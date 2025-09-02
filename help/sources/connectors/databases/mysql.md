@@ -3,9 +3,9 @@ title: Übersicht über den MySQL Source Connector
 description: Erfahren Sie, wie Sie MySQL mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '622'
 ht-degree: 5%
 
 ---

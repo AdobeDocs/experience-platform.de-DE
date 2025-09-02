@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Übersicht über den Microsoft Dynamics Source Connector
 description: Erfahren Sie, wie Sie Microsoft Dynamics mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 50%
+source-wordcount: '284'
+ht-degree: 14%
 
 ---
 
-# Microsoft Dynamics-Connector
+# [!DNL Microsoft Dynamics]
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+[!DNL Microsoft Dynamics] ist eine Reihe von Geschäftsanwendungen, mit denen Sie Ihre Abläufe effektiver verwalten können. Unabhängig davon, ob Sie Kundenbeziehungen, Finanzen oder Lieferketten überwachen, bietet [!DNL Microsoft Dynamics] Ihnen die Tools, um Ihre Workflows zu optimieren und intelligentere Entscheidungen zu treffen. Die Plattform unterstützt sowohl die Enterprise Resource Planning als auch das Customer Relationship Management (CRM) und ermöglicht es Ihnen, Ihre Geschäftsprozesse in einem integrierten System zu vereinheitlichen.
 
-[!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einem CRM-System eines Drittanbieters. Unterstützung für CRM-Anbieter umfasst [!DNL Microsoft Dynamics].
+Sie können die [!DNL Microsoft Dynamics] verwenden, um Daten aus Ihrem [!DNL Microsoft Dynamics]-Konto in Adobe Experience Platform aufzunehmen.
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung ](../../ip-address-allow-list.md) Experience Platform.
 
 ## Feldzuordnung von [!DNL Microsoft Dynamics] zu XDM
 
