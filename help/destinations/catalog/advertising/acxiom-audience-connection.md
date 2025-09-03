@@ -1,43 +1,43 @@
 ---
-title: Acxiom-Zielgruppen-Verteilung
-description: Verwenden Sie  [!DNL Acxiom Audience Distribution]  Ziel, um Zielgruppen mit  [!DNL Acxiom's Real ID]  Technologie anzureichern und Zielgruppen für mehrere Plattformen zu aktivieren, z. B [!DNL Altice],  [!DNL Ampersand],  [!DNL Comcast] und mehr.
+title: Verbindung mit Acxiom-Zielgruppe
+description: Verwenden Sie  [!DNL Acxiom Audience Connection]  Ziel, um Zielgruppen mit  [!DNL Acxiom's Real ID]  Technologie anzureichern und Zielgruppen für mehrere Plattformen zu aktivieren, z. B [!DNL Altice],  [!DNL Ampersand],  [!DNL Comcast] und mehr.
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 14%
 
 ---
 
-# [!DNL Acxiom Audience Distribution]
+# [!DNL Acxiom Audience Connection]
 
 >[!NOTE]
 >
->Das [!DNL Acxiom Audience Distribution]-Ziel befindet sich in der Beta-Phase. Dieser Ziel-Connector und diese Dokumentationsseite werden vom [!DNL Acxiom]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Acxiom [hier](mailto:acxiom-adobe-help@acxiom.com).
+>Das [!DNL Acxiom Audience Connection]-Ziel befindet sich in der Beta-Phase. Dieser Ziel-Connector und diese Dokumentationsseite werden vom [!DNL Acxiom]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Acxiom [hier](mailto:acxiom-adobe-help@acxiom.com).
 
-Verwenden Sie das [!DNL Acxiom Audience Distribution] Ziel, um Zielgruppen mit [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/)-Technologie zu erweitern und Zielgruppen für mehrere Plattformen zu aktivieren, z. B. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] und mehr.
+Verwenden Sie das [!DNL Acxiom Audience Connection] Ziel, um Zielgruppen mit [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/)-Technologie zu erweitern und Zielgruppen für mehrere Plattformen zu aktivieren, z. B. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] und mehr.
 
-Dieses Tutorial enthält Anweisungen zum Erstellen eines [!DNL Acxiom Audience Distribution]-Ziel-Connectors mithilfe der [!DNL Adobe Experience Platform]-Benutzeroberfläche. Dieser Connector wird zum Erstellen und Verteilen von Zielgruppen an ausgewählte Ziele verwendet.
+Dieses Tutorial enthält Anweisungen zum Erstellen eines [!DNL Acxiom Audience Connection]-Ziel-Connectors mithilfe der [!DNL Adobe Experience Platform]-Benutzeroberfläche. Dieser Connector wird zum Erstellen und Verteilen von Zielgruppen an ausgewählte Ziele verwendet.
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Acxiom Audience Distribution]-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das [!DNL Adobe Experience Platform] Kunden mithilfe dieses Connectors lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Acxiom Audience Connection]-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das [!DNL Adobe Experience Platform] Kunden mithilfe dieses Connectors lösen können.
 
 ### Senden von Zielgruppen aus Experience Platform an Ihr Acxiom-Konto {#send-audiences}
 
 Verwenden Sie diesen Ziel-Connector, wenn Sie ein Marketing-Experte sind, der Zielgruppen von [!DNL Experience Platform] zur kanalübergreifenden Akquise an Ihr [!DNL Acxiom]-Konto senden möchte.
 
-So ist beispielsweise die Marketing Operations-Abteilung einer globalen Finanzdienstleistungsmarke an einer kanalübergreifenden Kundenakquise über mehrere Werbeplattformen interessiert. Sie können den Ziel-Connector von [!DNL Acxiom Audience Distribution] verwenden, um Zielgruppen von [!DNL Experience Platform] an [!DNL Acxiom] zu senden, die Zielgruppen mit [!DNL Acxiom's Real ID] Technologie zu erweitern und die Zielgruppen für mehrere Plattformen zu aktivieren, z. B. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] und mehr.
+So ist beispielsweise die Marketing Operations-Abteilung einer globalen Finanzdienstleistungsmarke an einer kanalübergreifenden Kundenakquise über mehrere Werbeplattformen interessiert. Sie können den Ziel-Connector von [!DNL Acxiom Audience Connection] verwenden, um Zielgruppen von [!DNL Experience Platform] an [!DNL Acxiom] zu senden, die Zielgruppen mit [!DNL Acxiom's Real ID] Technologie zu erweitern und die Zielgruppen für mehrere Plattformen zu aktivieren, z. B. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] und mehr.
 
 ## Voraussetzungen {#prerequisites}
 
-* **Nutzungsbedingungen bestätigen:** Bevor Sie ein neues [!DNL Acxiom Audience Distribution] konfigurieren können, müssen Sie [!DNL Acxiom's] Nutzungsbedingungen lesen und unterzeichnen. Sie erhalten den Link zur Vereinbarung, sobald Ihr ausgeführter Auftrag abgeschlossen ist. Solange Sie die Vereinbarung nicht unterzeichnet haben, wird die [!DNL Acxiom Audience Distribution] Zielkarte im Experience Platform-Zielkatalog nicht angezeigt. Nachdem Sie den Vertrag akzeptiert und unterzeichnet haben, schließen [!DNL Adobe] Ihren Onboarding-Prozess ab und Sie sehen die [!DNL Acxiom Audience Distribution] Zielkarte.
+* **Nutzungsbedingungen bestätigen:** Bevor Sie ein neues [!DNL Acxiom Audience Connection] konfigurieren können, müssen Sie [!DNL Acxiom's] Nutzungsbedingungen lesen und unterzeichnen. Sie erhalten den Link zur Vereinbarung, sobald Ihr ausgeführter Auftrag abgeschlossen ist. Solange Sie die Vereinbarung nicht unterzeichnet haben, wird die [!DNL Acxiom Audience Connection] Zielkarte im Experience Platform-Zielkatalog nicht angezeigt. Nachdem Sie den Vertrag akzeptiert und unterzeichnet haben, schließen [!DNL Adobe] Ihren Onboarding-Prozess ab und Sie sehen die [!DNL Acxiom Audience Connection] Zielkarte.
 * **Kennen Sie Ihre Adobe-Organisations-ID**: Zum Ausfüllen Ihrer Nutzungsbedingungen ist Ihre [!DNL Adobe] Organisations-ID erforderlich. Weitere Informationen zum Anzeigen [!DNL Adobe's] Organisations *ID finden Sie unter* Organisationen in [Experience Cloud](https://experienceleague.adobe.com/de/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 ## Unterstützte Ziele {#supported-destinations}
 
-Das [!DNL Acxiom Audience Distribution]-Ziel unterstützt derzeit die Zielgruppenaktivierung für die folgenden Plattformen.<br>
+Das [!DNL Acxiom Audience Connection]-Ziel unterstützt derzeit die Zielgruppenaktivierung für die folgenden Plattformen.<br>
 
 * [!DNL Altice]
 * [!DNL Ampersand]
@@ -49,11 +49,11 @@ Das [!DNL Acxiom Audience Distribution]-Ziel unterstützt derzeit die Zielgruppe
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
-Die Authentifizierung für [!DNL Acxiom's Audience Distribution] Ziel wird automatisch im Hintergrund durchgeführt.
+Die Authentifizierung für [!DNL Acxiom's Audience Connection] Ziel wird automatisch im Hintergrund durchgeführt.
 
 ## Zielspezifische Einstellungen {#destination-settings}
 
-Für einige [!DNL Acxiom Audience Distribution]-Ziele sind zusätzliche Informationen erforderlich. Die folgenden Abschnitte enthalten detaillierte Anleitungen zum Konfigurieren dieser Optionen.
+Für einige [!DNL Acxiom Audience Connection]-Ziele sind zusätzliche Informationen erforderlich. Die folgenden Abschnitte enthalten detaillierte Anleitungen zum Konfigurieren dieser Optionen.
 
 ### [!DNL LG Ads] {#lg-ads}
 
@@ -67,20 +67,20 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 >[!NOTE]
 >
->Das [!DNL Acxiom Audience Distribution] unterstützt nur vollständige Dateiexporte.
+>Das [!DNL Acxiom Audience Connection] unterstützt nur vollständige Dateiexporte.
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Damit das [!DNL Acxiom Audience Distribution] Ziel die Zielgruppendaten korrekt erhält, müssen Sie die Quellfelder von Experience Platform den richtigen [!DNL Acxiom Audience Distribution] Zielfeldern zuordnen.
+Damit das [!DNL Acxiom Audience Connection] Ziel die Zielgruppendaten korrekt erhält, müssen Sie die Quellfelder von Experience Platform den richtigen [!DNL Acxiom Audience Connection] Zielfeldern zuordnen.
 
-[!DNL Acxiom Audience Distribution] ermöglicht nur die Zuordnung zu den folgenden Zielfeldern. Die in der folgenden Tabelle beschriebenen Zielfelder müssen in der unten angegebenen Reihenfolge zugeordnet werden.
+[!DNL Acxiom Audience Connection] ermöglicht nur die Zuordnung zu den folgenden Zielfeldern. Die in der folgenden Tabelle beschriebenen Zielfelder müssen in der unten angegebenen Reihenfolge zugeordnet werden.
 
 | Feldname | Beschreibung | Erforderlich | Reihenfolge der Felder | Max. Länge |
 |---|---|---|---|---|          
@@ -105,7 +105,7 @@ Wenn Sie [!DNL Adobe's] Standardschema nicht verwenden, finden Sie in der Dokume
 
 ### Überprüfung {#review}
 
-Nachdem Sie alle oben genannten Schritte ausgeführt haben, können Sie den Status Ihrer Zielverbindung und die Details Ihrer Zielgruppe überprüfen, bevor Sie sie aktivieren (verteilen). Die ausgewählten Zielgruppen werden in einer Liste unten angezeigt. Jede Zielgruppe ist ein separater Aufruf der [!DNL Acxiom Audience Distribution]-API.
+Nachdem Sie alle oben genannten Schritte ausgeführt haben, können Sie den Status Ihrer Zielverbindung und die Details Ihrer Zielgruppe überprüfen, bevor Sie sie aktivieren (verteilen). Die ausgewählten Zielgruppen werden in einer Liste unten angezeigt. Jede Zielgruppe ist ein separater Aufruf der [!DNL Acxiom Audience Connection]-API.
 
 Wenn Sie mit den Ergebnissen zufrieden sind, klicken Sie auf **[!UICONTROL Beenden]**, um Ihr Ziel zu aktivieren.
 
@@ -128,4 +128,4 @@ In diesem Tutorial haben Sie erfolgreich eine Zielgruppe für die ausgewählte Z
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](https://experienceleague.adobe.com/de/docs/experience-platform/data-governance/home).
+Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
