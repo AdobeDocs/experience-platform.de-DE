@@ -34,8 +34,8 @@ Das Senden von Push-Abonnementdaten wird als Aktion innerhalb einer Regel in der
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. Wählen [!UICONTROL  unter &quot;]&quot; eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Legen Sie [!UICONTROL  Dropdown-Feld ]Erweiterung“ auf **[!UICONTROL Adobe Experience Platform Web SDK]** fest und [!UICONTROL Aktionstyp] auf **[!UICONTROL Push-Abonnement senden]**.
+1. Wählen [!UICONTROL &#x200B; unter &quot;]&quot; eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
+1. Legen Sie [!UICONTROL &#x200B; Dropdown-Feld &#x200B;]Erweiterung“ auf **[!UICONTROL Adobe Experience Platform Web SDK]** fest und [!UICONTROL Aktionstyp] auf **[!UICONTROL Push-Abonnement senden]**.
 1. Klicken Sie **[!UICONTROL Änderungen beibehalten]** und führen Sie dann den Veröffentlichungs-Workflow aus.
 
 ## Registrieren eines Push-Abonnements über die Web SDK JavaScript-Bibliothek {#register-push-subscription-javascript}
