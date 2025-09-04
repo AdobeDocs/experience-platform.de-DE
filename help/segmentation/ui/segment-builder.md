@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
+source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
 workflow-type: tm+mt
-source-wordcount: '5174'
+source-wordcount: '5200'
 ht-degree: 64%
 
 ---
@@ -330,7 +330,7 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 >[!NOTE]
 >
 >Bei Verwendung der Zeitbeschränkung „Nach“ kann letzteres Ereignis länger als die in der Zeitbeschränkung aufgeführte Zeit stattfinden. >
->&#x200B;>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
+>>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
 >
 >Darüber hinaus können diese beiden Zeitbeschränkungen in Abstimmung miteinander verwendet werden.
 >
@@ -406,10 +406,7 @@ Der Zeitstempel für qualifizierte Profile gibt den neuesten Segmentauswertungsa
 
 **[!UICONTROL Geschätzte Profile]** gibt einen **ungefähren Bereich** von Profilen an, basierend auf dem **Beispielvorgang**. Dies bedeutet, dass die Beispieldaten auf den größeren Profilsatz projiziert werden, was zu einer geschätzten Anzahl führt, die von der tatsächlichen Anzahl qualifizierter Profile abweichen kann. Die geschätzte Profilstichprobe weist ein Konfidenzintervall von 95 % auf.
 
-Diese Zahl wird in zwei Szenarien aktualisiert:
-
-1. Die Kundendaten ändern sich um mehr als 3 %, oder der letzte Beispielvorgang ist älter als drei Tage.
-2. Die Regeln der Zielgruppe wurden geändert oder entfernt.
+Wenn Sie Änderungen an den Regeln der Zielgruppe vornehmen, können Sie auf die Schaltfläche **[!UICONTROL Schätzung aktualisieren]** klicken, um eine aktualisierte Anzahl geschätzter Profile anzuzeigen. Diese Zahl basiert jedoch weiterhin auf dem vorherigen Beispielvorgang. Der Beispielvorgang wird aktualisiert, wenn die Änderung der Kundendaten mehr als 3 % beträgt oder der letzte Beispielvorgang älter als drei Tage ist.
 
 Bei Auswahl der Informationsblase werden Datum und Uhrzeit der letzten Ausführung des Beispielauftrags angezeigt.
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise August 2025
 description: Versionshinweise August 2025 für Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
+source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1321'
 ht-degree: 23%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 23%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 19. August 2025**
 
@@ -159,7 +159,7 @@ Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../s
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Zielgruppenschätzungen | Zielgruppenschätzungen werden jetzt automatisch in Segment Builder generiert. Dieser Wert wird bei jeder Änderung der Zielgruppe aktualisiert und entspricht immer den neuesten Zielgruppenregeln. Darüber hinaus wird die Schätzung jetzt als **Bereich** angezeigt, der auf dem Konfidenzintervall der Sampling-Daten basiert. |
+| Zielgruppenschätzungen | Zielgruppenschätzungen werden jetzt als **Bereich“ angezeigt** der auf dem Konfidenzintervall der Sampling-Daten basiert. Weitere Informationen zu Schätzungen finden Sie im [Segment Builder-Handbuch](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Weitere Informationen finden Sie in der [[!DNL Segmentation Service] Übersicht](../../segmentation/home.md).
 
