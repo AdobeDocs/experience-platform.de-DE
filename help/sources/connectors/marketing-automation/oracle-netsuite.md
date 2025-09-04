@@ -2,22 +2,17 @@
 title: Übersicht über Oracle NetSuite Source
 description: Erfahren Sie, wie Sie Oracle NetSuite mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2024-01-30T00:00:00Z
-badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 11%
+source-wordcount: '738'
+ht-degree: 14%
 
 ---
 
 # [!DNL Oracle NetSuite]
 
->[!NOTE]
->
->Die [!DNL Oracle NetSuite]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
-
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Experience Platform unterstützt die Aufnahme von Daten in Marketing-Automatisierungssystemen von Drittanbietern. Der Support für Anbieter von Marketing-Automatisierung umfasst [!DNL Oracle NetSuite].
 
@@ -54,7 +49,7 @@ Bevor Sie Ihre [!DNL Oracle NetSuite] Daten in Experience Platform übertragen k
       * Die OAuth 2.0-Funktion wurde aktiviert und die entsprechenden OAuth 2.0-Rollen wurden eingerichtet.
       * Benutzende wurden den OAuth 2.0-Rollen zugewiesen und die erforderlichen Integrationsdatensätze erstellt.
 * Ein **Zugriffstoken** und ein **Aktualisierungstoken**.
-   * Informationen zum Generieren Ihrer Zugriffs[ und Aktualisierungs-Token finden Sie im [!DNL Oracle] zu ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow)OAuth 2.0 Authorization Code Grant Flow.
+   * Informationen zum Generieren Ihrer Zugriffs[!DNL Oracle] und Aktualisierungs-Token finden Sie im [ zu ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow)OAuth 2.0 Authorization Code Grant Flow.
 
 ### Sammeln erforderlicher Anmeldedaten {#gather-credentials}
 

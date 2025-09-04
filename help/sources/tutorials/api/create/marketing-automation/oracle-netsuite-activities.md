@@ -1,22 +1,15 @@
 ---
 title: Erstellen einer Quellverbindung und eines Datenflusses für Oracle NetSuite-Aktivitäten mit der Flow Service-API
 description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um Oracle NetSuite-Ereignisdaten mithilfe der Flow Service-API an Experience Platform zu übertragen.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1957'
 ht-degree: 46%
 
 ---
 
 # Erstellen einer Quellverbindung und eines Datenflusses für [!DNL Oracle NetSuite Activities] mithilfe der Flow Service-API
-
->[!NOTE]
->
->Die [!DNL Oracle NetSuite Activities]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Ereignisdaten aus Ihrem [!DNL Oracle NetSuite Activities]-Konto mithilfe der -API [[!DNL Flow Service]  Adobe Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -27,7 +20,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Oracle NetSuite Activities] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Oracle NetSuite Activities]-API eine Verbindung zu [!DNL Flow Service] herstellen zu können.
 
 ### Authentifizierung
 

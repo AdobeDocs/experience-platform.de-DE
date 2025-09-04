@@ -1,22 +1,15 @@
 ---
 title: Erstellen einer  [!DNL Oracle NetSuite Entities] -Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Oracle NetSuite Entities-Quellverbindung erstellen.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '689'
 ht-degree: 36%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Oracle NetSuite Entities] in der Benutzeroberfläche
-
->[!NOTE]
->
->Die [!DNL Oracle NetSuite Entities]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie in der -Benutzeroberfläche Kontakt- und Kundendaten aus Ihrem [!DNL Oracle NetSuite Entities]-Konto an Adobe Experience Platform übertragen.
 

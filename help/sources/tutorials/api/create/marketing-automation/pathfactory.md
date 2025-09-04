@@ -1,11 +1,10 @@
 ---
 title: Erstellen einer PathFactory-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Ihr PathFactory-Konto mithilfe der Flow Service-API für Experience Platform authentifizieren.
-badge: Beta
 exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 24%
 
 ---
@@ -27,7 +26,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
-Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit [!DNL PathFactory] verbinden zu können.
+Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL PathFactory]-API erfolgreich mit [!DNL Flow Service] verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen {#gather-credentials}
 
@@ -36,7 +35,7 @@ Um auf Ihr PathFactory-Konto in der Experience Platform zuzugreifen, müssen Sie
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | Benutzername | Benutzername Ihres [!DNL PathFactory]. Dies ist für die Identifizierung Ihres Kontos im System unerlässlich. |
-| Kennwort | Das mit Ihrem [!DNL PathFactory]-Konto verknüpfte Kennwort. Sicherstellen, dass dieser sicher aufbewahrt wird, um nicht autorisierten Zugriff zu verhindern. |
+| Passwort | Das mit Ihrem [!DNL PathFactory]-Konto verknüpfte Kennwort. Sicherstellen, dass dieser sicher aufbewahrt wird, um nicht autorisierten Zugriff zu verhindern. |
 | Domain | Die Ihrem [!DNL PathFactory]-Konto zugeordnete Domain. Dies bezieht sich normalerweise auf die eindeutige Kennung in Ihrer [!DNL PathFactory]-URL. |
 | Zugriffs-Token | Ein eindeutiges Token, das für die API-Authentifizierung verwendet wird, um eine sichere Kommunikation zwischen Ihren Systemen und [!DNL PathFactory] sicherzustellen. |
 | API-Endpunkte | Spezifische API-Endpunkte für den Datenzugriff: Besucher, Sitzungen und Seitenansichten. Jeder Endpunkt entspricht verschiedenen Datensätzen, die Sie abrufen können. **Hinweis:** Diese sind von [!DNL PathFactory] vordefiniert und beziehen sich speziell auf die Daten, auf die Sie zugreifen möchten: <ul><li>**Besucher-Endpunkt**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Sessions Endpoint**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Seitenansichten-Endpunkt**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |

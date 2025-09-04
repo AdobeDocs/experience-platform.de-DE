@@ -2,20 +2,15 @@
 title: Übersicht über PathFactory Source
 description: Erfahren Sie, wie Sie PathFactory mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2024-04-30T00:00:00Z
-badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 12%
+source-wordcount: '449'
+ht-degree: 11%
 
 ---
 
 # [!DNL PathFactory]
-
->[!NOTE]
->
->Die [!DNL PathFactory]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 [[!DNL PathFactory]](https://www.pathfactory.com/) bietet eine Cloud-basierte Plattform, die Unternehmen bei der Verwaltung von Content-Journey und der Förderung von Interaktionen durch intelligente Inhaltserkenntnisse unterstützt. In diesem Handbuch wird beschrieben, wie Sie Daten aus PathFactory in Experience Platform integrieren und dabei die Connectoren von PathFactory für eine optimale Datenaufnahme verwenden können.
 
@@ -50,7 +45,7 @@ Um [!DNL PathFactory] mit Experience Platform zu verbinden, müssen Sie die folg
 | Anmeldedaten | Beschreibung | Endpunkt |
 | --- | --- | --- |
 | Benutzername | Benutzername Ihres [!DNL PathFactory]. | Nicht zutreffend |
-| Kennwort | Ihr [!DNL PathFactory]-Passwort. | Nicht zutreffend |
+| Passwort | Ihr [!DNL PathFactory]-Passwort. | Nicht zutreffend |
 | Domain | Die Ihrem [!DNL PathFactory]-Konto zugeordnete Domain. | Nicht zutreffend |
 | Zugriffs-Token | Ein eindeutiges Token, das für die API-Authentifizierung verwendet wird. | Nicht zutreffend |
 | Visitors-Endpunkt | Der API-Endpunkt für Besucherdaten. | `/api/public/v3/data_lake_apis/visitors.json` |

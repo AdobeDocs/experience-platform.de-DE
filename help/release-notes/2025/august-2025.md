@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise August 2025
 description: Versionshinweise August 2025 für Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 23%
+source-wordcount: '1432'
+ht-degree: 24%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 23%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 19. August 2025**
 
@@ -171,6 +171,9 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
+| Allgemeine Verfügbarkeit der [!DNL Oracle NetSuite]-Quelle | Die [!DNL Oracle NetSuite] ist jetzt allgemein verfügbar. Sie können jetzt Ihr [!DNL Oracle NetSuite]-Konto mit Experience Platform verbinden, um Aktivitäts- und Entitätsdaten für eine einheitliche Analyse und Aktivierung aufzunehmen. Weitere Informationen finden Sie in der [[!DNL Oracle NetSuite] Übersicht](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
+| Allgemeine Verfügbarkeit der [!DNL PathFactory]-Quelle | Die [!DNL PathFactory] ist jetzt allgemein verfügbar. Sie können Ihr [!DNL PathFactory]-Konto mit Experience Platform verbinden, um Besucher-, Sitzungs- und Seitenansichtsdaten für eine einheitliche Analyse und Aktivierung aufzunehmen. Weitere Informationen finden Sie in der [[!DNL PathFactory] Übersicht](../../sources/connectors/marketing-automation/pathfactory.md). |
+| Allgemeine Verfügbarkeit der [!DNL Stripe]-Quelle | Die [!DNL Stripe] ist jetzt allgemein verfügbar. Sie können Ihr [!DNL Stripe] mit Experience Platform verbinden, um Zahlungs- und Transaktionsdaten für eine einheitliche Analyse und Aktivierung aufzunehmen. Weitere Informationen finden Sie in der [[!DNL Stripe] Übersicht](../../sources/connectors/payments/stripe.md). |
 | Erweiterte Authentifizierung für [!DNL Azure Blob Storage] | Sie können jetzt die auf Service-Prinzipalen basierende Authentifizierung verwenden, um Ihre [!DNL Azure Blob Storage] mit Experience Platform zu verbinden. Verwenden Sie die auf Service-Prinzipalen basierende Authentifizierung für erhöhte Sicherheit, einfachere Rotation der Anmeldeinformationen und eine granularere Zugriffssteuerung für Ihr Konto. Weitere Informationen finden Sie in der [[!DNL Azure Blob Storage] Übersicht](../../sources/connectors/cloud-storage/blob.md). |
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).

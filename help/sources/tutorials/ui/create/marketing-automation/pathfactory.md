@@ -1,11 +1,10 @@
 ---
 title: Verbinden Ihres PathFactory-Kontos mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihr PathFactory-Konto über die Benutzeroberfläche mit Experience Platform verbinden.
-badge: Beta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '571'
 ht-degree: 18%
 
 ---
@@ -32,7 +31,7 @@ Um auf Ihr PathFactory-Konto in der Experience Platform zuzugreifen, müssen Sie
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | Benutzername | Benutzername Ihres PathFactory-Kontos. Dies ist für die Identifizierung Ihres Kontos im System unerlässlich. |
-| Kennwort | Das Ihrem PathFactory-Konto zugeordnete Kennwort. Sicherstellen, dass dieser sicher aufbewahrt wird, um nicht autorisierten Zugriff zu verhindern. |
+| Passwort | Das Ihrem PathFactory-Konto zugeordnete Kennwort. Sicherstellen, dass dieser sicher aufbewahrt wird, um nicht autorisierten Zugriff zu verhindern. |
 | Domain | Die Domain, die Ihrem PathFactory-Konto zugeordnet ist. Dies bezieht sich normalerweise auf die eindeutige Kennung in Ihrer PathFactory-URL. |
 | Zugriffs-Token | Ein eindeutiges Token, das für die API-Authentifizierung verwendet wird, um eine sichere Kommunikation zwischen Ihren Systemen und PathFactory sicherzustellen. |
 | API-Endpunkte | Spezifische API-Endpunkte für den Datenzugriff: Besucher, Sitzungen und Seitenansichten. Jeder Endpunkt entspricht verschiedenen Datensätzen, die Sie abrufen können. **Hinweis:** Diese sind von [!DNL PathFactory] vordefiniert und beziehen sich speziell auf die Daten, auf die Sie zugreifen möchten: <ul><li>**Besucher-Endpunkt**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Sessions Endpoint**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Seitenansichten-Endpunkt**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |

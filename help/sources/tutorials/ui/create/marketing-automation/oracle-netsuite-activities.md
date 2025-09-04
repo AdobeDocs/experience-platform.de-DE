@@ -1,22 +1,15 @@
 ---
 title: Erstellen einer  [!DNL Oracle NetSuite Activities] -Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung für Oracle NetSuite-Aktivitäten erstellen.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '607'
 ht-degree: 40%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Oracle NetSuite Activities] in der Benutzeroberfläche
-
->[!NOTE]
->
->Die [!DNL Oracle NetSuite Activities]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Ereignisdaten aus Ihrem [!DNL Oracle NetSuite Activities]-Konto über die Benutzeroberfläche an Adobe Experience Platform übertragen.
 

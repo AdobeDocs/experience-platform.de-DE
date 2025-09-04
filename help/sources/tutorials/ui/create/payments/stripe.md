@@ -3,18 +3,14 @@ title: Nehmen Sie Zahlungsdaten aus Ihrem Stripe-Konto über die Benutzeroberfl�
 description: Erfahren Sie, wie Sie Zahlungsdaten von Ihrem Stripe-Konto mithilfe der Benutzeroberfläche in Experience Platform aufnehmen.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1637'
 ht-degree: 16%
 
 ---
 
 # Aufnehmen von Zahlungsdaten aus Ihrem [!DNL Stripe]-Konto in Experience Platform über die Benutzeroberfläche
-
->[!NOTE]
->
->Die [!DNL Stripe]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Zahlungsdaten von Ihrem [!DNL Stripe]-Konto über die Benutzeroberfläche in Adobe Experience Platform aufnehmen.
 
@@ -116,7 +112,7 @@ Wenn Sie bereits über einen vorhandenen Datensatz verfügen, wählen Sie **[!UI
 
 >[!ENDTABS]
 
-+++Wählen Sie Schritte aus, um die Profilaufnahme, Fehlerdiagnose und partielle Aufnahme zu aktivieren.
++++Wählen Sie aus, um die Profilaufnahme, Fehlerdiagnose und partielle Aufnahme zu aktivieren.
 
 Wenn Ihr Datensatz für das Echtzeit-Kundenprofil aktiviert ist, können Sie in diesem Schritt **[!UICONTROL Profildatensatz]** umschalten, um Ihre Daten für die Profilaufnahme zu aktivieren. Sie können diesen Schritt auch verwenden, um **[!UICONTROL Fehlerdiagnose]** und **[!UICONTROL Partielle Aufnahme]** zu aktivieren.
 
