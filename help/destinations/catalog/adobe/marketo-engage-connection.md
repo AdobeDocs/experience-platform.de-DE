@@ -1,13 +1,13 @@
 ---
 title: Marketo Engage-Verbindung
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analysen und Commerce. Damit können Sie Aktivitäten automatisieren und verwalten, von der CRM-Lead-Verwaltung und Kundeninteraktion bis hin zu Account-basiertem Marketing und Umsatzzuordnung.
-source-git-commit: 88864353d4872d62258914d6490b90331692fa96
+exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
+source-git-commit: 1a87ad8259803886b9a1c60f1cdc50942ba49173
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1999'
 ht-degree: 17%
 
 ---
-
 
 # Marketo Engage-Verbindung
 
@@ -45,7 +45,9 @@ Sie können ihre Zielgruppen in Marketo Engage aktivieren und den Synchronisieru
 
 ## Voraussetzungen {#prerequisites}
 
-Die Person, die das Ziel einrichtet, muss über die Berechtigung [Person bearbeiten](https://experienceleague.adobe.com/de/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) in ihrer Marketo-Instanz und -Partition verfügen.
+* Die Person, die das Ziel einrichtet, muss über die Berechtigung [Person bearbeiten](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) in ihrer Marketo-Instanz und -Partition verfügen.
+* Beim Einrichten dieses Ziels sind nur Marketo Engage-Instanzen in derselben Adobe Real-Time CDP-Organisation verfügbar.
+* Nur Marketo Engage-Instanzen, deren Benutzer in der Adobe Admin Console verwaltet werden, können dieses Ziel verwenden.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -119,7 +121,7 @@ Marketo verwendet das Feld **[!UICONTROL Marketo-Deduplizierung]** Sie wählen a
 > 
 >* Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 >
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -143,8 +145,8 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
    * **[!UICONTROL Zielgruppe und Profil]**: Wählen Sie diese Option, wenn Sie sowohl Zielgruppenmitglieder zu Marketo-Listen hinzufügen als auch deren Profilinformationen auf dem neuesten Stand halten möchten.
    * **[!UICONTROL Nur Profil]**: Wählen Sie diese Option aus, wenn Sie möchten, dass Marketo-Lead-Profile stets mit den neuesten Informationen aus Experience Platform aktualisiert werden.
    * **[!UICONTROL Nur Zielgruppe]**: Wählen Sie diese Option aus, wenn Sie Zielgruppenmitglieder zu Marketo-Listen hinzufügen möchten, ohne ihre Profilinformationen zu aktualisieren.
-* **[!UICONTROL Partition]**: *Die Partitionsauswahl ist nur verfügbar, wenn Sie **[!UICONTROL Nur Profil]**&#x200B;oder **[!UICONTROL Audience und Profil]**&#x200B;Synchronisierungstypen* auswählen. Wählen Sie eine Marketo-Partitions-ID aus, die mit Ihrem ausgewählten Arbeitsbereich verknüpft ist. Auf diese Weise können Sie angeben, welche Lead-Partition in Marketo die exportierten Daten erhält. Wenn Sie keine bestimmte Partition auswählen, werden Ihre Daten an die **[!UICONTROL Standard]**-Partition in Marketo gesendet.
-* **[!UICONTROL Marketo-Deduplizierungsfeld]**: Wählen Sie das Marketo-Deduplizierungsfeld aus, das Sie beim Aktualisieren vorhandener Marketo-Leads verwenden möchten. Dieser Selektor zeigt die Felder an, die Sie in Marketo als Deduplizierungsfelder markiert haben. Wenn ein bestimmtes Feld aus Marketo als Deduplizierungsfeld angezeigt werden soll, müssen Sie das Feld in Marketo als [ durchsuchbares ](https://experienceleague.adobe.com/de/docs/marketo-developer/marketo/rest/lead-database/lead-database) markieren.
+* **[!UICONTROL Partition]**: *Die Partitionsauswahl ist nur verfügbar, wenn Sie **[!UICONTROL Nur Profil]**oder **[!UICONTROL Audience und Profil]**Synchronisierungstypen* auswählen. Wählen Sie eine Marketo-Partitions-ID aus, die mit Ihrem ausgewählten Arbeitsbereich verknüpft ist. Auf diese Weise können Sie angeben, welche Lead-Partition in Marketo die exportierten Daten erhält. Wenn Sie keine bestimmte Partition auswählen, werden Ihre Daten an die **[!UICONTROL Standard]**-Partition in Marketo gesendet.
+* **[!UICONTROL Marketo-Deduplizierungsfeld]**: Wählen Sie das Marketo-Deduplizierungsfeld aus, das Sie beim Aktualisieren vorhandener Marketo-Leads verwenden möchten. Dieser Selektor zeigt die Felder an, die Sie in Marketo als Deduplizierungsfelder markiert haben. Wenn ein bestimmtes Feld aus Marketo als Deduplizierungsfeld angezeigt werden soll, müssen Sie das Feld in Marketo als [ durchsuchbares ](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) markieren.
 
   >[!NOTE]
   >
@@ -164,7 +166,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
