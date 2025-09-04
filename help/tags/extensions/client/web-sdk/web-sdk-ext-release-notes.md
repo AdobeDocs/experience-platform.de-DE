@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
+source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
 workflow-type: tm+mt
-source-wordcount: '2825'
-ht-degree: 63%
+source-wordcount: '2947'
+ht-degree: 61%
 
 ---
 
@@ -13,6 +13,18 @@ ht-degree: 63%
 # Versionshinweise zur Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Version 2.32.0 – Freitag, 4. September 2025
+
+**Neue Funktionen**
+
+- Enthält [Version 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) des Adobe Experience Platform Web SDK.
+- Es wurde Unterstützung für Adobe Advertising als neue benutzerdefinierte Build-Komponente hinzugefügt. Konfigurieren Sie in der Erweiterungskonfiguration und in Ereignisaufrufen senden .
+- Unterstützung für die Aufzeichnung von Push-Abonnementdetails im Profil hinzugefügt. Dies erfolgt über die neue Aktion „Abonnementdetails per Push übertragen“
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Verbesserte XDM-Datenelementbearbeitung, wenn Schemas oder Sandboxes nicht verfügbar sind. Sie können jetzt XDM-Objekt- und -Variablendatenelemente bearbeiten, selbst wenn ihre referenzierten Schemata nicht gefunden werden können oder wenn auf Sandboxes nicht zugegriffen werden kann. Damit werden Probleme behoben, die häufig bei Migrationen von Unternehmen in neue Rechenzentren auftreten, bei denen sich Schema-IDs ändern können und bei denen es in der Vergangenheit dazu kam, dass Bearbeitungsschnittstellen Fehler anzeigen und unbrauchbar wurden.
 
 ## Version 2.31.1 – Freitag, 31. Juli 2025
 
@@ -34,7 +46,6 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 **Bekannte Probleme**
 
 - Nach der Veröffentlichung der Version 2.31.0 wurde ein Problem mit dem Build-Prozess [Benutzerdefinierte Komponenten](/help/web-sdk/install/create-custom-build.md) festgestellt. Während benutzerdefinierte Builds weiterhin funktionieren, sind alle Komponenten derzeit im Build enthalten, was unabhängig von der Komponentenauswahl zu einem Paket in voller Größe führt. Eine Lösung für dieses Problem wird derzeit entwickelt. Wenn Sie sich zur Minimierung der Build-Größe auf die Auswahl benutzerdefinierter Komponenten verlassen, wird empfohlen, auf eine zukünftige Version zu warten.
-
 
 ## Version 2.30.1 – Mittwoch, 27. Mai 2025
 

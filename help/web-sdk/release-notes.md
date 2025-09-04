@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 21140a6ff4f34db213032dd600d4099a5459e31d
+source-git-commit: 05b9893e17db0caeab1175f35f939cb6a1dd0291
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 59%
+source-wordcount: '2573'
+ht-degree: 58%
 
 ---
 
@@ -15,6 +15,19 @@ ht-degree: 59%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.29.0 – Freitag, 4. September 2025
+
+**Neue Funktionen**
+
+- Unterstützung für die Erfassung von Adobe Advertising-Daten für Adobe Journey Analytics wurde hinzugefügt
+- Unterstützung für die Aufzeichnung von Push-Abonnementdetails in den Benutzerprofilen hinzugefügt.
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Es wurde ein Problem behoben, bei dem Konfigurationsüberschreibungsabschnitte zusammengeführt anstatt ersetzt wurden.
+- Fehlerkorrektur - Die Link-Sammlung sendet jetzt den gesamten Dokumentinhalt als Link-Name.
+- Es wurde ein Problem behoben, bei dem bestimmte Vorschläge nicht erneut gerendert werden konnten.
 
 ## Version 2.28.1 – Freitag, 31. Juli 2025
 
