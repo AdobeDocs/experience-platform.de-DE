@@ -177,4 +177,4 @@ In diesem Handbuch wurde beschrieben, wie Sie Audit-Protokolle in Experience Pla
 
 Sehen Sie sich das folgende Video an, um Audit-Protokolle in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409524?quality=12&learn=on&captions=ger)
