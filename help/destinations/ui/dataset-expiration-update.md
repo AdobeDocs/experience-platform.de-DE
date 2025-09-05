@@ -55,7 +55,7 @@ Bevor Sie den Exportzeitplan für Ihre Datensatzexport-Datenflüsse verlängern,
    >
    >Verwenden Sie den **[!UICONTROL Datentypen]** Filter auf der linken Seite des Katalogs, um verfügbare Ziele nach **[!UICONTROL Datensätzen]** zu filtern.
 
-3. Wählen Sie **[!UICONTROL Datentyp]**Datensätze“ aus, um nur die Datenflüsse mit Datensatzexporten anzuzeigen.
+3. Wählen Sie **[!UICONTROL Datentyp]**&#x200B;Datensätze“ aus, um nur die Datenflüsse mit Datensatzexporten anzuzeigen.
    ![Screenshot, der zeigt, wie Datenflüsse nach Datentyp gefiltert werden.](/help/destinations/assets/ui/export-datasets/dataset-type.png)
 4. Wählen Sie die Spaltenüberschrift **[!UICONTROL Erstellt]** und dann **[!UICONTROL Aufsteigend sortieren]**, um ältere Datenflüsse anzuzeigen.
    ![Screenshot, der zeigt, wie Datenflüsse in aufsteigender Reihenfolge sortiert werden.](/help/destinations/assets/ui/export-datasets/sort-ascending.png)
