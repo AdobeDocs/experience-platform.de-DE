@@ -6,7 +6,7 @@ type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3455'
+source-wordcount: '3438'
 ht-degree: 39%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 39%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 >title="Prognostiziertes Geschäftspersonenprofil"
->abstract="Geschäftspersonenprofile sind Datensätze im Echtzeit-Kundenprofil, die Einzelpersonen in einem B2B-Kontext darstellen.<br>Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, konfigurieren Sie den Ablauf von Datensätzen oder Daten pseudonymer Profile."
+>abstract="Geschäftspersonenprofile sind Einträge im Echtzeit-Kundenprofil, die Einzelpersonen in einem B2B-Kontext darstellen.<br>Ihre Nutzung könnte die lizenzierte Menge erreichen. Um die Nutzung zu reduzieren, konfigurieren Sie den Ablauf von Datensätzen oder Daten pseudonymer Profile."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
@@ -107,7 +107,7 @@ ht-degree: 39%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
 >title="Prognostiziertes Geschäftspersonenprofil"
->abstract="Geschäftspersonenprofile sind Datensätze im Echtzeit-Kundenprofil, die Einzelpersonen in einem B2B-Kontext darstellen.<br>Ihre Nutzung hat die lizenzierte Menge überschritten. Um die Nutzung zu reduzieren, konfigurieren Sie den Ablauf von Datensätzen oder Daten pseudonymer Profile."
+>abstract="Geschäftspersonenprofile sind Einträge im Echtzeit-Kundenprofil, die Einzelpersonen in einem B2B-Kontext darstellen.<br>Ihre Nutzung hat die lizenzierte Menge überschritten. Um die Nutzung zu reduzieren, konfigurieren Sie den Ablauf von Datensätzen oder Daten pseudonymer Profile."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
@@ -138,7 +138,7 @@ Lizenznutzungsberichte bieten ein hohes Maß an Granularität. Die meisten Metri
 
 In diesem Handbuch wird beschrieben, wie Sie das Lizenznutzungs-Dashboard in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).
 
 ## [!UICONTROL Lizenznutzung] Dashboard-Daten
 
@@ -230,7 +230,7 @@ Auf **[!UICONTROL Registerkarte]** Produkte“ werden Lizenznutzungsdaten nach g
 
 >[!NOTE]
 >
->Der [!UICONTROL Lizenzbetrag] für Add-ons ist im Gesamtlizenzbetrag des Kernprodukts enthalten. Add-ons werden nicht separat verfolgt, sondern erweitern die Funktionen der zugehörigen Produkte. Wenn Sie beispielsweise ein Paket mit fünf Sandboxes als Add-on kaufen, wird der Betrag zu dem des Basisprodukts hinzugefügt. Die Tabelle „Add-ons[!UICONTROL &#x200B; zeigt einen für das Add]on spezifischen „Lizenzbetrag“ an, aber die tatsächliche Nutzung wird über das Basisprodukt verfolgt.
+>Der [!UICONTROL Lizenzbetrag] für Add-ons ist im Gesamtlizenzbetrag des Kernprodukts enthalten. Add-ons werden nicht separat verfolgt, sondern erweitern die Funktionen der zugehörigen Produkte. Wenn Sie beispielsweise ein Paket mit fünf Sandboxes als Add-on kaufen, wird der Betrag zu dem des Basisprodukts hinzugefügt. Die Tabelle „Add-ons[!UICONTROL  zeigt einen für das Add]on spezifischen „Lizenzbetrag“ an, aber die tatsächliche Nutzung wird über das Basisprodukt verfolgt.
 
 ![Die Registerkarte „Produkte“ im Lizenznutzungs-Dashboard mit Tabellen zu Kernprodukten und Add-ons.](../images/license-usage/products-tab.png)
 
@@ -256,7 +256,7 @@ Proaktive Verwaltung und Optimierung Ihrer Lizenzierungsressourcen mit präzisen
 >
 >Die Prognosen werden wöchentlich jeden Freitag aktualisiert. Das Datum der Aktualisierung ist in einem Infosymbol enthalten (![Dieses Infosymbol.](../images/license-usage/info-icon.png)) über dem Spaltentitel.
 
-Zeigen Sie auf der Registerkarte „Produkt“ unter der Tabelle [!UICONTROL Kernprodukte] eine Zusammenfassung der Nutzung [!UICONTROL &#x200B; Produktberechtigungen &#x200B;].
+Zeigen Sie auf der Registerkarte „Produkt“ unter der Tabelle [!UICONTROL Kernprodukte] eine Zusammenfassung der Nutzung [!UICONTROL  Produktberechtigungen ].
 
 ![Die Registerkarte [!UICONTROL Lizenznutzung] [!UICONTROL Produkt] mit einem hervorgehobenen Produkt und der Spalte „Prognostizierte Nutzung“.](../images/license-usage/product-predicted-usage.png)
 
@@ -294,7 +294,7 @@ Das Lizenznutzungs-Dashboard enthält Berichte zu verschiedenen eindeutigen Metr
 | Metrik | Beschreibung |
 |---|---|
 | [!UICONTROL Audience Activation-Größe] | Die Gesamtgröße der für ein dateibasiertes Ziel aktivierten Profile in einem Jahr. Hinweis: Dies beinhaltet keine Profile, die über Streaming-Ziele gesendet werden. |
-| [!UICONTROL Addressable Audience] | Die Gruppe von Personenprofilen im Echtzeit-Kundenprofil, mit denen Ihr Unternehmen interagieren darf, einschließlich direkt identifizierbarer und pseudonymer Profile. Diese Profile können Attribute, Verhaltensweisen und Segmentzugehörigkeitsdaten enthalten. Profilvolumina werden mithilfe des standardmäßigen deterministischen Identitätsdiagramms von Adobe Experience Platform berechnet und werden als freigegebene Funktion betrachtet. |
+| [!UICONTROL Ansprechbare Zielgruppe] | Die Gruppe von Personenprofilen im Echtzeit-Kundenprofil, mit denen Ihr Unternehmen interagieren darf, einschließlich direkt identifizierbarer und pseudonymer Profile. Diese Profile können Attribute, Verhaltensweisen und Segmentzugehörigkeitsdaten enthalten. Profilvolumina werden mithilfe des standardmäßigen deterministischen Identitätsdiagramms von Adobe Experience Platform berechnet und werden als freigegebene Funktion betrachtet. |
 | [!UICONTROL Ad-hoc-Query Service-Benutzerpakete] | Ein Add-on, um die Berechtigung für autorisierte gleichzeitige Abfrage-Service-Benutzende um fünf zusätzliche gleichzeitige Abfrage-Service-Benutzende und eine zusätzliche gleichzeitig ausgeführte ungeplante Abfrage pro Paket zu erhöhen. Es können mehrere Pakete mit zusätzlichen ungeplanten Abfrage-Benutzenden lizenziert werden. |
 | [!UICONTROL Durchschnittliche Profilreichhaltigkeit] | **Veraltet** - Die Summe aller Produktionsdaten, die zu einem beliebigen Zeitpunkt im Hub-Profil-Service gespeichert sind, dividiert durch die fünffache Anzahl der Profile autorisierter Geschäftspersonen. [!UICONTROL Durchschnittliche Profilreichhaltigkeit] ist eine gemeinsam genutzte Funktion. |
 | [!UICONTROL CJA-Zeilen verfügbar] | Die täglichen durchschnittlichen Datenzeilen, die für die Analyse in Customer Journey Analytics verfügbar sind. |
@@ -303,10 +303,10 @@ Das Lizenznutzungs-Dashboard enthält Berichte zu verschiedenen eindeutigen Metr
 | [!UICONTROL Größe des Datenexports] | Die Datenmenge, die über Datensatzaktivierungen in einem Jahr gesendet wird. |
 | [!UICONTROL Datenexporte] | Die Gesamtgröße der Datensätze, die (direkt oder indirekt) in einem Jahr in eine beliebige Nicht-Adobe-Lösung exportiert werden können. |
 | [!UICONTROL Data Lake Storage] | Die vom analytischen Datenspeicher in Adobe Experience Platform verwendete Menge. |
-| [!UICONTROL Ansprechbare Zielgruppe] | Eine Gruppe von Personenprofilen im Echtzeit-Kundenprofil, an die Sie in den letzten 12 Monaten mithilfe der Authoring-, Entscheidungs-, Bereitstellungs-, Experimentier- oder Orchestrierungsfunktionen von Journey Optimizer versucht haben zu interagieren. |
+| [!UICONTROL Kontaktierbare Zielgruppe] | Eine Gruppe von Personenprofilen im Echtzeit-Kundenprofil, an die Sie in den letzten 12 Monaten mithilfe der Authoring-, Entscheidungs-, Bereitstellungs-, Experimentier- oder Orchestrierungsfunktionen von Journey Optimizer versucht haben zu interagieren. |
 | [!UICONTROL Lookalike-Zielgruppen] | Eine Verbraucher-Lookalike-Zielgruppe ist eine Zielgruppe, die durch die Modellierung einer vorhandenen Verbraucher-Zielgruppe generiert wird, um Personenprofile mit ähnlichen Attributen oder Verhaltensweisen zu identifizieren. |
 | [!UICONTROL Anzahl der AMM-Modelle] | Eine Zählung des Modells für maschinelles Lernen (integriert in Adobe Mix Modeler), mit dem ein bestimmtes Ergebnis auf Grundlage Ihrer Investitionen gemessen und/oder vorhergesagt wird. |
-| [!UICONTROL Anzahl der Sandboxes] | Die Anzahl der logischen Trennungen eines On-Demand-Services von Adobe innerhalb Ihrer Instanz, der auf Adobe Experience Platform zugreift und Daten und Vorgänge isoliert. |
+| [!UICONTROL Anzahl der Sandboxes] | Die Anzahl logischer Abgrenzungen innerhalb Ihrer Instanz eines On-demand-Dienstes von Adobe, der auf Adobe Experience Platform zugreift und bei dem Daten und Vorgänge voneinander isoliert sind. |
 | [!UICONTROL Reichhaltigkeit des Profils - Anzahl der Packungen] | Eine Erhöhung des autorisierten Gesamtdatenvolumens um 25 KB pro Profil für jedes Paket mit zusätzlichem Profilumfang. |
 | [!UICONTROL Query Service Compute Hours] | Ein Maß für die Zeit, die die Abfrage-Service-Engines benötigen, um Daten bei Ausführung einer Batch-Abfrage im Data Lake zu lesen, dort zu verarbeiten und dorthin zurückzuschreiben. |
 | [!UICONTROL Streaming-Segmentierung: Anzahl der Packs] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungs-Service gelangen. Die Segmentzugehörigkeit wird basierend auf den aktuellen Personenprofilattributen und dem Wert des aktuellen Ereignisses bewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsam genutzte Funktion. |
@@ -323,12 +323,12 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 | Lizenz | Produktbeschreibung |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD-STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/de/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT KUNDENDATENPLATTFORM:OD PRFL BIS 10M</li><li>RT KUNDENDATENPLATTFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD ACTIVATION PRFL BIS 10M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50M</li></ul> | [Adobe Experience Platform-Aktivierung](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD-PROFILORCHESTRIERUNG</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD Lite</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL BIS 10M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform-Aktivierung](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME - STARTER:OD</li><li>UNP AJO ULTIMATE - STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILORCHESTRIERUNG</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
@@ -338,4 +338,4 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 Nach dem Lesen dieses Dokuments können Sie das Lizenznutzungs-Dashboard finden und Nutzungsmetriken für jedes gekaufte Produkt, für alle Produktions- oder Entwicklungs-Sandboxes und für eine bestimmte Sandbox anzeigen. Weitere Informationen zu verfügbaren Metriken für Ihr Unternehmen, die auf der von Ihrem Unternehmen erworbenen Lizenz basieren, finden Sie.
 
-Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).

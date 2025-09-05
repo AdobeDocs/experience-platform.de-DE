@@ -31,7 +31,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Profilverarbeitung"
->abstract="Die Profilverarbeitungs-Ansicht enthält Informationen zu den in den Profildienst aufgenommenen Datensätzen, einschließlich der Anzahl der erstellten und aktualisierten Profilfragmente sowie der Gesamtzahl der Profilfragmente."
+>abstract="Die Profilverarbeitungs-Ansicht enthält Informationen zu den in den Profildienst aufgenommenen Einträgen, einschließlich der Anzahl der erstellten und aktualisierten Profilfragmente sowie der Gesamtzahl der Profilfragmente."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -90,7 +90,7 @@ Wählen Sie das Filtersymbol ![filter](/help/images/icons/filter.png) neben der 
 
 ![Das Filtersymbol ist hervorgehoben. Durch Auswahl dieses Symbols können Sie Details zum ausgewählten Datenfluss anzeigen.](../assets/ui/monitor-profiles/dataflows-filter.png)
 
-Auf [!UICONTROL &#x200B; Seite „Datenflussausführungs-]&quot; werden weitere Informationen zur Ausführung des [!DNL Profile]-Datenflusses angezeigt, einschließlich der Organisations-ID und der Datenflussausführungs-ID. Auf dieser Seite werden auch der entsprechende Fehlercode und die Fehlermeldung angezeigt, die von [!DNL Profile] bereitgestellt werden, falls während des Aufnahmevorgangs Fehler auftreten.
+Auf [!UICONTROL  Seite „Datenflussausführungs-]&quot; werden weitere Informationen zur Ausführung des [!DNL Profile]-Datenflusses angezeigt, einschließlich der Organisations-ID und der Datenflussausführungs-ID. Auf dieser Seite werden auch der entsprechende Fehlercode und die Fehlermeldung angezeigt, die von [!DNL Profile] bereitgestellt werden, falls während des Aufnahmevorgangs Fehler auftreten.
 
 ![Ein Dashboard mit detaillierten Informationen zum ausgewählten Datenfluss wird angezeigt.](../assets/ui/monitor-profiles/dataflow-run-details.png)
 

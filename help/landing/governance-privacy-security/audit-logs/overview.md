@@ -26,7 +26,7 @@ ht-degree: 33%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="Überwachen von Benutzeraktivitäten in Experience Platform"
->abstract="<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität für verschiedene Experience Platform-Dienste und -Funktionen in Form von Auditprotokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, in dem verzeichnet wird, <b>wer</b> <b>welche</b> Aktion <b>wann</b> ausgeführt hat. Auditprotokolle können die Fehlerbehebung in Experience Platform erleichtern und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p>"
+>abstract="<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität für verschiedene Experience Platform-Dienste und -Funktionen in Form von Auditprotokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, in dem verzeichnet wird, <b>wer</b><b>welche</b> Aktion <b>wann</b> ausgeführt hat. Auditprotokolle können die Fehlerbehebung in Experience Platform erleichtern und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p>"
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Services und Funktionen in Form von „Audit-Protokollen“ zu überprüfen. Diese Protokolle bilden einen Audit-Trail, der Ihnen bei der Fehlerbehebung in Experience Platform helfen kann und Ihrem Unternehmen dabei hilft, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
@@ -83,7 +83,7 @@ Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie die Zugri
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="Anweisungen"
->abstract="<ul><li>Wählen Sie <b>Audits</b> in der linken Navigation aus. Der Arbeitsbereich „Audits“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.</li>   <li> HINWEIS: Audit-Protokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1.000 Datensätze angezeigt. </li><li>Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen** aus.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Audit-Protokolle</a> auf Experience League.</li></ul>"
+>abstract="<ul><li>Wählen Sie <b>Audits</b> in der linken Navigation aus. Der Arbeitsbereich „Audits“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.</li>   <li> HINWEIS: Audit-Protokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1.000 Einträge angezeigt. </li><li>Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen** aus.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Audit-Protokolle</a> auf Experience League.</li></ul>"
 
 Sie können Audit-Protokolle für verschiedene Experience Platform-Funktionen im Arbeitsbereich **[!UICONTROL Audits]** in der Experience Platform-Benutzeroberfläche anzeigen. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
 
@@ -114,7 +114,7 @@ Die folgenden Filter sind für Audit-Ereignisse in der Benutzeroberfläche verf�
 | [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach ([) ](#category) filtern. |
 | [!UICONTROL Aktion] | Nach Aktion filtern. Die für jeden Service verfügbaren Aktionen finden Sie in der oben stehenden Ressourcentabelle. |
 | [!UICONTROL Benutzer] | Geben Sie die vollständige Benutzer-ID ein (z. B. `johndoe@acme.com`), um nach Benutzer zu filtern. |
-| [!UICONTROL Status] | Filtern von Audit-Ereignissen nach Ergebnis: erfolgreich, fehlgeschlagen, zulässig oder verweigert aufgrund fehlender [Zugriffskontrolle](../../../access-control/home.md)-Berechtigungen. Für eine ausgeführte Aktion zeigen die Hauptereignisse [!UICONTROL Zulassen] oder [!UICONTROL Ablehnen]. Wenn das Hauptereignis &quot;[!UICONTROL &quot; &#x200B;], wurden möglicherweise ein oder mehrere erweiterte Ereignisse mit &quot;**[!UICONTROL &quot;]** &quot;**[!UICONTROL &quot;]**. Beispielsweise wird bei einer erfolgreichen Aktion &quot;[!UICONTROL &quot; &#x200B;] Hauptereignis und &quot;[!UICONTROL &quot; &#x200B;] angehängten erweiterten Ereignis angezeigt. |
+| [!UICONTROL Status] | Filtern von Audit-Ereignissen nach Ergebnis: erfolgreich, fehlgeschlagen, zulässig oder verweigert aufgrund fehlender [Zugriffskontrolle](../../../access-control/home.md)-Berechtigungen. Für eine ausgeführte Aktion zeigen die Hauptereignisse [!UICONTROL Zulassen] oder [!UICONTROL Ablehnen]. Wenn das Hauptereignis &quot;[!UICONTROL &quot; ], wurden möglicherweise ein oder mehrere erweiterte Ereignisse mit &quot;**[!UICONTROL &quot;]** &quot;**[!UICONTROL &quot;]**. Beispielsweise wird bei einer erfolgreichen Aktion &quot;[!UICONTROL &quot; ] Hauptereignis und &quot;[!UICONTROL &quot; ] angehängten erweiterten Ereignis angezeigt. |
 | [!UICONTROL Datum] | Wählen Sie ein Start- und/oder Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. Daten können über einen 90-tägigen Lookback-Zeitraum exportiert werden (z. B. vom 15.12.2021 bis zum 15.03.2022). Dies kann je nach Ereignistyp unterschiedlich sein. |
 
 Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für den betreffenden Filter, oder wählen Sie **[!UICONTROL Alle löschen]** aus, um alle Filter zu entfernen.
@@ -169,7 +169,7 @@ Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können au
 
 ## Verwalten von Auditprotokollen für Adobe Admin Console
 
-Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/de/enterprise/using/audit-logs.html).
+Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
@@ -177,4 +177,4 @@ In diesem Handbuch wurde beschrieben, wie Sie Audit-Protokolle in Experience Pla
 
 Sehen Sie sich das folgende Video an, um Audit-Protokolle in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409524?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

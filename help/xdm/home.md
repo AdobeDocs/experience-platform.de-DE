@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;XDM;XDM-System;XDM Individual Profile;XDM ExperienceEvent;XDM Experience Event;Experience Event;Erlebnisereignis;Feldergruppen;Feldergruppen;Feldergruppe;Feldergruppe;Erlebnisereignis;XDM ExperienceEvent;experienceEvent;experienceEvent;XDM Experienceevent;Experience-Datenmodell;Experience Data Model;Datenmodell;Data Model;Schema Registry;Schema Library;Schemabibliothek;Schema;Datensatzdaten;Zeitreihen;Time Series
+keywords: Experience Platform;Startseite;beliebte Themen;XDM;XDM-System;XDM Individual Profile;XDM ExperienceEvent;XDM Experience Event;Experience Event;Erlebnisereignis;Feldergruppen;Feldergruppen;Feldergruppe;Feldergruppe;Erlebnisereignis;XDM ExperienceEvent;experienceEvent;experienceEvent;XDM Experienceevent;Experience-Datenmodell;Experience Data Model;Datenmodell;Data Model;Schema Registry;Schema Library;Schemabibliothek;Schema;Eintragsdaten;Zeitreihen;Zeitreihen
 solution: Experience Platform
 title: XDM-System – Übersicht
 description: Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemata für das Customer Experience Management.
@@ -53,15 +53,15 @@ Weitere Informationen zur Verwaltung von und Interaktion mit Schemas in Experien
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Datenverhalten"
->abstract="Die zur Verwendung in Experience Platform bestimmten Daten sind in drei Verhaltenstypen unterteilt: Datensatz, Zeitreihen und Ad-hoc-Analysen. Datensatzschemas liefern Informationen über die Attribute eines Subjekts, während Zeitreihenschemata eine Momentaufnahme des Systems zum Zeitpunkt der Durchführung einer Aktion erfassen. Ad-hoc-Schemata erfassen Felder, die Namespaces sind und von nur einem Datensatz verwendet werden können. Weitere Informationen zu Datenverhalten in Experience Platform finden Sie in der Dokumentation."
+>abstract="Die zur Verwendung in Experience Platform bestimmten Daten sind in drei Verhaltenstypen unterteilt: Eintrag, Zeitreihen und Ad-hoc-Analysen. Eintragsschemata liefern Informationen über die Attribute eines Subjekts, während Zeitreihenschemata eine Momentaufnahme des Systems zum Zeitpunkt der Durchführung einer Aktion erfassen. Ad-hoc-Schemata erfassen Felder, die Namespaces sind und von nur einem Datensatz verwendet werden können. Weitere Informationen zu Datenverhalten in Experience Platform finden Sie in der Dokumentation."
 
 Daten, die in Experience Platform verwendet werden können, sind in drei Verhaltenstypen unterteilt:
 
-* **Datensatz**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt kann ein Unternehmen oder eine Person sein.
+* **Eintrag**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt kann ein Unternehmen oder eine Person sein.
 * **Zeitreihe**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
 * **Ad-hoc**: Erfasst Felder, die sich in einem Namespace befinden und nur von einem einzigen Datensatz verwendet werden. Ad-hoc-Schemata werden in verschiedenen Datenaufnahme-Workflows für Experience Platform verwendet, einschließlich der Aufnahme von CSV-Dateien und der Erstellung bestimmter Arten von Quellverbindungen.
 
-Alle XDM-Schemata beschreiben Daten, die als Datensatz oder Zeitreihe kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen beschreiben die Mindestanzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten zu haben.
+Alle XDM-Schemata beschreiben Daten, die als Eintrag oder Zeitreihe kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen beschreiben die Mindestanzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten zu haben.
 
 Obwohl Sie in der [!DNL Schema Registry] Ihre eigenen Klassen definieren können, wird empfohlen, die Standardklassen **[!UICONTROL XDM Individual Profile]** und **[!UICONTROL XDM ExperienceEvent]** für Datensatz- bzw. Zeitreihendaten zu verwenden. Diese Klassen werden weiter unten detaillierter beschrieben.
 
@@ -147,4 +147,4 @@ Um mehr über die Prinzipien und Best Practices beim Erstellen von Schemata zu e
 
 Sehen Sie sich das folgende Video an, um [!DNL XDM System] in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/38505?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

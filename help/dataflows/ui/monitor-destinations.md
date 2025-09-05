@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3622'
 ht-degree: 11%
 
 ---
@@ -65,14 +65,14 @@ In der folgenden Tabelle finden Sie weitere Informationen zu Status:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="Ausgeschlossene Identitäten"
->abstract="Die Anzahl individueller Profildatensätze, die aufgrund fehlender Attribute und Einverständnisverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
+>abstract="Die Anzahl individueller Profileinträge, die aufgrund fehlender Attribute und Einverständnisverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Fehlgeschlagene Identitäten"
 >abstract="Die Anzahl individueller Profilidentitäten, deren Aktivierung für das ausgewählte Ziel fehlgeschlagen ist. Genauere Informationen dazu finden Sie in der Fehlerdiagnose."
 
-Für Streaming-Ziele bietet [!UICONTROL &#x200B; Registerkarte &#x200B;]Datenflussausführungen“ eine stündliche Aktualisierung von Metrikdaten in Ihren Datenflussausführungen. Die bekanntesten Statistiken sind Identitäten.
+Für Streaming-Ziele bietet [!UICONTROL  Registerkarte ]Datenflussausführungen“ eine stündliche Aktualisierung von Metrikdaten in Ihren Datenflussausführungen. Die bekanntesten Statistiken sind Identitäten.
 
 Identitäten stellen die verschiedenen Facetten eines Profils dar. Wenn beispielsweise ein Profil sowohl eine Telefonnummer als auch eine E-Mail-Adresse enthält, hat dieses Profil zwei Identitäten.
 
@@ -86,10 +86,10 @@ Eine Liste einzelner Ausführungen und ihrer jeweiligen Metriken wird zusammen m
 
 Jede einzelne Datenflussausführung zeigt die folgenden Details:
 
-- **[!UICONTROL Start der Datenflussausführung]**: Der Zeitpunkt, zu dem die Datenflussausführung gestartet wurde. Bei Streaming-Datenflussausführungen erfasst Experience Platform Metriken in Form stündlicher Metriken, die auf dem Beginn der Datenflussausführung basieren. Das bedeutet, dass für Streaming-Datenflussausführungen, wenn eine Datenflussausführung gestartet wurde, z. B. um 22:30 Uhr, die Metrik die Startzeit in der Benutzeroberfläche als 22:00 Uhr anzeigt.
+- **[!UICONTROL Start der Datenflussausführung]**: Der Zeitpunkt, zu dem die Datenflussausführung gestartet wurde. Bei Streaming-Datenflussausführungen erfasst Experience Platform Metriken in Form stündlicher Metriken, die auf dem Beginn der Datenflussausführung basieren. Das bedeutet, dass für Streaming-Datenflussausführungen, wenn eine Datenflussausführung z. B. um 10 Uhr :30PM hat, die Metrik die Startzeit in der Benutzeroberfläche :00 23 Uhr anzeigt.
 - **[!UICONTROL Verarbeitungszeit]**: Die Zeit, die für die Verarbeitung der Datenflussausführung benötigt wurde.
    - Bei **[!UICONTROL abgeschlossenen]** Ausführungen zeigt die Metrik Verarbeitungszeit immer eine Stunde an.
-   - Bei Datenflussausführungen, die sich noch im Status **[!UICONTROL Verarbeitung]** befinden, bleibt das Fenster zur Erfassung aller Metriken länger als eine Stunde geöffnet, um alle Metriken zu verarbeiten, die der Datenflussausführung entsprechen. Beispielsweise kann eine Datenflussausführung, die um 9:30 Uhr gestartet wurde, eine Stunde und dreißig Minuten lang in einem Verarbeitungsstatus bleiben, um alle Metriken zu erfassen und zu verarbeiten. Sobald das Verarbeitungsfenster geschlossen ist und der Status der Datenflussausführung auf &quot;**&quot; aktualisiert**, wird die angezeigte Verarbeitungszeit auf eine Stunde geändert.
+   - Bei Datenflussausführungen, die sich noch im Status **[!UICONTROL Verarbeitung]** befinden, bleibt das Fenster zur Erfassung aller Metriken länger als eine Stunde geöffnet, um alle Metriken zu verarbeiten, die der Datenflussausführung entsprechen. Beispielsweise kann eine Datenflussausführung, die um 9 Uhr :30 begann, eine Stunde und dreißig Minuten lang in einem Verarbeitungsstatus bleiben, um alle Metriken zu erfassen und zu verarbeiten. Sobald das Verarbeitungsfenster geschlossen ist und der Status der Datenflussausführung auf &quot;**&quot; aktualisiert**, wird die angezeigte Verarbeitungszeit auf eine Stunde geändert.
 - **[!UICONTROL Empfangene Profile]**: Die Gesamtzahl der im Datenfluss empfangenen Profile.
 - **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der Profilidentitäten, die im Rahmen der Datenflussausführung erfolgreich für das ausgewählte Ziel aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
 - **[!UICONTROL Identitäten ausgeschlossen]**: Die Gesamtzahl der Profilidentitäten, die aufgrund fehlender Attribute und Einverständnisverletzungen von der Aktivierung ausgeschlossen sind.
@@ -174,9 +174,9 @@ Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist derzeit nur für 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Ausgeschlossene Identitäten"
->abstract="Die Anzahl individueller Profildatensätze, die aufgrund fehlender Attribute und Einverständnisverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
+>abstract="Die Anzahl individueller Profileinträge, die aufgrund fehlender Attribute und Einverständnisverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
 
-Für Batch-Ziele [!UICONTROL &#x200B; die Registerkarte &#x200B;]Datenflussausführungen“ Metrikdaten zu Ihren Datenflussausführungen. Eine Liste einzelner Ausführungen und ihrer jeweiligen Metriken wird zusammen mit den folgenden Summen für Identitäten angezeigt:
+Für Batch-Ziele [!UICONTROL  die Registerkarte ]Datenflussausführungen“ Metrikdaten zu Ihren Datenflussausführungen. Eine Liste einzelner Ausführungen und ihrer jeweiligen Metriken wird zusammen mit den folgenden Summen für Identitäten angezeigt:
 
 - **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der für das ausgewählte Ziel erfolgreich aktivierten Profilidentitäten. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
 - **[!UICONTROL Identitäten ausgeschlossen]**: Die Anzahl individueller Profilidentitäten, die von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind, basierend auf fehlenden Attributen und einer Einverständnisverletzung.
@@ -233,7 +233,7 @@ Sie können auch im Monitoring-Dashboard umfangreiche Informationen zu einem bes
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
->title="Activation"
+>title="Aktivierung"
 >abstract="Die Zielaktivierungsansicht enthält Informationen zum Aktivierungsstatus einer Zielgruppe und Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren."
 
 Um auf das Dashboard [!UICONTROL Monitoring] zuzugreifen, wählen Sie **[!UICONTROL Monitoring]** (![Monitoring icon](/help/images/icons/monitoring.png)) in der linken Navigationsleiste aus. Wählen Sie auf der [!UICONTROL Überwachung] die Option [!UICONTROL Ziele] aus. Das [!UICONTROL Monitoring]-Dashboard enthält Metriken und Informationen zu den Zielausführungsvorgängen.

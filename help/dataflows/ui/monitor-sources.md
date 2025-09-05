@@ -4,7 +4,7 @@ title: Überwachen der Data Lake-Aufnahme
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1461'
 ht-degree: 15%
 
 ---
@@ -35,13 +35,13 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Quellaufnahme"
->abstract="Die Quellaufnahmen-Ansicht enthält Informationen zum Status der Datenaktivität und zu Metriken im Data-Lake-Dienst, einschließlich der aufgenommenen und fehlgeschlagenen Datensätze. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition."
+>abstract="Die Quellaufnahmen-Ansicht enthält Informationen zum Status der Datenaktivität und zu Metriken im Data-Lake-Dienst, einschließlich der aufgenommenen und fehlgeschlagenen Einträge. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="Details zur Datenflussausführung"
->abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data-Lake-Dienst, einschließlich der aufgenommenen und fehlgeschlagenen Datensätze. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition."
+>abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data-Lake-Dienst, einschließlich der aufgenommenen und fehlgeschlagenen Einträge. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition."
 >text="Learn more in documentation"
 
 Wählen **[!UICONTROL Data Lake]** aus der Hauptkopfzeile im Monitoring-Dashboard aus, um Ihre Data-Lake-Aufnahmerate anzuzeigen.
@@ -66,7 +66,7 @@ Im unteren Teil des Dashboards wird eine Tabelle angezeigt, die den aktuellen Me
 | Übersprungene Einträge | Die Gesamtzahl der übersprungenen Datensätze. Ein übersprungener Datensatz bezieht sich auf Felder, die übersprungen wurden, weil sie für die Aufnahme nicht erforderlich waren. Wenn Sie beispielsweise einen Quelldatenfluss mit aktivierter partieller Aufnahme erstellen, können Sie einen akzeptablen Schwellenwert für die Fehlerrate konfigurieren. Während des Aufnahmevorgangs überspringt die Aufnahme Datensätze von Feldern, die nicht erforderlich sind, z. B. Identitätsfelder, solange sie sich innerhalb des Fehlerschwellenwerts befinden. |
 | Fehlgeschlagene Einträge | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern nicht aufgenommen werden konnten. |
 | Aufgenommene Rate | Der Prozentsatz der aufgenommenen Datensätze auf der Basis der Gesamtzahl der empfangenen Datensätze. |
-| Insgesamt fehlgeschlagene Datenflüsse | Die Gesamtzahl der fehlgeschlagenen Datenflüsse. |
+| Fehlgeschlagene Datenflüsse insgesamt | Die Gesamtzahl der fehlgeschlagenen Datenflüsse. |
 
 {style="table-layout:auto"}
 
@@ -106,7 +106,7 @@ Um einen Datenfluss weiter zu untersuchen, wählen Sie das Filtersymbol (![) ](/
 
 Als Nächstes gelangen Sie zu einer Schnittstelle, die alle Iterationen der Datenflussausführung des ausgewählten Datenflusses auflistet.
 
-Datenflussausführungen stellen eine Instanz der Datenflussausführung dar. Wenn ein Datenfluss beispielsweise so geplant ist, dass er stündlich um 9:00 Uhr, 10:00 Uhr und 11:00 Uhr ausgeführt wird, gibt es drei Instanzen eines Flussdurchgangs. Flussausführungen sind spezifisch für Ihre bestimmte Organisation.
+Datenflussausführungen stellen eine Instanz der Datenflussausführung dar. Wenn ein Datenfluss beispielsweise so geplant ist, dass er stündlich um 9 :00, :00 Uhr und :00 Uhr morgens ausgeführt wird, gibt es drei Instanzen eines Flussdurchgangs. Flussausführungen sind spezifisch für Ihre bestimmte Organisation.
 
 Um Metriken einer bestimmten Iteration der Datenflussausführung zu überprüfen, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben Ihrem Datenfluss aus.
 
@@ -135,7 +135,7 @@ Auf der Seite mit den Datenflussausführungs-Details können Sie Metriken und In
 
 {style="table-layout:auto"}
 
-Wenn bei der Datenflussausführung Fehler auftreten, können Sie über die Benutzeroberfläche „Datenflussausführungsfehler[!UICONTROL &#x200B; einen Bildlauf nach unten &#x200B;].
+Wenn bei der Datenflussausführung Fehler auftreten, können Sie über die Benutzeroberfläche „Datenflussausführungsfehler[!UICONTROL  einen Bildlauf nach unten ].
 
 Verwenden Sie den Abschnitt [!UICONTROL Fehlgeschlagene Datensätze] um Metriken zu Datensätzen anzuzeigen, die aufgrund von Fehlern nicht aufgenommen wurden. Um einen umfassenden Fehlerbericht anzuzeigen, wählen Sie **[!UICONTROL Fehlerdiagnose in der Vorschau anzeigen]**. Um eine Kopie Ihrer Fehlerdiagnose und Ihres Dateimanifests herunterzuladen, wählen Sie **[!UICONTROL Herunterladen]** und kopieren Sie dann den Beispiel-API-Aufruf, der mit der [!DNL Data Access]-API verwendet werden soll.
 

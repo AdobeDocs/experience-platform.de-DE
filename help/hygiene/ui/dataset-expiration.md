@@ -13,8 +13,8 @@ ht-degree: 49%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="Löschen unerwünschter oder abgelaufener Kundendatensätze"
->abstract="<h2>Beschreibung</h2><p>Um den Lebenszyklus der Experience Platform-Daten unabhängig von der Einhaltung gesetzlicher Vorschriften zu verwalten, können Kundendatensätze gelöscht und Ablaufdaten für Datensätze geplant werden. Informationen zum Erstellen oder Verwalten von Anfragen betroffener Personen sind im Abschnitt über den Anwendungsfall „Berücksichtigen von Datenschutzanträgen betroffener Personen“ zu finden.</p>"
+>title="Löschen unerwünschter oder abgelaufener Kundeneinträge und -datensätze"
+>abstract="<h2>Beschreibung</h2><p>Um den Lebenszyklus der Experience Platform-Daten unabhängig von der Einhaltung gesetzlicher Vorschriften zu verwalten, können Kundeneinträge gelöscht und Ablaufdaten für Datensätze geplant werden. Informationen zum Erstellen oder Verwalten von Anfragen betroffener Personen sind im Abschnitt über den Anwendungsfall „Berücksichtigen von Datenschutzanträgen betroffener Personen“ zu finden.</p>"
 
 Der [[!UICONTROL Datenlebenszyklus]-Arbeitsbereich](./overview.md) in der Adobe Experience Platform-Benutzeroberfläche ermöglicht Ihnen, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als abgeschlossen markiert.
 
@@ -39,7 +39,7 @@ Advanced Data Lifecycle Management unterstützt das Löschen von Datensätzen ü
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Anweisungen"
->abstract="<ul><li>Wählen Sie im linken Navigationsbereich <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=de">Datenlebenszyklus</a> und anschließend die Option <b>Anfrage erstellen</b> aus.</li><li>Wenn Sie Datensätze löschen möchten:</li>   <li>Wählen Sie <b>Datensatz</b> aus.</li>   <li>Wählen Sie einen bestimmten Datensatz aus, aus dem Datensätze gelöscht werden sollen, oder wählen Sie die Option aus, sie aus allen Datensätzen zu löschen.</li>   <li>Geben Sie die Identitäten der Personen an, deren Datensätze gelöscht werden sollen. Wählen Sie <b>Identität hinzufügen</b> aus, um die Identitäten einzeln anzugeben, oder wählen Sie <b>Dateien auswählen</b> aus, um stattdessen eine JSON-Datei mit Identitäten hochzuladen.</li>   <li>Wählen Sie bei Bedarf <b>Vorlage</b> aus, um das erwartete Format der JSON-Datei anzuzeigen.</li><li>Anweisungen zum <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=de#schedule-dataset-expiration">Planen von Ablaufdaten für Datensätze</a> finden Sie in der Dokumentation.</li></ul>"
+>abstract="<ul><li>Wählen Sie im linken Navigationsbereich <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=de">Datenlebenszyklus</a> und anschließend die Option <b>Anfrage erstellen</b> aus.</li><li>Wenn Sie Einträge löschen möchten:</li>   <li>Wählen Sie <b>Eintrag</b> aus.</li>   <li>Wählen Sie einen bestimmten Datensatz aus, aus dem Einträge gelöscht werden sollen, oder wählen Sie die Option aus, sie aus allen Datensätzen zu löschen.</li>   <li>Geben Sie die Identitäten der Personen an, deren Einträge gelöscht werden sollen. Wählen Sie <b>Identität hinzufügen</b> aus, um die Identitäten einzeln anzugeben, oder wählen Sie <b>Dateien auswählen</b> aus, um stattdessen eine JSON-Datei mit Identitäten hochzuladen.</li>   <li>Wählen Sie bei Bedarf <b>Vorlage</b> aus, um das erwartete Format der JSON-Datei anzuzeigen.</li><li>Anweisungen zum <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=de#schedule-dataset-expiration">Planen von Ablaufdaten für Datensätze</a> finden Sie in der Dokumentation.</li></ul>"
 
 Um eine Anfrage zu erstellen, wählen **[!UICONTROL auf der Hauptseite]** Arbeitsbereich die Option „Anfrage erstellen“ aus.
 
@@ -47,7 +47,7 @@ Um eine Anfrage zu erstellen, wählen **[!UICONTROL auf der Hauptseite]** Arbeit
 >
 >Für Real-Time CDP-, Adobe Journey Optimizer- und Customer Journey Analytics-Benutzer stehen 20 Arbeitsaufträge zur Gültigkeit von Datensätzen aus. Benutzende von Healthcare Shield und Privacy and Security Shield haben 50 geplante Arbeitsaufträge zur Gültigkeit von Datensätzen. Das bedeutet, dass Sie 20 oder 50 Datensätze gleichzeitig löschen können.<br>Wenn Sie beispielsweise 20 geplante Datensatzgültigkeiten haben und ein Datensatz morgen gelöscht werden soll, können Sie keine weiteren Gültigkeiten festlegen, bis dieser Datensatz gelöscht wurde.
 
-![Der Arbeitsbereich [!UICONTROL Datenlebenszyklus] mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;]Anfrage erstellen“](../images/ui/ttl/create-request-button.png)
+![Der Arbeitsbereich [!UICONTROL Datenlebenszyklus] mit [!UICONTROL  hervorgehobenen ]Anfrage erstellen“](../images/ui/ttl/create-request-button.png)
 
 Der Workflow zur Anfrageerstellung wird angezeigt. Wählen Sie im Abschnitt [!UICONTROL Angeforderte Aktion] die Option **[!UICONTROL Datensatz löschen]** aus, um die Steuerelemente für die Planung der Datensatzgültigkeit zu aktualisieren.
 

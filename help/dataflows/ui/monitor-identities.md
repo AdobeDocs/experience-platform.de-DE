@@ -29,7 +29,7 @@ Das Monitoring-Dashboard bietet Ihnen eine visuelle Darstellung der Datenaktivit
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Identitätsverarbeitung"
->abstract="Die Identitätsverarbeitungs-Ansicht enthält Informationen zu den Datensätzen, die in den Identity Service aufgenommen werden, einschließlich der Anzahl der hinzugefügten Identitäten sowie der erstellten und aktualisierten Diagramme. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition."
+>abstract="Die Identitätsverarbeitungs-Ansicht enthält Informationen zu den Einträgen, die in den Identity Service aufgenommen werden, einschließlich der Anzahl der hinzugefügten Identitäten sowie der erstellten und aktualisierten Diagramme. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -91,7 +91,7 @@ Wählen Sie das Filtersymbol ![filter](/help/images/icons/filter.png) neben der 
 
 ![Das Filtersymbol ist hervorgehoben. Durch Auswahl dieses Symbols können Sie Details zum ausgewählten Datenfluss anzeigen.](../assets/ui/monitor-identities/dataflows-filter.png)
 
-Auf [!UICONTROL &#x200B; Seite „Datenflussausführungs-]&quot; werden weitere Informationen zur Ausführung des [!DNL Identity]-Datenflusses angezeigt, einschließlich der Organisations-ID und der Datenflussausführungs-ID. Auf dieser Seite werden auch der entsprechende Fehlercode und die Fehlermeldung angezeigt, die von [!DNL Identity Service] bereitgestellt werden, falls während des Aufnahmevorgangs Fehler auftreten.
+Auf [!UICONTROL  Seite „Datenflussausführungs-]&quot; werden weitere Informationen zur Ausführung des [!DNL Identity]-Datenflusses angezeigt, einschließlich der Organisations-ID und der Datenflussausführungs-ID. Auf dieser Seite werden auch der entsprechende Fehlercode und die Fehlermeldung angezeigt, die von [!DNL Identity Service] bereitgestellt werden, falls während des Aufnahmevorgangs Fehler auftreten.
 
 ![Ein Dashboard mit detaillierten Informationen zum ausgewählten Datenfluss wird angezeigt.](../assets/ui/monitor-identities/dataflow-run-details.png)
 
