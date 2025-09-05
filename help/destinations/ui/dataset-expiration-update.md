@@ -3,9 +3,9 @@ title: Erweitern der Zeitpläne für den Datensatzexport für Datenflüsse, die 
 description: Erfahren Sie, wie Sie den Exportzeitplan für Datensatzexport-Datenflüsse verlängern, die vor November 2024 erstellt wurden und am 1. September 2025 nicht mehr funktionieren.
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
-source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
+source-git-commit: 0da592dd2846ed0f1eeb31102842c8895cac6952
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Bevor Sie den Exportzeitplan für Ihre Datensatzexport-Datenflüsse verlängern,
    >
    >Verwenden Sie den **[!UICONTROL Datentypen]** Filter auf der linken Seite des Katalogs, um verfügbare Ziele nach **[!UICONTROL Datensätzen]** zu filtern.
 
-3. Wählen Sie **[!UICONTROL Datentyp]**&#x200B;Datensätze“ aus, um nur die Datenflüsse mit Datensatzexporten anzuzeigen.
+3. Wählen Sie **[!UICONTROL Datentyp]**Datensätze“ aus, um nur die Datenflüsse mit Datensatzexporten anzuzeigen.
    ![Screenshot, der zeigt, wie Datenflüsse nach Datentyp gefiltert werden.](/help/destinations/assets/ui/export-datasets/dataset-type.png)
 4. Wählen Sie die Spaltenüberschrift **[!UICONTROL Erstellt]** und dann **[!UICONTROL Aufsteigend sortieren]**, um ältere Datenflüsse anzuzeigen.
    ![Screenshot, der zeigt, wie Datenflüsse in aufsteigender Reihenfolge sortiert werden.](/help/destinations/assets/ui/export-datasets/sort-ascending.png)
@@ -87,8 +87,6 @@ Jetzt können Sie den Exportzeitplan ändern, um ihn über den 1. September 2025
 
 ## Was passiert, wenn ich die Frist vom 1. September 2025 verpasse? {#missed-deadline}
 
-Wenn Ihre Datenflüsse für den Datensatzexport am 1. September 2025 ablaufen und Sie ihre Zeitpläne nicht verlängert haben, gibt es eine **30-tägige Übergangsphase** in der Sie sich an Adobe wenden können, um Ihre Datenflüsse ohne Datenverlust wieder zu aktivieren. Dazu gehören Daten, die zwischen dem 1. September und dem Datum der Kontaktaufnahme mit Adobe nicht exportiert wurden.
+Wenn Ihre Datenflüsse für den Datensatzexport am 1. September 2025 abgelaufen sind und Sie sie dennoch verlängern möchten, führen Sie die Schritte in den obigen Abschnitten aus, um ihren Zeitplan zu verlängern.
 
->[!IMPORTANT]
->
->Adobe bietet diese Übergangsphase. Wir empfehlen jedoch dringend, Ihre Zeitpläne vor dem 1. September 2025 zu verlängern, um einen unterbrechungsfreien Datenexport sicherzustellen und mögliche Service-Unterbrechungen zu vermeiden.
+Wenn Sie den Exportzeitplan innerhalb von 30 Tagen erweitern (oder weniger, wenn der [Time-to-Live-Satz im exportierten Datensatz](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) weniger als 30 Tage beträgt), können Sie trotzdem eine Aufstockung der Daten erhalten, die zwischen dem 1. September und dem Datum, an dem Sie den Export erneut aktivieren, nicht exportiert wurden. Bei der Festlegung einer neuen Endzeit *zuerst* vollständiger Dateiexport erfolgen. Stattdessen werden die Exporte schrittweise von dort aus fortgesetzt, wo sie am 1. September aufgehört haben.
