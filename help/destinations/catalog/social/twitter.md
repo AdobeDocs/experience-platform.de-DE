@@ -32,7 +32,7 @@ Bevor Sie Ihr [!DNL Twitter Custom Audiences]-Ziel konfigurieren, sollten Sie di
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Twitter Custom Audiences] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+[!DNL Twitter Custom Audiences] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#getting-started).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
