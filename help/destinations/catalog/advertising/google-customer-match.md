@@ -3,9 +3,9 @@ keywords: Google Customer Match; Google Customer Match; Google Customer Match
 title: Google Customer Match-Verbindung
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kundinnen und Kunden in den von Google verwalteten und betriebenen Eigenschaften wie Search, Shopping und Gmail zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
+source-git-commit: 4541e812ac1f44b5374b81685c1e41cb7f00993f
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2451'
 ht-degree: 15%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 15%
 >[!IMPORTANT]
 >
 > Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) und der [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview), um die Compliance- und Zustimmungsanforderungen zu unterstützen, die im [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union definiert sind ([EU-Richtlinie zur ](https://www.google.com/about/company/user-consent-policy/)). Die Durchsetzung dieser Änderungen an den Einverständnisanforderungen ist ab dem 6. März 2024 aktiv.
-><br/>
->Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Adobe Ihnen die erforderlichen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
-><br/>
->Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie“ ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) haben, um nicht einverstandene Profile herauszufiltern, müssen keine Maßnahmen ergreifen.
-><br/>
->Kunden, die Adobe Privacy &amp; Security Shield nicht erworben haben, müssen die [Segmentdefinition](../../../segmentation/home.md#segment-definitions)-Funktionen in [Segment Builder](../../../segmentation/ui/segment-builder.md) verwenden, um nicht einverstandene Profile herauszufiltern, damit die bestehenden Real-Time CDP Google-Ziele ohne Unterbrechung weiter verwendet werden können.
+> ><br/>
+> >Um die EU-Richtlinie zur Benutzerzustimmung einzuhalten und weiterhin Zielgruppenlisten für Nutzer im Europäischen Wirtschaftsraum (EWR) zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Zustimmung der Endnutzer weitergeben. Als Google-Partner stellt Adobe Ihnen die erforderlichen Tools zur Verfügung, um diese Zustimmungsanforderungen gemäß dem DMA in der Europäischen Union zu erfüllen.
+> ><br/>
+> >Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie“ ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) haben, um nicht einverstandene Profile herauszufiltern, müssen keine Maßnahmen ergreifen.
+> ><br/>
+> >Kunden, die Adobe Privacy &amp; Security Shield nicht erworben haben, müssen die [Segmentdefinition](../../../segmentation/home.md#segment-definitions)-Funktionen in [Segment Builder](../../../segmentation/ui/segment-builder.md) verwenden, um nicht einverstandene Profile herauszufiltern, damit die bestehenden Real-Time CDP Google-Ziele ohne Unterbrechung weiter verwendet werden können.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften wie [!DNL Search], [!DNL Shopping] und [!DNL Gmail] zu erreichen und erneut mit ihnen zu interagieren.
 
@@ -96,7 +96,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Bevor Sie ein [!DNL Google Customer Match] Ziel in Experience Platform einrichten, stellen Sie sicher, dass Sie die Richtlinie von Google zur Verwendung von [!DNL Customer Match] lesen und befolgen, die in der [Dokumentation zum Google-Support beschrieben ](https://support.google.com/google-ads/answer/6299717).
 
-Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine [!DNL Standard] oder höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der Dokumentation zu {[&#128279;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)}Google Ads .
+Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine [!DNL Standard] oder höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der Dokumentation zu {[}Google Ads .](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)
 
 ### Zulassungsliste {#allowlist}
 
@@ -139,13 +139,13 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 
 ### Hashing-Anforderungen für Felder adressieren {#address-field-hashing}
 
-Beim Zuordnen von adressbezogenen Feldern zu [!DNL Google Customer Match] **Experience Platform die `address_info_first_name`- und `address_info_last_name`-Werte** automatisch hasht, bevor sie an Google gesendet werden. Dieser automatische Hash ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Google zu erfüllen.
+Beim Zuordnen von adressbezogenen Feldern zu [!DNL Google Customer Match] **Experience Platform die**- und `address_info_first_name`-Werte `address_info_last_name` automatisch hasht, bevor sie an Google gesendet werden. Dieser automatische Hash ist erforderlich, um die Sicherheits- und Datenschutzanforderungen von Google zu erfüllen.
 
 Geben **nicht** vorab gehashte Werte für `address_info_first_name` oder `address_info_last_name` an. Wenn Sie bereits Hash-Werte angeben, schlägt der Abgleichprozess fehl.
 
 ### Verwenden benutzerdefinierter Namespaces {#custom-namespaces}
 
-Bevor Sie den `User_ID`-Namespace zum Senden von Daten an Google verwenden können, müssen Sie Ihre eigenen Kennungen mithilfe von [!DNL gTag] synchronisieren. Detaillierte Informationen finden Sie in der offiziellen Dokumentation [&#128279;](https://support.google.com/google-ads/answer/9199250) Google .
+Bevor Sie den `User_ID`-Namespace zum Senden von Daten an Google verwenden können, müssen Sie Ihre eigenen Kennungen mithilfe von [!DNL gTag] synchronisieren. Detaillierte Informationen finden Sie in der offiziellen Dokumentation [ ](https://support.google.com/google-ads/answer/9199250)Google .
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
@@ -162,7 +162,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 Sehen Sie sich das folgende Video an, um eine Erläuterung der Vorteile und der Aktivierung von Daten für den Google-Kundenabgleich zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/326485?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -180,6 +180,10 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für diese Zielverbindung an.
 * **[!UICONTROL Konto-]**: Ihre [Google Ads-Kunden-ID](https://support.google.com/google-ads/answer/1704344?hl=en). Das Format der ID lautet xxx-xxx-xxxx. Wenn Sie die [!DNL Google Ads Manager Account (My Client Center)] verwenden, verwenden Sie nicht Ihre Manager-Konto-ID. Verwenden Sie stattdessen die [Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en)Kunden-ID.
 
+>[!NOTE]
+>
+>Während des OAuth2-Verbindungsprozesses wird möglicherweise &quot;Marketo Test“ als Google OAuth-Projektname angezeigt. Dies ist ein normales Verhalten, da Adobe diesen Projektnamen für die Google Customer Match-Integration verwendet. Dies hat keine Auswirkungen auf Ihre Zielkonfiguration.
+
 >[!IMPORTANT]
 >
 > * Die **[!UICONTROL Mit PII kombinieren]** Marketing-Aktion ist für das [!DNL Google Customer Match] Ziel standardmäßig ausgewählt und kann nicht entfernt werden.
@@ -194,7 +198,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* an Ziele benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions) <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
@@ -256,4 +260,4 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#google-account-prerequisites) nicht erfüllen. Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für eine [!DNL Standard] oder höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der Dokumentation zu {[&#128279;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)}Google Ads .
+Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#google-account-prerequisites) nicht erfüllen. Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für eine [!DNL Standard] oder höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der Dokumentation zu {[}Google Ads .](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)
