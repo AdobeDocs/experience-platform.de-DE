@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
+source-git-commit: 9d92999df8e35ac6223986ece8a98af72ab6ace8
 workflow-type: tm+mt
-source-wordcount: '3622'
+source-wordcount: '3623'
 ht-degree: 11%
 
 ---
@@ -72,7 +72,7 @@ In der folgenden Tabelle finden Sie weitere Informationen zu Status:
 >title="Fehlgeschlagene Identitäten"
 >abstract="Die Anzahl individueller Profilidentitäten, deren Aktivierung für das ausgewählte Ziel fehlgeschlagen ist. Genauere Informationen dazu finden Sie in der Fehlerdiagnose."
 
-Für Streaming-Ziele bietet [!UICONTROL &#x200B; Registerkarte &#x200B;]Datenflussausführungen“ eine stündliche Aktualisierung von Metrikdaten in Ihren Datenflussausführungen. Die bekanntesten Statistiken sind Identitäten.
+Für Streaming-Ziele bietet [!UICONTROL  Registerkarte ]Datenflussausführungen“ eine stündliche Aktualisierung von Metrikdaten in Ihren Datenflussausführungen. Die bekanntesten Statistiken sind Identitäten.
 
 Identitäten stellen die verschiedenen Facetten eines Profils dar. Wenn beispielsweise ein Profil sowohl eine Telefonnummer als auch eine E-Mail-Adresse enthält, hat dieses Profil zwei Identitäten.
 
@@ -176,7 +176,7 @@ Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist derzeit nur für 
 >title="Ausgeschlossene Identitäten"
 >abstract="Die Anzahl individueller Profileinträge, die aufgrund fehlender Attribute und Einverständnisverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
 
-Für Batch-Ziele [!UICONTROL &#x200B; die Registerkarte &#x200B;]Datenflussausführungen“ Metrikdaten zu Ihren Datenflussausführungen. Eine Liste einzelner Ausführungen und ihrer jeweiligen Metriken wird zusammen mit den folgenden Summen für Identitäten angezeigt:
+Für Batch-Ziele [!UICONTROL  die Registerkarte ]Datenflussausführungen“ Metrikdaten zu Ihren Datenflussausführungen. Eine Liste einzelner Ausführungen und ihrer jeweiligen Metriken wird zusammen mit den folgenden Summen für Identitäten angezeigt:
 
 - **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der für das ausgewählte Ziel erfolgreich aktivierten Profilidentitäten. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
 - **[!UICONTROL Identitäten ausgeschlossen]**: Die Anzahl individueller Profilidentitäten, die von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind, basierend auf fehlenden Attributen und einer Einverständnisverletzung.
@@ -327,11 +327,27 @@ Sie aktivieren beispielsweise eine Zielgruppe mit dem Namen „Mitglieder des Tr
 >
 >- Die Ansicht auf Zielgruppenebene ist derzeit für die unten aufgeführten Ziele verfügbar. Der Rollout ist für weitere Streaming-Ziele geplant.
 >
->   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
->   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
->   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
->   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL (API) Oracle Eloqua] -Verbindung](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+>   - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+>   - [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+>   - [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+>   - [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+>   - [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+>   - [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+>   - [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+>   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+>   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+>   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+>   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - Batch-Ziele (dateibasiert)
 > 
 >- Für Batch-Ziele werden Metriken auf Zielgruppenebene derzeit nur für erfolgreiche Datenflussausführungen aufgezeichnet. Sie werden nicht für fehlgeschlagene Datenflussdurchgänge und ausgeschlossene Datensätze aufgezeichnet. Bei Datenflussausführungen zu Streaming-Zielen werden Metriken für aktivierte und ausgeschlossene Datensätze erfasst und angezeigt.
