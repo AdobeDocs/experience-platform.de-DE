@@ -4,9 +4,9 @@ title: Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Ser
 description: Erfahren Sie, wie Sie mit der Flow Service-API Dateien mit qualifizierten Profilen in Cloud-Speicher-Ziele exportieren können.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
 workflow-type: tm+mt
-source-wordcount: '4763'
+source-wordcount: '4911'
 ht-degree: 9%
 
 ---
@@ -50,14 +50,14 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] können Sie aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen erstellen und Zielgruppen in [!DNL Adobe Experience Platform] generieren.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] können Sie aus Ihren [!DNL Adobe Experience Platform]-Daten Zielgruppen erstellen und Zielgruppen in [!DNL Real-Time Customer Profile] generieren.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Daten für dateibasierte Ziele in Experience Platform zu aktivieren.
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Exportieren von Profilen benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **&#x200B;**&#x200B;Segmente anzeigen[Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+Zum Exportieren von Profilen benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **** Segmente anzeigen[Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
@@ -102,7 +102,7 @@ Bevor Sie den Workflow zum Exportieren von Profilen starten, identifizieren Sie 
 | Ziel | Verbindungsspezifikation | Flussspezifikation |
 ---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
-| Azur Blob-Speicherung | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
+| Azur Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
 | Azure Data Lake Gen2 (ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
 | Data Landing Zone (DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
 | Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
@@ -1137,7 +1137,7 @@ Optional können Sie Ihren exportierten Dateien eine Verschlüsselung hinzufüge
             ]
 ```
 
-+++
++++ 
 
 **Anfrage**
 
@@ -1202,7 +1202,7 @@ Notieren Sie die Verbindungs-ID aus der Antwort. Diese ID ist im nächsten Schri
 
 Als Nächstes müssen Sie eine Zielverbindung erstellen. [Zielgruppenverbindungen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) speichern die Exportparameter für die exportierten Zielgruppen. Zu den Exportparametern gehören Exportspeicherort, Dateiformat, Komprimierung und andere Details. Für CSV-Dateien können Sie beispielsweise mehrere Exportoptionen auswählen. Weitere Informationen zu allen unterstützten CSV-Exportoptionen finden Sie auf der Seite [Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-Die unterstützten Eigenschaften für jeden Zieltyp werden in den im -`connection spec` des Ziels bereitgestellten `targetSpec`-Eigenschaften beschrieben. Auf den folgenden Registerkarten finden Sie die `targetSpec` Eigenschaften aller unterstützten Ziele.
+Die unterstützten Eigenschaften für jeden Zieltyp werden in den im -`targetSpec` des Ziels bereitgestellten `connection spec`-Eigenschaften beschrieben. Auf den folgenden Registerkarten finden Sie die `targetSpec` Eigenschaften aller unterstützten Ziele.
 
 >[!BEGINTABS]
 
@@ -2422,7 +2422,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec id
@@ -2456,6 +2457,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2514,7 +2516,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "container": "your-container-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec id
@@ -2548,6 +2551,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2605,7 +2609,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec id
@@ -2639,6 +2644,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2696,7 +2702,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone connection spec id
@@ -2730,6 +2737,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2788,7 +2796,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec id
@@ -2822,6 +2831,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2856,7 +2866,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Anfrage**
 
-+++SFTP - Target-Verbindungsanfrage
++++SFTP - Anfrage zur Zielverbindung
 
 >[!TIP]
 >
@@ -2879,7 +2889,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "remotePath": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec id
@@ -2913,6 +2924,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2994,7 +3006,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-+++Datenfluss erstellen - Antwort
++++Erstellen eines Datenflusses - Antwort
 
 ```json
 {
@@ -3054,7 +3066,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-+++Datenfluss erstellen - Antwort
++++Erstellen eines Datenflusses - Antwort
 
 ```json
 {
@@ -3102,7 +3114,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-+++Datenfluss erstellen - Antwort
++++Erstellen eines Datenflusses - Antwort
 
 ```json
 {
@@ -3150,7 +3162,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-+++Datenfluss erstellen - Antwort
++++Erstellen eines Datenflusses - Antwort
 
 ```json
 {
@@ -3198,7 +3210,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-+++Datenfluss erstellen - Antwort
++++Erstellen eines Datenflusses - Antwort
 
 ```json
 {
@@ -3246,7 +3258,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-+++Datenfluss erstellen - Antwort
++++Erstellen eines Datenflusses - Antwort
 
 ```json
 {
@@ -3677,7 +3689,7 @@ Als Nächstes müssen Sie die Antwort von oben kopieren und zum Erstellen Ihres 
 
 **Anforderung zum Erstellen des Eingabeschemas**
 
-+++Eingabeschema erstellen - Anfrage
++++Erstellen eines Eingabeschemas - Anfrage
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas/' \ 
@@ -3696,7 +3708,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Antwort**
 
-+++Eingabeschema erstellen - Antwort
++++Erstellen eines Eingabeschemas - Antwort
 
 ```json
 {
@@ -3726,7 +3738,7 @@ Als Nächstes müssen Sie das Ausgabeschema für Ihren Export einrichten. Zunäc
 
 **Anfrage**
 
-+++Anfordern des Partnerschemas für das Ausgabeschema
++++Anfrage zum Abrufen des Partnerschemas für das Ausgabeschema
 
 Beachten Sie, dass im folgenden Beispiel die `connection spec ID` für Amazon S3 verwendet wird. Ersetzen Sie diesen Wert durch die für Ihr Ziel spezifische Verbindungsspezifikations-ID.
 
@@ -4504,7 +4516,7 @@ Die Antwort von der Flow Service-API gibt die ID des aktualisierten Datenflusses
 
 ![Schritte zum Aktivieren von Zielgruppen mit Hervorhebung des aktuellen Schritts, in dem sich der Benutzer befindet](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-Um Aktualisierungen an Ihrem Datenfluss vorzunehmen, verwenden Sie den Vorgang `PATCH` . Sie können beispielsweise eine Marketing-Aktion zu Ihren Datenflüssen hinzufügen. Sie können Ihre Datenflüsse auch aktualisieren, um Felder als obligatorische Schlüssel oder Deduplizierungsschlüssel auszuwählen.
+Um Aktualisierungen an Ihrem Datenfluss vorzunehmen, verwenden Sie den Vorgang `PATCH` . Sie können beispielsweise eine Marketing-Aktion zu Ihren Datenflüssen hinzufügen, Ihre Datenflüsse aktualisieren, um Felder als obligatorische Schlüssel oder Deduplizierungsschlüssel auszuwählen, oder die Dateimanifestgenerierung zu vorhandenen Zielen hinzufügen.
 
 ### Hinzufügen einer Marketing-Aktion {#add-marketing-action}
 
@@ -4512,11 +4524,11 @@ Um eine [Marketing-Aktion](/help/data-governance/api/marketing-actions.md) hinzu
 
 >[!IMPORTANT]
 >
->Bei einer `PATCH`-Anfrage ist die `If-Match`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität aktualisiert, z. B. Datenfluss, Zielverbindung und andere.
+>Bei einer `If-Match`-Anfrage ist die `PATCH`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität aktualisiert, z. B. Datenfluss, Zielverbindung und andere.
 >
 > Um die neueste Version des eTag-Werts abzurufen, führen Sie eine GET-Anfrage an den `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`-Endpunkt durch, wobei `{ID}` die Datenfluss-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie bei `PATCH` Anfragen den Wert des `If-Match`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
+> Stellen Sie sicher, dass Sie bei `If-Match` Anfragen den Wert des `PATCH`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
 
 >[!BEGINSHADEBOX]
 
@@ -4581,11 +4593,11 @@ Informationen zum Hinzufügen [obligatorischen Schlüssels](/help/destinations/u
 
 >[!IMPORTANT]
 >
->Bei einer `PATCH`-Anfrage ist die `If-Match`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität aktualisiert, z. B. Datenfluss, Zielverbindung und andere.
+>Bei einer `If-Match`-Anfrage ist die `PATCH`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität aktualisiert, z. B. Datenfluss, Zielverbindung und andere.
 >
 > Um die neueste Version des eTag-Werts abzurufen, führen Sie eine GET-Anfrage an den `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`-Endpunkt durch, wobei `{ID}` die Datenfluss-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie bei `PATCH` Anfragen den Wert des `If-Match`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
+> Stellen Sie sicher, dass Sie bei `If-Match` Anfragen den Wert des `PATCH`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
 
 >[!BEGINSHADEBOX]
 
@@ -4660,11 +4672,11 @@ Informationen zum Hinzufügen [Deduplizierungsschlüssels](/help/destinations/ui
 
 >[!IMPORTANT]
 >
->Bei einer `PATCH`-Anfrage ist die `If-Match`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität aktualisiert, z. B. Datenfluss, Zielverbindung und andere.
+>Bei einer `If-Match`-Anfrage ist die `PATCH`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität aktualisiert, z. B. Datenfluss, Zielverbindung und andere.
 >
 > Um die neueste Version des eTag-Werts abzurufen, führen Sie eine GET-Anfrage an den `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`-Endpunkt durch, wobei `{ID}` die Datenfluss-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie bei `PATCH` Anfragen den Wert des `If-Match`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
+> Stellen Sie sicher, dass Sie bei `If-Match` Anfragen den Wert des `PATCH`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
 
 >[!BEGINSHADEBOX]
 
@@ -4736,6 +4748,44 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ```
 
 +++
+
+>[!ENDSHADEBOX]
+
+### Hinzufügen der Dateimanifestgenerierung zu einem vorhandenen Ziel {#add-file-manifest}
+
+Um die Generierung des Dateimanifests zu einem vorhandenen Ziel hinzuzufügen, müssen Sie die Zielverbindungsparameter mithilfe des `PATCH` aktualisieren. Dies ermöglicht die Generierung von Manifestdateien für Ihr Ziel, das Metadaten zu den exportierten Dateien bereitstellt.
+
+>[!IMPORTANT]
+>
+>Bei einer `If-Match`-Anfrage ist die `PATCH`-Kopfzeile erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Zielverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität aktualisiert, z. B. Datenfluss, Zielverbindung und andere.
+>
+> Um die neueste Version des eTag-Werts abzurufen, führen Sie eine GET-Anfrage an den `https://platform.adobe.io/data/foundation/flowservice/targetConnections/{ID}`-Endpunkt durch, wobei `{ID}` die Zielverbindungs-ID ist, die Sie aktualisieren möchten.
+>
+> Stellen Sie sicher, dass Sie bei `If-Match` Anfragen den Wert des `PATCH`-Headers in doppelte Anführungszeichen setzen, wie in den Beispielen unten.
+
+>[!BEGINSHADEBOX]
+
+**Anfrage**
+
++++Hinzufügen des Dateimanifests zu einer vorhandenen Zielverbindung - Anfrage
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+  {
+    "op": "add",
+    "path": "/params/includeFileManifest",
+    "value": true
+  }
+]'
+```
 
 >[!ENDSHADEBOX]
 
