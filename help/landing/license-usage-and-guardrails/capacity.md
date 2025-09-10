@@ -2,10 +2,10 @@
 title: Lizenznutzung und -kapazität
 description: Erfahren Sie mehr über Ihre Lizenznutzung und Kapazitätsbeschränkungen in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
+source-git-commit: 568a0ba7707402496167145ce2673181b240496e
 workflow-type: tm+mt
-source-wordcount: '1537'
-ht-degree: 7%
+source-wordcount: '1593'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 7%
 >- **Anzeigen des Dashboards zur Lizenznutzung**
 >   - Mit dieser Berechtigung können **die Startseite** Kapazität anzeigen.
 >- **Verwalten von Sandboxes**
->   - Mit dieser Berechtigung können **&#x200B;**&#x200B;Kapazitätszuweisungen „bearbeiten“.
+>   - Mit dieser Berechtigung können **** Kapazitätszuweisungen „bearbeiten“.
 >
 >Weitere Informationen zu Berechtigungen in Experience Platform finden Sie unter [Zugriffssteuerung - Übersicht](/help/access-control/home.md#permissions)
 >
@@ -55,11 +55,13 @@ Innerhalb dieser Services werden die folgenden Leitplanken verfolgt:
 
 - Die maximale Anzahl von Streaming-Zielgruppen ist 500
    - Von diesen 500 Streaming-Zielgruppen sind maximal 150 Edge-Zielgruppen zulässig
-- Der maximale kombinierte Durchsatz für die Streaming-Segmentierung beträgt 1500 Datensätze pro Sekunde (rps)
+- Der kombinierte anfängliche Durchsatz für die Streaming-Aufnahme beträgt 1500 Datensätze pro Sekunde (rps)
+   - Dieser kombinierte Streaming-Durchsatz misst die kombinierten Spitzenwerte der eingehenden Ereignisse pro Sekunde für die Streaming-Aufnahme in das Echtzeit-Kundenprofil über Ihre Produktions- und Entwicklungs-Sandboxes hinweg.
+   - Sie können zusätzliche Streaming-Segmentierungsunterstützung für bis zu 13.500 Datensätze pro Sekunde erwerben. Weitere Informationen zum Kauf zusätzlicher Berechtigungen finden Sie in der [Real-Time CDP-Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 Die Zielgruppenkapazität befindet sich auf **Sandbox**-Ebene. Das bedeutet, dass Sie für jede Sandbox in Ihrem Unternehmen 500 Streaming-Zielgruppen haben können, davon 150 Edge-Zielgruppen.
 
-Die Durchsatzkapazität befindet sich auf **Organisations**-Ebene und kann an Ihre individuellen Sandboxes verteilt werden. Beispielsweise können Sie mit den 1.500 U/s für den Durchsatz der Streaming-Segmentierung Ihre Produktions-Sandbox auf 1.350 U/s und Ihre Entwicklungs-Sandbox auf 150 U/s festlegen.
+Die Streaming-Durchsatzkapazität befindet sich auf **Organisations**-Ebene und kann an Ihre individuellen Sandboxes verteilt werden. Beispielsweise können Sie mit den 1.500 U/s für den Streaming-Aufnahme-Durchsatz Ihre Produktions-Sandbox auf 1.300 U/s und Ihre Entwicklungs-Sandbox auf 200 U/s festlegen.
 
 Experience Platform berechnet den Durchsatz der Sandbox in rollierenden Intervallen von 15 Minuten. Dieser Durchsatz wird in Echtzeit gemessen, wobei die Daten alle 60 Sekunden aktualisiert werden.
 
@@ -202,11 +204,11 @@ Sie stellen eine konsistente Leistung während Spitzenzeiten sicher und vermeide
 
 +++
 
-### Was sind die Best Practices für die Verwaltung des Durchsatzes der Streaming-Segmentierung?
+### Was sind die Best Practices für die Verwaltung des Streaming-Aufnahmedurchsatzes?
 
 +++ Antwort
 
-Um den Durchsatz Ihrer Streaming-Segmentierung optimal zu verwalten, sollten Sie Ihre Datensätze bewerten, um sicherzustellen, dass sie Daten priorisieren, die für die Personalisierung erforderlich sind.
+Um den Durchsatz bei der Streaming-Aufnahme am besten zu verwalten, sollten Sie Ihre Datensätze bewerten, um sicherzustellen, dass sie Daten priorisieren, die für die Personalisierung erforderlich sind.
 
 
 Wenn keine Echtzeitverarbeitung erforderlich ist, sollten Sie die Batch-Aufnahme anstelle der Streaming-Aufnahme verwenden.

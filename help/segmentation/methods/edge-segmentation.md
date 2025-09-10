@@ -2,7 +2,7 @@
 title: Edge-Segmentierungshandbuch
 description: Erfahren Sie, wie Sie mit der Edge-Segmentierung Zielgruppen in Experience Platform sofort am Edge auswerten können, um Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite zu ermöglichen.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
+source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 22%
@@ -31,10 +31,10 @@ Eine Abfrage kann mithilfe der Edge-Segmentierung ausgewertet werden, wenn sie e
 
 | Abfragetyp | Details | Abfrage | Beispiel |
 | ---------- | ------- | ----- | ------- |
-| Einzelnes Ereignis innerhalb eines Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die innerhalb eines Zeitfensters von weniger als 24 Stunden auf ein einzelnes eingehendes Ereignis verweist. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Ein Beispiel für ein einzelnes Ereignis innerhalb eines relativen Zeitfensters wird angezeigt.](../images/methods/edge/single-event.png) |
-| Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. | `homeAddress.country.equals("US", false)` | ![Ein Beispiel für ein Profilattribut wird angezeigt.](../images/methods/edge/profile-attribute.png) |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden auftritt. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut in einem relativen Zeitfenster wird angezeigt.](../images/methods/edge/single-event-with-profile-attribute.png) |
-| Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Edge-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![Ein Beispiel für ein Segment von Segmenten wird angezeigt.](../images/methods/edge/segment-of-segments.png) |
+| Einzelnes Ereignis innerhalb eines Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die innerhalb eines Zeitfensters von weniger als 24 Stunden auf ein einzelnes eingehendes Ereignis verweist. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Ein Beispiel für ein einzelnes Ereignis innerhalb eines relativen Zeitfensters wird angezeigt.](../images/methods/edge/single-event.png){zoomable="yes"} |
+| Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. | `homeAddress.country.equals("US", false)` | ![Ein Beispiel für ein Profilattribut wird angezeigt.](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden auftritt. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut in einem relativen Zeitfenster wird angezeigt.](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
+| Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Edge-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![Ein Beispiel für ein Segment von Segmenten wird angezeigt.](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
 
 Darüber hinaus **die Segmentdefinition (**) an eine Zusammenführungsrichtlinie gebunden sein, die im Randbereich aktiv ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Handbuch zu Zusammenführungsrichtlinien](../../profile/api/merge-policies.md).
 
@@ -153,15 +153,15 @@ Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Handbuch zu
 
 Wählen Sie in Audience Portal **[!UICONTROL Zielgruppe erstellen]** aus.
 
-![Die Schaltfläche „Zielgruppe erstellen“ ist im Zielgruppenportal hervorgehoben.](../images/methods/edge/select-create-audience.png)
+![Die Schaltfläche „Zielgruppe erstellen“ ist im Zielgruppenportal hervorgehoben.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
 Ein Popup wird angezeigt. Wählen Sie **[!UICONTROL Regeln erstellen]**, um in Segment Builder zu gelangen.
 
-![Die Schaltfläche „Regeln erstellen“ ist im Pop-up „Zielgruppe erstellen“ hervorgehoben.](../images/methods/edge/select-build-rules.png)
+![Die Schaltfläche „Regeln erstellen“ ist im Pop-up „Zielgruppe erstellen“ hervorgehoben.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
 Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([ Abfragetypen) ](#eligible-query-types). Wenn die Segmentdefinition für die Edge-Segmentierung geeignet ist, können Sie **[!UICONTROL Edge]** als **[!UICONTROL Auswertungsmethode]** auswählen.
 
-![Die Segmentdefinition wird angezeigt. Der Auswertungstyp ist hervorgehoben und zeigt an, dass die Segmentdefinition mithilfe der Edge-Segmentierung ausgewertet werden kann.](../images/methods/edge/edge-evaluation-method.png)
+![Die Segmentdefinition wird angezeigt. Der Auswertungstyp ist hervorgehoben und zeigt an, dass die Segmentdefinition mithilfe der Edge-Segmentierung ausgewertet werden kann.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
 Weitere Informationen zum Erstellen von Segmentdefinitionen finden Sie im [Segment Builder-Handbuch](../ui/segment-builder.md)
 
@@ -297,11 +297,11 @@ Detailliertere Informationen zur zurückgegebenen Segmentdefinition finden Sie i
 
 Sie können alle Zielgruppen abrufen, die für die Edge-Segmentierung in Ihrer Organisation aktiviert sind, indem Sie in Audience Portal Filter verwenden. Wählen Sie das ![Filtersymbol](../../images/icons/filter.png) aus, um die Liste der Filter anzuzeigen.
 
-![Das Filtersymbol ist in Audience Portal hervorgehoben.](../images/methods/filter-audiences.png)
+![Das Filtersymbol ist in Audience Portal hervorgehoben.](../images/methods/filter-audiences.png){zoomable="yes"}
 
 Gehen Sie in den verfügbaren Filtern zu **Aktualisierungshäufigkeit** und wählen Sie &quot;Edge&quot; aus. Mit diesem Filter werden alle Zielgruppen in Ihrer Organisation angezeigt, die mithilfe der Edge-Segmentierung ausgewertet werden.
 
-![Die Aktualisierungshäufigkeit von Edge ist ausgewählt und zeigt alle Zielgruppen in der Organisation an, die mithilfe der Edge-Segmentierung ausgewertet werden.](../images/methods/edge/filter-edge.png)
+![Die Aktualisierungshäufigkeit von Edge ist ausgewählt und zeigt alle Zielgruppen in der Organisation an, die mithilfe der Edge-Segmentierung ausgewertet werden.](../images/methods/edge/filter-edge.png){zoomable="yes"}
 
 Weitere Informationen zum Anzeigen von Zielgruppen in Experience Platform finden Sie im [Handbuch für Zielgruppenportale](../ui/audience-portal.md).
 
@@ -321,7 +321,7 @@ Die **[!UICONTROL Gesamtzahl der Qualifizierten]** stellt die Gesamtzahl der qua
 
 Die Metrik **[!UICONTROL Neue Zielgruppe aktualisiert]** wird durch ein Liniendiagramm dargestellt, das die Änderung der Zielgruppengröße durch die Edge-Segmentierung anzeigt. Sie können das Dropdown-Menü so anpassen, dass die letzten 24 Stunden, die letzte Woche oder die letzten 30 Tage angezeigt werden.
 
-![Die Karte „Profile im Zeitverlauf“ ist hervorgehoben.](../images/methods/edge/profiles-over-time.png)
+![Die Karte „Profile im Zeitverlauf“ ist hervorgehoben.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
 Weitere Informationen zu Zielgruppendetails finden Sie im Abschnitt [Zielgruppenportal - Übersicht](../ui/audience-portal.md#audience-details).
 
