@@ -2,10 +2,10 @@
 title: Konfigurieren der Tag-Erweiterung „Web SDK"
 description: Erfahren Sie, wie Sie die Tag-Erweiterung "Experience Platform Web SDK" in der Tags-Benutzeroberfläche konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 57b29c396531ee18c79fad7cce068ff3adf5f2a2
+source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
 workflow-type: tm+mt
-source-wordcount: '2965'
-ht-degree: 4%
+source-wordcount: '3095'
+ht-degree: 3%
 
 ---
 
@@ -42,13 +42,14 @@ Wenn Sie einen benutzerdefinierten Web-SDK-Build erstellen, wird der Build von a
 >[!IMPORTANT]
 >
 >Durch das Deaktivieren von Web SDK-Komponenten kann die bestehende Implementierung beschädigt werden. Jedes Mal, wenn Sie eine Komponente deaktivieren, sollten Sie Ihre Implementierung gründlich testen, um sicherzustellen, dass alle benötigten Funktionen erwartungsgemäß funktionieren.
->&#x200B;>Wenn Sie eine Komponente deaktivieren, können Sie die Einstellungen dieser Komponente nicht mehr bearbeiten.
+>>Wenn Sie eine Komponente deaktivieren, können Sie die Einstellungen dieser Komponente nicht mehr bearbeiten.
 
 Gehen Sie wie folgt vor, um einen benutzerdefinierten Web-SDK-Build mithilfe der Tag-Erweiterung „Web SDK&quot; zu erstellen.
 
 1. Erweitern Sie auf der Seite für die Konfiguration von Tag **[!UICONTROL Erweiterungen den Abschnitt]** Benutzerdefinierte Build-Komponenten“.
 1. Aktivieren oder deaktivieren Sie die Komponenten je nach Bedarf. Sie können aus den folgenden Komponenten auswählen:
    * **[!UICONTROL Activity Collector]**: Diese Komponente ermöglicht die automatische Link-Erfassung und Activity Map-Verfolgung.
+   * **[!UICONTROL Advertising]**: Diese Komponente enthält den gesamten JavaScript-Code, der für Adobe Advertising benötigt wird. Außerdem werden [!UICONTROL Adobe Advertising]-Einstellungen im Abschnitt [!UICONTROL SDK-Instanzen] und eine [!UICONTROL Advertising]-Einstellung in Tag-Regeln hinzugefügt, um zu definieren, wie Werbedaten für die Attributionsmessung verwendet werden.
    * **[!UICONTROL Audiences]**: Diese Komponenten ermöglichen die Integration von Audience Manager, einschließlich URL- und Cookie-basierter Ziele, und ID-Synchronisierungen.
    * **[!UICONTROL Einverständnis]**: Diese Komponente ermöglicht Integrationen von Einverständnissen. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
       * [Einverständnis festlegen](action-types.md#set-consent) Aktionstyp
@@ -75,6 +76,11 @@ Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an
 * **[!UICONTROL Name]**: Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten an mehrere Organisationen mit einer Tag-Konfiguration zu senden. Der Instanzname ist standardmäßig auf `alloy` festgelegt. Sie können jedoch den Instanznamen in einen beliebigen gültigen JavaScript-Objektnamen ändern.
 * **[!UICONTROL IMS-Organisations-ID]**: Die ID der Organisation, an die die Daten mit Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, füllen Sie dieses Feld mit dem Wert der zweiten Organisation, an die Sie Daten senden möchten.
 * **[!UICONTROL Edge-Domain]**: Die Domain, von der die Erweiterung Daten sendet und empfängt. Adobe empfiehlt die Verwendung einer Erstanbieter-Domain (CNAME) für diese Erweiterung. Die standardmäßige Drittanbieterdomäne funktioniert in Entwicklungsumgebungen, ist jedoch nicht für Produktionsumgebungen geeignet. Anweisungen zum Einrichten eines Erstanbieter-CNAME finden Sie [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
+* **[!UICONTROL Adobe Advertising]**: Verfügbar, wenn die `Advertising` ausgewählt ist. Einstellungen nur für Organisationen mit Adobe Advertising DSP:
+   * **[!UICONTROL Adobe Advertising DSP]**: Aktiviert das View-Through-Tracking.
+   * **[!UICONTROL Advertisers]**: Verfügbar, wenn [!UICONTROL Adobe Advertising DSP] aktiviert ist. Die Advertiser, für die das View-Through-Tracking aktiviert werden soll.
+   * **[!UICONTROL ID5 Partner-ID]**: Optional. Adobe Advertising DSP Verfügbar, wenn  aktiviert ist. Die ID5-Partner-ID Ihres Unternehmens. Mit dieser Einstellung kann Web SDK universelle ID5-IDs erfassen.
+   * **[!UICONTROL RampID JavaScript-Pfad]**: Optional. Adobe Advertising DSP Verfügbar, wenn  aktiviert ist. Der Pfad zum [!DNL LiveRamp RampID] JavaScript-Code (`ats.js`) Ihres Unternehmens.  Mit dieser Einstellung kann Web SDK universelle IDs [!DNL RampID].
 
 ## Konfigurieren von Datenstromeinstellungen {#datastreams}
 
@@ -113,14 +119,13 @@ In diesem Abschnitt können Sie das Verhalten der Web-SDK bei der Handhabung der
 
 ![Bild mit den Identitätseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/web-sdk-ext-identity.png)
 
-* **[!UICONTROL ECID von VisitorAPI migrieren]**: Diese Option ist standardmäßig aktiviert. Wenn diese Funktion aktiviert ist, kann der SDK die `AMCV` und `s_ecid` Cookies lesen und das von [!DNL Visitor.js] verwendete `AMCV`-Cookie festlegen. Diese Funktion ist bei der Migration auf Web SDK wichtig, da einige Seiten möglicherweise noch [!DNL Visitor.js] verwenden. Diese Option ermöglicht es SDK, dieselbe [!DNL ECID] weiterhin zu verwenden, sodass Benutzende nicht als zwei separate Benutzende identifiziert werden.
+* **[!UICONTROL ECID von VisitorAPI migrieren]**: Diese Option ist standardmäßig aktiviert. Wenn diese Funktion aktiviert ist, kann der SDK die `AMCV` und `s_ecid` Cookies lesen und das von `AMCV` verwendete [!DNL Visitor.js]-Cookie festlegen. Diese Funktion ist bei der Migration auf Web SDK wichtig, da einige Seiten möglicherweise noch [!DNL Visitor.js] verwenden. Diese Option ermöglicht es SDK, dieselbe [!DNL ECID] weiterhin zu verwenden, sodass Benutzende nicht als zwei separate Benutzende identifiziert werden.
 * **[!UICONTROL Verwendung von Drittanbieter-Cookies]**: Wenn diese Option aktiviert ist, versucht Web SDK, eine Benutzerkennung in einem Drittanbieter-Cookie zu speichern. Bei erfolgreicher Ausführung wird der Benutzer bei der Navigation durch mehrere Domains als ein einzelner Benutzer identifiziert, anstatt in jeder Domain als separater Benutzer identifiziert zu werden. Wenn diese Option aktiviert ist, kann die SDK die Benutzerkennung möglicherweise immer noch nicht in einem Drittanbieter-Cookie speichern, wenn der Browser keine Drittanbieter-Cookies unterstützt oder vom Benutzer so konfiguriert wurde, dass keine Drittanbieter-Cookies zugelassen werden. In diesem Fall speichert die SDK die Kennung nur in der Erstanbieter-Domain.
 
   >[!IMPORTANT]
-  >&#x200B;>Drittanbieter-Cookies sind nicht mit der Funktion [Erstanbieter-Geräte-ID](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK kompatibel.
-  >&#x200B;>Sie können entweder Erstanbieter-Geräte-IDs verwenden oder Drittanbieter-Cookies verwenden. Sie können jedoch nicht beide Funktionen gleichzeitig verwenden.
+  >>Drittanbieter-Cookies sind nicht mit der Funktion [Erstanbieter-Geräte-ID](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK kompatibel.
+  >>Sie können entweder Erstanbieter-Geräte-IDs verwenden oder Drittanbieter-Cookies verwenden. Sie können jedoch nicht beide Funktionen gleichzeitig verwenden.
   >
-
 ## Personalisierungseinstellungen konfigurieren {#personalization}
 
 In diesem Abschnitt können Sie festlegen, wie bestimmte Teile einer Seite beim Laden personalisierter Inhalte ausgeblendet werden sollen. Dadurch wird sichergestellt, dass Ihren Besuchern nur die personalisierte Seite angezeigt wird.
@@ -206,7 +211,7 @@ Als Alternative zur Übergabe der Überschreibungen über einen Web SDK-Befehl k
 
 >[!IMPORTANT]
 >
->Datenstrom-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwicklungs-, Staging- und Produktionsumgebungen haben jeweils separate Überschreibungen. Sie können die Einstellungen mithilfe der entsprechenden Optionen, die im folgenden Bildschirm angezeigt werden, zwischen ihnen kopieren.
+> Datenstrom-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwicklungs-, Staging- und Produktionsumgebungen haben jeweils separate Überschreibungen. Sie können die Einstellungen mithilfe der entsprechenden Optionen, die im folgenden Bildschirm angezeigt werden, zwischen ihnen kopieren.
 
 ![Bild, das die Überschreibungen der Datenstromkonfiguration mithilfe der Tag-Erweiterungs-Seite von Web SDK zeigt.](assets/datastream-overrides.png)
 
