@@ -3,24 +3,16 @@ keywords: Airship Tags;Airship Destination
 title: Airship Tags-Verbindung
 description: Nahtlose Übergabe von Adobe-Zielgruppendaten an Airship als Zielgruppen-Tags für das Targeting innerhalb von Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
+source-git-commit: 5a2f1c87381c39d6d15f569523cfb3b00d02b34b
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 29%
+source-wordcount: '970'
+ht-degree: 32%
 
 ---
 
 # [!DNL Airship Tags]-Verbindung {#airship-tags-destination}
 
 ## Übersicht
-
->[!IMPORTANT]
->
->* Ab dem 21. August 2025 werden im Zielkatalog zwei **[!DNL Airship Tags]** nebeneinander angezeigt. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der vorhandene **[!DNL Airship Tags]**-Ziel-Connector wurde in **[!UICONTROL (veraltet) Airship Tags]** umbenannt, und eine neue Karte mit dem Namen **[!UICONTROL Airship Tags]** ist jetzt für Sie verfügbar.
->* Verwenden Sie die neue **[!UICONTROL Airship Tags]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum Ziel **[!UICONTROL (veraltet) Airship Tags]** haben, werden diese automatisch aktualisiert, sodass keine Aktion von Ihnen erforderlich ist.
->* Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:
->   * Flussspezifikations-ID: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
->   * Verbindungsspezifikations-ID: `aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 [!DNL Airship] ist die führende Plattform für Kundeninteraktion, mit der Sie Ihren Benutzern in jeder Phase des Kundenlebenszyklus aussagekräftige, personalisierte Omni-Channel-Messaging bereitstellen können.
 
@@ -134,7 +126,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
