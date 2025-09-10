@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Batch-Aufnahme-API
 description: Mit der Batch-Aufnahme-API von Adobe Experience Platform können Sie Daten als Batch-Dateien in Experience Platform aufnehmen. Bei den aufgenommenen Daten kann es sich um Profildaten aus einer flachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder um Daten handeln, die einem bekannten Schema in der Registrierung des Experience-Datenmodells (XDM) entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dace7bc2f7940748422628b62f0f57854036ad3f
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1389'
 ht-degree: 65%
 
 ---
