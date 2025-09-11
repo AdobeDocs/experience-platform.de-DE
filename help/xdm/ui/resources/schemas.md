@@ -31,9 +31,9 @@ Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Unter [XDM-�
 >
 >In diesem Abschnitt wird beschrieben, wie Sie ein neues Schema in der Benutzeroberfläche manuell erstellen. Wenn Sie CSV-Daten in Experience Platform aufnehmen, können Sie mithilfe von ML-Algorithmen (maschinelles Lernen) **aus CSV-Beispieldaten ein Schema generieren**. Dieser Workflow stimmt mit Ihrem Datenformat überein und erstellt automatisch ein neues Schema, das auf der Struktur und dem Inhalt Ihrer CSV-Datei basiert. Weitere Informationen zu [ Workflow finden Sie ](../ml-assisted-schema-creation.md) Handbuch zur Erstellung von XML-unterstützten Schemata .
 
-Wählen [!UICONTROL  Arbeitsbereich Schemata ] oben **[!UICONTROL rechts die Option]** Schema erstellen“ aus.
+Wählen [!UICONTROL &#x200B; Arbeitsbereich Schemata &#x200B;] oben **[!UICONTROL rechts die Option]** Schema erstellen“ aus.
 
-![Der Arbeitsbereich „Schemata“ mit [!UICONTROL  hervorgehobenen Option &quot;] erstellen“](../../images/ui/resources/schemas/create-schema.png)
+![Der Arbeitsbereich „Schemata“ mit [!UICONTROL &#x200B; hervorgehobenen Option &quot;] erstellen“](../../images/ui/resources/schemas/create-schema.png)
 
 Das [!UICONTROL Erstellen eines Schemas] wird angezeigt. In diesem Dialogfeld können Sie entweder manuell ein Schema erstellen, indem Sie Felder und Feldergruppen hinzufügen, oder Sie können eine CSV-Datei hochladen und ML-Algorithmen verwenden, um ein Schema zu generieren. Wählen Sie im Dialogfeld einen Workflow zur Schemaerstellung aus.
 
@@ -45,7 +45,7 @@ Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Sche
 
 ### Manuelle Schemaerstellung {#manual-creation}
 
-Der [!UICONTROL Schema erstellen] wird angezeigt. Sie können eine Basisklasse für das Schema auswählen, indem Sie entweder **[!UICONTROL Individuelles Profil]**, **[!UICONTROL Erlebnisereignis]** oder **[!UICONTROL Andere]** und dann **[!UICONTROL Weiter]** auswählen. Weitere Informationen zu diesen Klassen finden Sie in [[!UICONTROL  Dokumentation ]](../../classes/individual-profile.md)XDM Individual Profile[[!UICONTROL  und ]](../../classes/experienceevent.md)XDM ExperienceEvent .
+Der [!UICONTROL Schema erstellen] wird angezeigt. Sie können eine Basisklasse für das Schema auswählen, indem Sie entweder **[!UICONTROL Individuelles Profil]**, **[!UICONTROL Erlebnisereignis]** oder **[!UICONTROL Andere]** und dann **[!UICONTROL Weiter]** auswählen. Weitere Informationen zu diesen Klassen finden Sie in [[!UICONTROL &#x200B; Dokumentation &#x200B;]](../../classes/individual-profile.md)XDM Individual Profile[[!UICONTROL &#x200B; und &#x200B;]](../../classes/experienceevent.md)XDM ExperienceEvent .
 
 ![Workflow [!UICONTROL Schema erstellen] mit den drei Klassenoptionen und [!UICONTROL Weiter] hervorgehoben.](../../images/ui/resources/schemas/schema-class-options.png)
 
@@ -71,7 +71,7 @@ Wählen Sie eine beliebige Zeile aus, um eine Klasse auszuwählen, und klicken S
 
 Nachdem Sie eine Klasse ausgewählt haben, wird der Abschnitt [!UICONTROL Name und Überprüfung] angezeigt. In diesem Abschnitt geben Sie einen Namen und eine Beschreibung ein, um Ihr Schema zu identifizieren. &#x200B;Die Basisstruktur des Schemas (bereitgestellt von der -Klasse) wird auf der Arbeitsfläche angezeigt, damit Sie Ihre ausgewählte Klassen- und Schemastruktur überprüfen und überprüfen können.
 
-Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen ] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
+Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen &#x200B;] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
 
 ![Der [!UICONTROL Name und Überprüfung] des Workflows [!UICONTROL Schema erstellen] mit den hervorgehobenen [!UICONTROL Anzeigename des Schemas], [!UICONTROL Beschreibung] und [!UICONTROL Beenden].](../../images/ui/resources/schemas/name-and-review.png)
 
@@ -172,11 +172,11 @@ Nachdem Sie eine Feldergruppe zu einem Schema hinzugefügt haben, können Sie Fe
 >[!IMPORTANT]
 >
 >Wenn Sie **[!UICONTROL Entfernen]** auswählen, wird das Feld aus der Feldergruppe selbst gelöscht, was sich auf *alle* Schemata auswirkt, die diese Feldergruppe verwenden.
->>Verwenden Sie diese Option nur, wenn Sie **Feld aus jedem Schema entfernen möchten, das die Feldergruppe**.
+>&#x200B;>Verwenden Sie diese Option nur, wenn Sie **Feld aus jedem Schema entfernen möchten, das die Feldergruppe**.
 
 Um ein Feld aus der Feldergruppe zu löschen, wählen Sie es auf der Arbeitsfläche aus und wählen **[!UICONTROL Entfernen]** in der rechten Leiste aus. Dieses Beispiel zeigt das Feld `taxId` aus der Gruppe **[!UICONTROL Demografische Details]**.
 
-![Die [!DNL Schema Editor] mit [!UICONTROL  hervorgehobenen ]. Diese Aktion entfernt ein einzelnes Feld.](../../images/ui/resources/schemas/remove-single-field.png)
+![Die [!DNL Schema Editor] mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;]. Diese Aktion entfernt ein einzelnes Feld.](../../images/ui/resources/schemas/remove-single-field.png)
 
 Um mehrere Felder aus einem Schema auszublenden, ohne sie aus der Feldergruppe selbst zu entfernen, verwenden Sie die Option **[!UICONTROL Verwandte Felder verwalten]**. Wählen Sie auf der Arbeitsfläche ein beliebiges Feld aus der Gruppe und dann in der rechten Leiste **[!UICONTROL Verknüpfte Felder verwalten]** aus.
 
