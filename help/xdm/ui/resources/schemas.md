@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche
 description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche von Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
 workflow-type: tm+mt
-source-wordcount: '4078'
+source-wordcount: '4178'
 ht-degree: 3%
 
 ---
@@ -31,9 +31,9 @@ Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Unter [XDM-�
 >
 >In diesem Abschnitt wird beschrieben, wie Sie ein neues Schema in der Benutzeroberfläche manuell erstellen. Wenn Sie CSV-Daten in Experience Platform aufnehmen, können Sie mithilfe von ML-Algorithmen (maschinelles Lernen) **aus CSV-Beispieldaten ein Schema generieren**. Dieser Workflow stimmt mit Ihrem Datenformat überein und erstellt automatisch ein neues Schema, das auf der Struktur und dem Inhalt Ihrer CSV-Datei basiert. Weitere Informationen zu [ Workflow finden Sie ](../ml-assisted-schema-creation.md) Handbuch zur Erstellung von XML-unterstützten Schemata .
 
-Wählen [!UICONTROL &#x200B; Arbeitsbereich Schemata &#x200B;] oben **[!UICONTROL rechts die Option]** Schema erstellen“ aus.
+Wählen [!UICONTROL  Arbeitsbereich Schemata ] oben **[!UICONTROL rechts die Option]** Schema erstellen“ aus.
 
-![Der Arbeitsbereich „Schemata“ mit [!UICONTROL &#x200B; hervorgehobenen Option &quot;] erstellen“](../../images/ui/resources/schemas/create-schema.png)
+![Der Arbeitsbereich „Schemata“ mit [!UICONTROL  hervorgehobenen Option &quot;] erstellen“](../../images/ui/resources/schemas/create-schema.png)
 
 Das [!UICONTROL Erstellen eines Schemas] wird angezeigt. In diesem Dialogfeld können Sie entweder manuell ein Schema erstellen, indem Sie Felder und Feldergruppen hinzufügen, oder Sie können eine CSV-Datei hochladen und ML-Algorithmen verwenden, um ein Schema zu generieren. Wählen Sie im Dialogfeld einen Workflow zur Schemaerstellung aus.
 
@@ -45,7 +45,7 @@ Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Sche
 
 ### Manuelle Schemaerstellung {#manual-creation}
 
-Der [!UICONTROL Schema erstellen] wird angezeigt. Sie können eine Basisklasse für das Schema auswählen, indem Sie entweder **[!UICONTROL Individuelles Profil]**, **[!UICONTROL Erlebnisereignis]** oder **[!UICONTROL Andere]** und dann **[!UICONTROL Weiter]** auswählen. Weitere Informationen zu diesen Klassen finden Sie in [[!UICONTROL &#x200B; Dokumentation &#x200B;]](../../classes/individual-profile.md)XDM Individual Profile[&#128279;](../../classes/experienceevent.md) und XDM ExperienceEvent .
+Der [!UICONTROL Schema erstellen] wird angezeigt. Sie können eine Basisklasse für das Schema auswählen, indem Sie entweder **[!UICONTROL Individuelles Profil]**, **[!UICONTROL Erlebnisereignis]** oder **[!UICONTROL Andere]** und dann **[!UICONTROL Weiter]** auswählen. Weitere Informationen zu diesen Klassen finden Sie in [[!UICONTROL  Dokumentation ]](../../classes/individual-profile.md)XDM Individual Profile[[!UICONTROL  und ]](../../classes/experienceevent.md)XDM ExperienceEvent .
 
 ![Workflow [!UICONTROL Schema erstellen] mit den drei Klassenoptionen und [!UICONTROL Weiter] hervorgehoben.](../../images/ui/resources/schemas/schema-class-options.png)
 
@@ -71,7 +71,7 @@ Wählen Sie eine beliebige Zeile aus, um eine Klasse auszuwählen, und klicken S
 
 Nachdem Sie eine Klasse ausgewählt haben, wird der Abschnitt [!UICONTROL Name und Überprüfung] angezeigt. In diesem Abschnitt geben Sie einen Namen und eine Beschreibung ein, um Ihr Schema zu identifizieren. &#x200B;Die Basisstruktur des Schemas (bereitgestellt von der -Klasse) wird auf der Arbeitsfläche angezeigt, damit Sie Ihre ausgewählte Klassen- und Schemastruktur überprüfen und überprüfen können.
 
-Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen &#x200B;] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
+Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen ] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
 
 ![Der [!UICONTROL Name und Überprüfung] des Workflows [!UICONTROL Schema erstellen] mit den hervorgehobenen [!UICONTROL Anzeigename des Schemas], [!UICONTROL Beschreibung] und [!UICONTROL Beenden].](../../images/ui/resources/schemas/name-and-review.png)
 
@@ -167,27 +167,43 @@ Nachdem Sie eine Feldergruppe zu einem Schema hinzugefügt haben, können Sie op
 
 ### Entfernen hinzugefügter Felder aus Feldergruppen {#remove-fields}
 
-Nachdem Sie eine Feldergruppe zu einem Schema hinzugefügt haben, können Sie alle Felder entfernen, die Sie nicht benötigen.
+Nachdem Sie eine Feldergruppe zu einem Schema hinzugefügt haben, können Sie Felder entweder global aus der Feldergruppe entfernen oder lokal aus dem aktuellen Schema ausblenden. Um unbeabsichtigte Schemaänderungen zu vermeiden, ist es wichtig, den Unterschied zwischen diesen Aktionen zu verstehen.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Das Entfernen von Feldern aus einer Feldergruppe wirkt sich nur auf das bearbeitete Schema aus und nicht auf die Feldergruppe selbst. Wenn Sie Felder in einem Schema entfernen, sind diese Felder weiterhin in allen anderen Schemata verfügbar, die dieselbe Feldergruppe verwenden.
+>Wenn Sie **[!UICONTROL Entfernen]** auswählen, wird das Feld aus der Feldergruppe selbst gelöscht, was sich auf *alle* Schemata auswirkt, die diese Feldergruppe verwenden.
+>>Verwenden Sie diese Option nur, wenn Sie **Feld aus jedem Schema entfernen möchten, das die Feldergruppe**.
 
-Im folgenden Beispiel wurde die Standardfeldgruppe **[!UICONTROL Demografische Details]** zu einem Schema hinzugefügt. Um ein einzelnes Feld, z. B. `taxId`, zu entfernen, wählen Sie das Feld auf der Arbeitsfläche und dann **[!UICONTROL Entfernen]** in der rechten Leiste aus.
+Um ein Feld aus der Feldergruppe zu löschen, wählen Sie es auf der Arbeitsfläche aus und wählen **[!UICONTROL Entfernen]** in der rechten Leiste aus. Dieses Beispiel zeigt das Feld `taxId` aus der Gruppe **[!UICONTROL Demografische Details]**.
 
-![Die [!DNL Schema Editor] mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;]. Diese Aktion entfernt ein einzelnes Feld.](../../images/ui/resources/schemas/remove-single-field.png)
+![Die [!DNL Schema Editor] mit [!UICONTROL  hervorgehobenen ]. Diese Aktion entfernt ein einzelnes Feld.](../../images/ui/resources/schemas/remove-single-field.png)
 
-Wenn mehrere Felder entfernt werden sollen, können Sie die Feldergruppe als Ganzes verwalten. Wählen Sie auf der Arbeitsfläche ein Feld aus, das zur Gruppe gehört, und wählen Sie dann **[!UICONTROL Verknüpfte Felder verwalten]** in der rechten Leiste aus.
+Um mehrere Felder aus einem Schema auszublenden, ohne sie aus der Feldergruppe selbst zu entfernen, verwenden Sie die Option **[!UICONTROL Verwandte Felder verwalten]**. Wählen Sie auf der Arbeitsfläche ein beliebiges Feld aus der Gruppe und dann in der rechten Leiste **[!UICONTROL Verknüpfte Felder verwalten]** aus.
 
 ![Der [!DNL Schema Editor] mit [!UICONTROL Verwalten verwandter Felder] hervorgehoben.](../../images/ui/resources/schemas/manage-related-fields.png)
 
-Es wird ein Dialogfeld mit der Struktur der betreffenden Feldergruppe angezeigt. Von hier aus können Sie die bereitgestellten Kontrollkästchen verwenden, um die erforderlichen Felder zu aktivieren oder die Auswahl aufzuheben. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Bestätigen]** aus.
+Es wird ein Dialogfeld mit der Struktur der Feldergruppe angezeigt. Aktivieren oder deaktivieren Sie mithilfe der Kontrollkästchen die Felder, die Sie einbeziehen möchten.
 
 ![Das Dialogfeld [!UICONTROL Verwandte Felder verwalten] mit ausgewählten Feldern und [!UICONTROL Bestätigen] hervorgehoben.](../../images/ui/resources/schemas/select-fields.png)
 
-Die Arbeitsfläche wird erneut angezeigt, wobei nur die ausgewählten Felder in der Schemastruktur vorhanden sind.
+Wählen Sie **[!UICONTROL Bestätigen]**, um die Arbeitsfläche zu aktualisieren und Ihre ausgewählten Felder anzuzeigen.
+
 
 ![Felder hinzugefügt](../../images/ui/resources/schemas/fields-added.png)
+
+### Feldverhalten beim Entfernen oder Verwerfen von Feldern {#field-removal-deprecation-behavior}
+
+Die nachstehende Tabelle zeigt den Umfang der einzelnen Aktionen.
+
+| Aktion | Gilt nur für das aktuelle Schema | Ändert die Feldergruppe | Wirkt sich auf andere Schemata aus | Beschreibung |
+|--------------------------|--------------------------------|----------------------|-----------------------|-------------|
+| **Feld entfernen** | Nein | Ja | Ja | Löscht das Feld aus der Feldergruppe. Dadurch wird sie aus allen Schemata entfernt, die diese Gruppe verwenden. |
+| **Verwalten verwandter Felder** | Ja | Nein | Nein | Blendet nur Felder aus dem aktuellen Schema aus. Die Feldergruppe bleibt unverändert. |
+| **Feld verwerfen** | Nein | Ja | Ja | Markiert das Feld in der Feldergruppe als veraltet. Sie ist nicht mehr zur Verwendung in einem Schema verfügbar. |
+
+>[!NOTE]
+>
+>Dieses Verhalten ist sowohl bei datensatzbasierten als auch bei ereignisbasierten Schemata konsistent.
 
 ### Hinzufügen benutzerdefinierter Felder zu Feldergruppen {#add-fields}
 
