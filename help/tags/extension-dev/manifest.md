@@ -2,10 +2,10 @@
 title: Erweiterungsmanifest
 description: Erfahren Sie, wie Sie eine JSON-Manifestdatei konfigurieren, die Adobe Experience Platform Informationen zur korrekten Verwendung Ihrer Erweiterung bereitstellt.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
 workflow-type: tm+mt
-source-wordcount: '2606'
-ht-degree: 86%
+source-wordcount: '2652'
+ht-degree: 85%
 
 ---
 
@@ -22,7 +22,7 @@ Ein Beispiel für `extension.json` finden Sie im GitHub-Repository [Hello World 
 Ein Erweiterungsmanifest muss Folgendes enthalten:
 
 | Eigenschaft | Beschreibung |
-| --- | --- |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name` | Name der Erweiterung. Dies muss sich von allen anderen Erweiterungen unterscheiden und den [Benennungsregeln](#naming-rules) entsprechen. **Er wird von Tags als Kennung verwendet und sollte nach der Veröffentlichung der Erweiterung nicht geändert werden.** |
 | `platform` | Die Plattform für die Erweiterung. Der einzige Wert, der im Moment akzeptiert wird, lautet `web`. |
 | `version` | Die Version der Erweiterung. Sie muss dem Versionierungsformat [semver](https://semver.org/lang/de/) entsprechen. Dies entspricht dem [npm-Feld version](https://docs.npmjs.com/files/package.json#version). |
@@ -30,6 +30,7 @@ Ein Erweiterungsmanifest muss Folgendes enthalten:
 | `description` | Die Beschreibung der Erweiterung. Dies wird Experience Platform-Benutzern angezeigt. Wenn Benutzer mit Ihrer Erweiterung Ihr Produkt auf ihrer Website implementieren können, beschreiben Sie die Funktionen Ihres Produkts. Es ist nicht erforderlich, „Tags“ oder „Erweiterung“ zu erwähnen, da die Benutzer bereits wissen, dass sie eine Tag-Erweiterung vor sich haben. |
 | `iconPath` *(Optional)* | Der relative Pfad zu dem Symbol, das für die Erweiterung angezeigt wird. Er sollte nicht mit einem Schrägstrich beginnen. Er muss auf eine SVG-Datei mit der Erweiterung `.svg` verweisen. Der SVG sollte quadratisch sein und kann von Experience Platform skaliert werden. |
 | `author` | „author“ ist ein Objekt, das wie folgt strukturiert sein sollte: <ul><li>`name`: Der Name des Autors der Erweiterung. Alternativ kann hier der Name der Firma angegeben werden.</li><li>`url` *(Optional)*: Eine URL, die weitere Informationen zum Autor der Erweiterung bietet.</li><li>`email` *(Optional)*: Die E-Mail-Adresse des Autors der Erweiterung.</li></ul>Dies entspricht den Regeln des [npm-Felds author](https://docs.npmjs.com/files/package.json#people-fields-author-contributors). |
+| `releaseNotesUrl` *(Optional)* | Die URL zu den Versionshinweisen Ihrer Erweiterung, wenn Sie über einen Speicherort für die Veröffentlichung dieser Informationen verfügen. Diese URL wird in der Adobe Tags-Benutzeroberfläche verwendet, um diesen Link während der Installation und Aktualisierung der Erweiterung anzuzeigen. Diese Eigenschaft wird nur für Web- und Edge-Erweiterungen unterstützt. |
 | `exchangeUrl` *(Erforderlich für öffentliche Erweiterungen)* | Die URL zum Listeneintrag Ihrer Erweiterung auf Adobe Exchange. Sie muss dem Muster `https://www.adobeexchange.com/experiencecloud.details.######.html` entsprechen. |
 | `viewBasePath` | Der relative Pfad zu dem Unterverzeichnis, das alle Ihre Ansichten und ansichtsbezogenen Ressourcen (HTML, JavaScript, CSS, Bilder) enthält. Experience Platform hostet dieses Verzeichnis auf einem Webserver und lädt iframe-Inhalte daraus. Dies ist ein erforderliches Feld und darf nicht mit einem Schrägstrich beginnen. Wenn sich beispielsweise alle Ihre Ansichten im Verzeichnis `src/view/` befinden, hat `viewBasePath` den Wert `src/view/`. |
 | `hostedLibFiles` *(Optional)* | Viele Benutzer bevorzugen es, alle Tag-bezogenenen Dateien auf ihrem eigenen Server zu hosten. Dies bietet den Benutzern höhere Sicherheit in Bezug auf die Dateiverfügbarkeit zur Laufzeit und sie können den Code einfach auf Sicherheitslücken überprüfen. Wenn die Bibliothekskomponente der Erweiterung zur Laufzeit JavaScript-Dateien laden muss, sollten Sie diese Eigenschaft verwenden, um die betreffenden Dateien aufzulisten. Die aufgelisteten Dateien werden zusammen mit der Tag-Laufzeitbibliothek gehostet. Ihre Erweiterung kann die Dateien dann über eine URL laden, die mit der [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file)-Methode abgerufen wird.<br><br>Diese Option enthält ein Array mit relativen Pfaden zu Bibliotheksdateien von Drittanbietern, die gehostet werden müssen. |
@@ -74,20 +75,20 @@ Das Konfigurationsobjekt sollte wie folgt strukturiert sein:
       <td><code>schema</code></td>
       <td>Ein Objekt vom Typ <a href="https://json-schema.org/">JSON-Schema</a>, das das Format eines gültigen Objekts beschreibt, das in der Erweiterungskonfigurationsansicht gespeichert wird. Da Sie der Entwickler der Konfigurationsansicht sind, müssen Sie sicherstellen, dass alle gespeicherten Einstellungsobjekte diesem Schema entsprechen. Dieses Schema wird auch für die Validierung verwendet, wenn Benutzende versuchen, Daten mithilfe von Experience Platform-Services zu speichern.<br><br>Beispiel für ein schema-Objekt:
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Es wird empfohlen, zum manuellen Testen Ihres Schemas ein Tool wie <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> zu verwenden.</td>
     </tr>
@@ -134,20 +135,20 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
       <td><code>schema</code></td>
       <td>Ein Objekt vom Typ <a href="https://json-schema.org/">JSON-Schema</a>, das das Format eines gültigen Einstellungsobjekts beschreibt, das vom Benutzer gespeichert werden kann. Die Einstellungen werden normalerweise von einem Benutzer über die Datenerfassungs-Benutzeroberfläche konfiguriert und gespeichert. In diesen Fällen kann die Ansicht der Erweiterung die erforderlichen Schritte zur Überprüfung der vom Benutzer bereitgestellten Einstellungen durchführen. Auf der anderen Seite entscheiden sich einige Benutzer dafür, Tag-APIs direkt ohne die Hilfe einer Benutzeroberfläche zu verwenden. Mit diesem Schema wird Experience Platform in die Lage versetzt, genau zu überprüfen, ob die von den Benutzenden gespeicherten Einstellungsobjekte unabhängig davon, ob eine Benutzeroberfläche verwendet wird, in einem Format vorliegen, das mit dem Bibliotheksmodul kompatibel ist, das zur Laufzeit das Einstellungsobjekt verarbeitet.<br><br>Ein Beispiel für ein schema-Objekt:<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Es wird empfohlen, zum manuellen Testen Ihres Schemas ein Tool wie <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> zu verwenden.</td>
     </tr>
