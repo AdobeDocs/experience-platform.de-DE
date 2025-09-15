@@ -62,5 +62,5 @@ Sobald Sie diese Schritte abgeschlossen haben, können alle Support-Administrato
 
 Weiterführende Informationen dazu, wie Sie mit dem Produktsupport-Agenten eine nahtlose Fehlerbehebung durchführen können, ohne Ihre Workflows verlassen zu müssen, finden Sie im folgenden Video.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443192?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
 
