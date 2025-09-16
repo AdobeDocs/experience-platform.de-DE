@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
 workflow-type: tm+mt
 source-wordcount: '5248'
-ht-degree: 63%
+ht-degree: 64%
 
 ---
 
@@ -130,7 +130,7 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Externe Zielgruppen"
->abstract="Über die Registerkarte „Zielgruppen“ importierte Zielgruppen werden jetzt automatisch über das Zielgruppenportal angezeigt. Dazu gehören Zielgruppen, die aus Audience Manager, Customer Journey Analytics, Segment Match und anderen benutzerdefinierten Integrationen aufgenommen werden.<br/><br/>Bis Ende September 2025 werden Zielgruppen ausschließlich über die einheitliche Suche abgerufen und der vorherige Workflow wird nicht mehr unterstützt. Segment Match bleibt während der Umstellung des Service nur für eine geringe Anzahl benannter Kunden verfügbar. Der Zugriff für neue Segment Match-Kunden kann auf Anfrage weiterhin aktiviert werden, bevor der Service vollständig eingestellt wird.<br/><br/>Für die laufende Datenzusammenarbeit empfiehlt Adobe den Wechsel zu Collaboration, der langfristig unterstützten Lösung."
+>abstract="Über die Registerkarte „Zielgruppen“ importierte Zielgruppen werden jetzt automatisch über das Zielgruppenportal angezeigt. Dazu gehören Zielgruppen, die aus Audience Manager, Customer Journey Analytics, Segment Match und anderen benutzerdefinierten Integrationen aufgenommen werden.<br/><br/>Ab Ende September 2025 werden Zielgruppen ausschließlich über die einheitliche Suche abgerufen und der vorherige Workflow wird nicht mehr unterstützt. Segment Match bleibt während der Umstellung des Diensts nur für eine geringe Anzahl bestimmter Kundinnen und Kunden verfügbar. Der Zugriff für neue Segment Match-Kundinnen und -Kunden kann auf Anfrage weiterhin aktiviert werden, bevor der Dienst vollständig eingestellt wird.<br/><br/>Für laufende Anwendungsfälle bezüglich Datenzusammenarbeit empfiehlt Adobe den Wechsel zu Collaboration, der langfristig unterstützten Lösung."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/ui/audience-portal#list" text="Zielgruppenportal"
 
 >[!NOTE]
@@ -330,7 +330,7 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 >[!NOTE]
 >
 >Bei Verwendung der Zeitbeschränkung „Nach“ kann letzteres Ereignis länger als die in der Zeitbeschränkung aufgeführte Zeit stattfinden. >
->&#x200B;>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
+>>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
 >
 >Darüber hinaus können diese beiden Zeitbeschränkungen in Abstimmung miteinander verwendet werden.
 >
