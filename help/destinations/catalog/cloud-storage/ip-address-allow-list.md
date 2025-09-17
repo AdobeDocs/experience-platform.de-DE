@@ -3,9 +3,9 @@ title: ZULASSUNGSLISTE von IP-Adressen für dateibasierte Cloud-Speicher-Ziele
 type: Documentation
 description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten aus Experience Platform sicher in Cloud-Speicher-Ziele zu exportieren.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
+source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '305'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ Die Informationen zum IP-Bereich auf dieser Seite gelten für die folgenden date
 
 >[!IMPORTANT]
 >
->Die auf dieser Seite dokumentierten IP-Bereiche werden *nicht* für die folgenden dateibasierten Cloud-Speicherziele unterstützt: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] und [!UICONTROL Data Landing Zone].
+>Die auf dieser Seite dokumentierten IP-Bereiche werden *nicht* für die folgenden dateibasierten Cloud-Speicherziele unterstützt: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone] und SFTP-Server, die auf Microsoft Azure gehostet werden.
 
 ## Überblick {#overview}
 
@@ -43,7 +43,7 @@ Adobe empfiehlt, die folgenden IP-Bereiche zu einer -Zulassungsliste hinzuzufüg
 
 ## US-Kunden, die mit AWS arbeiten {#aws}
 
-Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht [&#128279;](../../../landing/multi-cloud.md) Experience Platform Multi-Cloud .
+Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht [ Experience Platform Multi-Cloud .](../../../landing/multi-cloud.md)
 
 >[!NOTE]
 >
