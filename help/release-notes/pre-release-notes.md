@@ -2,10 +2,10 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
+source-git-commit: c592d007932835f5263d7f78b2e8155790313840
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 23%
+source-wordcount: '1217'
+ht-degree: 24%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 23%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: September 2025**
 
@@ -46,9 +46,8 @@ Der Adobe Experience Platform-KI-Assistent ist ein Gesprächserlebnis, mit dem S
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator ist Ihr intelligenter Assistent für Experience Cloud-Anwendungen. Wenn Sie Fragen stellen oder Hilfe anfordern, ruft Agent Orchestrator automatisch spezialisierte Agenten auf, um die richtigen Antworten zu erhalten. Agent Orchestrator speichert Ihren Gesprächsverlauf, sodass Sie auf natürliche Weise auf früheren Fragen aufbauen können, ohne den Kontext zu wiederholen, und kombiniert Einblicke aus mehreren Agenten, um Ihnen klare, einheitliche Antworten zu bieten. Sie können die Agent Orchestrator-Funktionen über die Konversationsoberfläche des KI-Assistenten nutzen. |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator ist die intelligente Ebene, die den KI-Assistenten antreibt. Wenn Sie Fragen stellen oder Hilfe anfordern, ruft Agent Orchestrator automatisch spezialisierte Agenten auf, um die richtigen Antworten zu erhalten. Agent Orchestrator speichert Ihren Gesprächsverlauf, sodass Sie auf natürliche Weise auf früheren Fragen aufbauen können, ohne den Kontext zu wiederholen, und kombiniert Einblicke aus mehreren Agenten, um Ihnen klare, einheitliche Antworten zu bieten. |
 | Audience Agent | Mit der Audience Agent können Sie Einblicke zu Zielgruppen erhalten, einschließlich der Erkennung signifikanter Änderungen der Zielgruppengröße, der Erkennung doppelter Zielgruppen, der Untersuchung Ihres Zielgruppeninventars und des Abrufs der Zielgruppengröße. |
-| Field Discovery Agent | Der Field Discovery Agent hilft Benutzern automatisch, Datenfelder in ihren Schemas und Datensätzen zu finden und zu verstehen. Dieser intelligente Agent analysiert Ihre Datenstruktur und bietet Einblicke in die Feldnutzung, Beziehungen und Optimierungsempfehlungen. |
 
 Weitere Informationen finden Sie unter [KI-Assistent - Übersicht](../ai-assistant/home.md).
 
