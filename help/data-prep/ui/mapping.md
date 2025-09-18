@@ -134,7 +134,7 @@ Um eine Zuordnung aus einer exportierten Datei zu importieren, wählen Sie **[!U
 
 ![Die Zuordnungsschnittstelle mit der Auswahl „Zuordnung importieren“ und „Zuordnung aus Datei importieren“.](../images/ui/mapping/import_from_file.png)
 
-Verwenden Sie als Nächstes [!UICONTROL  Fenster ]Vorlage hochladen“, um eine CSV-Kopie Ihrer Zuordnungen herunterzuladen. Anschließend können Sie Ihre Zuordnungen lokal auf Ihrem Gerät konfigurieren und eine beliebige Software verwenden, die die Bearbeitung von CSV-Dateitypen unterstützt. In diesem Schritt müssen Sie sicherstellen, dass Sie nur die Felder verwenden, die in Ihrer Quelldatei und im Zielschema bereitgestellt werden.
+Verwenden Sie als Nächstes [!UICONTROL &#x200B; Fenster &#x200B;]Vorlage hochladen“, um eine CSV-Kopie Ihrer Zuordnungen herunterzuladen. Anschließend können Sie Ihre Zuordnungen lokal auf Ihrem Gerät konfigurieren und eine beliebige Software verwenden, die die Bearbeitung von CSV-Dateitypen unterstützt. In diesem Schritt müssen Sie sicherstellen, dass Sie nur die Felder verwenden, die in Ihrer Quelldatei und im Zielschema bereitgestellt werden.
 
 ![Das Fenster „Vorlage hochladen“, in dem Optionen zum Herunterladen und Hochladen einer exportierten CSV-Datei der Zuordnungen angezeigt werden.](../images/ui/mapping/upload_template.png)
 
