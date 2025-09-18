@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 6e76b7a594cb8482b3e33edbf6776ba3b03e6fb9
+source-git-commit: 66a1c323eaf930b4b9204d9e898bbe8356a9b1e5
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 73%
+source-wordcount: '1317'
+ht-degree: 74%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 73%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -196,7 +196,6 @@ ht-degree: 73%
       * [Moengage-Verbindung](./catalog/mobile-engagement/moengage.md)
    * Personalisierungsziele {#personalization}
       * [Personalisierungsziele – Übersicht](./catalog/personalization/overview.md)
-      * [(Eingeschränkte Verfügbarkeit) Zielgruppenanalyse](./catalog/personalization/audience-analysis.md)
       * [Adobe Commerce-Verbindung](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target-Verbindung](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target-Erweiterung](./catalog/personalization/adobe-target.md)
