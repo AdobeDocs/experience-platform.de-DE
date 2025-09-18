@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei 
 title: Handbuch zur Datenvorbereitungs-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche mithilfe von Datenvorbereitungsfunktionen CSV-Dateien einem XDM-Schema zuordnen können.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 33%
+source-wordcount: '1505'
+ht-degree: 32%
 
 ---
 
@@ -134,7 +134,7 @@ Um eine Zuordnung aus einer exportierten Datei zu importieren, wählen Sie **[!U
 
 ![Die Zuordnungsschnittstelle mit der Auswahl „Zuordnung importieren“ und „Zuordnung aus Datei importieren“.](../images/ui/mapping/import_from_file.png)
 
-Verwenden Sie als Nächstes [!UICONTROL &#x200B; Fenster &#x200B;]Vorlage hochladen“, um eine CSV-Kopie Ihrer Zuordnungen herunterzuladen. Anschließend können Sie Ihre Zuordnungen lokal auf Ihrem Gerät konfigurieren und eine beliebige Software verwenden, die die Bearbeitung von CSV-Dateitypen unterstützt. In diesem Schritt müssen Sie sicherstellen, dass Sie nur die Felder verwenden, die in Ihrer Quelldatei und im Zielschema bereitgestellt werden.
+Verwenden Sie als Nächstes [!UICONTROL  Fenster ]Vorlage hochladen“, um eine CSV-Kopie Ihrer Zuordnungen herunterzuladen. Anschließend können Sie Ihre Zuordnungen lokal auf Ihrem Gerät konfigurieren und eine beliebige Software verwenden, die die Bearbeitung von CSV-Dateitypen unterstützt. In diesem Schritt müssen Sie sicherstellen, dass Sie nur die Felder verwenden, die in Ihrer Quelldatei und im Zielschema bereitgestellt werden.
 
 ![Das Fenster „Vorlage hochladen“, in dem Optionen zum Herunterladen und Hochladen einer exportierten CSV-Datei der Zuordnungen angezeigt werden.](../images/ui/mapping/upload_template.png)
 
@@ -151,6 +151,10 @@ Wenn Sie fertig sind, wählen **[!UICONTROL Datei hochladen]** und die aktualisi
 >[!ENDTABS]
 
 Nachdem Sie die Zuordnungen abgeschlossen haben, können Sie jetzt auf **[!UICONTROL Beenden]** klicken und mit dem nächsten Schritt fortfahren, um Ihren Datenfluss abzuschließen.
+
+>[!TIP]
+>
+>Warten Sie nach Abschluss der Erstellung der Zuordnungen bis zu 10 Minuten, bevor Sie mit der Datenaufnahme beginnen. Diese Wartezeit stellt sicher, dass Ihre neuen Zuordnungen vollständig gespeichert und im System verfügbar sind.
 
 ![Die Zuordnungsschnittstelle mit einem vollständigen Satz von Zuordnungen.](../images/ui/mapping/completed_mappings.png)
 
