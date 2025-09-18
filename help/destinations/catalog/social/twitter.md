@@ -2,24 +2,16 @@
 title: Verbindung mit benutzerdefinierten Twitter-Zielgruppen
 description: Sprechen Sie Ihre bestehenden Follower und Kunden auf Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 5b529a1af62c2745c3226029de1a1ff508bddfc7
+source-git-commit: ee7e85afd48f7b1c40f0152ad76c8c718b8f1432
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 39%
+source-wordcount: '855'
+ht-degree: 44%
 
 ---
 
 # [!DNL Twitter Custom Audiences]-Verbindung
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->* Ab dem 9. September 2025 können Sie im Zielkatalog zwei **[!DNL Twitter Custom Audiences]** nebeneinander sehen. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der vorhandene **[!DNL Twitter Custom Audiences]**-Ziel-Connector wurde in **[!UICONTROL (veraltet) Twitter Custom Audiences]** umbenannt, und es **[!UICONTROL jetzt eine neue Karte mit dem Namen]** Twitter Custom Audiences verfügbar.
->* Verwenden Sie die neue **[!UICONTROL Twitter Custom Audiences]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum Ziel der **[!UICONTROL (nicht mehr unterstützt) benutzerdefinierten Twitter]** Zielgruppen haben, werden diese automatisch aktualisiert, sodass keine Aktion erforderlich ist.
->* Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:
->   * Flussspezifikations-ID: `903da9e4-7cf5-442a-9498-a237e4f064f9`
->   * Verbindungsspezifikations-ID: `9eb18875-a095-4b89-854e-39b9e29ccd41`
 
 Sprechen Sie Ihre bestehenden Follower und Kunden auf Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren.
 
@@ -32,7 +24,7 @@ Bevor Sie Ihr [!DNL Twitter Custom Audiences]-Ziel konfigurieren, sollten Sie di
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Twitter Custom Audiences] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#getting-started).
+[!DNL Twitter Custom Audiences] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
@@ -113,7 +105,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).

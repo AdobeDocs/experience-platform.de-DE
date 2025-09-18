@@ -3,25 +3,16 @@ keywords: LinkedIn-Verbindung;LinkedIn-Verbindung;LinkedIn-Ziele;LinkedIn;
 title: LinkedIn Matched Audiences-Verbindung
 description: Aktivieren Sie Profile für Ihre LinkedIn-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Grundlage von gehashten E-Mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 13b95db846d70c36233cf8ded491d19e1c93e4c0
+source-git-commit: 653f43ac6afb25445fe8ef3c2832be8f1c4723fe
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 29%
+source-wordcount: '1234'
+ht-degree: 32%
 
 ---
 
 # [!DNL LinkedIn Matched Audiences]-Verbindung
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->* Ab dem 9. September 2025 können Sie im Zielkatalog zwei **[!DNL LinkedIn Matched Audiences]** nebeneinander sehen. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der vorhandene **[!DNL LinkedIn Matched Audiences]**-Ziel-Connector wurde in **[!UICONTROL (veraltet) LinkedIn Matched Audiences]** umbenannt, und eine neue Karte mit dem Namen **[!UICONTROL LinkedIn Matched Audiences]** ist jetzt für Sie verfügbar.
->* Verwenden Sie die neue **[!UICONTROL LinkedIn Matched Audiences]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum Ziel **[!UICONTROL (veraltet) LinkedIn Matched Audiences haben]** werden diese automatisch aktualisiert, sodass keine Aktion erforderlich ist.
->* Die neue **[!UICONTROL LinkedIn Matched Audiences]**-Verbindung unterstützt [!DNL IDFA] Identitäten nicht mehr.
->* Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:
->   * Flussspezifikations-ID: `963604d1-811d-4ce4-ac66-1fc78bde7c42`
->   * Verbindungsspezifikations-ID: `393a7ce1-e527-4fdb-8d99-0b11dc910279`
 
 Aktivieren Sie Profile für Ihre [!DNL LinkedIn] Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung, basierend auf gehashten E-Mails und mobilen IDs.
 
@@ -36,6 +27,11 @@ Ein Software-Unternehmen organisiert eine Konferenz und möchte mit den Teilnehm
 ## Unterstützte Identitäten {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+
+>[!IMPORTANT]
+>
+>Ab September 2025 unterstützt das [!DNL LinkedIn Matched Audiences]-Ziel keine [!DNL IDFA]-Identitäten (Identifikatoren für Advertiser) mehr.  Diese Änderung ist auf die Anforderungen von LinkedIn zurückzuführen und steht in keinem Zusammenhang mit Ziel-Service-Upgrades von Experience Platform.
+
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
@@ -96,7 +92,7 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 >[!NOTE]
 >
 >Daten aus nicht gehashten Namespaces werden von [!DNL Experience Platform] bei der Aktivierung automatisch gehasht.
->&#x200B;> Attributquelldaten werden nicht automatisch gehasht.
+>> Attributquelldaten werden nicht automatisch gehasht.
 > 
 > Wenn Ihr [ ungehashte Attribute enthält, aktivieren Sie im Schritt „Identitätszuordnung](../../ui/activate-segment-streaming-destinations.md#mapping) die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht.
 > 
@@ -168,7 +164,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
