@@ -15,7 +15,7 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 > 
-> * Zum Aktivieren von Zielgruppen und Aktivieren [Zuordnungsschritts](#mapping) des Workflows sind die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **** Segmente anzeigen[ erforderlich](/help/access-control/home.md#permissions).
+> * Zum Aktivieren von Zielgruppen und Aktivieren [Zuordnungsschritts](#mapping) des Workflows sind die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **&#x200B;**&#x200B;Segmente anzeigen[ erforderlich](/help/access-control/home.md#permissions).
 > * Um Zielgruppen zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 > * Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 > 
@@ -64,7 +64,7 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 >Dieser Schritt gilt nur für einige Zielgruppen-Streaming-Ziele. Wenn Ihr Ziel nicht über einen Schritt **[!UICONTROL Zuordnung]** verfügt, fahren Sie mit [Zielgruppen-Planung](#scheduling) fort.
 >
 >Beim Aktivieren von Zielgruppen für Streaming-Ziele müssen Sie zusätzlich zu *Zielprofilattributen auch mindestens* Zielidentitäts-Namespace zuordnen. Andernfalls werden die Zielgruppen nicht für die Zielplattform aktiviert.
->> ![Abbildung des Zuordnungsschritts, der eine obligatorische Identitäts-Namespace-Zuordnung anzeigt.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>&#x200B;> ![Abbildung des Zuordnungsschritts, der eine obligatorische Identitäts-Namespace-Zuordnung anzeigt.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 Bei einigen Zielgruppen-Streaming-Zielen müssen Sie Quellattribute oder Identity-Namespaces auswählen, die als Zielidentitäten im Ziel zugeordnet werden sollen.
