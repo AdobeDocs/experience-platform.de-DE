@@ -4,7 +4,7 @@ title: Erstellen einer Segmentdefinition mit der Segmentierungs-Service-API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Segmentierungs-Service-API von Adobe Experience Platform eine Segmentdefinition entwickeln, testen, in der Vorschau anzeigen und speichern.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 24%
@@ -72,7 +72,7 @@ Es gibt zwei erforderliche Schritte, um eine Vorschau anzuzeigen oder eine Schä
 
 ### So werden Schätzungen generiert
 
-Wenn für das Echtzeit-Kundenprofil aktivierte Daten in Experience Platform aufgenommen werden, werden sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtprofilanzahl um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Wenn sich die Profilanzahl nicht um mehr als 5 % ändert, wird der Sampling-Auftrag automatisch wöchentlich ausgeführt.
+Wenn für das Echtzeit-Kundenprofil aktivierte Daten in Experience Platform aufgenommen werden, werden sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtprofilanzahl um mehr als 3 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Wenn sich die Profilanzahl nicht um mehr als 3 % ändert, wird der Sampling-Auftrag automatisch wöchentlich ausgeführt.
 
 Die Art und Weise, wie die Stichprobe ausgelöst wird, hängt von der Art der Aufnahme ab, die verwendet wird:
 

@@ -4,7 +4,7 @@ title: API-Endpunkte für Vorschauen und Schätzungen
 description: Bei der Entwicklung der Segmentdefinition können Sie die Tools Schätzung und Vorschau in Adobe Experience Platform verwenden, um Informationen auf Zusammenfassungsebene anzuzeigen und so sicherzustellen, dass Sie die erwartete Zielgruppe isolieren.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 11%
@@ -29,7 +29,7 @@ Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experienc
 
 ## So werden Schätzungen generiert
 
-Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtprofilanzahl um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Die Art und Weise, wie das Daten-Sampling ausgelöst wird, hängt von der Methode der Aufnahme ab:
+Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtprofilanzahl um mehr als 3 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Die Art und Weise, wie das Daten-Sampling ausgelöst wird, hängt von der Methode der Aufnahme ab:
 
 * **Batch-Aufnahme:** Bei der Batch-Aufnahme innerhalb von 15 Minuten nach der erfolgreichen Aufnahme eines Batches in den Profilspeicher wird ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert von 3 % für die Erhöhung oder Verringerung erreicht wird.
 * **Streaming-Aufnahme:** Bei Streaming-Daten-Workflows wird stündlich überprüft, ob der Schwellenwert von 3 % für die Erhöhung oder Verringerung erreicht wurde. Ist dies der Fall, wird automatisch ein Vorgang ausgelöst, um die Anzahl zu aktualisieren.
