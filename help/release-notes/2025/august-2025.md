@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise August 2025
 description: Versionshinweise August 2025 für Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
 workflow-type: tm+mt
-source-wordcount: '1432'
-ht-degree: 24%
+source-wordcount: '1485'
+ht-degree: 23%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 24%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 19. August 2025**
 
@@ -104,6 +104,7 @@ Weitere Informationen zum Katalog-Service finden Sie im Abschnitt [Übersicht ü
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) internes Upgrade | Seit dem 11. August 2025 haben Sie im Zielkatalog für einen kurzen Zeitraum möglicherweise zwei **[!DNL Microsoft Bing]** nebeneinander gesehen. Dies ist auf ein internes Upgrade des Ziel-Service zurückzuführen. Der bestehende **[!DNL Microsoft Bing]**-Ziel-Connector wurde in **[!UICONTROL (veraltet) Microsoft Bing]** umbenannt, und es **[!UICONTROL jetzt eine neue Karte mit dem Namen]** Microsoft Bing verfügbar. <br> Das Upgrade wurde abgeschlossen und die veraltete Karte wurde aus dem Zielkatalog entfernt. Verwenden Sie die **[!UICONTROL Microsoft Bing]**-Verbindung im Katalog für neue Aktivierungsdatenflüsse. Wenn Sie aktive Datenflüsse zum **[!UICONTROL (veraltet) Microsoft Bing]**-Ziel hatten, werden diese automatisch aktualisiert, sodass keine Aktion erforderlich ist. <br><br>Wenn Sie Datenflüsse über die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erstellen, müssen Sie Ihre [!DNL flow spec ID] und [!DNL connection spec ID] auf die folgenden Werte aktualisieren:<ul><li>Flussspezifikations-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindungsspezifikations-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Nach diesem Upgrade kann es zu einem **Rückgang der Anzahl aktivierter Profile** in Ihren Datenflüssen zu [!DNL Microsoft Bing] kommen. Dieser Rückgang wird durch die Einführung der **ECID-Zuordnungsanforderung** für alle Aktivierungen auf dieser Zielplattform verursacht. |
 | Details zur Authentifizierungsgültigkeit für Ziele von [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) und [LinkedIn übereinstimmende Zielgruppen](../../destinations/catalog/social/linkedin-b2b.md) | Informationen zum Authentifizierungsablauf für [!DNL LinkedIn] Ziele sind jetzt direkt in der Experience Platform-Benutzeroberfläche sichtbar, sodass Sie sehen können, wann Ihre Authentifizierung abläuft und erneuert wird, bevor sie zu Unterbrechungen Ihrer Datenflüsse führt. Sie können das Ablaufdatum Ihres Tokens über die Spalte **[!UICONTROL Account-Ablaufdatum]** entweder auf den Registerkarten **[[!UICONTROL Konten]](../../destinations/ui/destinations-workspace.md#accounts)** oder **[[!UICONTROL Durchsuchen]](../../destinations/ui/destinations-workspace.md#browse)** überwachen. |
+| [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) Entfernung [!DNL IDFA] Identitätsunterstützung | Ab September 2025 können Sie [!DNL IDFA] nicht mehr als Zielidentität zuordnen, da [!DNL IDFA] vom [!DNL LinkedIn Matched Audiences] Ziel nicht mehr unterstützt wird. Weitere Informationen finden Sie in der [!DNL LinkedIn Matched Audiences] zur [-](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) . Diese Änderung ist auf die Anforderungen von LinkedIn zurückzuführen und steht in keinem Zusammenhang mit Ziel-Service-Upgrades von Experience Platform. |
 
 **Neue oder aktualisierte Funktionen**
 
