@@ -33,7 +33,7 @@ Adobe Target ist eine Personalisierungsverbindung im Adobe Experience Platform-Z
 
 Einen kurzen Überblick über die Konfiguration der Adobe Target-Verbindung in Experience Platform erhalten Sie im folgenden Video.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449802/?quality=12&learn=on&captions=ger)
 
 ## Unterstützte Anwendungsfälle basierend auf dem Implementierungstyp {#supported-use-cases}
 
