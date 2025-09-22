@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 77%
+source-wordcount: '703'
+ht-degree: 75%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 77%
       * [Gesundheitswesen](./schema/industries/healthcare.md)
       * [Telekommunikation](./schema/industries/telecom.md)
       * [Reisen und Touristik](./schema/industries/travel-hospitality.md)
-   * Gesundheitsdatenmodell v2 - {#healthcare}
+   * Gesundheitsdatenmodell v2 {#healthcare}
       * [Healthcare v2](./schema/healthcare/healthcare-v2.md)
       * Klassen {#classes}
          * [Standort](./schema/healthcare/classes/location.md)
@@ -94,7 +94,7 @@ ht-degree: 77%
       * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
       * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
 * Feldergruppen {#field-groups}
-   * XDM Individual Profile {#profile}
+   * Individuelles XDM-Profil {#profile}
       * [Einverständnis und Voreinstellungen](./field-groups/profile/consents.md)
       * [Demografische Details](./field-groups/profile/demographic-details.md)
       * [Details zum versicherten Mitglied](./field-groups/profile/healthcare-member-details.md)
@@ -112,6 +112,7 @@ ht-degree: 77%
       * [Details zum potenziellen Partner (Beispiel)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Volle Adobe Analytics-Erweiterung](./field-groups/event/analytics-full-extension.md)
+      * [Adobe Advertising Cloud - Vollständige Erweiterung](./field-groups/event/advertising-full-extension.md)
       * [Werbedetails](./field-groups/event/advertising-details.md)
       * [Anwendungsdetails](./field-groups/event/application-details.md)
       * [Bilanzübertragungen](./field-groups/event/balance-transfers.md)
@@ -138,7 +139,7 @@ ht-degree: 77%
       * [Web-Details](./field-groups/event/web-details.md)
    * XDM Business Campaign {#b2b-campaign}
       * [XDM Business Campaign-Details](./field-groups/b2b-campaign/details.md)
-   * XDM Business Campaign-Mitglieder {#b2b-campaign-members}
+   * XDM Business Campaign Members {#b2b-campaign-members}
       * [XDM Business Campaign-Mitgliederdetails](./field-groups/b2b-campaign-members/details.md)
    * Medizin {#medication}
       * [Arzneimittel](./field-groups/medication/healthcare-medication.md)
@@ -149,7 +150,7 @@ ht-degree: 77%
       * [Produktkategorie](./field-groups/product/product-category.md)
    * Anbieter {#provider}
       * [Gesundheitsdienstleister](./field-groups/provider/healthcare-provider.md)
-   * Freigegebene {#shared}
+   * Freigegeben {#shared}
       * [Audit-Details des externen Quellsystems](./field-groups/shared/external-source-system-audit-details.md)
    * [Namensänderungen der Feldergruppe](./field-groups/name-updates.md)
 * Datentypen {#data-types}
@@ -230,7 +231,7 @@ ht-degree: 77%
    * [Web-Informationen](./data-types/web-information.md)
    * [Web-Interaktion](./data-types/web-interaction.md)
    * [Webseitendetails](./data-types/webpage-details.md)
-* [!UICONTROL Schemata]-Benutzeroberfläche {#ui}
+* [!UICONTROL Schemata] Benutzeroberfläche {#ui}
    * [Übersicht](./ui/overview.md)
    * [Erkunden von XDM-Ressourcen](./ui/explore.md)
    * Erstellen und Bearbeiten von Ressourcen {#resources}
@@ -238,8 +239,8 @@ ht-degree: 77%
       * [Klassen](./ui/resources/classes.md)
       * [Feldergruppen](./ui/resources/field-groups.md)
       * [Datentypen](./ui/resources/data-types.md)
-   * Definieren von Feldern {#fields}
-      * [Übersicht](./ui/fields/overview.md)
+   * Felder definieren {#fields}
+      * [Überblick](./ui/fields/overview.md)
       * [Array-Felder](./ui/fields/array.md)
       * [Aufzählungsfelder](./ui/fields/enum.md)
       * [Identitätsfelder](./ui/fields/identity.md)
@@ -251,7 +252,7 @@ ht-degree: 77%
    * [Durch maschinelles Lernen unterstützte Schemaerstellung](./ui/ml-assisted-schema-creation.md)
    * [Generieren von Beispiel-XDM-Daten](./ui/sample.md)
    * [Exportieren von XDM-Schemata](./ui/export.md)
-* Schemaregistrierungs-API {#api}
+* Schema Registry-API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [Schemata](api/schemas.md)
@@ -280,7 +281,7 @@ ht-degree: 77%
    * [Definieren einer Schemabeziehung in der Benutzeroberfläche](tutorials/relationship-ui.md)
    * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
    * [Definieren einer Schemabeziehung in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
-   * [Verwalten von Datennutzungskennzeichnungen für ein Schema](tutorials/labels.md)
+   * [Verwalten von Datennutzungs-Labels für ein Schema](tutorials/labels.md)
    * [Erstellen eines Ad-hoc-Schemas](tutorials/ad-hoc.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
