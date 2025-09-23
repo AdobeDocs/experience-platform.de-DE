@@ -77,7 +77,7 @@ Wählen Sie das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) im
 
 Die **&quot;**&quot; wird angezeigt. Wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Benachrichtigungen“ aus, um auf die E-Mail-Warnhinweiseinstellungen zuzugreifen.
 
-![Die Profilseite mit hervorgehobener [!UICONTROL  &quot;]&quot; im linken Navigationsbereich.](../images/alerts/ui/profile.png)
+![Die Profilseite mit hervorgehobener [!UICONTROL &#x200B; &quot;]&quot; im linken Navigationsbereich.](../images/alerts/ui/profile.png)
 
 Scrollen Sie zum Abschnitt **E** unten auf der Seite und wählen Sie **[!UICONTROL Sofortige Benachrichtigungen]**
 
