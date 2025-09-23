@@ -113,7 +113,7 @@ Wenn Sie ein benutzerdefiniertes Trennzeichen bevorzugen, wählen Sie **[!UICONT
 
 Sie können auch komprimierte JSON- oder durch Trennzeichen getrennte Dateien erfassen, indem Sie ihren Komprimierungstyp angeben.
 
-Wählen [!UICONTROL  im Schritt ]Daten auswählen“ eine komprimierte Datei für die Aufnahme und dann den entsprechenden Dateityp aus und geben Sie an, ob er XDM-kompatibel ist oder nicht. Wählen Sie anschließend **[!UICONTROL Komprimierungstyp]** und wählen Sie dann den entsprechenden komprimierten Dateityp für Ihre Quelldaten aus.
+Wählen [!UICONTROL &#x200B; im Schritt &#x200B;]Daten auswählen“ eine komprimierte Datei für die Aufnahme und dann den entsprechenden Dateityp aus und geben Sie an, ob er XDM-kompatibel ist oder nicht. Wählen Sie anschließend **[!UICONTROL Komprimierungstyp]** und wählen Sie dann den entsprechenden komprimierten Dateityp für Ihre Quelldaten aus.
 
 Um eine bestimmte Datei in Experience Platform aufzunehmen, wählen Sie einen Ordner und dann die Datei aus, die Sie aufnehmen möchten. In diesem Schritt können Sie auch eine Vorschau des Dateiinhalts anderer Dateien in einem bestimmten Ordner anzeigen, indem Sie das Vorschausymbol neben einem Dateinamen verwenden.
 
