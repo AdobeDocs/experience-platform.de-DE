@@ -80,5 +80,5 @@ Verwenden Sie diese Werte, um den Webhook in der **Relay-Konsole“**. Detaillie
 
 ## Zusätzliche Ressourcen
 
-* [Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Verbinden Sie sich über die Benutzeroberfläche mit Ihrer Quelle](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API](https://experienceleague.adobe.com/de/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Verbinden Sie sich über die Benutzeroberfläche mit Ihrer Quelle](https://experienceleague.adobe.com/de/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
