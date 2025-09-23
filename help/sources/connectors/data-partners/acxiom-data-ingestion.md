@@ -1,22 +1,17 @@
 ---
 title: Acxiom-Datenaufnahme
-description: Erfahren Sie, wie  [!DNL Acxiom]  Daten in Real-time Customer Data Platform aufnehmen, Erstanbieterprofile anreichern, Zielgruppen verbessern und über Marketing-Kanäle hinweg aktivieren können.
-badge: Beta
+description: Erfahren Sie, wie  [!DNL Acxiom]  Daten in Real-Time Customer Data Platform aufnehmen, Erstanbieterprofile anreichern, Zielgruppen verbessern und über Marketing-Kanäle hinweg aktivieren können.
 exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 43%
+source-wordcount: '461'
+ht-degree: 32%
 
 ---
 
 # [!DNL Acxiom Data Ingestion]
 
->[!NOTE]
->
->Die [!DNL Acxiom Prospecting Data Import]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
-
-Verwenden Sie die [!DNL Acxiom Data Ingestion], um [!DNL Acxiom] in Real-time Customer Data Platform aufzunehmen und Erstanbieterprofile anzureichern. Anschließend können Sie Ihre mit [!DNL Acxiom] angereicherten First-Party-Profile verwenden, um Zielgruppen zu verbessern und über Marketing-Kanäle hinweg zu aktivieren.
+Verwenden Sie die [!DNL Acxiom Data Ingestion], um [!DNL Acxiom] in Real-Time Customer Data Platform aufzunehmen und Erstanbieterprofile anzureichern. Anschließend können Sie Ihre mit [!DNL Acxiom] angereicherten First-Party-Profile verwenden, um Zielgruppen zu verbessern und über Marketing-Kanäle hinweg zu aktivieren.
 
 ![acxiom-data-gestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
@@ -33,11 +28,11 @@ Um Ihr [!DNL Acxiom Data Ingestion]-Konto mit Experience Platform zu verbinden, 
 | Geheimer [!DNL Amazon S3]-Schlüssel | Die geheime Schlüssel-ID für Ihren Bucket. Sie können diesen Wert vom [!DNL Acxiom]-Team abrufen. |
 | Behältername | Dies ist der Bucket, in dem Dateien freigegeben werden. Sie können diesen Wert vom [!DNL Acxiom]-Team abrufen. |
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Bevor Sie Quell-Connectoren verwenden können, müssen Sie die erforderlichen IP-Adressen für Ihre Region zu Ihrer Zulassungsliste hinzufügen. Wenn Sie diese IP-Adressen nicht hinzufügen, funktionieren die Quell-Connectoren möglicherweise nicht ordnungsgemäß oder es treten Fehler auf. Auf die Zulassungsliste setzen Detaillierte Anweisungen und die Liste der zuzulassenden IP-Adressen finden Sie auf der Seite [IP-Adresse](../../ip-address-allow-list.md) .
 
-### Konfigurieren von Berechtigungen auf Experience Platform
+### Konfigurieren von Berechtigungen für Experience Platform
 
 Sie müssen sowohl **[!UICONTROL Quellen anzeigen]** als auch **[!UICONTROL Quellen verwalten]** für Ihr Konto aktiviert haben, um Ihr [!DNL Acxiom Data Ingestion]-Konto mit Experience Platform zu verbinden. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/ui/overview.md).
 
@@ -54,4 +49,4 @@ Beachten Sie die folgenden Einschränkungen beim Benennen Ihrer Cloud-Speicherda
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten aus Ihrem [!DNL Acxiom]-Konto auf Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Acxiom Data Ingestion] Experience Platform über die Benutzeroberfläche fortfahren](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten von Ihrem [!DNL Acxiom]-Konto in Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Acxiom Data Ingestion]  mit Experience Platform über die Benutzeroberfläche ](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).

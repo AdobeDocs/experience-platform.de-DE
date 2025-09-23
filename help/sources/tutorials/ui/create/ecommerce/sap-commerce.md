@@ -1,20 +1,15 @@
 ---
 title: Erstellen einer SAP Commerce-Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Commerce-Quellverbindung für SAP erstellen.
-badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '959'
 ht-degree: 28%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL SAP Commerce] in der Benutzeroberfläche
-
->[!NOTE]
->
->Die [!DNL SAP Commerce]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL SAP Commerce] Quellverbindung, um [[!DNL SAP] Abonnementabrechnung“, Kontakte ](https://www.sap.com/products/financial-management/subscription-billing.html) Kundendaten über die Benutzeroberfläche von Adobe Experience Platform zu übertragen.
 

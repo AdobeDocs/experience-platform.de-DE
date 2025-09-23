@@ -1,21 +1,15 @@
 ---
 title: Acxiom-Datenaufnahme
 description: Verwenden Sie die Acxiom-Datenaufnahme, um Acxiom-Daten in Real-Time CDP aufzunehmen und First-Party-Profile anzureichern. Verwenden Sie Ihre mit Acxiom angereicherten First-Party-Profile, um Zielgruppen zu verbessern und über Marketing-Kanäle hinweg zu aktivieren.
-last-substantial-update: 2024-03-19T00:00:00Z
-badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1817'
 ht-degree: 14%
 
 ---
 
 # Erstellen einer [!DNL Acxiom Data Ingestion] Quellverbindung und eines Datenflusses in der Benutzeroberfläche
-
->[!NOTE]
->
->Die [!DNL Acxiom Data Ingestion]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Verwenden Sie die [!DNL Acxiom Data Ingestion], um [!DNL Acxiom] in Real-Time Customer Data Platform aufzunehmen und Erstanbieterprofile anzureichern. Anschließend können Sie Ihre mit [!DNL Acxiom] angereicherten First-Party-Profile verwenden, um Zielgruppen zu verbessern und über Marketing-Kanäle hinweg zu aktivieren.
 
@@ -105,7 +99,7 @@ Als Nächstes müssen Sie Informationen zu Ihrem Datensatz und Ihrem Datenfluss 
 
 >[!TAB Verwenden eines neuen Datensatzes]
 
-Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Daten, die erfolgreich in Experience Platform aufgenommen werden, bleiben als Datensätze im Data Lake erhalten. Um einen neuen Datensatz zu verwenden, wählen Sie **[!UICONTROL Neuer Datensatz]** aus.
+Ein Datensatz ist ein Konstrukt zur Speicherung und Verwaltung einer Sammlung von Daten, in der Regel eine Tabelle, die ein Schema (Spalten) und Felder (Zeilen) enthält. Daten, die erfolgreich in Experience Platform aufgenommen werden, bleiben als Datensätze im Data Lake erhalten. Um einen neuen Datensatz zu verwenden, wählen Sie **[!UICONTROL Neuer Datensatz]** aus.
 
 ![Die neue Datensatzschnittstelle.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-new-dataset.png)
 
@@ -125,7 +119,7 @@ Sie können **[!UICONTROL Erweiterte Suche]** auswählen, um ein Fenster aller D
 
 >[!ENDTABS]
 
-+++Wählen Sie Schritte aus, um die Profilaufnahme, Fehlerdiagnose und partielle Aufnahme zu aktivieren.
++++Wählen Sie aus, um die Profilaufnahme, Fehlerdiagnose und partielle Aufnahme zu aktivieren.
 
 Wenn Ihr Datensatz für das Echtzeit-Kundenprofil aktiviert ist, können Sie in diesem Schritt **[!UICONTROL Profildatensatz]** umschalten, um Ihre Daten für die Profilaufnahme zu aktivieren. Sie können diesen Schritt auch verwenden, um **[!UICONTROL Fehlerdiagnose]** und **[!UICONTROL Partielle Aufnahme]** zu aktivieren.
 

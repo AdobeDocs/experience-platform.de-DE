@@ -1,21 +1,15 @@
 ---
 title: Erstellen einer Source-Verbindung mit Merkury Enterprise Identity Resolution und eines Datenflusses in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung für Merkury Enterprise Identity Resolution erstellen.
-last-substantial-update: 2023-12=12
-badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2128'
 ht-degree: 28%
 
 ---
 
 # Erstellen einer [!DNL Merkury Enterprise Identity Resolution] Quellverbindung und eines Datenflusses in der Benutzeroberfläche
-
->[!NOTE]
->
->Die [!DNL Merkury Enterprise Identity Resolution]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Merkury Enterprise Identity Resolution] Quellverbindung und eines Datenflusses mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
@@ -119,7 +113,7 @@ Wenn Sie ein benutzerdefiniertes Trennzeichen bevorzugen, wählen Sie **[!UICONT
 
 Sie können auch komprimierte JSON- oder durch Trennzeichen getrennte Dateien erfassen, indem Sie ihren Komprimierungstyp angeben.
 
-Wählen [!UICONTROL &#x200B; im Schritt &#x200B;]Daten auswählen“ eine komprimierte Datei für die Aufnahme und dann den entsprechenden Dateityp aus und geben Sie an, ob er XDM-kompatibel ist oder nicht. Wählen Sie anschließend **[!UICONTROL Komprimierungstyp]** und wählen Sie dann den entsprechenden komprimierten Dateityp für Ihre Quelldaten aus.
+Wählen [!UICONTROL  im Schritt ]Daten auswählen“ eine komprimierte Datei für die Aufnahme und dann den entsprechenden Dateityp aus und geben Sie an, ob er XDM-kompatibel ist oder nicht. Wählen Sie anschließend **[!UICONTROL Komprimierungstyp]** und wählen Sie dann den entsprechenden komprimierten Dateityp für Ihre Quelldaten aus.
 
 Um eine bestimmte Datei in Experience Platform aufzunehmen, wählen Sie einen Ordner und dann die Datei aus, die Sie aufnehmen möchten. In diesem Schritt können Sie auch eine Vorschau des Dateiinhalts anderer Dateien in einem bestimmten Ordner anzeigen, indem Sie das Vorschausymbol neben einem Dateinamen verwenden.
 
@@ -145,11 +139,11 @@ Für ein Aufnehmen in einen neuen Datensatz wählen Sie **[!UICONTROL Neuer Date
 
 ### Profil- und Fehlerdiagnose aktivieren
 
-+++Wählen Sie aus, um die Schritte zur Aktivierung der Fehlerdiagnose und Profilaufnahme anzuzeigen.
++++Wählen Sie aus, um die Schritte zur Aktivierung der Fehlerdiagnose und Profilaufnahme anzuzeigen
 
 Wählen Sie als Nächstes den **[!UICONTROL Profildatensatz]** aus, um Ihren Datensatz für das Echtzeit-Kundenprofil zu aktivieren. Auf diese Weise können Sie eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität erstellen. Daten aus allen profilaktivierten Datensätzen werden in das Profil eingeschlossen und Änderungen werden angewendet, wenn Sie Ihren Datenfluss speichern.
 
-[!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erstellung von Fehlermeldungen für alle fehlerhaften Datensätze, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Aufnahme] die Aufnahme von fehlerhaften Daten bis zu einem gewissen Schwellenwert, den Sie manuell definieren, ermöglicht. Weitere Informationen finden Sie in der [Übersicht zur partiellen Batch-Aufnahme](../../../../../ingestion/batch-ingestion/partial.md).
+[!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erstellung von Fehlermeldungen für alle fehlerhaften Einträge, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Aufnahme] die Aufnahme von fehlerhaften Daten bis zu einem gewissen Schwellenwert, den Sie manuell definieren, ermöglicht. Weitere Informationen finden Sie in der [Übersicht zur partiellen Batch-Aufnahme](../../../../../ingestion/batch-ingestion/partial.md).
 
 +++
 

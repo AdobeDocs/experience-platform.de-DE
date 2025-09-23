@@ -1,21 +1,15 @@
 ---
 title: Übersicht über die Merkury Enterprise Identity Resolution Source
 description: Erfahren Sie, wie Sie die Merkury Enterprise Identity Resolution über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
-last-substantial-update: 2023-12-12T00:00:00Z
-badge: Beta
 exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 44%
+source-wordcount: '486'
+ht-degree: 34%
 
 ---
 
 # [!DNL Merkury Enterprise Identity Resolution]
-
->[!NOTE]
->
->Die [!DNL Merkury Enterprise Identity Resolution]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Adobe Experience Platform unterstützt die Aufnahme von Daten aus einer Datenpartneranwendung. Unterstützung für Datenpartner umfasst [!DNL Merkury Enterprise Identity Resolution].
 
@@ -31,9 +25,9 @@ Sie können aufgenommene Daten als Experience-Datenmodell (XDM), JSON, XDM Parqu
 
 ![Abbildung des Datenverarbeitungs-Workflows für die Merkury-Quelle.](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Bevor Sie Quell-Connectoren verwenden können, müssen Sie die erforderlichen IP-Adressen für Ihre Region zu Ihrer Zulassungsliste hinzufügen. Wenn Sie diese IP-Adressen nicht hinzufügen, funktionieren die Quell-Connectoren möglicherweise nicht ordnungsgemäß oder es treten Fehler auf. Auf die Zulassungsliste setzen Detaillierte Anweisungen und die Liste der zuzulassenden IP-Adressen finden Sie auf der Seite [IP-Adresse](../../ip-address-allow-list.md) .
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 
@@ -59,4 +53,4 @@ Sie müssen die folgenden Voraussetzungen erfüllen, bevor Sie mit der Verwendun
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten aus Ihrem [!DNL Merkury]-Konto auf Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Merkury] Experience Platform über die Benutzeroberfläche fortfahren](../../tutorials/ui/create/data-partners/merkury.md).
+Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten aus Ihrem [!DNL Merkury]-Konto in Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Merkury]  mit Experience Platform über die Benutzeroberfläche ](../../tutorials/ui/create/data-partners/merkury.md).
