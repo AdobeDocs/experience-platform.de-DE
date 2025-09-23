@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 197cdc89abd292d87276d792201dedb2373f5564
+source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 91%
+source-wordcount: '1070'
+ht-degree: 90%
 
 ---
 
@@ -103,6 +103,8 @@ ht-degree: 91%
       - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
    - Lokales System {#local-system}
       - [Connector für den Upload lokaler Dateien](connectors/local-system/local-file-upload.md)
+   - Treue {#loyalty}
+      - [Kapillar-Streaming-Ereignisse](connectors/loyalty/capillary.md)
    - Marketing-Automatisierung {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -179,6 +181,8 @@ ht-degree: 91%
          - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
+      - Treue {#loyalty}
+         - [Kapillar-Streaming-Ereignisse](tutorials/api/create/loyalty/capillary.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -311,6 +315,8 @@ ht-degree: 91%
          - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokales System {#local-system}
          - [Lokaler Datei-Upload](tutorials/ui/create/local-system/local-file-upload.md)
+      - Treue {#loyalty}
+         - [Kapillar-Streaming-Ereignisse](tutorials/ui/create/loyalty/capillary.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -322,6 +328,7 @@ ht-degree: 91%
          - [Oracle NetSuite-Aktivitäten](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite-Entitäten](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+         - [Relaisstecker](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [Square](tutorials/ui/create/payments/square.md)
@@ -330,7 +337,7 @@ ht-degree: 91%
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/ui/create/streaming/http.md)
-   - Datenfluss konfigurieren {#dataflow}
+   - Konfigurieren eines Datenflusses {#dataflow}
       - [Datenfluss der Werbeverbindung](tutorials/ui/dataflow/advertising.md)
       - [Datenfluss der Analytics-Verbindung](tutorials/ui/dataflow/analytics.md)
       - [Datenfluss der Batch-Cloud-Speicherverbindung](tutorials/ui/dataflow/batch/cloud-storage.md)
