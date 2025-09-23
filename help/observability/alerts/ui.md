@@ -4,10 +4,10 @@ title: Handbuch zur Warnhinweis-Benutzeroberfläche
 description: Hier erfahren Sie, wie Sie Warnhinweise in der Benutzeroberfläche von Experience Platform verwalten.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 57261ca37bf10e394f47ea4bb3c01856a18b197d
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 34%
+source-wordcount: '814'
+ht-degree: 35%
 
 ---
 
@@ -77,7 +77,7 @@ Wählen Sie das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) im
 
 Die **&quot;**&quot; wird angezeigt. Wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Benachrichtigungen“ aus, um auf die E-Mail-Warnhinweiseinstellungen zuzugreifen.
 
-![Die Profilseite mit hervorgehobener [!UICONTROL &#x200B; &quot;]&quot; im linken Navigationsbereich.](../images/alerts/ui/profile.png)
+![Die Profilseite mit hervorgehobener [!UICONTROL  &quot;]&quot; im linken Navigationsbereich.](../images/alerts/ui/profile.png)
 
 Scrollen Sie zum Abschnitt **E** unten auf der Seite und wählen Sie **[!UICONTROL Sofortige Benachrichtigungen]**
 
@@ -96,10 +96,12 @@ Warnschwellenwerte können für die folgenden Warnhinweistypen angepasst werden:
 | Verzögerung bei der Ausführung des Zielflusses | Verzögerungsschwellenwert |
 | Verzögerung bei der Ausführung des Identity Service-Flusses | Verzögerungsschwellenwert |
 | Verzögerung bei der Ausführung eines Profilflusses | Verzögerungsschwellenwert |
+| Rate für fehlgeschlagene Profil-Streaming-Aufnahmen überschritten | Fehlerschwellenwert |
+| Profil-Streaming-Erfassungsüberspringungsrate überschritten | Fehlerschwellenwert |
 | Verzögerung bei Flussausführung an der Quelle | Verzögerungsschwellenwert |
+| Fehlerrate bei der Quellaufnahme überschritten | Fehlerschwellenwert |
 | Verzögerung der Abfrageausführung | Verzögerungsschwellenwert |
 | Aktivierungsüberspringrate überschritten | Fehlerschwellenwert |
-| Fehlerrate bei der Quellaufnahme überschritten | Fehlerschwellenwert |
 
 Klicken Sie auf die Auslassungszeichen (**…**) neben dem Namen einer Regel. In einem Dropdown-Menü werden dann Steuerelemente angezeigt. Wählen Sie **[!UICONTROL Bearbeiten]** aus.
 
