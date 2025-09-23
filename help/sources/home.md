@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a236019dc3478c32ee035bfd337096346780d14b
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 56%
+source-wordcount: '1666'
+ht-degree: 55%
 
 ---
 
@@ -218,6 +218,14 @@ Sie können die folgenden Quellen verwenden, um Daten aus Ihrem lokalen System i
 | [Lokaler Datei-Upload](connectors/local-system/local-file-upload.md) | Batch | Azure |
 
 {style="table-layout:auto"}
+
+### Treue {#loyalty}
+
+Sie können die folgenden Quellen verwenden, um Treueprogramm-Daten in Experience Platform aufzunehmen.
+
+| Quelle | Aufnahmetyp | Cloud |
+| --- | --- | --- |
+| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
 
 ### Marketing-Automatisierung {#marketing-automation}
 

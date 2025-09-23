@@ -1,16 +1,20 @@
 ---
 title: Verbinden von Capillary mit Experience Platform mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Capillary mithilfe von APIs mit Experience Platform verbinden.
-hide: true
-hidefromtoc: true
-source-git-commit: 7119ca51e0a4db09c8adb68bcde41ab3837439d1
+badge: Beta
+exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 8%
+source-wordcount: '1150'
+ht-degree: 9%
 
 ---
 
 # Verbinden von [!DNL Capillary Streaming Events] mit Experience Platform mithilfe der [!DNL Flow Service]-API
+
+>[!AVAILABILITY]
+>
+>Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mit dem [!DNL Capillary Streaming Events] und der [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) Daten von Ihrem [!DNL Capillary] an Adobe Experience Platform streamen.
 
@@ -230,9 +234,9 @@ Transaktionen erfassen Commerce-Aktivitäten. Sehen Sie sich die folgende Payloa
 
 >[!ENDTABS]
 
-### Unterstützte Ereignisse
+<!--### Supported Events
 
-Die [!DNL Capillary] unterstützt die folgenden Ereignisse:
+The [!DNL Capillary] source supports the following events:
 
 * `pointsIssued`
 * `tierDowngraded`
@@ -247,8 +251,7 @@ Die [!DNL Capillary] unterstützt die folgenden Ereignisse:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`
-
+* `customerUpdated`-->
 
 ### Historische Datenmigration
 
@@ -319,11 +322,15 @@ Ordnen Sie die Kapillarfelder den entsprechenden XDM-Schemafeldern wie folgt zu:
 
 | Quellschema | Zielschema |
 |------------------------------|-------------------------------|
-| `identityMap.email.id` | `xdm:identityMap.email` |
-| `loyalty.points` | `xdm:loyaltyPoints` |
-| `loyalty.tier` | `xdm:loyaltyTier` |
+| `identityMap.email.id` | `xdm:identityMap.email[0].id` |
+| `loyalty.points` | `xdm:loyalty.points` |
+| `loyalty.tier` | `xdm:loyalty.tier` |
 | `commerce.order.priceTotal` | `xdm:commerce.order.priceTotal` |
 | `productLineItems.SKU` | `xdm:productListItems.SKU` |
+
+>[!TIP]
+>
+>Sie können die [Ereignisse und Profilzuordnungen](../../../../images/tutorials/create/capillary/mappings.zip) für [!DNL Capillary] herunterladen und [die Dateien in die Datenvorbereitung ](../../../../../data-prep/ui/mapping.md#import-mapping), wenn Sie für die Zuordnung Ihrer Daten bereit sind.
 
 ### Erstellen eines Datenflusses {#flow}
 
@@ -376,7 +383,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Ihren Datenfluss mit der entsprechenden Datenfluss-ID zurück.
+Bei einer erfolgreichen Antwort wird Ihr Datenfluss mit der entsprechenden Datenfluss-ID zurückgegeben.
 
 ```json
 {
