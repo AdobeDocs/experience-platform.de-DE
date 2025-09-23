@@ -3,9 +3,9 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Benutzeroberfläche;B
 title: Anpassung von Profildetails in der Benutzeroberfläche
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzeige von Echtzeit-Kundenprofildaten in der Adobe Experience Platform-Benutzeroberfläche.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e253be0c4e02b82bfc8926ac4531589782b9c8fe
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ Nachdem Sie sich entschieden haben, das Dashboard zu ändern, können Sie die Ka
 ![Die Schaltfläche zum Ändern der Größe wird in der Karte „Grundlegende Attribute“ hervorgehoben.](../images/profile-customization/resize.png)
 
 Die ausgewählte Karte wird an die gewünschte Größe angepasst und die umgebenden Karten werden dynamisch neu positioniert. Dies kann dazu führen, dass einige Karten in zusätzliche Zeilen verschoben werden, sodass Sie nach unten scrollen müssen, um alle Karten zu sehen. Wenn beispielsweise die Größe der Karte &quot;[!UICONTROL Basisattribute]&quot; geändert wird, ist die Karte &quot;[!UICONTROL Verknüpfte Identitäten]&quot; nicht mehr in der oberen Zeile sichtbar und wird jetzt in einer neuen zweiten Zeile innerhalb des Profils angezeigt (nicht angezeigt). Um die Karte &quot;[!UICONTROL Verknüpfte Identitäten]&quot; in die oberste Zeile zurückzugeben, können Sie sie per Drag-and-Drop an die aktuelle Position der Karte &quot;[!UICONTROL Kanaleinstellungen] ziehen.
-
-![Eine Karte mit geänderter Größe ist hervorgehoben.](../images/profile-customization/resized.png)
 
 ## Bearbeiten und Entfernen von Karten
 
@@ -70,8 +68,6 @@ Wenn Sie zum Bildschirm **[!UICONTROL Widget bearbeiten]** zurückkehren, sollte
 
 Nach dem Speichern kehren Sie zur Registerkarte **[!UICONTROL Detail]** zurück, auf der die aktualisierte Karte und die Attribute sichtbar sind.
 
-![Die neu hinzugefügten Attribute werden auf der Karte im Profil-Dashboard angezeigt.](../images/profile-customization/added-attributes.png)
-
 ## Neue Karte hinzufügen {#add-a-new-card}
 
 Um das Erscheinungsbild von Profilen in Experience Platform weiter anzupassen, können Sie dem Dashboard neue Karten hinzufügen und die Attribute auswählen, die auf diesen Karten angezeigt werden sollen. Wählen Sie zunächst **[!UICONTROL Dashboard ändern]** auf der Registerkarte **[!UICONTROL Detail]** aus.
@@ -99,8 +95,6 @@ Um Ihre neue Karte zu speichern, müssen Sie zunächst einen **[!UICONTROL Karte
 ![Das neue Widget wird im Bildschirm Widget bearbeiten in der Vorschau angezeigt.](../images/profile-customization/new-widget.png)
 
 Nach dem Speichern kehren Sie zur Registerkarte **[!UICONTROL Detail]** zurück, auf der Ihre neue Karte und Ihre neuen Attribute sichtbar sind.
-
-![Das neue Widget wird zum Profil-Dashboard hinzugefügt.](../images/profile-customization/added-widget.png)
 
 ## Standardkarten wiederherstellen
 
