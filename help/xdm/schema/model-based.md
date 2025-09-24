@@ -37,7 +37,7 @@ Verwenden Sie modellbasierte Schemata, um:
 
 ## Unterschiede zwischen modellbasierten Schemas und standardmäßigen XDM-Schemas
 
-Standard-XDM-Schemata in Experience Platform folgen einem von drei Datenverhalten: Datensatz, Zeitreihen oder Ad-hoc. Definitionen und Details finden Sie unter [XDM-Datenverhalten](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
+Standard-XDM-Schemata in Experience Platform folgen einem von drei Datenverhalten: Datensatz, Zeitreihen oder Ad-hoc. Definitionen und Details finden Sie unter [XDM-Datenverhalten](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/home#data-behaviors).
 
 Im traditionellen Modell sind Datensatz- und Zeitreihenschemas Teil von [Vereinigungsschemata](../api/unions.md) (siehe auch das [Handbuch zur Vereinigungsschema-Benutzeroberfläche](../../profile/ui/union-schema.md)). Diese Schemata entwickeln sich automatisch weiter[ wenn freigegebene (](./composition.md#field-group)) aktualisiert werden und benutzerdefinierte Felder unter einem Mandanten-Namespace verschachtelt werden müssen. Dieses Modell ist zwar leistungsstark, kann aber das Onboarding verlangsamen, übermäßig komplexe Schemata mit nicht verwendeten Feldern produzieren und zusätzliche Datenzuordnungen oder Umwandlungen erfordern. Diese Faktoren erhöhen die Lernkurve und den laufenden Wartungsaufwand.
 
