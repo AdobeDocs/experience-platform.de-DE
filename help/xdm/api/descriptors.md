@@ -525,7 +525,7 @@ Der Primärschlüsseldeskriptor (`xdm:descriptorPrimaryKey`) erzwingt Einschrän
 
 >[!NOTE]
 >
->Im Schema-Editor der Benutzeroberfläche wird der Versionsdeskriptor als &quot;[!UICONTROL Versionskennung“ ].
+>Im Schema-Editor der Benutzeroberfläche wird der Versionsdeskriptor als &quot;[!UICONTROL Versionskennung“ &#x200B;].
 
 Der Versionsdeskriptor (`xdm:descriptorVersion`) bezeichnet ein Feld, um Konflikte durch Änderungsereignisse zu erkennen und zu verhindern, die nicht in der richtigen Reihenfolge auftreten.
 
@@ -547,7 +547,7 @@ Der Versionsdeskriptor (`xdm:descriptorVersion`) bezeichnet ein Feld, um Konflik
 
 >[!NOTE]
 >
->Im Schema-Editor der Benutzeroberfläche wird der Zeitstempeldeskriptor als &quot;[!UICONTROL Zeitstempelkennung“ ].
+>Im Schema-Editor der Benutzeroberfläche wird der Zeitstempeldeskriptor als &quot;[!UICONTROL Zeitstempelkennung“ &#x200B;].
 
 Der Zeitstempeldeskriptor (`xdm:descriptorTimestamp`) bezeichnet ein Datums-/Uhrzeitfeld als Zeitstempel für Schemata mit `"meta:behaviorType": "time-series"`.
 
