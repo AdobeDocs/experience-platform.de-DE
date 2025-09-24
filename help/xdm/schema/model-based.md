@@ -71,7 +71,7 @@ Verwenden Sie einen Primärschlüsseldeskriptor, um sicherzustellen, dass jeder 
 
 >[!NOTE]
 >
->Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[!UICOTRNOL Versionskennung“ ] &quot;[!UICOTRNOL Zeitstempelkennung]&quot; angezeigt.
+>Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[ !UICOTRNOL Versionskennung“ ] &quot;[ !UICOTRNOL Zeitstempelkennung]&quot; angezeigt.
 
 **Beispiel (ein Feld):**
 

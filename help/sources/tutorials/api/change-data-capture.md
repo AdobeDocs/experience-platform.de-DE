@@ -82,7 +82,7 @@ So aktivieren Sie die Änderungsdatenerfassung mit einem modellbasierten Schema:
 
 >[!IMPORTANT]
 >
->Die dateibasierte Änderungsdatenerfassung erfordert Data Mirror mit modellbasierten Schemata. Bevor Sie die folgenden Dateiformatierungsschritte ausführen, stellen Sie sicher, dass Sie den Data Mirror-Setup-Workflow [](#workflow) abgeschlossen haben, der zuvor in diesem Dokument beschrieben wurde. In den folgenden Schritten wird beschrieben, wie Sie Ihre Datendateien formatieren, um Änderungsnachverfolgungsinformationen einzuschließen, die von Data Mirror verarbeitet werden.
+>Die dateibasierte Änderungsdatenerfassung erfordert Data Mirror mit modellbasierten Schemata. Bevor Sie die folgenden Dateiformatierungsschritte ausführen, stellen Sie sicher, dass Sie den Data Mirror-Setup-Workflow [&#128279;](#workflow) abgeschlossen haben, der zuvor in diesem Dokument beschrieben wurde. In den folgenden Schritten wird beschrieben, wie Sie Ihre Datendateien formatieren, um Änderungsnachverfolgungsinformationen einzuschließen, die von Data Mirror verarbeitet werden.
 
 Fügen Sie bei dateibasierten Quellen ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] und [!DNL SFTP]) eine `_change_request_type` Spalte in Ihre Dateien ein.
 

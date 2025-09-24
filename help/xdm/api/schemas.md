@@ -302,7 +302,7 @@ Erstellen Sie zuerst das Schema mit `POST /tenant/schemas`. Fügen Sie dann die 
 
 >[!NOTE]
 >
->Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[!UICOTRNOL Versionskennung“ ] &quot;[!UICOTRNOL Zeitstempelkennung]&quot; angezeigt.
+>Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[ !UICOTRNOL Versionskennung“ ] &quot;[ !UICOTRNOL Zeitstempelkennung]&quot; angezeigt.
 
 <!-- >[!AVAILABILITY]
 >

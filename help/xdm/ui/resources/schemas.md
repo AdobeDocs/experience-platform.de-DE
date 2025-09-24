@@ -27,9 +27,9 @@ Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Unter [XDM-�
 
 ## Erstellen eines neuen Schemas {#create}
 
-Wählen [!UICONTROL  Arbeitsbereich Schemata ] oben **[!UICONTROL rechts die Option]** Schema erstellen“ aus. Das Dropdown-Menü „Schematyp auswählen“ wird mit Optionen für [!UICONTROL Standard] oder [!UICONTROL modellbasierte] Schemata angezeigt.
+Wählen [!UICONTROL &#x200B; Arbeitsbereich Schemata &#x200B;] oben **[!UICONTROL rechts die Option]** Schema erstellen“ aus. Das Dropdown-Menü „Schematyp auswählen“ wird mit Optionen für [!UICONTROL Standard] oder [!UICONTROL modellbasierte] Schemata angezeigt.
 
-![Der Arbeitsbereich „Schemata[!UICONTROL  mit hervorgehobener Option &quot;] erstellen“ und dem Dropdown-Menü „Schematyp auswählen“](../../images/ui/resources/schemas/create-schema.png).
+![Der Arbeitsbereich „Schemata[!UICONTROL &#x200B; mit hervorgehobener Option &quot;] erstellen“ und dem Dropdown-Menü „Schematyp auswählen“](../../images/ui/resources/schemas/create-schema.png).
 
 ## Modellbasiertes Schema erstellen {#create-model-based-schema}
 
@@ -39,7 +39,7 @@ Wählen [!UICONTROL  Arbeitsbereich Schemata ] oben **[!UICONTROL rechts die Opt
 
 Wählen Sie **[!UICONTROL modellbasiert]** aus, um strukturierte, modellbasierte Schemata mit differenzierter Kontrolle über Datensätze zu definieren. Modellbasierte Schemata unterstützen die Durchsetzung von Primärschlüsseln, die Versionierung auf Datensatzebene und Beziehungen auf Schemaebene über Primär- und Fremdschlüssel. Sie sind auch für die inkrementelle Aufnahme mithilfe der Änderungsdatenerfassung optimiert und unterstützen mehrere Datenmodelle, die in der Kampagnenorchestrierung, in der Data Distiller und in B2B-Implementierungen verwendet werden.
 
-Weitere Informationen finden Sie in der Übersicht über das {0[Data Mirror](../../data-mirror/overview.md) oder Modellbasierte Schema[.](../../schema/model-based.md)
+Weitere Informationen finden Sie in der Übersicht über das &lbrace;0[Data Mirror](../../data-mirror/overview.md) oder Modellbasierte Schema[.](../../schema/model-based.md)
 
 ### Manuell erstellen {#create-manually}
 
@@ -79,8 +79,8 @@ Fahren Sie anschließend mit [Definieren von Primärschlüsseln](../fields/ident
 
 >[!NOTE]
 >
->Nach dem Speichern zeigt das Feld [!UICONTROL Typ] in der Seitenleiste [!UICONTROL  Schemaeigenschaften] an, dass es sich um ein [!UICONTROL modellbasiertes] Schema handelt. Dies wird auch in der Detailseitenleiste in der Schema-Bestandsansicht angezeigt.
->>![Die Arbeitsfläche des Schema-Editors, auf der eine leere modellbasierte Schemastruktur mit hervorgehobenem modellbasiertem Typ angezeigt wird.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>Nach dem Speichern zeigt das Feld [!UICONTROL Typ] in der Seitenleiste [!UICONTROL &#x200B; Schemaeigenschaften] an, dass es sich um ein [!UICONTROL modellbasiertes] Schema handelt. Dies wird auch in der Detailseitenleiste in der Schema-Bestandsansicht angezeigt.
+>&#x200B;>![Die Arbeitsfläche des Schema-Editors, auf der eine leere modellbasierte Schemastruktur mit hervorgehobenem modellbasiertem Typ angezeigt wird.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Hochladen einer DDL-Datei {#upload-ddl-file}
 
@@ -116,7 +116,7 @@ Anleitungen zum Aktivieren der Änderungsdatenerfassung in Experience Platform-Q
 
 ## Erstellung eines Standardschemas {#standard-based-creation}
 
-Wenn Sie im Dropdown-Menü „Schematyp auswählen“ die Option „Standardschematyp“ auswählen, wird [!UICONTROL  Dialogfeld „Schema erstellen] angezeigt. In diesem Dialogfeld können Sie entweder manuell ein Schema erstellen, indem Sie Felder und Feldergruppen hinzufügen, oder Sie können eine CSV-Datei hochladen und ML-Algorithmen verwenden, um ein Schema zu generieren. Wählen Sie im Dialogfeld einen Workflow zur Schemaerstellung aus.
+Wenn Sie im Dropdown-Menü „Schematyp auswählen“ die Option „Standardschematyp“ auswählen, wird [!UICONTROL &#x200B; Dialogfeld „Schema erstellen] angezeigt. In diesem Dialogfeld können Sie entweder manuell ein Schema erstellen, indem Sie Felder und Feldergruppen hinzufügen, oder Sie können eine CSV-Datei hochladen und ML-Algorithmen verwenden, um ein Schema zu generieren. Wählen Sie im Dialogfeld einen Workflow zur Schemaerstellung aus.
 
 ![Das Dialogfeld „Schema erstellen“ mit den Workflow-Optionen und hervorgehobener Auswahl.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
@@ -126,7 +126,7 @@ Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Sche
 
 ### Manuelle Schemaerstellung {#manual-creation}
 
-Der [!UICONTROL Schema erstellen] wird angezeigt. Sie können eine Basisklasse für das Schema auswählen, indem Sie entweder **[!UICONTROL Individuelles Profil]**, **[!UICONTROL Erlebnisereignis]** oder **[!UICONTROL Andere]** und dann **[!UICONTROL Weiter]** auswählen. Weitere Informationen zu diesen Klassen finden Sie in [[!UICONTROL  Dokumentation ]](../../classes/individual-profile.md)XDM Individual Profile[[!UICONTROL  und ]](../../classes/experienceevent.md)XDM ExperienceEvent .
+Der [!UICONTROL Schema erstellen] wird angezeigt. Sie können eine Basisklasse für das Schema auswählen, indem Sie entweder **[!UICONTROL Individuelles Profil]**, **[!UICONTROL Erlebnisereignis]** oder **[!UICONTROL Andere]** und dann **[!UICONTROL Weiter]** auswählen. Weitere Informationen zu diesen Klassen finden Sie in [[!UICONTROL &#x200B; Dokumentation &#x200B;]](../../classes/individual-profile.md)XDM Individual Profile[[!UICONTROL &#x200B; und &#x200B;]](../../classes/experienceevent.md)XDM ExperienceEvent .
 
 ![Workflow [!UICONTROL Schema erstellen] mit den drei Klassenoptionen und [!UICONTROL Weiter] hervorgehoben.](../../images/ui/resources/schemas/schema-class-options.png)
 
@@ -152,7 +152,7 @@ Wählen Sie eine beliebige Zeile aus, um eine Klasse auszuwählen, und klicken S
 
 Nachdem Sie eine Klasse ausgewählt haben, wird der Abschnitt [!UICONTROL Name und Überprüfung] angezeigt. In diesem Abschnitt geben Sie einen Namen und eine Beschreibung ein, um Ihr Schema zu identifizieren. &#x200B;Die Basisstruktur des Schemas (bereitgestellt von der -Klasse) wird auf der Arbeitsfläche angezeigt, damit Sie Ihre ausgewählte Klassen- und Schemastruktur überprüfen und überprüfen können.
 
-Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen ] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
+Geben Sie im Textfeld einen benutzerfreundlichen [!UICONTROL Anzeigenamen &#x200B;] Schemas“ ein. Geben Sie als Nächstes eine geeignete Beschreibung ein, um Ihr Schema zu identifizieren. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
 
 ![Der [!UICONTROL Name und Überprüfung] des Workflows [!UICONTROL Schema erstellen] mit den hervorgehobenen [!UICONTROL Anzeigename des Schemas], [!UICONTROL Beschreibung] und [!UICONTROL Beenden].](../../images/ui/resources/schemas/name-and-review.png)
 
@@ -253,11 +253,11 @@ Nachdem Sie eine Feldergruppe zu einem Schema hinzugefügt haben, können Sie Fe
 >[!IMPORTANT]
 >
 >Wenn Sie **[!UICONTROL Entfernen]** auswählen, wird das Feld aus der Feldergruppe selbst gelöscht, was sich auf *alle* Schemata auswirkt, die diese Feldergruppe verwenden.
->>Verwenden Sie diese Option nur, wenn Sie **Feld aus jedem Schema entfernen möchten, das die Feldergruppe**.
+>&#x200B;>Verwenden Sie diese Option nur, wenn Sie **Feld aus jedem Schema entfernen möchten, das die Feldergruppe**.
 
 Um ein Feld aus der Feldergruppe zu löschen, wählen Sie es auf der Arbeitsfläche aus und wählen **[!UICONTROL Entfernen]** in der rechten Leiste aus. Dieses Beispiel zeigt das Feld `taxId` aus der Gruppe **[!UICONTROL Demografische Details]**.
 
-![Die [!DNL Schema Editor] mit [!UICONTROL  hervorgehobenen ]. Diese Aktion entfernt ein einzelnes Feld.](../../images/ui/resources/schemas/remove-single-field.png)
+![Die [!DNL Schema Editor] mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;]. Diese Aktion entfernt ein einzelnes Feld.](../../images/ui/resources/schemas/remove-single-field.png)
 
 Um mehrere Felder aus einem Schema auszublenden, ohne sie aus der Feldergruppe selbst zu entfernen, verwenden Sie die Option **[!UICONTROL Verwandte Felder verwalten]**. Wählen Sie auf der Arbeitsfläche ein beliebiges Feld aus der Gruppe und dann in der rechten Leiste **[!UICONTROL Verknüpfte Felder verwalten]** aus.
 

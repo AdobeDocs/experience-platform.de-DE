@@ -42,7 +42,7 @@ Bevor Sie beginnen, sollten Sie die folgenden Komponenten von Experience Platfor
 * [Erstellen von Schemata in der Experience Platform-](../ui/resources/schemas.md) oder [API](../api/schemas.md)
 * [Konfigurieren von Cloud-Quellverbindungen](../../sources/home.md#cloud-storage)
 * [Change Data Capture-Konzepte anwenden](../../sources/tutorials/api/change-data-capture.md) (Upserts, Löschvorgänge)
-* Unterscheiden Sie zwischen [](../schema/composition.md) und [modellbasierten Schemas](../schema/model-based.md)
+* Unterscheiden Sie zwischen [&#128279;](../schema/composition.md) und [modellbasierten Schemas](../schema/model-based.md)
 * [Definieren struktureller Beziehungen mit Deskriptoren](../api/descriptors.md)
 
 ### Implementierungsanforderungen
