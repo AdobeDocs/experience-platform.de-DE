@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API-Endpunkt für Schemata
 description: Mit dem Endpunkt /schemas in der Schema Registry-API können Sie XDM-Schemas in Ihrem Erlebnisprogramm programmgesteuert verwalten.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 15%
@@ -302,7 +302,7 @@ Erstellen Sie zuerst das Schema mit `POST /tenant/schemas`. Fügen Sie dann die 
 
 >[!NOTE]
 >
->Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[ !UICOTRNOL Versionskennung“ ] &quot;[ !UICOTRNOL Zeitstempelkennung]&quot; angezeigt.
+>Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[!UICONTROL Versionskennung“ ] &quot;[!UICONTROL Zeitstempelkennung]&quot; angezeigt.
 
 <!-- >[!AVAILABILITY]
 >

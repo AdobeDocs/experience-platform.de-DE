@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Modellbasierte Schemata
 description: Erfahren Sie mehr über modellbasierte Schemata (auch als relationale Schemata bezeichnet) in Adobe Experience Platform, einschließlich Funktionen, erforderliche Felder, Beziehungen und Einschränkungen.
 badge: Eingeschränkte Verfügbarkeit
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%
@@ -37,7 +38,7 @@ Verwenden Sie modellbasierte Schemata, um:
 
 ## Unterschiede zwischen modellbasierten Schemas und standardmäßigen XDM-Schemas
 
-Standard-XDM-Schemata in Experience Platform folgen einem von drei Datenverhalten: Datensatz, Zeitreihen oder Ad-hoc. Definitionen und Details finden Sie unter [XDM-Datenverhalten](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/home#data-behaviors).
+Standard-XDM-Schemata in Experience Platform folgen einem von drei Datenverhalten: Datensatz, Zeitreihen oder Ad-hoc. Definitionen und Details finden Sie unter [XDM-Datenverhalten](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
 Im traditionellen Modell sind Datensatz- und Zeitreihenschemas Teil von [Vereinigungsschemata](../api/unions.md) (siehe auch das [Handbuch zur Vereinigungsschema-Benutzeroberfläche](../../profile/ui/union-schema.md)). Diese Schemata entwickeln sich automatisch weiter[ wenn freigegebene (](./composition.md#field-group)) aktualisiert werden und benutzerdefinierte Felder unter einem Mandanten-Namespace verschachtelt werden müssen. Dieses Modell ist zwar leistungsstark, kann aber das Onboarding verlangsamen, übermäßig komplexe Schemata mit nicht verwendeten Feldern produzieren und zusätzliche Datenzuordnungen oder Umwandlungen erfordern. Diese Faktoren erhöhen die Lernkurve und den laufenden Wartungsaufwand.
 
@@ -71,7 +72,7 @@ Verwenden Sie einen Primärschlüsseldeskriptor, um sicherzustellen, dass jeder 
 
 >[!NOTE]
 >
->Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[ !UICOTRNOL Versionskennung“ ] &quot;[ !UICOTRNOL Zeitstempelkennung]&quot; angezeigt.
+>Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[!UICONTROL Versionskennung“ ] &quot;[!UICONTROL Zeitstempelkennung]&quot; angezeigt.
 
 **Beispiel (ein Feld):**
 
@@ -210,4 +211,3 @@ Eine Implementierungsanleitung finden Sie unter [Löschen von Datensätzen aus m
 * Beziehungen sind auf Eins-zu-eins und Viele-zu-eins beschränkt.
 * Die Verfügbarkeit hängt von Ihrer Lizenz oder der Aktivierung von Funktionen ab.
 * Zusammengesetzte Primärschlüssel sind für Zeitreihenschemata erforderlich.
-

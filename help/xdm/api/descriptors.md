@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API-Endpunkt für Deskriptoren
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 25%
@@ -525,7 +525,7 @@ Der Primärschlüsseldeskriptor (`xdm:descriptorPrimaryKey`) erzwingt Einschrän
 
 >[!NOTE]
 >
->Im Schema-Editor der Benutzeroberfläche wird der Versionsdeskriptor als &quot;[ !UICOTRNOL Versionskennung“ ].
+>Im Schema-Editor der Benutzeroberfläche wird der Versionsdeskriptor als &quot;[!UICONTROL Versionskennung“ ].
 
 Der Versionsdeskriptor (`xdm:descriptorVersion`) bezeichnet ein Feld, um Konflikte durch Änderungsereignisse zu erkennen und zu verhindern, die nicht in der richtigen Reihenfolge auftreten.
 
@@ -547,7 +547,7 @@ Der Versionsdeskriptor (`xdm:descriptorVersion`) bezeichnet ein Feld, um Konflik
 
 >[!NOTE]
 >
->Im Schema-Editor der Benutzeroberfläche wird der Zeitstempeldeskriptor als &quot;[ !UICOTRNOL Zeitstempelkennung“ ].
+>Im Schema-Editor der Benutzeroberfläche wird der Zeitstempeldeskriptor als &quot;[!UICONTROL Zeitstempelkennung“ ].
 
 Der Zeitstempeldeskriptor (`xdm:descriptorTimestamp`) bezeichnet ein Datums-/Uhrzeitfeld als Zeitstempel für Schemata mit `"meta:behaviorType": "time-series"`.
 
