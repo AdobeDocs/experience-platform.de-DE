@@ -1,14 +1,11 @@
 ---
 title: Unterstützung privater Links für Quellen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche private Azure-Links für Quellen verwenden.
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 1%
+source-wordcount: '814'
+ht-degree: 0%
 
 ---
 
@@ -16,16 +13,29 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Diese Funktion befindet sich in der Beta-Phase und wird derzeit nur für die folgenden Quellen unterstützt:
+>Diese Funktion wird von den folgenden Quellen unterstützt:
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>Der Support für private Links ist derzeit nur für Organisationen verfügbar, die Adobe Healthcare Shield oder Adobe Privacy &amp; Security Shield erworben haben.
 
 Sie können die Funktion für private Links verwenden, um private Endpunkte zu erstellen, mit denen sich Ihre Adobe Experience Platform-Quellen verbinden können. Verbinden Sie Ihre Quellen mithilfe privater IP-Adressen sicher mit einem virtuellen Netzwerk, sodass keine öffentlichen IPs mehr benötigt werden und Sie Ihre Angriffsfläche reduzieren können. Vereinfachen Sie die Einrichtung Ihres Netzwerks, indem Sie die Notwendigkeit komplexer Konfigurationen für die Übersetzung von Firewall- oder Netzwerkadressen beseitigen und gleichzeitig sicherstellen, dass der Datenverkehr nur genehmigte Services erreicht.
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie den Quellarbeitsbereich in der Experience Platform-Benutzeroberfläche verwenden können, um einen privaten Endpunkt zu erstellen und zu verwenden.
+
+>[!BEGINSHADEBOX]
+
+## Lizenznutzungsberechtigungen für die Unterstützung privater Links
+
+Die Lizenznutzungsberechtigungsmetriken für die Unterstützung privater Links in Quellen lauten wie folgt:
+
+* Kunden haben Anspruch auf eine Datenübertragung von bis zu 2 TB pro Jahr über unterstützte Quellen ([!DNL Azure Blob Storage], [!DNL ADLS Gen2] und [!DNL Azure File Storage]) in allen Sandboxes und Organisationen.
+* Jede Organisation kann für alle Produktions-Sandboxes maximal 10 Endpunkte haben.
+* Jede Organisation kann über maximal 1 Endpunkt für alle Entwicklungs-Sandboxes verfügen.
+
+>[!ENDSHADEBOX]
 
 ## Erstellen eines privaten Endpunkts
 
@@ -45,7 +55,6 @@ Wählen Sie als Nächstes Ihre gewünschte Quelle aus und geben Sie dann Werte f
 | `subscriptionId` | Die ID, die Ihrem [!DNL Azure]-Abonnement zugeordnet ist. Weitere Informationen finden Sie im [!DNL Azure] unter [Abrufen Ihrer Abonnement- und Mandanten-IDs aus der [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | Der Name Ihrer Ressourcengruppe auf [!DNL Azure]. Eine Ressourcengruppe enthält zugehörige Ressourcen für eine [!DNL Azure]. Weitere Informationen finden Sie im [!DNL Azure] Handbuch unter [Verwalten von Ressourcengruppen](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceGroup` | Der Name Ihrer Ressource. In [!DNL Azure] bezieht sich eine Ressource auf Instanzen wie virtuelle Maschinen, Web-Anwendungen und Datenbanken. Weitere Informationen finden Sie im [!DNL Azure] Handbuch unter [Grundlegendes zum Ressourcen [!DNL Azure] Manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | Die vollqualifizierten Domain-Namen für Ihre Quelle. **HINWEIS**: Diese Eigenschaft ist nur bei Verwendung der [!DNL Snowflake] erforderlich. |
 
 {style="table-layout:auto"}
 
