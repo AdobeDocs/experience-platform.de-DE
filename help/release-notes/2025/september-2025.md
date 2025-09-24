@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform – Versionshinweise, September 2025
 description: Versionshinweise September 2025 zu Adobe Experience Platform.
-source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
+exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
+source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 22%
+source-wordcount: '1388'
+ht-degree: 23%
 
 ---
 
@@ -16,9 +17,9 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 23. September 2025**
 
@@ -138,7 +139,10 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | --- | --- |
 | Neue Quellen in allgemeiner Verfügbarkeit | Die folgenden Quellen sind jetzt allgemein verfügbar: Mehrere Quell-Connectoren wurden von Beta auf allgemein verfügbar aktualisiert: <ul><li>[Acxiom-Datenaufnahme](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Datenaufnahme des potenziellen Kunden Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Diese Quellen werden jetzt vollständig unterstützt und sind für die Verwendung in der Produktion bereit. |
 | Unterstützung der [!DNL Snowflake] Schlüsselpaar-Authentifizierung | Die Sicherheit für Snowflake-Verbindungen wurde durch die Unterstützung der Schlüsselpaar-Authentifizierung verbessert. Die Standardauthentifizierung (Benutzername/Kennwort) wird ab November 2025 eingestellt, sodass Kunden ermutigt werden, zur Verbesserung der Sicherheit zur Schlüsselpaar-Authentifizierung zu migrieren. Weitere Informationen finden Sie in der [[!DNL Snowflake] Dokumentation](../../sources/connectors/databases/snowflake.md). |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Verwenden Sie die [[!DNL Capillary Streaming Events] Quelle](../../sources/connectors/loyalty/capillary.md) um Treueprogramm-Daten von Ihrem [!DNL Capillary]-Konto zu Experience Platform zu streamen. |
 | Allgemeine Verfügbarkeit der Unterstützung für private Links in Quellen | Sie können jetzt **private Links** für eine ausgewählte Gruppe von Quellen verwenden. Verwenden Sie diese Funktion, um einen privaten Endpunkt zu erstellen, mit dem Ihre Quelle eine Verbindung herstellen kann. Mit privaten Endpunkten können Sie Verbindungen und Datenflüsse einrichten, die das öffentliche Internet umgehen, sodass die Sicherheit und Netzwerkisolierung für Ihre sensiblen Daten verbessert wird. Unterstützung für private Links ist für die folgenden Quellen verfügbar: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Weitere Informationen finden Sie in den Handbüchern zum Erstellen privater Links [in der ](../../sources/tutorials/api/private-link.md) und [in der Benutzeroberfläche](../../sources/tutorials/ui/private-link.md). |
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).
+
+<!--
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
+-->

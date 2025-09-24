@@ -1,24 +1,25 @@
 ---
-title: Verbinden von Azure DataBricks mit Experience Platform über die Benutzeroberfläche
-description: Erfahren Sie, wie Sie Azure Databricks über die Benutzeroberfläche mit Experience Platform verbinden.
+title: Verbinden von DataBricks mit Experience Platform über die Benutzeroberfläche
+description: Erfahren Sie, wie Sie Databricks über die Benutzeroberfläche mit Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2bd16d5a55c5bbeedbc6a6012d9f0229eee8433a
+exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '481'
 ht-degree: 8%
 
 ---
 
-# Verbinden von [!DNL Azure Databricks] mit Experience Platform über die Benutzeroberfläche
+# Verbinden von [!DNL Databricks] mit Experience Platform über die Benutzeroberfläche
 
 >[!AVAILABILITY]
 >
->* Die [!DNL Azure Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
+>* Die [!DNL Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
 >
->* Die [!DNL Azure Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Azure Databricks]-Konto mithilfe des Quellarbeitsbereichs in der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Databricks]-Konto mithilfe des Quellarbeitsbereichs in der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
 ## Erste Schritte
 
@@ -29,22 +30,22 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Geben Sie Werte für die folgenden Anmeldeinformationen an, um [!DNL Azure Databricks] mit Experience Platform zu verbinden.
+Geben Sie Werte für die folgenden Anmeldeinformationen an, um [!DNL Databricks] mit Experience Platform zu verbinden.
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Domain | Die URL Ihres [!DNL Azure Databricks]. Beispiel: `https://adb-1234567890123456.7.azuredatabricks.net`. |
-| Cluster-ID | Die ID Ihres Clusters in [!DNL Azure Databricks]. Dieser Cluster muss bereits ein vorhandener Cluster sein und sollte ein interaktiver Cluster sein. |
-| Zugriffs-Token | Das Zugriffstoken, das Ihr [!DNL Azure Databricks]-Konto authentifiziert. Sie können Ihr Zugriffs-Token mit dem [!DNL Azure Databricks] Workspace generieren. |
+| Domain | Die URL Ihres [!DNL Databricks]. Beispiel: `https://adb-1234567890123456.7.azuredatabricks.net`. |
+| Cluster-ID | Die ID Ihres Clusters in [!DNL Databricks]. Dieser Cluster muss bereits ein vorhandener Cluster sein und sollte ein interaktiver Cluster sein. |
+| Zugriffs-Token | Das Zugriffstoken, das Ihr [!DNL Databricks]-Konto authentifiziert. Sie können Ihr Zugriffs-Token mit dem [!DNL Databricks] Workspace generieren. |
 | Datenbank | Der Name Ihrer Datenbank im Delta Lake. |
 
-Weitere Informationen finden Sie in der [[!DNL Azure Databricks] Übersicht](../../../../connectors/databases/databricks.md).
+Weitere Informationen finden Sie in der [[!DNL Databricks] Übersicht](../../../../connectors/databases/databricks.md).
 
 ## Navigieren im Quellkatalog
 
 Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich *[!UICONTROL Quellen]* zuzugreifen. Wählen Sie eine Kategorie aus oder verwenden Sie die Suchleiste, um Ihre Quelle zu finden.
 
-Um eine Verbindung zu [!DNL Azure Databricks] herzustellen, gehen Sie zur Kategorie *[!UICONTROL Datenbanken]*, wählen Sie die Quellkarte **[!UICONTROL Azure]** Datenblöcke) aus und klicken Sie dann auf **[!UICONTROL Einrichten]**.
+Um eine Verbindung zu [!DNL Databricks] herzustellen, gehen Sie zur Kategorie *[!UICONTROL Datenbanken]*, wählen Sie die Quellkarte **[!UICONTROL Azure]** Datenblöcke) aus und klicken Sie dann auf **[!UICONTROL Einrichten]**.
 
 >[!TIP]
 >

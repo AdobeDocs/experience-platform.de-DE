@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 54%
+source-wordcount: '1674'
+ht-degree: 55%
 
 ---
 
@@ -219,13 +219,18 @@ Sie können die folgenden Quellen verwenden, um Daten aus Ihrem lokalen System i
 
 {style="table-layout:auto"}
 
-### Treue {#loyalty}
+<!--
+### Loyalty {#loyalty}
 
-Sie können die folgenden Quellen verwenden, um Treueprogramm-Daten in Experience Platform aufzunehmen.
+You can use the following sources to ingest data loyalty to Experience Platform.
 
-| Quelle | Aufnahmetyp | Cloud |
+| Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
+
+-->
 
 ### Marketing-Automatisierung {#marketing-automation}
 
@@ -241,7 +246,6 @@ Sie können die folgenden Quellen verwenden, um Daten zur Marketing-Automatisier
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
-| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
 
 {style="table-layout:auto"}

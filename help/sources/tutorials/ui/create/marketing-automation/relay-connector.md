@@ -1,7 +1,10 @@
 ---
 title: Verbinden von Relay mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine benutzerdefinierte Quellverbindung für einen Relay-Connector erstellen.
-source-git-commit: b16600888bd5e70dd97d67ceb265e3a1848d2a66
+hide: true
+hidefromtoc: true
+exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 2%
@@ -80,5 +83,5 @@ Verwenden Sie diese Werte, um den Webhook in der **Relay-Konsole“**. Detaillie
 
 ## Zusätzliche Ressourcen
 
-* [Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API](https://experienceleague.adobe.com/de/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Verbinden Sie sich über die Benutzeroberfläche mit Ihrer Quelle](https://experienceleague.adobe.com/de/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Verbinden Sie sich über die Benutzeroberfläche mit Ihrer Quelle](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

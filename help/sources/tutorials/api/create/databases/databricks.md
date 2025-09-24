@@ -1,25 +1,25 @@
 ---
-title: Verbinden von Azure DataBricks mit Experience Platform mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie Azure Databricks mithilfe von APIs mit Experience Platform verbinden.
+title: Verbinden von DataBricks mit Experience Platform mithilfe der Flow Service-API
+description: Erfahren Sie, wie Sie Databricks mithilfe von APIs mit Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '532'
 ht-degree: 17%
 
 ---
 
-# Verbinden von [!DNL Azure Databricks] mit Experience Platform mithilfe der [!DNL Flow Service]-API
+# Verbinden von [!DNL Databricks] mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
 >[!AVAILABILITY]
 >
->* Die [!DNL Azure Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
+>* Die [!DNL Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
 >
->* Die [!DNL Azure Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Azure Databricks]-Konto mithilfe der [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) mit Adobe Experience Platform verbinden.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Databricks]-Konto mithilfe der [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) mit Adobe Experience Platform verbinden.
 
 ## Erste Schritte
 
@@ -48,7 +48,7 @@ Geben Sie Werte für die folgenden Anmeldeinformationen an, um [!DNL Databricks]
 | `database` | Der Name Ihrer Datenbank im Delta Lake. |
 | `connectionSpec.Id` | Die Verbindungsspezifikations-ID gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Databricks] ist `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
 
-Weitere Informationen finden Sie in der [[!DNL Azure Databricks] Übersicht](../../../../connectors/databases/databricks.md).
+Weitere Informationen finden Sie in der [[!DNL Databricks] Übersicht](../../../../connectors/databases/databricks.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -109,7 +109,7 @@ curl -X POST \
 
 Eine erfolgreiche Antwort gibt Ihre neu erstellte Verbindung zurück, einschließlich Ihrer Basisverbindungs-ID.
 
-+++Beispiel für eine Antwort anzeigen
++++Beispiel für eine Anfrageantwort
 
 ```json
 {

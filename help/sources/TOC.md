@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1069'
 ht-degree: 90%
 
 ---
@@ -363,7 +363,7 @@ ht-degree: 90%
    - [Abonnieren von Warnmeldungen für Quellen](tutorials/ui/alerts.md)
    - [Speichern eines Datenflusses als Entwurf](tutorials/ui/draft.md)
    - [Anwenden von Zugriffskennzeichnungen auf einen Datenfluss](tutorials/ui/labels.md)
-   - [Erstellen eines privaten Azure-Endpunkts](tutorials/ui/private-link.md)
+   - [Erstellen eines privaten Endpunkts](tutorials/ui/private-link.md)
 - Selbstbedienungsquellen (Batch-SDK) {#sdk}
    - [Überblick](sources-sdk/overview.md)
    - Konfigurieren der Verbindungsspezifikation {#config}
