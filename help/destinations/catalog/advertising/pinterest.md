@@ -2,10 +2,10 @@
 title: Pinterest Customer List-Verbindung
 description: Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 1b35687350dbbcebfc86acc90852d86870292142
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 38%
+source-wordcount: '829'
+ht-degree: 37%
 
 ---
 
@@ -26,7 +26,7 @@ Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besuch
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Das [!DNL Pinterest Customer List]-Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#getting-started).
+Das [!DNL Pinterest Customer List]-Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Ordnen Sie [ Schritt ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) Zielaktivierung die gewünschten Identitäten dem Zielfeld zu (*_audience*. Identitäten werden bei der Datenaufnahme in Pinterest unterschieden und aufgelöst.
 
@@ -75,7 +75,9 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 ### Authentifizierungsdaten aktualisieren {#refresh-authentication-credentials}
 
-Pinterest-Token laufen alle 30 Tage ab. Sobald das Token abgelaufen ist, funktionieren Datenexporte an das Ziel nicht mehr. Um dies zu verhindern, authentifizieren Sie sich erneut, indem Sie die folgenden Schritte ausführen:
+Pinterest-Token laufen alle 30 Tage ab. Sie können das Ablaufdatum Ihres Tokens über die Spalte **[!UICONTROL Account-Ablaufdatum]** entweder auf den Registerkarten **[[!UICONTROL Konten]](../../ui/destinations-workspace.md#accounts)** oder **[[!UICONTROL Durchsuchen]](../../ui/destinations-workspace.md#browse)** überwachen.
+
+Sobald das Token abgelaufen ist, funktionieren Datenexporte an das Ziel nicht mehr. Um dies zu verhindern, authentifizieren Sie sich erneut, indem Sie die folgenden Schritte ausführen:
 
 1. Navigieren Sie **[!UICONTROL Ziele]** > **[!UICONTROL Konten]**
 2. (Optional) Verwenden Sie die verfügbaren Filter auf der Seite, um nur Pinterest-Konten anzuzeigen.
@@ -99,7 +101,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
