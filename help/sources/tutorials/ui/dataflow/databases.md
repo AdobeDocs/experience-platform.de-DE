@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses mithilfe einer Datenbank-Source in der Benut
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Experience Platform-Datensatz aufgenommen werden. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche einen Datenfluss für eine Datenbankquelle erstellen.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
-source-wordcount: '1576'
-ht-degree: 40%
+source-wordcount: '1698'
+ht-degree: 36%
 
 ---
 
@@ -70,7 +70,7 @@ Für ein Aufnehmen in einen neuen Datensatz wählen Sie **[!UICONTROL Neuer Date
 
 Wählen Sie als Nächstes den **[!UICONTROL Profildatensatz]**-Umschalter aus, um Ihren Datensatz für [!DNL Profile] zu aktivieren. Auf diese Weise können Sie eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität erstellen. Daten aus allen [!DNL Profile]-aktivierten Datensätzen werden in [!DNL Profile] eingeschlossen und Änderungen werden wirksam, wenn Sie Ihren Datenfluss speichern.
 
-[!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erstellung von Fehlermeldungen für alle fehlerhaften Datensätze, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Aufnahme] die Aufnahme von fehlerhaften Daten bis zu einem gewissen Schwellenwert, den Sie manuell definieren, ermöglicht. Weitere Informationen finden Sie in der [Übersicht zur partiellen Batch-Aufnahme](../../../../ingestion/batch-ingestion/partial.md).
+[!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erstellung von Fehlermeldungen für alle fehlerhaften Einträge, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Aufnahme] die Aufnahme von fehlerhaften Daten bis zu einem gewissen Schwellenwert, den Sie manuell definieren, ermöglicht. Weitere Informationen finden Sie in der [Übersicht zur partiellen Batch-Aufnahme](../../../../ingestion/batch-ingestion/partial.md).
 
 ![profile-and-errors](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
 
@@ -87,6 +87,16 @@ Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
 Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../data-prep/ui/mapping.md).
+
+>[!NOTE]
+>
+>Stellen Sie bei der Zuordnung zu modellbasierten Schemata sicher, dass Ihre Quelldaten die erforderlichen Felder enthalten, z. B. einen Primärschlüssel und eine Versionskennung oder eine Zeitstempelkennung für Zeitreihenschemas .
+
+Kontrollspalten wie `_change_request_type`, die für die Änderungsdatenerfassung verwendet werden, werden während der Aufnahme gelesen, aber nicht im Zielschema gespeichert.
+
+Modellbasierte Schemata unterstützen auch Beziehungen zwischen Datensätzen, die Primär- und Fremdschlüsselzuordnungen verwenden.
+
+Weitere Informationen finden Sie in der [Übersicht über ](../../../../xdm/data-mirror/overview.md) Data Mirror und in der [technischen Referenz zu modellbasierten Schemata](../../../../xdm/schema/model-based.md).
 
 Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
 
@@ -123,7 +133,7 @@ Weitere Informationen zur Planung von Konfigurationen finden Sie in der folgende
 Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neuen Datenfluss überprüfen können, bevor er hergestellt wird. Die Details lassen sich wie folgt kategorisieren:
 
 * **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
-* **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt an, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
+* **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt den Datensatz an, in den die Quelldaten aufgenommen werden, sowie das zugehörige Schema. Wenn Sie ein modellbasiertes Schema verwenden, stellen Sie sicher, dass die erforderlichen Felder, wie der Primärschlüssel und die Versionskennung, korrekt zugeordnet sind. Stellen Sie außerdem sicher, dass alle geänderten Datenerfassungssteuerungsspalten ordnungsgemäß konfiguriert sind. Datensätze, die modellbasierte Schemata verwenden, unterstützen mehrere Datenmodelle und ermöglichen [Workflows zur Datenerfassung ändern](../../api/change-data-capture.md).
 * **[!UICONTROL Planung]**: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmezeitplans an.
 
 Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.

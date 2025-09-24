@@ -3,10 +3,10 @@ title: Erstellen eines Datenflusses für Datenbankquellen mit der Flow Service-A
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API einen Datenfluss erstellen und Daten aus Ihrer Datenbank in Experience Platform aufnehmen.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 73%
+source-wordcount: '1489'
+ht-degree: 71%
 
 ---
 
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | Die Verbindungs-ID Ihrer Datenbankquelle. |
 | `params.tableName` | Der Pfad der Quelldatei. |
-| `params.cdcEnabled` | Ein boolescher Wert, der angibt, ob die Erfassung des Änderungsverlaufs aktiviert ist oder nicht. Diese Eigenschaft wird von den folgenden Datenbankquellen unterstützt: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Weitere Informationen finden Sie im Handbuch unter Verwenden von [Datenerfassung in Quellen ändern](../change-data-capture.md). |
+| `params.cdcEnabled` | Ein boolescher Wert, der angibt, ob die Erfassung des Änderungsverlaufs aktiviert ist. Bei Verwendung mit modellbasierten Schemata ändern Sie die Datenerfassung, um Einfügungen, Aktualisierungen und Löschungen zu verfolgen, damit der Zieldatensatz mit der Quelle synchronisiert bleibt. Diese Eigenschaft wird von den folgenden Datenbankquellen unterstützt: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Einen Überblick über diese Funktion finden Sie in der Übersicht zu [Data Mirror](../../../../xdm/data-mirror/overview.md). Implementierungsdetails finden Sie unter [Ändern der Datenerfassung im Handbuch für Quellen](../change-data-capture.md) und [Technische Referenz zu modellbasierten Schemata](../../../../xdm/schema/model-based.md). |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Datenbankquelle. Eine Liste von Datenbankspezifikations-IDs finden Sie im [Anhang](#appendix). |
 
 **Antwort**

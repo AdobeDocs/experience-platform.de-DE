@@ -2,10 +2,10 @@
 title: Anfragen zum Löschen von Datensätzen (UI-Workflow)
 description: Erfahren Sie, wie Sie Datensätze in der Adobe Experience Platform-Benutzeroberfläche löschen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
+source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 19%
+source-wordcount: '2420'
+ht-degree: 15%
 
 ---
 
@@ -41,7 +41,7 @@ Der Workflow zur Anfrageerstellung wird angezeigt. Standardmäßig ist die Optio
 > 
 >Um die Effizienz zu verbessern und den Datensatzbetrieb kostengünstiger zu gestalten, können Unternehmen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als „delta-migriert“ bezeichnet. Benutzer von Organisationen, die in den Delta-Bereich migriert wurden, können Datensätze aus einem oder allen Datensätzen löschen. Benutzer von Organisationen, die keine Delta-Migration durchgeführt haben, können keine Datensätze selektiv aus einem einzelnen Datensatz oder allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem Abschnitt [Bereitstellen von ](#provide-identities)&quot; des Handbuchs fort.
 
-![Der Workflow für die Anfrageerstellung mit [!UICONTROL &#x200B; ausgewählten und hervorgehobenen Option &quot;] löschen“](../images/ui/record-delete/delete-record.png)
+![Der Workflow für die Anfrageerstellung mit [!UICONTROL  ausgewählten und hervorgehobenen Option &quot;] löschen“](../images/ui/record-delete/delete-record.png)
 
 ## Auswählen von Datensätzen {#select-dataset}
 
@@ -55,7 +55,7 @@ Um aus einem bestimmten Datensatz zu löschen, klicken Sie auf **[!UICONTROL Dat
 
 Um aus allen Datensätzen zu löschen, wählen Sie **[!UICONTROL Alle Datensätze]** aus. Diese Option vergrößert den Umfang des Vorgangs und erfordert die Angabe aller relevanten Identitätstypen.
 
-![Das Dialogfeld [!UICONTROL Datensatz auswählen] mit der ausgewählten Option [!UICONTROL Alle &#x200B;]Datensätze)](../images/ui/record-delete/all-datasets.png)
+![Das Dialogfeld [!UICONTROL Datensatz auswählen] mit der ausgewählten Option [!UICONTROL Alle ]Datensätze)](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
@@ -197,13 +197,76 @@ Ein Dialogfeld [!UICONTROL Anfrage bestätigen] zeigt an, dass die Identitäten 
 
 ![Dialogfeld [!UICONTROL Anforderung bestätigen].](../images/ui/record-delete/confirm-request.png)
 
-Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt und auf der Registerkarte &quot;[!UICONTROL &quot; &#x200B;] Arbeitsbereichs [!UICONTROL Datenlebenszyklus] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
+Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt und auf der Registerkarte &quot;[!UICONTROL &quot; ] Arbeitsbereichs [!UICONTROL Datenlebenszyklus] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
 
 >[!NOTE]
 >
 >Im Abschnitt „Übersicht“ unter [Timelines und Transparenz](../home.md#record-delete-transparency) finden Sie Einzelheiten darüber, wie Löschvorgänge von Datensätzen verarbeitet werden, sobald sie ausgeführt werden.
 
 ![Die Registerkarte [!UICONTROL Datensatz] des Arbeitsbereichs [!UICONTROL Datenlebenszyklus] mit der hervorgehobenen neuen Anfrage.](../images/ui/record-delete/request-log.png)
+
+## Löschen von Datensätzen aus modellbasierten Datensätzen {#model-based-record-delete}
+
+Wenn der Datensatz, aus dem Sie löschen möchten, ein modellbasiertes Schema ist, sollten Sie die folgenden Überlegungen überprüfen, um sicherzustellen, dass Datensätze korrekt entfernt und nicht aufgrund von Diskrepanzen zwischen Experience Platform und Ihrem Quellsystem erneut aufgenommen werden.
+
+### Verhalten beim Löschen von Datensätzen
+
+In der folgenden Tabelle wird beschrieben, wie sich das Löschen von Datensätzen je nach Aufnahmemethode und geänderter Datenerfassungskonfiguration über Experience Platform- und Quellsysteme hinweg verhält.
+
+| Aspekt | Verhalten |
+|---------------------|--------------------------------------------------------------------------|
+| Platform-Löschung | Datensätze werden aus dem Experience Platform-Datensatz und dem Data Lake entfernt. |
+| Aufbewahrung in Source | Datensätze verbleiben im Quellsystem, es sei denn, sie werden dort explizit gelöscht. |
+| Auswirkung auf vollständige Aktualisierung | Bei Verwendung der vollständigen Aktualisierung können gelöschte Datensätze erneut aufgenommen werden, es sei denn, sie werden entfernt oder aus der Quelle ausgeschlossen. |
+| Verhalten bei der Datenerfassung ändern | Datensätze, die mit `_change_request_type = 'd'` gekennzeichnet sind, werden während der Aufnahme gelöscht. Nicht gekennzeichnete Datensätze können erneut aufgenommen werden. |
+
+Um eine erneute Aufnahme zu verhindern, wenden Sie denselben Löschansatz sowohl auf Ihr Quellsystem als auch auf Experience Platform an, indem Sie entweder Datensätze aus beiden Systemen entfernen oder `_change_request_type = 'd'` für Datensätze einschließen, die Sie löschen möchten.
+
+### Ändern von Datenerfassungs- und Kontrollspalten
+
+Modellbasierte Schemata, die Quellen mit Änderungsdatenerfassung verwenden, können die `_change_request_type` Kontrollspalte verwenden, um Löschvorgänge von Upserts zu unterscheiden. Während der Aufnahme werden Datensätze, die mit `d` gekennzeichnet sind, aus dem Datensatz gelöscht, während Datensätze, die mit `u` oder ohne Spalte gekennzeichnet sind, als Upserts behandelt werden. Die `_change_request_type` Spalte wird nur zur Aufnahmezeit gelesen und nicht im Zielschema gespeichert oder XDM-Feldern zugeordnet.
+
+>[!NOTE]
+>
+>Das Löschen von Datensätzen über die Data Lifecycle-Benutzeroberfläche hat keine Auswirkungen auf das Quellsystem. Um Daten aus beiden Speicherorten zu entfernen, löschen Sie sie sowohl in Experience Platform als auch in der Quelle.
+
+### Zusätzliche Löschmethoden für modellbasierte Schemata
+
+Über den standardmäßigen Löscharbeitsablauf für Datensätze hinaus unterstützen modellbasierte Schemata zusätzliche Methoden für bestimmte Anwendungsfälle:
+
+* **Ansatz mit sicherer Kopie des Datensatzes**: Duplizieren Sie den Produktionsdatensatz und wenden Sie Löschvorgänge auf die Kopie an, um sie kontrollierten Tests oder einer Abstimmung zu unterziehen, bevor Sie Änderungen auf die Produktionsdaten anwenden.
+* **Nur-Löschen-Batch-Upload**: Laden Sie eine Datei hoch, die nur Löschvorgänge für eine gezielte Hygiene enthält, wenn Sie bestimmte Datensätze entfernen müssen, ohne andere Daten zu beeinflussen.
+
+### Deskriptorunterstützung für Hygienevorgänge {#descriptor-support}
+
+Modellbasierte Schemadeskriptoren bieten wichtige Metadaten für präzise Hygienevorgänge:
+
+* **Primärer Schlüsseldeskriptor**: Identifiziert Datensätze eindeutig für zielgerichtete Aktualisierungen oder Löschungen, um sicherzustellen, dass die richtigen Datensätze betroffen sind.
+* **Versionsdeskriptor**: Stellt sicher, dass Löschvorgänge und Aktualisierungen in der richtigen chronologischen Reihenfolge durchgeführt werden, um Vorgänge außerhalb der Sequenz zu verhindern.
+* **Zeitstempeldeskriptor (Zeitreihenschemata)**: Richtet Löschvorgänge an den Ereigniszeiten und nicht an den Aufnahmezeiten aus.
+
+>[!NOTE]
+>
+>Hygieneprozesse werden auf Datensatzebene ausgeführt. Bei profilaktivierten Datensätzen sind möglicherweise zusätzliche Profil-Workflows erforderlich, um die Konsistenz über das Echtzeit-Kundenprofil hinweg zu wahren.
+
+### Geplante Aufbewahrung für modellbasierte Schemata
+
+Informationen zur automatisierten Hygiene basierend auf dem Datenalter und nicht auf bestimmten Identitäten finden Sie unter [Verwalten der Experience Event-Datensatzaufbewahrung (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) für die geplante Aufbewahrung auf Zeilenebene im Data Lake.
+
+>[!NOTE]
+>
+>Die Gültigkeit auf Zeilenebene wird nur für Datensätze unterstützt, die Zeitreihenverhalten verwenden.
+
+### Best Practices für das modellbasierte Löschen von Datensätzen
+
+Befolgen Sie die folgenden Best Practices, um eine unbeabsichtigte erneute Aufnahme von Daten zu vermeiden und die Konsistenz der Daten systemübergreifend zu gewährleisten:
+
+* **Löschungen koordinieren**: Richten Sie das Löschen von Datensätzen an Ihrer geänderten Datenerfassungskonfiguration und Ihrer Strategie zur Verwaltung von Quelldaten aus.
+* **Ändern von Datenerfassungsflüssen**: Nachdem Sie Datensätze in Platform gelöscht haben, überwachen Sie Datenflüsse und bestätigen Sie, dass das Quellsystem dieselben Datensätze entfernt oder in `_change_request_type = 'd'` einbezieht.
+* **Quelle bereinigen**: Löschen Sie bei Quellen, die eine vollständige Aktualisierungsaufnahme verwenden, oder Quellen, die Löschvorgänge über die Änderungsdatenerfassung nicht unterstützen, Datensätze direkt aus dem Quellsystem, um eine erneute Aufnahme zu vermeiden.
+
+Weitere Informationen zu Schemaanforderungen finden Sie unter [Modellbasierte Schemadeskriptoranforderungen](../../xdm/schema/model-based.md#model-based-schemas).\
+Informationen zur Funktionsweise der Änderungsdatenerfassung mit Quellen finden Sie unter [Aktivieren der Änderungsdatenerfassung in Quellen](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
 
 ## Nächste Schritte
 

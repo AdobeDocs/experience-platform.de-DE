@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
+source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
 workflow-type: tm+mt
-source-wordcount: '1666'
-ht-degree: 55%
+source-wordcount: '1696'
+ht-degree: 54%
 
 ---
 
@@ -306,7 +306,11 @@ Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfiguratione
 
 - Wenden Sie Kennzeichnungen auf Schemafelder an, um den Zugriff auf bestimmte Schemafelder in Ihrer Organisation zu definieren. Sobald der Zugriff auf bestimmte Schemafelder eingerichtet ist, können Benutzerinnen und Benutzer nur noch Zuordnungen für die Felder erstellen, auf die sie Zugriff haben.
 - Benutzende ohne die entsprechenden Rollen können keine Datenflüsse mit Zuordnungen erstellen oder aktualisieren, die unzugängliche Schemafelder beinhalten. Darüber hinaus können nicht autorisierte Benutzer vorhandene Datenflüsse mit nicht zugänglichen Schemafeldern nicht aktualisieren, löschen, aktivieren oder deaktivieren.
-- Darüber hinaus muss ein Datenfluss in seiner Zuordnung, seinem Zieldatensatz und seiner Zielverbindung exakt dieselbe Schema-ID und Version haben.
+- Darüber hinaus muss ein Datenfluss in seiner Zuordnung, seinem Zieldatensatz und seiner Zielverbindung exakt dieselbe Schema-ID und Version haben. Dies gilt sowohl für standardmäßige XDM-Schemata als auch für modellbasierte Schemata.
+
+>[!NOTE]
+>
+>Modellbasierte Schemata haben zusätzliche Anforderungen, einschließlich der Felder Primärschlüssel und Versionskennung. Weitere Informationen finden Sie unter [Übersicht über modellbasierte Schemata](../xdm/schema/model-based.md).
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../access-control/abac/overview.md).
 

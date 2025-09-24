@@ -4,26 +4,41 @@ solution: Experience Platform
 title: API-Endpunkt für Deskriptoren
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2192'
-ht-degree: 38%
+source-wordcount: '2888'
+ht-degree: 25%
 
 ---
 
 # Descriptors-Endpunkt
 
-Schemata definieren eine statische Ansicht von Datenentitäten, geben jedoch nicht spezifisch an, wie sich Daten, die auf diesen Schemata basieren (z. B. Datensätze), zueinander verhalten. Mit Adobe Experience Platform können Sie diese Beziehungen und andere interpretative Metadaten über ein Schema mithilfe von Deskriptoren beschreiben.
+Schemata definieren die Struktur von Datenentitäten, aber geben nicht an, wie sich Datensätze, die aus diesen Schemata erstellt wurden, zueinander verhalten. In Adobe Experience Platform können Sie Deskriptoren verwenden, um diese Beziehungen zu beschreiben und einem Schema interpretierende Metadaten hinzuzufügen.
 
-Schemadeskriptoren sind Metadaten auf Mandantenebene, d. h. sie sind für Ihre Organisation eindeutig, und alle Deskriptorvorgänge finden im Mandanten-Container statt.
+Deskriptoren sind Metadatenobjekte auf Mandantenebene, die auf Schemata in Adobe Experience Platform angewendet werden. Sie definieren strukturelle Beziehungen, Schlüssel und Verhaltensfelder (wie Zeitstempel oder Versionierung), die beeinflussen, wie Daten nachgelagert validiert, verbunden oder interpretiert werden.
 
-Auf jedes Schema können eine oder mehrere Schemadeskriptorentitäten angewendet werden. Jede Schemadeskriptorentität enthält einen Deskriptor `@type` und das `sourceSchema`, auf das er angewendet wird. Nach der Anwendung gelten diese Deskriptoren für alle mit dem Schema erstellten Datensätze.
+Ein Schema kann einen oder mehrere Deskriptoren aufweisen. Jeder Deskriptor definiert einen `@type` und die `sourceSchema`, für die er gilt. Der Deskriptor gilt automatisch für alle Datensätze, die aus diesem Schema erstellt wurden.
+
+In Adobe Experience Platform ist ein Deskriptor Metadaten, die einem Schema Verhaltensregeln oder eine strukturelle Bedeutung hinzufügen.
+Es gibt verschiedene Arten von Deskriptoren, darunter:
+
+- [Identitätsdeskriptor](#identity-descriptor) - markiert ein Feld als Identität
+- [Primärer Schlüsseldeskriptor](#primary-key-descriptor) - Erzwingt Eindeutigkeit
+- [Beziehungsdeskriptor](#relationship-descriptor) - definiert einen Fremdschlüssel-Join
+- [Alternativer Anzeigeninformations-Deskriptor](#friendly-name) - ermöglicht das Umbenennen eines Felds in der Benutzeroberfläche
+- [Version](#version-descriptor)- und [timestamp](#timestamp-descriptor)-Deskriptoren - Verfolgen der Ereignisreihenfolge und der Änderungserkennung
 
 Mit dem `/descriptors`-Endpunkt in der [!DNL Schema Registry]-API können Sie Deskriptoren in Ihrem Erlebnisprogramm programmgesteuert verwalten.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
+
+Zusätzlich zu Standarddeskriptoren unterstützt der [!DNL Schema Registry] Deskriptortypen für modellbasierte Schemata wie **Primärschlüssel**, **Version** und **Zeitstempel**. Diese erzwingen Eindeutigkeit, steuern die Versionierung und definieren Zeitreihenfelder auf Schemaebene. Wenn Sie nicht mit modellbasierten Schemata vertraut sind, lesen Sie die technische Referenz zu [Data Mirror](../data-mirror/overview.md) und [modellbasierten Schemata](../schema/model-based.md) bevor Sie fortfahren.
+
+>[!IMPORTANT]
+>
+>Einzelheiten zu allen Deskriptortypen finden [ im ](#defining-descriptors)Anhang).
 
 ## Abrufen einer Liste von Deskriptoren {#list}
 
@@ -86,7 +101,7 @@ Bei Verwendung der `link` `Accept`-Kopfzeile wird jeder Deskriptor als Array-Ele
 
 ## Deskriptor nachschlagen {#lookup}
 
-Wenn Sie die Details eines bestimmten Deskriptors anzeigen möchten, können Sie einen einzelnen Deskriptor mit dessen `@id` nachschlagen (GET).
+Um die Details eines bestimmten Deskriptors anzuzeigen, senden Sie eine GET-Anfrage über die `@id` .
 
 **API-Format**
 
@@ -283,7 +298,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text
 
 Um zu bestätigen, dass der Deskriptor gelöscht wurde, können Sie eine [Suchanfrage](#lookup) für den `@id` durchführen. Die Antwort gibt den HTTP-Status 404 (Nicht gefunden) zurück, da der Deskriptor aus der [!DNL Schema Registry] entfernt wurde.
 
-## Anhang
+## Anhang {#appendix}
 
 Der folgende Abschnitt enthält zusätzliche Informationen zum Arbeiten mit Deskriptoren in der [!DNL Schema Registry]-API.
 
@@ -299,9 +314,9 @@ Die folgenden Abschnitte bieten eine Übersicht über die verfügbaren Deskripto
 >
 >Sie können das Namespace-Objekt des Mandanten nicht beschriften, da das System diese Beschriftung auf jedes benutzerdefinierte Feld in dieser Sandbox anwenden würde. Stattdessen müssen Sie den Endknoten unter dem Objekt angeben, das Sie beschriften müssen.
 
-#### Identitätsdeskriptor
+#### Identitätsdeskriptor {#identity-descriptor}
 
-Ein Identitätsdeskriptor signalisiert, dass &quot;[!UICONTROL sourceProperty]&quot; von &quot;[!UICONTROL sourceSchema]&quot; ein [!DNL Identity] ist, wie vom [Adobe Experience Platform Identity Service](../../identity-service/home.md) beschrieben.
+Ein Identitätsdeskriptor signalisiert, dass &quot;[!UICONTROL sourceProperty]&quot; von &quot;[!UICONTROL sourceSchema]&quot; ein [!DNL Identity] ist, wie vom [Experience Platform Identity Service](../../identity-service/home.md) beschrieben.
 
 ```json
 {
@@ -371,21 +386,36 @@ Mit Deskriptoren für benutzerfreundliche Namen können Benutzende die `title`-,
 
 #### Beziehungsdeskriptor {#relationship-descriptor}
 
-Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Schemata. Sie werden in die Eigenschaften eingegeben, die in `sourceProperty` und `destinationProperty` beschrieben werden. Weiterführende Informationen finden Sie in der Anleitung zum [Definieren einer Beziehung zwischen zwei Schemata](../tutorials/relationship-api.md).
+Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Schemata. Sie werden in die Eigenschaften eingegeben, die in `xdm:sourceProperty` und `xdm:destinationProperty` beschrieben werden. Weiterführende Informationen finden Sie in der Anleitung zum [Definieren einer Beziehung zwischen zwei Schemata](../tutorials/relationship-api.md).
+
+Verwenden Sie diese Eigenschaften, um zu deklarieren, wie sich ein Quellfeld (Fremdschlüssel) auf ein Zielfeld ([Primärschlüssel](#primary-key-descriptor) oder Kandidatenschlüssel) bezieht.
+
+>[!TIP]
+>
+>Ein **Fremdschlüssel** ist ein Feld im Quellschema (definiert durch `xdm:sourceProperty`), das auf ein Schlüsselfeld in einem anderen Schema verweist. Ein **Kandidatenschlüssel** ist ein Feld (oder eine Gruppe von Feldern) im Zielschema, das einen Datensatz eindeutig identifiziert und anstelle des Primärschlüssels verwendet werden kann.
+
+Die -API unterstützt zwei Muster:
+
+- `xdm:descriptorOneToOne`: Standard-1:1-Beziehung.
+- `xdm:descriptorRelationship`: Allgemeines Muster für neue Arbeits- und modellbasierte Schemata (unterstützt Kardinalität, Benennung und nicht-primäre Schlüsselziele).
+
+##### Eins-zu-eins-Beziehung (Standardschemata)
+
+Verwenden Sie diese Option, wenn Sie vorhandene Standardschemaintegrationen beibehalten möchten, die bereits auf `xdm:descriptorOneToOne` basieren.
 
 ```json
 {
   "@type": "xdm:descriptorOneToOne",
-  "xdm:sourceSchema":
-    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
   "xdm:sourceVersion": 1,
   "xdm:sourceProperty": "/parentField/subField",
-  "xdm:destinationSchema": 
-    "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
   "xdm:destinationVersion": 1,
   "xdm:destinationProperty": "/parentField/subField"
 }
 ```
+
+In der folgenden Tabelle werden die Felder beschrieben, die zum Definieren eines Eins-zu-eins-Beziehungsdeskriptors erforderlich sind.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
@@ -397,7 +427,143 @@ Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Sc
 | `xdm:destinationVersion` | Die Hauptversion des Referenzschemas. |
 | `xdm:destinationProperty` | (Optional) Pfad zu einem Zielfeld im Referenzschema. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
 
-{style="table-layout:auto"}
+##### Allgemeine Beziehung (modellbasierte Schemata und empfohlen für neue Projekte)
+
+Verwenden Sie diesen Deskriptor für alle neuen Implementierungen und für modellbasierte Schemata. Damit können Sie die Kardinalität der Beziehung definieren (z. B. Eins-zu-eins oder Viele-zu-eins), Beziehungsnamen angeben und eine Verknüpfung zu einem Zielfeld erstellen, das nicht der Primärschlüssel ist (Nicht-Primärschlüssel).
+
+Die folgenden Beispiele zeigen, wie Sie einen allgemeinen Beziehungsdeskriptor definieren.
+
+**Minimales Beispiel:**
+
+Dieses minimale Beispiel enthält nur die erforderlichen Felder, um eine Viele-zu-eins-Beziehung zwischen zwei Schemata zu definieren.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:sourceVersion": 1,
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:cardinality": "M:1"
+}
+```
+
+**Beispiel mit allen optionalen Feldern:**
+
+Dieses Beispiel enthält alle optionalen Felder, z. B. Beziehungsnamen, Anzeigetitel und ein explizites Zielfeld für einen nicht-Primärschlüssel.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:destinationProperty": "/customer_id",
+  "xdm:sourceToDestinationName": "CampaignToCustomer",
+  "xdm:destinationToSourceName": "CustomerToCampaign",
+  "xdm:sourceToDestinationTitle": "Customer campaigns",
+  "xdm:destinationToSourceTitle": "Campaign customers",
+  "xdm:cardinality": "M:1"
+}
+```
+
+##### Auswahl eines Beziehungsdeskriptors
+
+Verwenden Sie die folgenden Richtlinien, um zu entscheiden, welcher Beziehungsdeskriptor angewendet werden soll:
+
+| Situation | Zu verwendender Deskriptor |
+| --------------------------------------------------------------------- | ----------------------------------------- |
+| Neue Arbeits- oder modellbasierte Schemata | `xdm:descriptorRelationship` |
+| Vorhandene 1:1-Zuordnung in Standardschemata | Setzen Sie die Verwendung von `xdm:descriptorOneToOne` fort, es sei denn, Sie benötigen Funktionen, die nur von `xdm:descriptorRelationship` unterstützt werden. |
+| Viele-zu-eins- oder optionale Kardinalität erforderlich (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship` |
+| Beziehungsnamen oder -titel für die Lesbarkeit der Benutzeroberfläche/nachgelagerten Elemente erforderlich | `xdm:descriptorRelationship` |
+| Zielgruppe benötigt, die keine Identität ist | `xdm:descriptorRelationship` |
+
+>[!NOTE]
+>
+>Für vorhandene `xdm:descriptorOneToOne`-Deskriptoren in Standardschemas sollten Sie sie weiterhin verwenden, es sei denn, Sie benötigen Funktionen wie nicht primäre Identitätsziel-Ziele, benutzerdefinierte Benennungen oder erweiterte Kardinalitätsoptionen.
+
+##### Vergleich der Funktionen
+
+In der folgenden Tabelle werden die Funktionen der beiden Deskriptortypen verglichen:
+
+| Funktion | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship` |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------ |
+| Kardinalität | 1:1 | 1:1, 1:0, M:1, M:0 (informativ) |
+| Zielgruppe | Identitäts-/explizites Feld | Primärer Schlüssel standardmäßig oder Nicht-Primärschlüssel über `xdm:destinationProperty` |
+| Benennen von Feldern | Nicht unterstützt | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` und Titel |
+| relationale Anpassung | Limited | Primäres Muster für modellbasierte Schemata |
+
+##### Einschränkungen und Validierung
+
+Befolgen Sie beim Definieren eines allgemeinen Beziehungsdeskriptors diese Anforderungen und Empfehlungen:
+
+- Platzieren Sie bei modellbasierten Schemata das Quellfeld (Fremdschlüssel) auf der Stammebene. Dies ist eine aktuelle technische Einschränkung für die Aufnahme, nicht nur eine Best-Practice-Empfehlung.
+- Stellen Sie sicher, dass die Datentypen der Quell- und Zielfelder kompatibel sind (numerisch, Datum, boolesch, Zeichenfolge).
+- Denken Sie daran, dass Kardinalität informativ ist. Datenspeicherung erzwingt sie nicht. Geben Sie die Kardinalität im `<source>:<destination>` an. Akzeptierte Werte sind: `1:1`, `1:0`, `M:1` oder `M:0`.
+
+#### Primärer Schlüsseldeskriptor {#primary-key-descriptor}
+
+Der Primärschlüsseldeskriptor (`xdm:descriptorPrimaryKey`) erzwingt Einschränkungen hinsichtlich Eindeutigkeit und Nicht-Null für ein oder mehrere Felder in einem Schema.
+
+```json
+{
+  "@type": "xdm:descriptorPrimaryKey",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": ["/orderId", "/orderLineId"]
+}
+```
+
+| Eigenschaft | Beschreibung |
+| -------------------- | ----------------------------------------------------------------------------- |
+| `@type` | Muss `xdm:descriptorPrimaryKey`sein. |
+| `xdm:sourceSchema` | `$id` URI des Schemas. |
+| `xdm:sourceProperty` | JSON-Zeiger auf die Primärschlüsselfelder. Verwenden Sie ein Array für zusammengesetzte Schlüssel. Bei Zeitreihenschemata muss der zusammengesetzte Schlüssel das Zeitstempelfeld enthalten, um die Eindeutigkeit über Ereignisdatensätze hinweg sicherzustellen. |
+
+#### Versionsdeskriptor {#version-descriptor}
+
+>[!NOTE]
+>
+>Im Schema-Editor der Benutzeroberfläche wird der Versionsdeskriptor als &quot;[!UICOTRNOL Versionskennung“ ].
+
+Der Versionsdeskriptor (`xdm:descriptorVersion`) bezeichnet ein Feld, um Konflikte durch Änderungsereignisse zu erkennen und zu verhindern, die nicht in der richtigen Reihenfolge auftreten.
+
+```json
+{
+  "@type": "xdm:descriptorVersion",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/versionNumber"
+}
+```
+
+| Eigenschaft | Beschreibung |
+| -------------------- | ------------------------------------------------------------- |
+| `@type` | Muss `xdm:descriptorVersion`sein. |
+| `xdm:sourceSchema` | `$id` URI des Schemas. |
+| `xdm:sourceProperty` | JSON-Zeiger auf das Feld Version . Muss als `required` gekennzeichnet sein. |
+
+#### Zeitstempel-Deskriptor {#timestamp-descriptor}
+
+>[!NOTE]
+>
+>Im Schema-Editor der Benutzeroberfläche wird der Zeitstempeldeskriptor als &quot;[!UICOTRNOL Zeitstempelkennung“ ].
+
+Der Zeitstempeldeskriptor (`xdm:descriptorTimestamp`) bezeichnet ein Datums-/Uhrzeitfeld als Zeitstempel für Schemata mit `"meta:behaviorType": "time-series"`.
+
+```json
+{
+  "@type": "xdm:descriptorTimestamp",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/eventTime"
+}
+```
+
+| Eigenschaft | Beschreibung |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `@type` | Muss `xdm:descriptorTimestamp`sein. |
+| `xdm:sourceSchema` | `$id` URI des Schemas. |
+| `xdm:sourceProperty` | JSON-Zeiger auf das Zeitstempelfeld. Muss als `required` gekennzeichnet und vom Typ `date-time` sein. |
 
 ##### B2B-Beziehungsdeskriptor {#B2B-relationship-descriptor}
 
@@ -427,7 +593,7 @@ Real-Time CDP B2B edition führt eine alternative Methode zur Definition von Bez
 | `xdm:sourceProperty` | Der Pfad zum Feld im Quellschema, in dem die Beziehung definiert wird. Sollte mit &quot;/&quot; beginnen und nicht mit &quot;/&quot; enden. Schließen Sie „properties“ nicht in den Pfad ein (z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
 | `xdm:destinationSchema` | Der `$id`-URI des Referenzschemas, mit dem dieser Deskriptor eine Beziehung definiert. |
 | `xdm:destinationVersion` | Die Hauptversion des Referenzschemas. |
-| `xdm:destinationProperty` | (Optional) Pfad zu einem Zielfeld im Referenzschema, das die primäre ID des Schemas sein muss. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
+| `xdm:destinationProperty` | (Optional) Pfad zu einem Zielfeld im Referenzschema. Diese muss in die primäre ID des Schemas oder in ein anderes Feld mit einem kompatiblen Datentyp aufgelöst werden, um `xdm:sourceProperty` zu können. Wird dies ausgelassen, funktioniert die Beziehung möglicherweise nicht wie erwartet. |
 | `xdm:destinationNamespace` | Der Namespace der primären ID aus dem Referenzschema. |
 | `xdm:destinationToSourceTitle` | Der Anzeigename der Beziehung vom Referenzschema zum Quellschema. |
 | `xdm:sourceToDestinationTitle` | Der Anzeigename der Beziehung vom Quellschema zum Referenzschema. |

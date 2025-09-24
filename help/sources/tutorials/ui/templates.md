@@ -3,10 +3,10 @@ description: Erfahren Sie, wie Sie Vorlagen in der Adobe Experience Platform-Ben
 title: Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2250'
-ht-degree: 40%
+source-wordcount: '2314'
+ht-degree: 39%
 
 ---
 
@@ -65,6 +65,12 @@ Es wird ein Popup-Fenster angezeigt, in dem Sie die Möglichkeit haben, Vorlagen
 
 * **Vorlagen durchsuchen**: Quellvorlagen erstellen automatisch Schemata, Identitäten, Datensätze und Datenflüsse mit Zuordnungsregeln für Sie. Sie können diese Assets nach Bedarf anpassen.
 * **Meine vorhandenen Assets verwenden**: Nehmen Sie Ihre Daten mit vorhandenen Datensätzen und Schemata auf, die Sie erstellt haben. Sie können bei Bedarf auch neue Datensätze und Schemata erstellen.
+
+>[!NOTE]
+>
+>Vorlagen können beim Arbeiten mit Quellen, die Änderungsdatenerfassungs-Workflows erfordern oder mehrere Datenmodelle unterstützen, automatisch modellbasierte Schemata generieren. Diese Schemata ermöglichen Data Mirror-Funktionen für die Echtzeit-Datensynchronisation.\
+>Bei Verwendung von Vorlagen mit modellbasierten Schemata enthalten die automatisch generierten Assets die erforderlichen Felder für den Primärschlüssel, die Versionskennung und die Zeitstempelkennung.\
+>Data Mirror Weitere Informationen finden Sie unter [Übersicht über ](../../../xdm/data-mirror/overview.md) und [Technische Referenz zu modellbasierten Schemata](../../../xdm/schema/model-based.md).
 
 Um automatisch generierte Assets zu verwenden, wählen Sie **[!UICONTROL Vorlagen durchsuchen]** und dann **[!UICONTROL Auswählen]** aus.
 

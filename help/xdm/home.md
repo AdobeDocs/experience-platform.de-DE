@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM-System – Übersicht
 description: Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemata für das Customer Experience Management.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7527732c91e55f6ffaefbf98c37a2c4aad3aa3b9
 workflow-type: tm+mt
-source-wordcount: '2135'
-ht-degree: 67%
+source-wordcount: '2452'
+ht-degree: 58%
 
 ---
 
@@ -105,6 +105,40 @@ Um mit der Aufnahme von Daten in Experience Platform zu beginnen, können Sie mi
 
 Weitere Informationen finden Sie [ „Übersicht ](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [ finden ](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
 
+### Data Mirror und modellbasierte Schemata {#model-based-schemas}
+
+>[!AVAILABILITY]
+>
+>Data Mirror und modellbasierte Schemata stehen Adobe Journey Optimizer-Lizenzinhabern (**Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
+
+Data Mirror ist eine Adobe Experience Platform-Funktion, die eine erweiterte Datenbanksynchronisierung mithilfe modellbasierter Schemata ermöglicht. Einen vollständigen Überblick über die Funktionen und Anwendungsfälle von Data Mirror finden Sie in der Übersicht zu [Data Mirror](./data-mirror/overview.md).
+
+Data Mirror arbeitet mit modellbasierten Schemata, die für strukturierte Datenmuster im relationalen Stil entwickelt wurden. Sie erzwingen Primärschlüssel, unterstützen Versionskennungen und definieren Schema-zu-Schema-Beziehungen mit Primär- und Fremdschlüsseln. Im Gegensatz zu Standard-XDM-Schemata erfordern sie keine Klassen oder Feldergruppen und sind für Workflows zur Erfassung von Änderungsdaten optimiert.
+
+Weitere Informationen zum Definieren von Schema-zu-Schema-Beziehungen finden Sie in der [Deskriptoren-Endpunktdokumentation](./api/descriptors.md).
+
+Verwenden Sie Data Mirror bei folgenden Aufgaben:
+
+* Synchronisieren von Datenänderungen aus externen Systemen wie Snowflake, Databricks oder BigQuery
+* Beibehalten von Datenbankbeziehungen und Erzwingen der Datenintegrität während der Aufnahme
+* Unterstützung erweiterter Analysen und Journey-Orchestrierung
+* Präzises Änderungs-Tracking mit Upserts und Löschvorgängen aktivieren
+
+Um ein modellbasiertes Schema zu erstellen, wählen Sie **[!UICONTROL modellbasiert]** beim Erstellen eines Schemas aus. Modellbasierte Schemata verwenden keine Klassen oder Feldergruppen. Stattdessen definieren Sie die Struktur manuell oder laden eine DDL-Datei hoch. Modellbasierte Schemata erfordern einen Primärschlüssel, eine Versionskennung und gegebenenfalls Zeitstempelkennungsfelder. Anschließend können Sie zusätzliche Felder konfigurieren und Beziehungen zu anderen Schemata definieren.
+
+>[!NOTE]
+>
+>Während der Aufnahme verwendete Kontrollspalten (z. B. `_change_request_type` für Workflows zur Erfassung von Änderungsdaten) werden zur Aufnahmezeit gelesen und nicht im Schema gespeichert oder XDM-Feldern zugeordnet. Relationale Schemata sind mit entsprechenden Experience Platform-Berechtigungen und aktivierten Funktionen verfügbar.
+
+Ausführliche Anweisungen und Anleitungen für Anwendungsfälle finden Sie unter:
+
+* [Übersicht über Data Mirror](./data-mirror/overview.md) - Funktionen, Anwendungsfälle und Implementierungsplanung
+* [Modellbasierte technische Referenz zum Schema](./schema/model-based.md) - Technische Spezifikationen und Einschränkungen
+* [Tutorial zur Benutzeroberfläche](./ui/resources/schemas.md#create-model-based-schema)
+* [API-Tutorial](./api/schemas.md#create-model-based-schema)
+* [Dokumentation zu Deskriptoren (Bezeichnern)](./api/descriptors.md#relationship-descriptor)
+* [Änderungsdatenerfassung aktivieren](../sources/tutorials/api/change-data-capture.md)
+
 ### Abfrage-Service {#query-service}
 
 Sie können Standard-SQL zur Abfrage von Experience Platform-Daten verwenden, um viele verschiedene Anwendungsfälle mit dem Abfrage-Service von Adobe Experience Platform zu unterstützen.
@@ -147,4 +181,4 @@ Um mehr über die Prinzipien und Best Practices beim Erstellen von Schemata zu e
 
 Sehen Sie sich das folgende Video an, um [!DNL XDM System] in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/38505?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

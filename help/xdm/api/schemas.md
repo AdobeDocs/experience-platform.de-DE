@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;Schema;Schema;Schemas;Schemas;erstellen
+keywords: Experience Platform;Startseite;beliebte Themen;API;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Schema Registry;schema;Schemas;Schemas;erstellen
 solution: Experience Platform
 title: API-Endpunkt für Schemata
 description: Mit dem Endpunkt /schemas in der Schema Registry-API können Sie XDM-Schemas in Ihrem Erlebnisprogramm programmgesteuert verwalten.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '1443'
-ht-degree: 20%
+source-wordcount: '2095'
+ht-degree: 15%
 
 ---
 
@@ -35,7 +35,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, der die Schemas enthält, die Sie abrufen möchten: `global` für Adobe-erstellte Schemas oder `tenant` für Schemas, die Ihrem Unternehmen gehören. |
+| `{CONTAINER_ID}` | Der Container, der die Schemata enthält, die Sie abrufen möchten: `global` für von Adobe erstellte Schemata oder `tenant` für Schemata, die Ihrem Unternehmen gehören. |
 | `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
 
 {style="table-layout:auto"}
@@ -196,7 +196,9 @@ Eine erfolgreiche Antwort gibt die Details des Schemas zurück. Die zurückgegeb
 
 ## Erstellen eines Schemas {#create}
 
-Der Prozess der Schemakomposition beginnt mit der Zuweisung einer Klasse. Die Klasse definiert wichtige verhaltensbezogene Aspekte der Daten (Datensatz oder Zeitreihen) sowie die Mindestfelder, die erforderlich sind, um die zu erfassenden Daten zu beschreiben.
+Der Prozess der Schemakomposition beginnt mit der Zuweisung einer Klasse. Die Klasse definiert wichtige verhaltensbezogene Aspekte der Daten (Eintrag oder Zeitreihen) sowie die Mindestfelder, die erforderlich sind, um die zu erfassenden Daten zu beschreiben.
+
+Anweisungen zum Erstellen eines Schemas ohne Klassen oder Feldergruppen, das als modellbasiertes Schema bezeichnet wird, finden Sie [ Abschnitt „Erstellen eines modellbasierten ](#create-model-based-schema)&quot;.
 
 >[!NOTE]
 >
@@ -275,13 +277,199 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 }
 ```
 
-Wenn Sie eine GET-Anfrage ausführen[ um alle Schemata ](#list) Mandanten-Container aufzulisten, würde jetzt das neue Schema enthalten. Sie können eine [Suchanfrage (GET) ausführen, ](#lookup) Sie den URL-kodierten `$id`-URI verwenden, um das neue Schema direkt anzuzeigen.
+Wenn Sie eine GET-Anfrage ausführen[ um alle Schemata ](#list) Mandanten-Container aufzulisten, würde jetzt das neue Schema enthalten. Sie können eine [Suchanfrage (GET) ](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um das neue Schema direkt anzuzeigen.
 
-Um einem Schema zusätzliche Felder hinzuzufügen, können Sie einen [PATCH-Vorgang durchführen](#patch) um den `allOf`- und `meta:extends`-Arrays des Schemas Feldergruppen hinzuzufügen.
+Um einem Schema zusätzliche Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um den `allOf`- und `meta:extends`-Arrays des Schemas Feldergruppen hinzuzufügen.
+
+## Modellbasiertes Schema erstellen {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>Data Mirror und modellbasierte Schemata stehen Adobe Journey Optimizer-Lizenzinhabern (**Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
+
+Erstellen Sie ein modellbasiertes Schema, indem Sie eine POST-Anfrage an den `/schemas`-Endpunkt senden. Modellbasierte Schemata speichern strukturierte Daten im relationalen Stil **ohne** Klassen oder Feldergruppen. Definieren Sie Felder direkt im Schema und identifizieren Sie das Schema mithilfe eines logischen Verhaltens-Tags als modellbasiert.
+
+>[!IMPORTANT]
+>
+>Um ein modellbasiertes Schema zu erstellen, setzen Sie `meta:extends` auf `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Dies ist eine **logische Verhaltenskennung** (kein physisches Verhalten oder keine Klasse). Verweisen **nicht** auf Klassen oder Feldergruppen in `allOf` und schließen **nicht** Klassen oder Feldergruppen in `meta:extends` ein.
+
+Erstellen Sie zuerst das Schema mit `POST /tenant/schemas`. Fügen Sie dann die erforderlichen Deskriptoren mit der [Deskriptoren-API (`POST /tenant/descriptors`) hinzu](../api/descriptors.md):
+
+- [Primärer Schlüsseldeskriptor](../api/descriptors.md#primary-key-descriptor): Ein Primärschlüsselfeld muss sich auf der **Stammebene“ befinden** als **markiert**.
+- [Versionsdeskriptor](../api/descriptors.md#version-descriptor): **Erforderlich** wenn ein Primärschlüssel vorhanden ist.
+- [Beziehungsdeskriptor](../api/descriptors.md#relationship-descriptor): Optional, definiert Joins; Kardinalität wird bei der Aufnahme nicht erzwungen.
+- [Zeitstempeldeskriptor](../api/descriptors.md#timestamp-descriptor): Bei Zeitreihenschemata muss der Primärschlüssel ein **zusammengesetzter** Schlüssel sein, der das Zeitstempelfeld enthält.
+
+>[!NOTE]
+>
+>Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[!UICOTRNOL Versionskennung“ ] &quot;[!UICOTRNOL Zeitstempelkennung]&quot; angezeigt.
+
+<!-- >[!AVAILABILITY]
+>
+>Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+
+>[!CAUTION]
+>
+>Modellbasierte Schemata sind **nicht kompatibel mit Vereinigungsschemata**. Wenden Sie beim Arbeiten mit modellbasierten Schemata das `union`-Tag nicht auf `meta:immutableTags` an. Diese Konfiguration ist in der Benutzeroberfläche blockiert, wird aber derzeit nicht von der API blockiert. Weitere Informationen zum Verhalten [ Vereinigungsschemas finden ](./unions.md) im Handbuch zum Vereinigungsendpunkt .
+
+**API-Format**
+
+```http
+POST /tenant/schemas
+```
+
+**Anfrage**
+
+```shell
+curl --request POST \
+  --url https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Accept: application/vnd.adobe.xed+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+  "title": "marketing.customers",
+  "type": "object",
+  "description": "Schema of the Marketing Customers table.",
+  "definitions": {
+    "customFields": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/customFields",
+      "meta:xdmType": "object"
+    }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record"
+}
+'
+```
+
+### Eigenschaften des Anfragetexts
+
+| Eigenschaft | Typ | Beschreibung |
+| ------------------------------- | ------ | --------------------------------------------------------- |
+| `title` | Zeichenfolge | Anzeigename des Schemas. |
+| `description` | String | Kurze Erläuterung des Zwecks des Schemas. |
+| `type` | String | Muss für modellbasierte Schemata `"object"` werden. |
+| `definitions` | Objekt | Enthält die Objekte auf Stammebene, die Ihre Schemafelder definieren. |
+| `definitions.<name>.properties` | Objekt | Feldnamen und Datentypen. |
+| `allOf` | Array | Verweist auf die Objektdefinition auf der Stammebene (z. B. `#/definitions/marketing_customers`). |
+| `meta:extends` | Array | Muss `"https://ns.adobe.com/xdm/data/adhoc-v2"` enthalten, um das Schema als modellbasiert zu identifizieren. |
+| `meta:behaviorType` | String | Auf `"record"` festgelegt. Verwenden Sie `"time-series"` nur, wenn aktiviert und geeignet. |
+
+>[!IMPORTANT]
+>
+>Die Schemaentwicklung für modellbasierte Schemata folgt denselben additiven Regeln wie Standardschemata. Sie können neue Felder mit einer PATCH-Anfrage hinzufügen. Änderungen wie das Umbenennen oder Entfernen von Feldern sind nur zulässig, wenn keine Daten in den Datensatz aufgenommen wurden.
+
+**Antwort**
+
+Bei einer erfolgreichen Anfrage werden **HTTP 201 (Erstellt)** und das erstellte Schema zurückgegeben.
+
+>[!NOTE]
+>
+>Modellbasierte Schemata erben keine vordefinierten Felder (z. B. id, timestamp oder eventType). Definieren Sie alle erforderlichen Felder explizit in Ihrem Schema.
+
+**Beispielantwort**
+
+```json
+{
+  "$id": "https://ns.adobe.com/<TENANT_ID>/schemas/<SCHEMA_UUID>",
+  "meta:altId": "_<SCHEMA_ALT_ID>",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "marketing.customers",
+  "description": "Schema of the Marketing Customers table.",
+  "type": "object",
+  "definitions": {
+    "marketing_customers": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/definitions/marketing_customers" }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record",
+  "meta:containerId": "tenant"
+}
+```
+
+### Eigenschaften des Antworttextes
+
+| Eigenschaft | Typ | Beschreibung |
+| ------------------- | ------ | -------------------------- |
+| `$id` | Zeichenfolge | Die eindeutige URL des erstellten Schemas. Verwenden Sie in nachfolgenden API-Aufrufen. |
+| `meta:altId` | String | Eine alternative Kennung für das Schema. |
+| `meta:resourceType` | String | Der Ressourcentyp (immer `"schemas"`). |
+| `version` | String | Eine Schemaversion, die bei der Erstellung zugewiesen wurde. |
+| `title` | String | Der Anzeigename des Schemas. |
+| `description` | String | Eine kurze Erläuterung des Zwecks des Schemas. |
+| `type` | String | Der Schematyp. |
+| `definitions` | Objekt | Definiert wiederverwendbare Objekte oder Feldergruppen, die im Schema verwendet werden. Dies umfasst normalerweise die Hauptdatenstruktur und wird im `allOf`-Array referenziert, um den Schemastamm zu definieren. |
+| `allOf` | Array | Gibt das Stammobjekt des Schemas durch Verweis auf eine oder mehrere Definitionen an (z. B. `#/definitions/marketing_customers`). |
+| `meta:extends` | Array | Identifiziert das Schema als modellbasiert (`adhoc-v2`). |
+| `meta:behaviorType` | String | Verhaltenstyp (`record` oder `time-series`, falls aktiviert). |
+| `meta:containerId` | String | Container, in dem das Schema gespeichert ist (z. B. `tenant`). |
+
+Um einem modellbasierten Schema nach der Erstellung Felder hinzuzufügen, stellen Sie eine [PATCH-Anfrage](#patch). Modellbasierte Schemata erben nicht und entwickeln sich nicht automatisch. Strukturelle Änderungen wie das Umbenennen oder Löschen von Feldern sind nur zulässig, wenn keine Daten in den Datensatz aufgenommen wurden. Sobald Daten vorhanden sind **werden nur** additive Änderungen“ (z. B. das Hinzufügen neuer Felder) unterstützt.
+
+Sie können neue Felder auf Stammebene hinzufügen (innerhalb der Stammdefinition oder des `properties`), aber Sie können den Typ der vorhandenen Felder nicht entfernen, umbenennen oder ändern.
+
+>[!CAUTION]
+>
+>Die Schemaentwicklung wird eingeschränkt, nachdem ein Datensatz mithilfe des Schemas initialisiert wurde. Planen Sie Feldnamen und -typen sorgfältig im Voraus, da Felder nach der Aufnahme von Daten nicht mehr gelöscht oder geändert werden können.
 
 ## Schema aktualisieren {#put}
 
-Sie können ein ganzes Schema durch einen PUT-Vorgang ersetzen, wobei die Ressource im Wesentlichen neu geschrieben wird. Beim Aktualisieren eines Schemas über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim [Erstellen eines neuen Schemas](#create) in einer POST-Anfrage erforderlich sind.
+Sie können ein ganzes Schema durch einen PUT-Vorgang ersetzen, indem Sie die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim [ eines neuen Schemas in ](#create) POST-Anfrage erforderlich sind.
 
 >[!NOTE]
 >
@@ -366,7 +554,7 @@ Sie können einen Teil eines Schemas mithilfe einer PATCH-Anfrage aktualisieren.
 
 >[!NOTE]
 >
->Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt über [Ersetzen eines Schemas mithilfe eines PUT-Vorgangs](#put).
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, finden Sie weitere Informationen im Abschnitt zum [ eines Schemas mithilfe eines PUT-Vorgangs](#put).
 
 Einer der häufigsten PATCH-Vorgänge besteht darin, wie im folgenden Beispiel gezeigt, zuvor definierte Feldergruppen zu einem Schema hinzuzufügen.
 
@@ -455,7 +643,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Fe
 
 ## Aktivieren eines Schemas zur Verwendung im Echtzeit-Kundenprofil {#union}
 
-Damit ein Schema am Echtzeit[Kundenprofil teilnehmen kann, ](../../profile/home.md) Sie dem `meta:immutableTags`-Array des Schemas ein `union`-Tag hinzufügen. Sie können dies erreichen, indem Sie eine PATCH-Anfrage für das betreffende Schema stellen.
+Damit ein Schema am Echtzeit[Kundenprofil teilnehmen kann, ](../../profile/home.md) Sie dem `union`-Array des Schemas ein `meta:immutableTags`-Tag hinzufügen. Sie können dies tun, indem Sie eine PATCH-Anfrage für das betreffende Schema stellen.
 
 >[!IMPORTANT]
 >
@@ -542,7 +730,7 @@ Sie können jetzt die Vereinigung für die Klasse dieses Schemas anzeigen, um zu
 
 ## Löschen eines Schemas {#delete}
 
-Gelegentlich kann es erforderlich sein, ein Schema aus der Schemaregistrierung zu entfernen. Dies geschieht, indem eine Schemaanfrage mit der im Pfad angegebenen DELETE-ID durchgeführt wird.
+Gelegentlich kann es erforderlich sein, ein Schema aus der Schemaregistrierung zu entfernen. Dies geschieht, indem eine DELETE-Anfrage mit der im Pfad angegebenen Schema-ID durchgeführt wird.
 
 **API-Format**
 

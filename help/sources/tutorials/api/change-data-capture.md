@@ -1,56 +1,123 @@
 ---
 title: Aktivieren der Änderungsdatenerfassung für Quellverbindungen in der API
 description: Erfahren Sie, wie Sie die Änderungsdatenerfassung für Quellverbindungen in der API aktivieren
-source-git-commit: d8b4557424e1f29dfdd8893932aef914226dd60d
+exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
+source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '1238'
 ht-degree: 0%
 
 ---
 
 # Aktivieren der Änderungsdatenerfassung für Quellverbindungen in der API
 
-Die Funktion „Datenerfassung in Adobe Experience Platform ändern“ kann verwendet werden, um die Echtzeit-Datensynchronisation zwischen Ihren Quell- und Zielsystemen aufrechtzuerhalten.
+Verwenden Sie die Änderungsdatenerfassung in Adobe Experience Platform-Quellen, um Ihre Quell- und Zielsysteme nahezu in Echtzeit synchronisiert zu halten.
 
-Derzeit unterstützt Experience Platform **inkrementelle Datenkopie** wodurch sichergestellt wird, dass neu erstellte oder aktualisierte Datensätze im Quellsystem regelmäßig in die aufgenommenen Datensätze kopiert werden. Dieser Prozess beruht auf der Verwendung der **Zeitstempelspalte**, z. B. `LastModified`, um Änderungen zu verfolgen und zu erfassen **nur die neu eingefügten oder aktualisierten Daten**. Diese Methode berücksichtigt jedoch keine gelöschten Datensätze, was im Laufe der Zeit zu Dateninkonsistenzen führen kann.
+Experience Platform unterstützt derzeit **inkrementelle Datenkopie** mit der regelmäßig neu erstellte oder aktualisierte Datensätze aus dem Quellsystem an die aufgenommenen Datensätze übertragen werden. Bei dieser Methode werden Änderungen mithilfe einer **Zeitstempelspalte** verfolgt, es werden jedoch keine Löschungen erkannt, was im Laufe der Zeit zu Dateninkonsistenzen führen kann.
 
-Bei der Erfassung von Änderungsdaten erfasst und wendet ein gegebener Fluss alle Änderungen an, einschließlich Einfügungen, Aktualisierungen und Löschungen. Ebenso bleiben Experience Platform-Datensätze vollständig mit dem Quellsystem synchronisiert.
+Im Gegensatz dazu erfasst und wendet Change Data Capture Einfügungen, Aktualisierungen und Löschungen nahezu in Echtzeit an. Diese umfassende Änderungsverfolgung stellt sicher, dass Datensätze vollständig mit dem Quellsystem abgestimmt bleiben, und bietet einen vollständigen Änderungsverlauf, der über die Unterstützung inkrementeller Kopien hinausgeht. Löschvorgänge müssen jedoch besonders berücksichtigt werden, da sie sich auf alle Anwendungen auswirken, die die Zieldatensätze verwenden.
 
-Sie können die Änderungsdatenerfassung für die folgenden Quellen verwenden:
+Für das Ändern der Datenerfassung in Experience Platform ist **[Data Mirror](../../../xdm/data-mirror/overview.md)** mit [modellbasierten Schemata](../../../xdm/schema/model-based.md) (auch als relationale Schemata bezeichnet) erforderlich. Sie können Änderungsdaten auf zwei Arten für Data Mirror bereitstellen:
 
-## [!DNL Amazon S3]
+* **[Manuelles Änderungs-Tracking](#file-based-sources)**: Fügen Sie eine `_change_request_type` Spalte in Ihren Datensatz für Quellen ein, die nativ keine Änderungsdatensätze generieren
+* **[Exporte der nativen Änderungsdatenerfassung](#database-sources)**: Verwenden Sie Änderungsdatenerfassungsdatensätze, die direkt aus Ihrem Quellsystem exportiert wurden
 
-Stellen Sie sicher, dass `_change_request_type` in der [!DNL Amazon S3] vorhanden ist, die Sie in Experience Platform aufnehmen möchten. Darüber hinaus müssen Sie sicherstellen, dass die folgenden gültigen Werte in der Datei enthalten sind:
+Bei beiden Ansätzen ist Data Mirror mit modellbasierten Schemata erforderlich, um Beziehungen beizubehalten und Eindeutigkeit durchzusetzen.
 
-* `u`: für Einfügungen und Aktualisierungen
-* `d`: für Löschvorgänge.
+## Data Mirror mit modellbasierten Schemata
 
-Wenn `_change_request_type` nicht in der Datei vorhanden ist, wird der Standardwert `u` verwendet.
+>[!AVAILABILITY]
+>
+>Data Mirror und modellbasierte Schemata stehen Adobe Journey Optimizer-Lizenzinhabern (**Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
 
-Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdatenerfassung für Ihre [!DNL Amazon S3]-Quellverbindung aktivieren:
+>[!NOTE]
+>
+>**Benutzende mit orchestrierten Kampagnen**: Verwenden Sie die in diesem Dokument beschriebenen Data Mirror-Funktionen, um mit Kundendaten zu arbeiten, die die referenzielle Integrität wahren. Auch wenn Ihre Quelle die Datenerfassungsformatierung für Änderungen nicht verwendet, unterstützt Data Mirror relationale Funktionen wie die Durchsetzung von Primärschlüsseln, Upserts auf Datensatzebene und Schemabeziehungen. Diese Funktionen gewährleisten eine konsistente und zuverlässige Datenmodellierung über verbundene Datensätze hinweg.
 
-* [Erstellen  [!DNL Amazon S3]  Basisverbindung](../api/create/cloud-storage/s3.md).
-* [Erstellen einer Quellverbindung für einen Cloud-Speicher](../api/collect/cloud-storage.md#create-a-source-connection).
+Data Mirror verwendet modellbasierte Schemata, um die Änderungsdatenerfassung zu erweitern und erweiterte Datenbanksynchronisierungsfunktionen zu ermöglichen. Einen Überblick über Data Mirror finden Sie unter [Übersicht über Data Mirror](../../../xdm/data-mirror/overview.md).
 
-## [!DNL Azure Blob]
+Modellbasierte Schemata erweitern Experience Platform, um die Eindeutigkeit von Primärschlüsseln zu erzwingen, Änderungen auf Zeilenebene zu verfolgen und Beziehungen auf Schemaebene zu definieren. Bei der Datenerfassung für Änderungen wenden sie Einfügungen, Aktualisierungen und Löschungen direkt im Data Lake an, wodurch die Notwendigkeit von Extract, Transform, Load (ETL) oder manueller Abstimmung reduziert wird.
 
-Stellen Sie sicher, dass `_change_request_type` in der [!DNL Azure Blob] vorhanden ist, die Sie in Experience Platform aufnehmen möchten. Darüber hinaus müssen Sie sicherstellen, dass die folgenden gültigen Werte in der Datei enthalten sind:
+Weitere [ finden Sie unter Übersicht über ](../../../xdm/schema/model-based.md) Schemata .
 
-* `u`: für Einfügungen und Aktualisierungen
-* `d`: für Löschvorgänge.
+### Modellbasierte Schemaanforderungen für die Erfassung von Änderungsdaten
 
-Wenn `_change_request_type` nicht in der Datei vorhanden ist, wird der Standardwert `u` verwendet.
+Bevor Sie ein modellbasiertes Schema mit Änderungsdatenerfassung verwenden, konfigurieren Sie die folgenden Kennungen:
 
-Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdatenerfassung für Ihre [!DNL Azure Blob]-Quellverbindung aktivieren:
+* Jeden Datensatz mit einem Primärschlüssel eindeutig identifizieren.
+* Wenden Sie Aktualisierungen nacheinander mithilfe einer Versionskennung an.
+* Fügen Sie für Zeitreihenschemas eine Zeitstempelkennung hinzu.
 
-* [Erstellen  [!DNL Azure Blob]  Basisverbindung](../api/create/cloud-storage/blob.md).
-* [Erstellen einer Quellverbindung für einen Cloud-Speicher](../api/collect/cloud-storage.md#create-a-source-connection).
+### Umgang mit Kontrollspalten {#control-column-handling}
 
-## [!DNL Azure Databricks]
+Verwenden Sie die Spalte `_change_request_type` , um anzugeben, wie jede Zeile verarbeitet werden soll:
 
-Sie müssen **Daten-Feed ändern** in Ihrer [!DNL Azure Databricks] aktivieren, um die Änderungsdatenerfassung in Ihrer Quellverbindung verwenden zu können.
+* `u` — upsert (Standard, wenn die Spalte fehlt)
+* `d` — Löschen
 
-Verwenden Sie die folgenden Befehle, um die Option Daten-Feed ändern in [!DNL Azure Databricks] explizit zu aktivieren
+Diese Spalte wird nur während der Aufnahme ausgewertet und nicht gespeichert oder XDM-Feldern zugeordnet.
+
+### Workflow {#workflow}
+
+So aktivieren Sie die Änderungsdatenerfassung mit einem modellbasierten Schema:
+
+1. Erstellen Sie ein modellbasiertes Schema.
+2. Fügen Sie die erforderlichen Deskriptoren hinzu:
+   * [Primärer Schlüsseldeskriptor](../../../xdm/api/descriptors.md#primary-key-descriptor)
+   * [Versionsdeskriptor](../../../xdm/api/descriptors.md#version-descriptor)
+   * [Zeitstempeldeskriptor](../../../xdm/api/descriptors.md#timestamp-descriptor) (nur Zeitreihen)
+3. Erstellen Sie einen Datensatz aus dem Schema und aktivieren Sie die Änderungsdatenerfassung.
+4. Nur für die dateibasierte Aufnahme: Fügen Sie die Spalte `_change_request_type` zu Ihren Quelldateien hinzu, wenn Sie Löschvorgänge explizit angeben müssen. CDC-Exportkonfigurationen behandeln dies automatisch für Datenbankquellen.
+5. Schließen Sie die Einrichtung der Quellverbindung ab, um die Aufnahme zu aktivieren.
+
+>[!NOTE]
+>
+>Die Spalte `_change_request_type` ist nur für dateibasierte Quellen (Amazon S3, Azure Blob, Google Cloud Storage, SFTP) erforderlich, wenn Sie das Änderungsverhalten auf Zeilenebene explizit steuern möchten. Bei Datenbankquellen mit nativen CDC-Funktionen werden Änderungsvorgänge automatisch über CDC-Exportkonfigurationen verarbeitet. Die dateibasierte Aufnahme setzt standardmäßig Upsert-Vorgänge voraus. Sie müssen diese Spalte nur hinzufügen, wenn Sie Löschvorgänge in Ihren Datei-Uploads angeben möchten.
+
+>[!IMPORTANT]
+>
+>**Planung des Löschens von Daten ist erforderlich**. Alle Anwendungen, die modellbasierte Schemata verwenden, müssen die Auswirkungen von Löschungen verstehen, bevor sie die Änderungsdatenerfassung implementieren. Planen Sie, wie sich Löschungen auf zugehörige Datensätze, Compliance-Anforderungen und nachgelagerte Prozesse auswirken. Siehe [Überlegungen zur Datenhygiene](../../../hygiene/ui/record-delete.md#model-based-record-delete) für Anleitungen.
+
+## Bereitstellung von Änderungsdaten für dateibasierte Quellen {#file-based-sources}
+
+>[!IMPORTANT]
+>
+>Die dateibasierte Änderungsdatenerfassung erfordert Data Mirror mit modellbasierten Schemata. Bevor Sie die folgenden Dateiformatierungsschritte ausführen, stellen Sie sicher, dass Sie den Data Mirror-Setup-Workflow [](#workflow) abgeschlossen haben, der zuvor in diesem Dokument beschrieben wurde. In den folgenden Schritten wird beschrieben, wie Sie Ihre Datendateien formatieren, um Änderungsnachverfolgungsinformationen einzuschließen, die von Data Mirror verarbeitet werden.
+
+Fügen Sie bei dateibasierten Quellen ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] und [!DNL SFTP]) eine `_change_request_type` Spalte in Ihre Dateien ein.
+
+Verwenden Sie die `_change_request_type` Werte, die im Abschnitt [Umgang mit Kontrollspalten](#control-column-handling) oben definiert wurden.
+
+>[!IMPORTANT]
+>
+>Für **nur dateibasierte Quellen** benötigen bestimmte Anwendungen möglicherweise eine `_change_request_type` Spalte mit entweder `u` (upsert) oder `d` (delete), um die Funktionen zum Nachverfolgen von Änderungen zu validieren. Die Adobe Journey Optimizer-Funktion **Orchestrierte Kampagnen** erfordert diese Spalte beispielsweise, um den Umschalter „Orchestrierte Kampagnen“ zu aktivieren und die Datensatzauswahl für die Zielgruppenbestimmung zuzulassen. Anwendungsspezifische Validierungsanforderungen können variieren.
+
+Führen Sie die folgenden quellspezifischen Schritte aus.
+
+### Cloud-Speicherquellen {#cloud-storage-sources}
+
+Aktivieren Sie die Änderungsdatenerfassung für Cloud-Speicherquellen, indem Sie die folgenden Schritte ausführen:
+
+1. Erstellen Sie eine Basisverbindung für Ihre Quelle:
+
+   | Quelle | Basisverbindungshandbuch |
+   |---|---|
+   | [!DNL Amazon S3] | [Erstellen einer  [!DNL Amazon S3] -Basisverbindung](../api/create/cloud-storage/s3.md) |
+   | [!DNL Azure Blob] | [Erstellen einer  [!DNL Azure Blob] -Basisverbindung](../api/create/cloud-storage/blob.md) |
+   | [!DNL Google Cloud Storage] | [Erstellen einer  [!DNL Google Cloud Storage] -Basisverbindung](../api/create/cloud-storage/google.md) |
+   | [!DNL SFTP] | [Erstellen einer  [!DNL SFTP] -Basisverbindung](../api/create/cloud-storage/sftp.md) |
+
+2. [Erstellen einer Quellverbindung für einen Cloud-Speicher](../api/collect/cloud-storage.md#create-a-source-connection).
+
+Alle Cloud-Speicherquellen verwenden dasselbe `_change_request_type` Spaltenformat, das im Abschnitt [Dateibasierte Quellen](#file-based-sources) oben beschrieben wird.
+
+## Datenbankquellen {#database-sources}
+
+### [!DNL Azure Databricks]
+
+Um die Änderungsdatenerfassung mit [!DNL Azure Databricks] zu verwenden, müssen Sie sowohl **Datenfeed ändern** in Ihren Quelltabellen aktivieren als auch Data Mirror mit modellbasierten Schemata in Experience Platform konfigurieren.
+
+Verwenden Sie die folgenden Befehle, um den Änderungsdaten-Feed in Ihren Tabellen zu aktivieren:
 
 **Neue Tabelle**
 
@@ -83,20 +150,20 @@ Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdate
 * [Erstellen  [!DNL Azure Databricks]  Basisverbindung](../api/create/databases/databricks.md).
 * [Erstellen einer Quellverbindung für eine Datenbank](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Data Landing Zone]
+### [!DNL Data Landing Zone]
 
-Sie müssen **Daten-Feed ändern** in Ihrer [!DNL Data Landing Zone] aktivieren, um die Änderungsdatenerfassung in Ihrer Quellverbindung verwenden zu können.
-
-Verwenden Sie die folgenden Befehle, um die Option Daten-Feed ändern in [!DNL Data Landing Zone] explizit zu aktivieren.
+Um die Änderungsdatenerfassung mit [!DNL Data Landing Zone] zu verwenden, müssen Sie sowohl **Datenfeed ändern** in Ihren Quelltabellen aktivieren als auch Data Mirror mit modellbasierten Schemata in Experience Platform konfigurieren.
 
 Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdatenerfassung für Ihre [!DNL Data Landing Zone]-Quellverbindung aktivieren:
 
 * [Erstellen  [!DNL Data Landing Zone]  Basisverbindung](../api/create/cloud-storage/data-landing-zone.md).
 * [Erstellen einer Quellverbindung für einen Cloud-Speicher](../api/collect/cloud-storage.md#create-a-source-connection).
 
-## [!DNL Google BigQuery]
+### [!DNL Google BigQuery]
 
-So verwenden Sie die Änderungsdatenerfassung in Ihrer [!DNL Google BigQuery]. Navigieren Sie in der [!DNL Google BigQuery]-Konsole zu Ihrer [!DNL Google Cloud] und legen Sie `enable_change_history` auf `TRUE` fest. Diese Eigenschaft aktiviert den Änderungsverlauf für Ihre Datentabelle.
+Um die Änderungsdatenerfassung mit [!DNL Google BigQuery] verwenden zu können, müssen Sie sowohl den Änderungsverlauf in Ihren Quelltabellen aktivieren als auch Data Mirror mit modellbasierten Schemata in Experience Platform konfigurieren.
+
+Um den Änderungsverlauf in Ihrer [!DNL Google BigQuery]-Quellverbindung zu aktivieren, navigieren Sie in der [!DNL Google BigQuery]-Konsole zu Ihrer [!DNL Google Cloud]-Seite und setzen `enable_change_history` auf `TRUE`. Diese Eigenschaft aktiviert den Änderungsverlauf für Ihre Datentabelle.
 
 Weitere Informationen finden Sie im Handbuch zu [Datendefinitionssprachanweisungen in [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
@@ -105,39 +172,9 @@ Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdate
 * [Erstellen  [!DNL Google BigQuery]  Basisverbindung](../api/create/databases/bigquery.md).
 * [Erstellen einer Quellverbindung für eine Datenbank](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Google Cloud Storage]
+### [!DNL Snowflake]
 
-Stellen Sie sicher, dass `_change_request_type` in der [!DNL Google Cloud Storage] vorhanden ist, die Sie in Experience Platform aufnehmen möchten. Darüber hinaus müssen Sie sicherstellen, dass die folgenden gültigen Werte in der Datei enthalten sind:
-
-* `u`: für Einfügungen und Aktualisierungen
-* `d`: für Löschvorgänge.
-
-Wenn `_change_request_type` nicht in der Datei vorhanden ist, wird der Standardwert `u` verwendet.
-
-Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdatenerfassung für Ihre [!DNL Google Cloud Storage]-Quellverbindung aktivieren:
-
-* [Erstellen  [!DNL Google Cloud Storage]  Basisverbindung](../api/create/cloud-storage/google.md).
-* [Erstellen einer Quellverbindung für einen Cloud-Speicher](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL SFTP]
-
-Stellen Sie sicher, dass `_change_request_type` in der [!DNL SFTP] vorhanden ist, die Sie in Experience Platform aufnehmen möchten. Darüber hinaus müssen Sie sicherstellen, dass die folgenden gültigen Werte in der Datei enthalten sind:
-
-* `u`: für Einfügungen und Aktualisierungen
-* `d`: für Löschvorgänge.
-
-Wenn `_change_request_type` nicht in der Datei vorhanden ist, wird der Standardwert `u` verwendet.
-
-Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdatenerfassung für Ihre [!DNL SFTP]-Quellverbindung aktivieren:
-
-* [Erstellen  [!DNL SFTP]  Basisverbindung](../api/create/cloud-storage/sftp.md).
-* [Erstellen einer Quellverbindung für einen Cloud-Speicher](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL Snowflake]
-
-Sie müssen **Änderungs-Tracking** in Ihren [!DNL Snowflake]-Tabellen aktivieren, um die Änderungsdatenerfassung in Ihren Quellverbindungen verwenden zu können.
+Um die Änderungsdatenerfassung mit [!DNL Snowflake] verwenden zu können, müssen Sie sowohl **Änderungsverfolgung** in Ihren Quelltabellen aktivieren als auch Data Mirror mit modellbasierten Schemata in Experience Platform konfigurieren.
 
 Aktivieren Sie [!DNL Snowflake] die Änderungsverfolgung mithilfe der `ALTER TABLE` und legen Sie `CHANGE_TRACKING` auf `TRUE` fest.
 
@@ -151,4 +188,3 @@ Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdate
 
 * [Erstellen  [!DNL Snowflake]  Basisverbindung](../api/create/databases/snowflake.md).
 * [Erstellen einer Quellverbindung für eine Datenbank](../api/collect/database-nosql.md#create-a-source-connection).
-
