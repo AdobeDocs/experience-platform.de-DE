@@ -140,7 +140,7 @@ v2.0.4
 
 * Unterstützung von Datenelementen für verschiedene Felder hinzugefügt – Die Unterstützung von Datenelementen wurde den folgenden Ereignissen hinzugefügt: „Zeit auf Seite“, „Betreten des Viewports“, „Hover“ und „Abgespielte Medienzeit“. Zusätzlich zu den folgenden Bedingungen: „Besuchszeit pro Site“ und „Vergleich von Werten“
 * Fügt Unterstützung für das Standardverhalten von Strg/Befehlstaste+Klick und auch Mittelmausklick bei Verwendung der Linkverzögerung hinzu.
-* **Link-Verzögerung beim Klickereignis als „nicht mehr unterstützt“ markiert.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) für Adobe Experience Platform
+* **Link-Verzögerung beim Klickereignis als „nicht mehr unterstützt“ markiert.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=de) für Adobe Experience Platform
 
 ## &#x200B;6. Januar 2021
 
