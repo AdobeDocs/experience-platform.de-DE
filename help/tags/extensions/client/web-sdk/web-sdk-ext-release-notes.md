@@ -2,9 +2,9 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '2947'
+source-wordcount: '2970'
 ht-degree: 61%
 
 ---
@@ -13,6 +13,13 @@ ht-degree: 61%
 # Versionshinweise zur Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Version 2.33.0 – Donnerstag, 24. September 2025
+
+**Neue Funktionen**
+
+- Unterstützung für das Anzeigen von Push-Benachrichtigungen hinzugefügt
+- Enthält [Version 2.30.0](../../../../web-sdk/release-notes.md#2-30-0) des Adobe Experience Platform Web SDK.
 
 ## Version 2.32.0 – Freitag, 4. September 2025
 

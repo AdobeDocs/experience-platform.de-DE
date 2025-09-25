@@ -2,9 +2,9 @@
 title: Konfigurieren der Tag-Erweiterung „Web SDK"
 description: Erfahren Sie, wie Sie die Tag-Erweiterung "Experience Platform Web SDK" in der Tags-Benutzeroberfläche konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '3095'
+source-wordcount: '3107'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Wenn Sie einen benutzerdefinierten Web-SDK-Build erstellen, wird der Build von a
 >[!IMPORTANT]
 >
 >Durch das Deaktivieren von Web SDK-Komponenten kann die bestehende Implementierung beschädigt werden. Jedes Mal, wenn Sie eine Komponente deaktivieren, sollten Sie Ihre Implementierung gründlich testen, um sicherzustellen, dass alle benötigten Funktionen erwartungsgemäß funktionieren.
->&#x200B;>Wenn Sie eine Komponente deaktivieren, können Sie die Einstellungen dieser Komponente nicht mehr bearbeiten.
+>>Wenn Sie eine Komponente deaktivieren, können Sie die Einstellungen dieser Komponente nicht mehr bearbeiten.
 
 Gehen Sie wie folgt vor, um einen benutzerdefinierten Web-SDK-Build mithilfe der Tag-Erweiterung „Web SDK&quot; zu erstellen.
 
@@ -60,7 +60,8 @@ Gehen Sie wie folgt vor, um einen benutzerdefinierten Web-SDK-Build mithilfe der
    * **[!UICONTROL Media Analytics Bridge]**: Diese Komponente ermöglicht Edge Network Streaming Media mithilfe der Media Analytics-Oberfläche. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
       * [Abrufen von Media Analytics Tracker](action-types.md#get-media-analytics-tracker) Aktionstyp
    * **[!UICONTROL Personalization]**: Diese Komponente ermöglicht die Integration von Adobe Target und Adobe Journey Optimizer. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
-      * [Aktionstyp „Vorschläge ](action-types.md)&quot;
+      * [Vorschläge anwenden](action-types.md#apply-propositions)Aktionstyp
+   * **[!UICONTROL Push-Benachrichtigungen]**: Diese Komponente aktiviert Web-Push-Benachrichtigungen für Adobe Journey Optimizer.
    * **[!UICONTROL Regel-Engine]**: Diese Komponente aktiviert die Adobe Journey Optimizer-Entscheidungsfindung auf dem Gerät. Durch Deaktivieren dieser Komponente werden die folgenden Elemente deaktiviert:
       * [Regelsätze auswerten](action-types.md#evaluate-rulesets) Aktionstyp
       * [Regelsatzelemente abonnieren](event-types.md#subscribe-ruleset-items) Ereignistyp
@@ -123,10 +124,9 @@ In diesem Abschnitt können Sie das Verhalten der Web-SDK bei der Handhabung der
 * **[!UICONTROL Verwendung von Drittanbieter-Cookies]**: Wenn diese Option aktiviert ist, versucht Web SDK, eine Benutzerkennung in einem Drittanbieter-Cookie zu speichern. Bei erfolgreicher Ausführung wird der Benutzer bei der Navigation durch mehrere Domains als ein einzelner Benutzer identifiziert, anstatt in jeder Domain als separater Benutzer identifiziert zu werden. Wenn diese Option aktiviert ist, kann die SDK die Benutzerkennung möglicherweise immer noch nicht in einem Drittanbieter-Cookie speichern, wenn der Browser keine Drittanbieter-Cookies unterstützt oder vom Benutzer so konfiguriert wurde, dass keine Drittanbieter-Cookies zugelassen werden. In diesem Fall speichert die SDK die Kennung nur in der Erstanbieter-Domain.
 
   >[!IMPORTANT]
-  >&#x200B;>Drittanbieter-Cookies sind nicht mit der Funktion [Erstanbieter-Geräte-ID](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK kompatibel.
-  >&#x200B;>Sie können entweder Erstanbieter-Geräte-IDs verwenden oder Drittanbieter-Cookies verwenden. Sie können jedoch nicht beide Funktionen gleichzeitig verwenden.
+  >>Drittanbieter-Cookies sind nicht mit der Funktion [Erstanbieter-Geräte-ID](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK kompatibel.
+  >>Sie können entweder Erstanbieter-Geräte-IDs verwenden oder Drittanbieter-Cookies verwenden. Sie können jedoch nicht beide Funktionen gleichzeitig verwenden.
   >
-
 ## Personalisierungseinstellungen konfigurieren {#personalization}
 
 In diesem Abschnitt können Sie festlegen, wie bestimmte Teile einer Seite beim Laden personalisierter Inhalte ausgeblendet werden sollen. Dadurch wird sichergestellt, dass Ihren Besuchern nur die personalisierte Seite angezeigt wird.
