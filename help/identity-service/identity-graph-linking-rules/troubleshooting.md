@@ -2,9 +2,9 @@
 title: Handbuch zur Fehlerbehebung bei Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie, wie Sie häufige Probleme in den Verknüpfungsregeln für Identitätsdiagramme beheben können.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
 workflow-type: tm+mt
-source-wordcount: '3295'
+source-wordcount: '3451'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,27 @@ Es gibt verschiedene Gründe dafür, warum Ihre Erlebnisereignisfragmente nicht 
    * Beispielsweise muss ein Erlebnisereignis sowohl einen `_id` als auch einen `timestamp` enthalten.
    * Darüber hinaus muss die `_id` für jedes Ereignis (Datensatz) eindeutig sein.
 
-Im Kontext der Namespace-Priorität lehnt das Profil jedes Ereignis ab, das zwei oder mehr Identitäten mit der höchsten Namespace-Priorität enthält. Wenn beispielsweise GAID nicht als eindeutiger Namespace markiert ist und zwei Identitäten sowohl mit einem GAID-Namespace als auch mit unterschiedlichen Identitätswerten eingingen, speichert das Profil keines der Ereignisse.
+Im Kontext der Namespace-Priorität lehnt das Profil jedes Ereignis ab, das zwei oder mehr Identitäten mit der höchsten Namespace-Priorität im (angegebenen) **-Ereignis**. Angenommen, Ihre Identitätseinstellungen sind wie folgt konfiguriert:
+
+| Namespace | Nur einmal im Diagramm | Priorität |
+| --- | --- | --- |
+| CRMID | ✔️ | 1 |
+| GAID | | 2 |
+| ECID | | 3 |
+
+Angenommen, für jedes Szenario enthalten Erlebnisereignisse die folgenden Ereignisse:
+
+**Szenario 1: 2 GAIDs, 1 ECID**
+
+* In diesem Szenario enthält ein eingehendes Erlebnisereignis zwei GAIDs und eine ECID. Zwischen diesen Namespaces wird GAID als Namespace mit der höchsten Namespace-Priorität konfiguriert. Da es jedoch zwei GAIDs gibt, speichert **Profil nicht** dieses Erlebnisereignis.
+
+**Szenario 2: 2 CRMIDs, 1 GAID**
+
+* In diesem Szenario enthält ein eingehendes Erlebnisereignis 2 CRMIDs und 1 GAID. Zwischen diesen Namespaces wird CRMID als Namespace mit der höchsten Namespace-Priorität konfiguriert. Da es jedoch zwei GAIDs gibt, speichert **Profil nicht** dieses Erlebnisereignis.
+
+**Szenario 3: 1 CRMID, 2 GAIDs**
+
+* In diesem Szenario enthält ein eingehendes Erlebnisereignis 1 CRMID und 2 GAIDs. Zwischen diesen Namespaces wird CRMID als Namespace mit der höchsten Namespace-Priorität konfiguriert. Da es nur eine CRM-ID gibt, nimmt das Profil die Erlebnisereignisse auf, da es nur eine Instanz des Namespace mit der höchsten Namespace-Priorität gibt.
 
 **Schritte zur Fehlerbehebung**
 
@@ -320,7 +340,7 @@ Sie können die folgende Abfrage im Profil-Schnappschuss-Exportdatensatz verwend
 
 In diesem Abschnitt finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu [!DNL Identity Graph Linking Rules].
 
-## Algorithmus zur Identitätsoptimierung {#identity-optimization-algorithm}
+## Algorithmus der Identitätsoptimierung {#identity-optimization-algorithm}
 
 In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zum [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md).
 
@@ -403,4 +423,4 @@ Im Allgemeinen sollten Tests in einer Entwicklungs-Sandbox die Anwendungsfälle 
 
 Verwenden Sie das [Diagrammsimulations-Tool](./graph-simulation.md) um zu überprüfen, ob die Funktion auf individueller Diagrammebene funktioniert.
 
-Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren &#x200B;]&quot; im Identitäts-Dashboard.
+Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren ]&quot; im Identitäts-Dashboard.

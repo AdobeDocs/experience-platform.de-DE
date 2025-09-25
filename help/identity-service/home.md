@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service – Übersicht
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1574'
 ht-degree: 8%
 
 ---
@@ -74,6 +74,10 @@ Identity Service bietet die folgenden Vorgänge, um seinen Auftrag zu erfüllen:
 
 ## Verknüpfen von Identitäten mit Identity Service
 
+>[!IMPORTANT]
+>
+>Bei Identity Service wird zwischen Groß- und Kleinschreibung unterschieden. Beispielsweise würden **abc<span>@gmail.com** und **ABC<span>@GMAIL.COM** als zwei separate E-Mail-Identitäten behandelt.
+
 Eine Verknüpfung zwischen zwei Identitäten wird hergestellt, wenn der Identity-Namespace und die Identitätswerte übereinstimmen.
 
 Ein typisches Anmeldeereignis (**zwei Identitäten)** Experience Platform:
@@ -101,7 +105,7 @@ Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen versc
 
 Das folgende Video soll Ihnen Identitäten und Identitätsdiagramme näherbringen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422772?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Grundlegendes zur Rolle von Identity Service in der Experience Platform-Infrastruktur
 
