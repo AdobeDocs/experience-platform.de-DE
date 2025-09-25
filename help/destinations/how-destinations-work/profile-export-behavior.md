@@ -2,10 +2,10 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: ede6f3ed4518babddb537a62cdb16915e2d37310
+source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
 workflow-type: tm+mt
-source-wordcount: '2935'
-ht-degree: 86%
+source-wordcount: '3068'
+ht-degree: 77%
 
 ---
 
@@ -15,7 +15,8 @@ Es gibt mehrere Zieltypen in Experience Platform, wie in der Abbildung unten dar
 
 >[!IMPORTANT]
 >
->Auf dieser Dokumentationsseite wird nur das Verhalten beim Profilexport für die Verbindungen beschrieben, die im unteren Bereich der Abbildung hervorgehoben sind.
+>* Beachten Sie die im September 2025 eingeführte Änderung des Exportverhaltens für [Unternehmensziele](#enterprise-behavior)
+>* Auf dieser Dokumentationsseite wird nur das Verhalten beim Profilexport für die Verbindungen beschrieben, die im unteren Bereich der Abbildung hervorgehoben sind.
 
 ![Abbildung mit den Zieltypen](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
@@ -29,10 +30,10 @@ Profile werden in HTTPS-Nachrichten aggregiert, bevor sie an Ziel-API-Endpunkte 
 
 Nehmen wir das [Facebook-Ziel](/help/destinations/catalog/social/facebook.md) mit *[konfigurierbarer Aggregationsrichtlinie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* als Beispiel. Daten werden aggregiert gesendet, wobei der Ziel-Service alle eingehenden Daten aus dem Upstream-Profil-Service nach einem der folgenden Kriterien aggregiert, bevor sie an Facebook gesendet werden:
 
-* Anzahl der Datensätze (maximal 10.000) oder
+* Anzahl der Einträge (maximal 10.000) oder
 * Zeitfenster-Intervall (300 Sekunden)
 
-Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. Im Dashboard [!DNL Facebook Custom Audiences] werden möglicherweise Zielgruppen aus Experience Platform in Schritten von 10.000 Datensätzen angezeigt. Möglicherweise werden alle 2 bis 3 Minuten 10.000 Datensätze angezeigt, da die Daten schneller verarbeitet und aggregiert werden als beim Exportintervall von 300 Sekunden und schneller gesendet werden, etwa alle 2 bis 3 Minuten, bis alle Datensätze verarbeitet wurden. Wenn für einen Batch von 10.000 Datensätzen nicht genügend Datensätze vorhanden sind, wird die aktuelle Datensatzanzahl gesendet, sobald der Schwellenwert des Zeitfensters erreicht wird. Also werden möglicherweise auch kleinere Batches an Facebook gesendet.
+Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. Im Dashboard [!DNL Facebook Custom Audiences] werden möglicherweise Zielgruppen aus Experience Platform in Schritten von 10.000 Einträgen angezeigt. Möglicherweise werden alle 2 bis 3 Minuten 10.000 Datensätze angezeigt, da die Daten schneller verarbeitet und aggregiert werden als beim Exportintervall von 300 Sekunden und schneller gesendet werden, etwa alle 2 bis 3 Minuten, bis alle Datensätze verarbeitet wurden. Wenn für einen Batch von 10.000 nicht genügend Einträge vorhanden sind, wird die aktuelle Eintragsanzahl gesendet, sobald der Schwellenwert des Zeitfensters erreicht wird. Also werden möglicherweise auch kleinere Batches an Facebook gesendet.
 
 Ein weiteres Beispiel ist das [HTTP-API-Ziel](/help/destinations/catalog/streaming/http-destination.md), das mit `maxUsersPerRequest: 10` über eine Richtlinie zur *[Aggregation nach bestem Bemühen](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* verfügt. Das bedeutet, dass maximal zehn Profile aggregiert werden, bevor ein HTTP-Aufruf an dieses Ziel gesendet wird. Experience Platform versucht jedoch, Profile an das Ziel zu senden, sobald der Ziel-Service aktualisierte Neuauswertungsinformationen von einem Upstream-Service erhält.
 
@@ -56,13 +57,13 @@ In allen oben beschriebenen Fällen werden nur die Profile exportiert, in denen 
 
 Beachten Sie, dass alle zugeordneten Attribute unabhängig von der Art der Änderungen für ein Profil exportiert werden. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
 
-### Was bestimmt einen Datenexport und was ist im Export enthalten?
+### Was bestimmt einen Datenexport und was ist im Export enthalten? {#enterprise-behavior}
 
 Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es wichtig, die beiden verschiedenen Konzepte zu verstehen, nämlich *was den Datenexport an Ihr Unternehmensziel bestimmt* und *welche Daten im Export enthalten sind*.
 
 | Was einen Zielexport bestimmt | Im Zielexport enthaltene Informationen |
 |---------|----------|
-| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn sich der `segmentMembership` eines Profils in `realized` oder `exiting` ändert oder zugeordnete Attribute aktualisiert werden.</li><li>Da Identitäten derzeit nicht Unternehmenszielen zugeordnet werden können, bestimmen Änderungen an der Identität eines bestimmten Profils auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifikations- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. </li><li>Alle Identitäten im `identityMap`-Objekt sind ebenfalls enthalten (Experience Platform unterstützt derzeit keine Identitätszuordnung im Unternehmensziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
+| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn sich der `segmentMembership` eines Profils in `realized` oder `exiting` ändert oder zugeordnete Attribute aktualisiert werden.</li><li>Da Identitäten derzeit nicht Unternehmenszielen zugeordnet werden können, bestimmen Änderungen an der Identität eines bestimmten Profils auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>**Hinweis**: Das Exportverhalten für Unternehmensziele wurde mit der Version vom September 2025 aktualisiert. Das unten hervorgehobene neue Verhalten gilt derzeit nur für neue Unternehmensziele, die nach dieser Version erstellt wurden. Bei bestehenden Unternehmenszielen können Sie weiterhin das alte Exportverhalten verwenden oder Adobe kontaktieren, um zu dem neuen Verhalten zu migrieren, in dem nur zugeordnete Zielgruppen exportiert werden. Alle Organisationen werden 2026 schrittweise auf das neue Verhalten umgestellt. <br><br> <span class="preview"> **Neues Exportverhalten**: Die Segmente, die dem Ziel zugeordnet sind und sich geändert haben, werden in das `segmentMembership`-Objekt aufgenommen. In einigen Szenarien können sie mit mehreren Aufrufen exportiert werden. In einigen Szenarien können auch bestimmte Segmente, die sich nicht geändert haben, in den Aufruf eingeschlossen werden. In jedem Fall werden nur Segmente exportiert, die im Datenfluss zugeordnet sind.</span></li><br>**Altes Verhalten**: Das `segmentMembership` enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifikations- oder Segmentaustrittsereignis geändert hat. Andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, können Teil des Zielexports sein, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören.<li>Alle Identitäten im `identityMap`-Objekt sind ebenfalls enthalten (Experience Platform unterstützt derzeit keine Identitätszuordnung im Unternehmensziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -76,7 +77,8 @@ Betrachten Sie beispielsweise den folgenden Datenfluss an ein HTTP-Ziel, bei dem
 
 ![Unternehmensziel-Datenfluss](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Ein Profilexport an das Ziel kann durch ein Profil bestimmt werden, das sich für eines der *drei zugeordneten Segmente* qualifiziert. Im Datenexport jedoch können im `segmentMembership`-Objekt andere nicht zugeordnete Zielgruppen angezeigt werden, wenn dieses spezielle Profil zu ihnen gehört und diese Zielgruppen dieselbe Zusammenführungsrichtlinie verwenden wie die Zielgruppe, die den Export ausgelöst hat. Wenn ein Profil sich für die Zielgruppe **Kundschaft mit DeLorean-Autos** qualifiziert hat, aber auch zu den Zielgruppen **Hat „Zurück in die Zukunft“ gesehen** und **Science-Fiction-Fans** gehört, sind diese beiden anderen Zielgruppen ebenfalls im `segmentMembership`-Objekt des Datenexports vorhanden, obwohl sie nicht im Datenfluss zugeordnet sind, falls diese dieselbe Zusammenführungsrichtlinie wie die Zielgruppe **Kundschaft mit DeLorean-Autos** verwenden.
+Ein Profilexport an das Ziel kann durch ein Profil bestimmt werden, das sich für eines der *drei zugeordneten Segmente* qualifiziert. Im Datenexport können im `segmentMembership` andere zugeordnete Zielgruppen angezeigt werden, wenn dieses bestimmte Profil zu diesem Profil gehört und diese Zielgruppen dieselbe Zusammenführungsrichtlinie wie die Zielgruppe verwenden, die den Export ausgelöst hat. Wenn ein Profil sich für die Zielgruppe **Kunde mit DeLorean-**) qualifiziert und auch Mitglied der Segmente **Grundlegende Site-Aktivität und Stadt - Dallas** ist, sind diese beiden anderen Zielgruppen ebenfalls im `segmentMembership` des Datenexports vorhanden, da diese im Datenfluss zugeordnet sind, falls diese dieselbe Zusammenführungsrichtlinie wie das Segment **Kunde mit DeLorean-Autos** verwenden.
+
 
 Aus Sicht der Profilattribute bestimmt jede Änderung an den vier oben zugeordneten Attributen einen Zielexport, und eines der vier im Profil vorhandenen zugeordneten Attribute wird im Datenexport vorhanden sein.
 
@@ -103,7 +105,7 @@ In allen oben beschriebenen Fällen werden nur die Profile exportiert, in denen 
 
 Beachten Sie, dass alle zugeordneten Attribute unabhängig von der Art der Änderungen für ein Profil exportiert werden. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
 
-### Was bestimmt einen Datenexport und was ist im Export enthalten?
+### Was bestimmt einen Datenexport und was ist im Export enthalten? {#streaming-behavior}
 
 Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es wichtig, die beiden verschiedenen Konzepte zu verstehen, nämlich was den Datenexport an Ihr Streaming-API-Ziel bestimmt und welche Daten im Export enthalten sind.
 
