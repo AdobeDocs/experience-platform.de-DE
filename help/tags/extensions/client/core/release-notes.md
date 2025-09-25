@@ -2,10 +2,10 @@
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
+source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 86%
+source-wordcount: '1723'
+ht-degree: 85%
 
 ---
 
@@ -15,7 +15,16 @@ ht-degree: 86%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-## 8. Mai 2025
+## &#x200B;25. September 2025
+
+v3.4.4
+
+* Fügen Sie das `releaseNotesUrl` Feld zur Datei extension.json mit dieser Seite als Wert hinzu.
+* Audit-Abhängigkeiten.
+* Entfernen Sie Yarn und bringen Sie den Build-Prozess mit unseren anderen Open-Source-Repositorys in Einklang.
+
+
+## &#x200B;8. Mai 2025
 
 v3.4.3
 
@@ -23,13 +32,13 @@ v3.4.3
 * Aktualisierungen @adobe/react-spectrum auf Version 3.41.0.
 * Aktualisierungen @adobe/reactor-sandbox Version 13.2.1.
 
-## 23. Oktober 2024
+## &#x200B;23. Oktober 2024
 
 v3.4.2
 
 * Behebung eines Schemavalidierungsfehlers für das Formular -> Änderungsereignis, wenn „und mit bestimmten Eigenschaftswerten…“ aktiv ist.
 
-## 29. März 2023
+## &#x200B;29. März 2023
 
 v3.4.1
 
@@ -49,26 +58,26 @@ v3.4.1
 * Entfernt Code, der DTM-Cookies zu LocalStorage migriert hat.
 * Protokolliert eine Warnung auf der Konsole, wenn die LocalStorage- und SessionStorage-APIs nicht verfügbar sind.
 
-## 4. Januar 2022
+## &#x200B;4. Januar 2022
 
 v3.3.0
 
 * Ändert die [Trigger-Direktaufruf-Aktion](./overview.md#direct-call-action), damit Sie benutzerdefinierte Ereignisinformationen bereitstellen können, die an Direktaufrufregeln gesendet werden.
 
-## 8. Oktober 2021
+## &#x200B;8. Oktober 2021
 
 v3.2.2
 
 * Korrigieren Sie das JSON-Schema für das Bedingungswert-Datenelement für alle verfügbaren Operatoren.
 * Fehlerbehebung https://github.com/adobe/reactor-extension-core/issues/64.
 
-## 23. September 2021
+## &#x200B;23. September 2021
 
 v3.2.1
 
 * Es wurde ein Fehler behoben, bei dem die Initialisierung der Ansicht für Datenelemente mit bedingtem Wert nicht richtig funktionierte, wenn die Feldwerte 0 waren.
 
-## 23. September 2021
+## &#x200B;23. September 2021
 
 v3.2.0
 
@@ -78,13 +87,13 @@ Die folgenden Änderungen wurden im Datenelement „Bedingter Wert“ eingeführ
 * Zahlenwerte werden im Einstellungsobjekt als Zahlen dargestellt.
 * Der bedingte Wert ist nicht mehr erforderlich, sodass er sich genauso verhalten kann wie der Fallback-Wert.
 
-## 17. September 2021
+## &#x200B;17. September 2021
 
 v3.1.1
 
 * Behebung eines JS-Fehlers, der verhinderte, dass die Ansicht für die Bedingung „Datumsbereich“ geladen werden konnte.
 
-## 16. September 2021
+## &#x200B;16. September 2021
 
 v3.1.0
 
@@ -96,7 +105,7 @@ Neue Datenelemente wurden hinzugefügt:
 * JavaScript-Tools - Wrapper für gängige JavaScript-Operationen: Grundlegende String-Manipulation (replace, substring, regex match, first and last index, split, slice), grundlegende Array-Operationen (slice, join, pop, shift) und grundlegende universelle Operationen (slice, length).
 * Geräteattribute - Rückgabe von Geräteattributen wie Fenstergröße oder Bildschirmgröße.
 
-## 11. August 2021
+## &#x200B;11. August 2021
 
 v3.0.0
 
@@ -106,14 +115,14 @@ Version 3.0.0 der Haupterweiterung ist mit Änderungen in [Version 27.2.0 der Tu
 
 Dieses Upgrade ist optional und abwärtskompatibel für Benutzer ohne Premium-CDN. Für Kunden, die Premium-CDN in ihrem Unternehmen aktiviert haben, ist es obligatorisch.
 
-## 20. Mai 2021
+## &#x200B;20. Mai 2021
 
 v2.0.7
 
 * Es wurde ein Problem behoben, durch das Mausinteraktionen auf Texteingaben nicht mehr ordnungsgemäß funktionierten.
 * Die Verwendung der Bedingungen für Browser und Betriebssystem wird verworfen.
 
-## 4. Mai 2021
+## &#x200B;4. Mai 2021
 
 v2.0.6
 
@@ -131,9 +140,9 @@ v2.0.4
 
 * Unterstützung von Datenelementen für verschiedene Felder hinzugefügt – Die Unterstützung von Datenelementen wurde den folgenden Ereignissen hinzugefügt: „Zeit auf Seite“, „Betreten des Viewports“, „Hover“ und „Abgespielte Medienzeit“. Zusätzlich zu den folgenden Bedingungen: „Besuchszeit pro Site“ und „Vergleich von Werten“
 * Fügt Unterstützung für das Standardverhalten von Strg/Befehlstaste+Klick und auch Mittelmausklick bei Verwendung der Linkverzögerung hinzu.
-* **Link-Verzögerung beim Klickereignis als „nicht mehr unterstützt“ markiert.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=de) für Adobe Experience Platform
+* **Link-Verzögerung beim Klickereignis als „nicht mehr unterstützt“ markiert.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) für Adobe Experience Platform
 
-## 6. Januar 2021
+## &#x200B;6. Januar 2021
 
 v1.9.0
 
@@ -145,26 +154,26 @@ v1.8.4
 
 * Es wurde ein Fehler behoben, durch den ein User CSP vorübergehend nicht löschen oder deaktivieren konnte.
 
-## 28. Juli 2020
+## &#x200B;28. Juli 2020
 
 v1.8.3
 
 * Es wurde ein Fehler behoben, durch den die CSP-Nonce beim Starten der Erweiterung nur einmal gelesen wurde, anstatt beim Aufruf der benutzerdefinierten Code-Aktion neu abgerufen zu werden.
 
-## 13. Juli 2020
+## &#x200B;13. Juli 2020
 
 v1.8.2
 
 * Es wurde ein Fehler behoben, durch den die Aktion für benutzerspezifischen Code einen Fehler für HTML-Code ausgab, der Token ohne Tag-Namen enthielt (z. B. Kommentare).
 
-## 10. Juli 2020
+## &#x200B;10. Juli 2020
 
 v1.8.1
 
 * Es wurde ein Fehler behoben, durch den benutzerdefinierte HTML-Entitäten innerhalb von Attributen von `script`- und `style`-Tags nicht korrekt dekodiert wurden, bevor sie auf die Seite geschrieben wurden.
 * Es wurde ein Fehler behoben, der auftrat, wenn eine externe benutzerdefinierte Code-Aktion keinen Inhalt enthielt. Die externe Aktion für benutzerdefinierten Code ist die Aktion, die aus einer anderen Datei als der Bibliothek geladen wird (dies tritt auf, wenn das Ereignis, das die Regel auslöst, nicht libraryLoaded oder pageBottom ist).
 
-## 6. Juli 2020
+## &#x200B;6. Juli 2020
 
 v1.8.0
 
@@ -173,13 +182,13 @@ v1.8.0
 
 Weitere Informationen finden Sie im [Referenzdokument zur Haupterweiterung](./overview.md) unter Bedingungen > Benutzerspezifischer Code und Aktionen > Benutzerspezifischer Code.
 
-## 7. April 2020
+## &#x200B;7. April 2020
 
 v1.7.3
 
 * **Vergrößerung der Textfeldlänge**: Texteingabefelder haben jetzt ein Flex-Layout, um die Bildschirmbreite des Benutzers besser zu nutzen und längeren Textzeichenfolgen mehr Platz zu geben.
 
-## 1. November 2019
+## &#x200B;1. November 2019
 
 v1.7.0
 
@@ -195,15 +204,15 @@ v1.6.2
 
 v1.6.1
 
-* **Unterstützung von CSP mit einer Nonce** – Die Haupterweiterung hat jetzt einen optionalen Konfigurationsparameter. Sie können damit ein Datenelement hinzufügen, das eine Nonce referenziert. Wenn konfiguriert, verwenden alle Inline-Skripte, die ein Tag zur Seite hinzufügt, die von Ihnen konfigurierte Nonce. Durch diese Änderung wird die Verwendung einer CSP mit einer Nonce unterstützt, sodass Launch-Skripte weiterhin in einer CSP-Umgebung geladen werden. Weitere Informationen zur Verwendung von Tags mit einer CSP finden Sie [hier](../../../ui/client-side/content-security-policy.md).
+* **Unterstützung von CSP mit einer Nonce** – Die Haupterweiterung hat jetzt einen optionalen Konfigurationsparameter. Sie können damit ein Datenelement hinzufügen, das auf eine Nonce verweist. Wenn konfiguriert, verwenden alle Inline-Skripte, die ein Tag zur Seite hinzufügt, die von Ihnen konfigurierte Nonce. Durch diese Änderung wird die Verwendung einer CSP mit einer Nonce unterstützt, sodass Launch-Skripte weiterhin in einer CSP-Umgebung geladen werden. Weitere Informationen zur Verwendung von Tags mit einer CSP finden Sie [hier](../../../ui/client-side/content-security-policy.md).
 
-## 18. Juni 2019
+## &#x200B;18. Juni 2019
 
 v1.5.0
 
 * **Direktaufruf-Protokollierung** – Die Browserprotokollierung für Direktaufrufregeln bietet jetzt zusätzliche Details, wenn sie passiert wird.
 
-## 8. Mai 2019
+## &#x200B;8. Mai 2019
 
 v1.4.3
 
@@ -212,7 +221,7 @@ v1.4.3
 * **Fehlerbehebung** – Behebung eines Fehlers, durch den die Wertvergleichsbedingung keinen 0-Wert enthalten konnte.
 * **Fehlerbehebung** – Aktualisierung des Felds exchange\_url, sodass nun die Haupterweiterungsliste in Adobe Exchange angezeigt wird.
 
-## 8. Januar 2019
+## &#x200B;8. Januar 2019
 
 v1.4.2
 
@@ -220,28 +229,28 @@ v1.4.2
 * **Benutzerspezifisches Ereignis** – Benutzerspezifische Ereignisse können jetzt kontextbezogene Daten enthalten, die innerhalb von Bedingungen und Aktionen verwendet werden können.
 * **Klickereignis** – Wenn Sie eine Link-Verzögerung im Klickereignis festlegen, wird es sich für nachkommende Elemente des Ankers und nicht nur für den Anker selbst registrieren.
 
-## 8. November 2018
+## &#x200B;8. November 2018
 
 * **Option „Kohorte beibehalten“** – Die Option, eine Kohorte dauerhaft beizubehalten, wurde zur Sampling-Bedingung hinzugefügt. Dadurch wird die Beispielkohorte für einen Benutzer sitzungsübergreifend beibehalten oder beendet. Wenn beispielsweise das Kontrollkästchen „Kohorte beibehalten“ aktiviert ist und die Bedingung bei der ersten Ausführung für eine bestimmte Besucherin bzw. einen bestimmten Besucher „true“ zurückgibt, gibt sie in allen nachfolgenden Ausführungen der Bedingung für dieselbe Person ebenfalls „true“ zurück. Wenn das Kontrollkästchen „Kohorte beibehalten“ aktiviert ist und die Bedingung bei der ersten Ausführung für eine bestimmte Besucherin bzw. für einen bestimmten Besucher „false“ zurückgibt, gibt sie gleichermaßen in allen nachfolgenden Ausführungen der Bedingung für dieselbe Person ebenfalls „false“ zurück.
 * **Fehlerbehebung** – Es wurde ein Problem behoben, durch das eine Regel mithilfe eines Seitenende-Ereignisses und einer benutzerdefinierten Code-Aktion auf einer Seite, auf der Tags zwar synchron geladen, aber nicht ordnungsgemäß installiert wurden (kein Aufruf von `_satellite.pageBottom()`), Inhalte der Website gelöscht hat.
 * **Fehlerbehebung** - Es wurde ein Problem behoben, bei dem Enters Viewport nicht funktionierte, wenn die Tag-Bibliothek asynchron geladen wurde und das Laden abgeschlossen wurde, nachdem das DOMContentLoaded-Ereignis des Browsers ausgelöst wurde.
 
-## 24. Mai 2018
+## &#x200B;24. Mai 2018
 
 * **Funktion** – Hinzufügung einer Wertvergleichsbedingung. Dabei werden zwei Werte mit verschiedenen verfügbaren Operatoren verglichen. Dadurch wird die Funktionalität verschiedener älterer Bedingungen ersetzt, die viel zu spezifisch waren.
 * **Funktion** – Hinzufügung einer „Max. Häufigkeit“-Bedingung, mit der Sie festlegen können, wie oft die Bedingung innerhalb eines Zeitraums oder Ereignisauftretens „true“ zurückgeben soll. Beispiele: 5 Mal pro Tag, 2 Mal pro Besuch.
 
-## 11. April 2018
+## &#x200B;11. April 2018
 
 * **Funktion** – Datenelemente können nun auf andere Datenelemente verweisen.
 
-## 20. März 2018
+## &#x200B;20. März 2018
 
 * **Fehlerbehebung** – Benutzerdefinierte Code-Fenster wiesen `document.write`-Fehler auf und wurden in asynchronen Bereitstellungen nicht ausgeführt
 * **Fehlerbehebung** – Hauptmodule wurden nicht in einer Bibliothek eingeschlossen
 * **Fehlerbehebung** – Probleme mit Mindest- und Höchstwerten im Datenelement „Zufällige Nummer“
 
-## 10. Januar 2018
+## &#x200B;10. Januar 2018
 
 * **Funktion** – Datenelement „Zufällige Nummer“
 * **Funktion** – Datenelement „Seiteninformationen“
