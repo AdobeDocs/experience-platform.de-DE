@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
+source-git-commit: c697d0e924545caf430382385797bde340b57d94
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 50%
+source-wordcount: '241'
+ht-degree: 46%
 
 ---
 
@@ -18,14 +18,14 @@ ht-degree: 50%
 
 * [Web SDK – Übersicht](home.md)
 * [Versionshinweise](release-notes.md)
-* Web SDK-{#install}
+* Web SDK-Installation {#install}
    * [Überblick](install/overview.md)
    * [Installieren von Web SDK mithilfe der Tag-Erweiterung](install/extension.md)
    * [Installieren von Web SDK mithilfe der JavaScript-Bibliothek](install/library.md)
    * [Installieren von Web SDK mithilfe des NPM-Pakets](install/npm.md)
    * [Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket](install/create-custom-build.md)
-* Befehle {#commands}
-   * Konfigurieren von {#configure}
+* Commands {#commands}
+   * configure {#configure}
       * [Überblick](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
@@ -43,9 +43,10 @@ ht-degree: 50%
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
       * [PrehidingStyle](commands/configure/prehidingstyle.md)
+      * [Push-Benachrichtigungen](commands/configure/pushnotifications.md)
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
-   * sendEvent-{#sendevent}
+   * sendEvent {#sendevent}
       * [Überblick](commands/sendevent/overview.md)
       * [data](commands/sendevent/data.md)
       * [DokumentEntladen](commands/sendevent/documentunloading.md)
@@ -63,12 +64,13 @@ ht-degree: 50%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [sendPushSubscription](commands/sendPushSubscription.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [Konfigurieren von Datenstromüberschreibungen](commands/datastream-overrides.md)
    * [Befehlsantworten](commands/command-responses.md)
 
 * Identität {#identity}
-   * [Übersicht](identity/overview.md)
+   * [Überblick](identity/overview.md)
    * [IDs von Erstanbieter-Geräten](identity/first-party-device-ids.md)
    * [Mobile-zu-Web und Domain-übergreifender ID-Austausch](identity/id-sharing.md)
 
@@ -83,20 +85,20 @@ ht-degree: 50%
       * [Zugriff auf Antwort-Token](personalization/adobe-target/accessing-response-tokens.md)
       * [Verwenden der mBox-Drittanbieter-ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Vergleich der at.js-Bibliothek mit dem Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Analytics for Target (A4T)-Protokollierung {#a4t}
-         * [Übersicht](personalization/adobe-target/analytics-logging/overview.md)
+      * Analytics for Target(A4T)-Protokollierung {#a4t}
+         * [Überblick](personalization/adobe-target/analytics-logging/overview.md)
          * [Client-seitige Protokollierung](personalization/adobe-target/analytics-logging/client-side.md)
          * [Server-seitige Protokollierung](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
-      * [Übersicht](personalization/offer-decisioning/offer-decisioning-overview.md)
+      * [Überblick](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Übersicht](personalization/ajo/overview.md)
       * [Implementierung von Einzelseitenanwendungen](personalization/ajo/web-spa-implementation.md)
       * [Konfigurieren der Web-In-App-Messaging-Unterstützung in Web SDK](personalization/web-in-app-messaging.md)
 
 * Einverständnis {#consent}
-   * IAB-Transparenz und -Einverständnis – Framework 2.0 {#iab-tcf}
-      * [Übersicht](consent/iab-tcf/overview.md)
+   * IAB-Transparenz und -Einverständnis - Framework 2.0 {#iab-tcf}
+      * [Überblick](consent/iab-tcf/overview.md)
       * [Integrieren mit Tags](consent/iab-tcf/with-tags.md)
       * [Integrieren ohne Tags](consent/iab-tcf/without-tags.md)
 
