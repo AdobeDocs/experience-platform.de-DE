@@ -1,14 +1,14 @@
 ---
 title: Demandbase-Verbindung
 description: Verwenden Sie dieses Ziel, um Ihre Konto-Zielgruppen für Account-Based Marketing-Anwendungsfälle (ABM) zu aktivieren. Werben Sie über die B2B-Demand Side Platform (DSP) von DemandBase für relevante Personas und Rollen in Ihren Zielkonten. Zielkonten können auch mit Demandbase-Drittanbieterdaten für andere nachgelagerte Anwendungsfälle in Marketing und Vertrieb angereichert werden.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
-badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
+source-git-commit: 39012e2308af57af7c9193bdc4894f8f2e358606
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 26%
+source-wordcount: '762'
+ht-degree: 25%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 26%
 
 >[!AVAILABILITY]
 >
->&#x200B;>Die Funktion zum Aktivieren von Account-Zielgruppen für das Demandbase-Ziel ist für Unternehmen verfügbar, die die [Business-to](/help/rtcdp/overview.md#rtcdp-b2b)- und [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p)-Editionen von Real-Time Customer Data Platform erwerben.
+>Die Funktion zum Aktivieren von Account-Zielgruppen für das Demandbase-Ziel ist für Unternehmen verfügbar, die die [Business-to](/help/rtcdp/overview.md#rtcdp-b2b)- und [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p)-Editionen von Real-Time Customer Data Platform erwerben.
 
 Aktivieren Sie Profile für Ihre Demandbase-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung, basierend auf [Account-Zielgruppen](/help/segmentation/types/account-audiences.md) .
 
@@ -24,7 +24,7 @@ Aktivieren Sie Profile für Ihre Demandbase-Kampagnen zum Zielgruppen-Targeting,
 
 Verwenden Sie dieses Ziel, um Ihre Konto-Zielgruppen für Account-Based Marketing-Anwendungsfälle (ABM) zu aktivieren. Werben Sie über die B2B-Demand Side Platform (DSP) von DemandBase für relevante Personas und Rollen in Ihren Zielkonten. Zielkonten können auch mit Demandbase-Drittanbieterdaten für andere nachgelagerte Anwendungsfälle in Marketing und Vertrieb angereichert werden.
 
-Nutzen Sie beispielsweise die Ad-Tech-DSP von Demandbase, um bestimmte Personen oder Rollen innerhalb von Schlüsselkonten für die Top-of-Funnel-Lead-Generierung anzusprechen, oder erstellen und erweitern Sie Einkaufsgruppen. Verwenden Sie das Demandbase-Ziel, um andere Anwendungsfälle zu erkunden, um Ihre Konten effektiv anzusprechen.
+Nutzen Sie beispielsweise die Ad-Tech-DSP von Demandbase, um bestimmte Rollen oder Personas innerhalb von Schlüsselkonten für die Top-of-funnel-Lead-Generierung anzusprechen, oder erstellen und erweitern Sie Einkaufsgruppen. Verwenden Sie das Demandbase-Ziel, um andere Anwendungsfälle zu erkunden, um Ihre Konten effektiv anzusprechen.
 
 Mit dieser Integration können Sie das Website-Erlebnis auch personalisieren, indem Sie die Suche nach Kontoinformationen in Echtzeit verwenden, um die Interaktion zu optimieren.
 
@@ -89,10 +89,24 @@ Jetzt können Sie Ihre Zielgruppen in Demandbase aktivieren.
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen [ Aktivieren von Konto-Zielgruppen für ](/help/destinations/ui/activate-account-audiences.md) Ziel finden Sie unter „Aktivieren von Konto-Zielgruppen“.
+
+### Obligatorische Zuordnungen {#mandatory-mappings}
+
+Beim Aktivieren von Zielgruppen für das [!DNL Demandbase] müssen Sie die folgenden obligatorischen Feldzuordnungen im Zuordnungsschritt konfigurieren:
+
+| Quellfeld | Zielfeld | Beschreibung |
+|--------------|--------------|-------------|
+| `xdm: accountName` | `xdm: accountName` | Der Name des Kontos |
+| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | Die E-Mail-Domain des Unternehmenskontos |
+| `xdm: accountKey.sourceKey` | `Identity: primaryId` | Die primäre Kennung für das Konto |
+
+![Demandbase-Zuordnungen](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+
+Diese Zuordnungen sind erforderlich, damit das Ziel ordnungsgemäß funktioniert, und müssen konfiguriert werden, bevor Sie mit dem Aktivierungs-Workflow fortfahren können.
 
 ## Zusätzliche Hinweise und wichtige Hinweise {#additional-notes}
 
