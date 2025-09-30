@@ -4,9 +4,9 @@ title: Handbuch zur Vereinigungsschema-Benutzeroberfläche
 type: Documentation
 description: In der Benutzeroberfläche von Adobe Experience Platform können Sie problemlos jedes Vereinigungsschema innerhalb Ihres Unternehmens anzeigen und eine Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schemata für eine bestimmte Klasse anzeigen. Dieses Handbuch enthält detaillierte Informationen zum Anzeigen und Erkunden von Vereinigungsschemata mithilfe der Experience Platform-Benutzeroberfläche.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1206'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 In der Benutzeroberfläche von Adobe Experience Platform können Sie problemlos jedes Vereinigungsschema innerhalb Ihres Unternehmens anzeigen und eine Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schemata für eine bestimmte Klasse anzeigen. Dieses Handbuch enthält detaillierte Informationen zum Anzeigen und Erkunden von Vereinigungsschemata mithilfe der Experience Platform-Benutzeroberfläche.
 
-## Erste Schritte
+## Erste Schritte {#getting-started}
 
 Dieses Handbuch für die Benutzeroberfläche setzt ein Verständnis der verschiedenen [!DNL Experience Platform]-Services voraus, die mit der Verwaltung von Echtzeit-Kundenprofildaten verbunden sind. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Services:
 
@@ -23,7 +23,14 @@ Dieses Handbuch für die Benutzeroberfläche setzt ein Verständnis der verschie
 * [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert die [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, während sie in [!DNL Experience Platform] aufgenommen werden.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 
-## Grundlagen zu Vereinigungsschemata
+## Grundlagen zu Vereinigungsschemata {#understanding-union-schemas}
+
+>[!CONTEXTUALHELP]
+>id="rtcdp_collaboration_union_schema"
+>title="Vereinigungsschemata"
+>abstract=""
+
+<!-- The above contextual help is used in the Collaboration UI for a read more link. -->
 
 Mit dem Echtzeit-Kundenprofil können Sie robuste, zentralisierte Profile erstellen, die Kundenattribute und Ereignisse mit Zeitstempel enthalten, wobei jede Kundeninteraktion über in Adobe Experience Platform integrierte Systeme hinweg erfolgt. Das Format und die Struktur dieser Daten werden von Experience-Datenmodell (XDM)-Schemata bereitgestellt, wobei jedes Schema auf einer XDM-Klasse basiert und Felder enthält, die mit dieser Klasse kompatibel sind.
 
@@ -31,13 +38,13 @@ Schemata können für mehrere Anwendungsfälle erstellt werden, die auf dieselbe
 
 Das Arbeiten mit Vereinigungsschemata erfordert ein tiefes Verständnis von XDM-Schemata. Um weitere Informationen zu erhalten, lesen Sie zunächst die [Grundlagen der Schemakomposition](../../xdm/schema/composition.md).
 
-## Vereinigungsschemata anzeigen
+## Vereinigungsschemata anzeigen {#view-union-schemas}
 
 Um in der Experience Platform-Benutzeroberfläche zu den Vereinigungsschemata zu navigieren, wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Profile“ und dann die Registerkarte **[!UICONTROL Vereinigungsschema]** aus. Die Registerkarte [!UICONTROL Vereinigungsschema] wird geöffnet, um das Vereinigungsschema für die aktuell ausgewählte Klasse anzuzeigen.
 
 ![Die Seite „Vereinigungsschema“ wird angezeigt, wobei die Registerkarte „Profil“ und „Vereinigungsschema“ hervorgehoben sind.](../images/union-schema/landing.png)
 
-## Klasse auswählen
+## Klasse auswählen {#select-a-class}
 
 Um das Vereinigungsschema für eine bestimmte XDM-Klasse anzuzeigen, wählen Sie die Klasse aus dem Dropdown-Menü **[!UICONTROL Klasse]** aus. Da nicht alle Klassen Vereinigungsschemata haben, sind in der Dropdown-Liste nur Klassen mit Vereinigungsschemata (d. h. Klassen mit Schemata, die für Profil aktiviert wurden) verfügbar.
 
@@ -45,7 +52,7 @@ Nachdem eine Klasse ausgewählt wurde, wird das angezeigte Schema aktualisiert, 
 
 ![Ein Dropdown-Menü mit den Klassen des Vereinigungsschemas ist hervorgehoben.](../images/union-schema/class.png)
 
-## Erkunden von Vereinigungsschemata
+## Erkunden von Vereinigungsschemata {#explore-union-schemas}
 
 Sie können das Vereinigungsschema erkunden, indem Sie nach oben und unten scrollen, um die vollständige Schemastruktur anzuzeigen, und indem Sie eine rechte spitze Klammer (`>`) auswählen, um verschachtelte Felder zu erweitern.
 
@@ -61,7 +68,7 @@ Weitere Informationen zu Datensätzen, einschließlich der Anzeige von Datensatz
 
 ![Die Liste der Datensätze, die sich auf das Schema beziehen, ist hervorgehoben.](../images/union-schema/datasets.png)
 
-## Beitragende Schemata anzeigen
+## Beitragende Schemata anzeigen {#view-contributing-schemas}
 
 Sie können auch anzeigen, welche spezifischen Schemata zum Vereinigungsschema beitragen, indem Sie &quot;**[!UICONTROL beitragenden Schemata“]**, um die Liste der Schemata zu erweitern. Je nach ausgewählter Klasse und der Anzahl der Schemata, die Ihr Unternehmen in Experience Platform erstellt hat, kann es sich um eine kurze Liste mit einem einzigen Schema oder eine lange Liste mit vielen Schemata handeln.
 
@@ -71,7 +78,7 @@ Wenn Sie den Namen eines bestimmten Schemas auswählen, werden die Felder innerh
 
 ![Das ausgewählte beitragende Schema ist hervorgehoben. Die Felder, die Teil des beitragenden Schemas sind, bleiben schwarz, während die Felder, die nicht Teil des beitragenden Schemas sind, ausgegraut sind.](../images/union-schema/select-schema.png)
 
-## Anzeigen von Identitäten
+## Anzeigen von Identitäten {#view-identities}
 
 Über die Benutzeroberfläche können Sie eine Liste von Identitäten anzeigen, die im Vereinigungsschema enthalten sind, indem Sie **[!UICONTROL Identitäten]** auswählen, um die Liste zu erweitern.
 
@@ -83,7 +90,7 @@ Das Identitätsfeld wird innerhalb des Vereinigungsschemas hervorgehoben und die
 
 ![Die ausgewählte Identität ist hervorgehoben. Details zur ausgewählten Identität werden in der rechten Seitenleiste angezeigt.](../images/union-schema/select-identity.png)
 
-## Beziehungen zeigen
+## Beziehungen zeigen {#view-relationships}
 
 In der Benutzeroberfläche des Vereinigungsschemas können Sie auch Beziehungen sehen, die für Schemas basierend auf der ausgewählten Schemaklasse definiert wurden. Durch das Definieren einer Beziehung können zwei Schemata miteinander verbunden werden, die zu verschiedenen Klassen gehören, um komplexere Einblicke in Kundendaten zu erhalten.
 
