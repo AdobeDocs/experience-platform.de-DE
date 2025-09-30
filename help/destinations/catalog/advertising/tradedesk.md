@@ -3,10 +3,10 @@ keywords: Werbung; The Trade Desk; Advertising Trade Desk
 title: Verbindung mit The Trade Desk
 description: The Trade Desk ist eine Self-Service-Plattform für Anzeigenkäufer, um Retargeting und zielgruppenorientierte digitale Kampagnen für Display-, Video- und mobile Inventarquellen auszuführen.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
+source-git-commit: f078d7b20bc16bf1a6cca065e5e6fba85d9d0648
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 29%
+source-wordcount: '1066'
+ht-degree: 28%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 29%
 >[!IMPORTANT]
 >
 > Nach dem [internen Upgrade](../../../release-notes/2025/july-2025.md#destinations) auf den Ziel-Service ab Juli 2025 kann es **zu einem Rückgang der Anzahl der aktivierten Profile** Ihren Datenflüssen zu [!DNL The Trade Desk] kommen.
-> &#x200B;> Dieser Rückgang wird durch die Einführung der **ECID-Zuordnungsanforderung** für alle Aktivierungen auf dieser Zielplattform verursacht. Detaillierte Informationen finden Sie [ Abschnitt ](#mandatory-mappings)Obligatorische Zuordnung“ auf dieser Seite.
+> > Dieser Rückgang wird durch die Einführung der **ECID-Zuordnungsanforderung** für alle Aktivierungen auf dieser Zielplattform verursacht. Detaillierte Informationen finden Sie [ Abschnitt ](#mandatory-mappings)Obligatorische Zuordnung“ auf dieser Seite.
 >
 >**Änderungen:**
 >
@@ -84,7 +84,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Wenn Sie Ihr erstes Ziel mit [!DNL The Trade Desk] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/de/docs/id-service/using/id-service-api/methods/idsync) im Experience Cloud ID-Service noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Programmen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL The Trade Desk] Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Experience Platform übertragen.
+>Wenn Sie Ihr erstes Ziel mit [!DNL The Trade Desk] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) im Experience Cloud ID-Service noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Programmen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL The Trade Desk] Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Experience Platform übertragen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -120,7 +120,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
@@ -131,16 +131,33 @@ Für die Zuordnung von Zielgruppen empfiehlt Adobe zur Vereinfachung die Verwend
 
 ### Obligatorische Zuordnungen {#mandatory-mappings}
 
-Alle im Abschnitt [Unterstützte Identitäten](#supported-identities) beschriebenen Zielidentitäten sind obligatorisch und müssen während des Zielgruppenaktivierungsprozesses zugeordnet werden. Dazu gehören:
+Alle im Abschnitt [Unterstützte Identitäten](#supported-identities) beschriebenen Zielidentitäten müssen im Zuordnungsschritt des Zielgruppenaktivierungs-Workflows zugeordnet werden. Dazu gehören:
 
-* **GAID** (Google Advertising ID)
-* **IDFA** (Apple ID für Advertiser)
-* **ECID** (Experience Cloud ID)
-* **The Trade Desk ID**
-
-Wenn nicht alle erforderlichen Identitäten zugeordnet werden können, können Sie den Aktivierungs-Workflow nicht abschließen. Jede Identität erfüllt einen bestimmten Zweck in der Integration, und alle sind erforderlich, damit das Ziel ordnungsgemäß funktioniert.
+* [!DNL GAID] (Google Advertising ID)
+* [!DNL IDFA] (Apple ID für Advertiser)
+* [!DNL ECID] (Experience Cloud ID)
+* [!DNL The Trade Desk ID]
 
 ![Screenshot mit den obligatorischen Zuordnungen](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
+
+Das Zuordnen aller Zielidentitäten stellt sicher, dass die Aktivierung Profile korrekt aufteilen und bereitstellen kann, indem eine beliebige Identität verwendet wird. Dies bedeutet nicht, dass alle Identitäten in jedem Profil vorhanden sein müssen.
+
+Damit der Export an das Trade Desk erfolgreich ist, muss ein Profil Folgendes enthalten:
+
+* [!DNL ECID] und
+* Mindestens eines von: [!DNL GAID], [!DNL IDFA] oder [!DNL The Trade Desk ID]
+
+Beispiele:
+
+* Nur [!DNL ECID]: nicht exportiert
+* [!DNL ECID] + [!DNL The Trade Desk ID]: exportiert
+* [!DNL ECID] + [!DNL IDFA]: exportiert
+* [!DNL ECID] + [!DNL GAID]: exportiert
+* [!DNL IDFA] + [!DNL The Trade Desk ID] (keine [!DNL ECID]): nicht exportiert
+
+>[!NOTE]
+> 
+>Nach dem [ des Ziel](/help/release-notes/2025/july-2025.md#destinations)Service vom Juli 2025 wird [!DNL ECID] Zuordnung erzwungen. Profile, für die [!DNL ECID] fehlen, werden jetzt erwartungsgemäß gelöscht, wodurch die Aktivierungszahlen im Vergleich zum alten Verhalten möglicherweise niedriger sind.
 
 ## Exportierte Daten {#exported-data}
 
