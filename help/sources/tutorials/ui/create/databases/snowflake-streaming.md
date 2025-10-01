@@ -52,7 +52,7 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und ge
 
 Um die [!UICONTROL Standardauthentifizierung] zu verwenden, wählen Sie **[!UICONTROL Standardauthentifizierung für Snowflake]** aus und geben Sie Anmeldeinformationen für Ihr [!DNL Snowflake] an. Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung hergestellt ist.
 
-[!DNL Snowflake Streaming] Weiterführende Informationen dazu, wie Sie die erforderlichen Anmeldeinformationen [, finden Sie in der Übersicht zu ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+[!DNL Snowflake Streaming] Weiterführende Informationen dazu, wie Sie die erforderlichen Anmeldeinformationen [, finden Sie in der Übersicht zu &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
 ![Die neue Kontoschnittstelle im Quell-Workflow mit ausgewählter einfacher Authentifizierung.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
@@ -60,7 +60,7 @@ Um die [!UICONTROL Standardauthentifizierung] zu verwenden, wählen Sie **[!UICO
 
 Um die [!UICONTROL KeyPair-Authentifizierung] zu verwenden, wählen Sie **[!UICONTROL KeyPair-Authentifizierung für Snowflake]** aus und geben Sie Anmeldeinformationen für Ihr [!DNL Snowflake] an. Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung hergestellt ist.
 
-[!DNL Snowflake Streaming] Weiterführende Informationen dazu, wie Sie die erforderlichen Anmeldeinformationen [, finden Sie in der Übersicht zu ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+[!DNL Snowflake Streaming] Weiterführende Informationen dazu, wie Sie die erforderlichen Anmeldeinformationen [, finden Sie in der Übersicht zu &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
 ![Die neue Kontoschnittstelle im Quell-Workflow, Schlüsselpaar-Authentifizierung ausgewählt](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
