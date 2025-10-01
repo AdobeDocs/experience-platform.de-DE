@@ -2,16 +2,16 @@
 title: Streamen von Daten aus Ihrer Snowflake-Datenbank an Experience Platform mithilfe der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Daten aus Ihrer Snowflake-Datenbank an Experience Platform streamen.
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
+source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1451'
 ht-degree: 16%
 
 ---
 
 # Streamen von Daten aus Ihrer [!DNL Snowflake]-Datenbank an Experience Platform mithilfe der Benutzeroberfläche
 
-In diesem Handbuch erfahren Sie, wie Sie die Benutzeroberfläche verwenden, um Daten aus Ihrer [!DNL Snowflake] an Adobe Experience Platform zu streamen.
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Daten aus Ihrer [!DNL Snowflake]-Datenbank mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche an Experience Platform streamen.
 
 ## Erste Schritte
 
@@ -30,7 +30,7 @@ Lesen Sie das Handbuch unter [Vorausgesetzte Einrichtung für  [!DNL Snowflake] 
 
 Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter *Kategorie* die Option **[!DNL Snowflake Streaming]** und dann die Option **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter *Kategorie* die Option **[!DNL Snowflake Streaming]** und dann **[!UICONTROL Einrichten]** aus.
 
 >[!TIP]
 >
@@ -40,37 +40,33 @@ Wählen Sie unter *Kategorie* die Option **[!DNL Snowflake Streaming]** und dann
 
 Die **[!UICONTROL Snowflake Streaming-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
->[!BEGINTABS]
+### Neues Konto erstellen
 
->[!TAB Neues Konto erstellen]
-
-Um ein neues Konto zu erstellen, wählen **[!UICONTROL Neues Konto]** und geben Sie einen Namen, eine optionale Beschreibung und Ihre -Anmeldeinformationen an.
-
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie einen Namen und eine optionale Beschreibung für Ihr Konto an.
 
 ![Die neue Benutzeroberfläche zur Kontoerstellung des Quell-Workflows.](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
-| Anmeldedaten | Beschreibung |
-| --- | --- |
-| Konto | Der Name Ihres [!DNL Snowflake]. Konventionen zu Kontonamen finden Sie im [[!DNL Snowflake Streaming] Authentifizierungshandbuch](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
-| Warehouse | Der Name Ihres [!DNL Snowflake]. Warehouses verwalten die Ausführung von Abfragen in [!DNL Snowflake]. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, um Daten in Experience Platform zu bringen. |
-| Datenbank | Der Name Ihrer [!DNL Snowflake]. Die -Datenbank enthält die Daten, die Sie an Experience Platform übermitteln möchten. |
-| Schema | (Optional) Das mit Ihrem [!DNL Snowflake] verknüpfte Datenbankschema. |
-| Benutzername | Der Benutzername Ihres [!DNL Snowflake]. |
-| Kennwort | Das Kennwort für Ihr [!DNL Snowflake]. |
-| Rolle | (Optional) Eine benutzerdefinierte Rolle, die einem Benutzer für eine bestimmte Verbindung bereitgestellt werden kann. Wenn kein Wert angegeben wird, ist dieser Standardwert `public`. |
+>[!BEGINTABS]
 
-Weiterführende Informationen zur Kontoerstellung finden Sie im Abschnitt [Konfigurieren von Rolleneinstellungen](../../../../connectors/databases/snowflake-streaming.md#configure-role-settings) in der [!DNL Snowflake Streaming].
+>[!TAB Einfache Authentifizierung]
 
->[!TAB Vorhandenes Konto verwenden]
+Um die [!UICONTROL Standardauthentifizierung] zu verwenden, wählen Sie **[!UICONTROL Standardauthentifizierung für Snowflake]** aus und geben Sie Anmeldeinformationen für Ihr [!DNL Snowflake] an. Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung hergestellt ist.
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und dann das gewünschte Konto aus dem vorhandenen Kontokatalog aus.
+[!DNL Snowflake Streaming] Weiterführende Informationen dazu, wie Sie die erforderlichen Anmeldeinformationen [, finden Sie in der Übersicht zu ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
-Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+![Die neue Kontoschnittstelle im Quell-Workflow mit ausgewählter einfacher Authentifizierung.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
-![Die vorhandene Kontoauswahlseite des Quellkatalogs.](../../../../images/tutorials/create/snowflake-streaming/existing.png)
+>[!TAB KeyPair-Authentifizierung]
+
+Um die [!UICONTROL KeyPair-Authentifizierung] zu verwenden, wählen Sie **[!UICONTROL KeyPair-Authentifizierung für Snowflake]** aus und geben Sie Anmeldeinformationen für Ihr [!DNL Snowflake] an. Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung hergestellt ist.
+
+[!DNL Snowflake Streaming] Weiterführende Informationen dazu, wie Sie die erforderlichen Anmeldeinformationen [, finden Sie in der Übersicht zu ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+
+![Die neue Kontoschnittstelle im Quell-Workflow, Schlüsselpaar-Authentifizierung ausgewählt](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
 >[!ENDTABS]
+
+Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]**, wählen Sie Ihr Konto aus der Liste aus und klicken Sie auf **[!UICONTROL Weiter]**.
 
 ## Daten auswählen {#select-data}
 
@@ -83,8 +79,6 @@ Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 Der Schritt [!UICONTROL Daten auswählen] wird angezeigt. In diesem Schritt müssen Sie die Daten auswählen, die Sie in Experience Platform importieren möchten, Zeitstempel und Zeitzonen konfigurieren und eine Beispieldatendatei für die Aufnahme von Rohdaten bereitstellen.
 
 Verwenden Sie das Datenbankverzeichnis auf der linken Bildschirmseite und wählen Sie die Tabelle aus, die Sie in Experience Platform importieren möchten.
-
-![Die ausgewählte Datenschnittstelle mit ausgewählter Datenbanktabelle.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
 Wählen Sie als Nächstes den Zeitstempel-Spaltentyp Ihrer Tabelle aus. Sie können zwischen zwei Arten von Zeitstempelspalten wählen: `TIMESTAMP_NTZ` oder `TIMESTAMP_LTZ`. Wenn Sie den Spaltentyp `TIMESTAMP_NTZ` auswählen, müssen Sie auch eine Zeitzone angeben. Die Spalten sollten eine NOT NULL-Einschränkung aufweisen. Weitere Informationen finden Sie im Abschnitt zu [Einschränkungen und häufig gestellte Fragen](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
@@ -106,15 +100,13 @@ Als Nächstes müssen Sie Informationen zu Ihrem Datensatz und Ihrem Datenfluss 
 
 ### Datensatz-Details {#dataset-details}
 
-Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Daten, die erfolgreich in Experience Platform aufgenommen werden, bleiben als Datensätze im Data Lake erhalten. In diesem Schritt können Sie einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
+Ein Datensatz ist ein Konstrukt zur Speicherung und Verwaltung einer Sammlung von Daten, in der Regel eine Tabelle, die ein Schema (Spalten) und Felder (Zeilen) enthält. Daten, die erfolgreich in Experience Platform aufgenommen werden, bleiben als Datensätze im Data Lake erhalten. In diesem Schritt können Sie einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
 
->[!BEGINTABS]
+Wenn Sie über einen vorhandenen Datensatz verfügen, wählen Sie **[!UICONTROL Vorhandener Datensatz]** und verwenden Sie dann die Option **[!UICONTROL Erweiterte Suche]**, um ein Fenster aller Datensätze in Ihrer Organisation anzuzeigen, einschließlich der entsprechenden Details, z. B. ob sie für die Aufnahme in das Echtzeit-Kundenprofil aktiviert sind.
 
->[!TAB Verwenden eines neuen Datensatzes]
+![Die vorhandene Oberfläche zur Datensatzauswahl.](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
 
 Um einen neuen Datensatz zu verwenden, wählen **[!UICONTROL Neuer Datensatz]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihren Datensatz an. Sie müssen auch ein Experience-Datenmodell-Schema (XDM) auswählen, dem Ihr Datensatz entspricht.
-
-![Die neue Oberfläche zur Datensatzauswahl.](../../../../images/tutorials/create/snowflake-streaming/new-dataset.png)
 
 | Neue Datensatzdetails | Beschreibung |
 | --- | --- |
@@ -122,28 +114,11 @@ Um einen neuen Datensatz zu verwenden, wählen **[!UICONTROL Neuer Datensatz]** 
 | Beschreibung | (Optional) Ein kurzer Überblick über den neuen Datensatz. |
 | Schema | Eine Dropdown-Liste mit Schemata, die in Ihrer Organisation vorhanden sind. Sie können auch vor dem Prozess der Quellkonfiguration Ihr eigenes Schema erstellen. Weitere Informationen finden Sie im Handbuch unter [Erstellen eines XDM-Schemas in der Benutzeroberfläche](../../../../../xdm/tutorials/create-schema-ui.md). |
 
->[!TAB Verwenden eines vorhandenen Datensatzes]
-
-Wenn Sie bereits über einen vorhandenen Datensatz verfügen, wählen Sie **[!UICONTROL Vorhandener Datensatz]** und verwenden Sie dann die Option **[!UICONTROL Erweiterte Suche]**, um ein Fenster aller Datensätze in Ihrer Organisation anzuzeigen, einschließlich der entsprechenden Details, z. B. ob sie für die Aufnahme in das Echtzeit-Kundenprofil aktiviert sind.
-
-![Die vorhandene Oberfläche zur Datensatzauswahl.](../../../../images/tutorials/create/snowflake-streaming/existing-dataset.png)
-
->[!ENDTABS]
-
-+++Wählen Sie Schritte aus, um die Profilaufnahme, Fehlerdiagnose und partielle Aufnahme zu aktivieren.
-
-Wenn Ihr Datensatz für das Echtzeit-Kundenprofil aktiviert ist, können Sie in diesem Schritt **[!UICONTROL Profildatensatz]** umschalten, um Ihre Daten für die Profilaufnahme zu aktivieren. Sie können diesen Schritt auch verwenden, um **[!UICONTROL Fehlerdiagnose]** und **[!UICONTROL Partielle Aufnahme]** zu aktivieren.
-
-* **[!UICONTROL Fehlerdiagnose]**: Wählen Sie **[!UICONTROL Fehlerdiagnose]** aus, um die Quelle anzuweisen, Fehlerdiagnosen zu erstellen, auf die Sie später bei der Überwachung Ihrer Datensatzaktivität und des Datenflussstatus verweisen können.
-* **[!UICONTROL Partielle Aufnahme]** Bei der partiellen Batch-Aufnahme werden Daten mit Fehlern bis zu einem bestimmten konfigurierbaren Schwellenwert aufgenommen. Mit dieser Funktion können Sie alle Ihre korrekten Daten erfolgreich in Experience Platform aufnehmen, während alle Ihre falschen Daten separat mit Informationen darüber, warum sie ungültig sind, in Batches erfasst werden.
-
-+++
-
 ### Datenflussdetails {#dataflow-details}
 
 Nachdem Ihr Datensatz konfiguriert wurde, müssen Sie Details zu Ihrem Datenfluss angeben, einschließlich eines Namens, einer optionalen Beschreibung und Warnhinweiskonfigurationen.
 
-![Der Konfigurationsschritt „Datenflussdetails“.](../../../../images/tutorials/create/snowflake-streaming/dataflow-details.png)
+![Der Konfigurationsschritt „Datenflussdetails“.](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
 
 | Datenflusskonfigurationen | Beschreibung |
 | --- | --- |
