@@ -4,10 +4,10 @@ type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Snowflake-Quellverbindung erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 80ea8b5aa46e7aa4fdecfee3c962a77989a9b191
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 7%
+source-wordcount: '1250'
+ht-degree: 6%
 
 ---
 
@@ -78,7 +78,7 @@ Um die Kontoschlüsselauthentifizierung zu verwenden, wählen Sie **[!UICONTROL 
 | Warehouse | Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Experience Platform einzeln aufgerufen werden. |
 | Datenbank | Die [!DNL Snowflake]-Datenbank enthält die Daten, die Sie mit der Experience Platform verknüpfen möchten. |
 | Benutzername | Der Benutzername für das [!DNL Snowflake]. |
-| Kennwort | Das Kennwort für das [!DNL Snowflake] Benutzerkonto. |
+| Passwort | Das Kennwort für das [!DNL Snowflake] Benutzerkonto. |
 | Rolle | Die in der [!DNL Snowflake]-Sitzung zu verwendende standardmäßige Zugriffssteuerungsrolle. Die Rolle sollte eine vorhandene sein, die dem angegebenen Benutzer bereits zugewiesen wurde. Die Standardrolle ist `PUBLIC`. |
 | Verbindungszeichenfolge | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Snowflake]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] ist `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
@@ -111,17 +111,25 @@ Weitere Informationen zu diesen Werten finden Sie in [diesem Snowflake-Dokument]
 
 Um ein neues [!DNL Snowflake]-Konto zu erstellen und eine Verbindung zu Experience Platform auf AWS herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden, und geben Sie dann die erforderlichen Anmeldeinformationen zur Authentifizierung an.
 
+>[!BEGINTABS]
+
+>[!TAB Schlüsselpaar-Authentifizierung]
+
+Um eine Verbindung mithilfe von Schlüsselpaaren herzustellen, wählen Sie **[!UICONTROL Schlüsselpaar-Authentifizierung]**, geben Sie Ihre Authentifizierungsdaten ein und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]**. Weitere Informationen zu diesen Anmeldeinformationen finden Sie unter [[!DNL Snowflake] Batch-Übersicht](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
+![Der Schritt zur Erstellung eines neuen Kontos für die Authentifizierung von Schlüsselpaaren.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+
+>[!TAB Einfache Authentifizierung]
+
+>[!WARNING]
+>
+>Die Standardauthentifizierung (oder Kontoschlüsselauthentifizierung) für die [!DNL Snowflake] wird ab November 2025 eingestellt. Sie müssen zur schlüsselpaarbasierten Authentifizierung wechseln, um weiterhin die -Quelle verwenden und Daten aus Ihrer -Datenbank in Experience Platform aufnehmen zu können. Weitere Informationen zur Einstellung finden Sie im [[!DNL Snowflake] Handbuch mit Best Practices zum Minimieren der Risiken durch das Kompromittieren von Anmeldeinformationen](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
+Um eine Verbindung mit einer Kombination aus Benutzername und Kennwort herzustellen, wählen Sie **[!UICONTROL Standardauthentifizierung]**, geben Sie Ihre Authentifizierungsdaten ein und wählen Sie **[!UICONTROL Mit Quelle verbinden]**. Weitere Informationen zu diesen Anmeldeinformationen finden Sie unter [[!DNL Snowflake] Batch-Übersicht](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
 ![Der Schritt „Neues Konto“ im Quell-Workflow, mit dem Sie Snowflake mit Experience Platform in AWS verbinden können.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
-| Anmeldedaten | Beschreibung |
-| --- | --- |
-| Host | Die Host-URL, mit der sich Ihr [!DNL Snowflake]-Konto verbindet. |
-| Port | Die Port-Nummer, die von [!DNL Snowflake] verwendet wird, wenn eine Verbindung zu einem Server über das Internet hergestellt wird. |
-| Benutzername | Der Benutzername, der Ihrem [!DNL Snowflake]-Konto zugeordnet ist. |
-| Kennwort | Das mit Ihrem [!DNL Snowflake]-Konto verknüpfte Kennwort. |
-| Datenbank | Die [!DNL Snowflake] Datenbank, aus der die Daten abgerufen werden. |
-| Schema | Der Name des Schemas, das Ihrer [!DNL Snowflake]-Datenbank zugeordnet ist. Sie müssen sicherstellen, dass der Benutzer, dem Sie Datenbankzugriff gewähren möchten, auch Zugriff auf dieses Schema hat. |
-| Warehouse | Das [!DNL Snowflake] Warehouse, das Sie verwenden. |
+>[!ENDTABS]
 
 ### Vorschau der Beispieldaten überspringen {#skip-preview-of-sample-data}
 
