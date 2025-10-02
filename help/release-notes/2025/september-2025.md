@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise, September 2025
 description: Versionshinweise September 2025 zu Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1422'
 ht-degree: 22%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 23. September 2025**
 
@@ -41,10 +41,10 @@ Adobe Experience Platform Agent Orchestrator ist die neue agentische Schicht in 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator ist die neue agentische Schicht in Adobe Experience Platform. Experience Platform Agent Orchestrator wurde entwickelt, um die umfangreichen Daten und das Kundenwissen der Plattform zu nutzen. Es unterstützt die Intelligenz und das Denken der speziell entwickelten Adobe Experience Platform-Experten und ermöglicht es ihnen, komplexe Entscheidungsfindungs- und Problemlösungsaufgaben schnell und skaliert auszuführen - alles unter menschlicher Aufsicht. Wenn Sie Fragen stellen oder Hilfe über eine natürliche Sprache in einer Gesprächsoberfläche wie dem KI-Assistenten anfordern, ruft Agent Orchestrator automatisch spezialisierte Agenten auf, um die richtigen Antworten zu erhalten. Agent Orchestrator speichert Ihren Gesprächsverlauf, sodass Sie auf natürliche Weise auf früheren Fragen aufbauen können, ohne den Kontext zu wiederholen, und kombiniert Einblicke aus mehreren Agenten, um Ihnen klare, einheitliche Antworten zu bieten. Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
-| Audience Agent | Mit der Audience Agent können Sie Einblicke zu Zielgruppen erhalten, einschließlich der Erkennung signifikanter Änderungen der Zielgruppengröße, der Erkennung doppelter Zielgruppen, der Untersuchung Ihres Zielgruppeninventars und des Abrufs der Zielgruppengröße. Weitere Informationen finden Sie in der Dokumentation zu [Audience Agent](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator ist die neue agentische Schicht in Adobe Experience Platform. Experience Platform Agent Orchestrator wurde entwickelt, um die umfangreichen Daten und das Kundenwissen der Plattform zu nutzen. Es unterstützt die Intelligenz und das Denken der speziell entwickelten Adobe Experience Platform-Experten und ermöglicht es ihnen, komplexe Entscheidungsfindungs- und Problemlösungsaufgaben schnell und skaliert auszuführen - alles unter menschlicher Aufsicht. Wenn Sie Fragen stellen oder Hilfe über eine natürliche Sprache in einer Gesprächsoberfläche wie dem KI-Assistenten anfordern, ruft Agent Orchestrator automatisch spezialisierte Agenten auf, um die richtigen Antworten zu erhalten. Agent Orchestrator speichert Ihren Gesprächsverlauf, sodass Sie auf natürliche Weise auf früheren Fragen aufbauen können, ohne den Kontext zu wiederholen, und kombiniert Einblicke aus mehreren Agenten, um Ihnen klare, einheitliche Antworten zu bieten. Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
+| Audience Agent | Mit der Audience Agent können Sie Einblicke zu Zielgruppen erhalten, einschließlich der Erkennung signifikanter Änderungen der Zielgruppengröße, der Erkennung doppelter Zielgruppen, der Untersuchung Ihres Zielgruppeninventars und des Abrufs der Zielgruppengröße. Weitere Informationen finden Sie in der Dokumentation zu [Audience Agent](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/home).
+Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Warnhinweise {#alerts}
 
@@ -106,7 +106,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Verbesserungen am Profil-Viewer | Die Version September 2025 enthält die folgenden Verbesserungen für den Profil-Viewer. <ul><li>**Kombinierte Ansicht**: Attribute, Ereignisse und Einblicke wurden in einer einzigen Ansicht kombiniert.</li><li>**KI-generierte Insights**: Auf der Seite mit Profildetails werden jetzt KI-generierte Insights angezeigt, sodass Sie über die aus Ihrem Profil generierten Details informiert sind. Diese Einblicke können Informationen wie Tendenz-Scores und Trendanalysen enthalten.</li><li>**Stilaktualisierung**: Die Seite mit den Profildetails wurde visuell aktualisiert.</li><li>**Durchsuchen**: Sie können jetzt Ihre Profile durch ein interaktives kartenbasiertes Karussell mit Suche und Anpassung durchsuchen.</li></ul> |
+| [!BADGE Alpha]{type=Informative} Diese Funktion befindet sich derzeit in Alpha. Verbesserungen am Profil-Viewer | Die Version September 2025 enthält die folgenden Verbesserungen für den Profil-Viewer. <ul><li>**Kombinierte Ansicht**: Attribute, Ereignisse und Einblicke wurden in einer einzigen Ansicht kombiniert.</li><li>**KI-generierte Insights**: Auf der Seite mit Profildetails werden jetzt KI-generierte Insights angezeigt, sodass Sie über die aus Ihrem Profil generierten Details informiert sind. Diese Einblicke können Informationen wie Tendenz-Scores und Trendanalysen enthalten.</li><li>**Stilaktualisierung**: Die Seite mit den Profildetails wurde visuell aktualisiert.</li><li>**Durchsuchen**: Sie können jetzt Ihre Profile durch ein interaktives kartenbasiertes Karussell mit Suche und Anpassung durchsuchen.</li></ul> |
 
 Weitere Informationen finden Sie unter [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
