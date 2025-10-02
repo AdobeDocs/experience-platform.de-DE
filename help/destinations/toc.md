@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: b71c6ff74fd173a4be12a9a8caf06e27c4fb54cc
+source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1323'
 ht-degree: 73%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -92,7 +92,6 @@ ht-degree: 73%
       * [Facebook-Pixel-Erweiterung](./catalog/advertising/facebook-pixel.md)
       * [Flashspeak OneTag-Erweiterung](./catalog/advertising/flashtalking.md)
       * [Google Ads-Verbindung](./catalog/advertising/google-ads-destination.md)
-      * [Google Ads-Erweiterung](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager-Verbindung](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360-Verbindung](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match-Verbindung](./catalog/advertising/google-customer-match.md)

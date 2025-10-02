@@ -3,10 +3,10 @@ keywords: Werbeziele;Ziele;Plattformziele
 title: Werbeziele – Übersicht
 description: Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) verbinden und pseudonyme Zielgruppen für diese Plattformen freigeben.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: a0c1ddc5bcdd8b89e7605491441d56199f301e9e
+source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 45%
+source-wordcount: '283'
+ht-degree: 44%
 
 ---
 
@@ -59,7 +59,6 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [DoubleClick Floodlight-Erweiterung](doubleclick-floodlight.md)
 * [Facebook-Pixel-Erweiterung](facebook-pixel.md)
 * [Flashspeak OneTag-Erweiterung](flashtalking.md)
-* [Google Ads-Erweiterung](google-ads-extension.md)
 * [Google gtag-Erweiterung](gtag-advertising.md)
 * [LinkedIn Insight Tag-Erweiterung](linkedin.md)
 * [Pinterest Conversion Tracking-Erweiterung](pinterest-extension.md)
