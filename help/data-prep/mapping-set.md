@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Zuordnungssätze
 description: Erfahren Sie, wie Sie Zuordnungssätze mit der Funktion zur Datenvorbereitung von Adobe Experience Platform verwenden.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 95%
+source-wordcount: '979'
+ht-degree: 93%
 
 ---
 
@@ -82,6 +82,10 @@ Die folgende JSON-Datei ist ein Beispiel für einen typischen Zuordnungssatz:
 ## Konfigurieren von Zuordnungsquellen
 
 Bei einer Zuordnung kann `source` ein Feld, ein Ausdruck oder ein statischer Wert sein. Je nach vorhandenem Quelltyp kann der Wert auf verschiedene Arten extrahiert werden.
+
+>[!TIP]
+>
+>Warten Sie bis zu 10 Minuten nach dem Speichern Ihrer Zuordnungen, bevor Sie mit der Datenaufnahme beginnen, um sicherzustellen, dass sie vollständig gespeichert werden.
 
 ### Feld in Spaltendaten
 
