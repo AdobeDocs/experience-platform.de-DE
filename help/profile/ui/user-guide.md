@@ -28,7 +28,7 @@ Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Pro
 
 >[!NOTE]
 >
->Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, wird das Dashboard [!UICONTROL Profile] nicht angezeigt. Stattdessen werden auf [!UICONTROL  Registerkarte ]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
+>Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, wird das Dashboard [!UICONTROL Profile] nicht angezeigt. Stattdessen werden auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
 
 ### Profil-Dashboard {#profile-dashboard}
 
@@ -151,7 +151,7 @@ Sie können auch zwischen der Anzeige der Attributnamen als Anzeigenamen und der
 
 Der Abschnitt **[!UICONTROL Automatisch klassifizierte Widgets]** zeigt Widgets an, die das Vereinigungsschema nutzen, um die Quellfeldgruppen zu bestimmen, zu denen ein Attribut gehört, und so einen klareren Kontext bieten, woher die Daten stammen. Sie können die Suchleiste verwenden, um in Ihren Widgets leichter nach Keywords zu suchen.
 
-Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ ](#customizable-widgets) strukturieren.
+Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ &#x200B;](#customizable-widgets) strukturieren.
 
 >[!NOTE]
 >
