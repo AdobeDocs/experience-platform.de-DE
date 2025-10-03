@@ -2,7 +2,7 @@
 title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
+source-git-commit: 06b2bc91524299505bde4e5ee30e03cfc6a3c7ba
 workflow-type: tm+mt
 source-wordcount: '4545'
 ht-degree: 54%
@@ -102,8 +102,8 @@ Sie können zusätzliche Felder zu Audience Portal hinzufügen, indem Sie ![das 
 | ----- | ----------- |
 | [!UICONTROL Name] | Der Name der Zielgruppe. |
 | [!UICONTROL Anzahl der Profile] | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
-| [!UICONTROL Herkunft] | Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Mögliche Werte sind [Segmentierungs-Service](#segment-builder), [Benutzerdefinierter Upload](#import-audience), [Zielgruppenkomposition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/de/docs/audience-manager/user-guide/aam-home), [Lookalike-Zielgruppe](../types/lookalike-audiences.md), [Federated Zielgruppenkomposition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/guide-overview) und [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
-| [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Inactive` und `Published`. Weitere Informationen zum Lebenszyklusstatus, einschließlich der Bedeutung der verschiedenen Status und der Verlagerung von Zielgruppen in verschiedene Lebenszyklusstatus, finden [&#x200B; im Abschnitt „Lebenszyklusstatus“ der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-status). |
+| [!UICONTROL Herkunft] | Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Mögliche Werte sind [Segmentierungs-Service](#segment-builder), [Benutzerdefinierter Upload](#import-audience), [Zielgruppenkomposition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Lookalike-Zielgruppe](../types/lookalike-audiences.md), [Federated Zielgruppenkomposition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/guide-overview) und [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Inactive` und `Published`. Weitere Informationen zum Lebenszyklusstatus, einschließlich der Bedeutung der verschiedenen Status und der Verlagerung von Zielgruppen in verschiedene Lebenszyklusstatus, finden [ im Abschnitt „Lebenszyklusstatus“ der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-status). |
 | [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] und [!UICONTROL Nicht geplant]. |
 | [!UICONTROL Zuletzt aktualisiert von] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
 | [!UICONTROL Erstellt] | Datum und Uhrzeit der Erstellung der Zielgruppe in UTC. |
@@ -119,7 +119,7 @@ Wenn die Aufschlüsselung ausgewählt ist, wird ein Balkendiagramm angezeigt, da
 | Status | Beschreibung |
 | ------ | ----------- |
 | [!UICONTROL Realisiert] | Die Anzahl der Profile **die sich in** letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags für die Zielgruppe qualifiziert haben. |
-| [!UICONTROL Bestehend] | Die Anzahl der Profile, **in** letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags in der Zielgruppe verblieben sind. Dieses Feld ist **berechnet** und wird im [`segmentMembership` nicht &#x200B;](../../xdm/field-groups/profile/segmentation.md). |
+| [!UICONTROL Bestehend] | Die Anzahl der Profile, **in** letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags in der Zielgruppe verblieben sind. Dieses Feld ist **berechnet** und wird im [`segmentMembership` nicht ](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Verlassen] | Die Anzahl der Profile, **die** in den letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags verlassen haben. |
 
 Nachdem Sie die Felder ausgewählt haben, die angezeigt werden sollen, können Sie auch die Breite der angezeigten Spalten ändern. Sie können dies tun, indem Sie den Bereich zwischen die Spalten ziehen oder indem Sie das ![Pfeilsymbol](/help/images/icons/chevron-down.png) der Spalte auswählen, deren Größe Sie ändern möchten, gefolgt von **[!UICONTROL Spaltengröße ändern]**.
@@ -203,7 +203,7 @@ Die Liste der verfügbaren Filter wird angezeigt.
 
 | Filter | Beschreibung |
 | ------ | ----------- |
-| [!UICONTROL Herkunft] | Ermöglicht die Filterung nach der Herkunft der Zielgruppe. Mögliche Werte sind [Segmentierungs-Service](#segment-builder), [Benutzerdefinierter Upload](#import-audience), [Zielgruppenkomposition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/de/docs/audience-manager/user-guide/aam-home), [Lookalike-Zielgruppe](../types/lookalike-audiences.md), [Federated Zielgruppenkomposition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/guide-overview) und [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Herkunft] | Ermöglicht die Filterung nach der Herkunft der Zielgruppe. Mögliche Werte sind [Segmentierungs-Service](#segment-builder), [Benutzerdefinierter Upload](#import-audience), [Zielgruppenkomposition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Lookalike-Zielgruppe](../types/lookalike-audiences.md), [Federated Zielgruppenkomposition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/guide-overview) und [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Hat ein beliebiges Tag] | Filtert nach Tags. Sie können zwischen **[!UICONTROL Hat ein beliebiges Tag]** und **[!UICONTROL Hat alle Tags]** wählen. Wenn **[!UICONTROL Hat ein beliebiges Tag]** ausgewählt ist, enthalten die gefilterten Zielgruppen **jedes** der Tags, die Sie hinzugefügt haben. Wenn **[!UICONTROL Hat alle Tags]** ausgewählt ist, müssen die gefilterten Zielgruppen **alle** der von Ihnen hinzugefügten Tags enthalten. |
 | [!UICONTROL Lebenszyklusstatus] | Ermöglicht die Filterung nach dem Lebenszyklusstatus der Zielgruppe. Zu den verfügbaren Optionen gehören [!UICONTROL Gelöscht], [!UICONTROL Entwurf], [!UICONTROL Inaktiv] und [!UICONTROL Veröffentlicht]. |
 | [!UICONTROL Aktualisierungshäufigkeit] | Ermöglicht das Filtern nach der Aktualisierungshäufigkeit der Zielgruppe (Auswertungsmethode). Zu den verfügbaren Optionen [!UICONTROL Batch], [!UICONTROL Streaming] und [!UICONTROL Edge] |
@@ -407,7 +407,7 @@ Weitere Informationen zu Data Distiller finden Sie im Handbuch [Erstellen von Zi
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_importaudience_dataexpiration"
 >title="Ablauf von Daten"
->abstract="Die Anzahl der Tage, nach denen die Zielgruppenzugehörigkeit abläuft. Für diesen Wert kann eine Zeitangabe zwischen 1 Tag und 180 Tagen festgelegt werden. Sobald die Zielgruppenzugehörigkeit abläuft, wird die Auswertung gestoppt und alle Profile verlassen die Zielgruppenzugehörigkeit. Sie können das Gültigkeitsfenster aktualisieren, wenn die Zielgruppenzugehörigkeit weniger als 7 Tage beträgt. Sobald jedoch 0 Tage verbleiben, können Sie das Gültigkeitsfenster nicht mehr aktualisieren."
+>abstract="Die Anzahl der Tage, nach denen die Zielgruppenzugehörigkeit abläuft. Für diesen Wert kann eine Zeitangabe zwischen 1 Tag und 90 Tagen festgelegt werden. Sobald die Zielgruppenzugehörigkeit abläuft, wird die Auswertung gestoppt und alle Profile verlassen die Zielgruppenzugehörigkeit. Sie können das Gültigkeitsfenster aktualisieren, wenn die Zielgruppenzugehörigkeit weniger als 7 Tage beträgt. Sobald jedoch 0 Tage verbleiben, können Sie das Gültigkeitsfenster nicht mehr aktualisieren."
 
 >[!IMPORTANT]
 >
@@ -454,7 +454,7 @@ Sie können Ihrer extern generierten Zielgruppe optional auch einige zusätzlich
 
 >[!NOTE]
 >
->Die Gültigkeit benutzerdefinierter Daten legt die Anzahl der Tage fest, die Profile in der Zielgruppenzugehörigkeit **verbleiben**. Nach Ablauf der Daten verlassen die Profile die Zielgruppenzugehörigkeit. Dieser Wert kann auf 1 bis 180 Tage eingestellt werden.
+>Die Gültigkeit benutzerdefinierter Daten legt die Anzahl der Tage fest, die Profile in der Zielgruppenzugehörigkeit **verbleiben**. Nach Ablauf der Daten verlassen die Profile die Zielgruppenzugehörigkeit. Dieser Wert kann auf 1 bis 90 Tage eingestellt werden.
 
 Nachdem Sie die Zielgruppendetails ausgefüllt haben, wählen Sie **[!UICONTROL Weiter]** aus.
 
@@ -472,7 +472,7 @@ Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UIC
 >
 >Wenn Ihre extern generierte Zielgruppe außerdem sensible und/oder gesundheitsbezogene Informationen enthält, **müssen** die erforderlichen Datennutzungskennzeichnungen vor der Aktivierung auf ein beliebiges Ziel anwenden. Da Variablen von extern generierten Zielgruppen im Data Lake und nicht im Echtzeit-Kundenprofil gespeichert werden, sollten **nicht** Einverständnisdaten in Ihre CSV-Datei einschließen.
 >
->Weitere Informationen zum Anwenden von Datennutzungskennzeichnungen finden Sie in der Dokumentation unter [&#x200B; von Kennzeichnungen](../../access-control/abac/ui/labels.md). Um mehr über Datennutzungskennzeichnungen in Experience Platform im Allgemeinen zu erfahren, lesen Sie [Datennutzungskennzeichnungen - Übersicht](../../data-governance/labels/overview.md). Informationen zur Funktionsweise des Einverständnisses in extern generierten Zielgruppen finden Sie in den [Häufig gestellte Fragen zu Zielgruppen](../faq.md#consent).
+>Weitere Informationen zum Anwenden von Datennutzungskennzeichnungen finden Sie in der Dokumentation unter [ von Kennzeichnungen](../../access-control/abac/ui/labels.md). Um mehr über Datennutzungskennzeichnungen in Experience Platform im Allgemeinen zu erfahren, lesen Sie [Datennutzungskennzeichnungen - Übersicht](../../data-governance/labels/overview.md). Informationen zur Funktionsweise des Einverständnisses in extern generierten Zielgruppen finden Sie in den [Häufig gestellte Fragen zu Zielgruppen](../faq.md#consent).
 
 ## Nächste Schritte
 
