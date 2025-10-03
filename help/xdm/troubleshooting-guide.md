@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung beim XDM-System
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich schrittweiser Anweisungen zur Behebung gängiger API-Fehler.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
 workflow-type: tm+mt
-source-wordcount: '2348'
-ht-degree: 82%
+source-wordcount: '2378'
+ht-degree: 81%
 
 ---
 
@@ -49,7 +49,7 @@ Bei einem Feld vom Typ „long“ handelt es sich um eine Ganzzahl mit einer max
 
 Weiterführende Informationen zu Feldtypen finden Sie im Dokument zu [Begrenzungen für XDM-Feldtypen](./schema/field-constraints.md).
 
-### Was ist meta:altId?
+### Was ist meta:AltId?
 
 `meta:altId` ist eine eindeutige Kennung für ein Schema. Die `meta:altId` bietet eine einfach zu verweisende ID zur Verwendung in API-Aufrufen. Diese ID vermeidet die Notwendigkeit, jedes Mal codiert/decodiert zu werden, wenn sie wie mit dem JSON-URI-Format verwendet wird.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -63,11 +63,13 @@ Weiterführende Informationen zu Feldtypen finden Sie im Dokument zu [Begrenzung
 
 XDM setzt die folgenden Einschränkungen für die Verwendung dieses Datentyps:
 
-- Zuordnungstypen MÜSSEN vom Typ „Objekt“ sein.
+- Zuordnungstypen MÜSSEN vom Typ `object` sein.
 - Für Zuordnungstypen DÜRFEN KEINE Eigenschaften definiert sein (d. h. sie definieren „leere“ Objekte).
-- Zuordnungstypen MÜSSEN ein additionalProperties.type-Feld enthalten, das die Werte beschreibt, die innerhalb der Zuordnung platziert werden können, entweder Zeichenfolge oder Ganzzahl.
+- Zuordnungstypen MÜSSEN ein `additionalProperties.type` enthalten, das die Werte beschreibt, die innerhalb der Zuordnung platziert werden können, entweder `string` oder `integer`.
 - Die Segmentierung mehrerer Entitäten kann nur anhand der Zuordnungsschlüssel und nicht anhand der Werte definiert werden.
 - Zuordnungen werden für Konto-Zielgruppen nicht unterstützt.
+- In benutzerdefinierten XDM-Objekten definierte Zuordnungen sind auf eine einzelne Ebene beschränkt. Verschachtelte Zuordnungen können nicht erstellt werden. Diese Einschränkung gilt nicht für Zuordnungen, die in standardmäßigen XDM-Objekten definiert sind.
+- Arrays von Zuordnungen werden nicht unterstützt.
 
 Weitere Einzelheiten finden [ unter „Nutzungsbeschränkungen für ](./ui/fields/map.md#restrictions)&quot;.
 
@@ -140,7 +142,7 @@ Das Schema wird nicht automatisch für das Echtzeit-Kundenprofil aktiviert. Sie 
 
 ### Kann ich profilaktivierte Schemata löschen?
 
-Ein Schema kann nicht gelöscht werden, nachdem es für das Echtzeit-Kundenprofil aktiviert wurde. Nachdem ein Schema für das Profil aktiviert wurde, kann es nicht mehr deaktiviert oder gelöscht werden und es können keine Felder aus dem Schema entfernt werden. Daher ist es wichtig, die Schemakonfiguration sorgfältig zu planen und zu überprüfen, bevor sie für das Profil aktiviert wird. Sie können jedoch einen profilaktivierten Datensatz löschen. Informationen finden Sie hier: <https://experienceleague.adobe.com/de/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Ein Schema kann nicht gelöscht werden, nachdem es für das Echtzeit-Kundenprofil aktiviert wurde. Nachdem ein Schema für das Profil aktiviert wurde, kann es nicht mehr deaktiviert oder gelöscht werden und es können keine Felder aus dem Schema entfernt werden. Daher ist es wichtig, die Schemakonfiguration sorgfältig zu planen und zu überprüfen, bevor sie für das Profil aktiviert wird. Sie können jedoch einen profilaktivierten Datensatz löschen. Informationen finden Sie hier: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Wenn Sie die Verwendung eines profilaktivierten Schemas nicht mehr wünschen, wird empfohlen, das Schema umzubenennen und **Nicht verwenden** oder **Inaktiv** einzuschließen.
 

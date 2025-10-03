@@ -2,9 +2,9 @@
 title: Definieren von Zuordnungsfeldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Zuordnungsfeld definieren.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c0421974493884488e4d639278106835ad1d8b1b
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Mit Adobe Experience Platform können Sie die Struktur Ihrer benutzerdefinierten Experience-Datenmodell (XDM)-Klassen, Schemafeldgruppen und Datentypen vollständig anpassen.
 
-Sie können im Schema-Editor auch Zuordnungsfelder definieren, um flexible und dynamische Datenstrukturen zu modellieren oder eine Sammlung von Schlüssel-Wert-Paaren zu speichern.
+Sie können im Schema-Editor auch Zuordnungsfelder definieren, um eine Sammlung von Schlüssel-Wert-Paaren mit flexiblen, dynamischen Schlüsseln zu speichern.
 
 Verwenden Sie beim Definieren eines neuen Felds in der Experience Platform-Benutzeroberfläche das Dropdown-Menü **[!UICONTROL Typ]** und wählen Sie &quot;**[!UICONTROL Zuordnung]** aus der Liste aus.
 
@@ -36,6 +36,8 @@ XDM setzt die folgenden Einschränkungen für die Verwendung dieses Datentyps:
 * Zuordnungstypen MÜSSEN ein `additionalProperties.type` enthalten, das die Werte beschreibt, die innerhalb der Zuordnung platziert werden können, entweder `string` oder `integer`.
 * Die Segmentierung mehrerer Entitäten kann nur anhand der Zuordnungsschlüssel und nicht anhand der Werte definiert werden.
 * Zuordnungen werden für Konto-Zielgruppen nicht unterstützt.
+* In benutzerdefinierten XDM-Objekten definierte Zuordnungen sind auf eine einzelne Ebene beschränkt. Verschachtelte Zuordnungen können nicht erstellt werden. Diese Einschränkung gilt nicht für Zuordnungen, die in standardmäßigen XDM-Objekten definiert sind.
+* Arrays von Zuordnungen werden nicht unterstützt.
 
 Stellen Sie sicher, dass Sie Felder vom Typ Zuordnung nur verwenden, wenn dies unbedingt erforderlich ist, da sie die folgenden Leistungseinbußen aufweisen:
 
@@ -44,7 +46,7 @@ Stellen Sie sicher, dass Sie Felder vom Typ Zuordnung nur verwenden, wenn dies u
 
 >[!NOTE]
 >
->Die Experience Platform-Benutzeroberfläche verfügt über Einschränkungen beim Extrahieren der Schlüssel von Feldern vom Typ Zuordnung . Während sich Felder vom Typ „Objekt“ erweitern lassen, werden Zuordnungen stattdessen als einzelnes Feld angezeigt. Zuordnungsfelder, die über die Schema Registry-API erstellt wurden und keine String- oder Integer-Datentypen sind, werden als &quot;[!UICONTROL &quot; &#x200B;].
+>Die Experience Platform-Benutzeroberfläche verfügt über Einschränkungen beim Extrahieren der Schlüssel von Feldern vom Typ Zuordnung . Während sich Felder vom Typ „Objekt“ erweitern lassen, werden Zuordnungen stattdessen als einzelnes Feld angezeigt. Zuordnungsfelder, die über die Schema Registry-API erstellt wurden und keine String- oder Integer-Datentypen sind, werden als &quot;[!UICONTROL &quot; ].
 
 ## Nächste Schritte
 
