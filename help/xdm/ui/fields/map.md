@@ -46,7 +46,7 @@ Stellen Sie sicher, dass Sie Felder vom Typ Zuordnung nur verwenden, wenn dies u
 
 >[!NOTE]
 >
->Die Experience Platform-Benutzeroberfläche verfügt über Einschränkungen beim Extrahieren der Schlüssel von Feldern vom Typ Zuordnung . Während sich Felder vom Typ „Objekt“ erweitern lassen, werden Zuordnungen stattdessen als einzelnes Feld angezeigt. Zuordnungsfelder, die über die Schema Registry-API erstellt wurden und keine String- oder Integer-Datentypen sind, werden als &quot;[!UICONTROL &quot; ].
+>Die Experience Platform-Benutzeroberfläche verfügt über Einschränkungen beim Extrahieren der Schlüssel von Feldern vom Typ Zuordnung . Während sich Felder vom Typ „Objekt“ erweitern lassen, werden Zuordnungen stattdessen als einzelnes Feld angezeigt. Zuordnungsfelder, die über die Schema Registry-API erstellt wurden und keine String- oder Integer-Datentypen sind, werden als &quot;[!UICONTROL &quot; &#x200B;].
 
 ## Nächste Schritte
 
