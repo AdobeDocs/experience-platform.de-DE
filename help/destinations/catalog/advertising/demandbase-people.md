@@ -1,13 +1,13 @@
 ---
 title: Demandbase People-Verbindung
 description: Verwenden Sie dieses Ziel, um Ihre Zielgruppen zu aktivieren und sie mit Demandbase-Drittanbieterdaten für andere nachgelagerte Anwendungsfälle in Marketing und Vertrieb anzureichern.
-source-git-commit: df2cb1edbf998082fca961e6d9bb567a1ad3b7e6
+exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
+source-git-commit: ab29c1113dbbd1811acd3d5add5a247cb2703884
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 33%
+source-wordcount: '819'
+ht-degree: 31%
 
 ---
-
 
 # Demandbase People-Verbindung {#demandbase-people}
 
@@ -31,7 +31,7 @@ Die [!DNL Demandbase People]-Verbindung unterstützt die Aktivierung von Identit
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| E-Mail | Nur-Text-E-Mail-Adressen | Die [!DNL Demandbase People]-Verbindung unterstützt nur E-Mail-Adressen im Klartext. |
+| email | Nur-Text-E-Mail-Adressen | Die [!DNL Demandbase People]-Verbindung unterstützt nur E-Mail-Adressen im Klartext. |
 
 {style="table-layout:auto"}
 
@@ -95,10 +95,25 @@ Jetzt können Sie Ihre Zielgruppen in Demandbase People aktivieren.
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
+
+### Obligatorische Zuordnungen {#mandatory-mappings}
+
+Beim Aktivieren von Zielgruppen für das [!DNL Demandbase People] müssen Sie die folgenden obligatorischen Feldzuordnungen im Zuordnungsschritt konfigurieren:
+
+| Quellfeld | Zielfeld | Beschreibung |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | Die eindeutige Kennung der Person |
+| `xdm: person.name.lastName` | `xdm: lastName` | Der Nachname der Person |
+| `xdm: person.name.firstName` | `xdm: firstName` | Der Vorname der Person |
+| `xdm: workEmail.address` | `Identity: email` | Die geschäftliche E-Mail-Adresse der Person |
+
+![Demandbase-Personenzuordnungen](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+Diese Zuordnungen sind erforderlich, damit das Ziel ordnungsgemäß funktioniert, und müssen konfiguriert werden, bevor Sie mit dem Aktivierungs-Workflow fortfahren können.
 
 ## Zusätzliche Hinweise und wichtige Hinweise {#additional-notes}
 
