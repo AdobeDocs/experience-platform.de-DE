@@ -5,9 +5,9 @@ breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von in Adobe Experience Platform generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
 role: User
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '207'
 ht-degree: 75%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 75%
 
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)
-- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de#segmentation-guardrails)
+- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentation-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
@@ -33,7 +33,7 @@ ht-degree: 75%
 - Benutzeroberfläche für die Segmentierung {#ui}
    - [Überblick](ui/overview.md)
    - [Zielgruppen-Dashboard](ui/audience-dashboard.md)
-   - [Zielgruppen-Portal](ui/audience-portal.md)
+   - [Zielgruppenportal](ui/audience-portal.md)
    - [Zielgruppenkomposition](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home)
@@ -62,7 +62,7 @@ ht-degree: 75%
    - [Segmentierung mit mehreren Entitäten](tutorials/multi-entity-segmentation.md)
    - [Berücksichtigung des Einverständnisses](tutorials/consents.md)
    - [Auswerten einer Segmentdefinition](tutorials/evaluate-a-segment.md)
-   - [Importieren und Verwenden externer Zielgruppen](tutorials/using-external-audiences.md)
+   - [Externe Audiences erstellen](tutorials/create-external-audience.md)
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Erzwingen der Datennutzungskonformität für Zielgruppen](tutorials/governance.md)
 - Profile Query Language {#pql}

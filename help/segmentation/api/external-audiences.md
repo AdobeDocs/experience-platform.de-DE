@@ -2,9 +2,9 @@
 title: API-Endpunkt für externe Zielgruppen
 description: Erfahren Sie, wie Sie mit der API für externe Zielgruppen Ihre externen Zielgruppen aus Adobe Experience Platform erstellen, aktualisieren, aktivieren und löschen können.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
+source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2253'
 ht-degree: 9%
 
 ---
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | String | Eine optionale Beschreibung für die externe Zielgruppe. |
 | `customAudienceId` | String | Eine optionale Kennung für Ihre externe Zielgruppe. |
 | `fields` | Array von Objekten | Liste der Felder und ihrer Datentypen Beim Erstellen der Feldliste können Sie die folgenden Elemente hinzufügen: <ul><li>`name`: **Erforderlich** Der Name des Felds, das Teil der Spezifikation der externen Zielgruppe ist.</li><li>`type`: **Erforderlich** Der Datentyp, der in das Feld aufgenommen wird. Unterstützte Werte sind `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) und `boolean`.</li><li>`identityNs`: **Erforderlich für Identitätsfeld** Der Namespace, der vom Identitätsfeld verwendet wird. Unterstützte Werte umfassen alle gültigen Namespaces, z. B. `ECID` oder `email`.</li><li>`labels`: *Optional* Ein Array von Zugriffssteuerungsbeschriftungen für das Feld. Weitere Informationen zu den verfügbaren Zugriffssteuerungsbeschriftungen finden Sie im [Glossar zu Datennutzungsbeschriftungen](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objekt | Ein Objekt, das die Informationen enthält, wo sich die externe Zielgruppe befindet. Wenn Sie dieses Objekt verwenden **müssen** die folgenden Informationen einschließen: <ul><li>`path`: **Erforderlich**: Der Speicherort der externen Zielgruppe oder des Ordners, der die externe Zielgruppe in der Quelle enthält.</li><li>`type`: **Erforderlich** Der Typ des Objekts, das Sie aus der Quelle abrufen. Dieser Wert kann entweder `file` oder `folder` sein.</li><li>`sourceType`: *Optional* Der Typ der Quelle, von der Sie abrufen. Derzeit wird nur der Wert `Cloud Storage` unterstützt.</li><li>`cloudType`: *Optional* Der Typ des Cloud-Speichers, basierend auf dem Quelltyp. Zu den unterstützten Werten gehören `S3`, `DLZ`, `GCS` und `SFTP`.</li><li>`baseConnectionId`: Die ID der Basisverbindung und wird von Ihrem Quellanbieter bereitgestellt. Dieser Wert ist **erforderlich** wenn ein `cloudType` Wert von `S3`, `GCS` oder `SFTP` verwendet wird. Weitere Informationen finden Sie unter [Übersicht über Quell-Connectoren](../../sources/home.md)</li></ul> |
+| `sourceSpec` | Objekt | Ein Objekt, das die Informationen enthält, wo sich die externe Zielgruppe befindet. Wenn Sie dieses Objekt verwenden **müssen** die folgenden Informationen einschließen: <ul><li>`path`: **Erforderlich**: Der Speicherort der externen Zielgruppe oder des Ordners, der die externe Zielgruppe in der Quelle enthält. Der Dateipfad **darf** Leerzeichen enthalten. Wenn Ihr Pfad beispielsweise `activation/sample-source/Example CSV File.csv` ist, legen Sie den Pfad auf `activation/sample-source/ExampleCSVFile.csv` fest. Den Pfad zu Ihrer Quelle finden Sie in der Spalte **Source** im Abschnitt Datenflüsse .</li><li>`type`: **Erforderlich** Der Typ des Objekts, das Sie aus der Quelle abrufen. Dieser Wert kann entweder `file` oder `folder` sein.</li><li>`sourceType`: *Optional* Der Typ der Quelle, von der Sie abrufen. Derzeit wird nur der Wert `Cloud Storage` unterstützt.</li><li>`cloudType`: **Erforderlich** Der Typ des Cloud-Speichers, basierend auf dem Quelltyp. Zu den unterstützten Werten gehören `S3`, `DLZ`, `GCS`, `Azure` und `SFTP`.</li><li>`baseConnectionId`: Die ID der Basisverbindung und wird von Ihrem Quellanbieter bereitgestellt. Dieser Wert ist **erforderlich** wenn ein `cloudType` Wert von `S3`, `GCS` oder `SFTP` verwendet wird. Andernfalls **Sie diesen Parameter**. Weitere Informationen finden Sie unter [Übersicht über Quell-Connectoren](../../sources/home.md).</li></ul> |
 | `ttlInDays` | Ganzzahl | Die Datengültigkeit für die externe Zielgruppe in Tagen. Dieser Wert kann zwischen 1 und 90 eingestellt werden. Standardmäßig ist der Ablauf der Daten auf 30 Tage festgelegt. |
 | `audienceType` | String | Der Zielgruppentyp für die externe Zielgruppe. Derzeit wird nur `people` unterstützt. |
 | `originName` | String | **Erforderlich** Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Für externe Zielgruppen sollten Sie `CUSTOM_UPLOAD` verwenden. |
@@ -408,8 +408,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 
 | Eigenschaft | Typ | Beschreibung |
 | -------- | ---- | ----------- |
-| `dataFilterStartTime` | Zeitstempel der Epoche | **Erforderlich** Der Bereich, der die Startzeit angibt, zu der der Fluss ausgeführt wird, um die zu verarbeitenden Dateien auszuwählen. |
-| `dataFilterEndTime` | Zeitstempel der Epoche | Der Bereich, der die Endzeit angibt, zu der der Fluss ausgeführt wird, um die zu verarbeitenden Dateien auszuwählen. |
+| `dataFilterStartTime` | Zeitstempel der Epoche | **Erforderlich** Der Bereich, der die Startzeit angibt, um zu bestimmen, welche Dateien verarbeitet werden. Das bedeutet, dass die ausgewählten Dateien nach **angegebenen** als Dateien angezeigt werden. |
+| `dataFilterEndTime` | Zeitstempel der Epoche | Der Bereich, der die Endzeit angibt, zu der der Fluss ausgeführt wird, um die zu verarbeitenden Dateien auszuwählen. Das bedeutet, dass die ausgewählten Dateien Dateien **vor)** angegebenen Zeit sein werden. |
 
 +++
 

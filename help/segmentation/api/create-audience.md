@@ -3,17 +3,17 @@ title: Zielgruppen-API-Endpunkt erstellen
 description: Erfahren Sie, wie Sie die Metadaten für eine externe Zielgruppe mithilfe der API erstellen.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
+source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 36%
+source-wordcount: '246'
+ht-degree: 35%
 
 ---
 
-
 # Zielgruppen-Endpunkt erstellen
 
-Der Endpunkt POST-`/audiences` kann verwendet werden, um die Metadaten für eine externe Zielgruppe zu erstellen. Sie sollten diesen Endpunkt verwenden, wenn die Zielgruppenaufnahme in einem separaten Service verwaltet wird, z. B. in der Batch-Aufnahme.
+Der Endpunkt POST-`/audiences` kann verwendet werden, um die Metadaten für eine externe Zielgruppe zu erstellen, wodurch die Zielgruppe im Zielgruppenportal sichtbar wird. Sie sollten diesen Endpunkt verwenden, wenn die Zielgruppenaufnahme in einem separaten Service verwaltet wird, z. B. in der Batch-Aufnahme.
 
 ## Erste Schritte
 
