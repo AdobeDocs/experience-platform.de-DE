@@ -613,7 +613,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Auf
 
 | Eigenschaft | Typ | Beschreibung |
 | -------- | ---- | ----------- |
-| `runs` | Objekt | Ein -Objekt, das die Liste der Aufnahmedurchgänge enthält, die zur Audience gehören. Weitere Informationen zu diesem Objekt finden Sie im Abschnitt [Abrufen des ](#retrieve-ingestion-status)&quot;. |
+| `runs` | Objekt | Ein -Objekt, das die Liste der Aufnahmedurchgänge enthält, die zur Audience gehören. Weitere Informationen zu diesem Objekt finden Sie im Abschnitt [Abrufen des &#x200B;](#retrieve-ingestion-status)&quot;. |
 
 +++
 

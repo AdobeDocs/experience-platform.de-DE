@@ -48,7 +48,7 @@ Bevor Sie eine externe Zielgruppe in Experience Platform erstellen können, müs
 
 Für dieses Beispiel sollten Sie eine CSV-Datei verwenden. Stellen Sie sicher, dass Ihre CSV **Datei** eine Spalte mit einem Identitätswert wie einer ECID, einer E-Mail-ID oder einer CRM-ID enthält. Stellen Sie außerdem sicher, dass alle Anreicherungsattribute enthält, die Sie für die Segmentierung und Aktivierung benötigen.
 
-Außerdem müssen Sie sicherstellen, dass die Datei den Anforderungen Ihres Experience Platform-Schemas entspricht. Weitere Informationen zum Erstellen eines Schemas finden Sie entweder im [Tutorial zum Erstellen eines Schemas mithilfe der ](/help/xdm/tutorials/create-schema-api.md) oder im [Tutorial zum Erstellen eines Schemas mithilfe der Benutzeroberfläche](/help/xdm/tutorials/create-schema-ui.md).
+Außerdem müssen Sie sicherstellen, dass die Datei den Anforderungen Ihres Experience Platform-Schemas entspricht. Weitere Informationen zum Erstellen eines Schemas finden Sie entweder im [Tutorial zum Erstellen eines Schemas mithilfe der &#x200B;](/help/xdm/tutorials/create-schema-api.md) oder im [Tutorial zum Erstellen eines Schemas mithilfe der Benutzeroberfläche](/help/xdm/tutorials/create-schema-ui.md).
 
 Nachdem Sie bestätigt haben, dass Ihre CSV-Datei alle benötigten Informationen enthält und dem Schema entspricht, müssen Sie die CSV-Datei in Ihren Cloud-Speicheranbieter hochladen, damit Sie Quellen verwenden können, um die Daten in Experience Platform aufzunehmen. Weitere Informationen zur Verwendung einer Cloud-Speicherquelle finden Sie entweder im [Tutorial zum Erkunden von Cloud-Speicheroptionen mithilfe der API](/help/sources/tutorials/api/explore/cloud-storage.md) oder in der [Quellen - Übersicht](/help/sources/home.md#cloud-storage).
 
