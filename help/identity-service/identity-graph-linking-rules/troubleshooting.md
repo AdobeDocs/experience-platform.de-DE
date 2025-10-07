@@ -123,7 +123,7 @@ Suchen Sie nach dem Ausführen Ihrer Abfrage den Ereignisdatensatz, von dem Sie 
 
 Die Namespace-Priorität spielt eine wichtige Rolle bei der Bestimmung der primären Identität durch Ereignisfragmente.
 
-* Nachdem Sie Ihre [Identitätseinstellungen“ für ](./identity-settings-ui.md) Sandbox konfiguriert und gespeichert haben, verwendet das Profil [Namespace-Priorität](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events), um die primäre Identität zu bestimmen. Im Fall von identityMap verwendet das Profil dann nicht mehr das `primary=true`-Flag.
+* Nachdem Sie Ihre [Identitätseinstellungen“ für &#x200B;](./identity-settings-ui.md) Sandbox konfiguriert und gespeichert haben, verwendet das Profil [Namespace-Priorität](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events), um die primäre Identität zu bestimmen. Im Fall von identityMap verwendet das Profil dann nicht mehr das `primary=true`-Flag.
 * Das Profil verweist zwar nicht mehr auf dieses Flag, andere Services in Experience Platform verwenden jedoch möglicherweise weiterhin das `primary=true`-Flag.
 
 Damit [authentifizierte Benutzerereignisse](implementation-guide.md#ingest-your-data) mit dem Personen-Namespace verknüpft werden können, müssen alle authentifizierten Ereignisse den Personen-Namespace (CRMID) enthalten. Das bedeutet, dass der Personen-Namespace auch nach der Anmeldung eines Benutzers bei jedem authentifizierten Ereignis vorhanden sein muss.
@@ -278,14 +278,14 @@ ORDER BY timestamp desc
 
 **Schritte zur Fehlerbehebung**
 
-Weitere Informationen finden Sie in [ Dokumentation unter ](./identity-optimization-algorithm.md) zur Identitätsoptimierung sowie zu den unterstützten Diagrammstrukturen.
+Weitere Informationen finden Sie in [&#x200B; Dokumentation unter &#x200B;](./identity-optimization-algorithm.md) zur Identitätsoptimierung sowie zu den unterstützten Diagrammstrukturen.
 
-* Beispiele für unterstützte Diagrammstrukturen [ Sie im ](./example-configurations.md) zur Diagrammkonfiguration .
-* Beispiele für nicht unterstützte Diagrammstrukturen [ Sie auch im ](./implementation-guide.md#appendix)Implementierungshandbuch“. Es gibt zwei mögliche Szenarien:
+* Beispiele für unterstützte Diagrammstrukturen [&#x200B; Sie im &#x200B;](./example-configurations.md) zur Diagrammkonfiguration .
+* Beispiele für nicht unterstützte Diagrammstrukturen [&#x200B; Sie auch im &#x200B;](./implementation-guide.md#appendix)Implementierungshandbuch“. Es gibt zwei mögliche Szenarien:
    * Kein einzelner Namespace für alle Profile.
-   * Ein [ Szenario mit einer &quot;](./implementation-guide.md#dangling-loginid-scenario)&quot; tritt auf. In diesem Szenario kann Identity Service nicht ermitteln, ob die verwaiste ID mit einer der Personenentitäten in den Diagrammen verknüpft ist.
+   * Ein [&#x200B; Szenario mit einer &quot;](./implementation-guide.md#dangling-loginid-scenario)&quot; tritt auf. In diesem Szenario kann Identity Service nicht ermitteln, ob die verwaiste ID mit einer der Personenentitäten in den Diagrammen verknüpft ist.
 
-Sie können auch das [Diagrammsimulations-Tool in der Benutzeroberfläche verwenden, um Ereignisse ](./graph-simulation.md) simulieren und Ihre eigenen eindeutigen Namespace- und Namespace-Prioritätseinstellungen zu konfigurieren. Auf diese Weise erhalten Sie einen grundlegenden Einblick in das Verhalten des Identitätsoptimierungsalgorithmus.
+Sie können auch das [Diagrammsimulations-Tool in der Benutzeroberfläche verwenden, um Ereignisse &#x200B;](./graph-simulation.md) simulieren und Ihre eigenen eindeutigen Namespace- und Namespace-Prioritätseinstellungen zu konfigurieren. Auf diese Weise erhalten Sie einen grundlegenden Einblick in das Verhalten des Identitätsoptimierungsalgorithmus.
 
 Wenn Ihre Simulationsergebnisse den Verhaltenserwartungen Ihres Diagramms entsprechen, können Sie überprüfen, ob Ihre [Identitätseinstellungen](./identity-settings-ui.md) mit den Einstellungen übereinstimmen, die Sie in Ihrer Simulation konfiguriert haben.
 
@@ -305,7 +305,7 @@ Verwenden Sie das Identitäts-Dashboard, um Einblicke in den Status Ihres Identi
 
 ![Das Identitäts-Dashboard mit Metriken zur Anzahl der Identitäten, zur Anzahl der Diagramme, zur Anzahl nach Namespace, zur Anzahl nach Größe und zur Anzahl der Diagramme mit mehr als zwei Namespaces.](../images/troubleshooting/identity_dashboard.png)
 
-Eine detaillierte Aufschlüsselung des Exportdatensatzes [Profilschnappschuss“ finden Sie ](../../dashboards/query.md) Data Lake, indem Sie die folgende Abfrage ausführen:
+Eine detaillierte Aufschlüsselung des Exportdatensatzes [Profilschnappschuss“ finden Sie &#x200B;](../../dashboards/query.md) Data Lake, indem Sie die folgende Abfrage ausführen:
 
 >[!NOTE]
 >
@@ -346,7 +346,7 @@ In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zum [Ident
 
 ### Ich habe eine CRMID für jede meiner Geschäftseinheiten (B2C CRMID, B2B CRMID), aber ich habe keinen eindeutigen Namespace für alle meine Profile. Was passiert, wenn ich B2C CRMID und B2B CRMID als eindeutig markiere und meine Identitätseinstellungen aktiviere?
 
-Dieses Szenario wird nicht unterstützt. Daher können Diagramme in Fällen ausgeblendet werden, in denen ein Benutzer seine B2C-CRMID zur Anmeldung verwendet und ein anderer Benutzer seine B2B-CRMID zur Anmeldung verwendet. Weitere Informationen finden Sie im Abschnitt [Anforderung an Namespace für einzelne ](./implementation-guide.md#single-person-namespace-requirement)) auf der Seite Implementierung.
+Dieses Szenario wird nicht unterstützt. Daher können Diagramme in Fällen ausgeblendet werden, in denen ein Benutzer seine B2C-CRMID zur Anmeldung verwendet und ein anderer Benutzer seine B2B-CRMID zur Anmeldung verwendet. Weitere Informationen finden Sie im Abschnitt [Anforderung an Namespace für einzelne &#x200B;](./implementation-guide.md#single-person-namespace-requirement)) auf der Seite Implementierung.
 
 ### Korrigiert der Identitätsoptimierungsalgorithmus vorhandene reduzierte Diagramme?
 
@@ -401,7 +401,7 @@ Nein. Die Namespace-Priorität gilt nur für Erlebnisereignis-Datensätze, die d
 
 ### Wie funktioniert diese Funktion zusammen mit den Leitplanken für Identitätsdiagramme von 50 Identitäten pro Diagramm? Wirkt sich die Namespace-Priorität auf diese vom System definierte Leitplanke aus?
 
-Der Algorithmus zur Identitätsoptimierung wird zuerst angewendet, um die Darstellung der Entität einer Person sicherzustellen. Wenn das Diagramm anschließend versucht, die [Leitplanke für Identitätsdiagramme“ (50 ](../guardrails.md) pro Diagramm) zu überschreiten, wird diese Logik angewendet. Die Namespace-Priorität hat keinen Einfluss auf die Löschlogik der 50-Grad-Leitplanke für Identitäten/Diagramme.
+Der Algorithmus zur Identitätsoptimierung wird zuerst angewendet, um die Darstellung der Entität einer Person sicherzustellen. Wenn das Diagramm anschließend versucht, die [Leitplanke für Identitätsdiagramme“ (50 &#x200B;](../guardrails.md) pro Diagramm) zu überschreiten, wird diese Logik angewendet. Die Namespace-Priorität hat keinen Einfluss auf die Löschlogik der 50-Grad-Leitplanke für Identitäten/Diagramme.
 
 ## Testen
 
@@ -423,4 +423,4 @@ Im Allgemeinen sollten Tests in einer Entwicklungs-Sandbox die Anwendungsfälle 
 
 Verwenden Sie das [Diagrammsimulations-Tool](./graph-simulation.md) um zu überprüfen, ob die Funktion auf individueller Diagrammebene funktioniert.
 
-Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren ]&quot; im Identitäts-Dashboard.
+Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren &#x200B;]&quot; im Identitäts-Dashboard.
