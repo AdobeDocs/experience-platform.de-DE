@@ -2,7 +2,7 @@
 title: Handbuch zur Fehlerbehebung bei Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie, wie Sie häufige Probleme in den Verknüpfungsregeln für Identitätsdiagramme beheben können.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
+source-git-commit: 10cdbef8281ec43a21af9fead80345f1c78b9d2c
 workflow-type: tm+mt
 source-wordcount: '3451'
 ht-degree: 0%
@@ -162,11 +162,11 @@ Angenommen, für jedes Szenario enthalten Erlebnisereignisse die folgenden Ereig
 
 **Szenario 2: 2 CRMIDs, 1 GAID**
 
-* In diesem Szenario enthält ein eingehendes Erlebnisereignis 2 CRMIDs und 1 GAID. Zwischen diesen Namespaces wird CRMID als Namespace mit der höchsten Namespace-Priorität konfiguriert. Da es jedoch zwei GAIDs gibt, speichert **Profil nicht** dieses Erlebnisereignis.
+* In diesem Szenario enthält ein eingehendes Erlebnisereignis 2 CRMIDs und 1 GAID. Zwischen diesen Namespaces wird CRMID als Namespace mit der höchsten Namespace-Priorität konfiguriert. Da es jedoch zwei CRMIDs gibt, speichert **Profil (nicht** dieses Erlebnisereignis.
 
 **Szenario 3: 1 CRMID, 2 GAIDs**
 
-* In diesem Szenario enthält ein eingehendes Erlebnisereignis 1 CRMID und 2 GAIDs. Zwischen diesen Namespaces wird CRMID als Namespace mit der höchsten Namespace-Priorität konfiguriert. Da es nur eine CRM-ID gibt, nimmt das Profil die Erlebnisereignisse auf, da es nur eine Instanz des Namespace mit der höchsten Namespace-Priorität gibt.
+* In diesem Szenario enthält ein eingehendes Erlebnisereignis 1 CRMID und 2 GAIDs. Zwischen diesen Namespaces wird CRMID als Namespace mit der höchsten Namespace-Priorität konfiguriert. Da es nur eine CRM-ID gibt, nimmt das Profil die Erlebnisereignisse auf, da es nur eine Identität des Namespace mit der höchsten Namespace-Priorität gibt.
 
 **Schritte zur Fehlerbehebung**
 
@@ -423,4 +423,4 @@ Im Allgemeinen sollten Tests in einer Entwicklungs-Sandbox die Anwendungsfälle 
 
 Verwenden Sie das [Diagrammsimulations-Tool](./graph-simulation.md) um zu überprüfen, ob die Funktion auf individueller Diagrammebene funktioniert.
 
-Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren &#x200B;]&quot; im Identitäts-Dashboard.
+Informationen zur Validierung der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren ]&quot; im Identitäts-Dashboard.
