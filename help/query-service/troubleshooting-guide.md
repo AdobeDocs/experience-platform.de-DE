@@ -29,7 +29,7 @@ Gemeinsam ermöglicht Query Service schnelle Einblicke, während Data Distiller 
 
 **Data Distiller**: Ermöglicht Batch-Abfragen, die Daten verarbeiten, bereinigen und anreichern, wobei die Ergebnisse im Data Lake gespeichert werden. Diese Abfragen unterstützen eine längere Ausführung (bis zu 24 Stunden) und zusätzliche Funktionen wie Planung, Überwachung und beschleunigtes Reporting. Data Distiller eignet sich ideal für detaillierte Datenmanipulationen und geplante Datenverarbeitungsaufgaben.
 
-Ausführlichere Informationen finden Sie [ Dokument zum ](./packaging.md) von Query Service.
+Ausführlichere Informationen finden Sie [&#x200B; Dokument zum &#x200B;](./packaging.md) von Query Service.
 
 ## Fragenkategorien {#categories}
 
@@ -134,7 +134,7 @@ Die vollständige Anleitung finden Sie in der Dokumentation zum [Arbeiten mit ve
 ### Wie beschleunige ich eine Abfrage für einen Datensatz, der Arrays enthält?
 
 +++Antwort
-Um die Leistung von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie [ Laufzeit das Array ](https://spark.apache.org/docs/latest/api/sql/index.html#explode) eine [CTAS-Abfrage](./sql/syntax.md#create-table-as-select) auflösen und es dann weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
+Um die Leistung von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie [&#x200B; Laufzeit das Array &#x200B;](https://spark.apache.org/docs/latest/api/sql/index.html#explode) eine [CTAS-Abfrage](./sql/syntax.md#create-table-as-select) auflösen und es dann weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
 +++
 
 ### Warum wird meine CTAS-Abfrage für eine geringe Anzahl von Zeilen nach vielen Stunden immer noch bearbeitet?
@@ -148,7 +148,7 @@ Es kann verschiedene Gründe dafür geben, dass eine Abfrage bei der Verarbeitun
 ### Wie kontaktiere ich den Kunden-Support von Adobe? {#customer-support}
 
 +++Antwort
-[Eine vollständige Liste der Telefonnummern des Kunden-Supports von Adobe ](https://helpx.adobe.com/de/contact/phone.html) Sie auf der Hilfeseite zu Adobe. Alternativ können Sie Hilfe online finden, indem Sie die folgenden Schritte ausführen:
+[Eine vollständige Liste der Telefonnummern des Kunden-Supports von Adobe &#x200B;](https://helpx.adobe.com/de/contact/phone.html) Sie auf der Hilfeseite zu Adobe. Alternativ können Sie Hilfe online finden, indem Sie die folgenden Schritte ausführen:
 
 - Navigieren Sie zu [https://www.adobe.com/](https://www.adobe.com/) in Ihrem Webbrowser.
 - Wählen Sie rechts in der oberen Navigationsleiste die Option **[!UICONTROL Anmelden]**.
@@ -646,7 +646,7 @@ Ja. TLS wird auf Port 80 erzwungen und unverschlüsselte Verbindungen werden nic
 ### Wie wird die Lizenznutzung von Data Distiller verfolgt und wo kann ich diese Informationen sehen?
 
 +++Antwort  
-Die Hauptmetrik zur Verfolgung der Batch-Abfragenutzung ist „Compute Hour“. Sie haben über das Dashboard „Lizenznutzung[ Zugriff auf diese Informationen und ](../dashboards/guides/license-usage.md) aktuellen Verbrauch.
+Die Hauptmetrik zur Verfolgung der Batch-Abfragenutzung ist „Compute Hour“. Sie haben über das Dashboard „Lizenznutzung[&#x200B; Zugriff auf diese Informationen und &#x200B;](../dashboards/guides/license-usage.md) aktuellen Verbrauch.
 +++
 
 ### Was ist eine Compute Hour?
@@ -714,7 +714,7 @@ FROM <table_name>
 \g <table_name>.out
 ```
 
-[Hinweise zur Verwendung des Befehls `COPY TO` ](./sql/syntax.md#copy) finden Sie in der SQL-Syntaxreferenzdokumentation.
+[Hinweise zur Verwendung des Befehls `COPY TO` &#x200B;](./sql/syntax.md#copy) finden Sie in der SQL-Syntaxreferenzdokumentation.
 +++
 
 ### Kann ich den Inhalt des endgültigen Datensatzes, der durch CTAS-Abfragen aufgenommen wurde, extrahieren (unter der Annahme, es handelt sich um größere Datenmengen wie Terabytes)?
