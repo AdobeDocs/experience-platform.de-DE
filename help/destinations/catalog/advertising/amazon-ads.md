@@ -1,12 +1,12 @@
 ---
 title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
-last-substantial-update: 2025-01-07T00:00:00Z
+last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6afb8d56b8af8e5b0450f769414d3afcac1d58eb
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 47%
+source-wordcount: '2038'
+ht-degree: 42%
 
 ---
 
@@ -57,6 +57,13 @@ Die *[!DNL Amazon Ads]*-Verbindung unterstützt die Aktivierung von Identitäten
 |---|---|---|
 | phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| `firstName` | Vorname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
+| `lastName` | Nachname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
+| `street` | Adresse des Benutzers auf Straßenebene | Es wird nur eine SHA256-Hash-Eingabe unterstützt. Normalisieren vor dem Hashing. Aktivieren **nicht** die Adobe-seitige Umwandlung. |
+| `city` | Stadt des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
+| `state` | Bundesland oder Kanton des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
+| `zip` | Postleitzahl des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
+| `country` | Land des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
 
 {style="table-layout:auto"}
 
@@ -65,7 +72,7 @@ Die *[!DNL Amazon Ads]*-Verbindung unterstützt die Aktivierung von Identitäten
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
+| ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im *[!DNL Amazon Ads]*-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -113,7 +120,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
@@ -128,6 +135,14 @@ Die [!DNL Amazon Ads]-Verbindung unterstützt Hash-E-Mail-Adressen und Hash-Tele
 * Um Hash-Telefonnummern zuzuordnen, wählen Sie den Identity-Namespace von `Phone_SHA256` als ein Quellfeld aus.
 * Um ungehashte E-Mail-Adressen oder Telefonnummern zuzuordnen, wählen Sie die entsprechenden Identity-Namespaces als Quellfelder aus und überprüfen Sie die `Apply Transformation`-Option, damit Experience Platform die Identitäten bei der Aktivierung hasht.
 * *NEU ab der Version vom September 2024*: Amazon Ads erfordert, dass Sie ein Feld mit einem `countryCode` im 2-stelligen ISO-Format zuordnen, um den Prozess der Identitätsauflösung zu erleichtern (z. B.: US, GB, MX, CA usw.). Verbindungen ohne `countryCode` führen zu negativen Auswirkungen auf die Übereinstimmungsraten der Identitäten.
+
+>[!NOTE]
+>
+>Verwenden dieser Felder:
+> 
+>* Alle Identitätswerte sollten vor der Aufnahme normalisiert werden. Siehe das [Normalisierungshandbuch](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+>* SHA256-Hashing ist erforderlich, entweder Client-seitig oder durch Aktivieren der Transformationseinstellung von Adobe.
+>* Die Adobe-Benutzeroberfläche bietet ein Kontrollkästchen zum Anwenden der Transformation pro Identitätsfeld während der Connector-Einrichtung.
 
 Sie wählen in einer Zielkonfiguration des [!DNL Amazon Ads]-Connectors nur einmal ein bestimmtes Zielfeld aus.  Wenn Sie beispielsweise eine Geschäfts-E-Mail senden, können Sie keine persönliche E-Mail in derselben Zielkonfiguration zuordnen.
 
@@ -159,7 +174,7 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 Weitere Hilfedokumentation finden Sie in den folgenden [!DNL Amazon Ads]-Hilferessourcen:
 
-* [Hilfezentrum von Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
+* [Hilfezentrum von Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_bt_desktop_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
 ## Änderungsprotokoll {#changelog}
 
@@ -169,6 +184,7 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
+| Oktober 2025 | Unterstützung für zusätzliche Identitätsfelder hinzugefügt | Es wurden zusätzliche persönliche IDs hinzugefügt, die Unterstützung von `firstName`, `lastName`, `street`, `city`, `state`, `zip` und `country` bieten. Die Zuordnung dieser Felder kann die Übereinstimmungsraten der Zielgruppen verbessern. |
 | Februar 2025 | Es wurde die Anforderung hinzugefügt, **[!UICONTROL Amazon Ads-Einverständnissignal]** zum Exportieren von Datenflüssen hinzuzufügen, und das Ziel von der Beta-Version in „Allgemein verfügbar“ hochgestuft. |
 | Mai 2024 | Funktions- und Dokumentationsaktualisierung | Es wurde die Zuordnungsoption zum Exportieren `countryCode` Parameters in Amazon Ads hinzugefügt. Verwenden Sie `countryCode` im [Zuordnungsschritt](#map) um die Übereinstimmungsraten Ihrer Identitäten mit Amazon zu verbessern. |
 | März 2024 | Funktions- und Dokumentationsaktualisierung | Es wurde die Option zum Exportieren von Zielgruppen hinzugefügt, die in [!DNL Amazon Marketing Cloud] (AMC) verwendet werden sollen. |
