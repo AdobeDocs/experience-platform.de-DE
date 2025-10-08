@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Query Service und Data Distiller
 description: Dieses Dokument enthält häufige Fragen und Antworten zu Query Service und Data Distiller. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
+source-git-commit: f072f95823768d5b65169b56bb874ae9c3986c44
 workflow-type: tm+mt
-source-wordcount: '5186'
-ht-degree: 78%
+source-wordcount: '5441'
+ht-degree: 59%
 
 ---
 
@@ -52,8 +52,8 @@ Dieser Abschnitt enthält Informationen zu Performance, Beschränkungen und Proz
 
 ### Kann ich die Funktion zur automatischen Vervollständigung im Editor des Abfrage-Service deaktivieren?
 
-+++Antwort 
-Nr. Das Deaktivieren der Funktion zur automatischen Vervollständigung wird derzeit vom Editor nicht unterstützt.
++++Antwort
+Nein. Das Deaktivieren der Funktion zur automatischen Vervollständigung wird derzeit vom Editor nicht unterstützt.
 +++
 
 ### Warum wird der Abfrage-Editor manchmal langsam, wenn ich eine Abfrage eingebe?
@@ -65,7 +65,7 @@ Eine potenzielle Ursache ist die Funktion zur automatischen Vervollständigung. 
 ### Kann ich [!DNL Postman] für die Abfrage-Service-API verwenden?
 
 +++Antwort
-Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/31575?captions=ger) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldedaten für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Ja, Sie können alle Adobe-API-Services mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/28832) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldedaten für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?
@@ -82,14 +82,14 @@ In Batch-Abfragen wird das Aktualisieren einer Zeile im Datensatz nicht unterst�
 
 ### Gibt es eine Größenbeschränkung für die resultierende Ausgabe einer Abfrage?
 
-+++Antwort 
-Nr. Es gibt keine Begrenzung der Datengröße, aber es gibt eine Zeitbeschränkung von 10 Minuten für Abfragen aus einer interaktiven Sitzung. Wenn die Abfrage als Batch-CTAS ausgeführt wird, gilt keine Zeitbeschränkung auf 10 Minuten. Weitere Informationen finden Sie in den Leitlinien zur [interaktiven Ausführung von Abfragen](./best-practices/writing-queries.md#interactive-query-execution).
++++Antwort
+Nein. Es gibt keine Begrenzung der Datengröße, aber es gibt eine Zeitbeschränkung von 10 Minuten für Abfragen aus einer interaktiven Sitzung. Wenn die Abfrage als Batch-CTAS ausgeführt wird, gilt keine Zeitbeschränkung auf 10 Minuten. Weitere Informationen finden Sie in den Leitlinien zur [interaktiven Ausführung von Abfragen](./best-practices/writing-queries.md#interactive-query-execution).
 +++
 
 ### Wie kann ich verhindern, dass meine Abfragen nach 10 Minuten ablaufen?
 
 +++Antwort
-Es werden eine oder mehrere der folgenden Lösungen empfohlen, wenn bei Abfragen eine Zeitüberschreitung auftritt.
+Für den Fall, dass bei Abfragen eine Zeitüberschreitung auftritt, werden eine oder mehrere der folgenden Lösungen empfohlen.
 
 - [Konvertieren Sie die Abfrage in eine CTAS-Abfrage](./sql/syntax.md#create-table-as-select) und planen Sie die Ausführung. Eine Ausführung kann entweder [über die Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) oder die [API](./api/scheduled-queries.md#create) geplant werden.
 - Führen Sie die Abfrage auf einen kleineren Datensatz aus, indem Sie zusätzliche [Filterbedingungen](https://spark.apache.org/docs/latest/api/sql/index.html#filter) anwenden.
@@ -100,14 +100,14 @@ Es werden eine oder mehrere der folgenden Lösungen empfohlen, wenn bei Abfragen
 
 ### Gibt es Probleme oder Auswirkungen auf die Performance des Abfrage-Service, wenn mehrere Abfragen gleichzeitig ausgeführt werden?
 
-+++Antwort 
-Nr. Der Abfrage-Service verfügt über eine Funktion zur automatischen Skalierung, die sicherstellt, dass gleichzeitige Abfragen keine merklichen Auswirkungen auf die Performance des Service haben.
++++Antwort
+Nein. Der Abfrage-Service verfügt über eine Funktion zur automatischen Skalierung, die sicherstellt, dass gleichzeitige Abfragen keine merklichen Auswirkungen auf die Performance des Service haben.
 +++
 
 ### Kann ich reservierte Keywords als Spaltennamen verwenden?
 
 +++Antwort
-Es gibt bestimmte reservierte Keywords, die nicht als Spaltenname verwendet werden können, z. B.: `ORDER`, `GROUP BY`, `WHERE` und `DISTINCT`. Wenn Sie diese Keywords verwenden möchten, müssen Sie diese Spalten mit Escape-Zeichen versehen.
+Es gibt bestimmte reservierte Keywords, die nicht als Spaltenname verwendet werden können, z. B. `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Wenn Sie diese Keywords verwenden möchten, müssen Sie diese Spalten mit Escape-Zeichen versehen.
 +++
 
 ### Wie finde ich einen Spaltennamen aus einem hierarchischen Datensatz?
@@ -134,7 +134,7 @@ Die vollständige Anleitung finden Sie in der Dokumentation zum [Arbeiten mit ve
 ### Wie beschleunige ich eine Abfrage für einen Datensatz, der Arrays enthält?
 
 +++Antwort
-Um die Performance von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie das Array zunächst während der Laufzeit als [CTAS-Abfrage](./sql/syntax.md#create-table-as-select) [auflösen](https://spark.apache.org/docs/latest/api/sql/index.html#explode). Danach können Sie es weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
+Um die Leistung von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie [ Laufzeit das Array ](https://spark.apache.org/docs/latest/api/sql/index.html#explode) eine [CTAS-Abfrage](./sql/syntax.md#create-table-as-select) auflösen und es dann weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
 +++
 
 ### Warum wird meine CTAS-Abfrage für eine geringe Anzahl von Zeilen nach vielen Stunden immer noch bearbeitet?
@@ -148,7 +148,7 @@ Es kann verschiedene Gründe dafür geben, dass eine Abfrage bei der Verarbeitun
 ### Wie kontaktiere ich den Kunden-Support von Adobe? {#customer-support}
 
 +++Antwort
-[Eine vollständige Liste der Telefonnummern des Kunden-Supports von Adobe](https://helpx.adobe.com/de/contact/phone.html) ist auf der Hilfeseite von Adobe verfügbar. Alternativ können Sie Hilfe online finden, indem Sie die folgenden Schritte ausführen:
+[Eine vollständige Liste der Telefonnummern des Kunden-Supports von Adobe ](https://helpx.adobe.com/de/contact/phone.html) Sie auf der Hilfeseite zu Adobe. Alternativ können Sie Hilfe online finden, indem Sie die folgenden Schritte ausführen:
 
 - Navigieren Sie zu [https://www.adobe.com/](https://www.adobe.com/) in Ihrem Webbrowser.
 - Wählen Sie rechts in der oberen Navigationsleiste die Option **[!UICONTROL Anmelden]**.
@@ -174,7 +174,7 @@ Weitere Informationen finden Sie in der [Dokumentation zu anonymen Blöcken](./k
 ### Wie implementiere ich eine benutzerdefinierte Attribution im Abfrage-Service?
 
 +++Antwort
-Es gibt zwei Möglichkeiten, benutzerdefinierte Attributionen zu implementieren:
+Es gibt zwei Möglichkeiten, eine benutzerdefinierte Attribution zu implementieren:
 
 1. Verwenden Sie eine Kombination aus vorhandenen, [von Adobe definierten Funktionen](./sql/adobe-defined-functions.md), um festzustellen, ob die Anforderungen des Anwendungsfalls erfüllt sind.
 1. Wenn der vorherige Vorschlag nicht auf Ihren Anwendungsfall anwendbar ist, sollten Sie eine Kombination aus [Fensterfunktionen](./sql/adobe-defined-functions.md#window-functions) verwenden. Fensterfunktionen betrachten alle Ereignisse in einer Sequenz. Sie ermöglichen es Ihnen auch, die Verlaufsdaten zu überprüfen und können in jeder beliebigen Kombination verwendet werden.
@@ -256,7 +256,7 @@ AS SELECT '1' as _id,
 
 ### Wie kann ich die neuen Daten, die täglich in das System gelangen, schnell verarbeiten?
 
-+++Antwort 
++++Antwort
 Die [`SNAPSHOT`](./sql/syntax.md#snapshot-clause)-Klausel kann verwendet werden, um Daten einer Tabelle basierend auf einer Schnappschuss-ID inkrementell zu lesen. Dies eignet sich ideal für die Verwendung mit dem Design-Muster für [inkrementelles Laden](./key-concepts/incremental-load.md), bei dem nur Informationen im Datensatz verarbeitet werden, die seit der letzten Ausführung des Ladevorgangs erstellt oder geändert wurden. Dadurch hat es eine höhere Verarbeitungseffizienz und kann sowohl bei der Streaming- als auch bei der Batch-Datenverarbeitung verwendet werden.
 +++
 
@@ -287,19 +287,19 @@ SELECT count(1) FROM myTableName
 ### Kann ich meine Daten stichprobenweise überprüfen?
 
 +++Antwort
-An dieser Funktion wird derzeit gearbeitet. Details werden in den [Versionshinweisen](../release-notes/latest/latest.md) und über die Dialogfelder der Experience Platform-Benutzeroberfläche bekannt gegeben, sobald die Funktion zur Veröffentlichung bereit ist.
+Diese Funktion ist derzeit in Arbeit. Details werden in den [Versionshinweisen](../release-notes/latest/latest.md) und über die Dialogfelder der Experience Platform-Benutzeroberfläche bekannt gegeben, sobald die Funktion zur Veröffentlichung bereit ist.
 +++
 
 ### Welche Helferfunktionen werden vom Abfrage-Service unterstützt?
 
 +++Antwort
-Der Abfrage-Service bietet mehrere integrierte SQL-Helferfunktionen zur Erweiterung der SQL-Funktionalität. Im Dokument finden Sie eine vollständige Liste der [vom Abfrage-Service unterstützten SQL-Funktionen](./sql/spark-sql-functions.md).
+Query Service bietet mehrere integrierte SQL-Hilfsfunktionen zur Erweiterung der SQL-Funktionalität. Im Dokument finden Sie eine vollständige Liste der [vom Abfrage-Service unterstützten SQL-Funktionen](./sql/spark-sql-functions.md).
 +++
 
 ### Werden alle nativen [!DNL Spark SQL]-Funktionen unterstützt oder sind die Benutzenden nur auf die von Adobe bereitgestellten [!DNL Spark SQL]-Wrapper-Funktionen beschränkt?
 
 +++Antwort
-Bisher wurden noch nicht alle Open-Source-[!DNL Spark SQL]-Funktionen an Data Lake-Daten getestet. Sobald sie getestet und bestätigt sind, werden sie in die Liste der unterstützten Funktionen aufgenommen. Bitte sehen Sie in der [Liste der unterstützten  [!DNL Spark SQL] -Funktionen](./sql/spark-sql-functions.md) nach, um eine bestimmte Funktion zu finden.
+Bisher wurden noch nicht alle Open-Source-[!DNL Spark SQL] auf Data Lake-Daten getestet. Sobald sie getestet und bestätigt sind, werden sie in die Liste der unterstützten Funktionen aufgenommen. Bitte sehen Sie in der [Liste der unterstützten  [!DNL Spark SQL] -Funktionen](./sql/spark-sql-functions.md) nach, um eine bestimmte Funktion zu finden.
 +++
 
 ### Können Benutzende ihre eigenen benutzerdefinierten Funktionen (UDF) definieren, die über andere Abfragen hinweg verwendet werden können?
@@ -311,7 +311,7 @@ Aus Gründen der Datensicherheit ist die benutzerdefinierte Definition von UDFs 
 ### Was sollte ich tun, wenn meine geplante Abfrage fehlschlägt?
 
 +++Antwort
-Zunächst überprüfen Sie die Protokolle, um die Details des Fehlers zu ermitteln. Der FAQ-Abschnitt zum [Suchen von Fehlern in Protokollen](#error-logs) enthält weitere Informationen dazu.
+Überprüfen Sie zunächst die Protokolle, um die Details des Fehlers zu ermitteln. Der FAQ-Abschnitt zum [Suchen von Fehlern in Protokollen](#error-logs) enthält weitere Informationen dazu.
 
 Sie sollten auch in der Dokumentation nachlesen, wie Sie [geplante Abfragen in der Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) und über [die API](./api/scheduled-queries.md) durchführen können.
 
@@ -321,7 +321,7 @@ Beachten Sie, dass Sie bei Verwendung der [!DNL Query Editor] nur einen Zeitplan
 ### Was bedeutet die Fehlermeldung „Sitzungs-Limit erreicht“?
 
 +++Antwort
-„Sitzungs-Limit erreicht“ bedeutet, dass die für Ihr Organisation maximal zulässige Anzahl von Sitzungen des Abfrage-Service erreicht wurde. Wenden Sie sich an den Adobe Experience Platform-Administrator Ihrer Organisation.
+„Sitzungslimit erreicht“ bedeutet, dass die für Ihr Unternehmen maximal zulässige Anzahl von Query Service-Sitzungen erreicht wurde. Wenden Sie sich an den Adobe Experience Platform-Administrator Ihrer Organisation.
 +++
 
 ### Wie behandelt das Abfrageprotokoll Abfragen, die sich auf einen gelöschten Datensatz beziehen?
@@ -373,7 +373,7 @@ LIMIT 100;
 ### Wie ändere ich die Zeitzone von und zu einem UTC-Zeitstempel?
 
 +++Antwort
-Adobe Experience Platform behält Daten im UTC-Zeitstempelformat (Coordinated Universal Time) bei. Ein Beispiel für das UTC-Format ist `2021-12-22T19:52:05Z`
+Adobe Experience Platform speichert Daten im UTC-Zeitstempelformat (Coordinated Universal Time). Ein Beispiel für das UTC-Format ist `2021-12-22T19:52:05Z`
 
 Der Abfrage-Service unterstützt integrierte SQL-Funktionen zum Konvertieren eines bestimmten Zeitstempels in das und aus dem UTC-Format. Sowohl die Methode `to_utc_timestamp()` als auch `from_utc_timestamp()` benötigt zwei Parameter: Zeitstempel und Zeitzone.
 
@@ -443,7 +443,7 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 ### Wie verwende ich den `CAST`-Operator richtig, um meine Zeitstempel in SQL-Abfragen zu konvertieren?
 
 +++Antwort
-Wenn Sie den `CAST`-Operator verwenden, um einen Zeitstempel zu konvertieren, müssen Sie **sowohl** das Datum als auch die Uhrzeit angeben.
+Wenn Sie den `CAST`-Operator verwenden, um einen Zeitstempel zu konvertieren, müssen Sie sowohl das Datum als auch **Uhrzeit**.
 
 Fehlt zum Beispiel die Zeitkomponente, wie unten gezeigt, führt dies zu einem Fehler:
 
@@ -464,13 +464,13 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ### Sollte ich Platzhalter verwenden, z. B. *, um alle Zeilen aus meinen Datensätzen zu erhalten?
 
 +++Antwort
-Sie können keine Platzhalter verwenden, um alle Daten aus Ihren Zeilen abzurufen, da der Abfrage-Service als **Spalten-Speicher** und nicht als traditionelles zeilenbasiertes Speichersystem behandelt werden sollte.
+Sie können keine Platzhalter verwenden, um alle Daten aus Ihren Zeilen abzurufen, da der Abfrage-Service als **Spalten-Speicher“ und** als traditionelles zeilenbasiertes Speichersystem behandelt werden sollte.
 +++
 
 ### Sollte ich `NOT IN` in meiner SQL-Abfrage verwenden?
 
 +++Antwort
-Der `NOT IN`-Operator wird häufig zum Abrufen von Zeilen verwendet, die nicht in einer anderen Tabelle oder SQL-Anweisung gefunden werden. Dieser Operator kann die Performance verlangsamen und unerwartete Ergebnisse liefern, wenn die zu vergleichenden Spalten `NOT NULL` akzeptieren oder wenn Sie eine große Anzahl von Datensätzen haben.
+Der `NOT IN`-Operator wird häufig zum Abrufen von Zeilen verwendet, die nicht in einer anderen Tabelle oder SQL-Anweisung gefunden werden. Dieser Operator kann die Performance verlangsamen und unerwartete Ergebnisse liefern, wenn die zu vergleichenden Spalten `NOT NULL` akzeptieren oder wenn Sie eine große Anzahl von Einträge haben.
 
 Anstatt `NOT IN` zu verwenden, können Sie entweder `NOT EXISTS` oder `LEFT OUTER JOIN` verwenden.
 
@@ -507,7 +507,7 @@ WHERE T2.ID IS NULL
 ### Kann ich einen Datensatz mithilfe einer CTAS-Abfrage mit einem Namen mit doppeltem Unterstrich erstellen, wie er in der Benutzeroberfläche angezeigt wird? Beispiel: `test_table_001`.
 
 +++Antwort
-Nein, dies ist eine absichtliche Einschränkung in der gesamten Experience Platform, die für alle Adobe-Services gilt, einschließlich Abfrage-Service. Ein Name mit zwei Unterstrichen ist als Schema- und Datensatzname zulässig, aber der Tabellenname für den Datensatz darf nur einen einzigen Unterstrich enthalten.
+Nein, dies ist eine absichtliche Einschränkung in Experience Platform, die für alle Adobe-Services gilt, einschließlich Abfrage-Service. Ein Name mit zwei Unterstrichen ist als Schema- und Datensatzname zulässig, aber der Tabellenname für den Datensatz darf nur einen einzigen Unterstrich enthalten.
 +++
 
 ### Wie viele gleichzeitige Abfragen können parallel ausgeführt werden?
@@ -519,19 +519,19 @@ Es gibt keine Begrenzung der Gleichzeitigkeit von Abfragen, da Batch-Abfragen al
 ### Gibt es ein Aktivitäts-Dashboard, in dem Abfrageaktivitäten und -status zu sehen sind?
 
 +++Antwort
-Es gibt Monitoring- und Warnfunktionen, mit denen Sie sich über Abfrageaktivitäten und -status informieren können. Weitere Informationen finden Sie in den Dokumenten zur [Auditprotokollintegration für den Abfrage-Service](./data-governance/audit-log-guide.md) und zu [Abfrageprotokollen](./ui/overview.md#log).
+Es gibt Überwachungs- und Warnfunktionen zum Überprüfen von Abfrageaktivitäten und -status. Weitere Informationen finden Sie in den Dokumenten zur [Auditprotokollintegration für den Abfrage-Service](./data-governance/audit-log-guide.md) und zu [Abfrageprotokollen](./ui/overview.md#log).
 +++
 
 ### Gibt es eine Möglichkeit, Aktualisierungen zurückzusetzen? Wenn beispielsweise ein Fehler auftritt oder einige Berechnungen beim Zurückschreiben von Daten in Experience Platform neu konfiguriert werden müssen, wie sollte dieses Szenario gehandhabt werden?
 
 +++Antwort
-Derzeit unterstützen wir keine Zurücksetzungen oder Aktualisierungen auf diese Weise.
+Derzeit unterstützen wir auf diese Weise keine Rollbacks oder Aktualisierungen.
 +++
 
 ### Wie können Abfragen in Adobe Experience Platform optimiert werden?
 
 +++Antwort
-Das System hat keine Indizes, da es keine Datenbank ist, aber es sind andere Optimierungen im Zusammenhang mit dem Datenspeicher vorhanden. Die folgenden Optionen stehen zur Abstimmung Ihrer Abfragen zur Verfügung:
+Das System verfügt nicht über Indizes, da es keine Datenbank ist, aber es sind andere Optimierungen im Zusammenhang mit dem Datenspeicher vorhanden. Die folgenden Optionen stehen zur Abstimmung Ihrer Abfragen zur Verfügung:
 
 - Ein zeitbasierter Filter für Zeitreihendaten.
 - Optimierter Push-Down für den „struct“-Datentyp.
@@ -543,7 +543,7 @@ Das System hat keine Indizes, da es keine Datenbank ist, aber es sind andere Opt
 ### Können Anmeldungen auf bestimmte Aspekte vom Abfrage-Service beschränkt werden oder ist dies eine „Alles-oder-Nichts“-Lösung?
 
 +++Antwort
-Der Abfrage-Service ist eine „Alles-oder-Nichts“-Lösung. Es kann kein Teilzugriff gewährt werden.
+Query Service ist eine „Alles-oder-Nichts“-Lösung. Es kann kein Teilzugriff gewährt werden.
 +++
 
 ### Kann ich einschränken, welche Daten der Abfrage-Service nutzen kann, oder greift er einfach auf den gesamten Adobe Experience Platform Data Lake zu?
@@ -573,28 +573,16 @@ Es gibt drei Möglichkeiten, den Zugriff zu beschränken. Diese sind wie folgt:
 Ja, SSL-Modi werden unterstützt. Siehe [Dokumentation zu SSL-Modi](./clients/ssl-modes.md) für eine Aufschlüsselung der verschiedenen verfügbaren SSL-Modi und des Schutzniveaus, das sie bieten.
 +++
 
-### Wird TLS 1.2 für alle Verbindungen von Power BI-Clients zum Abfrage-Service verwendet?
-
-+++Antwort
-Ja. Daten in Bewegung sind immer HTTPS-konform. Die derzeit unterstützte Version ist TLS1.2.
-+++
-
-### Wird bei einer Verbindung über Port 80 immer noch https verwendet?
-
-+++Antwort
-Ja, eine über Port 80 hergestellte Verbindung verwendet immer noch SSL. Sie können auch Port 5432 verwenden.
-+++
-
 ### Kann ich den Zugriff auf bestimmte Datensätze und Spalten für eine bestimmte Verbindung steuern? Wie ist dies konfiguriert?
 
-+++Antwort 
++++Antwort
 Ja, die attributbasierte Zugriffssteuerung wird erzwungen, wenn sie konfiguriert ist. Weitere Informationen finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../access-control/abac/overview.md).
 +++
 
 ### Unterstützt Query Service den Befehl „INSERT OVERWRITE INTO“?
 
-+++Antwort 
-Nein, Query Service unterstützt den Befehl „INSERT OVERWRITE INTO“ nicht.
++++Antwort
+Nein, der Abfrage-Service unterstützt den Befehl „INSERT OVERWRITE INTO“ nicht.
 +++
 
 ### Wie oft werden die Nutzungsdaten im Lizenznutzungs-Dashboard für Data Distiller Compute Hours aktualisiert?
@@ -615,35 +603,73 @@ Ja, Sie können `CREATE VIEW` Befehl ohne Zugriff auf Data Distiller verwenden. 
 Ja. Bestimmte Drittanbieter-Clients wie DbVisualizer benötigen jedoch möglicherweise eine separate Kennung vor und nach einem SQL-Block, um anzugeben, dass ein Teil eines Skripts als einzelne Anweisung gehandhabt werden soll. Weitere Informationen finden Sie in der [Dokumentation zu anonymen Blöcken](./key-concepts/anonymous-block.md) oder in [offiziellen DbVisualizer-Dokumentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
+## TLS, Port-Zugriff und Verschlüsselung {#tls-port-questions}
+
+### Wird bei einer über Port 80 hergestellten Verbindung weiterhin eine HTTPS- und TLS-Verschlüsselung verwendet?
+
++++Antwort
+Ja. Verbindungen an Port 80 sind mit TLS-Verschlüsselung geschützt und die TLS-Durchsetzung ist durch den Service erforderlich. Einfache HTTP-Verbindungen werden nicht akzeptiert. Port 80 wird für bestimmte Kundennetzwerkrichtlinien unterstützt. Wenn Ihr Unternehmen Port 80 blockiert, verwenden Sie stattdessen Port 5432. Beide Ports erfordern TLS und bieten denselben Sicherheitszustand.
++++
+
+### Macht der Abfrage-Service von Adobe Daten über unverschlüsseltes HTTP verfügbar (Port 80)?
+
++++Antwort
+Nein. Verbindungen an Port 80 erfordern TLS und Plain-Text-HTTP-Anfragen werden Server-seitig abgelehnt. Port 5432 wird ebenfalls unterstützt und ist TLS-verschlüsselt.
++++
+
+### Ist die Verwendung von Port 80 für den Abfrage-Service und Data Distiller eine Legacy-Konfiguration?
+
++++Antwort
+Nein. Port 80 mit obligatorischem TLS ist eine unterstützte Konfiguration, die für Kunden mit bestimmten Netzwerkanforderungen entwickelt wurde. Dies ist kein veralteter oder unsicherer Modus. Wenn Ihre Umgebung ausgehende Verbindungen auf Port 80 einschränkt, verwenden Sie stattdessen Port 5432. Beide Ports erzwingen TLS.
++++
+
+### Wird TLS 1.2 für alle Verbindungen von Power BI-Clients zum Abfrage-Service verwendet?
+
++++Antwort
+Ja. Daten in der Übertragung sind immer mit HTTPS geschützt und die derzeit unterstützte Version ist TLS 1.2. Alle Power BI-Verbindungen zum Abfrage-Service erfordern einen verschlüsselten Transport.
++++
+
+### Ist Port 80 bei Verwendung mit Data Distiller unverschlüsselt?
+
++++Antwort
+Nein. Data Distiller erzwingt TLS an Port 80 und lehnt alle Nur-Text-HTTP-Anfragen ab. Port 5432 wird ebenfalls unterstützt und ist TLS-verschlüsselt.
++++
+
+### Gibt es Risiken oder Einschränkungen bei der Verwendung von Port 80 mit Query Service oder Data Distiller?
+
++++Antwort
+Ja. TLS wird auf Port 80 erzwungen und unverschlüsselte Verbindungen werden nicht unterstützt. Einige Organisationen blockieren aufgrund von Richtlinienbeschränkungen den ausgehenden Traffic auf Port 80. Wenn dies auf Ihr Netzwerk zutrifft, verwenden Sie stattdessen Port 5432. Beide Ports bieten dasselbe Sicherheitsniveau, da in allen Fällen TLS erforderlich ist.
++++
+
 ## Data Distiller {#data-distiller}
 
 ### Wie wird die Lizenznutzung von Data Distiller verfolgt und wo kann ich diese Informationen sehen?
 
-+++Antwort\
++++Antwort  
 Die Hauptmetrik zur Verfolgung der Batch-Abfragenutzung ist „Compute Hour“. Sie haben über das Dashboard „Lizenznutzung[ Zugriff auf diese Informationen und ](../dashboards/guides/license-usage.md) aktuellen Verbrauch.
 +++
 
 ### Was ist eine Compute Hour?
 
-+++Antwort\
++++Antwort  
 Berechnungsstunden sind die Zeit, die die Abfrage-Service-Engines zum Lesen, Verarbeiten und Zurückschreiben von Daten in den Data Lake benötigen, wenn eine Batch-Abfrage ausgeführt wird.
 +++
 
 ### Wie werden Compute Hours gemessen?
 
-+++Antwort\
++++Antwort  
 Berechnungsstunden werden kumulativ für alle autorisierten Sandboxes gemessen.
 +++
 
 ### Warum bemerke ich manchmal Schwankungen beim Verbrauch der Rechenstunden, selbst wenn ich dieselbe Abfrage nacheinander ausführe?
 
-+++Antwort\
++++Antwort  
 Die Berechnung der Stunden für eine Abfrage kann aufgrund mehrerer Faktoren schwanken. Dazu gehören das verarbeitete Datenvolumen, die Komplexität der Umwandlungsvorgänge innerhalb der SQL-Abfrage usw. Query Service skaliert den Cluster basierend auf den oben genannten Parametern für jede Abfrage, was zu Unterschieden bei den Rechenstunden führen kann.
 +++
 
 ### Ist es normal, eine Verringerung der Compute Hours zu bemerken, wenn ich dieselbe Abfrage über einen langen Zeitraum mit denselben Daten ausführe? Warum kann das passieren?
 
-+++Antwort\
++++Antwort  
 Die Backend-Infrastruktur wird ständig verbessert, um die Auslastung und Verarbeitungszeit der Rechenstunden zu optimieren. Daher kann es vorkommen, dass sich die Leistung im Laufe der Zeit verbessert.
 +++
 
@@ -667,8 +693,8 @@ Wenn die Option „Abfrage erstellen“ bei „Verbindung wird initialisiert…�
 
 ### Kann ich Beispiele für einen Systemdatensatz erstellen?
 
-+++Antwort 
-Nr. Schreibberechtigungen sind auf Systemdatensätze beschränkt, sodass keine Beispiele erstellt werden können.
++++Antwort
+Nein. Schreibberechtigungen sind auf Systemdatensätze beschränkt, sodass keine Beispiele erstellt werden können.
 +++
 
 ## Exportieren von Daten {#exporting-data}
@@ -693,8 +719,8 @@ FROM <table_name>
 
 ### Kann ich den Inhalt des endgültigen Datensatzes, der durch CTAS-Abfragen aufgenommen wurde, extrahieren (unter der Annahme, es handelt sich um größere Datenmengen wie Terabytes)?
 
-+++Antwort 
-Nr. Es gibt derzeit keine Funktion für die Extraktion aufgenommener Daten.
++++Antwort
+Nein. Es gibt derzeit keine Funktion für die Extraktion aufgenommener Daten.
 +++
 
 ### Warum gibt der Analytics-Daten-Connector keine Daten zurück?
@@ -752,13 +778,13 @@ Ja, Sie können mehrere Desktop-Clients von Drittanbietern mit dem Abfrage-Servi
 ### Gibt es eine Möglichkeit, den Abfrage-Service einmal für die kontinuierliche Verwendung mit einem Tool eines Drittanbieters zu verbinden?
 
 +++Antwort
-Ja, Desktop-Clients von Drittanbietern können über eine einmalige Einrichtung ohne ablaufende Anmeldedaten mit dem Abfrage-Service verbunden werden. Nicht ablaufende Anmeldedaten können von einem autorisierten Benutzer generiert und in einer JSON-Datei empfangen werden, die automatisch auf den lokalen Computer heruntergeladen wird. Eine vollständige [Anleitung zum Erstellen und Herunterladen von nicht ablaufenden Anmeldedaten](./ui/credentials.md#non-expiring-credentials) finden Sie in der Dokumentation.
+Ja, Desktop-Clients von Drittanbietern können über eine einmalige Einrichtung ohne ablaufende Anmeldeinformationen mit dem Abfrage-Service verbunden werden. Nicht ablaufende Anmeldedaten können von einem autorisierten Benutzer generiert und in einer JSON-Datei empfangen werden, die automatisch auf den lokalen Computer heruntergeladen wird. Eine vollständige [Anleitung zum Erstellen und Herunterladen von nicht ablaufenden Anmeldedaten](./ui/credentials.md#non-expiring-credentials) finden Sie in der Dokumentation.
 +++
 
 ### Warum funktionieren meine nicht ablaufenden Anmeldedaten nicht?
 
 +++Antwort
-Der Wert für nicht ablaufende Anmeldedaten sind die verketteten Argumente aus der `technicalAccountID` und dem `credential` aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{{technicalAccountId}:{credential}}`.
+Der Wert für nicht ablaufende Anmeldeinformationen sind die verketteten Argumente aus der `technicalAccountID` und die `credential` aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{{technicalAccountId}:{credential}}`.
 In der Dokumentation finden Sie weitere Informationen zur [Verbindung mit externen Clients mit Anmeldedaten](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
@@ -771,7 +797,7 @@ Ja. Wenn Sie ein Kennwort für nicht ablaufende Anmeldeinformationen festlegen, 
 ### Welche Art von SQL-Editoren von Drittanbietern kann ich mit dem Abfrage-Service-Editor verbinden?
 
 +++Antwort
-Alle SQL-Editoren von Drittanbietern, die PSQL oder [!DNL Postgres] Client-kompatibel sind, können mit dem Abfrage-Service-Editor verbunden werden. In der Dokumentation zum [Verbinden von Clients mit dem Abfrage-Service](./clients/overview.md) finden Sie eine Liste der verfügbaren Anweisungen.
+Jeder SQL-Editor eines Drittanbieters, der PSQL oder [!DNL Postgres] Client-kompatibel ist, kann mit dem Abfrage-Service-Editor verbunden werden. In der Dokumentation zum [Verbinden von Clients mit dem Abfrage-Service](./clients/overview.md) finden Sie eine Liste der verfügbaren Anweisungen.
 +++
 
 ### Kann ich das Power BI-Tool mit dem Abfrage-Service verbinden?
@@ -821,7 +847,7 @@ Die folgende Tabelle enthält PSQL-Fehler-Codes und die möglichen Ursachen.
 ### Warum habe ich einen Fehlercode 58000 erhalten, als ich die Methode history_meta() für meine Tabelle verwendet habe?
 
 +++Antwort
-Die Methode `history_meta()` wird verwendet, um auf einen Schnappschuss eines Datensatzes zuzugreifen. Wenn Sie früher eine Abfrage über einen leeren Datensatz in Azure Data Lake Storage (ADLS) durchgeführt haben, erhielten Sie einen 58000-Fehler-Code, der besagte, dass der Datensatz nicht existiert. Nachfolgend finden Sie ein Beispiel für den alten Systemfehler.
+Die `history_meta()` Methode wird verwendet, um auf einen Schnappschuss aus einem Datensatz zuzugreifen. Wenn Sie früher eine Abfrage über einen leeren Datensatz in Azure Data Lake Storage (ADLS) durchgeführt haben, erhielten Sie einen 58000-Fehler-Code, der besagte, dass der Datensatz nicht existiert. Nachfolgend finden Sie ein Beispiel für den alten Systemfehler.
 
 ```shell
 ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
