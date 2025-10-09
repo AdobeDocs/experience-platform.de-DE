@@ -2,9 +2,9 @@
 title: Kopieren von Ressourcen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine neue Tag-Ressource mit den Einstellungen einer schon vorhandenen Tag-Ressource erstellen.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: a4e4fe0ae0f52a3b4b5bfa2c42ef4dce7f2a6a59
+source-git-commit: 319496975bcdbfd0a670cf8d36fb7e562b2ef2de
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '834'
 ht-degree: 87%
 
 ---
@@ -45,7 +45,7 @@ Wenn Sie eine Kopie einer vollständigen Eigenschaft erstellen, sollten Sie eini
 
 >[!IMPORTANT]
 >
->Für Ressourcen, die den Variablentyp Datenelement-Update verwenden, sind nach dem Kopieren zusätzliche Schritte erforderlich. Bearbeiten Sie jede Aktion zum Aktualisieren der Variablen, nehmen Sie eine Bearbeitung an einem beliebigen Wert im Daten- oder XDM-Objekt vor und speichern Sie die Änderungen. Die veröffentlichte Bibliothek sollte dann erwartungsgemäß funktionieren. Wenden Sie sich an den technischen Support, wenn Sie Fragen zu diesem Vorgang haben.
+>Für Ressourcen, die den Variablentyp Datenelement-Update verwenden, sind nach dem Kopieren zusätzliche Schritte erforderlich. Bearbeiten Sie jede Aktion zum Aktualisieren der Variablen, nehmen Sie eine Änderung an einem beliebigen Wert im Daten- oder XDM-Objekt vor und speichern Sie die Änderungen. Die veröffentlichte Bibliothek sollte dann erwartungsgemäß funktionieren. Wenden Sie sich an den technischen Support , wenn Sie Fragen zu diesem Vorgang haben.
 
 * Die Eigenschaften-Einstellungen werden genau so kopiert, wie sie sind (Domains, erweiterte Einstellungen usw.).
 * Regeln, Datenelemente und Erweiterungen aus der Ursprungs-Eigenschaft werden in die neue Ziel-Eigenschaft kopiert. Adapter, Umgebungen und Bibliotheken werden nicht kopiert.
