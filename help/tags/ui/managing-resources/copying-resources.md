@@ -2,10 +2,10 @@
 title: Kopieren von Ressourcen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine neue Tag-Ressource mit den Einstellungen einer schon vorhandenen Tag-Ressource erstellen.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a4e4fe0ae0f52a3b4b5bfa2c42ef4dce7f2a6a59
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 93%
+source-wordcount: '835'
+ht-degree: 87%
 
 ---
 
@@ -43,6 +43,10 @@ Nachdem Sie das gewünschte Verhalten konfiguriert haben, klicken Sie auf **[!UI
 
 Wenn Sie eine Kopie einer vollständigen Eigenschaft erstellen, sollten Sie einige Dinge über den Prozess wissen.
 
+>[!IMPORTANT]
+>
+>Für Ressourcen, die den Variablentyp Datenelement-Update verwenden, sind nach dem Kopieren zusätzliche Schritte erforderlich. Bearbeiten Sie jede Aktion zum Aktualisieren der Variablen, nehmen Sie eine Bearbeitung an einem beliebigen Wert im Daten- oder XDM-Objekt vor und speichern Sie die Änderungen. Die veröffentlichte Bibliothek sollte dann erwartungsgemäß funktionieren. Wenden Sie sich an den technischen Support, wenn Sie Fragen zu diesem Vorgang haben.
+
 * Die Eigenschaften-Einstellungen werden genau so kopiert, wie sie sind (Domains, erweiterte Einstellungen usw.).
 * Regeln, Datenelemente und Erweiterungen aus der Ursprungs-Eigenschaft werden in die neue Ziel-Eigenschaft kopiert. Adapter, Umgebungen und Bibliotheken werden nicht kopiert.
 * Erforderliche Erweiterungen (Erweiterungen, die für vorhandene Datenelemente oder Regelkomponenten benötigt werden) werden auch dann in die Ziel-Eigenschaft kopiert, wenn sie in der Ursprungs-Eigenschaft deinstalliert wurden.
@@ -67,5 +71,5 @@ Alle Regeln und Datenelemente werden von einer Erweiterung bereitgestellt. Wenn 
 Das Dialogfeld „Kopieren“ enthält eine Erläuterung dessen, was genau vor dem Kopieren ausgeführt wird. Das Dialogfeld oben ist für eine Regel vorgesehen. Dasselbe gilt jedoch für Datenelemente.
 
 1. **Die für diese Regeln erforderlichen Erweiterungen werden kopiert.** Auf diese Weise wissen Sie, dass die erforderlichen Erweiterungen mit der Regel übereinstimmen. Diese Kopien folgen denselben Regeln wie die oben beschriebene normale Erweiterungskopie.
-1. **Die Erweiterungseinstellungen werden NICHT kopiert, wenn die Erweiterung bereits installiert ist.** Wenn die erforderlichen Erweiterungen bereits in der Ziel-Eigenschaft vorhanden sind, bleibt die Erweiterung unverändert. Wenn Sie die Erweiterungseinstellungen ebenfalls kopieren möchten, können Sie die Schaltfläche **Erweiterungseinstellungen in Ziel-Eigenschaft ersetzen** verwenden. Die Erklärung wird daraufhin entsprechend aktualisiert.
+1. **Die Erweiterungseinstellungen werden NICHT kopiert, wenn die Erweiterung bereits installiert ist.** Wenn die erforderlichen Erweiterungen bereits in der Ziel-Eigenschaft vorhanden sind, bleibt die Erweiterung unverändert. Wenn Sie die Erweiterungseinstellungen ebenfalls kopieren möchten, können Sie den Umschalter **Erweiterungseinstellungen in Ziel-Eigenschaft ersetzen** verwenden. Die Erklärung wird daraufhin entsprechend aktualisiert.
 1. **Datenelemente, die für diese Regeln erforderlich sind, werden NICHT kopiert.** Diese Erklärung gilt nur für Regeln. Regeln sind häufig auf Datenelemente angewiesen, um ordnungsgemäß zu funktionieren. Wenn Sie eine Regel in eine neue Eigenschaft kopieren, müssen Sie im Rahmen einer separaten Aktion auch die erforderlichen Datenelemente kopieren.
