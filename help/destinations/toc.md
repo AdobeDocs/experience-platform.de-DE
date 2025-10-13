@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
+source-git-commit: 73241750bdb310abf28cd4b1bcb4ba3ec43a6f39
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1325'
 ht-degree: 73%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -79,6 +79,7 @@ ht-degree: 73%
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
+      * [Adform-Verbindung](./catalog/advertising/adform.md)
       * [Amazon Ads-Verbindung](./catalog/advertising/amazon-ads.md)
       * [Awin Advertising Conversion Tag-Erweiterung](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag-Erweiterung](./catalog/advertising/awin-mastertag.md)
