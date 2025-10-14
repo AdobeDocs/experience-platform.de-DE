@@ -32,7 +32,7 @@ Derzeit beträgt die maximale Datenmenge, die Sie von Ihrem [!DNL Event Hubs]-Ko
 
 ### Steigerung der Parallelität auf [!DNL Event Hubs] und Experience Platform
 
-Parallelität bezieht sich auf die gleichzeitige Ausführung derselben Aufgaben auf mehreren Verarbeitungseinheiten, um Geschwindigkeit und Leistung zu erhöhen. Sie können die Parallelität auf der [!DNL Event Hubs] Seite erhöhen, indem Sie die Partition erhöhen oder mehr Verarbeitungseinheiten für Ihr [!DNL Event Hubs]-Konto erwerben. Weitere Informationen finden Sie [[!DNL Event Hubs]  diesem Dokument ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) Skalierung .
+Parallelität bezieht sich auf die gleichzeitige Ausführung derselben Aufgaben auf mehreren Verarbeitungseinheiten, um Geschwindigkeit und Leistung zu erhöhen. Sie können die Parallelität auf der [!DNL Event Hubs] Seite erhöhen, indem Sie die Partition erhöhen oder mehr Verarbeitungseinheiten für Ihr [!DNL Event Hubs]-Konto erwerben. Weitere Informationen finden Sie [[!DNL Event Hubs]  diesem Dokument &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) Skalierung .
 
 Um die Aufnahmegeschwindigkeit auf der Experience Platform-Seite zu erhöhen, muss Experience Platform die Anzahl der Aufgaben im Quell-Connector erhöhen, die von den [!DNL Event Hubs] Partitionen gelesen werden. Sobald Sie die Parallelität auf der [!DNL Event Hubs] erhöht haben, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um Experience Platform-Aufgaben basierend auf Ihrer neuen Partition zu skalieren. Derzeit ist dieser Prozess nicht automatisiert.
 
@@ -121,7 +121,7 @@ In der folgenden Liste finden Sie die verschiedenen Regionen von Experience Plat
 }
 ```
 
-Weitere Informationen [[!DNL Event Hubs]  Netzwerkregelsätze finden Sie ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) folgenden Dokument.
+Weitere Informationen [[!DNL Event Hubs]  Netzwerkregelsätze finden Sie &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) folgenden Dokument.
 
 ## Verbinden von [!DNL Event Hubs] mit Experience Platform
 
