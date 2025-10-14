@@ -3,10 +3,10 @@ title: Übersicht über den Source-Connector für Azure Event Hubs
 description: Erfahren Sie, wie Sie Azure Event Hubs über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 02c777b5db9734cf45b35f131d83c35c5ce670fb
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 9%
+source-wordcount: '633'
+ht-degree: 8%
 
 ---
 
@@ -32,13 +32,15 @@ Derzeit beträgt die maximale Datenmenge, die Sie von Ihrem [!DNL Event Hubs]-Ko
 
 ### Steigerung der Parallelität auf [!DNL Event Hubs] und Experience Platform
 
-Parallelität bezieht sich auf die gleichzeitige Ausführung derselben Aufgaben auf mehreren Verarbeitungseinheiten, um Geschwindigkeit und Leistung zu erhöhen. Sie können die Parallelität auf der [!DNL Event Hubs] Seite erhöhen, indem Sie die Partition erhöhen oder mehr Verarbeitungseinheiten für Ihr [!DNL Event Hubs]-Konto erwerben. Weitere Informationen finden Sie [[!DNL Event Hubs]  diesem Dokument &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) Skalierung .
+Parallelität bezieht sich auf die gleichzeitige Ausführung derselben Aufgaben auf mehreren Verarbeitungseinheiten, um Geschwindigkeit und Leistung zu erhöhen. Sie können die Parallelität auf der [!DNL Event Hubs] Seite erhöhen, indem Sie die Partition erhöhen oder mehr Verarbeitungseinheiten für Ihr [!DNL Event Hubs]-Konto erwerben. Weitere Informationen finden Sie [[!DNL Event Hubs]  diesem Dokument ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) Skalierung .
 
 Um die Aufnahmegeschwindigkeit auf der Experience Platform-Seite zu erhöhen, muss Experience Platform die Anzahl der Aufgaben im Quell-Connector erhöhen, die von den [!DNL Event Hubs] Partitionen gelesen werden. Sobald Sie die Parallelität auf der [!DNL Event Hubs] erhöht haben, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um Experience Platform-Aufgaben basierend auf Ihrer neuen Partition zu skalieren. Derzeit ist dieser Prozess nicht automatisiert.
 
 ## Verwenden eines virtuellen Netzwerks zum Herstellen einer Verbindung zwischen [!DNL Event Hubs] und Experience Platform
 
-Sie können ein virtuelles Netzwerk einrichten, um [!DNL Event Hubs] mit Experience Platform zu verbinden, während Ihre Firewall-Maßnahmen aktiviert sind. Um ein virtuelles Netzwerk einzurichten, gehen Sie zu diesem [[!DNL Event Hubs] Dokument zu Netzwerkregelsätzen](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) und führen Sie die unten aufgeführten Schritte aus:
+Experience Platform unterstützt die Verbindung zu [!DNL Event Hubs] über ein virtuelles Netzwerk. Auf diese Weise können Sie Daten über eine sichere, private Verbindung anstelle des öffentlichen Internets übertragen. Sie können das Experience Platform VNet so auf die Zulassungsliste setzen, dass [!DNL Event Hubs] Traffic sicher über das private [!DNL Azure]-Backbone geleitet wird, während Ihre vorhandenen Firewall-Schutzmechanismen beibehalten werden.
+
+Um ein virtuelles Netzwerk einzurichten, gehen Sie zu diesem [[!DNL Event Hubs] Dokument zu Netzwerkregelsätzen](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) und führen Sie die unten aufgeführten Schritte aus:
 
 * Wählen **im REST** API-Bedienfeld aus.
 * Authentifizieren Sie Ihr [!DNL Azure]-Konto mit Ihren Anmeldedaten im selben Browser.
@@ -119,7 +121,7 @@ In der folgenden Liste finden Sie die verschiedenen Regionen von Experience Plat
 }
 ```
 
-Weitere Informationen [[!DNL Event Hubs]  Netzwerkregelsätze finden Sie &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) folgenden Dokument.
+Weitere Informationen [[!DNL Event Hubs]  Netzwerkregelsätze finden Sie ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) folgenden Dokument.
 
 ## Verbinden von [!DNL Event Hubs] mit Experience Platform
 
