@@ -17,9 +17,9 @@ ht-degree: 29%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `adAssetReference` | Objekt | Erfasst Asset-Informationen über die Anzeige. Weitere Informationen [ Struktur dieses Objekts ](#adAssetReference) Sie im Abschnitt „Unterabschnitt unten“. |
-| `adAssetViewDetails` | Objekt | Erfasst Ansichtsdetails für die Anzeigenwiedergabe. Weitere Informationen [ Struktur dieses Objekts ](#adAssetViewDetails) Sie im Abschnitt „Unterabschnitt unten“. |
-| `adViewability` | Objekt | Erfasst die Anzahl der Impressionen, die von Endbenutzenden angezeigt werden, z. B. Player-Lautstärke, Bibliotheksversion, Fensterstatus und Anzeigenansichtsfenster-Dimensionen. Weitere Informationen [ Struktur dieses Objekts ](#adViewability) Sie im Abschnitt „Unterabschnitt unten“. |
+| `adAssetReference` | Objekt | Erfasst Asset-Informationen über die Anzeige. Weitere Informationen [&#x200B; Struktur dieses Objekts &#x200B;](#adAssetReference) Sie im Abschnitt „Unterabschnitt unten“. |
+| `adAssetViewDetails` | Objekt | Erfasst Ansichtsdetails für die Anzeigenwiedergabe. Weitere Informationen [&#x200B; Struktur dieses Objekts &#x200B;](#adAssetViewDetails) Sie im Abschnitt „Unterabschnitt unten“. |
+| `adViewability` | Objekt | Erfasst die Anzahl der Impressionen, die von Endbenutzenden angezeigt werden, z. B. Player-Lautstärke, Bibliotheksversion, Fensterstatus und Anzeigenansichtsfenster-Dimensionen. Weitere Informationen [&#x200B; Struktur dieses Objekts &#x200B;](#adViewability) Sie im Abschnitt „Unterabschnitt unten“. |
 | `clicks` | [[!UICONTROL Maßnahme]](../../data-types/measure.md) | Die Anzahl der Klickaktionen auf die Anzeige. |
 | `completes` | [[!UICONTROL Maßnahme]](../../data-types/measure.md) | Die Häufigkeit, mit der ein zeitgesteuertes Medien-Asset bis zum Ende angesehen wurde. Dies bedeutet nicht unbedingt, dass der Endbenutzer das gesamte Video angesehen hat, da er möglicherweise vorgesprungen ist. |
 | `conversions` | [[!UICONTROL Maßnahme]](../../data-types/measure.md) | Die Häufigkeit, mit der eine vordefinierte Aktion (oder Aktionen) ein Ereignis zur Leistungsbewertung ausgelöst hat. |
@@ -44,7 +44,7 @@ Das `adAssetReference` erfasst Asset-Informationen über die Anzeige.
 | --- | --- | --- |
 | `_dc.title` | Zeichenfolge | Der benutzerfreundliche und menschenlesbare Name des Anzeigen-Assets. |
 | `_xmpDM.duration` | Ganzzahl | Die Dauer des Assets in Sekunden. |
-| `_id` | String | Eine eindeutige Kennung des Anzeigen-Assets, die dem [Ad-ID-Standard) ](https://datatracker.ietf.org/doc/html/rfc8107). |
+| `_id` | String | Eine eindeutige Kennung des Anzeigen-Assets, die dem [Ad-ID-Standard) &#x200B;](https://datatracker.ietf.org/doc/html/rfc8107). |
 | `advertiser` | String | Die Firma oder Marke, deren Produkt in der Anzeige zu sehen ist. |
 | `campaign` | String | Die ID der Anzeigenkampagne. |
 | `creativeID` | String | Die ID des Kreativinhalts der Anzeige. |

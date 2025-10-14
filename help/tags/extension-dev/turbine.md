@@ -112,7 +112,7 @@ Ruft ein Modul ab, das von einer anderen Erweiterung freigegeben wurde. Wenn kei
 turbine.logger.error('Error!');
 ```
 
-Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debuggens besteht in der Verwendung des [Adobe Experience Platform Debuggers ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Alternativ kann der Benutzer den Befehl `_satellite.setDebug(true)` in der Browser-Entwicklungskonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
+Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debuggens besteht in der Verwendung des [Adobe Experience Platform Debuggers &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Alternativ kann der Benutzer den Befehl `_satellite.setDebug(true)` in der Browser-Entwicklungskonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
 
 * `logger.log(message: string)`: Protokolliert eine Meldung auf der Browser-Konsole.
 * `logger.info(message: string)`: Protokolliert eine Informationsmeldung auf der Konsole.

@@ -186,7 +186,7 @@ inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-43
 
 Sie können eine Zielgruppe erstellen, die mithilfe der Streaming-Segmentierung ausgewertet wird, entweder mithilfe der Segmentierungs-Service-API oder über das Zielgruppenportal in der Benutzeroberfläche.
 
-Eine Segmentdefinition kann für Streaming aktiviert werden, wenn sie mit einem der [geeigneten Regelsätze“ ](#eligible-rulesets).
+Eine Segmentdefinition kann für Streaming aktiviert werden, wenn sie mit einem der [geeigneten Regelsätze“ &#x200B;](#eligible-rulesets).
 
 >[!BEGINTABS]
 
@@ -297,7 +297,7 @@ Ein Popup wird angezeigt. Wählen Sie **[!UICONTROL Regeln erstellen]**, um in S
 
 ![Die Schaltfläche „Regeln erstellen“ ist im Pop-up „Zielgruppe erstellen“ hervorgehoben.](../images/methods/streaming/select-build-rules.png)
 
-Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([ Regelsätze) ](#eligible-rulesets). Wenn die Segmentdefinition für die Streaming-Segmentierung geeignet ist, können Sie &quot;**[!UICONTROL &quot;]** die **[!UICONTROL Auswertungsmethode]** auswählen.
+Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([&#x200B; Regelsätze) &#x200B;](#eligible-rulesets). Wenn die Segmentdefinition für die Streaming-Segmentierung geeignet ist, können Sie &quot;**[!UICONTROL &quot;]** die **[!UICONTROL Auswertungsmethode]** auswählen.
 
 ![Die Segmentdefinition wird angezeigt. Der Auswertungstyp ist hervorgehoben und zeigt an, dass die Segmentdefinition mithilfe der Streaming-Segmentierung ausgewertet werden kann.](../images/methods/streaming/streaming-evaluation-method.png)
 
@@ -471,4 +471,4 @@ In diesem Handbuch wird erläutert, wie für Streaming aktivierte Segmentdefinit
 
 Weitere Informationen zur Verwendung der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Benutzerhandbuch zur Segmentierung](./overview.md).
 
-Häufig gestellte Fragen zur Streaming-Segmentierung finden Sie im Abschnitt [Streaming-Segmentierung“ der häufig gestellten ](../faq.md#streaming-segmentation).
+Häufig gestellte Fragen zur Streaming-Segmentierung finden Sie im Abschnitt [Streaming-Segmentierung“ der häufig gestellten &#x200B;](../faq.md#streaming-segmentation).

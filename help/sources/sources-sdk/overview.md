@@ -13,7 +13,7 @@ ht-degree: 7%
 
 # Übersicht über Selbstbedienungsquellen (Batch-SDK)
 
-Adobe Experience Platform-Selbstbedienungsquellen (Batch-SDK) sind ein Framework, mit dem Sie eine REST-API-basierte Quelle mithilfe der -API in den Experience Platform[[!DNL Flow Service] Quellkatalog ](https://www.adobe.io/experience-platform-apis/references/flow-service/) können. Self-Service-Quellen (Batch-SDK) bieten eine Reihe von Konfigurations-APIs, um Ihre eigene Quelle zu erstellen und Ihre Batch-Daten in Experience Platform zu übertragen.
+Adobe Experience Platform-Selbstbedienungsquellen (Batch-SDK) sind ein Framework, mit dem Sie eine REST-API-basierte Quelle mithilfe der -API in den Experience Platform[[!DNL Flow Service] Quellkatalog &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) können. Self-Service-Quellen (Batch-SDK) bieten eine Reihe von Konfigurations-APIs, um Ihre eigene Quelle zu erstellen und Ihre Batch-Daten in Experience Platform zu übertragen.
 
 Mit Selbstbedienungsquellen (Batch-SDK) können Sie:
 
@@ -35,7 +35,7 @@ Weitere Informationen zu Quellen und eine Liste der verschiedenen Quellen, die d
 
 Über Selbstbedienungsquellen können Sie Ihre eigene REST-API-basierte Quelle integrieren und Ihre Daten mit [!DNL Flow Service] an Experience Platform übertragen. Sie können eine Quelle in den Experience Platform-Quellkatalog integrieren, indem Sie neue Verbindungsspezifikationen über die [!DNL Flow Service]-API erstellen, konfigurieren und senden.
 
-Informationen zur Integration einer neuen [ in Experience Platform finden Sie ](./api/api-overview.md) Handbuch unter „Erstellen einer neuen“.
+Informationen zur Integration einer neuen [&#x200B; in Experience Platform finden Sie &#x200B;](./api/api-overview.md) Handbuch unter „Erstellen einer neuen“.
 
 ## Dokumentieren der Quelle
 
@@ -45,7 +45,7 @@ Nachdem Sie Ihre Quelle erstellt haben, finden Sie im [Dokumentationshandbuch](.
 
 Der schrittweise Prozess zum Konfigurieren Ihrer -Quelle in Experience Platform wird unten beschrieben:
 
-* Lesen Sie [ API-Handbuch für Selbstbedienungsquellen (Batch-SDK](./api/api-overview.md).
+* Lesen Sie [&#x200B; API-Handbuch für Selbstbedienungsquellen (Batch-SDK](./api/api-overview.md).
    * Lesen Sie [Erste Schritte](./api/getting-started.md).
    * Befolgen Sie das Tutorial [Erstellen einer neuen Verbindungsspezifikation](./api/create.md).
    * Befolgen Sie das Tutorial [Aktualisieren Ihrer Verbindungsspezifikation](./api/update-connection-specs.md).
@@ -58,5 +58,5 @@ Der schrittweise Prozess zum Konfigurieren Ihrer -Quelle in Experience Platform 
 * Um mit der Dokumentation Ihrer Quelle zu beginnen, lesen Sie [Übersicht über das Erstellen der Dokumentation für Selbstbedienungsquellen](./documentation/doc-overview.md)
    * Sie können diese [Quellen-API-Dokumentationsvorlage](./documentation/template.md) zur Strukturierung Ihrer API-Dokumentation verwenden.
    * Sie können diese [Dokumentationsvorlage für die Quell-Benutzeroberfläche](./documentation/ui-template.md) verwenden, um Ihre Benutzeroberflächendokumentation zu strukturieren.
-   * Anweisungen zum Erstellen [ Dokumentation mit GitHub finden Sie im Handbuch ](./documentation/github.md)Verwenden der GitHub-Web-Benutzeroberfläche“.
-   * Anweisungen zum Erstellen [ Dokumentation auf Ihrem lokalen Computer finden Sie ](./documentation/text-editor.md) Handbuch unter „Verwenden eines Texteditors“.
+   * Anweisungen zum Erstellen [&#x200B; Dokumentation mit GitHub finden Sie im Handbuch &#x200B;](./documentation/github.md)Verwenden der GitHub-Web-Benutzeroberfläche“.
+   * Anweisungen zum Erstellen [&#x200B; Dokumentation auf Ihrem lokalen Computer finden Sie &#x200B;](./documentation/text-editor.md) Handbuch unter „Verwenden eines Texteditors“.

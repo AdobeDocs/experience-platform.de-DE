@@ -19,7 +19,7 @@ Mit der [!DNL Schema Editor] in der Adobe Experience Platform-Benutzeroberfläch
 
 Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Unter [XDM-Übersicht](../../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und die [Grundlagen der Schemakomposition](../../schema/composition.md) um zu erfahren, wie Klassen und Feldergruppen Felder zu XDM-Schemata beitragen.
 
-Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [ Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
+Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [&#x200B; Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
 
 ## Ressource auswählen, der Felder hinzugefügt werden sollen {#select-resource}
 
@@ -31,7 +31,7 @@ Sobald die [!DNL Schema Editor] geöffnet ist, werden die Steuerelemente zum Hin
 
 >[!WARNING]
 >
->Wenn Sie versuchen, ein Feld zu einem Objekt hinzuzufügen, das von einer Standardfeldgruppe bereitgestellt wird, wird diese Feldgruppe in eine benutzerdefinierte Feldgruppe konvertiert und die ursprüngliche Feldgruppe ist nicht mehr verfügbar. Weitere Informationen finden Sie [ Abschnitt zum Hinzufügen von Feldern zu Standardfeldgruppen ](../resources/schemas.md#custom-fields-for-standard-groups) Handbuch zur Benutzeroberfläche von Schemata .
+>Wenn Sie versuchen, ein Feld zu einem Objekt hinzuzufügen, das von einer Standardfeldgruppe bereitgestellt wird, wird diese Feldgruppe in eine benutzerdefinierte Feldgruppe konvertiert und die ursprüngliche Feldgruppe ist nicht mehr verfügbar. Weitere Informationen finden Sie [&#x200B; Abschnitt zum Hinzufügen von Feldern zu Standardfeldgruppen &#x200B;](../resources/schemas.md#custom-fields-for-standard-groups) Handbuch zur Benutzeroberfläche von Schemata .
 
 Um der Ressource ein neues Feld hinzuzufügen, wählen Sie auf der Arbeitsfläche das Symbol **plus (+)** neben dem Namen des Schemas oder neben dem Feld vom Typ „Objekt“ aus, unter dem Sie das Feld definieren möchten.
 
@@ -53,7 +53,7 @@ In der rechten Leiste unter **[!UICONTROL Feldeigenschaften]** können Sie die D
 | Feldeigenschaft | Beschreibung |
 | --- | --- |
 | [!UICONTROL Feldname] | Ein eindeutiger, beschreibender Name für das Feld. Beachten Sie, dass der Name des Felds nach dem Speichern des Schemas nicht mehr geändert werden kann. Dieser Wert wird verwendet, um das Feld im Code und in anderen nachgelagerten Anwendungen zu identifizieren und darauf <br><br> verweisen. Der Name sollte idealerweise in Binnenmajuskel-Schreibweise geschrieben werden. Es kann alphanumerische Zeichen oder Unterstriche enthalten, es **jedoch** mit einem Unterstrich beginnen.<ul><li>**Richtig**: `fieldName`</li><li>**Akzeptiert:** `field_name2`, `fieldName_3`</li><li>**Falsch**: `_fieldName`</li></ul> |
-| [!UICONTROL Anzeigename] | Ein Anzeigename für das Feld. Dies ist der Name, der zur Darstellung des Felds auf der Arbeitsfläche des Schema-Editors verwendet wird. Der Feldname kann mithilfe des Umschalters für den Anzeigenamen in [ Anzeigenamen geändert ](../resources/schemas.md#display-name-toggle). |
+| [!UICONTROL Anzeigename] | Ein Anzeigename für das Feld. Dies ist der Name, der zur Darstellung des Felds auf der Arbeitsfläche des Schema-Editors verwendet wird. Der Feldname kann mithilfe des Umschalters für den Anzeigenamen in [&#x200B; Anzeigenamen geändert &#x200B;](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL Typ] | Der Typ der Daten, die das Feld enthalten soll. Aus diesem Dropdown-Menü können Sie einen der [standardmäßigen Skalartypen](../../schema/field-constraints.md) die von XDM unterstützt werden, oder einen der Mehrfeld-[Datentypen](../resources/data-types.md) auswählen, die zuvor in der [!DNL Schema Registry] definiert wurden.<br>Hinweis: Wenn Sie den Datentyp Zuordnung auswählen, wird [!UICONTROL &#x200B; Eigenschaft &quot;]&quot; angezeigt.<br><br>Sie können auch **[!UICONTROL Erweiterte Typsuche]** auswählen, um vorhandene Datentypen zu suchen und zu filtern und den gewünschten Typ leichter zu finden. |
 | [!UICONTROL Zuordnungs-Werttyp] | Dieser Wert ist erforderlich, wenn Sie [!UICONTROL Zuordnung] als Datentyp für das Feld auswählen. Verfügbare Werte für die Zuordnung sind [!UICONTROL Zeichenfolge] und [!UICONTROL Ganzzahl]. Wählen Sie einen Wert aus der Dropdown-Liste der verfügbaren Optionen aus.<br>Weitere Informationen zu [typspezifischen Feldeigenschaften](#type-specific-properties) finden Sie in der Übersicht zum Definieren von Feldern . |
 
@@ -64,9 +64,9 @@ Sie können auch eine Beschreibung und Anmerkungen für jedes Feld angeben. Verw
 
 >[!NOTE]
 >
->Je nach dem **[!UICONTROL Feld]** Typ“ werden in der rechten Leiste möglicherweise zusätzliche Konfigurationssteuerelemente angezeigt. Weitere Informationen zu [ Steuerelementen finden Sie im Abschnitt ](#type-specific-properties)Typspezifische Feldeigenschaften“.
+>Je nach dem **[!UICONTROL Feld]** Typ“ werden in der rechten Leiste möglicherweise zusätzliche Konfigurationssteuerelemente angezeigt. Weitere Informationen zu [&#x200B; Steuerelementen finden Sie im Abschnitt &#x200B;](#type-specific-properties)Typspezifische Feldeigenschaften“.
 >
->Die rechte Leiste enthält auch Kontrollkästchen zum Festlegen spezieller Feldtypen. Weitere Informationen finden Sie [ Abschnitt ](#special)Spezielle Feldtypen“.
+>Die rechte Leiste enthält auch Kontrollkästchen zum Festlegen spezieller Feldtypen. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#special)Spezielle Feldtypen“.
 
 Nachdem Sie die Konfiguration des Felds abgeschlossen haben, wählen Sie **[!UICONTROL Anwenden]** aus.
 

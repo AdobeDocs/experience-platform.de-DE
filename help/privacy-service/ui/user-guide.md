@@ -71,7 +71,7 @@ Waiting:
 
 >[!NOTE]
 >
->Weitere Informationen zum rechtlichen Kontext [ einzelnen Verordnungen finden Sie ](../regulations/overview.md) der Übersicht zu (unterstützten Datenschutzbestimmungen.
+>Weitere Informationen zum rechtlichen Kontext [&#x200B; einzelnen Verordnungen finden Sie &#x200B;](../regulations/overview.md) der Übersicht zu (unterstützten Datenschutzbestimmungen.
 
 Vorgänge für jeden Regulierungstyp werden separat verfolgt. Um zwischen Regulierungstypen zu wechseln, wählen Sie das Dropdown **[!UICONTROL Menü]** Regulierungstyp) aus und wählen Sie die gewünschte Regelung aus der Liste aus.
 
@@ -109,7 +109,7 @@ Der [!UICONTROL Auftragsanfragen] enthält Details zu den letzten Auftragsanfrag
 >
 >Die Daten für zuvor erstellte Aufträge sind nur 30 Tage nach dem Abschlussdatum verfügbar.
 
-Sie können die Liste filtern, indem Sie Keywords in die Suchleiste unter dem Titel [!UICONTROL Auftragsanfragen] eingeben. Die Liste wird bei der Eingabe automatisch gefiltert und zeigt Anfragen an, die Werte enthalten, die Ihren Suchbegriffen entsprechen. Das Suchfeld führt eine „Schnellsuche“ durch, die die Datenschutzauftrags-IDs mit den aktuell gerenderten/geladenen Aufträgen in der Benutzeroberfläche abgleicht. Es handelt sich nicht um eine umfassende Suche aller eingereichten Aufträge. Stattdessen handelt es sich um einen Filter, der auf die geladenen Ergebnisse angewendet wird. Verwenden Sie die Privacy Service-API[ um Aufträge (basierend auf einer bestimmten Verordnung, Datumsbereichen oder einem einzelnen Auftrag) ](../api/privacy-jobs.md#list).
+Sie können die Liste filtern, indem Sie Keywords in die Suchleiste unter dem Titel [!UICONTROL Auftragsanfragen] eingeben. Die Liste wird bei der Eingabe automatisch gefiltert und zeigt Anfragen an, die Werte enthalten, die Ihren Suchbegriffen entsprechen. Das Suchfeld führt eine „Schnellsuche“ durch, die die Datenschutzauftrags-IDs mit den aktuell gerenderten/geladenen Aufträgen in der Benutzeroberfläche abgleicht. Es handelt sich nicht um eine umfassende Suche aller eingereichten Aufträge. Stattdessen handelt es sich um einen Filter, der auf die geladenen Ergebnisse angewendet wird. Verwenden Sie die Privacy Service-API[&#x200B; um Aufträge (basierend auf einer bestimmten Verordnung, Datumsbereichen oder einem einzelnen Auftrag) &#x200B;](../api/privacy-jobs.md#list).
 
 >[!TIP]
 >

@@ -21,10 +21,10 @@ ht-degree: 8%
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Adresse] | `address` | Array von [[!UICONTROL Adresse]](../data-types/address.md) | Anschrift(en) des Arztes, die außerhalb seines Arbeitsplatzes liegen, wie z. B. eine Privatanschrift. |
-| [!UICONTROL Kommunikation] | `communication` | Array von Objekten | Eine Sprache, die für die Kommunikation mit dem Arzt verwendet werden kann. Weitere Informationen finden [ im ](#communication) Abschnitt unten |
+| [!UICONTROL Kommunikation] | `communication` | Array von Objekten | Eine Sprache, die für die Kommunikation mit dem Arzt verwendet werden kann. Weitere Informationen finden [&#x200B; im &#x200B;](#communication) Abschnitt unten |
 | [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Eine Kennung, die für diese Person in dieser Rolle gilt. |
 | [!UICONTROL Name] | `name` | Array von [[!UICONTROL Human Name]](../data-types/human-name.md) | Die Namen, die mit dem Praktizierenden verknüpft sind. |
-| [!UICONTROL Qualifizierung] | `qualification` | Array von Objekten | Die offiziellen Qualifikationen, Zertifizierungen, Akkreditierungen, Schulungen, Lizenzen oder Ähnliches, die die Versorgung durch den Arzt genehmigen oder anderweitig betreffen. Weitere Informationen finden [ im ](#qualification) Abschnitt unten. |
+| [!UICONTROL Qualifizierung] | `qualification` | Array von Objekten | Die offiziellen Qualifikationen, Zertifizierungen, Akkreditierungen, Schulungen, Lizenzen oder Ähnliches, die die Versorgung durch den Arzt genehmigen oder anderweitig betreffen. Weitere Informationen finden [&#x200B; im &#x200B;](#qualification) Abschnitt unten. |
 | [!UICONTROL Kontaktdaten] | `telecom` | Array von [[!UICONTROL Kontaktpunkt]](../data-types/contact-point.md) | Die Kontaktdaten für den Arzt. |
 | [!UICONTROL aktiv] | `active` | Boolesch | Gibt an, ob der Datensatz der medizinischen Fachkräfte aktiv verwendet wird. |
 | [!UICONTROL Geburtsdatum] | `birthDate` | Datum | Das Geburtsdatum des Praktizierenden. |

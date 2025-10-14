@@ -66,7 +66,7 @@ Als Nächstes verwendet der Bodea-Marketing-Experte den [Marketo Engage-Connecto
 
 Um eine Verbindung zwischen einem Marketo-Konto und Experience Platform herzustellen, müssen Sie Authentifizierungsdaten anfordern. Detaillierte Anleitungen finden Sie im [Handbuch zum Erlangen der Authentifizierungs-Anmeldedaten für den Marketo-Quell-Connector](../sources/connectors/adobe-applications/marketo/marketo-auth.md).
 
-Nachdem der Bodea-Marketing-Experte Anmeldeinformationen zur Authentifizierung erhalten hat, erstellt er eine Verbindung zwischen dem Marketo-Konto und seinem Experience Platform-Unternehmen. In der Dokumentation finden Sie Anweisungen [ Verbinden eines Marketo-Kontos über die Experience Platform-Benutzeroberfläche](../sources/tutorials/ui/create/adobe-applications/marketo.md).
+Nachdem der Bodea-Marketing-Experte Anmeldeinformationen zur Authentifizierung erhalten hat, erstellt er eine Verbindung zwischen dem Marketo-Konto und seinem Experience Platform-Unternehmen. In der Dokumentation finden Sie Anweisungen [&#x200B; Verbinden eines Marketo-Kontos über die Experience Platform-Benutzeroberfläche](../sources/tutorials/ui/create/adobe-applications/marketo.md).
 
 Der Marketo Engage-Quell-Connector bietet eine Funktion zur automatischen Zuordnung, mit der Sie all Ihre Datenfelder denen der neu erstellten Schemata zuordnen können.
 
@@ -100,7 +100,7 @@ Im Arbeitsbereich [!UICONTROL Segmente] der Experience Platform-Benutzeroberflä
 
 >[!NOTE]
 > 
->Eine ausführliche Anleitung dazu finden [ im Tutorial zum Aktivieren einer Zielgruppe für ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) Ziel .
+>Eine ausführliche Anleitung dazu finden [&#x200B; im Tutorial zum Aktivieren einer Zielgruppe für &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) Ziel .
 
 Der Bodea-Marketing-Experte aktiviert die Zielgruppe für das Marketo-Ziel, sodass sie Zielgruppendaten in Form einer statischen Liste von Experience Platform an Marketo Engage pushen kann. Weitere Informationen finden Sie im Handbuch zum [Marketo-Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=de).
 

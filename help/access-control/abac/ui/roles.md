@@ -53,7 +53,7 @@ Die neue Rolle wurde erfolgreich erstellt und Sie werden zur Seite **[!UICONTROL
 
 ![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
-Weitere Informationen zum Verwalten [ Rollenberechtigungen nach deren Erstellung finden ](#manage-permissions-for-a-role) in den Abschnitten zum Verwalten von Berechtigungen für eine Rolle .
+Weitere Informationen zum Verwalten [&#x200B; Rollenberechtigungen nach deren Erstellung finden &#x200B;](#manage-permissions-for-a-role) in den Abschnitten zum Verwalten von Berechtigungen für eine Rolle .
 
 Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer für diese Rolle verwalten.
 

@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # [!UICONTROL Upsell-Details] Schemafeldgruppe
 
-[!UICONTROL Upsell-Details] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , mit ](../../classes/experienceevent.md) Informationen zu einem Upsell-Marketing-Ereignis erfasst werden, einschließlich Details zur Transaktion und den verschiedenen Arten, wie das Angebot einem Kunden angezeigt wurde.
+[!UICONTROL Upsell-Details] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , mit &#x200B;](../../classes/experienceevent.md) Informationen zu einem Upsell-Marketing-Ereignis erfasst werden, einschließlich Details zur Transaktion und den verschiedenen Arten, wie das Angebot einem Kunden angezeigt wurde.
 
 Die Feldergruppe stellt `upsells` ein einzelnes Feld vom Typ „Objekt“ bereit. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
 

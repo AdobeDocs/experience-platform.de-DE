@@ -62,6 +62,6 @@ Dieses Rezept verwendet [XDM-Schemata](../../xdm/home.md) um die Daten zu modell
 
 ## Algorithmus
 
-Zunächst wird der Trainings-Datensatz im *ProductPrediction*-Schema geladen. Von hier aus wird das Modell mit einem [Random Forest Classifier“ ](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random Forest Classifier ist eine Art von verkettetem Algorithmus, der sich auf einen Algorithmus bezieht, der mehrere Algorithmen kombiniert, um eine verbesserte Vorhersageleistung zu erhalten. Die Idee hinter dem Algorithmus ist, dass die zufällige Waldklassifizierung mehrere Entscheidungsbäume erstellt und sie zusammenführt, um eine genauere und stabilere Vorhersage zu erstellen.
+Zunächst wird der Trainings-Datensatz im *ProductPrediction*-Schema geladen. Von hier aus wird das Modell mit einem [Random Forest Classifier“ &#x200B;](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random Forest Classifier ist eine Art von verkettetem Algorithmus, der sich auf einen Algorithmus bezieht, der mehrere Algorithmen kombiniert, um eine verbesserte Vorhersageleistung zu erhalten. Die Idee hinter dem Algorithmus ist, dass die zufällige Waldklassifizierung mehrere Entscheidungsbäume erstellt und sie zusammenführt, um eine genauere und stabilere Vorhersage zu erstellen.
 
 Dieser Prozess beginnt mit der Erstellung eines Satzes von Entscheidungsbäumen, die zufällig Untergruppen von Trainingsdaten auswählen. Danach werden die Ergebnisse jedes Entscheidungsbaums gemittelt.

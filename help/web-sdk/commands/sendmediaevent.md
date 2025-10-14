@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `sendMediaEvent`
 
-Der Befehl `sendMediaEvent` ist Teil der Web SDK-`streamingMedia`. Sie können diese Komponente verwenden, um Daten zu Mediensitzungen auf Ihrer Website zu erfassen. Informationen zum Konfigurieren dieser Komponente finden [ in der `streamingMedia` ](configure/streamingmedia.md)Dokumentation).
+Der Befehl `sendMediaEvent` ist Teil der Web SDK-`streamingMedia`. Sie können diese Komponente verwenden, um Daten zu Mediensitzungen auf Ihrer Website zu erfassen. Informationen zum Konfigurieren dieser Komponente finden [&#x200B; in der `streamingMedia` &#x200B;](configure/streamingmedia.md)Dokumentation).
 
 Verwenden Sie den `sendMediaEvent`-Befehl, um Medienwiedergaben, Pausen, Abschlüsse, Aktualisierungen des Player-Status und andere zugehörige Ereignisse zu verfolgen.
 

@@ -28,7 +28,7 @@ Mit dem `/jobs`-Endpunkt können Sie Datenschutzaufträge für Ihre Organisation
 
 ## Einverständnis
 
-Bestimmte Vorschriften erfordern die ausdrückliche Zustimmung des Kunden, bevor seine personenbezogenen Daten erfasst werden können. Mit dem `/consent`-Endpunkt können Sie Einverständnisanfragen von Kunden verarbeiten und in Ihren Datenschutz-Workflow integrieren. Weitere Informationen finden [ im ](./consent.md) zum Einverständnisendpunkt .
+Bestimmte Vorschriften erfordern die ausdrückliche Zustimmung des Kunden, bevor seine personenbezogenen Daten erfasst werden können. Mit dem `/consent`-Endpunkt können Sie Einverständnisanfragen von Kunden verarbeiten und in Ihren Datenschutz-Workflow integrieren. Weitere Informationen finden [&#x200B; im &#x200B;](./consent.md) zum Einverständnisendpunkt .
 
 ## Nächste Schritte
 

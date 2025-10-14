@@ -19,7 +19,7 @@ Sie können die [!DNL Microsoft Dynamics] verwenden, um Daten aus Ihrem [!DNL Mi
 
 ## Zulassungsliste von IP-Adressen
 
-Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung ](../../ip-address-allow-list.md) Experience Platform.
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung &#x200B;](../../ip-address-allow-list.md) Experience Platform.
 
 ## Feldzuordnung von [!DNL Microsoft Dynamics] zu XDM
 

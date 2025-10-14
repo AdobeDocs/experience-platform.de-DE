@@ -16,7 +16,7 @@ ht-degree: 31%
 
 [!DNL Airship] ist die führende Experience Platform für Kundeninteraktion und hilft Ihnen, Ihren Anwendern in jeder Phase des Kundenlebenszyklus aussagekräftige, personalisierte Omni-Channel-Messaging bereitzustellen.
 
-Durch diese Integration werden Adobe-Profildaten zum Targeting oder [ als ](https://docs.airship.com/guides/audience/attributes/) an [!DNL Airship] übergeben.
+Durch diese Integration werden Adobe-Profildaten zum Targeting oder [&#x200B; als &#x200B;](https://docs.airship.com/guides/audience/attributes/) an [!DNL Airship] übergeben.
 
 Weitere Informationen zu [!DNL Airship] finden Sie unter [Airship Docs](https://docs.airship.com).
 
@@ -41,7 +41,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -61,7 +61,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Adobe Experience Platform-Profilattribute ähneln [!DNL Airship] und können mithilfe des unten auf dieser Seite gezeigten Zuordnungs-Tools einfach in Experience Platform zugeordnet werden.
 
-[!DNL Airship] Projekte verfügen über mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es zuerst in [!DNL Airship] definieren. Weitere [ finden Sie unter „Einrichten und Verwalten ](https://docs.airship.com/tutorials/audience/attributes/) Attributen“.
+[!DNL Airship] Projekte verfügen über mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es zuerst in [!DNL Airship] definieren. Weitere [&#x200B; finden Sie unter „Einrichten und Verwalten &#x200B;](https://docs.airship.com/tutorials/audience/attributes/) Attributen“.
 
 ## Bearer-Token generieren {#bearer-token}
 

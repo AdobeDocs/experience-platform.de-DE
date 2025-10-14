@@ -42,7 +42,7 @@ Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren mö
 
 Der Workflow führt Sie zur Datenerfassungs-Benutzeroberfläche, um die Installation abzuschließen.
 
-Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
+Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen &#x200B;](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 
 ## Verwenden der Erweiterung {#how-to-use}
 

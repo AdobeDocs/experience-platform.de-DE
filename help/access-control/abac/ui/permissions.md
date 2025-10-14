@@ -166,7 +166,7 @@ Benutzergruppen sind mehrere Benutzer, die gruppiert wurden und Zugriff haben, u
 
 Wählen Sie die **[!UICONTROL Benutzergruppen]** aus, um den Arbeitsbereich Benutzergruppen der Rolle zu öffnen, und wählen Sie dann **[!UICONTROL Gruppen hinzufügen]**, um der Rolle Benutzergruppen zuzuweisen.
 
-![Der Arbeitsbereich Benutzergruppen der Rolle mit der Option Gruppen hinzufügen ](../../images/flac-ui/flac-user-groups.png)
+![Der Arbeitsbereich Benutzergruppen der Rolle mit der Option Gruppen hinzufügen &#x200B;](../../images/flac-ui/flac-user-groups.png)
 
 Das **[!UICONTROL Gruppen hinzufügen]** wird angezeigt. Wählen Sie aus der Liste die Benutzergruppen aus, die Sie der Rolle hinzufügen möchten. Alternativ können Sie über die Suchleiste nach der Benutzergruppe suchen, indem Sie den Namen der Gruppe eingeben. Klicken Sie dann auf **[!UICONTROL Speichern]**.
 
@@ -188,9 +188,9 @@ Sie werden zur Registerkarte **[!UICONTROL Benutzergruppen]** zurückgeleitet.
 
 ## Hinzufügen von Benutzern zu Experience Platform
 
-Als Systemadministrator können Sie einem Benutzer Entwicklerzugriff gewähren, damit er in der Adobe Developer Console [Integrationen ](../../../landing/api-authentication.md#generate-credentials) kann.
+Als Systemadministrator können Sie einem Benutzer Entwicklerzugriff gewähren, damit er in der Adobe Developer Console [Integrationen &#x200B;](../../../landing/api-authentication.md#generate-credentials) kann.
 
-Um eine Benutzer-Experience Platform hinzuzufügen, melden Sie sich bei der [Admin Console an ](https://adminconsole.adobe.com) wählen Sie **[!UICONTROL Benutzer hinzufügen]** aus.
+Um eine Benutzer-Experience Platform hinzuzufügen, melden Sie sich bei der [Admin Console an &#x200B;](https://adminconsole.adobe.com) wählen Sie **[!UICONTROL Benutzer hinzufügen]** aus.
 
 ![Das Adobe Admin Console-Dashboard mit hervorgehobener Option „Benutzer hinzufügen“.](../../images/flac-ui/product-profile-add-users.png)
 

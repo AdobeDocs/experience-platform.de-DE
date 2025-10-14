@@ -17,7 +17,7 @@ In diesem Tutorial werden die Schritte zum Bearbeiten verschiedener Komponenten 
 
 >[!NOTE]
 >
-> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch in der Benutzeroberfläche von Experience Platform unterstützt. Weitere Informationen finden Sie im Tutorial [ Bearbeiten von Zielen ](/help/destinations/ui/edit-destination.md) der Benutzeroberfläche .
+> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch in der Benutzeroberfläche von Experience Platform unterstützt. Weitere Informationen finden Sie im Tutorial [&#x200B; Bearbeiten von Zielen &#x200B;](/help/destinations/ui/edit-destination.md) der Benutzeroberfläche .
 
 ## Erste Schritte {#get-started}
 
@@ -451,7 +451,7 @@ Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualis
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

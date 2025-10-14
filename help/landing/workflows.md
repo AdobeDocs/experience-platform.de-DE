@@ -27,7 +27,7 @@ Der **[!UICONTROL Datensatz aus CSV erstellen]** ermöglicht Ihnen das Erstellen
 
 ## [!UICONTROL Modelle]
 
-Der Workflow **[!UICONTROL Rezept importieren]** ermöglicht den Import und die Konfiguration von Rezepten. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zum [ eines gepackten Rezepts](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md).
+Der Workflow **[!UICONTROL Rezept importieren]** ermöglicht den Import und die Konfiguration von Rezepten. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zum [&#x200B; eines gepackten Rezepts](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md).
 
 Der **[!UICONTROL Modell erstellen]** ermöglicht Ihnen das Erstellen eines Modells für maschinelles Lernen. Weitere Informationen zu diesem Workflow finden Sie im [Modell-Tutorial zu Schulung und Evaluierung](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 

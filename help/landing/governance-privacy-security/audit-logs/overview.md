@@ -111,7 +111,7 @@ Die folgenden Filter sind für Audit-Ereignisse in der Benutzeroberfläche verf�
 
 | Filter | Beschreibung |
 | --- | --- |
-| [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach ([) ](#category) filtern. |
+| [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach ([) &#x200B;](#category) filtern. |
 | [!UICONTROL Aktion] | Nach Aktion filtern. Die für jeden Service verfügbaren Aktionen finden Sie in der oben stehenden Ressourcentabelle. |
 | [!UICONTROL Benutzer] | Geben Sie die vollständige Benutzer-ID ein (z. B. `johndoe@acme.com`), um nach Benutzer zu filtern. |
 | [!UICONTROL Status] | Filtern von Audit-Ereignissen nach Ergebnis: erfolgreich, fehlgeschlagen, zulässig oder verweigert aufgrund fehlender [Zugriffskontrolle](../../../access-control/home.md)-Berechtigungen. Für eine ausgeführte Aktion zeigen die Hauptereignisse [!UICONTROL Zulassen] oder [!UICONTROL Ablehnen]. Wenn das Hauptereignis &quot;[!UICONTROL &quot; &#x200B;], wurden möglicherweise ein oder mehrere erweiterte Ereignisse mit &quot;**[!UICONTROL &quot;]** &quot;**[!UICONTROL &quot;]**. Beispielsweise wird bei einer erfolgreichen Aktion &quot;[!UICONTROL &quot; &#x200B;] Hauptereignis und &quot;[!UICONTROL &quot; &#x200B;] angehängten erweiterten Ereignis angezeigt. |
@@ -165,7 +165,7 @@ Wählen Sie den gewünschten Warnhinweis aus der Liste, der abonniert werden sol
 
 ## Verwalten von Auditprotokollen in der API
 
-Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können auch mithilfe von API-Aufrufen ausgeführt werden. Weitere Informationen finden [ im ](https://www.adobe.io/experience-platform-apis/references/audit-query/)-API-Referenzdokument .
+Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können auch mithilfe von API-Aufrufen ausgeführt werden. Weitere Informationen finden [&#x200B; im &#x200B;](https://www.adobe.io/experience-platform-apis/references/audit-query/)-API-Referenzdokument .
 
 ## Verwalten von Auditprotokollen für Adobe Admin Console
 

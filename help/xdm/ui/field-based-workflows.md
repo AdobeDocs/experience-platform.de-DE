@@ -107,7 +107,7 @@ Wenn das Schema, an dem Sie arbeiten, ein Feld vom Typ „Objekt“ hat, das von
 
 ![Der Schema-Editor mit dem Pluszeichen neben einem Standardobjekt wird hervorgehoben.](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
-Weitere Informationen [ Hinzufügen benutzerdefinierter Felder finden Sie im Handbuch zur Benutzeroberfläche ](./resources/schemas.md#custom-fields-for-standard-groups)Erstellen und Bearbeiten von Schemata“.
+Weitere Informationen [&#x200B; Hinzufügen benutzerdefinierter Felder finden Sie im Handbuch zur Benutzeroberfläche &#x200B;](./resources/schemas.md#custom-fields-for-standard-groups)Erstellen und Bearbeiten von Schemata“.
 
 ## Nächste Schritte
 

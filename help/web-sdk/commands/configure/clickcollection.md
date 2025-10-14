@@ -30,7 +30,7 @@ Die folgenden Variablen sind im `clickCollection`-Objekt verfügbar:
 
 ## Klicken Sie auf Sammlungseinstellungen mithilfe der Tag-Erweiterung „Web SDK&quot;
 
-Wählen Sie beim Konfigurieren der Tag[Erweiterung eine der folgenden Optionen ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md):
+Wählen Sie beim Konfigurieren der Tag[Erweiterung eine der folgenden Optionen &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md):
 
 * [!UICONTROL Erfassen interner Links]
    * [!UICONTROL Optionen für die Ereignisgruppierung]:
@@ -41,7 +41,7 @@ Wählen Sie beim Konfigurieren der Tag[Erweiterung eine der folgenden Optionen ]
 * [!UICONTROL Downloadlinks erfassen]
 * [!UICONTROL Filter - Klickeigenschaften]
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].

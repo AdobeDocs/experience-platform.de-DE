@@ -14,7 +14,7 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->Die [!DNL Braze Currents]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Braze Currents]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -26,7 +26,7 @@ Experience Platform unterstützt die Aufnahme von Daten aus Streaming-Anwendunge
 
 Um die Schritte in diesem Handbuch abzuschließen, benötigen Sie Folgendes:
 
-* Eine Anmeldung bei [Adobe Experience Platform ](https://platform.adobe.com) die Berechtigung zum Erstellen einer neuen Streaming-Quellverbindung.
+* Eine Anmeldung bei [Adobe Experience Platform &#x200B;](https://platform.adobe.com) die Berechtigung zum Erstellen einer neuen Streaming-Quellverbindung.
 * Eine Anmeldung bei Ihrem [[!DNL Braze] Dashboard](https://dashboard.braze.com/sign_in), eine nicht verwendete [Aktuelle Connector-](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)) und Berechtigungen zum Erstellen eines Connectors. Weitere Informationen finden Sie unter [Voraussetzungen für die Einrichtung [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ### Sammeln erforderlicher Anmeldedaten
@@ -46,4 +46,4 @@ Informationen zum Abrufen dieser Werte finden Sie im Handbuch unter [Erste Schri
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten von Ihrem [!DNL Braze Currents]-Konto an Experience Platform zu streamen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Braze Currents]  mit Experience Platform über die Benutzeroberfläche ](../../tutorials/ui/create/marketing-automation/braze.md).
+Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten von Ihrem [!DNL Braze Currents]-Konto an Experience Platform zu streamen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Braze Currents]  mit Experience Platform über die Benutzeroberfläche &#x200B;](../../tutorials/ui/create/marketing-automation/braze.md).

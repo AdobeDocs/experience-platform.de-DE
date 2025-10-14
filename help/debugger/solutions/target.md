@@ -15,7 +15,7 @@ Adobe Experience Platform Debugger bietet eine Suite nützlicher Tools zum Teste
 
 ## Voraussetzungen
 
-Um Experience Platform Debugger für Target verwenden zu können, muss die Website die [at.js-Bibliothek ](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) Version 1.x oder höher verwenden. Frühere Versionen werden nicht unterstützt.
+Um Experience Platform Debugger für Target verwenden zu können, muss die Website die [at.js-Bibliothek &#x200B;](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) Version 1.x oder höher verwenden. Frühere Versionen werden nicht unterstützt.
 
 ## Initialisieren von Experience Platform Debugger
 

@@ -19,7 +19,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ## Lesen von Beispiel-API-Aufrufen
 
-In der Dokumentation zur API für einheitliche Tags wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie [ Abschnitt zum Lesen von Beispiel-API](../../landing/troubleshooting.md#how-do-i-format-an-api-request)Aufrufen im Handbuch zur Fehlerbehebung bei Experience Platform.
+In der Dokumentation zur API für einheitliche Tags wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie [&#x200B; Abschnitt zum Lesen von Beispiel-API](../../landing/troubleshooting.md#how-do-i-format-an-api-request)Aufrufen im Handbuch zur Fehlerbehebung bei Experience Platform.
 
 ## Erforderliche Kopfzeilen
 

@@ -50,7 +50,7 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppe Sie an dieses Zi
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---|---|---|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert &#x200B;](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -82,7 +82,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 * **[!UICONTROL Kennwort]**: Das für die Anmeldung bei [[!DNL Gainsight PX]](https://app.aptrinsic.com) verwendete Kennwort
 * **[!UICONTROL Client-ID]**: Die Gainsight PX-Abonnement-ID auf der [Seite „Unternehmensdetails“](https://app.aptrinsic.com/settings/subscription)
-* **[!UICONTROL Client-Geheimnis]**: Das OAuth-Geheimnis, das unten auf der Seite &quot;[&quot; ](https://app.aptrinsic.com/settings/subscription) der [!DNL Gainsight PX]-Benutzeroberfläche generiert wird.
+* **[!UICONTROL Client-Geheimnis]**: Das OAuth-Geheimnis, das unten auf der Seite &quot;[&quot; &#x200B;](https://app.aptrinsic.com/settings/subscription) der [!DNL Gainsight PX]-Benutzeroberfläche generiert wird.
 * **[!UICONTROL Benutzername]**: Die E-Mail, mit der die Anmeldung bei der [[!DNL Gainsight PX]](https://app.aptrinsic.com)-Benutzeroberfläche erfolgt
 
 ### Ausfüllen der Zieldetails {#destination-details}

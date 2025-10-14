@@ -12,7 +12,7 @@ ht-degree: 78%
 
 # OAuth 2-Autorisierung
 
-Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu ](https://tools.ietf.org/html/rfc6749).
+Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu &#x200B;](https://tools.ietf.org/html/rfc6749).
 
 Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 

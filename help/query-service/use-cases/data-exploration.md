@@ -27,7 +27,7 @@ Um Ihnen das Verständnis der in diesem Dokument besprochenen Konzepte zu erleic
 - **Datenaufnahme**: In der [Übersicht zur Datenaufnahme](../../ingestion/home.md) erfahren Sie mehr über die Grundlagen, wie Daten in Experience Platform aufgenommen werden, einschließlich der verschiedenen Methoden und Prozesse.
 - **Batch-Aufnahme**: In der [Übersicht zur Batch-Aufnahme-](../../ingestion/batch-ingestion/overview.md) erfahren Sie mehr über die grundlegenden Konzepte der Batch-Aufnahme. Im Einzelnen geht es darum, was ein „Batch“ ist und wie er innerhalb des Datenerfassungsprozesses von Experience Platform funktioniert.
 - **Systemmetadaten in Datensätzen**: In der [Übersicht über den Katalog-Service](../../catalog/home.md) erfahren Sie, wie Systemmetadatenfelder verwendet werden, um aufgenommene Daten zu verfolgen und abzufragen.
-- **Experience-Datenmodell (XDM)**: In der [Übersicht über die Schemabenutzeroberfläche](../../xdm/ui/overview.md) und den [Grundlagen der Schemakomposition&#39; erfahren ](../../xdm/schema/composition.md) mehr über XDM-Schemata und darüber, wie sie die Struktur und das Format von Daten darstellen und validieren, die in Experience Platform aufgenommen werden.
+- **Experience-Datenmodell (XDM)**: In der [Übersicht über die Schemabenutzeroberfläche](../../xdm/ui/overview.md) und den [Grundlagen der Schemakomposition&#39; erfahren &#x200B;](../../xdm/schema/composition.md) mehr über XDM-Schemata und darüber, wie sie die Struktur und das Format von Daten darstellen und validieren, die in Experience Platform aufgenommen werden.
 
 ## Zugriff auf Datensatz-Batch-Metadaten {#access-dataset-batch-metadata}
 
@@ -92,7 +92,7 @@ Die Ergebnisse zeigen die Effizienz und das Verhalten des Datenerfassungsprozess
 
 >[!TIP]
 >
->Um die Batch-ID und die mit dieser Batch-ID verknüpften Abfragedatensätze abzurufen, müssen Sie zunächst einen Batch in Experience Platform erstellen. Wenn Sie den Prozess selbst testen möchten, können Sie CSV-Daten in Experience Platform aufnehmen. Lesen Sie das Handbuch zum [ (Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema mithilfe von KI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md).
+>Um die Batch-ID und die mit dieser Batch-ID verknüpften Abfragedatensätze abzurufen, müssen Sie zunächst einen Batch in Experience Platform erstellen. Wenn Sie den Prozess selbst testen möchten, können Sie CSV-Daten in Experience Platform aufnehmen. Lesen Sie das Handbuch zum [&#x200B; (Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema mithilfe von KI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Nachdem Sie einen Batch aufgenommen haben, müssen Sie zur Registerkarte [!UICONTROL Datensatzaktivität] für den Datensatz navigieren, in den Sie Daten aufgenommen haben.
 

@@ -126,4 +126,4 @@ JSON-Schema ist ein Format, mit dem die Struktur von JSON-Daten beschrieben und 
 
 ## Nächste Schritte
 
-In diesem Dokument wurden einige der Technologien und Syntaxen vorgestellt, die mit der Verwaltung von JSON-basierten Ressourcen für [!DNL Experience Platform] verbunden sind. Weitere Informationen zur Verwendung [ Experience Platform-APIs, einschließlich Best ](api-guide.md), finden Sie im Handbuch „Erste Schritte“. Antworten auf häufig gestellte Fragen finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platform](troubleshooting.md).
+In diesem Dokument wurden einige der Technologien und Syntaxen vorgestellt, die mit der Verwaltung von JSON-basierten Ressourcen für [!DNL Experience Platform] verbunden sind. Weitere Informationen zur Verwendung [&#x200B; Experience Platform-APIs, einschließlich Best &#x200B;](api-guide.md), finden Sie im Handbuch „Erste Schritte“. Antworten auf häufig gestellte Fragen finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platform](troubleshooting.md).

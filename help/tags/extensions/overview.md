@@ -15,7 +15,7 @@ ht-degree: 36%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
-Eine Erweiterung ist ein gepackter Code-Satz, der die von Tags oder der Ereignisweiterleitung bereitgestellten Funktionen erweitert. Wenn Sie eine Erweiterung in einer Bibliothek installieren, fügt die Erweiterung eine Reihe eindeutiger Ereignisse, Bedingungen und/oder Aktionen hinzu, die in den ([) dieser Bibliothek verwendet ](../ui/managing-resources/rules.md) können.
+Eine Erweiterung ist ein gepackter Code-Satz, der die von Tags oder der Ereignisweiterleitung bereitgestellten Funktionen erweitert. Wenn Sie eine Erweiterung in einer Bibliothek installieren, fügt die Erweiterung eine Reihe eindeutiger Ereignisse, Bedingungen und/oder Aktionen hinzu, die in den ([) dieser Bibliothek verwendet &#x200B;](../ui/managing-resources/rules.md) können.
 
 Weitere Informationen zur Funktionsweise von Erweiterungen innerhalb der Frameworks für Tags und Ereignisweiterleitung finden Sie unter [Erweiterungen - Übersicht](../ui/managing-resources/extensions/overview.md).
 

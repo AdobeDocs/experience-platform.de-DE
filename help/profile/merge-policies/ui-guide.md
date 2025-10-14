@@ -40,7 +40,7 @@ Diese Registerkarte enthält eine Liste aller vorhandenen Zusammenführungsricht
 
 ![Die Seite zum Durchsuchen von Zusammenführungsrichtlinien wird angezeigt.](../images/merge-policies/landing.png)
 
-Um zu entscheiden, welche Details angezeigt werden sollen, oder um der Anzeige weitere Spalten hinzuzufügen, wählen Sie ![das Symbol Spalteneinstellungen ](../../images/icons/column-settings.png) und wählen Sie einen Spaltennamen aus, um ihn der Ansicht hinzuzufügen oder daraus zu entfernen.
+Um zu entscheiden, welche Details angezeigt werden sollen, oder um der Anzeige weitere Spalten hinzuzufügen, wählen Sie ![das Symbol Spalteneinstellungen &#x200B;](../../images/icons/column-settings.png) und wählen Sie einen Spaltennamen aus, um ihn der Ansicht hinzuzufügen oder daraus zu entfernen.
 
 ![Die verfügbaren Optionen zum Anpassen der Seite zum Durchsuchen von Zusammenführungsrichtlinien werden angezeigt.](../images/merge-policies/adjust-view.png)
 
@@ -217,4 +217,4 @@ Um mehr über Data Governance in Adobe Experience Platform zu erfahren, lesen Si
 
 ## Nächste Schritte
 
-Nachdem Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellt und konfiguriert haben, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Experience Platform anzupassen und aus Ihren Profildaten Zielgruppen zu erstellen. Weitere Informationen [ Erstellen und Verwenden von Audiences mithilfe der [!DNL Experience Platform]-Benutzeroberfläche und von APIs finden Sie in der ](../../segmentation/home.md)Segmentierungsübersicht) .
+Nachdem Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellt und konfiguriert haben, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Experience Platform anzupassen und aus Ihren Profildaten Zielgruppen zu erstellen. Weitere Informationen [&#x200B; Erstellen und Verwenden von Audiences mithilfe der [!DNL Experience Platform]-Benutzeroberfläche und von APIs finden Sie in der &#x200B;](../../segmentation/home.md)Segmentierungsübersicht) .

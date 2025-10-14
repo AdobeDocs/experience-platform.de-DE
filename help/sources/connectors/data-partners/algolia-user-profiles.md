@@ -35,7 +35,7 @@ Sie müssen die folgenden Schritte ausführen, bevor Sie Ihr [!DNL Algolia]-Kont
 
 1. Verwenden Sie das [[!DNL Algolia] Dashboard](https://dashboard.algolia.com/users/sign_up), um sich bei Ihrem [!DNL Algolia]-Konto anzumelden oder ein neues Konto zu erstellen.
 2. [Index vorbereiten](https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/in-depth/prepare-data-in-depth/).
-3. [Richten Sie Ihre Facetten ](https://www.algolia.com/doc/guides/managing-results/refine-results/faceting/).
+3. [Richten Sie Ihre Facetten &#x200B;](https://www.algolia.com/doc/guides/managing-results/refine-results/faceting/).
 4. [Benutzerereignisse senden](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 5. [Personalisieren Sie Ihren Index](https://www.algolia.com/doc/guides/personalization/advanced-personalization/configure/setup/indices/).
 
@@ -45,7 +45,7 @@ Sie müssen sowohl **[!UICONTROL Quellen anzeigen]** als auch **[!UICONTROL Quel
 
 ### Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [ Seite ](../../ip-address-allow-list.md)IP-Adresse“.
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [&#x200B; Seite &#x200B;](../../ip-address-allow-list.md)IP-Adresse“.
 
 ## Verbinden Ihres [!DNL Algolia] mit Experience Platform
 

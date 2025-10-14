@@ -19,7 +19,7 @@ Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DN
 
 >[!NOTE]
 >
->Die Schema Registry-API verweist auf Referenzschemas „Zielschemas“. Diese sind nicht mit Zielschemata in [Datenvorbereitungs-Zuordnungssätzen](../../data-prep/mapping-set.md) oder Schemata für ([) ](../../destinations/home.md).
+>Die Schema Registry-API verweist auf Referenzschemas „Zielschemas“. Diese sind nicht mit Zielschemata in [Datenvorbereitungs-Zuordnungssätzen](../../data-prep/mapping-set.md) oder Schemata für ([) &#x200B;](../../destinations/home.md).
 
 Dieses Dokument enthält ein Tutorial zum Definieren einer Eins-zu-eins-Beziehung zwischen zwei Schemas, die von Ihrem Unternehmen mithilfe der [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) definiert wurden.
 
@@ -42,7 +42,7 @@ Schemabeziehungen werden durch ein **Quellschema) mit einem Feld dargestellt** d
 
 >[!IMPORTANT]
 >
->Um eine Beziehung herzustellen, müssen beide Schemata über definierte primäre Identitäten verfügen und für die [!DNL Real-Time Customer Profile] aktiviert sein. Wenn Sie Anleitungen zur entsprechenden Konfiguration Ihrer Schemata benötigen[ lesen Sie im Tutorial zur Schemaerstellung den Abschnitt ](./create-schema-api.md#profile)Aktivieren eines Schemas zur Verwendung im Profil“.
+>Um eine Beziehung herzustellen, müssen beide Schemata über definierte primäre Identitäten verfügen und für die [!DNL Real-Time Customer Profile] aktiviert sein. Wenn Sie Anleitungen zur entsprechenden Konfiguration Ihrer Schemata benötigen[&#x200B; lesen Sie im Tutorial zur Schemaerstellung den Abschnitt &#x200B;](./create-schema-api.md#profile)Aktivieren eines Schemas zur Verwendung im Profil“.
 
 Um eine Beziehung zwischen zwei Schemata festzulegen, müssen Sie sich zunächst die `$id`-Werte für beide Schemata verschaffen. Wenn Sie die Anzeigenamen (`title`) der Schemata kennen, können Sie deren `$id` finden, indem Sie eine GET-Anfrage an den `/tenant/schemas`-Endpunkt in der [!DNL Schema Registry]-API stellen.
 
@@ -122,7 +122,7 @@ In diesem Tutorial enthält das Referenzschema &quot;[!DNL Hotels]&quot; ein `ho
 
 >[!NOTE]
 >
->Wenn Ihr Quellschema bereits über ein dediziertes Feld verfügt, das Sie als Referenzfeld verwenden möchten, können Sie mit dem Schritt [Erstellen eines Referenzdeskriptors“ ](#reference-identity).
+>Wenn Ihr Quellschema bereits über ein dediziertes Feld verfügt, das Sie als Referenzfeld verwenden möchten, können Sie mit dem Schritt [Erstellen eines Referenzdeskriptors“ &#x200B;](#reference-identity).
 
 ### Erstellen einer neuen Feldergruppe
 

@@ -36,7 +36,7 @@ Um [!DNL SugarCRM Accounts & Contacts] mit Experience Platform zu verbinden, mü
 
 ### Erstellen eines Experience Platform-Schemas
 
-Bevor Sie eine [!DNL SugarCRM] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
+Bevor Sie eine [!DNL SugarCRM] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [&#x200B; Schemas finden Sie &#x200B;](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
 
 Die [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Das bedeutet, dass Sie je nach dem verwendeten Objekttyp ein separates Schema erstellen müssen. In den folgenden Beispielen finden Sie sowohl Konten- als auch Kontaktschemata:
 

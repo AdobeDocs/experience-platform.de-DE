@@ -277,4 +277,4 @@ CREATE MODEL modelname OPTIONS(
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie verschiedene Regressionsalgorithmen konfigurieren und verwenden können. Weitere Informationen zu anderen Typen erweiterter statistischer Modelle finden [ in den Dokumenten ](./classification.md)Klassifizierung und [Clustering](./clustering.md).
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie verschiedene Regressionsalgorithmen konfigurieren und verwenden können. Weitere Informationen zu anderen Typen erweiterter statistischer Modelle finden [&#x200B; in den Dokumenten &#x200B;](./classification.md)Klassifizierung und [Clustering](./clustering.md).

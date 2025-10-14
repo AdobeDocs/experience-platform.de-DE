@@ -46,4 +46,4 @@ Das folgende Video soll Ihnen dabei helfen, Entwickler- und API-Anmeldeinformati
 
 ## Nächste Schritte
 
-Sie haben jetzt gelernt, wie Sie Benutzerdetails und die Rollen anzeigen, denen sie derzeit hinzugefügt werden. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter &quot;[ Zugriffssteuerung - Übersicht](../overview.md).
+Sie haben jetzt gelernt, wie Sie Benutzerdetails und die Rollen anzeigen, denen sie derzeit hinzugefügt werden. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter &quot;[&#x200B; Zugriffssteuerung - Übersicht](../overview.md).

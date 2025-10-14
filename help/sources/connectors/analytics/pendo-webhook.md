@@ -14,7 +14,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Die [!DNL Pendo]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Pendo]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -38,7 +38,7 @@ Ein [!DNL Pendo]. Wenn Sie noch keine haben, sehen Sie die Seite [[!DNL Pendo] r
 
 ### Webhook [!DNL Pendo] {#set-up-webhook}
 
-Nachdem Sie Ihren Datenfluss erfolgreich erstellt haben, müssen Sie einen Webhook einrichten, um Experience Platform über [!DNL Pendo] Ereignisse zu informieren. [!DNL Pendo] Webhooks können Echtzeit-Benachrichtigungen an andere Services senden, wenn bestimmte Ereignisse eintreten, und diese Informationen an Ihre [!DNL Pendo] senden. Weitere Informationen finden Sie in den Tutorials zum [ der Streaming-Endpunkt-URL und ](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint)Einrichten [ Webhooks [!DNL Pendo]  ](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
+Nachdem Sie Ihren Datenfluss erfolgreich erstellt haben, müssen Sie einen Webhook einrichten, um Experience Platform über [!DNL Pendo] Ereignisse zu informieren. [!DNL Pendo] Webhooks können Echtzeit-Benachrichtigungen an andere Services senden, wenn bestimmte Ereignisse eintreten, und diese Informationen an Ihre [!DNL Pendo] senden. Weitere Informationen finden Sie in den Tutorials zum [&#x200B; der Streaming-Endpunkt-URL und &#x200B;](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint)Einrichten [&#x200B; Webhooks [!DNL Pendo]  &#x200B;](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
 
 ## Verbinden von [!DNL Pendo] mit Experience Platform {#connect-to-platform}
 

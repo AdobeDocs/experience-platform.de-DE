@@ -19,9 +19,9 @@ In diesem Handbuch wird davon ausgegangen, dass Sie mit interaktiven [!DNL Pytho
 
 ### Abrufen von Verbindungsberechtigungen {#obtain-credentials}
 
-Um eine Verbindung zu Data Distiller und anderen Adobe Experience Platform-Services herzustellen, benötigen Sie Experience Platform-API-Anmeldedaten. API-Anmeldeinformationen können in der [Adobe Developer Console ](https://developer.adobe.com/console/home) von einer Person erstellt werden, die Entwicklerzugriff auf die Experience Platform hat. Es wird empfohlen, eine OAuth2-API-Berechtigung speziell für datenwissenschaftliche Workflows zu erstellen und einen Adobe-Systemadministrator Ihres Unternehmens anzuweisen, die Berechtigung einer Rolle mit entsprechenden Berechtigungen zuzuweisen.
+Um eine Verbindung zu Data Distiller und anderen Adobe Experience Platform-Services herzustellen, benötigen Sie Experience Platform-API-Anmeldedaten. API-Anmeldeinformationen können in der [Adobe Developer Console &#x200B;](https://developer.adobe.com/console/home) von einer Person erstellt werden, die Entwicklerzugriff auf die Experience Platform hat. Es wird empfohlen, eine OAuth2-API-Berechtigung speziell für datenwissenschaftliche Workflows zu erstellen und einen Adobe-Systemadministrator Ihres Unternehmens anzuweisen, die Berechtigung einer Rolle mit entsprechenden Berechtigungen zuzuweisen.
 
-Detaillierte [ zum Erstellen von API-Anmeldeinformationen und zum Abrufen ](../../../landing/api-authentication.md) erforderlichen Berechtigungen finden Sie unter „Authentifizieren und Zugreifen auf Experience Platform-APIs“.
+Detaillierte [&#x200B; zum Erstellen von API-Anmeldeinformationen und zum Abrufen &#x200B;](../../../landing/api-authentication.md) erforderlichen Berechtigungen finden Sie unter „Authentifizieren und Zugreifen auf Experience Platform-APIs“.
 
 Zu den empfohlenen Berechtigungen für Data Science gehören:
 
@@ -137,4 +137,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie in Ihrer maschinellen Lernumgebung von einem [!DNL Python]-Notebook aus eine Verbindung zu Data Distiller herstellen können. Der nächste Schritt beim Erstellen von Funktions-Pipelines aus Experience Platform zum Einspeisen benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin[ Ihre Datensätze zu untersuchen und ](./exploratory-analysis.md).
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie in Ihrer maschinellen Lernumgebung von einem [!DNL Python]-Notebook aus eine Verbindung zu Data Distiller herstellen können. Der nächste Schritt beim Erstellen von Funktions-Pipelines aus Experience Platform zum Einspeisen benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin[&#x200B; Ihre Datensätze zu untersuchen und &#x200B;](./exploratory-analysis.md).

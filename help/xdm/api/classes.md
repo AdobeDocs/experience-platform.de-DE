@@ -34,7 +34,7 @@ Sie können alle Klassen unter dem `global`- oder `tenant`-Container durch eine 
 
 >[!NOTE]
 >
->Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [ Abschnitt ](./appendix.md#query)Abfrageparameter“ im Anhang.
+>Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](./appendix.md#query)Abfrageparameter“ im Anhang.
 
 **API-Format**
 
@@ -45,7 +45,7 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{CONTAINER_ID}` | Der Container, aus dem Sie Klassen abrufen möchten: `global` für von Adobe erstellte Klassen oder `tenant` für Klassen, die Ihrem Unternehmen gehören. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [&#x200B; im &#x200B;](./appendix.md#query)-Dokument . |
 
 {style="table-layout:auto"}
 
@@ -252,9 +252,9 @@ Sie können eine benutzerdefinierte Klasse unter dem `tenant`-Container definier
 
 >[!IMPORTANT]
 >
->Beim Erstellen eines Schemas basierend auf einer benutzerdefinierten Klasse, die Sie definieren, können Sie keine Standardfeldgruppen verwenden. Jede Feldergruppe definiert die Klassen, mit denen sie kompatibel sind, in ihrem `meta:intendedToExtend`. Sobald Sie mit der Definition von Feldergruppen beginnen, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung der `$id` Ihrer neuen Klasse im `meta:intendedToExtend` Feld der Feldergruppe), können Sie diese Feldergruppen jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weitere Informationen finden Sie in den Abschnitten [Erstellen ](./field-groups.md#create) Feldergruppen[ und ](./schemas.md#create)Erstellen von Schemas in den jeweiligen Endpunkthandbüchern.
+>Beim Erstellen eines Schemas basierend auf einer benutzerdefinierten Klasse, die Sie definieren, können Sie keine Standardfeldgruppen verwenden. Jede Feldergruppe definiert die Klassen, mit denen sie kompatibel sind, in ihrem `meta:intendedToExtend`. Sobald Sie mit der Definition von Feldergruppen beginnen, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung der `$id` Ihrer neuen Klasse im `meta:intendedToExtend` Feld der Feldergruppe), können Sie diese Feldergruppen jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weitere Informationen finden Sie in den Abschnitten [Erstellen &#x200B;](./field-groups.md#create) Feldergruppen[&#x200B; und &#x200B;](./schemas.md#create)Erstellen von Schemas in den jeweiligen Endpunkthandbüchern.
 >
->Wenn Sie planen, Schemas zu verwenden, die auf benutzerdefinierten Klassen im Echtzeit-Kundenprofil basieren, sollten Sie auch beachten, dass Vereinigungsschemas nur auf der Grundlage von Schemas erstellt werden, die dieselbe Klasse aufweisen. Wenn Sie ein benutzerdefiniertes Klassenschema für eine andere Klasse wie [!UICONTROL XDM Individual Profile] oder [!UICONTROL XDM ExperienceEvent] in die Vereinigung einbeziehen möchten, müssen Sie eine Beziehung zu einem anderen Schema herstellen, das diese Klasse verwendet. Weitere Informationen finden Sie im Tutorial [Erstellen einer Beziehung zwischen zwei Schemas in ](../tutorials/relationship-api.md) API“.
+>Wenn Sie planen, Schemas zu verwenden, die auf benutzerdefinierten Klassen im Echtzeit-Kundenprofil basieren, sollten Sie auch beachten, dass Vereinigungsschemas nur auf der Grundlage von Schemas erstellt werden, die dieselbe Klasse aufweisen. Wenn Sie ein benutzerdefiniertes Klassenschema für eine andere Klasse wie [!UICONTROL XDM Individual Profile] oder [!UICONTROL XDM ExperienceEvent] in die Vereinigung einbeziehen möchten, müssen Sie eine Beziehung zu einem anderen Schema herstellen, das diese Klasse verwendet. Weitere Informationen finden Sie im Tutorial [Erstellen einer Beziehung zwischen zwei Schemas in &#x200B;](../tutorials/relationship-api.md) API“.
 
 **API-Format**
 
@@ -388,7 +388,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 }
 ```
 
-Wenn Sie eine GET-Anfrage ausführen[ um alle Klassen ](#list) dem `tenant`-Container aufzulisten, würde diese jetzt die Property-Klasse enthalten. Sie können auch [eine Suchanfrage (GET) ausführen](#lookup) indem Sie die URL-codierte `$id` verwenden, um die neue Klasse direkt anzuzeigen.
+Wenn Sie eine GET-Anfrage ausführen[&#x200B; um alle Klassen &#x200B;](#list) dem `tenant`-Container aufzulisten, würde diese jetzt die Property-Klasse enthalten. Sie können auch [eine Suchanfrage (GET) ausführen](#lookup) indem Sie die URL-codierte `$id` verwenden, um die neue Klasse direkt anzuzeigen.
 
 ## Aktualisieren einer Klasse {#put}
 

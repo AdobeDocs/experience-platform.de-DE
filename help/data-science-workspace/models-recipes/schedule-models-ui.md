@@ -31,7 +31,7 @@ Dieses Tutorial führt Sie durch die Schritte, die Sie zum Konfigurieren von Tra
 
 Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie in [!DNL Experience Platform] keinen Zugriff auf eine Organisation haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
-Für dieses Tutorial ist ein bestehender Service erforderlich. Wenn Sie über keinen Service verfügen, mit dem Sie arbeiten können, können Sie einen Service erstellen, indem Sie dem Tutorial zum Veröffentlichen [ Modells als Service ](./publish-model-service-ui.md).
+Für dieses Tutorial ist ein bestehender Service erforderlich. Wenn Sie über keinen Service verfügen, mit dem Sie arbeiten können, können Sie einen Service erstellen, indem Sie dem Tutorial zum Veröffentlichen [&#x200B; Modells als Service &#x200B;](./publish-model-service-ui.md).
 
 ## Geplantes Scoring konfigurieren {#configure-scheduled-scoring}
 

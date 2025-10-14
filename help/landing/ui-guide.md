@@ -149,17 +149,17 @@ Im Abschnitt **[!UICONTROL Services]** können Sie Ihre veröffentlichten Modell
 
 ### [!UICONTROL Daten-Management]
 
-Im Abschnitt **[!UICONTROL Schemata]** können Sie Experience-Datenmodell-Schemata (XDM) erstellen und verwalten. Weitere Informationen zu Schemata finden Sie im Tutorial zum [ eines Schemas](../xdm/tutorials/create-schema-ui.md). Weitere Informationen zu XDM finden Sie in der [XDM-Systemübersicht](../xdm/home.md).
+Im Abschnitt **[!UICONTROL Schemata]** können Sie Experience-Datenmodell-Schemata (XDM) erstellen und verwalten. Weitere Informationen zu Schemata finden Sie im Tutorial zum [&#x200B; eines Schemas](../xdm/tutorials/create-schema-ui.md). Weitere Informationen zu XDM finden Sie in der [XDM-Systemübersicht](../xdm/home.md).
 
 Im **[!UICONTROL Datensätze]** können Sie Datensätze erstellen und verwalten. Weitere Informationen zu Datensätzen finden Sie im [Benutzerhandbuch zu Datensätzen](../catalog/datasets/user-guide.md).
 
 Im Abschnitt **[!UICONTROL Abfragen]** können Sie Abfragen erstellen und verwalten, vom Adobe Experience Platform-Abfrage-Service erstellte SQL-Abfragen protokollieren und Ihre [!DNL PostgreSQL]-Anmeldeinformationen anzeigen. Weitere Informationen zu Abfragen finden Sie im [Query Service-Benutzerhandbuch](../query-service/ui/overview.md).
 
-Im **[!UICONTROL Monitoring]** können Sie die Batch- und Streaming-Aufnahme überwachen. Weitere Informationen zur Überwachung finden Sie im [Benutzerhandbuch zur Datenaufnahme ](../ingestion/quality/monitor-data-ingestion.md).
+Im **[!UICONTROL Monitoring]** können Sie die Batch- und Streaming-Aufnahme überwachen. Weitere Informationen zur Überwachung finden Sie im [Benutzerhandbuch zur Datenaufnahme &#x200B;](../ingestion/quality/monitor-data-ingestion.md).
 
 ### [!UICONTROL Verknüpfte Daten]
 
-Im **[!UICONTROL Modelle]** können Sie Datenmodelle und Schemata entwerfen und erstellen, die die Struktur, Beziehungen und Begrenzungen Ihrer Daten definieren. Weitere Informationen zu den Datenmodellen und Schemata finden Sie im [Benutzerhandbuch zur Federated Audience ](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/config/datamodel/schemas).
+Im **[!UICONTROL Modelle]** können Sie Datenmodelle und Schemata entwerfen und erstellen, die die Struktur, Beziehungen und Begrenzungen Ihrer Daten definieren. Weitere Informationen zu den Datenmodellen und Schemata finden Sie im [Benutzerhandbuch zur Federated Audience &#x200B;](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/config/datamodel/schemas).
 
 Der Abschnitt **[!UICONTROL Audit]** Protokoll“ bietet eine detaillierte und chronologische Aufzeichnung aller Aktionen und Ereignisse, die in Echtzeit in Ihrer Umgebung durchgeführt wurden. Weitere Informationen zum Audit-Protokoll finden Sie im Benutzerhandbuch [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
 
@@ -180,4 +180,4 @@ Die Benutzeroberfläche von Experience Platform verfügt über ein Dashboard, ü
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs haben Sie sich nun mit der Startseite und den wichtigsten Navigationselementen der Experience Platform-Benutzeroberfläche vertraut gemacht. Weitere Informationen zum Arbeiten in der Benutzeroberfläche finden Sie in der Dokumentation zu den einzelnen Experience Platform-Services. Links zu dieser Dokumentation finden Sie im Abschnitt [Linker ](#left-nav)) weiter oben in diesem Dokument.
+Durch das Lesen dieses Handbuchs haben Sie sich nun mit der Startseite und den wichtigsten Navigationselementen der Experience Platform-Benutzeroberfläche vertraut gemacht. Weitere Informationen zum Arbeiten in der Benutzeroberfläche finden Sie in der Dokumentation zu den einzelnen Experience Platform-Services. Links zu dieser Dokumentation finden Sie im Abschnitt [Linker &#x200B;](#left-nav)) weiter oben in diesem Dokument.

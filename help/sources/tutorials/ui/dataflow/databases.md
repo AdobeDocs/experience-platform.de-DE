@@ -96,7 +96,7 @@ Kontrollspalten wie `_change_request_type`, die für die Änderungsdatenerfassun
 
 Modellbasierte Schemata unterstützen auch Beziehungen zwischen Datensätzen, die Primär- und Fremdschlüsselzuordnungen verwenden.
 
-Weitere Informationen finden Sie in der [Übersicht über ](../../../../xdm/data-mirror/overview.md) Data Mirror und in der [technischen Referenz zu modellbasierten Schemata](../../../../xdm/schema/model-based.md).
+Weitere Informationen finden Sie in der [Übersicht über &#x200B;](../../../../xdm/data-mirror/overview.md) Data Mirror und in der [technischen Referenz zu modellbasierten Schemata](../../../../xdm/schema/model-based.md).
 
 Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
 

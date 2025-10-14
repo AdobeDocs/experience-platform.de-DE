@@ -39,7 +39,7 @@ Die Auswahl der richtigen Cloud-Region ist entscheidend, um die Anforderungen an
 
 ![Bild, das die geografische Verteilung der Hosting-Standorte zeigt.](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
 
-Experience Platform ist an sechs Microsoft Azure-Hosting-Standorten und einem Amazon Web Services (AWS)-Hosting-Standort verfügbar und leitet Daten über sieben [Edge Network-Knoten, die weltweit ](../collection/home.md#edge) sind, an Adobe-Services weiter.
+Experience Platform ist an sechs Microsoft Azure-Hosting-Standorten und einem Amazon Web Services (AWS)-Hosting-Standort verfügbar und leitet Daten über sieben [Edge Network-Knoten, die weltweit &#x200B;](../collection/home.md#edge) sind, an Adobe-Services weiter.
 
 ### Microsoft Azure-Regionen {#azure-regions}
 

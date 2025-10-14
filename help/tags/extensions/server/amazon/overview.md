@@ -22,7 +22,7 @@ Führen Sie vor der Installation und Konfiguration der API-Erweiterung für [!DN
 
 Erstellen Sie ein neues [!DNL Amazon][Ereignisweiterleitungsgeheimnis](../../../ui/event-forwarding/secrets.md) und geben Sie ihm einen eindeutigen Namen, der das authentifizierende Mitglied angibt. Dies wird verwendet, um die Verbindung zu Ihrem Konto zu authentifizieren und dabei den Wert sicher zu halten.
 
-Als Nächstes erstellen [ mithilfe ](../../../ui/managing-resources/data-elements.md#create-a-data-element) Erweiterung [!UICONTROL Core] und eines Datenelementtyps [!UICONTROL Secret] ein Datenelement, das auf das soeben erstellte `Amazon` verweist.
+Als Nächstes erstellen [&#x200B; mithilfe &#x200B;](../../../ui/managing-resources/data-elements.md#create-a-data-element) Erweiterung [!UICONTROL Core] und eines Datenelementtyps [!UICONTROL Secret] ein Datenelement, das auf das soeben erstellte `Amazon` verweist.
 
 ### Sammeln erforderlicher Konfigurationsdetails {#configuration-details}
 

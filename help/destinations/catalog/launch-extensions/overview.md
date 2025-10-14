@@ -27,9 +27,9 @@ Um die Erweiterungen in der Experience Platform-Benutzeroberfläche zu finden, n
 
 ## Funktionsweise von Tag-Erweiterungen {#how-extensions-work}
 
-Eine [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder Mobile App erweitert. Dazu kann gehören, dass Rohdaten von Ereignissen an ein Ziel wie [Google Analytics gesendet ](/help/destinations/catalog/analytics/google-universal-analytics.md), aber sie können auch andere Funktionen erfüllen.
+Eine [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder Mobile App erweitert. Dazu kann gehören, dass Rohdaten von Ereignissen an ein Ziel wie [Google Analytics gesendet &#x200B;](/help/destinations/catalog/analytics/google-universal-analytics.md), aber sie können auch andere Funktionen erfüllen.
 
-Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die Erweiterungen, die in der Benutzeroberfläche Experience Platform-Ziele angezeigt werden, sind *Tag-Erweiterungen*. Weitere Informationen zu den Unterschieden zwischen Tags und [ Ereignisweiterleitung finden Sie in der Übersicht ](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) Ereignisweiterleitung .
+Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die Erweiterungen, die in der Benutzeroberfläche Experience Platform-Ziele angezeigt werden, sind *Tag-Erweiterungen*. Weitere Informationen zu den Unterschieden zwischen Tags und [&#x200B; Ereignisweiterleitung finden Sie in der Übersicht &#x200B;](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) Ereignisweiterleitung .
 
 
 
@@ -64,7 +64,7 @@ Erweiterungen können in Experience Platform unter die folgenden Kategorien fall
 - [Werbung](../advertising/overview.md)
 - [Analysen](../analytics/overview.md)
 - [Daten-Management-Plattform](../data-management/overview.md)
-- [E-Mail-Marketing-Ziele ](../email-marketing/overview.md)
+- [E-Mail-Marketing-Ziele &#x200B;](../email-marketing/overview.md)
 - [Personalisierung](../personalization/overview.md)
 - [Umfragen](../survey/overview.md)
 - [Stimme des Kunden](../voice/overview.md)

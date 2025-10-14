@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Authentifizierung
 
-Informationen [[!DNL Stripe]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/payments/stripe.md) „Übersicht“.
+Informationen [[!DNL Stripe]  Abrufen Ihrer Authentifizierungsdaten finden Sie &#x200B;](../../../../connectors/payments/stripe.md) „Übersicht“.
 
 ## Verbinden Ihres [!DNL Stripe]-Kontos {#connect}
 

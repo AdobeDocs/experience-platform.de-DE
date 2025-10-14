@@ -55,11 +55,11 @@ Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie z
 
 Um Offer Decisioning zu aktivieren, führen Sie die folgenden Schritte aus:
 
-1. Adobe Experience Platform in Ihrem [Datenstrom“ aktiviert ](/help/datastreams/overview.md) das Kontrollkästchen &quot;Offer Decisioning&quot; aktiviert
+1. Adobe Experience Platform in Ihrem [Datenstrom“ aktiviert &#x200B;](/help/datastreams/overview.md) das Kontrollkästchen &quot;Offer Decisioning&quot; aktiviert
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Befolgen Sie die Anweisungen zum [Installieren des SDK](/help/web-sdk/install/overview.md) (SDK kann eigenständig oder über die Benutzeroberfläche installiert werden. Weitere Informationen finden Sie [ Tags-Schnellstartanleitung ](/help/tags/quick-start/quick-start.md).
+1. Befolgen Sie die Anweisungen zum [Installieren des SDK](/help/web-sdk/install/overview.md) (SDK kann eigenständig oder über die Benutzeroberfläche installiert werden. Weitere Informationen finden Sie [&#x200B; Tags-Schnellstartanleitung &#x200B;](/help/tags/quick-start/quick-start.md).
 1. Konfigurieren Sie die SDK für Offer Decisioning mithilfe von `personalization.decisionScopes`. Weitere Offer Decisioning-spezifische Schritte sind unten aufgeführt.
 
    * Installieren des eigenständigen SDKS
@@ -100,7 +100,7 @@ Um Offer Decisioning zu aktivieren, führen Sie die folgenden Schritte aus:
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
-      1. [Erstellen und veröffentlichen Sie eine ](/help/tags/ui/publishing/libraries.md) mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
+      1. [Erstellen und veröffentlichen Sie eine &#x200B;](/help/tags/ui/publishing/libraries.md) mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
 
 ## Beispielanfragen und -antworten
 

@@ -14,7 +14,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->Die [!DNL Customer.io]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Customer.io]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Customer.io] Quellverbindung und eines Datenflusses mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
@@ -55,7 +55,7 @@ Bevor Sie eine [!DNL Customer.io] Quellverbindung erstellen, benötigen Sie ein 
 
 ### Erstellen eines Experience Platform-Schemas für [!DNL Customer.io] {#create-platform-schema}
 
-Sie müssen auch sicherstellen, dass Sie ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
+Sie müssen auch sicherstellen, dass Sie ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [&#x200B; Schemas finden Sie &#x200B;](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
 
 Screenshot der ![Experience Platform-Benutzeroberfläche mit einem Beispielschema für Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 

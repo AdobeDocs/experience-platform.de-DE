@@ -103,7 +103,7 @@ Falls in einem Namespace mehr als eine Identität verfügbar ist, stellen Sie si
 
 >[!NOTE]
 >
-> Wenn für einen Datensatz kein gültiger Identitätstyp (Namespace) vorhanden ist, müssen Sie eine primäre Identität festlegen und sie mithilfe des [-Editors einem Identity-Namespace ](../../xdm/schema/composition.md#identity). Weitere Informationen zu Namespaces und Identitäten finden Sie in der Dokumentation [Identity Service-Namespaces](../../identity-service/features/namespaces.md) .
+> Wenn für einen Datensatz kein gültiger Identitätstyp (Namespace) vorhanden ist, müssen Sie eine primäre Identität festlegen und sie mithilfe des [-Editors einem Identity-Namespace &#x200B;](../../xdm/schema/composition.md#identity). Weitere Informationen zu Namespaces und Identitäten finden Sie in der Dokumentation [Identity Service-Namespaces](../../identity-service/features/namespaces.md) .
 
 ## Zuordnen von Medien- und Kampagnenfeldern {#aai-mapping}
 

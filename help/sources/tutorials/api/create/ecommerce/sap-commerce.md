@@ -14,9 +14,9 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->Die [!DNL SAP Commerce]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+>Die [!DNL SAP Commerce]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL SAP Commerce] Quellverbindung und eines Datenflusses, um (Abonnement[[!DNL SAP] Abrechnung) Kontakte ](https://www.sap.com/products/financial-management/subscription-billing.html) Kundendaten mithilfe der -[[!DNL Flow Service]  in Adobe Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL SAP Commerce] Quellverbindung und eines Datenflusses, um (Abonnement[[!DNL SAP] Abrechnung) Kontakte &#x200B;](https://www.sap.com/products/financial-management/subscription-billing.html) Kundendaten mithilfe der -[[!DNL Flow Service]  in Adobe Experience Platform &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 

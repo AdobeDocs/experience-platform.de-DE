@@ -13,7 +13,7 @@ ht-degree: 3%
 
 [!UICONTROL B2B-Source] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine zusammengesetzte Kennung für eine B2B-Entität darstellt (z. B. [Account](../classes/b2b/business-account.md), [Opportunity](../classes/b2b/business-opportunity.md) oder [Campaign](../classes/b2b/business-campaign.md)).
 
-Wenn wir uns ausschließlich auf zeichenfolgenbasierte Kennungen verlassen, kann es zu Überschneidungen zwischen IDs in mehreren Systemen kommen (z. B. könnte eine Opportunity in einem CRM-System eine Zeichenfolge-ID erhalten, aber dieselbe ID könnte sich auf eine völlig andere Opportunity beziehen). Dies kann beim Zusammenführen von Daten in [Echtzeit-Kundenprofil) zu Datenkonflikten ](../../profile/home.md).
+Wenn wir uns ausschließlich auf zeichenfolgenbasierte Kennungen verlassen, kann es zu Überschneidungen zwischen IDs in mehreren Systemen kommen (z. B. könnte eine Opportunity in einem CRM-System eine Zeichenfolge-ID erhalten, aber dieselbe ID könnte sich auf eine völlig andere Opportunity beziehen). Dies kann beim Zusammenführen von Daten in [Echtzeit-Kundenprofil) zu Datenkonflikten &#x200B;](../../profile/home.md).
 
 Mit dem Datentyp [!UICONTROL B2B Source] können Sie die ursprüngliche String-ID einer Entität verwenden und mit quellenspezifischen Kontextinformationen kombinieren, um sicherzustellen, dass sie im Experience Platform-System unabhängig von der Quelle, aus der sie stammt, vollständig eindeutig bleibt.
 

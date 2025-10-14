@@ -21,7 +21,7 @@ In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung &quot;Ad
 
 ### Experience Cloud ID-Erweiterung 5.5.0
 
-* Die Erweiterung unterstützt jetzt Version 5.5.0 des [Visitor JS Client](https://github.com/Adobe-Marketing-Cloud/id-service). Spezifische Aktualisierungen finden Sie [ den ](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0)Besucherhinweisen“.
+* Die Erweiterung unterstützt jetzt Version 5.5.0 des [Visitor JS Client](https://github.com/Adobe-Marketing-Cloud/id-service). Spezifische Aktualisierungen finden Sie [&#x200B; den &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0)Besucherhinweisen“.
 
 ## 9. März 2022
 

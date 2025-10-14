@@ -26,11 +26,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über ein [!DNL Salesforce Marketing Cloud]-Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Übertragen von Daten zur Marketing-Automatisierung in Experience Platform mithilfe der Benutzeroberfläche“ ](../../dataflow/marketing-automation.md).
+Wenn Sie bereits über ein [!DNL Salesforce Marketing Cloud]-Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Übertragen von Daten zur Marketing-Automatisierung in Experience Platform mithilfe der Benutzeroberfläche“ &#x200B;](../../dataflow/marketing-automation.md).
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Salesforce Marketing Cloud]  Sie in ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#prerequisites)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Salesforce Marketing Cloud]  Sie in &#x200B;](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#prerequisites)Übersicht“.
 
 ## Navigieren im Quellkatalog
 
@@ -71,7 +71,7 @@ Um eine Verbindung zu Experience Platform auf [!DNL Azure] herzustellen, geben S
 >
 >Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../../../landing/multi-cloud.md).
 
-Um eine Verbindung zu Experience Platform on [!DNL AWS] herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden und einen Kontonamen, eine optionale Beschreibung und Ihre [Anmeldeinformationen zur Kontoauthentifizierung“ ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#aws). Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung hergestellt ist.
+Um eine Verbindung zu Experience Platform on [!DNL AWS] herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden und einen Kontonamen, eine optionale Beschreibung und Ihre [Anmeldeinformationen zur Kontoauthentifizierung“ &#x200B;](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#aws). Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung hergestellt ist.
 
 ![Die neue Kontoschnittstelle im Quell-Workflow für die Verbindung zu Experience Platform auf AWS](../../../../images/tutorials/create/salesforce-marketing-cloud/new-aws.png)
 

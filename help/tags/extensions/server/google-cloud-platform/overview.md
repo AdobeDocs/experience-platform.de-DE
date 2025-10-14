@@ -24,11 +24,11 @@ Um diese Erweiterung verwenden zu können, müssen Sie über ein [!DNL Google Cl
 
 Erstellen Sie zunächst ein neues `Google OAuth 2`[Ereignisweiterleitungs-Geheimnis](../../../ui/event-forwarding/secrets.md), das zur Authentifizierung der Verbindung zu Ihrem Konto verwendet wird, während der Wert sicher bleibt.
 
-Als Nächstes erstellen [ mithilfe ](../../../ui/managing-resources/data-elements.md#create-a-data-element) Erweiterung **[!UICONTROL Core]** und eines Datenelementtyps **[!UICONTROL Secret]** ein Datenelement, das auf das soeben erstellte `Google OAuth 2` verweist.
+Als Nächstes erstellen [&#x200B; mithilfe &#x200B;](../../../ui/managing-resources/data-elements.md#create-a-data-element) Erweiterung **[!UICONTROL Core]** und eines Datenelementtyps **[!UICONTROL Secret]** ein Datenelement, das auf das soeben erstellte `Google OAuth 2` verweist.
 
 ## Installieren und Konfigurieren der [!DNL Google Cloud Platform] {#install}
 
-Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
 Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Wählen Sie auf der **[!UICONTROL Katalog]**-Registerkarte **[!UICONTROL Installieren]** auf der Karte für die [!DNL Google Cloud Platform] aus.
 

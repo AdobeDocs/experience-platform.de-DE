@@ -15,7 +15,7 @@ ht-degree: 50%
 
 >[!IMPORTANT]
 > 
-> * Zum Aktivieren von Zielgruppen und Aktivieren [Zuordnungsschritts](#mapping) des Workflows sind die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **&#x200B;**&#x200B;Segmente anzeigen[ erforderlich](/help/access-control/home.md#permissions).
+> * Zum Aktivieren von Zielgruppen und Aktivieren [Zuordnungsschritts](#mapping) des Workflows sind die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **&#x200B;**&#x200B;Segmente anzeigen[&#x200B; erforderlich](/help/access-control/home.md#permissions).
 > * Um Zielgruppen zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 > 
@@ -39,7 +39,7 @@ Beim Exportieren von Audiences werden die folgenden Dateiformate unterstützt:
 
 Beachten Sie, dass der Export von CSV-Dateien Ihnen mehr Flexibilität bei der Strukturierung Ihrer exportierten Dateien bietet. Lesen Sie mehr über [Dateiformatierungskonfiguration für CSV-Dateien](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
 
-Wählen Sie das gewünschte Dateiformat für den Export aus[ wenn Sie eine Verbindung mit dem dateibasierten Ziel ](/help/destinations/ui/connect-destination.md).
+Wählen Sie das gewünschte Dateiformat für den Export aus[&#x200B; wenn Sie eine Verbindung mit dem dateibasierten Ziel &#x200B;](/help/destinations/ui/connect-destination.md).
 
 ## Auswählen des Ziels {#select-destination}
 
@@ -75,7 +75,7 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 >[!TIP]
 >
->Um Zielgruppen aus vorhandenen Aktivierungsflüssen zu entfernen, verwenden Sie die Seite **[!UICONTROL Aktivierungsdaten]** . Weitere Informationen finden Sie im Abschnitt [Entfernen mehrerer Zielgruppen aus ](../ui/destination-details-page.md#bulk-remove)-Flüssen“.
+>Um Zielgruppen aus vorhandenen Aktivierungsflüssen zu entfernen, verwenden Sie die Seite **[!UICONTROL Aktivierungsdaten]** . Weitere Informationen finden Sie im Abschnitt [Entfernen mehrerer Zielgruppen aus &#x200B;](../ui/destination-details-page.md#bulk-remove)-Flüssen“.
 
 ## Planen eines Zielgruppenexports {#scheduling}
 
@@ -106,7 +106,7 @@ Um mehrere Zeitpläne gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen
 
 >[!TIP]
 >
->Sie können Zielgruppen-Aktivierungspläne für vorhandene Aktivierungsflüsse über die Seite **[!UICONTROL Aktivierungsdaten]** bearbeiten. Weitere Informationen finden Sie in [ Dokumentation unter ](../ui/destination-details-page.md#bulk-edit-schedule) für die Massenbearbeitung .
+>Sie können Zielgruppen-Aktivierungspläne für vorhandene Aktivierungsflüsse über die Seite **[!UICONTROL Aktivierungsdaten]** bearbeiten. Weitere Informationen finden Sie in [&#x200B; Dokumentation unter &#x200B;](../ui/destination-details-page.md#bulk-edit-schedule) für die Massenbearbeitung .
 
 >[!IMPORTANT]
 >
@@ -540,7 +540,7 @@ Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identitäts-Names
 
 >[!IMPORTANT]
 > 
->Alle Cloud-Speicher-Ziele im Katalog können einen verbesserten [[!UICONTROL Zuordnungsschritt] sehen, ](#mapping) den in diesem Abschnitt beschriebenen **[!UICONTROL Attribute]**&quot; ersetzt.
+>Alle Cloud-Speicher-Ziele im Katalog können einen verbesserten [[!UICONTROL Zuordnungsschritt] sehen, &#x200B;](#mapping) den in diesem Abschnitt beschriebenen **[!UICONTROL Attribute]**&quot; ersetzt.
 >
 >Dieser **[!UICONTROL Attribute auswählen]**-Schritt wird weiterhin für die E-Mail-Marketing-Ziele Adobe Campaign, Oracle Responsys, Oracle Eloqua und Salesforce Marketing Cloud angezeigt.
 
@@ -631,7 +631,7 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 >title="Aktuelle Einverständnisrichtlinien anzeigen"
 >abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
 ### Prüfung der Datennutzungsrichtlinien {#data-usage-policy-checks}
 

@@ -31,7 +31,7 @@ Ab dem 15. Oktober 2022 ist Assurance allgemein für alle Adobe Experience Cloud
 
 ### Was ändert sich?
 
-Am 15. Oktober wird der Zugriff auf Assurance über Admin Console verwaltet. Lesen Sie das [Benutzerhandbuch“, ](./user-access.md) sicherzustellen, dass Sie weiterhin unterbrechungsfreien Zugriff haben.
+Am 15. Oktober wird der Zugriff auf Assurance über Admin Console verwaltet. Lesen Sie das [Benutzerhandbuch“, &#x200B;](./user-access.md) sicherzustellen, dass Sie weiterhin unterbrechungsfreien Zugriff haben.
 
 Für bestehende Assurance-Integrationen, -Sitzungen und -Ereignisse werden keine weiteren Änderungen oder Unterbrechungen erwartet. Der Zugriff auf Assurance kann über [https://griffon.adobe.com](https://griffon.adobe.com) fortgesetzt werden **oder** Sie können (und ein Lesezeichen) [https://experience.adobe.com/assurance verwenden](https://experience.adobe.com/assurance).
 

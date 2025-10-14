@@ -23,4 +23,4 @@ Im Experience-Datenmodell (XDM) erfasst die [!UICONTROL Provider]-Klasse den Min
 
 {style="table-layout:auto"}
 
-Die Klasse kann mit der Feldergruppe [[!UICONTROL Gesundheitsdienstleister] erweitert werden, ](../field-groups/provider/healthcare-provider.md) weitere Details zu einem Gesundheitsdienstleister zu beschreiben.
+Die Klasse kann mit der Feldergruppe [[!UICONTROL Gesundheitsdienstleister] erweitert werden, &#x200B;](../field-groups/provider/healthcare-provider.md) weitere Details zu einem Gesundheitsdienstleister zu beschreiben.

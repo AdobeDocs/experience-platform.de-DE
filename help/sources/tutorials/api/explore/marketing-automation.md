@@ -184,4 +184,4 @@ Eine erfolgreiche Antwort gibt die Struktur einer Tabelle zurück. Details zu de
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr Marketing-Automatisierungssystem erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] einbringen möchten, und Informationen über dessen Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Marketing-Automatisierungssystem zu erfassen und in Experience Platform zu ](../collect/marketing-automation.md).
+In diesem Tutorial haben Sie Ihr Marketing-Automatisierungssystem erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] einbringen möchten, und Informationen über dessen Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[&#x200B; um Daten aus Ihrem Marketing-Automatisierungssystem zu erfassen und in Experience Platform zu &#x200B;](../collect/marketing-automation.md).

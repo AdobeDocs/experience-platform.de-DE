@@ -24,15 +24,15 @@ Ein Snowflake-Konto kann auf einer der folgenden Cloud-Plattformen gehostet werd
 
 - [Amazon Web Services ([!DNL AWS])](https://aws.amazon.com/) - [!DNL AWS] ist eine Cloud-Computing-Plattform, die eine Vielzahl von Services wie verteiltes Computing, Datenbankspeicherung, Inhaltsbereitstellung und SaaS-Integrationsservices (Software-as-a-Service) für Customer Relationship Management (CRM) und Enterprise Resource Planning (ERP) bietet.
 
-Weitere Informationen [[!DNL AWS]  Installieren der Erweiterung und Konfigurieren ](../aws/overview.md) Regeln für die Ereignisweiterleitung finden Sie unter „Übersicht“.
+Weitere Informationen [[!DNL AWS]  Installieren der Erweiterung und Konfigurieren &#x200B;](../aws/overview.md) Regeln für die Ereignisweiterleitung finden Sie unter „Übersicht“.
 
 - [Microsoft Azure ([!DNL Azure])](https://azure.microsoft.com/en-us/products/event-hubs/#overview) - [!DNL Azure] ist eine Cloud-Computing-Plattform und ein Online-Portal, über das Sie auf von Microsoft bereitgestellte Cloud-Services und -Ressourcen zugreifen und diese verwalten können.
 
-Weitere Informationen [[!DNL Azure]  Installieren der Erweiterung und Konfigurieren ](../azure/overview.md) Regeln für die Ereignisweiterleitung finden Sie unter „Übersicht“.
+Weitere Informationen [[!DNL Azure]  Installieren der Erweiterung und Konfigurieren &#x200B;](../azure/overview.md) Regeln für die Ereignisweiterleitung finden Sie unter „Übersicht“.
 
 - [[!DNL Google Cloud Platform]](https://cloud.google.com/) - [!DNL Google Cloud Platform] ist eine Cloud-Computing-Plattform, die eine breite Palette von Services wie verteiltes Computing, Datenbankspeicherung, Inhaltsbereitstellung und SaaS-Integrationsservices (Software-as-a-Service) für Customer Relationship Management (CRM) und Enterprise Resource Planning (ERP) bietet.
 
-Weitere Informationen [[!DNL Google Cloud Platform]  Installieren der Erweiterung und Konfigurieren ](../google-cloud-platform/overview.md) Regeln für die Ereignisweiterleitung finden Sie unter „Übersicht“.
+Weitere Informationen [[!DNL Google Cloud Platform]  Installieren der Erweiterung und Konfigurieren &#x200B;](../google-cloud-platform/overview.md) Regeln für die Ereignisweiterleitung finden Sie unter „Übersicht“.
 
 Unsere nativen [[!DNL AWS]](../aws/overview.md)-, [[!DNL Azure]](../azure/overview.md)- und [[!DNL Google Cloud Platform]](../google-cloud-platform/overview.md)-Erweiterungen für die Ereignisweiterleitung ermöglichen es Kunden, ihre Ereignisdaten Server-seitig in Echtzeit zu erfassen, anzureichern und an ihre Cloud-Services weiterzuleiten, damit sie von [!DNL Snowflake] genutzt werden können. Siehe unten:
 

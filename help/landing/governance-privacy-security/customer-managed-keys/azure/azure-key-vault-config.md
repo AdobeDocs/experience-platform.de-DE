@@ -92,4 +92,4 @@ Der konfigurierte Schlüssel wird in der Liste der Schlüssel für den Tresor an
 Um den einmaligen Prozess zum Einrichten der Funktion für kundenseitig verwaltete Schlüssel fortzusetzen, folgen Sie den Einrichtungshandbüchern für die Hosting-Umgebung Ihrer Plattform:
 
 - Verwenden Sie [!DNL Azure] die Einrichtungshandbücher für [API](./api-set-up.md) oder [UI](./ui-set-up.md).
-- Informationen zu AWS finden Sie im [Handbuch zur AWS-Konfiguration ](../aws/configure-kms.md) KMS und im [Einrichtungshandbuch für die Benutzeroberfläche](../aws/ui-set-up.md).
+- Informationen zu AWS finden Sie im [Handbuch zur AWS-Konfiguration &#x200B;](../aws/configure-kms.md) KMS und im [Einrichtungshandbuch für die Benutzeroberfläche](../aws/ui-set-up.md).

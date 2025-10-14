@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Didomi]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Didomi]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 [!DNL Didomi] ist eine Plattform zur Einverständnis- und Präferenzverwaltung, die Unternehmen dabei hilft, Benutzerentscheidungen in Bezug auf personenbezogene Daten auf Websites, in Apps und internen Tools zu erfassen, zu verwalten und durchzusetzen.
 

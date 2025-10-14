@@ -107,7 +107,7 @@ Wählen Sie **[!UICONTROL Aktivitäten]** aus der Liste [!DNL Marketo] Datensät
 
 ### Datenflussdetails
 
-Geben [ anschließend Informationen für Ihren Datenfluss ](./marketo.md#provide-dataflow-details), einschließlich Namen und Beschreibungen für Ihren Datensatz und Datenfluss, das Schema, das Sie verwenden werden, und Konfigurationen für die [!DNL Profile], Fehlerdiagnose und partielle Aufnahme.
+Geben [&#x200B; anschließend Informationen für Ihren Datenfluss &#x200B;](./marketo.md#provide-dataflow-details), einschließlich Namen und Beschreibungen für Ihren Datensatz und Datenfluss, das Schema, das Sie verwenden werden, und Konfigurationen für die [!DNL Profile], Fehlerdiagnose und partielle Aufnahme.
 
 ![Der Schritt „Datenflussdetails“.](../../../../images/tutorials/create/marketo-custom-activities/dataflow-detail.png)
 

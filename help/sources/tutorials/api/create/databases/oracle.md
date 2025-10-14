@@ -24,11 +24,11 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Oracle DB]  Sie in ](../../../../connectors/databases/oracle.md#prerequisites)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Oracle DB]  Sie in &#x200B;](../../../../connectors/databases/oracle.md#prerequisites)Übersicht“.
 
 ## Verbinden von [!DNL Oracle DB] mit Experience Platform auf Azure {#azure}
 

@@ -23,4 +23,4 @@ Damit ein Benutzer auf Tag-Funktionen zugreifen kann, muss ein Administrator sei
 
 ## Bestätigen der Bereitstellung
 
-Nachdem Ihr Unternehmen Zugriff auf Tags erhalten hat und Ihre Benutzerinnen und Benutzer wie oben beschrieben eingerichtet wurden, sollten Sie über das [Adobe Experience Cloud-Dashboard auf die Datenerfassungs-Benutzeroberfläche und die Experience Platform-Benutzeroberfläche zugreifen ](https://experience.adobe.com/). Wenn Sie nach Abschluss der oben genannten Schritte immer noch nicht auf eine der Benutzeroberflächen zugreifen können, wenden Sie sich an Ihr Adobe-Account-Team oder die Kundenunterstützung.
+Nachdem Ihr Unternehmen Zugriff auf Tags erhalten hat und Ihre Benutzerinnen und Benutzer wie oben beschrieben eingerichtet wurden, sollten Sie über das [Adobe Experience Cloud-Dashboard auf die Datenerfassungs-Benutzeroberfläche und die Experience Platform-Benutzeroberfläche zugreifen &#x200B;](https://experience.adobe.com/). Wenn Sie nach Abschluss der oben genannten Schritte immer noch nicht auf eine der Benutzeroberflächen zugreifen können, wenden Sie sich an Ihr Adobe-Account-Team oder die Kundenunterstützung.

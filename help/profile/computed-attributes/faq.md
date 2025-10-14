@@ -77,7 +77,7 @@ Wenn beispielsweise am 9. Oktober um 12 Uhr UTC eine erste Auswertung erfolgt, w
 
 >[!IMPORTANT]
 >
->Dies ist nur der Fall, wenn die schnelle Aktualisierung **nicht** aktiviert ist. Informationen dazu, wie sich die Lookback-Periode ändert, wenn die schnelle Aktualisierung aktiviert ist, finden Sie [ Abschnitt „Schnelle Aktualisierung](./overview.md#fast-refresh).
+>Dies ist nur der Fall, wenn die schnelle Aktualisierung **nicht** aktiviert ist. Informationen dazu, wie sich die Lookback-Periode ändert, wenn die schnelle Aktualisierung aktiviert ist, finden Sie [&#x200B; Abschnitt „Schnelle Aktualisierung](./overview.md#fast-refresh).
 
 Die **wöchentliche** und **monatliche** Aktualisierung erfolgt am Beginn der **Kalenderwoche** (Sonntag der neuen Woche) oder am Beginn des **Kalendermonats** (der erste des neuen Monats), im Gegensatz zu genau einer Woche oder einem Monat nach dem ersten Auswertungsdatum.
 

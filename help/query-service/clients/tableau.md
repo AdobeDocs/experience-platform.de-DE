@@ -19,7 +19,7 @@ Dieses Dokument enthält Informationen zum Verbinden von [!DNL Tableau] mit Adob
 >
 > In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL Tableau] haben und mit dem Navigieren in der zugehörigen Benutzeroberfläche vertraut sind. Weitere Informationen zu [!DNL Tableau] finden Sie in der [offiziellen [!DNL Tableau] Dokumentation](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
 
-Anleitungen zum Verbinden [ PostgreSQL-Servers mit Tableau ](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) Sie auf der offiziellen Tableau-Website. Sobald das Dialogfeld für die Verbindungseinstellungen angezeigt wird, geben Sie Ihre Experience Platform-Anmeldeinformationen in die Parameterfelder ein, um eine Verbindung mit Adobe Experience Platform herzustellen. Eine Liste der erforderlichen Verbindungsparameter finden Sie unten.
+Anleitungen zum Verbinden [&#x200B; PostgreSQL-Servers mit Tableau &#x200B;](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) Sie auf der offiziellen Tableau-Website. Sobald das Dialogfeld für die Verbindungseinstellungen angezeigt wird, geben Sie Ihre Experience Platform-Anmeldeinformationen in die Parameterfelder ein, um eine Verbindung mit Adobe Experience Platform herzustellen. Eine Liste der erforderlichen Verbindungsparameter finden Sie unten.
 
 | Verbindungsparameter | Beschreibung |
 |---|---|
@@ -34,9 +34,9 @@ Weiterführende Informationen dazu, wie Sie Ihren Benutzernamen, Ihr Kennwort un
 
 >[!IMPORTANT]
 >
->Als Tableau- oder Power BI-Anwender können Sie Customer Journey Analytics über die Registerkarte Anmeldeinformationen für den Abfrage-Service mit Ihren BI-Tools verbinden. Anleitungen zum Verbinden Ihrer BI-Tools mit Customer Journey Analytics finden [ in der Dokumentation zu Anmeldeinformationen ](../ui/credentials.md#connect-to-customer-journey-analytics).
+>Als Tableau- oder Power BI-Anwender können Sie Customer Journey Analytics über die Registerkarte Anmeldeinformationen für den Abfrage-Service mit Ihren BI-Tools verbinden. Anleitungen zum Verbinden Ihrer BI-Tools mit Customer Journey Analytics finden [&#x200B; in der Dokumentation zu Anmeldeinformationen &#x200B;](../ui/credentials.md#connect-to-customer-journey-analytics).
 
-Vergewissern Sie sich, dass Sie das **[!UICONTROL SSL erforderlich]** aktiviert haben, bevor Sie versuchen, eine Verbindung herzustellen. Weitere Informationen zur SSL[Unterstützung für Drittanbieterverbindungen ](./ssl-modes.md) Adobe Experience Platform Query Service finden Sie in der Dokumentation zu SSL-Modi .
+Vergewissern Sie sich, dass Sie das **[!UICONTROL SSL erforderlich]** aktiviert haben, bevor Sie versuchen, eine Verbindung herzustellen. Weitere Informationen zur SSL[Unterstützung für Drittanbieterverbindungen &#x200B;](./ssl-modes.md) Adobe Experience Platform Query Service finden Sie in der Dokumentation zu SSL-Modi .
 
 >[!IMPORTANT]
 >

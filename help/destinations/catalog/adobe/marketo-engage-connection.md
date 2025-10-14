@@ -55,7 +55,7 @@ Sie können ihre Zielgruppen in Marketo Engage aktivieren und den Synchronisieru
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| `DedupeField` | Das Feld, das zum Identifizieren und Abgleichen bestehender Leads in Marketo verwendet wird. | Ordnen Sie [ Schritt ](#mapping)Zuordnung“ jedes Quellfeld (z. B. `Email` oder andere benutzerdefinierte Kennungen) zu, das Sie als Deduplizierungsfeld für diese Zielidentität verwenden möchten. Um die besten Ergebnisse zu erzielen, wählen Sie ein Feld aus, das in allen Ihren Kundenprofilen konsistent verfügbar und eindeutig ist. `ECID` wird als Deduplizierungsfeld nicht unterstützt. |
+| `DedupeField` | Das Feld, das zum Identifizieren und Abgleichen bestehender Leads in Marketo verwendet wird. | Ordnen Sie [&#x200B; Schritt &#x200B;](#mapping)Zuordnung“ jedes Quellfeld (z. B. `Email` oder andere benutzerdefinierte Kennungen) zu, das Sie als Deduplizierungsfeld für diese Zielidentität verwenden möchten. Um die besten Ergebnisse zu erzielen, wählen Sie ein Feld aus, das in allen Ihren Kundenprofilen konsistent verfügbar und eindeutig ist. `ECID` wird als Deduplizierungsfeld nicht unterstützt. |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | ✓ | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> <br> |
 
 {style="table-layout:auto"}
@@ -146,7 +146,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
    * **[!UICONTROL Nur Profil]**: Wählen Sie diese Option aus, wenn Sie möchten, dass Marketo-Lead-Profile stets mit den neuesten Informationen aus Experience Platform aktualisiert werden.
    * **[!UICONTROL Nur Zielgruppe]**: Wählen Sie diese Option aus, wenn Sie Zielgruppenmitglieder zu Marketo-Listen hinzufügen möchten, ohne ihre Profilinformationen zu aktualisieren.
 * **[!UICONTROL Partition]**: *Die Partitionsauswahl ist nur verfügbar, wenn Sie **[!UICONTROL Nur Profil]**&#x200B;oder **[!UICONTROL Audience und Profil]**&#x200B;Synchronisierungstypen* auswählen. Wählen Sie eine Marketo-Partitions-ID aus, die mit Ihrem ausgewählten Arbeitsbereich verknüpft ist. Auf diese Weise können Sie angeben, welche Lead-Partition in Marketo die exportierten Daten erhält. Wenn Sie keine bestimmte Partition auswählen, werden Ihre Daten an die **[!UICONTROL Standard]**-Partition in Marketo gesendet.
-* **[!UICONTROL Marketo-Deduplizierungsfeld]**: Wählen Sie das Marketo-Deduplizierungsfeld aus, das Sie beim Aktualisieren vorhandener Marketo-Leads verwenden möchten. Dieser Selektor zeigt die Felder an, die Sie in Marketo als Deduplizierungsfelder markiert haben. Wenn ein bestimmtes Feld aus Marketo als Deduplizierungsfeld angezeigt werden soll, müssen Sie das Feld in Marketo als [ durchsuchbares ](https://experienceleague.adobe.com/de/docs/marketo-developer/marketo/rest/lead-database/lead-database) markieren.
+* **[!UICONTROL Marketo-Deduplizierungsfeld]**: Wählen Sie das Marketo-Deduplizierungsfeld aus, das Sie beim Aktualisieren vorhandener Marketo-Leads verwenden möchten. Dieser Selektor zeigt die Felder an, die Sie in Marketo als Deduplizierungsfelder markiert haben. Wenn ein bestimmtes Feld aus Marketo als Deduplizierungsfeld angezeigt werden soll, müssen Sie das Feld in Marketo als [&#x200B; durchsuchbares &#x200B;](https://experienceleague.adobe.com/de/docs/marketo-developer/marketo/rest/lead-database/lead-database) markieren.
 
   >[!NOTE]
   >

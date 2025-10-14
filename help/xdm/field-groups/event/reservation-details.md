@@ -12,7 +12,7 @@ ht-degree: 8%
 
 # [!UICONTROL Reservierungsdetails] Schemafeldgruppe
 
-[!UICONTROL Reservierungsdetails] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , ](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Reservierung zu erfassen, einschließlich Länge, Änderung, Erstattungsstatus und Anzahl der Zimmer.
+[!UICONTROL Reservierungsdetails] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , &#x200B;](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Reservierung zu erfassen, einschließlich Länge, Änderung, Erstattungsstatus und Anzahl der Zimmer.
 
 Die Feldergruppe stellt `reservations` ein einzelnes Feld vom Typ „Objekt“ bereit. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
 

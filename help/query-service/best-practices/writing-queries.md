@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Query Service] verfügt über zwei Modelle der A
 
 ### Interaktive Abfrageausführung
 
-Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service]-Benutzeroberfläche oder [über einen verbundenen Client) gesendet ](../clients/overview.md). Wenn [!DNL Query Service] über einen verbundenen Client ausgeführt wird, wird eine aktive Sitzung zwischen dem Client und [!DNL Query Service] ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung auftritt.
+Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service]-Benutzeroberfläche oder [über einen verbundenen Client) gesendet &#x200B;](../clients/overview.md). Wenn [!DNL Query Service] über einen verbundenen Client ausgeführt wird, wird eine aktive Sitzung zwischen dem Client und [!DNL Query Service] ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung auftritt.
 
 Die interaktive Ausführung von Abfragen hat die folgenden Einschränkungen:
 

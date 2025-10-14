@@ -33,7 +33,7 @@ In diesem Tutorial werden die Schritte zum Erstellen und Bearbeiten benutzerdefi
 
 Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Unter [XDM-Übersicht](../../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und in die [Grundlagen der Schemakomposition](../../schema/composition.md) wie Datentypen zu XDM-Schemata beitragen.
 
-Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [ Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
+Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [&#x200B; Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
 
 ## Öffnen der [!DNL Schema Editor] für einen Datentyp {#data-type}
 
@@ -59,7 +59,7 @@ In diesem Tutorial wird ein Datentyp erstellt, der eine Restauranteigenschaft be
 
 ![](../../images/ui/resources/data-types/data-type-properties.png)
 
-Von hier aus können Sie mit dem [ Abschnitt fortfahren](#add-fields) um Felder zum neuen Datentyp hinzuzufügen.
+Von hier aus können Sie mit dem [&#x200B; Abschnitt fortfahren](#add-fields) um Felder zum neuen Datentyp hinzuzufügen.
 
 ### Filtern von Datentypen {#filter}
 
@@ -71,7 +71,7 @@ Die Liste der verfügbaren Datentypen wird je nach ihrer Erstellung vorab gefilt
 
 >[!NOTE]
 >
->Sobald ein vorhandener Datentyp in einem Schema verwendet wird, das für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde, können anschließend nur noch zerstörungsfreie Änderungen an diesem Datentyp vorgenommen werden. Weitere Informationen finden [ unter „Regeln ](../../schema/composition.md#evolution) Schemaentwicklung“.
+>Sobald ein vorhandener Datentyp in einem Schema verwendet wird, das für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde, können anschließend nur noch zerstörungsfreie Änderungen an diesem Datentyp vorgenommen werden. Weitere Informationen finden [&#x200B; unter „Regeln &#x200B;](../../schema/composition.md#evolution) Schemaentwicklung“.
 
 Es können nur benutzerdefinierte Datentypen bearbeitet werden, die von Ihrer Organisation definiert wurden. Wählen Sie **[!UICONTROL Benutzerdefiniert]** aus, um nur benutzerdefinierte Datentypen anzuzeigen, die Ihrem Unternehmen gehören.
 
@@ -87,7 +87,7 @@ Um Felder zum Datentyp hinzuzufügen, wählen Sie auf der Arbeitsfläche das Sym
 
 ![](../../images/ui/resources/data-types/new-field.png)
 
-Verwenden Sie die Steuerelemente in der rechten Leiste, um die Details des neuen Felds zu konfigurieren. Spezifische Schritte zum Konfigurieren [ Hinzufügen des Felds zum Datentyp finden ](../fields/overview.md#define) im Handbuch unter „Definieren von Feldern in der“.
+Verwenden Sie die Steuerelemente in der rechten Leiste, um die Details des neuen Felds zu konfigurieren. Spezifische Schritte zum Konfigurieren [&#x200B; Hinzufügen des Felds zum Datentyp finden &#x200B;](../fields/overview.md#define) im Handbuch unter „Definieren von Feldern in der“.
 
 Der Datentyp Restaurant erfordert ein Zeichenfolgenfeld, das den Namen des Restaurants darstellt. Daher wird der [!UICONTROL Feldname] als „Name“ und der [!UICONTROL Typ] als &quot;[!UICONTROL String]&quot; festgelegt. Wählen Sie **[!UICONTROL Übernehmen]** aus, um die Änderungen auf das Feld anzuwenden.
 
@@ -109,7 +109,7 @@ Nachdem Sie dem Datentyp Felder hinzugefügt haben, klicken Sie auf **[!UICONTRO
 
 Nachdem Sie einen Datentyp erstellt haben, können Sie ihn in Ihren Schemata verwenden. Da XDM-Schemata aus einer Klasse und keiner oder mehreren Feldergruppen bestehen, können von einem Datentyp bereitgestellte Felder nicht direkt zu einem Schema hinzugefügt werden. Stattdessen müssen sie in eine Klasse oder Feldergruppe aufgenommen werden.
 
-Führen Sie zunächst die Schritte aus, die mit dem [Hinzufügen eines Felds zu einer ](./classes.md#add-fields) oder [Hinzufügen eines Felds zu einer Feldergruppe“ ](./field-groups.md#add-fields) sind. Alternativ können Sie mit dem [Hinzufügen eines Felds direkt zu einem Schema](./schemas.md#add-individual-fields) beginnen und dort die übergeordnete Klasse oder Feldergruppe auswählen. Wenn Sie den **[!UICONTROL Typ]** für das neue Feld auswählen, wählen Sie den Namen Ihres Datentyps aus dem Dropdown-Menü aus.
+Führen Sie zunächst die Schritte aus, die mit dem [Hinzufügen eines Felds zu einer &#x200B;](./classes.md#add-fields) oder [Hinzufügen eines Felds zu einer Feldergruppe“ &#x200B;](./field-groups.md#add-fields) sind. Alternativ können Sie mit dem [Hinzufügen eines Felds direkt zu einem Schema](./schemas.md#add-individual-fields) beginnen und dort die übergeordnete Klasse oder Feldergruppe auswählen. Wenn Sie den **[!UICONTROL Typ]** für das neue Feld auswählen, wählen Sie den Namen Ihres Datentyps aus dem Dropdown-Menü aus.
 
 ## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#convert}
 

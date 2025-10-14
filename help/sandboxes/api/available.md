@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [&#x200B; im &#x200B;](./appendix.md#query)-Dokument . |
 
 **Anfrage**
 

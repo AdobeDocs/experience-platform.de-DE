@@ -56,7 +56,7 @@ Weitere Informationen zu [Taxonomie-Metadaten](https://developer.verizonmedia.co
 >
 >Beim Aktivieren von mehr als 100 Zielgruppen für die [!DNL Verizon Media/Yahoo DataX] erhalten Sie möglicherweise Ratenbegrenzungsfehler vom Ziel. Versuchen Sie beim Aktivieren von Zielgruppen für dieses Ziel, in einem Aktivierungsdatenfluss weniger als 100 Zielgruppen zu aktivieren. Wenn Sie mehr Segmente aktivieren müssen, erstellen Sie ein neues Ziel im selben Konto.
 
-[!DNL DataX] ist gemäß den Quotenbegrenzungen für Taxonomie- und Zielgruppen-Posts, die in der (DataX[Dokumentation) beschrieben ](https://developer.verizonmedia.com/datax/guide/rate-limits/), ratenbegrenzt.
+[!DNL DataX] ist gemäß den Quotenbegrenzungen für Taxonomie- und Zielgruppen-Posts, die in der (DataX[Dokumentation) beschrieben &#x200B;](https://developer.verizonmedia.com/datax/guide/rate-limits/), ratenbegrenzt.
 
 
 | Fehler-Code | Fehlermeldung | Beschreibung |
@@ -123,7 +123,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 >* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen [ Aktivieren von Zielgruppen für Ziele finden Sie ](../../ui/activate-segment-streaming-destinations.md)Aktivieren von Profilen und Zielgruppen für ein Ziel“.
+Anweisungen [&#x200B; Aktivieren von Zielgruppen für Ziele finden Sie &#x200B;](../../ui/activate-segment-streaming-destinations.md)Aktivieren von Profilen und Zielgruppen für ein Ziel“.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

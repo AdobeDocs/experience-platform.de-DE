@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Voraussetzungen
 
-Informationen [[!DNL Bombora Intent]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/data-partners/bombora.md) „Übersicht“.
+Informationen [[!DNL Bombora Intent]  Abrufen Ihrer Authentifizierungsdaten finden Sie &#x200B;](../../../../connectors/data-partners/bombora.md) „Übersicht“.
 
 ## Navigieren im Quellkatalog
 

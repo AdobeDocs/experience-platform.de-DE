@@ -24,7 +24,7 @@ Vor der Version vom Januar 2024 bezogen sich alle Zeitbeschränkungen auf Regel-
 
 Zuvor konnten einem einzelnen Ereignis mehrere Zeitbeschränkungsregeln beigefügt werden. Im Rahmen dieser letzten Aktualisierung führt der Versuch, einer Regel eine Zeitbeschränkung hinzuzufügen, jetzt zu einem **Fehler**.
 
-![Die Zeitbeschränkung auf Regelebene ist hervorgehoben. Der anschließend auftretende Fehler wird ebenfalls hervorgehoben. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![Die Zeitbeschränkung auf Regelebene ist hervorgehoben. Der anschließend auftretende Fehler wird ebenfalls hervorgehoben. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 Zeitbeschränkungen können jetzt nur auf der Arbeitsflächen- oder Kartenebene angewendet werden.
 

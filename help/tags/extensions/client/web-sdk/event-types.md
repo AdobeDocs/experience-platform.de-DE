@@ -44,7 +44,7 @@ Die Web SDK-Tag-Erweiterung unterstützt die folgenden Überwachungs-Hooks:
 
 ## [!UICONTROL Senden des Ereignisses abgeschlossen]
 
-Normalerweise verfügt Ihre Eigenschaft über eine oder mehrere Regeln, die die Aktion [[!UICONTROL Ereignis senden] verwenden, ](action-types.md#send-event) Ereignisse an das Adobe Experience Platform-Edge Network zu senden. Jedes Mal, wenn ein Ereignis an Edge Network gesendet wird, wird eine Antwort mit nützlichen Daten an den Browser zurückgegeben. Ohne den Ereignistyp [!UICONTROL Ereignis senden abgeschlossen] hätten Sie keinen Zugriff auf diese zurückgegebenen Daten.
+Normalerweise verfügt Ihre Eigenschaft über eine oder mehrere Regeln, die die Aktion [[!UICONTROL Ereignis senden] verwenden, &#x200B;](action-types.md#send-event) Ereignisse an das Adobe Experience Platform-Edge Network zu senden. Jedes Mal, wenn ein Ereignis an Edge Network gesendet wird, wird eine Antwort mit nützlichen Daten an den Browser zurückgegeben. Ohne den Ereignistyp [!UICONTROL Ereignis senden abgeschlossen] hätten Sie keinen Zugriff auf diese zurückgegebenen Daten.
 
 Um auf die zurückgegebenen Daten zuzugreifen, erstellen Sie eine separate Regel und fügen Sie dann der Regel [!UICONTROL &#x200B; Ereignis &#x200B;]Ereignis „Ereignis senden abgeschlossen“ hinzu. Diese Regel wird jedes Mal ausgelöst, wenn als Ergebnis der Aktion „Ereignis senden[!UICONTROL &#x200B; eine erfolgreiche Antwort vom Server &#x200B;] wird.
 
@@ -253,7 +253,7 @@ In der Aktion für benutzerspezifischen Code, die in der Regel für die Verarbei
 var propositions = event.propositions;
 ```
 
-Wenn `event.propositions` vorhanden ist, handelt es sich um ein Array mit Personalisierungsvorschlagsobjekten. Weitere Informationen [ Inhalt von `result.propositions` finden Sie ](#manually-render-personalized-content)Manuelles Rendern personalisierter Inhalte“.
+Wenn `event.propositions` vorhanden ist, handelt es sich um ein Array mit Personalisierungsvorschlagsobjekten. Weitere Informationen [&#x200B; Inhalt von `result.propositions` finden Sie &#x200B;](#manually-render-personalized-content)Manuelles Rendern personalisierter Inhalte“.
 
 Angenommen, Sie möchten alle Aktivitätsnamen aus allen Vorschlägen erfassen, die automatisch von Web SDK gerendert wurden, und sie in ein einziges Array pushen. Sie können dann das einzelne Array an einen Drittanbieter senden. Schreiben Sie in diesem Fall benutzerdefinierten Code innerhalb der Aktion [!UICONTROL Benutzerdefinierter Code] in:
 

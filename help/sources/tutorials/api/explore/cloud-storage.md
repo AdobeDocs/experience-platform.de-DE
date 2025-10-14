@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erkunden von Cloud-Speicherordnern
 
@@ -114,7 +114,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}
 | `{BASE_CONNECTION_ID}` | Die Verbindungs-ID Ihres Cloud-Speicher-Quell-Connectors. |
 | `{FILE_PATH}` | Der Pfad zur Datei, die Sie überprüfen möchten. |
 | `{FILE_TYPE}` | Der Typ der Datei. Zu den unterstützten Dateitypen gehören:<ul><li><code>GETRENNT</code>: Durch Trennzeichen getrennter Wert. DSV-Dateien müssen durch Kommas getrennt sein.</li><li><code>JSON</code>: JavaScript-Objektnotation. JSON-Dateien müssen XDM-kompatibel sein</li><li><code></code>In: Apache Parquet. Parquet-Dateien müssen XDM-kompatibel sein.</li></ul> |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter, mit denen Ergebnisse gefiltert werden können. Weitere Informationen finden Sie [ Abschnitt ](#query) Abfrageparameter . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter, mit denen Ergebnisse gefiltert werden können. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#query) Abfrageparameter . |
 
 **Anfrage**
 
@@ -168,4 +168,4 @@ Die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refe
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr Cloud-Speichersystem erkundet, den Pfad der Datei gefunden, die Sie in [!DNL Experience Platform] einbringen möchten, und ihre Struktur betrachtet. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Cloud-Speicher zu erfassen und in Experience Platform zu ](../collect/cloud-storage.md).
+In diesem Tutorial haben Sie Ihr Cloud-Speichersystem erkundet, den Pfad der Datei gefunden, die Sie in [!DNL Experience Platform] einbringen möchten, und ihre Struktur betrachtet. Sie können diese Informationen im nächsten Tutorial verwenden[&#x200B; um Daten aus Ihrem Cloud-Speicher zu erfassen und in Experience Platform zu &#x200B;](../collect/cloud-storage.md).

@@ -15,7 +15,7 @@ Mit der Ansicht „Ereignistransaktionen“ in Adobe Experience Platform Assuran
 
 ## Einrichten von Assurance für den Edge Network-Workflow
 
-Stellen [ nach dem „Einrichten von Assurance](../tutorials/implement-assurance.md) sicher, dass Sie die neuesten Versionen der Assurance- und Edge Network-Erweiterungen in Ihrer App implementiert haben.
+Stellen [&#x200B; nach dem „Einrichten von Assurance](../tutorials/implement-assurance.md) sicher, dass Sie die neuesten Versionen der Assurance- und Edge Network-Erweiterungen in Ihrer App implementiert haben.
 
 Um Ihre Ereignisse anzuzeigen, wählen Sie im Menü links **[!UICONTROL Abschnitt {]**}Adobe Experience Platform Edge **die Option „Ereignistransaktionen“ aus.**
 

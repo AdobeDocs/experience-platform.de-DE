@@ -48,7 +48,7 @@ Zu den Berechtigungen unter Adobe Experience Platform gehört der Zugriff auf Da
 
 ### Berechtigungen zur Datenerfassung in Adobe Experience Platform
 
-Berechtigungen unter Adobe Experience Platform-Datenerfassung steuern den Zugriff auf Tags und Ereignisweiterleitungsfunktionen, einschließlich Eigenschaften, Erweiterungen und Umgebungen. Anweisungen zum Konfigurieren der Datenerfassungsberechtigungen für Adobe Experience Platform finden Sie [ Abschnitt unten](#manage).
+Berechtigungen unter Adobe Experience Platform-Datenerfassung steuern den Zugriff auf Tags und Ereignisweiterleitungsfunktionen, einschließlich Eigenschaften, Erweiterungen und Umgebungen. Anweisungen zum Konfigurieren der Datenerfassungsberechtigungen für Adobe Experience Platform finden Sie [&#x200B; Abschnitt unten](#manage).
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ Um auf Datenerfassungsfunktionen zuzugreifen, müssen Sie alle Berechtigungen in
 
 ![Bild, das die Datenerfassungs-Produktkarte in Admin Console zeigt](./images/permissions/platform-permission-card.png)
 
-Detaillierte Anweisungen [ Verwalten von Experience Platform-Berechtigungen finden ](../access-control/ui/overview.md) im Handbuch zur Benutzeroberfläche der Zugriffssteuerung .
+Detaillierte Anweisungen [&#x200B; Verwalten von Experience Platform-Berechtigungen finden &#x200B;](../access-control/ui/overview.md) im Handbuch zur Benutzeroberfläche der Zugriffssteuerung .
 
 >[!NOTE]
 >

@@ -72,10 +72,10 @@ $$;
 /
 ```
 
-Insbesondere für DbVisualizer gibt es in der Benutzeroberfläche auch eine Option zum &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Weitere Informationen finden [ in der Dokumentation ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer)DbVisualizer“.
+Insbesondere für DbVisualizer gibt es in der Benutzeroberfläche auch eine Option zum &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Weitere Informationen finden [&#x200B; in der Dokumentation &#x200B;](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer)DbVisualizer“.
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments verstehen Sie nun anonyme Blöcke und ihre Struktur besser. Weitere Informationen zum [ von Abfragen finden ](../best-practices/writing-queries.md) im „Handbuch zur Abfrageausführung“.
+Durch das Lesen dieses Dokuments verstehen Sie nun anonyme Blöcke und ihre Struktur besser. Weitere Informationen zum [&#x200B; von Abfragen finden &#x200B;](../best-practices/writing-queries.md) im „Handbuch zur Abfrageausführung“.
 
 Sie sollten auch das Thema über [Verwendung anonymer Blöcke mit dem Design-Muster zum inkrementellen Laden“ lesen](./incremental-load.md) um die Abfrageeffizienz zu erhöhen.

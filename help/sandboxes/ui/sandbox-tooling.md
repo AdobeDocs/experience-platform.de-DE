@@ -180,7 +180,7 @@ Die Optionen zum Erstellen neuer oder zum Verwenden vorhandener werden angezeigt
 
 Das **[!UICONTROL Feldgruppe]** zeigt eine Liste der für das Objekt verfügbaren Feldgruppen an. Wählen Sie die erforderlichen Feldergruppen aus und klicken Sie dann auf **[!UICONTROL Speichern]**.
 
-![Eine Liste der Felder, die im Dialogfeld [!UICONTROL Feldergruppe] angezeigt wird, wobei die Auswahl [!UICONTROL Speichern] hervorgehoben wird. ](../images/ui/sandbox-tooling/field-group-list.png)
+![Eine Liste der Felder, die im Dialogfeld [!UICONTROL Feldergruppe] angezeigt wird, wobei die Auswahl [!UICONTROL Speichern] hervorgehoben wird. &#x200B;](../images/ui/sandbox-tooling/field-group-list.png)
 
 Sie kehren zur Seite &quot;[!UICONTROL &#x200B; und Abhängigkeiten“ &#x200B;]. Wählen Sie von hier aus **[!UICONTROL Beenden]**, um den Package-Import abzuschließen.
 

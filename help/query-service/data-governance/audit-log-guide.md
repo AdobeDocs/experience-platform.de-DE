@@ -75,11 +75,11 @@ Der Wert von [!UICONTROL Ereignisstatus] ändert sich je nach der beim Audit ver
 
 ## Verfügbare Filter für [!DNL Query Service] Administratorprotokoll-Kategorien {#available-filters}
 
-Die verfügbaren Filter variieren je nach der im Dropdown-Menü ausgewählten Kategorie. In der folgenden Tabelle sind die Filter aufgeführt, die für [[!DNL Query Service] Auditprotokollkategorien“ verfügbar ](#audit-log-categories).
+Die verfügbaren Filter variieren je nach der im Dropdown-Menü ausgewählten Kategorie. In der folgenden Tabelle sind die Filter aufgeführt, die für [[!DNL Query Service] Auditprotokollkategorien“ verfügbar &#x200B;](#audit-log-categories).
 
 | Filter | Beschreibung |
 |---|---|
-| Kategorie | Eine vollständige Liste [[!DNL Query Service]  verfügbaren Kategorien finden Sie ](#audit-log-categories) Abschnitt „Auditprotokollkategorien“. |
+| Kategorie | Eine vollständige Liste [[!DNL Query Service]  verfügbaren Kategorien finden Sie &#x200B;](#audit-log-categories) Abschnitt „Auditprotokollkategorien“. |
 | Aktion | Wenn Sie sich auf [!DNL Query Service] Auditkategorien beziehen, handelt es sich bei der Aktualisierung um **Änderung am vorhandenen Formular**, beim Löschen **Entfernen des Zeitplans oder der**), beim Erstellen **Erstellen eines neuen Zeitplans oder einer neuen Vorlage** und beim Ausführen **eine Abfrage**. |
 | Benutzer | Geben Sie die vollständige Benutzer-ID ein (z. B. johndoe@acme.com), um nach Benutzer zu filtern. |
 | Status | Die Optionen [!UICONTROL Zulassen], [!UICONTROL Erfolg] und [!UICONTROL Fehler] filtern die Protokolle auf der Grundlage des „Status“ oder „Ereignisstatus“, während die Option [!UICONTROL Ablehnen] **alle**-Protokolle herausfiltert. |

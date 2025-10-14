@@ -11,7 +11,7 @@ ht-degree: 55%
 
 # Erstellen eines Datenflusses für [!DNL Zendesk] mithilfe der [!DNL Flow Service]-API
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Zendesk] Daten mithilfe der -API [[!DNL Flow Service]  Experience Platform ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Zendesk] Daten mithilfe der -API [[!DNL Flow Service]  Experience Platform &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Erste Schritte
 

@@ -26,7 +26,7 @@ Wenn Sie bereits über ein gültiges [!DNL Oracle NetSuite]-Konto verfügen, kö
 
 >[!TIP]
 >
->Informationen [[!DNL Oracle NetSuite]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/marketing-automation/oracle-netsuite.md) „Übersicht“.
+>Informationen [[!DNL Oracle NetSuite]  Abrufen Ihrer Authentifizierungsdaten finden Sie &#x200B;](../../../../connectors/marketing-automation/oracle-netsuite.md) „Übersicht“.
 
 ## Verbinden Ihres [!DNL Oracle NetSuite]-Kontos {#connect-account}
 

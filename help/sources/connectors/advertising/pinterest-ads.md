@@ -17,7 +17,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden ](../../home.md#terms-and-conditions) unter „Quellen - Übersicht“ .
+>Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden &#x200B;](../../home.md#terms-and-conditions) unter „Quellen - Übersicht“ .
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -99,7 +99,7 @@ Für Experience Platform ist die [!DNL Pinterest Ads] intern so konfiguriert, da
 
 >[!IMPORTANT]
 >
->Pinterest begrenzt die Anzahl der API-Aufrufe pro Tag auf 1.000, um Informationen aus Anzeigen, Anzeigengruppen oder Anzeigenkampagnen zu lesen. Informationen zu Ratenbeschränkungen für zugrunde liegende API-Aufrufe finden Sie in der [[!DNL Pinterest] Dokumentation zu ](https://developers.pinterest.com/docs/reference/ratelimits/).
+>Pinterest begrenzt die Anzahl der API-Aufrufe pro Tag auf 1.000, um Informationen aus Anzeigen, Anzeigengruppen oder Anzeigenkampagnen zu lesen. Informationen zu Ratenbeschränkungen für zugrunde liegende API-Aufrufe finden Sie in der [[!DNL Pinterest] Dokumentation zu &#x200B;](https://developers.pinterest.com/docs/reference/ratelimits/).
 
 ## Verbinden von [!DNL Pinterest Ads] mit Experience Platform {#connect-to-platform}
 

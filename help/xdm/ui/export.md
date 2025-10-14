@@ -24,7 +24,7 @@ Um diese Anforderung zu erfüllen, können Sie mit dem [!UICONTROL Schemas] in d
 
 >[!NOTE]
 >
->Sie können die Schema Registry-API auch verwenden, um zusätzlich zu Schemata andere Ressourcen zu exportieren, einschließlich Klassen, Schemafeldgruppen und Datentypen. Weitere Informationen finden [ im ](../api/export.md) zum Exportieren von Endpunkten .
+>Sie können die Schema Registry-API auch verwenden, um zusätzlich zu Schemata andere Ressourcen zu exportieren, einschließlich Klassen, Schemafeldgruppen und Datentypen. Weitere Informationen finden [&#x200B; im &#x200B;](../api/export.md) zum Exportieren von Endpunkten .
 
 ## Voraussetzungen
 
@@ -38,7 +38,7 @@ Um eine Export-Payload zu generieren, wählen Sie **[!UICONTROL Schemata]** im l
 
 >[!TIP]
 >
->Weitere Informationen dazu, wie Sie die [ XDM-Ressource finden, finden ](./explore.md) im Handbuch zu XDM-Ressourcen .
+>Weitere Informationen dazu, wie Sie die [&#x200B; XDM-Ressource finden, finden &#x200B;](./explore.md) im Handbuch zu XDM-Ressourcen .
 
 Wählen Sie als Nächstes das **[!UICONTROL JSON kopieren]**-Symbol (![Kopiersymbol](/help/images/icons/copy.png)) aus den verfügbaren Optionen aus.
 
@@ -218,7 +218,7 @@ Sie können die Payload auch kopieren, indem Sie [!UICONTROL Mehr] oben rechts i
 >
 >Ein Schema kann nicht gelöscht werden, wenn es für ein Profil aktiviert ist oder über verknüpfte Datensätze verfügt.
 
-![Der Schema-Editor mit [!UICONTROL Mehr] und [!UICONTROL In JSON kopieren] hervorgehobenen ](../images/ui/export/schema-editor-copy-json.png)
+![Der Schema-Editor mit [!UICONTROL Mehr] und [!UICONTROL In JSON kopieren] hervorgehobenen &#x200B;](../images/ui/export/schema-editor-copy-json.png)
 
 Die Payload hat die Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine zu exportierende benutzerdefinierte XDM-Ressource darstellt. Im obigen Beispiel sind die benutzerdefinierte Feldergruppe &quot;[!DNL Loyalty details]&quot; und das Schema &quot;[!DNL Loyalty Members]&quot; enthalten. Alle vom Schema verwendeten Kernressourcen sind nicht im Export enthalten, da diese Ressourcen in allen Sandboxes und Organisationen verfügbar sind.
 
@@ -226,7 +226,7 @@ Beachten Sie, dass jede Instanz der Mandanten-ID Ihrer Organisation als `<XDM_TE
 
 ## Ressource mit der API importieren {#import-resource-with-api}
 
-Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Payload für eine POST-Anfrage an den `/rpc/import`-Endpunkt in der Schema Registry-API verwenden. Weitere Informationen [ Konfigurieren des Aufrufs zum Senden des Schemas an ](../api/import.md) gewünschte Organisation und Sandbox finden Sie im Handbuch zum des Importendpunkts .
+Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Payload für eine POST-Anfrage an den `/rpc/import`-Endpunkt in der Schema Registry-API verwenden. Weitere Informationen [&#x200B; Konfigurieren des Aufrufs zum Senden des Schemas an &#x200B;](../api/import.md) gewünschte Organisation und Sandbox finden Sie im Handbuch zum des Importendpunkts .
 
 ## Nächste Schritte
 

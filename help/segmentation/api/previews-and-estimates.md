@@ -193,7 +193,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit detaillierten Inform
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `results` | Eine Liste der Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können mithilfe des Profilzugriffs-API[Endpunkts zum Nachschlagen der angegebenen Entitäten ](../../profile/api/entities.md). |
+| `results` | Eine Liste der Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können mithilfe des Profilzugriffs-API[Endpunkts zum Nachschlagen der angegebenen Entitäten &#x200B;](../../profile/api/entities.md). |
 
 +++
 

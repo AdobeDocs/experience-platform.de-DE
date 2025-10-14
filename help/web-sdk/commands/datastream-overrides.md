@@ -21,7 +21,7 @@ Dieses Objekt ist nützlich, wenn Sie unterschiedliche Websites oder Subdomains 
 
 Die Überschreibung der Datenstromkonfiguration ist ein zweistufiger Prozess:
 
-1. Zunächst müssen Sie in der Datenstrom-Benutzeroberfläche auf der Seite [Datenstromkonfiguration“ ](../../datastreams/configure.md) Überschreiben der Datenstromkonfiguration definieren. Anweisungen [ Konfigurieren von Überschreibungen finden Sie ](../../datastreams/overrides.md#configure-overrides) der Dokumentation zu Datenstromkonfigurationsüberschreibungen .
+1. Zunächst müssen Sie in der Datenstrom-Benutzeroberfläche auf der Seite [Datenstromkonfiguration“ &#x200B;](../../datastreams/configure.md) Überschreiben der Datenstromkonfiguration definieren. Anweisungen [&#x200B; Konfigurieren von Überschreibungen finden Sie &#x200B;](../../datastreams/overrides.md#configure-overrides) der Dokumentation zu Datenstromkonfigurationsüberschreibungen .
 2. Nachdem Sie die Datenstrom-Überschreibung in der Benutzeroberfläche konfiguriert haben, müssen Sie die Überschreibungen auf eine der folgenden Arten an das Edge Network senden:
    * Über die Web-SDK [Tag-Erweiterung](#tag-extension).
    * Über die [`sendEvent`](../commands/sendevent/overview.md) oder [`configure`](../commands/configure/overview.md) Web SDK-Befehle.
@@ -31,7 +31,7 @@ Wenn Sie Überschreibungen sowohl in der Web-SDK-Konfiguration als auch in einem
 
 >[!NOTE]
 >
->Wenn Sie möchten, dass ein Experience Cloud-Service durch *Konfiguration* (deaktiviert) wird, müssen Sie sicherstellen, dass der Service in *Datenstromkonfiguration* (aktiviert) ist. Weitere Informationen zum Hinzufügen von [ zu einem Datenstrom finden Sie in ](../../datastreams/configure.md#add-services) Dokumentation zum Konfigurieren von Datenströmen .
+>Wenn Sie möchten, dass ein Experience Cloud-Service durch *Konfiguration* (deaktiviert) wird, müssen Sie sicherstellen, dass der Service in *Datenstromkonfiguration* (aktiviert) ist. Weitere Informationen zum Hinzufügen von [&#x200B; zu einem Datenstrom finden Sie in &#x200B;](../../datastreams/configure.md#add-services) Dokumentation zum Konfigurieren von Datenströmen .
 
 ## Senden von Datenstrom-Überschreibungen an das Edge Network über die Tag-Erweiterung „Web SDK&quot; {#tag-extension}
 
@@ -39,7 +39,7 @@ Detaillierte Konfigurationsanweisungen finden Sie in der Dokumentation [Konfigur
 
 Wenn Sie Datenstrom-Überschreibungen aus der Web SDK-Tag-Erweiterung konfigurieren möchten, legen Sie jedes gewünschte Feld unter &quot;**[!UICONTROL von Datenstrom-Konfigurationen]** beim [Konfigurieren der Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) fest.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].
@@ -48,7 +48,7 @@ Wenn Sie Datenstrom-Überschreibungen aus der Web SDK-Tag-Erweiterung konfigurie
 
 Wenn Sie Überschreibungen nur für einen bestimmten Befehl festlegen möchten, legen Sie jedes gewünschte Feld in den Aktionen einer Tag-Regel fest.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.

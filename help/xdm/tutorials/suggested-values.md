@@ -75,7 +75,7 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 
 ## Hinzufügen empfohlener Werte zu einem Standardfeld {#add-suggested-standard}
 
-Um die `meta:enum` eines standardmäßigen Zeichenfolgenfelds zu erweitern, können Sie für das [ Feld in einem bestimmten Schema einen ](../api/descriptors.md#friendly-name)Deskriptor für benutzerfreundliche Namen“ erstellen.
+Um die `meta:enum` eines standardmäßigen Zeichenfolgenfelds zu erweitern, können Sie für das [&#x200B; Feld in einem bestimmten Schema einen &#x200B;](../api/descriptors.md#friendly-name)Deskriptor für benutzerfreundliche Namen“ erstellen.
 
 >[!NOTE]
 >
@@ -274,4 +274,4 @@ Nach Anwendung der Änderung antwortet die Schemaregistrierung beim Abrufen des 
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie vorgeschlagene Werte für Zeichenfolgenfelder in der Schema Registry-API verwalten. Weitere Informationen zum Erstellen [ verschiedenen Feldtypen finden Sie ](./custom-fields-api.md) Handbuch unter „Definieren benutzerdefinierter Felder in der API“.
+In diesem Handbuch wurde beschrieben, wie Sie vorgeschlagene Werte für Zeichenfolgenfelder in der Schema Registry-API verwalten. Weitere Informationen zum Erstellen [&#x200B; verschiedenen Feldtypen finden Sie &#x200B;](./custom-fields-api.md) Handbuch unter „Definieren benutzerdefinierter Felder in der API“.

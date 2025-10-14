@@ -56,7 +56,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Schritt 2: Erstellen einer Zielkonfiguration {#create-destination-configuration}
 
-Im Folgenden finden Sie eine Beispielkonfiguration für eine Zielvorlage, die mithilfe dem `/destinations`-API-Endpunkt erstellt wurde. Weitere Informationen [ Sie unter ](../authoring-api/destination-configuration/create-destination-configuration.md) einer Zielkonfiguration .
+Im Folgenden finden Sie eine Beispielkonfiguration für eine Zielvorlage, die mithilfe dem `/destinations`-API-Endpunkt erstellt wurde. Weitere Informationen [&#x200B; Sie unter &#x200B;](../authoring-api/destination-configuration/create-destination-configuration.md) einer Zielkonfiguration .
 
 Um die Server- und Vorlagenkonfiguration in Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die Instanz-ID der Server- und Vorlagenkonfiguration hier als `destinationServerId` hinzu.
 
@@ -152,7 +152,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Schritt 3: Erstellen einer Nachrichtenumwandlungsvorlage – Verwenden Sie die Vorlagensprache, um das Ausgabeformat der Nachricht anzugeben {#create-transformation-template}
 
-Basierend auf den Payloads, die das Ziel unterstützt, müssen Sie eine Vorlage erstellen, die das Format der exportierten Daten aus dem Adobe-XDM-Format in ein vom Ziel unterstütztes Format umwandelt. Adobe Orientieren Sie sich an den Vorlagenbeispielen im Abschnitt [Verwenden einer Vorlagensprache für die Umwandlung von Identität, Attributen und Zielgruppenzugehörigkeit](../functionality/destination-server/message-format.md#using-templating) und verwenden Sie das von [ bereitgestellte Tool ](../testing-api/streaming-destinations/create-template.md) Vorlagenerstellung .
+Basierend auf den Payloads, die das Ziel unterstützt, müssen Sie eine Vorlage erstellen, die das Format der exportierten Daten aus dem Adobe-XDM-Format in ein vom Ziel unterstütztes Format umwandelt. Adobe Orientieren Sie sich an den Vorlagenbeispielen im Abschnitt [Verwenden einer Vorlagensprache für die Umwandlung von Identität, Attributen und Zielgruppenzugehörigkeit](../functionality/destination-server/message-format.md#using-templating) und verwenden Sie das von [&#x200B; bereitgestellte Tool &#x200B;](../testing-api/streaming-destinations/create-template.md) Vorlagenerstellung .
 
 Nachdem Sie eine Vorlage für die Nachrichtenumwandlung erstellt haben, die Ihren Anforderungen entspricht, fügen Sie sie der Server- und Vorlagenkonfiguration hinzu, die Sie in Schritt 1 erstellt haben.
 

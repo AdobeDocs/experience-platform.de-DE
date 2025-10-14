@@ -18,7 +18,7 @@ Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgeruf
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit der [!DNL OneTrust Integration] verfügen. Weitere Informationen finden Sie im Tutorial [Erstellen  [!DNL OneTrust Integration]  Quellverbindung in ](../../ui/create/consent-and-preferences/onetrust.md) Benutzeroberfläche“.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit der [!DNL OneTrust Integration] verfügen. Weitere Informationen finden Sie im Tutorial [Erstellen  [!DNL OneTrust Integration]  Quellverbindung in &#x200B;](../../ui/create/consent-and-preferences/onetrust.md) Benutzeroberfläche“.
 >* Damit Experience Platform Daten aufnehmen kann, müssen die Zeitzonen für alle tabellenbasierten Batch-Quellen als UTC konfiguriert werden.
 
 ## Erste Schritte

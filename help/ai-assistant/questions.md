@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Lesen Sie dieses Dokument, um eine Reihe von Beispielfragen zu erhalten, die Sie bei der Abfrage des KI-Assistenten verwenden können.
 
-In diesem Dokument erfahren Sie auch, wie Sie [ Ihre Fragen formulieren können](#phrasing-your-questions) um vom KI-Assistenten optimale Antworten zu erhalten.
+In diesem Dokument erfahren Sie auch, wie Sie [&#x200B; Ihre Fragen formulieren können](#phrasing-your-questions) um vom KI-Assistenten optimale Antworten zu erhalten.
 
 ## Zielbezogene Fragen {#objectives-questions}
 

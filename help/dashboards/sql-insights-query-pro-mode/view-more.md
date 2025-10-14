@@ -27,7 +27,7 @@ Exportieren Sie im **[!UICONTROL „Mehr anzeigen]** die Tabellendaten, indem Si
 
 >[!IMPORTANT]
 >
->Um auf die Exportoptionen zuzugreifen, muss Ihnen Ihr Administrator die Berechtigung **[!UICONTROL Export-Dashboard-Daten]** erteilen. Wenn die Schaltfläche [!UICONTROL Exportieren] ausgegraut ist, wenden Sie sich an Ihren Administrator. Weitere Informationen zu Dashboard[Berechtigungen finden Sie ](../../access-control/home.md) „Zugriffssteuerung - Übersicht“.
+>Um auf die Exportoptionen zuzugreifen, muss Ihnen Ihr Administrator die Berechtigung **[!UICONTROL Export-Dashboard-Daten]** erteilen. Wenn die Schaltfläche [!UICONTROL Exportieren] ausgegraut ist, wenden Sie sich an Ihren Administrator. Weitere Informationen zu Dashboard[Berechtigungen finden Sie &#x200B;](../../access-control/home.md) „Zugriffssteuerung - Übersicht“.
 
 >[!NOTE]
 >
@@ -97,4 +97,4 @@ Pro Seite können bis zu 500 Datensätze angezeigt werden. Um durch die Datensä
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie tabellarische Ergebnisse aus der SQL-Analyse Ihres benutzerdefinierten Diagramms anzeigen und diese Daten sicher exportieren können. Im Dokument SQL anzeigen erfahren Sie, wie Sie [SQL hinter Ihren benutzerdefinierten Einblicken anzeigen](./view-sql.md).
 
-Außerdem erfahren Sie mit dem Handbuch [ Design-Modus , wie Sie Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche ](../standard-dashboards.md).
+Außerdem erfahren Sie mit dem Handbuch [&#x200B; Design-Modus , wie Sie Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche &#x200B;](../standard-dashboards.md).

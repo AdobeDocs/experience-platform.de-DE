@@ -14,21 +14,21 @@ ht-degree: 6%
 
 # [!UICONTROL Abdeckung] Schemafeldgruppe
 
-[!UICONTROL Abdeckung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL Plan] ](../../../classes/plan.md). Sie enthält ein einheitliches Feld vom Typ „Objekt“, `healthcareCoverage` dem die übergeordneten Kennungen und Deskriptoren eines Versicherungsplans bereitgestellt werden sollen, in der Regel die Informationen, die auf einer Versicherungskarte erscheinen würden und die verwendet werden können, um ganz oder teilweise die Bereitstellung von Gesundheitsprodukten und -dienstleistungen zu bezahlen.
+[!UICONTROL Abdeckung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL Plan] &#x200B;](../../../classes/plan.md). Sie enthält ein einheitliches Feld vom Typ „Objekt“, `healthcareCoverage` dem die übergeordneten Kennungen und Deskriptoren eines Versicherungsplans bereitgestellt werden sollen, in der Regel die Informationen, die auf einer Versicherungskarte erscheinen würden und die verwendet werden können, um ganz oder teilweise die Bereitstellung von Gesundheitsprodukten und -dienstleistungen zu bezahlen.
 
 ![Feldergruppenstruktur](../../../images/healthcare/field-groups/coverage/coverage.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Planbegünstigter] | `beneficiary` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Partei, die vom Versicherungsschutz profitiert, und der Patient, wenn Produkte oder Dienstleistungen erbracht werden. |
-| [!UICONTROL Klasse] | `class` | Array von Objekten | Eine Suite von Underwriter-spezifischen Klassifikatoren. Weitere Informationen finden [ im ](#class) Abschnitt unten. |
+| [!UICONTROL Klasse] | `class` | Array von Objekten | Eine Suite von Underwriter-spezifischen Klassifikatoren. Weitere Informationen finden [&#x200B; im &#x200B;](#class) Abschnitt unten. |
 | [!UICONTROL Kontakt] | `contract` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Die Police(s), die diesen Versicherungsschutz bilden. |
-| [!UICONTROL Kosten für den Begünstigten] | `costToBeneficiary` | Array von Objekten | Eine Suite von Codes, die die Kostenkategorie und den zugehörigen Betrag angeben, die in der Richtlinie detailliert beschrieben und möglicherweise auf der Gesundheitskarte enthalten sind. Weitere Informationen finden [ im ](#cost-to-beneficiary) Abschnitt unten. |
-| [!UICONTROL Ausnahme] | `exception` | Array von Objekten | Eine Reihe von Codes, die Ausnahmen oder Ermäßigungen der Patientenkosten und ihrer effektiven Zeiträume angeben. Weitere Informationen finden [ im ](#exception) Abschnitt unten. |
+| [!UICONTROL Kosten für den Begünstigten] | `costToBeneficiary` | Array von Objekten | Eine Suite von Codes, die die Kostenkategorie und den zugehörigen Betrag angeben, die in der Richtlinie detailliert beschrieben und möglicherweise auf der Gesundheitskarte enthalten sind. Weitere Informationen finden [&#x200B; im &#x200B;](#cost-to-beneficiary) Abschnitt unten. |
+| [!UICONTROL Ausnahme] | `exception` | Array von Objekten | Eine Reihe von Codes, die Ausnahmen oder Ermäßigungen der Patientenkosten und ihrer effektiven Zeiträume angeben. Weitere Informationen finden [&#x200B; im &#x200B;](#exception) Abschnitt unten. |
 | [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Die Kennung der vom Versicherer ausgestellten Deckung. |
 | [!UICONTROL Versicherungsplan] | `insurancePlan` | [[!UICONTROL Referenz]](../data-types/reference.md) | Im Versicherungsplan sind die Einzelheiten, die Vorteile und die Kosten aufgeführt, die diesen Versicherungsschutz ausmachen. |
 | [!UICONTROL Versicherer] | `insurer` | [[!UICONTROL Referenz]](../data-types/reference.md) | Programm- oder Planversicherer, Zahler oder Versicherungsgesellschaft. |
-| [!UICONTROL Zahlung bis] | `paymentBy` | Array von Objekten | Der Link zur Zahlstelle und optional das, was diese zu zahlen hat. Weitere Informationen finden [ im ](#payment-by) Abschnitt unten. |
+| [!UICONTROL Zahlung bis] | `paymentBy` | Array von Objekten | Der Link zur Zahlstelle und optional das, was diese zu zahlen hat. Weitere Informationen finden [&#x200B; im &#x200B;](#payment-by) Abschnitt unten. |
 | [!UICONTROL Start- und Enddatum des Leistungsanspruchs] | `period` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Der Zeitraum, in dem die Abdeckung aktiv ist. Ein fehlendes Startdatum bedeutet, dass das Startdatum nicht bekannt ist. Ein fehlendes Enddatum bedeutet, dass die Abdeckung noch läuft. |
 | [!UICONTROL Versicherungsnehmer] | `policyHolder` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Partei, die die Versicherungspolice besitzt. |
 | [!UICONTROL Beziehung zum Begünstigten] | `relationship` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Beziehung des Begünstigten zum Teilnehmer. |

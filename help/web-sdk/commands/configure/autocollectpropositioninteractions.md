@@ -122,7 +122,7 @@ alloy("sendEvent", {
 
 ## Automatische Vorschläge und Interaktionen für das Klick-Tracking über die Tag-Erweiterung von Web SDK aktivieren {#tag-extension}
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **Datenerfassung** > **Tags**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **Erweiterungen** und wählen Sie dann **Konfigurieren** auf der Karte Adobe Experience Platform Web SDK aus.

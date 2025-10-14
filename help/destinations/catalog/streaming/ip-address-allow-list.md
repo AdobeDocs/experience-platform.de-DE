@@ -24,7 +24,7 @@ Die auf dieser Seite dokumentierten IP-Bereiche gelten für die folgenden Ziele:
 
 * [Erweiterte Unternehmensziele](../../destination-types.md#advanced-enterprise-destinations): [HTTP-API-Ziel](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 * [Exportziele für Streaming-Zielgruppen](../../destination-types.md#streaming-destinations) wie [Pega CDH RealTime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-basierte Integrationen mit [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) und [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
-* Öffentliche oder private Ziele, die über [Destination SDK erstellt ](../../destination-sdk/getting-started.md)
+* Öffentliche oder private Ziele, die über [Destination SDK erstellt &#x200B;](../../destination-sdk/getting-started.md)
 
 Der von Experience Platform an diese Ziele ausgehende Traffic durchläuft immer die auf dieser Seite aufgelisteten IPs.
 
@@ -77,7 +77,7 @@ Auf die Zulassungsliste setzen Zusätzlich zu diesen globalen IP-Adressen müsse
 
 ## VA6: Kunden aus den USA und Amerika, die mit AWS arbeiten {#aws}
 
-Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht [ Experience Platform Multi-Cloud .](../../../landing/multi-cloud.md)
+Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht [&#x200B; Experience Platform Multi-Cloud .](../../../landing/multi-cloud.md)
 
 * `3.209.222.108`
 * `3.211.230.204`

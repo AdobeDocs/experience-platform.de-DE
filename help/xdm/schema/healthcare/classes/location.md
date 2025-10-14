@@ -24,4 +24,4 @@ Im Experience-Datenmodell (XDM) erfasst die [!UICONTROL Location]-Klasse Live-In
 | [!UICONTROL Standortkennung] | `locationID` | [!UICONTROL String] | Eine eindeutige Kennung für den Speicherort. |
 | [!UICONTROL Speicherort-Name] | `locationName` | [!UICONTROL String] | Der Name des Speicherorts. |
 
-Die Klasse kann mit der Feldergruppe [[!UICONTROL Standort] erweitert werden, ](../field-groups/location.md) weitere Details zu einem Standort zu beschreiben.
+Die Klasse kann mit der Feldergruppe [[!UICONTROL Standort] erweitert werden, &#x200B;](../field-groups/location.md) weitere Details zu einem Standort zu beschreiben.

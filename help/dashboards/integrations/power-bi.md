@@ -17,7 +17,7 @@ Dieses Dokument enthält Anweisungen dazu, wie Sie Adobe Experience Platform mit
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Tutorial fortfahren, sollten Sie ein gutes Verständnis über [Schemakomposition](../../xdm/schema/composition.md) in Experience Platform haben und darüber, wie Attribute über das „Vereinigungsschema[ in das Echtzeit-Kundenprofil eingefügt ](../../xdm/schema/composition.md#union).
+Bevor Sie mit diesem Tutorial fortfahren, sollten Sie ein gutes Verständnis über [Schemakomposition](../../xdm/schema/composition.md) in Experience Platform haben und darüber, wie Attribute über das „Vereinigungsschema[&#x200B; in das Echtzeit-Kundenprofil eingefügt &#x200B;](../../xdm/schema/composition.md#union).
 
 Um die Power BI-Anwendungsintegration installieren zu können, müssen Benutzende zunächst die folgenden Experience Platform-Berechtigungen erhalten haben:
 

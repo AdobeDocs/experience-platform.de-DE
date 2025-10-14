@@ -21,7 +21,7 @@ Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre e
 Die Dienste können in drei Bereiche unterteilt werden:
 
 * [Data Governance](#governance)
-* [Datenschutz   ](#privacy)
+* [Datenschutz   &#x200B;](#privacy)
 * [Sicherheit](#security)
 
 ## Data Governance {#governance}
@@ -40,7 +40,7 @@ Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Da
 
 Katalog organisiert aufgenommene Daten in Datensätze, wobei jeder Datensatz Metadaten enthält, die zur Kennzeichnung und Kategorisierung der darin enthaltenen Daten verwendet werden können.
 
-Weitere Informationen zu [ Service finden Sie ](../../catalog/home.md) der Übersicht zum Katalog-Service . Informationen zum Verwalten von Datensätzen in Experience Platform finden Sie unter [Datensätze - Übersicht](../../catalog/datasets/overview.md).
+Weitere Informationen zu [&#x200B; Service finden Sie &#x200B;](../../catalog/home.md) der Übersicht zum Katalog-Service . Informationen zum Verwalten von Datensätzen in Experience Platform finden Sie unter [Datensätze - Übersicht](../../catalog/datasets/overview.md).
 
 ## Datenschutz    {#privacy}
 

@@ -121,4 +121,4 @@ Wenn Ereignisse nach dem ersten Erlebnisereignis ausgelöst werden, sind die bei
 
 ## Nächste Schritte
 
-Nachdem Sie nun gelernt haben, wie Sie IAB TCF 2.0 mit der Experience Platform Web SDK-Erweiterung verwenden, können Sie auch eine Integration mit anderen Adobe-Lösungen wie Adobe Analytics oder Adobe Real-Time Customer Data Platform wählen. Weitere Informationen finden [ in der Übersicht zum IAB Transparency &amp; Consent Framework ](./overview.md).0 .
+Nachdem Sie nun gelernt haben, wie Sie IAB TCF 2.0 mit der Experience Platform Web SDK-Erweiterung verwenden, können Sie auch eine Integration mit anderen Adobe-Lösungen wie Adobe Analytics oder Adobe Real-Time Customer Data Platform wählen. Weitere Informationen finden [&#x200B; in der Übersicht zum IAB Transparency &amp; Consent Framework &#x200B;](./overview.md).0 .

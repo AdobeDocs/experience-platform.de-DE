@@ -289,4 +289,4 @@ In diesem Handbuch wird beschrieben, wie Sie eine Segmentdefinition erstellen, d
 
 Weitere Informationen zur Verwendung der Benutzeroberfläche von Experience Platform finden Sie im [Segmentierungs-Benutzerhandbuch](../ui/overview.md).
 
-Häufig gestellte Fragen zur Batch-Segmentierung finden Sie [ Abschnitt zur Batch-Segmentierung der häufig gestellten Fragen](../faq.md#batch-segmentation).
+Häufig gestellte Fragen zur Batch-Segmentierung finden Sie [&#x200B; Abschnitt zur Batch-Segmentierung der häufig gestellten Fragen](../faq.md#batch-segmentation).

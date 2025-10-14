@@ -53,7 +53,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------------|----------------|----------------|
-| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
+| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/ui/audience-portal#import-audience) werden. |
 
 

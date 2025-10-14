@@ -24,7 +24,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL MariaDB]  Sie in ](../../../../connectors/databases/mariadb.md#prerequisites)Übersicht“.
+Informationen zur Authentifizierung [[!DNL MariaDB]  Sie in &#x200B;](../../../../connectors/databases/mariadb.md#prerequisites)Übersicht“.
 
 ### Verwenden von Experience Platform-APIs
 

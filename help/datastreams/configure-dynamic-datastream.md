@@ -26,8 +26,8 @@ Dynamische Datenstromkonfigurationen decken dieses Problem durch benutzerkonfigu
 
 Um eine dynamische Konfiguration für Ihren Datenstrom zu erstellen, müssen Sie zwei Bedingungen erfüllen:
 
-* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [ Erstellen ](configure.md) Datenstroms .
-* Es muss *mindestens* ein Experience Cloud-Service zu Ihrem Datenstrom hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [ Hinzufügen eines ](configure.md#add-services) zu einem Datenstrom .
+* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Erstellen &#x200B;](configure.md) Datenstroms .
+* Es muss *mindestens* ein Experience Cloud-Service zu Ihrem Datenstrom hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Hinzufügen eines &#x200B;](configure.md#add-services) zu einem Datenstrom .
 
 Nachdem Sie einen Datenstrom erstellt und ihm einen Experience Cloud-Service hinzugefügt haben, können Sie [eine dynamische Konfiguration erstellen](#create-dynamic-configuration).
 

@@ -26,7 +26,7 @@ Dies liegt daran, dass Journey Optimizer-Playbooks Nachrichten für E-Mail-, Pus
 
 ## Status *fehlgeschlagen* beim Erstellen einer neuen Instanz {#status-failed}
 
-Wenn beim Erstellen einer Instanz eine Fehlermeldung angezeigt wird, liegt dies möglicherweise daran, dass Ihnen der Administrator die erforderlichen Benutzerberechtigungen nicht erteilt hat. Ein Playbook enthält viele verschiedene Assets, und Ihr Benutzer benötigt die Berechtigungen zum Erstellen dieser Assets, um die Instanz des Playbooks erfolgreich erstellen zu können. Informationen [ Einrichten von Berechtigungen finden ](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) im Abschnitt „Berechtigungen“ in diesem Handbuch.
+Wenn beim Erstellen einer Instanz eine Fehlermeldung angezeigt wird, liegt dies möglicherweise daran, dass Ihnen der Administrator die erforderlichen Benutzerberechtigungen nicht erteilt hat. Ein Playbook enthält viele verschiedene Assets, und Ihr Benutzer benötigt die Berechtigungen zum Erstellen dieser Assets, um die Instanz des Playbooks erfolgreich erstellen zu können. Informationen [&#x200B; Einrichten von Berechtigungen finden &#x200B;](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) im Abschnitt „Berechtigungen“ in diesem Handbuch.
 
 ## Importfehler {#import-failure}
 

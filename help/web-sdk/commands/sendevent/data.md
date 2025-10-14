@@ -27,7 +27,7 @@ Mit dem `data`-Objekt können Sie eine Payload an Adobe senden, die nicht mit ei
 
 Geben Sie ein Datenelement im Feld **[!UICONTROL Daten]** innerhalb der Aktionen einer Tag-Regel an.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
@@ -48,4 +48,4 @@ alloy("sendEvent", {
 
 ## Verwenden des `data`-Objekts mit Adobe Analytics {#analytics}
 
-Sie können das `data`-Objekt mit Adobe Analytics verwenden, um Daten ohne XDM-Schema an eine Report Suite zu senden. Variablen sind so konfiguriert, dass sie dieselbe Syntax wie [!DNL AppMeasurement] verwenden, was den Upgrade-Prozess auf die Web-SDK vereinfacht. Adobe Analytics Weitere Informationen finden [ unter „Zuordnen von Datenobjektvariablen zu ](https://experienceleague.adobe.com/de/docs/analytics/implementation/aep-edge/data-var-mapping)&quot; im Adobe Analytics-Implementierungshandbuch.
+Sie können das `data`-Objekt mit Adobe Analytics verwenden, um Daten ohne XDM-Schema an eine Report Suite zu senden. Variablen sind so konfiguriert, dass sie dieselbe Syntax wie [!DNL AppMeasurement] verwenden, was den Upgrade-Prozess auf die Web-SDK vereinfacht. Adobe Analytics Weitere Informationen finden [&#x200B; unter „Zuordnen von Datenobjektvariablen zu &#x200B;](https://experienceleague.adobe.com/de/docs/analytics/implementation/aep-edge/data-var-mapping)&quot; im Adobe Analytics-Implementierungshandbuch.

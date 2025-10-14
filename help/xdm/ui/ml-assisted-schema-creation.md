@@ -22,13 +22,13 @@ Mit der ML-Schemagenerierung können Sie schnell neue Datenquellen integrieren u
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der Anforderungen für die Schemaerstellung voraus. Bevor Sie mit diesem Handbuch fortfahren, sollten Sie das [Handbuch zur Benutzeroberfläche zum Erstellen und Bearbeiten von Schemata“ ](./resources/schemas.md).
+Dieses Tutorial setzt ein Grundverständnis der Anforderungen für die Schemaerstellung voraus. Bevor Sie mit diesem Handbuch fortfahren, sollten Sie das [Handbuch zur Benutzeroberfläche zum Erstellen und Bearbeiten von Schemata“ &#x200B;](./resources/schemas.md).
 
-In diesem Handbuch wird erläutert, wie Sie Schemas mithilfe von Machine-Learning-Algorithmen (ML) erstellen, um ein Schema aus Beispieldaten zu generieren. Informationen [ Erstellen von Schemata finden Sie im Handbuch zum ](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) des Schemas oder im Dokument zu [feldbasierten Workflows im Schema-Editor](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/ui/field-based-workflows) um Ihr Verständnis des Prozesses zur Schemaerstellung zu verbessern.
+In diesem Handbuch wird erläutert, wie Sie Schemas mithilfe von Machine-Learning-Algorithmen (ML) erstellen, um ein Schema aus Beispieldaten zu generieren. Informationen [&#x200B; Erstellen von Schemata finden Sie im Handbuch zum &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) des Schemas oder im Dokument zu [feldbasierten Workflows im Schema-Editor](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/ui/field-based-workflows) um Ihr Verständnis des Prozesses zur Schemaerstellung zu verbessern.
 
 >[!NOTE]
 >
->Sie können ein Schema auch mithilfe der [!DNL Schema Registry]-API erstellen. Um ein Schema manuell mit der API zu erstellen, lesen Sie zunächst das [[!DNL Schema Registry] Entwicklerhandbuch](../api/getting-started.md) bevor Sie das Tutorial zum [Erstellen eines Schemas mithilfe der API“ ](../tutorials/create-schema-api.md).
+>Sie können ein Schema auch mithilfe der [!DNL Schema Registry]-API erstellen. Um ein Schema manuell mit der API zu erstellen, lesen Sie zunächst das [[!DNL Schema Registry] Entwicklerhandbuch](../api/getting-started.md) bevor Sie das Tutorial zum [Erstellen eines Schemas mithilfe der API“ &#x200B;](../tutorials/create-schema-api.md).
 
 ## Navigieren Sie zum Workflow Schema erstellen . {#navigate-to-schema-creation-workflow}
 
@@ -125,4 +125,4 @@ Der Schema-Editor wird mit dem neu erstellten Schema auf der Arbeitsfläche ange
 
 Nachdem Sie Ihr Schema erstellt haben, können Sie den Schema-Editor verwenden, um bei Bedarf weitere Änderungen vorzunehmen. Ihr neues Schema kann jetzt in Ihre Datenquellen integriert und für die Datenanalyse verwendet werden.
 
-Weitere Informationen zur Verwendung [ Schema-Editors finden ](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/ui/resources/schemas#edit) im Handbuch zum Bearbeiten eines vorhandenen Schemas .
+Weitere Informationen zur Verwendung [&#x200B; Schema-Editors finden &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/ui/resources/schemas#edit) im Handbuch zum Bearbeiten eines vorhandenen Schemas .

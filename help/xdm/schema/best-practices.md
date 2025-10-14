@@ -237,7 +237,7 @@ Wenn Sie Daten in den Data Lake aufnehmen, wird die Datenvalidierung nur für ei
 >
 >Die Validierung gilt nicht für verschachtelte Spalten. Wenn sich das Feldformat in einer Array-Spalte befindet, werden die Daten nicht validiert.
 
-Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld aus dem Schema-Editor aus, um die Seitenleiste **[!UICONTROL Feldeigenschaften]** zu öffnen. Genaue Beschreibungen der [ Felder finden Sie in der Dokumentation ](../ui/fields/overview.md#type-specific-properties)Typspezifische Feldeigenschaften“.
+Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld aus dem Schema-Editor aus, um die Seitenleiste **[!UICONTROL Feldeigenschaften]** zu öffnen. Genaue Beschreibungen der [&#x200B; Felder finden Sie in der Dokumentation &#x200B;](../ui/fields/overview.md#type-specific-properties)Typspezifische Feldeigenschaften“.
 
 ![Der Schema-Editor mit den Einschränkungsfeldern, die in der Seitenleiste [!UICONTROL Feldeigenschaften] hervorgehoben sind.](../images/best-practices/data-validation-fields.png)
 

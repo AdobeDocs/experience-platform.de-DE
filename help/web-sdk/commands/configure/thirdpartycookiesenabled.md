@@ -16,13 +16,13 @@ Die `thirdPartyCookiesEnabled`-Eigenschaft ist ein boolescher Wert, der bestimmt
 
 Die `thirdPartyCookiesEnabled`-Eigenschaft steuert auch, ob eine [`CORE ID`](../../identity/overview.md#tracking-coreid-web-sdk) für [`getIdentity`](../getidentity.md)-Aufrufe angefordert werden kann.
 
-Wenn diese Option aktiviert ist, verwendet die Web-SDK Adobe Audience Manager, um einen Besucher zu identifizieren. Wenn diese Option deaktiviert ist, ist der Aufruf von Audience Manager deaktiviert. Weitere Informationen finden [ unter „Aufrufe an die ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=de)-Domain“ im Benutzerhandbuch für Audience Manager.
+Wenn diese Option aktiviert ist, verwendet die Web-SDK Adobe Audience Manager, um einen Besucher zu identifizieren. Wenn diese Option deaktiviert ist, ist der Aufruf von Audience Manager deaktiviert. Weitere Informationen finden [&#x200B; unter „Aufrufe an die &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=de)-Domain“ im Benutzerhandbuch für Audience Manager.
 
 ## Aktivieren von Drittanbieter-Cookies mithilfe der Tag-Erweiterung „Web SDK&quot;
 
 Aktivieren Sie **[!UICONTROL Kontrollkästchen „Third-Party-Cookies verwenden]** beim [Konfigurieren der Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].

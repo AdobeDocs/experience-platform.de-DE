@@ -63,12 +63,12 @@ Die folgende Zugriffssteuerungsmatrix bietet eine Aufschlüsselung darüber, wel
 
 ## Hinzufügen von Berechtigungen zu Ihrem Produktprofil
 
-Verwenden Sie die oben bereitgestellten Informationen, um Ihrem Produktprofil die entsprechenden Berechtigungen hinzuzufügen. In der Dokumentation finden Sie vollständige Anweisungen [ „Hinzufügen von Berechtigungen über die Benutzeroberfläche der Zugriffssteuerung](../access-control/ui/permissions.md).
+Verwenden Sie die oben bereitgestellten Informationen, um Ihrem Produktprofil die entsprechenden Berechtigungen hinzuzufügen. In der Dokumentation finden Sie vollständige Anweisungen [&#x200B; „Hinzufügen von Berechtigungen über die Benutzeroberfläche der Zugriffssteuerung](../access-control/ui/permissions.md).
 
 Beschreibungen der Berechtigungen finden Sie im Abschnitt [Verfügbare Berechtigungen](#available-permissions) weiter oben in diesem Dokument.
 
 >[!NOTE]
 >
->Sie müssen nicht alle Berechtigungen für alle Benutzer aktivieren. Je nach Struktur Ihres Unternehmens möchten Sie möglicherweise separate Produktprofile für bestimmte Benutzer erstellen und eingeschränkten Zugriff gewähren (z. B. schreibgeschützt). Informationen zum Zuweisen von Berechtigungen für bestimmte Benutzer finden Sie in der Dokumentation [ Verwalten von Benutzern für ein Produktprofil ](../access-control/ui/users.md).
+>Sie müssen nicht alle Berechtigungen für alle Benutzer aktivieren. Je nach Struktur Ihres Unternehmens möchten Sie möglicherweise separate Produktprofile für bestimmte Benutzer erstellen und eingeschränkten Zugriff gewähren (z. B. schreibgeschützt). Informationen zum Zuweisen von Berechtigungen für bestimmte Benutzer finden Sie in der Dokumentation [&#x200B; Verwalten von Benutzern für ein Produktprofil &#x200B;](../access-control/ui/users.md).
 
 Nachdem Sie die erforderlichen Zugriffsberechtigungen hinzugefügt haben, können Benutzende in Ihrem Unternehmen Dashboards in der Experience Platform-Benutzeroberfläche anzeigen und andere Aktionen ausführen, die auf den von Ihnen zugewiesenen Berechtigungen basieren.

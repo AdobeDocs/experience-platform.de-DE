@@ -610,4 +610,4 @@ Bei einer erfolgreichen Antwort werden die Details der abgefragten Flussspezifik
 
 ## Nächste Schritte
 
-Nachdem Ihre neue Verbindungsspezifikation zur entsprechenden Flussspezifikation hinzugefügt wurde, können Sie jetzt mit dem Testen und Senden Ihrer neuen Quelle fortfahren. Weitere Informationen finden Sie im Handbuch [Testen und Senden einer neuen ](./submit.md)&quot;.
+Nachdem Ihre neue Verbindungsspezifikation zur entsprechenden Flussspezifikation hinzugefügt wurde, können Sie jetzt mit dem Testen und Senden Ihrer neuen Quelle fortfahren. Weitere Informationen finden Sie im Handbuch [Testen und Senden einer neuen &#x200B;](./submit.md)&quot;.

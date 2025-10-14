@@ -14,9 +14,9 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->Die [!DNL Customer.io]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+>Die [!DNL Customer.io]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Customer.io] Quellverbindung und eines Datenflusses, um [[!DNL Customer.io]](https://customer.io/) Ereignisdaten mithilfe der -API [[!DNL Flow Service]  Adobe Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Customer.io] Quellverbindung und eines Datenflusses, um [[!DNL Customer.io]](https://customer.io/) Ereignisdaten mithilfe der -API [[!DNL Flow Service]  Adobe Experience Platform &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte {#getting-started}
 

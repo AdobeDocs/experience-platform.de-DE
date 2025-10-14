@@ -22,11 +22,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine [!DNL MySQL] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [ eines Datenflusses ](../../dataflow/databases.md).
+Wenn Sie bereits über eine [!DNL MySQL] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [&#x200B; eines Datenflusses &#x200B;](../../dataflow/databases.md).
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL MySQL]  Sie in ](../../../../connectors/databases/mysql.md#prerequisites)Übersicht“.
+Informationen zur Authentifizierung [[!DNL MySQL]  Sie in &#x200B;](../../../../connectors/databases/mysql.md#prerequisites)Übersicht“.
 
 ## Navigieren im Quellkatalog
 
@@ -78,7 +78,7 @@ Um die Standardauthentifizierung zu verwenden, wählen Sie **[!UICONTROL Standar
 >
 >Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../../../landing/multi-cloud.md).
 
-Um ein neues [!DNL MySQL]-Konto zu erstellen und eine Verbindung zu Experience Platform auf AWS herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden, und geben Sie dann die erforderlichen [ (Anmeldeinformationen für die Authentifizierung) ](../../../../connectors/databases/mysql.md#aws).
+Um ein neues [!DNL MySQL]-Konto zu erstellen und eine Verbindung zu Experience Platform auf AWS herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden, und geben Sie dann die erforderlichen [&#x200B; (Anmeldeinformationen für die Authentifizierung) &#x200B;](../../../../connectors/databases/mysql.md#aws).
 
 ![Die neue Kontoschnittstelle im Quell-Workflow zum Herstellen einer Verbindung mit AWS.](../../../../images/tutorials/create/my-sql/aws.png)
 

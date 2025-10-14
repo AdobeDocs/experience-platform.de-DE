@@ -25,8 +25,8 @@ Dieses Dokument und die zugehörige Videopräsentation bieten einen allgemeinen 
 Diese Workflow-Demonstration beruht auf mehreren Adobe Experience Platform-Services. Wenn Sie dem Beispiel folgen möchten, sollten Sie über ein gutes Verständnis der folgenden Funktionen und Services verfügen:
 
 * Die [Grundlagen der Schemakomposition des Experience-Datenmodells (XDM)](../../xdm/schema/composition.md)
-* So erstellen [ Datensätze und nehmen Daten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de)
-* So [ Sie Daten mithilfe des Adobe Analytics-Quell-Connectors aufnehmen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=de)
+* So erstellen [&#x200B; Datensätze und nehmen Daten &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de)
+* So [&#x200B; Sie Daten mithilfe des Adobe Analytics-Quell-Connectors aufnehmen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=de)
 * [Segmentierung](../../segmentation/home.md)
 * [Ziele](../../destinations/home.md)
 
@@ -75,7 +75,7 @@ Adobe Experience Platform bietet ein Daten-Repository und die erforderlichen Too
 
 Durch das Lesen dieses Dokuments sollten Sie jetzt verstehen, wie sich [!DNL Query Service] nicht nur auf die Qualität Ihrer Daten und die Einfachheit der Segmentierung auswirkt, sondern auch auf ihre Bedeutung in Ihrer Datenarchitektur für den gesamten End-to-End-Workflow. Anwendbare SQL-Beispiele, die Adobe Analytics mit [!DNL Query Service] verwenden, finden Sie im Anwendungsfall [Adobe Analytics-Merchandising-Variablen](./merchandising-variables.md).
 
-Andere Dokumente, die die Vorteile der [!DNL Query Service] für die strategischen geschäftlichen Einblicke Ihres Unternehmens zeigen, sind [ Beispiel die ](./bot-filtering.md) „Bot-Filterung“.
+Andere Dokumente, die die Vorteile der [!DNL Query Service] für die strategischen geschäftlichen Einblicke Ihres Unternehmens zeigen, sind [&#x200B; Beispiel die &#x200B;](./bot-filtering.md) „Bot-Filterung“.
 
 Alternativ können diese Dokumente Ihr Verständnis [!DNL Query Service] Funktionen verbessern:
 

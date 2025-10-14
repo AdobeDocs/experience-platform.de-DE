@@ -70,13 +70,13 @@ Das [!UICONTROL Beschriftungen bearbeiten] wird angezeigt. In dieser Ansicht kö
 
 ![Das Popover „Beschriftungen bearbeiten“.](../images/data-governance/edit-labels-popover.png)
 
-In der Dokumentation finden Sie Anleitungen zum [ (Erstellen oder Bearbeiten von Kennzeichnungen für das ausgewählte Schema oder Feld](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
+In der Dokumentation finden Sie Anleitungen zum [&#x200B; (Erstellen oder Bearbeiten von Kennzeichnungen für das ausgewählte Schema oder Feld](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
 >Das Erstellen einer neuen Kennzeichnung oder das Bearbeiten einer vorhandenen Kennzeichnung erfordert Administratorberechtigungen für Ihre Organisation. Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um den Zugriff zu arrangieren.
 
-Kennzeichnungen können auch mit dem Arbeitsbereich Berechtigungen erstellt werden. Anweisungen finden Sie [Handbuch zum Erstellen von Beschriftungen im ](../../access-control/abac/ui/labels.md) .
+Kennzeichnungen können auch mit dem Arbeitsbereich Berechtigungen erstellt werden. Anweisungen finden Sie [Handbuch zum Erstellen von Beschriftungen im &#x200B;](../../access-control/abac/ui/labels.md) .
 
 Sobald die entsprechende Ebene der attributbasierten Zugriffssteuerung angewendet wurde, gilt das folgende Systemverhalten für jede Abfrage, die über den Abfrage-Service ausgeführt wird, wenn ein Benutzer versucht, auf nicht zugängliche Daten zuzugreifen:
 

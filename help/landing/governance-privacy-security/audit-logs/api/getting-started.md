@@ -43,4 +43,4 @@ Für alle Anfragen mit einer Payload (POST, PUT, PATCH) wird eine zusätzliche K
 
 ## Nächste Schritte
 
-Informationen zu den ersten Aufrufen mit der [!DNL Audit Query]-API finden Sie im [Handbuch für ](./events.md)-Endpunkte) und im [Handbuch für Exportendpunkte](./export.md).
+Informationen zu den ersten Aufrufen mit der [!DNL Audit Query]-API finden Sie im [Handbuch für &#x200B;](./events.md)-Endpunkte) und im [Handbuch für Exportendpunkte](./export.md).

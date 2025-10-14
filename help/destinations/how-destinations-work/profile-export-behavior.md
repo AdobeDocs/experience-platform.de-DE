@@ -151,7 +151,7 @@ Ein Profil qualifiziert sich nicht bei jeder Aktualisierung für die Aufnahme in
 
 Wenn sich jedoch das `segmentMembership` für ein Profil ändert, wird das Profil in die exportierten Dateien aufgenommen. Mit anderen Worten: Wenn das Profil Teil der Zielgruppe wird oder aus der Zielgruppe entfernt wird, wird es in inkrementelle Dateiexporte eingeschlossen.
 
-Trigger Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm) hinzugefügt wird, ](/help/identity-service/features/identity-graph-viewer.md) das Profil in einen neuen inkrementellen Dateiexport eingeschlossen.
+Trigger Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm) hinzugefügt wird, &#x200B;](/help/identity-service/features/identity-graph-viewer.md) das Profil in einen neuen inkrementellen Dateiexport eingeschlossen.
 
 Wenn einer Zielzuordnung eine neue Zielgruppe hinzugefügt wird, hat dies keine Auswirkungen auf Qualifikationen und Exporte für ein anderes Segment. Exportpläne werden für jede Zielgruppe einzeln konfiguriert und Dateien werden für jedes Segment separat exportiert, selbst wenn die Zielgruppen demselben Zieldatenfluss hinzugefügt wurden.
 

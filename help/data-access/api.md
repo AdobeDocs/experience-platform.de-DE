@@ -15,7 +15,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->Die Datenzugriffs-API ist jetzt **veraltet**. Es wird empfohlen, Ziele zum Exportieren von Daten aus Adobe Experience Platform zu verwenden. Weitere Informationen finden Sie in der Dokumentation [ Datensatzexportziele ](../destinations/destination-types.md#dataset-export-destinations).
+>Die Datenzugriffs-API ist jetzt **veraltet**. Es wird empfohlen, Ziele zum Exportieren von Daten aus Adobe Experience Platform zu verwenden. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Datensatzexportziele &#x200B;](../destinations/destination-types.md#dataset-export-destinations).
 
 Die Datenzugriffs-API unterstützt Adobe Experience Platform, indem sie Benutzenden eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit aufgenommener Datensätze innerhalb von [!DNL Experience Platform] konzentriert.
 
@@ -243,4 +243,4 @@ Weitere Beispiele finden Sie im [Tutorial zum Datenzugriff](tutorials/dataset-da
 
 ## Abonnieren von Datenerfassungsereignissen {#subscribe-to-data-ingestion-events}
 
-Sie können bestimmte hochwertige Ereignisse über die [Adobe Developer Console&rbrace; ](https://developer.adobe.com/console/). Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial [Abonnieren von Adobe](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.
+Sie können bestimmte hochwertige Ereignisse über die [Adobe Developer Console&rbrace; &#x200B;](https://developer.adobe.com/console/). Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial [Abonnieren von Adobe](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.

@@ -21,9 +21,9 @@ ht-degree: 8%
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Adresse] | `address` | Array von [[!UICONTROL Adresse]](../data-types/address.md) | Eine oder mehrere Adressen für die Person. |
-| [!UICONTROL Kommunikation] | `communication` | Array von Objekten | Eine Sprache, die verwendet werden kann, um mit der Person über ihre Gesundheit zu kommunizieren. Weitere Informationen finden [ im ](#communication) Abschnitt unten. |
+| [!UICONTROL Kommunikation] | `communication` | Array von Objekten | Eine Sprache, die verwendet werden kann, um mit der Person über ihre Gesundheit zu kommunizieren. Weitere Informationen finden [&#x200B; im &#x200B;](#communication) Abschnitt unten. |
 | [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Eine menschliche Kennung für diese Person. |
-| [!UICONTROL Personen-Link-Details] | `link` | Array von Objekten | Ein Link zu einer Ressource, die dieselbe tatsächliche Person betrifft. Weitere Informationen finden [ im ](#link) Abschnitt unten. |
+| [!UICONTROL Personen-Link-Details] | `link` | Array von Objekten | Ein Link zu einer Ressource, die dieselbe tatsächliche Person betrifft. Weitere Informationen finden [&#x200B; im &#x200B;](#link) Abschnitt unten. |
 | [!UICONTROL Organisation verwalten] | `managingOrganization` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Organisation, die die Patientenakte verwaltet. |
 | [!UICONTROL Familienstand] | `maritalStatus` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Familienstand (oder der bürgerliche Status) einer Person |
 | [!UICONTROL Name] | `name` | Array von [[!UICONTROL Human Name]](../data-types/human-name.md) | Die mit einer Person verknüpften Namen. |

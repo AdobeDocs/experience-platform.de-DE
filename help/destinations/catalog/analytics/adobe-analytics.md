@@ -44,7 +44,7 @@ Der Workflow führt Sie zur Datenerfassungs-Benutzeroberfläche, um die Installa
 
 Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=de) in der Tags-Dokumentation.
 
-Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
+Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen &#x200B;](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 
 ## Verwenden der Erweiterung {#how-to-use}
 

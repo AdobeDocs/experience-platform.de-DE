@@ -61,4 +61,4 @@ Nach einigen Augenblicken wird am unteren Bildschirmrand ein Bestätigungsfeld a
 
 In diesem Tutorial haben Sie erfolgreich den Arbeitsbereich [!UICONTROL Quellen] zum Löschen eines vorhandenen Datenflusses verwendet.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe [ API-Aufrufen finden Sie ](../../tutorials/api/delete-dataflows.md) Tutorial zum Löschen von Datenflüssen mithilfe der Flow Service-API .
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe [&#x200B; API-Aufrufen finden Sie &#x200B;](../../tutorials/api/delete-dataflows.md) Tutorial zum Löschen von Datenflüssen mithilfe der Flow Service-API .

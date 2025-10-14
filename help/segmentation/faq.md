@@ -244,7 +244,7 @@ Nein, das tun Sie nicht. Sofern Sie Bearbeitungsberechtigungen für Zielgruppen 
 
 ### Gibt es eine Begrenzung für die Anzahl der Ordner, die ich erstellen kann?
 
-Nein, es gibt keine Begrenzung für die Anzahl der Ordner, die Sie erstellen können. Weitere Informationen zu Ordnern finden Sie im Abschnitt [Zielgruppeninventar“ ](./ui/audience-portal.md#folders) Übersicht über die Segmentierungs-Service-Benutzeroberfläche.
+Nein, es gibt keine Begrenzung für die Anzahl der Ordner, die Sie erstellen können. Weitere Informationen zu Ordnern finden Sie im Abschnitt [Zielgruppeninventar“ &#x200B;](./ui/audience-portal.md#folders) Übersicht über die Segmentierungs-Service-Benutzeroberfläche.
 
 ### Gibt es eine Begrenzung für die Anzahl der Tags, die einer Zielgruppe hinzugefügt werden können?
 

@@ -25,7 +25,7 @@ Bevor Sie hybride Personalisierung in Ihre Web-Eigenschaften implementieren, mü
 * Sie haben entschieden, welche Personalisierungslösung Sie verwenden möchten. Dies wirkt sich auf die Payload-Inhalte der [!UICONTROL Edge Network-API] aus.
 * Sie haben Zugriff auf einen Anwendungsserver, mit dem Sie die Aufrufe der [!UICONTROL Edge Network-API] durchführen können.
 * Sie haben Zugriff auf die [Edge Network-API](https://developer.adobe.com/data-collection-apis/docs/api/).
-* Sie haben [ Web SDK korrekt ](/help/web-sdk/commands/configure/overview.md)konfiguriert) und auf den Seiten bereitgestellt, die Sie personalisieren möchten.
+* Sie haben [&#x200B; Web SDK korrekt &#x200B;](/help/web-sdk/commands/configure/overview.md)konfiguriert) und auf den Seiten bereitgestellt, die Sie personalisieren möchten.
 
 ## Flussdiagramm {#flow-diagram}
 

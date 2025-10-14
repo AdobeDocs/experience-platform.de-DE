@@ -37,7 +37,7 @@ tqdm
 
 ## Importieren von Analytics-Tabellen aus Experience Platform in [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Um ein Tendenz-Score-Modell zu generieren, muss eine Projektion der in Experience Platform gespeicherten Analysedaten in [!DNL Jupyter Notebook] importiert werden. Von einer [!DNL Python] 3-[!DNL Jupyter Notebook], die mit dem Abfrage-Service verbunden ist, importieren die folgenden Befehle einen Kundenverhaltensdatensatz aus Luma, einem fiktiven Bekleidungsgeschäft. Da Experience Platform-Daten im Experience-Datenmodell (XDM)-Format gespeichert werden, muss ein JSON-Beispielobjekt generiert werden, das der Schemastruktur entspricht. In der Dokumentation finden Sie Anweisungen zum Generieren [ JSON-Beispielobjekts](../../xdm/ui/sample.md).
+Um ein Tendenz-Score-Modell zu generieren, muss eine Projektion der in Experience Platform gespeicherten Analysedaten in [!DNL Jupyter Notebook] importiert werden. Von einer [!DNL Python] 3-[!DNL Jupyter Notebook], die mit dem Abfrage-Service verbunden ist, importieren die folgenden Befehle einen Kundenverhaltensdatensatz aus Luma, einem fiktiven Bekleidungsgeschäft. Da Experience Platform-Daten im Experience-Datenmodell (XDM)-Format gespeichert werden, muss ein JSON-Beispielobjekt generiert werden, das der Schemastruktur entspricht. In der Dokumentation finden Sie Anweisungen zum Generieren [&#x200B; JSON-Beispielobjekts](../../xdm/ui/sample.md).
 
 ![Das [!DNL Jupyter Notebook]-Dashboard mit mehreren hervorgehobenen Befehlen.](../images/use-cases/jupyter-commands.png)
 

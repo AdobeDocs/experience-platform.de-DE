@@ -24,7 +24,7 @@ Bevor Sie mit diesem Handbuch fortfahren, lesen Sie das [Handbuch zur Benutzerob
 
 >[!NOTE]
 >
->In der Adobe Experience Platform-Benutzeroberfläche werden parametrisierte Abfragen nur auf der übergeordneten Ebene von Inline-Vorlagen unterstützt. Dies bedeutet, dass parametrisierte Abfragen nur bei Verwendung in der ursprünglichen Vorlage funktionieren. Untergeordnete Vorlagen müssen eine statische Vorlage sein und dürfen keine dynamischen Parameter enthalten. Weitere Informationen finden [ in der Dokumentation ](../key-concepts/inline-templates.md) Inline-Vorlagen .
+>In der Adobe Experience Platform-Benutzeroberfläche werden parametrisierte Abfragen nur auf der übergeordneten Ebene von Inline-Vorlagen unterstützt. Dies bedeutet, dass parametrisierte Abfragen nur bei Verwendung in der ursprünglichen Vorlage funktionieren. Untergeordnete Vorlagen müssen eine statische Vorlage sein und dürfen keine dynamischen Parameter enthalten. Weitere Informationen finden [&#x200B; in der Dokumentation &#x200B;](../key-concepts/inline-templates.md) Inline-Vorlagen .
 
 ## Parametrisierte Abfragesyntax {#syntax}
 
@@ -61,7 +61,7 @@ Verwenden Sie den `'$'`-Vorspann, um einen Abfrageparameter in Ihre Abfrage im T
 
 ## Verwenden Sie Details der Abfrageprotokolle, um Parameterwerte zu überprüfen {#check-parameter-values}
 
-Sie können keine Parameter in Vorlagen speichern, da die verwendeten Werte nicht persistent sind. Sie können jedoch die Seite [!UICONTROL Details zum Abfrageprotokoll] überprüfen, um die in einer Abfrageausführung verwendeten Parameterwerte zu finden. In diesem Fall geben die Protokolle nicht an, dass die Abfrage eine parametrisierte Abfrage war. Anweisungen [ Ermitteln der verwendeten Werte finden Sie ](./query-logs.md) der Dokumentation zu Abfrageprotokollen .
+Sie können keine Parameter in Vorlagen speichern, da die verwendeten Werte nicht persistent sind. Sie können jedoch die Seite [!UICONTROL Details zum Abfrageprotokoll] überprüfen, um die in einer Abfrageausführung verwendeten Parameterwerte zu finden. In diesem Fall geben die Protokolle nicht an, dass die Abfrage eine parametrisierte Abfrage war. Anweisungen [&#x200B; Ermitteln der verwendeten Werte finden Sie &#x200B;](./query-logs.md) der Dokumentation zu Abfrageprotokollen .
 
 ![Die Ansicht mit den Abfrageprotokollen, wobei der SQL-Code einer parametrisierten Abfrage im Detailabschnitt hervorgehoben ist.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 
@@ -69,11 +69,11 @@ Sie können keine Parameter in Vorlagen speichern, da die verwendeten Werte nich
 
 ## Planen einer parametrisierten Abfrage {#schedule}
 
-Parameterwerte werden gespeichert, wenn Sie eine parametrisierte Abfrage planen. Um eine parametrisierte Abfrage zu planen, folgen Sie dem typischen Prozess zum Erstellen einer geplanten Abfrage, wie in der Anleitung zum [Erstellen eines Abfrageplans](./query-schedules.md#create-schedule) beschrieben, und geben Sie dann die Parameterwerte ein, die bei der Abfrageausführung verwendet werden sollen. Dieser Abschnitt der Benutzeroberfläche wird nur für parametrisierte Abfragen angezeigt. Spezifische Anweisungen finden Sie [ Abschnitt zum Festlegen von Parametern für eine geplante parametrisierte ](./query-schedules.md#set-parameters) .
+Parameterwerte werden gespeichert, wenn Sie eine parametrisierte Abfrage planen. Um eine parametrisierte Abfrage zu planen, folgen Sie dem typischen Prozess zum Erstellen einer geplanten Abfrage, wie in der Anleitung zum [Erstellen eines Abfrageplans](./query-schedules.md#create-schedule) beschrieben, und geben Sie dann die Parameterwerte ein, die bei der Abfrageausführung verwendet werden sollen. Dieser Abschnitt der Benutzeroberfläche wird nur für parametrisierte Abfragen angezeigt. Spezifische Anweisungen finden Sie [&#x200B; Abschnitt zum Festlegen von Parametern für eine geplante parametrisierte &#x200B;](./query-schedules.md#set-parameters) .
 
 >[!TIP]
 >
->Der Abfrage-Service unterstützt vorbereitete Anweisungen durch die Verwendung parametrisierter Abfragen. Weitere Informationen [ verwendeten SQL-Syntax finden Sie ](../sql/prepared-statements.md) Handbuch zur Syntax von vorbereiteten Anweisungen .
+>Der Abfrage-Service unterstützt vorbereitete Anweisungen durch die Verwendung parametrisierter Abfragen. Weitere Informationen [&#x200B; verwendeten SQL-Syntax finden Sie &#x200B;](../sql/prepared-statements.md) Handbuch zur Syntax von vorbereiteten Anweisungen .
 
 ## Nächste Schritte
 

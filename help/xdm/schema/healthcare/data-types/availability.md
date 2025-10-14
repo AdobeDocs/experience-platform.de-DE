@@ -20,8 +20,8 @@ ht-degree: 9%
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Verfügbare Zeit] | `availableTime` | Array von Objekten | Die Zeitpunkte, zu denen das Element verfügbar ist. Weitere Informationen finden [ im ](#available-time) Abschnitt unten. |
-| [!UICONTROL Zeit nicht verfügbar] | `notAvailableTime` | String | Die Zeit, in der das Element aus einem angegebenen Grund nicht verfügbar ist. Weitere Informationen finden [ im ](#not-available-time) Abschnitt unten. |
+| [!UICONTROL Verfügbare Zeit] | `availableTime` | Array von Objekten | Die Zeitpunkte, zu denen das Element verfügbar ist. Weitere Informationen finden [&#x200B; im &#x200B;](#available-time) Abschnitt unten. |
+| [!UICONTROL Zeit nicht verfügbar] | `notAvailableTime` | String | Die Zeit, in der das Element aus einem angegebenen Grund nicht verfügbar ist. Weitere Informationen finden [&#x200B; im &#x200B;](#not-available-time) Abschnitt unten. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

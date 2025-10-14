@@ -37,7 +37,7 @@ Das [!UICONTROL Dashboard erstellen] wird angezeigt. Geben Sie einen benutzerfre
 
 ![Das Dialogfeld „Dashboard erstellen“](./images/standard-dashboards/create-dashboard-dialog.png)
 
-Benutzende, die die Data Distiller SKU erworben haben, haben die Möglichkeit, benutzerdefinierte SQL-Abfragen zu verwenden, um ihre Einblicke zu erstellen. Anweisungen zu diesem Workflow finden [ in der ](./sql-insights-query-pro-mode/overview.md)Query Pro-Modus - Übersicht“.
+Benutzende, die die Data Distiller SKU erworben haben, haben die Möglichkeit, benutzerdefinierte SQL-Abfragen zu verwenden, um ihre Einblicke zu erstellen. Anweisungen zu diesem Workflow finden [&#x200B; in der &#x200B;](./sql-insights-query-pro-mode/overview.md)Query Pro-Modus - Übersicht“.
 
 Das neu erstellte leere Dashboard wird mit dem ausgewählten Namen oben links in der Ansicht angezeigt.
 

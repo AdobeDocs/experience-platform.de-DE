@@ -15,7 +15,7 @@ Gewinnen Sie wertvolle Einblicke zur Optimierung Ihrer Zielgruppensegmentierung 
 
 ## Audiences filtern {#filter-audiences}
 
-Um bestimmte Zielgruppen für die Überschneidungsanalyse zu filtern, wählen Sie das Filtersymbol (![ Filtersymbol.](../../../images/icons/filter-icon-white.png)), um das Dialogfeld [!UICONTROL Filter] zu öffnen. Von hier aus können Sie Zielgruppen zur Überschneidungsvorlage hinzufügen oder daraus entfernen, um Ihre Analyse zu verfeinern.
+Um bestimmte Zielgruppen für die Überschneidungsanalyse zu filtern, wählen Sie das Filtersymbol (![&#x200B; Filtersymbol.](../../../images/icons/filter-icon-white.png)), um das Dialogfeld [!UICONTROL Filter] zu öffnen. Von hier aus können Sie Zielgruppen zur Überschneidungsvorlage hinzufügen oder daraus entfernen, um Ihre Analyse zu verfeinern.
 
 ![Die Ansicht „Erweiterte Zielgruppe überschneidet“ mit hervorgehobenem Filtersymbol.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-filter-icon.png)
 
@@ -53,4 +53,4 @@ Um zur Übersicht über [!UICONTROL Vorlage] zurückzukehren, wählen Sie **[!UI
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments haben Sie gelernt, wie Sie Zielgruppenüberschneidungen analysieren und datengesteuerte Entscheidungen mithilfe des Dashboards **[!UICONTROL Erweiterte Zielgruppenüberschneidungen“]**. Um Ihre Zielgruppensegmentierung und Zielgruppenbestimmungsstrategien weiter zu optimieren, sollten Sie andere Data Distiller-Vorlagen erkunden, die wertvolle Einblicke bieten. Weitere Informationen zur weiteren Verbesserung Ihrer Zielgruppeninteraktion und zur Segmentierung finden Sie [ Benutzeroberflächen-Handbücher ](./trends.md)Zielgruppentrends[ „Zielgruppenvergleich](./comparison.md) und [Zielgruppenidentitätsüberschneidungen](./identity-overlaps.md).
+Nach dem Lesen dieses Dokuments haben Sie gelernt, wie Sie Zielgruppenüberschneidungen analysieren und datengesteuerte Entscheidungen mithilfe des Dashboards **[!UICONTROL Erweiterte Zielgruppenüberschneidungen“]**. Um Ihre Zielgruppensegmentierung und Zielgruppenbestimmungsstrategien weiter zu optimieren, sollten Sie andere Data Distiller-Vorlagen erkunden, die wertvolle Einblicke bieten. Weitere Informationen zur weiteren Verbesserung Ihrer Zielgruppeninteraktion und zur Segmentierung finden Sie [&#x200B; Benutzeroberflächen-Handbücher &#x200B;](./trends.md)Zielgruppentrends[&#x200B; „Zielgruppenvergleich](./comparison.md) und [Zielgruppenidentitätsüberschneidungen](./identity-overlaps.md).

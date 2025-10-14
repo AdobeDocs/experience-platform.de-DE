@@ -19,7 +19,7 @@ In diesem Dokument wird erläutert, wie Sie die Tag-Erweiterung in der Tags-Benu
 
 ## Installieren der Adobe Content Analytics-Tag-Erweiterung {#install}
 
-Die Adobe Content Analytics-Tag-Erweiterung wird automatisch als Teil der Tag-Eigenschaft installiert, die bei Verwendung des Konfigurationsassistenten für Content Analytics [automatisch erstellt ](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided).
+Die Adobe Content Analytics-Tag-Erweiterung wird automatisch als Teil der Tag-Eigenschaft installiert, die bei Verwendung des Konfigurationsassistenten für Content Analytics [automatisch erstellt &#x200B;](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided).
 
 <!--
 ### Manual installation
@@ -50,7 +50,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Konfigurieren von Datenströmen
 
-Der Assistent für die geführte Konfiguration von &lbrace;0[ Content Analytics wählt automatisch den richtigen Wert für den ](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided)Sandbox **[!UICONTROL - und]** Produktionsdatenstrom **[!UICONTROL .]** Sie können optional einen zusätzlichen **[!UICONTROL Staging-Datenstrom]** und **[!UICONTROL Entwicklungsdatenstrom]** konfigurieren.
+Der Assistent für die geführte Konfiguration von &lbrace;0[&#x200B; Content Analytics wählt automatisch den richtigen Wert für den &#x200B;](https://experienceleague.adobe.com/de/docs/analytics-platform/using/content-analytics/configuration/guided)Sandbox **[!UICONTROL - und]** Produktionsdatenstrom **[!UICONTROL .]** Sie können optional einen zusätzlichen **[!UICONTROL Staging-Datenstrom]** und **[!UICONTROL Entwicklungsdatenstrom]** konfigurieren.
 
 ![Bild, das die Konfiguration der Datenströme der Tag-Erweiterung &quot;Adobe Content Analytics&quot; in der Tags-Benutzeroberfläche anzeigt](assets/aca-tag-datastreams.png)
 
@@ -63,7 +63,7 @@ Sie können die automatisch ausgewählten Werte für **[!UICONTROL Sandbox]** un
 >* Die ausgewählte Sandbox ist noch nicht mit einer anderen Content Analytics-Konfiguration verknüpft
 >* Für jeden ausgewählten Datenstrom ist der Experience Platform-Service mit einem aktivierten Content Analytics Experience Event-Datensatz konfiguriert.
 
-Informationen zum Konfigurieren eines [ finden ](../../../../datastreams/overview.md) im Handbuch zu Datenströmen .
+Informationen zum Konfigurieren eines [&#x200B; finden &#x200B;](../../../../datastreams/overview.md) im Handbuch zu Datenströmen .
 
 ## Konfigurieren der Erlebniserfassung und -definition
 

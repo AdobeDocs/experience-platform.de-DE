@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Dieser Datentyp soll verwendet werden, um die Struktur der Einverständnisschemata Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Einverständnisse und Voreinstellungen] als ](../field-groups/profile/consents.md) anzupassen.
+>Dieser Datentyp soll verwendet werden, um die Struktur der Einverständnisschemata Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Einverständnisse und Voreinstellungen] als &#x200B;](../field-groups/profile/consents.md) anzupassen.
 >
 >Wenn Sie eine `subscriptions` für ein bestimmtes Marketing-Präferenzfeld benötigen, müssen Sie stattdessen das Feld [Marketing-Feld mit dem Datentyp Abonnements](./marketing-field-subscriptions.md) verwenden.
 

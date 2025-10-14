@@ -37,7 +37,7 @@ Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern
 
 ## 2. Anmelden
 
-Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Anmeldebildschirm von [Experience Cloud ](https://experience.adobe.com/) wählen Sie entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]**.
+Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Anmeldebildschirm von [Experience Cloud &#x200B;](https://experience.adobe.com/) wählen Sie entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >

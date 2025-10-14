@@ -36,7 +36,7 @@ Um eine Dokumentation für Ihre Quelle zu erstellen, müssen Sie eine Abspaltung
 
 ## Dokumentationsvorlage
 
-Sie können eine vorausgefüllte (Dokumentationsvorlage[ verwenden, ](./template.md) beim Erstellen der Dokumentation für Ihre Quelle zu helfen. Weiter unten finden Sie Anweisungen zum Bearbeiten der Vorlage und zum Öffnen einer Pull-Anfrage. Die eingereichte Dokumentation für Ihre neue Quelle wird vom Adobe-Dokumentations-Team geprüft und veröffentlicht.
+Sie können eine vorausgefüllte (Dokumentationsvorlage[&#x200B; verwenden, &#x200B;](./template.md) beim Erstellen der Dokumentation für Ihre Quelle zu helfen. Weiter unten finden Sie Anweisungen zum Bearbeiten der Vorlage und zum Öffnen einer Pull-Anfrage. Die eingereichte Dokumentation für Ihre neue Quelle wird vom Adobe-Dokumentations-Team geprüft und veröffentlicht.
 
 Sie können auch die folgenden Dokumentationsvorlagen herunterladen:
 

@@ -12,7 +12,7 @@ ht-degree: 13%
 
 # [!UICONTROL Restaurantreservierung] Schemafeldgruppe
 
-[!UICONTROL Restaurantreservierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , ](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Restaurantreservierung zu erfassen.
+[!UICONTROL Restaurantreservierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , &#x200B;](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Restaurantreservierung zu erfassen.
 
 Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungsdetails] und enthält alle gleichen Felder unter einem einzigen Feld vom Typ „Objekt“, `reservations`. Zusätzlich zu diesen allgemeinen Feldern enthält [!UICONTROL Restaurantreservierung] auch `diningReservations` Array. Dieses Array von Objekten wird verwendet, um eine oder mehrere Reservierungen mit Restaurantspezifischen Eigenschaften zu beschreiben.
 

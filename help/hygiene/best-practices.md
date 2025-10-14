@@ -19,7 +19,7 @@ Dieses Handbuch setzt ein Verständnis des Datenlebenszyklus-Arbeitsbereichs und
 
 ## Richtlinien zur Erstellung von Arbeitsaufträgen {#work-order-creation-guidelines}
 
-Sie können den `/workorder`-Endpunkt in der Data Hygiene API verwenden, um Anfragen zum Löschen von Datensätzen in Experience Platform programmgesteuert zu verwalten. Mit diesem Endpunkt können Sie eine Löschanfrage erstellen, ihren Status überprüfen oder eine vorhandene Anfrage aktualisieren. Informationen zum Ausführen dieser Aktionen mithilfe [ API finden ](./api/workorder.md) im Dokument zum Arbeitsauftrags-Endpunkt .
+Sie können den `/workorder`-Endpunkt in der Data Hygiene API verwenden, um Anfragen zum Löschen von Datensätzen in Experience Platform programmgesteuert zu verwalten. Mit diesem Endpunkt können Sie eine Löschanfrage erstellen, ihren Status überprüfen oder eine vorhandene Anfrage aktualisieren. Informationen zum Ausführen dieser Aktionen mithilfe [&#x200B; API finden &#x200B;](./api/workorder.md) im Dokument zum Arbeitsauftrags-Endpunkt .
 
 >[!TIP]
 >
@@ -41,13 +41,13 @@ Wenn Sie einen 429-Fehler erhalten, bedeutet dies, dass Sie die zulässige Anzah
 
 ## Ablaufdatum des Datensatzes {#dataset-expiration}
 
-Richten Sie die automatische Datensatzbereinigung für kurzlebige Daten ein. Verwenden Sie den `/ttl`-Endpunkt in der Datenhygiene-API, um Ablaufdaten für Datensätze zur Bereinigung basierend auf einer bestimmten Zeit oder einem bestimmten Datum zu planen. Informationen zum Erstellen einer Datensatzgültigkeit und [akzeptierten Abfrageparametern](./api/dataset-expiration.md) finden Sie [ Handbuch zum Datensatzgültigkeits-Endpunkt ](./api/dataset-expiration.md#query-params).
+Richten Sie die automatische Datensatzbereinigung für kurzlebige Daten ein. Verwenden Sie den `/ttl`-Endpunkt in der Datenhygiene-API, um Ablaufdaten für Datensätze zur Bereinigung basierend auf einer bestimmten Zeit oder einem bestimmten Datum zu planen. Informationen zum Erstellen einer Datensatzgültigkeit und [akzeptierten Abfrageparametern](./api/dataset-expiration.md) finden Sie [&#x200B; Handbuch zum Datensatzgültigkeits-Endpunkt &#x200B;](./api/dataset-expiration.md#query-params).
 
 ## Überwachen des Arbeitsauftrags und des Datensatzgültigkeitsstatus {#monitor}
 
 Sie können den Fortschritt des Daten-Lifecycle-Managements effizient mithilfe von **I/O Events** überwachen. Ein I/O-Ereignis ist ein Mechanismus zum Empfang von Echtzeitbenachrichtigungen über Änderungen oder Aktualisierungen in verschiedenen Services in Experience Platform.
 
-E/A-Ereignis-Warnhinweise können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über einen Webhook zu erhalten, müssen Sie Ihren Webhook für Experience Platform-Warnhinweise in Adobe Developer Console registrieren. Detaillierte Anweisungen finden Sie [ Handbuch unter „Abonnieren von Adobe I/O](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.
+E/A-Ereignis-Warnhinweise können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über einen Webhook zu erhalten, müssen Sie Ihren Webhook für Experience Platform-Warnhinweise in Adobe Developer Console registrieren. Detaillierte Anweisungen finden Sie [&#x200B; Handbuch unter „Abonnieren von Adobe I/O](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.
 
 Verwenden Sie die folgenden Methoden und Richtlinien für den Datenlebenszyklus, um Auftragsstatus effektiv abzurufen und zu überwachen:
 

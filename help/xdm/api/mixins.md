@@ -18,7 +18,7 @@ ht-degree: 16%
 >
 >Mixins wurden in Schemafeldgruppen umbenannt, sodass der `/mixins`-Endpunkt zugunsten des `/fieldgroups`-Endpunkts veraltet ist.
 >
->`/mixins` wird zwar weiterhin als Legacy-Endpunkt gepflegt, es wird jedoch dringend empfohlen, `/fieldgroups` für neue Implementierungen der Schema Registry-API in Ihren Erlebnisanwendungen zu verwenden. Weitere Informationen finden [ im Handbuch ](./field-groups.md) Feldergruppen-Endpunkt .
+>`/mixins` wird zwar weiterhin als Legacy-Endpunkt gepflegt, es wird jedoch dringend empfohlen, `/fieldgroups` für neue Implementierungen der Schema Registry-API in Ihren Erlebnisanwendungen zu verwenden. Weitere Informationen finden [&#x200B; im Handbuch &#x200B;](./field-groups.md) Feldergruppen-Endpunkt .
 
 Mixins sind wiederverwendbare Komponenten, die ein oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine einzelne Person, eine E-Mail-Adresse oder eine Webbrowser-Umgebung. Mixins sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert, je nach dem Verhalten der Daten, die sie darstellen (Datensatz oder Zeitreihe). Mit dem `/mixins`-Endpunkt in der [!DNL Schema Registry]-API können Sie Mixins in Ihrem Erlebnisprogramm programmgesteuert verwalten.
 
@@ -32,7 +32,7 @@ Sie können alle Mixins unter dem `global`- oder `tenant`-Container durch eine G
 
 >[!NOTE]
 >
->Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [ Abschnitt ](./appendix.md#query)Abfrageparameter“ im Anhang.
+>Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](./appendix.md#query)Abfrageparameter“ im Anhang.
 
 **API-Format**
 
@@ -43,7 +43,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{CONTAINER_ID}` | Den Container, aus dem Sie Mixins abrufen möchten: `global` für von Adobe erstellte Mixins oder `tenant` für Mixins, die Ihrem Unternehmen gehören. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [&#x200B; im &#x200B;](./appendix.md#query)-Dokument . |
 
 {style="table-layout:auto"}
 
@@ -391,7 +391,7 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Paylo
 }
 ```
 
-Wenn Sie eine GET-Anfrage ausführen[ um alle Mixins ](#list) Mandanten-Container aufzulisten, würde dies jetzt das Mixin „Eigenschaftendetails“ enthalten oder Sie können [eine Suchanfrage (GET) ](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um das neue Mixin direkt anzuzeigen.
+Wenn Sie eine GET-Anfrage ausführen[&#x200B; um alle Mixins &#x200B;](#list) Mandanten-Container aufzulisten, würde dies jetzt das Mixin „Eigenschaftendetails“ enthalten oder Sie können [eine Suchanfrage (GET) &#x200B;](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um das neue Mixin direkt anzuzeigen.
 
 ## Aktualisieren eines Mixins {#put}
 
@@ -752,4 +752,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine [Suchanfrage (GET)) ](#lookup) das Mixin ausführen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da das Mixin aus der Schemaregistrierung entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine [Suchanfrage (GET)) &#x200B;](#lookup) das Mixin ausführen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da das Mixin aus der Schemaregistrierung entfernt wurde.

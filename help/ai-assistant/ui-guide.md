@@ -57,7 +57,7 @@ Beim Anzeigen von Daten zu Ihrer Sandbox kann der KI-Assistent direkte Links zu 
 
 In diesem Beispiel gibt der KI-Assistent zusätzliche Informationen zu den vorhandenen XDM-Schemata in Ihrer Sandbox zurück, einschließlich ihrer Gesamtanzahl und der fünf am häufigsten verwendeten Felder.
 
-![ Dropdown-Fenster „In Ihrer Sandbox“ wird geöffnet, in dem zusätzliche Informationen zu Ihren Schemata angezeigt werden.](./images/in-your-sandbox.png)
+![&#x200B; Dropdown-Fenster „In Ihrer Sandbox“ wird geöffnet, in dem zusätzliche Informationen zu Ihren Schemata angezeigt werden.](./images/in-your-sandbox.png)
 
 +++
 
@@ -87,7 +87,7 @@ Im folgenden Beispiel wird der KI-Assistent nach der folgenden Abfrage gefragt: 
 
 ![Eine Frage zu operativen Einblicken.](./images/op-insights-question.png)
 
-Der KI-Assistent antwortet dann mit einer Tabelle, in der Ihre Datenflüsse und die entsprechenden IDs aufgelistet sind. Wählen Sie das Download-Symbol ![Download-Symbol](/help/images/icons/download.png), um die Tabelle als CSV-Datei herunterzuladen. Um die gesamte Tabelle anzuzeigen, klicken Sie auf das Symbol „Erweitern![ (Symbol „Erweitern](/help/images/icons/expand.png)).
+Der KI-Assistent antwortet dann mit einer Tabelle, in der Ihre Datenflüsse und die entsprechenden IDs aufgelistet sind. Wählen Sie das Download-Symbol ![Download-Symbol](/help/images/icons/download.png), um die Tabelle als CSV-Datei herunterzuladen. Um die gesamte Tabelle anzuzeigen, klicken Sie auf das Symbol „Erweitern![&#x200B; (Symbol „Erweitern](/help/images/icons/expand.png)).
 
 ![Eine Antwort auf operative Erkenntnisse](./images/op-insights-answer.png)
 
@@ -165,7 +165,7 @@ Um die Auffindbarkeit anzuzeigen, wählen Sie das Glühbirnensymbol in der obere
 
 ![Die Entdeckungsfunktion des KI-Assistenten.](./images/lightbulb.png)
 
-Wählen Sie als Nächstes eine Kategorie und dann eine Eingabeaufforderung aus der bereitgestellten Liste aus. Mithilfe dieser Funktion können Sie sich einen besseren Überblick über die Arten von Fragen verschaffen, die der KI-Assistent beantworten kann. Sie können auch die bereits vorhandenen Eingabeaufforderungen mit bestimmten Details aktualisieren, die sich auf Ihre Sandbox beziehen, indem Sie freien Text oder &quot;[&quot; ](#use-auto-complete).
+Wählen Sie als Nächstes eine Kategorie und dann eine Eingabeaufforderung aus der bereitgestellten Liste aus. Mithilfe dieser Funktion können Sie sich einen besseren Überblick über die Arten von Fragen verschaffen, die der KI-Assistent beantworten kann. Sie können auch die bereits vorhandenen Eingabeaufforderungen mit bestimmten Details aktualisieren, die sich auf Ihre Sandbox beziehen, indem Sie freien Text oder &quot;[&quot; &#x200B;](#use-auto-complete).
 
 ![Der KI-Assistent fordert zur Entdeckung auf.](./images/prompt.png)
 

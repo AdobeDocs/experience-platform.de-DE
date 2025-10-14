@@ -99,7 +99,7 @@ Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Zielgruppentyp]**: Wählen Sie **[!UICONTROL ID für Werbetreibende (IFAs)]** aus, wenn die Identitäten, die exportiert werden sollen, vom Typ *ID für Werbetreibende (IFAs)*. Wählen Sie **[!UICONTROL LINE-Benutzer]** IDs aus, wenn die Identitäten, die exportiert werden sollen, vom Typ *LINE-Benutzer-IDs* sind. Weitere Informationen zu den Identitätstypen [ Sie ](#supported-identities) Abschnitt „Unterstützte Identitäten“.
+* **[!UICONTROL Zielgruppentyp]**: Wählen Sie **[!UICONTROL ID für Werbetreibende (IFAs)]** aus, wenn die Identitäten, die exportiert werden sollen, vom Typ *ID für Werbetreibende (IFAs)*. Wählen Sie **[!UICONTROL LINE-Benutzer]** IDs aus, wenn die Identitäten, die exportiert werden sollen, vom Typ *LINE-Benutzer-IDs* sind. Weitere Informationen zu den Identitätstypen [&#x200B; Sie &#x200B;](#supported-identities) Abschnitt „Unterstützte Identitäten“.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 

@@ -20,9 +20,9 @@ ht-degree: 3%
 - Targeting spezifischer Benutzer für Marketing- und Werbekampagnen, um die Anzahl der Bestandskunden zu erhöhen.
 - Untersuchen Sie das Benutzerverhalten und die Muster, um bestimmte Zielgruppen mit benutzerdefinierten Nachrichten anzusprechen, was zu einer Umsatzsteigerung beitragen könnte.
 
-Mit [ Erweiterung [!DNL Braze Track Events API]Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) können Sie die im Adobe Experience Platform-Edge Network erfassten Daten nutzen und in Form von Server-seitigen Ereignissen mithilfe der [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track)-API an [!DNL Braze] senden.
+Mit [&#x200B; Erweiterung [!DNL Braze Track Events API]Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) können Sie die im Adobe Experience Platform-Edge Network erfassten Daten nutzen und in Form von Server-seitigen Ereignissen mithilfe der [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track)-API an [!DNL Braze] senden.
 
-In diesem Dokument werden die Anwendungsfälle der Erweiterung behandelt und beschrieben, wie Sie sie in Ihren Bibliotheken für die Ereignisweiterleitung installieren und wie Sie ihre Funktionen in einer Regel für die [ verwenden](../../../ui/managing-resources/rules.md).
+In diesem Dokument werden die Anwendungsfälle der Erweiterung behandelt und beschrieben, wie Sie sie in Ihren Bibliotheken für die Ereignisweiterleitung installieren und wie Sie ihre Funktionen in einer Regel für die [&#x200B; verwenden](../../../ui/managing-resources/rules.md).
 
 ## Anwendungsfälle
 
@@ -30,7 +30,7 @@ Diese Erweiterung sollte verwendet werden, wenn Sie Daten aus dem Edge Network v
 
 Nehmen wir zum Beispiel ein Einzelhandelsunternehmen mit einer kanalübergreifenden Präsenz (Website und Mobilgerät), das Transaktions- oder Konversationseingaben als Ereignisdaten von seiner Website und seinen mobilen Plattformen erfasst. Mithilfe verschiedener [Tag](../../../home.md)-Regeln werden diese Daten in Echtzeit an das Edge Network gesendet. Von hier aus sendet die [!DNL Braze]-Erweiterung für die Ereignisweiterleitung automatisch relevante Ereignisse von der Server-Seite an [!DNL Braze].
 
-Nach dem Versand der Daten können die Analyse-Teams des Unternehmens dann [!DNL Braze's] Funktionen nutzen, um die Datensätze zu verarbeiten und geschäftliche Einblicke abzuleiten, um Diagramme, Dashboards oder andere Visualisierungen zu generieren, um geschäftliche Stakeholder zu informieren. Weitere Informationen zu den verschiedenen Anwendungsfällen [[!DNL Braze]  Plattform finden ](https://www.braze.com/customers) auf der Seite „Kunden“.
+Nach dem Versand der Daten können die Analyse-Teams des Unternehmens dann [!DNL Braze's] Funktionen nutzen, um die Datensätze zu verarbeiten und geschäftliche Einblicke abzuleiten, um Diagramme, Dashboards oder andere Visualisierungen zu generieren, um geschäftliche Stakeholder zu informieren. Weitere Informationen zu den verschiedenen Anwendungsfällen [[!DNL Braze]  Plattform finden &#x200B;](https://www.braze.com/customers) auf der Seite „Kunden“.
 
 ## [!DNL Braze] Voraussetzungen und Leitlinien {#prerequisites}
 
@@ -51,7 +51,7 @@ Die Erweiterung verwendet zwei APIs von [!DNL Braze] und ihre Einschränkungen s
 
 ### Fakturierbare Datenpunkte
 
-Das Senden zusätzlicher benutzerdefinierter Attribute an [!DNL Braze] kann die Nutzung Ihrer [!DNL Braze]-Datenpunkte erhöhen. Wenden Sie sich an Ihren [!DNL Braze] Account Manager, bevor Sie zusätzliche benutzerdefinierte Attribute senden. Weitere Informationen finden Sie in der [!DNL Braze] Dokumentation [Abrechnungsfähige ](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable)).
+Das Senden zusätzlicher benutzerdefinierter Attribute an [!DNL Braze] kann die Nutzung Ihrer [!DNL Braze]-Datenpunkte erhöhen. Wenden Sie sich an Ihren [!DNL Braze] Account Manager, bevor Sie zusätzliche benutzerdefinierte Attribute senden. Weitere Informationen finden Sie in der [!DNL Braze] Dokumentation [Abrechnungsfähige &#x200B;](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable)).
 
 ### Sammeln erforderlicher Konfigurationsdetails {#configuration-details}
 
@@ -64,11 +64,11 @@ Um das Edge Network an [!DNL Braze] anzuschließen, sind folgende Eingaben erfor
 
 ### Erstellen geheimer Daten
 
-Erstellen Sie ein neues [Geheimnis für die Ereignisweiterleitung](../../../ui/event-forwarding/secrets.md) und legen Sie den Wert auf Ihren [[!DNL Braze] -API-Schlüssel ](#configuration-details). Dies wird verwendet, um die Verbindung zu Ihrem Konto zu authentifizieren und dabei den Wert sicher zu halten.
+Erstellen Sie ein neues [Geheimnis für die Ereignisweiterleitung](../../../ui/event-forwarding/secrets.md) und legen Sie den Wert auf Ihren [[!DNL Braze] -API-Schlüssel &#x200B;](#configuration-details). Dies wird verwendet, um die Verbindung zu Ihrem Konto zu authentifizieren und dabei den Wert sicher zu halten.
 
 ## Installieren und Konfigurieren der [!DNL Braze] {#install}
 
-Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
 Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Wählen Sie auf der **[!UICONTROL Katalog]**-Registerkarte **[!UICONTROL Installieren]** auf der Karte für die [!DNL Braze] aus.
 
@@ -200,7 +200,7 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, mit denen e
 
 ## Validieren von Daten in [!DNL Braze] {#validate}
 
-Wenn die Ereignissammlung und [!DNL Adobe Experience Platform] Integration erfolgreich waren, werden bei der Anzeige von Benutzerprofilen Ereignisse in der [!DNL Braze]-Konsole [angezeigt](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/). Insbesondere die neuen Ereignisdaten, die an [!DNL Braze] gesendet werden, werden im Abschnitt [!DNL Purchases] der Registerkarte [Übersicht“ eines bestimmten Benutzers ](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
+Wenn die Ereignissammlung und [!DNL Adobe Experience Platform] Integration erfolgreich waren, werden bei der Anzeige von Benutzerprofilen Ereignisse in der [!DNL Braze]-Konsole [angezeigt](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/). Insbesondere die neuen Ereignisdaten, die an [!DNL Braze] gesendet werden, werden im Abschnitt [!DNL Purchases] der Registerkarte [Übersicht“ eines bestimmten Benutzers &#x200B;](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
 
 ## Nächste Schritte
 

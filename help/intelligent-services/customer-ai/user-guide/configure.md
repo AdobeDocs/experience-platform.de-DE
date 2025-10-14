@@ -112,7 +112,7 @@ Falls in einem Namespace mehr als eine Identität verfügbar ist, stellen Sie si
 
 >[!NOTE]
 >
-> Wenn für einen Datensatz kein gültiger Identitätstyp (Namespace) vorhanden ist, müssen Sie eine primäre Identität festlegen und sie mithilfe des [-Editors einem Identity-Namespace ](../../../xdm/schema/composition.md#identity). Weitere Informationen zu Namespaces und Identitäten finden Sie in der Dokumentation [Identity Service-Namespaces](../../../identity-service/features/namespaces.md) .
+> Wenn für einen Datensatz kein gültiger Identitätstyp (Namespace) vorhanden ist, müssen Sie eine primäre Identität festlegen und sie mithilfe des [-Editors einem Identity-Namespace &#x200B;](../../../xdm/schema/composition.md#identity). Weitere Informationen zu Namespaces und Identitäten finden Sie in der Dokumentation [Identity Service-Namespaces](../../../identity-service/features/namespaces.md) .
 
 ## Ziel definieren {#define-a-goal}
 
@@ -159,15 +159,15 @@ Standardmäßig werden Tendenzwerte für alle Profile generiert, es sei denn, es
 
 ### Benutzerspezifische Ereignisse (*optional*) {#custom-events}
 
-Wenn Sie zusätzlich zu den [Standardereignisfeldern“, die von Kunden-KI ](../data-requirements.md#standard-events) Generieren von Tendenz-Scores verwendet werden, über zusätzliche Informationen verfügen, wird eine Option für benutzerdefinierte Ereignisse bereitgestellt. Mit dieser Option können Sie zusätzliche Ereignisse hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und zu genaueren Ergebnissen führen kann. Wenn der ausgewählte Datensatz benutzerdefinierte Ereignisse enthält, die in Ihrem Schema definiert sind, können Sie sie zu Ihrer Instanz hinzufügen.
+Wenn Sie zusätzlich zu den [Standardereignisfeldern“, die von Kunden-KI &#x200B;](../data-requirements.md#standard-events) Generieren von Tendenz-Scores verwendet werden, über zusätzliche Informationen verfügen, wird eine Option für benutzerdefinierte Ereignisse bereitgestellt. Mit dieser Option können Sie zusätzliche Ereignisse hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und zu genaueren Ergebnissen führen kann. Wenn der ausgewählte Datensatz benutzerdefinierte Ereignisse enthält, die in Ihrem Schema definiert sind, können Sie sie zu Ihrer Instanz hinzufügen.
 
 >[!NOTE]
 >
-> Eine ausführliche Erläuterung der Auswirkungen benutzerdefinierter Ereignisse auf die Ergebnisse der Kunden-KI-Bewertung finden Sie [ Abschnitt „Beispiel für benutzerdefiniertes ](#custom-event)&quot;.
+> Eine ausführliche Erläuterung der Auswirkungen benutzerdefinierter Ereignisse auf die Ergebnisse der Kunden-KI-Bewertung finden Sie [&#x200B; Abschnitt „Beispiel für benutzerdefiniertes &#x200B;](#custom-event)&quot;.
 
 ![Ein Beispiel für die Konfiguration einer Ereignisfunktion in Kunden-KI.](../images/user-guide/event-feature.png)
 
-Um ein benutzerdefiniertes Ereignis hinzuzufügen, wählen Sie **[!UICONTROL Benutzerdefiniertes Ereignis hinzufügen]** aus. Geben Sie als Nächstes einen benutzerdefinierten Ereignisnamen ein und ordnen Sie ihn dann dem Ereignisfeld in Ihrem Schema zu. Bei der Betrachtung von Einflussfaktoren und anderen Einblicken werden benutzerdefinierte Ereignisnamen anstelle der Feldwerte angezeigt. Das bedeutet, dass der benutzerdefinierte Ereignisname anstelle der ID/des Werts des Ereignisses verwendet wird. Weitere Informationen zur Anzeige benutzerdefinierter Ereignisse finden Sie [ Abschnitt „Beispiel für benutzerdefiniertes Ereignis](#custom-event). Diese zusätzlichen benutzerspezifischen Ereignisse werden von Kunden-KI verwendet, um die Qualität Ihres Modells zu verbessern und genauere Ergebnisse zu liefern.
+Um ein benutzerdefiniertes Ereignis hinzuzufügen, wählen Sie **[!UICONTROL Benutzerdefiniertes Ereignis hinzufügen]** aus. Geben Sie als Nächstes einen benutzerdefinierten Ereignisnamen ein und ordnen Sie ihn dann dem Ereignisfeld in Ihrem Schema zu. Bei der Betrachtung von Einflussfaktoren und anderen Einblicken werden benutzerdefinierte Ereignisnamen anstelle der Feldwerte angezeigt. Das bedeutet, dass der benutzerdefinierte Ereignisname anstelle der ID/des Werts des Ereignisses verwendet wird. Weitere Informationen zur Anzeige benutzerdefinierter Ereignisse finden Sie [&#x200B; Abschnitt „Beispiel für benutzerdefiniertes Ereignis](#custom-event). Diese zusätzlichen benutzerspezifischen Ereignisse werden von Kunden-KI verwendet, um die Qualität Ihres Modells zu verbessern und genauere Ergebnisse zu liefern.
 
 ![Ein Beispiel für die Konfiguration eines benutzerdefinierten Ereignisfelds in Kunden-KI.](../images/user-guide/custom-event.png)
 
@@ -187,7 +187,7 @@ Zusätzlich zu den [Standardereignisfeldern“, die von Kunden-KI zum Generieren
 
 >[!NOTE]
 >
->Das Hinzufügen eines benutzerdefinierten Profilattributs folgt demselben Workflow wie das Hinzufügen eines benutzerdefinierten Ereignisses. Ähnlich wie benutzerdefinierte Ereignisse wirken sich benutzerdefinierte Profilattribute auf die gleiche Weise auf die Bewertung Ihres Modells aus. Eine ausführliche Erläuterung finden Sie im Abschnitt [Beispiel für ein benutzerdefiniertes ](#custom-event)).
+>Das Hinzufügen eines benutzerdefinierten Profilattributs folgt demselben Workflow wie das Hinzufügen eines benutzerdefinierten Ereignisses. Ähnlich wie benutzerdefinierte Ereignisse wirken sich benutzerdefinierte Profilattribute auf die gleiche Weise auf die Bewertung Ihres Modells aus. Eine ausführliche Erläuterung finden Sie im Abschnitt [Beispiel für ein benutzerdefiniertes &#x200B;](#custom-event)).
 
 ![Ein Beispiel für die Konfiguration eines benutzerdefinierten Profilattributs in Kunden-KI.](../images/user-guide/profile-attributes.png)
 
@@ -245,7 +245,7 @@ In diesem Abschnitt haben Sie eine Instanz der Kunden-KI konfiguriert und einen 
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfolgreich eine Instanz von Kunden-KI konfiguriert und Tendenz-Scores generiert. Sie können jetzt Segment Builder verwenden, um [Kundensegmente mit prognostizierten Werten zu erstellen](./create-segment.md) oder [Einblicke mit Kunden-KI zu ](./discover-insights.md).
+In diesem Tutorial haben Sie erfolgreich eine Instanz von Kunden-KI konfiguriert und Tendenz-Scores generiert. Sie können jetzt Segment Builder verwenden, um [Kundensegmente mit prognostizierten Werten zu erstellen](./create-segment.md) oder [Einblicke mit Kunden-KI zu &#x200B;](./discover-insights.md).
 
 ## Zusätzliche Ressourcen
 

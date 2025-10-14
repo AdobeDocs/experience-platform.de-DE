@@ -29,4 +29,4 @@ Wählen Sie **[!UICONTROL Schließen]** aus, um das Dialogfeld zu schließen.
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie die SQL hinter Ihren benutzerdefinierten Einblicken anzeigen können. Im Dokument Weitere Informationen erfahren Sie, wie Sie [Ihr benutzerdefiniertes Diagramm mit den tabellarischen Ergebnissen Ihrer SQL-Analyse vergleichen](./view-more.md).
 
-Außerdem erfahren Sie mit dem Handbuch [ Design-Modus , wie Sie Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche ](../standard-dashboards.md).
+Außerdem erfahren Sie mit dem Handbuch [&#x200B; Design-Modus , wie Sie Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche &#x200B;](../standard-dashboards.md).

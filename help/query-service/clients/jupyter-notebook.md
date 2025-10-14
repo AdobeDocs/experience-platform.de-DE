@@ -40,9 +40,9 @@ Geben Sie in der ersten Zeile des [!DNL Notebook]-Editors den folgenden Wert ein
 
 Importieren Sie als Nächstes einen [!DNL PostgreSQL] Datenbankadapter für [!DNL Python]. Geben Sie den Wert ein: `import psycopg2`und wählen Sie **[!DNL Run]** aus. Es gibt keine Erfolgsmeldung für diesen Prozess. Wenn keine Fehlermeldung angezeigt wird, fahren Sie mit dem nächsten Schritt fort.
 
-Sie müssen jetzt Ihre Adobe Experience Platform-Anmeldeinformationen angeben, indem Sie den Wert eingeben: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Ihre Anmeldeinformationen für die Verbindung finden Sie [!UICONTROL &#x200B; Abschnitt &#x200B;]Abfragen“ auf der Registerkarte [!UICONTROL Anmeldeinformationen] der Experience Platform-Benutzeroberfläche. Detaillierte Anweisungen finden Sie in der Dokumentation [ Suchen der ](../ui/credentials.md) Ihres Unternehmens .
+Sie müssen jetzt Ihre Adobe Experience Platform-Anmeldeinformationen angeben, indem Sie den Wert eingeben: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Ihre Anmeldeinformationen für die Verbindung finden Sie [!UICONTROL &#x200B; Abschnitt &#x200B;]Abfragen“ auf der Registerkarte [!UICONTROL Anmeldeinformationen] der Experience Platform-Benutzeroberfläche. Detaillierte Anweisungen finden Sie in der Dokumentation [&#x200B; Suchen der &#x200B;](../ui/credentials.md) Ihres Unternehmens .
 
-Die Verwendung nicht ablaufender Anmeldeinformationen wird empfohlen, wenn Sie Drittanbieter-Clients verwenden, um sich die wiederholte Eingabe Ihrer Details zu ersparen. In der Dokumentation finden [ Anweisungen zum Generieren und Verwenden nicht ablaufender Anmeldeinformationen](../ui/credentials.md#non-expiring-credentials).
+Die Verwendung nicht ablaufender Anmeldeinformationen wird empfohlen, wenn Sie Drittanbieter-Clients verwenden, um sich die wiederholte Eingabe Ihrer Details zu ersparen. In der Dokumentation finden [&#x200B; Anweisungen zum Generieren und Verwenden nicht ablaufender Anmeldeinformationen](../ui/credentials.md#non-expiring-credentials).
 
 >[!IMPORTANT]
 >

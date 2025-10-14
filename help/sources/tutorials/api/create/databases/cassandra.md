@@ -123,4 +123,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Cassandra] mithilfe der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, in dem Sie das Erkunden [ Datenbanken mithilfe der Flow Service-API ](../../explore/database-nosql.md).
+In diesem Tutorial haben Sie eine [!DNL Cassandra] mithilfe der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, in dem Sie das Erkunden [&#x200B; Datenbanken mithilfe der Flow Service-API &#x200B;](../../explore/database-nosql.md).

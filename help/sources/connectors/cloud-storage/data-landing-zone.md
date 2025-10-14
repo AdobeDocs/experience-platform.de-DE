@@ -146,7 +146,7 @@ Im folgenden Beispiel wird [!DNL Microsoft's] Dienstprogramm [!DNL AzCopy] zum H
 
 >[!TIP]
 >
->Während im folgenden Beispiel der Befehl `copy` verwendet wird, können Sie mithilfe von [!DNL AzCopy] andere Befehle und Optionen verwenden, um eine Datei in Ihr [!DNL Data Landing Zone] hochzuladen. Weitere Informationen finden [[!DNL Microsoft AzCopy]  in diesem ](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json).
+>Während im folgenden Beispiel der Befehl `copy` verwendet wird, können Sie mithilfe von [!DNL AzCopy] andere Befehle und Optionen verwenden, um eine Datei in Ihr [!DNL Data Landing Zone] hochzuladen. Weitere Informationen finden [[!DNL Microsoft AzCopy]  in diesem &#x200B;](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json).
 
 ```bat
 set sasUri=<FULL SAS URI, PROPERLY ESCAPED>

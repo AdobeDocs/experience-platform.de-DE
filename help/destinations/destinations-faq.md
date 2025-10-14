@@ -27,7 +27,7 @@ Bei der Streaming-Segmentierung wird die Profilanzahl für Streaming-Zielgruppen
 
 Wenn sich der Zeitplan für den Zielgruppenexport vom Segmentierungsplan unterscheidet, unterscheiden sich die Profilzahlen zwischen der Benutzeroberfläche und der exportierten [!DNL CSV], insbesondere bei Streaming-Zielgruppen.
 
-Weitere Informationen finden [ in der ](../segmentation/home.md) zum Segmentierungs-Service .
+Weitere Informationen finden [&#x200B; in der &#x200B;](../segmentation/home.md) zum Segmentierungs-Service .
 +++
 
 ### Warum werden niedrige Übereinstimmungsraten beim Deaktivieren und erneuten Aktivieren einer aktualisierten Zielgruppe für dasselbe Ziel angezeigt?
@@ -93,7 +93,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die folgenden Anforderungen erfüllen:
 
 * Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Adobe Experience Cloud Das Geschäftskonto **&#x200B;**&#x200B;muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
+* Adobe Experience Cloud Das Geschäftskonto **&#x200B;**&#x200B;muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [&#x200B; in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
 
   >[!IMPORTANT]
   >
@@ -201,7 +201,7 @@ Nein, [Web SDK](../web-sdk/home.md) ist nicht erforderlich, um Zielgruppen für 
 
 Wenn jedoch [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=de) anstelle von Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
 
-Bei [Personalisierung der gleichen Seite und ](ui/activate-edge-personalization-destinations.md) nächsten Seite“ müssen Sie entweder [Web SDK](../web-sdk/home.md) oder die [Edge Network API verwenden](https://developer.adobe.com/data-collection-apis/docs/api/). Weitere Informationen finden Sie in [ Dokumentation unter Aktivieren von Zielgruppen für Edge](ui/activate-edge-personalization-destinations.md)Ziele .
+Bei [Personalisierung der gleichen Seite und &#x200B;](ui/activate-edge-personalization-destinations.md) nächsten Seite“ müssen Sie entweder [Web SDK](../web-sdk/home.md) oder die [Edge Network API verwenden](https://developer.adobe.com/data-collection-apis/docs/api/). Weitere Informationen finden Sie in [&#x200B; Dokumentation unter Aktivieren von Zielgruppen für Edge](ui/activate-edge-personalization-destinations.md)Ziele .
 +++
 
 ### Gibt es eine Begrenzung für die Anzahl der Attribute, die ich von Real-time Customer Data Platform an Adobe Target oder ein benutzerdefiniertes Personalization-Ziel senden kann?
@@ -253,7 +253,7 @@ Ja, die Edge Network-API funktioniert mit dem benutzerdefinierten Personalizatio
 ### Ich kann nur eine einzige Zusammenführungsrichtlinie haben, die im Randbereich aktiv ist. Kann ich Zielgruppen erstellen, die eine andere Zusammenführungsrichtlinie verwenden, und sie dennoch als Streaming-Zielgruppen an Adobe Target senden?
 
 +++Antwort 
-Nr. Alle Zielgruppen, die Sie für Adobe Target aktivieren möchten, müssen eine Active-On-Edge-[ (Zusammenführungsrichtlinie) ](../profile/merge-policies/ui-guide.md).
+Nr. Alle Zielgruppen, die Sie für Adobe Target aktivieren möchten, müssen eine Active-On-Edge-[&#x200B; (Zusammenführungsrichtlinie) &#x200B;](../profile/merge-policies/ui-guide.md).
 +++
 
 ### Werden Datennutzungskennzeichnungen und -durchsetzung (Data Usage Labeling and Enforcement, DULE) und Einverständnisrichtlinien durchgesetzt?

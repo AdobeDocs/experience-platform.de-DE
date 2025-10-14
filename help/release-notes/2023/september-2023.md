@@ -43,7 +43,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschied
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Registerkarte „Warnhinweisverlauf“ | Die Registerkarte [!UICONTROL Warnhinweise] enthält jetzt alle Ereignisse, einschließlich Verzögerungen, Starts, Erfolg und Fehler. Weitere Informationen zur Registerkarte „Verlauf[ finden ](../../observability/alerts/ui.md) in der Dokumentation zur Warnhinweis-Benutzeroberfläche . |
+| Registerkarte „Warnhinweisverlauf“ | Die Registerkarte [!UICONTROL Warnhinweise] enthält jetzt alle Ereignisse, einschließlich Verzögerungen, Starts, Erfolg und Fehler. Weitere Informationen zur Registerkarte „Verlauf[&#x200B; finden &#x200B;](../../observability/alerts/ui.md) in der Dokumentation zur Warnhinweis-Benutzeroberfläche . |
 
 {style="table-layout:auto"}
 
@@ -69,7 +69,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Datenströme | Unterstützung der Gerätesuche | Beim Konfigurieren eines Datenstroms können Sie jetzt die Ebene der Gerätesuchinformationen auswählen, die erfasst werden sollen. Gerätesuchinformationen enthalten Daten zu Gerät, Hardware, Betriebssystem und Browser, die für die Interaktion mit Ihrer Seite verwendet werden. <br> Gerätesuchinformationen können nicht zusammen mit Benutzeragenten- und Client-Hinweisen erfasst werden. Wenn Sie sich für die Erfassung von Geräteinformationen entscheiden, wird die Erfassung von Benutzeragenten- und Client-Hinweisen deaktiviert und umgekehrt. Alle Gerätesuchinformationen werden in der `xdm:device` Feldergruppe gespeichert. Weitere Informationen finden Sie in der Dokumentation unter [ von Datenströmen](../../datastreams/configure.md#geolocation-device-lookup). |
+| Datenströme | Unterstützung der Gerätesuche | Beim Konfigurieren eines Datenstroms können Sie jetzt die Ebene der Gerätesuchinformationen auswählen, die erfasst werden sollen. Gerätesuchinformationen enthalten Daten zu Gerät, Hardware, Betriebssystem und Browser, die für die Interaktion mit Ihrer Seite verwendet werden. <br> Gerätesuchinformationen können nicht zusammen mit Benutzeragenten- und Client-Hinweisen erfasst werden. Wenn Sie sich für die Erfassung von Geräteinformationen entscheiden, wird die Erfassung von Benutzeragenten- und Client-Hinweisen deaktiviert und umgekehrt. Alle Gerätesuchinformationen werden in der `xdm:device` Feldergruppe gespeichert. Weitere Informationen finden Sie in der Dokumentation unter [&#x200B; von Datenströmen](../../datastreams/configure.md#geolocation-device-lookup). |
 | Erweiterungen | API-Erweiterung für [!DNL TikTok]-Web-Ereignisse | Mit der [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api)-Erweiterung können Sie die in Adobe Experience Platform Edge Network erfassten Daten nutzen und in Form von Server-seitigen Ereignissen mithilfe der [!DNL TikTok] Web Events API an [!DNL TikTok] senden. |
 
 {style="table-layout:auto"}
@@ -84,7 +84,7 @@ Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neue Partner-Ökosystem-Kennzeichnungen für Drittanbieterdaten | Es sind neue Datennutzungskennzeichnungen für die Anreicherung und Interessentenakquise von Drittanbietern verfügbar. Weitere Informationen finden Sie in der [Dokumentation ](../../data-governance/labels/reference.md#partner) Partner-Ökosystem-Kennzeichnungen“. |
+| Neue Partner-Ökosystem-Kennzeichnungen für Drittanbieterdaten | Es sind neue Datennutzungskennzeichnungen für die Anreicherung und Interessentenakquise von Drittanbietern verfügbar. Weitere Informationen finden Sie in der [Dokumentation &#x200B;](../../data-governance/labels/reference.md#partner) Partner-Ökosystem-Kennzeichnungen“. |
 
 {style="table-layout:auto"}
 
@@ -98,8 +98,8 @@ Experience Platform bietet eine Reihe von Funktionen zur Datenhygiene, mit denen
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Löschen von Datensätzen (eingeschränkte Version) | Verwalten Sie Ihren Datenlebenszyklus in allen Datenspeichern, um Kundenverpflichtungen und Lizenzvereinbarungen mit erweiterten Funktionen für das Data Lifecycle Management in Adobe Experience Platform zu erfüllen: Automatisierte Gültigkeit von Datensätzen und Löschen von Datensätzen.<br>Mit der automatisierten Datensatzgültigkeit können Sie ganze Datensätze löschen und ein Datum und eine Uhrzeit für das Löschen des Datensatzes festlegen.<br>Mit dem Löschen von Datensätzen können Sie einzelne Verbraucherprofile löschen, indem Sie deren primäre Identitäten ansprechen. Sie können die primären Identitäten einzeln über die Benutzeroberfläche oder über den CSV-/JSON-Datei-Upload angeben. Weitere Informationen finden [ in der ](../../hygiene/ui/record-delete.md) zum Löschen von Datensätzen . |
-| Datensatzgültigkeiten | Minimieren Sie Ihre Daten und behalten Sie die Kontrolle über Ihre Lizenzvereinbarungen mit automatisierter Datensatzgültigkeit. Verringern Sie das Datenvolumen, indem Sie ganze Datensätze löschen und ein Datum und eine Uhrzeit für das Löschen des Datensatzes festlegen. Weitere Informationen finden [ in der ](../../hygiene/ui/dataset-expiration.md) zur Datensatzgültigkeit . |
+| [!BADGE Beta]{type=Informative} Löschen von Datensätzen (eingeschränkte Version) | Verwalten Sie Ihren Datenlebenszyklus in allen Datenspeichern, um Kundenverpflichtungen und Lizenzvereinbarungen mit erweiterten Funktionen für das Data Lifecycle Management in Adobe Experience Platform zu erfüllen: Automatisierte Gültigkeit von Datensätzen und Löschen von Datensätzen.<br>Mit der automatisierten Datensatzgültigkeit können Sie ganze Datensätze löschen und ein Datum und eine Uhrzeit für das Löschen des Datensatzes festlegen.<br>Mit dem Löschen von Datensätzen können Sie einzelne Verbraucherprofile löschen, indem Sie deren primäre Identitäten ansprechen. Sie können die primären Identitäten einzeln über die Benutzeroberfläche oder über den CSV-/JSON-Datei-Upload angeben. Weitere Informationen finden [&#x200B; in der &#x200B;](../../hygiene/ui/record-delete.md) zum Löschen von Datensätzen . |
+| Datensatzgültigkeiten | Minimieren Sie Ihre Daten und behalten Sie die Kontrolle über Ihre Lizenzvereinbarungen mit automatisierter Datensatzgültigkeit. Verringern Sie das Datenvolumen, indem Sie ganze Datensätze löschen und ein Datum und eine Uhrzeit für das Löschen des Datensatzes festlegen. Weitere Informationen finden [&#x200B; in der &#x200B;](../../hygiene/ui/dataset-expiration.md) zur Datensatzgültigkeit . |
 
 {style="table-layout:auto"}
 
@@ -153,13 +153,13 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Funktion | Beschreibung |
 | --- | --- |
 | Schnellaktionen zum Schema-Editor hinzugefügt | Der Arbeitsfläche des Schema-Editors wurden neue Schnellaktionen hinzugefügt. Sie können jetzt die JSON-Struktur kopieren oder das Schema direkt aus dem Editor löschen.<br>![Schnellaktionen im Schema-Editor.](../2023/assets/schema-editor-copy-json.png "Der Editor „Schemata“ mit hervorgehobenen Optionen „Mehr“ und „In JSON kopieren“."){width="100" zoomable="yes"} |
-| Filtern von XDM-Ressourcen nach benutzerdefiniertem oder standardmäßigem Ersteller | Die Listen der verfügbaren Schemata, Feldergruppen, Datentypen und Klassen sind jetzt basierend auf ihrer Erstellungsmethode vorgefiltert. Auf diese Weise können Sie Ressourcen danach filtern, ob sie benutzerdefiniert erstellt oder von Adobe erstellt wurden.<br>![Die standardmäßigen und benutzerdefinierten Filter im Arbeitsbereich Schemata .](../2023/assets/standard-and-custom-classes.png "Der Arbeitsbereich „Schemata“ mit hervorgehobenen Standard- und benutzerdefinierten Filtern."){width="100" zoomable="yes"} <br> Weitere Informationen finden [ in der ](../../xdm/ui/resources/classes.md#filter.md) zum Erstellen und Bearbeiten von Ressourcen . |
+| Filtern von XDM-Ressourcen nach benutzerdefiniertem oder standardmäßigem Ersteller | Die Listen der verfügbaren Schemata, Feldergruppen, Datentypen und Klassen sind jetzt basierend auf ihrer Erstellungsmethode vorgefiltert. Auf diese Weise können Sie Ressourcen danach filtern, ob sie benutzerdefiniert erstellt oder von Adobe erstellt wurden.<br>![Die standardmäßigen und benutzerdefinierten Filter im Arbeitsbereich Schemata .](../2023/assets/standard-and-custom-classes.png "Der Arbeitsbereich „Schemata“ mit hervorgehobenen Standard- und benutzerdefinierten Filtern."){width="100" zoomable="yes"} <br> Weitere Informationen finden [&#x200B; in der &#x200B;](../../xdm/ui/resources/classes.md#filter.md) zum Erstellen und Bearbeiten von Ressourcen . |
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktualisierter Workflow zur Schemaerstellung | Es wurde ein neuer Workflow zur Schemaerstellung implementiert, um den Prozess zu optimieren. <br> ![Die neue Benutzeroberfläche zur Schemaerstellung.](../2023/assets/schema-class-options.png "Auswahl „Neue Schemadetails“ hervorgehoben."){width="100" zoomable="yes"} <br> Weitere Informationen finden [ in der ](../../xdm/ui/resources/schemas.md#create) zur Schemaerstellung . |
+| Aktualisierter Workflow zur Schemaerstellung | Es wurde ein neuer Workflow zur Schemaerstellung implementiert, um den Prozess zu optimieren. <br> ![Die neue Benutzeroberfläche zur Schemaerstellung.](../2023/assets/schema-class-options.png "Auswahl „Neue Schemadetails“ hervorgehoben."){width="100" zoomable="yes"} <br> Weitere Informationen finden [&#x200B; in der &#x200B;](../../xdm/ui/resources/schemas.md#create) zur Schemaerstellung . |
 
 **Neue XDM-Komponenten**
 
@@ -205,8 +205,8 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktualisierungen der Protokollfilter-Benutzeroberfläche | Verbesserte Filterung des Abfrageprotokolls verbessert die Sichtbarkeit für benutzergenerierte Protokolle zur Überwachung, Verwaltung und Fehlerbehebung. Sie können die Liste der Abfrageprotokolle nach verschiedenen Einstellungen filtern. <br> ![Die Filtereinstellungen für das Abfrageprotokoll.](../2023/assets/log-filter-settings.png "Neue Abfrageprotokollfilter sind hervorgehoben."){width="100" zoomable="yes"} <br> Weitere Informationen finden [ in der ](../../query-service/ui/query-logs.md#filter-logs) zu Abfrageprotokollen . |
-| Mehrere Aktualisierungen der Benutzeroberfläche des Abfrage-Editors | Sie können jetzt mehrere sequenzielle Abfragen im Abfrage-Editor ausführen oder mehr als eine Abfrage schreiben und alle Abfragen sequenziell ausführen. Um der Ausführung Ihrer Abfrage mehr Flexibilität zu verleihen, können Sie die ausgewählte Abfrage markieren und auswählen, dass diese spezifische Abfrage unabhängig von den anderen ausgeführt werden soll. Weitere Informationen finden Sie [ Handbuch zur Benutzeroberfläche ](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) Abfrage-Editors . |
+| Aktualisierungen der Protokollfilter-Benutzeroberfläche | Verbesserte Filterung des Abfrageprotokolls verbessert die Sichtbarkeit für benutzergenerierte Protokolle zur Überwachung, Verwaltung und Fehlerbehebung. Sie können die Liste der Abfrageprotokolle nach verschiedenen Einstellungen filtern. <br> ![Die Filtereinstellungen für das Abfrageprotokoll.](../2023/assets/log-filter-settings.png "Neue Abfrageprotokollfilter sind hervorgehoben."){width="100" zoomable="yes"} <br> Weitere Informationen finden [&#x200B; in der &#x200B;](../../query-service/ui/query-logs.md#filter-logs) zu Abfrageprotokollen . |
+| Mehrere Aktualisierungen der Benutzeroberfläche des Abfrage-Editors | Sie können jetzt mehrere sequenzielle Abfragen im Abfrage-Editor ausführen oder mehr als eine Abfrage schreiben und alle Abfragen sequenziell ausführen. Um der Ausführung Ihrer Abfrage mehr Flexibilität zu verleihen, können Sie die ausgewählte Abfrage markieren und auswählen, dass diese spezifische Abfrage unabhängig von den anderen ausgeführt werden soll. Weitere Informationen finden Sie [&#x200B; Handbuch zur Benutzeroberfläche &#x200B;](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) Abfrage-Editors . |
 
 {style="table-layout:auto"}
 

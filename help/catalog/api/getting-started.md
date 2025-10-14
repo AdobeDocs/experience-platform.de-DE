@@ -65,4 +65,4 @@ Dieses Dokument behandelt die erforderlichen Grundkenntnisse zum Aufrufen der [!
 
 Die meisten Beispiele in diesem Handbuch verwenden den `/dataSets`-Endpunkt, die Prinzipien können jedoch auf andere Endpunkte in [!DNL Catalog] angewendet werden (z. B. `/batches`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-Einen Schritt-für-Schritt-Workflow, der zeigt, wie die [!DNL Catalog]-API mit der Datenaufnahme verbunden ist, finden Sie im Tutorial zum [ eines Datensatzes](../datasets/create.md).
+Einen Schritt-für-Schritt-Workflow, der zeigt, wie die [!DNL Catalog]-API mit der Datenaufnahme verbunden ist, finden Sie im Tutorial zum [&#x200B; eines Datensatzes](../datasets/create.md).

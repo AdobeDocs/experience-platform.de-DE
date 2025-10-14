@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Adobe Analytics-Ereignisansicht in Assurance
 
-Analytics Events bietet eine umfassendere Ansicht von SDK Events für Anwender, die ihre Adobe Analytics-Implementierung debuggen und validieren. In der Ansicht werden Ereignisse angezeigt, die von der [Adobe Experience Platform Edge Network SDK ](https://developer.adobe.com/client-sdks/edge/edge-network/) der [Adobe Experience Platform Mobile SDK an Adobe Analytics gesendet ](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). Die Ansicht enthält auch ein Bedienfeld Details , das Kontext dazu bietet, wie das Ereignis von der Client-SDK und den Upstream-Services verarbeitet wurde, nachdem es das Gerät verlassen hat.
+Analytics Events bietet eine umfassendere Ansicht von SDK Events für Anwender, die ihre Adobe Analytics-Implementierung debuggen und validieren. In der Ansicht werden Ereignisse angezeigt, die von der [Adobe Experience Platform Edge Network SDK &#x200B;](https://developer.adobe.com/client-sdks/edge/edge-network/) der [Adobe Experience Platform Mobile SDK an Adobe Analytics gesendet &#x200B;](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). Die Ansicht enthält auch ein Bedienfeld Details , das Kontext dazu bietet, wie das Ereignis von der Client-SDK und den Upstream-Services verarbeitet wurde, nachdem es das Gerät verlassen hat.
 
 ## Erste Schritte
 

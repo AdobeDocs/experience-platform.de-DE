@@ -83,7 +83,7 @@ Die Beispiele in diesem Dokument decken nicht die vollständige Funktionalität 
 
 >[!NOTE]
 >
->Alle zurückgegebenen Identitäten werden im nativen XID-Formular angezeigt, wenn in der Anfrage eine native XID verwendet wird. Es wird empfohlen, das Formular ID/Namespace zu verwenden. Weitere Informationen finden Sie im Abschnitt zum [ der XID für eine Identität](./create-custom-namespace.md).
+>Alle zurückgegebenen Identitäten werden im nativen XID-Formular angezeigt, wenn in der Anfrage eine native XID verwendet wird. Es wird empfohlen, das Formular ID/Namespace zu verwenden. Weitere Informationen finden Sie im Abschnitt zum [&#x200B; der XID für eine Identität](./create-custom-namespace.md).
 
 ## Nächste Schritte
 

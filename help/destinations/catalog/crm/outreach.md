@@ -38,7 +38,7 @@ Beachten Sie die folgenden Voraussetzungen in [!DNL Outreach], um Daten aus Expe
 
 #### Sie benötigen ein Outreach-Konto {#prerequisites-account}
 
-Navigieren Sie zur [!DNL Outreach] [Anmelden](https://accounts.outreach.io/users/sign_in)-Seite, um sich zu registrieren und ein Konto zu erstellen, falls Sie noch keines haben. Weitere Informationen finden Sie auch auf [ Seite ](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) [!DNL Outreach]-Support .
+Navigieren Sie zur [!DNL Outreach] [Anmelden](https://accounts.outreach.io/users/sign_in)-Seite, um sich zu registrieren und ein Konto zu erstellen, falls Sie noch keines haben. Weitere Informationen finden Sie auch auf [&#x200B; Seite &#x200B;](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) [!DNL Outreach]-Support .
 
 Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Outreach]-CRM-Ziel authentifizieren:
 
@@ -49,7 +49,7 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Outreach]-CRM-Ziel 
 
 #### Einrichten von benutzerdefinierten Feldbezeichnungen {#prerequisites-custom-fields}
 
-[!DNL Outreach] unterstützt benutzerdefinierte Felder für [Interessenten](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Weitere Anleitungen finden [ unter „Hinzufügen eines benutzerdefinierten Felds ](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) Outreach“. Um die Identifizierung zu erleichtern, wird empfohlen, die Kennzeichnungen manuell auf die entsprechenden Zielgruppennamen zu aktualisieren, anstatt die Standardwerte beizubehalten. Beispiel:
+[!DNL Outreach] unterstützt benutzerdefinierte Felder für [Interessenten](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Weitere Anleitungen finden [&#x200B; unter „Hinzufügen eines benutzerdefinierten Felds &#x200B;](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) Outreach“. Um die Identifizierung zu erleichtern, wird empfohlen, die Kennzeichnungen manuell auf die entsprechenden Zielgruppennamen zu aktualisieren, anstatt die Standardwerte beizubehalten. Beispiel:
 
 Seite „Einstellungen“ für Interessenten mit benutzerdefinierten Feldern [!DNL Outreach].
 ![Screenshot der Outreach-Benutzeroberfläche mit den benutzerdefinierten Feldern auf der Einstellungsseite.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
@@ -67,7 +67,7 @@ Die [!DNL Outreach]-API erlaubt eine Ratenbeschränkung von 10.000 Anfragen pro 
 
 Wenn Sie diese Nachricht erhalten haben, müssen Sie Ihren Zeitplan für den Zielgruppenexport aktualisieren, um den Schwellenwert für die Rate einzuhalten.
 
-Weitere Informationen finden [[!DNL Outreach]  in der ](https://api.outreach.io/api/v2/docs#rate-limiting).
+Weitere Informationen finden [[!DNL Outreach]  in der &#x200B;](https://api.outreach.io/api/v2/docs#rate-limiting).
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -161,7 +161,7 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
      |---|---|---|
      | `Oid` | `OutreachId` | Ja |
 
-   * **[!UICONTROL Benutzerdefinierte Attribute auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im Feld [!UICONTROL Attributname] definieren. Eine umfassende Liste [[!DNL Outreach]  unterstützten Attribute finden ](https://api.outreach.io/api/v2/docs#prospect) in der Dokumentation zum Interessenten .
+   * **[!UICONTROL Benutzerdefinierte Attribute auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im Feld [!UICONTROL Attributname] definieren. Eine umfassende Liste [[!DNL Outreach]  unterstützten Attribute finden &#x200B;](https://api.outreach.io/api/v2/docs#prospect) in der Dokumentation zum Interessenten .
 
      Screenshot der Experience Platform-Benutzeroberfläche mit Ziel-Zuordnung unter Verwendung von LastName.![&#128279;](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
@@ -187,7 +187,7 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
   > * Der numerische Wert *(`N`)*, der in der [!UICONTROL Zuordnungs-ID] verwendet wird, sollte mit dem benutzerdefinierten Attributschlüssel übereinstimmen, der mit dem numerischen Wert in [!DNL Outreach] angefügt wird. Beispiel: *Benutzerdefiniertes Feld `N` Bezeichnung*.
   > * Sie müssen nur den numerischen Wert angeben, nicht die gesamte benutzerdefinierte Feldbezeichnung.
   > * [!DNL Outreach] unterstützt maximal 150 benutzerdefinierte Beschriftungsfelder.
-  > * Weitere Informationen finden [[!DNL Outreach]  in der Dokumentation ](https://api.outreach.io/api/v2/docs#prospect) Interessenten .
+  > * Weitere Informationen finden [[!DNL Outreach]  in der Dokumentation &#x200B;](https://api.outreach.io/api/v2/docs#prospect) Interessenten .
 
    * z. B.:
 

@@ -29,7 +29,7 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
 
 - Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie in [!DNL Experience Platform] keinen Zugriff auf eine Organisation haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
-- Alle Data Science Workspace-Tutorials verwenden das Luma-Tendenzmodell. Um diesem Schritt folgen zu können, müssen Sie die [Luma-Tendenzmodell-Schemata und Datensätze“ erstellt ](./create-luma-data.md).
+- Alle Data Science Workspace-Tutorials verwenden das Luma-Tendenzmodell. Um diesem Schritt folgen zu können, müssen Sie die [Luma-Tendenzmodell-Schemata und Datensätze“ erstellt &#x200B;](./create-luma-data.md).
 
 ### Daten untersuchen und Schemata verstehen
 
@@ -57,7 +57,7 @@ Befolgen Sie das Tutorial [Erstellen eines Modells mit JupyterLab-](../jupyterla
 
 ## Rezept aus externen Quellen importieren und verpacken (*optional*)
 
-Wenn Sie ein Rezept für die Verwendung in Data Science Workspace importieren und verpacken möchten, müssen Sie Ihre Quelldateien in eine Archivdatei packen. Tutorial [Packen von Quelldateien in ein ](./package-source-files-recipe.md)&quot;. In diesem Tutorial erfahren Sie, wie Sie Quelldateien in ein Rezept packen. Dies ist die Voraussetzung für den Import eines Rezepts in Data Science Workspace. Sobald das Tutorial abgeschlossen ist, erhalten Sie ein Docker-Image in einer Azure Container Registry zusammen mit der entsprechenden Bild-URL, d. h. eine Archivdatei.
+Wenn Sie ein Rezept für die Verwendung in Data Science Workspace importieren und verpacken möchten, müssen Sie Ihre Quelldateien in eine Archivdatei packen. Tutorial [Packen von Quelldateien in ein &#x200B;](./package-source-files-recipe.md)&quot;. In diesem Tutorial erfahren Sie, wie Sie Quelldateien in ein Rezept packen. Dies ist die Voraussetzung für den Import eines Rezepts in Data Science Workspace. Sobald das Tutorial abgeschlossen ist, erhalten Sie ein Docker-Image in einer Azure Container Registry zusammen mit der entsprechenden Bild-URL, d. h. eine Archivdatei.
 
 Diese Archivdatei kann verwendet werden, um ein Rezept in Data Science Workspace zu erstellen, indem der Import-Workflow für Rezepte mithilfe des [UI-Workflows](./import-packaged-recipe-ui.md) oder des [API-Workflows](./import-packaged-recipe-api.md).
 

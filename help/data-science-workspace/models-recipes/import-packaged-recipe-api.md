@@ -207,4 +207,4 @@ Eine erfolgreiche Antwort zeigt eine JSON-Payload mit Informationen zur neu erst
 
 ## Nächste Schritte {#next-steps}
 
-Sie haben eine Engine mithilfe der API erstellt und eine eindeutige Engine-Kennung wurde als Teil der Antwort abgerufen. Sie können diese Engine-Kennung im nächsten Tutorial verwenden, in dem Sie lernen[ wie Sie ein Modell mithilfe der API erstellen, trainieren und bewerten](./train-evaluate-model-api.md).
+Sie haben eine Engine mithilfe der API erstellt und eine eindeutige Engine-Kennung wurde als Teil der Antwort abgerufen. Sie können diese Engine-Kennung im nächsten Tutorial verwenden, in dem Sie lernen[&#x200B; wie Sie ein Modell mithilfe der API erstellen, trainieren und bewerten](./train-evaluate-model-api.md).

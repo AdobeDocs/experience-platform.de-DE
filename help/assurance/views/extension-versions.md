@@ -15,7 +15,7 @@ Mit der Ansicht Erweiterungsversion können Sie schnell sortieren und anzeigen, 
 
 ## Erste Schritte mit Ansichten von Erweiterungsversionen
 
-Assurance Wählen [ nach dem Einrichten von ](../tutorials/implement-assurance.md) in der Ansicht **Startseite** die Option **[!UICONTROL Erweiterungsversionen]**
+Assurance Wählen [&#x200B; nach dem Einrichten von &#x200B;](../tutorials/implement-assurance.md) in der Ansicht **Startseite** die Option **[!UICONTROL Erweiterungsversionen]**
 
 ![Erweiterungsversionen](./images/versions/versions-extension.png)
 

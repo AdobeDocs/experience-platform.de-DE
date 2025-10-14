@@ -40,13 +40,13 @@ Bevor Sie eine [!DNL SugarCRM]-Quellverbindung erstellen können, müssen Sie zu
 
 ## Verbinden von [!DNL SugarCRM Accounts & Contacts] mit Experience Platform
 
-* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Accounts & Contacts]  mithilfe von APIs in Experience Platform zu ](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
+* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Accounts & Contacts]  mithilfe von APIs in Experience Platform zu &#x200B;](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
 * [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Accounts & Contacts]  über die Benutzeroberfläche in Experience Platform zu importieren](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
 * [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
 
 ## Verbinden von [!DNL SugarCRM Events] mit Experience Platform
 
-* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Events]  mithilfe von APIs in Experience Platform zu ](../../tutorials/ui/create/crm/sugarcrm-events.md).
+* [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Events]  mithilfe von APIs in Experience Platform zu &#x200B;](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Erstellen Sie eine Quellverbindung, um - [!DNL SugarCRM Events]  über die Benutzeroberfläche in Experience Platform zu importieren](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Erstellen eines Datenflusses für eine CRM-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)

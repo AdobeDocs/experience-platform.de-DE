@@ -19,7 +19,7 @@ Das folgende Prozessflussdiagramm veranschaulicht, wie Experience Platform Daten
 
 ## Daten werden übertragen {#in-transit}
 
-Alle Daten, die zwischen Experience Platform und externen Komponenten übertragen werden, werden über sichere, verschlüsselte Verbindungen mit HTTPS ([ v1.2) ](https://datatracker.ietf.org/doc/html/rfc5246).
+Alle Daten, die zwischen Experience Platform und externen Komponenten übertragen werden, werden über sichere, verschlüsselte Verbindungen mit HTTPS ([&#x200B; v1.2) &#x200B;](https://datatracker.ietf.org/doc/html/rfc5246).
 
 Im Allgemeinen werden Daten auf drei Arten in Experience Platform importiert:
 
@@ -61,7 +61,7 @@ Adobe automatisiert jetzt den Zertifikatlebenszyklus für mTLS-Integrationen, um
 - Erneut veröffentlicht 60 Tage vor Ablauf der Gültigkeit.
 - 30 Tage vor Ablauf widerrufen.
 
-Diese Intervalle werden entsprechend den [ Richtlinien des CA/B-Forums weiter verkürzt](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) mit dem Ziel, die Zertifikatlebensdauer auf maximal 47 Tage zu reduzieren.
+Diese Intervalle werden entsprechend den [&#x200B; Richtlinien des CA/B-Forums weiter verkürzt](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) mit dem Ziel, die Zertifikatlebensdauer auf maximal 47 Tage zu reduzieren.
 
 Wenn Sie zuvor über Links auf dieser Seite Zertifikate heruntergeladen haben, aktualisieren Sie Ihren Prozess, um diese ausschließlich über die API abzurufen.
 

@@ -26,7 +26,7 @@ Dieser Befehl unterstützt die folgenden Felder:
 
 Das Anwenden von Vorschlägen wird als Aktion innerhalb einer Regel in der Benutzeroberfläche für Datenerfassungs-Tags von Adobe Experience Platform ausgeführt.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.

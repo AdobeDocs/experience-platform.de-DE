@@ -24,7 +24,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erkunden von Datentabellen
 
@@ -134,4 +134,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre Datenbank untersucht, den Pfad der Tabelle gefunden, die Sie in Experience Platform aufnehmen möchten, und Informationen über ihre Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrer Datenbank zu erfassen und in Experience Platform zu ](../collect/database-nosql.md).
+In diesem Tutorial haben Sie Ihre Datenbank untersucht, den Pfad der Tabelle gefunden, die Sie in Experience Platform aufnehmen möchten, und Informationen über ihre Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[&#x200B; um Daten aus Ihrer Datenbank zu erfassen und in Experience Platform zu &#x200B;](../collect/database-nosql.md).

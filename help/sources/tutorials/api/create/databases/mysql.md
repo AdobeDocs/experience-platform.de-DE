@@ -24,7 +24,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL MySQL]  Sie in ](../../../../connectors/databases/mysql.md#prerequisites)Übersicht“.
+Informationen zur Authentifizierung [[!DNL MySQL]  Sie in &#x200B;](../../../../connectors/databases/mysql.md#prerequisites)Übersicht“.
 
 ### Verwenden von Experience Platform-APIs
 

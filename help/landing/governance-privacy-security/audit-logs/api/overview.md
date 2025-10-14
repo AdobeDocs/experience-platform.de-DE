@@ -13,7 +13,7 @@ ht-degree: 9%
 
 # [!DNL Audit Query]-API-Handbuch
 
-Die [!DNL Audit Query]-API stellt Endpunkte bereit, mit denen Sie Ereignisdaten für verschiedene Adobe Experience Platform-Funktionen programmgesteuert abrufen und überwachen können. Die Endpunkte sind unten beschrieben. Wichtige Informationen [ erforderlichen Kopfzeilen, zum Lesen von Beispiel](./getting-started.md)API-Aufrufen und mehr finden Sie im Handbuch „Erste Schritte“.
+Die [!DNL Audit Query]-API stellt Endpunkte bereit, mit denen Sie Ereignisdaten für verschiedene Adobe Experience Platform-Funktionen programmgesteuert abrufen und überwachen können. Die Endpunkte sind unten beschrieben. Wichtige Informationen [&#x200B; erforderlichen Kopfzeilen, zum Lesen von Beispiel](./getting-started.md)API-Aufrufen und mehr finden Sie im Handbuch „Erste Schritte“.
 
 Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!DNL Audit Query] API-Swagger](https://www.adobe.io/experience-platform-apis/references/audit-query/).
 

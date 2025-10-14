@@ -103,7 +103,7 @@ Katalogdaten werden im Data Lake gespeichert, einem hochgradig granularen Datens
 
 Um mit der Aufnahme von Daten in Experience Platform zu beginnen, können Sie mithilfe von Catalog Service einen Datensatz erstellen. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der aufzunehmenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, leitet Experience Platform ein „festgestelltes Schema“ ab, indem Typ und Inhalt der erfassten Datenfelder überprüft werden. Datensätze werden dann im Katalog-Service verfolgt und im Data Lake zusammen mit den Schemas und festgestellten Schemas, auf denen sie basieren, gespeichert.
 
-Weitere Informationen finden Sie [ „Übersicht ](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [ finden ](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
+Weitere Informationen finden Sie [&#x200B; „Übersicht &#x200B;](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [&#x200B; finden &#x200B;](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
 
 ### Data Mirror und modellbasierte Schemata {#model-based-schemas}
 

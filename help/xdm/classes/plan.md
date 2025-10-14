@@ -23,4 +23,4 @@ Im Experience-Datenmodell (XDM) erfasst die [!UICONTROL Plan]-Klasse den Mindest
 
 {style="table-layout:auto"}
 
-Die Klasse kann mit der Feldergruppe [[!UICONTROL Details zum Gesundheitsplan] erweitert werden, ](../field-groups/plan/healthcare-plan-details.md) weitere Details zu einem Krankenversicherungsplan zu beschreiben.
+Die Klasse kann mit der Feldergruppe [[!UICONTROL Details zum Gesundheitsplan] erweitert werden, &#x200B;](../field-groups/plan/healthcare-plan-details.md) weitere Details zu einem Krankenversicherungsplan zu beschreiben.

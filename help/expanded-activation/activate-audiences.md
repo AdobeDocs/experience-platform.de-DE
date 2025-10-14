@@ -25,7 +25,7 @@ Bei den in diesem Handbuch beschriebenen Schritten wird davon ausgegangen, dass 
 
 Der [Audience Manager-Quell](../sources/connectors/adobe-applications/audience-manager.md)Connector sendet in Adobe Audience Manager erfasste Zielgruppendaten zur Aktivierung auf den Zielplattformen, die von der erweiterten Aktivierung unterstützt werden.
 
-Folgen Sie der Anleitung zum [ einer Audience Manager-Quellverbindung, ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) Ihren Quell-Connector zu konfigurieren.
+Folgen Sie der Anleitung zum [&#x200B; einer Audience Manager-Quellverbindung, &#x200B;](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) Ihren Quell-Connector zu konfigurieren.
 
 ![Bild der Experience Platform-Benutzeroberfläche, das die Registerkarte „Quellen“ mit der Audience Manager-Quellverbindung anzeigt.](assets/sources-tab.png)
 
@@ -64,7 +64,7 @@ Um eine neue Verbindung zu einer Zielplattform zu erstellen, folgen Sie der Anle
 
 ## Schritt 3: Aktivieren von Zielgruppen für Ihr Ziel {#activate-audiences}
 
-Nachdem Sie Audience Manager[Zielgruppen erfolgreich ](#configure-source) und [eine neue Zielverbindung erstellt haben](#create-destination-connection) können Sie Ihre Zielgruppen jetzt für die Zielplattform Ihrer Wahl aktivieren.
+Nachdem Sie Audience Manager[Zielgruppen erfolgreich &#x200B;](#configure-source) und [eine neue Zielverbindung erstellt haben](#create-destination-connection) können Sie Ihre Zielgruppen jetzt für die Zielplattform Ihrer Wahl aktivieren.
 
 ![Bild der Experience Platform-Benutzeroberfläche mit dem Zielkatalog für die erweiterte Aktivierung.](assets/activate-audiences.png)
 

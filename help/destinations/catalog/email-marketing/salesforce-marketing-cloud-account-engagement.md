@@ -44,9 +44,9 @@ Beachten Sie die folgenden Voraussetzungen, um Daten aus Experience Platform in 
 
 Ein [!DNL Marketing Cloud Account Engagement] Konto mit einem Abonnement für das Produkt [Marketing Cloud Account Engagement](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) ist erforderlich, um fortzufahren.
 
-Ihr [!DNL Salesforce]-Konto sollte die [!DNL Salesforce] `Account Engagement Administrator role` haben. Dies ist erforderlich, um [benutzerdefinierte Felder für Interessenten erstellen](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&amp;type=5).
+Ihr [!DNL Salesforce]-Konto sollte die [!DNL Salesforce] `Account Engagement Administrator role` haben. Dies ist erforderlich, um [benutzerdefinierte Felder für Interessenten erstellen](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5).
 
-Schließlich sollte Ihr Konto auch in der Lage sein, auf die [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&amp;type=5) zuzugreifen.
+Schließlich sollte Ihr Konto auch in der Lage sein, auf die [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5) zuzugreifen.
 
 Wenden Sie sich an [[!DNL Salesforce] Support](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) oder Ihren [!DNL Salesforce]-Kontoadministrator, wenn Sie kein Konto haben oder dem Konto das [!DNL Marketing Cloud Account Engagement]-Abonnement oder die [!DNL Account Engagement Administrator role] fehlt.
 
@@ -68,7 +68,7 @@ Weitere Informationen finden Sie [!DNL Marketing Cloud Account Engagement] Absch
 
 >[!IMPORTANT]
 >
->Wenn Ihr [!DNL Salesforce]-Kontoadministrator den Zugriff auf vertrauenswürdige IP-Bereiche beschränkt hat, müssen Sie sich an ihn wenden, um [Experience Platform auf die Zulassungsliste setzen IPs](/help/destinations/catalog/streaming/ip-address-allow-list.md) zu erhalten. Weitere Anleitungen finden Sie in der [!DNL Salesforce] [Zugriff auf vertrauenswürdige IP-Bereiche für eine ](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) App beschränken“.
+>Wenn Ihr [!DNL Salesforce]-Kontoadministrator den Zugriff auf vertrauenswürdige IP-Bereiche beschränkt hat, müssen Sie sich an ihn wenden, um [Experience Platform auf die Zulassungsliste setzen IPs](/help/destinations/catalog/streaming/ip-address-allow-list.md) zu erhalten. Weitere Anleitungen finden Sie in der [!DNL Salesforce] [Zugriff auf vertrauenswürdige IP-Bereiche für eine &#x200B;](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) App beschränken“.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -115,7 +115,7 @@ Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche eine Me
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
-Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist. Eine Anleitung dazu finden [ im Abschnitt  [!DNL Marketing Cloud Account Engagement] Sammeln](#gather-credentials)Anmeldeinformationen“.
+Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist. Eine Anleitung dazu finden [&#x200B; im Abschnitt  [!DNL Marketing Cloud Account Engagement] Sammeln](#gather-credentials)Anmeldeinformationen“.
 
 Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
 

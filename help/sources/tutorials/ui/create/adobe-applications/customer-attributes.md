@@ -46,7 +46,7 @@ Die Schemaentwicklung wird von der Kundenattributquelle nicht unterstützt. Wenn
 
 >[!IMPORTANT]
 >
->Sie können zwar einen Datenfluss mit Kundenattributen löschen, der entsprechende Datensatz bleibt jedoch auch nach dem Löschen des Datenflusses erhalten. Anweisungen zum manuellen Löschen eines Datensatzes finden [ im Handbuch ](../../../../../catalog/datasets/user-guide.md) Löschen eines Datensatzes .
+>Sie können zwar einen Datenfluss mit Kundenattributen löschen, der entsprechende Datensatz bleibt jedoch auch nach dem Löschen des Datenflusses erhalten. Anweisungen zum manuellen Löschen eines Datensatzes finden [&#x200B; im Handbuch &#x200B;](../../../../../catalog/datasets/user-guide.md) Löschen eines Datensatzes .
 
 Um eine neue Verbindung zu erstellen, wählen Sie eine Datenquelle aus der Liste aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 

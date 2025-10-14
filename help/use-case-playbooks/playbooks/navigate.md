@@ -29,7 +29,7 @@ Wenn Sie nicht über die Berechtigung zum Erstellen von Sandboxes verfügen, wen
 
 ![Zu inspirierender Sandbox.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-Wenn Sie noch keine inspirierenden Sandboxes eingerichtet haben, wählen Sie **[!UICONTROL Erstellen einer inspirierenden Sandbox]** aus. Ein modales Fenster wird angezeigt. Geben Sie **Name** und **Titel** in die erforderlichen Felder ein und wählen Sie **Erstellen**. Nachdem Sie die inspirierende Sandbox erstellt haben, stellen Sie sicher[ dass Sie Berechtigungen definieren](/help/access-control/home.md) bevor Sie zurück zur Detailseite für Anwendungsfälle in Playbooks navigieren, um eine Instanz zu erstellen.
+Wenn Sie noch keine inspirierenden Sandboxes eingerichtet haben, wählen Sie **[!UICONTROL Erstellen einer inspirierenden Sandbox]** aus. Ein modales Fenster wird angezeigt. Geben Sie **Name** und **Titel** in die erforderlichen Felder ein und wählen Sie **Erstellen**. Nachdem Sie die inspirierende Sandbox erstellt haben, stellen Sie sicher[&#x200B; dass Sie Berechtigungen definieren](/help/access-control/home.md) bevor Sie zurück zur Detailseite für Anwendungsfälle in Playbooks navigieren, um eine Instanz zu erstellen.
 
 ![Erstellen Sie eine inspirierende Sandbox.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
@@ -71,4 +71,4 @@ Vergewissern Sie sich, dass die Kanalkonfigurationen entweder über die Experien
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie dieses Dokument gelesen haben, sollten Sie wissen, wie Sie eine inspirierende Sandbox einrichten und mit verschiedenen Möglichkeiten für den Zugriff auf Anwendungsfall-Playbooks in Experience Platform vertraut sein. Lesen Sie als nächsten Schritt, wie Sie [ richtige Playbook ](/help/use-case-playbooks/playbooks/choose.md)wählen“.
+Nachdem Sie dieses Dokument gelesen haben, sollten Sie wissen, wie Sie eine inspirierende Sandbox einrichten und mit verschiedenen Möglichkeiten für den Zugriff auf Anwendungsfall-Playbooks in Experience Platform vertraut sein. Lesen Sie als nächsten Schritt, wie Sie [&#x200B; richtige Playbook &#x200B;](/help/use-case-playbooks/playbooks/choose.md)wählen“.

@@ -55,7 +55,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
+| Segmentierungs-Service | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
 | Benutzerdefinierte Uploads | ✓ | Audiences, die aus CSV-Dateien in Experience Platform importiert wurden. |
 
 ## Exporttyp und -frequenz {#export-type-and-frequency}
@@ -78,7 +78,7 @@ Wenn Ihr Unternehmen Zugriff auf mehrere Organisationen hat, stellen Sie sicher,
 
 >[!IMPORTANT]
 >
->Die Benutzerin oder der Benutzer, die oder der das Ziel einrichtet[ muss in der Marketo](https://experienceleague.adobe.com/de/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)Instanz und -Partition über die Berechtigung „Person bearbeiten“ verfügen.
+>Die Benutzerin oder der Benutzer, die oder der das Ziel einrichtet[&#x200B; muss in der Marketo](https://experienceleague.adobe.com/de/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)Instanz und -Partition über die Berechtigung „Person bearbeiten“ verfügen.
 
 ![Mit Ziel verbinden](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 

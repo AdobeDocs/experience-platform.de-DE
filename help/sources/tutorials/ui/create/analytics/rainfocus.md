@@ -14,7 +14,7 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->Die [!DNL RainFocus]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+>Die [!DNL RainFocus]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL RainFocus]-Konto verbinden und Ereignisverwaltungs- und Analysedaten mit Adobe Experience Platform streamen.
 

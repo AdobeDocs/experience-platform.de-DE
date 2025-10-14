@@ -34,7 +34,7 @@ Experience Platform unterstützt die folgenden Dateiformate, die aus externen Sp
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Azure Blob Storage]  Sie in ](../../../../connectors/cloud-storage/blob.md#authentication)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Azure Blob Storage]  Sie in &#x200B;](../../../../connectors/cloud-storage/blob.md#authentication)Übersicht“.
 
 ## Navigieren im Quellkatalog
 

@@ -188,4 +188,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre Protokollanwendung untersucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] aufnehmen möchten, und Informationen über ihre Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem Protokollprogramm zu erfassen und in Experience Platform zu ](../collect/protocols.md).
+In diesem Tutorial haben Sie Ihre Protokollanwendung untersucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] aufnehmen möchten, und Informationen über ihre Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[&#x200B; um Daten aus Ihrem Protokollprogramm zu erfassen und in Experience Platform zu &#x200B;](../collect/protocols.md).

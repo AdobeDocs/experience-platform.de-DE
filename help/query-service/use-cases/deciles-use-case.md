@@ -92,7 +92,7 @@ Erstellen Sie als Nächstes einen Datentyp, der für alle dezilbezogenen Felderg
 
 Jedem Schema, das für die Verwendung mit Dezilen erstellt wurde, muss eine primäre Identität zugewiesen sein. Sie können [ein Identitätsfeld in der Benutzeroberfläche &quot;Adobe Experience Platform-](../../xdm/ui/fields/identity.md#define-an-identity-field)&quot; oder über die [Schema Registry-API](../../xdm/api/descriptors.md#create) definieren.
 
-Mit Query Service können Sie auch eine Identität oder eine primäre Identität für Ad-hoc-Schema-Datensatzfelder direkt über SQL festlegen. Weitere Informationen finden Sie in [ Dokumentation unter „Festlegen einer sekundären Identität und einer primären Identität in Ad-hoc](../data-governance/ad-hoc-schema-identities.md)Schemaidentitäten“.
+Mit Query Service können Sie auch eine Identität oder eine primäre Identität für Ad-hoc-Schema-Datensatzfelder direkt über SQL festlegen. Weitere Informationen finden Sie in [&#x200B; Dokumentation unter „Festlegen einer sekundären Identität und einer primären Identität in Ad-hoc](../data-governance/ad-hoc-schema-identities.md)Schemaidentitäten“.
 
 ### Erstellen einer Abfrage zur Berechnung von Dezilen über einen Lookback-Zeitraum {#create-a-query}
 
@@ -299,4 +299,4 @@ Führen Sie die Abfrage aus, um den Dezil-Datensatz zu füllen. Sie können die 
 
 ## Nächste Schritte
 
-Im obigen Anwendungsbeispiel werden die Schritte hervorgehoben, mit denen dezilbasierte abgeleitete Datensätze im Echtzeit-Kundenprofil verfügbar gemacht werden. Dies ermöglicht es dem Segmentierungs-Service, entweder über eine Benutzeroberfläche oder eine RESTful-API, Zielgruppen basierend auf diesen Dezilen-Buckets zu generieren. Informationen zum Erstellen[ Auswerten und Zugreifen auf Segmente finden ](../../segmentation/home.md) in der Übersicht zum Segmentierungs-Service .
+Im obigen Anwendungsbeispiel werden die Schritte hervorgehoben, mit denen dezilbasierte abgeleitete Datensätze im Echtzeit-Kundenprofil verfügbar gemacht werden. Dies ermöglicht es dem Segmentierungs-Service, entweder über eine Benutzeroberfläche oder eine RESTful-API, Zielgruppen basierend auf diesen Dezilen-Buckets zu generieren. Informationen zum Erstellen[&#x200B; Auswerten und Zugreifen auf Segmente finden &#x200B;](../../segmentation/home.md) in der Übersicht zum Segmentierungs-Service .

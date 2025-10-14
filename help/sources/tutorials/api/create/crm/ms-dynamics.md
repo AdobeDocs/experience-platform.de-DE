@@ -11,7 +11,7 @@ ht-degree: 14%
 
 # Verbinden von [!DNL Microsoft Dynamics] mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre [!DNL Microsoft Dynamics] mithilfe der [[!DNL Flow Service] API) mit Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre [!DNL Microsoft Dynamics] mithilfe der [[!DNL Flow Service] API) mit Adobe Experience Platform &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -22,7 +22,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Experience Platform mithilfe der [!DNL Flow Service]-API erfolgreich mit einem Dynamics-Konto verbinden zu können.
 

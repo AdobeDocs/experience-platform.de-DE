@@ -15,7 +15,7 @@ ht-degree: 14%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Didomi]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Didomi]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Didomi]-Konto mithilfe des Quellarbeitsbereichs in der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
@@ -51,7 +51,7 @@ Um eine Verbindung zu [!DNL Didomi] herzustellen, gehen Sie zur Kategorie *[!UIC
 
 ## Hinzufügen des Quelldatenschemas
 
-Verwenden Sie als Nächstes die *[!UICONTROL Daten auswählen]*-Schnittstelle, um die JSON-Datei hochzuladen, die [in den erforderlichen Schritten heruntergeladen) ](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file).
+Verwenden Sie als Nächstes die *[!UICONTROL Daten auswählen]*-Schnittstelle, um die JSON-Datei hochzuladen, die [in den erforderlichen Schritten heruntergeladen) &#x200B;](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file).
 
 Sie können die Vorschau-Benutzeroberfläche verwenden, um die Dateistruktur der Payload anzuzeigen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 

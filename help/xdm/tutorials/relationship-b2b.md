@@ -55,7 +55,7 @@ Schemabeziehungen werden durch ein dediziertes Feld innerhalb eines **Quellschem
 
 Um eine Beziehung herzustellen, muss das Referenzschema über eine definierte primäre Identität verfügen. Beachten Sie beim Festlegen einer Primäridentität für eine B2B-Entität, dass sich zeichenfolgenbasierte Entitäts-IDs überschneiden können, wenn Sie sie über verschiedene Systeme oder Standorte hinweg erfassen, was zu Datenkonflikten in Experience Platform führen könnte.
 
-Aus diesem Grund enthalten alle standardmäßigen B2B-Klassen „Schlüssel“-Felder, die dem Datentyp [[!UICONTROL B2B]Source&quot; ](../data-types/b2b-source.md). Dieser Datentyp stellt Felder für eine Zeichenfolgenkennung für die B2B-Entität zusammen mit anderen kontextuellen Informationen über die Quelle der Kennung bereit. Eines dieser Felder verkettet `sourceKey` die Werte der anderen Felder im Datentyp, um eine völlig eindeutige Kennung für die Entität zu erzeugen. Dieses Feld sollte immer als primäre Identität für B2B-Entitätsschemata verwendet werden.
+Aus diesem Grund enthalten alle standardmäßigen B2B-Klassen „Schlüssel“-Felder, die dem Datentyp [[!UICONTROL B2B]Source&quot; &#x200B;](../data-types/b2b-source.md). Dieser Datentyp stellt Felder für eine Zeichenfolgenkennung für die B2B-Entität zusammen mit anderen kontextuellen Informationen über die Quelle der Kennung bereit. Eines dieser Felder verkettet `sourceKey` die Werte der anderen Felder im Datentyp, um eine völlig eindeutige Kennung für die Entität zu erzeugen. Dieses Feld sollte immer als primäre Identität für B2B-Entitätsschemata verwendet werden.
 
 ![sourceKey-Feld](../images/tutorials/relationship-b2b/sourcekey.png)
 
@@ -152,10 +152,10 @@ Beachten Sie beim Verwalten von Schemabeziehungen mit verknüpften Datensätzen 
 
 ## Filtern und Suchen nach Beziehungen {#filter-and-search}
 
-Sie können über die Registerkarte „Beziehungen“ des Arbeitsbereichs [!UICONTROL Schemata] nach bestimmten [!UICONTROL &#x200B; innerhalb Ihrer Schemata &#x200B;] und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [ Dokument unter ](../ui/explore.md#lookup) von Schemaressourcen .
+Sie können über die Registerkarte „Beziehungen“ des Arbeitsbereichs [!UICONTROL Schemata] nach bestimmten [!UICONTROL &#x200B; innerhalb Ihrer Schemata &#x200B;] und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [&#x200B; Dokument unter &#x200B;](../ui/explore.md#lookup) von Schemaressourcen .
 
 ![Registerkarte „Beziehungen“ im Arbeitsbereich „Schemata“.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe der [!DNL Schema Editor] erfolgreich eine Viele-zu-eins-Beziehung zwischen zwei Schemas erstellt. Sobald Daten mit Datensätzen aufgenommen wurden, die auf diesen Schemata basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemata für Anwendungsfälle [Segmentierung mehrerer Klassen“ ](../../rtcdp/segmentation/b2b.md).
+In diesem Tutorial haben Sie mithilfe der [!DNL Schema Editor] erfolgreich eine Viele-zu-eins-Beziehung zwischen zwei Schemas erstellt. Sobald Daten mit Datensätzen aufgenommen wurden, die auf diesen Schemata basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemata für Anwendungsfälle [Segmentierung mehrerer Klassen“ &#x200B;](../../rtcdp/segmentation/b2b.md).

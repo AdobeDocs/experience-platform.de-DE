@@ -25,7 +25,7 @@ Sie können alle Feldergruppen unter dem `global`- oder `tenant`-Container durch
 
 >[!NOTE]
 >
->Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [ Abschnitt ](./appendix.md#query)Abfrageparameter“ im Anhang.
+>Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](./appendix.md#query)Abfrageparameter“ im Anhang.
 
 **API-Format**
 
@@ -36,7 +36,7 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{CONTAINER_ID}` | Der Container, aus dem Sie Feldergruppen abrufen möchten: `global` für vom Adobe erstellte Feldergruppen oder `tenant` für Feldergruppen, die Ihrem Unternehmen gehören. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [&#x200B; im &#x200B;](./appendix.md#query)-Dokument . |
 
 {style="table-layout:auto"}
 
@@ -384,7 +384,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 201 (Erstellt) sowie eine P
 }
 ```
 
-Wenn Sie eine GET-Anfrage ausführen[ um alle Feldergruppen ](#list) Mandanten-Container aufzulisten, würde dies jetzt die Feldergruppe „Eigenschaftsdetails“ enthalten. Alternativ können Sie [eine Suchanfrage (GET) ](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um die neue Feldergruppe direkt anzuzeigen.
+Wenn Sie eine GET-Anfrage ausführen[&#x200B; um alle Feldergruppen &#x200B;](#list) Mandanten-Container aufzulisten, würde dies jetzt die Feldergruppe „Eigenschaftsdetails“ enthalten. Alternativ können Sie [eine Suchanfrage (GET) &#x200B;](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um die neue Feldergruppe direkt anzuzeigen.
 
 ## Aktualisieren einer Feldergruppe {#put}
 
@@ -745,4 +745,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine [Suchanfrage (GET)) ](#lookup) die Feldergruppe stellen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da die Feldergruppe aus der Schemaregistrierung entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine [Suchanfrage (GET)) &#x200B;](#lookup) die Feldergruppe stellen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da die Feldergruppe aus der Schemaregistrierung entfernt wurde.

@@ -19,7 +19,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Weitere Informationen dazu, wie Ereignisse zusammengeführt werden, um Identitäts[Cluster zu erstellen, finden Sie in der [!DNL Mixpanel]-Dokumentation ](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management)Identitätsverwaltung[!DNL Mixpanel]. Es wird außerdem empfohlen, das Dokument zu [Unique IDs](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) zu lesen, um zu verstehen, wie sie zur Identifizierung von Benutzern in Ereignisdaten verwendet werden.
+>Weitere Informationen dazu, wie Ereignisse zusammengeführt werden, um Identitäts[Cluster zu erstellen, finden Sie in der [!DNL Mixpanel]-Dokumentation &#x200B;](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management)Identitätsverwaltung[!DNL Mixpanel]. Es wird außerdem empfohlen, das Dokument zu [Unique IDs](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) zu lesen, um zu verstehen, wie sie zur Identifizierung von Benutzern in Ereignisdaten verwendet werden.
 
 ## Anwendungsszenarien
 
@@ -52,7 +52,7 @@ Stellen Sie sicher, dass die [[!DNL Identity Merge]](https://help.mixpanel.com/h
 
 >[!NOTE]
 >
->Weitere Informationen zu diesen Methoden finden [ im [!DNL Mixpanel]-Dokument ](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification)Identitätsverwaltung“.
+>Weitere Informationen zu diesen Methoden finden [&#x200B; im [!DNL Mixpanel]-Dokument &#x200B;](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification)Identitätsverwaltung“.
 >
 >Bestätigen Sie, dass Sie die Funktion [[!DNL Mixpanel] Identitätszusammenführung“ aktiviert haben](#prerequisites-mixpanel) um sicherzustellen, dass Identitäts-Cluster ordnungsgemäß aufgelöst werden.
 
@@ -66,7 +66,7 @@ Um Experience Platform mit [!DNL Mixpanel] zu verbinden, benötigen Sie die folg
 
 ## Installieren und Konfigurieren der [!DNL Mixpanel] {#install}
 
-Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
 Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Wählen Sie auf der **[!UICONTROL Katalog]**-Registerkarte **[!UICONTROL Installieren]** auf der Karte für die [!DNL Mixpanel] aus.
 
@@ -87,7 +87,7 @@ Beginnen Sie mit der Erstellung einer neuen Regel in Ihrer Ereignisweiterleitung
 
 >[!NOTE]
 >
->Weitere Informationen zu den Standardfeldern für eine [!DNL Mixpanel] finden Sie in der [ Dokumentation](https://developer.mixpanel.com/reference/import-events#event).
+>Weitere Informationen zu den Standardfeldern für eine [!DNL Mixpanel] finden Sie in der [&#x200B; Dokumentation](https://developer.mixpanel.com/reference/import-events#event).
 
 ![Fügen Sie eine Regelaktionskonfiguration für die Ereignisweiterleitung hinzu.](../../../images/extensions/server/mixpanel/track-event-action.png)
 

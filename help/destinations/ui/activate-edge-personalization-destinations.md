@@ -81,7 +81,7 @@ Stellen Sie beim Konfigurieren des Datenstroms unter **[!UICONTROL Adobe Experie
 
 >[!TIP]
 >
->Ab der Version April 2024 müssen Sie beim Konfigurieren der Verbindung zu Adobe Target das Kontrollkästchen [Edge-Segmentierung“ nicht ](/help/destinations/catalog/personalization/adobe-target-connection.md). In diesem Fall ist [Personalisierung der nächsten Sitzung](#next-session) der einzige verfügbare Anwendungsfall für die Personalisierung.
+>Ab der Version April 2024 müssen Sie beim Konfigurieren der Verbindung zu Adobe Target das Kontrollkästchen [Edge-Segmentierung“ nicht &#x200B;](/help/destinations/catalog/personalization/adobe-target-connection.md). In diesem Fall ist [Personalisierung der nächsten Sitzung](#next-session) der einzige verfügbare Anwendungsfall für die Personalisierung.
 
 ![Datenstromkonfiguration mit hervorgehobener Edge-Segmentierung und hervorgehobenen Personalization-Zielen!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -101,7 +101,7 @@ Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](.
 
 Nachdem Sie die [!DNL Active-On-Edge] Zusammenführungsrichtlinie erstellt haben, müssen Sie eine neue Zielgruppe in Experience Platform erstellen.
 
-Befolgen Sie die [Audience Builder](../../segmentation/ui/segment-builder.md)-Anleitung zum Erstellen Ihrer neuen Zielgruppe und stellen Sie sicher, [ Sie ](../../segmentation/ui/segment-builder.md#merge-policies) im vorherigen Schritt erstellte [!DNL Active-On-Edge]-Zusammenführungsrichtlinie „zuweisen“.
+Befolgen Sie die [Audience Builder](../../segmentation/ui/segment-builder.md)-Anleitung zum Erstellen Ihrer neuen Zielgruppe und stellen Sie sicher, [&#x200B; Sie &#x200B;](../../segmentation/ui/segment-builder.md#merge-policies) im vorherigen Schritt erstellte [!DNL Active-On-Edge]-Zusammenführungsrichtlinie „zuweisen“.
 
 ### Erstellen einer Zielverbindung {#connect-destination}
 
@@ -200,7 +200,7 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
 ### Prüfung der Datennutzungsrichtlinien {#data-usage-policy-checks}
 

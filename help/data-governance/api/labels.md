@@ -18,7 +18,7 @@ Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Da
 
 >[!NOTE]
 >
->Der `/labels`-Endpunkt wird nur zum Abrufen, Erstellen und Aktualisieren von Datennutzungsbeschriftungen verwendet. Kennzeichnungen können nicht gelöscht werden. Sie können jedoch mithilfe von API-Aufrufen Kennzeichnungen zu Datensätzen und Feldern hinzufügen oder entfernen. Anweisungen finden Sie im Handbuch unter [Verwalten ](../labels/dataset-api.md) Datensatzkennzeichnungen .
+>Der `/labels`-Endpunkt wird nur zum Abrufen, Erstellen und Aktualisieren von Datennutzungsbeschriftungen verwendet. Kennzeichnungen können nicht gelöscht werden. Sie können jedoch mithilfe von API-Aufrufen Kennzeichnungen zu Datensätzen und Feldern hinzufügen oder entfernen. Anweisungen finden Sie im Handbuch unter [Verwalten &#x200B;](../labels/dataset-api.md) Datensatzkennzeichnungen .
 
 ## Erste Schritte
 

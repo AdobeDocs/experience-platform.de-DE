@@ -101,7 +101,7 @@ Optional können Sie für jeden Wert unter einer `meta:enum`-Eigenschaft kundens
 
 >[!NOTE]
 >
->Der `meta:enum`-Wert deklariert **keine**-Auflistung und steuert auch keine eigenständige Datenvalidierung. In den meisten Fällen werden die unter `meta:enum` bereitgestellten Zeichenfolgen auch unter `enum` bereitgestellt, um sicherzustellen, dass die Daten eingeschränkt sind. Es gibt jedoch einige Anwendungsfälle, in denen `meta:enum` ohne ein entsprechendes `enum`-Array bereitgestellt wird. Weitere Informationen finden Sie im Tutorial [Definieren ](../tutorials/suggested-values.md) empfohlenen Werten“.
+>Der `meta:enum`-Wert deklariert **keine**-Auflistung und steuert auch keine eigenständige Datenvalidierung. In den meisten Fällen werden die unter `meta:enum` bereitgestellten Zeichenfolgen auch unter `enum` bereitgestellt, um sicherzustellen, dass die Daten eingeschränkt sind. Es gibt jedoch einige Anwendungsfälle, in denen `meta:enum` ohne ein entsprechendes `enum`-Array bereitgestellt wird. Weitere Informationen finden Sie im Tutorial [Definieren &#x200B;](../tutorials/suggested-values.md) empfohlenen Werten“.
 
 Sie können optional eine `default`-Eigenschaft bereitstellen, um den standardmäßigen `enum` anzugeben, den das Feld verwenden wird, wenn kein Wert angegeben wird.
 
@@ -142,7 +142,7 @@ Zahlenfelder werden durch `type: number` gekennzeichnet und haben keine anderen 
 
 >[!NOTE]
 >
->`number` Typen werden für beliebige numerische Typen verwendet, entweder Ganzzahlen oder Gleitkommazahlen, während [`integer` Typen ](#integer) ganzzahlige Zahlen spezifiziert sind. Weitere Informationen zu den Anwendungsfällen für [ einzelnen Typ finden ](https://json-schema.org/understanding-json-schema/reference/numeric.html) in der JSON-Schemadokumentation zu numerischen .
+>`number` Typen werden für beliebige numerische Typen verwendet, entweder Ganzzahlen oder Gleitkommazahlen, während [`integer` Typen &#x200B;](#integer) ganzzahlige Zahlen spezifiziert sind. Weitere Informationen zu den Anwendungsfällen für [&#x200B; einzelnen Typ finden &#x200B;](https://json-schema.org/understanding-json-schema/reference/numeric.html) in der JSON-Schemadokumentation zu numerischen .
 
 ## [!UICONTROL Integer] {#integer}
 
@@ -158,7 +158,7 @@ Zahlenfelder werden durch `type: number` gekennzeichnet und haben keine anderen 
 
 >[!NOTE]
 >
->Während sich `integer` Typen auf ganzzahlige Zahlen beziehen, werden [`number` Typen ](#number) jedem numerischen Typ verwendet, entweder Ganzzahlen oder Gleitkommazahlen. Weitere Informationen zu den Anwendungsfällen für [ einzelnen Typ finden ](https://json-schema.org/understanding-json-schema/reference/numeric.html) in der JSON-Schemadokumentation zu numerischen .
+>Während sich `integer` Typen auf ganzzahlige Zahlen beziehen, werden [`number` Typen &#x200B;](#number) jedem numerischen Typ verwendet, entweder Ganzzahlen oder Gleitkommazahlen. Weitere Informationen zu den Anwendungsfällen für [&#x200B; einzelnen Typ finden &#x200B;](https://json-schema.org/understanding-json-schema/reference/numeric.html) in der JSON-Schemadokumentation zu numerischen .
 
 Optional können Sie den Bereich der Ganzzahl einschränken, indem Sie der Definition `minimum`- und `maximum` hinzufügen. Einige andere numerische Typen, die von der Schema Builder-Benutzeroberfläche unterstützt werden, sind nur `integer` mit bestimmten `minimum` und `maximum` Einschränkungen, wie [[!UICONTROL Long]](#long), [[!UICONTROL Short]](#short) und [[!UICONTROL Byte]](#byte).
 
@@ -174,7 +174,7 @@ Optional können Sie den Bereich der Ganzzahl einschränken, indem Sie der Defin
 
 ## [!UICONTROL Lang] {#long}
 
-Das Äquivalent eines [!UICONTROL Long]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-9007199254740992` bzw. `9007199254740992`).
+Das Äquivalent eines [!UICONTROL Long]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld &#x200B;](#integer) bestimmten `minimum` und `maximum` Werten (`-9007199254740992` bzw. `9007199254740992`).
 
 ```json
 "sampleField": {
@@ -188,7 +188,7 @@ Das Äquivalent eines [!UICONTROL Long]-Felds, das über die Schema Builder-Benu
 
 ## [!UICONTROL kurz] {#short}
 
-Das Äquivalent eines [!UICONTROL Short]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-32768` bzw. `32767`).
+Das Äquivalent eines [!UICONTROL Short]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld &#x200B;](#integer) bestimmten `minimum` und `maximum` Werten (`-32768` bzw. `32767`).
 
 ```json
 "sampleField": {
@@ -202,7 +202,7 @@ Das Äquivalent eines [!UICONTROL Short]-Felds, das über die Schema Builder-Ben
 
 ## [!UICONTROL Byte] {#byte}
 
-Das Äquivalent eines [!UICONTROL Byte]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld ](#integer) bestimmten `minimum` und `maximum` Werten (`-128` bzw. `127`).
+Das Äquivalent eines [!UICONTROL Byte]-Felds, das über die Schema Builder-Benutzeroberfläche erstellt wurde, ist ein [`integer` Feld &#x200B;](#integer) bestimmten `minimum` und `maximum` Werten (`-128` bzw. `127`).
 
 ```json
 "sampleField": {
@@ -333,7 +333,7 @@ Sie können auch das gesamte Objekt über definieren, indem Sie auf einen Datent
 
 ## [!UICONTROL Landkarte] {#map}
 
-Ein Zuordnungsfeld ist im Wesentlichen ein Feld vom Typ [`object` mit ](#object) nicht eingeschränkten Schlüsselsatz. Wie Objekte haben auch Karten einen `type` Wert von `object`, aber ihre `meta:xdmType` ist explizit auf `map` festgelegt.
+Ein Zuordnungsfeld ist im Wesentlichen ein Feld vom Typ [`object` mit &#x200B;](#object) nicht eingeschränkten Schlüsselsatz. Wie Objekte haben auch Karten einen `type` Wert von `object`, aber ihre `meta:xdmType` ist explizit auf `map` festgelegt.
 
 Eine Zuordnung **darf** keine Eigenschaften definieren. Sie **muss** ein einzelnes `additionalProperties` definieren, um den Typ der in der Zuordnung enthaltenen Werte zu beschreiben (jede Zuordnung kann nur einen einzigen Datentyp enthalten). Der `type` muss entweder `string` oder `integer` sein.
 

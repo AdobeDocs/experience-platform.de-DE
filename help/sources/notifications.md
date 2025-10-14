@@ -31,7 +31,7 @@ Dieses Dokument setzt auch ein Verständnis von Webhooks voraus. Außerdem erfah
 
 Um Flussausführungsbenachrichtigungen zu erhalten, müssen Sie Adobe Developer Console verwenden, um einen Webhook zu Ihrer [!DNL Experience Platform]-Integration zu registrieren.
 
-Im Tutorial zum [ von [!DNL I/O Event]-Benachrichtigungen ](../observability/alerts/subscribe.md) Sie ausführliche Schritte, wie Sie dies tun können.
+Im Tutorial zum [&#x200B; von [!DNL I/O Event]-Benachrichtigungen &#x200B;](../observability/alerts/subscribe.md) Sie ausführliche Schritte, wie Sie dies tun können.
 
 >[!IMPORTANT]
 >

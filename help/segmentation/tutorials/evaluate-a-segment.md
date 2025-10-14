@@ -166,7 +166,7 @@ Es gibt zwei Möglichkeiten, den erforderlichen Datensatz zu erstellen:
 - **Verwenden von APIs:** In den Schritten, die in diesem Tutorial folgen, wird beschrieben, wie Sie mithilfe der [!DNL Catalog]-API einen Datensatz erstellen, der auf die [!DNL XDM Individual Profile Union Schema] verweist.
 - **Verwenden der Benutzeroberfläche:** Um die [!DNL Adobe Experience Platform]-Benutzeroberfläche zum Erstellen eines Datensatzes zu verwenden, der auf das Vereinigungsschema verweist, führen Sie die Schritte im [Benutzeroberflächen-Tutorial](../ui/overview.md) aus und kehren Sie dann zu diesem Tutorial zurück, um mit den Schritten zum [Generieren von Zielgruppenprofilen](#generate-profiles).
 
-Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen ID kennen, können Sie direkt mit dem Schritt zum [ von Zielgruppenprofilen ](#generate-profiles).
+Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen ID kennen, können Sie direkt mit dem Schritt zum [&#x200B; von Zielgruppenprofilen &#x200B;](#generate-profiles).
 
 **API-Format**
 

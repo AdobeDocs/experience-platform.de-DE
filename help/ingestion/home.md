@@ -47,7 +47,7 @@ Weitere Informationen finden Sie im Abschnitt [Quellen - Übersicht](../sources/
 
 Um neue Datenquellen schnell zu integrieren, können Sie jetzt maschinelle Lernalgorithmen verwenden, um ein Schema aus Beispieldaten zu generieren. Diese Automatisierung vereinfacht die Erstellung genauer Schemata, reduziert Fehler und beschleunigt den Prozess von der Datenerfassung bis hin zur Analyse und Erkenntnissen.
 
-Weitere Informationen zu [ Workflow finden Sie ](../xdm/ui/ml-assisted-schema-creation.md) Handbuch zur Erstellung XML-unterstützter Schemata .
+Weitere Informationen zu [&#x200B; Workflow finden Sie &#x200B;](../xdm/ui/ml-assisted-schema-creation.md) Handbuch zur Erstellung XML-unterstützter Schemata .
 
 ## Datenvorbereitung {#data-prep}
 

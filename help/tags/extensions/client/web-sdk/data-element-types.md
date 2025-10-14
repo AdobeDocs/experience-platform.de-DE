@@ -34,7 +34,7 @@ Im Datenelement [!UICONTROL Identitätszuordnung] geben Sie die folgenden Inform
 
 Beim Erstellen einer Identitätszuordnung sollten Sie keine [!DNL ECID] angeben. Bei Verwendung der SDK wird automatisch eine [!DNL ECID] auf dem Server generiert und in die Identitätszuordnung aufgenommen.
 
-Das Identitätszuordnungs-Datenelement wird häufig zusammen mit dem [[!UICONTROL XDM-Objekt] Datenelementtyp ](#xdm-object) dem Aktionstyp [[!UICONTROL Einverständnis festlegen] verwendet](action-types.md#set-consent).
+Das Identitätszuordnungs-Datenelement wird häufig zusammen mit dem [[!UICONTROL XDM-Objekt] Datenelementtyp &#x200B;](#xdm-object) dem Aktionstyp [[!UICONTROL Einverständnis festlegen] verwendet](action-types.md#set-consent).
 
 Lesen Sie mehr über [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
 

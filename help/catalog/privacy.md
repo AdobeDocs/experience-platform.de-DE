@@ -19,7 +19,7 @@ In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datensch
 
 >[!NOTE]
 >
->In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Data Lake in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Echtzeit-Kundenprofil-Datenspeicher vornehmen möchten, lesen Sie zusätzlich zu diesem Tutorial [ Handbuch ](../profile/privacy.md) Verarbeitung von Datenschutzanfragen für Profil .
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Data Lake in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Echtzeit-Kundenprofil-Datenspeicher vornehmen möchten, lesen Sie zusätzlich zu diesem Tutorial [&#x200B; Handbuch &#x200B;](../profile/privacy.md) Verarbeitung von Datenschutzanfragen für Profil .
 >
 >Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
@@ -206,13 +206,13 @@ curl -X POST \
 
 Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Experience Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake entfernt. Während dieses 7-Tage-Fensters werden die Daten vorläufig gelöscht und stehen somit keinem [!DNL Experience Platform]-Service mehr zur Verfügung.
 
-Wenn Sie in die Datenschutzanfrage auch `ProfileService` oder `identity` aufgenommen haben, werden deren zugehörige Daten separat verarbeitet. Weitere Informationen finden Sie im Abschnitt [Verarbeitung von Löschanfragen für ](../profile/privacy.md#delete)).
+Wenn Sie in die Datenschutzanfrage auch `ProfileService` oder `identity` aufgenommen haben, werden deren zugehörige Daten separat verarbeitet. Weitere Informationen finden Sie im Abschnitt [Verarbeitung von Löschanfragen für &#x200B;](../profile/privacy.md#delete)).
 
 ## Nächste Schritte
 
 In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen für den Data Lake erhalten. Wir empfehlen Ihnen, die Dokumentation in diesem Handbuch weiterzulesen, um Ihr Verständnis hinsichtlich der Verwaltung von Identitätsdaten und Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Anweisungen zur Verarbeitung [ Datenschutzanfragen für den [!DNL Profile] finden Sie ](../profile/privacy.md) Dokument zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofile .
+Anweisungen zur Verarbeitung [&#x200B; Datenschutzanfragen für den [!DNL Profile] finden Sie &#x200B;](../profile/privacy.md) Dokument zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofile .
 
 ## Anhang
 

@@ -64,7 +64,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Löschen eines Datensatzes aus dem Profilspeicher | Wenn Sie einen Datensatz aus Experience Platform Data Lake löschen, wird er automatisch auch aus dem Profilspeicher gelöscht. Sie müssen nicht mehr den Vorgangs-API-Endpunkt von Profile System verwenden, um eine Löschanfrage zu erstellen und den Datensatz aus dem Profilspeicher zu löschen. Weitere Informationen finden Sie im [Handbuch zum Vorgangs-API-Endpunkt von Profile System](../../profile/api/profile-system-jobs.md). |
 | Geschätzte Anzahl der IDs pro Namespace für ein bestimmtes Segment | Die Vorschau-API meldet nun Folgendes für die Anzahl der geschätzten Profile:<ul><li>Gesamtanzahl der geschätzten Profile in einem Segment für einen bestimmten Namespace.</li><li>Gesamtanzahl der geschätzten Profil im Profil-Vereinigungsschema für einen bestimmten Namespace.</li></ul>Weitere Informationen finden Sie im [Handbuch zum Profilvorschau-API-Endpunkt](../../profile/api/preview-sample-status.md). |
 
-Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile], finden Sie in der Übersicht [ Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile], finden Sie in der Übersicht [&#x200B; Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

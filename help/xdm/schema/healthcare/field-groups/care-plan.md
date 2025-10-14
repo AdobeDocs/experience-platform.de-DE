@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # [!UICONTROL Care Plan] Schemafeldgruppe
 
-[!UICONTROL Care Plan] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] ](../../../classes/individual-profile.md). Es bietet ein einzelnes Objekttyp-Feld, in `healthcareCarePlan` ein Gesundheitsplan für einen Patienten oder eine Gruppe erfasst wird.
+[!UICONTROL Care Plan] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] &#x200B;](../../../classes/individual-profile.md). Es bietet ein einzelnes Objekttyp-Feld, in `healthcareCarePlan` ein Gesundheitsplan für einen Patienten oder eine Gruppe erfasst wird.
 
 ![Feldergruppenstruktur](../../../images/healthcare/field-groups/care-plan/care-plan.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Aktivität] | `activity` | Array von Objekten | kennzeichnet eine Aktion, die im Rahmen des Plans stattgefunden hat oder geplant ist. Weitere Informationen finden [ im ](#activity) Abschnitt unten. |
+| [!UICONTROL Aktivität] | `activity` | Array von Objekten | kennzeichnet eine Aktion, die im Rahmen des Plans stattgefunden hat oder geplant ist. Weitere Informationen finden [&#x200B; im &#x200B;](#activity) Abschnitt unten. |
 | [!UICONTROL Adressen] | `addresses` | Array von [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Identifiziert die Bedingungen oder Bedenken, die der Behandlungsplan handhabt. |
 | [!UICONTROL basierend auf] | `basedOn` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Eine Anfrageressource auf höherer Ebene, die ganz oder teilweise von diesem Behandlungsplan erfüllt wird. |
 | [!UICONTROL Betreuerteam] | `careTeam` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Identifiziert alle Personen und Organisationen, von denen erwartet wird, dass sie an der in diesem Plan vorgesehenen Versorgung beteiligt sind. |

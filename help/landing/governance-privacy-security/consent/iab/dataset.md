@@ -48,15 +48,15 @@ In den folgenden Abschnitten wird die Struktur jeder dieser Feldergruppen erläu
 
 Für Schemata, die auf [!DNL XDM Individual Profile] basieren, bietet die Feldergruppe [!UICONTROL IAB TCF 2.0 Consent Details] ein einziges Feld vom Typ Zuordnung, `identityPrivacyInfo`, das Kundenidentitäten ihren TCF-Einverständnisvoreinstellungen zuordnet. Diese Feldergruppe muss in einem datensatzbasierten Schema enthalten sein, das für das Echtzeit-Kundenprofil aktiviert ist, damit die automatische Durchsetzung stattfindet.
 
-Weitere Informationen [ Struktur und Anwendungsfall finden ](../../../../xdm/field-groups/profile/iab.md) im „Referenzhandbuch“ für diese Feldergruppe.
+Weitere Informationen [&#x200B; Struktur und Anwendungsfall finden &#x200B;](../../../../xdm/field-groups/profile/iab.md) im „Referenzhandbuch“ für diese Feldergruppe.
 
 ### Ereignisfeldgruppe {#event-field-group}
 
 Wenn Sie Einverständnisänderungsereignisse im Laufe der Zeit verfolgen möchten, können Sie die Feldergruppe [!UICONTROL IAB TCF 2.0 Einverständnisdetails] zu Ihrem [!UICONTROL XDM ExperienceEvent]-Schema hinzufügen.
 
-Wenn Sie nicht planen, Einverständnisänderungsereignisse im Laufe der Zeit zu verfolgen, müssen Sie diese Feldergruppe nicht in Ihr Ereignisschema aufnehmen. Beim automatischen Durchsetzen von TCF-Einverständniswerten verwendet Experience Platform nur die neuesten Einverständnisinformationen, die in die [Profilfeldgruppe“ aufgenommen ](#profile-field-group). Die von Ereignissen erfassten Einverständniswerte sind nicht Teil der automatischen Erzwingungs-Workflows.
+Wenn Sie nicht planen, Einverständnisänderungsereignisse im Laufe der Zeit zu verfolgen, müssen Sie diese Feldergruppe nicht in Ihr Ereignisschema aufnehmen. Beim automatischen Durchsetzen von TCF-Einverständniswerten verwendet Experience Platform nur die neuesten Einverständnisinformationen, die in die [Profilfeldgruppe“ aufgenommen &#x200B;](#profile-field-group). Die von Ereignissen erfassten Einverständniswerte sind nicht Teil der automatischen Erzwingungs-Workflows.
 
-Weitere Informationen zu [ Struktur und ](../../../../xdm/field-groups/event/iab.md) Anwendungsfall dieser Feldergruppe finden Sie im „Referenzhandbuch“ für diese Feldergruppe .
+Weitere Informationen zu [&#x200B; Struktur und &#x200B;](../../../../xdm/field-groups/event/iab.md) Anwendungsfall dieser Feldergruppe finden Sie im „Referenzhandbuch“ für diese Feldergruppe .
 
 ## Erstellen von Kundeneinverständnisschemata {#create-schemas}
 
@@ -70,7 +70,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Schemat
 >
 >Wenn Sie über vorhandene XDM-Schemata verfügen, mit denen Sie stattdessen Einverständnisdaten erfassen möchten, können Sie diese Schemata bearbeiten, anstatt neue zu erstellen. Wenn ein vorhandenes Schema jedoch für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde, kann seine primäre Identität kein direkt identifizierbares Feld sein, das in interessenbasierter Werbung wie einer E-Mail-Adresse nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie sich nicht sicher sind, welche Felder eingeschränkt sind.
 >
->Darüber hinaus können beim Bearbeiten vorhandener Schemata nur additive (nicht unterbrechende) Änderungen vorgenommen werden. Weitere Informationen finden Sie im Abschnitt [Grundsätze ](../../../../xdm/schema/composition.md#evolution) Schemaentwicklung“.
+>Darüber hinaus können beim Bearbeiten vorhandener Schemata nur additive (nicht unterbrechende) Änderungen vorgenommen werden. Weitere Informationen finden Sie im Abschnitt [Grundsätze &#x200B;](../../../../xdm/schema/composition.md#evolution) Schemaentwicklung“.
 
 ### Erstellen eines Einverständnisschemas für Profile {#profile-schema}
 
@@ -98,7 +98,7 @@ Nachdem Sie einen Namen und eine Beschreibung angegeben haben, können Sie optio
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-Wenn Sie ein vorhandenes Schema bearbeiten, das bereits für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert wurde, wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Änderungen zu bestätigen, bevor Sie mit dem Abschnitt [Erstellen eines Datensatzes basierend auf Ihrem Einverständnisschema“ ](#dataset). Wenn Sie ein neues Schema erstellen, fahren Sie mit den im folgenden Unterabschnitt beschriebenen Schritten fort.
+Wenn Sie ein vorhandenes Schema bearbeiten, das bereits für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert wurde, wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Änderungen zu bestätigen, bevor Sie mit dem Abschnitt [Erstellen eines Datensatzes basierend auf Ihrem Einverständnisschema“ &#x200B;](#dataset). Wenn Sie ein neues Schema erstellen, fahren Sie mit den im folgenden Unterabschnitt beschriebenen Schritten fort.
 
 #### Aktivieren des Schemas für die Verwendung in [!DNL Real-Time Customer Profile]
 
@@ -126,7 +126,7 @@ Klicken Sie abschließend **[!UICONTROL Speichern]**, um Ihre Änderungen zu bes
 
 >[!NOTE]
 >
->Ereigniseinverständnisschemata werden nur verwendet, um Einverständnisänderungsereignisse im Laufe der Zeit zu verfolgen, und werden nicht in nachgelagerten Durchsetzungs-Workflows einbezogen. Wenn Sie Einverständnisänderungen nicht im Laufe der Zeit verfolgen möchten, können Sie mit dem nächsten Abschnitt zum Erstellen [ Einverständnisdatensätzen ](#datasets).
+>Ereigniseinverständnisschemata werden nur verwendet, um Einverständnisänderungsereignisse im Laufe der Zeit zu verfolgen, und werden nicht in nachgelagerten Durchsetzungs-Workflows einbezogen. Wenn Sie Einverständnisänderungen nicht im Laufe der Zeit verfolgen möchten, können Sie mit dem nächsten Abschnitt zum Erstellen [&#x200B; Einverständnisdatensätzen &#x200B;](#datasets).
 
 Wählen Sie im Arbeitsbereich **[!UICONTROL Schemata]** die Option **[!UICONTROL Schema erstellen]** und wählen Sie dann **[!UICONTROL XDM ExperienceEvent]** aus der Dropdown-Liste aus.
 

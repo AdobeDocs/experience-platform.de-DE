@@ -12,7 +12,7 @@ ht-degree: 32%
 
 # Handbuch zur Datenvorbereitungs-Benutzeroberfläche
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie [Datenvorbereitungs](../home.md)-Zuordnungsfunktionen in der Adobe Experience Platform-Benutzeroberfläche verwenden können, um CSV-Dateien einem [Experience-Datenmodell (XDM)-Schema ](../../xdm/home.md).
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie [Datenvorbereitungs](../home.md)-Zuordnungsfunktionen in der Adobe Experience Platform-Benutzeroberfläche verwenden können, um CSV-Dateien einem [Experience-Datenmodell (XDM)-Schema &#x200B;](../../xdm/home.md).
 
 ## Erste Schritte
 
@@ -57,8 +57,8 @@ Als Nächstes können Sie die in der Kopfzeile aufgelisteten Optionen verwenden,
 | --- | --- |
 | [!UICONTROL Quellfelder suchen] | Navigieren Sie mithilfe der Suchleiste zu einem bestimmten Quellfeld. |
 | [!UICONTROL Alle Felder] | Wählen Sie **[!UICONTROL Alle Felder]** aus, um ein Dropdown-Menü mit Optionen zum Filtern Ihrer Zuordnungen nach anzuzeigen. Zu den verfügbaren Filteroptionen gehören:<ul><li>**[!UICONTROL Erforderliche Felder]**: Filtert die Benutzeroberfläche so, dass nur die zum Abschließen des Workflows erforderlichen Felder angezeigt werden.</li><li> **[!UICONTROL Identitätsfelder]**: Filtert die Benutzeroberfläche so, dass nur als Identitäten markierte Felder angezeigt werden.</li><li>**[!UICONTROL Zugeordnete Felder]**: Filtert die Benutzeroberfläche so, dass nur Felder angezeigt werden, die bereits zugeordnet wurden.</li><li>**[!UICONTROL Nicht zugeordnete Felder]**: Filtert die Benutzeroberfläche so, dass nur Felder angezeigt werden, die noch zugeordnet werden müssen.</li><li>**[!UICONTROL Felder mit Fehlern]**: Filtert die Benutzeroberfläche so, dass nur Felder mit Fehlern angezeigt werden.</li></ul> |
-| [!UICONTROL Neuer Feldtyp] | Wählen Sie **[!UICONTROL Neuer Feldtyp]** aus, um entweder ein neues Feld oder ein berechnetes Feld hinzuzufügen. Weitere Informationen finden Sie im Abschnitt zum [ eines neuen Feldtyps](#add-a-new-field-type). |
-| [!UICONTROL Zuordnungen importieren] | Wählen Sie **[!UICONTROL Zuordnungen importieren]** aus, um Zuordnungen aus einer vorhandenen Datei oder einem Datenfluss zu importieren. Weitere Informationen finden Sie im Abschnitt zum [ von Zuordnungen](#import-mapping). |
+| [!UICONTROL Neuer Feldtyp] | Wählen Sie **[!UICONTROL Neuer Feldtyp]** aus, um entweder ein neues Feld oder ein berechnetes Feld hinzuzufügen. Weitere Informationen finden Sie im Abschnitt zum [&#x200B; eines neuen Feldtyps](#add-a-new-field-type). |
+| [!UICONTROL Zuordnungen importieren] | Wählen Sie **[!UICONTROL Zuordnungen importieren]** aus, um Zuordnungen aus einer vorhandenen Datei oder einem Datenfluss zu importieren. Weitere Informationen finden Sie im Abschnitt zum [&#x200B; von Zuordnungen](#import-mapping). |
 | [!UICONTROL Validieren] | Wählen Sie **[!UICONTROL Validieren]** aus, um Ihre Zuordnungen auf Fehler zu überprüfen. |
 | [!UICONTROL Vorlage herunterladen] | Wählen Sie **[!UICONTROL Vorlage herunterladen]** aus, um eine CSV-Datei Ihrer Zuordnungen zu exportieren und herunterzuladen. |
 | [!UICONTROL Vorschau der Daten] | Wählen Sie **[!UICONTROL Datenvorschau]** aus, um das Bedienfeld „Vorschau“ zu verwenden und die Struktur und den Inhalt Ihres Quelldatensatzes zu überprüfen. |

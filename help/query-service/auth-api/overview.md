@@ -35,7 +35,7 @@ Um sichere Datenzugriffspraktiken zu unterstützen, protokolliert der Abfrage-Se
 - **Echtzeit-Überwachung**: Verfolgen Sie IP-basierte Zugriffsmuster, um die Einhaltung sicherzustellen.
 - **Benachrichtigung bei nicht autorisiertem Zugriff**: Identifizieren Sie Zugriffsversuche von nicht autorisierten IPs und reagieren Sie darauf.
 
-Weitere Informationen finden Sie [ „Übersicht ](../../landing/governance-privacy-security/audit-logs/overview.md) Auditprotokolle“.
+Weitere Informationen finden Sie [&#x200B; „Übersicht &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) Auditprotokolle“.
 
 ## Nächste Schritte
 

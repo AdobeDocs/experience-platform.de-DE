@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Mit Adobe Experience Platform Web SDK können Sie [Daten von Adobe Analytics for Target (A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de) Client-seitig in Ihrer Web-Anwendung erfassen.
 
-Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target] auf der Client-Seite zurückgegeben werden, sodass Sie sie erfassen und für Analytics freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=de) möchten.
+Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target] auf der Client-Seite zurückgegeben werden, sodass Sie sie erfassen und für Analytics freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=de) möchten.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ In den folgenden Unterabschnitten wird beschrieben, wie Sie die Client-seitige A
 
 ### Aktivieren der Client-seitigen Analytics-Protokollierung {#enable-analytics-client-side-logging}
 
-Um zu erwägen, dass die Client-seitige Protokollierung von Analytics für Ihre Implementierung aktiviert ist, müssen Sie die Adobe Analytics-Konfiguration in Ihrem [Datenstrom) ](../../../../datastreams/overview.md).
+Um zu erwägen, dass die Client-seitige Protokollierung von Analytics für Ihre Implementierung aktiviert ist, müssen Sie die Adobe Analytics-Konfiguration in Ihrem [Datenstrom) &#x200B;](../../../../datastreams/overview.md).
 
 ![Analytics-Datenstromkonfiguration deaktiviert](../assets/disable-analytics-datastream.png)
 
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde die Client-seitige Protokollierung für A4T-Daten in der Web-SDK behandelt. Weitere Informationen zum Umgang mit [4T-Daten in Edge Network finden ](server-side.md) im Handbuch zur Server-seitigen Protokollierung.
+In diesem Handbuch wurde die Client-seitige Protokollierung für A4T-Daten in der Web-SDK behandelt. Weitere Informationen zum Umgang mit [4T-Daten in Edge Network finden &#x200B;](server-side.md) im Handbuch zur Server-seitigen Protokollierung.

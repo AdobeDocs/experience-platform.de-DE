@@ -74,7 +74,7 @@ Ein Element eines Identity-Namespace ist der **Identitätstyp**. Der Identitäts
 * Ob ein Identitätsdiagramm generiert wird:
    * Identitätsdiagramme werden nicht für die folgenden Identitätstypen generiert: Nicht-Personen-IDs und Partner-ID.
    * Identitätsdiagramme werden für alle anderen Identitätstypen generiert.
-* Welche Identitäten werden aus dem Identitätsdiagramm entfernt, wenn die Systembeschränkungen erreicht sind. Weitere Informationen finden Sie unter [ für Identitätsdaten ](../guardrails.md).
+* Welche Identitäten werden aus dem Identitätsdiagramm entfernt, wenn die Systembeschränkungen erreicht sind. Weitere Informationen finden Sie unter [&#x200B; für Identitätsdaten &#x200B;](../guardrails.md).
 
 Die folgenden Identitätstypen sind in Experience Platform verfügbar:
 
@@ -101,7 +101,7 @@ Die folgenden Standard-Namespaces stehen allen Organisationen in Experience Plat
 | AdCloud | Ein Namespace, der Adobe AdCloud darstellt. |
 | Adobe Analytics (veraltete ID) | Ein Namespace, der Adobe Analytics darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=de#namespaces)Namespaces. |
 | Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple ID für Advertiser darstellt. Weiteführende Informationen finden Sie im folgenden Dokument zu [Interessensbasierten Anzeigen](https://support.apple.com/de-de/HT202074). |
-| Apple Push Notification Service | Ein Namespace, der für Identitäten steht, die mit dem Push-Benachrichtigungs-Service von Apple erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument zum [Apple Push Notification ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)Service). |
+| Apple Push Notification Service | Ein Namespace, der für Identitäten steht, die mit dem Push-Benachrichtigungs-Service von Apple erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument zum [Apple Push Notification &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)Service). |
 | ECID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](./ecid.md) . |
 | E-Mail | Ein Namespace, der eine E-Mail-Adresse darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. |
 | E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Weitere Informationen finden Sie im folgenden Dokument [SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=de#hashing-support)Hashing-Unterstützung). |
@@ -161,4 +161,4 @@ Die Angabe des Namespace für eine Identität hängt von der Methode ab, mit der
 
 ## Nächste Schritte
 
-Sie kennen nun die Schlüsselkonzepte von Identity-Namespaces und können als Nächstes erfahren, wie Sie Ihr Identitätsdiagramm mithilfe des [Identitätsdiagramm-Viewers“ ](../features/identity-graph-viewer.md).
+Sie kennen nun die Schlüsselkonzepte von Identity-Namespaces und können als Nächstes erfahren, wie Sie Ihr Identitätsdiagramm mithilfe des [Identitätsdiagramm-Viewers“ &#x200B;](../features/identity-graph-viewer.md).

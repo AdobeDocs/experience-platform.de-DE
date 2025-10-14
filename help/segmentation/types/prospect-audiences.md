@@ -50,7 +50,7 @@ Um eine Zielgruppe für Interessenten zu erstellen, wählen Sie im Zielgruppen-P
 
 Der Segment Builder wird angezeigt. Die Interessenten-Profilattribute werden in der linken Navigationsleiste angezeigt.
 
-![Der Segment Builder wird angezeigt. Beachten Sie, dass die einzigen verfügbaren Attribute für die Klasse der Interessentenprofile gelten ](../images/types/prospect/segment-builder.png).
+![Der Segment Builder wird angezeigt. Beachten Sie, dass die einzigen verfügbaren Attribute für die Klasse der Interessentenprofile gelten &#x200B;](../images/types/prospect/segment-builder.png).
 
 Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](../ui/segment-builder.md).
 

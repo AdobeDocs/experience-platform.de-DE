@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Erstellen eines Datumsfilters {#create-date-filter}
 
-Um Ihre Insights nach Datum zu filtern, müssen Sie Parameter zu Ihren SQL-Abfragen hinzufügen, die Datumsbeschränkungen akzeptieren können. Dies erfolgt im Rahmen des Workflows zur Erstellung von Insights im Abfragemodus. Weitere Informationen [ Eingabe von SQL für Ihre ](../overview.md#query-pro-mode) finden Sie in der Dokumentation zum Query Pro-Modus .
+Um Ihre Insights nach Datum zu filtern, müssen Sie Parameter zu Ihren SQL-Abfragen hinzufügen, die Datumsbeschränkungen akzeptieren können. Dies erfolgt im Rahmen des Workflows zur Erstellung von Insights im Abfragemodus. Weitere Informationen [&#x200B; Eingabe von SQL für Ihre &#x200B;](../overview.md#query-pro-mode) finden Sie in der Dokumentation zum Query Pro-Modus .
 
 Abfrageparameter ermöglichen es Ihnen, mit dynamischen Daten zu arbeiten, da sie als Platzhalter für die Werte dienen, die Sie zur Ausführungszeit hinzufügen. Diese Platzhalterwerte können über die Benutzeroberfläche aktualisiert werden und ermöglichen es weniger technischen Benutzenden, die Einblicke basierend auf Datumsbereichen zu aktualisieren.
 
@@ -79,7 +79,7 @@ Um Ihren Datumsfilter zu entfernen, klicken Sie auf das Symbol Filter löschen !
 
 ## SQL bearbeiten, um Datumsabfrageparameter einzuschließen {#include-date-parameters}
 
-Stellen Sie als Nächstes sicher, dass Ihre SQL Abfrageparameter enthält, um einen Datumsbereich zuzulassen. Wenn Sie noch keine Abfrageparameter in Ihre SQL integriert haben, bearbeiten Sie Ihre Insights, um diese Parameter aufzunehmen. In der Dokumentation finden Sie Anweisungen zum [ (Bearbeiten eines Insights](../overview.md#edit).
+Stellen Sie als Nächstes sicher, dass Ihre SQL Abfrageparameter enthält, um einen Datumsbereich zuzulassen. Wenn Sie noch keine Abfrageparameter in Ihre SQL integriert haben, bearbeiten Sie Ihre Insights, um diese Parameter aufzunehmen. In der Dokumentation finden Sie Anweisungen zum [&#x200B; (Bearbeiten eines Insights](../overview.md#edit).
 
 >[!TIP]
 >
@@ -118,7 +118,7 @@ Im folgenden Screenshot werden die in der SQL-Anweisung enthaltenen Datumsbeschr
 
 ## Aktivieren von Datumsparametern in jeder Einsicht {#enable-date-parameters}
 
-Nachdem Sie die entsprechenden Parameter in die SQL Ihrer Insights integriert haben, sind die Variablen `Start_date` und `End_date` jetzt als Umschalter im Widget-Composer verfügbar. Weitere Informationen [ Bearbeiten eines Insights finden Sie ](../overview.md#populate-widget) Abschnitt „Abfrage pro-Modus-Widget-Population“.
+Nachdem Sie die entsprechenden Parameter in die SQL Ihrer Insights integriert haben, sind die Variablen `Start_date` und `End_date` jetzt als Umschalter im Widget-Composer verfügbar. Weitere Informationen [&#x200B; Bearbeiten eines Insights finden Sie &#x200B;](../overview.md#populate-widget) Abschnitt „Abfrage pro-Modus-Widget-Population“.
 
 Wählen Sie im Widget-Composer die Option Umschalter aus, um die `Start_date`- und `End_date` zu aktivieren.
 

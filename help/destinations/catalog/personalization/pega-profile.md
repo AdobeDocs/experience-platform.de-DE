@@ -109,7 +109,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 >* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
+Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden Sie &#x200B;](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
@@ -122,7 +122,7 @@ Für [!DNL Pega Profile Connector]-Ziele erstellt [!DNL Experience Platform] ein
 Bei einem erfolgreichen Import von Profildaten aus S3 werden Daten in den [!DNL Pega Customer] Profildatenspeicher eingefügt. Die importierten Kundenprofildaten können in [!DNL Pega Customer Profile Designer] validiert werden, wie in der folgenden Abbildung dargestellt.
 ![Abbildung des Bildschirms der Benutzeroberfläche, auf dem Sie Adobe-Profildaten in der Kundenprofil-Designer überprüfen können](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-In [!DNL Pega Customer Decision Hub] können Datenadministratoren Datenaufträge konfigurieren, [!DNL Customer Profile Designer] Profildaten regelmäßig aus S3 zu importieren, wie in der folgenden Abbildung dargestellt. Weitere Informationen [ Konfigurieren von Datenvorgängen ](#additional-resources) Importieren von Profildaten aus [!DNL Amazon S3] finden Sie unter „Zusätzliche Ressourcen“.
+In [!DNL Pega Customer Decision Hub] können Datenadministratoren Datenaufträge konfigurieren, [!DNL Customer Profile Designer] Profildaten regelmäßig aus S3 zu importieren, wie in der folgenden Abbildung dargestellt. Weitere Informationen [&#x200B; Konfigurieren von Datenvorgängen &#x200B;](#additional-resources) Importieren von Profildaten aus [!DNL Amazon S3] finden Sie unter „Zusätzliche Ressourcen“.
 ![Abbildung des Bildschirms der Benutzeroberfläche zum Konfigurieren von Datenvorgängen in der Designer des Kundenprofils](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## Zusätzliche Ressourcen {#additional-resources}

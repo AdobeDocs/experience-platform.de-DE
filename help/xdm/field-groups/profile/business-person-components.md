@@ -19,12 +19,12 @@ Die Feldergruppe stellt ein `personComponents`-Feld auf Stammebene bereit, das e
 
 >[!IMPORTANT]
 >
->Sie müssen die Aufnahmemuster befolgen, wie in der [Quellendokumentation“ ](../../../rtcdp/sources/b2b.md). Andere Feldzuordnungsmethoden funktionieren nicht immer.
+>Sie müssen die Aufnahmemuster befolgen, wie in der [Quellendokumentation“ &#x200B;](../../../rtcdp/sources/b2b.md). Andere Feldzuordnungsmethoden funktionieren nicht immer.
 >
 >Beispielsweise wird jedes Objekt des `personComponents`-Arrays während standardmäßiger Aufnahmemuster einzeln übermittelt und dann von Experience Platform zum Array hinzugefügt. Wenn Sie der Geschäftspersonenkomponente manuell ein Array von Objekten hinzufügen, wird ein Fehler zurückgegeben.
->Sie sollten das Dienstprogramm zur automatischen Generierung verwenden, wenn Sie Schemas für Ihre B2B-Daten erstellen. Anweisungen zur Verwendung des B2B-Namespace und [ Dienstprogramms zur automatischen Schemaerstellung finden Sie in der Dokumentation ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden und Ihr Datenmodell manuell zuordnen möchten, lesen Sie unbedingt die Dokumentation zu den [Adobe Real-Time Customer Data Platform B2B edition XDM-Klassen](../../../rtcdp/schemas/b2b.md) bevor Sie Ihre Daten zuordnen.
+>Sie sollten das Dienstprogramm zur automatischen Generierung verwenden, wenn Sie Schemas für Ihre B2B-Daten erstellen. Anweisungen zur Verwendung des B2B-Namespace und [&#x200B; Dienstprogramms zur automatischen Schemaerstellung finden Sie in der Dokumentation &#x200B;](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden und Ihr Datenmodell manuell zuordnen möchten, lesen Sie unbedingt die Dokumentation zu den [Adobe Real-Time Customer Data Platform B2B edition XDM-Klassen](../../../rtcdp/schemas/b2b.md) bevor Sie Ihre Daten zuordnen.
 >
->Informationen [ empfohlenen Workflows für B2B-Daten ](../../../rtcdp/b2b-tutorial.md) Sie im End-to-End-Tutorial .
+>Informationen [&#x200B; empfohlenen Workflows für B2B-Daten &#x200B;](../../../rtcdp/b2b-tutorial.md) Sie im End-to-End-Tutorial .
 
 ![](../../images/field-groups/business-person-components.png)
 

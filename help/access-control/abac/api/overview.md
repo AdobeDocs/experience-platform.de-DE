@@ -20,21 +20,21 @@ Die attributbasierte Zugriffssteuerungs-API wird verwendet, um auf Rollen, Produ
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit den Data Governance-Funktionen von Experience Platform, mit denen Sie mithilfe von Kennzeichnungen und Richtlinien steuern können, wie Daten in Experience Platform verwendet werden, und nicht damit, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Anweisungen zur programmgesteuerten Nutzung dieser Funktionen finden [ im ](../../../data-governance/api/overview.md) zur Policy Service-API .
+>Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit den Data Governance-Funktionen von Experience Platform, mit denen Sie mithilfe von Kennzeichnungen und Richtlinien steuern können, wie Daten in Experience Platform verwendet werden, und nicht damit, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Anweisungen zur programmgesteuerten Nutzung dieser Funktionen finden [&#x200B; im &#x200B;](../../../data-governance/api/overview.md) zur Policy Service-API .
 
 Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 
 ## Rollen
 
-Rollen definieren den Zugriff, den Admins, Fachleute oder Endbenutzende auf Ressourcen in Ihrer Organisation haben. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, und Mitglieder Ihrer Organisation können je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden. Weitere Informationen [ Arbeiten mit Rollen in der API finden ](./roles.md) im Handbuch zum roles-Endpunkt .
+Rollen definieren den Zugriff, den Admins, Fachleute oder Endbenutzende auf Ressourcen in Ihrer Organisation haben. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, und Mitglieder Ihrer Organisation können je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden. Weitere Informationen [&#x200B; Arbeiten mit Rollen in der API finden &#x200B;](./roles.md) im Handbuch zum roles-Endpunkt .
 
 ## Richtlinien
 
-Richtlinien sind Anweisungen, die Attribute zusammenbringen, um zulässige und unzulässige Aktionen festzustellen. Richtlinien können entweder lokal oder global sein und andere Richtlinien überschreiben. Mit dem `/policies`-Endpunkt können Sie Richtlinien in Ihrer Organisation programmgesteuert verwalten. Weitere Informationen zum Arbeiten mit [ in der API finden ](./policies.md) im Handbuch zum policies-Endpunkt .
+Richtlinien sind Anweisungen, die Attribute zusammenbringen, um zulässige und unzulässige Aktionen festzustellen. Richtlinien können entweder lokal oder global sein und andere Richtlinien überschreiben. Mit dem `/policies`-Endpunkt können Sie Richtlinien in Ihrer Organisation programmgesteuert verwalten. Weitere Informationen zum Arbeiten mit [&#x200B; in der API finden &#x200B;](./policies.md) im Handbuch zum policies-Endpunkt .
 
 ## Produkte
 
-Mit dem `/products`-Endpunkt in der attributbasierten Zugriffssteuerungs-API können Sie Produkte sowie mit Produkten in Ihrer Organisation verknüpfte Berechtigungskategorien und Berechtigungssätze programmgesteuert verwalten. Weitere Informationen [ Arbeiten mit Produkten und den entsprechenden Berechtigungskategorien und ](./products.md) in der API finden Sie im Handbuch zum products-Endpunkt .
+Mit dem `/products`-Endpunkt in der attributbasierten Zugriffssteuerungs-API können Sie Produkte sowie mit Produkten in Ihrer Organisation verknüpfte Berechtigungskategorien und Berechtigungssätze programmgesteuert verwalten. Weitere Informationen [&#x200B; Arbeiten mit Produkten und den entsprechenden Berechtigungskategorien und &#x200B;](./products.md) in der API finden Sie im Handbuch zum products-Endpunkt .
 
 ## Nächste Schritte
 

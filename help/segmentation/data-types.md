@@ -56,7 +56,7 @@ Derzeit wird nur Adobe Audience Manager als externe Zielgruppe unterstützt, wob
 
 ### Freigabe der Segmentdefinition
 
-In Experience Platform erstellte Segmentdefinitionen können in anderen [Adobe Experience Cloud Core Services&rbrace; verwendet ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=de). Um diese Funktion zu aktivieren, müssen Sie sich an Ihren Lösungsarchitekten oder Ihren Berater wenden.
+In Experience Platform erstellte Segmentdefinitionen können in anderen [Adobe Experience Cloud Core Services&rbrace; verwendet &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=de). Um diese Funktion zu aktivieren, müssen Sie sich an Ihren Lösungsarchitekten oder Ihren Berater wenden.
 
 ## Andere Datentypen
 

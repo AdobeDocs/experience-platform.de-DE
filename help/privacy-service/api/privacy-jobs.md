@@ -48,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den akzeptierten Werten gehören: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>Weitere Informationen zu den Datenschutzbestimmungen, [ die oben genannten Werte darstellen, finden Sie in der Übersicht zu unterstützten ](../regulations/overview.md)&quot;. |
+| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den akzeptierten Werten gehören: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>Weitere Informationen zu den Datenschutzbestimmungen, [&#x200B; die oben genannten Werte darstellen, finden Sie in der Übersicht zu unterstützten &#x200B;](../regulations/overview.md)&quot;. |
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
 | `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `100` und der Maximalwert ist `1000`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
 | `{status}` | Das Standardverhalten besteht darin, alle Status einzuschließen. Wenn Sie einen Statustyp angeben, gibt die Anfrage nur Datenschutzaufträge zurück, die diesem Statustyp entsprechen. Zu den akzeptierten Werten gehören: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -180,7 +180,7 @@ curl -X POST \
 | `expandIDs` | Eine optionale Eigenschaft, die bei Festlegung auf `true` eine Optimierung der Verarbeitung der IDs in den Programmen darstellt (derzeit nur von [!DNL Analytics] unterstützt). Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anfragen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn keine `priority` angegeben wird, lautet das Standardverhalten `normal`. |
 | `mergePolicyId` | Bei Datenschutzanfragen für das Echtzeit-Kundenprofil (`profileService`) können Sie optional die ID der spezifischen [Zusammenführungsrichtlinie) angeben](../../profile/merge-policies/overview.md) die Sie für die ID-Zuordnung verwenden möchten. Durch Angabe einer Zusammenführungsrichtlinie können Datenschutzanfragen beim Zurückgeben von Daten zu einem Kunden Zielgruppeninformationen enthalten. Pro Anfrage kann nur eine Zusammenführungsrichtlinie angegeben werden. Wenn keine Zusammenführungsrichtlinie angegeben ist, sind keine Segmentierungsinformationen in der Antwort enthalten. |
-| `regulation` **(Erforderlich)** | Die Verordnung für den Datenschutzauftrag. Folgende Werte werden akzeptiert: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Weitere Informationen zu den Datenschutzbestimmungen, [ die oben genannten Werte darstellen, finden Sie in der Übersicht zu unterstützten ](../regulations/overview.md)&quot;. |
+| `regulation` **(Erforderlich)** | Die Verordnung für den Datenschutzauftrag. Folgende Werte werden akzeptiert: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Weitere Informationen zu den Datenschutzbestimmungen, [&#x200B; die oben genannten Werte darstellen, finden Sie in der Übersicht zu unterstützten &#x200B;](../regulations/overview.md)&quot;. |
 
 {style="table-layout:auto"}
 
@@ -254,7 +254,7 @@ GET /jobs/{JOB_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{JOB_ID}` | Die ID des Auftrags, den Sie suchen möchten. Diese ID wird unter `jobId` in erfolgreichen API-Antworten für „Erstellen [ Auftrags“ ](#create-job) „Auflisten [ Aufträge“ ](#list). |
+| `{JOB_ID}` | Die ID des Auftrags, den Sie suchen möchten. Diese ID wird unter `jobId` in erfolgreichen API-Antworten für „Erstellen [&#x200B; Auftrags“ &#x200B;](#create-job) „Auflisten [&#x200B; Aufträge“ &#x200B;](#list). |
 
 {style="table-layout:auto"}
 

@@ -29,11 +29,11 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Azure Synapse Analytics]  Sie in ](../../../../connectors/databases/synapse-analytics.md#prerequisites)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Azure Synapse Analytics]  Sie in &#x200B;](../../../../connectors/databases/synapse-analytics.md#prerequisites)Übersicht“.
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Verbinden von [!DNL Azure Synapse Analytics] mit Experience Platform
 

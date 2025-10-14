@@ -17,7 +17,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->In diesem Dokument wird der Datentyp beschrieben. Informationen zur Feldergruppe mit demselben Namen finden Sie im Referenzhandbuch [[!UICONTROL Telekom-Abonnement] Feldergruppe ](../field-groups/profile/telecom-subscription.md).
+>In diesem Dokument wird der Datentyp beschrieben. Informationen zur Feldergruppe mit demselben Namen finden Sie im Referenzhandbuch [[!UICONTROL Telekom-Abonnement] Feldergruppe &#x200B;](../field-groups/profile/telecom-subscription.md).
 >
 >Wenn Sie einen Abonnementtyp beschreiben, der nicht mit der Telekommunikationsbranche verbunden ist, verwenden Sie stattdessen den generischen [[!UICONTROL Abonnement]-Datentyp](./subscription.md).
 

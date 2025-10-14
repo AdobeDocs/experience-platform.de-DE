@@ -15,7 +15,7 @@ Der `/rpc/csv2schema`-Endpunkt in der [!DNL Schema Registry]-API ermöglicht Ihn
 
 ## Erste Schritte
 
-Der `/rpc/csv2schema`-Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen [ im Handbuch „Erste Schritte](./getting-started.md) Links zu entsprechenden Dokumentationen, einen Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer Adobe Experience Platform-API erforderlich sind.
+Der `/rpc/csv2schema`-Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen [&#x200B; im Handbuch „Erste Schritte](./getting-started.md) Links zu entsprechenden Dokumentationen, einen Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer Adobe Experience Platform-API erforderlich sind.
 
 Der `/rpc/csv2schema`-Endpunkt ist Teil der Remote Procedure Calls (RPCs), die vom [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der [!DNL Schema Registry]-API benötigen RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` und verwenden keine `CONTAINER_ID`. Stattdessen müssen sie den `/rpc` Namespace verwenden, wie in den folgenden API-Aufrufen veranschaulicht.
 
@@ -362,4 +362,4 @@ Eine erfolgreiche Antwort gibt eine Export-Payload zurück, die aus der CSV-Date
 
 Nachdem Sie die Export-Payload aus der CSV-Datei generiert haben, können Sie diese Payload an den `/rpc/import`-Endpunkt senden, um das Schema zu generieren.
 
-Weitere Informationen [ Generieren von Schemata aus Export](./import.md)Payloads finden Sie im Handbuch zum Import-Endpunkt .
+Weitere Informationen [&#x200B; Generieren von Schemata aus Export](./import.md)Payloads finden Sie im Handbuch zum Import-Endpunkt .

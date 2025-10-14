@@ -93,11 +93,11 @@ Das `implementationDetails`-Schlüsselwort erfasst Informationen über die SDK-V
 
 >[!TIP]
 >
->Detaillierte Informationen zur [ finden Sie in der Dokumentation ](../../use-cases/client-hints.md)User Agent Client Hints“.
+>Detaillierte Informationen zur [&#x200B; finden Sie in der Dokumentation &#x200B;](../../use-cases/client-hints.md)User Agent Client Hints“.
 
 Das `"highEntropyUserAgentHints"`-Schlüsselwort erfasst detaillierte Informationen über das Gerät des Benutzers. Diese Daten sind im HTTP-Header der Anfrage enthalten, die an Adobe gesendet wird. Nachdem die Daten im Edge-Netzwerk eingegangen sind, füllt das XDM-Objekt den entsprechenden XDM-Pfad. Wenn Sie den entsprechenden XDM-Pfad in Ihrem `sendEvent`-Aufruf festlegen, hat dieser Vorrang vor dem HTTP-Header-Wert.
 
-Wenn Sie bei der [ Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/configure.md) können Daten zugunsten von Gerätesuchwerten gelöscht werden. Einige Client-Hinweisfelder und Gerätesuchfelder können nicht im selben Treffer vorhanden sein.
+Wenn Sie bei der [&#x200B; Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/configure.md) können Daten zugunsten von Gerätesuchwerten gelöscht werden. Einige Client-Hinweisfelder und Gerätesuchfelder können nicht im selben Treffer vorhanden sein.
 
 | Eigenschaft | Beschreibung | HTTP-Kopfzeile | XDM-Pfad | Beispiel |
 | --- | --- | --- | --- | --- |
@@ -115,7 +115,7 @@ Wenn Sie bei der [ Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/
 
 Die Einstellung Kontextinformationen ist eine Kombination aus Optionsfeldern und Kontrollkästchen beim [Konfigurieren der Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Jedes Kontrollkästchen ist einem Kontextschlüsselwort zugeordnet.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].

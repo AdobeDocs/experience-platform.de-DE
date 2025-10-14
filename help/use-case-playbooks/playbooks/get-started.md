@@ -20,7 +20,7 @@ Erfahren Sie, wie Sie Ihr -Konto für Anwendungsfall-Playbooks einrichten, die f
 * Konfigurieren von Benutzerberechtigungen
 * Konfigurieren von Journey Optimizer-Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen (wenn Sie Journey Optimizer-Playbooks verwenden möchten)
 
-Um auf eine umfangreiche Sammlung von Anwendungsfall-Playbooks in der Experience Platform-Benutzeroberfläche zuzugreifen, wählen Sie **[!UICONTROL Playbooks]** in der linken Navigationsleiste aus. Lesen Sie die Dokumentation zum Navigieren [ Playbooks für Anwendungsfälle ](../playbooks/navigate.md) und beginnen Sie mit einer [inspirierenden Sandbox](../playbooks/navigate.md).
+Um auf eine umfangreiche Sammlung von Anwendungsfall-Playbooks in der Experience Platform-Benutzeroberfläche zuzugreifen, wählen Sie **[!UICONTROL Playbooks]** in der linken Navigationsleiste aus. Lesen Sie die Dokumentation zum Navigieren [&#x200B; Playbooks für Anwendungsfälle &#x200B;](../playbooks/navigate.md) und beginnen Sie mit einer [inspirierenden Sandbox](../playbooks/navigate.md).
 
 ## Konfigurieren von Playbooks für Anwendungsfälle - Videoeinführung {#video}
 
@@ -57,7 +57,7 @@ Um die erforderlichen Berechtigungen hinzuzufügen, fügen Sie in der Benutzerob
 
 **Richten Sie eine Rolle für Playbooks ein:**
 
-Alternativ können Sie auch erwägen, neue Rollen mit [den erforderlichen Berechtigungen) ](/help/access-control/home.md#sandboxes-and-permissions).
+Alternativ können Sie auch erwägen, neue Rollen mit [den erforderlichen Berechtigungen) &#x200B;](/help/access-control/home.md#sandboxes-and-permissions).
 
 [Richten Sie eine neue Rolle ein](/help/access-control/abac/ui/permissions.md) mit den erforderlichen Berechtigungen für wesentliche Playbook-Aufgaben. Erstellen Sie eine Rolle und fügen Sie ihr die neue Sandbox hinzu, wie unten dargestellt.
 
@@ -115,4 +115,4 @@ Lesen Sie die Dokumentation [Einrichten von Oberflächen für Push-Kanäle](http
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie alle Schritte in diesem Dokument ausgeführt haben, sollten Sie eine Entwicklungs-Sandbox mit Playbooks für Anwendungsfälle in der linken Navigation erstellt haben. Jetzt wissen Sie auch, wie Sie Ihren Team-Mitgliedern die erforderlichen Berechtigungen zum Anzeigen und Verwalten von Playbooks und zum Generieren von Assets gewähren. Lesen Sie als nächsten Schritt, wie [ das richtige Playbook ](/help/use-case-playbooks/playbooks/choose.md) und dann [Instanzen daraus erstellen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Nachdem Sie alle Schritte in diesem Dokument ausgeführt haben, sollten Sie eine Entwicklungs-Sandbox mit Playbooks für Anwendungsfälle in der linken Navigation erstellt haben. Jetzt wissen Sie auch, wie Sie Ihren Team-Mitgliedern die erforderlichen Berechtigungen zum Anzeigen und Verwalten von Playbooks und zum Generieren von Assets gewähren. Lesen Sie als nächsten Schritt, wie [&#x200B; das richtige Playbook &#x200B;](/help/use-case-playbooks/playbooks/choose.md) und dann [Instanzen daraus erstellen](/help/use-case-playbooks/playbooks/create-share-reuse.md).

@@ -18,7 +18,7 @@ Dieses Handbuch bietet eine Einführung in die wichtigsten Konzepte, die Sie ken
 
 Dieses Handbuch setzt ein Grundverständnis von [Privacy Service](../home.md) voraus und erläutert, wie Sie damit Zugriffs- und Löschanfragen von betroffenen Personen (Kunden) in allen Adobe Experience Cloud-Programmen verwalten können.
 
-Um Zugriffsberechtigungen für die API zu erstellen, muss ein Administrator in Ihrem Unternehmen zuvor Produktprofile für Privacy Service in Adobe Admin Console eingerichtet haben. Das Produktprofil, das Sie einer API-Integration zuweisen, bestimmt, welche Berechtigungen diese Integration beim Zugriff auf Privacy Service-Funktionen hat. Weitere Informationen finden Sie im Handbuch [Verwalten ](../permissions.md) Privacy Service-Berechtigungen“.
+Um Zugriffsberechtigungen für die API zu erstellen, muss ein Administrator in Ihrem Unternehmen zuvor Produktprofile für Privacy Service in Adobe Admin Console eingerichtet haben. Das Produktprofil, das Sie einer API-Integration zuweisen, bestimmt, welche Berechtigungen diese Integration beim Zugriff auf Privacy Service-Funktionen hat. Weitere Informationen finden Sie im Handbuch [Verwalten &#x200B;](../permissions.md) Privacy Service-Berechtigungen“.
 
 ## Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-required-headers}
 

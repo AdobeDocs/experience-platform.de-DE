@@ -21,7 +21,7 @@ In diesem Dokument werden die Struktur und der Anwendungsfall der Feldergruppe d
 
 >[!NOTE]
 >
->Sie können auch diese Feldergruppe (in [ Benutzeroberfläche von Experience Platform) ](../../ui/explore.md) oder das vollständige Schema im [öffentlichen XDM-Repository) ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>Sie können auch diese Feldergruppe (in [&#x200B; Benutzeroberfläche von Experience Platform) &#x200B;](../../ui/explore.md) oder das vollständige Schema im [öffentlichen XDM-Repository) &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## Feldgruppenstruktur
 
@@ -31,14 +31,14 @@ Die Feldgruppe stellt ein einzelnes `_experience`-Objekt für ein Schema bereit,
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `adDeliveryDetails` | Objekt | Hinzufügen von Versanddetails. Weitere Informationen [ Inhalt dieses Objekts finden Sie im `adDeliveryDetails`Unterabschnitt zum ](#adDeliveryDetails)-Objekt“. |
-| `advertisement` | Objekt | Details zur digitalen Werbung. Weitere Informationen [ Inhalt dieses Objekts finden Sie im ](#advertisement)Unterabschnitt zum Werbeobjekt“. |
-| `campaign` | Objekt | Details zur Kampagnenhierarchie. Weitere Informationen [ Inhalt dieses Objekts finden Sie im ](#campaign-campaign)Unterabschnitt zum Kampagnenobjekt“. |
+| `adDeliveryDetails` | Objekt | Hinzufügen von Versanddetails. Weitere Informationen [&#x200B; Inhalt dieses Objekts finden Sie im `adDeliveryDetails`Unterabschnitt zum &#x200B;](#adDeliveryDetails)-Objekt“. |
+| `advertisement` | Objekt | Details zur digitalen Werbung. Weitere Informationen [&#x200B; Inhalt dieses Objekts finden Sie im &#x200B;](#advertisement)Unterabschnitt zum Werbeobjekt“. |
+| `campaign` | Objekt | Details zur Kampagnenhierarchie. Weitere Informationen [&#x200B; Inhalt dieses Objekts finden Sie im &#x200B;](#campaign-campaign)Unterabschnitt zum Kampagnenobjekt“. |
 | `conversionDetails` | Objekt | Konversionsdetails für eine Anzeige. Weitere Informationen zum Inhalt dieses Objekts finden Sie im [nachfolgenden Unterabschnitt](#conversionDetails). |
 | `eventType` | String | Der Ereignistyp von Adobe Advertising. |
-| `fees` | Objekt | Advertising-Gebührendetails. Weitere Informationen [ Inhalt dieses Objekts finden Sie im ](#fees)Unterabschnitt zum Gebührenobjekt“. |
+| `fees` | Objekt | Advertising-Gebührendetails. Weitere Informationen [&#x200B; Inhalt dieses Objekts finden Sie im &#x200B;](#fees)Unterabschnitt zum Gebührenobjekt“. |
 | `inventory` | Objekt | Inventardetails. Weitere Informationen zum Inhalt dieses Objekts finden Sie im [nachfolgenden Unterabschnitt](#inventory). |
-| `productDetails` | Objekt | Details zur Produktanzeige. Weitere Informationen [ Inhalt dieses Objekts finden Sie im ](#productDetails)Unterabschnitt zum productDetails-Objekt“. |
+| `productDetails` | Objekt | Details zur Produktanzeige. Weitere Informationen [&#x200B; Inhalt dieses Objekts finden Sie im &#x200B;](#productDetails)Unterabschnitt zum productDetails-Objekt“. |
 | `stitchId` | String | ID von den Adobe Advertising-Werbeservern zur Verfolgung von Clickthrough-Konversionen in Browsern, die Drittanbieter-Cookies blockieren. |
 
 ## `adDeliveryDetails` {#adDeliveryDetails}

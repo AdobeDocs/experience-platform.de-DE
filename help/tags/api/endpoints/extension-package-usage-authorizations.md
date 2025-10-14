@@ -13,7 +13,7 @@ ht-degree: 16%
 
 Ein Erweiterungspaket stellt eine [Erweiterung](./extensions.md) dar, die von einem Erweiterungsentwickler verfasst wurde. Zusätzliche Funktionen, die Tag-Benutzern zur Verfügung gestellt werden können, werden durch ein Erweiterungspaket definiert. Diese Funktionen können Hauptmodule und freigegebene Module enthalten, obwohl sie meist als [Regelkomponenten“ (](./rule-components.md), Bedingungen und Aktionen) und [Datenelemente](./data-elements.md) bereitgestellt werden.
 
-Ein Erweiterungspaket ist im Besitz des ([) ](./companies.md). Besitzer von Erweiterungspaketen können andere Unternehmen autorisieren, ihre privaten Versionen der Pakete zu verwenden. Jedes autorisierte Unternehmen erhält eine Nutzungsautorisierung für ein einzelnes Erweiterungspaket, das für alle zukünftigen und aktuellen privaten Versionen des Pakets gültig ist.
+Ein Erweiterungspaket ist im Besitz des ([) &#x200B;](./companies.md). Besitzer von Erweiterungspaketen können andere Unternehmen autorisieren, ihre privaten Versionen der Pakete zu verwenden. Jedes autorisierte Unternehmen erhält eine Nutzungsautorisierung für ein einzelnes Erweiterungspaket, das für alle zukünftigen und aktuellen privaten Versionen des Pakets gültig ist.
 
 ## Erste Schritte
 
@@ -102,7 +102,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungspaketen zurück.
 
 ## Erstellen einer Autorisierung für die Verwendung von Erweiterungspaketen {#create}
 
-Erstellen Sie für jedes Erweiterungspaket (Erweiterungspaket[ und `{ORG_ID}` der Organisation](./extension-packages.md) die Sie autorisieren möchten, eine Autorisierung für die Verwendung des Erweiterungspakets. Um eine neue Autorisierung für die Verwendung von Erweiterungspaketen zu erstellen, stellen Sie eine POST-Anfrage an den folgenden Endpunkt.
+Erstellen Sie für jedes Erweiterungspaket (Erweiterungspaket[&#x200B; und `{ORG_ID}` der Organisation](./extension-packages.md) die Sie autorisieren möchten, eine Autorisierung für die Verwendung des Erweiterungspakets. Um eine neue Autorisierung für die Verwendung von Erweiterungspaketen zu erstellen, stellen Sie eine POST-Anfrage an den folgenden Endpunkt.
 
 **API-Format**
 

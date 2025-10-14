@@ -37,7 +37,7 @@ Weitere Informationen zum Authentifizieren Ihrer [!DNL Zendesk] finden Sie unter
 
 ### Erstellen eines Experience Platform-Schemas für [!DNL Zendesk]
 
-Bevor Sie eine [!DNL Zendesk] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
+Bevor Sie eine [!DNL Zendesk] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [&#x200B; Schemas finden Sie &#x200B;](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
 
 Weitere Anleitungen zu Ihrem für die [!DNL Zendesk Search API] erforderlichen [!DNL Zendesk] finden Sie im Abschnitt [Beschränkungen](#limits) unten.
 
@@ -107,7 +107,7 @@ In der folgenden Tabelle sind die unterstützten Zuordnungen aufgeführt, die f�
 
 >[!TIP]
 >
->Weitere [ zur API finden Sie unter ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results)Zendesk-Such-API > Suchergebnisse exportieren.
+>Weitere [&#x200B; zur API finden Sie unter &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results)Zendesk-Such-API > Suchergebnisse exportieren.
 
 | Quelle | Typ |
 |---|---|
@@ -156,4 +156,4 @@ In der folgenden Tabelle sind die unterstützten Zuordnungen aufgeführt, die f�
    * Der Wert für den ``filter[type]``-Parameter ist auf ``user`` festgelegt, daher gibt die Zendesk-Verbindung nur Benutzer zurück.
    * Die Anzahl der Ergebnisse pro Seite wird vom ``page[size]``-Parameter verwaltet. Der Wert wird auf ``100`` festgelegt. Dies geschieht, um die Auswirkungen der von Zendesk festgelegten Geschwindigkeitsreduzierungsbeschränkungen zu reduzieren.
    * Siehe [Beschränkungen](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) und [Paginierung](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1).
-   * Sie können auch auf &quot;[ durch Listen mithilfe der Cursor-Paginierung“ ](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).
+   * Sie können auch auf &quot;[&#x200B; durch Listen mithilfe der Cursor-Paginierung“ &#x200B;](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).

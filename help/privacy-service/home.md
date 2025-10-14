@@ -34,7 +34,7 @@ Diese Entscheidungen lassen sich anhand der folgenden Fragen zusammenfassen:
 1. **Welche Informationen erfasse ich von meinen Kunden?**
    * Um Privacy Service optimal nutzen zu können, müssen Sie über ein detailliertes Verständnis der Datentypen verfügen, die Sie von Ihren Kunden erfassen, und wissen, welche davon den Datenschutzbestimmungen unterliegen. Weitere Informationen finden Sie im Abschnitt [Festlegen von Datenschutzanforderungen](#requirements).
 1. **Habe ich meine Daten richtig gekennzeichnet?**
-   * Daten müssen für den Service ordnungsgemäß gekennzeichnet sein, um zu bestimmen, auf welche Felder während Datenschutzaufträgen zugegriffen werden soll oder welche gelöscht werden sollen. Weitere Informationen finden Sie im Abschnitt [Kennzeichnen von ](#label)&quot;.
+   * Daten müssen für den Service ordnungsgemäß gekennzeichnet sein, um zu bestimmen, auf welche Felder während Datenschutzaufträgen zugegriffen werden soll oder welche gelöscht werden sollen. Weitere Informationen finden Sie im Abschnitt [Kennzeichnen von &#x200B;](#label)&quot;.
 1. **Weiß ich, welche IDs ich an den Privacy Service senden soll?**
    * Beim Senden von Datenschutzanfragen müssen für bestimmte Adobe-Programme jeweils individuelle Kunden-IDs angegeben werden. Weitere Informationen finden Sie in den Abschnitten [Bereitstellen von Identitätsdaten](#identity) und [Erstellen von Datenschutzanfragen](#requests).
 1. **Wie verfolge ich meine Datenschutzaufträge?**

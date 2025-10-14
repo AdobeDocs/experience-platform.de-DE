@@ -22,7 +22,7 @@ Dieser Connector ist im Zielkatalog für Kundinnen und Kunden verfügbar, die Re
 Um diese Zielverbindung zu verwenden, stellen Sie sicher, dass Sie Zugriff haben auf:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Mit Zugriff auf die Entwicklerkonsole können Sie Informationen zu Service-Konten und Anmeldedaten anzeigen, die zum [ (Abschließen der Konfiguration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=de#configure-the-extension) der Erweiterung in Adobe Commerce erforderlich sind.
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Mit Zugriff auf die Entwicklerkonsole können Sie Informationen zu Service-Konten und Anmeldedaten anzeigen, die zum [&#x200B; (Abschließen der Konfiguration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=de#configure-the-extension) der Erweiterung in Adobe Commerce erforderlich sind.
 - [Adobe Commerce Cloud-Version 2.4.4 oder höher](https://business.adobe.com/de/products/magento/magento-commerce.html)
 
 Erstellen Sie in Experience Platform Folgendes:
@@ -67,7 +67,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 > 
 >Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen [ Aktivieren von Zielgruppen für das [!DNL Commerce]-Ziel finden Sie ](../../ui/activate-edge-personalization-destinations.md)Aktivieren von Profilen und Zielgruppen für Profilanfrageziele“.
+Anweisungen [&#x200B; Aktivieren von Zielgruppen für das [!DNL Commerce]-Ziel finden Sie &#x200B;](../../ui/activate-edge-personalization-destinations.md)Aktivieren von Profilen und Zielgruppen für Profilanfrageziele“.
 
 ## Nächste Schritte in [!DNL Adobe Commerce]
 

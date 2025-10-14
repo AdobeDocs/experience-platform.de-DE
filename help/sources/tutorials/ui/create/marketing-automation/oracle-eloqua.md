@@ -24,7 +24,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Wenn Sie bereits über ein authentifiziertes [!DNL Oracle Eloqua]-Konto in Experience Platform verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung in Experience Platform aufzunehmen“ ](../../dataflow/marketing-automation.md).
+Wenn Sie bereits über ein authentifiziertes [!DNL Oracle Eloqua]-Konto in Experience Platform verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung in Experience Platform aufzunehmen“ &#x200B;](../../dataflow/marketing-automation.md).
 
 ### Sammeln erforderlicher Anmeldedaten
 

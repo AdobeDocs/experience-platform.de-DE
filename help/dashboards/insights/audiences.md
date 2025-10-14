@@ -19,7 +19,7 @@ In der [SQL-Dokumentation anzeigen](../view-sql.md) finden Sie weitere Informati
 
 Die folgenden Einblicke stehen Ihnen alle als Teil des [Zielgruppen-Dashboards](../guides/audiences.md) oder eines benutzerdefinierten [benutzerdefinierten Dashboards](../standard-dashboards.md) zur Verfügung. Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [&#128279;](../customize/overview.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
 
-Die folgenden Einblicke stehen Ihnen alle als Teil des (Zielgruppen[Dashboards ](../guides/audiences.md) benutzerdefinierten Dashboards zur Verfügung.
+Die folgenden Einblicke stehen Ihnen alle als Teil des (Zielgruppen[Dashboards &#x200B;](../guides/audiences.md) benutzerdefinierten Dashboards zur Verfügung.
 
 ## Bericht zur Zielgruppenüberschneidung {#audience-overlap-report}
 
@@ -86,7 +86,7 @@ SELECT source_segment_name,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-overlap-report) Widget-Dokumentation zum Bericht zur Zielgruppenüberschneidung .
+Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/audiences.md#audience-overlap-report) Widget-Dokumentation zum Bericht zur Zielgruppenüberschneidung .
 
 ## Zielgruppenüberschneidung {#audience-overlap}
 
@@ -133,7 +133,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-overlap) Dokumentation zu Zielgruppenüberschneidungen .
+Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/audiences.md#audience-overlap) Dokumentation zu Zielgruppenüberschneidungen .
 
 ## Entwicklung der Zielgruppengröße {#audience-size-change-trend}
 
@@ -174,7 +174,7 @@ SELECT date_key,
 
 +++
 
-Weitere Informationen [ Aussehen und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-size-change-trend) Dokumentation zum Widget „Entwicklung der“.
+Weitere Informationen [&#x200B; Aussehen und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/audiences.md#audience-size-change-trend) Dokumentation zum Widget „Entwicklung der“.
 
 ## Entwicklung der Zielgruppengröße nach Identität {#audience-size-trend-by-identity}
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-size-trend-by-identity) Dokumentation zu Widgets für die Entwicklung der Zielgruppengröße nach Identität.
+Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/audiences.md#audience-size-trend-by-identity) Dokumentation zu Widgets für die Entwicklung der Zielgruppengröße nach Identität.
 
 ## Trend der Zielgruppen-Größe {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-size-trend) Dokumentation zu Widgets für die Entwicklung der Zielgruppengröße .
+Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/audiences.md#audience-size-trend) Dokumentation zu Widgets für die Entwicklung der Zielgruppengröße .
 
 ## Zielgruppengröße {#audience-size}
 
@@ -266,7 +266,7 @@ WHERE
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#audience-size) Dokumentation zu Widgets für Zielgruppengrößen .
+Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/audiences.md#audience-size) Dokumentation zu Widgets für Zielgruppengrößen .
 
 ## Kunden-KI – Verteilung der Scores {#customer-ai-distribution-of-scores}
 
@@ -409,7 +409,7 @@ SELECT b.model_name,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in der Widget](../guides/audiences.md#customer-ai-distribution-of-scores)Dokumentation zur Kunden-KI-Verteilung der Bewertungen ).
+Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in der Widget](../guides/audiences.md#customer-ai-distribution-of-scores)Dokumentation zur Kunden-KI-Verteilung der Bewertungen ).
 
 ## Zusammenfassung der KI-Kundenbewertung {#customer-ai-scoring-summary}
 
@@ -454,7 +454,7 @@ SELECT model_name,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#customer-ai-scoring-summary) Dokumentation zum Kunden-KI-Scoring-.
+Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/audiences.md#customer-ai-scoring-summary) Dokumentation zum Kunden-KI-Scoring-.
 
 ## Identitätsüberschneidung {#identity-overlap}
 
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#identity-overlap) Dokumentation zum Widget „Identitätsüberschneidung“ .
+Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/audiences.md#identity-overlap) Dokumentation zum Widget „Identitätsüberschneidung“ .
 
 ## Profile nach Identität {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Informationen [ Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in ](../guides/audiences.md#profiles-by-identity) Dokumentation zum Widget „Profile nach Identität .
+Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/audiences.md#profiles-by-identity) Dokumentation zum Widget „Profile nach Identität .
 
 ## Geplante Aktivierungen {#scheduled-activations}
 
@@ -577,7 +577,7 @@ SELECT p.destination_platform ,
 
 +++
 
-Weitere Informationen [ Erscheinungsbild und Funktionalität dieser Einblicke finden ](../guides/audiences.md#scheduled-activations) in der Dokumentation zum Widget „Geplante Aktivierungen“.
+Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einblicke finden &#x200B;](../guides/audiences.md#scheduled-activations) in der Dokumentation zum Widget „Geplante Aktivierungen“.
 
 ## Nächste Schritte
 

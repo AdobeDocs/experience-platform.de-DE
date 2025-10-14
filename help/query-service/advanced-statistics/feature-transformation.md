@@ -54,7 +54,7 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 ## Manuelle Funktionstransformationen {#manual-transformations}
 
-Um die benutzerdefinierte Datenvorverarbeitung in Ihrer `CREATE MODEL`-Anweisung zu definieren, verwenden Sie die `TRANSFORM`-Klausel in Kombination mit einer beliebigen Anzahl der verfügbaren Umwandlungsfunktionen. Diese manuellen Vorverarbeitungsfunktionen können auch außerhalb der `TRANSFORM`-Klausel verwendet werden. Alle im Abschnitt [Transformator unten“ beschriebenen Transformationen ](#available-transformations) zur manuellen Vorverarbeitung der Daten verwendet werden.
+Um die benutzerdefinierte Datenvorverarbeitung in Ihrer `CREATE MODEL`-Anweisung zu definieren, verwenden Sie die `TRANSFORM`-Klausel in Kombination mit einer beliebigen Anzahl der verfügbaren Umwandlungsfunktionen. Diese manuellen Vorverarbeitungsfunktionen können auch außerhalb der `TRANSFORM`-Klausel verwendet werden. Alle im Abschnitt [Transformator unten“ beschriebenen Transformationen &#x200B;](#available-transformations) zur manuellen Vorverarbeitung der Daten verwendet werden.
 
 ### Hauptmerkmale {#key-characteristics}
 
@@ -97,7 +97,7 @@ Lesen Sie diesen Abschnitt für Details zu den Transformatoren, die für eine Vi
 
 #### numerischer Computer {#numeric-imputer}
 
-Der Transformator **Numerischer**) vervollständigt fehlende Werte in einem Datensatz. Dabei wird entweder der Mittelwert, Median oder Modus der Spalten verwendet, in denen sich die fehlenden Werte befinden. Die Eingabespalten sollten entweder `DoubleType` oder `FloatType` sein. Weitere Informationen und Beispiele finden Sie in der Dokumentation zum [-Algorithmus ](https://spark.apache.org/docs/2.2.0/ml-features.html#imputer).
+Der Transformator **Numerischer**) vervollständigt fehlende Werte in einem Datensatz. Dabei wird entweder der Mittelwert, Median oder Modus der Spalten verwendet, in denen sich die fehlenden Werte befinden. Die Eingabespalten sollten entweder `DoubleType` oder `FloatType` sein. Weitere Informationen und Beispiele finden Sie in der Dokumentation zum [-Algorithmus &#x200B;](https://spark.apache.org/docs/2.2.0/ml-features.html#imputer).
 
 >[!NOTE]
 >

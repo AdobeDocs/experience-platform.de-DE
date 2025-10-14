@@ -38,4 +38,4 @@ Wählen **[!UICONTROL Berechtigungs-Manager]** im linken Navigationsbereich aus.
 
 ## Nächste Schritte
 
-Nachdem Sie zum Arbeitsbereich [!UICONTROL Berechtigungs-Manager] navigiert sind, fahren Sie mit dem nächsten Schritt fort, um mehr darüber zu erfahren, wie Sie ([ und Rollen) ](./permissions.md) können.
+Nachdem Sie zum Arbeitsbereich [!UICONTROL Berechtigungs-Manager] navigiert sind, fahren Sie mit dem nächsten Schritt fort, um mehr darüber zu erfahren, wie Sie ([&#x200B; und Rollen) &#x200B;](./permissions.md) können.

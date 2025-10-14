@@ -31,7 +31,7 @@ Wenn Sie bereits über eine gültige [!DNL Azure Synapse Analytics]-Verbindung v
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Azure Synapse Analytics]  Sie in ](../../../../connectors/databases/synapse-analytics.md#prerequisites)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Azure Synapse Analytics]  Sie in &#x200B;](../../../../connectors/databases/synapse-analytics.md#prerequisites)Übersicht“.
 
 ## Navigieren im Quellkatalog
 
@@ -67,13 +67,13 @@ Sie können Ihr [!DNL Azure Synapse Analytics] mit Experience Platform verbinden
 
 Um die Kontoschlüsselauthentifizierung zu verwenden, wählen Sie **[!UICONTROL Kontoschlüsselauthentifizierung]**, geben Sie Ihre [Verbindungszeichenfolge](../../../../connectors/databases/synapse-analytics.md#prerequisites) an und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]**.
 
-![ Schritt „Neues Konto erstellen“ im Quell-Workflow mit der Option „Authentifizierung des Kontoschlüssels ausgewählt.](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png)
+![&#x200B; Schritt „Neues Konto erstellen“ im Quell-Workflow mit der Option „Authentifizierung des Kontoschlüssels ausgewählt.](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png)
 
 >[!TAB Authentifizierung von Service-Prinzipalen und -Schlüsseln]
 
 Wählen Sie alternativ **[!UICONTROL Service-Prinzipal- und Schlüsselauthentifizierung]**, geben Sie Werte für Ihre [Authentifizierungsberechtigungen](../../../../connectors/databases/synapse-analytics.md#prerequisites) ein und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]**.
 
-![ Schritt „Neues Konto erstellen“ im Quell-Workflow mit der Option „Service-Prinzipal- und Schlüsselauthentifizierung“.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
+![&#x200B; Schritt „Neues Konto erstellen“ im Quell-Workflow mit der Option „Service-Prinzipal- und Schlüsselauthentifizierung“.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
 
 >[!ENDTABS]
 

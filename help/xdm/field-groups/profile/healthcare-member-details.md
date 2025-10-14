@@ -22,7 +22,7 @@ ht-degree: 3%
 | `homeAddress` | [[!UICONTROL Anschrift]](../../data-types/postal-address.md) | Die Privatadresse der Person. |
 | `homePhone` | [[!UICONTROL Telefonnummer]](../../data-types/phone-number.md) | Die private Telefonnummer der Person. |
 | `mailingAddress` | [[!UICONTROL Anschrift]](../../data-types/postal-address.md) | Die Anschrift der Person. |
-| `memberDetails` | Objekt | Ein Objekt, das detaillierte Informationen zu den gesundheitsbezogenen Attributen und Beziehungen der Person enthält. Weitere Informationen [ Struktur des ](#memberDetails) finden Sie im Abschnitt „Unterabschnitt unten“. |
+| `memberDetails` | Objekt | Ein Objekt, das detaillierte Informationen zu den gesundheitsbezogenen Attributen und Beziehungen der Person enthält. Weitere Informationen [&#x200B; Struktur des &#x200B;](#memberDetails) finden Sie im Abschnitt „Unterabschnitt unten“. |
 | `mobilePhone` | [[!UICONTROL Telefonnummer]](../../data-types/phone-number.md) | Die Mobiltelefonnummer der Person. |
 | `person` | [[!UICONTROL Person]](../../data-types/person.md) | Ein einzelner Akteur, Kontakt oder Eigentümer, der mit der Gesundheitszugehörigkeit der Person in Verbindung steht. |
 | `personalEmail` | [[!UICONTROL E-Mail-Adresse]](../../data-types/email-address.md) | Die persönliche E-Mail-Adresse der Person. |
@@ -61,4 +61,4 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
-Weitere Informationen dazu, wie diese Feldergruppe zur Unterstützung gängiger Anwendungsfälle (Anwendungsfälle der Gesundheitsbranche) verwendet werden kann, finden Sie in der Dokumentation [ Branchenschemas ](../../schema/industries/healthcare.md).
+Weitere Informationen dazu, wie diese Feldergruppe zur Unterstützung gängiger Anwendungsfälle (Anwendungsfälle der Gesundheitsbranche) verwendet werden kann, finden Sie in der Dokumentation [&#x200B; Branchenschemas &#x200B;](../../schema/industries/healthcare.md).

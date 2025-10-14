@@ -18,7 +18,7 @@ ht-degree: 44%
 
 In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie mit der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-Informationen zum Erstellen von Vorlagen über die [-Benutzeroberfläche finden ](../ui/query-templates.md) in der Dokumentation zu Abfragevorlagen der Benutzeroberfläche von Experience Platform .
+Informationen zum Erstellen von Vorlagen über die [-Benutzeroberfläche finden &#x200B;](../ui/query-templates.md) in der Dokumentation zu Abfragevorlagen der Benutzeroberfläche von Experience Platform .
 
 ### Liste von Abfragevorlagen abrufen
 
@@ -109,7 +109,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Abf
 
 >[!NOTE]
 >
->Mit dem Wert `_links.delete` können Sie [ Abfragevorlage löschen](#delete-a-specified-query-template).
+>Mit dem Wert `_links.delete` können Sie [&#x200B; Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Abfragevorlage erstellen
 
@@ -176,7 +176,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zur 
 
 >[!NOTE]
 >
->Mit dem Wert `_links.delete` können Sie [ Abfragevorlage löschen](#delete-a-specified-query-template).
+>Mit dem Wert `_links.delete` können Sie [&#x200B; Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage abrufen
 
@@ -234,7 +234,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen A
 
 >[!NOTE]
 >
->Mit dem Wert `_links.delete` können Sie [ Abfragevorlage löschen](#delete-a-specified-query-template).
+>Mit dem Wert `_links.delete` können Sie [&#x200B; Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage aktualisieren
 
@@ -310,7 +310,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit den aktualis
 
 >[!NOTE]
 >
->Mit dem Wert `_links.delete` können Sie [ Abfragevorlage löschen](#delete-a-specified-query-template).
+>Mit dem Wert `_links.delete` können Sie [&#x200B; Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage löschen
 

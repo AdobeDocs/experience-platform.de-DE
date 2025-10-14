@@ -15,7 +15,7 @@ Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek,
 
 Sie können Web SDK auf zwei Arten implementieren:
 
-* Die [Web SDK-Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Weitere Informationen finden Sie im Tutorial [Implementieren von Adobe Experience Cloud SDK mit Web ](https://experienceleague.adobe.com/de/docs/platform-learn/implement-web-sdk/overview)&quot;.
+* Die [Web SDK-Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Weitere Informationen finden Sie im Tutorial [Implementieren von Adobe Experience Cloud SDK mit Web &#x200B;](https://experienceleague.adobe.com/de/docs/platform-learn/implement-web-sdk/overview)&quot;.
 * Manuelle Implementierung mithilfe der [Web SDK JavaScript Library](install/library.md).
 
 Dieses Handbuch enthält Anweisungen für die Interaktion mit Experience Cloud-Lösungen unter Verwendung der Web SDK JavaScript-Bibliothek und der Tag-Erweiterung.
@@ -68,7 +68,7 @@ Sehen Sie sich das folgende Video an, um die [!DNL Web SDK] und [!DNL Edge Netwo
 
 ## Migration von vorhandenen Bibliotheken zu Web SDK {#migrating-to-web-sdk}
 
-Adobe bietet einen optimierten Aktualisierungspfad, um die Migration von einer der [ Bibliotheken ](#sdks) Web SDK zu vereinfachen. Sie können jede Seite Ihrer Website einzeln migrieren, ohne die gesamte Website gleichzeitig migrieren zu müssen. Sie können den Web-SDK auf einigen Seiten verwenden, während vorhandene Bibliotheken auf anderen verbleiben, was einen schrittweisen Übergang ermöglicht.
+Adobe bietet einen optimierten Aktualisierungspfad, um die Migration von einer der [&#x200B; Bibliotheken &#x200B;](#sdks) Web SDK zu vereinfachen. Sie können jede Seite Ihrer Website einzeln migrieren, ohne die gesamte Website gleichzeitig migrieren zu müssen. Sie können den Web-SDK auf einigen Seiten verwenden, während vorhandene Bibliotheken auf anderen verbleiben, was einen schrittweisen Übergang ermöglicht.
 
 ### Überlegungen zur Migration von `AT.js` zu Web SDK {#considerations}
 

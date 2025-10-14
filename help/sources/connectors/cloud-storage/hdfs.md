@@ -15,7 +15,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Der Apache HDFS-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+>Der Apache HDFS-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen übernehmen können. Aufgenommene Daten können als JSON, Parquet oder mit Trennzeichen formatiert werden. Die Unterstützung für Cloud-Speicheranbieter umfasst [!DNL Apache] HDFS.
 

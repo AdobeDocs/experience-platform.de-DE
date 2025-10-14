@@ -164,15 +164,15 @@ Um diese Funktion verwenden zu können, müssen Sie das [!DNL FPID]-Cookie auf d
 
 >[!IMPORTANT]
 >
->Für diese Funktion muss [ Erstanbieter-Datenerfassung aktiviert ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de).
+>Für diese Funktion muss [&#x200B; Erstanbieter-Datenerfassung aktiviert &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de).
 
 **Schritt 2. Aktivieren**&#x200B;[!UICONTROL &#x200B; First-Party-ID &#x200B;]&#x200B;**Cookie-Funktion für Ihren Datenstrom**
 
 Nachdem Sie Ihren CNAME konfiguriert haben, müssen Sie die Option **[!UICONTROL Erstanbieter-ID-Cookie]** für Ihren Datenstrom aktivieren. Diese Einstellung weist Edge Network an, bei der Suche nach einer First-Party-Geräte-ID ein bestimmtes Cookie zu verwenden, anstatt nach diesem Wert in der [Identitätszuordnung](#identityMap) zu suchen.
 
-Weitere Informationen zum Einrichten [ Datenstroms finden ](../../datastreams/configure.md#advanced-options) in der Dokumentation zur Datenstromkonfiguration .
+Weitere Informationen zum Einrichten [&#x200B; Datenstroms finden &#x200B;](../../datastreams/configure.md#advanced-options) in der Dokumentation zur Datenstromkonfiguration .
 
-Weitere Informationen zur Funktionsweise [ Erstanbieter-Cookies finden ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) in der Dokumentation zu Adobe Experience Cloud .
+Weitere Informationen zur Funktionsweise [&#x200B; Erstanbieter-Cookies finden &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) in der Dokumentation zu Adobe Experience Cloud .
 
 ![Platform-UI-Bild mit der Datenstromkonfiguration, in der die First-Party-ID-Cookie-Einstellung hervorgehoben ist](../assets/first-party-id-datastreams.png)
 

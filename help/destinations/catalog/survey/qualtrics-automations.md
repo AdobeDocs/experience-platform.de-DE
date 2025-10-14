@@ -21,7 +21,7 @@ Verwenden Sie die Aggregation mehrerer betrieblicher Datenquellen in Adobe Exper
 
 >[!IMPORTANT]
 >
->Der Ziel-Connector und die Dokumentationsseite werden vom Qualtrics-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an die Kontaktperson, indem Sie sich beim [Customer Success Hub“ ](https://support-portal.qualtrics.com/).
+>Der Ziel-Connector und die Dokumentationsseite werden vom Qualtrics-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an die Kontaktperson, indem Sie sich beim [Customer Success Hub“ &#x200B;](https://support-portal.qualtrics.com/).
 
 ## Anwendungsfälle {#use-cases}
 
@@ -97,7 +97,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* Trigger **[!UICONTROL URL]**: Die im JSON-[ gefundene URL](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) die Ihren [Workflow in Qualtrics) ](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). Ein Beispiel finden Sie im folgenden Screenshot.
+* Trigger **[!UICONTROL URL]**: Die im JSON-[&#x200B; gefundene URL](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) die Ihren [Workflow in Qualtrics) &#x200B;](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). Ein Beispiel finden Sie im folgenden Screenshot.
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 

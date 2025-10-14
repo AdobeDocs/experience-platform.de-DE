@@ -75,9 +75,9 @@ Die folgenden Cookies werden gesetzt, wenn die Einverständniskonfiguration Folg
 
 ## Festlegen des Standardeinverständnisses mit der Tag-Erweiterung „Web SDK&quot;
 
-Wählen Sie beim Konfigurieren der Tag **[!UICONTROL Erweiterung die gewünschte Optionsschaltfläche unter]** Standardeinverständnis[ aus](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Wählen Sie beim Konfigurieren der Tag **[!UICONTROL Erweiterung die gewünschte Optionsschaltfläche unter]** Standardeinverständnis[&#x200B; aus](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].

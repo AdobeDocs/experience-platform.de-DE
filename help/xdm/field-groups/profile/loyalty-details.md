@@ -17,7 +17,7 @@ ht-degree: 11%
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Treuedetails] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md). Die Feldergruppe bietet ein einzelnes Feld vom Typ „Objekt“, `loyalty`, das Informationen über die Zugehörigkeit einer Person zu einem Treueprogramm für Kunden erfasst.
+[!UICONTROL Treuedetails] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] &#x200B;](../../classes/individual-profile.md). Die Feldergruppe bietet ein einzelnes Feld vom Typ „Objekt“, `loyalty`, das Informationen über die Zugehörigkeit einer Person zu einem Treueprogramm für Kunden erfasst.
 
 ![](../../images/field-groups/loyalty-details.png)
 

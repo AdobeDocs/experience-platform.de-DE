@@ -34,7 +34,7 @@ ht-degree: 4%
 | [!UICONTROL Grund nicht ausgeführt] | `notPerformedReason` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Der Grund, warum das Medikament nicht abgegeben wurde. |
 | [!UICONTROL Hinweis] | `note` | Array von [[!UICONTROL Anmerkung]](../data-types/annotation.md) | Zusätzliche Informationen zur Abgabe. |
 | [!UICONTROL Teil von] | `partOf` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Das Verfahren oder die Medikamentenanfrage, die die Abgabe ausgelöst hat. |
-| [!UICONTROL Ausführende] | `performer` | Array von Objekten | Gibt an, wer oder was den Abgabefall durchgeführt hat. Weitere Informationen finden [ im ](#performer) Abschnitt unten. |
+| [!UICONTROL Ausführende] | `performer` | Array von Objekten | Gibt an, wer oder was den Abgabefall durchgeführt hat. Weitere Informationen finden [&#x200B; im &#x200B;](#performer) Abschnitt unten. |
 | [!UICONTROL Menge] | `quantity` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die Menge des abgegebenen Arzneimittels, einschließlich der Maßeinheit. |
 | [!UICONTROL Receiver] | `receiver` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Identifiziert die Person, die das Medikament aufgenommen hat, oder den Ort, an dem das Medikament abgegeben wurde. |
 | [!UICONTROL Betreff] | `subject` | [[!UICONTROL Referenz]](../data-types/reference.md) | Ein Link zu einer Ressource, die die Person oder Gruppe repräsentiert, der das Medikament gegeben wird. |

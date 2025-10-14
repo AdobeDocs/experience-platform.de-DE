@@ -29,13 +29,13 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit [!DNL Salesforce Marketing Cloud] verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Salesforce Marketing Cloud]  Sie in ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md)Authentifizierungsübersicht“.
+Informationen zur Authentifizierung [[!DNL Salesforce Marketing Cloud]  Sie in &#x200B;](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md)Authentifizierungsübersicht“.
 
 ### Verwenden von Experience Platform-APIs
 
@@ -191,4 +191,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung zurüc
 
 ## Erstellen eines Datenflusses für [!DNL Salesforce Marketing Cloud] Daten
 
-Nachdem Sie Ihr [!DNL Salesforce Marketing Cloud]-Konto erfolgreich verbunden haben, können Sie jetzt [einen Datenfluss erstellen und Daten von Ihrem Marketing-Automatisierungsanbieter in Experience Platform ](../../collect/marketing-automation.md).
+Nachdem Sie Ihr [!DNL Salesforce Marketing Cloud]-Konto erfolgreich verbunden haben, können Sie jetzt [einen Datenfluss erstellen und Daten von Ihrem Marketing-Automatisierungsanbieter in Experience Platform &#x200B;](../../collect/marketing-automation.md).

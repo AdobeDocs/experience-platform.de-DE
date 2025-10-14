@@ -17,7 +17,7 @@ Mit [!DNL Adobe Experience Platform] können Sie Kundenprofile basierend auf bes
 
 In diesem Tutorial werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren einer Audience über die [!DNL Experience Platform]-Benutzeroberfläche verwendet werden kann.
 
-Dieses Tutorial bezieht sich direkt auf die Schritte, die im Tutorial [Bewerten und Zugreifen auf Segmentierungsergebnisse“ beschrieben ](./evaluate-a-segment.md). Das Tutorial zur Evaluierung von Segmentdefinitionen enthält Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Catalog Service]-API, während in diesem Tutorial die Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Experience Platform]-Benutzeroberfläche beschrieben werden.
+Dieses Tutorial bezieht sich direkt auf die Schritte, die im Tutorial [Bewerten und Zugreifen auf Segmentierungsergebnisse“ beschrieben &#x200B;](./evaluate-a-segment.md). Das Tutorial zur Evaluierung von Segmentdefinitionen enthält Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Catalog Service]-API, während in diesem Tutorial die Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Experience Platform]-Benutzeroberfläche beschrieben werden.
 
 ## Erste Schritte
 
@@ -85,6 +85,6 @@ Die rechte Leiste enthält Informationen zu Ihrem neuen Datensatz, wie Datensatz
 
 ## Nächste Schritte
 
-Nachdem Sie nun einen Datensatz basierend auf der [!DNL XDM Individual Profile Union Schema] erstellt haben, können Sie die Datensatz-ID verwenden, um mit dem Tutorial [Auswerten von Segmentdefinitionsergebnissen und Zugreifen auf ](./evaluate-a-segment.md)) fortzufahren.
+Nachdem Sie nun einen Datensatz basierend auf der [!DNL XDM Individual Profile Union Schema] erstellt haben, können Sie die Datensatz-ID verwenden, um mit dem Tutorial [Auswerten von Segmentdefinitionsergebnissen und Zugreifen auf &#x200B;](./evaluate-a-segment.md)) fortzufahren.
 
 Kehren Sie jetzt zum Tutorial zum Auswerten von Segmentdefinitionsergebnissen zurück und greifen Sie auf den Schritt [Generieren von Profilen für Zielgruppenmitglieder](./evaluate-a-segment.md#generate-profiles) des Workflows zum Exportieren einer Zielgruppe zurück.

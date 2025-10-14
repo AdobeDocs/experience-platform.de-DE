@@ -28,7 +28,7 @@ Dieses Dokument bietet einen Überblick darüber, wie Sie benutzerdefinierte Kla
 
 Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Unter [XDM-Übersicht](../../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und die [Grundlagen der Schemakomposition](../../schema/composition.md) um zu erfahren, wie Klassen zu XDM-Schemata beitragen.
 
-Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [ Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des Schema-Editors vertraut zu machen.
+Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [&#x200B; Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des Schema-Editors vertraut zu machen.
 
 ## Erste Schritte {#getting-started}
 
@@ -114,7 +114,7 @@ Ein Platzhalter **[!UICONTROL Nicht benanntes Feld]** wird auf der Arbeitsfläch
 
 ![Ein nicht benanntes Feld auf der Arbeitsfläche des Schema-Editors mit der ausgewählten und hervorgehobenen [!UICONTROL &#x200B; &quot;]&quot;.](../../images/ui/resources/classes/assign-to-class.png)
 
-Spezifische Schritte zum Konfigurieren [ Hinzufügen des Felds zur Klasse finden ](../fields/overview.md#define) im Handbuch unter „Definieren von Feldern in der“. Fügen Sie der Klasse weiterhin so viele Felder wie nötig hinzu. Wenn Sie fertig sind, wählen **[!UICONTROL Speichern]** aus, um sowohl das Schema als auch die Klasse zu speichern.
+Spezifische Schritte zum Konfigurieren [&#x200B; Hinzufügen des Felds zur Klasse finden &#x200B;](../fields/overview.md#define) im Handbuch unter „Definieren von Feldern in der“. Fügen Sie der Klasse weiterhin so viele Felder wie nötig hinzu. Wenn Sie fertig sind, wählen **[!UICONTROL Speichern]** aus, um sowohl das Schema als auch die Klasse zu speichern.
 
 ![Das neu erstellte Schema auf der Arbeitsfläche des Schema-Editors, mit hervorgehobener [!UICONTROL Speichern].](../../images/ui/resources/classes/save.png)
 
@@ -124,15 +124,15 @@ Wenn Sie zuvor Schemata erstellt haben, die diese Klasse verwenden, werden die n
 
 >[!NOTE]
 >
->Nur benutzerdefinierte Klassen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Kernklassen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Weitere Informationen finden Sie [ Abschnitt „Bearbeiten von Anzeigenamen für ](./schemas.md#display-names)&quot;.
+>Nur benutzerdefinierte Klassen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Kernklassen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Weitere Informationen finden Sie [&#x200B; Abschnitt „Bearbeiten von Anzeigenamen für &#x200B;](./schemas.md#display-names)&quot;.
 >
->Nachdem eine benutzerdefinierte Klasse gespeichert und bei der Datenaufnahme verwendet wurde, können anschließend nur noch additive Änderungen daran vorgenommen werden. Weitere Informationen finden [ unter „Regeln ](../../schema/composition.md#evolution) Schemaentwicklung“.
+>Nachdem eine benutzerdefinierte Klasse gespeichert und bei der Datenaufnahme verwendet wurde, können anschließend nur noch additive Änderungen daran vorgenommen werden. Weitere Informationen finden [&#x200B; unter „Regeln &#x200B;](../../schema/composition.md#evolution) Schemaentwicklung“.
 
 Sie können eine Klasse über den Schema-Workflow bearbeiten, indem Sie ein vorhandenes Schema bearbeiten, das die Klasse erweitert, oder indem Sie ein Schema manuell erstellen. Es ist nicht möglich, eine Klasse direkt zu bearbeiten. Wählen Sie auf der [!UICONTROL Durchsuchen] im Arbeitsbereich [!UICONTROL Schemata] eine vorhandene Klasse aus oder **[!UICONTROL Schema erstellen]**.
 
 ![Der Schema-Editor mit einer vorhandenen Klasse und der [!UICONTROL Schema erstellen] wurde hervorgehoben.](../../images/ui/resources/classes/edit-class-options.png)
 
-Wenn Sie sich für die Erstellung eines neuen Schemas entscheiden, finden Sie weitere Details im Abschnitt [Erstellen eines ](#create-schema)&quot;. Nachdem Sie das Erstellen des Schemas abgeschlossen haben (oder nachdem Sie ein vorhandenes Schema ausgewählt haben), wird der Schema-Editor angezeigt. Um ein vorhandenes Klassenfeld zu aktualisieren, wählen Sie das Feld aus der Schemastruktur aus. Die Feldinformationen werden in der rechten Leiste angezeigt. Stellen Sie sicher[!UICONTROL &#x200B; dass „Zuweisen zu]
+Wenn Sie sich für die Erstellung eines neuen Schemas entscheiden, finden Sie weitere Details im Abschnitt [Erstellen eines &#x200B;](#create-schema)&quot;. Nachdem Sie das Erstellen des Schemas abgeschlossen haben (oder nachdem Sie ein vorhandenes Schema ausgewählt haben), wird der Schema-Editor angezeigt. Um ein vorhandenes Klassenfeld zu aktualisieren, wählen Sie das Feld aus der Schemastruktur aus. Die Feldinformationen werden in der rechten Leiste angezeigt. Stellen Sie sicher[!UICONTROL &#x200B; dass „Zuweisen zu]
 die Option **[!UICONTROL Klasse]** ausgewählt ist, da andernfalls Ihre Aktualisierungen keine Auswirkungen auf die Klasse haben.
 
 ![Der Schema-Editor mit einem ausgewählten und hervorgehobenen Feld und der angezeigten rechten Leiste, wobei [!UICONTROL &#x200B; „Zuweisen zu“ hervorgehoben &#x200B;].](../../images/ui/resources/classes/edit-existing-field.png)
@@ -141,7 +141,7 @@ Nehmen Sie die gewünschten Änderungen am Feld vor, indem Sie in der rechten Le
 
 >[!IMPORTANT]
 >
-> Alle Aktualisierungen, die Sie an Feldern vornehmen, werden gemäß den [Regeln der Schemaentwicklung“ auf alle Schemata angewendet, die diese Klasse ](../../schema/composition.md#evolution).
+> Alle Aktualisierungen, die Sie an Feldern vornehmen, werden gemäß den [Regeln der Schemaentwicklung“ auf alle Schemata angewendet, die diese Klasse &#x200B;](../../schema/composition.md#evolution).
 
 ![Der Schema-Editor mit einem ausgewählten Feld und der rechten Leiste, die angezeigt wird, wobei &quot;[!UICONTROL &quot; hervorgehoben &#x200B;].](../../images/ui/resources/classes/save-changes.png)
 
@@ -152,7 +152,7 @@ Um neue Felder hinzuzufügen, folgen Sie der Anleitung [Felder zu einer Klasse h
 ## Ändern der Klasse eines Schemas {#schema}
 
 Sie können die Klasse des Schemas während des anfänglichen Erstellungsprozesses jederzeit ändern, bevor es gespeichert wurde. Dies sollte jedoch mit Vorsicht erfolgen, da Feldergruppen nur mit bestimmten Klassen kompatibel sind. Durch das Ändern der Klasse werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
-Weitere Informationen finden Sie im Handbuch [Erstellen und Bearbeiten ](./schemas.md#change-class) Schemata“.
+Weitere Informationen finden Sie im Handbuch [Erstellen und Bearbeiten &#x200B;](./schemas.md#change-class) Schemata“.
 
 ## Nächste Schritte {#next-steps}
 

@@ -41,7 +41,7 @@ Die Sicherheit in Bezug auf den Abfrage-Service ist in die folgenden Kategorien 
 
 Mit der Zugriffssteuerung in Adobe Experience Platform können Sie [Adobe Admin Console](https://adminconsole.adobe.com/) verwenden, um den Zugriff auf Abfrage-Service-Funktionen mithilfe von rollenbasierten Berechtigungen zu verwalten. Auf ähnliche Weise können Sie den Zugriff auf bestimmte Datenattribute durch die Kennzeichnungsverwaltung in Schemata und Datenfeldern steuern.
 
-In diesem Abschnitt werden die erforderlichen Zugriffssteuerungsberechtigungen beschrieben, die ein Benutzer besitzen muss, um die Funktionen des Abfrage-Service vollständig nutzen zu können. Detaillierte Anweisungen zum Zuweisen [ Zugriffs auf ein Produktprofil finden ](../../access-control/ui/permissions.md) in den Dokumenten [&#128279;](../../access-control/ui/users.md)Verwalten von Berechtigungen“ und &quot; von Benutzern“.
+In diesem Abschnitt werden die erforderlichen Zugriffssteuerungsberechtigungen beschrieben, die ein Benutzer besitzen muss, um die Funktionen des Abfrage-Service vollständig nutzen zu können. Detaillierte Anweisungen zum Zuweisen [&#x200B; Zugriffs auf ein Produktprofil finden &#x200B;](../../access-control/ui/permissions.md) in den Dokumenten [&#128279;](../../access-control/ui/users.md)Verwalten von Berechtigungen“ und &quot; von Benutzern“.
 
 #### Relevante Berechtigungen
 
@@ -70,7 +70,7 @@ Dieser Abschnitt dient als Anleitung für den ressourcenbasierten Zugriff, der f
 
 Die attributbasierte Zugriffssteuerungsfunktion ermöglicht es Benutzern von Query Service, den Zugriff auf kritische Benutzerdaten zu beschränken. Der Zugriff kann basierend auf den einer Rolle zugewiesenen Berechtigungen gewährt oder eingeschränkt werden. Der Benutzerzugriff auf einzelne Spalten wird durch die entsprechenden Datennutzungskennzeichnungen und die Berechtigungssätze gesteuert, die auf die den Benutzern zugewiesenen Rollen angewendet werden.
 
-Durch das Tagging von Schemafeldgruppen und -klassen mit Datennutzungskennzeichnungen werden Datennutzungsbeschränkungen auf alle Schemata mit denselben Feldergruppen und -klassen angewendet. Umfassende Informationen zu [ Funktion finden Sie in der Übersicht ](../../access-control/abac/overview.md) (attributbasierte Zugriffssteuerung) .
+Durch das Tagging von Schemafeldgruppen und -klassen mit Datennutzungskennzeichnungen werden Datennutzungsbeschränkungen auf alle Schemata mit denselben Feldergruppen und -klassen angewendet. Umfassende Informationen zu [&#x200B; Funktion finden Sie in der Übersicht &#x200B;](../../access-control/abac/overview.md) (attributbasierte Zugriffssteuerung) .
 
 Mit dieser Funktion können Sie den Benutzergruppen Ihrer Wahl Zugriffsrechte auf vertrauliche Spalten gewähren. Die Zugriffssteuerung für eine Spalte kann die Lese- und Schreibfunktionen für einen bestimmten Benutzertyp einschränken.
 
@@ -97,7 +97,7 @@ Mit der [attributbasierten Zugriffssteuerungsfunktion](../../access-control/abac
 
 Um feldbasierte Zugriffsbeschränkungen für beschleunigte Datensätze zu erstellen, können Sie CTAS-Abfragen des Abfrage-Service verwenden, um beschleunigte Datensätze zu erstellen und diese Datensätze auf der Grundlage vorhandener XDM-Schemata oder Ad-hoc-Schemata zu strukturieren. Admins können dann [Datennutzungsbeschriftungen für das Schema hinzufügen und bearbeiten](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) oder [Ad-hoc-Schema](./ad-hoc-schema-labels.md#edit-governance-labels). Sie können Kennzeichnungen auf Ihre Schemata über den Arbeitsbereich [!UICONTROL Kennzeichnungen] in der Benutzeroberfläche [!UICONTROL Schemata] anwenden, erstellen und bearbeiten.
 
-Datennutzungsbeschriftungen können auch über die Benutzeroberfläche Datensätze [angewendet oder direkt auf den Datensatz ](../../data-governance/labels/user-guide.md#add-labels)) oder über den Arbeitsbereich Zugriffssteuerung [!UICONTROL Beschriftungen] erstellt werden. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer neuen ](../../access-control/abac/ui/labels.md)&quot;.
+Datennutzungsbeschriftungen können auch über die Benutzeroberfläche Datensätze [angewendet oder direkt auf den Datensatz &#x200B;](../../data-governance/labels/user-guide.md#add-labels)) oder über den Arbeitsbereich Zugriffssteuerung [!UICONTROL Beschriftungen] erstellt werden. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer neuen &#x200B;](../../access-control/abac/ui/labels.md)&quot;.
 
 Der Benutzerzugriff auf einzelne Spalten kann dann durch die angehängten Datennutzungskennzeichnungen und die Berechtigungssätze gesteuert werden, die auf die Rollen angewendet werden, die den Benutzern zugewiesen sind.
 
@@ -119,7 +119,7 @@ Für den Zugriff auf den Abfrage-Service mit einem Drittanbieter-Client sind Anm
 
 [Nicht ablaufende Anmeldeinformationen](../ui/credentials.md#non-expiring-credentials) ermöglichen es Ihnen, eine permanente Verbindung mit einem externen Client herzustellen, was die Verbindung zum Abfrage-Service erleichtert, ohne dass ein manuelles Kennwort erforderlich ist.
 
-Um die Option zum Generieren nicht ablaufender Zugangsdaten zu aktivieren, müssen Sie den beschriebenen [vorausgesetzte Workflow“ ](../ui/credentials.md#prerequisites). Im Rahmen dieses Prozesses muss Ihr Organisationsadministrator Berechtigungen für das Produktprofil konfigurieren, sodass der Administrator steuern kann, welche Konten Zugriff auf die Verwendung nicht ablaufender Anmeldeinformationen haben.
+Um die Option zum Generieren nicht ablaufender Zugangsdaten zu aktivieren, müssen Sie den beschriebenen [vorausgesetzte Workflow“ &#x200B;](../ui/credentials.md#prerequisites). Im Rahmen dieses Prozesses muss Ihr Organisationsadministrator Berechtigungen für das Produktprofil konfigurieren, sodass der Administrator steuern kann, welche Konten Zugriff auf die Verwendung nicht ablaufender Anmeldeinformationen haben.
 
 Technische Benutzerkonten mit unbefristeten Anmeldeinformationen können Rollen zugewiesen werden, um eine angemessene Data Governance sicherzustellen, indem der Umfang ihres Lese- und Schreibzugriffs auf der Grundlage ihrer Zuständigkeiten und Anforderungen definiert wird. Siehe vorherigen Abschnitt unter [Verwenden rollenbasierter Berechtigungen durch Zugriffssteuerung](#access-control) zum Verwalten des Zugriffs auf den Abfrage-Service.
 
@@ -129,15 +129,15 @@ Sobald der vorausgesetzte Workflow abgeschlossen ist, können autorisierte Benut
 
 Zur Erhöhung der Sicherheit bietet der Abfrage-Service native Unterstützung für SSL-Verbindungen zur Verschlüsselung der Client/Server-Kommunikation. Experience Platform unterstützt verschiedene SSL-Optionen, um Ihre Datensicherheitsanforderungen zu erfüllen und den Verarbeitungsaufwand für Verschlüsselung und Schlüsselaustausch auszugleichen.
 
-Weitere Informationen, einschließlich der Verwendung [ SSL-Parameterwerts `verify-full`, finden Sie im Handbuch zu verfügbaren SSL](../clients/ssl-modes.md)Optionen für Clientverbindungen von Drittanbietern zum Abfrage-Service .
+Weitere Informationen, einschließlich der Verwendung [&#x200B; SSL-Parameterwerts `verify-full`, finden Sie im Handbuch zu verfügbaren SSL](../clients/ssl-modes.md)Optionen für Clientverbindungen von Drittanbietern zum Abfrage-Service .
 
 ### Verschlüsselung und kundenverwaltete Schlüssel (CMK) {#encryption-and-customer-managed-keys}
 
 Verschlüsselung ist die Verwendung eines algorithmischen Prozesses, um Daten in verschlüsselten und unlesbaren Text umzuwandeln, um sicherzustellen, dass die Informationen geschützt sind und ohne einen Entschlüsselungsschlüssel nicht zugänglich sind.
 
-Die Datenkonformität des Abfrage-Service stellt sicher, dass Daten immer verschlüsselt werden. Daten in Übertragung sind immer HTTPS-konform und ruhende Daten werden in einem Azure Data Lake-Speicher mithilfe von Schlüsseln auf Systemebene verschlüsselt. Weitere Informationen finden Sie in der Dokumentation [So werden Daten in Adobe Experience Platform ](../../landing/governance-privacy-security/encryption.md). Einzelheiten dazu, wie Data-at-Rest im Azure Data Lake Storage verschlüsselt werden, finden Sie in der [offiziellen Azure-Dokumentation](https://docs.microsoft.com/de-de/azure/data-lake-store/data-lake-store-encryption).
+Die Datenkonformität des Abfrage-Service stellt sicher, dass Daten immer verschlüsselt werden. Daten in Übertragung sind immer HTTPS-konform und ruhende Daten werden in einem Azure Data Lake-Speicher mithilfe von Schlüsseln auf Systemebene verschlüsselt. Weitere Informationen finden Sie in der Dokumentation [So werden Daten in Adobe Experience Platform &#x200B;](../../landing/governance-privacy-security/encryption.md). Einzelheiten dazu, wie Data-at-Rest im Azure Data Lake Storage verschlüsselt werden, finden Sie in der [offiziellen Azure-Dokumentation](https://docs.microsoft.com/de-de/azure/data-lake-store/data-lake-store-encryption).
 
-Daten in Übertragung sind immer HTTPS-kompatibel. Wenn sich die Daten im Data Lake im Ruhezustand befinden, erfolgt die Verschlüsselung mit dem Customer Management Key (CMK), der bereits von Data Lake Management unterstützt wird. Die derzeit unterstützte Version ist TLS1.2. In der [Dokumentation Kundenverwaltete Schlüssel (CMK) ](../../landing/governance-privacy-security/customer-managed-keys/overview.md) Sie, wie Sie Ihre eigenen Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
+Daten in Übertragung sind immer HTTPS-kompatibel. Wenn sich die Daten im Data Lake im Ruhezustand befinden, erfolgt die Verschlüsselung mit dem Customer Management Key (CMK), der bereits von Data Lake Management unterstützt wird. Die derzeit unterstützte Version ist TLS1.2. In der [Dokumentation Kundenverwaltete Schlüssel (CMK) &#x200B;](../../landing/governance-privacy-security/customer-managed-keys/overview.md) Sie, wie Sie Ihre eigenen Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 
 
 ## Verfolgung {#audit}
@@ -174,7 +174,7 @@ Nachfolgend finden Sie eine Liste mit drei erweiterten Server-Protokollen, die m
 1. **Sitzungsprotokolle**: Das System erstellt ein Sitzungseintragsprotokoll für einen Benutzer, wenn er sich beim Abfrage-Service anmeldet, unabhängig davon, ob er eine Abfrage ausführt.
 1. **Verbindungsprotokolle von Drittanbietern**: Ein Verbindungsprüfprotokoll wird generiert, wenn ein Benutzer den Abfrage-Service erfolgreich mit einem Client eines Drittanbieters verbindet.
 
-Weitere Informationen darüber[ wie Auditprotokolle Ihrem Unternehmen helfen können, die Einhaltung von Datenvorschriften zu gewährleisten, finden Sie ](../../landing/governance-privacy-security/audit-logs/overview.md) „Übersicht über Auditprotokolle“.
+Weitere Informationen darüber[&#x200B; wie Auditprotokolle Ihrem Unternehmen helfen können, die Einhaltung von Datenvorschriften zu gewährleisten, finden Sie &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) „Übersicht über Auditprotokolle“.
 
 ## Datennutzung {#data-usage}
 
@@ -186,7 +186,7 @@ Es ist Best Practice, in jeder Phase des Journey der Daten auf die Einhaltung de
 >
 >Datensätze, die mit dem Abfrage-Service erstellt werden, werden als „abgeleitete Datensätze“ bezeichnet.
 
-Da Ad-hoc-Schemata von einem einzelnen Benutzer für einen bestimmten Zweck erstellt werden, werden die XDM-Schemafelder für diesen bestimmten Datensatz mit einem Namespace versehen und sind nicht für die Verwendung in verschiedenen Datensätzen vorgesehen. Daher sind Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche standardmäßig nicht sichtbar. Obwohl es bei der Anwendung von Datennutzungskennzeichnungen keinen Unterschied zwischen Standard- und Ad-hoc-Schemata gibt, müssen Ad-hoc-Schemata, die vom Abfrage-Service zum Zweck der Kennzeichnung erstellt wurden, zunächst in der Experience Platform-Benutzeroberfläche sichtbar gemacht werden. Weitere Informationen finden Sie im Handbuch [Erkennen von Ad-hoc-Schemata in ](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) Experience Platform-Benutzeroberfläche“.
+Da Ad-hoc-Schemata von einem einzelnen Benutzer für einen bestimmten Zweck erstellt werden, werden die XDM-Schemafelder für diesen bestimmten Datensatz mit einem Namespace versehen und sind nicht für die Verwendung in verschiedenen Datensätzen vorgesehen. Daher sind Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche standardmäßig nicht sichtbar. Obwohl es bei der Anwendung von Datennutzungskennzeichnungen keinen Unterschied zwischen Standard- und Ad-hoc-Schemata gibt, müssen Ad-hoc-Schemata, die vom Abfrage-Service zum Zweck der Kennzeichnung erstellt wurden, zunächst in der Experience Platform-Benutzeroberfläche sichtbar gemacht werden. Weitere Informationen finden Sie im Handbuch [Erkennen von Ad-hoc-Schemata in &#x200B;](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) Experience Platform-Benutzeroberfläche“.
 
 Nachdem Sie auf das Schema zugegriffen haben, können Sie [Kennzeichnungen auf einzelne Felder anwenden](../../xdm/tutorials/labels.md). Sobald ein Schema gekennzeichnet wurde, erben alle Datensätze, die von diesem Schema abgeleitet sind, diese Kennzeichnungen. Von hier aus können Sie Datennutzungsrichtlinien einrichten, die verhindern können, dass Daten mit bestimmten Beschriftungen für bestimmte Ziele aktiviert werden. Weitere Informationen finden Sie in der Übersicht zu [Datennutzungsrichtlinien](../../data-governance/policies/overview.md).
 
@@ -196,11 +196,11 @@ Nachdem Sie auf das Schema zugegriffen haben, können Sie [Kennzeichnungen auf e
 
 Datenschutzanfragen können an den Data Lake oder den Profildatenspeicher gesendet werden. Aus dem Data Lake gelöschte Datensätze führen nicht zum Löschen von Profilen, die aus diesen Datensätzen erstellt wurden. Ein Datenschutzauftrag zum Löschen personenbezogener Daten aus dem Data Lake löscht auch nicht sein Profil, sodass alle Informationen (die diese Profil-ID enthalten), die nach Abschluss des Datenschutzauftrags aufgenommen werden, dieses Profil wie gewohnt aktualisieren. Dies bekräftigt die Notwendigkeit, in Ad-hoc-Schemata verwendete Daten ordnungsgemäß zu identifizieren.
 
-Weitere Informationen finden Sie in der Privacy Service[Dokumentation zu Identitätsdaten für Datenschutzanfragen und ](../../privacy-service/identity-data.md), wie Sie Ihre Datenvorgänge konfigurieren und Adobe-Technologien nutzen können, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
+Weitere Informationen finden Sie in der Privacy Service[Dokumentation zu Identitätsdaten für Datenschutzanfragen und &#x200B;](../../privacy-service/identity-data.md), wie Sie Ihre Datenvorgänge konfigurieren und Adobe-Technologien nutzen können, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
 
 Die Funktionen des Abfrage-Service für die Data Governance vereinfachen und optimieren den Prozess der Datenkategorisierung und die Einhaltung von Datennutzungsbestimmungen. Nachdem die Daten identifiziert wurden, können Sie mit dem Abfrage-Service die primäre Identität für alle Ausgabedatensätze zuweisen. Sie **müssen** Identitäten zum Datensatz hinzufügen, um Datenschutzanfragen zu erleichtern und auf die Einhaltung von Datenschutzbestimmungen hinzuarbeiten.
 
-Schemadatenfelder können über die Experience Platform-Benutzeroberfläche als Identitätsfeld festgelegt werden. Darüber hinaus ermöglicht Ihnen der Abfrage-Service, die [ mithilfe des SQL-Befehls „ALTER TABLE“ zu ](../sql/syntax.md#alter-table). Das Festlegen einer Identität mit dem Befehl `ALTER TABLE` ist besonders dann hilfreich, wenn Datensätze mithilfe von SQL und nicht direkt aus einem Schema über die Experience Platform-Benutzeroberfläche erstellt werden. In der Dokumentation finden Sie Anweisungen zum [ von Identitätsfeldern in der Benutzeroberfläche bei ](../../xdm/ui/fields/identity.md) Verwendung von Standardschemata.
+Schemadatenfelder können über die Experience Platform-Benutzeroberfläche als Identitätsfeld festgelegt werden. Darüber hinaus ermöglicht Ihnen der Abfrage-Service, die [&#x200B; mithilfe des SQL-Befehls „ALTER TABLE“ zu &#x200B;](../sql/syntax.md#alter-table). Das Festlegen einer Identität mit dem Befehl `ALTER TABLE` ist besonders dann hilfreich, wenn Datensätze mithilfe von SQL und nicht direkt aus einem Schema über die Experience Platform-Benutzeroberfläche erstellt werden. In der Dokumentation finden Sie Anweisungen zum [&#x200B; von Identitätsfeldern in der Benutzeroberfläche bei &#x200B;](../../xdm/ui/fields/identity.md) Verwendung von Standardschemata.
 
 ## Datenhygiene {#data-hygiene}
 
@@ -212,4 +212,4 @@ Wenn Sie dagegen einen aggregierten Datensatz im beschleunigten Speicher erstell
 
 Eine Ausnahme in diesem Szenario ist der Fall der Löschung. Wenn eine Datenhygiene-Löschung für einen Datensatz angefordert wird und bevor die Löschung abgeschlossen ist, eine andere abgeleitete Datensatzabfrage ausgeführt wird, erfasst der abgeleitete Datensatz Informationen aus dem ursprünglichen Datensatz. In diesem Fall müssen Sie beachten, dass Sie, wenn eine Anfrage zum Löschen eines Datensatzes gesendet wurde, keine neu abgeleiteten Datensatzabfragen mit derselben Datensatzquelle ausführen dürfen.
 
-Weitere [ zur Datenhygiene in Adobe Experience Platform finden Sie ](../../hygiene/home.md) der Übersicht zur Datenhygiene .
+Weitere [&#x200B; zur Datenhygiene in Adobe Experience Platform finden Sie &#x200B;](../../hygiene/home.md) der Übersicht zur Datenhygiene .

@@ -89,7 +89,7 @@ In diesem Abschnitt können Sie die Datenströme auswählen, die für jede der d
 
 Wenn eine Anfrage an die Edge Network gesendet wird, wird eine Datenstrom-ID verwendet, um auf die Server-seitige Konfiguration zu verweisen. Sie können die Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
 
-Informationen zum Konfigurieren eines [ finden ](../../../../datastreams/overview.md) im Handbuch zu Datenströmen .
+Informationen zum Konfigurieren eines [&#x200B; finden &#x200B;](../../../../datastreams/overview.md) im Handbuch zu Datenströmen .
 
 Sie können entweder einen Datenstrom aus den verfügbaren Dropdown-Menüs auswählen oder **[!UICONTROL Werte eingeben]** auswählen und für jede Umgebung eine benutzerdefinierte Datenstrom-ID eingeben.
 
@@ -194,7 +194,7 @@ Die erfassten Daten können Informationen zu Medienwiedergaben, Pausen, Beendigu
 * **[!UICONTROL Player-]**: Der Name des Medien-Players.
 * **[!UICONTROL Anwendungsversion]**: Die Version der Media Player-Anwendung.
 * **[!UICONTROL Haupt-Ping-Intervall]**: Häufigkeit der Pings für den Hauptinhalt in Sekunden. Der Standardwert lautet `10`. Die Werte können zwischen `10` und `50` Sekunden liegen.  Wenn kein Wert angegeben ist, wird der Standardwert bei der Verwendung von [automatisch verfolgten Sitzungen](../../../../web-sdk/commands/createmediasession.md#automatic) verwendet.
-* **[!UICONTROL Ad-Ping-Intervall]**: Häufigkeit der Pings für den Anzeigeninhalt in Sekunden. Der Standardwert lautet `10`. Die Werte können zwischen `1` und `10` Sekunden liegen. Wenn kein Wert angegeben ist, wird der Standardwert bei der Verwendung von [automatisch verfolgten Sitzungen“ ](../../../../web-sdk/commands/createmediasession.md#automatic)
+* **[!UICONTROL Ad-Ping-Intervall]**: Häufigkeit der Pings für den Anzeigeninhalt in Sekunden. Der Standardwert lautet `10`. Die Werte können zwischen `1` und `10` Sekunden liegen. Wenn kein Wert angegeben ist, wird der Standardwert bei der Verwendung von [automatisch verfolgten Sitzungen“ &#x200B;](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Konfigurieren von Datenstromüberschreibungen {#datastream-overrides}
 
@@ -207,7 +207,7 @@ Das Überschreiben der Datenstromkonfiguration besteht aus zwei Schritten:
 1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](/help/datastreams/configure.md) definieren.
 2. Anschließend müssen Sie die Überschreibungen entweder über einen Web-SDK-Befehl oder mithilfe der Tag-Erweiterung „Web SDK&quot; an Edge Network senden.
 
-Detaillierte Anweisungen [ Überschreiben von Datenstromkonfigurationen finden Sie ](/help/datastreams/overrides.md) der Dokumentation zu Datenstromkonfigurationen .
+Detaillierte Anweisungen [&#x200B; Überschreiben von Datenstromkonfigurationen finden Sie &#x200B;](/help/datastreams/overrides.md) der Dokumentation zu Datenstromkonfigurationen .
 
 Als Alternative zur Übergabe der Überschreibungen über einen Web SDK-Befehl können Sie die Überschreibungen im Bildschirm „Tag-Erweiterung“ konfigurieren, der unten dargestellt ist.
 

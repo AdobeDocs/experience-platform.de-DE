@@ -16,7 +16,7 @@ ht-degree: 63%
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL IdentityMap] ist eine standardmäßige Schemafeldgruppe für die Klasse [[!UICONTROL XDM ExperienceEvent] ](../../classes/experienceevent.md) und eine kompatible Feldergruppe für die Klasse [[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md). Die Feldergruppe stellt ein einzelnes Zuordnungsfeld bereit, das eine Reihe von Benutzeridentitäten enthält, die vom Namespace angegeben wurden.
+[!UICONTROL IdentityMap] ist eine standardmäßige Schemafeldgruppe für die Klasse [[!UICONTROL XDM ExperienceEvent] &#x200B;](../../classes/experienceevent.md) und eine kompatible Feldergruppe für die Klasse [[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md). Die Feldergruppe stellt ein einzelnes Zuordnungsfeld bereit, das eine Reihe von Benutzeridentitäten enthält, die vom Namespace angegeben wurden.
 
 ![Ein Diagramm der Schemafeldgruppe [!UICONTROL IdentityMap]](../../images/field-groups/identitymap.png)
 

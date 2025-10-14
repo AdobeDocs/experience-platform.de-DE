@@ -11,7 +11,7 @@ ht-degree: 10%
 
 # Erstellen eines Datenflusses, um Daten aus einem CRM in Experience Platform aufzunehmen
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen [[!DNL Flow Service]  Daten in Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen [[!DNL Flow Service]  Daten in Adobe Experience Platform &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ### Basisverbindung erstellen {#base}
 

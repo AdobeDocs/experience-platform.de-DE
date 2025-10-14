@@ -36,7 +36,7 @@ In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle an
 
 ## Herunterladen der Assets {#assets}
 
-Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Bevor Sie fortfahren[ laden Sie den ZIP-Ordner der erforderlichen ](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) herunter. Dieser Ordner enthält:
+Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Bevor Sie fortfahren[&#x200B; laden Sie den ZIP-Ordner der erforderlichen &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) herunter. Dieser Ordner enthält:
 
 - Das Notebook mit der Kaufneigung
 - Ein Notebook, mit dem Daten in einen Trainings- und Scoring-Datensatz aufgenommen werden (einen Teil der Luma-Web-Daten)
@@ -49,7 +49,7 @@ Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell.
 
 ### Erstellen des Luma-Web-Datenschemas und Aufnehmen der Daten
 
-Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Experience Platform verfügen, der zum Trainieren und Bewerten Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?lang=de&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Aufnahme der vom Kaufneigungsmodell verwendeten Daten.
+Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Experience Platform verfügen, der zum Trainieren und Bewerten Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?lang=de&recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Aufnahme der vom Kaufneigungsmodell verwendeten Daten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3447163?captions=ger)
 

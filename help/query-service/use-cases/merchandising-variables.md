@@ -11,7 +11,7 @@ ht-degree: 12%
 
 # Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten 
 
-Verwenden Sie den Abfrage-Service, um die Daten zu verwalten, die von Adobe Analytics als Datensätze in Adobe Experience Platform aufgenommen werden. Die folgenden Abschnitte enthalten Beispielabfragen, mit denen Sie auf die Merchandising-Variablen in Ihren Analytics-Datensätzen zugreifen können. Weitere Informationen finden Sie in der Dokumentation [ Aufnehmen und Zuordnen von Adobe Analytics-Daten ](../../sources/connectors/adobe-applications/mapping/analytics.md) der Analytics-Quelle
+Verwenden Sie den Abfrage-Service, um die Daten zu verwalten, die von Adobe Analytics als Datensätze in Adobe Experience Platform aufgenommen werden. Die folgenden Abschnitte enthalten Beispielabfragen, mit denen Sie auf die Merchandising-Variablen in Ihren Analytics-Datensätzen zugreifen können. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Aufnehmen und Zuordnen von Adobe Analytics-Daten &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) der Analytics-Quelle
 
 ## Merchandising-Variablen {#merchandising-variables}
 

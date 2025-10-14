@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Mit Adobe Experience Platform können Sie die Struktur Ihrer benutzerdefinierten Experience-Datenmodell (XDM)-Klassen, Schemafeldgruppen und Datentypen vollständig anpassen. Um verwandte Felder in benutzerdefinierten XDM-Ressourcen zu organisieren und zu verschachteln, können Sie Felder vom Typ „Objekt“ definieren, die zusätzliche Unterfelder enthalten können.
 
-Verwenden [ beim Definieren eines ](./overview.md#define) Felds in der Benutzeroberfläche von Adobe Experience Platform das **[!UICONTROL Typ]** und wählen Sie &quot;[!UICONTROL Objekt]&quot; aus der Liste aus.
+Verwenden [&#x200B; beim Definieren eines &#x200B;](./overview.md#define) Felds in der Benutzeroberfläche von Adobe Experience Platform das **[!UICONTROL Typ]** und wählen Sie &quot;[!UICONTROL Objekt]&quot; aus der Liste aus.
 
 ![](../../images/ui/fields/special/object.png)
 
@@ -29,7 +29,7 @@ Um ein Unterfeld hinzuzufügen, wählen Sie das Symbol **plus (+)** neben dem Ob
 
 Nachdem Sie das Unterfeld konfiguriert und **[!UICONTROL Anwenden]** ausgewählt haben, können Sie dem Objekt weitere Felder hinzufügen, indem Sie denselben Prozess verwenden. Sie können auch Unterfelder hinzufügen, die selbst Objekte sind, sodass Sie Felder beliebig tief verschachteln können.
 
-Nachdem Sie die Erstellung des -Objekts abgeschlossen haben, möchten Sie möglicherweise seine Struktur in verschiedenen Klassen und Feldergruppen wiederverwenden. In diesem Fall können Sie das -Objekt in einen Datentyp konvertieren. Weitere Informationen finden Sie [ Abschnitt zum Konvertieren von Objekten in ](../resources/data-types.md#convert) im Handbuch zur Datentypbenutzeroberfläche.
+Nachdem Sie die Erstellung des -Objekts abgeschlossen haben, möchten Sie möglicherweise seine Struktur in verschiedenen Klassen und Feldergruppen wiederverwenden. In diesem Fall können Sie das -Objekt in einen Datentyp konvertieren. Weitere Informationen finden Sie [&#x200B; Abschnitt zum Konvertieren von Objekten in &#x200B;](../resources/data-types.md#convert) im Handbuch zur Datentypbenutzeroberfläche.
 
 ## Nächste Schritte
 

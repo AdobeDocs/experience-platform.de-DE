@@ -59,7 +59,7 @@ Real-Time CDP Business-to-Business (B2B) wurde speziell für B2B-Marketing-Exper
 
 Mit Real-Time CDP B2B edition können Marketing-Fachleute vollständige Profile für Personen und Konten erstellen. Insbesondere können Sie hier all Ihre quellenübergreifenden Daten anreichern, segmentieren und aus einem zentralen Speicher von einheitlichen Account-Profilen exportieren. Diese Daten können mithilfe von Data Governance-Werkzeugen verwaltet werden, die bei jedem Schritt des Zentralisierungsprozesses verfügbar sind.
 
-Weitere [ finden Sie in der Übersicht ](./b2b-overview.md) Real-Time CDP B2B edition .
+Weitere [&#x200B; finden Sie in der Übersicht &#x200B;](./b2b-overview.md) Real-Time CDP B2B edition .
 
 ### Adobe Real-time Customer Data Platform - B2P-Edition (Business-to-Person) {#rtcdp-b2p}
 

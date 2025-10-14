@@ -170,7 +170,7 @@ Wenn der Code erfolgreich ausgeführt wird, wird `validIDs` mit einer Liste der 
 
 ## Nächste Schritte
 
-In diesem Dokument haben Sie eine Einführung in die Kernfunktionen des [!DNL Privacy JS Library] erhalten. Nachdem Sie die -Bibliothek zum Abrufen einer Liste von Identitäten verwendet haben, können Sie diese Identitäten verwenden, um Datenzugriffs- und Löschanfragen an die [!DNL Privacy Service]-API zu erstellen. Weitere Informationen finden Sie im [Privacy Service ](api/overview.md)API-Handbuch.
+In diesem Dokument haben Sie eine Einführung in die Kernfunktionen des [!DNL Privacy JS Library] erhalten. Nachdem Sie die -Bibliothek zum Abrufen einer Liste von Identitäten verwendet haben, können Sie diese Identitäten verwenden, um Datenzugriffs- und Löschanfragen an die [!DNL Privacy Service]-API zu erstellen. Weitere Informationen finden Sie im [Privacy Service &#x200B;](api/overview.md)API-Handbuch.
 
 ## Anhang
 

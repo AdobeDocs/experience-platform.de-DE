@@ -17,7 +17,7 @@ Das Senden von Anzeigeereignissen verbessert die Genauigkeit von Personalisierun
 
 Mit Web SDK können Sie Anzeigeereignisse auf zwei Arten senden:
 
-* [Automatisch](#send-automatically), unmittelbar nachdem der personalisierte Inhalt auf der Seite gerendert wurde. Weitere Informationen finden Sie in der Dokumentation [ Rendern ](rendering-personalization-content.md) personalisierten Inhalten .
+* [Automatisch](#send-automatically), unmittelbar nachdem der personalisierte Inhalt auf der Seite gerendert wurde. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Rendern &#x200B;](rendering-personalization-content.md) personalisierten Inhalten .
 * [Manuell](#send-sendEvent-calls) durch nachfolgende `sendEvent`.
 
 >[!NOTE]

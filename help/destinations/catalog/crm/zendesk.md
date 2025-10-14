@@ -44,7 +44,7 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Zendesk]-Ziel authe
 
 ## Leitlinien {#guardrails}
 
-Auf [ Seite „Preise und ](https://developer.zendesk.com/api-reference/sales-crm/rate-limits/#pricing)&quot; werden die [!DNL Zendesk] API-Limits für Ihr Konto beschrieben. Sie müssen sicherstellen, dass Ihre Daten und Payloads innerhalb dieser Beschränkungen liegen.
+Auf [&#x200B; Seite „Preise und &#x200B;](https://developer.zendesk.com/api-reference/sales-crm/rate-limits/#pricing)&quot; werden die [!DNL Zendesk] API-Limits für Ihr Konto beschrieben. Sie müssen sicherstellen, dass Ihre Daten und Payloads innerhalb dieser Beschränkungen liegen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -77,7 +77,7 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL Zende
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [ im Abschnitt  [!DNL Zendesk] Sammeln](#gather-credentials)Anmeldeinformationen“.
+Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [&#x200B; im Abschnitt  [!DNL Zendesk] Sammeln](#gather-credentials)Anmeldeinformationen“.
 * **[!UICONTROL Bearer-Token]**: Das Zugriffstoken, das Sie in Ihrem [!DNL Zendesk]-Konto generiert haben.
 
 Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.

@@ -65,9 +65,9 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
-| [!DNL Federated Audience Composition] | ✓ | Zielgruppen, die über die [Federated Audience Composition“ in Experience Platform importiert ](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/start/audiences). |
+| [!DNL Federated Audience Composition] | ✓ | Zielgruppen, die über die [Federated Audience Composition“ in Experience Platform importiert &#x200B;](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -110,7 +110,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die erforderlichen Felder
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Die Werbekonto-ID, die mit dem Werbekonto verknüpft ist, in das Sie Ihre Zielgruppen importieren möchten. Weitere Informationen dazu finden Sie in [ Dokumentation im Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Konto-ID]**: Die Werbekonto-ID, die mit dem Werbekonto verknüpft ist, in das Sie Ihre Zielgruppen importieren möchten. Weitere Informationen dazu finden Sie in [&#x200B; Dokumentation im Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
@@ -133,7 +133,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Nach der Aktivierung der Zielgruppen für *Ziel „Snap*&quot; werden die Zielgruppen im Abschnitt „Zielgruppen“ des [**-**-Managers ](https://businesshelp.snapchat.com/s/article/audience-sharing). Gehen Sie wie folgt vor, um zu diesem Abschnitt zu navigieren:
+Nach der Aktivierung der Zielgruppen für *Ziel „Snap*&quot; werden die Zielgruppen im Abschnitt „Zielgruppen“ des [**-**-Managers &#x200B;](https://businesshelp.snapchat.com/s/article/audience-sharing). Gehen Sie wie folgt vor, um zu diesem Abschnitt zu navigieren:
 
 1. Melden Sie sich beim [Snap Ads Manager](https://ads.snapchat.com/) an
 2. Wählen **Zielgruppen** aus dem Pulldown-Menü in der oberen linken Ecke des Bildschirms aus. Die Zielgruppen, die Sie in Adobe Experience Platform aktiviert haben, werden in der Zielgruppenbibliothek angezeigt:

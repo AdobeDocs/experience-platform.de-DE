@@ -21,11 +21,11 @@ In diesem Dokument werden die Schritte zum Verbinden von [!DNL RStudio] mit Adob
 >
 > In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL RStudio] haben und mit dessen Verwendung vertraut sind. Weitere Informationen zu [!DNL RStudio] finden Sie in der [offiziellen [!DNL RStudio] Dokumentation](https://rstudio.com/products/rstudio/).
 > 
-> Um [!DNL RStudio] mit dem Abfrage-Service verwenden zu können, müssen Sie außerdem den [!DNL PostgreSQL] JDBC 4.2-Treiber installieren. Sie können den JDBC-Treiber von der [[!DNL PostgreSQL] offiziellen Website) ](https://jdbc.postgresql.org/download/).
+> Um [!DNL RStudio] mit dem Abfrage-Service verwenden zu können, müssen Sie außerdem den [!DNL PostgreSQL] JDBC 4.2-Treiber installieren. Sie können den JDBC-Treiber von der [[!DNL PostgreSQL] offiziellen Website) &#x200B;](https://jdbc.postgresql.org/download/).
 
 ## Erstellen einer [!DNL Query Service] Verbindung in der [!DNL RStudio]
 
-Nach der Installation von [!DNL RStudio] müssen Sie das RJDBC-Paket installieren. Eine Anleitung zum &quot;[ einer Datenbank über die Befehlszeile](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) finden Sie in der offiziellen POSIT-Dokumentation.
+Nach der Installation von [!DNL RStudio] müssen Sie das RJDBC-Paket installieren. Eine Anleitung zum &quot;[&#x200B; einer Datenbank über die Befehlszeile](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) finden Sie in der offiziellen POSIT-Dokumentation.
 
 Wenn Sie ein Mac-Betriebssystem verwenden, können Sie **[!UICONTROL Tools]** in der Menüleiste und anschließend **[!UICONTROL Pakete installieren]** aus dem Dropdown-Menü auswählen. Wählen Sie alternativ die Registerkarte **[!DNL Packages]** in der RStudio-Benutzeroberfläche aus und klicken Sie auf **[!DNL Install]**.
 
@@ -49,7 +49,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 >
 >In der [[!DNL Query Service] SSL-](./ssl-modes.md) erfahren Sie mehr über die SSL-Unterstützung für Drittanbieterverbindungen zum Abfrage-Service von Adobe Experience Platform und darüber, wie Sie eine Verbindung mit `verify-full` SSL-Modus herstellen.
 
-Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, finden Sie im [ zu Anmeldeinformationen ](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Experience Platform] an und wählen Sie **[!UICONTROL Abfragen]** gefolgt von **[!UICONTROL Anmeldeinformationen]**.
+Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, finden Sie im [&#x200B; zu Anmeldeinformationen &#x200B;](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Experience Platform] an und wählen Sie **[!UICONTROL Abfragen]** gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
 Eine Meldung in der Konsolenausgabe bestätigt die Verbindung zum Abfrage-Service.
 

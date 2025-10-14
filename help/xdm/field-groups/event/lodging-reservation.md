@@ -12,7 +12,7 @@ ht-degree: 7%
 
 # [!UICONTROL Unterkunftsreservierung] Schemafeldgruppe
 
-[!UICONTROL Unterkunftsreservierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , ](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Unterkunftsreservierung zu erfassen.
+[!UICONTROL Unterkunftsreservierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , &#x200B;](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Unterkunftsreservierung zu erfassen.
 
 Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungsdetails] und enthält alle gleichen Felder unter einem einzigen Feld vom Typ „Objekt“, `reservations`. Zusätzlich zu diesen allgemeinen Feldern enthält [!UICONTROL Unterkunftsreservierung] auch `lodgingReservations` Array. Dieses Array von Objekten wird verwendet, um eine oder mehrere Reservierungen mit für die Unterkunft eindeutigen Eigenschaften zu beschreiben.
 
@@ -20,7 +20,7 @@ Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungs
 >
 >In diesem Dokument werden die Details des `lodgingReservations`-Arrays behandelt. Informationen zu den anderen Feldern, die unter dem `reservations` Objekt bereitgestellt werden, finden Sie in der [[!UICONTROL Reservierungsdetails] Feldergruppenreferenz](./reservation-details.md).
 
-![Struktur der ](../../images/field-groups/lodging-reservation/structure.png)
+![Struktur der &#x200B;](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 

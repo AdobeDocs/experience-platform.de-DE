@@ -27,7 +27,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ## Aktualisieren von Konten
 
-Melden Sie sich bei der Benutzeroberfläche von [Experience Platform ](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Wählen Sie **[!UICONTROL Konten]** in der oberen Kopfzeile aus, um vorhandene Konten anzuzeigen.
+Melden Sie sich bei der Benutzeroberfläche von [Experience Platform &#x200B;](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Wählen Sie **[!UICONTROL Konten]** in der oberen Kopfzeile aus, um vorhandene Konten anzuzeigen.
 
 ![Katalog](../../images/tutorials/update/catalog.png)
 

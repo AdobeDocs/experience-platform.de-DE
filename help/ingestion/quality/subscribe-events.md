@@ -13,7 +13,7 @@ ht-degree: 20%
 
 # Benachrichtigungen zur Datenerfassung
 
-Der Prozess der Datenaufnahme in Adobe Experience Platform besteht aus mehreren Schritten. Sobald Sie Datendateien identifiziert haben, die in [!DNL Experience Platform] aufgenommen werden müssen, beginnt der Aufnahmeprozess und jeder Schritt findet nacheinander statt, bis die Daten entweder erfolgreich aufgenommen wurden oder fehlschlagen. Der Aufnahmevorgang kann über die [Batch-Aufnahme-API von Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) über die [!DNL Experience Platform] Benutzeroberfläche initiiert werden.
+Der Prozess der Datenaufnahme in Adobe Experience Platform besteht aus mehreren Schritten. Sobald Sie Datendateien identifiziert haben, die in [!DNL Experience Platform] aufgenommen werden müssen, beginnt der Aufnahmeprozess und jeder Schritt findet nacheinander statt, bis die Daten entweder erfolgreich aufgenommen wurden oder fehlschlagen. Der Aufnahmevorgang kann über die [Batch-Aufnahme-API von Adobe Experience Platform &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) über die [!DNL Experience Platform] Benutzeroberfläche initiiert werden.
 
 Daten, die in [!DNL Experience Platform] geladen werden, müssen mehrere Schritte durchlaufen, um ihr Ziel, den [!DNL Data Lake] oder den [!DNL Real-Time Customer Profile] Datenspeicher zu erreichen. Jeder Schritt umfasst die Verarbeitung der Daten, die Validierung der Daten und dann die Speicherung der Daten, bevor sie an den nächsten Schritt weitergeleitet werden. Je nachdem, wie viele Daten aufgenommen werden, kann dies ein zeitaufwendiger Prozess sein und es besteht immer die Möglichkeit, dass der Prozess aufgrund von Validierungs-, Semantik- oder Verarbeitungsfehlern fehlschlägt. Im Fall eines Fehlers müssen die Datenprobleme behoben werden und dann der gesamte Aufnahmevorgang mit den korrigierten Datendateien neu gestartet werden.
 
@@ -23,7 +23,7 @@ Um die Überwachung des Aufnahmeprozesses zu unterstützen, ermöglicht [!DNL Ex
 
 Um Datenaufnahmebenachrichtigungen zu erhalten, müssen Sie [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) verwenden, um einen Webhook zu Ihrer Experience Platform-Integration zu registrieren.
 
-Im Tutorial [Abonnieren von [!DNL Adobe I/O Event] Benachrichtigungen“ ](../../observability/alerts/subscribe.md) Sie ausführliche Schritte, wie Sie dies tun können.
+Im Tutorial [Abonnieren von [!DNL Adobe I/O Event] Benachrichtigungen“ &#x200B;](../../observability/alerts/subscribe.md) Sie ausführliche Schritte, wie Sie dies tun können.
 
 >[!IMPORTANT]
 >
@@ -71,7 +71,7 @@ Das vollständige Schema für Ereignis-Benachrichtigungen finden Sie im [öffent
 
 ## Nächste Schritte
 
-Nachdem Sie [!DNL Experience Platform]-Benachrichtigungen für Ihr Projekt registriert haben, können Sie die empfangenen Ereignisse in der [!UICONTROL Projektübersicht“ &#x200B;]. Ausführliche Anweisungen zum Nachverfolgen [ Ereignisse finden Sie im Handbuch ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)Nachverfolgen von Adobe I/O Events&quot;.
+Nachdem Sie [!DNL Experience Platform]-Benachrichtigungen für Ihr Projekt registriert haben, können Sie die empfangenen Ereignisse in der [!UICONTROL Projektübersicht“ &#x200B;]. Ausführliche Anweisungen zum Nachverfolgen [&#x200B; Ereignisse finden Sie im Handbuch &#x200B;](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)Nachverfolgen von Adobe I/O Events&quot;.
 
 ## Anhang
 

@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## Stimmt überein mit
 
-Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zu Übereinstimmungsmustern [ regulären Ausdrücken finden Sie ](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) diesem Dokument als boolescher Wert.
+Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zu Übereinstimmungsmustern [&#x200B; regulären Ausdrücken finden Sie &#x200B;](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) diesem Dokument als boolescher Wert.
 
 **Format**
 

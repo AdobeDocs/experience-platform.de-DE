@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Voraussetzungen
 
-Informationen [[!DNL Demandbase Intent]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/data-partners/demandbase.md) „Übersicht“.
+Informationen [[!DNL Demandbase Intent]  Abrufen Ihrer Authentifizierungsdaten finden Sie &#x200B;](../../../../connectors/data-partners/demandbase.md) „Übersicht“.
 
 ## Navigieren im Quellkatalog {#navigate}
 

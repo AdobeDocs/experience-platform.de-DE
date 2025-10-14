@@ -13,8 +13,8 @@ ht-degree: 17%
 
 Mit dem `/rpc/import`-Endpunkt in der [!DNL Schema Registry]-API können Sie Experience-Datenmodell (XDM)-Ressourcen aus generierten Export-Payloads erstellen. Export-Payloads können aus zwei Quellen erstellt werden:
 
-* Der [`/rpc/export`-Endpunkt ](./export.md) Export-Payloads aus vorhandenen XDM-Ressourcen, sodass Sie Ressourcen zwischen Sandboxes freigeben können.
-* Der [`/rpc/csv2schema`-Endpunkt ](./csv-to-schema.md) Export-Payloads aus CSV-Vorlagen.
+* Der [`/rpc/export`-Endpunkt &#x200B;](./export.md) Export-Payloads aus vorhandenen XDM-Ressourcen, sodass Sie Ressourcen zwischen Sandboxes freigeben können.
+* Der [`/rpc/csv2schema`-Endpunkt &#x200B;](./csv-to-schema.md) Export-Payloads aus CSV-Vorlagen.
 
 Nachdem Sie eine Export-Payload erstellt haben, können Sie den `/rpc/import`-Endpunkt verwenden, um die Ressource (und alle abhängigen Ressourcen) in der Sandbox Ihrer Wahl zu generieren.
 

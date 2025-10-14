@@ -19,7 +19,7 @@ Mit Experience Platform können Sie Builds von Tag-Bibliotheken auf einem gesich
 
 >[!NOTE]
 >
->Sie können auch einen Host verwenden, der stattdessen von Adobe verwaltet wird. Weitere Informationen finden Sie im Handbuch zu [von Adobe verwalteten ](./managed-by-adobe-host.md).
+>Sie können auch einen Host verwenden, der stattdessen von Adobe verwaltet wird. Weitere Informationen finden Sie im Handbuch zu [von Adobe verwalteten &#x200B;](./managed-by-adobe-host.md).
 >
 >Informationen zu den Vorteilen und Einschränkungen von Self-Hosting-Bibliotheken finden Sie im [Handbuch zum Self-Hosting](./self-hosting-libraries.md).
 
@@ -33,7 +33,7 @@ Auf Ihrem SFTP-Server muss ein öffentliches/privates Schlüsselpaar installiert
 
 ### Schlüssel verschlüsseln
 
-Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels verwendet. Sie müssen Ihren privaten Schlüssel während des Erstellungsprozesses des SFTP-Hosts angeben. Anweisungen zum Verschlüsseln [ öffentlichen Schlüsseln finden Sie ](../../../api/guides/encrypting-values.md) Abschnitt zum Verschlüsseln von Werten im Reactor-API-Handbuch. Verwenden Sie den GPG-Schlüssel der Produktionsumgebung, sofern Sie nicht wissen, dass Sie einen bestimmten Schlüssel benötigen. Sie können Ihren privaten Schlüssel auf jedem beliebigen Computer verschlüsseln. Sie müssen GPG also nicht auf Ihrem Server installieren, um diesen Schritt abzuschließen.
+Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels verwendet. Sie müssen Ihren privaten Schlüssel während des Erstellungsprozesses des SFTP-Hosts angeben. Anweisungen zum Verschlüsseln [&#x200B; öffentlichen Schlüsseln finden Sie &#x200B;](../../../api/guides/encrypting-values.md) Abschnitt zum Verschlüsseln von Werten im Reactor-API-Handbuch. Verwenden Sie den GPG-Schlüssel der Produktionsumgebung, sofern Sie nicht wissen, dass Sie einen bestimmten Schlüssel benötigen. Sie können Ihren privaten Schlüssel auf jedem beliebigen Computer verschlüsseln. Sie müssen GPG also nicht auf Ihrem Server installieren, um diesen Schritt abzuschließen.
 
 ### Auf die Zulassungsliste setzen Experience Platforms-IP-Adressen
 
@@ -67,12 +67,12 @@ Das Dialogfeld wird erweitert und enthält zusätzliche Konfigurationsoptionen f
 
 | Konfigurationsfeld | Beschreibung |
 | --- | --- |
-| [!UICONTROL Verwenden Sie keine Symlinks] | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf Bibliotheks-[ (Builds](../builds.md) zu verweisen, die auf dem Server gespeichert werden. Nicht alle Server unterstützen jedoch die Verwendung von Symlinks. Wenn diese Option ausgewählt ist, verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
+| [!UICONTROL Verwenden Sie keine Symlinks] | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf Bibliotheks-[&#x200B; (Builds](../builds.md) zu verweisen, die auf dem Server gespeichert werden. Nicht alle Server unterstützen jedoch die Verwendung von Symlinks. Wenn diese Option ausgewählt ist, verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
 | [!UICONTROL SFTP-Server-URL] | Der URL-Basispfad für Ihren Server. |
 | [!UICONTROL Pfad] | Der Pfad, der an die Basis-Server-URL für diesen Host angehängt werden soll. |
 | [!UICONTROL Port] | Der Port muss einer der folgenden sein:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Als Best Practice im Hinblick auf die Sicherheit beschränkt Adobe die Anzahl der Ports, die für den ausgehenden Datenverkehr verwendet werden können. Die ausgewählten Ports werden in der Regel über Unternehmens-Firewalls zugelassen und enthalten aus Gründen der Flexibilität einige Bereiche. |
 | [!UICONTROL Benutzername] | Der Benutzername, der beim Zugriff auf den Server verwendet wird. |
-| [!UICONTROL Verschlüsselter privater Schlüssel] | Der verschlüsselte private Schlüssel, den Sie in einem [ Schritt erstellt ](#access-key). |
+| [!UICONTROL Verschlüsselter privater Schlüssel] | Der verschlüsselte private Schlüssel, den Sie in einem [&#x200B; Schritt erstellt &#x200B;](#access-key). |
 
 Wählen Sie **[!UICONTROL Speichern]**, um den Host mit der ausgewählten Konfiguration zu erstellen.
 
@@ -82,4 +82,4 @@ Wenn Sie **[!UICONTROL Speichern]** auswählen, werden die Verbindung und die M�
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie einen selbst gehosteten SFTP-Server für die Verwendung in Tags einrichten. Sobald der Host eingerichtet wurde, können Sie ihn mit einer oder mehreren Ihrer [Umgebungen) verknüpfen, ](../environments.md) Tag-Bibliotheken zu veröffentlichen. Weitere Informationen zum allgemeinen Prozess der Aktivierung von Tag-Funktionen in Ihren Web- oder mobilen Eigenschaften finden Sie in der [Publishing-Übersicht](../overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie einen selbst gehosteten SFTP-Server für die Verwendung in Tags einrichten. Sobald der Host eingerichtet wurde, können Sie ihn mit einer oder mehreren Ihrer [Umgebungen) verknüpfen, &#x200B;](../environments.md) Tag-Bibliotheken zu veröffentlichen. Weitere Informationen zum allgemeinen Prozess der Aktivierung von Tag-Funktionen in Ihren Web- oder mobilen Eigenschaften finden Sie in der [Publishing-Übersicht](../overview.md).

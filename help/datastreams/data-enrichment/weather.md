@@ -62,7 +62,7 @@ Die Liste der Felder, die Sie zuordnen können, finden Sie auf der Seite [Wetter
 
 ### Adobe Customer Journey Analytics {#cja}
 
-In [!DNL Adobe Customer Journey Analytics] sind die Wetterdaten in dem Datensatz verfügbar, der im Datenstrom angegeben ist. Solange die Wetterattribute [zu Ihrem Schema hinzugefügt) ](#prerequisites-prerequisites), können sie in [!DNL Customer Journey Analytics] [zu einer Datenansicht ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=de).
+In [!DNL Adobe Customer Journey Analytics] sind die Wetterdaten in dem Datensatz verfügbar, der im Datenstrom angegeben ist. Solange die Wetterattribute [zu Ihrem Schema hinzugefügt) &#x200B;](#prerequisites-prerequisites), können sie in [!DNL Customer Journey Analytics] [zu einer Datenansicht &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=de).
 
 ### Real-Time Customer Data Platform {#rtcdp}
 

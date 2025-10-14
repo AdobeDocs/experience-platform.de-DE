@@ -26,7 +26,7 @@ Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Sch
 
 Das Filtersymbol (![Filtersymbol Bild](/help/images/icons/filter.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzugrenzen. Ressourcenfilter sind für Schemata und Beziehungen auf den Registerkarten **[!UICONTROL Durchsuchen]** und **[!UICONTROL Beziehungen]** verfügbar.
 
-Auf der Registerkarte [!UICONTROL Durchsuchen] des Arbeitsbereichs [!UICONTROL Schemata] können Sie Ihren Schemabestand filtern. Verwenden Sie den Umschalter **[!UICONTROL Im Profil enthalten]**, um nur Schemata anzuzeigen, die für die Verwendung im [Echtzeit-Kundenprofil“ aktiviert ](../../profile/home.md). Verwenden Sie den Umschalter **[!UICONTROL Ad-hoc-]** anzeigen“, um die Liste der Schemata zu filtern, die mit Feldern mit Namespace erstellt wurden und nur von einem einzigen Datensatz verwendet werden können.
+Auf der Registerkarte [!UICONTROL Durchsuchen] des Arbeitsbereichs [!UICONTROL Schemata] können Sie Ihren Schemabestand filtern. Verwenden Sie den Umschalter **[!UICONTROL Im Profil enthalten]**, um nur Schemata anzuzeigen, die für die Verwendung im [Echtzeit-Kundenprofil“ aktiviert &#x200B;](../../profile/home.md). Verwenden Sie den Umschalter **[!UICONTROL Ad-hoc-]** anzeigen“, um die Liste der Schemata zu filtern, die mit Feldern mit Namespace erstellt wurden und nur von einem einzigen Datensatz verwendet werden können.
 
 ![Die Registerkarte [!UICONTROL Schemata] im Arbeitsbereich [!UICONTROL Durchsuchen] mit hervorgehobenem Filterbedienfeld.](../images/ui/explore/filters.png)
 
@@ -67,7 +67,7 @@ Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Felder
 
 ![Der Schema-Editor mit hervorgehobenem Vorhängeschloss-Symbol](../images/ui/explore/schema-editor-padlock-icon.png)
 
-Eine Anleitung [ Sie in der Dokumentation zum Hinzufügen benutzerdefinierter Felder ](./resources/schemas.md) Standardfeldgruppen . Eine Standardklasse kann nicht bearbeitet werden.
+Eine Anleitung [&#x200B; Sie in der Dokumentation zum Hinzufügen benutzerdefinierter Felder &#x200B;](./resources/schemas.md) Standardfeldgruppen . Eine Standardklasse kann nicht bearbeitet werden.
 
 ### Systemgenerierte Felder {#system-fields}
 
@@ -101,13 +101,13 @@ Wenn es sich bei dem überprüften Feld um ein Aufzählungsfeld handelt, zeigt d
 
 Beim Überprüfen von Schemata, die Identitätsfelder enthalten, werden diese Felder in der linken Leiste unter der Klasse oder Feldergruppe aufgeführt, die sie für das Schema bereitstellt. Wählen Sie den Namen des Identitätsfelds in der linken Leiste aus, um das Feld auf der Arbeitsfläche anzuzeigen, unabhängig davon, wie tief es verschachtelt ist.
 
-Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol) ](/help/images/icons/identity-service.png). Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen anzeigen, z. B. den [Identity-Namespace](../../identity-service/features/namespaces.md) und ob das Feld die primäre Identität für das Schema ist oder nicht.
+Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol) &#x200B;](/help/images/icons/identity-service.png). Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen anzeigen, z. B. den [Identity-Namespace](../../identity-service/features/namespaces.md) und ob das Feld die primäre Identität für das Schema ist oder nicht.
 
 ![Der Schema-Editor mit der hervorgehobenen Identität des Schemas in der linken Leiste, dem hervorgehobenen Feld im Schemadiagramm und dem hervorgehobenen Identity-Namespace in den Feldeigenschaften.](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->Weitere Informationen zu Identitätsfeldern und [ Beziehung zu nachgelagerten Experience Platform](./fields/identity.md)Services finden Sie im Handbuch unter „Definieren von Identitätsfeldern“.
+>Weitere Informationen zu Identitätsfeldern und [&#x200B; Beziehung zu nachgelagerten Experience Platform](./fields/identity.md)Services finden Sie im Handbuch unter „Definieren von Identitätsfeldern“.
 
 ### Beziehungsfelder {#relationship}
 
@@ -119,7 +119,7 @@ Um den Identity-Namespace der primären Identität des Referenzschemas anzuzeige
 
 ![Das Dialogfeld „Beziehung bearbeiten“ mit den angezeigten Beziehungsparametern.](../images/ui/explore/edit-relationship-dialog.png)
 
-Weitere Informationen zur Verwendung von [ in XDM-Schemata finden Sie ](../tutorials/relationship-ui.md) Tutorial zum Erstellen einer Beziehung in der Benutzeroberfläche .
+Weitere Informationen zur Verwendung von [&#x200B; in XDM-Schemata finden Sie &#x200B;](../tutorials/relationship-ui.md) Tutorial zum Erstellen einer Beziehung in der Benutzeroberfläche .
 
 ## Nächste Schritte
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Definieren von Beziehungsfeldern in der Benutzeroberfläche
 
-Im Experience-Datenmodell (XDM) ist [Vereinigungsschema](../../schema/composition.md#union) eine einheitliche Ansicht aller Schemata derselben Klasse, die auch für das Echtzeit[Kundenprofil aktiviert ](../../../profile/home.md). Das Vereinigungsschema wird vom Profil genutzt, um aus unterschiedlichen Erlebnisdaten eine vollständige Darstellung eines Kunden zu erstellen.
+Im Experience-Datenmodell (XDM) ist [Vereinigungsschema](../../schema/composition.md#union) eine einheitliche Ansicht aller Schemata derselben Klasse, die auch für das Echtzeit[Kundenprofil aktiviert &#x200B;](../../../profile/home.md). Das Vereinigungsschema wird vom Profil genutzt, um aus unterschiedlichen Erlebnisdaten eine vollständige Darstellung eines Kunden zu erstellen.
 
 In einigen Fällen nehmen Sie Daten auf, die nicht unbedingt Teil eines Profils sind, aber trotzdem mit dem Profil zusammenhängen. Ein Beispiel für diese Art von Daten wäre das Feld „Lieblingshotel“ für einen Kunden. Da die Attribute des Lieblingshotels einer Person nicht Attribute der Person selbst sind, wird ein Hotel am besten durch ein separates Schema dargestellt, das auf einer benutzerdefinierten Klasse anstatt auf [!DNL XDM Individual Profile] basiert.
 

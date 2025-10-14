@@ -47,4 +47,4 @@ Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandb
 
 ## Nächste Schritte
 
-Um Aufrufe mit der [!DNL Segmentation Service]-API durchzuführen, wählen Sie entweder über die linke Navigation oder im [Entwicklerhandbuch - Übersicht“ eines der verfügbaren Handbücher zu Endpunkten ](./overview.md)
+Um Aufrufe mit der [!DNL Segmentation Service]-API durchzuführen, wählen Sie entweder über die linke Navigation oder im [Entwicklerhandbuch - Übersicht“ eines der verfügbaren Handbücher zu Endpunkten &#x200B;](./overview.md)

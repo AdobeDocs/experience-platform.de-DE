@@ -22,7 +22,7 @@ Auf **[!UICONTROL Registerkarte]** Monitoring“ in der Datenerfassungs-Benutzer
 
 ## Voraussetzungen
 
-In diesem Handbuch wird davon ausgegangen, dass Sie die Ereignisweiterleitung erworben haben und dass Sie wissen, wie die Ereignisweiterleitung funktioniert. Weitere Informationen finden [ in der Übersicht ](./overview.md) die Ereignisweiterleitung .
+In diesem Handbuch wird davon ausgegangen, dass Sie die Ereignisweiterleitung erworben haben und dass Sie wissen, wie die Ereignisweiterleitung funktioniert. Weitere Informationen finden [&#x200B; in der Übersicht &#x200B;](./overview.md) die Ereignisweiterleitung .
 
 ## Videoüberblick
 

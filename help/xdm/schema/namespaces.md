@@ -15,13 +15,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->In XDM wird der Namespace (das Thema dieser Seite) verwendet, um Felder in einem Schema zu unterscheiden. Dies unterscheidet sich vom Konzept des Identity-Namespace in Identity Service, bei dem der Namespace zur Unterscheidung von Identitätswerten verwendet wird. Weitere Informationen finden Sie in der Dokumentation [Namespace im Identity ](../../identity-service/features/namespaces.md)).
+>In XDM wird der Namespace (das Thema dieser Seite) verwendet, um Felder in einem Schema zu unterscheiden. Dies unterscheidet sich vom Konzept des Identity-Namespace in Identity Service, bei dem der Namespace zur Unterscheidung von Identitätswerten verwendet wird. Weitere Informationen finden Sie in der Dokumentation [Namespace im Identity &#x200B;](../../identity-service/features/namespaces.md)).
 
-Alle Felder in Experience-Datenmodell (XDM)-Schemata haben einen zugehörigen Namespace. Mit diesen Namespaces können Sie Ihre Schemata erweitern und Feldkollisionen verhindern, wenn verschiedene Schemakomponenten zusammengeführt werden. Dieses Dokument bietet einen Überblick über Namespaces in XDM und darüber, wie sie in der [Schema Registry-API) dargestellt ](../api/overview.md).
+Alle Felder in Experience-Datenmodell (XDM)-Schemata haben einen zugehörigen Namespace. Mit diesen Namespaces können Sie Ihre Schemata erweitern und Feldkollisionen verhindern, wenn verschiedene Schemakomponenten zusammengeführt werden. Dieses Dokument bietet einen Überblick über Namespaces in XDM und darüber, wie sie in der [Schema Registry-API) dargestellt &#x200B;](../api/overview.md).
 
 Mit dem Namespace können Sie ein Feld in einem Namespace so definieren, dass es etwas Anderes bedeutet als dasselbe Feld in einem anderen Namespace. In der Praxis zeigt der Namespace eines Felds an, wer das Feld erstellt hat (z. B. Standard-XDM (Adobe), ein Anbieter oder Ihr Unternehmen).
 
-Nehmen wir zum Beispiel ein XDM-Schema, das die Feldergruppe [[!UICONTROL Persönliche Kontaktdaten] verwendet](../field-groups/profile/demographic-details.md) die über ein `mobilePhone` verfügt, das im `xdm`-Namespace vorhanden ist. Im selben Schema können Sie auch ein separates `mobilePhone` unter einem anderen Namespace (Ihrer [-ID) ](../api/getting-started.md#know-your-tenant_id). Beide Felder können nebeneinander existieren, während sie unterschiedliche zugrunde liegende Bedeutungen oder Einschränkungen haben.
+Nehmen wir zum Beispiel ein XDM-Schema, das die Feldergruppe [[!UICONTROL Persönliche Kontaktdaten] verwendet](../field-groups/profile/demographic-details.md) die über ein `mobilePhone` verfügt, das im `xdm`-Namespace vorhanden ist. Im selben Schema können Sie auch ein separates `mobilePhone` unter einem anderen Namespace (Ihrer [-ID) &#x200B;](../api/getting-started.md#know-your-tenant_id). Beide Felder können nebeneinander existieren, während sie unterschiedliche zugrunde liegende Bedeutungen oder Einschränkungen haben.
 
 ## Namespace-Syntax
 
@@ -105,7 +105,7 @@ Beispielsweise wird das standardmäßige XDM-`repo:createdDate` in `_repo.create
 }
 ```
 
-Felder, die den `xdm`-Namespace verwenden, werden als Stammfelder unter `properties` angezeigt und legen das `xdm:` Präfix ab, das in der ([ XDM-Syntax) ](#standard) würde. Beispielsweise wird `xdm:sku` stattdessen einfach als `sku` aufgeführt.
+Felder, die den `xdm`-Namespace verwenden, werden als Stammfelder unter `properties` angezeigt und legen das `xdm:` Präfix ab, das in der ([&#x200B; XDM-Syntax) &#x200B;](#standard) würde. Beispielsweise wird `xdm:sku` stattdessen einfach als `sku` aufgeführt.
 
 Die folgende JSON-Datei zeigt, wie das Beispiel der Standard-XDM-Syntax oben in den Kompatibilitätsmodus übersetzt wird.
 

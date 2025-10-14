@@ -16,7 +16,7 @@ ht-degree: 30%
 >
 >Die [!DNL AWS Redshift] ist im Quellkatalog für Benutzende verfügbar, die Real-Time Customer Data Platform Ultimate erworben haben.
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL AWS Redshift]-Quellkonto mithilfe der [[!DNL Flow Service] API) mit Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL AWS Redshift]-Quellkonto mithilfe der [[!DNL Flow Service] API) mit Adobe Experience Platform &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Verbinden von [!DNL AWS Redshift] mit Experience Platform auf Azure {#azure}
 

@@ -63,7 +63,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -85,7 +85,7 @@ Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die fo
 
 * Ihr [!DNL Facebook]-Benutzerkonto muss vollen Zugriff auf die [!DNL Facebook Business Account] haben, der das von Ihnen verwendete Werbekonto gehört.
 * Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Adobe Experience Cloud Das Geschäftskonto **&#x200B;**&#x200B;muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
+* Adobe Experience Cloud Das Geschäftskonto **&#x200B;**&#x200B;muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [&#x200B; in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
 
   >[!IMPORTANT]
   >
@@ -145,7 +145,7 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 
 ## Verwenden benutzerdefinierter Namespaces {#custom-namespaces}
 
-Bevor Sie den `Extern_ID`-Namespace zum Senden von Daten an [!DNL Facebook] verwenden können, müssen Sie Ihre eigenen Kennungen mithilfe von [!DNL Facebook Pixel] synchronisieren. Detaillierte Informationen finden [ in der offiziellen ](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) von Facebook.
+Bevor Sie den `Extern_ID`-Namespace zum Senden von Daten an [!DNL Facebook] verwenden können, müssen Sie Ihre eigenen Kennungen mithilfe von [!DNL Facebook Pixel] synchronisieren. Detaillierte Informationen finden [&#x200B; in der offiziellen &#x200B;](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) von Facebook.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -255,7 +255,7 @@ Auswahl der Quellfelder:
 * Wählen Sie den `Email` Namespace als Quellidentität aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht in einen Hash-Wert umgewandelt werden.
 * Wählen Sie den `Email_LC_SHA256`-Namespace als Quellidentität aus, wenn Sie die E-Mail-Adressen von Kunden bei der Datenaufnahme in [!DNL Experience Platform] gemäß den [!DNL Facebook]E[Mail-Hash-Anforderungen](#email-hashing-requirements) gehasht haben.
 * Wählen Sie den `PHONE_E.164`-Namespace als Quellidentität aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Experience Platform] werden die Telefonnummern hashen, um [!DNL Facebook] Anforderungen zu erfüllen.
-* Wählen Sie den `Phone_SHA256`-Namespace als Quellidentität aus, wenn Sie Telefonnummern bei der Datenaufnahme in [!DNL Experience Platform] gemäß [!DNL Facebook] Anforderungen zum Hashing [ Telefonnummern ](#phone-number-hashing-requirements).
+* Wählen Sie den `Phone_SHA256`-Namespace als Quellidentität aus, wenn Sie Telefonnummern bei der Datenaufnahme in [!DNL Experience Platform] gemäß [!DNL Facebook] Anforderungen zum Hashing [&#x200B; Telefonnummern &#x200B;](#phone-number-hashing-requirements).
 * Wählen Sie den `IDFA` Namespace als Quellidentität aus, wenn Ihre Daten aus [!DNL Apple] Geräte-IDs bestehen.
 * Wählen Sie den `GAID` Namespace als Quellidentität aus, wenn Ihre Daten aus [!DNL Android] Geräte-IDs bestehen.
 * Wählen Sie den `Custom` Namespace als Quellidentität aus, wenn Ihre Daten aus anderen Kennungstypen bestehen.

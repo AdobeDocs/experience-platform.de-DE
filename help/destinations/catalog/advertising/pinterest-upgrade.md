@@ -75,9 +75,9 @@ Ja, siehe unten:
 
 -->
 
-**Bis zum 15. Dezember 2023**: <span class="preview">Kundenaktion 1</span>. Sie müssen sich erneut bei Pinterest authentifizieren, damit die neue Karte mit Pinterest verbunden ist. Vollständige Anweisungen finden Sie [ (diesem Abschnitt](#reauthenticate).
+**Bis zum 15. Dezember 2023**: <span class="preview">Kundenaktion 1</span>. Sie müssen sich erneut bei Pinterest authentifizieren, damit die neue Karte mit Pinterest verbunden ist. Vollständige Anweisungen finden Sie [&#x200B; (diesem Abschnitt](#reauthenticate).
 
-<span class="preview">Kundenaktion 2</span>.Dann müssen Sie die Datenflüsse in der neuen Karte aktivieren. Vollständige Anweisungen finden Sie [ (diesem Abschnitt](#disable-old-enable-new-flows).
+<span class="preview">Kundenaktion 2</span>.Dann müssen Sie die Datenflüsse in der neuen Karte aktivieren. Vollständige Anweisungen finden Sie [&#x200B; (diesem Abschnitt](#disable-old-enable-new-flows).
 
 <!--
 

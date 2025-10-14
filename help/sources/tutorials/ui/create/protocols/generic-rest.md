@@ -14,7 +14,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
-> Die [!DNL Generic REST API]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+> Die [!DNL Generic REST API]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Generic REST API]-Quell-Connectors mithilfe der Benutzeroberfläche von Adobe Experience Platform.
 

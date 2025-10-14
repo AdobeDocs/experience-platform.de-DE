@@ -46,11 +46,11 @@ Eine Datensatzgültigkeit ist eine zeitverzögerte Aktion zum Löschen eines Dat
 >
 >Löschvorgänge von Einträgen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie dürfen **nicht** für Anfragen zu den Rechten der betroffenen Personen (Compliance) verwendet werden, da sie sich auf Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) beziehen. Verwenden Sie stattdessen [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) für alle Compliance-Anwendungsfälle.
 
-Mit der Data Hygiene API können Sie alle Datensätze löschen, die mit einer Identität in einem oder allen Datensätzen verknüpft sind. Alle Datenlebenszyklusaufgaben, die Identitäten löschen, werden durch ein Konstrukt repräsentiert, das als Arbeitsauftrag bezeichnet wird. Weitere Informationen [ Arbeiten mit Datensatzlöschungen in der API finden ](./workorder.md) im Handbuch für Arbeitsauftrags-Endpunkte .
+Mit der Data Hygiene API können Sie alle Datensätze löschen, die mit einer Identität in einem oder allen Datensätzen verknüpft sind. Alle Datenlebenszyklusaufgaben, die Identitäten löschen, werden durch ein Konstrukt repräsentiert, das als Arbeitsauftrag bezeichnet wird. Weitere Informationen [&#x200B; Arbeiten mit Datensatzlöschungen in der API finden &#x200B;](./workorder.md) im Handbuch für Arbeitsauftrags-Endpunkte .
 
 ## Kontingent
 
-Ihr Unternehmen ist auf ein vorab festgelegtes monatliches Vorgangskontingent für jeden Typ von Datenlebenszyklusvorgang beschränkt, das je nach Lizenzierung variieren kann. Einzelheiten zur Anzeige [ aktuellen Kontingent-Status Ihrer Datenlebenszyklusprozesse finden Sie ](./quota.md) „Handbuch für Kontingentendpunkte“.
+Ihr Unternehmen ist auf ein vorab festgelegtes monatliches Vorgangskontingent für jeden Typ von Datenlebenszyklusvorgang beschränkt, das je nach Lizenzierung variieren kann. Einzelheiten zur Anzeige [&#x200B; aktuellen Kontingent-Status Ihrer Datenlebenszyklusprozesse finden Sie &#x200B;](./quota.md) „Handbuch für Kontingentendpunkte“.
 
 ## Nächste Schritte
 

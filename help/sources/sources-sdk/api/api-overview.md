@@ -24,7 +24,7 @@ Der erste Schritt beim Konfigurieren einer neuen Quelle besteht darin, eine neue
 
 Verbindungsspezifikationen geben die Connector-Eigenschaften einer Quelle zurück. Sie enthalten Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen und eine feste Verbindungsspezifikations-ID, die einer bestimmten Quelle zugewiesen wird. Verbindungsspezifikationen sind mandanten- und organisationsunabhängig. Eine typische Verbindungsspezifikation enthält grundlegende Informationen zu einer bestimmten Quelle sowie drei verschiedene Abschnitte: `authSpec`, `sourceSpec` und `exploreSpec`.
 
-Detaillierte Anweisungen finden Sie im Handbuch unter [Erstellen einer neuen Verbindungsspezifikation](./create.md). Informationen zu den Eigenschaften und Werten, die für eine Verbindungsspezifikation verwendet werden, einschließlich Details zum Konfigurieren der Authentifizierungs-, Quell- und Erkundungsspezifikationen, finden Sie [ Dokument „Konfigurationsoptionen](../config/config.md).
+Detaillierte Anweisungen finden Sie im Handbuch unter [Erstellen einer neuen Verbindungsspezifikation](./create.md). Informationen zu den Eigenschaften und Werten, die für eine Verbindungsspezifikation verwendet werden, einschließlich Details zum Konfigurieren der Authentifizierungs-, Quell- und Erkundungsspezifikationen, finden Sie [&#x200B; Dokument „Konfigurationsoptionen](../config/config.md).
 
 ## Aktualisieren von Flussspezifikationen
 
@@ -36,11 +36,11 @@ Detaillierte Anweisungen finden Sie im Handbuch zum [Aktualisieren von Flussspez
 
 ## Aktualisieren der Verbindungsspezifikation
 
-Sie können Ihre Verbindungsspezifikation aktualisieren, indem Sie eine PUT-Anfrage an die [!DNL Flow Service]-API senden. Weitere Informationen finden Sie in [ Anleitung zum Aktualisieren ](./update-connection-specs.md) Verbindungsspezifikationen .
+Sie können Ihre Verbindungsspezifikation aktualisieren, indem Sie eine PUT-Anfrage an die [!DNL Flow Service]-API senden. Weitere Informationen finden Sie in [&#x200B; Anleitung zum Aktualisieren &#x200B;](./update-connection-specs.md) Verbindungsspezifikationen .
 
 ## Übermitteln Ihrer Quelle
 
-Um Ihre Quelle zur Integration in Experience Platform zu übermitteln, müssen Sie zunächst den gesamten [!DNL Flow Service]-API-Workflow für Quellen abschließen, um sicherzustellen, dass Ihre Quelle erfolgreich funktioniert. Wenn Ihre Quelle erfolgreich ausgeführt wird, können Sie fortfahren und sich an Ihren Adobe-Support-Mitarbeiter wenden, um sie zu überprüfen und zu bewerben. Weitere Informationen finden Sie in [ Anleitung zum Testen und Senden ](./submit.md) Quelle .
+Um Ihre Quelle zur Integration in Experience Platform zu übermitteln, müssen Sie zunächst den gesamten [!DNL Flow Service]-API-Workflow für Quellen abschließen, um sicherzustellen, dass Ihre Quelle erfolgreich funktioniert. Wenn Ihre Quelle erfolgreich ausgeführt wird, können Sie fortfahren und sich an Ihren Adobe-Support-Mitarbeiter wenden, um sie zu überprüfen und zu bewerben. Weitere Informationen finden Sie in [&#x200B; Anleitung zum Testen und Senden &#x200B;](./submit.md) Quelle .
 
 ## Nächste Schritte
 

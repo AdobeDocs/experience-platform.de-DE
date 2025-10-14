@@ -31,7 +31,7 @@ Attributions-KI erfordert, dass Datensätze dem Schema Consumer Experience Event
 
 >[!NOTE]
 >
->Wenn Sie die Rohdaten der Scores nicht herunterladen müssen, können Sie diesen Schritt überspringen und mit den [nächsten Schritten“ ](#next-steps).
+>Wenn Sie die Rohdaten der Scores nicht herunterladen müssen, können Sie diesen Schritt überspringen und mit den [nächsten Schritten“ &#x200B;](#next-steps).
 
 Der Download von Attribution AI-Scores erfolgt über eine Kombination aus API-Aufrufen. Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 

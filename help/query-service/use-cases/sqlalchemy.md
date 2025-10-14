@@ -59,7 +59,7 @@ password = quote('''
 
 >[!NOTE]
 >
->Das Kennwort für die Verbindung von [!DNL SQLAlchemy] mit Experience Platform läuft ab, wenn Sie ablaufende Anmeldeinformationen verwenden. Weitere Informationen finden [ im Abschnitt ](#credentials) .
+>Das Kennwort für die Verbindung von [!DNL SQLAlchemy] mit Experience Platform läuft ab, wenn Sie ablaufende Anmeldeinformationen verwenden. Weitere Informationen finden [&#x200B; im Abschnitt &#x200B;](#credentials) .
 
 ### Erstellen einer Engine-Instanz [#create-engine]
 
@@ -69,7 +69,7 @@ Nachdem die Variablen erstellt wurden, importieren Sie die Funktion `create_engi
 >
 >`create_engine`Gibt eine Instanz einer Engine zurück. Es öffnet jedoch die Verbindung zum Abfrage-Service erst, wenn eine Abfrage aufgerufen wird, für die eine Verbindung erforderlich ist.
 
-SSL muss beim Zugriff auf Experience Platform über Drittanbieter-Clients aktiviert sein. Verwenden Sie als Teil Ihrer Engine die `connect_args` , um zusätzliche Keyword-Argumente einzugeben. Es wird empfohlen, den SSL-Modus auf `require` festzulegen. Weitere Informationen zu den akzeptierten Werten finden [ in ](../clients/ssl-modes.md) Dokumentation zu SSL-Modi .
+SSL muss beim Zugriff auf Experience Platform über Drittanbieter-Clients aktiviert sein. Verwenden Sie als Teil Ihrer Engine die `connect_args` , um zusätzliche Keyword-Argumente einzugeben. Es wird empfohlen, den SSL-Modus auf `require` festzulegen. Weitere Informationen zu den akzeptierten Werten finden [&#x200B; in &#x200B;](../clients/ssl-modes.md) Dokumentation zu SSL-Modi .
 
 Im folgenden Beispiel wird der [!DNL Python] Code angezeigt, der zum Initialisieren einer Engine und einer Verbindungszeichenfolge erforderlich ist.
 
@@ -89,7 +89,7 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 
 >[!NOTE]
 >
->Das Kennwort für die Verbindung von [!DNL SQLAlchemy] mit Experience Platform läuft ab, wenn Sie ablaufende Anmeldeinformationen verwenden. Weitere Informationen finden [ im Abschnitt ](#credentials) .
+>Das Kennwort für die Verbindung von [!DNL SQLAlchemy] mit Experience Platform läuft ab, wenn Sie ablaufende Anmeldeinformationen verwenden. Weitere Informationen finden [&#x200B; im Abschnitt &#x200B;](#credentials) .
 
 Sie können jetzt Experience Platform-Daten mit [!DNL Python] abfragen. Das folgende Beispiel gibt ein Array von Query Service-Tabellennamen zurück.
 

@@ -27,7 +27,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Der `DELETE /batches/{ID}`-Endpunkt wird nicht mehr unterstützt. Um einen Batch zu löschen, sollten Sie die [Batch-Aufnahme-API“ ](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>Der `DELETE /batches/{ID}`-Endpunkt wird nicht mehr unterstützt. Um einen Batch zu löschen, sollten Sie die [Batch-Aufnahme-API“ &#x200B;](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parameter | Beschreibung |
 | --- | --- |

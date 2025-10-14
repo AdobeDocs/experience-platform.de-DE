@@ -48,7 +48,7 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 
 ![Der Aktionstyp [!UICONTROL Daten an Kinesis-Datenstrom senden] wird für eine Regel in der Datenerfassungs-Benutzeroberfläche ausgewählt.](../../../images/extensions/server/aws/select-action-type.png)
 
-Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen dazu an, wie die Daten gesendet werden sollen. Insbesondere müssen Sie den verschiedenen Eigenschaften[ die Ihre [!DNL Event Hub]-Konfiguration repräsentieren](../../../ui/managing-resources/data-elements.md) „Datenelemente“ zuweisen.
+Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen dazu an, wie die Daten gesendet werden sollen. Insbesondere müssen Sie den verschiedenen Eigenschaften[&#x200B; die Ihre [!DNL Event Hub]-Konfiguration repräsentieren](../../../ui/managing-resources/data-elements.md) „Datenelemente“ zuweisen.
 
 ![Die Konfigurationsoptionen für den Aktionstyp [!UICONTROL Daten an Kinesis-Datenstrom senden] werden in der Benutzeroberfläche angezeigt.](../../../images/extensions/server/aws/data-stream-details.png)
 

@@ -17,13 +17,13 @@ In diesem Handbuch werden die Best Practices für die effiziente Verarbeitung vo
 
 ## Erste Schritte {#getting-started}
 
-Dieses Handbuch setzt Grundkenntnisse des [Privacy Service ](./home.md) und dessen Verwaltung von Zugriffs- und Löschanfragen von betroffenen Personen (Kunden) in allen Adobe Experience Cloud-Programmen voraus. Es wird außerdem empfohlen, das Handbuch unter [Erstellen einer Datenschutzanfrage in der Benutzeroberfläche“ oder &quot;](./ui/user-guide.md#create-a-new-privacy-job-request)&quot; [API“ ](./api/overview.md) lesen und zu verstehen, wie diese Vorgänge programmgesteuert ausgeführt werden.
+Dieses Handbuch setzt Grundkenntnisse des [Privacy Service &#x200B;](./home.md) und dessen Verwaltung von Zugriffs- und Löschanfragen von betroffenen Personen (Kunden) in allen Adobe Experience Cloud-Programmen voraus. Es wird außerdem empfohlen, das Handbuch unter [Erstellen einer Datenschutzanfrage in der Benutzeroberfläche“ oder &quot;](./ui/user-guide.md#create-a-new-privacy-job-request)&quot; [API“ &#x200B;](./api/overview.md) lesen und zu verstehen, wie diese Vorgänge programmgesteuert ausgeführt werden.
 
 ## Voraussetzungen {#prerequisites}
 
 Der Zugriff auf den Adobe Experience Platform Privacy Service wird über granulare rollenbasierte Berechtigungen in Adobe Admin Console gesteuert. Sie benötigen die entsprechenden Berechtigungen in einem Produktprofil, um bestimmte Funktionen in der Privacy Service-Benutzeroberfläche und -API verwenden zu können. Wenden Sie sich an Ihren Systemadministrator, wenn Sie zusätzliche Berechtigungen benötigen.
 
-Administratoren können das Handbuch unter [Verwalten von Berechtigungen für Privacy Service ](./permissions.md) für weitere Informationen lesen.
+Administratoren können das Handbuch unter [Verwalten von Berechtigungen für Privacy Service &#x200B;](./permissions.md) für weitere Informationen lesen.
 
 ## Richtlinien zur Erstellung von Datenschutzaufträgen {#creation-guidelines}
 
@@ -47,7 +47,7 @@ Um Datenschutzaufträge effektiv zu überwachen und ihren Status zu überprüfen
 - **Webhook-Einrichtung:** Richten Sie Webhooks ein, um Push-Benachrichtigungen zu erhalten, wenn Statusänderungen für gesendete Aufträge auftreten. Dies hilft bei der Echtzeitüberwachung.
 - **Benachrichtigungen:** Verwenden Sie Benachrichtigungen sowohl auf Auftrags- als auch auf Produktebene, um den Fortschritt der Anfragen zu überwachen.
 
-Privacy Service Anleitungen zum Einrichten einer Ereignisregistrierung für [-Benachrichtigungen und zur Interpretation ](./privacy-events.md) Benachrichtigungs-Payloads finden Sie in der Dokumentation unter Abonnieren von Privacy Service-&quot;.
+Privacy Service Anleitungen zum Einrichten einer Ereignisregistrierung für [-Benachrichtigungen und zur Interpretation &#x200B;](./privacy-events.md) Benachrichtigungs-Payloads finden Sie in der Dokumentation unter Abonnieren von Privacy Service-&quot;.
 
 ### Alle Aufträge basierend auf Filtern abrufen {#retrieve-filtered-responses-for-all-jobs}
 
@@ -59,7 +59,7 @@ Eine GET-Anfrage an den `/jobs`-Endpunkt dient am besten zum Erfassen oder Vergl
 
 - **Abfrageparameter:** Verwenden Sie spezifische Filter, um Ihre Ergebnisse einzugrenzen, z. B.: Datenbereiche, Regulierungstypen und Status (Verarbeitung, Abgeschlossen usw.).
 
-Sie können eine Liste aller aktuellen Datenschutzaufträge in Ihrer Organisation über die Privacy Service-Benutzeroberfläche anzeigen. Informationen [ Filtern der Vorgangsanfrageliste finden Sie unter „Verwalten von Datenschutzaufträgen ](./ui/user-guide.md#job-requests) der Benutzeroberfläche“. Alternativ finden Sie weitere Informationen in der Dokumentation [Verwendung des /job-Endpunkts in der Privacy Service-API](./api/privacy-jobs.md).
+Sie können eine Liste aller aktuellen Datenschutzaufträge in Ihrer Organisation über die Privacy Service-Benutzeroberfläche anzeigen. Informationen [&#x200B; Filtern der Vorgangsanfrageliste finden Sie unter „Verwalten von Datenschutzaufträgen &#x200B;](./ui/user-guide.md#job-requests) der Benutzeroberfläche“. Alternativ finden Sie weitere Informationen in der Dokumentation [Verwendung des /job-Endpunkts in der Privacy Service-API](./api/privacy-jobs.md).
 
 Die Dokumentation zur Privacy Service-API enthält Details zu [den verfügbaren Abfrageparameterfiltern](https://developer.adobe.com/experience-platform-apis/references/privacy-service/#tag/Privacy-jobs/operation/listPrivacyJobs).
 
@@ -77,7 +77,7 @@ Wenn ein bestimmter Auftrag noch aussteht oder einen Fehler zurückgegeben hat, 
 
 ## Zugriff auf Anfragedaten {#access-request-data}
 
-Wenn Informationen über betroffene Personen angefordert werden, gibt jeder Service Daten in einem Format zurück, das der Art und Weise entspricht, in der sie diese Daten speichern und verwenden. Sobald alle Services die Anfrage abgeschlossen haben, wird in den Auftragsdetails eine ZIP-Archivdatei-URL angegeben, damit diese Daten heruntergeladen werden können. Informationen zum Herunterladen der Ergebnisse des Datenschutzauftrags finden [ im Handbuch zur Fehlerbehebung ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=de#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
+Wenn Informationen über betroffene Personen angefordert werden, gibt jeder Service Daten in einem Format zurück, das der Art und Weise entspricht, in der sie diese Daten speichern und verwenden. Sobald alle Services die Anfrage abgeschlossen haben, wird in den Auftragsdetails eine ZIP-Archivdatei-URL angegeben, damit diese Daten heruntergeladen werden können. Informationen zum Herunterladen der Ergebnisse des Datenschutzauftrags finden [&#x200B; im Handbuch zur Fehlerbehebung &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=de#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
 
 Im Folgenden finden Sie wichtige Hinweise zur Verwaltung des Datenarchivs:
 
@@ -96,8 +96,8 @@ Beim Ausfüllen von Privacy Service-Anfragen sind bestimmte technische Aspekte z
 - **Datenaufbewahrungszeitraum:** Der maximale Lookback-Zeitraum beträgt 60 Tage für jede Gruppe von Aufträgen und die maximale Zeitspanne für eine Abfrage beträgt 30 Tage (vom/bis-Datum).
 - **Gateway-Zeitüberschreitung:** Sie sich vor, dass Ihre Anfrage aus dem Gateway gelöscht werden kann, wenn sie 60 Sekunden überschreitet.
 - **Fehlerbehandlung:** Prüfen Sie Fehlermeldungen sorgfältig und senden Sie Anfragen ggf. erneut. Privacy Service verarbeitet Aufträge nach einem Fehler nicht automatisch neu.
-- **Grundlegendes zu HTTP 429-Fehlern:** Machen Sie sich mit HTTP 429-Fehlermeldungen und den erforderlichen Schritten zur Behebung von Problemen vertraut. HTTP 429-Fehler sind das Ergebnis von „Zu viele Anfragen“. Weitere Informationen [ Beheben des Problems finden ](./troubleshooting-guide.md#common-error-messages) im Abschnitt „Häufige Fehlermeldungen“ des Handbuchs zur Fehlerbehebung .
+- **Grundlegendes zu HTTP 429-Fehlern:** Machen Sie sich mit HTTP 429-Fehlermeldungen und den erforderlichen Schritten zur Behebung von Problemen vertraut. HTTP 429-Fehler sind das Ergebnis von „Zu viele Anfragen“. Weitere Informationen [&#x200B; Beheben des Problems finden &#x200B;](./troubleshooting-guide.md#common-error-messages) im Abschnitt „Häufige Fehlermeldungen“ des Handbuchs zur Fehlerbehebung .
 
 ## Nächste Schritte
 
-Durch die Lektüre dieses Dokuments verfügen Sie nun über die erforderlichen Kenntnisse und Verfahren, um den Privacy Service effizient und effektiv nutzen zu können. Als Nächstes finden Sie [ Handbuch zur Fehlerbehebung ](./troubleshooting-guide.md) Antworten auf häufig gestellte Fragen zu Privacy Services und Informationen zu häufig aufgetretenen Fehlern in der API.
+Durch die Lektüre dieses Dokuments verfügen Sie nun über die erforderlichen Kenntnisse und Verfahren, um den Privacy Service effizient und effektiv nutzen zu können. Als Nächstes finden Sie [&#x200B; Handbuch zur Fehlerbehebung &#x200B;](./troubleshooting-guide.md) Antworten auf häufig gestellte Fragen zu Privacy Services und Informationen zu häufig aufgetretenen Fehlern in der API.

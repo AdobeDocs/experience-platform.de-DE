@@ -44,18 +44,18 @@ Die Einstellungen, die Benutzenden beim Herstellen einer Zielverbindung zur Verf
 
 Beispiel: Für [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations) kann ein Zielentwickler-Team konfigurieren, welche Identitäten vom Ziel akzeptiert werden. Nur diese Identitäten werden dann den Benutzenden im [Zuordnungsschritt des Aktivierungs-Workflows](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) angezeigt, wie unten dargestellt:
 
-![Bildschirmaufzeichnung der Identitätsauswahl für das Zielfeld im Zuordnungsschritt des Aktivierungs-Workflows. ](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![Bildschirmaufzeichnung der Identitätsauswahl für das Zielfeld im Zuordnungsschritt des Aktivierungs-Workflows. &#x200B;](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 Entsprechend kann das Zielentwickler-Team für [dateibasierte Ziele](/help/destinations/destination-types.md#file-based) bestimmen, welche [Optionen zum Anhängen von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) für das Ziel bzw. welche [Optionen zum Formatieren von Dateien](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) verfügbar gemacht werden sollen. Die Benutzenden können dann nur aus diesen Optionen auswählen, wie unten dargestellt:
 
 ![Bildschirmaufzeichnung der Dateiformatierungsoption beim Verbinden mit einem dateibasierten Ziel.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![Bildschirmaufzeichnung der Option zum Anhängen von Dateinamen im Planungsschritt des Aktivierungs-Workflows. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![Bildschirmaufzeichnung der Option zum Anhängen von Dateinamen im Planungsschritt des Aktivierungs-Workflows. &#x200B;](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 Die folgenden verschiedenen Optionen und Schritte sind im Aktivierungs-Workflow verfügbar:
 
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md)
-* [Aktivieren von Zielgruppendaten für Unternehmensziele ](/help/destinations/ui/activate-streaming-profile-destinations.md)
+* [Aktivieren von Zielgruppendaten für Unternehmensziele &#x200B;](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Exportieren von Dateien nach Bedarf an Batch-Ziele](/help/destinations/ui/export-file-now.md)
 * [Exportieren von Datensätzen zu Cloud-Speicher-Zielen](/help/destinations/ui/export-datasets.md)

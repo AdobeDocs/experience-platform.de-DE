@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # [!UICONTROL Medizin] Schemafeldgruppe
 
-[!UICONTROL Medizin] ist eine Standardschemafeldgruppe für die Klasse [[!DNL Medication] ](../../../classes/medication.md). Es bietet ein einzelnes Objekttyp-Feld, `healthcareMedication` die Informationen einer Medikation erfasst.
+[!UICONTROL Medizin] ist eine Standardschemafeldgruppe für die Klasse [[!DNL Medication] &#x200B;](../../../classes/medication.md). Es bietet ein einzelnes Objekttyp-Feld, `healthcareMedication` die Informationen einer Medikation erfasst.
 
 ![Feldergruppenstruktur](../../../images/healthcare/field-groups/medication/medication.png)
 
@@ -25,7 +25,7 @@ ht-degree: 7%
 | [!UICONTROL Definition] | `definition` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Definition der Medikation. |
 | [!UICONTROL Dosierungsform] | `doseForm` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Beschreibt die Darreichungsform des Arzneimittels, z. B. Tabletten oder Kapseln. |
 | [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Eine Kennung für das Medikament. |
-| [!UICONTROL Zutat] | `ingredient` | Array von Objekten | Beschreibt die Inhaltsstoffinformationen für das Medikament. Weitere Informationen finden [ im ](#ingredient) Abschnitt unten. |
+| [!UICONTROL Zutat] | `ingredient` | Array von Objekten | Beschreibt die Inhaltsstoffinformationen für das Medikament. Weitere Informationen finden [&#x200B; im &#x200B;](#ingredient) Abschnitt unten. |
 | [!UICONTROL PHARMAZEUTISCHER UNTERNEHMER] | `marketingAuthorizationHolder` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Organisation, die über die Genehmigung für das Inverkehrbringen des Arzneimittels verfügt. |
 | [!UICONTROL Gesamtvolumen] | `totalVolume` | [[!UICONTROL Menge]](../data-types/quantity.md) | Die Produktmenge, die in dem Medikament bereitgestellt wird, wenn der Produktcode keine Paketgröße ableitet. |
 | [!UICONTROL Status] | `status` | String | Der Status des Medikaments. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `active` </li> <li> `inactive` </li> <li> `entered-in-error` </li> |

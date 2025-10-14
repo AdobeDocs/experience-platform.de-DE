@@ -20,7 +20,7 @@ Sie können auf die ECID entweder über [Datenvorbereitung für die Datenerfassu
 
 Diese Methode verwendet [Datenvorbereitung für die Datenerfassung](../../../../datastreams/data-prep.md) um eine benutzerdefinierte Zuordnung für die `ECID` zu konfigurieren.
 
-Weitere Informationen zur Verwendung [ Funktion finden Sie in der ](../../../../datastreams/data-prep.md) zur Datenvorbereitung für die Datenerfassung .
+Weitere Informationen zur Verwendung [&#x200B; Funktion finden Sie in der &#x200B;](../../../../datastreams/data-prep.md) zur Datenvorbereitung für die Datenerfassung .
 
 Wenn Sie die ECID nicht nur in der Identitätszuordnung haben, sondern auch in einem benutzerdefinierten XDM-Feld festlegen möchten, können Sie dies tun, indem Sie die `source` auf den folgenden Pfad festlegen:
 

@@ -98,7 +98,7 @@ Attribution AI gibt Folgendes aus:
 
 ### Granulare Rohwerte {#raw-granular-scores}
 
-Attribution AI gibt Attributionsbewertungen auf der detailliertesten Ebene aus, sodass Sie die Bewertungen in beliebige Score-Spalten aufteilen können. Um diese Bewertungen in der Benutzeroberfläche anzuzeigen, lesen Sie den Abschnitt unter [Anzeigen von Rohwertpfaden](#raw-score-path). Informationen zum Herunterladen der Scores über die API finden Sie [ Dokument „Herunterladen von Scores in Attributions-KI](./download-scores.md) .
+Attribution AI gibt Attributionsbewertungen auf der detailliertesten Ebene aus, sodass Sie die Bewertungen in beliebige Score-Spalten aufteilen können. Um diese Bewertungen in der Benutzeroberfläche anzuzeigen, lesen Sie den Abschnitt unter [Anzeigen von Rohwertpfaden](#raw-score-path). Informationen zum Herunterladen der Scores über die API finden Sie [&#x200B; Dokument „Herunterladen von Scores in Attributions-KI](./download-scores.md) .
 
 >[!NOTE]
 >
@@ -139,7 +139,7 @@ In der folgenden Tabelle sind die Schemafelder in der Beispielausgabe „Rohbewe
 | namespace (String) | True | Identitäts-Namespace zum Erstellen der Pfade und somit des Modells <br> **Beispiel:** aaid |
 | TouchpointsDetail (Objekt-Array) | True | Die Liste der Touchpoint-Details, die zur Konversion führen, sortiert nach | Touchpoint-Vorkommen oder Zeitstempel. |
 | TouchpointName (Zeichenfolge) | True | Name des Touchpoints, der bei der Einrichtung konfiguriert wurde. <br> **Beispiel:** PAID_SEARCH_CLICK |
-| Scores (Objekt) | True | Touchpoint-Beitrag zu dieser Konversion als Score. Weitere Informationen zu den in diesem Objekt erzielten Scores finden Sie im Abschnitt [aggregierte ](#aggregated-attribution-scores)). |
+| Scores (Objekt) | True | Touchpoint-Beitrag zu dieser Konversion als Score. Weitere Informationen zu den in diesem Objekt erzielten Scores finden Sie im Abschnitt [aggregierte &#x200B;](#aggregated-attribution-scores)). |
 | TouchPoint (Objekt) | True | Touchpoint-Metadaten. Weitere Informationen zu den in diesem Objekt erzielten Scores finden Sie im Abschnitt [aggregierte Scores](#aggregated-scores). |
 
 ### Anzeigen von Rohwertpfaden (Benutzeroberfläche) {#raw-score-path}
@@ -236,7 +236,7 @@ Die folgende Tabelle ordnet die aggregierten Scores den Rohbewertungen zu. Wenn 
 >
 > - Attribution AI verwendet nur aktualisierte Daten für die Weiterbildung und Bewertung. Ebenso verzichtet Kunden-KI auf die Verwendung der gelöschten Daten, wenn Sie eine Löschung von Daten anfordern.
 > - Attributions-KI nutzt Experience Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken Experience Platform Privacy Service verwenden, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.
-> - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur Datenverschlüsselung finden [ in der Dokumentation](../../../help/landing/governance-privacy-security/encryption.md)
+> - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur Datenverschlüsselung finden [&#x200B; in der Dokumentation](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Nächste Schritte {#next-steps}
 

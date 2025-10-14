@@ -53,7 +53,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Entwickeln einer Segmentdefinition
 
-Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen [ Sie im Handbuch zu PQL ](../pql/overview.md).
+Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie [!DNL Real-Time Customer Profile] bereitstellen. Weitere Informationen zum Schreiben von PQL-Abfragen [&#x200B; Sie im Handbuch zu PQL &#x200B;](../pql/overview.md).
 
 Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an den `/segment/definitions`-Endpunkt in der [!DNL Segmentation]-API stellen. Im folgenden Beispiel wird beschrieben, wie Sie eine Definitionsanfrage formatieren, einschließlich der Informationen, die für die erfolgreiche Definition einer Segmentdefinition erforderlich sind.
 
@@ -99,9 +99,9 @@ Detaillierte Anweisungen zum Erstellen eines Vorschauauftrags finden Sie im [Han
 
 Schätzungs- und Vorschauprozesse werden asynchron ausgeführt, da die Ausführung verschiedener Abfragen unterschiedlich lange dauern kann. Sobald eine Abfrage initiiert wurde, können Sie API-Aufrufe verwenden, um den aktuellen Status der Schätzung oder Vorschau abzurufen (GET), während sie fortgesetzt wird.
 
-Mithilfe der [!DNL Segmentation Service]-API können Sie den aktuellen Status eines Vorschauauftrags anhand seiner ID nachschlagen. Wenn der Status „RESULT_READY“ lautet, können Sie die Ergebnisse anzeigen. Um den aktuellen Status eines Vorschauauftrags nachzuschlagen, lesen Sie bitte den Abschnitt zum [ eines Vorschauauftrags ](../api/previews-and-estimates.md#get-preview) Handbuch für Vorschauen und Schätzungen von Endpunkten. Um den aktuellen Status eines Schätzauftrags nachzuschlagen, lesen Sie bitte den Abschnitt zum Abrufen [ Schätzauftrags ](../api/previews-and-estimates.md#get-estimate) Handbuch für Vorschauen und Schätzungen von Endpunkten.
+Mithilfe der [!DNL Segmentation Service]-API können Sie den aktuellen Status eines Vorschauauftrags anhand seiner ID nachschlagen. Wenn der Status „RESULT_READY“ lautet, können Sie die Ergebnisse anzeigen. Um den aktuellen Status eines Vorschauauftrags nachzuschlagen, lesen Sie bitte den Abschnitt zum [&#x200B; eines Vorschauauftrags &#x200B;](../api/previews-and-estimates.md#get-preview) Handbuch für Vorschauen und Schätzungen von Endpunkten. Um den aktuellen Status eines Schätzauftrags nachzuschlagen, lesen Sie bitte den Abschnitt zum Abrufen [&#x200B; Schätzauftrags &#x200B;](../api/previews-and-estimates.md#get-estimate) Handbuch für Vorschauen und Schätzungen von Endpunkten.
 
 
 ## Nächste Schritte
 
-Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, können Sie mithilfe der [!DNL Segmentation Service]-API einen Segmentauftrag erstellen, um eine Zielgruppe zu erstellen. Ausführliche Anweisungen dazu finden Sie im Tutorial [Bewerten von und Zugreifen auf ](./evaluate-a-segment.md)Segmentergebnisse).
+Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, können Sie mithilfe der [!DNL Segmentation Service]-API einen Segmentauftrag erstellen, um eine Zielgruppe zu erstellen. Ausführliche Anweisungen dazu finden Sie im Tutorial [Bewerten von und Zugreifen auf &#x200B;](./evaluate-a-segment.md)Segmentergebnisse).

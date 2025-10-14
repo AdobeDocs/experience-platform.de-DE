@@ -15,7 +15,7 @@ In diesem Tutorial wird erläutert, wie Sie Adobe Experience Platform Assurance 
 
 ## Erstellen von Sitzungen
 
-Nachdem Sie sich bei der Benutzeroberfläche von [Assurance ](https://experience.adobe.com/assurance) haben, können Sie auf **[!UICONTROL Sitzung erstellen]** klicken, um eine Sitzung zu erstellen.
+Nachdem Sie sich bei der Benutzeroberfläche von [Assurance &#x200B;](https://experience.adobe.com/assurance) haben, können Sie auf **[!UICONTROL Sitzung erstellen]** klicken, um eine Sitzung zu erstellen.
 
 ![Die Schaltfläche „Sitzung erstellen“ ist hervorgehoben und zeigt an, wo Sie eine Sitzung erstellen können.](./images/using-assurance/create-session.png)
 

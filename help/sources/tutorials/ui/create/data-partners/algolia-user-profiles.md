@@ -18,7 +18,7 @@ Dieses Tutorial führt Sie mithilfe der -Benutzeroberfläche durch die Aufnahme 
 
 >[!IMPORTANT]
 >
->Bevor Sie beginnen, stellen Sie sicher, dass Sie die in der [[!DNL Algolia User Profiles]  beschriebenen Voraussetzungen erfüllt ](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites).
+>Bevor Sie beginnen, stellen Sie sicher, dass Sie die in der [[!DNL Algolia User Profiles]  beschriebenen Voraussetzungen erfüllt &#x200B;](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites).
 
 In diesem Tutorial wird davon ausgegangen, dass Sie mit den folgenden Experience Platform-Komponenten vertraut sind:
 

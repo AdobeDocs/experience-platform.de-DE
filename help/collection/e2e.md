@@ -28,7 +28,7 @@ In diesem Tutorial wird die Datenerfassungs-Benutzeroberfläche verwendet, um ei
 * Entwickeln
 * Erweiterungen verwalten
 
-Informationen zum Gewähren des Zugriffs auf Eigenschaften [ Eigenschaftsrechte finden Sie ](./permissions.md) Handbuch unter Verwalten von Berechtigungen für die Datenerfassung .
+Informationen zum Gewähren des Zugriffs auf Eigenschaften [&#x200B; Eigenschaftsrechte finden Sie &#x200B;](./permissions.md) Handbuch unter Verwalten von Berechtigungen für die Datenerfassung .
 
 Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemata zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihr Adobe-Account-Team, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
 
@@ -37,7 +37,7 @@ Wenn Sie bereits Zugriff auf Experience Platform haben, müssen Sie sicherstelle
 * Datenmodellierung
 * Identitäten
 
-Informationen [ Gewähren von Berechtigungen für Experience Platform-Funktionen für Benutzende finden Sie ](../access-control/ui/overview.md) „Übersicht zur Benutzeroberfläche der Zugriffssteuerung“.
+Informationen [&#x200B; Gewähren von Berechtigungen für Experience Platform-Funktionen für Benutzende finden Sie &#x200B;](../access-control/ui/overview.md) „Übersicht zur Benutzeroberfläche der Zugriffssteuerung“.
 
 ## Prozesszusammenfassung
 

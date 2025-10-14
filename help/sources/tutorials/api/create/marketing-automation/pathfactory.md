@@ -13,7 +13,7 @@ ht-degree: 24%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Lesen Sie dieses Dokument, um zu erfahren, wie Sie eine Basisverbindung für [!DNL PathFactory] mithilfe der [[!DNL Flow Service] API) ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Lesen Sie dieses Dokument, um zu erfahren, wie Sie eine Basisverbindung für [!DNL PathFactory] mithilfe der [[!DNL Flow Service] API) &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Erste Schritte
 
@@ -24,7 +24,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL PathFactory]-API erfolgreich mit [!DNL Flow Service] verbinden zu können.
 

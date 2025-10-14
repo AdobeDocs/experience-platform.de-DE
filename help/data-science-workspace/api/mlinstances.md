@@ -26,7 +26,7 @@ Eine MLInstance ist eine Kombination aus einer vorhandenen [Engine](./engines.md
 
 Sie können eine MLInstance erstellen, indem Sie eine POST-Anfrage ausführen und dabei eine Anfrage-Payload angeben, die aus einer gültigen Engine-ID (`{ENGINE_ID}`) und einem entsprechenden Satz von Standardkonfigurationen besteht.
 
-Wenn die Engine-ID auf eine PySpark- oder Spark-Engine verweist, können Sie die Menge der Berechnungsressourcen konfigurieren, z. B. die Anzahl der Kerne oder die Speichermenge. Wenn eine Python-Engine referenziert wird, können Sie entweder eine CPU oder eine GPU für Trainings- und Scoring-Zwecke verwenden. Weitere Informationen finden Sie in den Anhang[Abschnitten zu PySpark- und Spark](./appendix.md#resource-config)Ressourcenkonfigurationen sowie [Python CPU- und ](./appendix.md#cpu-gpu-config)-Konfigurationen.
+Wenn die Engine-ID auf eine PySpark- oder Spark-Engine verweist, können Sie die Menge der Berechnungsressourcen konfigurieren, z. B. die Anzahl der Kerne oder die Speichermenge. Wenn eine Python-Engine referenziert wird, können Sie entweder eine CPU oder eine GPU für Trainings- und Scoring-Zwecke verwenden. Weitere Informationen finden Sie in den Anhang[Abschnitten zu PySpark- und Spark](./appendix.md#resource-config)Ressourcenkonfigurationen sowie [Python CPU- und &#x200B;](./appendix.md#cpu-gpu-config)-Konfigurationen.
 
 **API-Format**
 
@@ -281,7 +281,7 @@ Sie können eine bestehende MLInstance aktualisieren, indem Sie ihre Eigenschaft
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage durchzuführen, um die MLInstance [nach ID) ](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage durchzuführen, um die MLInstance [nach ID) &#x200B;](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Der folgende Beispiel-API-Aufruf aktualisiert die Trainings- und Bewertungsparameter einer MLInstance, während sie anfänglich diese Eigenschaften aufweisen:
 

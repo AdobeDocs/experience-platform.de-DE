@@ -25,7 +25,7 @@ Sie können alle Schemata unter dem `global`- oder `tenant`-Container auflisten,
 
 >[!NOTE]
 >
->Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [ Abschnitt ](./appendix.md#query)Abfrageparameter“ im Anhang.
+>Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](./appendix.md#query)Abfrageparameter“ im Anhang.
 
 **API-Format**
 
@@ -36,7 +36,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{CONTAINER_ID}` | Der Container, der die Schemata enthält, die Sie abrufen möchten: `global` für von Adobe erstellte Schemata oder `tenant` für Schemata, die Ihrem Unternehmen gehören. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [&#x200B; im &#x200B;](./appendix.md#query)-Dokument . |
 
 {style="table-layout:auto"}
 
@@ -198,7 +198,7 @@ Eine erfolgreiche Antwort gibt die Details des Schemas zurück. Die zurückgegeb
 
 Der Prozess der Schemakomposition beginnt mit der Zuweisung einer Klasse. Die Klasse definiert wichtige verhaltensbezogene Aspekte der Daten (Eintrag oder Zeitreihen) sowie die Mindestfelder, die erforderlich sind, um die zu erfassenden Daten zu beschreiben.
 
-Anweisungen zum Erstellen eines Schemas ohne Klassen oder Feldergruppen, das als modellbasiertes Schema bezeichnet wird, finden Sie [ Abschnitt „Erstellen eines modellbasierten ](#create-model-based-schema)&quot;.
+Anweisungen zum Erstellen eines Schemas ohne Klassen oder Feldergruppen, das als modellbasiertes Schema bezeichnet wird, finden Sie [&#x200B; Abschnitt „Erstellen eines modellbasierten &#x200B;](#create-model-based-schema)&quot;.
 
 >[!NOTE]
 >
@@ -277,7 +277,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 }
 ```
 
-Wenn Sie eine GET-Anfrage ausführen[ um alle Schemata ](#list) Mandanten-Container aufzulisten, würde jetzt das neue Schema enthalten. Sie können eine [Suchanfrage (GET) ](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um das neue Schema direkt anzuzeigen.
+Wenn Sie eine GET-Anfrage ausführen[&#x200B; um alle Schemata &#x200B;](#list) Mandanten-Container aufzulisten, würde jetzt das neue Schema enthalten. Sie können eine [Suchanfrage (GET) &#x200B;](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um das neue Schema direkt anzuzeigen.
 
 Um einem Schema zusätzliche Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um den `allOf`- und `meta:extends`-Arrays des Schemas Feldergruppen hinzuzufügen.
 
@@ -310,7 +310,7 @@ Erstellen Sie zuerst das Schema mit `POST /tenant/schemas`. Fügen Sie dann die 
 
 >[!CAUTION]
 >
->Modellbasierte Schemata sind **nicht kompatibel mit Vereinigungsschemata**. Wenden Sie beim Arbeiten mit modellbasierten Schemata das `union`-Tag nicht auf `meta:immutableTags` an. Diese Konfiguration ist in der Benutzeroberfläche blockiert, wird aber derzeit nicht von der API blockiert. Weitere Informationen zum Verhalten [ Vereinigungsschemas finden ](./unions.md) im Handbuch zum Vereinigungsendpunkt .
+>Modellbasierte Schemata sind **nicht kompatibel mit Vereinigungsschemata**. Wenden Sie beim Arbeiten mit modellbasierten Schemata das `union`-Tag nicht auf `meta:immutableTags` an. Diese Konfiguration ist in der Benutzeroberfläche blockiert, wird aber derzeit nicht von der API blockiert. Weitere Informationen zum Verhalten [&#x200B; Vereinigungsschemas finden &#x200B;](./unions.md) im Handbuch zum Vereinigungsendpunkt .
 
 **API-Format**
 
@@ -469,7 +469,7 @@ Sie können neue Felder auf Stammebene hinzufügen (innerhalb der Stammdefinitio
 
 ## Schema aktualisieren {#put}
 
-Sie können ein ganzes Schema durch einen PUT-Vorgang ersetzen, indem Sie die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim [ eines neuen Schemas in ](#create) POST-Anfrage erforderlich sind.
+Sie können ein ganzes Schema durch einen PUT-Vorgang ersetzen, indem Sie die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim [&#x200B; eines neuen Schemas in &#x200B;](#create) POST-Anfrage erforderlich sind.
 
 >[!NOTE]
 >
@@ -554,7 +554,7 @@ Sie können einen Teil eines Schemas mithilfe einer PATCH-Anfrage aktualisieren.
 
 >[!NOTE]
 >
->Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, finden Sie weitere Informationen im Abschnitt zum [ eines Schemas mithilfe eines PUT-Vorgangs](#put).
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, finden Sie weitere Informationen im Abschnitt zum [&#x200B; eines Schemas mithilfe eines PUT-Vorgangs](#put).
 
 Einer der häufigsten PATCH-Vorgänge besteht darin, wie im folgenden Beispiel gezeigt, zuvor definierte Feldergruppen zu einem Schema hinzuzufügen.
 
@@ -643,7 +643,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Fe
 
 ## Aktivieren eines Schemas zur Verwendung im Echtzeit-Kundenprofil {#union}
 
-Damit ein Schema am Echtzeit[Kundenprofil teilnehmen kann, ](../../profile/home.md) Sie dem `union`-Array des Schemas ein `meta:immutableTags`-Tag hinzufügen. Sie können dies tun, indem Sie eine PATCH-Anfrage für das betreffende Schema stellen.
+Damit ein Schema am Echtzeit[Kundenprofil teilnehmen kann, &#x200B;](../../profile/home.md) Sie dem `union`-Array des Schemas ein `meta:immutableTags`-Tag hinzufügen. Sie können dies tun, indem Sie eine PATCH-Anfrage für das betreffende Schema stellen.
 
 >[!IMPORTANT]
 >
@@ -726,7 +726,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück un
 }
 ```
 
-Sie können jetzt die Vereinigung für die Klasse dieses Schemas anzeigen, um zu bestätigen, dass die Felder des Schemas dargestellt werden. Weitere Informationen finden Sie [ &quot;](./unions.md)-Endpunkthandbuch“.
+Sie können jetzt die Vereinigung für die Klasse dieses Schemas anzeigen, um zu bestätigen, dass die Felder des Schemas dargestellt werden. Weitere Informationen finden Sie [&#x200B; &quot;](./unions.md)-Endpunkthandbuch“.
 
 ## Löschen eines Schemas {#delete}
 

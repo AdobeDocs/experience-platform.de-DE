@@ -31,7 +31,7 @@ ht-degree: 6%
 | [!UICONTROL Quelle] | `source` | [[!UICONTROL Referenz]](../data-types/reference.md) | Gibt die Quelle des Ziels an, z. B. den Patienten oder den Arzt. |
 | [!UICONTROL Codeable-Konzept starten] | `startCodeableConcept` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Das Ereignis, nach dem das Ziel dann verfolgt werden soll. |
 | [!UICONTROL Subject |]`subject` | [[!UICONTROL Referenz]](../data-types/reference.md) | Identifiziert den Patienten, die Gruppe oder die Organisation, für den bzw. die das Ziel festgelegt wird. |
-| [!UICONTROL Zielgruppe] | `target` | Array von Objekten | Gibt die Zeitleiste bestimmter Schritte im Ziel an. Weitere Informationen finden [ im ](#target) Abschnitt unten. |
+| [!UICONTROL Zielgruppe] | `target` | Array von Objekten | Gibt die Zeitleiste bestimmter Schritte im Ziel an. Weitere Informationen finden [&#x200B; im &#x200B;](#target) Abschnitt unten. |
 | [!UICONTROL Fortlaufend] | `continous` | Boolesch | Gibt an, ob nach Erreichen des Ziels eine fortlaufende Aktivität erforderlich ist, um das Ziel aufrechtzuerhalten. |
 | [!UICONTROL Lebenszyklus-Status] | `lifecycleStatus` | String | Der Status des Lebenszyklus des Ziels. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `proposed` </li> <li> `planned` </li> <li> `accepted` </li> <li> `active` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `cancelled` </li> <li> `entered-in-error` </li> <li> `rejected` </li> |
 | [!UICONTROL Startdatum] | `startDate` | Datum | Das Datum, nach dem das Ziel verfolgt werden soll. |

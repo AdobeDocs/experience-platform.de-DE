@@ -76,13 +76,13 @@ Audience Manager-Datensätze sind standardmäßig für Profile deaktiviert und B
 
 ### Verbindungen
 
-Adobe Audience Manager erstellt im Katalog eine Verbindung: Audience Manager-Verbindung. Catalog ist das System der Datensätze für den Speicherort und die Herkunft von Daten in Adobe Experience Platform. Eine Verbindung ist ein Katalogobjekt, das eine kundenspezifische Instanz von Connectoren ist. Weitere Informationen zu [, Verbindungen und Connectoren finden Sie ](../../../catalog/home.md) „Übersicht zum Katalog-Service“.
+Adobe Audience Manager erstellt im Katalog eine Verbindung: Audience Manager-Verbindung. Catalog ist das System der Datensätze für den Speicherort und die Herkunft von Daten in Adobe Experience Platform. Eine Verbindung ist ein Katalogobjekt, das eine kundenspezifische Instanz von Connectoren ist. Weitere Informationen zu [, Verbindungen und Connectoren finden Sie &#x200B;](../../../catalog/home.md) „Übersicht zum Katalog-Service“.
 
 ### Auswirkungen der Segmentpopulation auf das Profil
 
 Die Größe der Segmentpopulation wirkt sich direkt auf die Profilzahlen aus, wenn Sie zum ersten Mal ein Audience Manager-Segment an Experience Platform senden. Das bedeutet, dass die Auswahl aller Segmente möglicherweise zu Profilüberhängen führen kann, die Ihre Lizenznutzungsberechtigung überschreiten. Experience Platform unterscheidet bei der Profilaufnahme auch zwischen neuen Daten und historischen Daten. Ein Segment mit 100 First-Party-Identitäten erstellt 100 Profile. Wenn die Population desselben Segments jedoch auf 150 erhöht und in Experience Platform aufgenommen wurde, erhöht sich die Anzahl der Profile nur um 50, da es nur 50 neue Profile gibt.
 
-Sie können auch die Profilnutzung Ihres Kontos im Dashboard [Lizenznutzung“ ](../../../dashboards/guides/license-usage.md).
+Sie können auch die Profilnutzung Ihres Kontos im Dashboard [Lizenznutzung“ &#x200B;](../../../dashboards/guides/license-usage.md).
 
 ## Wie hoch ist die erwartete Latenz für Audience Manager-Daten in Experience Platform?
 

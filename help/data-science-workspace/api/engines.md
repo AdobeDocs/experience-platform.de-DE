@@ -393,7 +393,7 @@ Sie können eine vorhandene Engine ändern und aktualisieren, indem Sie ihre Eig
 
 >[!NOTE]
 >
->Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage durchzuführen, um die Engine nach [ abzurufen](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage durchzuführen, um die Engine nach [&#x200B; abzurufen](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Der folgende Beispiel-API-Aufruf aktualisiert den Namen und die Beschreibung einer Engine und weist zunächst folgende Eigenschaften auf:
 

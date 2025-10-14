@@ -11,7 +11,7 @@ ht-degree: 11%
 
 # Anwenden von Zugriffskennzeichnungen zur Verwaltung des Benutzerzugriffs auf Datenflüsse mithilfe der -API
 
-Real-Time CDP Sie können die von der [attributbasierten Zugriffssteuerung) in ](../../../access-control/abac/overview.md) bereitgestellten Funktionen verwenden, um Beschriftungen auf Ihre Quelldatenflüsse anzuwenden. Mit dieser Funktion können Sie sicherstellen, dass nur eine Untergruppe von Benutzern in Ihrer Organisation Zugriff auf bestimmte Quellen und Datenflüsse erhält.
+Real-Time CDP Sie können die von der [attributbasierten Zugriffssteuerung) in &#x200B;](../../../access-control/abac/overview.md) bereitgestellten Funktionen verwenden, um Beschriftungen auf Ihre Quelldatenflüsse anzuwenden. Mit dieser Funktion können Sie sicherstellen, dass nur eine Untergruppe von Benutzern in Ihrer Organisation Zugriff auf bestimmte Quellen und Datenflüsse erhält.
 
 Wenn Sie einem bestimmten Datenfluss eine Zugriffsbeschriftung hinzufügen, können nur Benutzer, die Zugriff auf eine Rolle haben, der diese Beschriftung zugewiesen ist, diesen Datenfluss anzeigen und bearbeiten. Wenn ein Quelldatenfluss nicht mit Beschriftungen gekennzeichnet ist, ist er für alle Benutzer sichtbar, die zu Ihrer Organisation gehören. Wenn Sie beispielsweise die Kennzeichnung C12 auf einen Datenfluss anwenden, können Benutzende, denen eine Rolle zugewiesen wurde, die nicht über die Kennzeichnung C12 verfügt, den Datenfluss nicht mit der Kennzeichnung C12 anzeigen und bearbeiten.
 

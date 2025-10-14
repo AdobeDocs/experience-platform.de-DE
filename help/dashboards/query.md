@@ -86,7 +86,7 @@ Um das vollständige Schema des DIM-Zieldatensatzes zu verstehen, können Sie ei
 
 Die Funktion CDP-Insights-Datenmodelle stellt den SQL-Code zur Verfügung, der die Insights für verschiedene Profil-, Ziel- und Segmentierungs-Widgets steuert. Sie können diese SQL-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.
 
-Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und deren Beziehung zu Audiences und Zielen. Siehe die Dokumentation zum CDP-Insights-Datenmodell für detaillierte Informationen zur [ (Anwendung der CDP-Insights-Datenmodelle auf Ihre speziellen KPI-Anwendungsfälle](./data-models/cdp-insights-data-model-b2c.md).
+Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und deren Beziehung zu Audiences und Zielen. Siehe die Dokumentation zum CDP-Insights-Datenmodell für detaillierte Informationen zur [&#x200B; (Anwendung der CDP-Insights-Datenmodelle auf Ihre speziellen KPI-Anwendungsfälle](./data-models/cdp-insights-data-model-b2c.md).
 
 ## Beispielabfragen
 

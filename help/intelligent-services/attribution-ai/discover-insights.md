@@ -65,7 +65,7 @@ Die Schaltfläche **[!UICONTROL Mehr Aktionen]** befindet sich in der oberen rec
 - **[!UICONTROL Klonen]**: Klont die Instanz.
 - **[!UICONTROL Löschen]**: Löscht die Instanz.
 - **[!UICONTROL Zusammenfassungsdaten herunterladen]**: Lädt eine CSV-Datei mit den Zusammenfassungsdaten herunter.
-- **[!UICONTROL Auf Scores zugreifen]**: Wenn Sie **[!UICONTROL Auf Scores zugreifen]** werden Sie zum Tutorial [Auf Scores für Attribution AI zugreifen“ ](./download-scores.md).
+- **[!UICONTROL Auf Scores zugreifen]**: Wenn Sie **[!UICONTROL Auf Scores zugreifen]** werden Sie zum Tutorial [Auf Scores für Attribution AI zugreifen“ &#x200B;](./download-scores.md).
 - **[!UICONTROL Ausführungsverlauf anzeigen]**: Ein Popup-Fenster mit einer Liste aller mit der Dienstinstanz verbundenen Bewertungsläufe wird angezeigt.
 
 ![Mehr Aktionen](./images/insights/more-actions.png)
@@ -92,7 +92,7 @@ Wenn Sie **[!UICONTROL Attributionsmodell]** auswählen, wird eine Dropdown-List
 
 >[!NOTE]
 >
->Dieser Filter ist nur vorhanden, wenn Sie beim Erstellen [ Dienstinstanz den optionalen Schritt Regionsbasierte Modellierung](./user-guide.md#region-based-modeling-optional) im Handbuch zur Attribution AI-Benutzeroberfläche ausgeführt haben.
+>Dieser Filter ist nur vorhanden, wenn Sie beim Erstellen [&#x200B; Dienstinstanz den optionalen Schritt Regionsbasierte Modellierung](./user-guide.md#region-based-modeling-optional) im Handbuch zur Attribution AI-Benutzeroberfläche ausgeführt haben.
 
 Mit diesem Filter können Sie alle Regionen auswählen, die Sie beim Erstellen der Instanz eingerichtet haben.
 

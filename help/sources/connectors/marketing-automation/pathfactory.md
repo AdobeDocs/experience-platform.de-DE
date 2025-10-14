@@ -62,6 +62,6 @@ Sie müssen sowohl **[!UICONTROL Quellen anzeigen]** als auch **[!UICONTROL Quel
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL PathFactory] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
-* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL PathFactory]  mithilfe von APIs in Experience Platform zu ](../../tutorials/api/create/marketing-automation/pathfactory.md).
+* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL PathFactory]  mithilfe von APIs in Experience Platform zu &#x200B;](../../tutorials/api/create/marketing-automation/pathfactory.md).
 * [Verbinden Ihres - [!DNL PathFactory]  mit Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/pathfactory.md).
 * [Erstellen eines Datenflusses für eine Quellverbindung mithilfe der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md).

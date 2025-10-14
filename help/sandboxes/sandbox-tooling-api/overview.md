@@ -17,11 +17,11 @@ Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforde
 
 ## Packages        {#packages}
 
-Mit dem Sandbox Tooling Packages-Endpunkt können Sie Pakete verwalten. Das Sandbox-Tooling-Paket ist eine Sammlung von Artefaktdefinitionen, einschließlich Paket-ID, Name, Beschreibung, Organisations-ID und Ersteller-ID. Weitere Informationen [ Arbeiten mit Paketen in der API finden ](./packages.md) im Handbuch zum packages-Endpunkt .
+Mit dem Sandbox Tooling Packages-Endpunkt können Sie Pakete verwalten. Das Sandbox-Tooling-Paket ist eine Sammlung von Artefaktdefinitionen, einschließlich Paket-ID, Name, Beschreibung, Organisations-ID und Ersteller-ID. Weitere Informationen [&#x200B; Arbeiten mit Paketen in der API finden &#x200B;](./packages.md) im Handbuch zum packages-Endpunkt .
 
 ## Tools {#tools}
 
-Mit dem Endpunkt Sandbox-Tools können Sie die JSON-Auftragsdaten unabhängig abrufen. Weitere Informationen zum Abrufen von JSON[Auftragsdaten in der API finden Sie ](./tools.md) „tools-Endpunkthandbuch“.
+Mit dem Endpunkt Sandbox-Tools können Sie die JSON-Auftragsdaten unabhängig abrufen. Weitere Informationen zum Abrufen von JSON[Auftragsdaten in der API finden Sie &#x200B;](./tools.md) „tools-Endpunkthandbuch“.
 
 ## Nächste Schritte {#next-steps}
 

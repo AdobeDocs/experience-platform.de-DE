@@ -16,7 +16,7 @@ Leitplanken sind Schwellenwerte, die Anhaltspunkte für die Daten- und Systemnut
 
 >[!IMPORTANT]
 >
->Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [&#x200B; entsprechenden &#x200B;](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
 Beginnen Sie hier und folgen Sie den unten stehenden Links, um alle Leitplanken in den verschiedenen Services und Bereichen von Real-Time CDP zu verstehen:
 

@@ -14,7 +14,7 @@ ht-degree: 8%
 
 # [!UICONTROL Immunisierung] Schemafeldgruppe
 
-[!UICONTROL Immunisierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Experience Event] ](../../../classes/experienceevent.md). Es bietet ein einzelnes Feld vom Typ „Objekt“, `healthcareImmunization` Informationen zu Immunisierungsereignissen erfasst.
+[!UICONTROL Immunisierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Experience Event] &#x200B;](../../../classes/experienceevent.md). Es bietet ein einzelnes Feld vom Typ „Objekt“, `healthcareImmunization` Informationen zu Immunisierungsereignissen erfasst.
 
 ![Feldergruppenstruktur](../../../images/healthcare/field-groups/immunization/immunization.png)
 
@@ -31,10 +31,10 @@ ht-degree: 8%
 | [!UICONTROL Hersteller] | `manufacturer` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Der Impfstoffhersteller. |
 | [!UICONTROL Hinweis] | `note` | Array von [[!UICONTROL Anmerkung]](../data-types/annotation.md) | Zusätzliche Impfhinweise. |
 | [!UICONTROL Patient] | `patient` | [[!UICONTROL Referenz]](../data-types/reference.md) | Wer wurde immunisiert. |
-| [!UICONTROL Batch] | `performer` | Array von Objekten | Wer hat das Immunisierungs-Ereignis durchgeführt. Weitere Informationen finden [ im ](#performer) Abschnitt unten. |
-| [!UICONTROL Programmeignung] | `programEligibility` | Array von Objekten | Die Eignung des Patienten für ein spezifisches Impfprogramm. Weitere Informationen finden [ im ](#program-eligibility) Abschnitt unten. |
-| [!UICONTROL Protokoll angewendet] | `protocolApplied` | Array von Objekten | Das vom Anbieter bereitgestellte Protokoll. Weitere Informationen finden [ im ](#protocol-applied) Abschnitt unten. |
-| [!UICONTROL Reaktion] | `reaction` | Array von Objekten | Die Details einer Reaktion nach der Impfung. Weitere Informationen finden [ im ](#reaction) Abschnitt unten. |
+| [!UICONTROL Batch] | `performer` | Array von Objekten | Wer hat das Immunisierungs-Ereignis durchgeführt. Weitere Informationen finden [&#x200B; im &#x200B;](#performer) Abschnitt unten. |
+| [!UICONTROL Programmeignung] | `programEligibility` | Array von Objekten | Die Eignung des Patienten für ein spezifisches Impfprogramm. Weitere Informationen finden [&#x200B; im &#x200B;](#program-eligibility) Abschnitt unten. |
+| [!UICONTROL Protokoll angewendet] | `protocolApplied` | Array von Objekten | Das vom Anbieter bereitgestellte Protokoll. Weitere Informationen finden [&#x200B; im &#x200B;](#protocol-applied) Abschnitt unten. |
+| [!UICONTROL Reaktion] | `reaction` | Array von Objekten | Die Details einer Reaktion nach der Impfung. Weitere Informationen finden [&#x200B; im &#x200B;](#reaction) Abschnitt unten. |
 | [!UICONTROL Grund] | `reason` | Array von [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Der Grund für die Impfung. |
 | [!UICONTROL Route] | `route` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Wie der Impfstoff in den Körper gelangt ist. |
 | [!UICONTROL Site] | `site` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Stelle im Körper, an der der Impfstoff verabreicht wurde |

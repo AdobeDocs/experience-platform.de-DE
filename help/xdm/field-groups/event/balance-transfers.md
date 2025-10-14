@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # Schemafeldgruppe [!UICONTROL Saldoübertragungen]
 
-[!UICONTROL Saldoübertragungen] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md). Die Feldergruppe stellt ein einzelnes `personalFinances.balanceTransfers` für ein Schema bereit, das Details zu einem Finanzsaldo-Transfer zwischen Konten erfasst.
+[!UICONTROL Saldoübertragungen] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] &#x200B;](../../classes/experienceevent.md). Die Feldergruppe stellt ein einzelnes `personalFinances.balanceTransfers` für ein Schema bereit, das Details zu einem Finanzsaldo-Transfer zwischen Konten erfasst.
 
 ![](../../images/field-groups/balance-transfers.png)
 

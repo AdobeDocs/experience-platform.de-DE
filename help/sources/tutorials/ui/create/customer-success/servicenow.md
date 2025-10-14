@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine gültige [!DNL ServiceNow]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [ eines Datenflusses fortfahren](../../dataflow/customer-success.md)
+Wenn Sie bereits über eine gültige [!DNL ServiceNow]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [&#x200B; eines Datenflusses fortfahren](../../dataflow/customer-success.md)
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -37,7 +37,7 @@ Um auf Ihr [!DNL ServiceNow]-Konto in [!DNL Experience Platform] zugreifen zu k�
 | `username` | Der Benutzername, mit dem eine Verbindung zum [!DNL ServiceNow]-Server zwecks Authentifizierung hergestellt wird. |
 | `password` | Das Kennwort, mit dem eine Verbindung zum [!DNL ServiceNow]-Server zwecks Authentifizierung hergestellt wird. |
 
-Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL ServiceNow] Dokument](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
+Weitere Informationen zu den ersten Schritten finden Sie [diesem [!DNL ServiceNow] Dokument](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET).
 
 ## Verbinden Ihres [!DNL ServiceNow]-Kontos
 

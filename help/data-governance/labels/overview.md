@@ -57,7 +57,7 @@ Sie können Datennutzungsbeschriftungen mit [!DNL Experience Platform]-APIs oder
 
 ### Verwenden der Benutzeroberfläche
 
-Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Sie können den Arbeitsbereich **[!UICONTROL Schemata]** verwenden, [ Kennzeichnungen auf Ihre Experience-Datenmodell(XDM)-](../../xdm/tutorials/labels.md) anzuwenden oder zu erfahren, wie Sie [benutzerdefinierte Kennzeichnungen in der **[!UICONTROL Richtlinien]**-Benutzeroberfläche erstellen und verwalten](./user-guide.md), indem Sie stattdessen das Benutzerhandbuch zu Datennutzungskennzeichnungen lesen.
+Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Sie können den Arbeitsbereich **[!UICONTROL Schemata]** verwenden, [&#x200B; Kennzeichnungen auf Ihre Experience-Datenmodell(XDM)-](../../xdm/tutorials/labels.md) anzuwenden oder zu erfahren, wie Sie [benutzerdefinierte Kennzeichnungen in der **[!UICONTROL Richtlinien]**-Benutzeroberfläche erstellen und verwalten](./user-guide.md), indem Sie stattdessen das Benutzerhandbuch zu Datennutzungskennzeichnungen lesen.
 
 >[!IMPORTANT]
 >

@@ -312,7 +312,7 @@ Das Pop **[!UICONTROL up „Zielgruppen bei]** auswerten“ wird angezeigt und z
 
 ![Es werden die Zielgruppen angezeigt, die mithilfe einer flexiblen Zielgruppenauswertung ausgewertet werden können.](../images/methods/fae/evaluate-audiences-modal.png)
 
-Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, können Sie mit der Anfrage fortfahren, und die flexible Zielgruppenbewertung wird gestartet. Sie können den Status dieser Zielgruppenauswertung in der Ansicht [Überwachung von Auswertungsaufträgen“ ](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
+Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, können Sie mit der Anfrage fortfahren, und die flexible Zielgruppenbewertung wird gestartet. Sie können den Status dieser Zielgruppenauswertung in der Ansicht [Überwachung von Auswertungsaufträgen“ &#x200B;](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >

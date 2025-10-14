@@ -22,11 +22,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Azure Blob Storage]  Sie in ](../../../../connectors/cloud-storage/blob.md#authentication)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Azure Blob Storage]  Sie in &#x200B;](../../../../connectors/cloud-storage/blob.md#authentication)Übersicht“.
 
 ## Verbinden Ihres [!DNL Azure Blob Storage] mit Experience Platform {#connect}
 
@@ -190,4 +190,4 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Blob] mithilfe von APIs erstellt und eine eindeutige ID als Teil der Antwort erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API zu ](../../explore/cloud-storage.md).
+In diesem Tutorial haben Sie eine [!DNL Blob] mithilfe von APIs erstellt und eine eindeutige ID als Teil der Antwort erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API zu &#x200B;](../../explore/cloud-storage.md).

@@ -32,7 +32,7 @@ Um Einverständnisdaten mithilfe der SDK an Adobe Experience Platform zu senden,
 - Ein Datensatz, dessen Schema auf der [!DNL XDM Individual Profile]-Klasse basiert und TCF 2.0-Einverständnisfelder enthält, die für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert sind.
 - Ein mit Experience Platform eingerichteter Datenstrom und der oben erwähnte profilaktivierte Datensatz.
 
-Anweisungen zum Erstellen der [ Datensätze und des Datenstroms finden Sie ](../../../landing/governance-privacy-security/consent/iab/overview.md) Handbuch zur TCF 2.0-Konformität .
+Anweisungen zum Erstellen der [&#x200B; Datensätze und des Datenstroms finden Sie &#x200B;](../../../landing/governance-privacy-security/consent/iab/overview.md) Handbuch zur TCF 2.0-Konformität .
 
 ## Audience Manager-Integration
 

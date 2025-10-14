@@ -25,13 +25,13 @@ Mit dem [!DNL Marketo Engage]-Quell-Connector können Sie B2B-Daten aus [!DNL Ma
 
 >[!IMPORTANT]
 >
->Sie müssen Zugriff auf [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) haben, um alle Marketo-Datensätze für die Segmentierung mit dem [Echtzeit-Kundenprofil“ ](../../../../profile/home.md). Ohne Real-Time CDP B2B edition können Sie weiterhin die Marketo-Quelle verwenden, um Daten aus den Personen- und Aktivitätsdatensätzen zur Segmentierung in das Echtzeit-Kundenprofil zu übertragen.
+>Sie müssen Zugriff auf [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) haben, um alle Marketo-Datensätze für die Segmentierung mit dem [Echtzeit-Kundenprofil“ &#x200B;](../../../../profile/home.md). Ohne Real-Time CDP B2B edition können Sie weiterhin die Marketo-Quelle verwenden, um Daten aus den Personen- und Aktivitätsdatensätzen zur Segmentierung in das Echtzeit-Kundenprofil zu übertragen.
 
 Dieses Dokument bietet einen Überblick über den [!DNL Marketo Engage]-Quell-Connector, einschließlich Informationen zur Authentifizierung des Connectors, zur Zuordnung [!DNL Marketo Engage] Felder zum Experience-Datenmodell (XDM) und zur Datenlatenz des Connectors.
 
 ## Einrichten der Adobe-Organisationszuordnung
 
-Bevor Sie Zuordnungssätze für [!DNL Marketo Engage] einrichten können, müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen dazu finden Sie im Handbuch zum Einrichten der Organisationszuordnung [ Adobe für  [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=de).
+Bevor Sie Zuordnungssätze für [!DNL Marketo Engage] einrichten können, müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen dazu finden Sie im Handbuch zum Einrichten der Organisationszuordnung [&#x200B; Adobe für  [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=de).
 
 ## [!DNL Marketo Engage]-Connector authentifizieren
 

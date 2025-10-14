@@ -15,7 +15,7 @@ Die `orgId`-Eigenschaft ist eine Zeichenfolge, die Adobe mitteilt, an welches Un
 
 So suchen Sie Ihr `orgID`:
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Drücken Sie an einer beliebigen Stelle in der Adobe Experience Cloud **`[Ctrl]`** + **`[I]`**. Ein Fenster [!UICONTROL User Data Debugger] wird geöffnet.
 1. Klicken Sie **[!UICONTROL Kopieren]** ![Kopieren](../../assets/copy.png) neben der [!UICONTROL Aktuelle Organisations-ID] oder klicken Sie auf die Registerkarte **[!UICONTROL Zugewiesene Organisationen]**, um andere Organisations-IDs anzuzeigen, auf die Sie zugreifen können.
 1. Wenn Sie die gewünschten Informationen gefunden haben, klicken Sie auf **[!UICONTROL Schließen]**.
@@ -26,7 +26,7 @@ Organisations-IDs sind immer alphanumerische Zeichenfolgen mit 24 Zeichen und en
 
 Geben Sie die Organisations-ID im Textfeld **[!UICONTROL IMS-Organisations]** ein, wenn Sie [die Tag-Erweiterung konfigurieren](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].

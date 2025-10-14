@@ -75,11 +75,11 @@ Das Data Governance-Framework beinhaltet vordefinierte Datennutzungskennzeichnun
 
 >[!NOTE]
 >
->Eine vollständige Liste [ verfügbaren Bezeichnungen und Definitionen für ](labels/reference.md) Bezeichnungstyp finden Sie im Handbuch zu „Unterstützte Datennutzungsbezeichnungen“.
+>Eine vollständige Liste [&#x200B; verfügbaren Bezeichnungen und Definitionen für &#x200B;](labels/reference.md) Bezeichnungstyp finden Sie im Handbuch zu „Unterstützte Datennutzungsbezeichnungen“.
 
 Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Als Best Practice empfiehlt sich eine Kennzeichnung von Daten, wenn diese in Experience Platform aufgenommen oder in [!DNL Experience Platform] verfügbar werden.
 
-Weitere Informationen dazu, wie [ Datennutzungskennzeichnungen zur Durchsetzung der Data-Governance](./labels/overview.md)Compliance verwendet werden, finden Sie in der Übersicht zu Datennutzungskennzeichnungen .
+Weitere Informationen dazu, wie [&#x200B; Datennutzungskennzeichnungen zur Durchsetzung der Data-Governance](./labels/overview.md)Compliance verwendet werden, finden Sie in der Übersicht zu Datennutzungskennzeichnungen .
 
 ## Datennutzungsrichtlinien {#data-usage-policies}
 

@@ -27,7 +27,7 @@ Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Aqua Data Stu
 
 ## Registrieren des Servers {#register-server}
 
-Nach der Installation von [!DNL Aqua Data Studio] müssen Sie zunächst den Server registrieren. In der offiziellen Aqua Data Studio-Dokumentation finden Sie Anweisungen zum [ (Starten des  [!DNL Register Server] -](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#launching_the_register_server_dialog) und [Registrieren des Servers](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#steps_to_register_a_server_in_aqua_data_studio).
+Nach der Installation von [!DNL Aqua Data Studio] müssen Sie zunächst den Server registrieren. In der offiziellen Aqua Data Studio-Dokumentation finden Sie Anweisungen zum [&#x200B; (Starten des  [!DNL Register Server] -](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#launching_the_register_server_dialog) und [Registrieren des Servers](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#steps_to_register_a_server_in_aqua_data_studio).
 
 Sobald das Dialogfeld **[!DNL Register Server]** für einen PostgresSQL-Server angezeigt wird, geben Sie die folgenden Details für die Server-Einstellungen an.
 
@@ -45,7 +45,7 @@ Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der [!DNL Experience
 
 ### Festlegen des SSL-Modus
 
-Als Nächstes müssen Sie den SSL-Modus-Wert auf `?sslmode=require` setzen. Dies erfolgt über die Registerkarte [!DNL Driver] des Dialogfelds [!DNL Edit Server Properties] . In der offiziellen Aqua Data Studio-Dokumentation finden Sie Anweisungen zum [ (Bearbeiten von Treibereigenschaften](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) und [Konfigurieren von SSL für [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration). Verwenden Sie die Suchleiste, um die `sslmode` Eigenschaft zu finden.
+Als Nächstes müssen Sie den SSL-Modus-Wert auf `?sslmode=require` setzen. Dies erfolgt über die Registerkarte [!DNL Driver] des Dialogfelds [!DNL Edit Server Properties] . In der offiziellen Aqua Data Studio-Dokumentation finden Sie Anweisungen zum [&#x200B; (Bearbeiten von Treibereigenschaften](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) und [Konfigurieren von SSL für [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration). Verwenden Sie die Suchleiste, um die `sslmode` Eigenschaft zu finden.
 
 >[!IMPORTANT]
 >

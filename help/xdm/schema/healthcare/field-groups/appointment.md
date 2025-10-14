@@ -28,12 +28,12 @@ ht-degree: 5%
 | [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Eine Liste eindeutiger Kennungen, die mit dem Termin verknüpft sind. Diese Kennungen werden auf der Grundlage von Geschäftsregeln zugewiesen oder wenn ein direkter URL-Link zum Termin nicht geeignet ist. |
 | [!UICONTROL Hinweis] | `note` | Array von [[!UICONTROL Anmerkung]](../data-types/annotation.md) | Zusätzliche Hinweise oder Kommentare zum Termin. |
 | [!UICONTROL Ursprungsdatum] | `originatingAppointment` | [[!UICONTROL Referenz]](../data-types/reference.md) | Der ursprüngliche Termin in einem wiederkehrenden Satz verwandter Termine. |
-| [!UICONTROL Teilnehmer] | `participant` | Array von Objekten | Eine Liste der an dem Termin beteiligten Teilnehmer. Weitere Informationen finden [ im ](#participant) Abschnitt unten. |
+| [!UICONTROL Teilnehmer] | `participant` | Array von Objekten | Eine Liste der an dem Termin beteiligten Teilnehmer. Weitere Informationen finden [&#x200B; im &#x200B;](#participant) Abschnitt unten. |
 | [!UICONTROL Patientenanleitung] | `patientInstruction` | Array von [[!UICONTROL Codeable Reference]](../data-types/reference.md) | Die Diagnose, die für den Termin relevant ist. |
 | [!UICONTROL Vorheriger Termin] | `previousAppointment` | [[!UICONTROL Referenz]](../data-types/reference.md) | Der vorherige Termin in einer Reihe verwandter Termine. |
 | [!UICONTROL Priorität] | `priority` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Priorität der Ernennung, die genutzt werden kann, um fundierte Entscheidungen zu treffen, wenn Ernennungen neu priorisiert werden müssen. Der iCal-Standard gibt `0` als undefiniert, als höchste Priorität `1` als niedrigste Priorität `9`. |
 | [!UICONTROL Grund] | `reason` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Grund, warum der Termin geplant wird, was normalerweise eine Bedingung oder ein Verfahren ist. |
-| [!UICONTROL Wiederholungsvorlage] | `recurrenceTemplate` | Array von Objekten | Enthält Details des Wiederholungsmusters oder der Vorlage zum Erstellen wiederkehrender Termine.  Weitere Informationen finden [ im ](#recurrence) Abschnitt unten. |
+| [!UICONTROL Wiederholungsvorlage] | `recurrenceTemplate` | Array von Objekten | Enthält Details des Wiederholungsmusters oder der Vorlage zum Erstellen wiederkehrender Termine.  Weitere Informationen finden [&#x200B; im &#x200B;](#recurrence) Abschnitt unten. |
 | [!UICONTROL ersetzt] | `replaces` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Der durch diesen Termin ersetzte Termin. Im Falle eines Abbruchs finden Sie die Details des Abbruchs in der `cancellationReason`-Eigenschaft der referenzierten Ressource. |
 | [!UICONTROL Angeforderter Zeitraum] | `requestedPeriod` | Array von [[!UICONTROL Zeitraum]](../data-types/period.md) | Eine Reihe von Datumsbereichen (möglicherweise einschließlich Zeiten), in denen der Termin vorzugsweise geplant wird. |
 | [!UICONTROL Service-Kategorie] | `serviceCategory` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Eine breite Kategorisierung des Dienstes, der während des Termins ausgeführt werden soll. |
@@ -81,10 +81,10 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| [!UICONTROL Monthly Template] | `monthlyTemplate` | Array von Objekten | Informationen zu monatlichen wiederkehrenden Terminen. Weitere Informationen finden [ im ](#monthly-template) Abschnitt unten. |
+| [!UICONTROL Monthly Template] | `monthlyTemplate` | Array von Objekten | Informationen zu monatlichen wiederkehrenden Terminen. Weitere Informationen finden [&#x200B; im &#x200B;](#monthly-template) Abschnitt unten. |
 | [!UICONTROL Wiederholungstyp] | `recurrenceType` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Wie oft die Terminserie wiederholt werden soll, z. B. wöchentlich, monatlich oder jährlich. |
 | [!UICONTROL Zeitzone] | `timezone` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Zeitzone des wiederkehrenden Termins. |
-| [!UICONTROL Wöchentliche Vorlage] | `weeklyTemplate` | Array von Objekten | Informationen zu wöchentlichen wiederkehrenden Terminen. Weitere Informationen finden [ im ](#weekly-template) Abschnitt unten. |
+| [!UICONTROL Wöchentliche Vorlage] | `weeklyTemplate` | Array von Objekten | Informationen zu wöchentlichen wiederkehrenden Terminen. Weitere Informationen finden [&#x200B; im &#x200B;](#weekly-template) Abschnitt unten. |
 | [!UICONTROL Jährliche Vorlage] | `yearlyTemplate` | Objekt | Informationen über jährliche wiederkehrende Termine. Enthält eine Eigenschaft, `yearInterval`, die einen ganzzahligen Wert enthält, der jedes n. Jahr angibt, in dem der Termin wiederholt wird. |
 | [!UICONTROL Ohne Datum] | `excludingDate` | Array von Datumsangaben | Alle Daten, z. B. Feiertage, die von der Wiederholung ausgeschlossen werden sollen. |
 | [!UICONTROL Ausschließen der Wiederholungs-ID] | `excludingRecurrenceId` | Array von Ganzzahlen | Alle Wiederholungs-IDs, die von der Wiederholung ausgeschlossen werden sollen. Dies ist eine Alternative zu `excludingDate`, bei der Sie den `reccurenceID` des auszuschließenden Termins angeben. |

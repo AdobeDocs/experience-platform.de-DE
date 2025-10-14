@@ -773,7 +773,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum neu aktu
 >
 >Nur der System- und Produktadministrator kann diesen API-Aufruf verwenden.
 >
->Darüber hinaus **das Tag (kann** keinem Geschäftsobjekt zugeordnet werden und **muss** archiviert werden, bevor Sie das Tag löschen können. Sie können das Tag mithilfe des Endpunkts [Tag aktualisieren“ ](#update-tag).
+>Darüber hinaus **das Tag (kann** keinem Geschäftsobjekt zugeordnet werden und **muss** archiviert werden, bevor Sie das Tag löschen können. Sie können das Tag mithilfe des Endpunkts [Tag aktualisieren“ &#x200B;](#update-tag).
 
 Sie können ein bestimmtes Tag löschen, indem Sie ein DELETE-Tag an den `/tags`-Endpunkt senden und die ID des Tags angeben, das Sie löschen möchten.
 

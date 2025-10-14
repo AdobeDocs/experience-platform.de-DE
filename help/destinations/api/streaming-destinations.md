@@ -405,7 +405,7 @@ curl -X POST \
 
 * `{FLOW_SPEC_ID}`: Die Flussspezifikations-ID für profilbasierte Ziele ist `71471eba-b620-49e4-90fd-23f1fa0174d8`. Verwenden Sie diesen Wert im -Aufruf.
 * `{SOURCE_CONNECTION_ID}`: Verwenden Sie die Quellverbindungs-ID, die Sie im Schritt [Verbindung zu Ihren Experience Platform-Daten herstellen](#connect-to-your-experience-platform-data) erhalten haben.
-* `{TARGET_CONNECTION_ID}`: Verwenden Sie die Zielverbindungs-ID, die Sie im Schritt &quot;[ mit Streaming-Ziel herstellen“ erhalten ](#connect-to-streaming-destination).
+* `{TARGET_CONNECTION_ID}`: Verwenden Sie die Zielverbindungs-ID, die Sie im Schritt &quot;[&#x200B; mit Streaming-Ziel herstellen“ erhalten &#x200B;](#connect-to-streaming-destination).
 
 **Antwort**
 
@@ -630,7 +630,7 @@ Gehen Sie wie folgt vor, um mithilfe der angehängten [!DNL Postman] eine Verbin
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

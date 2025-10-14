@@ -13,7 +13,7 @@ ht-degree: 77%
 
 # Erstellen eines Datenflusses für [!DNL Mailchimp Members] mithilfe der Flow Service-API
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Mailchimp Members] Daten mithilfe der -API [[!DNL Flow Service]  Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Mailchimp Members] Daten mithilfe der -API [[!DNL Flow Service]  Experience Platform &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Voraussetzungen
 

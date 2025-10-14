@@ -21,7 +21,7 @@ Das in diesem Anwendungsbeispiel dargestellte Beispiel konzentriert sich auf das
 
 Im Rahmen dieses Prozesses müssen Sie ein Modell für maschinelles Lernen trainieren. Dieses Dokument setzt Kenntnisse über eine oder mehrere maschinelle Lernumgebungen voraus.
 
-In diesem Beispiel werden [!DNL Python] und die [!DNL Jupyter Notebook] Entwicklungsumgebung verwendet. Obwohl viele Optionen verfügbar sind, wird [!DNL Jupyter Notebook] empfohlen, da es sich um eine Open-Source-Webanwendung mit geringen Rechenanforderungen handelt. Es kann von der offiziellen Jupyter[Website heruntergeladen ](https://jupyter.org/).
+In diesem Beispiel werden [!DNL Python] und die [!DNL Jupyter Notebook] Entwicklungsumgebung verwendet. Obwohl viele Optionen verfügbar sind, wird [!DNL Jupyter Notebook] empfohlen, da es sich um eine Open-Source-Webanwendung mit geringen Rechenanforderungen handelt. Es kann von der offiziellen Jupyter[Website heruntergeladen &#x200B;](https://jupyter.org/).
 
 Bevor Sie beginnen, müssen Sie die erforderlichen Bibliotheken importieren. [!DNL FuzzyWuzzy] ist eine Open-Source-[!DNL Python]-Bibliothek, die auf der [!DNL difflib]-Bibliothek aufbaut und zum Abgleichen von Zeichenfolgen verwendet wird. Es verwendet [!DNL Levenshtein Distance], um die Unterschiede zwischen Sequenzen und Mustern zu berechnen. [!DNL FuzzyWuzzy] hat die folgenden Anforderungen:
 
@@ -44,7 +44,7 @@ Weitere technische Informationen zu [!DNL Fuzzywuzzy] finden Sie in ihrer [offiz
 
 ### Verbindung zum Abfrage-Service herstellen
 
-Sie müssen Ihr maschinelles Lernmodell mit dem Abfrage-Service verbinden, indem Sie Ihre Verbindungsberechtigungen angeben. Es können sowohl ablaufende als auch nicht ablaufende Anmeldeinformationen angegeben werden. Weitere Informationen zum [ der erforderlichen Anmeldeinformationen finden ](../ui/credentials.md) im „Handbuch zu Anmeldeinformationen“. Wenn Sie [!DNL Jupyter Notebook] verwenden, lesen Sie bitte die vollständige Anleitung unter [Verbindung zum Abfrage-Service](../clients/jupyter-notebook.md).
+Sie müssen Ihr maschinelles Lernmodell mit dem Abfrage-Service verbinden, indem Sie Ihre Verbindungsberechtigungen angeben. Es können sowohl ablaufende als auch nicht ablaufende Anmeldeinformationen angegeben werden. Weitere Informationen zum [&#x200B; der erforderlichen Anmeldeinformationen finden &#x200B;](../ui/credentials.md) im „Handbuch zu Anmeldeinformationen“. Wenn Sie [!DNL Jupyter Notebook] verwenden, lesen Sie bitte die vollständige Anleitung unter [Verbindung zum Abfrage-Service](../clients/jupyter-notebook.md).
 
 Stellen Sie außerdem sicher, dass Sie das [!DNL numpy] Paket in Ihre [!DNL Python] importieren, um lineare Algebra zu aktivieren.
 

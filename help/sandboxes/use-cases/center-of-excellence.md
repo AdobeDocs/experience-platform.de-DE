@@ -39,7 +39,7 @@ Beachten Sie bei der Planung der Einrichtung eines eigenen Kompetenzzentrums in 
 
 ### Benutzeroberflächenfunktionen, Experience Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
 
-Um diesen Anwendungsfall erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Adobe Experience Platform verwenden. Vergewissern Sie sich, dass Sie über [ erforderlichen (attributbasierten Zugriffssteuerungsberechtigungen](../../access-control/abac/overview.md) für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu gewähren.
+Um diesen Anwendungsfall erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Adobe Experience Platform verwenden. Vergewissern Sie sich, dass Sie über [&#x200B; erforderlichen (attributbasierten Zugriffssteuerungsberechtigungen](../../access-control/abac/overview.md) für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu gewähren.
 
 - [Sandbox-Werkzeuge](../ui/sandbox-tooling.md)
 - [Sandbox-Verwaltung](../ui/user-guide.md)
@@ -65,7 +65,7 @@ Lesen Sie die folgenden Abschnitte, die Links zu weiterführender Dokumentation 
 
 Der erste Schritt, um Ihr Kompetenzzentrum zu ermöglichen, besteht darin, Ihre goldene Sandbox zu erstellen. Diese Sandbox sollte die grundlegenden Konfigurationen enthalten, die für Ihre Best Practices stehen. Um diese goldene Sandbox zu erstellen, folgen Sie der Anleitung unter [Erstellen einer neuen Sandbox](../ui/user-guide.md#create-a-new-sandbox) in Experience Platform.
 
-Beginnen Sie nach der Erstellung Ihrer Sandbox mit der Erstellung Ihrer grundlegenden Objektkonfigurationen, z[ B. ](../../xdm/ui/resources/schemas.md#create-a-new-schema), [Datensätze](../../catalog/datasets/user-guide.md#create-a-dataset) oder [Audiences](../../segmentation/ui/segment-builder.md). Prüfen Sie unbedingt Ihre Konfigurationen, bevor Sie fortfahren.
+Beginnen Sie nach der Erstellung Ihrer Sandbox mit der Erstellung Ihrer grundlegenden Objektkonfigurationen, z[&#x200B; B. &#x200B;](../../xdm/ui/resources/schemas.md#create-a-new-schema), [Datensätze](../../catalog/datasets/user-guide.md#create-a-dataset) oder [Audiences](../../segmentation/ui/segment-builder.md). Prüfen Sie unbedingt Ihre Konfigurationen, bevor Sie fortfahren.
 
 ### Exportieren der Sandbox in ein Paket
 
@@ -89,7 +89,7 @@ Nachdem Sie Ihr goldenes Sandbox-Paket abgeschlossen haben, haben Sie ein standa
 
 >[!NOTE]
 >
-> Die oben genannten Schritte folgen dem Prozess in der Benutzeroberfläche von Experience Platform. Es ist möglich, dieselben Schritte mithilfe der -API über verschiedene Endpunkte hinweg auszuführen. Weitere Informationen zu `sandboxes` einzelnen Anfragen über [ API finden ](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/api/sandboxes#create) im `packages` [Endpunkthandbuch](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
+> Die oben genannten Schritte folgen dem Prozess in der Benutzeroberfläche von Experience Platform. Es ist möglich, dieselben Schritte mithilfe der -API über verschiedene Endpunkte hinweg auszuführen. Weitere Informationen zu `sandboxes` einzelnen Anfragen über [&#x200B; API finden &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/api/sandboxes#create) im `packages` [Endpunkthandbuch](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
 
 ## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
 

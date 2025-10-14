@@ -374,7 +374,7 @@ Eine erfolgreiche Antwort gibt eine Liste der Dateien zurück, die Fehler aufwei
 }
 ```
 
-Sie können dann detaillierte Informationen zu den Fehlern über den Endpunkt [Diagnoseabruf“ ](#retrieve-diagnostics).
+Sie können dann detaillierte Informationen zu den Fehlern über den Endpunkt [Diagnoseabruf“ &#x200B;](#retrieve-diagnostics).
 
 Nachfolgend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
 

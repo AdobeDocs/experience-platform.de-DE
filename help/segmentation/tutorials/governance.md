@@ -202,7 +202,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 **Anfrage**
 
-Die folgende Anfrage testet die `exportToThirdParty` Marketing-Aktion mit Datensätzen, die im [ Schritt abgerufen ](#datasets). Die Anfrage-Payload ist ein Array, das die IDs der einzelnen Datensätze enthält.
+Die folgende Anfrage testet die `exportToThirdParty` Marketing-Aktion mit Datensätzen, die im [&#x200B; Schritt abgerufen &#x200B;](#datasets). Die Anfrage-Payload ist ein Array, das die IDs der einzelnen Datensätze enthält.
 
 ```shell
 curl -X POST \
@@ -377,7 +377,7 @@ Beim Exportieren einer Segmentdefinition in einen Datensatz mithilfe der [!DNL S
 
 Stellen Sie sich eine Segmentdefinition vor, die Datenfelder mit den Namen „A“, „B“ und „C“ enthält. Wenn Sie nur das Feld „C“ exportieren möchten, enthält der `fields`-Parameter nur das Feld „C“. Dadurch würden die Felder „A“ und „B“ beim Exportieren der Segmentdefinition ausgeschlossen.
 
-Weitere Informationen finden Sie im Abschnitt [Exportieren ](./evaluate-a-segment.md#export) Segmentdefinition“ im Segmentierungs-Tutorial.
+Weitere Informationen finden Sie im Abschnitt [Exportieren &#x200B;](./evaluate-a-segment.md#export) Segmentdefinition“ im Segmentierungs-Tutorial.
 
 ## Nächste Schritte
 

@@ -28,7 +28,7 @@ Die **[!UICONTROL Durchsuchen]** wird angezeigt. Eine Liste aller Interessentenp
 >
 >Während die meisten Suchfunktionen zwischen Kundenprofilen und Interessentenprofilen identisch sind, können Sie **&#x200B;**&#x200B;Interessentenprofile nach Zusammenführungsrichtlinien durchsuchen. Dies liegt daran, dass die Profile potenzieller Kundinnen und Kunden automatisch durch eine vom System entworfene zeitbasierte Zusammenführungsrichtlinie gesteuert werden. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
-Weiterführende Informationen zum Durchsuchen von Profilen finden Sie [ Abschnitt „Durchsuchen“ im Benutzerhandbuch für Profile](./user-guide.md#browse-identity).
+Weiterführende Informationen zum Durchsuchen von Profilen finden Sie [&#x200B; Abschnitt „Durchsuchen“ im Benutzerhandbuch für Profile](./user-guide.md#browse-identity).
 
 ## Details zum Interessentenprofil {#profile-details}
 
@@ -44,7 +44,7 @@ Es werden Informationen zum Interessentenprofil angezeigt, einschließlich der m
 
 ![Die Seite mit den Details des Interessentenprofils wird angezeigt.](../images/prospect-profile/profile-details.png)
 
-Weiterführende Informationen zu diesen Registerkarten finden Sie [ Abschnitt „Profildetails anzeigen“ im Benutzerhandbuch für Profile](./user-guide.md#profile-detail).
+Weiterführende Informationen zu diesen Registerkarten finden Sie [&#x200B; Abschnitt „Profildetails anzeigen“ im Benutzerhandbuch für Profile](./user-guide.md#profile-detail).
 
 Sie können auch alle Attribute im JSON-Format anzeigen, indem Sie **[!UICONTROL JSON anzeigen]** auswählen.
 

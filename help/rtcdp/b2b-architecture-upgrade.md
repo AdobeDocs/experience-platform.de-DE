@@ -59,7 +59,7 @@ Die folgenden Funktionen wurden im Rahmen der B2B-Architekturupgrades aktualisie
 
 Im Rahmen des neuen Architekturupgrades können Erlebnisereignisfilter nicht mehr in einer einzelnen Zielgruppe mit mehreren Entitäten verwendet werden, die B2B-Attribute enthält.
 
-Um dieselbe Zielgruppenlogik zu erreichen, können Sie Segment Builder verwenden, um Zielgruppen [ und zu referenzieren](../segmentation/ui/segment-builder.md#adding-audiences)
+Um dieselbe Zielgruppenlogik zu erreichen, können Sie Segment Builder verwenden, um Zielgruppen [&#x200B; und zu referenzieren](../segmentation/ui/segment-builder.md#adding-audiences)
 
 Beispiel:
 
@@ -92,13 +92,13 @@ Mit diesem Upgrade haben Sie jetzt folgende Möglichkeiten:
 * Verwenden Sie die [!DNL Profile Access]-APIs, um die neuesten Zusammenführungsprofile anzuzeigen, sobald die täglichen Entitätsauflösungsaufträge abgeschlossen sind.
 * Nutzen Sie die verbesserte Genauigkeit und Konsistenz Ihrer Konto- und Opportunity-Daten für die Segmentierung, Aktivierung und Analyse.
 
-Weitere Informationen finden [[!DNL Profile Access]  in ](../profile/api/entities.md)API“.
+Weitere Informationen finden [[!DNL Profile Access]  in &#x200B;](../profile/api/entities.md)API“.
 
 ### Unterstützung von Zusammenführungsrichtlinien in B2B-Zielgruppen mit mehreren Entitäten
 
 Zielgruppen mit mehreren Entitäten mit B2B-Attributen unterstützen jetzt eine einzige Zusammenführungsrichtlinie - die standardmäßige Zusammenführungsrichtlinie, die Sie konfigurieren - anstelle mehrerer Zusammenführungsrichtlinien.
 
-Weitere Informationen finden [ im Benutzerhandbuch für Segmentierungsanwendungsfälle ](./segmentation/b2b.md) Real-Time CDP B2B edition.
+Weitere Informationen finden [&#x200B; im Benutzerhandbuch für Segmentierungsanwendungsfälle &#x200B;](./segmentation/b2b.md) Real-Time CDP B2B edition.
 
 ### Einstellung der B2B-Entitätssuche und -löschung in der [!DNL Profile Access]-API
 
@@ -122,7 +122,7 @@ Löschanfragen für die folgenden B2B-Entitäten, die die [!DNL Profile Access]-
 * Marketing-Liste
 * Mitglieder der Marketing-Liste
 
-Weitere Informationen finden [[!DNL Profile Access]  in ](../profile/api/entities.md)API“.
+Weitere Informationen finden [[!DNL Profile Access]  in &#x200B;](../profile/api/entities.md)API“.
 
 ### Konto- und Opportunity-Profilsuche
 
@@ -149,4 +149,4 @@ Mit den Architekturupgrades können Sie keine Zielgruppen mit mehreren Entitäte
 
 Entwicklungs-Sandboxes werden auf die neue Architektur aktualisiert. Zielgruppen, die automatisch aktualisiert werden können, werden aktualisiert. Zielgruppen, die nicht automatisch aktualisiert werden können, werden deaktiviert. Deaktivierte Zielgruppen müssen nach dem Upgrade neu erstellt werden.
 
-Weitere Informationen finden [ im Sandbox](../sandboxes/ui/sandbox-tooling.md)Toolinghandbuch .
+Weitere Informationen finden [&#x200B; im Sandbox](../sandboxes/ui/sandbox-tooling.md)Toolinghandbuch .

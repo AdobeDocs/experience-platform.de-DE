@@ -14,9 +14,9 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
-Mit Selbstbedienungsquellen (Streaming-SDK) können Sie Ihre eigene Quelle integrieren, um Streaming-Daten an Adobe Experience Platform zu übertragen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [[!DNL Flow Service] API) ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Mit Selbstbedienungsquellen (Streaming-SDK) können Sie Ihre eigene Quelle integrieren, um Streaming-Daten an Adobe Experience Platform zu übertragen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [[!DNL Flow Service] API) &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Allgemeine Vorgehensweise
 
@@ -31,8 +31,8 @@ Der schrittweise Prozess zum Konfigurieren Ihrer -Quelle in Experience Platform 
 ### Dokumentation
 
 * Um mit der Dokumentation Ihrer Quelle zu beginnen, lesen Sie [Übersicht über das Erstellen der Dokumentation für Selbstbedienungsquellen](../documentation/doc-overview.md).
-* Anweisungen zum Erstellen [ Dokumentation mit GitHub finden Sie im Handbuch unter ](../documentation/github.md)Verwenden der GitHub-Web-Benutzeroberfläche“.
-* Anweisungen zum Erstellen [ Dokumentation auf Ihrem lokalen Computer finden Sie ](../documentation/text-editor.md) Handbuch unter „Verwenden eines Texteditors“.
+* Anweisungen zum Erstellen [&#x200B; Dokumentation mit GitHub finden Sie im Handbuch unter &#x200B;](../documentation/github.md)Verwenden der GitHub-Web-Benutzeroberfläche“.
+* Anweisungen zum Erstellen [&#x200B; Dokumentation auf Ihrem lokalen Computer finden Sie &#x200B;](../documentation/text-editor.md) Handbuch unter „Verwenden eines Texteditors“.
 * [Verwenden Sie die Dokumentationsvorlage für die Streaming-SDK-API , um Ihre Quelle in der API zu dokumentieren](streaming-template-api.md).
 * [Verwenden Sie die Dokumentationsvorlage für die Streaming-SDK-Benutzeroberfläche, um Ihre Quelle in der Benutzeroberfläche zu dokumentieren](streaming-template-ui.md).
 

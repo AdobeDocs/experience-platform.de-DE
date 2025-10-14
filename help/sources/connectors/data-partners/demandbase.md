@@ -26,7 +26,7 @@ Lesen Sie die folgenden Abschnitte für erforderliche Schritte, bevor Sie [!DNL 
 
 ### Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [ Seite ](../../ip-address-allow-list.md)IP-Adresse“.
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [&#x200B; Seite &#x200B;](../../ip-address-allow-list.md)IP-Adresse“.
 
 ### Konfigurieren von Berechtigungen für Experience Platform
 
@@ -194,6 +194,6 @@ Der Domain-Abgleich in Experience Platform basiert auf einer exakten Übereinsti
 
 +++Antwort
 
-Absichtsdaten können in &quot;[-Zielgruppen“ verwendet werden, ](../../../segmentation/types/account-audiences.md) Targeting, Segmentierung und Personalisierung zu verbessern. Durch die Nutzung von Absichtssignalen können Unternehmen Konten identifizieren und mit ihnen interagieren, die ein hohes Interesse an bestimmten Themen zeigen, und so Marketing- und Verkaufsaktivitäten optimieren
+Absichtsdaten können in &quot;[-Zielgruppen“ verwendet werden, &#x200B;](../../../segmentation/types/account-audiences.md) Targeting, Segmentierung und Personalisierung zu verbessern. Durch die Nutzung von Absichtssignalen können Unternehmen Konten identifizieren und mit ihnen interagieren, die ein hohes Interesse an bestimmten Themen zeigen, und so Marketing- und Verkaufsaktivitäten optimieren
 
 +++

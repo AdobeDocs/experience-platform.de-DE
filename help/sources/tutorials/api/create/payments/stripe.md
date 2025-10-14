@@ -12,7 +12,7 @@ ht-degree: 40%
 
 # Aufnehmen von Zahlungsdaten aus Ihrem [!DNL Stripe] mithilfe von APIs in Experience Platform
 
-Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Ihre Zahlungsdaten von [!DNL Stripe] in Adobe Experience Platform mithilfe der [[!DNL Flow Service] API) ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Ihre Zahlungsdaten von [!DNL Stripe] in Adobe Experience Platform mithilfe der [[!DNL Flow Service] API) &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -23,11 +23,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ### Authentifizierung
 
-Informationen [[!DNL Stripe]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/payments/stripe.md) „Übersicht“.
+Informationen [[!DNL Stripe]  Abrufen Ihrer Authentifizierungsdaten finden Sie &#x200B;](../../../../connectors/payments/stripe.md) „Übersicht“.
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Verbinden von [!DNL Stripe] mit Experience Platform
 
@@ -79,7 +79,7 @@ curl -X POST \
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID der Quelle. Die Verbindungsspezifikations-ID für [!DNL Stripe] ist `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3` und diese ID ist fest. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Experience Platform authentifizieren. |
-| `auth.params.accessToken` | Das Zugriffstoken Ihres [!DNL Stripe] Kontos. Anweisungen [[!DNL Stripe]  Abrufen Ihres Zugriffs-Tokens finden Sie ](../../../../connectors/payments/stripe.md#prerequisites) Authentifizierungshandbuch . |
+| `auth.params.accessToken` | Das Zugriffstoken Ihres [!DNL Stripe] Kontos. Anweisungen [[!DNL Stripe]  Abrufen Ihres Zugriffs-Tokens finden Sie &#x200B;](../../../../connectors/payments/stripe.md#prerequisites) Authentifizierungshandbuch . |
 
 **Antwort**
 
@@ -521,7 +521,7 @@ curl -X POST \
 | `description` | Ein optionaler Wert, den Sie für weitere Informationen zu Ihrer Zielverbindung angeben können. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die dem Data Lake entspricht. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | Das Format der [!DNL Stripe]-Daten, die Sie aufnehmen möchten. |
-| `params.dataSetId` | Die ID Ihres Zieldatensatzes. Diese ID wird durch &quot;[ eines Zieldatensatzes“ ](#target-dataset). |
+| `params.dataSetId` | Die ID Ihres Zieldatensatzes. Diese ID wird durch &quot;[&#x200B; eines Zieldatensatzes“ &#x200B;](#target-dataset). |
 
 **Antwort**
 
@@ -788,7 +788,7 @@ curl -X POST \
 | `xdmSchema` | Die ID Ihres XDM-Zielschemas. Diese ID wird durch Erstellen eines [Ziel-XDM-Schemas](#target-schema) generiert. |
 | `destinationXdmPath` | Das XDM-Feld, dem das Quellattribut zugeordnet wird. |
 | `sourceAttribute` | Das Quelldatenfeld, das zugeordnet wird. |
-| `identity` | Ein boolescher Wert, der definiert, ob das Feld in [Identity Service) beibehalten ](../../../../../identity-service/home.md). |
+| `identity` | Ein boolescher Wert, der definiert, ob das Feld in [Identity Service) beibehalten &#x200B;](../../../../../identity-service/home.md). |
 | `version` | Die verwendete Zuordnungsversion. |
 
 +++

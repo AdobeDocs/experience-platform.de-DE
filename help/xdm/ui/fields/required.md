@@ -18,7 +18,7 @@ Im Experience-Datenmodell (XDM) gibt ein erforderliches Feld an, dass ein gülti
 >
 >Unabhängig davon, ob ein Schemafeld erforderlich ist oder nicht, akzeptiert Experience Platform für kein aufgenommenes Feld `null` oder leere Werte. Wenn in einem Datensatz oder Ereignis kein Wert für ein bestimmtes Feld vorhanden ist, sollte der Schlüssel für dieses Feld aus der Aufnahme-Payload ausgeschlossen werden.
 
-Beim [Definieren eines neuen ](./overview.md#define) in der Benutzeroberfläche von Adobe Experience Platform können Sie es als erforderliches Feld festlegen, indem Sie das Kontrollkästchen **[!UICONTROL Erforderlich]** in der rechten Leiste aktivieren. Wählen Sie **[!UICONTROL Anwenden]** aus, um die Änderung auf das Schema anzuwenden.
+Beim [Definieren eines neuen &#x200B;](./overview.md#define) in der Benutzeroberfläche von Adobe Experience Platform können Sie es als erforderliches Feld festlegen, indem Sie das Kontrollkästchen **[!UICONTROL Erforderlich]** in der rechten Leiste aktivieren. Wählen Sie **[!UICONTROL Anwenden]** aus, um die Änderung auf das Schema anzuwenden.
 
 ![Kontrollkästchen Erforderlich](../../images/ui/fields/required/root.png)
 

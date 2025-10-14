@@ -21,7 +21,7 @@ Erfahren Sie, wie Sie verschiedene Komponenten einer vorhandenen Zielverbindung 
 
 >[!NOTE]
 >
-> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch über API-Vorgänge unterstützt. Weitere Informationen finden Sie im Tutorial [ Bearbeiten von Zielen in ](/help/destinations/api/edit-destination.md) API .
+> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch über API-Vorgänge unterstützt. Weitere Informationen finden Sie im Tutorial [&#x200B; Bearbeiten von Zielen in &#x200B;](/help/destinations/api/edit-destination.md) API .
 
 So bearbeiten Sie verschiedene Komponenten einer vorhandenen Zielverbindung:
 

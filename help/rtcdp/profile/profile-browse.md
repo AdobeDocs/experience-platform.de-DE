@@ -18,7 +18,7 @@ Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht auf Ihre einzelnen K
 
 In der Benutzeroberfläche von Adobe Experience Platform können Sie diese schreibgeschützten Profile anzeigen und wichtige Informationen zu Ihren einzelnen Kundinnen und Kunden anzeigen, einschließlich ihrer Voreinstellungen, vergangener Ereignisse, Interaktionen und der Zielgruppen, zu denen die Person gehört.
 
-Adobe Real-Time Customer Data Platform basiert auf Adobe Experience Platform und kann daher die Funktionen zur Profilanzeige in der Benutzeroberfläche von Experience Platform nutzen. Eine detaillierte Anleitung zum Anzeigen von Kundenprofilen in der Benutzeroberfläche von Experience Platform finden Sie [ Benutzerhandbuch zum Echtzeit-Kundenprofil](../../profile/ui/user-guide.md).
+Adobe Real-Time Customer Data Platform basiert auf Adobe Experience Platform und kann daher die Funktionen zur Profilanzeige in der Benutzeroberfläche von Experience Platform nutzen. Eine detaillierte Anleitung zum Anzeigen von Kundenprofilen in der Benutzeroberfläche von Experience Platform finden Sie [&#x200B; Benutzerhandbuch zum Echtzeit-Kundenprofil](../../profile/ui/user-guide.md).
 
 ## Profilverbesserungen für Real-Time CDP, B2B Edition
 

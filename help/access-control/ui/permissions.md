@@ -17,7 +17,7 @@ Unmittelbar nach der [Erstellung eines neuen Produktprofils](#create-a-new-produ
 
 ![Berechtigungen](../images/permissions.png)
 
-Berechtigungen werden in Kategorien unterteilt und auf dieser Seite aufgelistet. Die Liste zeigt den Kategorienamen, die Anzahl der darin enthaltenen Berechtigungen (und die Anzahl der aktiven Berechtigungen) und die Beschreibung an. Eine Aufschlüsselung der für [ einzelnen Rollen verfügbaren Berechtigungen finden Sie ](/help/access-control/home.md#permissions) der Tabelle unter „Ressourcenberechtigungen“.
+Berechtigungen werden in Kategorien unterteilt und auf dieser Seite aufgelistet. Die Liste zeigt den Kategorienamen, die Anzahl der darin enthaltenen Berechtigungen (und die Anzahl der aktiven Berechtigungen) und die Beschreibung an. Eine Aufschlüsselung der für [&#x200B; einzelnen Rollen verfügbaren Berechtigungen finden Sie &#x200B;](/help/access-control/home.md#permissions) der Tabelle unter „Ressourcenberechtigungen“.
 
 Klicken Sie auf eine Kategorie in der Liste, um die Seite **[!UICONTROL Berechtigungen bearbeiten]** zu öffnen.
 

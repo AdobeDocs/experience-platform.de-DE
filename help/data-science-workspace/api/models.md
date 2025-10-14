@@ -361,7 +361,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit den Informationen Ihrer Transkodierung enthält. Dazu gehört die eindeutige Kennung (`id`) für die Transkodierung, die beim [Abrufen eines bestimmten transkodierten Modells“ verwendet ](#retrieve-transcoded-model).
+Eine erfolgreiche Antwort gibt eine Payload zurück, die ein JSON-Objekt mit den Informationen Ihrer Transkodierung enthält. Dazu gehört die eindeutige Kennung (`id`) für die Transkodierung, die beim [Abrufen eines bestimmten transkodierten Modells“ verwendet &#x200B;](#retrieve-transcoded-model).
 
 ```json
 {

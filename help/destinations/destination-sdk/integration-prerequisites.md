@@ -25,7 +25,7 @@ Um Destination SDK zu verwenden, stellen Sie sicher, dass Sie die in den folgend
 ## Technische Voraussetzungen für Batch-Ziele {#batch-prerequisites}
 
 1. Sie haben einen Zielspeicherort, der auf [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud] oder einem privaten [!DNL Data Landing Zone] gehostet wird, wo Sie Dateien empfangen können, die aus Experience Platform exportiert wurden.
-2. Destination SDK Ihre Zielplattform kann Dateien in dem Format aufnehmen, das über die [Dateiformatierungsoptionen“ in der ](functionality/destination-server/file-formatting.md) für Batch-Ziele konfiguriert wurde.
+2. Destination SDK Ihre Zielplattform kann Dateien in dem Format aufnehmen, das über die [Dateiformatierungsoptionen“ in der &#x200B;](functionality/destination-server/file-formatting.md) für Batch-Ziele konfiguriert wurde.
 3. (Optional) Sie haben eine Zielgruppen-API ([!DNL CRUD]) oder einen API-Endpunkt zum Erstellen/Abrufen/Aktualisieren/Löschen für die programmgesteuerte Metadatenverwaltung.
 
 ## Voraussetzungen für die Partnerschaft {#partnership-prerequisites}

@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >* Die [!DNL Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
 >
->* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 [!DNL Databricks] ist eine Cloud-basierte Plattform für Datenanalyse, maschinelles Lernen und KI. Sie können [!DNL Databricks] verwenden, um eine ganzheitliche Umgebung für das Erstellen, Bereitstellen und Verwalten von Datenlösungen im benötigten Umfang zu integrieren und bereitzustellen.
 

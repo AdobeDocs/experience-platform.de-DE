@@ -13,7 +13,7 @@ ht-degree: 24%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Lesen Sie dieses Tutorial, um zu erfahren, wie Sie eine Basisverbindung für [!DNL Salesforce Service Cloud] mithilfe der [[!DNL Flow Service] API) ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Tutorial, um zu erfahren, wie Sie eine Basisverbindung für [!DNL Salesforce Service Cloud] mithilfe der [[!DNL Flow Service] API) &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -67,7 +67,7 @@ Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce Service Clo
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 

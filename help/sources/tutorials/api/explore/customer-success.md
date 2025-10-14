@@ -176,4 +176,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr CS-System erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] aufnehmen möchten, und Informationen über dessen Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem CS-System zu erfassen und in Experience Platform zu ](../collect/customer-success.md).
+In diesem Tutorial haben Sie Ihr CS-System erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] aufnehmen möchten, und Informationen über dessen Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[&#x200B; um Daten aus Ihrem CS-System zu erfassen und in Experience Platform zu &#x200B;](../collect/customer-success.md).

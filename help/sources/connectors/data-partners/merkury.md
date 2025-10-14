@@ -53,4 +53,4 @@ Sie müssen die folgenden Voraussetzungen erfüllen, bevor Sie mit der Verwendun
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten aus Ihrem [!DNL Merkury]-Konto in Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Merkury]  mit Experience Platform über die Benutzeroberfläche ](../../tutorials/ui/create/data-partners/merkury.md).
+Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten aus Ihrem [!DNL Merkury]-Konto in Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Merkury]  mit Experience Platform über die Benutzeroberfläche &#x200B;](../../tutorials/ui/create/data-partners/merkury.md).

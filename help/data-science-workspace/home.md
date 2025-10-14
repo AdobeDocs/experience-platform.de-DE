@@ -199,4 +199,4 @@ Weitere Informationen, z. B. einen kompletten täglichen Workflow, finden Sie in
 
 Das folgende Video wurde entwickelt, um Ihr Verständnis von [!DNL Data Science Workspace] zu unterstützen.
 
->[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&enable10seconds=on&speedcontrol=on)

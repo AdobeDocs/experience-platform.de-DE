@@ -12,7 +12,7 @@ ht-degree: 10%
 
 # [!UICONTROL Flugreservierung] Schemafeldgruppe
 
-[!UICONTROL Flugreservierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , ](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Flugreservierung zu erfassen.
+[!UICONTROL Flugreservierung] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM ExperienceEvent] , &#x200B;](../../classes/experienceevent.md) verwendet wird, um Informationen zu einer Flugreservierung zu erfassen.
 
 Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungsdetails] und enthält alle gleichen Felder unter einem einzigen Feld vom Typ „Objekt“, `reservations`. Zusätzlich zu diesen generischen Feldern enthält [!UICONTROL Flugreservierung] auch `flightReservations` Array. Dieses Array von Objekten wird verwendet, um eine oder mehrere Reservierungen mit einzigartigen Eigenschaften für Flugreisen zu beschreiben.
 

@@ -18,7 +18,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 >Weitere Informationen finden Sie in der unterstützenden Dokumentation im Adobe-Handbuch für Mitwirkende:
 >* [Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=de)
 >* [Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de)
->* [GitHub-Beitrags-Workflow für wichtige ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=de).
+>* [GitHub-Beitrags-Workflow für wichtige &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=de).
 
 ## Einrichten der GitHub-Authoring-Umgebung {#set-up-environment}
 

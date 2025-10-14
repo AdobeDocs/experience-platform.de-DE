@@ -15,7 +15,7 @@ Mit Adobe Experience Platform können Sie Daten aus Adobe Analytics Report Suite
 
 Dieses Dokument enthält eine Vielzahl von SQL-Beispielabfragen, die gängige Anwendungsfälle beim Erstellen von Einblicken aus Web- und Mobile-Analytics-Daten zeigen.
 
-Weitere Informationen [ Aufnehmen und Zuordnen von Analytics-Daten finden ](../../sources/connectors/adobe-applications/mapping/analytics.md) in der Dokumentation zu Analytics-Feldzuordnungen .
+Weitere Informationen [&#x200B; Aufnehmen und Zuordnen von Analytics-Daten finden &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) in der Dokumentation zu Analytics-Feldzuordnungen .
 
 ## Erste Schritte
 

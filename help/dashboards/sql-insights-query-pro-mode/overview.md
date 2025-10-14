@@ -15,7 +15,7 @@ Verwenden Sie benutzerdefinierte SQL-Abfragen, um effektiv Einblicke aus verschi
 
 >[!IMPORTANT]
 >
->Der Query Pro-Modus ist nur für Benutzer verfügbar, die die [Data Distiller SKU) ](../../query-service/data-distiller/overview.md) haben.
+>Der Query Pro-Modus ist nur für Benutzer verfügbar, die die [Data Distiller SKU) &#x200B;](../../query-service/data-distiller/overview.md) haben.
 
 Um Insights aus SQL zu generieren, müssen Sie zunächst ein Dashboard erstellen.
 
@@ -29,7 +29,7 @@ Das **[!UICONTROL Dashboard erstellen]** wird angezeigt. Es gibt zwei Optionen, 
 
 <!-- Maybe reference Guided design mode in other places on UDD doc. -->
 
-Die Verwendung eines vorhandenen Datenmodells bietet die Vorteile eines strukturierten, effizienten und skalierbaren Frameworks, das auf Ihre spezifischen Geschäftsanforderungen zugeschnitten ist. Informationen zum [ (Erstellen von Einblicken aus einem vorhandenen Datenmodell](../standard-dashboards.md#create-widget) finden Sie im Handbuch zum benutzerdefinierten Dashboard .
+Die Verwendung eines vorhandenen Datenmodells bietet die Vorteile eines strukturierten, effizienten und skalierbaren Frameworks, das auf Ihre spezifischen Geschäftsanforderungen zugeschnitten ist. Informationen zum [&#x200B; (Erstellen von Einblicken aus einem vorhandenen Datenmodell](../standard-dashboards.md#create-widget) finden Sie im Handbuch zum benutzerdefinierten Dashboard .
 
 Erkenntnisse, die aus SQL-Abfragen generiert werden, bieten eine viel größere Flexibilität und Anpassung. Technische Mitarbeiter können den Abfragemodus verwenden, um komplexe Analysen zu SQL durchzuführen und diese Analyse dann über diese Dashboard-Funktion für nicht-technische Benutzer freizugeben. Wählen **[!UICONTROL Query pro-Modus]** gefolgt von **[!UICONTROL Speichern]** aus.
 
@@ -51,7 +51,7 @@ Nachdem Sie sich entschieden haben, ein Dashboard mit Query Pro-Modus zu erstell
 >
 >Der Pro-Modus „Abfrage“ ist nur für Benutzende verfügbar, die die Data Distiller SKU erworben haben. Der [[!UICONTROL Geführte Design-Modus]](../standard-dashboards.md) steht allen Benutzern zur Verfügung, um Einblicke aus einem vorhandenen Datenmodell zu erstellen.
 
-Weitere Informationen [ Benutzeroberflächenelemente finden Sie ](../../query-service/ui/user-guide.md#query-authoring) Benutzerhandbuch zum Abfrage-Editor .
+Weitere Informationen [&#x200B; Benutzeroberflächenelemente finden Sie &#x200B;](../../query-service/ui/user-guide.md#query-authoring) Benutzerhandbuch zum Abfrage-Editor .
 
 ![Das Dialogfeld [!UICONTROL SQL eingeben] mit hervorgehobenem Dropdown-Menü „Datensatz“ und dem Symbol „Ausführen“. Das Dialogfeld enthält eine ausgefüllte SQL-Abfrage und die Registerkarte „Abfrageparameter“ wird angezeigt.](../images/sql-insights-query-pro-mode/enter-sql-database-dropdown.png)
 
@@ -61,7 +61,7 @@ Um [globale](./filters/global-filter.md) oder [Datumsfilter einzuschließen](./f
 
 >[!IMPORTANT]
 >
->Wenn Sie einen globalen Filter verwenden möchten, müssen Sie einen Abfrageparameter in Ihrer SQL platzieren und diesen Abfrageparameter dann mit dem globalen Filter im Widget-Composer verknüpfen. Im folgenden Screenshot wird `CONSENT_VALUE_FILTER` in SQL als Abfrageparameter für einen globalen Filter verwendet. Weitere Informationen dazu finden [ in ](./filters/global-filter.md#enable-global-filter) Dokumentation zum globalen Filter .
+>Wenn Sie einen globalen Filter verwenden möchten, müssen Sie einen Abfrageparameter in Ihrer SQL platzieren und diesen Abfrageparameter dann mit dem globalen Filter im Widget-Composer verknüpfen. Im folgenden Screenshot wird `CONSENT_VALUE_FILTER` in SQL als Abfrageparameter für einen globalen Filter verwendet. Weitere Informationen dazu finden [&#x200B; in &#x200B;](./filters/global-filter.md#enable-global-filter) Dokumentation zum globalen Filter .
 
 Um Ihre Abfrage auszuführen, wählen Sie das Symbol „Ausführen“ (![das Symbol „Ausführen„).](/help/images/icons/play.png)). Der Abfrage-Editor zeigt die Registerkarte Ergebnisse an. Bestätigen Sie als Nächstes Ihre Konfiguration und öffnen Sie den Widget-Composer, indem Sie **[!UICONTROL Auswählen]** auswählen.
 
@@ -147,10 +147,10 @@ Wählen Sie **[!UICONTROL Filter hinzufügen]** aus, um entweder einen [[!UICONT
 
 ## Bearbeiten, Duplizieren oder Löschen eines Insights
 
-Anweisungen zum Bearbeiten, Duplizieren oder Löschen eines vorhandenen Widgets [ Sie im Handbuch zum benutzerdefinierten Dashboard ](../standard-dashboards.md#duplicate).
+Anweisungen zum Bearbeiten, Duplizieren oder Löschen eines vorhandenen Widgets [&#x200B; Sie im Handbuch zum benutzerdefinierten Dashboard &#x200B;](../standard-dashboards.md#duplicate).
 
 ## Nächste Schritte
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie SQL-Abfragen in der Adobe Experience Platform-Benutzeroberfläche schreiben, um Diagramme für Ihre benutzerdefinierten Dashboards zu generieren. Als Nächstes sollten Sie lernen, wie Sie Ihre Daten durch [Erstellen eines Datumsfilters](./filters/date-filter.md) oder [Erstellen eines globalen Filters](./filters/global-filter.md) weiter anreichern können.
 
-Sie können auch mehr über andere Custom Insights-Funktionen erfahren, darunter [die verschiedenen Anzeigeoptionen für Ihre SQL-analysierten Daten](./view-more.md) oder wie Sie [ SQL hinter Ihren benutzerdefinierten Insights ](./view-sql.md).
+Sie können auch mehr über andere Custom Insights-Funktionen erfahren, darunter [die verschiedenen Anzeigeoptionen für Ihre SQL-analysierten Daten](./view-more.md) oder wie Sie [&#x200B; SQL hinter Ihren benutzerdefinierten Insights &#x200B;](./view-sql.md).

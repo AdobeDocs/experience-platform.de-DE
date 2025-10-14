@@ -23,7 +23,7 @@ In diesem Dokument wird die Verwendung der SQL-Zielgruppenerweiterung in Adobe E
 
 Führen Sie diese Schritte aus, um Ihre Zielgruppen zu erstellen, zu verwalten und zu aktivieren. Erstellte Zielgruppen lassen sich nahtlos in den Zielgruppenfluss integrieren, sodass Sie Segmente aus Basiszielgruppen und dateibasierten Zielen (z. B. CSV-Uploads oder Cloud-Speicherorte) für die Kundenkontakte erstellen können. „Zielgruppenfluss“ bezieht sich auf den vollständigen Prozess der Erstellung, Verwaltung und Aktivierung von Zielgruppen, um eine nahtlose Integration über Ziele hinweg sicherzustellen.
 
-Adobe Experience Platform Verwenden Sie im Rahmen Ihres „Zielgruppen-Flusses“ die folgenden SQL-Befehle[ um Zielgruppen in zu erstellen](#create-audience) zu [&#128279;](#add-profiles-to-audience) und [löschen](#delete-audience).
+Adobe Experience Platform Verwenden Sie im Rahmen Ihres „Zielgruppen-Flusses“ die folgenden SQL-Befehle[&#x200B; um Zielgruppen in zu erstellen](#create-audience) zu [&#128279;](#add-profiles-to-audience) und [löschen](#delete-audience).
 
 ### Erstellen einer Zielgruppe {#create-audience}
 
@@ -383,6 +383,6 @@ Nach dem Lesen dieses Dokuments haben Sie gelernt, wie Sie mit der SQL-Zielgrupp
 Als Nächstes können Sie die folgende Dokumentation lesen, um Ihre Zielgruppen-Management-Strategien für Experience Platform weiter zu entwickeln und zu optimieren:
 
 - **Erkunden der Zielgruppenauswertung**: Erfahren Sie mehr über die [Zielgruppenauswertungsmethoden in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): Streaming-Segmentierung für Echtzeit-Updates, Batch-Segmentierung für die geplante oder bedarfsgesteuerte Verarbeitung und Edge-Segmentierung für die sofortige Auswertung auf der Edge Network.
-- **Mit Zielen integrieren**: Lesen Sie das Handbuch zum [ von Dateien bei Bedarf in Batch-Ziele ](../../destinations/ui/export-file-now.md) der Benutzeroberfläche von Experience Platform-Zielen.
+- **Mit Zielen integrieren**: Lesen Sie das Handbuch zum [&#x200B; von Dateien bei Bedarf in Batch-Ziele &#x200B;](../../destinations/ui/export-file-now.md) der Benutzeroberfläche von Experience Platform-Zielen.
 - **Leistung der Zielgruppe überprüfen** Analysieren Sie, wie Ihre SQL-definierten Zielgruppen auf verschiedenen Kanälen funktionieren. Verwenden Sie Dateneinblicke, um Ihre Zielgruppendefinitionen und Zielgruppenbestimmungsstrategien anzupassen und zu verbessern. Lesen Sie das Dokument unter [Zielgruppeneinblicke](../../dashboards/insights/audiences.md), um zu erfahren, wie Sie in Adobe Real-Time CDP auf die SQL-Abfragen für Zielgruppeneinblicke zugreifen und diese anpassen können. Anschließend können Sie eigene Einblicke erstellen und Rohdaten in umsetzbare Informationen umwandeln, indem Sie das Zielgruppen-Dashboard anpassen, um diese Einblicke effektiv zu visualisieren und für eine bessere Entscheidungsfindung zu verwenden.
 

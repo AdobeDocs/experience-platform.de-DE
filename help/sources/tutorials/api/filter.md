@@ -33,7 +33,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ## Filtern von Quelldaten {#filter-source-data}
 
@@ -407,7 +407,7 @@ Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) der neu erste
 
 ## Aktivitätsentitäten für [!DNL Marketo Engage] filtern {#filter-for-marketo}
 
-Bei Verwendung des Quell-Connectors können Sie die Filterung auf Zeilenebene verwenden, um nach Aktivitätsentitäten [[!DNL Marketo Engage]  filtern](../../connectors/adobe-applications/marketo/marketo.md). Derzeit können Sie nur nach Aktivitätsentitäten und standardmäßigen Aktivitätstypen filtern. Benutzerdefinierte Aktivitäten werden weiterhin unter [[!DNL Marketo] Feldzuordnungen“ ](../../connectors/adobe-applications/mapping/marketo.md).
+Bei Verwendung des Quell-Connectors können Sie die Filterung auf Zeilenebene verwenden, um nach Aktivitätsentitäten [[!DNL Marketo Engage]  filtern](../../connectors/adobe-applications/marketo/marketo.md). Derzeit können Sie nur nach Aktivitätsentitäten und standardmäßigen Aktivitätstypen filtern. Benutzerdefinierte Aktivitäten werden weiterhin unter [[!DNL Marketo] Feldzuordnungen“ &#x200B;](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### Standard-Aktivitätstypen [!DNL Marketo] {#marketo-standard-activity-types}
 

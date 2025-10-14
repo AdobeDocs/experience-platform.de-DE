@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Was geschieht?
 
-In [ Experience Platform-Version vom September 2024 ](/help/release-notes/latest/latest.md#destinations) die Option zum Festlegen eines `endTime` für den Export von Datensatzdatenflüssen eingeführt. Adobe hat außerdem das standardmäßige Enddatum 1. Mai 2025 für alle Datensatzexport-Datenflüsse eingeführt, die (*der Version vom September 2024) erstellt*. Diese Datenflüsse zeigen derzeit eine Meldung ähnlich der unten gezeigten an.
+In [&#x200B; Experience Platform-Version vom September 2024 &#x200B;](/help/release-notes/latest/latest.md#destinations) die Option zum Festlegen eines `endTime` für den Export von Datensatzdatenflüssen eingeführt. Adobe hat außerdem das standardmäßige Enddatum 1. Mai 2025 für alle Datensatzexport-Datenflüsse eingeführt, die (*der Version vom September 2024) erstellt*. Diese Datenflüsse zeigen derzeit eine Meldung ähnlich der unten gezeigten an.
 
 ![Benutzeroberflächenbenachrichtigung über die Notwendigkeit, das Enddatum des Datensatzexport-Datenflusses zu aktualisieren.](/help/destinations/assets/ui/export-datasets/update-end-date.png)
 

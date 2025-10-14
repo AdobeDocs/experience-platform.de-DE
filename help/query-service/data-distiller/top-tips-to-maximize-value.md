@@ -55,7 +55,7 @@ Die folgende Infografik bietet einen allgemeinen Überblick über den Workflow z
 
 ![Eine Infografik mit dem Titel „RFM-Score-Based SQL Audience“, die vier Schritte veranschaulicht: CSV hochladen, Daten erkunden, mit RFM-Scores anreichern und die Zielgruppe aktivieren.](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
-Bevor Sie mit der Fallstudie zu Luma beginnen, müssen Sie einen Beispieldatensatz aufnehmen. Wählen [ zunächst den Link aus, um den `luma_web_data.zip`-Datensatz lokal herunterzuladen](../resources/luma_web_data.zip). Der Beispieldatensatz ist eine CSV-Datei im komprimierten ZIP-Format, die an den Anwendungsfall angepasst wird. Entpacken Sie diese ZIP-Datei mit Adobe Acrobat oder einem vertrauenswürdigen Dateiextraktions-Tool, z. B. dem integrierten Dienstprogramm Ihres Betriebssystems. In der Praxis würden Sie Daten normalerweise aus Adobe Analytics, Adobe Commerce oder Adobe Web/Mobile SDK beziehen.
+Bevor Sie mit der Fallstudie zu Luma beginnen, müssen Sie einen Beispieldatensatz aufnehmen. Wählen [&#x200B; zunächst den Link aus, um den `luma_web_data.zip`-Datensatz lokal herunterzuladen](../resources/luma_web_data.zip). Der Beispieldatensatz ist eine CSV-Datei im komprimierten ZIP-Format, die an den Anwendungsfall angepasst wird. Entpacken Sie diese ZIP-Datei mit Adobe Acrobat oder einem vertrauenswürdigen Dateiextraktions-Tool, z. B. dem integrierten Dienstprogramm Ihres Betriebssystems. In der Praxis würden Sie Daten normalerweise aus Adobe Analytics, Adobe Commerce oder Adobe Web/Mobile SDK beziehen.
 
 In diesem Tutorial verwenden Sie Data Distiller, um relevante Ereignisse und Felder in ein standardisiertes CSV-Format zu extrahieren. Ziel ist es, nur wesentliche Felder einzubeziehen und gleichzeitig eine flache Datenstruktur für Effizienz und Benutzerfreundlichkeit beizubehalten.
 
@@ -130,7 +130,7 @@ Die Abfrageergebnisse werden unter dem Abfrage-Editor auf der Registerkarte **[!
 
 ![Das Dialogfeld „Abfrageergebnisse“ für die grundlegenden Abfrageexplorationsergebnisse.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
-Weitere Informationen finden Sie [ Dokument „Allgemeine Leitlinien ](../best-practices/writing-queries.md) die Ausführung von Abfragen“.
+Weitere Informationen finden Sie [&#x200B; Dokument „Allgemeine Leitlinien &#x200B;](../best-practices/writing-queries.md) die Ausführung von Abfragen“.
 
 #### Fokus auf Bestellungen und Ausschließen stornierter Transaktionen {#focus-orders-exclude-cancelled}
 

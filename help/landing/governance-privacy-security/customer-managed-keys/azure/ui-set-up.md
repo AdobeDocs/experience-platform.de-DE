@@ -23,7 +23,7 @@ Um den Abschnitt [!UICONTROL Verschlüsselung] in Adobe Experience Platform anzu
 
 Weitere Informationen zur Zuweisung von Rollen und Berechtigungen in Experience Platform finden Sie in der [Dokumentation zu Berechtigungen konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de).
 
-Um CMK zu aktivieren[[!DNL Azure]  muss Ihr Schlüsseltresor mit ](./azure-key-vault-config.md) Einstellungen konfiguriert werden:
+Um CMK zu aktivieren[[!DNL Azure]  muss Ihr Schlüsseltresor mit &#x200B;](./azure-key-vault-config.md) Einstellungen konfiguriert werden:
 
 * [Bereinigungsschutz aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Soft-Delete aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -56,7 +56,7 @@ Kopieren Sie die [!UICONTROL Anwendungsauthentifizierungs-URL] und fügen Sie si
 
 >[!IMPORTANT]
 >
->Wenn Sie über mehrere [!DNL Microsoft Azure] verfügen, können Sie Ihre Experience Platform-Instanz möglicherweise mit dem falschen Schlüsseltresor verbinden. In diesem Fall müssen Sie den `common` Abschnitt des URL-Namens für die Anwendungsauthentifizierung durch die CMK-Verzeichnis-ID ersetzen.<br>Kopieren Sie die CMK-Verzeichnis-ID aus der Seite „Portaleinstellungen“, „Verzeichnisse“ und „Abonnements“ der [!DNL Microsoft Azure]-Anwendung<br>![ Die Seite &quot;[!DNL Microsoft Azure]-Anwendungsportaleinstellungen“, „Verzeichnisse und Abonnements“ mit hervorgehobener Verzeichnis-ID.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Fügen Sie es als Nächstes in die Adressleiste Ihres Browsers ein.<br>![Eine Google-Browser-Seite mit hervorgehobenem Abschnitt „Allgemein“ der Anwendungsauthentifizierungs-URL.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>Wenn Sie über mehrere [!DNL Microsoft Azure] verfügen, können Sie Ihre Experience Platform-Instanz möglicherweise mit dem falschen Schlüsseltresor verbinden. In diesem Fall müssen Sie den `common` Abschnitt des URL-Namens für die Anwendungsauthentifizierung durch die CMK-Verzeichnis-ID ersetzen.<br>Kopieren Sie die CMK-Verzeichnis-ID aus der Seite „Portaleinstellungen“, „Verzeichnisse“ und „Abonnements“ der [!DNL Microsoft Azure]-Anwendung<br>![&#x200B; Die Seite &quot;[!DNL Microsoft Azure]-Anwendungsportaleinstellungen“, „Verzeichnisse und Abonnements“ mit hervorgehobener Verzeichnis-ID.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Fügen Sie es als Nächstes in die Adressleiste Ihres Browsers ein.<br>![Eine Google-Browser-Seite mit hervorgehobenem Abschnitt „Allgemein“ der Anwendungsauthentifizierungs-URL.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### Zuweisen der CMK-App zu einer Rolle {#assign-to-role}
 

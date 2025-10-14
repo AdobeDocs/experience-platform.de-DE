@@ -13,7 +13,7 @@ ht-degree: 27%
 
 # Erste Schritte mit Selbstbedienungsquellen (Batch-SDK)
 
-Mit Selbstbedienungsquellen (Batch-SDK) können Sie Ihre eigene REST-basierte Quelle integrieren, um Batch-Daten in Adobe Experience Platform zu bringen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [[!DNL Flow Service] API) ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Mit Selbstbedienungsquellen (Batch-SDK) können Sie Ihre eigene REST-basierte Quelle integrieren, um Batch-Daten in Adobe Experience Platform zu bringen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [[!DNL Flow Service] API) &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Voraussetzungen
 

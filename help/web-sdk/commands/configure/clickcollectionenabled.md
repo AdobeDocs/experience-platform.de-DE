@@ -46,7 +46,7 @@ In allen Fällen ist `xdm.web.webInteraction.name` auf die Link-Textbeschriftung
 
 ## Aktivieren der automatischen Linkverfolgung mit der Tag-Erweiterung „Web SDK&quot; {#tag-extension}
 
-Diese Variable wird automatisch von der Tag-Erweiterung verwaltet; Sie müssen sie nicht explizit festlegen. Wenn beim Konfigurieren [ Tag-Erweiterung eine der folgenden Optionen ausgewählt ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), werden die entsprechenden Linktracking-Daten erfasst:
+Diese Variable wird automatisch von der Tag-Erweiterung verwaltet; Sie müssen sie nicht explizit festlegen. Wenn beim Konfigurieren [&#x200B; Tag-Erweiterung eine der folgenden Optionen ausgewählt &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), werden die entsprechenden Linktracking-Daten erfasst:
 
 * [!UICONTROL Erfassen interner Link-Klicks]
 * [!UICONTROL Erfassen externer Link-Klicks]

@@ -17,7 +17,7 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden ](../../../../home.md#terms-and-conditions) unter „Quellen - Übersicht“ .
+>Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden &#x200B;](../../../../home.md#terms-and-conditions) unter „Quellen - Übersicht“ .
 
 In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Pinterest Ads]-Quell-Connectors mithilfe der Benutzeroberfläche von Adobe Experience Platform.
 
@@ -42,7 +42,7 @@ Weitere Informationen zu diesen Verbindungseigenschaften finden Sie unter [[!DNL
 
 ### Erstellen eines Experience Platform-Schemas {#create-platform-schema}
 
-Sie müssen auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre [!DNL Pinterst Ads] verwendet wird. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie im Tutorial ](../../../../../xdm/schema/composition.md) Erstellen eines Experience Platform-Schemas .
+Sie müssen auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre [!DNL Pinterst Ads] verwendet wird. Eine ausführliche Anleitung zum Erstellen [&#x200B; Schemas finden Sie im Tutorial &#x200B;](../../../../../xdm/schema/composition.md) Erstellen eines Experience Platform-Schemas .
 
 ![Ein Experience Platform-Beispielschema für Pinterest Ads](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
@@ -80,7 +80,7 @@ Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und stellt eine Sch
 
 | Feld | Beschreibung |
 | --- | --- |
-| [!UICONTROL ad_account_id] | Ihre [!DNL Pinterest Ads]-Werbekonto-ID. Weitere Anleitungen finden [[!DNL Pinterest]  im Handbuch zum Suchen von IDs ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) Ads Manager. |
+| [!UICONTROL ad_account_id] | Ihre [!DNL Pinterest Ads]-Werbekonto-ID. Weitere Anleitungen finden [[!DNL Pinterest]  im Handbuch zum Suchen von IDs &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) Ads Manager. |
 | [!UICONTROL object_type] | Wählen Sie eine **Kampagnen**, **Anzeigengruppen** oder **Anzeigen** je nachdem, über welche der [!DNL Pinterest] Analytics-APIs Sie Informationen abrufen möchten. |
 | [!UICONTROL object_ids] | Die IDs des ausgewählten Objekts. Navigieren Sie zur [!DNL Pinterest] für **Pinterest Business Hub** > **Anzeigenkontenzusammenfassung** > **Kampagnen** / **Anzeigengruppen** / **Anzeigen** und kopieren Sie die erforderlichen IDs, die direkt unter jedem ihrer Namen erwähnt werden. |
 

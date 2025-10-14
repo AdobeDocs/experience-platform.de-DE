@@ -28,7 +28,7 @@ Um ein Einverständnis-Dashboard zu erstellen, müssen Sie zunächst eine Zielgr
 
 ![Das [!UICONTROL Zielgruppen]-Dashboard mit [!UICONTROL Kunde], [!UICONTROL Zielgruppen] und [!UICONTROL Segment erstellen] hervorgehoben.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-Der Segment Builder wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL XDM Individual Profile]** aus den verfügbaren Optionen aus. Weitere Informationen zur Arbeitsfläche des Regel[Builders finden Sie in der ](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
+Der Segment Builder wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL XDM Individual Profile]** aus den verfügbaren Optionen aus. Weitere Informationen zur Arbeitsfläche des Regel[Builders finden Sie in der &#x200B;](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
 
 ![Der Segment Builder mit dem hervorgehobenen [!UICONTROL XDM Individual Profile]-Attributordner.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
@@ -112,7 +112,7 @@ Nachdem Sie eine einverständnisbezogene Zielgruppe erstellt haben, z. B. „Ein
 
 Sie können auch eigene Widgets mit benutzerdefinierten Dashboards erstellen. Wenn Sie Ihr eigenes Widget erstellen, haben Sie die vollständige Kontrolle über den Typ des Widgets sowie die Möglichkeit, Filter und vieles mehr direkt in Adobe Real-Time CDP hinzuzufügen.
 
-Beispiel: Sie möchten mehrere Einverständnis-Zielgruppen im selben Diagramm im Trend anzeigen, sodass Sie im Laufe der Zeit sehen können, wie sich Ihre Einverständnisvoreinstellungen geändert haben. Diese Art der Visualisierung ist mit benutzerdefinierten Dashboards in minimalen Schritten und einer einmaligen Einrichtung möglich. Wählen Sie zunächst **[!UICONTROL Dashboards]** im linken Navigationsbereich aus. Der [!UICONTROL Dashboards]-Arbeitsbereich wird angezeigt. Wählen Sie dann **[!UICONTROL Dashboard erstellen]** aus. Vollständige Anweisungen zum [ (Erstellen eines Dashboards und eines benutzerdefinierten ](../standard-dashboards.md)) finden Sie im Handbuch zu benutzerdefinierten Dashboards .
+Beispiel: Sie möchten mehrere Einverständnis-Zielgruppen im selben Diagramm im Trend anzeigen, sodass Sie im Laufe der Zeit sehen können, wie sich Ihre Einverständnisvoreinstellungen geändert haben. Diese Art der Visualisierung ist mit benutzerdefinierten Dashboards in minimalen Schritten und einer einmaligen Einrichtung möglich. Wählen Sie zunächst **[!UICONTROL Dashboards]** im linken Navigationsbereich aus. Der [!UICONTROL Dashboards]-Arbeitsbereich wird angezeigt. Wählen Sie dann **[!UICONTROL Dashboard erstellen]** aus. Vollständige Anweisungen zum [&#x200B; (Erstellen eines Dashboards und eines benutzerdefinierten &#x200B;](../standard-dashboards.md)) finden Sie im Handbuch zu benutzerdefinierten Dashboards .
 
 ![Der Arbeitsbereich „Dashboards“ mit hervorgehobenen Optionen „Dashboards“ und „Dashboard erstellen“.](../images/standard-dashboards/create-dashboard.png)
 
@@ -130,11 +130,11 @@ Nachdem der Widget-Composer mit Daten aus der ausgewählten Tabelle gefüllt wur
   ![Der Widget-Composer mit dem hervorgehobenen Add-on-Symbol und dem hervorgehobenen Dropdown-Menü.](../images/standard-dashboards/attributes-dropdown.png)
 - Suchen Sie [!UICONTROL Attribute] nach `[!UICONTROL count_of_profiles]` und verwenden Sie dann das Symbol + , um der Y-Achse aus dem Dropdown-Menü das Attribut `[!UICONTROL count_of_profiles]` hinzuzufügen.
 - Wählen Sie das Symbol `...` (Ellipsen) im Feld [!UICONTROL Y-Achse] und dann die Aggregatfunktion [!UICONTROL SUMME] aus dem Dropdown-Menü aus.
-  ![Das Widget „Einverständnistrends des Widget-Composers“ mit Hervorhebung des Datenmodells, der Tabelle und des Dropdown-Menüs der Y-Achse und der Summenfunktion. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+  ![Das Widget „Einverständnistrends des Widget-Composers“ mit Hervorhebung des Datenmodells, der Tabelle und des Dropdown-Menüs der Y-Achse und der Summenfunktion. &#x200B;](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Wählen Sie [!UICONTROL &#x200B; Dropdown]Menü „Markierungen“ aus und ändern Sie den Diagrammtyp in [!UICONTROL Linie].
 - Suchen Sie [!UICONTROL Attribute] nach dem `[!UICONTROL segment_name]` und verwenden Sie dann das Symbol + , um die `segment_name` als [!UICONTROL Filter] aus dem Dropdown-Menü hinzuzufügen. Das [!UICONTROL Filter: Segment_name] wird angezeigt. Wählen Sie die zuvor erstellten Zielgruppen aus, die sich auf das Einverständnis beziehen. Wählen Sie für dieses Beispiel **[!UICONTROL Benutzer, die Anrufen zugestimmt haben]**, **[!UICONTROL Benutzer, die zu]** zugestimmt haben und **[!UICONTROL Benutzer, die zu E-Mails zugestimmt haben]** aus, gefolgt von **[!UICONTROL Apply]**.
 - Suchen Sie [!UICONTROL Attribute] nach `[!UICONTROL segment_name]` und wählen Sie dann aus dem Dropdown-Menü das Symbol + aus, um `segment_name` als [!UICONTROL Color] hinzuzufügen.
-- Öffnen Sie [Bedienfeld [!UICONTROL Eigenschaften] ](../standard-dashboards.md#widget-properties) und geben Sie einen geeigneten [!UICONTROL Widget-Titel] und [!UICONTROL Achsenbeschriftung].
+- Öffnen Sie [Bedienfeld [!UICONTROL Eigenschaften] &#x200B;](../standard-dashboards.md#widget-properties) und geben Sie einen geeigneten [!UICONTROL Widget-Titel] und [!UICONTROL Achsenbeschriftung].
   ![Der Widget-Composer mit dem Eigenschaftensymbol und dem hervorgehobenen Widget-Titel.](../images/standard-dashboards/properties-panel.png)
 - Klicken Sie **[!UICONTROL Speichern und schließen]**, um Ihre Einstellungen zu bestätigen.
 

@@ -22,7 +22,7 @@ ht-degree: 6%
 | --- | --- | --- | --- |
 | [!UICONTROL Zusätzliche Anweisungen] | `additionalInstruction` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Zusätzliche Anweisungen oder Warnhinweise für den Patienten. |
 | [!UICONTROL nach Bedarf für] | `asNeededFor` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Beschreibt, für welches Problem das Medikament nach Bedarf eingenommen werden sollte. |
-| [!UICONTROL Dosis und Geschwindigkeit] | `doseAndRate` | Array von Objekten | Die Menge des zu verabreichenden oder zu verabreichenden Arzneimittels oder die typische zu verabreichende Menge. Weitere Informationen finden [ im ](#dose-and-rate) Abschnitt unten |
+| [!UICONTROL Dosis und Geschwindigkeit] | `doseAndRate` | Array von Objekten | Die Menge des zu verabreichenden oder zu verabreichenden Arzneimittels oder die typische zu verabreichende Menge. Weitere Informationen finden [&#x200B; im &#x200B;](#dose-and-rate) Abschnitt unten |
 | [!UICONTROL Max. Dosis pro Anwendung] | `maxDosePerAdministration` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die Obergrenze der Medikation pro Verabreichung. |
 | [!UICONTROL Max. Dosis pro Lebensdauer] | `maxDosePerLifetime` | [[!UICONTROL Einfache Menge]](../data-types/simple-quantity.md) | Die Obergrenze der Medikation pro Lebensdauer des Patienten. |
 | [!UICONTROL Max. Dosis pro Zeitraum] | `maxDosePerPeriod` | Array von [[!UICONTROL Ratio]](../data-types/ratio.md) | Die Obergrenze der Medikation pro Zeiteinheit. |

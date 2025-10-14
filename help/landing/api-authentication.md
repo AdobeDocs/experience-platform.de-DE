@@ -52,7 +52,7 @@ Bevor Sie Integrationen in Adobe Developer Console erstellen können, muss Ihr K
 
 ### Erhalten von Entwicklerzugriff {#gain-developer-access}
 
-Wenden Sie sich an einen Admin Console-Administrator in Ihrer Organisation, um Sie als Entwicklungsperson einem Experience Platform-Produktprofil hinzuzufügen. Admin Console Spezifische Anweisungen zum Verwalten des [ für Produktprofile finden Sie in der Dokumentation zu ](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+Wenden Sie sich an einen Admin Console-Administrator in Ihrer Organisation, um Sie als Entwicklungsperson einem Experience Platform-Produktprofil hinzuzufügen. Admin Console Spezifische Anweisungen zum Verwalten des [&#x200B; für Produktprofile finden Sie in der Dokumentation zu &#x200B;](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 Sobald Sie als Entwickler zugewiesen sind, können Sie mit der Erstellung von Integrationen in [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) beginnen. Diese Integrationen sind eine Pipeline von externen Apps und Services zu Adobe-APIs.
 
@@ -60,7 +60,7 @@ Sobald Sie als Entwickler zugewiesen sind, können Sie mit der Erstellung von In
 
 Ihr Admin Console-Administrator muss Sie ebenfalls als Benutzende demselben Produktprofil hinzufügen. Beim Benutzerzugriff können Sie in der Benutzeroberfläche das Ergebnis der von Ihnen durchgeführten API-Vorgänge sehen.
 
-Weitere Informationen finden Sie [ Handbuch unter „Verwalten von Benutzergruppen ](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) Admin Console&quot;.
+Weitere Informationen finden Sie [&#x200B; Handbuch unter „Verwalten von Benutzergruppen &#x200B;](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) Admin Console&quot;.
 
 ## API-Schlüssel (Client-ID) und Organisations-ID generieren {#generate-credentials}
 
@@ -153,7 +153,7 @@ Der nächste Schritt besteht darin, eine `{ACCESS_TOKEN}` für die Verwendung in
 
 ## Authentifizierungsdaten direkt in der API-Referenzdokumentation erstellen und abrufen {#get-credentials-functionality}
 
-Ab der Experience Platform-Version vom November 2024 können Sie Anmeldedaten für die Verwendung der Experience Platform-APIs direkt von den API-Referenzseiten aus erhalten, ohne zu [!UICONTROL Developer Console wechseln zu &#x200B;]. Sehen Sie sich das folgende Beispiel auf der Seite [Flow Service-API - Ziele“ ](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+Ab der Experience Platform-Version vom November 2024 können Sie Anmeldedaten für die Verwendung der Experience Platform-APIs direkt von den API-Referenzseiten aus erhalten, ohne zu [!UICONTROL Developer Console wechseln zu &#x200B;]. Sehen Sie sich das folgende Beispiel auf der Seite [Flow Service-API - Ziele“ &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 
 ![Funktion „Anmeldeinformationen abrufen“ oben auf einer API-Referenzseite hervorgehoben.](././images/api-authentication/get-credentials-highlighted.png)
 
@@ -221,9 +221,9 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `{API_KEY}` | Die `{API_KEY}` ([!UICONTROL Client ID]), die Sie in einem [vorherigen Schritt) ](#api-ims-secret). |
-| `{SECRET}` | Das Client-Geheimnis, das Sie in einem [vorherigen Schritt) abgerufen ](#api-ims-secret). |
-| `{JWT}` | Das JWT, das Sie in einem [vorherigen Schritt“ generiert ](#jwt). |
+| `{API_KEY}` | Die `{API_KEY}` ([!UICONTROL Client ID]), die Sie in einem [vorherigen Schritt) &#x200B;](#api-ims-secret). |
+| `{SECRET}` | Das Client-Geheimnis, das Sie in einem [vorherigen Schritt) abgerufen &#x200B;](#api-ims-secret). |
+| `{JWT}` | Das JWT, das Sie in einem [vorherigen Schritt“ generiert &#x200B;](#jwt). |
 
 >[!NOTE]
 >
@@ -294,7 +294,7 @@ Wenn Ihre Antwort der unten gezeigten ähnelt, sind Ihre Anmeldedaten gültig un
 
 ## Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen {#get-abac-permissions}
 
-Um auf mehrere Ressourcen in Experience Platform zugreifen oder diese ändern zu können, benötigen Sie die entsprechenden Zugriffssteuerungsberechtigungen. Systemadministratoren können Ihnen die [erforderlichen Berechtigungen“ ](/help/access-control/ui/permissions.md). Weitere Informationen finden Sie im Abschnitt [Verwalten von API-Anmeldeinformationen für eine Rolle](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
+Um auf mehrere Ressourcen in Experience Platform zugreifen oder diese ändern zu können, benötigen Sie die entsprechenden Zugriffssteuerungsberechtigungen. Systemadministratoren können Ihnen die [erforderlichen Berechtigungen“ &#x200B;](/help/access-control/ui/permissions.md). Weitere Informationen finden Sie im Abschnitt [Verwalten von API-Anmeldeinformationen für eine Rolle](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
 
 Detaillierte Informationen dazu, wie ein Systemadministrator bzw. eine Systemadministratorin die erforderlichen Berechtigungen für den Zugriff auf Experience Platform-Ressourcen über die API gewähren kann, finden Sie im folgenden Video-Tutorial:
 
@@ -378,6 +378,6 @@ Weitere Informationen zu den ersten Schritten mit Experience Platform-APIs finde
 
 ## Nächste Schritte {#next-steps}
 
-Durch das Lesen dieses Dokuments haben Sie Ihre Zugriffsberechtigungen für Experience Platform-APIs gesammelt und erfolgreich getestet. Sie können jetzt den Beispiel-API-Aufrufen folgen, die in der ([) bereitgestellt ](../landing/documentation/overview.md).
+Durch das Lesen dieses Dokuments haben Sie Ihre Zugriffsberechtigungen für Experience Platform-APIs gesammelt und erfolgreich getestet. Sie können jetzt den Beispiel-API-Aufrufen folgen, die in der ([) bereitgestellt &#x200B;](../landing/documentation/overview.md).
 
 Zusätzlich zu den Authentifizierungswerten, die Sie in diesem Tutorial gesammelt haben, benötigen viele Experience Platform-APIs auch eine gültige `{SANDBOX_NAME}` als Kopfzeile. Weiterführende Informationen dazu finden Sie unter [Sandbox-Übersicht](../sandboxes/home.md).

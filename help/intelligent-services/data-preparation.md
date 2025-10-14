@@ -37,13 +37,13 @@ Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in Adobe Experience Plat
 
 ### Vorbereitung externer Daten
 
-Wenn Ihre Daten außerhalb von Experience Platform gespeichert sind, müssen Sie Ihre Daten den erforderlichen und relevanten Feldern in einem „Consumer ExperienceEvent[Schema ](#cee-schema). Dieses Schema kann mit benutzerdefinierten Feldergruppen erweitert werden, um Ihre Kundendaten besser zu erfassen. Nach der Zuordnung können Sie einen Datensatz mit Ihrem Consumer ExperienceEvent-Schema erstellen und [Ihre Daten in Experience Platform aufnehmen](../ingestion/home.md). Der CEE-Datensatz kann dann beim Konfigurieren eines [!DNL Intelligent Service] ausgewählt werden.
+Wenn Ihre Daten außerhalb von Experience Platform gespeichert sind, müssen Sie Ihre Daten den erforderlichen und relevanten Feldern in einem „Consumer ExperienceEvent[Schema &#x200B;](#cee-schema). Dieses Schema kann mit benutzerdefinierten Feldergruppen erweitert werden, um Ihre Kundendaten besser zu erfassen. Nach der Zuordnung können Sie einen Datensatz mit Ihrem Consumer ExperienceEvent-Schema erstellen und [Ihre Daten in Experience Platform aufnehmen](../ingestion/home.md). Der CEE-Datensatz kann dann beim Konfigurieren eines [!DNL Intelligent Service] ausgewählt werden.
 
 Je nach gewünschter [!DNL Intelligent Service] können verschiedene Felder erforderlich sein. Beachten Sie, dass es sich als Best Practice empfiehlt, einem Feld Daten hinzuzufügen, wenn die Daten verfügbar sind. Weitere Informationen zu den erforderlichen Feldern finden Sie im Handbuch [Attributions-KI](./attribution-ai/input-output.md) oder [Kunden-KI](./customer-ai/data-requirements.md) Datenanforderungen .
 
 ### Datenvorbereitung in Adobe Analytics {#analytics-data}
 
-Kunden-KI und Attributions-KI unterstützen nativ Adobe Analytics-Daten. Um Adobe Analytics-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Analytics-Quell-Connector) ](../sources/tutorials/ui/create/adobe-applications/analytics.md).
+Kunden-KI und Attributions-KI unterstützen nativ Adobe Analytics-Daten. Um Adobe Analytics-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Analytics-Quell-Connector) &#x200B;](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
 Sobald der Quell-Connector Ihre Daten in Experience Platform streamt, können Sie Adobe Analytics als Datenquelle und anschließend während der Konfiguration Ihrer Instanz einen Datensatz auswählen. Alle erforderlichen Schemafeldgruppen und einzelnen Felder werden bei der Einrichtung der Verbindung automatisch erstellt. Sie müssen die Datensätze nicht im CEE-Format abfragen (Extract, Transform, Load).
 
@@ -351,11 +351,11 @@ Nachdem der Datensatz erstellt wurde, können Sie ihn in der Experience Platform
 
 Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics] oder einer anderen externen Quelle importieren, haben Sie die Möglichkeit, ein Schemafeld als Identitätsfeld festzulegen. Um ein Schemafeld als Identitätsfeld festzulegen, lesen Sie den Abschnitt zum Festlegen von Identitätsfeldern im [UI-Tutorial](../xdm/tutorials/create-schema-ui.md#identity-field) oder [API-Tutorial](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) zum Erstellen eines Schemas.
 
-Wenn Sie Daten aus einer lokalen CSV-Datei erfassen, können Sie mit dem nächsten Abschnitt zum Thema [Zuordnen und Aufnehmen von Daten“ ](#ingest).
+Wenn Sie Daten aus einer lokalen CSV-Datei erfassen, können Sie mit dem nächsten Abschnitt zum Thema [Zuordnen und Aufnehmen von Daten“ &#x200B;](#ingest).
 
 #### Zuordnen und Aufnehmen von Daten {#ingest}
 
-Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Experience Platform aufnehmen. Anweisungen dazu, wie Sie [ der Benutzeroberfläche durchführen, finden Sie im Tutorial ](../ingestion/tutorials/map-csv/overview.md) Zuordnen einer CSV-Datei zu einem XDM-Schema . Sie können die folgende [JSON-Beispieldatei) verwenden](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um den Aufnahmeprozess zu testen, bevor Sie Ihre eigenen Daten verwenden.
+Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Experience Platform aufnehmen. Anweisungen dazu, wie Sie [&#x200B; der Benutzeroberfläche durchführen, finden Sie im Tutorial &#x200B;](../ingestion/tutorials/map-csv/overview.md) Zuordnen einer CSV-Datei zu einem XDM-Schema . Sie können die folgende [JSON-Beispieldatei) verwenden](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um den Aufnahmeprozess zu testen, bevor Sie Ihre eigenen Daten verwenden.
 
 Sobald ein Datensatz ausgefüllt wurde, kann derselbe Datensatz zum Aufnehmen zusätzlicher Datendateien verwendet werden.
 

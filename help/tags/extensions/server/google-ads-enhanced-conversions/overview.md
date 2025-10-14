@@ -33,7 +33,7 @@ Erweiterte Konvertierungen nutzen die [!DNL Google Ads]-API, um Erstanbieterdate
 
 >[!TIP]
 >
->Um das Client-seitige Konversionsereignis mit den Erstanbieterdaten zu verknüpfen, die von der Ereignisweiterleitung gesendet werden, muss die `transaction_ID` in beiden Aufrufen identisch sein. Weitere Informationen dazu, wo dieser Wert für jeden Service angegeben werden muss, finden Sie in den Abschnitten zum Konfigurieren von Konversionsaktionen für [Tags](#conversion-action-tags) bzw[ &quot;](#conversion-action-event-forwarding)&quot;.
+>Um das Client-seitige Konversionsereignis mit den Erstanbieterdaten zu verknüpfen, die von der Ereignisweiterleitung gesendet werden, muss die `transaction_ID` in beiden Aufrufen identisch sein. Weitere Informationen dazu, wo dieser Wert für jeden Service angegeben werden muss, finden Sie in den Abschnitten zum Konfigurieren von Konversionsaktionen für [Tags](#conversion-action-tags) bzw[&#x200B; &quot;](#conversion-action-event-forwarding)&quot;.
 
 Da das Senden von Konversionsereignissen sowohl eine Client- als auch eine Server-seitige Implementierung umfasst, werden in diesem Dokument die erforderlichen Schritte zum Einrichten der Client-seitigen [[!DNL Google Global Site Tag] -Erweiterung (gtag](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) sowie die [!DNL Enhanced Conversions]-Erweiterung für die Ereignisweiterleitung behandelt.
 
@@ -91,9 +91,9 @@ Sobald Sie Konversionsereignisse von der Client-Seite senden können, können Si
 
 Bevor Sie die Erweiterung konfigurieren, müssen Sie ein Zugriffstoken in der Ereignisweiterleitung erstellen, um sich bei [!DNL Google Ads] API zu authentifizieren.
 
-Ausführliche Anweisungen finden Sie im Handbuch [Erstellen von ](../../../ui/event-forwarding/secrets.md) für die Ereignisweiterleitung“. Stellen Sie sicher, dass Sie **[!UICONTROL Google OAuth 2]** als Geheimnistyp auswählen. Folgen Sie weiterhin den Anweisungen und wählen Sie auf Anforderung zur Auswahl eines Google-Kontoprofils das Konto aus, das Zugriff auf die Konversionsaktion hat, die Sie konfigurieren.
+Ausführliche Anweisungen finden Sie im Handbuch [Erstellen von &#x200B;](../../../ui/event-forwarding/secrets.md) für die Ereignisweiterleitung“. Stellen Sie sicher, dass Sie **[!UICONTROL Google OAuth 2]** als Geheimnistyp auswählen. Folgen Sie weiterhin den Anweisungen und wählen Sie auf Anforderung zur Auswahl eines Google-Kontoprofils das Konto aus, das Zugriff auf die Konversionsaktion hat, die Sie konfigurieren.
 
-Nachdem die geheimen Daten erstellt wurden, [ Sie „Neues Datenelement erstellen](../../../ui/managing-resources/data-elements.md#create-a-data-element) und wählen Sie **[!UICONTROL Datenelementtyp]** Geheime Daten“ aus. Wählen Sie für jede Umgebung das entsprechende Google OAuth 2-Geheimnis aus und klicken Sie auf **[!UICONTROL In Bibliothek speichern]**.
+Nachdem die geheimen Daten erstellt wurden, [&#x200B; Sie „Neues Datenelement erstellen](../../../ui/managing-resources/data-elements.md#create-a-data-element) und wählen Sie **[!UICONTROL Datenelementtyp]** Geheime Daten“ aus. Wählen Sie für jede Umgebung das entsprechende Google OAuth 2-Geheimnis aus und klicken Sie auf **[!UICONTROL In Bibliothek speichern]**.
 
 ### Konfigurieren und Installieren der [!DNL Enhanced Conversions] {#install-enhanced-conversions}
 
@@ -120,9 +120,9 @@ Im rechten Bereich werden neue Steuerelemente angezeigt, mit denen Sie die Konve
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| Kunden-ID | Ihre [!DNL Google Ads] Kunden-ID. Standardmäßig wird die Kunden-ID verwendet, die Sie bei der [ der Erweiterung eingegeben ](#install-enhanced-conversions). |
+| Kunden-ID | Ihre [!DNL Google Ads] Kunden-ID. Standardmäßig wird die Kunden-ID verwendet, die Sie bei der [&#x200B; der Erweiterung eingegeben &#x200B;](#install-enhanced-conversions). |
 | Konversions-ID oder Konversionskennzeichnung | Tracking-Werte, die bei der Einrichtung des Konversionstrackings von [!DNL Google Ads] abgerufen werden. Werte beginnen mit `AW-`.<br><br>Weitere Informationen zum Auffinden dieser Werte finden Sie in der [[!DNL Google Ads] Dokumentation](https://support.google.com/tagmanager/answer/6105160?hl=en). |
-| Transaction ID | Wählen Sie ein Datenelement mit demselben Transaktions-ID-Wert aus, der [ der Client-Seite ](#conversion-action-tags) der [!DNL Google Global Site Tag]-Erweiterung gesendet wird. |
+| Transaction ID | Wählen Sie ein Datenelement mit demselben Transaktions-ID-Wert aus, der [&#x200B; der Client-Seite &#x200B;](#conversion-action-tags) der [!DNL Google Global Site Tag]-Erweiterung gesendet wird. |
 
 **Benutzeridentifizierung**
 

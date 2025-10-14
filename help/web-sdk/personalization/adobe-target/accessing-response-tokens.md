@@ -27,7 +27,7 @@ alloy("sendEvent", {
   });
 ```
 
-In diesem Beispiel ist `result.propositions`, falls vorhanden, ein Array mit Personalisierungsvorschlägen im Zusammenhang mit dem Ereignis. Weitere Informationen [ Inhalt von `result.propositions` finden Sie ](../rendering-personalization-content.md) „Rendern von Personalisierungsinhalten“.
+In diesem Beispiel ist `result.propositions`, falls vorhanden, ein Array mit Personalisierungsvorschlägen im Zusammenhang mit dem Ereignis. Weitere Informationen [&#x200B; Inhalt von `result.propositions` finden Sie &#x200B;](../rendering-personalization-content.md) „Rendern von Personalisierungsinhalten“.
 
 Angenommen, Sie möchten alle Aktivitätsnamen aus allen Vorschlägen erfassen, die automatisch von Web SDK gerendert wurden, und sie in ein einziges Array pushen. Sie können dann das einzelne Array an einen Drittanbieter senden. In diesem Fall:
 

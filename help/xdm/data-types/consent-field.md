@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Dieser Datentyp soll verwendet werden, um die Struktur der Einverständnisschemata Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Einverständnisse und Voreinstellungen] als ](../field-groups/profile/consents.md) anzupassen.
+>Dieser Datentyp soll verwendet werden, um die Struktur der Einverständnisschemata Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Einverständnisse und Voreinstellungen] als &#x200B;](../field-groups/profile/consents.md) anzupassen.
 
 ![](../images/data-types/consent-field.png)
 

@@ -29,7 +29,7 @@ Sie können alle Datentypen unter dem `global`- oder `tenant`-Container aufliste
 
 >[!NOTE]
 >
->Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [ Abschnitt ](./appendix.md#query)Abfrageparameter“ im Anhang.
+>Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](./appendix.md#query)Abfrageparameter“ im Anhang.
 
 **API-Format**
 
@@ -40,7 +40,7 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{CONTAINER_ID}` | Der Container, aus dem Sie Datentypen abrufen möchten: `global` für vom Adobe erstellte Datentypen oder `tenant` für Datentypen Ihres Unternehmens. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [&#x200B; im &#x200B;](./appendix.md#query)-Dokument . |
 
 {style="table-layout:auto"}
 
@@ -239,7 +239,7 @@ POST /tenant/datatypes
 
 Im Gegensatz zu Feldergruppen sind für die Definition eines Datentyps keine `meta:extends` oder `meta:intendedToExtend` Felder erforderlich. Ebenso wenig müssen Felder verschachtelt werden, um Kollisionen zu vermeiden.
 
-Bei der Definition der Feldstruktur des Datentyps selbst können Sie primitive Typen verwenden (z. B. `string` oder `object`) oder Sie können durch `$ref` Attribute auf andere vorhandene Datentypen verweisen. Ausführliche Anleitungen zum erwarteten [ für verschiedene XDM-Feldtypen finden Sie ](../tutorials/custom-fields-api.md) Handbuch unter „Definieren benutzerdefinierter XDM-Felder in der API“.
+Bei der Definition der Feldstruktur des Datentyps selbst können Sie primitive Typen verwenden (z. B. `string` oder `object`) oder Sie können durch `$ref` Attribute auf andere vorhandene Datentypen verweisen. Ausführliche Anleitungen zum erwarteten [&#x200B; für verschiedene XDM-Feldtypen finden Sie &#x200B;](../tutorials/custom-fields-api.md) Handbuch unter „Definieren benutzerdefinierter XDM-Felder in der API“.
 
 Die folgende Anfrage erstellt einen Objekttyp „Eigenschaftskonstruktion“ mit den Untereigenschaften `yearBuilt`, `propertyType` und `location`:
 
@@ -353,7 +353,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 }
 ```
 
-Wenn Sie eine GET-Anfrage ausführen[ um alle Datentypen ](#list) Mandanten-Container aufzulisten, würde dies jetzt den Datentyp Eigenschaftsdetails enthalten, oder Sie können [eine Suchanfrage (GET) ](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um den neuen Datentyp direkt anzuzeigen.
+Wenn Sie eine GET-Anfrage ausführen[&#x200B; um alle Datentypen &#x200B;](#list) Mandanten-Container aufzulisten, würde dies jetzt den Datentyp Eigenschaftsdetails enthalten, oder Sie können [eine Suchanfrage (GET) &#x200B;](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um den neuen Datentyp direkt anzuzeigen.
 
 ## Aktualisieren eines Datentyps {#put}
 
@@ -660,4 +660,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine [Suchanfrage (GET)) ](#lookup) Datentyp ausführen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da der Datentyp aus der Schemaregistrierung entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine [Suchanfrage (GET)) &#x200B;](#lookup) Datentyp ausführen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da der Datentyp aus der Schemaregistrierung entfernt wurde.

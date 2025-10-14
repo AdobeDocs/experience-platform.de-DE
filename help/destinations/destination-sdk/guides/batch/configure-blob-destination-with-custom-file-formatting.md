@@ -21,7 +21,7 @@ Detaillierte Beschreibungen der unten verwendeten Parameter finden Sie unter [Ko
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte ](../../getting-started.md) Destination SDK , wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
+Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte &#x200B;](../../getting-started.md) Destination SDK , wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
@@ -412,7 +412,7 @@ Basierend auf den oben genannten Konfigurationen wird im Experience Platform-Kat
 
 ![Bildschirmaufzeichnung, die die Zielkatalogseite mit einer ausgewählten Zielkarte anzeigt.](../../assets/guides/batch/blob-destination-card.gif)
 
-Beachten Sie in den folgenden Bildern und Aufzeichnungen, wie die [ im Aktivierungs-Workflow für dateibasierte Ziele ](/help/destinations/ui/activate-batch-profile-destinations.md) den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
+Beachten Sie in den folgenden Bildern und Aufzeichnungen, wie die [&#x200B; im Aktivierungs-Workflow für dateibasierte Ziele &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
 
 Beachten Sie beim Ausfüllen von Details zum Ziel, wie die Felder die benutzerdefinierten Datenfelder sind, die Sie in der Konfiguration eingerichtet haben.
 

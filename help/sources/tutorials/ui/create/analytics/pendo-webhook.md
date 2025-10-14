@@ -14,7 +14,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->Die [!DNL Pendo]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Pendo]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Pendo] Quellverbindung und eines Datenflusses mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
@@ -53,7 +53,7 @@ Weitere Informationen finden Sie im [[!DNL Pendo] Handbuch zu Webhooks](https://
 
 ### Erstellen eines Experience Platform-Schemas für [!DNL Pendo] {#create-platform-schema}
 
-Sie müssen auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet wird. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
+Sie müssen auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet wird. Eine ausführliche Anleitung zum Erstellen [&#x200B; Schemas finden Sie &#x200B;](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
 
 ![Experience Platform-Benutzeroberfläche mit einem Beispielschema für Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
@@ -140,7 +140,7 @@ Melden Sie sich als Nächstes bei Ihrem -Konto unter [[!DNL Pendo]](https://pend
 
 Navigieren Sie nach der Erstellung des Webhooks zur Seite mit den Einstellungen Ihres [!DNL Pendo] Webhooks und geben Sie Ihre Webhook-URL in das Feld [!DNL URL] ein.
 
-![Der Screenshot der Pendo-Benutzeroberfläche mit dem Feld Webhook-Endpunkt ](../../../../images/tutorials/create/analytics-pendo-webhook/webhook.png)
+![Der Screenshot der Pendo-Benutzeroberfläche mit dem Feld Webhook-Endpunkt &#x200B;](../../../../images/tutorials/create/analytics-pendo-webhook/webhook.png)
 
 >[!TIP]
 >

@@ -14,7 +14,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Die [!DNL Customer.io]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Customer.io]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -22,7 +22,7 @@ Experience Platform unterstützt die Aufnahme von Daten aus Streaming-Anwendunge
 
 [[!DNL Customer.io]](https://customer.io/) ist eine automatisierte Messaging-Plattform für Marketing-Fachleute, die mehr Kontrolle und Flexibilität beim Erstellen und Senden datengesteuerter E-Mails, Push-Benachrichtigungen, In-App-Nachrichten und SMS wünschen.
 
-Mit der [!DNL Customer.io] Quelle können Sie unterstützte Webhook-Ereignisschemata und die zugehörigen Ereignisdaten aus [!DNL Customer.io] mithilfe der [[!DNL Customer.io] Reporting-Webhooks“ ](https://customer.io/docs/api/webhooks/).
+Mit der [!DNL Customer.io] Quelle können Sie unterstützte Webhook-Ereignisschemata und die zugehörigen Ereignisdaten aus [!DNL Customer.io] mithilfe der [[!DNL Customer.io] Reporting-Webhooks“ &#x200B;](https://customer.io/docs/api/webhooks/).
 
 Folgende Webhook-Ereignisschemata werden unterstützt:
 
@@ -45,7 +45,7 @@ Bevor Sie eine [!DNL Customer.io]-Quellverbindung erstellen können, müssen Sie
 
 ### Webhook [!DNL Customer.io] {#set-up-webhook}
 
-Nachdem Sie Ihren Datenfluss erfolgreich erstellt haben, müssen Sie einen Reporting-Webhook einrichten, um Experience Platform über [!DNL Customer.io] Ereignisse zu informieren. Webhooks können Sie sofort benachrichtigen, wenn sich Kundenattribute ändern oder wenn Personen Ihre Nachrichten öffnen, und diese Informationen an Ihre [!DNL Customer.io] senden. Weitere Informationen finden Sie in den Tutorials zum [ der Streaming-Endpunkt-URL und ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint)Einrichten [ Webhooks [!DNL Customer.io]  ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
+Nachdem Sie Ihren Datenfluss erfolgreich erstellt haben, müssen Sie einen Reporting-Webhook einrichten, um Experience Platform über [!DNL Customer.io] Ereignisse zu informieren. Webhooks können Sie sofort benachrichtigen, wenn sich Kundenattribute ändern oder wenn Personen Ihre Nachrichten öffnen, und diese Informationen an Ihre [!DNL Customer.io] senden. Weitere Informationen finden Sie in den Tutorials zum [&#x200B; der Streaming-Endpunkt-URL und &#x200B;](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint)Einrichten [&#x200B; Webhooks [!DNL Customer.io]  &#x200B;](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
 
 ## Verbinden von [!DNL Customer.io] mit Experience Platform {#connect-to-platform}
 

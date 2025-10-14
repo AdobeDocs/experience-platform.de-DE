@@ -26,7 +26,7 @@ Unsere Kunden können die Bibliothek direkt von der Registerkarte Implementierun
 
 Die vordefinierte Version ist in einem CDN verfügbar. Sie können direkt auf Ihrer Seite auf die Bibliothek im CDN verweisen oder sie herunterladen und in Ihrer eigenen Infrastruktur hosten. Es ist in minimierten und nicht minimierten Formaten verfügbar. Die nicht minimierte Version ist zum Debuggen hilfreich.
 
-Weitere [ finden Sie unter „Installieren von Web SDK mithilfe ](/help/web-sdk/install/library.md) JavaScript-Bibliothek“.
+Weitere [&#x200B; finden Sie unter „Installieren von Web SDK mithilfe &#x200B;](/help/web-sdk/install/library.md) JavaScript-Bibliothek“.
 
 ## Konfigurieren der Bibliotheken
 
@@ -871,7 +871,7 @@ So sieht die Antwort-Payload aus:
 }
 ```
 
-Die Analytics-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[ in den Analytics-Treffer ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) werden.
+Die Analytics-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[&#x200B; in den Analytics-Treffer &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) werden.
 
 #### Server-seitige Analytics-Protokollierung
 
@@ -895,7 +895,7 @@ Die Client-seitige Protokollierung in Analytics ist aktiviert, wenn Adobe Analyt
 
 ![Diagramm mit dem Client-seitigen Analytics-Protokollierungs-Workflow](assets/analytics-disabled-datastream-config.png)
 
-Die Kundin bzw. der Kunde hat Zugriff auf das Analytics-Token (`tnta`), das über die (Data Insertion [) API für Analytics freigegeben werden ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
+Die Kundin bzw. der Kunde hat Zugriff auf das Analytics-Token (`tnta`), das über die (Data Insertion [) API für Analytics freigegeben werden &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 in durch Verketten des Befehls `sendEvent` und Iteration durch das resultierende Vorschläge-Array.
 
 **Beispiel**
@@ -1257,6 +1257,6 @@ Bei Verwendung von Web SDK stehen mehrere Debugging-Funktionen zur Verfügung:
 
 * Verwenden von [Assurance](/help/assurance/home.md)
 * [Web SDK Debug aktiviert](/help/web-sdk/use-cases/debugging.md)
-* Verwenden [ Überwachungs-Hooks für Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* Verwenden [&#x200B; Überwachungs-Hooks für Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Verwenden Sie [Adobe Experience Platform Debugger](/help/debugger/home.md)
 * Zielspur

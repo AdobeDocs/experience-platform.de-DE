@@ -26,9 +26,9 @@ Adobe Experience Platform bietet viele Standardfeldgruppen, die eine Vielzahl vo
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Eine Einführung in die Rolle [ XDM im Experience Platform-Ökosystem ](../../home.md) Sie in der Übersicht zu XDM und in die [Grundlagen der Schemakomposition](../../schema/composition.md) wie Feldergruppen zu XDM-Schemata beitragen.
+Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Eine Einführung in die Rolle [&#x200B; XDM im Experience Platform-Ökosystem &#x200B;](../../home.md) Sie in der Übersicht zu XDM und in die [Grundlagen der Schemakomposition](../../schema/composition.md) wie Feldergruppen zu XDM-Schemata beitragen.
 
-Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [ Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
+Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [&#x200B; Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
 
 ## Erstellen einer neuen Feldergruppe {#create}
 
@@ -56,9 +56,9 @@ Die Liste der verfügbaren Feldergruppen wird je nach ihrer Erstellung vorab gef
 
 >[!NOTE]
 >
->Nur benutzerdefinierte Feldergruppen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Kernfeldgruppen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Sie werden im Schema-Editor durch ein Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png)). Weitere Informationen finden Sie [ Abschnitt „Bearbeiten von Anzeigenamen für ](./schemas.md#display-names)&quot;.
+>Nur benutzerdefinierte Feldergruppen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Kernfeldgruppen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Sie werden im Schema-Editor durch ein Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png)). Weitere Informationen finden Sie [&#x200B; Abschnitt „Bearbeiten von Anzeigenamen für &#x200B;](./schemas.md#display-names)&quot;.
 >
->Nachdem eine benutzerdefinierte Feldergruppe gespeichert und in einem Schema für die Datenaufnahme verwendet wurde, können anschließend nur noch additive Änderungen an der Feldergruppe vorgenommen werden. Weitere Informationen finden [ unter „Regeln ](../../schema/composition.md#evolution) Schemaentwicklung“.
+>Nachdem eine benutzerdefinierte Feldergruppe gespeichert und in einem Schema für die Datenaufnahme verwendet wurde, können anschließend nur noch additive Änderungen an der Feldergruppe vorgenommen werden. Weitere Informationen finden [&#x200B; unter „Regeln &#x200B;](../../schema/composition.md#evolution) Schemaentwicklung“.
 
 Um eine vorhandene Feldergruppe zu bearbeiten, müssen Sie zunächst ein Schema öffnen, das die Feldergruppe innerhalb der [!DNL Schema Editor] verwendet. Sie können [ein vorhandenes Schema zur Bearbeitung auswählen](./schemas.md#edit) oder [ein neues Schema erstellen](./schemas.md#create) und die betreffende Feldergruppe hinzufügen.
 
@@ -74,7 +74,7 @@ Um Felder zu einer benutzerdefinierten Feldergruppe hinzuzufügen, wählen Sie z
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Ein Platzhalter **[!UICONTROL Nicht benanntes Feld]** wird auf der Arbeitsfläche angezeigt, und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. Spezifische Schritte zum Konfigurieren [ verschiedenen Feldtypen finden Sie ](../fields/overview.md#define) Handbuch unter „Definieren von Feldern in der Benutzeroberfläche“.
+Ein Platzhalter **[!UICONTROL Nicht benanntes Feld]** wird auf der Arbeitsfläche angezeigt, und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. Spezifische Schritte zum Konfigurieren [&#x200B; verschiedenen Feldtypen finden Sie &#x200B;](../fields/overview.md#define) Handbuch unter „Definieren von Feldern in der Benutzeroberfläche“.
 
 Wählen **[!UICONTROL unter]** Zuweisen zu“ die Option **[!UICONTROL Feldergruppe]** und wählen Sie dann im Dropdown-Menü die gewünschte Feldergruppe aus der Liste aus. Sie können damit beginnen, den Namen der Feldergruppe einzugeben, um die Ergebnisse einzugrenzen.
 

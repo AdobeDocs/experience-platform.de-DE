@@ -20,7 +20,7 @@ Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [
 
 ## Verfügbare Sandboxes
 
-Mit dem Endpunkt Verfügbare Sandboxes können Sie eine Liste aller für den aktuellen Benutzer verfügbaren Sandboxes anzeigen, einschließlich Informationen über Namen, Titel, Status, Typ und Region jeder Sandbox. Auf den verfügbaren Sandbox-Endpunkt in der [!DNL Sandbox]-API können alle Benutzer zugreifen, auch diejenigen ohne Zugriffsberechtigungen für die Sandbox-Administration. Informationen [ Anzeigen verfügbarer Sandboxes in der API finden ](./available.md) im Handbuch zum verfügbaren Sandbox-Endpunkt .
+Mit dem Endpunkt Verfügbare Sandboxes können Sie eine Liste aller für den aktuellen Benutzer verfügbaren Sandboxes anzeigen, einschließlich Informationen über Namen, Titel, Status, Typ und Region jeder Sandbox. Auf den verfügbaren Sandbox-Endpunkt in der [!DNL Sandbox]-API können alle Benutzer zugreifen, auch diejenigen ohne Zugriffsberechtigungen für die Sandbox-Administration. Informationen [&#x200B; Anzeigen verfügbarer Sandboxes in der API finden &#x200B;](./available.md) im Handbuch zum verfügbaren Sandbox-Endpunkt .
 
 ## Sandbox-Verwaltung
 
@@ -28,7 +28,7 @@ Eine Sandbox ist eine virtuelle Partition innerhalb einer einzigen Instanz von A
 
 ## Sandbox-Typen
 
-Derzeit werden in Experience Platform Produktions- und Entwicklungs-Sandboxes als Sandbox-Typen unterstützt. Mit einer Standardlizenz für Experience Platform erhalten Sie insgesamt fünf Sandboxes, die Sie jeweils als Produktion oder Entwicklung klassifizieren können. Sie können Zusatzpakete von jeweils zehn Sandboxes bis zu einem Maximum von insgesamt 75 Sandboxes hinzufügen. Informationen [ Anzeigen unterstützter Sandbox-Typen für Ihre Organisation in der API finden ](./types.md) im Handbuch zum Sandbox--Typ .
+Derzeit werden in Experience Platform Produktions- und Entwicklungs-Sandboxes als Sandbox-Typen unterstützt. Mit einer Standardlizenz für Experience Platform erhalten Sie insgesamt fünf Sandboxes, die Sie jeweils als Produktion oder Entwicklung klassifizieren können. Sie können Zusatzpakete von jeweils zehn Sandboxes bis zu einem Maximum von insgesamt 75 Sandboxes hinzufügen. Informationen [&#x200B; Anzeigen unterstützter Sandbox-Typen für Ihre Organisation in der API finden &#x200B;](./types.md) im Handbuch zum Sandbox--Typ .
 
 ## Nächste Schritte
 

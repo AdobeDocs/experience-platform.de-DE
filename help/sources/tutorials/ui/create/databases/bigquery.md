@@ -31,7 +31,7 @@ Wenn Sie bereits über eine gültige [!DNL Google BigQuery]-Verbindung verfügen
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Ausführliche Schritte zum Sammeln [[!DNL Google BigQuery]  erforderlichen Anmeldeinformationen finden Sie ](../../../../connectors/databases/bigquery.md#prerequisites) Authentifizierungshandbuch .
+Ausführliche Schritte zum Sammeln [[!DNL Google BigQuery]  erforderlichen Anmeldeinformationen finden Sie &#x200B;](../../../../connectors/databases/bigquery.md#prerequisites) Authentifizierungshandbuch .
 
 ## Navigieren im Quellkatalog {#navigate}
 

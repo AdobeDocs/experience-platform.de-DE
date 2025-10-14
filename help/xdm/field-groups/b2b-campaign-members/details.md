@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # [!UICONTROL XDM Business Campaign Member Details] Schemafeldgruppe
 
-[!UICONTROL XDM Business Campaign Member Details] ist eine Standardschemafeldgruppe für die Klasse [[!UICONTROL XDM Business Campaign Members], ](../../classes/b2b/business-campaign-members.md) detaillierte Informationen über eine Unternehmenskampagne erfasst.
+[!UICONTROL XDM Business Campaign Member Details] ist eine Standardschemafeldgruppe für die Klasse [[!UICONTROL XDM Business Campaign Members], &#x200B;](../../classes/b2b/business-campaign-members.md) detaillierte Informationen über eine Unternehmenskampagne erfasst.
 
 ![Die Struktur der Feldergruppe „XDM Business Campaign Member Details“, wie sie in der Benutzeroberfläche angezeigt wird](../../images/field-groups/b2b/business-campaign-member-details.png)
 

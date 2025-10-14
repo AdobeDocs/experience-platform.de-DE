@@ -29,7 +29,7 @@ In der Dokumentation finden Sie Anweisungen dazu, wie Sie mit dem Abfrage-Editor
 
 >[!TIP]
 >
->Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine einfache Möglichkeit bietet, zum Arbeitsbereich Planung von Abfragen zu navigieren. Weitere Informationen zum Ausführen von [ mit benutzerdefinierter Kadenz finden ](./query-schedules.md) in der Dokumentation zum Planen von Abfragen .
+>Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine einfache Möglichkeit bietet, zum Arbeitsbereich Planung von Abfragen zu navigieren. Weitere Informationen zum Ausführen von [&#x200B; mit benutzerdefinierter Kadenz finden &#x200B;](./query-schedules.md) in der Dokumentation zum Planen von Abfragen .
 
 ## Abfragevorlagen durchsuchen {#browse}
 

@@ -25,16 +25,16 @@ SendGrid verwendet API-Bearer-Token als Authentifizierungsmechanismus für die K
 Die folgenden Elemente sind erforderlich, bevor Sie mit der Konfiguration des Ziels beginnen.
 
 1. Sie benötigen ein SendGrid-Konto.
-   * Navigieren Sie zur SendGrid[Anmeldeseite ](https://signup.sendgrid.com/) registrieren Sie sich und erstellen Sie ein SendGrid-Konto, falls Sie noch keines haben.
+   * Navigieren Sie zur SendGrid[Anmeldeseite &#x200B;](https://signup.sendgrid.com/) registrieren Sie sich und erstellen Sie ein SendGrid-Konto, falls Sie noch keines haben.
 1. Nach der Anmeldung beim SendGrid-Portal müssen Sie auch ein API-Token generieren.
 1. Navigieren Sie zur SendGrid-Website und rufen Sie die Seite **[!DNL Settings]** > **[!DNL API Keys]** auf. Alternativ finden Sie in der [SendGrid-Dokumentation](https://app.sendgrid.com/settings/api_keys) Informationen zum Zugriff auf den entsprechenden Abschnitt in der SendGrid-App.
 1. Klicken Sie abschließend auf die Schaltfläche **[!DNL Create API Key]** .
-   * Weitere Informationen zu den auszuführenden Aktionen [ Sie in der ](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key) zu SendGrid .
+   * Weitere Informationen zu den auszuführenden Aktionen [&#x200B; Sie in der &#x200B;](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key) zu SendGrid .
    * Wenn Sie Ihren API-Schlüssel programmgesteuert generieren möchten, lesen Sie die [SendGrid-Dokumentation](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie ein [Schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) in [!DNL Experience Platform] erstellt haben. Weitere Informationen finden Sie [ Abschnitt ](#limits)Beschränkungen“ weiter unten auf dieser Seite.
+Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie ein [Schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) in [!DNL Experience Platform] erstellt haben. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#limits)Beschränkungen“ weiter unten auf dieser Seite.
 
 >[!IMPORTANT]
 >
@@ -141,7 +141,7 @@ Auf den folgenden Bildern finden Sie Details, die speziell für dieses Ziel gelt
 1. Wählen Sie **[!UICONTROL Beenden]** aus, um die Einrichtung abzuschließen.
    ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
-Die umfassende Liste der unterstützten Attributzuordnungen, die für die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder aktualisieren) eingerichtet ](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) können, finden Sie unten.
+Die umfassende Liste der unterstützten Attributzuordnungen, die für die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder aktualisieren) eingerichtet &#x200B;](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) können, finden Sie unten.
 
 | Quellfeld | Zielfeld | Typ | Beschreibung | Beschränkungen |
 |---|---|---|---|---|
@@ -194,4 +194,4 @@ Dieses SendGrid-Ziel nutzt die folgenden APIs:
 
 ### Beschränkungen {#limits}
 
-* Die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder ](https://api.sendgrid.com/v3/marketing/contacts)Kontakt aktualisieren) kann 30.000 Kontakte oder 6 MB Daten akzeptieren, je nachdem, welcher Wert niedriger ist.
+* Die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder &#x200B;](https://api.sendgrid.com/v3/marketing/contacts)Kontakt aktualisieren) kann 30.000 Kontakte oder 6 MB Daten akzeptieren, je nachdem, welcher Wert niedriger ist.

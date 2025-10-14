@@ -235,7 +235,7 @@ Derzeit unterstützt Experience Platform für jedes Schema nur eine Hauptversion
 
 ## XDM-Feldbeschränkungen und Best Practices
 
-Die Felder eines Schemas werden innerhalb seines `properties`-Objekts aufgelistet. Jedes Feld selbst ist ein Objekt, das Attribute enthält, um die Daten zu beschreiben und einzuschränken, die das Feld enthalten kann. Codebeispiele und optionale Einschränkungen für [ am häufigsten verwendeten Datentypen finden Sie im Handbuch unter ](../tutorials/custom-fields-api.md)Definieren benutzerdefinierter Felder in der API“.
+Die Felder eines Schemas werden innerhalb seines `properties`-Objekts aufgelistet. Jedes Feld selbst ist ein Objekt, das Attribute enthält, um die Daten zu beschreiben und einzuschränken, die das Feld enthalten kann. Codebeispiele und optionale Einschränkungen für [&#x200B; am häufigsten verwendeten Datentypen finden Sie im Handbuch unter &#x200B;](../tutorials/custom-fields-api.md)Definieren benutzerdefinierter Felder in der API“.
 
 Das folgende Beispielfeld veranschaulicht ein korrekt formatiertes XDM-Feld, wobei weitere Einzelheiten zu den Benennungsbeschränkungen und Best Practices weiter unten aufgeführt sind. Diese Verfahren können auch bei der Definition anderer Ressourcen angewendet werden, die ähnliche Attribute enthalten.
 
@@ -260,7 +260,7 @@ Das folgende Beispielfeld veranschaulicht ein korrekt formatiertes XDM-Feld, wob
 * Für das Feld ist ein `type` erforderlich.
    * Die Definition bestimmter Typen erfordert möglicherweise ein optionales `format`.
    * Wenn eine bestimmte Formatierung der Daten erforderlich ist, kann `examples` als Array hinzugefügt werden.
-   * Der Feldtyp kann auch mit einem beliebigen Datentyp in der Registry definiert werden. Weitere Informationen finden Sie im [ zum Erstellen eines ](./data-types.md#create) im Handbuch zum Datentypendpunkt .
+   * Der Feldtyp kann auch mit einem beliebigen Datentyp in der Registry definiert werden. Weitere Informationen finden Sie im [&#x200B; zum Erstellen eines &#x200B;](./data-types.md#create) im Handbuch zum Datentypendpunkt .
 * In `description` wird das Feld und relevante Informationen zu den Felddaten erklärt. Dies sollte in vollständigen Sätzen mit klarer Sprache geschrieben sein, damit jeder, der auf das Schema zugreift, die Absicht des Feldes verstehen kann.
 
 ## Nächste Schritte

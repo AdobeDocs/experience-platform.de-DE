@@ -62,7 +62,7 @@ Standardmäßige B2B-XDM-Klassen, -Feldergruppen und -Datentypen sind für alle 
 |-----------|--------------|
 | Standard-B2B-XDM-Klassen | Real-Time Customer Data Platform B2B edition bietet mehrere standardmäßige XDM-Dateien, die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen und Kampagnen erfassen. |
 
-Weitere Informationen zur [ von B2B-Datenentitäten finden Sie ](../../rtcdp/schemas/b2b.md) der Dokumentation zu Schemas in Real-Time Customer Data Platform B2B edition .
+Weitere Informationen zur [&#x200B; von B2B-Datenentitäten finden Sie &#x200B;](../../rtcdp/schemas/b2b.md) der Dokumentation zu Schemas in Real-Time Customer Data Platform B2B edition .
 
 ### (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API {#ad-hoc-activation}
 

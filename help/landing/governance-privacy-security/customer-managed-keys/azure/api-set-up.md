@@ -23,7 +23,7 @@ Um den Abschnitt [!UICONTROL Verschlüsselung] in Adobe Experience Platform anzu
 
 Weitere Informationen zur Zuweisung von Rollen und Berechtigungen in Experience Platform finden Sie in der [Dokumentation zu Berechtigungen konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de).
 
-Um CMK für Azure-gehostete Experience Platform-Instanzen zu aktivieren[[!DNL Azure]  muss Ihr -Schlüsseltresor mit ](./azure-key-vault-config.md) Einstellungen konfiguriert werden:
+Um CMK für Azure-gehostete Experience Platform-Instanzen zu aktivieren[[!DNL Azure]  muss Ihr -Schlüsseltresor mit &#x200B;](./azure-key-vault-config.md) Einstellungen konfiguriert werden:
 
 * [Bereinigungsschutz aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Soft-Delete aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -139,7 +139,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Ein Name für die Konfiguration. Stellen Sie sicher, dass Sie sich diesen Wert merken, da er erforderlich ist, um den Konfigurationsstatus in einem [ Schritt zu überprüfen](#check-status). Bei dem Wert ist die Groß-/Kleinschreibung zu beachten. |
+| `name` | Ein Name für die Konfiguration. Stellen Sie sicher, dass Sie sich diesen Wert merken, da er erforderlich ist, um den Konfigurationsstatus in einem [&#x200B; Schritt zu überprüfen](#check-status). Bei dem Wert ist die Groß-/Kleinschreibung zu beachten. |
 | `type` | Der Konfigurationstyp. Muss auf `BYOK_CONFIG` festgelegt werden. |
 | `imsOrgId` | Ihre Organisations-ID. Diese ID muss mit dem Wert übereinstimmen, der unter der `x-gw-ims-org-id`-Kopfzeile angegeben wird. |
 | `configData` | Diese Eigenschaft enthält die folgenden Details zur Konfiguration:<ul><li>`providerType`: Muss auf `AZURE_KEYVAULT` festgelegt werden.</li><li>`keyVaultKeyIdentifier`: Der URI für den Schlüsseltresor, den Sie [zuvor](#send-to-adobe) kopiert haben.</li></ul> |

@@ -13,11 +13,11 @@ ht-degree: 10%
 
 >[!WARNING]
 >
->Die [!DNL Google Ads] ist derzeit nicht in der Benutzeroberfläche verfügbar. Sie können (mithilfe der API) weiterhin [!DNL Google Ads] Daten [ Experience Platform ](../../../api/create/advertising/ads.md).
+>Die [!DNL Google Ads] ist derzeit nicht in der Benutzeroberfläche verfügbar. Sie können (mithilfe der API) weiterhin [!DNL Google Ads] Daten [&#x200B; Experience Platform &#x200B;](../../../api/create/advertising/ads.md).
 
 >[!NOTE]
 >
->Die [!DNL Google Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+>Die [!DNL Google Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Google Ads]-Konto mithilfe des Quellarbeitsbereichs in der Experience Platform-Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
@@ -30,7 +30,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine gültige [!DNL Google Ads]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [ eines Datenflusses fortfahren](../../dataflow/advertising.md)
+Wenn Sie bereits über eine gültige [!DNL Google Ads]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [&#x200B; eines Datenflusses fortfahren](../../dataflow/advertising.md)
 
 ### Sammeln erforderlicher Anmeldedaten
 

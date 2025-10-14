@@ -52,7 +52,7 @@ Gehen Sie wie folgt vor, um von der Seite „Durchsuchen **[!UICONTROL Daten fü
 
 ### Aktivieren von Zielgruppen über die Seite mit den Zielgruppendetails {#activate-audience-details}
 
-Sie können Zielgruppen für Ziele über die Seite mit den Zielgruppendetails aktivieren. Weitere Informationen finden [ unter ](../../segmentation/ui/audience-portal.md#audience-details)Zielgruppendetails“.
+Sie können Zielgruppen für Ziele über die Seite mit den Zielgruppendetails aktivieren. Weitere Informationen finden [&#x200B; unter &#x200B;](../../segmentation/ui/audience-portal.md#audience-details)Zielgruppendetails“.
 
 Führen Sie je nach ausgewähltem Ziel die in den folgenden Artikeln beschriebenen Schritte aus, um den Aktivierungs-Workflow abzuschließen:
 

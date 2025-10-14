@@ -17,7 +17,7 @@ Auf diese Weise können Sie andere Datenstromverhaltensweisen als die standardm�
 
 Die Überschreibung der Datenstromkonfiguration ist ein zweistufiger Prozess:
 
-1. Zunächst müssen Sie Ihre Überschreibung der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration“ ](configure.md).
+1. Zunächst müssen Sie Ihre Überschreibung der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration“ &#x200B;](configure.md).
 2. Anschließend müssen Sie die Überschreibungen auf eine der folgenden Arten an Edge Network senden:
    * Durch die `sendEvent` oder `configure` [Web SDK](#send-overrides)-Befehle.
    * Über die Web-SDK [Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).

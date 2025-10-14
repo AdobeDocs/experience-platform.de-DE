@@ -32,7 +32,7 @@ Ein Datenstrom ist eine Konfiguration, die dem Edge Network mitteilt, wohin Ihre
 
 ![Datenströme](./images/data-collection/datastreams.png)
 
-Eine ausführliche Anleitung zum Konfigurieren der Datenerfassung in der Benutzeroberfläche finden Sie [ „Datenerfassung - End-to-End - Übersicht](../../../collection/e2e.md).
+Eine ausführliche Anleitung zum Konfigurieren der Datenerfassung in der Benutzeroberfläche finden Sie [&#x200B; „Datenerfassung - End-to-End - Übersicht](../../../collection/e2e.md).
 
 ## Nächste Schritte
 

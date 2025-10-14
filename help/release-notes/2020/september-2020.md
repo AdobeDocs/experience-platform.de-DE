@@ -46,7 +46,7 @@ In [Real-Time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgef
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen zu erleichtern, z. B. das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten. Weitere Informationen finden [ im Dokument ](../../destinations/ui/destinations-workspace.md)Arbeitsbereich“. |
+| UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen zu erleichtern, z. B. das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten. Weitere Informationen finden [&#x200B; im Dokument &#x200B;](../../destinations/ui/destinations-workspace.md)Arbeitsbereich“. |
 
 Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/home.md)
 
@@ -60,7 +60,7 @@ Mit [!DNL Observability Insights] können Sie Aktivitäten in Adobe Experience P
 | --- | --- |
 | Adobe I/O-Ereignisbenachrichtigungen | [!DNL Observability Insights] nutzt Adobe I/O Events zum Erstellen von Ereignisbenachrichtigungen für mehrere Experience Platform-Services. Benachrichtigungs-Payloads werden an einen konfigurierten Webhook gesendet, mit dem Sie dann weitere nachgelagerte Prozesse automatisieren können. |
 
-Weitere Informationen [[!DNL Observability Insights]  Service finden ](../../observability/home.md) in der Übersicht .
+Weitere Informationen [[!DNL Observability Insights]  Service finden &#x200B;](../../observability/home.md) in der Übersicht .
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -82,7 +82,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | ------- | ----------- |
 | Profilansicht | Der Profil-Viewer in der Experience Platform-Benutzeroberfläche wurde zu einem Dashboard mit vollständiger Anpassung aktualisiert. Der Benutzer hat jetzt die Möglichkeit, die folgenden Aufgaben auszuführen: <ul><li>Aktualisieren Sie die ausgewählten Standard- und benutzerdefinierten Attribute im Widget „Grundlegende Informationen“.</li><li>Erstellen, Bearbeiten und Entfernen benutzerdefinierter Widgets</li><li>Größe von Widgets ändern und neu anordnen</li></ul> |
 
-Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden [ in der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden [&#x200B; in der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
@@ -110,6 +110,6 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Automatische Zuordnung | [!DNL Experience Platform] bietet intelligente Empfehlungen für die automatische Zuordnung während des Workflows der Datenaufnahme, basierend auf einem vom Benutzer ausgewählten Zielschema oder Datensatz. Sie können flexible automatische Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. |
-| UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen wie das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten zu erleichtern. Weitere Informationen finden [ im Dokument ](../../sources/tutorials/ui/monitor.md)Überwachen von Datenflüssen“. |
+| UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen wie das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten zu erleichtern. Weitere Informationen finden [&#x200B; im Dokument &#x200B;](../../sources/tutorials/ui/monitor.md)Überwachen von Datenflüssen“. |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).

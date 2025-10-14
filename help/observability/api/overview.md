@@ -13,7 +13,7 @@ ht-degree: 14%
 
 # [!DNL Observability Insights]-API-Handbuch
 
-Die [!DNL Observability Insights]-API bietet einen Endpunkt, mit dem Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen programmgesteuert abrufen und überwachen können. Dieser Endpunkt wird unten beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel[API-Aufrufen und mehr finden Sie ](./getting-started.md) Endpunkthandbuch .
+Die [!DNL Observability Insights]-API bietet einen Endpunkt, mit dem Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen programmgesteuert abrufen und überwachen können. Dieser Endpunkt wird unten beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel[API-Aufrufen und mehr finden Sie &#x200B;](./getting-started.md) Endpunkthandbuch .
 
 Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!DNL Observability Insights] API-Swagger](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
 

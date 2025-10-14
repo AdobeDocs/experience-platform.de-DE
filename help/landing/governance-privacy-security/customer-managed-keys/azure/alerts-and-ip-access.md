@@ -42,7 +42,7 @@ Warnhinweise in Platform informieren Sie über Probleme, die den Schlüsselzugri
 
 <!-- For a complete list of alert types and recommended resolutions, see the [CMK alert resolution reference](../alert-resolution-reference.md). -->
 
-Abonnieren Sie Adobe I/O-Ereignisbenachrichtigungen, um in Echtzeit Warnhinweise in Ihren Überwachungs-Tools zu erhalten. Anweisungen zum Setup finden Sie unter [Abonnieren von Adobe I/O-Ereignisbenachrichtigungen](../../../../observability/alerts/subscribe.md). Informationen zum Anzeigen und Verwalten von Warnhinweisen in Experience Platform [ Sie auch ](../../../../observability/alerts/ui.md) Handbuch zur Warnhinweis-Benutzeroberfläche .
+Abonnieren Sie Adobe I/O-Ereignisbenachrichtigungen, um in Echtzeit Warnhinweise in Ihren Überwachungs-Tools zu erhalten. Anweisungen zum Setup finden Sie unter [Abonnieren von Adobe I/O-Ereignisbenachrichtigungen](../../../../observability/alerts/subscribe.md). Informationen zum Anzeigen und Verwalten von Warnhinweisen in Experience Platform [&#x200B; Sie auch &#x200B;](../../../../observability/alerts/ui.md) Handbuch zur Warnhinweis-Benutzeroberfläche .
 
 ## Nächste Schritte
 

@@ -31,7 +31,7 @@ Das `timeSeriesEvents`-Array ist eine Liste von Ereignissen aus Zeitreihen, die 
 
 ### Segmentzugehörigkeitszuordnung
 
-Die `segmentMembership` speichert die Ergebnisse der Auswertung einer Segmentdefinition. Wenn Segmentaufträge mit der [Segmentation-API](https://www.adobe.io/experience-platform-apis/references/segmentation/) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppen, die in Experience Platform aufgenommen werden, und ermöglicht so die Integration in andere Lösungen wie Adobe Audience Manager. Weitere Informationen finden Sie im Tutorial [Erstellen von Zielgruppen mithilfe ](../../segmentation/tutorials/create-a-segment.md) APIs“.
+Die `segmentMembership` speichert die Ergebnisse der Auswertung einer Segmentdefinition. Wenn Segmentaufträge mit der [Segmentation-API](https://www.adobe.io/experience-platform-apis/references/segmentation/) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppen, die in Experience Platform aufgenommen werden, und ermöglicht so die Integration in andere Lösungen wie Adobe Audience Manager. Weitere Informationen finden Sie im Tutorial [Erstellen von Zielgruppen mithilfe &#x200B;](../../segmentation/tutorials/create-a-segment.md) APIs“.
 
 ## Abrufen einer Liste von Vereinigungen {#list}
 
@@ -180,7 +180,7 @@ Das Antwortformat hängt von der Accept-Kopfzeile ab, die in der Anfrage gesende
 
 ## Aktivieren eines Schemas für die Vereinigungs-Mitgliedschaft {#enable}
 
-Damit ein Schema in die Vereinigung für seine Klasse aufgenommen werden kann, muss zum `meta:immutableTags` des Schemas ein `union`-Tag hinzugefügt werden. Sie können dies erreichen, indem Sie eine PATCH-Anfrage stellen, um dem betreffenden Schema ein `meta:immutableTags`-Array mit einem einzelnen Zeichenfolgenwert von `union` hinzuzufügen. Ein ausführliches Beispiel finden [ im Handbuch ](./schemas.md#union)schemas endpoint“.
+Damit ein Schema in die Vereinigung für seine Klasse aufgenommen werden kann, muss zum `meta:immutableTags` des Schemas ein `union`-Tag hinzugefügt werden. Sie können dies erreichen, indem Sie eine PATCH-Anfrage stellen, um dem betreffenden Schema ein `meta:immutableTags`-Array mit einem einzelnen Zeichenfolgenwert von `union` hinzuzufügen. Ein ausführliches Beispiel finden [&#x200B; im Handbuch &#x200B;](./schemas.md#union)schemas endpoint“.
 
 ## Auflisten von Schemata in einer Vereinigung {#list-schemas}
 

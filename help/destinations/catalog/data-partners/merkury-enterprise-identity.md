@@ -147,7 +147,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klic
 >* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **Ziele anzeigen**, **Ziele aktivieren**, **Profile anzeigen** und **Segmente anzeigen**. Lesen Sie die Übersicht zur Zugriffskontrolle oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren von Identitäten benötigen Sie die Zugriffssteuerungsberechtigung **Identitätsdiagramm anzeigen** .
 
-Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
+Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden Sie &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
 
 ## Zuordnungsvorschläge
 

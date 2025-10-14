@@ -105,13 +105,13 @@ In der folgenden Tabelle werden die unterstützten Warnhinweistypen für Abfrage
 | `success` | Dieser Warnhinweis informiert Sie, wenn eine geplante Abfrage erfolgreich ausgeführt wurde, und gibt an, dass die Abfrage fehlerfrei ausgeführt wurde. |
 | `failed` | Dieser Warnhinweis Trigger, wenn bei der Ausführung einer geplanten Abfrage ein Fehler auftritt oder sie nicht erfolgreich ausgeführt werden kann. So können Sie Probleme schnell identifizieren und beheben. |
 | `quarantine` | Dieser Warnhinweis wird aktiviert, wenn eine geplante Abfrageausführung in den Quarantänestatus versetzt wird. Wenn Abfragen in der [Quarantänefunktion) registriert sind](#quarantined-queries) wird jede geplante Abfrage, die zehn aufeinander folgende Ausführungen fehlschlägt, automatisch in einen [!UICONTROL Quarantänestatus] versetzt. Sie benötigen dann Ihr Eingreifen, bevor weitere Hinrichtungen stattfinden können. |
-| `delay` | Dieser Warnhinweis informiert Sie, wenn das [ einer Abfrageausführung einen bestimmten Schwellenwert überschreitet](#query-run-delay). Sie können einen benutzerdefinierten Trigger festlegen, der den Warnhinweis auslöst, wenn die Abfrage für diesen Zeitraum ausgeführt wird, ohne dass entweder der Abschluss erfolgt oder ein Fehler auftritt. |
+| `delay` | Dieser Warnhinweis informiert Sie, wenn das [&#x200B; einer Abfrageausführung einen bestimmten Schwellenwert überschreitet](#query-run-delay). Sie können einen benutzerdefinierten Trigger festlegen, der den Warnhinweis auslöst, wenn die Abfrage für diesen Zeitraum ausgeführt wird, ohne dass entweder der Abschluss erfolgt oder ein Fehler auftritt. |
 
 >[!NOTE]
 >
->Um über in Quarantäne befindliche Abfrageausführungen informiert zu werden, müssen Sie zunächst die geplanten Abfrageausführungen in der [Quarantänefunktion) ](#quarantined-queries).
+>Um über in Quarantäne befindliche Abfrageausführungen informiert zu werden, müssen Sie zunächst die geplanten Abfrageausführungen in der [Quarantänefunktion) &#x200B;](#quarantined-queries).
 
-Weitere Informationen finden [ in der ](../api/alert-subscriptions.md) zur Warnhinweis-Abonnement-API .
+Weitere Informationen finden [&#x200B; in der &#x200B;](../api/alert-subscriptions.md) zur Warnhinweis-Abonnement-API .
 
 ### Anzeigen der Abfragedetails {#query-details}
 
@@ -131,7 +131,7 @@ Um eine geplante Abfrage für die Quarantänefunktion zu aktivieren, wählen Sie
 
 ![Die Registerkarte „Geplante Abfragen“ mit Auslassungszeichen und der hervorgehobenen Option „Quarantäne aktivieren“ im Dropdown-Menü „Inline-Aktionen“.](../images/ui/monitor-queries/inline-enable.png)
 
-Abfragen können auch während des Erstellungsprozesses des Zeitplans in der Quarantänefunktion registriert werden. Weitere Informationen finden [ in der ](./query-schedules.md#quarantine) zu Abfragezeitplänen .
+Abfragen können auch während des Erstellungsprozesses des Zeitplans in der Quarantänefunktion registriert werden. Weitere Informationen finden [&#x200B; in der &#x200B;](./query-schedules.md#quarantine) zu Abfragezeitplänen .
 
 ## Verzögerung der Ausführung der Abfrage {#query-run-delay}
 

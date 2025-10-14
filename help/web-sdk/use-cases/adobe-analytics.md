@@ -38,11 +38,11 @@ Je nachdem, ob Sie AppMeasurement oder die Analytics-Tag-Erweiterung verwenden, 
 * [Migrieren von der Adobe Analytics-Tag-Erweiterung zur Web SDK-Tag-Erweiterung](https://experienceleague.adobe.com/de/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
 * [Migration vom AppMeasurement zur Web-SDK](https://experienceleague.adobe.com/de/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
 
-Eine vollständige Referenz der Datenobjektfelder und ihrer Zuordnung zu Analytics[Variablen finden Sie in der Dokumentation ](https://experienceleague.adobe.com/de/docs/analytics/implementation/aep-edge/data-var-mapping)Datenobjektvariablenzuordnung zu Adobe Analytics&quot; im Adobe Analytics-Implementierungshandbuch.
+Eine vollständige Referenz der Datenobjektfelder und ihrer Zuordnung zu Analytics[Variablen finden Sie in der Dokumentation &#x200B;](https://experienceleague.adobe.com/de/docs/analytics/implementation/aep-edge/data-var-mapping)Datenobjektvariablenzuordnung zu Adobe Analytics&quot; im Adobe Analytics-Implementierungshandbuch.
 
 ## Verwenden von Kontextdatenvariablen {#use-context-data-variables}
 
-Alle Variablen, die nicht automatisch zugeordnet werden, sind als [Kontextdatenvariablen“ ](https://experienceleague.adobe.com/de/docs/analytics/implementation/vars/page-vars/contextdata). Anschließend können Sie [Verarbeitungsregeln](https://experienceleague.adobe.com/de/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) verwenden, um Kontextdatenvariablen Analytics-Variablen zuzuordnen. Angenommen, Sie haben ein benutzerdefiniertes XDM-Schema, das wie folgt aussieht:
+Alle Variablen, die nicht automatisch zugeordnet werden, sind als [Kontextdatenvariablen“ &#x200B;](https://experienceleague.adobe.com/de/docs/analytics/implementation/vars/page-vars/contextdata). Anschließend können Sie [Verarbeitungsregeln](https://experienceleague.adobe.com/de/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) verwenden, um Kontextdatenvariablen Analytics-Variablen zuzuordnen. Angenommen, Sie haben ein benutzerdefiniertes XDM-Schema, das wie folgt aussieht:
 
 ```json
 {
@@ -84,7 +84,7 @@ a.x.objectarray.2.ad3 //600x50
 
 +++Wie unterscheide ich Seitenansichtsaufrufe von Linktracking-Aufrufen in Web SDK?
 
-Beim AppMeasurement in Adobe Analytics werden separate Methodenaufrufe für Seitenansichten ([`t()`) ](https://experienceleague.adobe.com/de/docs/analytics/implementation/vars/functions/t-method) Linktracking-Aufrufe ([`tl()`) ](https://experienceleague.adobe.com/de/docs/analytics/implementation/vars/functions/tl-method). Die Web-SDK stellt stattdessen nur den [`sendEvent`](../commands/sendevent/overview.md)-Befehl zum Senden sowohl von Seitenansichten als auch von Linktracking bereit. Die Daten, die Sie in ein Ereignis einbeziehen, bestimmen, ob es sich um eine [Seitenansicht](https://experienceleague.adobe.com/de/docs/analytics/components/metrics/page-views) oder ein [Seitenereignis](https://experienceleague.adobe.com/de/docs/analytics/components/metrics/page-events) in Adobe Analytics handelt.
+Beim AppMeasurement in Adobe Analytics werden separate Methodenaufrufe für Seitenansichten ([`t()`) &#x200B;](https://experienceleague.adobe.com/de/docs/analytics/implementation/vars/functions/t-method) Linktracking-Aufrufe ([`tl()`) &#x200B;](https://experienceleague.adobe.com/de/docs/analytics/implementation/vars/functions/tl-method). Die Web-SDK stellt stattdessen nur den [`sendEvent`](../commands/sendevent/overview.md)-Befehl zum Senden sowohl von Seitenansichten als auch von Linktracking bereit. Die Daten, die Sie in ein Ereignis einbeziehen, bestimmen, ob es sich um eine [Seitenansicht](https://experienceleague.adobe.com/de/docs/analytics/components/metrics/page-views) oder ein [Seitenereignis](https://experienceleague.adobe.com/de/docs/analytics/components/metrics/page-events) in Adobe Analytics handelt.
 
 Standardmäßig werden alle Ereignisse in Adobe Analytics als Seitenansichten betrachtet. Wenn Sie ein Web-SDK-Ereignis auf einen Adobe Analytics-Linktracking-Aufruf festlegen möchten, legen Sie die folgenden Felder fest:
 

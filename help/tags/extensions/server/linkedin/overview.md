@@ -22,11 +22,11 @@ Sie müssen [Konversionsregel erstellen](https://www.linkedin.com/help/lms/answe
 
 Erstellen Sie ein neues [!DNL LinkedIn][Ereignisweiterleitungsgeheimnis](../../../ui/event-forwarding/secrets.md) und geben Sie ihm einen eindeutigen Namen, der das authentifizierende Mitglied angibt. Dies wird verwendet, um die Verbindung zu Ihrem Konto zu authentifizieren und dabei den Wert sicher zu halten.
 
-Als Nächstes erstellen [ mithilfe ](../../../ui/managing-resources/data-elements.md#create-a-data-element) Erweiterung [!UICONTROL Core] und eines Datenelementtyps [!UICONTROL Secret] ein Datenelement, das auf das soeben erstellte `LinkedIn` verweist.
+Als Nächstes erstellen [&#x200B; mithilfe &#x200B;](../../../ui/managing-resources/data-elements.md#create-a-data-element) Erweiterung [!UICONTROL Core] und eines Datenelementtyps [!UICONTROL Secret] ein Datenelement, das auf das soeben erstellte `LinkedIn` verweist.
 
 ## Installieren und Konfigurieren der [!DNL LinkedIn] {#install}
 
-Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft ](../../../ui/event-forwarding/overview.md#properties) wählen Sie eine vorhandene Eigenschaft aus, die Sie bearbeiten möchten.
+Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft &#x200B;](../../../ui/event-forwarding/overview.md#properties) wählen Sie eine vorhandene Eigenschaft aus, die Sie bearbeiten möchten.
 
 Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Wählen Sie auf **[!UICONTROL Registerkarte]** Katalog“ die Erweiterung **[!UICONTROL LinkedIn]** und dann **[!UICONTROL Installieren]** aus.
 
@@ -40,7 +40,7 @@ Geben Sie im nächsten Bildschirm das zuvor erstellte Datenelementgeheimnis in d
 
 Nachdem alle Datenelemente eingerichtet wurden, können Sie mit der Erstellung von Ereignisweiterleitungsregeln beginnen, die bestimmen, wann und wie Ihre Ereignisse an [!DNL LinkedIn] gesendet werden.
 
-Erstellen Sie eine neue [ (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Fügen **[!UICONTROL unter „Aktionen]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL LinkedIn]** fest. Wählen Sie als Nächstes **[!UICONTROL Konvertierung senden]** für den **[!UICONTROL Aktionstyp]**.
+Erstellen Sie eine neue [&#x200B; (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Fügen **[!UICONTROL unter „Aktionen]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL LinkedIn]** fest. Wählen Sie als Nächstes **[!UICONTROL Konvertierung senden]** für den **[!UICONTROL Aktionstyp]**.
 
 ![Die Ansicht mit den Eigenschaftsregeln für die Ereignisweiterleitung mit den Feldern, die zum Hinzufügen einer Regelkonfiguration für die Ereignisweiterleitung erforderlich sind, ist hervorgehoben.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -66,7 +66,7 @@ Nach der Auswahl erscheinen zusätzliche Steuerelemente, um das Ereignis weiter 
 | [!UICONTROL Konvertierungszeit] | Jeder Zeitstempel in Millisekunden, bei dem das Konversionsereignis aufgetreten ist. <br><br> Hinweis: Wenn Ihre Quelle den Konvertierungszeitstempel in Sekunden aufzeichnet, fügen Sie am Ende bitte 000 ein, um ihn in Millisekunden zu transformieren. |
 | [!UICONTROL Währung] | Währungscode im ISO-Format. |
 | [!UICONTROL Betrag] | Wert der Konvertierung in einer Dezimalzeichenfolge (z. B. „100.05„). |
-| [!UICONTROL Ereignis-ID] | Die eindeutige ID, die von Werbetreibenden generiert wird, um jedes Ereignis anzugeben. Dies ist ein optionales Feld, das für die [Deduplizierung“ ](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02) wird. |
+| [!UICONTROL Ereignis-ID] | Die eindeutige ID, die von Werbetreibenden generiert wird, um jedes Ereignis anzugeben. Dies ist ein optionales Feld, das für die [Deduplizierung“ &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02) wird. |
 
 {style="table-layout:auto"}
 

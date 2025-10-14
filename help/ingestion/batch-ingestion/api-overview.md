@@ -99,7 +99,7 @@ Nachdem Sie nun einen Batch erstellt haben, können Sie die Batch-ID aus der Ant
 
 >[!NOTE]
 >
->Ein (Beispiel [ ordnungsgemäß formatierten JSON-Datendatei) finden Sie im Anhang ](#data-transformation-for-batch-ingestion).
+>Ein (Beispiel [&#x200B; ordnungsgemäß formatierten JSON-Datendatei) finden Sie im Anhang &#x200B;](#data-transformation-for-batch-ingestion).
 
 **API-Format**
 
@@ -623,7 +623,7 @@ Nach dem Erstellen eines Batches können Sie die `batchId` verwenden, um Dateien
 
 >[!NOTE]
 >
->Ein Beispiel für eine [ CSV-Datendatei finden Sie im Anhang ](#data-transformation-for-batch-ingestion).
+>Ein Beispiel für eine [&#x200B; CSV-Datendatei finden Sie im Anhang &#x200B;](#data-transformation-for-batch-ingestion).
 
 **API-Format**
 

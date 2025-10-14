@@ -27,7 +27,7 @@ XDM basiert auf dem JSON-Schema und daher übernehmen XDM-Felder beim Definieren
 
 >[!NOTE]
 >
->Weitere Informationen zu JSON[Schemas und anderen zugrunde liegenden Technologien in Experience Platform-APIs finden ](../../landing/api-fundamentals.md#json-schema) im Handbuch zu den API-Grundlagen .
+>Weitere Informationen zu JSON[Schemas und anderen zugrunde liegenden Technologien in Experience Platform-APIs finden &#x200B;](../../landing/api-fundamentals.md#json-schema) im Handbuch zu den API-Grundlagen .
 
 In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema dargestellt wird, zusammen mit einem Beispielwert, der dem Typ entspricht:
 
@@ -151,7 +151,7 @@ In den folgenden Abschnitten wird beschrieben, wie jeder XDM-Typ anderen gängig
 >
 >Unter den in den folgenden Tabellen aufgelisteten Standard-XDM-Typen ist auch [!UICONTROL &#x200B; Typ &#x200B;]Map“ enthalten. Zuordnungen werden in Standardschemata verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel nicht sinnvoll in ein statisches Schema aufgenommen werden können und als Datenwerte behandelt werden müssen.
 >
->Viele standardmäßige XDM-Komponenten verwenden Zuordnungstypen und Sie können bei [ auch benutzerdefinierte Zuordnungsfelder ](../tutorials/custom-fields-api.md#custom-maps). Die Aufnahme des Zuordnungstyps in die folgenden Tabellen soll Ihnen dabei helfen, zu bestimmen, wie Sie Ihre vorhandenen Daten XDM zuordnen, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
+>Viele standardmäßige XDM-Komponenten verwenden Zuordnungstypen und Sie können bei [&#x200B; auch benutzerdefinierte Zuordnungsfelder &#x200B;](../tutorials/custom-fields-api.md#custom-maps). Die Aufnahme des Zuordnungstyps in die folgenden Tabellen soll Ihnen dabei helfen, zu bestimmen, wie Sie Ihre vorhandenen Daten XDM zuordnen, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
 
 ### Parquet, Spark SQL und Java {#parquet}
 
@@ -206,4 +206,4 @@ In den folgenden Abschnitten wird beschrieben, wie jeder XDM-Typ anderen gängig
 
 ## Definieren von XDM-Feldtypen in der API {#define-fields}
 
-Mit der Schema Registry-API können Sie benutzerdefinierte Felder mithilfe von Formaten und optionalen Einschränkungen definieren. Weitere Informationen finden Sie [ Handbuch unter „Definieren benutzerdefinierter Felder in der Schema Registry](../tutorials/custom-fields-api.md)API“.
+Mit der Schema Registry-API können Sie benutzerdefinierte Felder mithilfe von Formaten und optionalen Einschränkungen definieren. Weitere Informationen finden Sie [&#x200B; Handbuch unter „Definieren benutzerdefinierter Felder in der Schema Registry](../tutorials/custom-fields-api.md)API“.

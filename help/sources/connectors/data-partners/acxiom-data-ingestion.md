@@ -49,4 +49,4 @@ Beachten Sie die folgenden Einschränkungen beim Benennen Ihrer Cloud-Speicherda
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten von Ihrem [!DNL Acxiom]-Konto in Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Acxiom Data Ingestion]  mit Experience Platform über die Benutzeroberfläche ](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten von Ihrem [!DNL Acxiom]-Konto in Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch unter [Verbinden [!DNL Acxiom Data Ingestion]  mit Experience Platform über die Benutzeroberfläche &#x200B;](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).

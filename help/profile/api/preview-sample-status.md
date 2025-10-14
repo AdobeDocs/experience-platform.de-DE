@@ -19,7 +19,7 @@ Die Ergebnisse dieses Beispielauftrags können mit dem `/previewsamplestatus`-En
 
 >[!NOTE]
 >
->Als Teil der Segmentierungs-Service-API von Adobe Experience Platform stehen Schätzungs- und Vorschau-Endpunkte zur Verfügung, mit denen Sie Informationen auf Zusammenfassungsebene zu Segmentdefinitionen anzeigen können, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Ausführliche Schritte zum Arbeiten mit Vorschau- und Schätzendpunkten finden Sie im [Handbuch zu Vorschauen und ](../../segmentation/api/previews-and-estimates.md)-Endpunkten, das Teil des [!DNL Segmentation]-API-Entwicklerhandbuchs ist.
+>Als Teil der Segmentierungs-Service-API von Adobe Experience Platform stehen Schätzungs- und Vorschau-Endpunkte zur Verfügung, mit denen Sie Informationen auf Zusammenfassungsebene zu Segmentdefinitionen anzeigen können, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Ausführliche Schritte zum Arbeiten mit Vorschau- und Schätzendpunkten finden Sie im [Handbuch zu Vorschauen und &#x200B;](../../segmentation/api/previews-and-estimates.md)-Endpunkten, das Teil des [!DNL Segmentation]-API-Entwicklerhandbuchs ist.
 
 ## Erste Schritte
 
@@ -197,7 +197,7 @@ Die Antwort enthält ein `data`-Array, das eine Liste der Datensatzobjekte enth�
 | `sampleCount` | Die Gesamtzahl der stichprobenweise erfassten zusammengeführten Profile mit dieser Datensatz-ID. |
 | `samplePercentage` | Der `sampleCount` als Prozentsatz der Gesamtzahl der abgefragten zusammengeführten Profile (der `numRowsToRead` Wert, wie er im [letzten Beispielstatus) zurückgegeben wurde](#view-last-sample-status) ausgedrückt im Dezimalformat. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profile mit dieser Datensatz-ID. |
-| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der Gesamtzahl der zusammengeführten Profile (der `totalRows`, wie im [letzten Beispielstatus) ](#view-last-sample-status) Dezimalformat zurückgegeben. |
+| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der Gesamtzahl der zusammengeführten Profile (der `totalRows`, wie im [letzten Beispielstatus) &#x200B;](#view-last-sample-status) Dezimalformat zurückgegeben. |
 | `name` | Der Name des Datensatzes, wie er bei der Erstellung des Datensatzes angegeben wurde. |
 | `description` | Die Beschreibung des Datensatzes, die bei der Erstellung des Datensatzes angegeben wurde. |
 | `value` | Die ID des Datensatzes. |
@@ -294,11 +294,11 @@ Die Antwort enthält ein `data`-Array mit einzelnen Objekten, die die Details f�
 | Eigenschaft | Beschreibung |
 |---|---|
 | `sampleCount` | Die Gesamtzahl der abgefragten zusammengeführten Profile im Namespace. |
-| `samplePercentage` | Der `sampleCount` als Prozentsatz der abgefragten zusammengeführten Profile (der im [letzten Beispielstatus) zurückgegebene `numRowsToRead`-Wert ](#view-last-sample-status) Dezimalformat. |
+| `samplePercentage` | Der `sampleCount` als Prozentsatz der abgefragten zusammengeführten Profile (der im [letzten Beispielstatus) zurückgegebene `numRowsToRead`-Wert &#x200B;](#view-last-sample-status) Dezimalformat. |
 | `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anfrage ein `date` angegeben wurde, wird der Bericht für das angegebene Datum zurückgegeben. Wenn kein `date` angegeben wird, wird der neueste Bericht zurückgegeben. |
 | `fullIDsFragmentCount` | Die Gesamtzahl der Profilfragmente im Namespace. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profile im Namespace. |
-| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der gesamten zusammengeführten Profile (der `totalRows` wie im [letzten Beispielstatus) ](#view-last-sample-status) Dezimalformat angegeben. |
+| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der gesamten zusammengeführten Profile (der `totalRows` wie im [letzten Beispielstatus) &#x200B;](#view-last-sample-status) Dezimalformat angegeben. |
 | `code` | Die `code` für den Namespace. Dies ist beim Arbeiten mit Namespaces mithilfe der [Adobe Experience Platform Identity Service-](../../identity-service/api/list-namespaces.md) zu finden und wird in der Experience Platform-Benutzeroberfläche auch [!UICONTROL Identitätssymbol] genannt. Weitere Informationen finden Sie unter [Übersicht über Identity-Namespaces](../../identity-service/features/namespaces.md). |
 | `value` | Der `id` für den Namespace. Dies können Sie beim Arbeiten mit Namespaces mithilfe der [Identity Service-API](../../identity-service/api/list-namespaces.md) feststellen. |
 

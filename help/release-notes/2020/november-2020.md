@@ -137,7 +137,7 @@ Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile 
 | ------- | ----------- |
 | Datensatz für Customer Experience Events (CEE) | Das Erstellen eines CEE-Datensatzes unterstützt jetzt das Hinzufügen von Identitätsfeldern zum Datensatz mit dem Schema-Editor. Attributions-KI und Kunden-KI verwenden die primäre Identität zum Kombinieren von Ereignissen. |
 
-Weitere Informationen finden Sie im Abschnitt zum [ von Identitätsfeldern zu einem Datensatz ](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) Intelligent Services-Datenvorbereitungshandbuch.
+Weitere Informationen finden Sie im Abschnitt zum [&#x200B; von Identitätsfeldern zu einem Datensatz &#x200B;](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) Intelligent Services-Datenvorbereitungshandbuch.
 
 ### Attributions-KI
 
@@ -190,7 +190,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Aktualisierter Workflow für Zusammenführungsrichtlinien | Experience Platform hat die Konfiguration der Zusammenführungsrichtlinie auf einen neuen schrittweisen Workflow aktualisiert. Dieser Workflow ermöglicht es Benutzenden, Datenfragmente aus mehreren Profildatensätzen zusammenzuführen und Prioritäten für die Art und Weise festzulegen, wie Daten über diese Datensätze hinweg zusammengeführt werden, um eine umfassende Ansicht jedes einzelnen Profils zu erstellen. Benutzer können ausgewählte XDM-Datensätze mit einzelnen Profilen zusammenführen, indem sie die entsprechende Zusammenführungsmethode auswählen (Zeitstempel geordnet oder Datensatzpriorität) und ExperienceEvent-Datensätze an die Profildatensätze anhängen. |
 | Vereinigungsschemaansicht | In der Experience Platform-Benutzeroberfläche können Benutzende Informationen zu allen Schemata und Datensätzen, die zum Vereinigungsschema beitragen, sowie Attribute von Oberflächenschlüsseln wie Identitäts- und Beziehungsfelder leichter finden. Diese Aktualisierungen verbessern die Möglichkeit, Probleme zu beheben und zu überprüfen, ob Profile korrekt konfiguriert und Identitäten korrekt zugeordnet wurden und Daten erfolgreich aufgenommen wurden. |
 
-Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile], finden Sie [ der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile], finden Sie [&#x200B; der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -202,7 +202,7 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| [!DNL Shopify] | Sie können [!DNL Shopify] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Weitere Informationen dazu finden Sie [ „Übersicht ](../../sources/connectors/ecommerce/shopify.md) Shopify-Connectors“. |
+| [!DNL Shopify] | Sie können [!DNL Shopify] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Weitere Informationen dazu finden Sie [&#x200B; „Übersicht &#x200B;](../../sources/connectors/ecommerce/shopify.md) Shopify-Connectors“. |
 
 **Wichtigste Funktionen**
 
@@ -210,7 +210,7 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 | ------- | ----------- |
 | Verbindungsinformationen aktualisieren | Sie können jetzt die Namen, Beschreibungen und Anmeldeinformationen vorhandener Batch-Verbindungen mithilfe der [!DNL Flow Service]-API und der Benutzeroberfläche aktualisieren. Weitere Informationen finden Sie im Tutorial zum [Aktualisieren von Verbindungen mithilfe der Flow Service-](../../sources/tutorials/api/update.md) und [Bearbeiten von Kontodetails mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/monitor.md). |
 | Verbindungen löschen | Batch-Verbindungen, die Fehler enthalten oder unnötig geworden sind, können jetzt mithilfe der [!DNL Flow Service]-API und der Benutzeroberfläche gelöscht werden. Weitere Informationen finden Sie im Tutorial [Löschen von Verbindungen mithilfe der Flow Service-API](../../sources/tutorials/api/delete.md) und [Löschen von Konten mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/delete-accounts.md). |
-| Hierarchische Zuordnung | Sie können während der Datenaufnahme eine Vorschau einer hierarchischen Quelldatei anzeigen, z. B. JSON oder Parquet. Weitere Informationen finden Sie im Tutorial [Konfigurieren eines Datenflusses für Cloud-Speicher-Connectoren in ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) Benutzeroberfläche“. |
+| Hierarchische Zuordnung | Sie können während der Datenaufnahme eine Vorschau einer hierarchischen Quelldatei anzeigen, z. B. JSON oder Parquet. Weitere Informationen finden Sie im Tutorial [Konfigurieren eines Datenflusses für Cloud-Speicher-Connectoren in &#x200B;](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) Benutzeroberfläche“. |
 | API-Unterstützung für die Zuordnung in Streaming-Quellen | Sie können jetzt APIs verwenden, um Zuordnungsfunktionen mit Streaming-Quellen durchzuführen. |
 | API-Unterstützung für benutzerdefinierte Trennzeichen für Cloud-Speicherquellen | Sie können jetzt Dateien ohne CSV-Trennzeichen mithilfe von Cloud-Speicherquellen erfassen. Sie können jedes einzelne Spaltentrennzeichen wie Tabulator, Komma, senkrechte Striche, Semikolon oder Hash verwenden, um flache Dateien in jedem Format zu erfassen. |
 | Sandbox-Unterstützung für Adobe Audience Manager Connector | Der Audience Manager-Connector ist jetzt Sandbox-fähig. Benutzerinnen und Benutzer können den Connector aktivieren, um Audience Manager-Datensätze an die Sandbox ihrer Wahl (einschließlich Nicht-Produktions-Sandboxes) weiterzuleiten. Die Konfiguration ist auf eine Sandbox pro Organisation beschränkt. |

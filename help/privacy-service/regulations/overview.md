@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Dieses Dokument bietet einen Überblick über die verschiedenen Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 
-Durch die Verwendung von [Adobe Experience Platform Privacy Service ](../home.md) unterstützt Experience Cloud Zugriffs- und Löschanfragen gemäß den folgenden Vorschriften:
+Durch die Verwendung von [Adobe Experience Platform Privacy Service &#x200B;](../home.md) unterstützt Experience Cloud Zugriffs- und Löschanfragen gemäß den folgenden Vorschriften:
 
 | Regelung | `regulation_type` | Beschreibung |
 |-----------|-------------------|-------------|

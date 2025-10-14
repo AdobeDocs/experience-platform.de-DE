@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Mit der `eventType`-Eigenschaft können Sie den Ereignistyp definieren, den Sie mit der Web-SDK senden. Dieses Feld füllt schließlich das `xdm.eventType`. Dies ist nützlich, wenn Sie die Ereignistypen unterscheiden möchten, die Sie an Adobe senden.
 
-Adobe bietet einige vordefinierte Ereignistypen, die Sie verwenden können. Eine vollständige Liste [ vordefinierten Werte finden Sie unter „Verfügbare Werte für die `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype)&quot; im XDM-Benutzerhandbuch. Sie können auch eigene Werte verwenden, falls gewünscht.
+Adobe bietet einige vordefinierte Ereignistypen, die Sie verwenden können. Eine vollständige Liste [&#x200B; vordefinierten Werte finden Sie unter „Verfügbare Werte für die `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype)&quot; im XDM-Benutzerhandbuch. Sie können auch eigene Werte verwenden, falls gewünscht.
 
 Wenn Sie sowohl `type` hier als auch `xdm.eventType` im [`xdm`](xdm.md) festlegen, hat der Wert in diesem Feld Priorität.
 
@@ -21,7 +21,7 @@ Wenn Sie sowohl `type` hier als auch `xdm.eventType` im [`xdm`](xdm.md) festlege
 
 Legen Sie das **[!UICONTROL Typ]** Dropdown-Feld innerhalb der Aktionen einer Tag-Regel fest.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.

@@ -16,7 +16,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Der FTP-Connector befindet sich in der Beta-Phase. Die Funktionen und die Dokumentation können sich ändern. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+>Der FTP-Connector befindet sich in der Beta-Phase. Die Funktionen und die Dokumentation können sich ändern. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -44,7 +44,7 @@ Um [!DNL Flow Service] mit [!DNL FTP] zu verbinden, müssen Sie Werte für die f
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -108,4 +108,4 @@ Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) der neu erste
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine FTP-Verbindung mithilfe der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API zu ](../../explore/cloud-storage.md).
+In diesem Tutorial haben Sie eine FTP-Verbindung mithilfe der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API zu &#x200B;](../../explore/cloud-storage.md).

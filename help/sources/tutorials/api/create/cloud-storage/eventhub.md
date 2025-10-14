@@ -81,7 +81,7 @@ Weitere Informationen zu diesen Werten finden Sie in [diesem Dokument zu Event H
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -383,7 +383,7 @@ curl -X POST \
 | `params.eventHubName` | Der Name Ihrer [!DNL Event Hubs]. |
 | `params.dataType` | Dieser Parameter definiert den Typ der aufgenommenen Daten. Zu den unterstützten Datentypen gehören: `raw` und `xdm`. |
 | `params.reset` | Dieser Parameter definiert, wie die Daten gelesen werden. Verwenden Sie `latest` , um mit dem Lesen der neuesten Daten zu beginnen, und `earliest` , um mit dem Lesen der ersten verfügbaren Daten im Stream zu beginnen. Dieser Parameter ist optional und auf `earliest` gesetzt, wenn er nicht angegeben wurde. |
-| `params.consumerGroup` | Der Veröffentlichungs- oder Abonnementmechanismus, der für die [!DNL Event Hubs] verwendet werden soll. Dieser Parameter ist optional und auf `$Default` gesetzt, wenn er nicht angegeben wurde. Weitere Informationen finden Sie [[!DNL Event Hubs]  diesem Handbuch ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) Event-Verbraucher . **Hinweis**: Eine [!DNL Event Hubs] Verbrauchergruppe kann jeweils nur für einen einzigen Fluss verwendet werden. |
+| `params.consumerGroup` | Der Veröffentlichungs- oder Abonnementmechanismus, der für die [!DNL Event Hubs] verwendet werden soll. Dieser Parameter ist optional und auf `$Default` gesetzt, wenn er nicht angegeben wurde. Weitere Informationen finden Sie [[!DNL Event Hubs]  diesem Handbuch &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) Event-Verbraucher . **Hinweis**: Eine [!DNL Event Hubs] Verbrauchergruppe kann jeweils nur für einen einzigen Fluss verwendet werden. |
 
 >[!NOTE]
 >

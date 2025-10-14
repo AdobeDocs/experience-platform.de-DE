@@ -70,7 +70,7 @@ Es wird ein Popup-Fenster angezeigt, in dem Sie die Möglichkeit haben, Vorlagen
 >
 >Vorlagen können beim Arbeiten mit Quellen, die Änderungsdatenerfassungs-Workflows erfordern oder mehrere Datenmodelle unterstützen, automatisch modellbasierte Schemata generieren. Diese Schemata ermöglichen Data Mirror-Funktionen für die Echtzeit-Datensynchronisation.\
 >Bei Verwendung von Vorlagen mit modellbasierten Schemata enthalten die automatisch generierten Assets die erforderlichen Felder für den Primärschlüssel, die Versionskennung und die Zeitstempelkennung.\
->Data Mirror Weitere Informationen finden Sie unter [Übersicht über ](../../../xdm/data-mirror/overview.md) und [Technische Referenz zu modellbasierten Schemata](../../../xdm/schema/model-based.md).
+>Data Mirror Weitere Informationen finden Sie unter [Übersicht über &#x200B;](../../../xdm/data-mirror/overview.md) und [Technische Referenz zu modellbasierten Schemata](../../../xdm/schema/model-based.md).
 
 Um automatisch generierte Assets zu verwenden, wählen Sie **[!UICONTROL Vorlagen durchsuchen]** und dann **[!UICONTROL Auswählen]** aus.
 

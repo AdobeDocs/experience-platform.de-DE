@@ -72,9 +72,9 @@ Weitere Anleitungen finden Sie in der Dokumentation zu [[!DNL Mailchimp] Grundla
 
 ### Leitlinien {#guardrails}
 
-Jede Ihrer [!DNL Mailchimp] Zielgruppen kann bis zu 60 Gruppennamen (oder Interessenkategorien) in einer einzelnen Gruppe oder über mehrere Gruppen innerhalb derselben Zielgruppe hinweg enthalten. Unter [!DNL Mailchimp]Gruppen[ finden ](https://mailchimp.com/help/getting-started-with-groups/) weitere Informationen. Wenn Sie dieses Limit erreichen, erhalten Sie von der [!DNL Mailchimp]-API eine `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` als Fehlerantwort.
+Jede Ihrer [!DNL Mailchimp] Zielgruppen kann bis zu 60 Gruppennamen (oder Interessenkategorien) in einer einzelnen Gruppe oder über mehrere Gruppen innerhalb derselben Zielgruppe hinweg enthalten. Unter [!DNL Mailchimp]Gruppen[&#x200B; finden &#x200B;](https://mailchimp.com/help/getting-started-with-groups/) weitere Informationen. Wenn Sie dieses Limit erreichen, erhalten Sie von der [!DNL Mailchimp]-API eine `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` als Fehlerantwort.
 
-Weitere Informationen zu den von der [!DNL Mailchimp]-API auferlegten Beschränkungen finden [!DNL Mailchimp] [ unter ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)Ratenbeschränkungen .
+Weitere Informationen zu den von der [!DNL Mailchimp]-API auferlegten Beschränkungen finden [!DNL Mailchimp] [&#x200B; unter &#x200B;](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)Ratenbeschränkungen .
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -132,7 +132,7 @@ Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](.
 | --- | --- |
 | **[!UICONTROL Name]** | Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können. |
 | **[!UICONTROL Beschreibung]** | Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren. |
-| **[!UICONTROL Rechenzentrum]** | Ihr [!DNL Mailchimp]-Konto `data center`. Eine Anleitung dazu finden [ im Abschnitt  [!DNL Mailchimp] Identifizieren](#identify-data-center)Datenzentrum“. |
+| **[!UICONTROL Rechenzentrum]** | Ihr [!DNL Mailchimp]-Konto `data center`. Eine Anleitung dazu finden [&#x200B; im Abschnitt  [!DNL Mailchimp] Identifizieren](#identify-data-center)Datenzentrum“. |
 | **[!UICONTROL Zielgruppenname (bitte zuerst Rechenzentrum auswählen)]** | Nachdem Sie Ihr **[!UICONTROL Rechenzentrum]** ausgewählt haben, werden in dieser Dropdown-Liste automatisch die Zielgruppennamen aus Ihrem [!DNL Mailchimp]-Konto angezeigt. Wählen Sie die Zielgruppe aus, die Sie mit Daten aus Experience Platform aktualisieren möchten. |
 | **[!UICONTROL Interessenkategorie (Bitte wählen Sie zuerst Datenzentrum und Zielgruppenname aus)]** | Nachdem Sie Ihren **[!UICONTROL Zielgruppennamen]** ausgewählt haben, wird dieses Dropdown-Menü automatisch mit den Namen der Interessengruppen-Kategorien aus Ihrem [!DNL Mailchimp]-Konto gefüllt. Wählen Sie den Kategorienamen aus, den Sie mit Daten aus Experience Platform aktualisieren möchten. |
 
@@ -205,7 +205,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 ![Screenshot der Mailchimp-Benutzeroberfläche mit der Seite „Zielgruppe“.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
 * Wählen Sie die Gruppe aus und überprüfen Sie, ob die ausgewählten Zielgruppen als Kategorien mit dem Zielgruppennamen aus Experience Platform erstellt wurden, auf den möglicherweise ein automatisch generiertes Suffix folgt.
-   * Dieses Ziel verwendet die Namen der ausgewählten Segmente, um die Interessenkategorie mithilfe der API [[!DNL Mailchimp] Interessenkategorie hinzufügen“ ](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/) erstellen. Wenn Sie ein neues Ziel erstellen und dieselben Zielgruppen erneut aktivieren, fügt [!DNL Mailchimp] ein Suffix hinzu, um zwischen den vorhandenen und den neuen Segmenten zu unterscheiden.
+   * Dieses Ziel verwendet die Namen der ausgewählten Segmente, um die Interessenkategorie mithilfe der API [[!DNL Mailchimp] Interessenkategorie hinzufügen“ &#x200B;](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/) erstellen. Wenn Sie ein neues Ziel erstellen und dieselben Zielgruppen erneut aktivieren, fügt [!DNL Mailchimp] ein Suffix hinzu, um zwischen den vorhandenen und den neuen Segmenten zu unterscheiden.
 * Kontakte, deren E-Mails nicht in der Gruppe vorhanden waren, werden der neu erstellten Kategorie hinzugefügt.
 * Bei Kontakten, die bereits in der Gruppe vorhanden sind, werden die Attributfelddaten aktualisiert und der Kontakt zur neu erstellten Kategorie hinzugefügt.
 

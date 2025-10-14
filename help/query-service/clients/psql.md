@@ -54,4 +54,4 @@ Wenn Sie Version 14.x nicht sehen, laden Sie eine unterstützte Version 14.x von
 
 ## Nächste Schritte
 
-Nachdem Sie sich mit dem Abfrage-Service verbunden haben, können Sie PSQL zum Schreiben von Abfragen verwenden. Weitere Informationen finden Sie im Handbuch [ Ausführen ](../best-practices/writing-queries.md) Abfragen .
+Nachdem Sie sich mit dem Abfrage-Service verbunden haben, können Sie PSQL zum Schreiben von Abfragen verwenden. Weitere Informationen finden Sie im Handbuch [&#x200B; Ausführen &#x200B;](../best-practices/writing-queries.md) Abfragen .

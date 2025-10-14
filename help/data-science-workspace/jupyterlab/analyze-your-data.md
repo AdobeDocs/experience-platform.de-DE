@@ -58,7 +58,7 @@ Das Rezept für Einzelhandelsumsätze ist ein eigenständiges Beispiel, das dens
 
 >[!NOTE]
 >
->Der `data_access_sdk_python` ist veraltet und wird nicht mehr empfohlen. Informationen zum Konvertieren von [ finden Sie im Tutorial zum Konvertieren von Datenzugriff auf SDK ](../authoring/platform-sdk.md) Experience Platform SDK . Die folgenden Schritte gelten auch für dieses Tutorial.
+>Der `data_access_sdk_python` ist veraltet und wird nicht mehr empfohlen. Informationen zum Konvertieren von [&#x200B; finden Sie im Tutorial zum Konvertieren von Datenzugriff auf SDK &#x200B;](../authoring/platform-sdk.md) Experience Platform SDK . Die folgenden Schritte gelten auch für dieses Tutorial.
 
 Wir werden den internen Zugriff auf Daten von [!DNL Adobe Experience Platform] und den externen Zugriff auf Daten überprüfen. Wir verwenden die `data_access_sdk_python`-Bibliothek für den Zugriff auf interne Daten wie Datensätze und XDM-Schemata. Für externe Daten verwenden wir die [!DNL Python]-Bibliothek von Pandas.
 
@@ -205,4 +205,4 @@ In diesem Tutorial wurde beschrieben, wie Sie ein neues Jupyter-Notebook in der 
 - Zugreifen auf Datensätze und Schemata
 - Erkunden von Datensätzen
 
-Jetzt können Sie mit dem [ Abschnitt fortfahren, ](../models-recipes/package-source-files-recipe.md) ein Rezept zu verpacken und es in Data Science Workspace zu importieren.
+Jetzt können Sie mit dem [&#x200B; Abschnitt fortfahren, &#x200B;](../models-recipes/package-source-files-recipe.md) ein Rezept zu verpacken und es in Data Science Workspace zu importieren.

@@ -21,11 +21,11 @@ In diesem Dokument wird beschrieben, wie Sie mit Ihrer lokalen Umgebung die Doku
 
 ## Voraussetzungen
 
-Für das folgende Tutorial muss GitHub Desktop auf Ihrem lokalen Computer installiert sein. Wenn Sie keinen GitHub-Desktop haben, können Sie die Anwendung ([) ](https://desktop.github.com/).
+Für das folgende Tutorial muss GitHub Desktop auf Ihrem lokalen Computer installiert sein. Wenn Sie keinen GitHub-Desktop haben, können Sie die Anwendung ([) &#x200B;](https://desktop.github.com/).
 
 ## Verbinden mit GitHub und Einrichten der lokalen Authoring-Umgebung
 
-Der erste Schritt beim Einrichten Ihrer lokalen Authoring-Umgebung besteht darin, zum [Adobe Experience Platform GitHub-Repository zu ](https://github.com/AdobeDocs/experience-platform.en).
+Der erste Schritt beim Einrichten Ihrer lokalen Authoring-Umgebung besteht darin, zum [Adobe Experience Platform GitHub-Repository zu &#x200B;](https://github.com/AdobeDocs/experience-platform.en).
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -63,7 +63,7 @@ Nachdem das Repository auf den lokalen Computer geklont und eine neue Verzweigun
 
 Adobe empfiehlt die Verwendung von [Visual Studio Code](https://code.visualstudio.com/) und die Installation der Adobe Markdown Authoring-Erweiterung. Um die Erweiterung zu installieren, starten Sie Visual Studio Code, und wählen Sie dann im linken Navigationsbereich **Registerkarte** Erweiterungen“ aus.
 
-![-Erweiterung ](../assets/extension.png)
+![-Erweiterung &#x200B;](../assets/extension.png)
 
 Geben Sie als Nächstes `Adobe Markdown Authoring` in die Suchleiste ein und wählen Sie dann auf der **Seite die Option** Installieren“ aus.
 

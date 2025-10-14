@@ -30,7 +30,7 @@ Weitere Anleitungen zum Erstellen und Konfigurieren eines technischen Kontos fin
 
 Wenn Sie nur die Benutzeroberfläche des Abfrage-Service verwenden, stellen Sie sicher, dass Sie über die erforderlichen Berechtigungen verfügen, oder stimmen Sie sich mit einem Administrator ab, der technische Konten verwaltet. Alle geplanten Abfragen werden der Liste auf der Registerkarte [!UICONTROL Geplante Abfragen] hinzugefügt, auf der Sie den Status, Zeitplandetails und Fehlermeldungen für alle geplanten Abfrageaufträge überwachen sowie Warnhinweise abonnieren können. Weitere Informationen zur Überwachung und Verwaltung Ihrer Abfragen finden Sie im Dokument [Überwachen geplanter Abfragen](./monitor-queries.md).
 
-Dieser Workflow behandelt den Zeitplanungsprozess in der Benutzeroberfläche des Abfrage-Service. Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie [ Handbuch zu Endpunkten für geplante Abfragen](../api/scheduled-queries.md).
+Dieser Workflow behandelt den Zeitplanungsprozess in der Benutzeroberfläche des Abfrage-Service. Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie [&#x200B; Handbuch zu Endpunkten für geplante Abfragen](../api/scheduled-queries.md).
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Wenn Sie über den Abfrage-Editor auf eine gespeicherte Abfrage zugreifen, könn
 
 ![Der Abfrage-Editor mit [!UICONTROL Zeitplan anzeigen] und [!UICONTROL Zeitplan hinzufügen] hervorgehoben.](../images/ui/query-schedules/view-add-schedule.png)
 
-Wählen Sie **[!UICONTROL Zeitplan hinzufügen]** aus, um zur Seite [Zeitplandetails“ ](#schedule-details).
+Wählen Sie **[!UICONTROL Zeitplan hinzufügen]** aus, um zur Seite [Zeitplandetails“ &#x200B;](#schedule-details).
 
 Alternativ können Sie die **[!UICONTROL Zeitpläne]** unter dem Namen der Abfrage auswählen.
 
@@ -90,7 +90,7 @@ Wählen Sie **[!UICONTROL Erstellen und an neuen Datensatz anhängen]** aus, um 
 
 ![Das Bedienfeld mit den Zeitplandetails mit Datensatzdetails und den hervorgehobenen [!UICONTROL Erstellen und an neuen Datensatz anhängen]-Optionen.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-Wählen Sie alternativ **[!UICONTROL An vorhandenen Datensatz anhängen]** gefolgt vom Datensatzsymbol (![ Datensatzsymbol.](/help/images/icons/database.png)).
+Wählen Sie alternativ **[!UICONTROL An vorhandenen Datensatz anhängen]** gefolgt vom Datensatzsymbol (![&#x200B; Datensatzsymbol.](/help/images/icons/database.png)).
 
 ![Das Bedienfeld „Zeitplandetails“ mit hervorgehobenen Datensatzdetails und „An vorhandenen Datensatz anhängen“.](../images/ui/query-schedules/dataset-details-existing.png)
 
@@ -106,9 +106,9 @@ Bei der Erstellung eines Zeitplans können Sie Ihre Abfrage in der Quarantänefu
 
 ![Der Arbeitsbereich „Zeitpläne für Abfragen“ mit [!UICONTROL &#x200B; hervorgehobenen &#x200B;] „Quarantäne für Abfragen“ und der ausgewählten Option „Ja“.](../images/ui/query-schedules/quarantine-enroll.png)
 
-Sobald eine Abfrage für die Quarantänefunktion registriert ist, können Sie Warnhinweise für diese Änderung des Abfragestatus abonnieren. Wenn eine geplante Abfrage nicht unter Quarantäne gestellt wird, wird sie nicht als Option im [Dialogfeld Warnhinweise“ ](./monitor-queries.md#alert-subscription).
+Sobald eine Abfrage für die Quarantänefunktion registriert ist, können Sie Warnhinweise für diese Änderung des Abfragestatus abonnieren. Wenn eine geplante Abfrage nicht unter Quarantäne gestellt wird, wird sie nicht als Option im [Dialogfeld Warnhinweise“ &#x200B;](./monitor-queries.md#alert-subscription).
 
-Sie können eine geplante Abfrage auch über die Inline-Aktionen auf der Registerkarte [!UICONTROL Geplante Abfragen“ für &#x200B;] Quarantänefunktion registrieren. Weitere Informationen finden [ in der ](./monitor-queries.md#alert-subscription) zum Überwachen von Abfragen .
+Sie können eine geplante Abfrage auch über die Inline-Aktionen auf der Registerkarte [!UICONTROL Geplante Abfragen“ für &#x200B;] Quarantänefunktion registrieren. Weitere Informationen finden [&#x200B; in der &#x200B;](./monitor-queries.md#alert-subscription) zum Überwachen von Abfragen .
 
 ### Festlegen von Warnhinweisen für den Status geplanter Abfragen {#alerts-for-query-status}
 
@@ -123,8 +123,8 @@ In der folgenden Tabelle werden die unterstützten Warnhinweistypen für Abfrage
 | `start` | Dieser Warnhinweis informiert Sie, wenn eine geplante Abfrageausführung initiiert wird oder mit der Verarbeitung beginnt. |
 | `success` | Dieser Warnhinweis informiert Sie, wenn eine geplante Abfrage erfolgreich ausgeführt wurde, und gibt an, dass die Abfrage fehlerfrei ausgeführt wurde. |
 | `failed` | Dieser Warnhinweis Trigger, wenn bei der Ausführung einer geplanten Abfrage ein Fehler auftritt oder sie nicht erfolgreich ausgeführt werden kann. So können Sie Probleme schnell identifizieren und beheben. |
-| `quarantine` | Dieser Warnhinweis wird aktiviert, wenn eine geplante Abfrageausführung in den Quarantänestatus versetzt wird. Sobald eine Abfrage [in der Quarantänefunktion registriert) ](#quarantine), wird jede geplante Abfrage, die zehn aufeinander folgende Ausführungen fehlschlägt, automatisch in einen [!UICONTROL Quarantänestatus] versetzt. Eine unter Quarantäne gestellte Abfrage erfordert dann Ihr Eingreifen, bevor weitere Ausführungen stattfinden können. Hinweis: Abfragen müssen für die Quarantänefunktion registriert sein, damit Sie Quarantänewarnungen abonnieren können. |
-| `delay` | Dieser Warnhinweis benachrichtigt Sie, wenn das [ einer geplanten Abfrageausführung einen bestimmten Schwellenwert ](./monitor-queries.md#query-run-delay). Sie können einen benutzerdefinierten Zeitpunkt festlegen, zu dem der Warnhinweis Trigger wird, wenn die Abfrage für diesen Zeitraum ausgeführt wird, ohne dass entweder der Abschluss erfolgt oder ein Fehler auftritt. Das Standardverhalten legt einen Warnhinweis für 150 Minuten fest, nachdem die Verarbeitung der Abfrage begonnen hat. |
+| `quarantine` | Dieser Warnhinweis wird aktiviert, wenn eine geplante Abfrageausführung in den Quarantänestatus versetzt wird. Sobald eine Abfrage [in der Quarantänefunktion registriert) &#x200B;](#quarantine), wird jede geplante Abfrage, die zehn aufeinander folgende Ausführungen fehlschlägt, automatisch in einen [!UICONTROL Quarantänestatus] versetzt. Eine unter Quarantäne gestellte Abfrage erfordert dann Ihr Eingreifen, bevor weitere Ausführungen stattfinden können. Hinweis: Abfragen müssen für die Quarantänefunktion registriert sein, damit Sie Quarantänewarnungen abonnieren können. |
+| `delay` | Dieser Warnhinweis benachrichtigt Sie, wenn das [&#x200B; einer geplanten Abfrageausführung einen bestimmten Schwellenwert &#x200B;](./monitor-queries.md#query-run-delay). Sie können einen benutzerdefinierten Zeitpunkt festlegen, zu dem der Warnhinweis Trigger wird, wenn die Abfrage für diesen Zeitraum ausgeführt wird, ohne dass entweder der Abschluss erfolgt oder ein Fehler auftritt. Das Standardverhalten legt einen Warnhinweis für 150 Minuten fest, nachdem die Verarbeitung der Abfrage begonnen hat. |
 
 >[!NOTE]
 >
@@ -179,9 +179,9 @@ Die folgende Tabelle enthält Beschreibungen der einzelnen Spalten, die im Detai
 >
 >Die Daten zur Stundenberechnung sind ab 08/15/2024 verfügbar. Daten vor diesem Datum werden als „Nicht verfügbar“ angezeigt.
 
-Vollständige Informationen [ Überwachen des Status aller Abfrageaufträge über die Benutzeroberfläche finden ](./monitor-queries.md#inline-actions) im Handbuch zur Überwachung geplanter Abfragen .
+Vollständige Informationen [&#x200B; Überwachen des Status aller Abfrageaufträge über die Benutzeroberfläche finden &#x200B;](./monitor-queries.md#inline-actions) im Handbuch zur Überwachung geplanter Abfragen .
 
-Wählen Sie eine **[!UICONTROL ID der Abfrageausführung]** aus der Liste aus, um zur Übersicht der Abfrageausführung zu navigieren. Eine vollständige Aufschlüsselung der in der (Übersicht über die [) verfügbaren Informationen ](./monitor-queries.md#query-run-overview) Sie in der Dokumentation Überwachen geplanter Abfragen .
+Wählen Sie eine **[!UICONTROL ID der Abfrageausführung]** aus der Liste aus, um zur Übersicht der Abfrageausführung zu navigieren. Eine vollständige Aufschlüsselung der in der (Übersicht über die [) verfügbaren Informationen &#x200B;](./monitor-queries.md#query-run-overview) Sie in der Dokumentation Überwachen geplanter Abfragen .
 
 Informationen zum Überwachen geplanter Abfragen mithilfe der Abfrage-Service-API finden Sie [Handbuch zu Endpunkten für die Ausführung geplanter Abfragen](../api/runs-scheduled-queries.md).
 

@@ -13,7 +13,7 @@ ht-degree: 12%
 
 # Erste Schritte mit Inhalts-Tagging
 
-[!DNL Content tagging] verwendet Adobe I/O-APIs. Um Adobe I/O-APIs und die I/O-Konsolenintegration aufzurufen, müssen Sie zunächst das (Authentifizierungs[Tutorial) ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
+[!DNL Content tagging] verwendet Adobe I/O-APIs. Um Adobe I/O-APIs und die I/O-Konsolenintegration aufzurufen, müssen Sie zunächst das (Authentifizierungs[Tutorial) &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 Wenn Sie jedoch zum Schritt **API hinzufügen** gelangen, befindet sich die API unter Creative Cloud statt unter Adobe Experience Platform, wie im folgenden Screenshot gezeigt:
 
@@ -45,7 +45,7 @@ Sie werden umgeleitet und aufgefordert, eine Umgebungsdatei von Ihrem Computer a
 
 ![](./images/click-open.png)
 
-Sie werden zurück zur Registerkarte *Umgebungen verwalten* mit einem neuen Umgebungsnamen weitergeleitet. Wählen Sie den Umgebungsnamen aus, um die in Postman verfügbaren Variablen anzuzeigen und zu bearbeiten. Sie müssen die `JWT_TOKEN` und `ACCESS_TOKEN` weiterhin manuell ausfüllen. Diese Werte sollten beim Abschließen des (Authentifizierungs[Tutorials) abgerufen ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
+Sie werden zurück zur Registerkarte *Umgebungen verwalten* mit einem neuen Umgebungsnamen weitergeleitet. Wählen Sie den Umgebungsnamen aus, um die in Postman verfügbaren Variablen anzuzeigen und zu bearbeiten. Sie müssen die `JWT_TOKEN` und `ACCESS_TOKEN` weiterhin manuell ausfüllen. Diese Werte sollten beim Abschließen des (Authentifizierungs[Tutorials) abgerufen &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ![](./images/re-direct-updated.png)
 

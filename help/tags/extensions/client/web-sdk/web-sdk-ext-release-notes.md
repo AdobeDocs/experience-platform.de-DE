@@ -385,7 +385,7 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Ein Kontrollkästchen [ „Dokument wird ](/help/web-sdk/commands/sendevent/documentunloading.md)&quot; wurde der Benutzeroberfläche für die Aktion „Ereignis senden“ hinzugefügt.
+- Ein Kontrollkästchen [&#x200B; „Dokument wird &#x200B;](/help/web-sdk/commands/sendevent/documentunloading.md)&quot; wurde der Benutzeroberfläche für die Aktion „Ereignis senden“ hinzugefügt.
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
 - Es wurde Unterstützung für den Adobe Consent 2.0-Standard bei Verwendung des [`setConsent`](/help/web-sdk/commands/setconsent.md)-Befehls hinzugefügt.

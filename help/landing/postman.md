@@ -25,7 +25,7 @@ Im folgenden Video-Handbuch wird das Erstellen und Einrichten Ihrer Postman-Umge
 
 ## Postman-Sammlungen {#collections}
 
-Einen Ordner mit allen verfügbaren Postman-Sammlungen finden Sie, indem Sie das GitHub-Repository mit den [Experience Platform Postman-Beispielen besuchen](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternativ kann ein Sammlungs-Link für Postman in jeder einzelnen Swagger-Datei in der (API[Referenzdokumentation) ](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O gefunden werden.
+Einen Ordner mit allen verfügbaren Postman-Sammlungen finden Sie, indem Sie das GitHub-Repository mit den [Experience Platform Postman-Beispielen besuchen](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternativ kann ein Sammlungs-Link für Postman in jeder einzelnen Swagger-Datei in der (API[Referenzdokumentation) &#x200B;](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O gefunden werden.
 
 Um eine Postman-Sammlung herunterzuladen, wählen Sie auf der GitHub-Seite die Option **[!DNL Raw]** aus, um die rohe JSON-Datei in eine neue Registerkarte zu laden. Klicken Sie dann mit der rechten Maustaste und wählen Sie **[!DNL Save as]** , um die Datei an einem lokalen Ziel Ihrer Wahl zu speichern.
 
@@ -33,7 +33,7 @@ Um eine Postman-Sammlung herunterzuladen, wählen Sie auf der GitHub-Seite die O
 
 ## Postman-Sammlung importieren {#import}
 
-Um eine [Postman-Sammlung zu ](#collections), muss eine Umgebung eingerichtet sein. Nachdem Sie die Einrichtung der Umgebung abgeschlossen haben, wählen Sie oben rechts die **[!DNL Manage Environments]** aus.
+Um eine [Postman-Sammlung zu &#x200B;](#collections), muss eine Umgebung eingerichtet sein. Nachdem Sie die Einrichtung der Umgebung abgeschlossen haben, wählen Sie oben rechts die **[!DNL Manage Environments]** aus.
 
 ![Umgebungsauswahl verwalten](./images/api-guide/environment-selector.png)
 
@@ -45,7 +45,7 @@ Sie werden aufgefordert, eine zu importierende Datei auszuwählen. Wählen Sie d
 
 ![Ausgefüllte Sammlung](./images/api-guide/imported-collection.png)
 
-Jede Sammlung verfügt über verschiedene Schlüssel-Wert-Paare, die möglicherweise erforderlich sind, um einen erfolgreichen CRUD-Vorgang durchzuführen. Lesen Sie das API[Entwicklerhandbuch des Service, ](api-guide.md#api-guides) sich über die erforderlichen Werte und Tipps zu informieren und Beispiele anzuzeigen.
+Jede Sammlung verfügt über verschiedene Schlüssel-Wert-Paare, die möglicherweise erforderlich sind, um einen erfolgreichen CRUD-Vorgang durchzuführen. Lesen Sie das API[Entwicklerhandbuch des Service, &#x200B;](api-guide.md#api-guides) sich über die erforderlichen Werte und Tipps zu informieren und Beispiele anzuzeigen.
 
 Weitere Informationen zur Postman-Benutzeroberfläche und ihren verfügbaren Funktionen finden Sie in der Dokumentation zu [Postman](https://learning.postman.com/docs/getting-started/navigating-postman/).
 

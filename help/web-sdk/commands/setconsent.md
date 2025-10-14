@@ -20,7 +20,7 @@ Web SDK unterstützt die folgenden Standards:
 * **[IAB Transparency &amp; Consent Framework](/help/landing/governance-privacy-security/consent/iab/overview.md)**: Wenn Sie diesen Standard verwenden, wird das Echtzeit-Kundenprofil des Besuchers mit den Einverständnisinformationen aktualisiert, sofern Ihre Implementierung korrekt konfiguriert ist:
    1. Das Schema Individuelles XDM-Profil enthält die Feldergruppe [IAB TCF 2.0-Einverständnis](/help/xdm/field-groups/profile/iab.md).
    1. Das Erlebnisereignis-Schema enthält die [IAB TCF 2.0-Einverständnis-Feldergruppe](/help/xdm/field-groups/event/iab.md).
-   1. Sie schließen die IAB-Einverständnisinformationen in das Ereignis (XDM[Objekt) ](sendevent/xdm.md). Web SDK enthält die Einverständnisinformationen beim Senden von Ereignisdaten nicht automatisch.
+   1. Sie schließen die IAB-Einverständnisinformationen in das Ereignis (XDM[Objekt) &#x200B;](sendevent/xdm.md). Web SDK enthält die Einverständnisinformationen beim Senden von Ereignisdaten nicht automatisch.
 
 Nach Verwendung dieses Befehls schreibt die Web-SDK die Benutzereinstellungen in ein Cookie. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft die SDK diese persistierten Voreinstellungen ab, um zu ermitteln, ob Ereignisse an Adobe gesendet werden können.
 
@@ -68,7 +68,7 @@ Die folgenden Cookies werden gesetzt, wenn die Einverständniskonfiguration Folg
 
 Das Festlegen des Einverständnisses wird als Aktion innerhalb einer Regel in der Tags-Benutzeroberfläche der Datenerfassung von Adobe Experience Platform ausgeführt.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
@@ -93,7 +93,7 @@ Führen Sie den `setConsent` Befehl aus, wenn Sie Ihre konfigurierte Instanz der
 
 ### Adobe 2.0-`consent`
 
-Wenn Sie Adobe Experience Platform verwenden, müssen Sie eine Datenschutzschemafeldgruppe in Ihr Profilschema aufnehmen. Weitere [ zum Adobe 2.0-Standard finden Sie unter ](../../landing/governance-privacy-security/overview.md)Governance, Datenschutz und Sicherheit in Adobe Experience Platform&quot;. Sie können im folgenden Wertobjekt Daten hinzufügen, die dem Schema des `consents` Felds der Profilfeldgruppe [!UICONTROL Einverständnis und Voreinstellungen] entsprechen.
+Wenn Sie Adobe Experience Platform verwenden, müssen Sie eine Datenschutzschemafeldgruppe in Ihr Profilschema aufnehmen. Weitere [&#x200B; zum Adobe 2.0-Standard finden Sie unter &#x200B;](../../landing/governance-privacy-security/overview.md)Governance, Datenschutz und Sicherheit in Adobe Experience Platform&quot;. Sie können im folgenden Wertobjekt Daten hinzufügen, die dem Schema des `consents` Felds der Profilfeldgruppe [!UICONTROL Einverständnis und Voreinstellungen] entsprechen.
 
 * **`standard`**: Der von Ihnen gewählte Einverständnisstandard. Legen Sie diese Eigenschaft für den Adobe 2.0-Standard auf `"Adobe"` fest.
 * **`version`**: Eine Zeichenfolge, die die Version des Einverständnisstandards darstellt. Legen Sie diese Eigenschaft für den Adobe 2.0-Standard auf `"2.0"` fest.
@@ -127,7 +127,7 @@ Um die Benutzereinverständnisvoreinstellungen aufzuzeichnen, die über den Stan
 
 Wenn das Einverständnis auf diese Weise festgelegt wird, wird das Echtzeit-Kundenprofil mit den Einverständnisinformationen aktualisiert. Dazu muss das Profil-XDM-Schema die Feldergruppe [Profil-Datenschutzschema“ enthalten](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Beim Senden von Ereignissen müssen die IAB-Einverständnisinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Web SDK enthält die Einverständnisinformationen nicht automatisch in die Ereignisse.
 
-Um die Einverständnisinformationen in -Ereignissen zu senden, müssen Sie die Feldergruppe Erlebnisereignis-Datenschutz zu Ihrem [!DNL Profile] aktivierten [!DNL XDM ExperienceEvent] hinzufügen. Anweisungen zur Konfiguration finden [ im Abschnitt zum Aktualisieren ](../../landing/governance-privacy-security/consent/iab/dataset.md#event-schema) ExperienceEvent-Schemas im Handbuch zur Datensatzvorbereitung.
+Um die Einverständnisinformationen in -Ereignissen zu senden, müssen Sie die Feldergruppe Erlebnisereignis-Datenschutz zu Ihrem [!DNL Profile] aktivierten [!DNL XDM ExperienceEvent] hinzufügen. Anweisungen zur Konfiguration finden [&#x200B; im Abschnitt zum Aktualisieren &#x200B;](../../landing/governance-privacy-security/consent/iab/dataset.md#event-schema) ExperienceEvent-Schemas im Handbuch zur Datensatzvorbereitung.
 
 * **`standard`**: Der von Ihnen gewählte Einverständnisstandard. Legen Sie diese Eigenschaft für den IAB TCF 2.0-Standard auf `"IAB TCF"` fest.
 * **`version`**: Eine Zeichenfolge, die die Version des Einverständnisstandards darstellt. Legen Sie diese Eigenschaft für den IAB TCF 2.0-Standard auf `"2.0"` fest.

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Das `personalization`-Objekt enthält mehrere Eigenschaften, mit denen Sie das Benutzererlebnis je nach Benutzer anpassen können. Dies ist besonders bei Adobe Target- oder Adobe Journey Optimizer-Implementierungen nützlich, da es die treibende Kraft ist, mit der Sie die angezeigten Inhalte pro Benutzerin bzw. Benutzer anpassen können.
 
-Weitere Informationen finden Sie in der Dokumentation [ Rendern ](../../personalization/rendering-personalization-content.md) personalisierten Inhalten .
+Weitere Informationen finden Sie in der Dokumentation [&#x200B; Rendern &#x200B;](../../personalization/rendering-personalization-content.md) personalisierten Inhalten .
 
 <!--
 ## Properties within this object

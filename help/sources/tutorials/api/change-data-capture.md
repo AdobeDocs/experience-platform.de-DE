@@ -38,7 +38,7 @@ Data Mirror verwendet modellbasierte Schemata, um die Änderungsdatenerfassung z
 
 Modellbasierte Schemata erweitern Experience Platform, um die Eindeutigkeit von Primärschlüsseln zu erzwingen, Änderungen auf Zeilenebene zu verfolgen und Beziehungen auf Schemaebene zu definieren. Bei der Datenerfassung für Änderungen wenden sie Einfügungen, Aktualisierungen und Löschungen direkt im Data Lake an, wodurch die Notwendigkeit von Extract, Transform, Load (ETL) oder manueller Abstimmung reduziert wird.
 
-Weitere [ finden Sie unter Übersicht über ](../../../xdm/schema/model-based.md) Schemata .
+Weitere [&#x200B; finden Sie unter Übersicht über &#x200B;](../../../xdm/schema/model-based.md) Schemata .
 
 ### Modellbasierte Schemaanforderungen für die Erfassung von Änderungsdaten
 

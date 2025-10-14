@@ -21,7 +21,7 @@ Lesen Sie die folgenden Abschnitte, um die erforderliche Einrichtung abzuschlie�
 
 ### Zulassungsliste von IP-Adressen
 
-Sie m체ssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzuf체gen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen f체r die Verbindung ](../../ip-address-allow-list.md) Experience Platform.
+Sie m체ssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzuf체gen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen f체r die Verbindung &#x200B;](../../ip-address-allow-list.md) Experience Platform.
 
 >[!IMPORTANT]
 >

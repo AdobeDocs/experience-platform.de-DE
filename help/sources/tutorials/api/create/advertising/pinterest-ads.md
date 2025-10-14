@@ -16,9 +16,9 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden ](../../../../home.md#terms-and-conditions) unter „Quellen - Übersicht“ .
+>Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden &#x200B;](../../../../home.md#terms-and-conditions) unter „Quellen - Übersicht“ .
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Pinterest Ads] Quellverbindung und eines Datenflusses, um [[!DNL Pinterest Ads]](https://ads.pinterest.com/) Daten mithilfe der (API[[!DNL Flow Service]  in Adobe Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Pinterest Ads] Quellverbindung und eines Datenflusses, um [[!DNL Pinterest Ads]](https://ads.pinterest.com/) Daten mithilfe der (API[[!DNL Flow Service]  in Adobe Experience Platform &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte {#getting-started}
 

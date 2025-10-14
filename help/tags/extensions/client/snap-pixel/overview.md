@@ -15,13 +15,13 @@ ht-degree: 1%
 
 Mit der [!DNL Snap Pixel] Tag-Erweiterung können Sie [!DNL Snap Pixel] Funktionen direkt in Ihre Client-seitigen Tag-Bibliotheken integrieren. In dieser Dokumentation wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in Ihren Tag-Management-Regeln implementieren.
 
-Die [!DNL Snap Pixel] Tag-Erweiterung optimiert die Integration [!DNL Snap Pixel] Funktionen in Ihre vorhandenen Client-seitigen Tag-Bibliotheken. In dieser Dokumentation wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in Ihrem Tag-Management ([) ](../../../ui/managing-resources/rules.md).
+Die [!DNL Snap Pixel] Tag-Erweiterung optimiert die Integration [!DNL Snap Pixel] Funktionen in Ihre vorhandenen Client-seitigen Tag-Bibliotheken. In dieser Dokumentation wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in Ihrem Tag-Management ([) &#x200B;](../../../ui/managing-resources/rules.md).
 
 ## Voraussetzungen {#prerequisites}
 
 Um die Erweiterung verwenden zu können, benötigen Sie ein gültiges [!DNL Snap]-Konto mit Zugriff auf [!DNL Ads Manager]. Sie müssen [einen neuen erstellen [!DNL Snap Pixel]](https://forbusiness.snapchat.com/advertising/snap-pixel#about) und dessen Pixel-ID kopieren, um die Erweiterung für Ihr Konto zu konfigurieren. Wenn Sie über eine vorhandene [!DNL Snap Pixel] verfügen, können Sie einfach deren ID verwenden.
 
-Es wird empfohlen, [!DNL Snap Pixel] zusammen mit dem [!DNL Snap Conversions API] zu verwenden, um dieselben Ereignisse sowohl Client- als auch Server-seitig zu senden. Dieser Ansatz kann dabei helfen, Ereignisse wiederherzustellen, die möglicherweise nicht nur von der [!DNL Snap Pixel] erfasst werden. Unter der [[!DNL Snap] Konversions-API-Erweiterung für die ](../../server/snap/overview.md)) finden Sie Anweisungen zur Integration in Ihre Server-seitigen Implementierungen. Beachten Sie, dass Ihre Organisation Zugriff auf [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) haben muss, um die Server-seitige Erweiterung verwenden zu können.
+Es wird empfohlen, [!DNL Snap Pixel] zusammen mit dem [!DNL Snap Conversions API] zu verwenden, um dieselben Ereignisse sowohl Client- als auch Server-seitig zu senden. Dieser Ansatz kann dabei helfen, Ereignisse wiederherzustellen, die möglicherweise nicht nur von der [!DNL Snap Pixel] erfasst werden. Unter der [[!DNL Snap] Konversions-API-Erweiterung für die &#x200B;](../../server/snap/overview.md)) finden Sie Anweisungen zur Integration in Ihre Server-seitigen Implementierungen. Beachten Sie, dass Ihre Organisation Zugriff auf [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) haben muss, um die Server-seitige Erweiterung verwenden zu können.
 
 ## Installieren der Erweiterung {#install}
 

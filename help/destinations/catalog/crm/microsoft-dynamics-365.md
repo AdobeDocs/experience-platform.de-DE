@@ -47,7 +47,7 @@ Erstellen Sie das benutzerdefinierte Feld vom Typ `Simple` mit dem Felddatentyp 
 
 Weitere Anleitungen finden Sie in der [!DNL Dynamics 365] [Erstellen oder Bearbeiten eines Felds (Attribut](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1)).
 
-Notieren Sie sich das **[!UICONTROL Anpassungspräfix]** des benutzerdefinierten Felds, das Sie in [!DNL Dynamics 365] erstellen. Sie benötigen dieses Präfix während des Schritts [Ausfüllen der Zieldetails](#destination-details). Weitere Informationen finden [ im Abschnitt ](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) und Bearbeiten von Feldern in der [!DNL Dynamics 365].
+Notieren Sie sich das **[!UICONTROL Anpassungspräfix]** des benutzerdefinierten Felds, das Sie in [!DNL Dynamics 365] erstellen. Sie benötigen dieses Präfix während des Schritts [Ausfüllen der Zieldetails](#destination-details). Weitere Informationen finden [&#x200B; im Abschnitt &#x200B;](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) und Bearbeiten von Feldern in der [!DNL Dynamics 365].
 Screenshot der ![Dynamics 365-Benutzeroberfläche mit dem Anpassungspräfix.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)
 
 Im Folgenden sehen Sie ein Beispiel-Setup in [!DNL Dynamics 365]:
@@ -71,7 +71,7 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Dynamics 365]-CRM-Z
 | `Client ID` | Die [!DNL Dynamics 365]-Client-ID für Ihr [!DNL Azure Active Directory]-Programm. Eine Anleitung finden Sie in der [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in). | `ababbaba-abab-baba-acac-acacacacacac` |
 | `Client Secret` | Den [!DNL Dynamics 365]-Client-Geheim-Code für Ihr [!DNL Azure Active Directory]-Programm. Sie würden Option 2 innerhalb der [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options) verwenden. | `abcde~abcdefghijklmnopqrstuvwxyz12345678` für Anleitung. |
 | `Tenant ID` | Die [!DNL Dynamics 365]-Mandanten-ID für Ihr [!DNL Azure Active Directory]-Programm. Eine Anleitung dazu finden Sie in der [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in). | `1234567-aaaa-12ab-ba21-1234567890` |
-| `Region` | Die mit der Umgebungs-URL verknüpfte Microsoft-Region.<br> Anleitungen finden Sie [[!DNL Dynamics 365]  der ](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions). | Wenn Ihre Domain wie im Folgenden aussieht, müssen Sie bei der Authentifizierung beim [Ziel“ den hervorgehobenen Wert für das CRM](#authenticate)Feld in der Dropdown-Auswahl angeben<br> *org57771b33.`crm`.dynamics.com*<br> Beispiel: Wenn Ihr Unternehmen in der Region Nordamerika (NAM) bereitgestellt wird, ist Ihre URL `crm.dynamics.com`, und Sie müssen `crm` auswählen. Wenn Ihr Unternehmen in der Region Kanada (CAN) bereitgestellt ist, wird Ihre URL `crm3.dynamics.com` und Sie müssen `crm3` auswählen. |
+| `Region` | Die mit der Umgebungs-URL verknüpfte Microsoft-Region.<br> Anleitungen finden Sie [[!DNL Dynamics 365]  der &#x200B;](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions). | Wenn Ihre Domain wie im Folgenden aussieht, müssen Sie bei der Authentifizierung beim [Ziel“ den hervorgehobenen Wert für das CRM](#authenticate)Feld in der Dropdown-Auswahl angeben<br> *org57771b33.`crm`.dynamics.com*<br> Beispiel: Wenn Ihr Unternehmen in der Region Nordamerika (NAM) bereitgestellt wird, ist Ihre URL `crm.dynamics.com`, und Sie müssen `crm` auswählen. Wenn Ihr Unternehmen in der Region Kanada (CAN) bereitgestellt ist, wird Ihre URL `crm3.dynamics.com` und Sie müssen `crm3` auswählen. |
 | `Environment URL` | Siehe die [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1), um eine Anleitung zu erhalten. | Wenn Ihre [!DNL Dynamics 365]-Domain wie im Folgenden aussieht, benötigen Sie den hervorgehobenen Wert.<br> *`org57771b33`.crm.dynamics.com* |
 
 {style="table-layout:auto"}
@@ -138,7 +138,7 @@ Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Anpassungspräfix]**: Die `Customization prefix` des benutzerdefinierten Felds, das Sie in [!DNL Dynamics 365] erstellt haben. Weitere Informationen finden [ im Abschnitt ](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) und Bearbeiten von Feldern in der [!DNL Dynamics 365].
+* **[!UICONTROL Anpassungspräfix]**: Die `Customization prefix` des benutzerdefinierten Felds, das Sie in [!DNL Dynamics 365] erstellt haben. Weitere Informationen finden [&#x200B; im Abschnitt &#x200B;](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) und Bearbeiten von Feldern in der [!DNL Dynamics 365].
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -183,7 +183,7 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
      >[!IMPORTANT]
      >
      > * Die Namen der Zielfelder sollten in `lowercase` sein.
-     > * Wenn Sie außerdem über ein Quellfeld für Datum oder Zeitstempel verfügen, das einem Zielfeld vom Typ [!DNL Dynamics 365] ([ oder Zeitstempel](https://docs.microsoft.com/de-de/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) zugeordnet ist, stellen Sie sicher, dass der zugeordnete Wert nicht leer ist. Wenn der exportierte Feldwert leer ist, wird die *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* Fehlermeldung angezeigt und die Daten werden nicht aktualisiert. Dies ist eine [!DNL Dynamics 365]-Beschränkung.
+     > * Wenn Sie außerdem über ein Quellfeld für Datum oder Zeitstempel verfügen, das einem Zielfeld vom Typ [!DNL Dynamics 365] ([&#x200B; oder Zeitstempel](https://docs.microsoft.com/de-de/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) zugeordnet ist, stellen Sie sicher, dass der zugeordnete Wert nicht leer ist. Wenn der exportierte Feldwert leer ist, wird die *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* Fehlermeldung angezeigt und die Daten werden nicht aktualisiert. Dies ist eine [!DNL Dynamics 365]-Beschränkung.
 
    * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365]-Instanz hinzu:
 
@@ -257,7 +257,7 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| Oktober 2023 | Dokumentation aktualisieren | Aktualisierte Anleitungen, um anzugeben, dass alle Zielattributnamen im Schritt [Zuordnungsüberlegungen und Beispiel“ in Kleinbuchstaben ](#mapping-considerations-example) werden sollten. |
+| Oktober 2023 | Dokumentation aktualisieren | Aktualisierte Anleitungen, um anzugeben, dass alle Zielattributnamen im Schritt [Zuordnungsüberlegungen und Beispiel“ in Kleinbuchstaben &#x200B;](#mapping-considerations-example) werden sollten. |
 | August 2023 | Funktions- und Dokumentationsaktualisierung | Es wurde Unterstützung für [!DNL Dynamics 365] benutzerdefinierte Feldpräfixe für benutzerdefinierte Felder hinzugefügt, die nicht innerhalb der Standardlösung in [!DNL Dynamics 365] erstellt wurden. Ein neues Eingabefeld, **[!UICONTROL Anpassungspräfix]**, wurde im Schritt [Ausfüllen der Zieldetails](#destination-details) hinzugefügt. (PLATIR-31602). |
 | November 2022 | Erstmalige Veröffentlichung | Erstmalige Zielveröffentlichung und Dokumentation. |
 

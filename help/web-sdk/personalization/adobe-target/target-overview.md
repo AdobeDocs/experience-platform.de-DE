@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Erfahren Sie im Tutorial zum Migrieren von Target von at.js 2.x [ Experience Platform Web SDK , wie Sie Ihre Target-Implementierung ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=de) Experience Platform Web SDK migrieren.
+>Erfahren Sie im Tutorial zum Migrieren von Target von at.js 2.x [&#x200B; Experience Platform Web SDK , wie Sie Ihre Target-Implementierung &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=de) Experience Platform Web SDK migrieren.
 >
->Erfahren Sie im Tutorial zur erstmaligen Implementierung von Target [Implementierung von Adobe Experience Cloud mit Web SDK](https://experienceleague.adobe.com/de/docs/platform-learn/implement-web-sdk/overview). Target-spezifische Informationen finden Sie im Tutorial-Abschnitt „Einrichten [ Target mit Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=de).
+>Erfahren Sie im Tutorial zur erstmaligen Implementierung von Target [Implementierung von Adobe Experience Cloud mit Web SDK](https://experienceleague.adobe.com/de/docs/platform-learn/implement-web-sdk/overview). Target-spezifische Informationen finden Sie im Tutorial-Abschnitt „Einrichten [&#x200B; Target mit Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=de).
 
 
 Die folgenden Funktionen wurden getestet und werden derzeit in [!DNL Target] unterstützt:
@@ -68,11 +68,11 @@ Weitere Informationen finden Sie unter [Visual Experience Composer Helper](https
 
 ## Rendern von personalisiertem Inhalt
 
-Weitere Informationen [ Sie unter ](../rendering-personalization-content.md) von Personalisierungsinhalten .
+Weitere Informationen [&#x200B; Sie unter &#x200B;](../rendering-personalization-content.md) von Personalisierungsinhalten .
 
 ## Zielgruppen in XDM
 
-Beim Definieren von Zielgruppen für die [!DNL Target]-Aktivitäten, die über die [!DNL Web SDK] bereitgestellt werden[ muss ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de)XDM) definiert und verwendet werden. Nachdem Sie XDM-Schemata, Klassen und Schemafeldgruppen definiert haben, können Sie eine [!DNL Target] Zielgruppenregel erstellen, die durch XDM-Daten für das Targeting definiert wird. In [!DNL Target] werden XDM-Daten in [!UICONTROL Audience Builder] als benutzerdefinierter Parameter angezeigt. Das XDM wird mit Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
+Beim Definieren von Zielgruppen für die [!DNL Target]-Aktivitäten, die über die [!DNL Web SDK] bereitgestellt werden[&#x200B; muss &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de)XDM) definiert und verwendet werden. Nachdem Sie XDM-Schemata, Klassen und Schemafeldgruppen definiert haben, können Sie eine [!DNL Target] Zielgruppenregel erstellen, die durch XDM-Daten für das Targeting definiert wird. In [!DNL Target] werden XDM-Daten in [!UICONTROL Audience Builder] als benutzerdefinierter Parameter angezeigt. Das XDM wird mit Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
 
 Wenn Sie über [!DNL Target] Aktivitäten mit vordefinierten Zielgruppen verfügen, die benutzerdefinierte Parameter oder ein Benutzerprofil verwenden, werden diese nicht ordnungsgemäß über die SDK bereitgestellt. Anstatt benutzerdefinierte Parameter oder das Benutzerprofil zu verwenden, müssen Sie stattdessen XDM verwenden. Es gibt jedoch vordefinierte Zielgruppen-Targeting-Felder, die über die [!DNL Web SDK] unterstützt werden und kein XDM erfordern. Diese Felder sind in der [!DNL Target]-Benutzeroberfläche verfügbar, die kein XDM erfordern:
 

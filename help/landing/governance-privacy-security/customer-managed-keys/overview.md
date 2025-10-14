@@ -68,10 +68,10 @@ Der Prozess sieht folgendermaßen aus:
 
 ### Für Azure {#azure-process-summary}
 
-1. [Konfigurieren Sie  [!DNL Azure]  Schlüsseltresor](./azure/azure-key-vault-config.md) basierend auf den Richtlinien Ihrer Organisation und [generieren Sie dann einen ](./azure/azure-key-vault-config.md#generate-a-key), der für Adobe freigegeben wird.
+1. [Konfigurieren Sie  [!DNL Azure]  Schlüsseltresor](./azure/azure-key-vault-config.md) basierend auf den Richtlinien Ihrer Organisation und [generieren Sie dann einen &#x200B;](./azure/azure-key-vault-config.md#generate-a-key), der für Adobe freigegeben wird.
 1. Richten Sie die CMK-App mit Ihrem [!DNL Azure]-Mandanten entweder über [API-Aufrufe](./azure/api-set-up.md#register-app) oder über die [UI](./azure/ui-set-up.md#register-app) ein.
-1. Senden Sie Ihre Verschlüsselungsschlüssel-ID an Adobe und starten Sie den Aktivierungsprozess für die Funktion, entweder [ der Benutzeroberfläche ](./azure/ui-set-up.md#send-to-adobe) mit einem [API-Aufruf](./azure/api-set-up.md#send-to-adobe).
-1. Überprüfen Sie den Status der Konfiguration, um zu überprüfen, ob CMK aktiviert wurde, entweder [in der ](./azure/ui-set-up.md#check-status) oder mit einem [API-Aufruf](./azure/api-set-up.md#check-status).
+1. Senden Sie Ihre Verschlüsselungsschlüssel-ID an Adobe und starten Sie den Aktivierungsprozess für die Funktion, entweder [&#x200B; der Benutzeroberfläche &#x200B;](./azure/ui-set-up.md#send-to-adobe) mit einem [API-Aufruf](./azure/api-set-up.md#send-to-adobe).
+1. Überprüfen Sie den Status der Konfiguration, um zu überprüfen, ob CMK aktiviert wurde, entweder [in der &#x200B;](./azure/ui-set-up.md#check-status) oder mit einem [API-Aufruf](./azure/api-set-up.md#check-status).
 
 Sobald der Einrichtungsprozess für die von Azure gehosteten Experience Platform-Instanzen abgeschlossen ist, werden alle Daten in allen Sandboxes, die in Experience Platform integriert sind, mit Ihrer [!DNL Azure] verschlüsselt. Zur Verwendung von CMK nutzen Sie die [!DNL Microsoft Azure]-Funktionen, die Teil des [öffentlichen Vorschauprogramms](https://azure.microsoft.com/de-de/support/legal/preview-supplemental-terms/) sein können.
 
@@ -115,5 +115,5 @@ Beispielsweise zeigt das Profil-Dashboard bis zu sieben Tage lang Daten aus sein
 
 So starten Sie den Prozess:
 
-- Für Azure: Beginnen Sie mit dem [Konfigurieren eines  [!DNL Azure] -Schlüsseltresors](./azure/azure-key-vault-config.md) und [Generieren eines ](./azure/azure-key-vault-config.md#generate-a-key), der für Adobe freigegeben werden soll.
+- Für Azure: Beginnen Sie mit dem [Konfigurieren eines  [!DNL Azure] -Schlüsseltresors](./azure/azure-key-vault-config.md) und [Generieren eines &#x200B;](./azure/azure-key-vault-config.md#generate-a-key), der für Adobe freigegeben werden soll.
 - Für AWS: [Richten Sie AWS KMS ein](./aws/configure-kms.md) und stellen Sie sicher, dass die richtigen IAM- und KMS-Konfigurationen vorliegen, bevor Sie mit den Handbüchern zur Benutzeroberfläche oder zur API-Einrichtung fortfahren.

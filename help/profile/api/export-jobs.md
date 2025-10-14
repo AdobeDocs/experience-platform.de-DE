@@ -38,9 +38,9 @@ Beim Exportieren [!DNL Profile] Daten muss zunächst ein Zieldatensatz erstellt 
 
 Eine der wichtigsten Überlegungen betrifft das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der unten stehenden API-Beispielanfrage). Um Profildaten zu exportieren, muss der Datensatz auf dem [!DNL XDM Individual Profile] Vereinigungsschema (`https://ns.adobe.com/xdm/context/profile__union`) basieren. Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas aggregiert, die dieselbe Klasse haben. In diesem Fall ist dies die [!DNL XDM Individual Profile]. Weitere Informationen zu Vereinigungsansichtsschemata finden Sie im Abschnitt [Vereinigung“ im Handbuch mit den Grundlagen der Schemakomposition](../../xdm/schema/composition.md#union).
 
-In den Schritten, die in diesem Tutorial folgen, wird beschrieben, wie Sie mithilfe der [!DNL Catalog]-API einen Datensatz erstellen, der auf das [!DNL XDM Individual Profile]-Vereinigungsschema verweist. Sie können auch die [!DNL Experience Platform]-Benutzeroberfläche verwenden, um einen Datensatz zu erstellen, der auf das Vereinigungsschema verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden in [diesem Benutzeroberflächen-Tutorial zum Exportieren von ](../../segmentation/tutorials/create-dataset-export-segment.md) beschrieben, können aber auch hier angewendet werden. Nach Abschluss des Vorgangs können Sie zu diesem Tutorial zurückkehren, um mit den Schritten zum [ eines neuen Exportvorgangs ](#initiate).
+In den Schritten, die in diesem Tutorial folgen, wird beschrieben, wie Sie mithilfe der [!DNL Catalog]-API einen Datensatz erstellen, der auf das [!DNL XDM Individual Profile]-Vereinigungsschema verweist. Sie können auch die [!DNL Experience Platform]-Benutzeroberfläche verwenden, um einen Datensatz zu erstellen, der auf das Vereinigungsschema verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden in [diesem Benutzeroberflächen-Tutorial zum Exportieren von &#x200B;](../../segmentation/tutorials/create-dataset-export-segment.md) beschrieben, können aber auch hier angewendet werden. Nach Abschluss des Vorgangs können Sie zu diesem Tutorial zurückkehren, um mit den Schritten zum [&#x200B; eines neuen Exportvorgangs &#x200B;](#initiate).
 
-Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen ID kennen, können Sie direkt mit dem Schritt zum [ eines neuen Exportvorgangs ](#initiate).
+Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen ID kennen, können Sie direkt mit dem Schritt zum [&#x200B; eines neuen Exportvorgangs &#x200B;](#initiate).
 
 **API-Format**
 
@@ -492,4 +492,4 @@ Um einen Exportvorgang zu erstellen, der nur Ereignisdaten (keine Profilattribut
 
 ### Audiences exportieren
 
-Sie können auch den Endpunkt für Exportvorgänge verwenden, um Zielgruppen anstelle von [!DNL Profile] zu exportieren. Weitere Informationen finden Sie [ Handbuch zu Exportvorgängen in ](../../segmentation/api/export-jobs.md) Segmentierungs-API .
+Sie können auch den Endpunkt für Exportvorgänge verwenden, um Zielgruppen anstelle von [!DNL Profile] zu exportieren. Weitere Informationen finden Sie [&#x200B; Handbuch zu Exportvorgängen in &#x200B;](../../segmentation/api/export-jobs.md) Segmentierungs-API .

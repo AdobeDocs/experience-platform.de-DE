@@ -99,7 +99,7 @@ Für dateibasierte Ziele können Sie verschiedene Einstellungen für die Formati
 
 ### Einrichten der Zielverbindung für Zielgruppenaktivierung, Kontoaktivierung, Interessentenaktivierung oder Datensatzexporte {#segment-activation-or-dataset-exports}
 
-Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannte Kundinnen und Kunden, Account-Kundinnen und -Kunden oder Interessenten sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, mit der Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Konten](/help/destinations/ui/activate-account-audiences.md), [Interessenten](/help/destinations/ui/activate-prospect-audiences.md) oder [ Datensätze exportieren](/help/destinations/ui/export-datasets.md).
+Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannte Kundinnen und Kunden, Account-Kundinnen und -Kunden oder Interessenten sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, mit der Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Konten](/help/destinations/ui/activate-account-audiences.md), [Interessenten](/help/destinations/ui/activate-prospect-audiences.md) oder [&#x200B; Datensätze exportieren](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >

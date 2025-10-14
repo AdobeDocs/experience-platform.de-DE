@@ -61,7 +61,7 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 ![Die Datenvorschauseite des Arbeitsbereichs „Quellen“.](../../../../images/tutorials/create/dlz/file-detection.png)
 
-Eine detaillierte, schrittweise Anleitung zum Erstellen eines Datenflusses für eine Cloud-Speicherquelle finden Sie im Tutorial zum [ eines Cloud-Datenflusses, um Daten in Experience Platform zu übertragen](../../dataflow/batch/cloud-storage.md).
+Eine detaillierte, schrittweise Anleitung zum Erstellen eines Datenflusses für eine Cloud-Speicherquelle finden Sie im Tutorial zum [&#x200B; eines Cloud-Datenflusses, um Daten in Experience Platform zu übertragen](../../dataflow/batch/cloud-storage.md).
 
 ## Abrufen Ihrer [!DNL Data Landing Zone] Anmeldedaten
 
@@ -101,4 +101,4 @@ Um Ihre Anmeldeinformationen über die rechte Leiste zu aktualisieren, wählen S
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie auf Ihren [!DNL Data Landing Zone]-Container zugegriffen und gelernt, Ihre Anmeldeinformationen abzurufen und zu aktualisieren. Sie können jetzt mit dem nächsten Tutorial zum Erstellen [ Datenflusses fortfahren, um Daten von einem Cloud-Speicher in Experience Platform zu übertragen](../../dataflow/batch/cloud-storage.md).
+In diesem Tutorial haben Sie auf Ihren [!DNL Data Landing Zone]-Container zugegriffen und gelernt, Ihre Anmeldeinformationen abzurufen und zu aktualisieren. Sie können jetzt mit dem nächsten Tutorial zum Erstellen [&#x200B; Datenflusses fortfahren, um Daten von einem Cloud-Speicher in Experience Platform zu übertragen](../../dataflow/batch/cloud-storage.md).

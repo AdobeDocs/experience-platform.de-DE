@@ -15,4 +15,4 @@ ht-degree: 45%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Informationen zum Vorbereiten eines Erweiterungspakets für das Hochladen in Adobe Experience Platform finden Sie in den API-Dokumenten für das Befehlszeilen@adobe/reactor-packagerTool {[&#128279;](https://www.npmjs.com/package/@adobe/reactor-packager)}.  Es gibt eine vorbereitete ZIP-Datei im erwarteten Format aus ([ einer Erweiterung](./upload-and-test.md).
+Informationen zum Vorbereiten eines Erweiterungspakets für das Hochladen in Adobe Experience Platform finden Sie in den API-Dokumenten für das Befehlszeilen@adobe/reactor-packagerTool {[&#128279;](https://www.npmjs.com/package/@adobe/reactor-packager)}.  Es gibt eine vorbereitete ZIP-Datei im erwarteten Format aus ([&#x200B; einer Erweiterung](./upload-and-test.md).

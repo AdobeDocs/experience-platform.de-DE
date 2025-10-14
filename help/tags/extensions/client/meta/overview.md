@@ -19,7 +19,7 @@ Mit der [!DNL Meta Pixel] Tag-Erweiterung können Sie [!DNL Pixel] Funktionen in
 
 Um die Erweiterung verwenden zu können, müssen Sie über ein gültiges [!DNL Meta] mit Zugriff auf [!DNL Ads Manager] verfügen. Insbesondere müssen Sie [einen neuen erstellen [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) und dessen [!DNL Pixel ID] kopieren, damit die Erweiterung für Ihr Konto konfiguriert werden kann. Wenn Sie bereits über eine vorhandene [!DNL Meta Pixel] verfügen, können Sie stattdessen deren ID verwenden.
 
-Es wird dringend empfohlen, [!DNL Meta Pixel] in Kombination mit dem -[!DNL Meta Conversions API] zu verwenden, um dieselben Ereignisse von der Client- bzw. Server-Seite freizugeben und zu senden, da dies dazu beitragen kann, Ereignisse wiederherzustellen, die von [!DNL Meta Pixel] nicht erfasst wurden. Anweisungen zur Integration in [[!DNL Meta Conversions API]  Server-seitigen Implementierungen finden ](../../client/meta/overview.md) im Handbuch zur -Erweiterung für die. Beachten Sie, dass Ihre Organisation Zugriff auf [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) haben muss, um die Server-seitige Erweiterung verwenden zu können.
+Es wird dringend empfohlen, [!DNL Meta Pixel] in Kombination mit dem -[!DNL Meta Conversions API] zu verwenden, um dieselben Ereignisse von der Client- bzw. Server-Seite freizugeben und zu senden, da dies dazu beitragen kann, Ereignisse wiederherzustellen, die von [!DNL Meta Pixel] nicht erfasst wurden. Anweisungen zur Integration in [[!DNL Meta Conversions API]  Server-seitigen Implementierungen finden &#x200B;](../../client/meta/overview.md) im Handbuch zur -Erweiterung für die. Beachten Sie, dass Ihre Organisation Zugriff auf [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) haben muss, um die Server-seitige Erweiterung verwenden zu können.
 
 ## Installieren der Erweiterung
 
@@ -33,7 +33,7 @@ In der angezeigten Konfigurationsansicht müssen Sie die zuvor kopierte [!DNL Pi
 
 >[!TIP]
 >
->Durch die Verwendung eines Datenelements haben Sie die Möglichkeit, die verwendete [!DNL Pixel]-ID in Abhängigkeit von anderen Faktoren wie der Build-Umgebung dynamisch zu ändern. Weitere Informationen finden Sie im Anhang [Verwenden  [!DNL Pixel]  IDs für ](#id-data-element) Umgebungen“.
+>Durch die Verwendung eines Datenelements haben Sie die Möglichkeit, die verwendete [!DNL Pixel]-ID in Abhängigkeit von anderen Faktoren wie der Build-Umgebung dynamisch zu ändern. Weitere Informationen finden Sie im Anhang [Verwenden  [!DNL Pixel]  IDs für &#x200B;](#id-data-element) Umgebungen“.
 
 Sie können optional auch eine Ereignis-ID angeben, die mit der Erweiterung verknüpft werden soll. Damit werden identische Ereignisse zwischen [!DNL Meta Pixel] und dem [!DNL Meta Conversions API] dedupliziert. Weitere Informationen finden Sie im Abschnitt [Ereignisdeduplizierung](../../server/meta/overview.md#event-deduplication) in der Übersicht zur [!DNL Conversions API].
 
@@ -63,7 +63,7 @@ Nachdem Ihr aktualisierter Build auf Ihrer Website bereitgestellt wurde, können
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der [!DNL Meta Pixel]-Tag-Erweiterung an [!DNL Meta] senden. Wenn Sie planen, Server-seitige Ereignisse auch an [!DNL Meta] zu senden, können Sie jetzt mit der Installation und Konfiguration der Erweiterung [[!DNL Conversions API] Ereignisweiterleitung“ ](../../server/meta/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der [!DNL Meta Pixel]-Tag-Erweiterung an [!DNL Meta] senden. Wenn Sie planen, Server-seitige Ereignisse auch an [!DNL Meta] zu senden, können Sie jetzt mit der Installation und Konfiguration der Erweiterung [[!DNL Conversions API] Ereignisweiterleitung“ &#x200B;](../../server/meta/overview.md).
 
 Weiterführende Informationen zu Tags in Experience Platform finden Sie in der [Übersicht zu Tags](../../../home.md).
 

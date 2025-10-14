@@ -14,7 +14,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Die [!DNL Chatlio]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Chatlio]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 In diesem Tutorial finden Sie die Schritte zum Erstellen einer [!DNL Chatlio]-Quellverbindung mithilfe der Benutzeroberfläche von Adobe Experience Platform.
 
@@ -50,7 +50,7 @@ Bevor Sie eine [!DNL Chatlio] Quellverbindung erstellen, benötigen Sie ein Quel
 
 ### Erstellen eines Experience Platform-Schemas für [!DNL Chatlio] {#create-platform-schema}
 
-Sie müssen auch sicherstellen, dass Sie ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie im Tutorial ](../../../../../xdm/schema/composition.md) Erstellen eines Experience Platform-Schemas .
+Sie müssen auch sicherstellen, dass Sie ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [&#x200B; Schemas finden Sie im Tutorial &#x200B;](../../../../../xdm/schema/composition.md) Erstellen eines Experience Platform-Schemas .
 
 ![Die Experience Platform-Benutzeroberfläche mit einem Beispielschema für Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 

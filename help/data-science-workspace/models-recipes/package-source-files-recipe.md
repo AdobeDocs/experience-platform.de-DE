@@ -36,7 +36,7 @@ Zu verstehende Konzepte:
 
 ## Rezepterstellung
 
-Die Rezepterstellung beginnt mit dem Verpacken von Quelldateien, um eine Archivdatei zu erstellen. Source-Dateien definieren die Logik und die Algorithmen des maschinellen Lernens, die zum Lösen eines bestimmten vorliegenden Problems verwendet werden, und werden entweder in [!DNL Python], R, PySpark oder Scala geschrieben. Die erstellten Archivdateien haben die Form eines Docker-Images. Nach der Erstellung wird die gepackte Archivdatei in [!DNL Data Science Workspace] importiert, um ein Rezept ([&#128279;](./import-packaged-recipe-ui.md) der Benutzeroberfläche oder ([ der API](./import-packaged-recipe-api.md) zu erstellen.
+Die Rezepterstellung beginnt mit dem Verpacken von Quelldateien, um eine Archivdatei zu erstellen. Source-Dateien definieren die Logik und die Algorithmen des maschinellen Lernens, die zum Lösen eines bestimmten vorliegenden Problems verwendet werden, und werden entweder in [!DNL Python], R, PySpark oder Scala geschrieben. Die erstellten Archivdateien haben die Form eines Docker-Images. Nach der Erstellung wird die gepackte Archivdatei in [!DNL Data Science Workspace] importiert, um ein Rezept ([&#128279;](./import-packaged-recipe-ui.md) der Benutzeroberfläche oder ([&#x200B; der API](./import-packaged-recipe-api.md) zu erstellen.
 
 ### Docker-basierte Modellerstellung {#docker-based-model-authoring}
 
@@ -71,7 +71,7 @@ Notieren Sie die Werte für Docker-Host, Benutzernamen und Kennwort. Diese werde
 
 >[!NOTE]
 >
->Die Source-URL wird bereitgestellt, nachdem Sie die unten beschriebenen Schritte ausgeführt haben. Die Konfigurationsdatei wird in nachfolgenden Tutorials unter &quot;[ Schritte“ ](#next-steps).
+>Die Source-URL wird bereitgestellt, nachdem Sie die unten beschriebenen Schritte ausgeführt haben. Die Konfigurationsdatei wird in nachfolgenden Tutorials unter &quot;[&#x200B; Schritte“ &#x200B;](#next-steps).
 
 ### Packen der Quelldateien
 

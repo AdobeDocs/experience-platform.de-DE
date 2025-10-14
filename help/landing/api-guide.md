@@ -21,7 +21,7 @@ Die APIs für jeden Experience Platform-Service verwenden alle denselben Satz an
 
 ## Authentifizierung und Header
 
-Um Experience Platform-Endpunkte erfolgreich aufzurufen, müssen Sie das (Authentifizierungs[Tutorial) ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Experience Platform-Endpunkte erfolgreich aufzurufen, müssen Sie das (Authentifizierungs[Tutorial) &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -37,7 +37,7 @@ Weitere Informationen zu Sandboxes in Experience Platform finden Sie in der [San
 
 ### Inhaltstyp-Kopfzeile
 
-Alle Anfragen mit einer Payload im Anfragetext (wie POST-, PUT- und PATCH-Aufrufe) müssen eine `Content-Type`-Kopfzeile enthalten. Akzeptierte Werte sind für jeden API-Endpunkt spezifisch. Wenn ein bestimmter `Content-Type` für einen Endpunkt benötigt wird, wird sein Wert in den Beispiel-API-Anfragen angezeigt, die von den [API-Handbüchern für einzelne Experience Platform-Services) ](#api-guides) werden.
+Alle Anfragen mit einer Payload im Anfragetext (wie POST-, PUT- und PATCH-Aufrufe) müssen eine `Content-Type`-Kopfzeile enthalten. Akzeptierte Werte sind für jeden API-Endpunkt spezifisch. Wenn ein bestimmter `Content-Type` für einen Endpunkt benötigt wird, wird sein Wert in den Beispiel-API-Anfragen angezeigt, die von den [API-Handbüchern für einzelne Experience Platform-Services) &#x200B;](#api-guides) werden.
 
 ## Experience Platform API-Grundlagen
 

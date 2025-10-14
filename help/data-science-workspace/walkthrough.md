@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Dieses Dokument enthält eine Beschreibung der erwarteten Lernergebnisse im Adobe Experience Platform Data Science Workspace-Kurs. Um den Kurs anzuzeigen, müssen Sie sich mit Ihrer Adobe ID bei Experience League anmelden.
 
-Der Kurs [Erste Schritte mit Data Science Workspace für Datenwissenschaftler](https://experienceleague.adobe.com/?lang=de&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=de) richtet sich an Datenwissenschaftler, die lernen möchten, wie sie mit JupyterLab-Notebooks Erkenntnisse und Abfragedaten ermitteln, profilaktivierte Datensätze erstellen, Modelle für automatisiertes maschinelles Lernen veröffentlichen und über maschinelles Lernen ermittelte Erkenntnisse für Adobe- und Nicht-Adobe-Anwendungen aktivieren können.
+Der Kurs [Erste Schritte mit Data Science Workspace für Datenwissenschaftler](https://experienceleague.adobe.com/?lang=de&recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=de) richtet sich an Datenwissenschaftler, die lernen möchten, wie sie mit JupyterLab-Notebooks Erkenntnisse und Abfragedaten ermitteln, profilaktivierte Datensätze erstellen, Modelle für automatisiertes maschinelles Lernen veröffentlichen und über maschinelles Lernen ermittelte Erkenntnisse für Adobe- und Nicht-Adobe-Anwendungen aktivieren können.
 
 ## Kursvoraussetzungen
 

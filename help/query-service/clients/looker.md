@@ -23,7 +23,7 @@ In diesem Dokument werden die Schritte zum Verbinden von [!DNL Looker] mit Adobe
 
 Wählen Sie nach der Anmeldung bei [!DNL Looker] die Option **[!DNL Admin]** und dann **[!DNL Connections]** aus. Die Seite [!DNL Connections] wird geöffnet. Wählen Sie auf der [!DNL Connections] Seite **[!DNL Add Connection]** aus.
 
-Geben Sie hier die Details für die unten aufgeführten Verbindungseinstellungen ein. In der offiziellen Looker-Dokumentation finden [ Anweisungen zum Erstellen einer neuen Datenbankverbindung und Beschreibungen der verfügbaren Eigenschaften](https://cloud.google.com/looker/docs/connecting-to-your-db#creating_a_new_database_connection).
+Geben Sie hier die Details für die unten aufgeführten Verbindungseinstellungen ein. In der offiziellen Looker-Dokumentation finden [&#x200B; Anweisungen zum Erstellen einer neuen Datenbankverbindung und Beschreibungen der verfügbaren Eigenschaften](https://cloud.google.com/looker/docs/connecting-to-your-db#creating_a_new_database_connection).
 
 - **[!DNL Name]:** Der Name Ihrer Verbindung.
 - **[!DNL Dialect]:** Der Dialekt, der für die SQL-Datenbank verwendet wird. [!DNL Query Service] verwendet **[!DNL PostgreSQL]**.
@@ -42,7 +42,7 @@ Um die zum Verbinden von Looker mit dem Abfrage-Service erforderlichen Anmeldein
 
 Weitere Informationen zur SSL-Unterstützung für Drittanbieterverbindungen in Adobe Experience Platform finden Sie in der [[!DNL Query Service] SSL-Dokumentation](./ssl-modes.md). In diesem Dokument erfahren Sie, wie Sie eine Verbindung mit `verify-full` SSL-Modus herstellen.
 
-Nachdem Sie Ihre Verbindungsdetails eingegeben haben, wählen Sie **[!DNL Test These Settings]** aus, um sicherzustellen, dass Ihre Anmeldeinformationen ordnungsgemäß funktionieren. Weitere Informationen zum [ Ihrer Verbindungseinstellungen finden ](https://cloud.google.com/looker/docs/connecting-to-your-db#testing_your_connection_settings) in der offiziellen Looker-Dokumentation. Bei erfolgreicher Verbindung wird eine Meldung auf dem Bildschirm angezeigt, die Sie darauf hinweist, dass Sie eine Verbindung herstellen können. Nachdem Ihre Verbindung erfolgreich hergestellt wurde, wählen Sie **[!DNL Add Connection]** aus, um Ihre Verbindung zu erstellen.
+Nachdem Sie Ihre Verbindungsdetails eingegeben haben, wählen Sie **[!DNL Test These Settings]** aus, um sicherzustellen, dass Ihre Anmeldeinformationen ordnungsgemäß funktionieren. Weitere Informationen zum [&#x200B; Ihrer Verbindungseinstellungen finden &#x200B;](https://cloud.google.com/looker/docs/connecting-to-your-db#testing_your_connection_settings) in der offiziellen Looker-Dokumentation. Bei erfolgreicher Verbindung wird eine Meldung auf dem Bildschirm angezeigt, die Sie darauf hinweist, dass Sie eine Verbindung herstellen können. Nachdem Ihre Verbindung erfolgreich hergestellt wurde, wählen Sie **[!DNL Add Connection]** aus, um Ihre Verbindung zu erstellen.
 
 ## Nächste Schritte
 

@@ -55,7 +55,7 @@ Auf dieser Seite finden Sie die folgenden Informationen:
 
   >[!TIP]
   >
-  >Sie nehmen gehashte E-Mails über den [Audience Manager-Quell-Connector](../sources/connectors/adobe-applications/audience-manager.md) auf. Weitere Informationen finden Sie in der [ zum Aktivieren von ](activate-audiences.md) .
+  >Sie nehmen gehashte E-Mails über den [Audience Manager-Quell-Connector](../sources/connectors/adobe-applications/audience-manager.md) auf. Weitere Informationen finden Sie in der [&#x200B; zum Aktivieren von &#x200B;](activate-audiences.md) .
 
 * **[!UICONTROL Nutzung]**: die Anzahl der gehashten E-Mails, die Sie aufgenommen haben.
 * **[!UICONTROL Nutzung %]**: Der Prozentsatz des von Ihnen verwendeten Lizenzbetrags.

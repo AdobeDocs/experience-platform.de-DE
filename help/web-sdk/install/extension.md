@@ -17,14 +17,14 @@ Sobald Sie die [Voraussetzungen](overview.md) erfüllt haben, können Sie die Ta
 
 ## Installieren der Erweiterung in einem -Tag
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus oder erstellen Sie eine Tag-Eigenschaft.
 1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und wählen Sie dann die Registerkarte **[!UICONTROL Katalog]** aus.
 1. Suchen Sie die Erweiterung **[!UICONTROL Adobe Experience Platform Web SDK]** und installieren Sie sie.
 1. Wählen Sie die entsprechende Sandbox und den entsprechenden Datenstrom für jede Umgebung aus und klicken Sie dann auf **[!UICONTROL Speichern]**.
 
-Weitere Informationen finden Sie in der Dokumentation [ Konfigurieren der Tag](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)Erweiterung für Web SDK .
+Weitere Informationen finden Sie in der Dokumentation [&#x200B; Konfigurieren der Tag](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)Erweiterung für Web SDK .
 
 ## Publish - Der Tag-Code für die Entwicklung
 

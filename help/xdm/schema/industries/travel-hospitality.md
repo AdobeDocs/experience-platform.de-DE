@@ -30,7 +30,7 @@ Folgende Legende verwenden, um dieses ERD zu interpretieren:
 
 >[!NOTE]
 >
->Die Erlebnisereignisentität enthält ein Feld „_ID“, das das von der XDM ExperienceEvent-Klasse bereitgestellte Attribut für die eindeutige Kennung (`_id`) darstellt. Weitere Informationen dazu, was für [ Wert erwartet wird, finden Sie ](../../classes/experienceevent.md) Referenzdokument unter XDM ExperienceEvent .
+>Die Erlebnisereignisentität enthält ein Feld „_ID“, das das von der XDM ExperienceEvent-Klasse bereitgestellte Attribut für die eindeutige Kennung (`_id`) darstellt. Weitere Informationen dazu, was für [&#x200B; Wert erwartet wird, finden Sie &#x200B;](../../classes/experienceevent.md) Referenzdokument unter XDM ExperienceEvent .
 
 ## [!UICONTROL Reisen und Gastgewerbe] Anwendungsfälle
 

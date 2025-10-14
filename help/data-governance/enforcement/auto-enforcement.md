@@ -122,7 +122,7 @@ Verwenden Sie das Datenherkunftsdiagramm, um zu verstehen, welche anderen Konfig
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Beim Aktivieren einer Zielgruppe für ein Ziel können Sie während der Überprüfungsphase [ Workflows ](../policies/user-guide.md)Ziele aktivieren&rbrack; sehen, wie sich Ihre &lbrack;Einverständnisrichtlinien[[!UICONTROL &#x200B; auf die Reichweite Ihrer Zielgruppe auswirken]](#pre-activation-evaluation).
+Beim Aktivieren einer Zielgruppe für ein Ziel können Sie während der Überprüfungsphase [&#x200B; Workflows &#x200B;](../policies/user-guide.md)Ziele aktivieren&rbrack; sehen, wie sich Ihre &lbrack;Einverständnisrichtlinien[[!UICONTROL &#x200B; auf die Reichweite Ihrer Zielgruppe auswirken]](#pre-activation-evaluation).
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ Diese Verbesserungen ermöglichen ein größeres Vertrauen in Ihre Marketing-Str
 
 #### Auswertung vor der Aktivierung {#pre-activation-evaluation}
 
-Wenn Sie beim Aktivieren **[!UICONTROL Ziels den Schritt]**&#x200B;Überprüfen[ erreicht haben](../../destinations/ui/activation-overview.md) wählen Sie **[!UICONTROL Angewendete Richtlinien anzeigen]**.
+Wenn Sie beim Aktivieren **[!UICONTROL Ziels den Schritt]**&#x200B;Überprüfen[&#x200B; erreicht haben](../../destinations/ui/activation-overview.md) wählen Sie **[!UICONTROL Angewendete Richtlinien anzeigen]**.
 
 ![Schaltfläche „Angewendete Richtlinien anzeigen“ im Workflow „Ziel aktivieren“](../images/enforcement/view-applied-policies.png)
 

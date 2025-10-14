@@ -36,7 +36,7 @@ Um [!DNL SugarCRM Events] mit Experience Platform zu verbinden, müssen Sie Wert
 
 ### Erstellen eines Experience Platform-Schemas für [!DNL SugarCRM]
 
-Bevor Sie eine [!DNL SugarCRM] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [ Schemas finden Sie ](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
+Bevor Sie eine [!DNL SugarCRM] Quellverbindung erstellen, müssen Sie auch sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Eine ausführliche Anleitung zum Erstellen [&#x200B; Schemas finden Sie &#x200B;](../../../../../xdm/schema/composition.md) Tutorial zum Erstellen eines Experience Platform-Schemas .
 
 Screenshot der ![Experience Platform-Benutzeroberfläche mit einem Beispielschema für SugarCRM-Ereignisse](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
 

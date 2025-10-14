@@ -72,7 +72,7 @@ Abfragen von Daten im Data Lake von Adobe Experience Platform unter Verwendung v
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Dater Distiller Authorization API | Verwalten und Erzwingen von IP-basierten Zugriffsbeschränkungen für Query Service-Sandboxes, um die Datensicherheit zu erhöhen und die Einhaltung von Unternehmensrichtlinien sicherzustellen. Weitere Informationen, einschließlich Details zu Endpunkten[ Parameterlisten, Anfrage-/Antwortbeispielen und Testfunktionen, finden Sie im Data Distiller Authorization API](../../query-service/auth-api/overview.md)Handbuch für weitere Informationen zu den wichtigsten Funktionen und Funktionen oder in der [OpenAPI](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/)Dokumentation. |
+| Dater Distiller Authorization API | Verwalten und Erzwingen von IP-basierten Zugriffsbeschränkungen für Query Service-Sandboxes, um die Datensicherheit zu erhöhen und die Einhaltung von Unternehmensrichtlinien sicherzustellen. Weitere Informationen, einschließlich Details zu Endpunkten[&#x200B; Parameterlisten, Anfrage-/Antwortbeispielen und Testfunktionen, finden Sie im Data Distiller Authorization API](../../query-service/auth-api/overview.md)Handbuch für weitere Informationen zu den wichtigsten Funktionen und Funktionen oder in der [OpenAPI](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/)Dokumentation. |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).
 

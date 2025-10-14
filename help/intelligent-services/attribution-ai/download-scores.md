@@ -17,7 +17,7 @@ Dieses Dokument dient als Anleitung zum Herunterladen von Scores für Attributio
 
 ## Erste Schritte
 
-Mit Attribution AI können Sie Partituren im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Attribution AI-Scores im [Erste Schritte“ gelesen ](./getting-started.md) abgeschlossen haben.
+Mit Attribution AI können Sie Partituren im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Attribution AI-Scores im [Erste Schritte“ gelesen &#x200B;](./getting-started.md) abgeschlossen haben.
 
 Um auf Scores für Attribution AI zugreifen zu können, benötigen Sie außerdem eine Service-Instanz mit dem Status „Erfolgreich ausgeführt“. Informationen zum Erstellen einer neuen Service-Instanz finden Sie im [Attribution AI-Benutzerhandbuch](./user-guide.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
@@ -259,7 +259,7 @@ Die Antwort lädt die angeforderte Datei in Ihr aktuelles Verzeichnis herunter. 
 
 ![Endgerät](./images/download-scores/terminal-output.png)
 
-Die heruntergeladenen Scores liegen im Parquet-Format vor und benötigen entweder einen [!DNL Spark]-Shell- oder einen Parquet-Reader, um die Scores anzuzeigen. Für die Anzeige von Rohwerten können Sie die [Apache Parquet-Tools“ ](https://parquet.apache.org/docs/). Parquet-Werkzeuge können die Daten mit [!DNL Spark] analysieren.
+Die heruntergeladenen Scores liegen im Parquet-Format vor und benötigen entweder einen [!DNL Spark]-Shell- oder einen Parquet-Reader, um die Scores anzuzeigen. Für die Anzeige von Rohwerten können Sie die [Apache Parquet-Tools“ &#x200B;](https://parquet.apache.org/docs/). Parquet-Werkzeuge können die Daten mit [!DNL Spark] analysieren.
 
 ## Nächste Schritte
 

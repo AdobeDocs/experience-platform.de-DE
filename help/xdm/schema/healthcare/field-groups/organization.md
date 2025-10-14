@@ -24,7 +24,7 @@ ht-degree: 7%
 | [!UICONTROL Endpunkt] | `endpoint` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Technische Endpunkte, die Zugriff auf Services bieten, die für die Organisation betrieben werden. |
 | [!UICONTROL ID] | `indentifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Die Kennung, die verwendet wird, um die Organisation über mehrere unterschiedliche Systeme hinweg zu identifizieren. |
 | [!UICONTROL Teil der Organisation] | `partOf` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Organisation, der diese Organisation angehört. |
-| [!UICONTROL Qualifizierung] | `qualification` | Array von Objekten | Die offiziellen Zertifizierungen, Akkreditierungen, Schulungen, Benennungen und Lizenzen, die die Versorgung durch die Organisation genehmigen und/oder anderweitig bestätigen. Weitere Informationen finden [ im ](#qualification) Abschnitt unten. |
+| [!UICONTROL Qualifizierung] | `qualification` | Array von Objekten | Die offiziellen Zertifizierungen, Akkreditierungen, Schulungen, Benennungen und Lizenzen, die die Versorgung durch die Organisation genehmigen und/oder anderweitig bestätigen. Weitere Informationen finden [&#x200B; im &#x200B;](#qualification) Abschnitt unten. |
 | [!UICONTROL Typ] | `type` | Array von [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Art der Organisation, die es ist. |
 | [!UICONTROL aktiv] | `active` | Boolesch | Ob der Datensatz des Unternehmens noch aktiv verwendet wird. |
 | [!UICONTROL Alias] | `alias` | Zeichenfolgen-Array | Eine Liste alternativer Namen, als die Organisation bekannt ist oder in der Vergangenheit bekannt war. |

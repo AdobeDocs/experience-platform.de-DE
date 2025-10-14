@@ -138,6 +138,6 @@ Geben Sie im letzten Bestätigungsfenster den Namen der Sandbox in das Dialogfel
 
 ## Nächste Schritte
 
-In diesem Dokument haben Sie erfahren, wie Sie Sandboxes in der Benutzeroberfläche von Experience Platform verwalten können. Nachdem Sie nun wissen, wie Sie Sandboxes verwalten, erfahren Sie, wie Sie mit dem Handbuch Sandbox-Tools [ die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen zwischen Sandboxes nahtlos exportieren ](./sandbox-tooling.md) importieren können.
+In diesem Dokument haben Sie erfahren, wie Sie Sandboxes in der Benutzeroberfläche von Experience Platform verwalten können. Nachdem Sie nun wissen, wie Sie Sandboxes verwalten, erfahren Sie, wie Sie mit dem Handbuch Sandbox-Tools [&#x200B; die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen zwischen Sandboxes nahtlos exportieren &#x200B;](./sandbox-tooling.md) importieren können.
 
 Informationen zum Verwalten von Sandboxes mithilfe der Sandbox-API finden Sie im [Sandbox-Entwicklerhandbuch](../api/getting-started.md).

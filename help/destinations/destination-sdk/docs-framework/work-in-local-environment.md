@@ -18,7 +18,7 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 >Weitere Informationen finden Sie auch in der unterstützenden Dokumentation im Adobe-Handbuch für Mitwirkende:
 >* [Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=de)
 >* [Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de)
->* [GitHub-Beitrags-Workflow für wichtige ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=de).
+>* [GitHub-Beitrags-Workflow für wichtige &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=de).
 
 ## Verbinden mit GitHub und Einrichten der lokalen Authoring-Umgebung {#set-up-environment}
 
@@ -35,7 +35,7 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 
 ## Erstellen der Dokumentationsseite für Ihr Ziel {#author-documentation}
 
-1. Ihre Dokumentationsseite basiert auf der [Self-Service-Zielvorlage](../docs-framework/self-service-template.md). Laden Sie die [Zielvorlage“ ](../assets/docs-framework/yourdestination-template.zip). Entpacken Sie sie und extrahieren Sie die Datei `yourdestination-template.md` in das in Schritt 4 oben erwähnte Verzeichnis.  Benennen Sie die Datei `YOURDESTINATION.md` um, wobei YOURDESTINATION der Name Ihres Ziels in Adobe Experience Platform ist. Wenn Ihre Firma beispielsweise Moviestar heißt, würden Sie Ihre Datei `moviestar.md` nennen.
+1. Ihre Dokumentationsseite basiert auf der [Self-Service-Zielvorlage](../docs-framework/self-service-template.md). Laden Sie die [Zielvorlage“ &#x200B;](../assets/docs-framework/yourdestination-template.zip). Entpacken Sie sie und extrahieren Sie die Datei `yourdestination-template.md` in das in Schritt 4 oben erwähnte Verzeichnis.  Benennen Sie die Datei `YOURDESTINATION.md` um, wobei YOURDESTINATION der Name Ihres Ziels in Adobe Experience Platform ist. Wenn Ihre Firma beispielsweise Moviestar heißt, würden Sie Ihre Datei `moviestar.md` nennen.
 2. Öffnen Sie die neue Datei in Ihrem [Texteditor Ihrer Wahl](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=de#understand-markdown-editors). Adobe empfiehlt die Verwendung von [Visual Studio Code](https://code.visualstudio.com/) und die Installation der Adobe Markdown Authoring-Erweiterung. Um die Erweiterung zu installieren, öffnen Sie Visual Studio Code, wählen Sie die Registerkarte **[!DNL Extensions]** auf der linken Seite des Bildschirms aus und suchen Sie nach `adobe markdown authoring`. Wählen Sie die Erweiterung aus und klicken Sie auf **[!DNL Install]**.
    ![Installieren der Adobe Markdown Authoring-Erweiterung](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. Bearbeiten Sie die Vorlage mit relevanten Informationen für Ihr Ziel. Befolgen Sie die Anweisungen in der Vorlage.
@@ -82,4 +82,4 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 
 >[!TIP]
 >
->Informationen zum Hinzufügen von Bildern und Links zu Ihrer Dokumentation sowie zu allen anderen Fragen rund um Markdown finden Sie unter [Verwenden von ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=de)) im Handbuch für gemeinsames Schreiben in Adobe.
+>Informationen zum Hinzufügen von Bildern und Links zu Ihrer Dokumentation sowie zu allen anderen Fragen rund um Markdown finden Sie unter [Verwenden von &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=de)) im Handbuch für gemeinsames Schreiben in Adobe.

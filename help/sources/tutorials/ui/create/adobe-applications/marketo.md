@@ -13,7 +13,7 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 >
->Bevor Sie eine [!DNL Marketo Engage]-Quellverbindung und einen Datenfluss erstellen, müssen Sie zunächst sicherstellen, dass Sie [Ihre Adobe-Organisations-](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=de)) in [!DNL Marketo] zugeordnet haben. Darüber hinaus müssen Sie auch sicherstellen, dass Sie [automatische Ausfüllen Ihrer B2B [!DNL Marketo] Namespaces und -Schemata) ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) haben, bevor Sie eine Quellverbindung und einen Datenfluss erstellen.
+>Bevor Sie eine [!DNL Marketo Engage]-Quellverbindung und einen Datenfluss erstellen, müssen Sie zunächst sicherstellen, dass Sie [Ihre Adobe-Organisations-](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=de)) in [!DNL Marketo] zugeordnet haben. Darüber hinaus müssen Sie auch sicherstellen, dass Sie [automatische Ausfüllen Ihrer B2B [!DNL Marketo] Namespaces und -Schemata) &#x200B;](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) haben, bevor Sie eine Quellverbindung und einen Datenfluss erstellen.
 
 In diesem Tutorial erfahren Sie, wie Sie einen [!DNL Marketo Engage]-Quell-Connector (im Folgenden als „[!DNL Marketo]“ abgekürzt) in der Benutzeroberfläche erstellen, um B2B-Daten in Adobe Experience Platform einzubringen.
 
@@ -213,7 +213,7 @@ Die Authentifizierung wird verweigert, wenn Ihr [!DNL Munchkin ID] nicht der von
 
 #### Primäre Identität fehlt
 
-Ein Datenfluss kann nicht gespeichert und aufgenommen werden, wenn eine primäre Identität fehlt. Stellen Sie sicher[ dass in Ihrem XDM-Schema eine primäre Identität vorhanden ist](../../../../../xdm/tutorials/create-schema-ui.md) bevor Sie versuchen, einen Datenfluss zu konfigurieren.
+Ein Datenfluss kann nicht gespeichert und aufgenommen werden, wenn eine primäre Identität fehlt. Stellen Sie sicher[&#x200B; dass in Ihrem XDM-Schema eine primäre Identität vorhanden ist](../../../../../xdm/tutorials/create-schema-ui.md) bevor Sie versuchen, einen Datenfluss zu konfigurieren.
 
 ![Eine Fehlermeldung, die anzeigt, dass die primäre Identität im XDM-Schema fehlt.](../../../../images/tutorials/create/marketo/no-primary-identity.png)
 

@@ -22,7 +22,7 @@ In Adobe Experience Platform können Sie verschiedene Komponenten vorhandener Ak
 * [Hinzufügen zusätzlicher Datensätze](#add-datasets) zum Aktivierungs-Workflow
 * [Marketing-Aktionen bearbeiten](#edit-marketing-actions) für Ihre Aktivierungsdatenflüsse
 * [Zugriffskennzeichnungen anwenden](#apply-access-labels) auf exportierte Daten
-* [Namen und Beschreibungen ](#edit-names-descriptions) Aktivierungsdatenflüsse bearbeiten)
+* [Namen und Beschreibungen &#x200B;](#edit-names-descriptions) Aktivierungsdatenflüsse bearbeiten)
 
 ## Durchsuchen von Aktivierungsdatenflüssen {#browse-activation-dataflows}
 
@@ -106,7 +106,7 @@ Wählen **[!UICONTROL Datensätze exportieren]** in der rechten Leiste aus, um z
 
 >[!NOTE]
 >
->Diese Option ist nur für (Ziele[ die den Datensatzexport unterstützen](export-datasets.md#supported-destinations) sichtbar.
+>Diese Option ist nur für (Ziele[&#x200B; die den Datensatzexport unterstützen](export-datasets.md#supported-destinations) sichtbar.
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/export-datasets.png)
 
@@ -129,7 +129,7 @@ Wählen Sie die entsprechenden Marketing-Aktionen aus und klicken Sie dann auf *
 
 ## Anwenden von Zugriffs-Labels {#apply-access-labels}
 
-Wählen Sie **[!UICONTROL Zugriffskennzeichnungen anwenden]** aus, um die Datennutzungskennzeichnungen für die exportierten Daten zu bearbeiten. Weitere Informationen finden [ in der Dokumentation ](../../data-governance/labels/overview.md) Datennutzungskennzeichnungen .
+Wählen Sie **[!UICONTROL Zugriffskennzeichnungen anwenden]** aus, um die Datennutzungskennzeichnungen für die exportierten Daten zu bearbeiten. Weitere Informationen finden [&#x200B; in der Dokumentation &#x200B;](../../data-governance/labels/overview.md) Datennutzungskennzeichnungen .
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/apply-access-labels.png)
 

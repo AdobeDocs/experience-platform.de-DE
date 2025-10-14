@@ -44,7 +44,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Hinzufügungen zur Profilvorschau-API | Die Profilvorschau-API (`/previewsamplestatus`) bietet jetzt die Möglichkeit, eine Aufschlüsselung der gesamten Profilfragmente in Ihrer Organisation sowie die Verteilung der Profilfragmente über Identity-Namespaces anzuzeigen. |
 | Aktualisierungen der Vereinigungsschemaansicht | In der Experience Platform-Benutzeroberfläche können Benutzende Informationen zu allen Schemata und Datensätzen, die zum Vereinigungsschema beitragen, sowie Attribute von Oberflächenschlüsseln wie Identitäts- und Beziehungsfelder leichter finden. Diese Aktualisierungen verbessern die Möglichkeit, Probleme zu beheben und zu überprüfen, ob Profile korrekt konfiguriert und Identitäten korrekt zugeordnet wurden und Daten erfolgreich aufgenommen wurden. |
 
-Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden [ in der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden [&#x200B; in der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
@@ -70,8 +70,8 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung der SSH-Authentifizierung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Experience Platform] verbinden, indem Sie RSA/DSA Open SSH-Schlüssel verwenden. Weitere Informationen finden Sie [ „SFTP](../../sources/connectors/cloud-storage/sftp.md)Übersicht“. |
-| UX-Verbesserungen | Sie können Ihren Datensatz während der Datenaufnahme für die [!DNL Profile] aktivieren. Weitere Informationen finden Sie [ Tutorial zum ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)Cloud-Datenspeicherungs-Workflow) . |
+| Unterstützung der SSH-Authentifizierung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Experience Platform] verbinden, indem Sie RSA/DSA Open SSH-Schlüssel verwenden. Weitere Informationen finden Sie [&#x200B; „SFTP](../../sources/connectors/cloud-storage/sftp.md)Übersicht“. |
+| UX-Verbesserungen | Sie können Ihren Datensatz während der Datenaufnahme für die [!DNL Profile] aktivieren. Weitere Informationen finden Sie [&#x200B; Tutorial zum &#x200B;](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)Cloud-Datenspeicherungs-Workflow) . |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
 

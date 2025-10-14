@@ -66,7 +66,7 @@ Wenn Sie beispielsweise am 15. Mai eine 30-Tage-Gültigkeit anwenden, passiert F
 
 +++Antwort
 
-Sie können die neueste Speichergröße auf Datensatzebene in Data Lake und Profil als separate Metriken auf der Inventarseite [!UICONTROL Datensätze] anzeigen. Sie können auch die Spalten sortieren, um die größten Datensätze zu identifizieren und sicherzustellen, dass Aufbewahrungsrichtlinien angewendet werden. Die Verwendung auf Sandbox-Ebene ist im Dashboard Lizenznutzung verfügbar. Weitere Informationen finden Sie [ „Dokumentation zur ](../dashboards/guides/license-usage.md)&quot;.
+Sie können die neueste Speichergröße auf Datensatzebene in Data Lake und Profil als separate Metriken auf der Inventarseite [!UICONTROL Datensätze] anzeigen. Sie können auch die Spalten sortieren, um die größten Datensätze zu identifizieren und sicherzustellen, dass Aufbewahrungsrichtlinien angewendet werden. Die Verwendung auf Sandbox-Ebene ist im Dashboard Lizenznutzung verfügbar. Weitere Informationen finden Sie [&#x200B; „Dokumentation zur &#x200B;](../dashboards/guides/license-usage.md)&quot;.
 
 +++
 

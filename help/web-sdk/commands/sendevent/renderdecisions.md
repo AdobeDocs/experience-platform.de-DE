@@ -17,7 +17,7 @@ Mit der `renderDecisions`-Eigenschaft können Sie die Web-SDK zwingen, alle pers
 
 Aktivieren **[!UICONTROL das Kontrollkästchen]** Visuelle Personalisierungsentscheidungen rendern“ in den Aktionen einer Tag-Regel.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.

@@ -88,7 +88,7 @@ Befolgen Sie die [Bearbeiten von Web](https://experienceleague.adobe.com/docs/jo
 
 ## Rendern von personalisiertem Inhalt {#rendering-personalized-content}
 
-Weitere Informationen finden Sie in der Dokumentation [ Rendern ](../rendering-personalization-content.md) Personalisierungsinhalten .
+Weitere Informationen finden Sie in der Dokumentation [&#x200B; Rendern &#x200B;](../rendering-personalization-content.md) Personalisierungsinhalten .
 
 Adobe Journey Optimizer-Vorschläge für Web-Oberflächen werden ähnlich wie die Vorschläge für den `__view__` Entscheidungsumfang verarbeitet. Wenn `renderDecisions` Option im `sendEvent`-Befehl auf `true` festgelegt ist, werden diese automatisch von der Web-SDK gerendert.
 

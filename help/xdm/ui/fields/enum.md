@@ -64,7 +64,7 @@ Wenn Sie fertig sind, wählen **[!UICONTROL Anwenden]** aus, um die Änderungen 
 
 ### Vorgeschlagene Werte für Standardfelder verwalten
 
-Einige Felder aus standardmäßigen XDM-Komponenten enthalten eigene vorgeschlagene Werte, z. B. `eventType` aus der Klasse [[!UICONTROL XDM ExperienceEvent] ](../../classes/experienceevent.md). Sie können zwar zusätzliche vorgeschlagene Werte für ein Standardfeld erstellen, Sie können jedoch keine vorgeschlagenen Werte, die nicht von Ihrem Unternehmen definiert wurden, ändern oder entfernen. Beim Anzeigen eines Standardfelds in der Benutzeroberfläche werden die vorgeschlagenen Werte angezeigt, sind aber schreibgeschützt.
+Einige Felder aus standardmäßigen XDM-Komponenten enthalten eigene vorgeschlagene Werte, z. B. `eventType` aus der Klasse [[!UICONTROL XDM ExperienceEvent] &#x200B;](../../classes/experienceevent.md). Sie können zwar zusätzliche vorgeschlagene Werte für ein Standardfeld erstellen, Sie können jedoch keine vorgeschlagenen Werte, die nicht von Ihrem Unternehmen definiert wurden, ändern oder entfernen. Beim Anzeigen eines Standardfelds in der Benutzeroberfläche werden die vorgeschlagenen Werte angezeigt, sind aber schreibgeschützt.
 
 ![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt sind](../../images/ui/fields/enum/suggested-standard.png)
 
@@ -117,7 +117,7 @@ Wenn in verschiedenen Feldergruppen auf denselben benutzerdefinierten Feldpfad v
 
 Aufgrund der aktuellen Systembeschränkungen gibt es zwei Fälle, in denen eine Aufzählung vom System während der Aufnahme nicht validiert wird:
 
-1. Die Aufzählung wird in einem „Array[Feld“ ](./array.md).
+1. Die Aufzählung wird in einem „Array[Feld“ &#x200B;](./array.md).
 1. Die Aufzählung ist mehr als eine Ebene tief in der Schemahierarchie definiert.
 
 ## Nächste Schritte

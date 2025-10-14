@@ -13,7 +13,7 @@ ht-degree: 64%
 
 # Gültigkeitsdauern von Erlebnisereignissen
 
-In Adobe Experience Platform können Sie Gültigkeitsdauern für alle Erlebnisereignisse konfigurieren, die in einen Datensatz aufgenommen werden, der für das Echtzeit[Kundenprofil aktiviert ](./home.md). Auf diese Weise können Sie automatisch Daten aus dem Profilspeicher entfernen, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
+In Adobe Experience Platform können Sie Gültigkeitsdauern für alle Erlebnisereignisse konfigurieren, die in einen Datensatz aufgenommen werden, der für das Echtzeit[Kundenprofil aktiviert &#x200B;](./home.md). Auf diese Weise können Sie automatisch Daten aus dem Profilspeicher entfernen, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
 
 Informationen zum Verwalten der Gültigkeitsdauern von Erlebnisereignissen in Ihren Datensätzen finden Sie im [Handbuch zur Datensatz-Benutzeroberfläche](../catalog/datasets/user-guide.md#data-retention-policy).
 

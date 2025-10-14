@@ -96,7 +96,7 @@ Nach der Veröffentlichung extrahiert das Playbook automatisch das Journey-Schem
 
 Alle erstellten Playbooks sind auf der Registerkarte &quot;**Playbooks“**.
 
-![ Registerkarte „Ihre Playbooks“ mit einer Liste der erstellten Playbooks.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
+![&#x200B; Registerkarte „Ihre Playbooks“ mit einer Liste der erstellten Playbooks.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
 
 Sie können jedes Playbook aus dem Katalog auswählen, um Instanzen zur Wiederverwendung zu erstellen. Weitere Informationen finden Sie in der Dokumentation [Erstellen von Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
 

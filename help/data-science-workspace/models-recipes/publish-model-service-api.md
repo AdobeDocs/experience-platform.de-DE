@@ -24,7 +24,7 @@ In diesem Tutorial wird der Prozess zum Veröffentlichen eines Modells als Servi
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis von Adobe Experience Platform Data Science Workspace voraus. Workspace Bevor Sie mit diesem Tutorial beginnen, lesen Sie [Übersicht über Data Science ](../home.md)), um eine allgemeine Einführung in den Service zu erhalten.
+Dieses Tutorial setzt ein Grundverständnis von Adobe Experience Platform Data Science Workspace voraus. Workspace Bevor Sie mit diesem Tutorial beginnen, lesen Sie [Übersicht über Data Science &#x200B;](../home.md)), um eine allgemeine Einführung in den Service zu erhalten.
 
 Um diesem Tutorial folgen zu können, müssen Sie über eine vorhandene ML-Engine, ML-Instanz und ein vorhandenes Experiment verfügen. Anweisungen zum Erstellen dieser Rezepte in der API finden Sie im Tutorial [Importieren eines gepackten Rezepts](./import-packaged-recipe-api.md).
 

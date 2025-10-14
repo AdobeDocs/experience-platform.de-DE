@@ -25,10 +25,10 @@ Die Feldergruppe bietet ein einzelnes Feld vom Typ „Objekt“, `telecomSubscri
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `internetSubscription` | Array von Objekten | Beschreibt Details zum Internet-Abonnementplan wie Datenobergrenze, Verbindungstyp und Geschwindigkeitsdetails. Weitere Informationen finden [ im ](#internetSubscription) Abschnitt unten. |
-| `landlineSubscription` | Array von Objekten | Beschreibt Details zum Festnetzabonnementplan, einschließlich ausgewählter Funktionen, Minuten und Wählpläne. Weitere Informationen finden [ im ](#landlineSubscription) Abschnitt unten. |
-| `mediaSubscription` | Array von Objekten | Beschreibt Details zum Medienabonnementplan, einschließlich der Anzahl der Kanäle und der enthaltenen Streaming-Services. Weitere Informationen finden [ im ](#mediaSubscription) Abschnitt unten. |
-| `mobileSubscription` | Array von Objekten | Beschreibt Details zum Mobile-Abonnementplan, einschließlich der Anzahl der Zeilen, Datenraten, Kosten und mehr. Weitere Informationen finden [ im ](#mobileSubscription) Abschnitt unten. |
+| `internetSubscription` | Array von Objekten | Beschreibt Details zum Internet-Abonnementplan wie Datenobergrenze, Verbindungstyp und Geschwindigkeitsdetails. Weitere Informationen finden [&#x200B; im &#x200B;](#internetSubscription) Abschnitt unten. |
+| `landlineSubscription` | Array von Objekten | Beschreibt Details zum Festnetzabonnementplan, einschließlich ausgewählter Funktionen, Minuten und Wählpläne. Weitere Informationen finden [&#x200B; im &#x200B;](#landlineSubscription) Abschnitt unten. |
+| `mediaSubscription` | Array von Objekten | Beschreibt Details zum Medienabonnementplan, einschließlich der Anzahl der Kanäle und der enthaltenen Streaming-Services. Weitere Informationen finden [&#x200B; im &#x200B;](#mediaSubscription) Abschnitt unten. |
+| `mobileSubscription` | Array von Objekten | Beschreibt Details zum Mobile-Abonnementplan, einschließlich der Anzahl der Zeilen, Datenraten, Kosten und mehr. Weitere Informationen finden [&#x200B; im &#x200B;](#mobileSubscription) Abschnitt unten. |
 | `primarySubscriber` | [[!UICONTROL Person]](../../data-types/person.md) | Beschreibt den Inhaber des Abonnements. |
 | `bundleName` | String | Erfasst den Namen eines beliebigen Abonnementpakets, für das der Kunde angemeldet ist, z. B. `Internet + Media`. |
 | `primaryPartyID` | String | Eine Kennung für die primäre Person, die für das Abonnement verantwortlich ist, wobei es sich normalerweise um die Telefonnummer des Geräts handelt. |

@@ -88,7 +88,7 @@ Weitere Informationen zum Katalog-Service finden Sie im Abschnitt [Übersicht ü
 >**Diese Änderung gilt für die folgenden Zieltypen:**
 >
 >- [Exportziele für Streaming-Zielgruppen](../../destinations/destination-types.md#streaming-destinations) ([Pega CDH RealTime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-basierte Integrationen mit [Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) und [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md))
->- Öffentliche oder private Ziele, die über [Destination SDK erstellt ](../../destinations/destination-sdk/getting-started.md)
+>- Öffentliche oder private Ziele, die über [Destination SDK erstellt &#x200B;](../../destinations/destination-sdk/getting-started.md)
 >
 >**Aktion erforderlich:** Wenn Sie mit Adobe an API-basierten Streaming-Zielen gearbeitet haben, müssen Sie die oben genannten IP-Adressen zu Ihrer Zulassungsliste auf die Zulassungsliste setzte hinzufügen, um einen unterbrechungsfreien Datenfluss zu Ihren API-basierten Zielen sicherzustellen.
 

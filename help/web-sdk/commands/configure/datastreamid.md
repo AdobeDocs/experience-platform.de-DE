@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # `datastreamId`
 
-Die `datastreamId`-Eigenschaft ist eine Zeichenfolge, die bestimmt[ an welchen ](../../../datastreams/overview.md)Datenstrom) in Adobe Experience Platform Sie Daten senden möchten. Diese Eigenschaft ist erforderlich, wenn Daten an Adobe gesendet werden. Web SDK-Versionen 2.20.0 oder früher verwenden stattdessen `edgeConfigId`.
+Die `datastreamId`-Eigenschaft ist eine Zeichenfolge, die bestimmt[&#x200B; an welchen &#x200B;](../../../datastreams/overview.md)Datenstrom) in Adobe Experience Platform Sie Daten senden möchten. Diese Eigenschaft ist erforderlich, wenn Daten an Adobe gesendet werden. Web SDK-Versionen 2.20.0 oder früher verwenden stattdessen `edgeConfigId`.
 
 So suchen Sie eine Datenstrom-ID:
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Datenströme]**.
 1. Verwenden Sie das Suchfeld, um den gewünschten Datenstrom zu finden, und wählen Sie dann **[!UICONTROL Kopieren]** ![Kopieren](../../assets/copy.png) neben der Datenstrom-ID aus.
 
@@ -23,9 +23,9 @@ Alternativ können Sie den gewünschten Datenstromnamen auswählen. Die Datenstr
 
 ## Wählen Sie die Datenstrom-ID mithilfe der Tag-Erweiterung „Web SDK&quot; aus
 
-Wählen Sie aus einer Liste der verfügbaren Datenströme aus oder geben Sie beim [Konfigurieren der Tag-Erweiterung“ direkt eine Datenstrom-ID ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Wählen Sie aus einer Liste der verfügbaren Datenströme aus oder geben Sie beim [Konfigurieren der Tag-Erweiterung“ direkt eine Datenstrom-ID &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].

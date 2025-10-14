@@ -39,7 +39,7 @@ In der folgenden Tabelle sind die wichtigsten Berechtigungen für den Abfrage-Se
 | Freibetrag für Datenexporte | Ihre gesamte Exportberechtigung hängt von Ihren plattformbasierten Anwendungslizenzen ab. Zum Beispiel Real-Time CDP, AJO, CJA und so weiter. | Ja - Es wird eine zusätzliche Exportberechtigung bereitgestellt, um den Export abgeleiteter Datensätze zu ermöglichen, die mit Data Distiller erstellt wurden.<br>Ihre jährliche Datenexportzulage wird in Terabyte (TB) gemessen und hängt von der Menge der von Ihnen erworbenen Rechenstunden ab. Weitere Einzelheiten finden Sie in der Produktbeschreibung. |
 | Benutzeroberfläche zur Abfrageausführung | <ul><li>Benutzeroberfläche von Query Service</li><li>Client-Benutzeroberfläche von Drittanbietern</li><li>[!DNL PostgresSQL] Client-Benutzeroberfläche</li></ul> | <ul><li>Benutzeroberfläche von Query Service </li><li>Client-Benutzeroberfläche von Drittanbietern</li><li>[!DNL PostgresSQL] Client-Benutzeroberfläche</li><li>REST-APIs</li></ul> |
 | Über zurückgegebene Abfrageergebnisse | Client-Benutzeroberfläche | Abgeleiteter Datensatz im Data Lake gespeichert |
-| Ergebnisgrenze | <ul><li>Benutzeroberfläche von Query Service - Die Anzahl der Ausgabezeilen kann ([ einer Benutzeroberflächeneinstellung konfiguriert) ](./ui/user-guide.md#result-count) zwischen 50 und 500 Zeilen eingestellt werden.</li><li>Drittanbieter-Clients - 50.000</li><li>[!DNL PostgresSQL] Client - 50.000</li></ul> | CTAS- und ITAS-Abfragen generieren nur Erfolgsmeldungen, da die Abfrageausgabe in abgeleiteten Datensätzen gespeichert wird. |
+| Ergebnisgrenze | <ul><li>Benutzeroberfläche von Query Service - Die Anzahl der Ausgabezeilen kann ([&#x200B; einer Benutzeroberflächeneinstellung konfiguriert) &#x200B;](./ui/user-guide.md#result-count) zwischen 50 und 500 Zeilen eingestellt werden.</li><li>Drittanbieter-Clients - 50.000</li><li>[!DNL PostgresSQL] Client - 50.000</li></ul> | CTAS- und ITAS-Abfragen generieren nur Erfolgsmeldungen, da die Abfrageausgabe in abgeleiteten Datensätzen gespeichert wird. |
 | Kapazität des Datensatzes lesen | Ja | Ja |
 | Datensatzkapazität schreiben | Nein | Ja |
 | Geplante Kapazität | Nein | Ja |
@@ -52,7 +52,7 @@ In der folgenden Tabelle sind die wichtigsten Berechtigungen für den Abfrage-Se
 
 Die Zugriffssteuerung für Experience Platform wird über die [Adobe Admin Console verwaltet](https://adminconsole.adobe.com/) wobei Produktprofile Benutzende mit Berechtigungen und Sandboxes verknüpfen. Weiterführende Informationen dazu finden Sie unter [Zugangssteuerung – Übersicht](../access-control/home.md).
 
-Detaillierte Anweisungen [ Anfordern des Zugriffs auf die Produktprofilberechtigungen finden Sie in den Dokumenten ](../access-control/ui/permissions.md)Berechtigungen für ein Produktprofil verwalten[&#128279;](../access-control/ui/users.md) und Benutzer für ein Produktprofil verwalten
+Detaillierte Anweisungen [&#x200B; Anfordern des Zugriffs auf die Produktprofilberechtigungen finden Sie in den Dokumenten &#x200B;](../access-control/ui/permissions.md)Berechtigungen für ein Produktprofil verwalten[&#128279;](../access-control/ui/users.md) und Benutzer für ein Produktprofil verwalten
 
 ### Relevante Query Service-Berechtigungen {#query-service-permissions}
 

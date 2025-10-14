@@ -17,7 +17,7 @@ Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgeruf
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit der [!DNL Mixpanel] verfügen. Weitere Informationen finden Sie im Tutorial [Erstellen  [!DNL Mixpanel]  Quellverbindung in ](../../ui/create/analytics/mixpanel.md) Benutzeroberfläche“.
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit der [!DNL Mixpanel] verfügen. Weitere Informationen finden Sie im Tutorial [Erstellen  [!DNL Mixpanel]  Quellverbindung in &#x200B;](../../ui/create/analytics/mixpanel.md) Benutzeroberfläche“.
 
 ## Erste Schritte
 

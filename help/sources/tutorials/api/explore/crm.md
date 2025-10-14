@@ -171,4 +171,4 @@ Eine erfolgreiche Antwort gibt die Struktur einer Tabelle zurück. Details zu de
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr CRM-System erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] einbringen möchten, und Informationen über seine Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[ um Daten aus Ihrem CRM-System zu erfassen und in Experience Platform zu ](../collect/crm.md).
+In diesem Tutorial haben Sie Ihr CRM-System erkundet, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] einbringen möchten, und Informationen über seine Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden[&#x200B; um Daten aus Ihrem CRM-System zu erfassen und in Experience Platform zu &#x200B;](../collect/crm.md).

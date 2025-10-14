@@ -11,7 +11,7 @@ ht-degree: 42%
 
 # Erstellen einer Quellverbindung und eines Datenflusses für [!DNL Oracle NetSuite Entities] mithilfe der Flow Service-API
 
-Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie mithilfe der -API Kontakt- und Kundendaten aus Ihrem [!DNL Oracle NetSuite Activities Entities]-Konto [[!DNL Flow Service]  Adobe Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie mithilfe der -API Kontakt- und Kundendaten aus Ihrem [!DNL Oracle NetSuite Activities Entities]-Konto [[!DNL Flow Service]  Adobe Experience Platform &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -24,11 +24,11 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Authentifizierung
 
-Informationen [[!DNL Oracle NetSuite]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/marketing-automation/oracle-netsuite.md) „Übersicht“.
+Informationen [[!DNL Oracle NetSuite]  Abrufen Ihrer Authentifizierungsdaten finden Sie &#x200B;](../../../../connectors/marketing-automation/oracle-netsuite.md) „Übersicht“.
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Verbinden von [!DNL Oracle NetSuite Entities] mit Experience Platform mithilfe der [!DNL Flow Service]-API
 

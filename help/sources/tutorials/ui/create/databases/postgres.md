@@ -26,7 +26,7 @@ Wenn Sie bereits über eine gültige [!DNL PostgreSQL]-Verbindung verfügen, kö
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Weitere Informationen zur Authentifizierung [[!DNL PostgreSQL]  Sie ](../../../../connectors/databases/postgres.md) „Übersicht“.
+Weitere Informationen zur Authentifizierung [[!DNL PostgreSQL]  Sie &#x200B;](../../../../connectors/databases/postgres.md) „Übersicht“.
 
 ### Aktivieren der SSL-Verschlüsselung für die Verbindungszeichenfolge
 
@@ -92,7 +92,7 @@ Um die Standardauthentifizierung zu verwenden, wählen Sie **[!UICONTROL Standar
 >
 >Dieser Abschnitt gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../../../landing/multi-cloud.md).
 
-Um ein neues [!DNL PostgreSQL]-Konto zu erstellen und eine Verbindung zu Experience Platform auf AWS herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden, und geben Sie dann die erforderlichen [ (Anmeldeinformationen für die Authentifizierung) ](../../../../connectors/databases/postgres.md#aws).
+Um ein neues [!DNL PostgreSQL]-Konto zu erstellen und eine Verbindung zu Experience Platform auf AWS herzustellen, stellen Sie sicher, dass Sie sich in einer VA6-Sandbox befinden, und geben Sie dann die erforderlichen [&#x200B; (Anmeldeinformationen für die Authentifizierung) &#x200B;](../../../../connectors/databases/postgres.md#aws).
 
 ![Die neue Kontoschnittstelle im Quell-Workflow zum Herstellen einer Verbindung mit AWS.](../../../../images/tutorials/create/postgresql/aws.png)
 

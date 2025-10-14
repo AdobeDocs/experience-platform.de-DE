@@ -77,7 +77,7 @@ Mit dieser Aktion wird die veraltete Media Analytics-API abgerufen. Wenn Sie die
 
 ## Mit Identität umleiten {#redirect-with-identity}
 
-Verwenden Sie diesen Aktionstyp, um Identitäten von der aktuellen Seite für andere Domains freizugeben. Diese Aktion ist für die Verwendung mit einem **[!UICONTROL Klick]**-Ereignistyp und einer Wertvergleichsbedingung vorgesehen. Weitere Informationen [ Verwendung dieses Aktionstyps finden Sie unter „Anfügen von ](../../../../web-sdk/commands/appendidentitytourl.md#extension) an URL mithilfe der Web-SDK-Erweiterung“.
+Verwenden Sie diesen Aktionstyp, um Identitäten von der aktuellen Seite für andere Domains freizugeben. Diese Aktion ist für die Verwendung mit einem **[!UICONTROL Klick]**-Ereignistyp und einer Wertvergleichsbedingung vorgesehen. Weitere Informationen [&#x200B; Verwendung dieses Aktionstyps finden Sie unter „Anfügen von &#x200B;](../../../../web-sdk/commands/appendidentitytourl.md#extension) an URL mithilfe der Web-SDK-Erweiterung“.
 
 ## Ereignis senden {#send-event}
 
@@ -123,7 +123,7 @@ Verwenden Sie den **[!UICONTROL Instance]**-Selektor, um die Web SDK-Instanz aus
 
 * **[!UICONTROL Bereiche]**: Wählen Sie die Bereiche (Adobe Target-[!DNL mboxes]) aus, die Sie explizit von der Personalisierung anfordern möchten. Sie können die Bereiche manuell eingeben oder ein Datenelement bereitstellen.
 * **[!UICONTROL Oberflächen]**: Legen Sie die Web-Oberflächen fest, die auf der Seite zur Personalisierung verfügbar sind. Weitere Informationen finden Sie in der Dokumentation [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=de)Adobe Journey Optimizer .
-* **Visuelle Personalisierungsentscheidungen rendern:** Wenn Sie personalisierte Inhalte auf Ihrer Seite rendern möchten, aktivieren Sie das Kontrollkästchen **[!UICONTROL Visuelle Personalisierungsentscheidungen rendern]**. Sie können bei Bedarf auch Entscheidungsumfänge und/oder Oberflächen angeben. Weitere Informationen [ Rendern personalisierter Inhalte finden ](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) in der Personalisierungsdokumentation .
+* **Visuelle Personalisierungsentscheidungen rendern:** Wenn Sie personalisierte Inhalte auf Ihrer Seite rendern möchten, aktivieren Sie das Kontrollkästchen **[!UICONTROL Visuelle Personalisierungsentscheidungen rendern]**. Sie können bei Bedarf auch Entscheidungsumfänge und/oder Oberflächen angeben. Weitere Informationen [&#x200B; Rendern personalisierter Inhalte finden &#x200B;](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) in der Personalisierungsdokumentation .
 * **[!UICONTROL Standardpersonalisierung anfordern]**: Verwenden Sie diesen Abschnitt, um zu steuern, ob der seitenweite Bereich (globale Mbox) und die Standardoberfläche (Web-Oberfläche basierend auf der aktuellen URL) angefordert werden. Standardmäßig wird dies automatisch beim ersten `sendEvent` des Seitenladevorgangs angefordert. Sie können aus den folgenden Optionen wählen:
    * **[!UICONTROL Automatisch]**: Dies ist das Standardverhalten. Fordern Sie nur die Standard-Personalisierung an, wenn sie noch nicht angefordert wurde. Dies entspricht `requestDefaultPersonalization` , die im Web-SDK-Befehl nicht festgelegt sind.
    * **[!UICONTROL Aktiviert]**: Explizit den Seitenbereich und die Standardoberfläche anfordern. Dadurch wird der SPA-Ansichts-Cache aktualisiert. Dies entspricht `requestDefaultPersonalization` auf `true` festgelegten Wert.
@@ -149,7 +149,7 @@ Wenn Sie keine Regel zum Konfigurieren einer `sendEvent` verwenden, werden die W
 
 Mit Datenstromüberschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenströme definieren, die über das Web SDK an das Edge-Netzwerk übergeben werden.
 
-Auf diese Weise können Sie andere Datenstromverhaltensweisen als die standardmäßigen Trigger vornehmen, ohne einen neuen Datenstrom zu erstellen oder Ihre bestehenden Einstellungen zu ändern. Weitere Informationen finden Sie in [ Dokumentation unter „Konfigurieren von ](web-sdk-extension-configuration.md#datastream-overrides)&quot;.
+Auf diese Weise können Sie andere Datenstromverhaltensweisen als die standardmäßigen Trigger vornehmen, ohne einen neuen Datenstrom zu erstellen oder Ihre bestehenden Einstellungen zu ändern. Weitere Informationen finden Sie in [&#x200B; Dokumentation unter „Konfigurieren von &#x200B;](web-sdk-extension-configuration.md#datastream-overrides)&quot;.
 
 ## Medienereignis senden {#send-media-event}
 

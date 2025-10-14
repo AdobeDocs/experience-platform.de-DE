@@ -34,7 +34,7 @@ Um das Einverständnis und die Voreinstellungen des Kunden zu berücksichtigen, 
 
 Details zur Struktur und zum vorgesehenen Anwendungsfall der einzelnen Attribute der Feldergruppe finden Sie im [Referenzhandbuch zu Einverständnissen und Voreinstellungen](../../xdm/field-groups/profile/consents.md). Eine schrittweise Anleitung zum Hinzufügen einer Feldergruppe zu einem Schema finden Sie im [Handbuch zur XDM-Benutzeroberfläche](../../xdm/ui/resources/schemas.md#add-field-groups).
 
-Nachdem die Feldergruppe zu einem [profilaktivierten Schema hinzugefügt ](../../xdm/ui/resources/schemas.md#profile) und ihre Felder zum Aufnehmen von Einverständnisdaten aus Ihrer Erlebnisanwendung verwendet wurden, können Sie die erfassten Einverständnisattribute in Ihren Segmentregeln verwenden.
+Nachdem die Feldergruppe zu einem [profilaktivierten Schema hinzugefügt &#x200B;](../../xdm/ui/resources/schemas.md#profile) und ihre Felder zum Aufnehmen von Einverständnisdaten aus Ihrer Erlebnisanwendung verwendet wurden, können Sie die erfassten Einverständnisattribute in Ihren Segmentregeln verwenden.
 
 ## Umgang mit dem Einverständnis in der Segmentierung
 

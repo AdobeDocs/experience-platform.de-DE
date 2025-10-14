@@ -68,7 +68,7 @@ Bei einer erfolgreichen Anfrage wird der HTTP-Status 200 (OK) und der Bericht zu
 
 ### Erstellen eines Berichts zur Datensatzüberschneidung mit Postman
 
-Postman ist eine kollaborative Plattform für die API-Entwicklung und nützlich für die Visualisierung von API-Aufrufen. Es kann kostenlos von der [Postman-Website heruntergeladen werden ](https://www.postman.com) bietet eine benutzerfreundliche Benutzeroberfläche zum Ausführen von API-Aufrufen. Die folgenden Screenshots verwenden die Benutzeroberfläche von Postman.
+Postman ist eine kollaborative Plattform für die API-Entwicklung und nützlich für die Visualisierung von API-Aufrufen. Es kann kostenlos von der [Postman-Website heruntergeladen werden &#x200B;](https://www.postman.com) bietet eine benutzerfreundliche Benutzeroberfläche zum Ausführen von API-Aufrufen. Die folgenden Screenshots verwenden die Benutzeroberfläche von Postman.
 
 **Anfrage**
 

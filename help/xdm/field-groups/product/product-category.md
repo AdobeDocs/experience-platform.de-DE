@@ -11,7 +11,7 @@ ht-degree: 9%
 
 # [!UICONTROL Produktkategorie] Schemafeldgruppe
 
-[!UICONTROL Produktkategorie] ist eine Standardschemafeldgruppe für die Klasse [[!UICONTROL Produkt], ](../../classes/product.md) Eigenschaften erfasst, die sich auf die Kategorie eines Produkts beziehen.
+[!UICONTROL Produktkategorie] ist eine Standardschemafeldgruppe für die Klasse [[!UICONTROL Produkt], &#x200B;](../../classes/product.md) Eigenschaften erfasst, die sich auf die Kategorie eines Produkts beziehen.
 
 ![](../../images/field-groups/product/product-category.png)
 

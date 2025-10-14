@@ -65,7 +65,7 @@ Schreiben Sie die folgenden Elemente auf, bevor Sie sich beim [!DNL (V2) Marketi
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Business Unit-ID für Kontointeraktion]** | Ihre Geschäftseinheits-ID für die [!DNL Salesforce]-Kontointeraktion. Weitere Informationen zum Ermitteln der ID finden [ in ](https://help.salesforce.com/s/articleView?id=000381973&type=1) Salesforce-Dokumentation . |
+| **[!UICONTROL Business Unit-ID für Kontointeraktion]** | Ihre Geschäftseinheits-ID für die [!DNL Salesforce]-Kontointeraktion. Weitere Informationen zum Ermitteln der ID finden [&#x200B; in &#x200B;](https://help.salesforce.com/s/articleView?id=000381973&type=1) Salesforce-Dokumentation . |
 
 {style="table-layout:auto"}
 
@@ -147,7 +147,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Um Zielgruppendaten von Adobe Experience Platform an das [!DNL (V2) Marketing Cloud Account Engagement] Ziel zu senden, müssen Sie Ihre Schemafelder des Experience-Datenmodells (XDM) den entsprechenden Feldern im Ziel zuordnen.
 
-Eine vollständige Liste der unterstützten [ finden Sie in der Dokumentation zur ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)Salesforce Prospect API v5. Beachten Sie[ dass ](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html)benutzerdefinierte Felder“ in der Alpha-Version nicht unterstützt werden.
+Eine vollständige Liste der unterstützten [&#x200B; finden Sie in der Dokumentation zur &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)Salesforce Prospect API v5. Beachten Sie[&#x200B; dass &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html)benutzerdefinierte Felder“ in der Alpha-Version nicht unterstützt werden.
 
 #### Unterstützte Attribute {#supported-attributes}
 

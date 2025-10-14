@@ -17,7 +17,7 @@ Wenn Sie die eindeutige Kennung für ein bestimmtes [!DNL Catalog] kennen, könn
 
 >[!NOTE]
 >
->Beim Anzeigen bestimmter Objekte ist es dennoch Best Practice[ nach Eigenschaften zu filtern ](filter-data.md) nur die Eigenschaften zurückzugeben, die Sie interessieren.
+>Beim Anzeigen bestimmter Objekte ist es dennoch Best Practice[&#x200B; nach Eigenschaften zu filtern &#x200B;](filter-data.md) nur die Eigenschaften zurückzugeben, die Sie interessieren.
 
 **API-Format**
 

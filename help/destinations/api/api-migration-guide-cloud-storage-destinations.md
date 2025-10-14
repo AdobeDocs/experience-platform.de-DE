@@ -22,7 +22,7 @@ ht-degree: 2%
 Ab [Oktober 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations) können Sie die neuen Dateiexportfunktionen verwenden, um beim Exportieren von Dateien von Experience Platform auf erweiterte Anpassungsfunktionen zuzugreifen:
 
 * Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* Möglichkeit zum Festlegen benutzerdefinierter Dateikopfzeilen in exportierten Dateien über den [ Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* Möglichkeit zum Festlegen benutzerdefinierter Dateikopfzeilen in exportierten Dateien über den [&#x200B; Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Möglichkeit zur Auswahl des [Dateityps](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) der exportierten Datei.
 * Möglichkeit zum [Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
@@ -72,7 +72,7 @@ TBD if we keep this link but will likely remove it
 
 ## Zusammenfassung der abwärtsinkompatiblen Änderungen {#summary-backwards-incompatible-changes}
 
-Mit der Migration zu den neuen Zielen werden allen Ihren vorhandenen Datenflüssen zu [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Zielen jetzt neue Zielverbindungen und Basisverbindungen zugewiesen. Der Schritt zur Profilzuordnung ändert sich ebenfalls. Abwärtsinkompatible Änderungen werden in den folgenden Abschnitten für jedes Ziel zusammengefasst. Weitere Informationen zu den Begriffen [ unten stehenden Diagramm ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) Sie auch im Glossar „Ziele“.
+Mit der Migration zu den neuen Zielen werden allen Ihren vorhandenen Datenflüssen zu [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Zielen jetzt neue Zielverbindungen und Basisverbindungen zugewiesen. Der Schritt zur Profilzuordnung ändert sich ebenfalls. Abwärtsinkompatible Änderungen werden in den folgenden Abschnitten für jedes Ziel zusammengefasst. Weitere Informationen zu den Begriffen [&#x200B; unten stehenden Diagramm &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) Sie auch im Glossar „Ziele“.
 
 ![Übersichtsbild zum Migrationshandbuch](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 

@@ -15,7 +15,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Die [!DNL RainFocus]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL RainFocus]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 [!DNL RainFocus] ist eine Plattform, mit der Sie Ihre Ereignisse bewerben und Ihre Zielgruppen erstellen können. Sie können [!DNL RainFocus] verwenden, um schöne Werbeseiten zu erstellen, die Kampagnenleistung zu verfolgen und die Registrierungs-Konversionen zu optimieren.
 
@@ -126,7 +126,7 @@ Wählen Sie die soeben erstellte [!DNL Integration Profile] aus, um eine Liste d
 
 ![Eine Liste vordefinierter Push-Typen im RainFocus-Dashboard.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 
-Um eine Kopie der JSON-Beispiel-Payload abzurufen, wählen Sie **[!DNL Sample JSON Payload]** aus. Markieren und kopieren Sie als Nächstes die JSON-Beispiel-Payload und **Sie sie in einer neuen Datei mit der Erweiterung .json**. Dies wird später beim Experience Platform für „Zuordnungskonfigurationen[ verwendet](../../tutorials/ui/create/analytics/rainfocus.md#mapping).
+Um eine Kopie der JSON-Beispiel-Payload abzurufen, wählen Sie **[!DNL Sample JSON Payload]** aus. Markieren und kopieren Sie als Nächstes die JSON-Beispiel-Payload und **Sie sie in einer neuen Datei mit der Erweiterung .json**. Dies wird später beim Experience Platform für „Zuordnungskonfigurationen[&#x200B; verwendet](../../tutorials/ui/create/analytics/rainfocus.md#mapping).
 
 ![Beispiel-JSON-Payload im RainFocus-Dashboard.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-json.png)
 

@@ -11,7 +11,7 @@ ht-degree: 7%
 
 # [!UICONTROL Gesundheitsmedizin] Schemafeldgruppe
 
-[!UICONTROL Medizin] ist eine Standardschemafeldgruppe für die Klasse [[!UICONTROL Medizin] ](../../classes/medication.md). Es bietet ein einzelnes Objekttyp-`medication`, in dem Details wie Markenname, Lotnummer und Menge erfasst werden.
+[!UICONTROL Medizin] ist eine Standardschemafeldgruppe für die Klasse [[!UICONTROL Medizin] &#x200B;](../../classes/medication.md). Es bietet ein einzelnes Objekttyp-`medication`, in dem Details wie Markenname, Lotnummer und Menge erfasst werden.
 
 ![](../../images/field-groups/healthcare-medication.png)
 

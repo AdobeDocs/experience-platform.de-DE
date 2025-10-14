@@ -14,7 +14,7 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 [!DNL Capillary Technologies] ist eine führende Treue- und Interaktionsplattform, der über 300 Marken auf der ganzen Welt vertrauen. Verwenden Sie die [!DNL Capillary Streaming Events], damit Ihr Unternehmen Kundenprofile, Treuedaten und Transaktionsereignisse nahtlos von [!DNL Capillary] in Adobe Experience Platform streamen kann. Verbinden Sie Ihre [!DNL Capillary], um Personalisierung in Echtzeit, erweiterte Zielgruppensegmentierung und Omni-Channel-Kampagnenorchestrierung zu ermöglichen.
 

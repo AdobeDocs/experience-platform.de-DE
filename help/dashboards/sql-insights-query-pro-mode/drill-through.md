@@ -63,4 +63,4 @@ Wählen Sie im Bedienfeld [!UICONTROL Eigenschaften] den Umschalter zum Deaktivi
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie einen Drill-Through für Ihr Dashboard erstellen. Außerdem erfahren Sie mit dem Handbuch [ Design-Modus , wie Sie Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche ](../standard-dashboards.md).
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie einen Drill-Through für Ihr Dashboard erstellen. Außerdem erfahren Sie mit dem Handbuch [&#x200B; Design-Modus , wie Sie Diagramme aus vorhandenen Datenmodellen in der Adobe Experience Platform-Benutzeroberfläche &#x200B;](../standard-dashboards.md).

@@ -14,18 +14,18 @@ ht-degree: 8%
 
 # [!UICONTROL Patient] Schemafeldgruppe
 
-[!UICONTROL Patient] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] ](../../../classes/individual-profile.md). Es bietet ein einzelnes Objektfeldmodell, `healthcarePatient` demografische und andere administrative Details über eine Person oder ein Tier erfasst, die bzw. das Pflege- oder andere gesundheitsbezogene Dienstleistungen erhält.
+[!UICONTROL Patient] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] &#x200B;](../../../classes/individual-profile.md). Es bietet ein einzelnes Objektfeldmodell, `healthcarePatient` demografische und andere administrative Details über eine Person oder ein Tier erfasst, die bzw. das Pflege- oder andere gesundheitsbezogene Dienstleistungen erhält.
 
 ![Feldergruppenstruktur](../../../images/healthcare/field-groups/patient/patient.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
 | [!UICONTROL Adresse] | `address` | Array von [[!UICONTROL Adresse]](../data-types/address.md) | Die Adressinformationen für den Patienten. |
-| [!UICONTROL Kommunikation] | `communication` | Array von Objekten | Eine Sprache, die verwendet werden kann, um mit dem Patienten über dessen Gesundheit zu kommunizieren. Weitere Informationen finden [ im ](#communication) Abschnitt unten. |
-| [!UICONTROL Patientenkontakte] | `contact` | Array von Objekten | Die Kontaktperson eines Patienten, z. B. ein Vormund, Partner oder Freund. Weitere Informationen finden [ im ](#contact) Abschnitt unten. |
+| [!UICONTROL Kommunikation] | `communication` | Array von Objekten | Eine Sprache, die verwendet werden kann, um mit dem Patienten über dessen Gesundheit zu kommunizieren. Weitere Informationen finden [&#x200B; im &#x200B;](#communication) Abschnitt unten. |
+| [!UICONTROL Patientenkontakte] | `contact` | Array von Objekten | Die Kontaktperson eines Patienten, z. B. ein Vormund, Partner oder Freund. Weitere Informationen finden [&#x200B; im &#x200B;](#contact) Abschnitt unten. |
 | [!UICONTROL Allgemeinmediziner] | `generalPractioner` | Array von [[!UICONTROL Referenz]](../data-types/reference.md) | Der Primärversorger des Patienten. |
 | [!UICONTROL ID] | `identifier` | Array von [[!UICONTROL Identifier]](../data-types/identifier.md) | Eine Kennung für den Patienten. |
-| [!UICONTROL Details zur Patientenverbindung] | `link` | Array von Objekten | Eine Relation zu einer Ressource eines Patienten oder einer mit ihm verbundenen Person, die dieselbe Person betrifft. Weitere Informationen finden [ im ](#link) Abschnitt unten. |
+| [!UICONTROL Details zur Patientenverbindung] | `link` | Array von Objekten | Eine Relation zu einer Ressource eines Patienten oder einer mit ihm verbundenen Person, die dieselbe Person betrifft. Weitere Informationen finden [&#x200B; im &#x200B;](#link) Abschnitt unten. |
 | [!UICONTROL Organisation verwalten] | `managingOrganization` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Aufbewahrungsorganisation der Patientenakte. |
 | [!UICONTROL Familienstand] | `maritalStatus` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Der Familienstand des Patienten. |
 | [!UICONTROL Name] | `name` | Array von [[!UICONTROL Menschlicher Name]](../data-types/human-name.md) | Der Name, der dem Patienten zugeordnet ist. |
@@ -67,7 +67,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 | [!UICONTROL Kontaktorganisation] | `organization` | [[!UICONTROL Referenz]](../data-types/reference.md) | Die Organisation, die mit der Kontaktperson verknüpft ist. |
 | [!UICONTROL Kontaktzeit] | `period` | [[!UICONTROL Zeitraum]](../data-types/period.md) | Der Zeitraum, in dem der Kontakt verwendet wurde oder wird. |
 | [!UICONTROL Beziehung“] | `relationship` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Die Beziehung zwischen dem Patienten und der Kontaktperson. |
-| [!UICONTROL Kontaktdaten] | `telecom` | Array von Objekten | Die Kontaktdaten für die Kontaktperson. Weitere Informationen finden [ im ](#telecom) Abschnitt unten. |
+| [!UICONTROL Kontaktdaten] | `telecom` | Array von Objekten | Die Kontaktdaten für die Kontaktperson. Weitere Informationen finden [&#x200B; im &#x200B;](#telecom) Abschnitt unten. |
 | [!UICONTROL Geschlecht] | `gender` | String | Die Geschlechtsidentität der Person. Der Wert dieser Eigenschaft muss einem der folgenden bekannten Enum-Werte entsprechen. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
 
 ### `telecom` {#telecom}

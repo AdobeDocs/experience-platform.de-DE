@@ -27,12 +27,12 @@ Beachten Sie bei der Planung der Erstellung eines eigenen Backup-Pakets in Ihrer
 
 - Bewerten Sie die aktuelle Verwendung der Sandboxes in Ihrer Organisation. Nähern sich Nicht-Produktions-Sandboxes ihrer Lizenzberechtigung oder überschreiten sie sie?
 - Welchen Umfang haben die Metadaten, die Sie sichern möchten? Je nach Anwendungsfall können Sie eine vollständige oder partielle Sandbox sichern.
-- Stellen Sie je nach Umfang der Metadaten, die Sie sichern möchten, sicher, dass Sie verstehen, wie [ Objekte manuell zu einem Paket hinzufügen ](../ui/sandbox-tooling.md#add-object-to-a-new-package) wie [ eine gesamte Sandbox exportieren ](../ui/sandbox-tooling.md#export-an-entire-sandbox).
+- Stellen Sie je nach Umfang der Metadaten, die Sie sichern möchten, sicher, dass Sie verstehen, wie [&#x200B; Objekte manuell zu einem Paket hinzufügen &#x200B;](../ui/sandbox-tooling.md#add-object-to-a-new-package) wie [&#x200B; eine gesamte Sandbox exportieren &#x200B;](../ui/sandbox-tooling.md#export-an-entire-sandbox).
 - Stellen Sie sicher, dass Sie in Ihrer Organisation mit den richtigen Berechtigungen Zugriff auf Sandbox-Tools haben.
 
 ### Benutzeroberflächenfunktionen, Experience Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
 
-Um diesen Anwendungsfall erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Adobe Experience Platform verwenden. Vergewissern Sie sich, dass Sie über [ erforderlichen (attributbasierten Zugriffssteuerungsberechtigungen](../../access-control/abac/overview.md) für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu gewähren.
+Um diesen Anwendungsfall erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Adobe Experience Platform verwenden. Vergewissern Sie sich, dass Sie über [&#x200B; erforderlichen (attributbasierten Zugriffssteuerungsberechtigungen](../../access-control/abac/overview.md) für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu gewähren.
 
 - [Sandbox-Werkzeuge](../ui/sandbox-tooling.md)
 - [Sandbox-Verwaltung](../ui/user-guide.md)
@@ -57,7 +57,7 @@ Lesen Sie die folgenden Abschnitte, die Links zu weiteren Dokumentationen enthal
 
 ### Definieren des Metadatenbereichs
 
-Bevor Sie mit der Erstellung Ihres Backup-Pakets beginnen, sollten Sie den Anwendungsfall des Pakets berücksichtigen. Je nach Bedarf können Sie eine vollständige Sandbox sichern oder bestimmte Objekte auswählen, die Sie Ihrem Paket hinzufügen möchten, wie in den [Voraussetzungen“ ](#prerequisites-and-planning).
+Bevor Sie mit der Erstellung Ihres Backup-Pakets beginnen, sollten Sie den Anwendungsfall des Pakets berücksichtigen. Je nach Bedarf können Sie eine vollständige Sandbox sichern oder bestimmte Objekte auswählen, die Sie Ihrem Paket hinzufügen möchten, wie in den [Voraussetzungen“ &#x200B;](#prerequisites-and-planning).
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ An dieser Stelle können Sie Ihre Sandbox mithilfe der Benutzeroberfläche der S
 
 >[!NOTE]
 >
-> Nicht alle Objekte werden für Sandbox-Tools unterstützt. Eine umfassende Liste [ zulässigen Objekte finden Sie im Handbuch ](../ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling)Objekte, die für Sandbox-Tools unterstützt werden“.
+> Nicht alle Objekte werden für Sandbox-Tools unterstützt. Eine umfassende Liste [&#x200B; zulässigen Objekte finden Sie im Handbuch &#x200B;](../ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling)Objekte, die für Sandbox-Tools unterstützt werden“.
 
 #### Exportieren einer vollständigen Sandbox
 
@@ -79,7 +79,7 @@ Um Ihre Sandbox vollständig zu sichern, befolgen Sie die Anweisungen im [Sandbo
 
 Sie können einzelne Objekte auf eine der folgenden Arten in einem Paket sichern. Während sich diese Handbücher auf das Hinzufügen eines Schemas zum Paket konzentrieren, gelten dieselben Schritte für andere Objekte wie Datensätze, Zielgruppen oder Journey.
 
-- Fügen Sie einem neuen Paket ein einzelnes Objekt hinzu, indem Sie dem Handbuch [ Hinzufügen von Objekten des Sandbox-Tools ](../ui/sandbox-tooling.md#add-object-to-a-new-package).
+- Fügen Sie einem neuen Paket ein einzelnes Objekt hinzu, indem Sie dem Handbuch [&#x200B; Hinzufügen von Objekten des Sandbox-Tools &#x200B;](../ui/sandbox-tooling.md#add-object-to-a-new-package).
 - Fügen Sie einem vorhandenen Backup-Paket ein einzelnes Objekt hinzu, indem Sie dem [Sandbox-Tool-Handbuch](../ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) folgen und sicherstellen, dass Sie Ihre Änderungen veröffentlichen.
 - Erstellen Sie ein leeres Paket mit mehreren Objekten, um Objekten hinzuzufügen, wie unten beschrieben.
 
@@ -111,7 +111,7 @@ Es ist zwar möglich, dem vorhandenen Backup-Paket neue Objekte hinzuzufügen, S
 
 ### Überprüfen Sie Ihre aktuelle Nutzung anhand Ihrer Lizenzberechtigungen.
 
-Nachdem Ihr Backup-Paket fertig ist, können Sie Ihre Sandbox zurücksetzen, um Ihre Nutzung zurückzusetzen. Sie sollten Ihre Nutzung regelmäßig überwachen, um Ihre Lizenzberechtigungen anzupassen oder Ihre Sandbox nach Bedarf zurückzusetzen. Weitere Informationen zum Lizenznutzungs[Dashboard finden ](../../dashboards/guides/license-usage.md) im Abschnitt „Lizenznutzungshandbuch.
+Nachdem Ihr Backup-Paket fertig ist, können Sie Ihre Sandbox zurücksetzen, um Ihre Nutzung zurückzusetzen. Sie sollten Ihre Nutzung regelmäßig überwachen, um Ihre Lizenzberechtigungen anzupassen oder Ihre Sandbox nach Bedarf zurückzusetzen. Weitere Informationen zum Lizenznutzungs[Dashboard finden &#x200B;](../../dashboards/guides/license-usage.md) im Abschnitt „Lizenznutzungshandbuch.
 
 ### Sandbox zurücksetzen
 

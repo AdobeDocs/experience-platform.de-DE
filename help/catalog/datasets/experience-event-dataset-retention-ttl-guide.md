@@ -100,7 +100,7 @@ Das Ausführen ähnlicher Abfragen für verschiedene Zeitintervalle hilft bei de
 
 ## Erste Schritte mit der TTL-Verwaltung
 
-Bevor Sie die Aufbewahrung von Erlebnisereignis-Datensätzen mit der Catalog Service API bewerten, festlegen und verwalten können, müssen Sie wissen, wie Sie Ihre Anfragen korrekt formatieren. Dazu gehören die Kenntnis der API-Pfade, die Bereitstellung erforderlicher Kopfzeilen und die Formatierung von Anfrage-Payloads. Weitere Informationen finden Sie [ „Erste Schritte mit der Catalog Service](../api/getting-started.md)API“.
+Bevor Sie die Aufbewahrung von Erlebnisereignis-Datensätzen mit der Catalog Service API bewerten, festlegen und verwalten können, müssen Sie wissen, wie Sie Ihre Anfragen korrekt formatieren. Dazu gehören die Kenntnis der API-Pfade, die Bereitstellung erforderlicher Kopfzeilen und die Formatierung von Anfrage-Payloads. Weitere Informationen finden Sie [&#x200B; „Erste Schritte mit der Catalog Service](../api/getting-started.md)API“.
 
 >[!NOTE]
 >
@@ -110,9 +110,9 @@ Bevor Sie die Aufbewahrung von Erlebnisereignis-Datensätzen mit der Catalog Ser
 
 Verwenden Sie den Data Hygiene API `/ttl/{DATASET_ID}`-Endpunkt, um TTL-Konfigurationen zu planen. Dieser Endpunkt gibt die minimalen und maximalen TTL-Werte zurück, die für Ihre Organisation unterstützt werden, zusammen mit einem empfohlenen Wert (`defaultValue`) für den Datensatztyp.
 
-Weitere Informationen finden Sie in der [ zur Adobe Developer ](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl)Datenhygiene-API).
+Weitere Informationen finden Sie in der [&#x200B; zur Adobe Developer &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl)Datenhygiene-API).
 
-Um [ derzeit auf einen Datensatz angewendete TTL zu überprüfen](#check-applied-ttl-values) stellen Sie stattdessen eine GET-Anfrage an [ Endpunkt ](https://developer.adobe.com/experience-platform-apis/references/catalog/)Catalog Service `/dataSets/{DATASET_ID}`).
+Um [&#x200B; derzeit auf einen Datensatz angewendete TTL zu überprüfen](#check-applied-ttl-values) stellen Sie stattdessen eine GET-Anfrage an [&#x200B; Endpunkt &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/)Catalog Service `/dataSets/{DATASET_ID}`).
 
 >[!TIP]
 >
@@ -126,7 +126,7 @@ GET /ttl/{DATASET_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Eine vom System generierte Zeichenfolge, die einen Datensatz eindeutig identifiziert. Verwenden Sie den `/datasets`-Endpunkt, um eine Datensatz-ID zu finden. Anweisungen [ Filtern von Antworten für relevante Datensätze finden Sie ](../api/list-objects.md) Handbuch zur List Catalog Objects API . |
+| `{DATASET_ID}` | Eine vom System generierte Zeichenfolge, die einen Datensatz eindeutig identifiziert. Verwenden Sie den `/datasets`-Endpunkt, um eine Datensatz-ID zu finden. Anweisungen [&#x200B; Filtern von Antworten für relevante Datensätze finden Sie &#x200B;](../api/list-objects.md) Handbuch zur List Catalog Objects API . |
 
 **Anfrage**
 
@@ -222,7 +222,7 @@ Eine erfolgreiche Antwort enthält das `extensions`-Objekt, das die aktuelle TTL
 >
 >Eine TTL-basierte Gültigkeit auf Zeilenebene kann nur auf Ereignis-Datensätze angewendet werden, die ein Zeitreihenschema verwenden. Dazu gehören Datensätze, die auf der standardmäßigen XDM ExperienceEvent-Klasse basieren, sowie benutzerdefinierte Schemata, die das Zeitreihenschema (`https://ns.adobe.com/xdm/data/time-series`) erweitern.
 >
->Bevor Sie die TTL anwenden, verwenden Sie die Schema Registry-API, um zu überprüfen, ob das Schema des Datensatzes die richtige Erweiterung enthält, indem Sie die `meta:extends` Eigenschaft überprüfen. Eine Anleitung dazu finden [ in der ](../../xdm/api/schemas.md#lookup) zum Schema-Endpunkt .
+>Bevor Sie die TTL anwenden, verwenden Sie die Schema Registry-API, um zu überprüfen, ob das Schema des Datensatzes die richtige Erweiterung enthält, indem Sie die `meta:extends` Eigenschaft überprüfen. Eine Anleitung dazu finden [&#x200B; in der &#x200B;](../../xdm/api/schemas.md#lookup) zum Schema-Endpunkt .
 
 Sie können die Aufbewahrung von Erlebnisereignis-Datensätzen konfigurieren, indem Sie eine neue TTL festlegen oder eine vorhandene TTL aktualisieren, indem Sie dieselbe API-Methode verwenden. Verwenden Sie eine PATCH-Anfrage an den `/v2/datasets/{DATASET_ID}`-Endpunkt, um die TTL anzuwenden oder anzupassen.
 
@@ -347,7 +347,7 @@ Ja, Sie können unterschiedliche Aufbewahrungsrichtlinien für Data Lake- und Pr
 +++Antwort
 Sie können die neueste Datensatzspeichergröße für Data Lake- und Profilspeicher als separate Metriken im Inventar-Arbeitsbereich [!UICONTROL Datensatz] überprüfen. Sortieren Sie die Spalten, um die größten Datensätze zu identifizieren, und überprüfen Sie, ob Aufbewahrungsrichtlinien angewendet werden.
 
-Weitere Informationen zur Verwendung auf Sandbox-Ebene finden Sie unter Lizenznutzungs-Dashboard . Weitere Informationen finden [ unter &quot;](../../dashboards/guides/license-usage.md)&quot;.
+Weitere Informationen zur Verwendung auf Sandbox-Ebene finden Sie unter Lizenznutzungs-Dashboard . Weitere Informationen finden [&#x200B; unter &quot;](../../dashboards/guides/license-usage.md)&quot;.
 +++
 
 ### Wie kann ich überprüfen, ob der Datenaufbewahrungsauftrag erfolgreich war?
@@ -388,6 +388,6 @@ Weitere Informationen finden Sie im Handbuch [Erstellen abgeleiteter Datensätze
 
 Nachdem Sie nun gelernt haben, wie Sie TTL-Einstellungen für den Ablauf auf Zeilenebene verwalten, lesen Sie die folgende Dokumentation, um Ihr Verständnis der TTL-Verwaltung zu vertiefen:
 
-- Aufbewahrungsaufträge: Erfahren Sie mit dem [Handbuch zur Datenlebenszyklus-Benutzeroberfläche“, wie Sie Datensatzgültigkeiten in der Experience Platform-Benutzeroberfläche planen und automatisieren ](../../hygiene/ui/dataset-expiration.md), oder überprüfen Sie die Konfigurationen zur Datensatzaufbewahrung und stellen Sie sicher, dass abgelaufene Datensätze gelöscht werden.
+- Aufbewahrungsaufträge: Erfahren Sie mit dem [Handbuch zur Datenlebenszyklus-Benutzeroberfläche“, wie Sie Datensatzgültigkeiten in der Experience Platform-Benutzeroberfläche planen und automatisieren &#x200B;](../../hygiene/ui/dataset-expiration.md), oder überprüfen Sie die Konfigurationen zur Datensatzaufbewahrung und stellen Sie sicher, dass abgelaufene Datensätze gelöscht werden.
 - [API-Endpunkthandbuch zur Datensatzgültigkeit](../../hygiene/api/dataset-expiration.md): Erfahren Sie, wie Sie ganze Datensätze und nicht nur Zeilen löschen können. Erfahren Sie, wie Sie die Datensatzgültigkeit mithilfe der API planen, verwalten und automatisieren können, um eine effiziente Datenaufbewahrung zu gewährleisten.
 - [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md) Erfahren Sie, wie Sie Ihre Datenaufbewahrungsstrategie an umfassenderen Compliance-Anforderungen und Marketing-Nutzungsbeschränkungen ausrichten können.

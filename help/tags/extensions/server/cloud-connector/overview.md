@@ -132,7 +132,7 @@ Das [!DNL mTLS]-Zertifikat ist eine digitale Berechtigung, die die Identität ei
 
 ### Installieren der Adobe Cloud Connector-Erweiterung {#install}
 
-Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
 Wählen **[!UICONTROL Erweiterungen]** im linken Bedienfeld aus. Wählen Sie auf der **[!UICONTROL Katalog]** die Karte **[!UICONTROL Adobe Cloud Connector]** und dann **[!UICONTROL Installieren]** aus.
 
@@ -146,7 +146,7 @@ Wählen **[!UICONTROL Erweiterungen]** im linken Bedienfeld aus. Wählen Sie auf
 
 Nach der Installation der Erweiterung können Sie eine Ereignisweiterleitungsregel erstellen, die [!DNL mTLS] verwendet, und sie zu Ihrer Bibliothek hinzufügen.
 
-Erstellen Sie eine neue [ (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Geben Sie einen Namen für Ihre Regel an und fügen Sie dann unter **[!UICONTROL Aktionen]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Adobe Cloud Connector]** fest. Wählen Sie als Nächstes **[!UICONTROL Abrufaufruf ausführen]** für den **[!UICONTROL Aktionstyp]**.
+Erstellen Sie eine neue [&#x200B; (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Geben Sie einen Namen für Ihre Regel an und fügen Sie dann unter **[!UICONTROL Aktionen]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Adobe Cloud Connector]** fest. Wählen Sie als Nächstes **[!UICONTROL Abrufaufruf ausführen]** für den **[!UICONTROL Aktionstyp]**.
 
 ![Die Ansicht mit den Eigenschaftsregeln für die Ereignisweiterleitung mit den Feldern, die zum Hinzufügen einer Regelkonfiguration für die Ereignisweiterleitung erforderlich sind, ist hervorgehoben.](../../../images/extensions/server/cloud-connector/event-action.png)
 

@@ -28,10 +28,10 @@ Um [!DNL Mixpanel] mit Experience Platform zu verbinden, müssen Sie Werte für 
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `username` | Der Benutzername des Service-Kontos, der Ihrem [!DNL Mixpanel] entspricht. Weitere Informationen finden [[!DNL Mixpanel]  in der ](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) zu Service-Konten . | `Test8.6d4ee7.mp-service-account` |
+| `username` | Der Benutzername des Service-Kontos, der Ihrem [!DNL Mixpanel] entspricht. Weitere Informationen finden [[!DNL Mixpanel]  in der &#x200B;](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) zu Service-Konten . | `Test8.6d4ee7.mp-service-account` |
 | `password` | Das Passwort des Service-Kontos, das Ihrem [!DNL Mixpanel]-Konto entspricht. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| `projectId` | Ihre [!DNL Mixpanel]-Projekt-ID. Diese ID ist erforderlich, um eine Quellverbindung zu erstellen. Weitere Informationen finden [[!DNL Mixpanel]  in der ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) zu Projekteinstellungen und [[!DNL Mixpanel] Handbuch ](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) Erstellen und Verwalten von Projekten). | `2384945` |
-| `timezone` | Die Zeitzone, die Ihrem [!DNL Mixpanel] Projekt entspricht. Die Zeitzone ist erforderlich, um eine Quellverbindung zu erstellen. Weitere Informationen finden [ in der Dokumentation ](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) Mixpanel-Projekteinstellungen . | `Pacific Standard Time` |
+| `projectId` | Ihre [!DNL Mixpanel]-Projekt-ID. Diese ID ist erforderlich, um eine Quellverbindung zu erstellen. Weitere Informationen finden [[!DNL Mixpanel]  in der &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) zu Projekteinstellungen und [[!DNL Mixpanel] Handbuch &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) Erstellen und Verwalten von Projekten). | `2384945` |
+| `timezone` | Die Zeitzone, die Ihrem [!DNL Mixpanel] Projekt entspricht. Die Zeitzone ist erforderlich, um eine Quellverbindung zu erstellen. Weitere Informationen finden [&#x200B; in der Dokumentation &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) Mixpanel-Projekteinstellungen . | `Pacific Standard Time` |
 
 Weitere Informationen zum Authentifizieren Ihrer [!DNL Mixpanel] finden Sie unter [[!DNL Mixpanel] Quelle - Übersicht](../../../../connectors/analytics/mixpanel.md).
 

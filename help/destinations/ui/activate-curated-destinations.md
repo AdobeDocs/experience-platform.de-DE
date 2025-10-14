@@ -83,7 +83,7 @@ Fahren Sie nach dem erfolgreichen Export Ihrer Zielgruppen in LiveRamp mit [Schr
 
 >[!TIP]
 >
->Bevor Sie zu [Schritt 2](#distribution) übergehen[ überprüfen Sie](../catalog/advertising/liveramp-onboarding.md#exported-data) ob Ihre Zielgruppen erfolgreich nach LiveRamp exportiert wurden. Weitere Informationen finden Sie in [ Dokumentation zur Überwachung ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) Zieldatenflüssen und zu den spezifischen Überwachungsdetails für [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
+>Bevor Sie zu [Schritt 2](#distribution) übergehen[&#x200B; überprüfen Sie](../catalog/advertising/liveramp-onboarding.md#exported-data) ob Ihre Zielgruppen erfolgreich nach LiveRamp exportiert wurden. Weitere Informationen finden Sie in [&#x200B; Dokumentation zur Überwachung &#x200B;](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) Zieldatenflüssen und zu den spezifischen Überwachungsdetails für [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
 
 ### Schritt 2: Aktivieren Sie die integrierten Zielgruppen für angeschlossene TV- und Audio-Ziele über das [!DNL LiveRamp - Distribution] {#distribution}
 
@@ -93,7 +93,7 @@ Sie aktivieren die Zielgruppen (exportiert in [Schritt 1](#onboarding)) mithilfe
 
 ![Experience Platform-UI-Bild, das die LiveRamp - Verteilungs-Zielkarte anzeigt](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
-Informationen zum Konfigurieren des **[!DNL LiveRamp - Distribution]**-Ziels und Aktivieren der in Schritt 1 exportierten Zielgruppen [ Sie ](#onboarding) der Dokumentation zum [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md)-Ziel.
+Informationen zum Konfigurieren des **[!DNL LiveRamp - Distribution]**-Ziels und Aktivieren der in Schritt 1 exportierten Zielgruppen [&#x200B; Sie &#x200B;](#onboarding) der Dokumentation zum [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md)-Ziel.
 
 >[!IMPORTANT]
 >

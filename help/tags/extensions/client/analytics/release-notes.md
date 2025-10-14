@@ -23,7 +23,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* Eine neue Funktion wurde hinzugefügt, mit der Benutzende eine JSON-Version der Aktion „Variablen festlegen[ anzeigen und ](https://experienceleague.adobe.com/de/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) können. Die Adobe Web SDK-Erweiterung enthält auch eine Aktion zum [Ausfüllen einer Analytics-Variablen](https://experienceleague.adobe.com/de/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) durch Bereitstellung von JSON. Durch Kopieren von JSON-Daten aus der AA-Erweiterung in die Web SDK-Erweiterung können migrierende Kunden einfach mehrere Einstellungen gleichzeitig übertragen, anstatt jede Variable manuell hinzuzufügen.
+* Eine neue Funktion wurde hinzugefügt, mit der Benutzende eine JSON-Version der Aktion „Variablen festlegen[&#x200B; anzeigen und &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) können. Die Adobe Web SDK-Erweiterung enthält auch eine Aktion zum [Ausfüllen einer Analytics-Variablen](https://experienceleague.adobe.com/de/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) durch Bereitstellung von JSON. Durch Kopieren von JSON-Daten aus der AA-Erweiterung in die Web SDK-Erweiterung können migrierende Kunden einfach mehrere Einstellungen gleichzeitig übertragen, anstatt jede Variable manuell hinzuzufügen.
 
 ## 12. August 2024
 
@@ -61,8 +61,8 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Fehlerbehebungen**:
 
-* Es wurde eine zusätzliche Fehlerbehandlung für Browser mit fehlerhaften APIs [ hohe Entropie (Benutzeragenten](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=de)Client-Hinweise) hinzugefügt.
-* Die Kopfzeile [POST ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Inhaltstyp wurde geändert, sodass sie standardmäßig `x-www-form-urlencoded` verwendet wird.
+* Es wurde eine zusätzliche Fehlerbehandlung für Browser mit fehlerhaften APIs [&#x200B; hohe Entropie (Benutzeragenten](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=de)Client-Hinweise) hinzugefügt.
+* Die Kopfzeile [POST &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Inhaltstyp wurde geändert, sodass sie standardmäßig `x-www-form-urlencoded` verwendet wird.
 
 ## 23. September 2022
 
@@ -71,7 +71,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 **Funktionen**:
 
 * Auf AppMeasurement v2.23.0 aktualisiert.
-* Die Erweiterung kann jetzt Client[Hinweise mit hoher Entropie erfassen, ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) von der neuesten AppMeasurement-Version unterstützt wird.
+* Die Erweiterung kann jetzt Client[Hinweise mit hoher Entropie erfassen, &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) von der neuesten AppMeasurement-Version unterstützt wird.
 
 ## 28. Februar 2022
 

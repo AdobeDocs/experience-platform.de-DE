@@ -31,23 +31,23 @@ XDM-Schemata stellen die Struktur und das Format von Daten dar, die in Experienc
 
 Eine schrittweise Anleitung zum manuellen Erstellen eines vollständigen Schemas in der Schema Registry-API, einschließlich des Erstellens und Hinzufügens von Feldergruppen und Datentypen, finden Sie im [API-Tutorial zur Schemaerstellung](../tutorials/create-schema-api.md).
 
-Wenn Sie CSV-Daten aufnehmen, lesen Sie den Abschnitt zur [ von CSV in Schemas](#csv-to-schema).
+Wenn Sie CSV-Daten aufnehmen, lesen Sie den Abschnitt zur [&#x200B; von CSV in Schemas](#csv-to-schema).
 
 ## Verhalten
 
-Verhaltensweisen definieren die Art der Daten, die ein Schema beschreibt. Jede XDM-Klasse muss auf ein bestimmtes Verhalten verweisen, das alle Schemas, die diese Klasse verwenden, erben. Informationen [ Anzeigen verfügbarer Verhaltensweisen in der API finden ](./behaviors.md) im Handbuch zum Behaviors-Endpunkt .
+Verhaltensweisen definieren die Art der Daten, die ein Schema beschreibt. Jede XDM-Klasse muss auf ein bestimmtes Verhalten verweisen, das alle Schemas, die diese Klasse verwenden, erben. Informationen [&#x200B; Anzeigen verfügbarer Verhaltensweisen in der API finden &#x200B;](./behaviors.md) im Handbuch zum Behaviors-Endpunkt .
 
 ## Klassen
 
-Eine Klasse definiert die Basisstruktur von allgemeinen Eigenschaften, die alle Schemata enthalten müssen, die auf dieser Klasse basieren, und bestimmt, welche Feldergruppen für die Verwendung in diesen Schemata geeignet sind. Jede Klasse muss mit einem vorhandenen Verhalten verknüpft sein. Weitere Informationen zur Verwendung von Klassen in [ API finden ](./classes.md) im Klassenendpunkthandbuch .
+Eine Klasse definiert die Basisstruktur von allgemeinen Eigenschaften, die alle Schemata enthalten müssen, die auf dieser Klasse basieren, und bestimmt, welche Feldergruppen für die Verwendung in diesen Schemata geeignet sind. Jede Klasse muss mit einem vorhandenen Verhalten verknüpft sein. Weitere Informationen zur Verwendung von Klassen in [&#x200B; API finden &#x200B;](./classes.md) im Klassenendpunkthandbuch .
 
 ## Feldergruppen
 
-Feldergruppen sind wiederverwendbare Komponenten, die ein oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine einzelne Person, eine E-Mail-Adresse oder eine Webbrowser-Umgebung. Feldergruppen sind je nach dem Verhalten der Daten, die sie darstellen (Datensatz oder Zeitreihe), als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert. Informationen [ Arbeiten mit Feldergruppen in der API ](./field-groups.md) Sie im Handbuch zu Feldergruppen-Endpunkten .
+Feldergruppen sind wiederverwendbare Komponenten, die ein oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine einzelne Person, eine E-Mail-Adresse oder eine Webbrowser-Umgebung. Feldergruppen sind je nach dem Verhalten der Daten, die sie darstellen (Datensatz oder Zeitreihe), als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert. Informationen [&#x200B; Arbeiten mit Feldergruppen in der API &#x200B;](./field-groups.md) Sie im Handbuch zu Feldergruppen-Endpunkten .
 
 ## Datentypen
 
-Datentypen werden in Klassen oder Feldergruppen auf dieselbe Weise als Felder vom Typ „Verweis“ verwendet wie grundlegende Literalfelder, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Datentypen ähneln zwar den Feldergruppen insofern, als sie die konsistente Verwendung einer Struktur mit mehreren Feldern ermöglichen, sind jedoch flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldergruppen nur auf der Stammebene hinzugefügt werden können. Weitere Informationen [ Arbeiten mit Datentypen in der API ](./data-types.md) Sie im Handbuch zum Datentypendpunkt .
+Datentypen werden in Klassen oder Feldergruppen auf dieselbe Weise als Felder vom Typ „Verweis“ verwendet wie grundlegende Literalfelder, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Datentypen ähneln zwar den Feldergruppen insofern, als sie die konsistente Verwendung einer Struktur mit mehreren Feldern ermöglichen, sind jedoch flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldergruppen nur auf der Stammebene hinzugefügt werden können. Weitere Informationen [&#x200B; Arbeiten mit Datentypen in der API &#x200B;](./data-types.md) Sie im Handbuch zum Datentypendpunkt .
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Datentypen werden in Klassen oder Feldergruppen auf dieselbe Weise als Felder vo
 
 ## Deskriptoren
 
-Deskriptoren sind Metadatensätze, die bestimmten Feldern innerhalb eines Schemas zugewiesen werden und verschiedene kontextuelle Details bereitstellen, darunter die Beziehung dieser Felder (und des Schemas selbst) zu anderen Schemas. Auf jedes Schema können eine oder mehrere Deskriptorentitäten angewendet werden. Es gibt mehrere verschiedene Deskriptortypen, die unterschiedlichen Zwecken dienen. Weitere Informationen zum Arbeiten mit Deskriptoren in [ API sowie ](./descriptors.md) Überblick über die verschiedenen Deskriptortypen und ihre Anwendungsfälle finden Sie im Handbuch zum descriptors-.
+Deskriptoren sind Metadatensätze, die bestimmten Feldern innerhalb eines Schemas zugewiesen werden und verschiedene kontextuelle Details bereitstellen, darunter die Beziehung dieser Felder (und des Schemas selbst) zu anderen Schemas. Auf jedes Schema können eine oder mehrere Deskriptorentitäten angewendet werden. Es gibt mehrere verschiedene Deskriptortypen, die unterschiedlichen Zwecken dienen. Weitere Informationen zum Arbeiten mit Deskriptoren in [&#x200B; API sowie &#x200B;](./descriptors.md) Überblick über die verschiedenen Deskriptortypen und ihre Anwendungsfälle finden Sie im Handbuch zum descriptors-.
 
 ## Vereinigungen
 
@@ -67,35 +67,35 @@ Informationen zum Anzeigen von Vereinigungen in der Schema Registry-API finden S
 
 Sie können automatisch ein XDM-Schema mithilfe einer CSV-Datei als Vorlage generieren, sodass Sie Vorlagen erstellen können, um Schemafelder per Massenimport zu importieren und den manuellen API- oder UI-Arbeitsaufwand zu reduzieren.
 
-Weitere Informationen finden Sie [ Handbuch zum Konvertierungsendpunkt von CSV ](./export.md) Schema .
+Weitere Informationen finden Sie [&#x200B; Handbuch zum Konvertierungsendpunkt von CSV &#x200B;](./export.md) Schema .
 
 >[!NOTE]
 >
->Sie können die Benutzeroberfläche auch verwenden, um ([ einer CSV mithilfe von KI-generierten Empfehlungen einem Schema zuzuordnen](../../ingestion/tutorials/map-csv/recommendations.md) (derzeit in der Beta-Phase).
+>Sie können die Benutzeroberfläche auch verwenden, um ([&#x200B; einer CSV mithilfe von KI-generierten Empfehlungen einem Schema zuzuordnen](../../ingestion/tutorials/map-csv/recommendations.md) (derzeit in der Beta-Phase).
 
 ## Exportieren {#export}
 
 Mit der Schema Registry-API können Sie XDM-Ressourcen zwischen Sandboxes und Organisationen übertragen und freigeben. Für jedes Schema, jede Feldergruppe oder jeden Datentyp können Sie eine Export-Payload generieren, die die Struktur der Ressource und alle abhängigen Ressourcen enthält. Diese Payload kann dann zum Importieren der Ressource in eine Ziel-Sandbox und in eine Organisation verwendet werden.
 
-Weitere Informationen [ Erstellen einer Export-Payload für ](./export.md) vorhandene XDM-Ressource finden Sie im Handbuch zum Exportieren von Endpunkten .
+Weitere Informationen [&#x200B; Erstellen einer Export-Payload für &#x200B;](./export.md) vorhandene XDM-Ressource finden Sie im Handbuch zum Exportieren von Endpunkten .
 
 ## Importieren
 
 Wenn Sie die Endpunkte [Export](#export) oder [CSV in Schema-Konversion](./import.md) zum Erstellen einer Export-Payload verwenden, können Sie diese Payload an eine Zielorganisation und Sandbox senden, um die angegebenen Ressourcen zu importieren.
 
-Weitere Informationen zum Generieren von XDM[Ressourcen aus Export-Payloads finden Sie ](./export.md) Handbuch zum Import-Endpunkt .
+Weitere Informationen zum Generieren von XDM[Ressourcen aus Export-Payloads finden Sie &#x200B;](./export.md) Handbuch zum Import-Endpunkt .
 
 ## Beispieldaten
 
 Sie können Beispieldaten für jedes angegebene Schema in der Schemabibliothek generieren. Das zurückgegebene Antwortobjekt kann dann als Datenquelle für die Datenaufnahme verwendet werden.
 
-Weitere Informationen [ Verwendung dieses Endpunkts finden ](./sample-data.md) im Handbuch zum Beispieldaten-.
+Weitere Informationen [&#x200B; Verwendung dieses Endpunkts finden &#x200B;](./sample-data.md) im Handbuch zum Beispieldaten-.
 
 ## Auditprotokoll
 
 Die Schemaregistrierung verwaltet ein Protokoll aller Änderungen, die an einer Ressource (Klasse, Feldergruppe, Datentyp oder Schema) zwischen verschiedenen Aktualisierungen vorgenommen wurden. Sie können das Protokoll für eine bestimmte Ressource abrufen, indem Sie deren `$id` oder `meta:altId` im Pfad einer GET-Anfrage an diesen Endpunkt angeben.
 
-Weitere [ zur Verwendung dieses Endpunkts finden ](./audit-log.md) im Handbuch zum audit log endpoint .
+Weitere [&#x200B; zur Verwendung dieses Endpunkts finden &#x200B;](./audit-log.md) im Handbuch zum audit log endpoint .
 
 ## Nächste Schritte
 

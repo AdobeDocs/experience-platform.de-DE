@@ -51,7 +51,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die XDM-Zielressource und alle ihre abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im -Array ein von einem Mandanten erstellter `Property`-Datentyp, den die `Restaurant` Feldgruppe verwendet, während das zweite Objekt die `Restaurant` Feldgruppe selbst ist. Diese Payload kann dann verwendet werden, um [ Ressource in ](#import) andere Sandbox oder Organisation zu importieren.
+Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die XDM-Zielressource und alle ihre abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im -Array ein von einem Mandanten erstellter `Property`-Datentyp, den die `Restaurant` Feldgruppe verwendet, während das zweite Objekt die `Restaurant` Feldgruppe selbst ist. Diese Payload kann dann verwendet werden, um [&#x200B; Ressource in &#x200B;](#import) andere Sandbox oder Organisation zu importieren.
 
 Beachten Sie, dass alle Instanzen der Mandanten-ID der Ressource durch `<XDM_TENANTID_PLACEHOLDER>` ersetzt werden. Dadurch kann die Schemaregistrierung automatisch die richtige Mandanten-ID auf die Ressourcen anwenden, je nachdem, wohin sie im nachfolgenden Importaufruf gesendet werden.
 
@@ -197,4 +197,4 @@ Beachten Sie, dass alle Instanzen der Mandanten-ID der Ressource durch `<XDM_TEN
 
 Nachdem Sie die Export-Payload aus der CSV-Datei generiert haben, können Sie diese Payload an den `/rpc/import`-Endpunkt senden, um das Schema zu generieren.
 
-Weitere Informationen [ Generieren von Schemata aus Export](./import.md)Payloads finden Sie im Handbuch zum Import-Endpunkt .
+Weitere Informationen [&#x200B; Generieren von Schemata aus Export](./import.md)Payloads finden Sie im Handbuch zum Import-Endpunkt .

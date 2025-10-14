@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Mit der `debugEnabled` Eigenschaft können Sie das Debugging mithilfe von Web SDK-Code aktivieren oder deaktivieren. Dies ist eine der verfügbaren Methoden zum Aktivieren von [Debugging](../../use-cases/debugging.md). Das Aktivieren des Debuggens innerhalb Ihrer Implementierung kann während der Website-Entwicklung praktischer sein als andere Methoden, wenn Sie das Debuggen immer aktivieren möchten. Diese Debugging-Methode aktiviert sie für alle Besucher, sodass sie für Produktionsseiten nicht empfohlen wird.
 
-Weitere Möglichkeiten zum Aktivieren [ Debuggens finden ](../../use-cases/debugging.md) auf der Seite zum Anwendungsfall „Debugging“.
+Weitere Möglichkeiten zum Aktivieren [&#x200B; Debuggens finden &#x200B;](../../use-cases/debugging.md) auf der Seite zum Anwendungsfall „Debugging“.
 
 ## Aktivieren des Debuggens mithilfe der Tag-Erweiterung „Web SDK&quot;
 

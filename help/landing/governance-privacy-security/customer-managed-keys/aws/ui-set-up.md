@@ -15,7 +15,7 @@ Verwenden Sie dieses Handbuch, um kundenseitig verwaltete Schlüssel (CMK) für 
 
 >[!IMPORTANT]
 >
->Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie die Einrichtung abgeschlossen haben, die im Dokument [Konfigurieren von AWS KMS für CMK“ beschrieben ](./configure-kms.md).
+>Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie die Einrichtung abgeschlossen haben, die im Dokument [Konfigurieren von AWS KMS für CMK“ beschrieben &#x200B;](./configure-kms.md).
 
 ## Aktualisieren Sie die AWS-Schlüsselrichtlinie, um den Schlüssel in Experience Platform zu integrieren
 

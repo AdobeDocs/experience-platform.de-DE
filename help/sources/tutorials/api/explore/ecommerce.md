@@ -196,4 +196,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre **[!UICONTROL eCommerce]**-Verbindung untersucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] aufnehmen möchten, und Informationen zu ihrer Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [E-Commerce-Daten zu erfassen und in Experience Platform zu ](../collect/ecommerce.md).
+In diesem Tutorial haben Sie Ihre **[!UICONTROL eCommerce]**-Verbindung untersucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Experience Platform] aufnehmen möchten, und Informationen zu ihrer Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [E-Commerce-Daten zu erfassen und in Experience Platform zu &#x200B;](../collect/ecommerce.md).

@@ -14,7 +14,7 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mit dem [!DNL Capillary Streaming Events] und der [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) Daten von Ihrem [!DNL Capillary] an Adobe Experience Platform streamen.
 
@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Capillary Streaming Events]  Sie in ](../../../../connectors/loyalty/capillary.md)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Capillary Streaming Events]  Sie in &#x200B;](../../../../connectors/loyalty/capillary.md)Übersicht“.
 
 ### Verwenden von Experience Platform-APIs
 
@@ -330,7 +330,7 @@ Ordnen Sie die Kapillarfelder den entsprechenden XDM-Schemafeldern wie folgt zu:
 
 >[!TIP]
 >
->Sie können die [Ereignisse und Profilzuordnungen](../../../../images/tutorials/create/capillary/mappings.zip) für [!DNL Capillary] herunterladen und [die Dateien in die Datenvorbereitung ](../../../../../data-prep/ui/mapping.md#import-mapping), wenn Sie für die Zuordnung Ihrer Daten bereit sind.
+>Sie können die [Ereignisse und Profilzuordnungen](../../../../images/tutorials/create/capillary/mappings.zip) für [!DNL Capillary] herunterladen und [die Dateien in die Datenvorbereitung &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping), wenn Sie für die Zuordnung Ihrer Daten bereit sind.
 
 ### Erstellen eines Datenflusses {#flow}
 

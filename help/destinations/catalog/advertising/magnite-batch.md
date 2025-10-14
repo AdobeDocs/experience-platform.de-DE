@@ -72,7 +72,7 @@ Das Ziel Magnite: Batch kann (*)* Identitätsquellen von der Adobe-CDP empfangen
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert &#x200B;](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -82,7 +82,7 @@ Das Ziel Magnite: Batch kann (*)* Identitätsquellen von der Adobe-CDP empfangen
 | Element | Typ | Anmerkungen |
 |-----------------------------|----------|----------|
 | Exporttyp | Zielgruppenexport | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im Ziel Magnite: Batch verwendet werden. |
-| Exporthäufigkeit | Batch | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie [ Batch (dateibasierte ](/help/destinations/destination-types.md)). |
+| Exporthäufigkeit | Batch | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie [&#x200B; Batch (dateibasierte &#x200B;](/help/destinations/destination-types.md)). |
 
 {style="table-layout:auto"}
 
@@ -153,7 +153,7 @@ Im Feld **[!UICONTROL Source]** können Sie ein beliebiges Attribut oder eine be
 ![Ordnen Sie dem Feld device_id die gewünschten Datenfelder zu](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
 Im Feld **[!UICONTROL Target]**:
-![Wählen Sie den entsprechenden Gerätetyp für die Zielidentität aus](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Weitere Informationen finden Sie [Unterstützte ](#supported-identities)&quot;.
+![Wählen Sie den entsprechenden Gerätetyp für die Zielidentität aus](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Weitere Informationen finden Sie [Unterstützte &#x200B;](#supported-identities)&quot;.
 In diesem Beispiel haben wir das Feld **[!UICONTROL Target]**: WITNIGH_DEVICEId_CUSTOM ausgewählt, da unser **[!UICONTROL Source-Feld]** als benutzerdefinierte IdentityMap definiert wurde: DeviceID.
 
 >[!NOTE]

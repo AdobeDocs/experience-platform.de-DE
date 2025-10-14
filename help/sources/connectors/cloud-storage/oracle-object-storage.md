@@ -19,7 +19,7 @@ Cloud-Speicherquellen können Ihre Daten in Experience Platform übertragen, ohn
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Informationen finden [ im Dokument ](../../ip-address-allow-list.md)Zulassungsliste von IP-Adressen“.
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Informationen finden [&#x200B; im Dokument &#x200B;](../../ip-address-allow-list.md)Zulassungsliste von IP-Adressen“.
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 

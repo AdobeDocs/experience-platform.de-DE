@@ -40,7 +40,7 @@ Dieser Connector sendet Daten an den [!DNL The Trade Desk] Erstanbieter-Endpunkt
 
 ## Anforderungen für den ID-Abgleich {#id-matching-requirements}
 
-Je nach Typ der IDs, die Sie in Adobe Experience Platform aufnehmen, müssen Sie die entsprechenden Anforderungen erfüllen. Weitere Informationen finden Sie [ „Übersicht ](/help/identity-service/features/namespaces.md) Identitäts-Namespaces“.
+Je nach Typ der IDs, die Sie in Adobe Experience Platform aufnehmen, müssen Sie die entsprechenden Anforderungen erfüllen. Weitere Informationen finden Sie [&#x200B; „Übersicht &#x200B;](/help/identity-service/features/namespaces.md) Identitäts-Namespaces“.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -97,7 +97,7 @@ Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen S
 
 Screenshot der ![Experience Platform-Benutzeroberfläche mit Informationen zum Ausfüllen der Zieldetails.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Weitere Einzelheiten finden Sie in der [ zu Experience Platform ](/help/data-governance/policies/overview.md)Übersicht zu Data Governance).
+Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Weitere Einzelheiten finden Sie in der [&#x200B; zu Experience Platform &#x200B;](/help/data-governance/policies/overview.md)Übersicht zu Data Governance).
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
@@ -106,7 +106,7 @@ Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governanc
 >* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen [ Aktivieren von Zielgruppen für ein Ziel finden Sie ](/help/destinations/ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
+Anweisungen [&#x200B; Aktivieren von Zielgruppen für ein Ziel finden Sie &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
 
 Auf der **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Audience konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
 

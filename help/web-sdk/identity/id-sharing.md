@@ -34,13 +34,13 @@ Ein Technologiehändler möchte das Reporting zu Besucheraktivitäten verbessern
 
 Um die Freigabe von Mobile-zu-Web- und Domain-übergreifenden IDs zu verwenden, müssen Sie [!DNL Web SDK] Version 2.11.0 oder höher verwenden.
 
-Bei mobilen Edge Network-Implementierungen wird diese Funktion ab Version 1.1.0 (iOS [ Android) in der ](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) „Identität für Edge Network&quot; unterstützt.
+Bei mobilen Edge Network-Implementierungen wird diese Funktion ab Version 1.1.0 (iOS [&#x200B; Android) in der &#x200B;](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) „Identität für Edge Network&quot; unterstützt.
 
 Diese Funktion ist auch mit [!DNL VisitorAPI.js] Version 1.7.0 oder höher kompatibel.
 
 ## Mobile-zu-Web-ID-Freigabe {#mobile-to-web}
 
-Verwenden Sie die `getUrlVariables`-API aus der [Identität für Edge Network ](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables)-Erweiterung, um die Kennungen als Abfrageparameter abzurufen und sie beim Öffnen von [!DNL webViews] an Ihre URL anzuhängen.
+Verwenden Sie die `getUrlVariables`-API aus der [Identität für Edge Network &#x200B;](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables)-Erweiterung, um die Kennungen als Abfrageparameter abzurufen und sie beim Öffnen von [!DNL webViews] an Ihre URL anzuhängen.
 
 Es ist keine zusätzliche Konfiguration erforderlich, damit Web SDK `ECID` Werte in der Abfragezeichenfolge akzeptiert.
 
@@ -53,7 +53,7 @@ Der Abfragezeichenfolgenparameter enthält:
 
 Die Freigabe der Mobile-zu-Web-IDs verwendet den `adobe_mc`. Wenn der `adobe_mc` vorhanden und gültig ist, wird der `ECID` aus der Abfragezeichenfolge bei der ersten Anfrage an das Edge Network automatisch zur Identitätszuordnung hinzugefügt. Alle nachfolgenden Edge Network-Interaktionen verwenden diese `ECID`.
 
-Weitere Informationen zum Übergeben von Besucher-IDs von einer Mobile App an eine WebView finden Sie in der Dokumentation unter [ von WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=de#implementation).
+Weitere Informationen zum Übergeben von Besucher-IDs von einer Mobile App an eine WebView finden Sie in der Dokumentation unter [&#x200B; von WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=de#implementation).
 
 ## Domain-übergreifende ID-Freigabe implementieren {#cross-domain-sharing}
 

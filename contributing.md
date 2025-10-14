@@ -49,4 +49,4 @@ Wir lieben Beiträge aus unserer Community. Wenn Sie den Schritt über die Rolle
 
 ## Sicherheitsprobleme
 
-Sicherheitsprobleme sollten in diesem Problemtracker nicht gemeldet werden. Stattdessen [ein Problem an unsere Sicherheitsexperten ](https://helpx.adobe.com/de/security/alertus.html).
+Sicherheitsprobleme sollten in diesem Problemtracker nicht gemeldet werden. Stattdessen [ein Problem an unsere Sicherheitsexperten &#x200B;](https://helpx.adobe.com/de/security/alertus.html).

@@ -28,7 +28,7 @@ Lesen Sie das Handbuch [Erste Schritte mit Experience Platform-APIs](../../../..
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Weitere Informationen zur Authentifizierung [[!DNL PostgreSQL]  Sie ](../../../../connectors/databases/postgres.md) „Übersicht“.
+Weitere Informationen zur Authentifizierung [[!DNL PostgreSQL]  Sie &#x200B;](../../../../connectors/databases/postgres.md) „Übersicht“.
 
 ### Aktivieren der SSL-Verschlüsselung für die Verbindungszeichenfolge
 

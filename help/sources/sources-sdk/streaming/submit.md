@@ -14,17 +14,17 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Die letzten Schritte zur Integration Ihrer neuen -Quelle in Adobe Experience Platform mithilfe von Selbstbedienungsquellen (Streaming-SDK) bestehen darin, Ihre neue -Quelle zu testen und zu übermitteln. Nachdem Sie Ihre Verbindungsspezifikation abgeschlossen und die Streaming-Flussspezifikation aktualisiert haben, können Sie mit dem Testen der Funktionalität Ihrer Quelle entweder über die API oder die Benutzeroberfläche beginnen. Bei Erfolg können Sie dann Ihre neue Quelle übermitteln, indem Sie sich an Ihren Adobe-Support-Mitarbeiter wenden.
 
-Im folgenden Dokument erfahren Sie, wie Sie Ihre Quelle mit der [[!DNL Flow Service] API) testen und ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Im folgenden Dokument erfahren Sie, wie Sie Ihre Quelle mit der [[!DNL Flow Service] API) testen und &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
-* Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
+* Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../landing/api-guide.md).
 * Informationen zum Generieren Ihrer Anmeldeinformationen für Experience Platform-APIs finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md).
-* Informationen zum Einrichten von [!DNL Postman] für Experience Platform-APIs finden Sie im Tutorial zum [ von Entwicklerkonsole und  [!DNL Postman]](../../../landing/postman.md).
+* Informationen zum Einrichten von [!DNL Postman] für Experience Platform-APIs finden Sie im Tutorial zum [&#x200B; von Entwicklerkonsole und  [!DNL Postman]](../../../landing/postman.md).
 * Um Ihren Test- und Debugging-Prozess zu unterstützen, laden Sie die [Sammlung und Umgebung für die Selbstbedienungsquellen-Verifizierung hier herunter](../assets/sdk-verification.zip) und führen Sie die folgenden Schritte aus.
 
 ## Testen der Quelle mithilfe der API
@@ -39,16 +39,16 @@ Um mit dem Testen zu beginnen, müssen Sie zunächst die Sammlung und die Umgebu
 
 | Parameter | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `x-api-key` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Informationen zum Abrufen Ihrer `x-api-key` finden [ im Tutorial zum ](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `x-gw-ims-org-id` | Eine Unternehmenseinheit, die Produkte und Dienstleistungen besitzen oder lizenzieren und ihren Mitgliedern Zugang gewähren kann. Anweisungen zum Abrufen Ihrer `x-gw-ims-org-id` finden [ im Tutorial zum Einrichten  [!DNL Postman]](../../../landing/postman.md) Entwicklerkonsole und . | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | Das Autorisierungs-Token, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Informationen zum Abrufen Ihrer `authorizationToken` finden [ im Tutorial zum ](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `Bearer authorizationToken` |
+| `x-api-key` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Informationen zum Abrufen Ihrer `x-api-key` finden [&#x200B; im Tutorial zum &#x200B;](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-gw-ims-org-id` | Eine Unternehmenseinheit, die Produkte und Dienstleistungen besitzen oder lizenzieren und ihren Mitgliedern Zugang gewähren kann. Anweisungen zum Abrufen Ihrer `x-gw-ims-org-id` finden [&#x200B; im Tutorial zum Einrichten  [!DNL Postman]](../../../landing/postman.md) Entwicklerkonsole und . | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `authorizationToken` | Das Autorisierungs-Token, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Informationen zum Abrufen Ihrer `authorizationToken` finden [&#x200B; im Tutorial zum &#x200B;](../../../landing/api-authentication.md) und Zugreifen auf Experience Platform-APIs . | `Bearer authorizationToken` |
 | `schemaId` | Damit die Quelldaten in Experience Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | Die eindeutige Version, die Ihrem Schema entspricht. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | Die `meta:altId`, die zusammen mit dem `schemaId` beim Erstellen eines neuen Schemas zurückgegeben wird. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
-| `mappings` | Mit Zuordnungssätzen lässt sich definieren, wie Daten in einem Quellschema den Daten eines Zielschemas zugeordnet werden sollen. Ausführliche Anweisungen zum Erstellen einer Zuordnung finden Sie im Tutorial zum Erstellen [ Zuordnungssatzes mithilfe der API](../../../data-prep/api/mapping-set.md). | `[{"destinationXdmPath":"person.name.firstName","sourceAttribute":"email.email_id","identity":false,"version":0},{"destinationXdmPath":"person.name.lastName","sourceAttribute":"email.activity.action","identity":false,"version":0}]` |
+| `mappings` | Mit Zuordnungssätzen lässt sich definieren, wie Daten in einem Quellschema den Daten eines Zielschemas zugeordnet werden sollen. Ausführliche Anweisungen zum Erstellen einer Zuordnung finden Sie im Tutorial zum Erstellen [&#x200B; Zuordnungssatzes mithilfe der API](../../../data-prep/api/mapping-set.md). | `[{"destinationXdmPath":"person.name.firstName","sourceAttribute":"email.email_id","identity":false,"version":0},{"destinationXdmPath":"person.name.lastName","sourceAttribute":"email.activity.action","identity":false,"version":0}]` |
 | `mappingId` | Die eindeutige ID, die Ihrem Zuordnungssatz entspricht. | `bf5286a9c1ad4266baca76ba3adc9366` |
-| `connectionSpecId` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. Dies ist die ID, die Sie nach dem Erstellen [ neuen Verbindungsspezifikation generiert ](./create.md). | `2e8580db-6489-4726-96de-e33f5f60295f` |
+| `connectionSpecId` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. Dies ist die ID, die Sie nach dem Erstellen [&#x200B; neuen Verbindungsspezifikation generiert &#x200B;](./create.md). | `2e8580db-6489-4726-96de-e33f5f60295f` |
 | `flowSpecificationId` | Die Flussspezifikations-ID von `GenericStreamingAEP`. **Dies ist ein fester**. | `e77fde5a-22a8-11ed-861d-0242ac120002` |
 | `targetConnectionSpecId` | Die Zielverbindungs-ID des Data Lake, in dem die aufgenommenen Daten landen. **Dies ist ein fester**. | `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
 | `verifyWatTimeInSecond` | Das vorgesehene Zeitintervall, das bei der Überprüfung auf den Abschluss eines Flussdurchgangs einzuhalten ist. | `40` |
@@ -74,7 +74,7 @@ Da Ihre neue Quelle jetzt in Ihrer Sandbox verfügbar ist, müssen Sie dem Quell
 
 ![Der Quellkatalog, der die neue Streaming-Quelle anzeigt.](../assets/testing/catalog-test.png)
 
-Der Schritt [!UICONTROL Daten hinzufügen] wird angezeigt. Um zu testen, ob Ihre Quelle Daten streamen kann, verwenden Sie die linke Seite der Schnittstelle, um ([ JSON-Beispieldaten) ](../assets/testing/raw.json.zip). Nach dem Hochladen Ihrer Daten wird auf der rechten Seite der Benutzeroberfläche eine Vorschau der Dateihierarchie Ihrer Daten angezeigt. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+Der Schritt [!UICONTROL Daten hinzufügen] wird angezeigt. Um zu testen, ob Ihre Quelle Daten streamen kann, verwenden Sie die linke Seite der Schnittstelle, um ([&#x200B; JSON-Beispieldaten) &#x200B;](../assets/testing/raw.json.zip). Nach dem Hochladen Ihrer Daten wird auf der rechten Seite der Benutzeroberfläche eine Vorschau der Dateihierarchie Ihrer Daten angezeigt. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 ![Der Schritt „Daten hinzufügen“ im Quell-Workflow, in dem Sie Ihre Daten vor der Aufnahme hochladen und in der Vorschau anzeigen können.](../assets/testing/add-data-test.png)
 

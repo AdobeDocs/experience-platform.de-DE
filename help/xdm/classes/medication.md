@@ -23,4 +23,4 @@ Im Experience-Datenmodell (XDM) erfasst die Klasse [!UICONTROL Medizin] den Mind
 
 {style="table-layout:auto"}
 
-Die Klasse kann mit der Feldergruppe [[!UICONTROL Healthcare Medication] erweitert werden, ](../field-groups/medication/healthcare-medication.md) weitere Details über das Medikament oder Medikament zu beschreiben.
+Die Klasse kann mit der Feldergruppe [[!UICONTROL Healthcare Medication] erweitert werden, &#x200B;](../field-groups/medication/healthcare-medication.md) weitere Details über das Medikament oder Medikament zu beschreiben.

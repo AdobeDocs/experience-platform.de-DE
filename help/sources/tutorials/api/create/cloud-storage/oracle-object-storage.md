@@ -44,7 +44,7 @@ Weitere Informationen zum Abrufen dieser Werte finden Sie im [Authentifizierungs
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -112,4 +112,4 @@ Bei einer erfolgreichen Antwort wird die Verbindungs-ID der neu erstellten Verbi
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Oracle Object Storage] mithilfe der [!DNL Flow Service]-API erstellt und ihre eindeutige Verbindungs-ID erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API zu ](../../explore/cloud-storage.md).
+In diesem Tutorial haben Sie eine [!DNL Oracle Object Storage] mithilfe der [!DNL Flow Service]-API erstellt und ihre eindeutige Verbindungs-ID erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API zu &#x200B;](../../explore/cloud-storage.md).

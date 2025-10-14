@@ -60,7 +60,7 @@ Wenn Sie keine private App haben, befolgen Sie die Dokumentation unter [Erstelle
 
 ## Leitlinien {#guardrails}
 
-[!DNL HubSpot] private Apps unterliegen [Ratenbeschränkungen](https://developers.hubspot.com/docs/api/usage-details). Die Anzahl der Aufrufe, die Ihre private App tätigen kann, hängt von Ihrem [!DNL HubSpot]-Kontoabonnement ab und davon, ob Sie das API-Add-on erworben haben. Siehe auch &quot;[ Beschränkungen](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] private Apps unterliegen [Ratenbeschränkungen](https://developers.hubspot.com/docs/api/usage-details). Die Anzahl der Aufrufe, die Ihre private App tätigen kann, hängt von Ihrem [!DNL HubSpot]-Kontoabonnement ab und davon, ob Sie das API-Add-on erworben haben. Siehe auch &quot;[&#x200B; Beschränkungen](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -107,7 +107,7 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL HubSp
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [ im Abschnitt  [!DNL HubSpot] -Zugriffstoken für private ](#gather-credentials) .
+Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [&#x200B; im Abschnitt  [!DNL HubSpot] -Zugriffstoken für private &#x200B;](#gather-credentials) .
 * **[!UICONTROL Bearer-Token]**: Das Zugriffstoken für Ihre [!DNL HubSpot] private App.
 
 Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.

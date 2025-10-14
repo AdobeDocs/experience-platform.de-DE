@@ -38,11 +38,11 @@ Um [!DNL Flow Service] mit [!DNL ServiceNow] zu verbinden, müssen Sie Werte fü
 | `password` | Das Kennwort, mit dem eine Verbindung zum [!DNL ServiceNow]-Server zwecks Authentifizierung hergestellt wird. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL ServiceNow] ist: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
 
-Weiterführende Informationen zu den ersten Schritten finden Sie in [diesem ServiceNow-Dokument](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
+Weiterführende Informationen zu den ersten Schritten finden Sie in [diesem ServiceNow-Dokument](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET).
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 

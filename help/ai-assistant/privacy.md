@@ -20,7 +20,7 @@ Lesen Sie dieses Dokument, um mehr über die auf das Kundenvertrauen fokussierte
 * Alle vorhandenen [Zugriffssteuerungsrichtlinien](../access-control/home.md) werden vom KI-Assistenten berücksichtigt.
    * Alle neuen attributbasierten Zugriffssteuerungsrichtlinien werden nach maximal 24 Stunden im KI-Assistenten angezeigt*
 * Die Interaktion mit dem KI-Assistenten muss ausdrücklich erlaubt sein.
-   * Sie können die Berechtigungen für Experience Platform und Journey Optimizer mithilfe der [Benutzeroberfläche „Berechtigungen“ unterschiedlich ](../access-control/abac/ui/permissions.md) und mithilfe der [Admin Console ](../access-control/ui/browse.md) Berechtigungen für Customer Journey Analytics zuweisen.
+   * Sie können die Berechtigungen für Experience Platform und Journey Optimizer mithilfe der [Benutzeroberfläche „Berechtigungen“ unterschiedlich &#x200B;](../access-control/abac/ui/permissions.md) und mithilfe der [Admin Console &#x200B;](../access-control/ui/browse.md) Berechtigungen für Customer Journey Analytics zuweisen.
    * Die Berechtigungen sind granular und Ihr Sandbox-Administrator kann konfigurieren, welche Ihrer Benutzer bzw. Benutzerinnen verschiedene Fragenkategorien stellen können (Produktkenntnisfragen mit dem KI-Assistenten oder Fragen zu operativen Einblicken).
 * Der KI-Assistent ist eine HIPAA-fähige Funktion, wenn sie in Kombination mit Adobe Experience Platform Healthcare Shield verwendet wird.
 * Sie können ein Protokoll Ihrer vorherigen Interaktionen mit dem KI-Assistenten mit einer 30-Tage-Aufbewahrungsrichtlinie anzeigen.

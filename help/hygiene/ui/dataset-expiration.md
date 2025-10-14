@@ -55,7 +55,7 @@ Der Workflow zur Anfrageerstellung wird angezeigt. Wählen Sie im Abschnitt [!UI
 
 ### Auswählen von Datum und Datensatz {#select-date-and-dataset}
 
-Wählen Sie im Abschnitt **[!UICONTROL Angeforderte Aktion]** ein Datum aus, an dem der Datensatz gelöscht werden soll. Sie können das Datum manuell eingeben (im Format `mm/dd/yyyy`) oder das Kalendersymbol auswählen (![ Kalendersymbol).](/help/images/icons/calendar.png)), um das Datum aus einem Dialogfeld auszuwählen.
+Wählen Sie im Abschnitt **[!UICONTROL Angeforderte Aktion]** ein Datum aus, an dem der Datensatz gelöscht werden soll. Sie können das Datum manuell eingeben (im Format `mm/dd/yyyy`) oder das Kalendersymbol auswählen (![&#x200B; Kalendersymbol).](/help/images/icons/calendar.png)), um das Datum aus einem Dialogfeld auszuwählen.
 
 ![Ein Kalenderdialogfeld mit ausgewähltem Ablaufdatum, das für den Datensatz hervorgehoben ist.](../images/ui/ttl/select-date.png)
 

@@ -14,7 +14,7 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Nachdem Sie eine neue Verbindungsspezifikations-ID generiert haben, müssen Sie diese ID zu einer Flussspezifikation hinzufügen, um einen Datenfluss zu erstellen.
 
@@ -368,4 +368,4 @@ Bei einer erfolgreichen Antwort werden die Details der abgefragten Flussspezifik
 
 ## Nächste Schritte
 
-Nachdem Ihre neue Verbindungsspezifikation zur entsprechenden Flussspezifikation hinzugefügt wurde, können Sie jetzt mit dem Testen und Senden Ihrer neuen Quelle fortfahren. Weitere Informationen finden Sie im Handbuch [Testen und Senden einer neuen ](./submit.md)&quot;.
+Nachdem Ihre neue Verbindungsspezifikation zur entsprechenden Flussspezifikation hinzugefügt wurde, können Sie jetzt mit dem Testen und Senden Ihrer neuen Quelle fortfahren. Weitere Informationen finden Sie im Handbuch [Testen und Senden einer neuen &#x200B;](./submit.md)&quot;.

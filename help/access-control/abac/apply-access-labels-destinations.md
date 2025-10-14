@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Verwenden von Zugriffsbeschriftungen zur Verwaltung des Benutzerzugriffs auf Zieldatenflüsse
 
-Im Rahmen der [[!UICONTROL attributbasierten Zugriffssteuerung]](overview.md) in Real-Time CDP können Sie jetzt Zugriffsbeschriftungen auf [Ziel-Datenflüsse“ ](../../dataflows/ui/monitor-destinations.md). Auf diese Weise können Sie sicherstellen, dass nur eine Teilmenge der Benutzenden in Ihrer Organisation Zugriff auf bestimmte Zieldatenflüsse erhält.
+Im Rahmen der [[!UICONTROL attributbasierten Zugriffssteuerung]](overview.md) in Real-Time CDP können Sie jetzt Zugriffsbeschriftungen auf [Ziel-Datenflüsse“ &#x200B;](../../dataflows/ui/monitor-destinations.md). Auf diese Weise können Sie sicherstellen, dass nur eine Teilmenge der Benutzenden in Ihrer Organisation Zugriff auf bestimmte Zieldatenflüsse erhält.
 
 Wenn Sie einem bestimmten Ziel eine Zugriffsbeschriftung hinzufügen, können nur Benutzer, die Zugriff auf eine Rolle haben, der diese Beschriftung zugewiesen ist, diesen Ziel-Datenfluss anzeigen und bearbeiten. Wenn ein Ziel-Datenfluss nicht mit Beschriftungen versehen ist, ist er für alle Benutzer sichtbar, die zu Ihrer Organisation gehören.
 
@@ -27,7 +27,7 @@ Beachten Sie die folgenden Voraussetzungen, die erfüllt sein müssen, bevor Sie
 
 ### Zugriff auf die Benutzeroberfläche für Berechtigungen {#access-permissions-ui}
 
-[!UICONTROL Berechtigungen] ist der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Richtlinien definieren können, um Berechtigungen für Funktionen und Objekte innerhalb einer Produktanwendung zu verwalten. Lesen Sie [ Abschnitt „Berechtigungen](/help/access-control/abac/end-to-end-guide.md#permissions), um zu beginnen.
+[!UICONTROL Berechtigungen] ist der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Richtlinien definieren können, um Berechtigungen für Funktionen und Objekte innerhalb einer Produktanwendung zu verwalten. Lesen Sie [&#x200B; Abschnitt „Berechtigungen](/help/access-control/abac/end-to-end-guide.md#permissions), um zu beginnen.
 
 ### Erstellen von Rollen, Kennzeichnungen und Zuweisen von Benutzern {#create-roles-labels-assign-users}
 
@@ -89,4 +89,4 @@ Beim Hinzufügen mehrerer Beschriftungen zu einem Ziel-Datenfluss müssen Benutz
 
 Wenn Sie die Schritte in diesem Dokument befolgen, wissen Sie jetzt, wie Sie Zugriffsbeschriftungen auf Ziel-Datenflüsse anwenden, damit nur eine Untergruppe von Benutzern in Ihrer Organisation Zugriff auf bestimmte Ziel-Datenflüsse erhält.
 
-Als Nächstes können Sie mehr über andere Funktionen lesen, die von der [!UICONTROL attributbasierten Zugriffssteuerung) &#x200B;] Aktivieren von Daten für Ziele unterstützt werden. Sie können beispielsweise den Zugriff von Benutzern auf (nur [ bestimmte Felder anzeigen und aktivieren](/help/access-control/abac/overview.md#destinations) einschränken.
+Als Nächstes können Sie mehr über andere Funktionen lesen, die von der [!UICONTROL attributbasierten Zugriffssteuerung) &#x200B;] Aktivieren von Daten für Ziele unterstützt werden. Sie können beispielsweise den Zugriff von Benutzern auf (nur [&#x200B; bestimmte Felder anzeigen und aktivieren](/help/access-control/abac/overview.md#destinations) einschränken.
