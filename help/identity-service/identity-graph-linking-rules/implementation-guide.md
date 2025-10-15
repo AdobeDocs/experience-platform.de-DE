@@ -94,7 +94,7 @@ Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/de/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ Sie sollten **nicht** eine Payload wie die folgende senden:
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/de/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ In diesem Beispiel können Sie davon ausgehen, dass das folgende Ereignis an Exp
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/",
+            "URL": "https://business.adobe.com/de/",
             "name": "Adobe Business"
         }
     }
