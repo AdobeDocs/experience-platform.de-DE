@@ -2,10 +2,10 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
+source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 16%
+source-wordcount: '1008'
+ht-degree: 15%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 16%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Oktober 2025**
 
@@ -57,7 +57,9 @@ Weitere Informationen zu Warnhinweisen finden Sie im Abschnitt [[!DNL Observabil
 | Ziel | Beschreibung |
 | --- | --- |
 | [!DNL AdForm] | Verwenden Sie dieses Ziel, um Adobe Real-Time CDP-Zielgruppen zur Aktivierung basierend auf der Experience Cloud ID (ECID) und der ID Fusion von [!DNL AdForm] an [!DNL AdForm] zu senden. ID Fusion von [!DNL AdForm] ist ein Service zur ID-Auflösung, mit dem Sie Ihre First-Party-Zielgruppen basierend auf der Experience Cloud ID (ECID) aktivieren können. |
-| `Amazon Ads` | Wir haben zusätzliche persönliche IDs hinzugefügt, die Unterstützung von `firstName`, `lastName`, `street`, `city`, `state`, `zip` und `country` bieten. Die Zuordnung dieser Felder als Zielidentitäten kann die Übereinstimmungsraten der Zielgruppen verbessern. |
+| [!DNL Amazon Ads] | Wir haben zusätzliche persönliche IDs hinzugefügt, die Unterstützung von `firstName`, `lastName`, `street`, `city`, `state`, `zip` und `country` bieten. Die Zuordnung dieser Felder als Zielidentitäten kann die Übereinstimmungsraten der Zielgruppen verbessern. |
+| [!DNL Snowflake Batch] (eingeschränkte Verfügbarkeit) | Erstellen Sie eine Live [!DNL Snowflake]-Datenfreigabe, um tägliche Zielgruppenaktualisierungen direkt als freigegebene Tabellen in Ihrem Konto zu erhalten. Diese Integration ist derzeit für Kundenorganisationen verfügbar, die in der Region VA7 bereitgestellt sind. |
+| [!DNL Snowflake Streaming] (eingeschränkte Verfügbarkeit) | Erstellen Sie eine Live [!DNL Snowflake]-Datenfreigabe, um Aktualisierungen der Streaming-Zielgruppe direkt als freigegebene Tabellen in Ihrem Konto zu erhalten. Diese Integration ist derzeit für Kundenorganisationen verfügbar, die in der Region VA7 bereitgestellt sind. |
 
 **Neue oder aktualisierte Funktionen**
 
