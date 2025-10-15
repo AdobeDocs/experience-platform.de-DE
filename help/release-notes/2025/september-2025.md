@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise, September 2025
 description: Versionshinweise September 2025 zu Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 22%
+source-wordcount: '1528'
+ht-degree: 21%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 23. September 2025**
 
@@ -42,9 +42,9 @@ Adobe Experience Platform Agent Orchestrator ist die neue agentische Schicht in 
 | Funktion | Beschreibung |
 | --- | --- |
 | Agent Orchestrator | Adobe Experience Platform Agent Orchestrator ist die neue agentische Schicht in Adobe Experience Platform. Experience Platform Agent Orchestrator wurde entwickelt, um die umfangreichen Daten und das Kundenwissen der Plattform zu nutzen. Es unterstützt die Intelligenz und das Denken der speziell entwickelten Adobe Experience Platform-Experten und ermöglicht es ihnen, komplexe Entscheidungsfindungs- und Problemlösungsaufgaben schnell und skaliert auszuführen - alles unter menschlicher Aufsicht. Wenn Sie Fragen stellen oder Hilfe über eine natürliche Sprache in einer Gesprächsoberfläche wie dem KI-Assistenten anfordern, ruft Agent Orchestrator automatisch spezialisierte Agenten auf, um die richtigen Antworten zu erhalten. Agent Orchestrator speichert Ihren Gesprächsverlauf, sodass Sie auf natürliche Weise auf früheren Fragen aufbauen können, ohne den Kontext zu wiederholen, und kombiniert Einblicke aus mehreren Agenten, um Ihnen klare, einheitliche Antworten zu bieten. Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
-| Audience Agent | Mit der Audience Agent können Sie Einblicke zu Zielgruppen erhalten, einschließlich der Erkennung signifikanter Änderungen der Zielgruppengröße, der Erkennung doppelter Zielgruppen, der Untersuchung Ihres Zielgruppeninventars und des Abrufs der Zielgruppengröße. Weitere Informationen finden Sie in der Dokumentation zu [Audience Agent](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+| Audience Agent | Mit der Audience Agent können Sie Einblicke zu Zielgruppen erhalten, einschließlich der Erkennung signifikanter Änderungen der Zielgruppengröße, der Erkennung doppelter Zielgruppen, der Untersuchung Ihres Zielgruppeninventars und des Abrufs der Zielgruppengröße. Weitere Informationen finden Sie in der Dokumentation zu [Audience Agent](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/home).
+Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Warnhinweise {#alerts}
 
@@ -108,6 +108,12 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | ------- | ----------- |
 | [!BADGE Alpha]{type=Informative} Diese Funktion befindet sich derzeit in Alpha. Verbesserungen am Profil-Viewer | Die Version September 2025 enthält die folgenden Verbesserungen für den Profil-Viewer. <ul><li>**Kombinierte Ansicht**: Attribute, Ereignisse und Einblicke wurden in einer einzigen Ansicht kombiniert.</li><li>**KI-generierte Insights**: Auf der Seite mit Profildetails werden jetzt KI-generierte Insights angezeigt, sodass Sie über die aus Ihrem Profil generierten Details informiert sind. Diese Einblicke können Informationen wie Tendenz-Scores und Trendanalysen enthalten.</li><li>**Stilaktualisierung**: Die Seite mit den Profildetails wurde visuell aktualisiert.</li><li>**Durchsuchen**: Sie können jetzt Ihre Profile durch ein interaktives kartenbasiertes Karussell mit Suche und Anpassung durchsuchen.</li></ul> |
 
+**Wichtige Updates**
+
+| Update | Beschreibung |
+| ------ | ----------- |
+| Einstellung der Profillöschungs-API | Die [Profillöschungs-API](/help/profile/api/entities.md#delete-entity) wird Ende Oktober 2025 eingestellt. Wenn Sie Vorgänge zum Löschen von Datensätzen durchführen möchten, können Sie stattdessen den [API-Workflow zum Löschen von Datensätzen im Datenlebenszyklus](/help/hygiene/api/workorder.md) oder den [Workflow zum Löschen von Datensätzen im Datenlebenszyklus](/help/hygiene/ui/record-delete.md) verwenden. Die Datenlebenszyklus-Workflows bieten End-to-End-Lebenszyklus-Tracking sowie monatliche Kontingente, die Sie anzeigen und für die Sie verwalten können. <br/><br/>Nachdem der Endpunkt veraltet ist, hat jeder Benutzer, der diesen Endpunkt derzeit verwendet, weiterhin Zugriff auf diesen Endpunkt. Das Ende der Lebensdauer für diesen wird separat angekündigt. Wenden Sie sich bei Fragen an die Adobe-Kundenunterstützung. |
+
 Weitere Informationen finden Sie unter [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Segmentierungs-Service {#segmentation-service}
@@ -141,6 +147,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Unterstützung der [!DNL Snowflake] Schlüsselpaar-Authentifizierung | Die Sicherheit für Snowflake-Verbindungen wurde durch die Unterstützung der Schlüsselpaar-Authentifizierung verbessert. Die Standardauthentifizierung (Benutzername/Kennwort) wird ab November 2025 eingestellt, sodass Kunden ermutigt werden, zur Verbesserung der Sicherheit zur Schlüsselpaar-Authentifizierung zu migrieren. Weitere Informationen finden Sie in der [[!DNL Snowflake] Dokumentation](../../sources/connectors/databases/snowflake.md). |
 | [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Verwenden Sie die [[!DNL Capillary Streaming Events] Quelle](../../sources/connectors/loyalty/capillary.md) um Treueprogramm-Daten von Ihrem [!DNL Capillary]-Konto zu Experience Platform zu streamen. |
 | [!BADGE Beta]{type=Informative} [!DNL Relay Connector] | Verwenden Sie die [[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md), um Ereignisdaten aus Ihrer [!DNL Relay Network]-Integration in Experience Platform zu streamen. |
-| Allgemeine Verfügbarkeit der Unterstützung für private Links in Quellen | Sie können jetzt **private Links** für eine ausgewählte Gruppe von Quellen verwenden. Verwenden Sie diese Funktion, um einen privaten Endpunkt zu erstellen, mit dem Ihre Quelle eine Verbindung herstellen kann. Mit privaten Endpunkten können Sie Verbindungen und Datenflüsse einrichten, die das öffentliche Internet umgehen, sodass die Sicherheit und Netzwerkisolierung für Ihre sensiblen Daten verbessert wird. Unterstützung für private Links ist für die folgenden Quellen verfügbar: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Weitere Informationen finden Sie in den Handbüchern zum Erstellen privater Links [in der &#x200B;](../../sources/tutorials/api/private-link.md) und [in der Benutzeroberfläche](../../sources/tutorials/ui/private-link.md). |
+| Allgemeine Verfügbarkeit der Unterstützung für private Links in Quellen | Sie können jetzt **private Links** für eine ausgewählte Gruppe von Quellen verwenden. Verwenden Sie diese Funktion, um einen privaten Endpunkt zu erstellen, mit dem Ihre Quelle eine Verbindung herstellen kann. Mit privaten Endpunkten können Sie Verbindungen und Datenflüsse einrichten, die das öffentliche Internet umgehen, sodass die Sicherheit und Netzwerkisolierung für Ihre sensiblen Daten verbessert wird. Unterstützung für private Links ist für die folgenden Quellen verfügbar: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Weitere Informationen finden Sie in den Handbüchern zum Erstellen privater Links [in der ](../../sources/tutorials/api/private-link.md) und [in der Benutzeroberfläche](../../sources/tutorials/ui/private-link.md). |
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).

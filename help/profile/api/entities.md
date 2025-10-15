@@ -5,10 +5,10 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Echtzeit-Kundenprofildaten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen können, die häufiger als „Profile“ bezeichnet werden.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
+source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
 workflow-type: tm+mt
-source-wordcount: '1981'
-ht-degree: 33%
+source-wordcount: '2141'
+ht-degree: 30%
 
 ---
 
@@ -66,6 +66,10 @@ Um auf eine Profilentität zuzugreifen **müssen** die folgenden Abfrageparamete
 - `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsbeispiel wird die `schema.name=_xdm.context.profile`.
 - `entityId`: Die ID der Entität, die Sie abrufen möchten.
 - `entityIdNS`: Der Namespace der Entität, die Sie abrufen möchten. Dieser Wert muss angegeben werden, wenn die `entityId` **keine** XID ist.
+
+Darüber hinaus wird die Verwendung des folgenden Abfrageparameters *dringend*:
+
+- `mergePolicyId`: Die ID der Zusammenführungsrichtlinie, nach der Sie die Daten filtern möchten. Wenn keine Zusammenführungsrichtlinie angegeben ist, wird die standardmäßige Zusammenführungsrichtlinie Ihrer Organisation verwendet.
 
 Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
@@ -180,6 +184,10 @@ Um auf die B2B-Kontodaten zuzugreifen **müssen** die folgenden Abfrageparameter
 - `entityId`: Die ID der Entität, die Sie abrufen möchten.
 - `entityIdNS`: Der Namespace der Entität, die Sie abrufen möchten. Dieser Wert muss angegeben werden, wenn die `entityId` **keine** XID ist.
 
+Darüber hinaus wird die Verwendung des folgenden Abfrageparameters *dringend*:
+
+- `mergePolicyId`: Die ID der Zusammenführungsrichtlinie, nach der Sie die Daten filtern möchten. Wenn keine Zusammenführungsrichtlinie angegeben ist, wird die standardmäßige Zusammenführungsrichtlinie Ihrer Organisation verwendet.
+
 Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
 **Anfrage**
@@ -271,6 +279,10 @@ Um auf eine B2B-Opportunity-Entität zuzugreifen **müssen** die folgenden Abfra
 - `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsbeispiel wird die `schema.name=_xdm.context.opportunity`.
 - `entityId`: Die ID der Entität, die Sie abrufen möchten.
 - `entityIdNS`: Der Namespace der Entität, die Sie abrufen möchten. Dieser Wert muss angegeben werden, wenn die `entityId` **keine** XID ist.
+
+Darüber hinaus wird die Verwendung des folgenden Abfrageparameters *dringend*:
+
+- `mergePolicyId`: Die ID der Zusammenführungsrichtlinie, nach der Sie die Daten filtern möchten. Wenn keine Zusammenführungsrichtlinie angegeben ist, wird die standardmäßige Zusammenführungsrichtlinie Ihrer Organisation verwendet.
 
 Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
@@ -1207,7 +1219,9 @@ Eine erfolgreiche Antwort gibt die nächste Ergebnisseite zurück. Diese Antwort
 
 >[!IMPORTANT]
 >
->Löschanfragen für die folgenden B2B-Entitäten werden nicht mehr unterstützt:
+>Der Endpunkt „Entität löschen“ wird Ende Oktober 2025 eingestellt. Wenn Sie Vorgänge zum Löschen von Datensätzen durchführen möchten, können Sie stattdessen den [API-Workflow zum Löschen von Datensätzen im Datenlebenszyklus](/help/hygiene/api/workorder.md) oder den [Workflow zum Löschen von Datensätzen im Datenlebenszyklus](/help/hygiene/ui/record-delete.md) verwenden.
+>
+>Darüber hinaus werden Löschanfragen für die folgenden B2B-Entitäten bereits nicht mehr unterstützt:
 >
 >- Konto
 >- Konto-Personen-Beziehung
@@ -1230,7 +1244,7 @@ Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten 
 
 Um eine Entität zu löschen **müssen** die folgenden Abfrageparameter angeben:
 
-- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **&#x200B;**&#x200B;nur`schema.name=_xdm.context.profile` verwenden.
+- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **** nur`schema.name=_xdm.context.profile` verwenden.
 - `entityId`: Die ID der Entität, die Sie abrufen möchten.
 - `entityIdNS`: Der Namespace der Entität, die Sie abrufen möchten. Dieser Wert muss angegeben werden, wenn die `entityId` **keine** XID ist.
 - `mergePolicyId`: Die Zusammenführungsrichtlinien-ID der Entität. Die Zusammenführungsrichtlinie enthält Informationen zur Identitätszuordnung und zum Zusammenführen von Schlüssel-Wert-XDM-Objekten. Wenn dieser Wert nicht angegeben wird, wird die standardmäßige Zusammenführungsrichtlinie verwendet.
@@ -1276,7 +1290,7 @@ Die folgenden Parameter werden im Pfad für GET-Anfragen an den `/access/entitie
 | `relatedEntityId` | Wenn `schema.name` `_xdm.context.experienceevent` ist, muss **Wert** ID der zugehörigen Profilentität angeben. Dieser Wert folgt denselben Regeln wie `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | Wenn `schema.name` den Wert „_xdm.context.experienceevent“ hat, muss dieser Wert den Identitäts-Namespace für die in `relatedEntityId` festgelegte Entität angeben. | `relatedEntityIdNS=CRMID` |
 | `fields` | Filtert die in der Antwort zurückgegebenen Daten. Geben Sie hier an, welche Schemafeldwerte in abgerufene Daten einbezogen werden sollen. Trennen Sie Werte bei mehreren Feldern durch ein Komma ohne Leerzeichen dazwischen. | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | Gibt die Zusammenführungsrichtlinie an, mit der die zurückgegebenen Daten gesteuert werden. Wenn im Aufruf keine Zusammenführungsrichtlinie angegeben ist, wird die Standardeinstellung Ihrer Organisation für dieses Schema verwendet. Wenn keine standardmäßige Zusammenführungsrichtlinie konfiguriert wurde, ist der Standardwert keine Profilzusammenführung und keine Identitätszuordnung. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `mergePolicyId` | *Empfohlen* Gibt die Zusammenführungsrichtlinie an, mit der die zurückgegebenen Daten gesteuert werden sollen. Wenn im Aufruf keine Zusammenführungsrichtlinie angegeben ist, wird die Standardeinstellung Ihrer Organisation für dieses Schema verwendet. Wenn für das von Ihnen angeforderte Schema keine standardmäßige Zusammenführungsrichtlinie definiert wurde, gibt die API einen HTTP-422-Fehlerstatus-Code zurück. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | Die Sortierreihenfolge der abgerufenen Entitäten nach Zeitstempel. Dies wird als `(+/-)timestamp` geschrieben, wobei der Standard `+timestamp` wird. | `orderby=-timestamp` |
 | `startTime` | Gibt die Startzeit zum Filtern der Entitäten an (in Millisekunden). | `startTime=1539838505` |
 | `endTime` | Gibt die Endzeit zum Filtern von Entitäten an (in Millisekunden). | `endTime=1539838510` |
