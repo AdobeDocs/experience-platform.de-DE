@@ -4,10 +4,10 @@ user-guide-title: Handbuch zu Datenflüssen
 user-guide-description: Erfahren Sie mehr über Datenflüsse und wie Sie sie in verschiedenen Services konfigurieren.
 feature: Dataflows
 role: Developer
-source-git-commit: 2f78b70761ef676fe4ab61b89b6cbb261c99e9ca
+source-git-commit: 13fc8603cb490ff59e76c18cbb03b68488ebd005
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 50%
+source-wordcount: '71'
+ht-degree: 46%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 50%
    - [Überwachen von Datenflüssen in Zielgruppen](./ui/monitor-audiences.md)
    - [Überwachen von Datenflüssen in Zielen](./ui/monitor-destinations.md)
    - [Überwachen von Datenflüssen für die Streaming-Profilaufnahme](./ui/monitor-streaming-profile.md)
+   - [Überwachen von Datenflüssen für die Streaming-Segmentierung](./ui/monitor-streaming-audiences.md)
    - B2B-Überwachung {#b2b}
       - [Überwachen von Profilanreicherungsaufträgen](./ui/b2b/monitor-profile-enrichment.md)
 - [Fluss-Service-API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
