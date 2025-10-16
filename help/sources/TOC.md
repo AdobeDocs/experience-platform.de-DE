@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1065'
 ht-degree: 90%
 
 ---
@@ -181,8 +181,6 @@ ht-degree: 90%
          - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
-      - Treue {#loyalty}
-         - [Kapillar-Streaming-Ereignisse](tutorials/api/create/loyalty/capillary.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)

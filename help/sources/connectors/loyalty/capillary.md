@@ -3,10 +3,10 @@ title: Übersicht über Kapillarstreaming-Ereignisse
 description: Erfahren Sie, wie Sie Daten von Capillary zu Experience Platform streamen.
 badge: Beta
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: 428aed259343f56a2bf493b40ff2388340fffb7b
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 8%
+source-wordcount: '554'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 [!DNL Capillary Technologies] ist eine führende Treue- und Interaktionsplattform, der über 300 Marken auf der ganzen Welt vertrauen. Verwenden Sie die [!DNL Capillary Streaming Events], damit Ihr Unternehmen Kundenprofile, Treuedaten und Transaktionsereignisse nahtlos von [!DNL Capillary] in Adobe Experience Platform streamen kann. Verbinden Sie Ihre [!DNL Capillary], um Personalisierung in Echtzeit, erweiterte Zielgruppensegmentierung und Omni-Channel-Kampagnenorchestrierung zu ermöglichen.
 
@@ -29,48 +29,38 @@ Durch die Integration von [!DNL Capillary] mit Experience Platform können Sie:
 Bevor Sie [!DNL Capillary] mit Adobe Experience Platform verbinden, stellen Sie Folgendes sicher:
 
 * Eine gültige **Adobe-Organisations-** und Zugriff auf eine aktivierte Experience Platform-Sandbox.
-* **[!DNL Capillary]-Quellberechtigungen** (Client-ID und Client-Geheimnis).
-* Die erforderlichen Berechtigungen in der Adobe Admin Console zum Erstellen von Quellen und Datenflüssen.
+* Sie müssen sowohl **[!UICONTROL Quellen anzeigen]** als auch **[!UICONTROL Quellen verwalten]** für Ihr Konto aktiviert haben, um Ihr [!DNL Capillary]-Konto mit Experience Platform zu verbinden. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/ui/overview.md).
 
-### Sammeln erforderlicher Anmeldedaten
+### Erstellen eines Schemas
 
-Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihr [!DNL Capillary]-Konto mit Experience Platform zu verbinden:
+Sie müssen ein Experience-Datenmodell (XDM)-Schema erstellen, um einen Datensatz zu beschreiben, in dem die möglichen Felder und Datentypen gespeichert werden können, die von [!DNL Capillary] gesendet werden.
 
-| Anmeldedaten | Beschreibung | Beispiel |
-| --- | --- | --- |
-| Client-ID | Die Client-Kennung für die [!DNL Capillary]. | `321c8a8fee0d4a06838d46f9d3109e8a` |
-| Client-Geheimnis | Das mit der Client-ID herausgegebene Client-Geheimnis | `xxxxxxxxxxxxxxxxxx` |
-| Organisations-ID | Ihre Adobe-Organisations-ID | `0A7D42FC5DB9D3360A495FD3@AdobeOrg` |
+1. Melden Sie sich bei Adobe Experience Platform an und greifen Sie über die Anmeldung Ihres Unternehmens auf die Experience Platform zu.
+2. Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Schemata]** aus, um den Arbeitsbereich [!UICONTROL Schemata] zu öffnen.
+3. Wählen **[!UICONTROL oben]** rechts Schema erstellen aus.
+4. Wählen Sie im Dialogfeld „Schema erstellen“ zwischen **[!UICONTROL Manuelle Erstellung]** (Felder und Feldergruppen selbst hinzufügen) oder **[!UICONTROL ML-unterstützte Erstellung]** (CSV-Datei hochladen und maschinelles Lernen verwenden, um ein empfohlenes Schema zu generieren).
+5. Wählen Sie eine Basisklasse für Ihr Schema aus (z. B. Einzelnes XDM-Profil, XDM ExperienceEvent oder Sonstiges). Wenn Sie **[!UICONTROL Sonstige]** auswählen, können Sie aus verfügbaren benutzerdefinierten oder Standardklassen auswählen.
+6. Geben Sie einen benutzerfreundlichen Namen und eine Beschreibung für Ihr Schema ein.
+7. Verwenden Sie den Schema-Editor, um: Feldergruppen (wiederverwendbare Blöcke von Feldern) hinzuzufügen, einzelne Felder zu definieren (Namen, Datentypen und Optionen anzupassen) und optional benutzerdefinierte Datentypen oder Feldergruppen zu erstellen, wenn die vorhandenen nicht Ihren Anforderungen entsprechen.
+8. Überprüfen Sie die Schemastruktur auf der Arbeitsfläche. Wählen Sie **[!UICONTROL Beenden]** aus, um das Schema zu erstellen.
+9. (Optional) Bearbeiten Sie Felder, fügen Sie Beschreibungen hinzu und passen Sie die Feldergruppen im Schema-Editor nach Bedarf an.
 
-Weitere Informationen zum Generieren von Zugriffs-Token finden Sie im [Authentifizierungshandbuch für Adobe](https://developer.adobe.com/developer-console/docs/guides/authentication/).
+Detaillierte Anweisungen zum Erstellen eines XDM-Schemas finden Sie im Handbuch unter [Erstellen eines Schemas mithilfe des Schema-Editors](../../../xdm/tutorials/create-schema-ui.md).
 
-### Erstellen eines Zugriffs-Tokens
+### Erstellen eines Datensatzes
 
-Verwenden Sie anschließend Ihre Client-ID und Ihren geheimen Client-Schlüssel, um ein Zugriffs-Token aus Adobe zu generieren.
+Als Nächstes müssen Sie einen Datensatz erstellen, der auf das soeben erstellte Schema verweist.
 
-**Anfrage**
+1. Wählen Sie in der Experience Platform-Benutzeroberfläche [!UICONTROL Datensätze] im linken Navigationsbereich aus, um den Arbeitsbereich [!UICONTROL Datensätze] zu öffnen.
+2. Wählen **[!UICONTROL oben]** „Datensatz erstellen“ aus.
+3. Wählen Sie in den Erstellungsoptionen **[!UICONTROL Datensatz aus Schema erstellen]** aus.
+4. Suchen Sie in der Liste nach dem zuvor erstellten XDM-Schema und wählen Sie es aus. Nachdem Sie Ihr Schema gefunden haben, klicken Sie auf **[!UICONTROL Weiter]**.
+5. Geben Sie einen eindeutigen, beschreibenden Namen für Ihren Datensatz ein.
+6. Fügen Sie optional eine Beschreibung hinzu, die künftigen Benutzenden hilft, den Datensatz zu identifizieren.
+7. Wählen Sie **[!UICONTROL Beenden]** aus, um den Datensatz zu erstellen.
 
-```shell
-curl -X POST 'https://ims-na1.adobelogin.com/ims/token' \
-  -d 'client_id={CLIENT_ID}' \
-  -d 'client_secret={CLIENT_SECRET}' \
-  -d 'grant_type=client_credentials' \
-  -d 'scope=openid AdobeID read_organizations additional_info.projectedProductContext session'
-```
+Detaillierte Anweisungen zum Erstellen eines Datensatzes finden Sie im [Handbuch zur Datensatzbenutzeroberfläche](../../../catalog/datasets/user-guide.md).
 
-**Antwort**
+## Verbinden von [!DNL Capillary Streaming Events] mit Experience Platform
 
-```json
-{
-  "access_token": "eyJhbGciOi...",
-  "token_type": "bearer",
-  "expires_in": 86399994
-}
-```
-
-## Nächste Schritte
-
-Nachdem Sie die erforderliche Einrichtung für [!DNL Capillary] abgeschlossen haben, lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie Ihr -Konto verbinden und mit dem Streaming von Daten von [!DNL Capillary] an Experience Platform beginnen können.
-
-* [Verbindung  [!DNL Capillary Streaming Events]  Experience Platform über die API herstellen](../../tutorials/api/create/loyalty/capillary.md)
-* [Verbindung  [!DNL Capillary Streaming Events]  Experience Platform über die Benutzeroberfläche herstellen](../../tutorials/ui/create/loyalty/capillary.md)
+Nachdem Sie die erforderliche Einrichtung für [!DNL Capillary] abgeschlossen haben, lesen Sie das [[!DNL Capillary Streaming Events] UI-Tutorial](../../tutorials/ui/create/loyalty/capillary.md), um zu erfahren, wie Sie Ihr -Konto verbinden und Daten von [!DNL Capillary] an Experience Platform streamen können.

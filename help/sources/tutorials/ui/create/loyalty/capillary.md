@@ -3,9 +3,9 @@ title: Verbinden von Capillary mit Experience Platform über die Benutzeroberfl�
 description: Erfahren Sie, wie Sie Capillary über die Benutzeroberfläche mit Experience Platform verbinden
 badge: Beta
 exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: 428aed259343f56a2bf493b40ff2388340fffb7b
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '855'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre [!DNL Capillary]-Datenbank mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von Experience Platform mit Adobe Experience Platform verbinden.
 
@@ -26,6 +26,10 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+
+>[!NOTE]
+>
+>Lesen Sie den [[!DNL Capillary Streaming Events] Überblick](../../../../connectors/loyalty/capillary.md), um Informationen zum erforderlichen Setup für die [!DNL Capillary]-Quelle zu erhalten.
 
 ## Navigieren im Quellkatalog
 
@@ -42,6 +46,10 @@ Um [!DNL Capillary] zu verwenden, wählen Sie die Quellkarte **[!UICONTROL Kapil
 ## Daten auswählen
 
 Verwenden Sie als Nächstes die *[!UICONTROL Daten auswählen]*-Schnittstelle, um eine JSON-Beispieldatei hochzuladen und Ihr Quellschema zu definieren. In diesem Schritt können Sie die Vorschau-Oberfläche verwenden, um die Dateistruktur der Payload anzuzeigen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+
+>[!TIP]
+>
+>Sie können die [Ereignisse und Profilschemata](../../../../images/tutorials/create/capillary/schemas.zip) herunterladen, um [!DNL Capillary] in der Datenauswahlschnittstelle zu verwenden.
 
 ![Der Schritt „Daten auswählen“ des Quell-Workflows](../../../../images/tutorials/create/capillary/select-data.png)
 
@@ -88,7 +96,7 @@ Verwenden Sie die Zuordnungsschnittstelle, um Ihre Quelldaten den entsprechenden
 
 >[!TIP]
 >
->Sie können die [Ereignisse und Profilzuordnungen](../../../../images/tutorials/create/capillary/mappings.zip) für [!DNL Capillary] herunterladen und [die Dateien in die Datenvorbereitung &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping), wenn Sie für die Zuordnung Ihrer Daten bereit sind.
+>Sie können die [Ereignisse und Profilzuordnungen](../../../../images/tutorials/create/capillary/mappings.zip) für [!DNL Capillary] herunterladen und [die Dateien in die Datenvorbereitung ](../../../../../data-prep/ui/mapping.md#import-mapping), wenn Sie für die Zuordnung Ihrer Daten bereit sind.
 
 ![Die Zuordnungsschnittstelle für Capillary.](../../../../images/tutorials/create/capillary/mappings.png)
 
