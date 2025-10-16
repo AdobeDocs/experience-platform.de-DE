@@ -2,18 +2,14 @@
 title: Verbinden von Google Ads mit Experience Platform mithilfe von APIs
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Google Ads verbinden.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a0977e98219797eda14dd8d7ddb6cf3f1410cef0
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 28%
+source-wordcount: '457'
+ht-degree: 27%
 
 ---
 
 # Verbinden von [!DNL Google Ads] mit Experience Platform mithilfe der [!DNL Flow Service]-API
-
->[!NOTE]
->
->Die [!DNL Google Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -26,11 +22,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Google Ads] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Google Ads]-API eine Verbindung zu [!DNL Flow Service] herstellen zu können.
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -72,7 +68,7 @@ curl -X POST \
               "refreshToken": "{REFRESH_TOKEN}",
               "clientId": "{CLIENT_ID}",
               "clientSecret": "{CLIENT_SECRET}",
-              "googleAdsApiVersion": "v17"
+              "googleAdsApiVersion": "v19"
 
           }
       },
@@ -91,7 +87,7 @@ curl -X POST \
 | `auth.params.refreshToken` | Das Aktualisierungs-Token Ihres [!DNL Google Ads] Kontos. |
 | `auth.params.clientID` | Die Client-ID Ihres [!DNL Google Ads]. |
 | `auth.params.clientSecret` | Das Client-Geheimnis Ihres [!DNL Google Ads]. |
-| `auth.params.googleAdsApiVersion` | Die [!DNL Google Ads] API-Version, die Sie verwenden. Die neueste unterstützte Version auf Experience Platform ist `v17`. |
+| `auth.params.googleAdsApiVersion` | Die [!DNL Google Ads] API-Version, die Sie verwenden. Experience Platform unterstützt derzeit Version `v19` und höher. Stellen Sie sicher, dass Sie eine dieser unterstützten Versionen verwenden, um die Kompatibilität sicherzustellen. |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL Google Ads]-Verbindung: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Antwort**

@@ -1,23 +1,22 @@
 ---
 title: Verbinden von Google Ads mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche Ihr Google Ads-Konto mit Adobe Experience Platform verbinden.
+badge: Beta
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 906da82a8940233b3eb226d376c454b477514bc5
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '893'
 ht-degree: 10%
 
 ---
 
 # Verbinden von [!DNL Google Ads] mit Experience Platform über die Benutzeroberfläche
 
->[!WARNING]
->
->Die [!DNL Google Ads] ist derzeit nicht in der Benutzeroberfläche verfügbar. Sie können (mithilfe der API) weiterhin [!DNL Google Ads] Daten [&#x200B; Experience Platform &#x200B;](../../../api/create/advertising/ads.md).
-
 >[!NOTE]
 >
->Die [!DNL Google Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+> Die [!DNL Google Ads] befindet sich derzeit in der Beta-Phase und unterstützt nur eine einmalige Aufnahme. Sie können [die API-Methode](../../../api/create/advertising/ads.md) verwenden, um eine inkrementelle Datenaufnahme Ihrer [!DNL Google Ads] Daten in Experience Platform durchzuführen.
+>
+>Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Google Ads]-Konto mithilfe des Quellarbeitsbereichs in der Experience Platform-Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
@@ -30,7 +29,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine gültige [!DNL Google Ads]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [&#x200B; eines Datenflusses fortfahren](../../dataflow/advertising.md)
+Wenn Sie bereits über eine gültige [!DNL Google Ads]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [ eines Datenflusses fortfahren](../../dataflow/advertising.md)
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -60,11 +59,11 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und ge
 
 * **Client-Kunden-ID**: Die Kunden-ID ist die Kontonummer, die dem [!DNL Google Ads] Client-Konto entspricht, das Sie mit der [!DNL Google Ads]-API verwalten möchten. Diese ID folgt der Vorlage von `123-456-7890`.
 * **Kunden-ID anmelden**: Die Kunden-ID für die Anmeldung ist die Kontonummer, die Ihrem [!DNL Google Ads] Manager-Konto entspricht und zum Abrufen von Berichtsdaten von einem bestimmten aktiven Kunden verwendet wird. Weitere Informationen zur Anmelde-Kunden-ID finden Sie in der [[!DNL Google Ads] API-Dokumentation](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).
-* **Entwicklertoken**: Mit dem Entwicklertoken können Sie auf die [!DNL Google Ads] API zugreifen. Sie können dasselbe Entwicklertoken verwenden, um Anforderungen für alle Ihre [!DNL Google Ads] Konten zu stellen. Rufen Sie Ihr Entwicklertoken ab, indem [Sie es in Ihrem Manager-Konto Protokollierung](https://ads.google.com/home/tools/manager-accounts/) und dann zur API Center-Seite navigieren.
-* **Aktualisieren Token**: Das Aktualisierungstoken ist Teil der [!DNL OAuth2] Authentifizierung. Mit diesem Token können Sie Ihre Zugriffstoken nach Ablauf erneut generieren.
+* **Entwickler-Token**: Mit dem Entwickler-Token können Sie auf die [!DNL Google Ads]-API zugreifen. Sie können dasselbe Entwickler-Token verwenden, um Anfragen an alle Ihre [!DNL Google Ads]-Konten zu richten. Rufen Sie Ihr Entwickler-Token ab[ indem Sie sich bei Ihrem Manager-Konto ](https://ads.google.com/home/tools/manager-accounts/) und dann zur Seite „API-Center“ navigieren.
+* **Aktualisierungstoken**: Das Aktualisierungstoken ist Teil [!DNL OAuth2] Authentifizierung. Mit diesem Token können Sie Ihre Zugriffs-Token nach ihrem Ablauf neu generieren.
 * **Client-ID**: Die Client-ID wird zusammen mit dem Client-Geheimnis im Rahmen [!DNL OAuth2] Authentifizierung verwendet. Zusammen ermöglichen die Client-ID und das Client-Geheimnis, dass Ihre Anwendung im Namen Ihres Kontos betrieben wird, indem Sie Ihre zu [!DNL Google] Anwendung identifizieren.
 * **Client-Geheimnis**: Das Client-Geheimnis wird zusammen mit der Client-ID als Teil [!DNL OAuth2] Authentifizierung verwendet. Zusammen ermöglichen die Client-ID und das Client-Geheimnis, dass Ihre Anwendung im Namen Ihres Kontos betrieben wird, indem Sie Ihre zu [!DNL Google] Anwendung identifizieren.
-* **[!DNL Google Ads]API-Version**: Die aktuelle API-Version, die von [!DNL Google Ads] unterstützt wird. Die neueste Version ist zwar `v18`, die neueste unterstützte Version für Experience Platform ist jedoch `v17`.
+* **[!DNL Google Ads]API-Version**: Die aktuelle API-Version, die von [!DNL Google Ads] unterstützt wird. Die neueste Version der [!DNL Google Ads]-API ist zwar v21, Experience Platform unterstützt jedoch derzeit Version v19 und höher. Stellen Sie sicher, dass Sie eine dieser unterstützten Versionen verwenden, um die Kompatibilität sicherzustellen.
 
 Nachdem Sie Ihre Anmeldedaten eingegeben haben, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung verarbeitet wird. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
@@ -72,7 +71,7 @@ Nachdem Sie Ihre Anmeldedaten eingegeben haben, wählen Sie **[!UICONTROL Mit Qu
 
 ## Daten auswählen {#select-data}
 
-Bei [!DNL Google Ads] müssen Sie die Liste der Attribute bereitstellen, die während der Datenauswahlphase des Workflows aufgenommen werden sollen. Um diese Attribute abzurufen, müssen Sie die [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v17/overview_query_builder) verwenden.
+Bei [!DNL Google Ads] müssen Sie die Liste der Attribute bereitstellen, die während der Datenauswahlphase des Workflows aufgenommen werden sollen. Um diese Attribute abzurufen, müssen Sie die [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder) verwenden.
 
 Navigieren Sie in der [!DNL Google Ads Query Builder] zu dem Ressourcentyp, den Sie verwenden möchten, und wählen Sie dann über die Attributauswahl Ihre Attribute, Segmente und Metriken aus.
 
