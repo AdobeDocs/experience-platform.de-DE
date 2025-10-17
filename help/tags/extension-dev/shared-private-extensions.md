@@ -16,7 +16,7 @@ Adobe Experience Platform Tags unterstützt jetzt **[!UICONTROL Usage Authorizat
 
 >[!NOTE]
 >
->Erweiterungspakete müssen eine private oder öffentliche Version aufweisen, damit sie über „Verwendungsautorisierungen“ [!UICONTROL  werden ]. Versionen, die als Entwicklungsverfügbarkeit gekennzeichnet sind, können nicht freigegeben werden und werden nicht in der Autorisierungs-Dropdown-Liste angezeigt. Dies gilt auch dann, wenn bereits eine frühere Version (z. B. 1.0.0) freigegeben wurde. Neuere Versionen (z. B. 1.0.1) müssen mindestens als privat eingestuft werden, bevor sie von empfangenden Organisationen autorisiert oder installiert werden können.
+>Erweiterungspakete müssen eine private oder öffentliche Version aufweisen, damit sie über „Verwendungsautorisierungen“ [!UICONTROL &#x200B; werden &#x200B;]. Versionen, die als Entwicklungsverfügbarkeit gekennzeichnet sind, können nicht freigegeben werden und werden nicht in der Autorisierungs-Dropdown-Liste angezeigt. Dies gilt auch dann, wenn bereits eine frühere Version (z. B. 1.0.0) freigegeben wurde. Neuere Versionen (z. B. 1.0.1) müssen mindestens als privat eingestuft werden, bevor sie von empfangenden Organisationen autorisiert oder installiert werden können.
 >
 >Alle Hinweise zur Freigabe privater Erweiterungspakete gelten auch, wenn Sie diese Pakete später veröffentlichen. Dieselben Überlegungen hinsichtlich Sichtbarkeit, Versionierung, Sicherheit, Kompatibilität, Support und Dokumentation bleiben unabhängig vom Verfügbarkeitsstatus des Pakets relevant.
 
@@ -59,7 +59,7 @@ Wählen Sie **[!UICONTROL Erweiterung]** aus, die Sie aus Ihren verfügbaren Erw
 
 Geben Sie als Nächstes die Kennung der empfangenden Organisation ein und wählen Sie dann **[!UICONTROL Speichern]**.
 
-![Die Seite [!UICONTROL Verwendungsautorisierung des Erweiterungspakets erstellen] auf der eine ausgewählte Erweiterung und die eingegebene Adobe-Organisations-ID angezeigt werden, wobei [!UICONTROL  hervorgehoben ist]](../images/shared-extensions/save-authorization.png)
+![Die Seite [!UICONTROL Verwendungsautorisierung des Erweiterungspakets erstellen] auf der eine ausgewählte Erweiterung und die eingegebene Adobe-Organisations-ID angezeigt werden, wobei [!UICONTROL &#x200B; hervorgehoben ist]](../images/shared-extensions/save-authorization.png)
 
 Sie kehren zur Registerkarte [!UICONTROL Nutzungsberechtigungen] zurück, auf der Sie die Erweiterung in Ihrer Liste **[!UICONTROL Für andere Organisationen freigegeben]** sehen. Der Status **„Genehmigung ausstehend**, bis die empfangende Organisation die Autorisierung genehmigt hat. Anschließend wird sie auf &quot;**&quot;**.
 
