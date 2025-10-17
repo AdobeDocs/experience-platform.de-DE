@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
+source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '791'
 ht-degree: 85%
 
 ---
@@ -306,6 +306,7 @@ ht-degree: 85%
    * [Hosten von Drittanbieter-Bibliotheken](./extension-dev/third-party-libraries.md)
    * [Freie turbine-Variable](./extension-dev/turbine.md)
    * [Abwärtskompatibilitätsstandard](./extension-dev/backwards-compatibility.md)
+   * [Freigegebene private Erweiterungen](./extension-dev/shared-private-extensions.md)
 * Reactor-API {#api}
    * [Übersicht](./api/overview.md)
    * [Authentifizieren von und Zugreifen auf die Reactor-API](./api/getting-started.md)
