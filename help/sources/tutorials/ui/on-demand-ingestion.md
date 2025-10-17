@@ -2,9 +2,9 @@
 title: On-Demand-Aufnahme für Datenflüsse von Quellen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Datenflüsse bei Bedarf für Ihre Quellverbindungen mithilfe der Experience Platform-Benutzeroberfläche erstellen.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fabacf273fb5774ddcee42d0cdcf12281eb0216b
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ In diesem Dokument erfahren Sie, wie Sie bei Bedarf Datenflüsse für Quellen er
 
 **Was ist eine Flussausführung?**
 
-Flussausführungen stellen eine Instanz der Datenflussausführung dar. Wenn ein Datenfluss beispielsweise so geplant ist, dass er stündlich um 9:00 Uhr, 10:00 Uhr und 11:00 Uhr ausgeführt wird, gibt es drei Instanzen eines Flussdurchgangs. Flussausführungen sind spezifisch für Ihre bestimmte Organisation.
+Flussausführungen stellen eine Instanz der Datenflussausführung dar. Wenn ein Datenfluss beispielsweise so geplant ist, dass er stündlich um 9 :00, :00 Uhr und :00 Uhr morgens ausgeführt wird, gibt es drei Instanzen eines Flussdurchgangs. Flussausführungen sind spezifisch für Ihre bestimmte Organisation.
 
 >[!ENDSHADEBOX]
 
@@ -58,6 +58,10 @@ Wählen Sie **[!UICONTROL Zeitplan]** aus und gewähren Sie etwas Zeit für Ihre
 ![Das Zeitplankonfigurationsfenster für die On-Demand-Aufnahme.](../../images/tutorials/on-demand/configure-schedule.png)
 
 Wählen Sie Ihren Datenflussnamen aus, um Ihre Datenflussaktivität anzuzeigen. Hier sehen Sie eine Liste Ihrer Datenflussausführungen, die verarbeitet wurden. Sie können einzelne Iterationen Ihrer Datenflussausführungen erneut ausführen, unabhängig davon, ob sie fehlgeschlagen oder erfolgreich waren. Bei fehlgeschlagenen Ausführungsiterationen können Sie mit **[!UICONTROL Wiederholen]** den Durchlauf erneut starten, nachdem Sie etwaige Fehler, die während des Erstellungsprozesses aufgetreten sind, diagnostiziert und behoben haben.
+
+>[!TIP]
+>
+>Beim Wiederholen einer Flussausführung werden nur Dateien mit Zeitstempeln verarbeitet, die innerhalb des Bereichs der ursprünglichen Ausführung liegen.
 
 ![Eine Liste verarbeiteter Flussausführungen für einen ausgewählten Datenfluss.](../../images/tutorials/on-demand/processed.png)
 
