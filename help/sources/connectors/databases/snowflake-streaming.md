@@ -3,9 +3,9 @@ title: Übersicht über den Snowflake Streaming Source Connector
 description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um Streaming-Daten von Ihrer Snowflake-Instanz in Adobe Experience Platform aufzunehmen
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
+source-git-commit: 1d0cc448293ab3cad6ccb971bb2edc86c1b01a5c
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1510'
 ht-degree: 6%
 
 ---
@@ -64,7 +64,7 @@ Um die Schlüsselpaar-Authentifizierung zu verwenden, müssen Sie ein 2048-Bit-R
 | --- | --- |
 | `account` | Ein Kontoname identifiziert ein Konto innerhalb Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto über verschiedene [!DNL Snowflake] hinweg eindeutig identifizieren. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Anleitungen finden Sie im Handbuch [Abrufen  [!DNL Snowflake]  Kontokennung](./snowflake.md#retrieve-your-account-identifier) . Weiterführende Informationen dazu finden Sie im [[!DNL Snowflake] entsprechenden Handbuch](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Der Benutzername Ihres [!DNL Snowflake]. |
-| `privateKey` | Der [!DNL Base64-]kodierte private Schlüssel Ihres [!DNL Snowflake]. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie auch eine Passphrase für den privaten Schlüssel angeben, wenn Sie sich bei Experience Platform authentifizieren. Weitere Informationen finden Sie im Handbuch unter [Abrufen  [!DNL Snowflake]  privaten &#x200B;](./snowflake.md)Schlüssels). |
+| `privateKey` | Der [!DNL Base64-]kodierte private Schlüssel Ihres [!DNL Snowflake]. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie auch eine Passphrase für den privaten Schlüssel angeben, wenn Sie sich bei Experience Platform authentifizieren. Weitere Informationen finden Sie im Handbuch unter [Abrufen  [!DNL Snowflake]  privaten ](./snowflake.md)Schlüssels). |
 | `passphrase` | Die Passphrase ist eine zusätzliche Sicherheitsebene, die Sie bei der Authentifizierung mit einem verschlüsselten privaten Schlüssel verwenden müssen. Sie müssen die Passphrase nicht angeben, wenn Sie einen unverschlüsselten privaten Schlüssel verwenden. |
 | `database` | Die [!DNL Snowflake], die die Daten enthält, die in Experience Platform aufgenommen werden sollen. |
 | `warehouse` | Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Experience Platform einzeln aufgerufen werden. |
@@ -79,7 +79,7 @@ Um Ihre [!DNL Snowflake]-Instanz bei Experience Platform zu authentifizieren, m�
 
 Gehen Sie wie folgt vor, um Ihre Kontokennung zu finden:
 
-* Navigieren Sie im Dashboard der [[!DNL Snowflake] -Benutzeroberfläche zu Ihrem &#x200B;](https://app.snowflake.com/).
+* Navigieren Sie im Dashboard der [[!DNL Snowflake] -Benutzeroberfläche zu Ihrem ](https://app.snowflake.com/).
 * Wählen Sie in der linken Navigationsleiste **[!DNL Accounts]** und dann **[!DNL Active Accounts]** aus der Kopfzeile aus.
 * Klicken Sie anschließend auf das Informationssymbol und wählen Sie den Domain-Namen der aktuellen URL aus und kopieren Sie ihn.
 
@@ -157,6 +157,25 @@ Sie müssen Berechtigungen für eine Rolle konfigurieren, auch wenn die standard
 >Die Funktion zum automatischen Fortsetzen und automatischen Aussetzen muss in den erweiterten Einstellungen Ihres Warehouse aktiviert sein.
 
 Weitere Informationen zur Rollen- und Berechtigungsverwaltung finden Sie in der [[!DNL Snowflake] API-Referenz](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
+
+## Unix-Zeit in Datumsfelder konvertieren
+
+Die [!DNL Snowflake Streaming] analysiert und schreibt ` DATE` Felder als die Anzahl der Tage seit der Unix-Epoche (1970-01-01). Beispiel: Ein `DATE` von 0 bedeutet den 1. Januar 1970, während ein Wert von 1 den 2. Januar 1970 bedeutet. Stellen Sie daher beim Vorbereiten der Datei zum Erstellen von Zuordnungen in der [!DNL Snowflake Streaming] sicher, dass die `DATE` Spalte als Ganzzahl dargestellt wird.
+
+Sie können [Datenvorbereitungs- und Zeitfunktionen](../../../data-prep/functions.md#date-and-time-functions) verwenden, um Unix-Zeit in Datumsfelder zu konvertieren, die in Experience Platform aufgenommen werden können. Beispiel:
+
+```shell
+dformat({DATE_COLUMN} * 86400000, "yyyy-MM-dd")
+```
+
+In dieser Funktion:
+
+* `{DATE_COLUMN}` ist die Datumsspalte, die die Ganzzahl für den Epochentag enthält.
+* Durch Multiplizieren mit 86400000 werden die Epochentage in Millisekunden umgewandelt.
+* &#39;JJJJ-MM-TT&#39; gibt das gewünschte Datumsformat an.
+
+Diese Konvertierung stellt sicher, dass das Datum in Ihrem Datensatz korrekt dargestellt wird.
+
 
 ## Einschränkungen und häufig gestellte Fragen {#limitations-and-frequently-asked-questions}
 
