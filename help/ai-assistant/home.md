@@ -61,7 +61,7 @@ Produktkenntnisse beziehen sich auf Konzepte und Themen, die auf der Dokumentati
 
 Sehen Sie sich das folgende Video an, um weitere Informationen zu KI-Assistent-Produktkenntnissen zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475939/?captions=ger&learn=on)
 
 ### Betriebliche Erkenntnisse {#operational-insights}
 

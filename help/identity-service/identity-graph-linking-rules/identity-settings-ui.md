@@ -19,7 +19,7 @@ Identitätseinstellungen sind eine Funktion in der Adobe Experience Platform Ide
 
 Sehen Sie sich das folgende Video an, um zusätzliche Informationen zur Verwendung der [!DNL Graph Simulation] im Arbeitsbereich der Identity Service-Benutzeroberfläche zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475971/?captions=ger&learn=on&enablevpops)
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre Identitätseinstellungen in der Benutzeroberfläche konfigurieren.
 

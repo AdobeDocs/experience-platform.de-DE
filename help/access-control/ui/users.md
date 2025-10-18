@@ -29,7 +29,7 @@ Nachdem Sie einen Benutzer ausgewählt haben, klicken Sie auf **[!UICONTROL Spei
 
 Das folgende Video soll Ihnen dabei helfen, die Verwaltung von Administratoren für ein Produktprofil zu verstehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475950/?captions=ger&learn=on)
 
 ## Nächste Schritte
 

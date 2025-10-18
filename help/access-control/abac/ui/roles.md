@@ -57,7 +57,7 @@ Weitere Informationen zum Verwalten [&#x200B; Rollenberechtigungen nach deren Er
 
 Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer für diese Rolle verwalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475982/?captions=ger&learn=on)
 
 ## Duplizieren einer Rolle
 
