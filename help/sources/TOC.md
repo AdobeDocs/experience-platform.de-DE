@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
+source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1073'
 ht-degree: 90%
 
 ---
@@ -105,6 +105,7 @@ ht-degree: 90%
       - [Connector für den Upload lokaler Dateien](connectors/local-system/local-file-upload.md)
    - Treue {#loyalty}
       - [Kapillar-Streaming-Ereignisse](connectors/loyalty/capillary.md)
+      - [Talon.One](connectors/loyalty/talon-one.md)
    - Marketing-Automatisierung {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -315,6 +316,8 @@ ht-degree: 90%
          - [Lokaler Datei-Upload](tutorials/ui/create/local-system/local-file-upload.md)
       - Treue {#loyalty}
          - [Kapillar-Streaming-Ereignisse](tutorials/ui/create/loyalty/capillary.md)
+         - [Talon.one Streaming-Ereignisse](tutorials/ui/create/loyalty/talon-one-streaming.md)
+         - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
