@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Talon.One] befinden sich in der Betaphase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Talon.One] befinden sich in der Betaphase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Mit [!DNL Talon.One] können Sie ganz einfach personalisierte Marketing-Kampagnen für Ihre Kunden erstellen, verwalten und optimieren. Nutzen Sie diese leistungsstarke Plattform, um Rabatte auszuführen, Coupons zu verteilen, Empfehlungsprogramme zu starten, Treueprogramme einzurichten und Gamified Incentives anzubieten - alles von einem skalierbaren System aus, das Ihnen hilft, Ihre Zielgruppe anzusprechen und zu belohnen.
 
