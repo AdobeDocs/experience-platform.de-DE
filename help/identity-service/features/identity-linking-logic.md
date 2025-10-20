@@ -2,10 +2,10 @@
 title: Verknüpfungslogik zum Identity Service
 description: Erfahren Sie, wie Identity Service unterschiedliche Identitäten verknüpft, um eine umfassende Ansicht eines Kunden zu erstellen.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
 workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 2%
+source-wordcount: '966'
+ht-degree: 3%
 
 ---
 
@@ -22,6 +22,10 @@ Es gibt zwei Arten von Identitäten, die verknüpft werden:
 
 * **Profildatensätze**: Diese Identitäten stammen normalerweise aus CRM-Systemen.
 * **Erlebnisereignisse**: Diese Identitäten stammen in der Regel aus der WebSDK-Implementierung oder der Adobe Analytics-Quelle.
+
+>[!IMPORTANT]
+>
+>Bei Identity Service wird zwischen Groß- und Kleinschreibung unterschieden. Beispielsweise würden **abc<span>@gmail.com** und **ABC<span>@GMAIL.COM** als zwei separate E-Mail-Identitäten behandelt.
 
 ## Semantische Bedeutung der Relationserstellung
 
@@ -101,7 +105,7 @@ Sie haben außerdem WebSDK implementiert und einen WebSDK-Datensatz (Erlebnisere
 | `t=3` | ECID:44675 | Startseite anzeigen |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | Kaufverlauf anzeigen |
 
-Die primäre Identität für jedes Ereignis wird anhand der Konfiguration [&#x200B; Datenelementtypen &#x200B;](../../tags/extensions/client/web-sdk/data-element-types.md).
+Die primäre Identität für jedes Ereignis wird anhand der Konfiguration [ Datenelementtypen ](../../tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >
@@ -111,10 +115,10 @@ Die primäre Identität für jedes Ereignis wird anhand der Konfiguration [&#x20
 
 In diesem Beispiel:
 
-* `t=1` einen Desktop-Computer verwendet (ECID:38652) und die Startseite anonym durchsuchen.
+* `t=1` verwendet einen Desktop-Computer (ECID:38652) und um die Startseite anonym zu durchsuchen.
 * `t=2` habe denselben Desktop-Computer verwendet, sich angemeldet (CRMID:31260XYZ) und dann nach Schuhen gesucht.
    * Nachdem sich ein Benutzer angemeldet hat, sendet das Ereignis sowohl ECID als auch CRMID an Identity Service.
-* `t=3` einen Laptop-Computer verwendet (ECID:44675) und anonym navigiert.
+* `t=3` einen Laptop-Computer (ECID) :44675 und anonym browsen.
 * `t=4` hat denselben Laptop-Computer verwendet, sich angemeldet (CRMID: 31260XYZ) und dann den Kaufverlauf angezeigt.
 
 
@@ -133,25 +137,25 @@ In diesem Beispiel:
 
 >[!TAB Zeitstempel=1]
 
-`timestamp=1` verwendet ein Kunde einen Laptop, um Ihre E-Commerce-Website zu besuchen, Ihre Homepage aufzurufen und anonym zu surfen. Dieses anonyme Browserereignis wird als ECID:38652 gekennzeichnet. Da Identity Service nur Ereignisse mit mindestens zwei Identitäten speichert, werden diese Informationen nicht gespeichert.
+`timestamp=1` verwendet ein Kunde einen Laptop, um Ihre E-Commerce-Website zu besuchen, Ihre Homepage aufzurufen und anonym zu surfen. Dieses anonyme Browser-Ereignis wird als ECID:38652 gekennzeichnet. Da Identity Service nur Ereignisse mit mindestens zwei Identitäten speichert, werden diese Informationen nicht gespeichert.
 
 ![Zeitstempel eins](../images/identity-settings/timestamp-one.png)
 
 >[!TAB Zeitstempel=2]
 
-`timestamp=2` verwendet ein Kunde denselben Laptop, um Ihre E-Commerce-Website zu besuchen. Sie melden sich mit ihrer Benutzername- und Passwortkombination an und suchen nach Schuhen. Identity Service identifiziert das Konto des Kunden bei der Anmeldung, da es seiner CRMID entspricht: 31260XYZ. Darüber hinaus verknüpft Identity Service ECID:38562 mit CRMID:31260, da beide denselben Browser auf demselben Gerät verwenden.
+`timestamp=2` verwendet ein Kunde denselben Laptop, um Ihre E-Commerce-Website zu besuchen. Sie melden sich mit ihrer Benutzername- und Passwortkombination an und suchen nach Schuhen. Identity Service identifiziert das Konto des Kunden bei der Anmeldung, da es seiner CRMID entspricht: 31260XYZ. Darüber hinaus verknüpft Identity Service ECID:38562 mit CRMID:31260XYZ da beide denselben Browser auf demselben Gerät verwenden.
 
 ![timestamp-two](../images/identity-settings/timestamp-two.png)
 
 >[!TAB Zeitstempel=3]
 
-`timestamp=3` verwendet ein Kunde ein Tablet, um Ihre E-Commerce-Website zu besuchen und anonym zu surfen. Dieses anonyme Browserereignis wird als ECID:44675 gekennzeichnet. Da Identity Service nur Ereignisse mit mindestens zwei Identitäten speichert, werden diese Informationen nicht gespeichert.
+`timestamp=3` verwendet ein Kunde ein Tablet, um Ihre E-Commerce-Website zu besuchen und anonym zu surfen. Dieses anonyme Browser-Ereignis wird als ECID:44675 gekennzeichnet. Da Identity Service nur Ereignisse mit mindestens zwei Identitäten speichert, werden diese Informationen nicht gespeichert.
 
 ![Zeitstempel-3](../images/identity-settings/timestamp-three.png)
 
 >[!TAB Zeitstempel=4]
 
-`timestamp=4` verwendet ein Kunde dasselbe Tablet, meldet sich bei seinem Konto an (CRMID:31260XYZ) und zeigt den Kaufverlauf an. Dieses Ereignis verknüpft seine CRMID:31260XYZ mit der Cookie-Kennung, die der anonymen Browser-Aktivität ECID:44675 zugewiesen ist, und verknüpft ECID:44675 mit dem Identitätsdiagramm von Kunde zwei.
+`timestamp=4` verwendet ein Kunde dasselbe Tablet, meldet sich bei seinem Konto (CRMID) an :31260XYZ zeigt seinen Kaufverlauf an. Dieses Ereignis verknüpft ihre CRMID:31260XYZ mit der Cookie-Kennung, die der anonymen Browser-Aktivität ECID:44675 zugewiesen ist, und :44675 ECID mit dem Identitätsdiagramm von Kunde zwei.
 
 ![timestamp-four](../images/identity-settings/timestamp-four.png)
 
