@@ -2,9 +2,9 @@
 title: Entwickeln einer Erweiterung
 description: Dieses Dokument bietet einen allgemeinen Überblick über den Entwicklungsprozess von Tag-Erweiterungen mit Links zu weiterführender Dokumentation für detailliertere Prozesse.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 73452d0735c6a040ddd25b4cd00cec4b91eaf7ae
+source-git-commit: 36870fa5359b5382cb9f1e9a5220ce8311f0c45c
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '443'
 ht-degree: 97%
 
 ---
@@ -45,7 +45,6 @@ Es gibt auch eine Reihe von npm-Tools, die Sie bei der Entwicklung Ihres Erweite
 Es gibt Beispielerweiterungen auf GitHub, die Sie prüfen oder als Einstiegsprojekte verwenden können:
 
 * [Beispielerweiterung „Hello World“](https://github.com/adobe/reactor-helloworld-extension)
-* [Facebook-Beispielerweiterung](https://github.com/Adobe-Marketing-Cloud-Activation/extension-facebookpixel)
 * [Typekit-Beispielerweiterung](https://github.com/jeffchasin/extension-typekit)
 * [Pinterest-Beispielerweiterung](https://github.com/jeffchasin/extension-pinterest)
 
