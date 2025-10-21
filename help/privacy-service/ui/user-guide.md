@@ -36,7 +36,7 @@ Das Dashboard für die [!DNL Privacy Service] Benutzeroberfläche bietet zwei Wi
 
 [!DNL Privacy Service] unterstützt Vorgangsanfragen für mehrere Datenschutzbestimmungen. In der folgenden Tabelle sind die unterstützten Verordnungen und die entsprechende Beschriftung aufgeführt, wie in der Benutzeroberfläche dargestellt.
 
-Eine Beschreibung jeder [, in der die Rechte von Verbrauchern und die ](../regulations/overview.md) Pflichten des Unternehmens erläutert werden, finden Sie unter „Übersicht über Datenschutzbestimmungen“.
+Eine Beschreibung jeder [, in der die Rechte von Verbrauchern und die &#x200B;](../regulations/overview.md) Pflichten des Unternehmens erläutert werden, finden Sie unter „Übersicht über Datenschutzbestimmungen“.
 
 >[!TIP]
 >
@@ -80,7 +80,7 @@ Eine Beschreibung jeder [, in der die Rechte von Verbrauchern und die ](../regul
 
 >[!NOTE]
 >
->Weitere Informationen zum rechtlichen Kontext [ einzelnen Verordnungen finden Sie ](../regulations/overview.md) der Übersicht zu (unterstützten Datenschutzbestimmungen.
+>Weitere Informationen zum rechtlichen Kontext [&#x200B; einzelnen Verordnungen finden Sie &#x200B;](../regulations/overview.md) der Übersicht zu (unterstützten Datenschutzbestimmungen.
 
 Vorgänge für jeden Regulierungstyp werden separat verfolgt. Um zwischen den Regelungstypen zu wechseln, wählen Sie das Dropdown-Menü **[!UICONTROL Regulation Type]** und dann die gewünschte Regelung aus der Liste aus.
 
@@ -118,7 +118,7 @@ Der Arbeitsbereich [!UICONTROL Job Requests] enthält Details zu den letzten Auf
 >
 >Die Daten für zuvor erstellte Aufträge sind nur 30 Tage nach dem Abschlussdatum verfügbar.
 
-Sie können die Liste filtern, indem Sie Keywords in die Suchleiste unter dem [!UICONTROL Job Requests] eingeben. Die Liste wird bei der Eingabe automatisch gefiltert und zeigt Anfragen an, die Werte enthalten, die Ihren Suchbegriffen entsprechen. Das Suchfeld führt eine „Schnellsuche“ durch, die die Datenschutzauftrags-IDs mit den aktuell gerenderten/geladenen Aufträgen in der Benutzeroberfläche abgleicht. Es handelt sich nicht um eine umfassende Suche aller eingereichten Aufträge. Stattdessen handelt es sich um einen Filter, der auf die geladenen Ergebnisse angewendet wird. Verwenden Sie die Privacy Service-API[ um Aufträge (basierend auf einer bestimmten Verordnung, Datumsbereichen oder einem einzelnen Auftrag) ](../api/privacy-jobs.md#list).
+Sie können die Liste filtern, indem Sie Keywords in die Suchleiste unter dem [!UICONTROL Job Requests] eingeben. Die Liste wird bei der Eingabe automatisch gefiltert und zeigt Anfragen an, die Werte enthalten, die Ihren Suchbegriffen entsprechen. Das Suchfeld führt eine „Schnellsuche“ durch, die die Datenschutzauftrags-IDs mit den aktuell gerenderten/geladenen Aufträgen in der Benutzeroberfläche abgleicht. Es handelt sich nicht um eine umfassende Suche aller eingereichten Aufträge. Stattdessen handelt es sich um einen Filter, der auf die geladenen Ergebnisse angewendet wird. Verwenden Sie die Privacy Service-API[&#x200B; um Aufträge (basierend auf einer bestimmten Verordnung, Datumsbereichen oder einem einzelnen Auftrag) &#x200B;](../api/privacy-jobs.md#list).
 
 >[!TIP]
 >
