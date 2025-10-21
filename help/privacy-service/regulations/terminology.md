@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie von Datenschutzbestimmungen
 description: In diesem Dokument finden Sie Definitionen für Schlüsselbegriffe im Zusammenhang mit den von Adobe Experience Cloud unterstützten Datenschutzbestimmungen.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: ccde37961bd98275030db98440800925d3a6703e
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '2630'
+source-wordcount: '2790'
 ht-degree: 0%
 
 ---
@@ -111,6 +111,8 @@ In diesem Dokument finden Sie Definitionen für Schlüsselbegriffe im Zusammenha
 
 **[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): Ab dem 31. Juli 2025 gibt die MCDPA Einwohnern von Minnesota das Recht, auf ihre personenbezogenen Daten zuzugreifen, sie zu korrigieren, zu löschen und zu erhalten sowie Datenverkäufe, gezielte Werbung und bestimmte Profiling-Aktionen abzuwählen. Sie gilt für Unternehmen, die in Minnesota tätig sind oder es zum Ziel haben, Daten von über 100.000 Verbrauchern jährlich zu verarbeiten (ohne reine Zahlungsdaten) oder von über 25.000 Verbrauchern, wenn mehr als 25 % des Umsatzes aus Datenverkäufen erzielt werden. Die abgedeckten Stellen müssen angemessene Datensicherheitsmaßnahmen umsetzen und Risikobewertungen durchführen. Der Attorney General von Minnesota setzt das Gesetz durch und kann Geldbußen von bis zu 7.500 US-Dollar pro Verstoß verhängen. Unternehmen haben jedoch bis zum 31. Januar 2026 Zeit, Verstöße zu beheben, bevor Sanktionen verhängt werden.
 
+**MODPA**: Der [!DNL Maryland Online Data Privacy Act] gewährt Gebietsansässigen Rechte wie Zugang, Berichtigung, Löschung und Datenübertragbarkeit. Bewohner können der Datenverarbeitung für gezielte Werbung, Verkauf personenbezogener Daten und Profiling widersprechen. Das Gesetz verbietet Geofencing um Einrichtungen für psychische Gesundheit oder reproduktive Gesundheit. Das Gesetz gilt für Unternehmen, die Daten von mehr als 35.000 Verbrauchern verarbeiten, oder für Unternehmen, die Daten von mehr als 10.000 Verbrauchern verarbeiten und über 20 % ihrer Einnahmen aus dem Verkauf dieser Daten erzielen. Die Durchsetzung erfolgt durch den Attorney General von Maryland, mit Geldstrafen und Strafen für Verstöße.
+
 **[!DNL Montana Consumer Data Privacy Act]**: Dieses Gesetz gibt Einwohnern von Montana das Recht, auf ihre personenbezogenen Daten zuzugreifen, sie zu korrigieren, zu löschen und Kopien anzufordern. Das MCDPA gilt für Unternehmen, die Daten für über 50.000 Verbraucher in Montana verarbeiten, und betont den Schutz sensibler personenbezogener Daten wie biometrischer und genetischer Informationen. Sie erzwingt Transparenz in Bezug auf die Datenerfassung, -freigabe und -verkaufspraktiken.
 
 ## N
@@ -133,6 +135,8 @@ In diesem Dokument finden Sie Definitionen für Schlüsselbegriffe im Zusammenha
 **Personenbezogene Daten**: Alle Informationen, die sich auf eine natürliche Person oder „betroffene Person“ beziehen und zur direkten oder indirekten Identifizierung der Person verwendet werden können.
 
 **Verletzung des Schutzes personenbezogener Daten**: Eine Verletzung der Sicherheit, die zum unbeabsichtigten oder unrechtmäßigen Zugriff auf, zur Zerstörung, zum Missbrauch usw. personenbezogener Daten führt.
+
+**PIPA** (Südkorea): Die [!DNL Personal Information Protection Act] regelt die Verarbeitung und den Schutz personenbezogener Daten für in Südkorea ansässige Personen. PIPA gewährt Gebietsansässigen das Recht, informiert zu werden, Zugang zu erhalten, Kopien zu erhalten und Berichtigung, Löschung oder Aussetzung der Verarbeitung zu verlangen. Die für die Verarbeitung Verantwortlichen müssen die Erhebungszwecke spezifizieren, die Daten im erforderlichen Mindestmaß rechtmäßig verarbeiten und die Datengenauigkeit gewährleisten. Mit dem Gesetz wurde auch die Personal Information Protection Commission for Enforcement geschaffen, die Geldbußen und Verwaltungssanktionen für die Nichteinhaltung der Vorschriften verhängen kann.
 
 **eingebauter Datenschutz** Ein Grundsatz, der die Einbeziehung des Datenschutzes von Beginn der Konzeption der Systeme an fordert, anstatt ihn zu ergänzen.
 

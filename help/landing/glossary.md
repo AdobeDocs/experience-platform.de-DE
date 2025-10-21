@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform-Glossar
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '8009'
+source-wordcount: '8170'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 4%
 
 **Attribute**: Attribute sind angegebene Merkmale, die ein Profil darstellen.
 
-**Attributzusammenführung**: Beim Definieren einer Zusammenführungsrichtlinie mit der Echtzeit-Kundenprofil-API gibt das `attributeMerge`-Objekt an, wie die Zusammenführungsrichtlinie Profilattribute im Falle von Datenkonflikten priorisiert. Dies entspricht der Auswahl einer [!UICONTROL Zusammenführungsmethode] beim Definieren einer Zusammenführungsrichtlinie in der Experience Platform-Benutzeroberfläche.
+**Attributzusammenführung**: Beim Definieren einer Zusammenführungsrichtlinie mit der Echtzeit-Kundenprofil-API gibt das `attributeMerge`-Objekt an, wie die Zusammenführungsrichtlinie Profilattribute im Falle von Datenkonflikten priorisiert. Dies entspricht der Auswahl eines [!UICONTROL Merge method] beim Definieren einer Zusammenführungsrichtlinie in der Experience Platform-Benutzeroberfläche.
 
 **Attribution AI**: [!DNL Attribution AI] ist ein Intelligent Service, der auf Adobe Sensei basiert und algorithmische Mehrkanal-Attributionsfunktionen für den gesamten Kundenlebenszyklus bietet.
 
@@ -95,7 +95,7 @@ ht-degree: 4%
 
 **Klasse**: Im Experience-Datenmodell (XDM) definiert eine Klasse den kleinsten Satz von Feldern, die zum Erstellen eines Schemas verwendet werden, und definiert das Basisverhalten des Geschäftsobjekts, das das Schema darstellt.
 
-**Client**: Ein Client ist ein externes Tool oder eine externe Anwendung, die über [!DNL PostgreSQL] Protokoll oder die HTTP-API eine Verbindung zu [!DNL Query Service] herstellt.
+**Client**: Ein Client ist ein externes Tool oder eine externe Anwendung, die über [!DNL Query Service] Protokoll oder die HTTP-API eine Verbindung zu [!DNL PostgreSQL] herstellt.
 
 **Sammlung**: In [!DNL Offer Decisioning] sind Sammlungen Untergruppen von Angeboten, die auf von einem Marketing-Experten vordefinierten Bedingungen basieren, z. B. der Kategorie des Angebots.
 
@@ -281,7 +281,7 @@ ht-degree: 4%
 
 **Identitäts-(„I„)-Kennzeichnungen**: Identitäts- („I„)-Datennutzungskennzeichnungen werden verwendet, um Daten zu kategorisieren, mit denen eine bestimmte Person identifiziert oder kontaktiert werden kann.
 
-**Identitätsdiagramm**: Ein Identitätsdiagramm ist eine Zuordnung von Beziehungen zwischen zusammengefügten und verknüpften Identitäten, die für einen einzelnen Kunden vorhanden sind. Jedes Identitätsdiagramm wird nahezu in Echtzeit mit der Kundenaktivität aktualisiert. Die allgemeine Struktur von Identitätsbeziehungen in Ihren Daten wird durch das [!UICONTROL private Diagramm] dargestellt, das als struktureller Blueprint für jedes einzelne Identitätsdiagramm dient.
+**Identitätsdiagramm**: Ein Identitätsdiagramm ist eine Zuordnung von Beziehungen zwischen zusammengefügten und verknüpften Identitäten, die für einen einzelnen Kunden vorhanden sind. Jedes Identitätsdiagramm wird nahezu in Echtzeit mit der Kundenaktivität aktualisiert. Die gemeinsame Struktur von Identitätsbeziehungen in Ihren Daten wird durch das [!UICONTROL Private Graph] dargestellt, das als struktureller Blueprint für jedes einzelne Identitätsdiagramm dient.
 
 **Identity-Namespace**: Ein Identity-Namespace definiert den Kontext einer Kennung wie eine E-Mail-Adresse oder eine CRM-ID.
 
@@ -351,6 +351,8 @@ ht-degree: 4%
 
 **Module**: Im Kontext von Tags ist ein Modul ein Ausschnitt von ausführbarem JavaScript, der von einer Erweiterung bereitgestellt wird. Dieses führt Aktionen in einer Client-Umgebung aus, ohne eine Regel erstellen zu müssen.
 
+**MODPA**: Das [!DNL Maryland Online Data Privacy Act] (MODPA) von 2024 gewährt Einwohnern von Maryland Rechte, einschließlich Zugriff, Korrektur, Löschung und Datenübertragbarkeit. Bewohner können sich gegen gezielte Werbung, Verkauf personenbezogener Daten und Profiling entscheiden. Verantwortliche müssen die Datenschutzhinweise bereitstellen und Datenschutzbewertungen für die Verarbeitung mit hohem Risiko durchführen. Das MODPA sticht durch ein Verbot des Geofencing um Einrichtungen für geistige und reproduktive Gesundheit hervor. Das Gesetz gilt für Unternehmen, die Daten von mehr als 35.000 Verbrauchern verarbeiten, oder für Unternehmen, die Daten von mehr als 10.000 Verbrauchern verarbeiten und über 20 % ihrer Einnahmen aus dem Verkauf dieser Daten erzielen. Es wird vom Maryland Attorney General vollstreckt.
+
 ## N
 
 **[!DNL New Zealand Privacy Act]**: Die [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) kontrolliert, wie Agenturen personenbezogene Daten neuseeländischer Bürger und Organisationen erfassen, verwenden, offenlegen, speichern und zugänglich machen können. Im Jahr 2020 wurden mit der neuesten Version des Gesetzes wesentliche Aktualisierungen dieser Datenschutzgesetze eingeführt, darunter neue Verstöße, die Erhöhung von Geldbußen, obligatorische Benachrichtigungen bei Datenschutzverletzungen und die Erweiterung der Befugnisse des Datenschutzbeauftragten.
@@ -377,17 +379,15 @@ ht-degree: 4%
 
 ## P
 
-**Partielle Aufnahme**: Die partielle Aufnahme ermöglicht die Aufnahme gültiger Datensätze von Batch-Daten innerhalb eines bestimmten Fehlerschwellenwerts. Die Fehlerdiagnose für fehlgeschlagene Datensätze kann unter Übersicht über die Datenflussausführung [!UICONTROL Überwachung] oder [!UICONTROL Quellen] heruntergeladen oder aufgerufen werden.
+**Partielle Aufnahme**: Die partielle Aufnahme ermöglicht die Aufnahme gültiger Datensätze von Batch-Daten innerhalb eines bestimmten Fehlerschwellenwerts. Die Fehlerdiagnose für fehlgeschlagene Datensätze kann im [!UICONTROL Monitoring] oder [!UICONTROL Sources] Datenflussausführungs-Überblick heruntergeladen oder aufgerufen werden.
 
 **Parquet-Dateien**: Eine Parquet-Datei ist ein säulenförmiges Speicherdateiformat mit komplexen verschachtelten Datenstrukturen. Parquet-Dateien sind erforderlich, um Daten zum Ausfüllen eines Schemadatensatzes hinzuzufügen.
 
 **PDPA**: Die [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) wurde eingeführt, um thailändische Dateninhaber vor der illegalen Sammlung, Verwendung oder Offenlegung ihrer personenbezogenen Daten zu schützen. Auf Grundlage der DSGVO der Europäischen Union räumt die Verordnung thailändischen Bürgern das Recht ein, Auskunft über ihre gespeicherten personenbezogenen Daten oder deren Löschung zu verlangen.
 
-<!-- Not yet released
-**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
--->
-
 **Personalisierte Angebote**: Ein personalisiertes Angebot ist eine anpassbare Marketing-Nachricht, die auf Eignungsregeln und Einschränkungen basiert.
+
+**PIPA** (Südkorea): Das [[!DNL Personal Information Protection Act] (PIPA)](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) regelt die Verarbeitung und den Schutz personenbezogener Daten für in Südkorea ansässige Personen. PIPA gewährt Rechte, informiert zu werden, Zugang zu erhalten, Kopien zu erhalten und Berichtigung, Löschung oder Aussetzung der Verarbeitung zu verlangen. Die für die Verarbeitung der personenbezogenen Daten Verantwortlichen müssen die Erhebungszwecke spezifizieren, die Daten im erforderlichen Mindestmaß rechtmäßig verarbeiten und die Richtigkeit der Daten gewährleisten. PIPA hat auch die Personal Information Protection Commission gegründet, um Datenschutzbestimmungen zu untersuchen und durchzusetzen.
 
 **Platzierungen**: Eine Platzierung ist der Speicherort und/oder Kontext, in dem ein Angebot für Endbenutzende erscheint.
 

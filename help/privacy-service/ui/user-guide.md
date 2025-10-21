@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
 description: Erfahren Sie, wie Sie die Benutzeroberfläche von Privacy Service verwenden, um Datenschutzanfragen in verschiedenen Experience Cloud-Programmen zu koordinieren und zu überwachen.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '1770'
+source-wordcount: '1689'
 ht-degree: 19%
 
 ---
@@ -28,52 +28,61 @@ In diesem Dokument werden die Schritte zum Erstellen und Verwalten von Datenschu
 
 ## Durchsuchen des Dashboards der [!DNL Privacy Service]-Benutzeroberfläche
 
-Das Dashboard für die [!DNL Privacy Service]-Benutzeroberfläche bietet zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge anzeigen können: &quot;[!UICONTROL Statusbericht] und &quot;[!UICONTROL Vorgangsanfragen]. Das Dashboard zeigt auch die aktuell ausgewählte Verordnung für die angezeigten Aufträge an.
+Das Dashboard für die [!DNL Privacy Service] Benutzeroberfläche bietet zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge anzeigen können: &quot;[!UICONTROL Status Report]&quot; und &quot;[!UICONTROL Job Requests]&quot;. Das Dashboard zeigt auch die aktuell ausgewählte Verordnung für die angezeigten Aufträge an.
 
 ![UI-Dashboard](../images/user-guide/dashboard.png)
 
-### Typ der Regelung
+### Regulierungstyp
 
-[!DNL Privacy Service] unterstützt Vorgangsanfragen für mehrere Datenschutzbestimmungen. In der folgenden Tabelle sind die unterstützten Verordnungen und die entsprechende Beschriftung aufgeführt, wie in der Benutzeroberfläche dargestellt:
+[!DNL Privacy Service] unterstützt Vorgangsanfragen für mehrere Datenschutzbestimmungen. In der folgenden Tabelle sind die unterstützten Verordnungen und die entsprechende Beschriftung aufgeführt, wie in der Benutzeroberfläche dargestellt.
 
-| UI-Kennzeichnung | Regelung |
-|-------------------------------------|------------------------|
-| [!UICONTROL APA_AUS (Australien)] | Die [!DNL Australia Privacy Act] |
-| [!UICONTROL CCPA (Kalifornien)] | Die [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPA_USA (Colorado)] | Die [!DNL Colorado Privacy Act] |
-| [!UICONTROL CPRA_USA (Kalifornien)] | Die [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA_USA (Connecticut)] | Die [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL DPDPA_USA (Delaware)] | Die [!DNL Delaware Personal Data Privacy Act] |
-| [!UICONTROL FDBR_USA (Florida)] | Die [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL DSGVO (Europäische Union)] | Die [!DNL General Data Protection Regulation] der Europäischen Union |
-| [!UICONTROL HIPPA_USA (Vereinigte Staaten)] | Die [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL ICDPA_USA] (Iowa) | Die [!DNL Iowa Consumer Data Protection Act] |
-| [!UICONTROL LGPD_BRA (Brasilien)] | Brasiliens &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA_USA (Washington)] | Die [!DNL Washington My Health My Data Act] |
-| [!UICONTROL MCDPA_USA (Montana)] | Die [!DNL Montana Consumer Data Privacy Act] |
-| [!UICONTROL NDPA_USA (Nebraska)] | Die [!DNL Nebraska Data Protection Act] |
-| [!UICONTROL NZPA_NZL (Neuseeland)] | Neuseelands [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA (New Hampshire)] | Die [!DNL New Hampshire Privacy Act] |
-| [!UICONTROL NJDPA_USA (New Jersey)] | Die [!DNL New Jersey Data Protection Act] |
-| [!UICONTROL OCPA USA (Oregon)] | Die [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA (Thailand)] | Thailands [!DNL Personal Data Protection Act] |
-| [!UICONTROL QL25_CAN (Quebec)] | [!DNL Quebec Law 25] |
-| [!UICONTROL TDPSA USA (Texas)] | Die [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA_USA (Utah)] | Die [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA (Virginia)] | Die [!DNL Virginia Consumer Data Protection Act] |
+Eine Beschreibung jeder [, in der die Rechte von Verbrauchern und die ](../regulations/overview.md) Pflichten des Unternehmens erläutert werden, finden Sie unter „Übersicht über Datenschutzbestimmungen“.
+
+>[!TIP]
+>
+>Der API-Regulierungstyp wurde aus Gründen der Übersichtlichkeit eingefügt.
+
+| UI-Kennzeichnung | API `regulation_type` | Verordnung |
+|-------------------------------------------|-----------------------|----------------|
+| [!UICONTROL APA_AUS (Australia)] | `apa_aus` | [!DNL Australia Privacy Act] |
+| [!UICONTROL CCCA (California)] | `ccpa` | [!DNL California Consumer Privacy Act] (CCPA) |
+| [!UICONTROL CPA_CO_USA (Colorado)] | `cpa_co_usa` | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_CA_USA (California)] | `cpra_ca_usa` | [!DNL California Privacy Rights Act] (CPRA) |
+| [!UICONTROL CTDPA_CT_USA (Connecticut)] | `ctdpa_ct_usa` | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_DE_USA (Delaware)] | `dpdpa_de_usa` | [!DNL Delaware Personal Data Privacy Act] |
+| [!UICONTROL FDBR_FL_USA (Florida)] | `fdbr_fl_usa` | [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL GDPR (European Union)] | `gdpr` | Die [!DNL General Data Protection Regulation] der Europäischen Union |
+| [!UICONTROL HIPAA_USA (United States)] | `hipaa_usa` | [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPALIA_USA (Iowa)] | `icdpa_ia_usa` | [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA (Brazil)] | `lgpd_bra` | Brasiliens &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MCDPA_MN_USA (Minnesota)] | `mcdpa_mn_usa` | [!DNL Minnesota Consumer Data Privacy Act] |
+| [!UICONTROL MCDPA_MT_USA (Montana)] | `mcdpa_mt_usa` | [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL MHMDA_WA_USA (Washington)] | `mhmda_wa_usa` | [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MODPA_MD_USA (Maryland)] | `modpa_md_usa` | [!DNL Maryland Online Data Privacy Act] |
+| [!UICONTROL NDPA_NE_USA (Nebraska)] | `ndpa_ne_usa` | [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NHPA_NH_USA (New Hampshire)] | `nhpa_nh_usa` | [!DNL New Hampshire Privacy Act] |
+| [!UICONTROL NJDPA_NJ_USA (New Jersey)] | `njdpa_nj_usa` | [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL NZPA_NZL (New Zealand)] | `nzpa_nzl` | Neuseelands [!DNL Privacy Act] (PA) |
+| [!UICONTROL OCPA_OR_USA (Oregon)] | `ocpa_or_usa` | [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA (Thailand)] | `pdpa_tha` | Thailands [!DNL Personal Data Protection Act] (PDPA) |
+| [!UICONTROL PIPA_KOR (South Korea)] | `pipa_kor` | Südkoreas [!DNL Personal Information Privacy Act] (PIPA) |
+| [!UICONTROL QL25_QC_CAN (Quebec)] | `ql25_qc_can` | [!DNL Quebec Law 25] |
+| [!UICONTROL TDPSA_TX_USA (Texas)] | `tdpsa_tx_usa` | [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL TIPA_TN_USA (Tennessee)] | `tipa_tn_usa` | [!DNL Tennessee Information Protection Act] |
+| [!UICONTROL UCPA_UT_USA (Utah)] | `ucpa_ut_usa` | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_VA_USA (Virginia)] | `vcdpa_va_usa` | [!DNL Virginia Consumer Data Protection Act] (VCDPA) |
 
 {style="table-layout:auto"}
 
-<!-- 
-Waiting:
-| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
- -->
+<!-- | [!UICONTROL ICDPA_IN_USA (Indiana)]       | `icdpa_in_usa` | [!DNL Indiana Consumer Data Protection Act]| NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL KCDPA_KY_USA (Kentucky)]      | `kcdpa_ky_usa`| [!DNL Kentucky Consumer Data Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL RIDTPPA_RI_USA (Rhode Island)]| `ridtppa_ri_usa` | [!DNL Rhode Island Data Transparency and Privacy Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
 
 >[!NOTE]
 >
->Weitere Informationen zum rechtlichen Kontext [&#x200B; einzelnen Verordnungen finden Sie &#x200B;](../regulations/overview.md) der Übersicht zu (unterstützten Datenschutzbestimmungen.
+>Weitere Informationen zum rechtlichen Kontext [ einzelnen Verordnungen finden Sie ](../regulations/overview.md) der Übersicht zu (unterstützten Datenschutzbestimmungen.
 
-Vorgänge für jeden Regulierungstyp werden separat verfolgt. Um zwischen Regulierungstypen zu wechseln, wählen Sie das Dropdown **[!UICONTROL Menü]** Regulierungstyp) aus und wählen Sie die gewünschte Regelung aus der Liste aus.
+Vorgänge für jeden Regulierungstyp werden separat verfolgt. Um zwischen den Regelungstypen zu wechseln, wählen Sie das Dropdown-Menü **[!UICONTROL Regulation Type]** und dann die gewünschte Regelung aus der Liste aus.
 
 ![Die Privacy Service-Konsole mit der Dropdown-Liste „Regulierungstyp“.](../images/user-guide/regulation.png)
 
@@ -101,15 +110,15 @@ Um weitere Details zu einem bestimmten Datenpunkt anzuzeigen, wählen Sie den be
 >
 >Wenn ein Filter auf das Widget Auftragsanfragen angewendet wurde, können Sie den Filter entfernen, indem Sie das **X** auf der Filterpille auswählen. Vorgangsanfragen kehren dann zur Standard-Tracking-Liste zurück.
 
-### Auftragsanfragen {#job-requests}
+### Vorgangsanfragen {#job-requests}
 
-Der [!UICONTROL Auftragsanfragen] enthält Details zu den letzten Auftragsanfragen in Ihrer Organisation. Zu den Details gehören der Anfragetyp, der aktuelle Status, das Fälligkeitsdatum, die anfragende E-Mail usw. Es werden jeweils 100 Datensätze geladen. Standardmäßig werden die zuletzt erstellten Aufträge oben angezeigt, wobei beim Scrollen zum Durchsuchen mehr Datensätze geladen werden.
+Der Arbeitsbereich [!UICONTROL Job Requests] enthält Details zu den letzten Auftragsanfragen in Ihrer Organisation. Zu den Details gehören der Anfragetyp, der aktuelle Status, das Fälligkeitsdatum, die anfragende E-Mail usw. Es werden jeweils 100 Datensätze geladen. Standardmäßig werden die zuletzt erstellten Aufträge oben angezeigt, wobei beim Scrollen zum Durchsuchen mehr Datensätze geladen werden.
 
 >[!NOTE]
 >
 >Die Daten für zuvor erstellte Aufträge sind nur 30 Tage nach dem Abschlussdatum verfügbar.
 
-Sie können die Liste filtern, indem Sie Keywords in die Suchleiste unter dem Titel [!UICONTROL Auftragsanfragen] eingeben. Die Liste wird bei der Eingabe automatisch gefiltert und zeigt Anfragen an, die Werte enthalten, die Ihren Suchbegriffen entsprechen. Das Suchfeld führt eine „Schnellsuche“ durch, die die Datenschutzauftrags-IDs mit den aktuell gerenderten/geladenen Aufträgen in der Benutzeroberfläche abgleicht. Es handelt sich nicht um eine umfassende Suche aller eingereichten Aufträge. Stattdessen handelt es sich um einen Filter, der auf die geladenen Ergebnisse angewendet wird. Verwenden Sie die Privacy Service-API[&#x200B; um Aufträge (basierend auf einer bestimmten Verordnung, Datumsbereichen oder einem einzelnen Auftrag) &#x200B;](../api/privacy-jobs.md#list).
+Sie können die Liste filtern, indem Sie Keywords in die Suchleiste unter dem [!UICONTROL Job Requests] eingeben. Die Liste wird bei der Eingabe automatisch gefiltert und zeigt Anfragen an, die Werte enthalten, die Ihren Suchbegriffen entsprechen. Das Suchfeld führt eine „Schnellsuche“ durch, die die Datenschutzauftrags-IDs mit den aktuell gerenderten/geladenen Aufträgen in der Benutzeroberfläche abgleicht. Es handelt sich nicht um eine umfassende Suche aller eingereichten Aufträge. Stattdessen handelt es sich um einen Filter, der auf die geladenen Ergebnisse angewendet wird. Verwenden Sie die Privacy Service-API[ um Aufträge (basierend auf einer bestimmten Verordnung, Datumsbereichen oder einem einzelnen Auftrag) ](../api/privacy-jobs.md#list).
 
 >[!TIP]
 >
@@ -117,11 +126,11 @@ Sie können die Liste filtern, indem Sie Keywords in die Suchleiste unter dem Ti
 
 ![Der Abschnitt „Datenschutzkonsolen-Auftragsanfrage“ mit hervorgehobenem Suchfeld.](../images/user-guide/job-search.png)
 
-Alternativ können Sie die Suchschaltfläche verwenden, um eine Datenschutzaufgabenabfrage durchzuführen, die sich über einen bestimmten Datumsbereich erstreckt. Diese Aktion gibt alle Datenschutzaufträge zurück, die von Ihrer Organisation im angegebenen Zeitraum gesendet wurden. Wählen Sie das **[!UICONTROL Angefordert am]** Dropdown-Menü aus, um ein Start- und Enddatum für die Abfrage auszuwählen. Zu den verfügbaren Optionen gehören [!UICONTROL Heute], [!UICONTROL Letzte 7 Tage], [!UICONTROL Letzte 2 Wochen], [!UICONTROL Letzte 30 Tage] oder [!UICONTROL Benutzerdefiniert]. Bei Verwendung mit der Option [!UICONTROL Angefordert am] zeigt die Suchfunktion nur Auftragsanfragen an, die zwischen den von Ihnen ausgewählten Datumsbereichen gesendet wurden.
+Alternativ können Sie die Suchschaltfläche verwenden, um eine Datenschutzaufgabenabfrage durchzuführen, die sich über einen bestimmten Datumsbereich erstreckt. Diese Aktion gibt alle Datenschutzaufträge zurück, die von Ihrer Organisation im angegebenen Zeitraum gesendet wurden. Wählen Sie das Dropdown-Menü **[!UICONTROL Requested on]** aus, um ein Start- und Enddatum für die Abfrage auszuwählen. Zu den verfügbaren Optionen gehören [!UICONTROL Today], [!UICONTROL Last 7 Days], [!UICONTROL Last 2 Weeks], [!UICONTROL Last 30 Days] oder [!UICONTROL Custom]. Bei Verwendung mit der Option [!UICONTROL Requested on] zeigt die Suchfunktion nur Auftragsanfragen an, die zwischen den von Ihnen ausgewählten Datumsbereichen gesendet wurden.
 
 ![Der Abschnitt „Vorgangsanfrage“ mit dem Suchfeld, dem Dropdown-Menü „Angefordert“ und der hervorgehobenen Suchschaltfläche.](../images/user-guide/requested-on-dropdown-menu.png)
 
-Um die Details einer bestimmten Vorgangsanfrage anzuzeigen, wählen Sie die Vorgangskennung der Anfrage aus der Liste aus, um die Seite **[!UICONTROL Vorgangsdetails]** zu öffnen.
+Um die Details einer bestimmten Vorgangsanfrage anzuzeigen, wählen Sie die Vorgangskennung der Anfrage aus der Liste aus, um die **[!UICONTROL Job Details]** zu öffnen.
 
 ![Details zu DSGVO-UI-Aufträgen](../images/user-guide/job-details.png)
 
@@ -129,7 +138,7 @@ Dieses Dialogfeld enthält Statusinformationen zu den einzelnen [!DNL Experience
 
 Wenn eine Lösung zusätzliche Daten bereitgestellt hat, können diese in diesem Dialogfeld angezeigt werden. Sie können diese Daten anzeigen, indem Sie einzelne Produktzeilen auswählen.
 
-Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, wählen **[!UICONTROL oben rechts]** Dialogfeld „In CSV exportieren“ aus.
+Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, wählen Sie oben rechts im Dialogfeld **[!UICONTROL Export to CSV]** aus.
 
 ## Erstellen einer neuen Anfrage für einen Datenschutzauftrag {#create-a-new-privacy-job-request}
 
@@ -153,21 +162,21 @@ Die Schritte zur Verwendung jeder dieser Methoden werden in den folgenden Abschn
 
 Mit dem Anfrage-Builder können Sie in der -Benutzeroberfläche manuell eine neue Datenschutzanfrage erstellen. Der Request Builder eignet sich am besten für einfachere und kleinere Anfragesätze, da der Request Builder Anfragen so einschränkt, dass sie nur einen ID-Typ pro Benutzer haben. Bei komplizierteren Anfragen ist es möglicherweise besser, stattdessen [eine JSON-Datei hochzuladen](#json).
 
-Um mit der Verwendung des Anfrage-Builders zu beginnen **[!UICONTROL wählen Sie]** Anfrage erstellen) unter dem Widget Statusbericht auf der rechten Seite des Bildschirms aus.
+Um mit der Verwendung des Anfrage-Builders zu beginnen, wählen Sie **[!UICONTROL Create Request]** unter dem Widget Statusbericht auf der rechten Seite des Bildschirms aus.
 
 ![Anfrage erstellen auswählen](../images/user-guide/create-request.png)
 
-Das **[!UICONTROL Anfrage erstellen]** wird geöffnet und zeigt die verfügbaren Optionen zum Senden einer Datenschutzanfrage für den derzeit ausgewählten Regulierungstyp an.
+Das Dialogfeld **[!UICONTROL Create Request]** wird geöffnet und zeigt die verfügbaren Optionen zum Senden einer Datenschutzanfrage für den derzeit ausgewählten Regulierungstyp an.
 
 ![](../images/user-guide/request-builder.png){width=500}
 
-Wählen Sie den **[!UICONTROL Vorgangstyp]** der Anfrage („Löschen“ oder „Zugriff„) und ein oder mehrere verfügbare Produkte aus der Liste aus.
+Wählen Sie den **[!UICONTROL Job Type]** der Anfrage („Löschen“ oder „Zugriff„) und ein oder mehrere verfügbare Produkte aus der Liste aus.
 
-Privacy Service unterstützt zwei Arten von Vorgangsanfragen für personenbezogene Daten: [!UICONTROL Zugriff] (Lesen) und/oder [!UICONTROL Löschen]. Sie können entweder eine Anfrage stellen, um alle im Produkt gespeicherten Informationen zu erhalten, die sich auf den Gegenstand der Anfrage beziehen, oder eine Löschung aller Informationen anfordern, die sich auf den Gegenstand der Anfrage beziehen.
+Privacy Service unterstützt zwei Arten von Vorgangsanfragen für personenbezogene Daten: [!UICONTROL Access] (Lesen) und/oder [!UICONTROL Delete]. Sie können entweder eine Anfrage stellen, um alle im Produkt gespeicherten Informationen zu erhalten, die sich auf den Gegenstand der Anfrage beziehen, oder eine Löschung aller Informationen anfordern, die sich auf den Gegenstand der Anfrage beziehen.
 
 ![](../images/user-guide/type-and-products.png){width=500}
 
-Wählen **[!UICONTROL unter „Namespace]** Typ den entsprechenden Namespace-Typ für die Kunden-IDs aus, die an [!DNL Privacy Service] gesendet werden.
+Wählen Sie unter **[!UICONTROL Namespace type]** den entsprechenden Namespace-Typ für die Kunden-IDs aus, die an [!DNL Privacy Service] gesendet werden sollen.
 
 ![](../images/user-guide/namespace-type.png){width=500}
 
@@ -179,7 +188,7 @@ Bei Verwendung des benutzerdefinierten Namespace-Typs müssen Sie den Namespace 
 
 ![](../images/user-guide/custom-namespace.png){width=500}
 
-Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Create]** aus.
 
 ![](../images/user-guide/request-builder-create.png){width=500}
 
@@ -189,15 +198,15 @@ Das Dialogfeld verschwindet, und der neue Auftrag (oder die neuen Aufträge) wer
 
 Bei der Erstellung komplexerer Anfragen, z. B. solche, die mehrere ID-Typen für jede verarbeitete betroffene Person verwenden, können Sie eine Anfrage erstellen, indem Sie eine JSON-Datei hochladen.
 
-Wählen Sie den Pfeil neben **[!UICONTROL Anfrage erstellen]** unterhalb des Widgets Statusbericht auf der rechten Seite des Bildschirms. Wählen Sie aus der angezeigten Liste der Optionen die Option **[!UICONTROL JSON hochladen]** aus.
+Wählen Sie den Pfeil neben **[!UICONTROL Create Request]**, unterhalb des Widgets Statusbericht auf der rechten Seite des Bildschirms. Wählen Sie aus der angezeigten Liste der Optionen **[!UICONTROL Upload JSON]** aus.
 
 ![Optionen für die Anfrageerstellung](../images/user-guide/create-options.png)
 
-Das Dialogfeld **[!UICONTROL JSON hochladen]** wird angezeigt und bietet ein Fenster, in das Sie Ihre JSON-Datei per Drag-and-Drop ziehen können.
+Das Dialogfeld **[!UICONTROL Upload JSON]** wird angezeigt und bietet ein Fenster, in das Sie Ihre JSON-Datei ziehen und ablegen können.
 
 ![](../images/user-guide/upload-json.png){width=500}
 
-Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie **[!UICONTROL Adobe-GDPR-Request.json herunterladen]** aus, um eine Vorlage herunterzuladen, die Sie entsprechend den von Ihren betroffenen Personen erfassten Werten ausfüllen können.
+Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie **[!UICONTROL Download Adobe-GDPR-Request.json]** aus, um eine Vorlage herunterzuladen, die Sie entsprechend den von Ihren betroffenen Personen erfassten Werten ausfüllen können.
 
 
 ![](../images/user-guide/privacy-template.png){width=500}
@@ -205,7 +214,7 @@ Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie **[!UICONTROL Adobe-G
 
 Suchen Sie die JSON-Datei auf Ihrem Computer und ziehen Sie sie in das Dialogfenster. Wenn der Upload erfolgreich war, wird der Dateiname im Dialogfeld angezeigt. Sie können weitere JSON-Dateien nach Bedarf hinzufügen, indem Sie sie per Drag-and-Drop in das Dialogfeld ziehen.
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Erstellen]** aus. Das Dialogfeld verschwindet, und der neue Auftrag (oder die neuen Aufträge) werden im Widget Auftragsanfragen zusammen mit ihrem aktuellen Verarbeitungsstatus aufgeführt.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Create]** aus. Das Dialogfeld verschwindet, und der neue Auftrag (oder die neuen Aufträge) werden im Widget Auftragsanfragen zusammen mit ihrem aktuellen Verarbeitungsstatus aufgeführt.
 
 ### Nächste Schritte
 
