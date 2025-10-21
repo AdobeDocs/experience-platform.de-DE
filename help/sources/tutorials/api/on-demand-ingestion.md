@@ -3,20 +3,24 @@ keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;
 title: Erstellen einer Flussausführung für die On-Demand-Aufnahme mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Flussausführung für die On-Demand-Aufnahme erstellen
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: b2b835faf9cf52ea0461d43b29076eaf7b0688f1
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '823'
 ht-degree: 10%
 
 ---
 
 # Erstellen einer Flussausführung für die On-Demand-Aufnahme mithilfe der [!DNL Flow Service]-API
 
-Flussausführungen stellen eine Instanz der Flussausführung dar. Beispiel: Wenn ein Fluss so geplant ist, dass er stündlich um 9:00 Uhr, um 10:00 Uhr und um 11:00 Uhr ausgeführt wird, gibt es drei Instanzen eines Flussdurchgangs. Flussausführungen sind spezifisch für Ihre bestimmte Organisation.
+Flussausführungen stellen eine Instanz der Flussausführung dar. Beispiel: Wenn ein Fluss so geplant ist, dass er stündlich um 9 :00, :00 Uhr und :00 Uhr morgens ausgeführt wird, gibt es drei Instanzen eines Flussdurchgangs. Flussausführungen sind spezifisch für Ihre bestimmte Organisation.
 
 Die On-Demand-Aufnahme bietet Ihnen die Möglichkeit, eine Flussausführung für einen bestimmten Datenfluss zu erstellen. Auf diese Weise können Ihre Benutzerinnen und Benutzer ohne Service-Token eine Flussausführung erstellen, die auf bestimmten Parametern basiert, und einen Aufnahmezyklus erstellen. Die On-Demand-Aufnahme wird nur für Batch-Quellen unterstützt.
 
 In diesem Tutorial werden die Schritte zur Verwendung der On-Demand-Aufnahme und zur Erstellung einer Flussausführung mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+
+>[!TIP]
+>
+>Beim Wiederholen einer Flussausführung werden nur Dateien mit Zeitstempeln verarbeitet, die innerhalb des Bereichs der ursprünglichen Ausführung liegen.
 
 ## Erste Schritte
 
@@ -31,7 +35,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ## Erstellen einer Flussausführung für eine tabellenbasierte Quelle
 
@@ -102,7 +106,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Flussausführung z
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [&#x200B; finden Sie &#x200B;](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
+| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [ finden Sie ](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
 | `etag` | Die Ressourcenversion der Flussausführung. |
 
 <!-- 
@@ -184,7 +188,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Flussausführung z
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [&#x200B; finden Sie &#x200B;](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
+| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [ finden Sie ](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
 | `etag` | Die Ressourcenversion der Flussausführung. |
 
 ## Überwachen von Flussausführungen
