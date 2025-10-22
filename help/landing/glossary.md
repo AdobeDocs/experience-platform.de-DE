@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform-Glossar
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
 workflow-type: tm+mt
-source-wordcount: '8170'
+source-wordcount: '8169'
 ht-degree: 4%
 
 ---
@@ -351,7 +351,7 @@ ht-degree: 4%
 
 **Module**: Im Kontext von Tags ist ein Modul ein Ausschnitt von ausführbarem JavaScript, der von einer Erweiterung bereitgestellt wird. Dieses führt Aktionen in einer Client-Umgebung aus, ohne eine Regel erstellen zu müssen.
 
-**MODPA**: Das [!DNL Maryland Online Data Privacy Act] (MODPA) von 2024 gewährt Einwohnern von Maryland Rechte, einschließlich Zugriff, Korrektur, Löschung und Datenübertragbarkeit. Bewohner können sich gegen gezielte Werbung, Verkauf personenbezogener Daten und Profiling entscheiden. Verantwortliche müssen die Datenschutzhinweise bereitstellen und Datenschutzbewertungen für die Verarbeitung mit hohem Risiko durchführen. Das MODPA sticht durch ein Verbot des Geofencing um Einrichtungen für geistige und reproduktive Gesundheit hervor. Das Gesetz gilt für Unternehmen, die Daten von mehr als 35.000 Verbrauchern verarbeiten, oder für Unternehmen, die Daten von mehr als 10.000 Verbrauchern verarbeiten und über 20 % ihrer Einnahmen aus dem Verkauf dieser Daten erzielen. Es wird vom Maryland Attorney General vollstreckt.
+**MODPA**: Das [!DNL Maryland Online Data Privacy Act] (MODPA) von 2024 gewährt Einwohnern von Maryland Rechte, einschließlich Zugriff, Korrektur, Löschung und Datenübertragbarkeit. Bewohner können sich gegen gezielte Werbung, Verkauf personenbezogener Daten und Profiling entscheiden. Verantwortliche müssen Datenschutzhinweise bereitstellen und Datenschutzbewertungen für die Verarbeitung mit hohem Risiko durchführen. Das MODPA sticht durch ein Verbot des Geofencing um Einrichtungen für geistige und reproduktive Gesundheit hervor. Das Gesetz gilt für Unternehmen, die Daten von mehr als 35.000 Verbrauchern verarbeiten, oder für Unternehmen, die Daten von mehr als 10.000 Verbrauchern verarbeiten und über 20 % ihrer Einnahmen aus dem Verkauf dieser Daten erzielen. Es wird vom Maryland Attorney General vollstreckt.
 
 ## N
 
