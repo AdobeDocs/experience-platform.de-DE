@@ -5,10 +5,10 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Echtzeit-Kundenprofildaten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen können, die häufiger als „Profile“ bezeichnet werden.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
+source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
 workflow-type: tm+mt
-source-wordcount: '2141'
-ht-degree: 30%
+source-wordcount: '2211'
+ht-degree: 29%
 
 ---
 
@@ -20,15 +20,22 @@ Adobe Experience Platform ermöglicht den Zugriff auf [!DNL Real-Time Customer P
 
 Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, schauen Sie bitte im Handbuch in [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
->[!BEGINSHADEBOX]
-
 ## Auflösung von Entitäten
 
 Im Rahmen des Architekturupgrades führt Adobe die Entitätsauflösung für Accounts und Opportunities ein. Dabei wird ein deterministischer ID-Abgleich auf der Grundlage der neuesten Daten verwendet. Der Vorgang zur Entitätsauflösung wird täglich während der Batch-Segmentierung ausgeführt, bevor Zielgruppen mit mehreren Entitäten mit B2B-Attributen bewertet werden.
 
 Diese Verbesserung ermöglicht es Experience Platform, mehrere Datensätze zu identifizieren und zu vereinheitlichen, die dieselbe Entität darstellen, wodurch die Datenkonsistenz verbessert und eine genauere Zielgruppensegmentierung ermöglicht wird.
 
-Zuvor nutzten Accounts und Opportunities eine auf Identitätsdiagrammen basierende Auflösung, die Identitäten verknüpfte, einschließlich aller historischen Aufnahmen. Beim neuen Ansatz zur Auflösung von Entitäten werden Identitäten nur anhand der neuesten Daten verknüpft
+Zuvor nutzten Accounts und Opportunities eine auf Identitätsdiagrammen basierende Auflösung, die Identitäten verknüpfte, einschließlich aller historischen Aufnahmen. Beim neuen Ansatz zur Auflösung von Entitäten werden Identitäten nur auf der Grundlage der neuesten Daten verknüpft.
+
+- Konto- und Opportunity-Entität werden durch eine zeitprioritätsbasierte Zusammenführung aufgelöst:
+   - Konto: Identitäten, die den Namespace `b2b_account` verwenden.
+   - Opportunity: Identitäten, die den `b2b_opportunity` Namespace verwenden.
+- Alle anderen Entitäten werden einfach vereinheitlicht, und nur primäre Identitätsüberschneidungen werden mit zeitprioritätsbasierter Zusammenführung zusammengeführt.
+
+>[!NOTE]
+>
+>Die Entitätsauflösung unterstützt nur `b2b_account` und `b2b_opportunity`. Identitäten aus anderen Namespaces werden bei der Entitätsauflösung nicht verwendet. Wenn Sie benutzerdefinierte Namespaces verwenden, können Sie keine Konten und Opportunities finden.
 
 ### Wie funktioniert die Entitätsauflösung?
 
@@ -36,8 +43,6 @@ Zuvor nutzten Accounts und Opportunities eine auf Identitätsdiagrammen basieren
 - **Nachher**: Wenn die DUNS-Nummer als zusätzliche Identität verwendet wurde und die DUNS-Nummer des Kontos in einem Quellsystem wie einem CRM aktualisiert wurde, ist die Konto-ID nur mit der neuen DUNS-Nummer verknüpft und spiegelt somit den aktuellen Kontostand genauer wider.
 
 Infolge dieser Aktualisierung spiegelt die [!DNL Profile Access]-API jetzt die neueste Ansicht des Zusammenführungsprofils wider, nachdem ein Entitätsauflösungsauftragszyklus abgeschlossen ist. Darüber hinaus bieten die konsistenten Daten Anwendungsfälle wie Segmentierung, Aktivierung und Analyse mit verbesserter Datengenauigkeit und -konsistenz.
-
->[!ENDSHADEBOX]
 
 ## Abrufen einer Entität {#retrieve-entity}
 
@@ -1244,7 +1249,7 @@ Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten 
 
 Um eine Entität zu löschen **müssen** die folgenden Abfrageparameter angeben:
 
-- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **&#x200B;**&#x200B;nur`schema.name=_xdm.context.profile` verwenden.
+- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **** nur`schema.name=_xdm.context.profile` verwenden.
 - `entityId`: Die ID der Entität, die Sie abrufen möchten.
 - `entityIdNS`: Der Namespace der Entität, die Sie abrufen möchten. Dieser Wert muss angegeben werden, wenn die `entityId` **keine** XID ist.
 - `mergePolicyId`: Die Zusammenführungsrichtlinien-ID der Entität. Die Zusammenführungsrichtlinie enthält Informationen zur Identitätszuordnung und zum Zusammenführen von Schlüssel-Wert-XDM-Objekten. Wenn dieser Wert nicht angegeben wird, wird die standardmäßige Zusammenführungsrichtlinie verwendet.

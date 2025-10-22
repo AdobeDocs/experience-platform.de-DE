@@ -1,10 +1,11 @@
 ---
 title: AdForm
 description: Adform ist ein führender Anbieter von Kauf- und Verkaufslösungen für programmgesteuerte Medien. Durch die Verbindung von Adform mit der Adobe Experience Platform können Sie Ihre Erstanbieter-Zielgruppen über Adform basierend auf der Experience Cloud ID (ECID) aktivieren.
-source-git-commit: 823b2142366ac218ad93279de5f31d60bdc07bbf
+last-substantial-update: 2025-10-22T00:00:00Z
+source-git-commit: f7fd7a83f6d047877697b72e78ac0d4b08c0ff00
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 36%
+source-wordcount: '972'
+ht-degree: 32%
 
 ---
 
@@ -27,16 +28,16 @@ Damit Sie besser verstehen können, wie und wann Sie das Adform-Ziel verwenden s
 
 Verwenden Sie dieses Ziel, um Adobe Real-Time CDP-Zielgruppen zur Aktivierung basierend auf der Experience Cloud ID (ECID) und der ID Fusion von Adform an Adform zu senden. ID Fusion von Adform ist der ID-Auflösungs-Service von Adform, mit dem Sie Ihre First-Party-Zielgruppen basierend auf der Experience Cloud ID (ECID) aktivieren können.
 
-Ein gängiger Fall ist die erneute Zielgruppenbestimmung Ihrer Website-Besucher auf Ihrer Website oder in Ihrer App anhand der Experience Cloud ID (ECID). Sie müssen lediglich die Experience Cloud ID (ECID) über die jederzeit verfügbaren [Event Streaming“ oder &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)Client-seitigen[&#x200B; Adform-Erweiterungen an Adform senden](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/analytics/adform). Anschließend können Sie Zielgruppen über das Adform-Ziel für die Aktivierung mit Adform freigeben - allein auf Grundlage der Experience Cloud ID (ECID).
+Ein gängiger Fall ist die erneute Zielgruppenbestimmung Ihrer Website-Besucher auf Ihrer Website oder in Ihrer App anhand der Experience Cloud ID (ECID). Sie müssen lediglich die Experience Cloud ID (ECID) über die jederzeit verfügbaren [Event Streaming“ oder ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)Client-seitigen[ Adform-Erweiterungen an Adform senden](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform). Anschließend können Sie Zielgruppen über das Adform-Ziel für die Aktivierung mit Adform freigeben - allein auf Grundlage der Experience Cloud ID (ECID).
 
 ## Voraussetzungen {#prerequisites}
 
 * Sie müssen bereits ein Adform-Kunde sein, um dieses Ziel verwenden zu können.
 * Dazu benötigen Sie Ihre Zugangsdaten für die Adform Audience Base-Datenverbindung.
    * Wenn Sie keine Anmeldeinformationen für die Datenverbindung der Adform-Zielgruppe haben, wenden Sie sich bitte an Ihren Adform-Support-Mitarbeiter.
-* Für eine ordnungsgemäße Synchronisierung müssen Sie entweder über eine [Ereignis-Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)- oder [Client-seitige](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/analytics/adform) Verbindung von Ihren Entitäten zu Adform Site Tracking verfügen.
+* Für eine ordnungsgemäße Synchronisierung müssen Sie entweder über eine [Ereignis-Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)- oder [Client-seitige](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Verbindung von Ihren Entitäten zu Adform Site Tracking verfügen.
    * Wenn Sie keine Ereignis-Streaming- oder Client-seitige Verbindung von Ihren Entitäten zu Adform Site Tracking haben, wenden Sie sich bitte an Ihren Adform-Support-Mitarbeiter.
-   * Adform bietet Adobe Experience Cloud-Erweiterungen für [Ereignis-Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) und [Client-seitig](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/analytics/adform).
+   * Adform bietet Adobe Experience Cloud-Erweiterungen für [Ereignis-Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) und [Client-seitig](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Unterstützte Identitäten {#supported-identities}
@@ -55,7 +56,7 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -66,7 +67,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im Ziel *YourDestination* verwendet werden. |
+| Exporttyp | **[!UICONTROL Segment export]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im Ziel *YourDestination* verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -75,19 +76,19 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[. ](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Connect to destination]** aus.
 
 ![Beim Ziel authentifizieren](../../assets/catalog/advertising/adform/authenticate-destination.png)
 
-* **[!UICONTROL Kontoname]**: Geben Sie einen Kontonamen ein, mit dem Sie diese Zielverbindung in Zukunft identifizieren können.
-* **[!UICONTROL S3-Zugriffsschlüssel-ID]**: Füllen Sie den von Adform bereitgestellten S3-Zugriffsschlüssel aus.
-* **[!UICONTROL Geheimer S3-Zugriffsschlüssel]**: Füllen Sie den von Adform bereitgestellten geheimen S3-Zugriffsschlüssel aus.
+* **[!UICONTROL Account name]**: Geben Sie einen Kontonamen ein, mit dem Sie diese Zielverbindung in Zukunft identifizieren können.
+* **[!UICONTROL S3 Access Key ID]**: Füllen Sie den von Adform bereitgestellten S3-Zugriffsschlüssel aus.
+* **[!UICONTROL S3 Secret Access Key]**: Füllen Sie den geheimen S3-Zugriffsschlüssel aus, der von Adform bereitgestellt wird.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -96,21 +97,21 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 ![Füllen Sie die Zieldetails aus](../../assets/catalog/advertising/adform/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Anbietername]**: Ihr von Adform bereitgestellter Adform-Kontoname.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Provider Name]**: Ihr Adform-Kontoname, der von Adform bereitgestellt wird.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
