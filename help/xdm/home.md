@@ -77,7 +77,7 @@ Weniger identifizierte Profile bestehen möglicherweise nur aus anonymen Verhalt
 
 Je mehr Daten zu einem Profil gesammelt werden, desto zuverlässiger wird der Bestand an personenbezogenen Daten, Identifizierungsinformationen, Kontaktdaten und Kommunikationsvorlieben einer Person.
 
-Weitere Informationen zur Struktur und [[!UICONTROL XDM Individual Profile] Anwendungsfall der Felder einer Klasse finden Sie im ](./classes/individual-profile.md)-Referenzhandbuch .
+Weitere Informationen zur Struktur und [[!UICONTROL XDM Individual Profile] Anwendungsfall der Felder einer Klasse finden Sie im &#x200B;](./classes/individual-profile.md)-Referenzhandbuch .
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -89,7 +89,7 @@ Es ist zwar nicht einfach, alle Ereignisse in allen Datenquellen zu kategorisier
 
 ![Eine Infografik der Kunden-Journey, die mit Erlebnisereignissen im Laufe der Zeit visualisiert wurde.](images/overview/experience-event-journey.png)
 
-Weitere Informationen zur Struktur und [[!UICONTROL XDM ExperienceEvent] Anwendungsfall der Felder einer Klasse finden Sie im ](./classes/experienceevent.md)-Referenzhandbuch .
+Weitere Informationen zur Struktur und [[!UICONTROL XDM ExperienceEvent] Anwendungsfall der Felder einer Klasse finden Sie im &#x200B;](./classes/experienceevent.md)-Referenzhandbuch .
 
 ## XDM-Schemata und Experience Platform-Services {#schemas-and-platform-services}
 
@@ -103,7 +103,7 @@ Katalogdaten werden im Data Lake gespeichert, einem hochgradig granularen Datens
 
 Um mit der Aufnahme von Daten in Experience Platform zu beginnen, können Sie mithilfe von Catalog Service einen Datensatz erstellen. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der aufzunehmenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, leitet Experience Platform ein „festgestelltes Schema“ ab, indem Typ und Inhalt der erfassten Datenfelder überprüft werden. Datensätze werden dann im Katalog-Service verfolgt und im Data Lake zusammen mit den Schemas und festgestellten Schemas, auf denen sie basieren, gespeichert.
 
-Weitere Informationen finden Sie [ „Übersicht ](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [ finden ](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
+Weitere Informationen finden Sie [&#x200B; „Übersicht &#x200B;](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [&#x200B; finden &#x200B;](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
 
 ### Data Mirror und relationale Schemata {#relational-schemas}
 

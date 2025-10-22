@@ -126,7 +126,7 @@ Verwenden Sie die Änderungsdatenerfassung, um präzise Löschungen auf Datensat
 
 ### Datenlöschung und Hygieneanforderungen
 
-Alle Programme, die relationale Schemata und Data Mirror verwenden, müssen mit den Auswirkungen des Löschens von Daten vertraut sein. Relationale Schemata ermöglichen präzise Löschvorgänge auf Datensatzebene, die sich auf verknüpfte Daten in verbundenen Datensätzen auswirken können. Diese Löschfunktionen wirken sich unabhängig von Ihrem spezifischen Anwendungsfall auf die Datenintegrität, die Compliance und das nachgelagerte Anwendungsverhalten aus. Überprüfen Sie [Datenhygiene-Anforderungen für Datensätze, die auf relationalen Schemata ](../../hygiene/ui/record-delete.md#relational-record-delete), und planen Sie Löschszenarien vor der Implementierung.
+Alle Programme, die relationale Schemata und Data Mirror verwenden, müssen mit den Auswirkungen des Löschens von Daten vertraut sein. Relationale Schemata ermöglichen präzise Löschvorgänge auf Datensatzebene, die sich auf verknüpfte Daten in verbundenen Datensätzen auswirken können. Diese Löschfunktionen wirken sich unabhängig von Ihrem spezifischen Anwendungsfall auf die Datenintegrität, die Compliance und das nachgelagerte Anwendungsverhalten aus. Überprüfen Sie [Datenhygiene-Anforderungen für Datensätze, die auf relationalen Schemata &#x200B;](../../hygiene/ui/record-delete.md#relational-record-delete), und planen Sie Löschszenarien vor der Implementierung.
 
 ### Auswahl des Schemaverhaltens
 

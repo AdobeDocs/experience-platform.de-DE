@@ -42,7 +42,7 @@ Data Mirror verwendet relationale Schemata, um die Änderungsdatenerfassung zu e
 
 Relationale Schemata erweitern Experience Platform, um die Eindeutigkeit von Primärschlüsseln zu erzwingen, Änderungen auf Zeilenebene zu verfolgen und Beziehungen auf Schemaebene zu definieren. Bei der Datenerfassung für Änderungen wenden sie Einfügungen, Aktualisierungen und Löschungen direkt im Data Lake an, wodurch die Notwendigkeit von Extract, Transform, Load (ETL) oder manueller Abstimmung reduziert wird.
 
-Weitere [ finden Sie unter ](../../../xdm/schema/relational.md) zu relationalen Schemata .
+Weitere [&#x200B; finden Sie unter &#x200B;](../../../xdm/schema/relational.md) zu relationalen Schemata .
 
 ### Anforderungen an relationale Schemata zur Änderungsdatenerfassung
 
@@ -86,7 +86,7 @@ So aktivieren Sie die Änderungsdatenerfassung mit einem relationalen Schema:
 
 >[!IMPORTANT]
 >
->Die dateibasierte Änderungsdatenerfassung erfordert Data Mirror mit relationalen Schemata. Bevor Sie die folgenden Dateiformatierungsschritte ausführen, stellen Sie sicher, dass Sie den Data Mirror-Setup-Workflow [](#workflow) abgeschlossen haben, der zuvor in diesem Dokument beschrieben wurde. In den folgenden Schritten wird beschrieben, wie Sie Ihre Datendateien formatieren, um Änderungsnachverfolgungsinformationen einzuschließen, die von Data Mirror verarbeitet werden.
+>Die dateibasierte Änderungsdatenerfassung erfordert Data Mirror mit relationalen Schemata. Bevor Sie die folgenden Dateiformatierungsschritte ausführen, stellen Sie sicher, dass Sie den Data Mirror-Setup-Workflow [&#128279;](#workflow) abgeschlossen haben, der zuvor in diesem Dokument beschrieben wurde. In den folgenden Schritten wird beschrieben, wie Sie Ihre Datendateien formatieren, um Änderungsnachverfolgungsinformationen einzuschließen, die von Data Mirror verarbeitet werden.
 
 Fügen Sie bei dateibasierten Quellen ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] und [!DNL SFTP]) eine `_change_request_type` Spalte in Ihre Dateien ein.
 
