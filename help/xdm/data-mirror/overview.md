@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Datenspiegelung;modellbasiertes Schema;relationales Schema;Datenerfassung ändern;Datenbanksynchronisierung;Primärschlüssel;Beziehungen
+keywords: Experience Platform;Datenspiegelung;relationales Schema;Datenerfassung ändern;Datenbanksynchronisierung;Primärschlüssel;Beziehungen
 solution: Experience Platform
 title: Übersicht über Data Mirror
-description: Erfahren Sie, wie Data Mirror die Aufnahme von Änderungen auf Zeilenebene von externen Datenbanken in Adobe Experience Platform mithilfe modellbasierter Schemata ermöglicht, die Eindeutigkeit, Beziehungen und Versionierung erzwingen.
+description: Erfahren Sie, wie Data Mirror die Aufnahme von Änderungen auf Zeilenebene von externen Datenbanken in Adobe Experience Platform mithilfe von relationalen Schemata ermöglicht, die Eindeutigkeit, Beziehungen und Versionierung erzwingen.
 badge: Eingeschränkte Verfügbarkeit
-source-git-commit: 6ce214073f625a253fcc5bb14dfdb6a4a61e6e7b
+exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1356'
 ht-degree: 1%
 
 ---
@@ -15,9 +16,13 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Data Mirror und modellbasierte Schemata stehen Adobe Journey Optimizer-Lizenzinhabern (**Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
+>Data Mirror und relationale Schemata stehen Adobe Journey Optimizer-Lizenzinhabern **Orchestrierte Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
 
-Data Mirror ist eine Adobe Experience Platform-Funktion, die die Aufnahme von Änderungen auf Zeilenebene aus externen Datenbanken in den Data Lake mithilfe von modellbasierten Schemata ermöglicht. Sie behält Datenbeziehungen bei, erzwingt Eindeutigkeit und unterstützt die Versionierung, ohne dass vorgelagerte ETL-Prozesse (Extract, Transform, Load) erforderlich sind.
+>[!NOTE]
+>
+>Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-Dokumentation zuvor als modellbasierte Schemata bezeichnet. Die Funktionalität bleibt gleich.
+
+Data Mirror ist eine Adobe Experience Platform-Funktion, die die Aufnahme von Änderungen auf Zeilenebene aus externen Datenbanken in den Data Lake mithilfe relationaler Schemata ermöglicht. Sie behält Datenbeziehungen bei, erzwingt Eindeutigkeit und unterstützt die Versionierung, ohne dass vorgelagerte ETL-Prozesse (Extract, Transform, Load) erforderlich sind.
 
 Verwenden Sie Data Mirror, um Einfügungen, Aktualisierungen und Löschungen (veränderliche Daten) aus externen Systemen wie [!DNL Snowflake], [!DNL Databricks] oder [!DNL BigQuery] direkt in Experience Platform zu synchronisieren. Auf diese Weise können Sie beim Importieren von Daten in Platform die Struktur Ihres vorhandenen Datenbankmodells und die Datenintegrität beibehalten.
 
@@ -33,7 +38,7 @@ Data Mirror bietet die folgenden grundlegenden Funktionen für die Datenbanksync
 
 Verwenden Sie Data Mirror, um Änderungen direkt aus Ihren Quellsystemen aufzunehmen, die Schemaintegrität durchzusetzen und die Daten für Analysen, Journey-Orchestrierung und Compliance-Workflows verfügbar zu machen. Data Mirror eliminiert komplexe vorgelagerte ETL-Prozesse und beschleunigt die Implementierung durch die Möglichkeit der direkten Spiegelung vorhandener Datenbankmodelle.
 
-Planen Sie die Anforderungen für Löschung und Datenhygiene bei der Implementierung modellbasierter Schemata mit Data Mirror. Alle Programme müssen vor der Bereitstellung berücksichtigen, wie sich Löschungen auf zugehörige Datensätze, Compliance-Workflows und nachgelagerte Prozesse auswirken.
+Planen Sie beim Implementieren relationaler Schemata mit Data Mirror die Anforderungen für das Löschen und die Datenhygiene. Alle Programme müssen vor der Bereitstellung berücksichtigen, wie sich Löschungen auf zugehörige Datensätze, Compliance-Workflows und nachgelagerte Prozesse auswirken.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -42,12 +47,12 @@ Bevor Sie beginnen, sollten Sie die folgenden Komponenten von Experience Platfor
 * [Erstellen von Schemata in der Experience Platform-](../ui/resources/schemas.md) oder [API](../api/schemas.md)
 * [Konfigurieren von Cloud-Quellverbindungen](../../sources/home.md#cloud-storage)
 * [Change Data Capture-Konzepte anwenden](../../sources/tutorials/api/change-data-capture.md) (Upserts, Löschvorgänge)
-* Unterscheiden Sie zwischen [&#128279;](../schema/composition.md) und [modellbasierten Schemas](../schema/model-based.md)
+* Unterscheiden zwischen [Standard](../schema/composition.md) und [relationalen Schemata](../schema/relational.md)
 * [Definieren struktureller Beziehungen mit Deskriptoren](../api/descriptors.md)
 
 ### Implementierungsanforderungen
 
-Ihre Platform-Instanz und Quelldaten müssen bestimmte Anforderungen erfüllen, damit Data Mirror ordnungsgemäß funktioniert. Data Mirror erfordert **modellbasierte Schemata** die flexible Datenstrukturen mit erzwungenen Einschränkungen sind. Derzeit arbeitet Data Mirror hauptsächlich mit modellbasierten Schemata. Die Integration mit standardmäßigen XDM-Schemata wird jedoch durch die kommenden B2B-Funktionen für benutzerdefinierte Objekte unterstützt (geplant für Oktober 2025).
+Ihre Platform-Instanz und Quelldaten müssen bestimmte Anforderungen erfüllen, damit Data Mirror ordnungsgemäß funktioniert. Data Mirror erfordert **relationale Schemata** die flexible Datenstrukturen mit erzwungenen Einschränkungen sind.
 
 Fügen Sie **Schema einen** Primärschlüssel und Versionsdeskriptor) hinzu. Wenn Sie mit einem Zeitreihenschema arbeiten, ist **ein &quot;**&quot; erforderlich.
 
@@ -61,17 +66,17 @@ Im Gegensatz zu standardmäßigen Aufnahmeansätzen behält Data Mirror Ihre Dat
 
 ### Definieren der Schemastruktur
 
-Erstellen Sie [modellbasierte Schemata](../schema/model-based.md) mit erforderlichen Deskriptoren (Metadaten, die das Schemaverhalten und Einschränkungen definieren). Wählen Sie entweder über die Benutzeroberfläche oder direkt über die API eine Methode aus, die zum Workflow Ihres Teams passt.
+Erstellen Sie [relationale Schemata](../schema/relational.md) mit erforderlichen Deskriptoren (Metadaten, die das Schemaverhalten und die Einschränkungen definieren). Wählen Sie entweder über die Benutzeroberfläche oder direkt über die API eine Methode aus, die zum Workflow Ihres Teams passt.
 
-* **UI-Ansatz**: [Erstellen modellbasierter Schemata im Schema-Editor](../ui/resources/schemas.md#create-model-based-schema)
-* **API-Ansatz**: [Erstellen von Schemata über die Schema Registry-API](../api/schemas.md#create-model-based-schema)
+* **UI-Ansatz**: [Erstellen relationaler Schemata im Schema-Editor](../ui/resources/schemas.md#create-relational-schema)
+* **API-Ansatz**: [Erstellen von Schemata über die Schema Registry-API](../api/schemas.md#create-relational-schema)
 
 ### Zuordnen von Beziehungen und Definieren des Daten-Managements
 
 Definieren von Verbindungen zwischen Datensätzen mithilfe von Beziehungsdeskriptoren. Verwalten Sie Beziehungen und behalten Sie die Datenqualität in allen Datensätzen bei. Diese Aufgaben stellen konsistente Joins sicher und unterstützen die Einhaltung von Datenhygiene-Anforderungen.
 
 * **Schemabeziehungen**: [Definieren von Beziehungen zwischen Datensätzen mithilfe von Deskriptoren](../api/descriptors.md)
-* **Datensatzhygiene**: [Löschen von Präzisionsdatensätzen verwalten](../../hygiene/ui/record-delete.md#model-based-record-delete)
+* **Datensatzhygiene**: [Verwalten von Präzisionsdatensatzlöschungen für Datensätze, die auf relationalen Schemata basieren](../../hygiene/ui/record-delete.md#relational-record-delete)
 
 ### Konfigurieren der Quellverbindung
 
@@ -93,7 +98,7 @@ Gehen Sie die unten aufgeführten gängigen Anwendungsfälle durch, in denen Dat
 
 ### Relationale Datenmodellierung
 
-Verwenden Sie [modellbasierte Schemata](../schema/model-based.md) (auch als relationale Schemata bezeichnet) in Data Mirror, um Entitäten darzustellen, Einfügungen, Aktualisierungen und Löschungen auf Zeilenebene zu verarbeiten und die in Ihren Datenquellen vorhandenen Primär- und Fremdschlüsselbeziehungen zu pflegen. Dieser Ansatz bringt relationale Datenmodellierungsprinzipien in Experience Platform ein und stellt die strukturelle Konsistenz über alle Datensätze hinweg sicher.
+Verwenden Sie [relationale Schemata](../schema/relational.md) in Data Mirror, um Entitäten darzustellen, Einfügungen, Aktualisierungen und Löschungen auf Zeilenebene zu verarbeiten und die in Ihren Datenquellen vorhandenen Primär- und Fremdschlüsselbeziehungen zu pflegen. Dieser Ansatz bringt relationale Datenmodellierungsprinzipien in Experience Platform ein und stellt die strukturelle Konsistenz über alle Datensätze hinweg sicher.
 
 ### Synchronisierung von Warehouse zu Lake
 
@@ -121,11 +126,11 @@ Verwenden Sie die Änderungsdatenerfassung, um präzise Löschungen auf Datensat
 
 ### Datenlöschung und Hygieneanforderungen
 
-Alle Programme, die modellbasierte Schemata und Data Mirror verwenden, müssen die Auswirkungen des Löschens von Daten verstehen. Modellbasierte Schemata ermöglichen präzise Löschvorgänge auf Datensatzebene, die sich auf zugehörige Daten in verbundenen Datensätzen auswirken können. Diese Löschfunktionen wirken sich unabhängig von Ihrem spezifischen Anwendungsfall auf die Datenintegrität, die Compliance und das nachgelagerte Anwendungsverhalten aus. Überprüfen Sie [Datenhygiene-Anforderungen](../../hygiene/ui/record-delete.md#model-based-record-delete) und planen Sie Löschszenarien vor der Implementierung.
+Alle Programme, die relationale Schemata und Data Mirror verwenden, müssen mit den Auswirkungen des Löschens von Daten vertraut sein. Relationale Schemata ermöglichen präzise Löschvorgänge auf Datensatzebene, die sich auf verknüpfte Daten in verbundenen Datensätzen auswirken können. Diese Löschfunktionen wirken sich unabhängig von Ihrem spezifischen Anwendungsfall auf die Datenintegrität, die Compliance und das nachgelagerte Anwendungsverhalten aus. Überprüfen Sie [Datenhygiene-Anforderungen für Datensätze, die auf relationalen Schemata ](../../hygiene/ui/record-delete.md#relational-record-delete), und planen Sie Löschszenarien vor der Implementierung.
 
 ### Auswahl des Schemaverhaltens
 
-Modellbasierte Schemata verwenden standardmäßig **Datensatzverhalten** das den Entitätsstatus erfasst (Kunden, Konten usw.). Wenn Sie **Zeitreihenverhalten** für die Ereignisverfolgung benötigen, müssen Sie dies explizit konfigurieren.
+Relationale Schemata verwenden standardmäßig **Datensatzverhalten** das den Entitätsstatus erfasst (Kunden, Konten usw.). Wenn Sie **Zeitreihenverhalten** für die Ereignisverfolgung benötigen, müssen Sie dies explizit konfigurieren.
 
 ### Vergleich der Aufnahmemethoden
 
@@ -146,8 +151,8 @@ Data Mirror unterstützt **Eins-zu-eins** und **Viele-zu-eins**-Beziehungen mit 
 Nachdem Sie diese Übersicht gelesen haben, sollten Sie in der Lage sein, festzustellen, ob Data Mirror zu Ihrem Anwendungsfall passt, und die Anforderungen für die Implementierung zu verstehen. Erste Schritte:
 
 1. **Datenarchitekten** sollten Ihr Datenmodell bewerten, um sicherzustellen, dass es Primärschlüssel, Versionierung und Änderungsverfolgungsfunktionen unterstützt.
-2. **Stakeholder** sollten bestätigen, dass Ihre Lizenz modellbasierte Schemaunterstützung und erforderliche Experience Platform-Editionen enthält.
+2. **Stakeholder** sollten bestätigen, dass Ihre Lizenz relationale Schemaunterstützung und erforderliche Experience Platform-Editionen enthält.
 3. **Schema-Designer** sollten Ihre Schemastruktur planen, um die erforderlichen Deskriptoren, Feldbeziehungen und Data Governance-Anforderungen zu identifizieren.
 4. **Implementierungs-Teams** sollten eine Aufnahmemethode basierend auf Ihren Quellsystemen, Echtzeitanforderungen und operativen Workflows auswählen.
 
-Details zur Implementierung finden Sie in der [Dokumentation zu modellbasierten Schemata](../schema/model-based.md).
+Details zur Implementierung finden Sie in der [Dokumentation zu relationalen Schemata](../schema/relational.md).

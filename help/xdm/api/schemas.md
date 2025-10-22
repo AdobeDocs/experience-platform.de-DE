@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-Endpunkt für Schemata
 description: Mit dem Endpunkt /schemas in der Schema Registry-API können Sie XDM-Schemas in Ihrem Erlebnisprogramm programmgesteuert verwalten.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2122'
 ht-degree: 15%
 
 ---
@@ -25,7 +25,7 @@ Sie können alle Schemata unter dem `global`- oder `tenant`-Container auflisten,
 
 >[!NOTE]
 >
->Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](./appendix.md#query)Abfrageparameter“ im Anhang.
+>Beim Auflisten von Ressourcen beschränkt die Schemaregistrierung Ergebnismengen auf 300 Elemente. Um Ressourcen über dieses Limit hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie [ Abschnitt ](./appendix.md#query)Abfrageparameter“ im Anhang.
 
 **API-Format**
 
@@ -36,7 +36,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{CONTAINER_ID}` | Der Container, der die Schemata enthält, die Sie abrufen möchten: `global` für von Adobe erstellte Schemata oder `tenant` für Schemata, die Ihrem Unternehmen gehören. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [&#x200B; im &#x200B;](./appendix.md#query)-Dokument . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Eine Liste der verfügbaren Parameter finden [ im ](./appendix.md#query)-Dokument . |
 
 {style="table-layout:auto"}
 
@@ -198,7 +198,7 @@ Eine erfolgreiche Antwort gibt die Details des Schemas zurück. Die zurückgegeb
 
 Der Prozess der Schemakomposition beginnt mit der Zuweisung einer Klasse. Die Klasse definiert wichtige verhaltensbezogene Aspekte der Daten (Eintrag oder Zeitreihen) sowie die Mindestfelder, die erforderlich sind, um die zu erfassenden Daten zu beschreiben.
 
-Anweisungen zum Erstellen eines Schemas ohne Klassen oder Feldergruppen, das als modellbasiertes Schema bezeichnet wird, finden Sie [&#x200B; Abschnitt „Erstellen eines modellbasierten &#x200B;](#create-model-based-schema)&quot;.
+Anweisungen zum Erstellen eines Schemas ohne Klassen oder Feldergruppen, auch als relationales Schema bezeichnet, finden Sie im Abschnitt [Erstellen eines relationalen ](#create-relational-schema)&quot;.
 
 >[!NOTE]
 >
@@ -277,21 +277,25 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 }
 ```
 
-Wenn Sie eine GET-Anfrage ausführen[&#x200B; um alle Schemata &#x200B;](#list) Mandanten-Container aufzulisten, würde jetzt das neue Schema enthalten. Sie können eine [Suchanfrage (GET) &#x200B;](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um das neue Schema direkt anzuzeigen.
+Wenn Sie eine GET-Anfrage ausführen[ um alle Schemata ](#list) Mandanten-Container aufzulisten, würde jetzt das neue Schema enthalten. Sie können eine [Suchanfrage (GET) ](#lookup), indem Sie den URL-kodierten `$id`-URI verwenden, um das neue Schema direkt anzuzeigen.
 
 Um einem Schema zusätzliche Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um den `allOf`- und `meta:extends`-Arrays des Schemas Feldergruppen hinzuzufügen.
 
-## Modellbasiertes Schema erstellen {#create-model-based-schema}
+## Relationales Schema erstellen {#create-relational-schema}
 
 >[!AVAILABILITY]
 >
->Data Mirror und modellbasierte Schemata stehen Adobe Journey Optimizer-Lizenzinhabern (**Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
+>Data Mirror und relationale Schemata stehen Adobe Journey Optimizer-Lizenzinhabern **Orchestrierte Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
 
-Erstellen Sie ein modellbasiertes Schema, indem Sie eine POST-Anfrage an den `/schemas`-Endpunkt senden. Modellbasierte Schemata speichern strukturierte Daten im relationalen Stil **ohne** Klassen oder Feldergruppen. Definieren Sie Felder direkt im Schema und identifizieren Sie das Schema mithilfe eines logischen Verhaltens-Tags als modellbasiert.
+>[!NOTE]
+>
+>Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-API-Dokumentation zuvor als modellbasierte Schemata bezeichnet. Die Funktionalität bleibt gleich - nur die Terminologie wurde aus Gründen der Übersichtlichkeit geändert.
+
+Erstellen Sie ein relationales Schema, indem Sie eine POST-Anfrage an den `/schemas`-Endpunkt senden. Relationale Schemata speichern strukturierte Daten im relationalen Stil **ohne** Klassen oder Feldergruppen. Definieren Sie Felder direkt im Schema und identifizieren Sie das Schema mithilfe eines logischen Verhaltens-Tags als relational.
 
 >[!IMPORTANT]
 >
->Um ein modellbasiertes Schema zu erstellen, setzen Sie `meta:extends` auf `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Dies ist eine **logische Verhaltenskennung** (kein physisches Verhalten oder keine Klasse). Verweisen **nicht** auf Klassen oder Feldergruppen in `allOf` und schließen **nicht** Klassen oder Feldergruppen in `meta:extends` ein.
+>Um ein relationales Schema zu erstellen, setzen Sie `meta:extends` auf `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Dies ist eine **logische Verhaltenskennung** (kein physisches Verhalten oder keine Klasse). Verweisen **nicht** auf Klassen oder Feldergruppen in `allOf` und schließen **nicht** Klassen oder Feldergruppen in `meta:extends` ein.
 
 Erstellen Sie zuerst das Schema mit `POST /tenant/schemas`. Fügen Sie dann die erforderlichen Deskriptoren mit der [Deskriptoren-API (`POST /tenant/descriptors`) hinzu](../api/descriptors.md):
 
@@ -302,15 +306,11 @@ Erstellen Sie zuerst das Schema mit `POST /tenant/schemas`. Fügen Sie dann die 
 
 >[!NOTE]
 >
->Im Benutzeroberflächenschema-Editor werden der Versionsdeskriptor und der Zeitstempeldeskriptor als &quot;[!UICONTROL Versionskennung“ &#x200B;] &quot;[!UICONTROL Zeitstempelkennung]&quot; angezeigt.
-
-<!-- >[!AVAILABILITY]
->
->Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+>Im Benutzeroberflächenschema-Editor werden die Versionsdeskriptor- und Zeitstempeldeskriptoren als &quot;[!UICONTROL Version identifier]&quot; bzw. &quot;[!UICONTROL Timestamp identifier]&quot; angezeigt.
 
 >[!CAUTION]
 >
->Modellbasierte Schemata sind **nicht kompatibel mit Vereinigungsschemata**. Wenden Sie beim Arbeiten mit modellbasierten Schemata das `union`-Tag nicht auf `meta:immutableTags` an. Diese Konfiguration ist in der Benutzeroberfläche blockiert, wird aber derzeit nicht von der API blockiert. Weitere Informationen zum Verhalten [&#x200B; Vereinigungsschemas finden &#x200B;](./unions.md) im Handbuch zum Vereinigungsendpunkt .
+>Relationale Schemata sind **nicht kompatibel mit Vereinigungsschemata**. Wenden Sie beim Arbeiten mit relationalen Schemata das `union`-Tag nicht auf `meta:immutableTags` an. Diese Konfiguration ist in der Benutzeroberfläche blockiert, wird aber derzeit nicht von der API blockiert. Weitere Informationen zum Verhalten [ Vereinigungsschemas finden ](./unions.md) im Handbuch zum Vereinigungsendpunkt .
 
 **API-Format**
 
@@ -377,16 +377,16 @@ curl --request POST \
 | ------------------------------- | ------ | --------------------------------------------------------- |
 | `title` | Zeichenfolge | Anzeigename des Schemas. |
 | `description` | String | Kurze Erläuterung des Zwecks des Schemas. |
-| `type` | String | Muss für modellbasierte Schemata `"object"` werden. |
+| `type` | String | Muss für relationale Schemata `"object"` werden. |
 | `definitions` | Objekt | Enthält die Objekte auf Stammebene, die Ihre Schemafelder definieren. |
 | `definitions.<name>.properties` | Objekt | Feldnamen und Datentypen. |
 | `allOf` | Array | Verweist auf die Objektdefinition auf der Stammebene (z. B. `#/definitions/marketing_customers`). |
-| `meta:extends` | Array | Muss `"https://ns.adobe.com/xdm/data/adhoc-v2"` enthalten, um das Schema als modellbasiert zu identifizieren. |
+| `meta:extends` | Array | Muss `"https://ns.adobe.com/xdm/data/adhoc-v2"` enthalten, um das Schema als relational zu identifizieren. |
 | `meta:behaviorType` | String | Auf `"record"` festgelegt. Verwenden Sie `"time-series"` nur, wenn aktiviert und geeignet. |
 
 >[!IMPORTANT]
 >
->Die Schemaentwicklung für modellbasierte Schemata folgt denselben additiven Regeln wie Standardschemata. Sie können neue Felder mit einer PATCH-Anfrage hinzufügen. Änderungen wie das Umbenennen oder Entfernen von Feldern sind nur zulässig, wenn keine Daten in den Datensatz aufgenommen wurden.
+>Die Schemaentwicklung für relationale Schemata folgt denselben additiven Regeln wie Standardschemata. Sie können neue Felder mit einer PATCH-Anfrage hinzufügen. Änderungen wie das Umbenennen oder Entfernen von Feldern sind nur zulässig, wenn keine Daten in den Datensatz aufgenommen wurden.
 
 **Antwort**
 
@@ -394,7 +394,7 @@ Bei einer erfolgreichen Anfrage werden **HTTP 201 (Erstellt)** und das erstellte
 
 >[!NOTE]
 >
->Modellbasierte Schemata erben keine vordefinierten Felder (z. B. id, timestamp oder eventType). Definieren Sie alle erforderlichen Felder explizit in Ihrem Schema.
+>Relationale Schemata erben keine vordefinierten Felder (z. B. id, timestamp oder eventType). Definieren Sie alle erforderlichen Felder explizit in Ihrem Schema.
 
 **Beispielantwort**
 
@@ -455,11 +455,11 @@ Bei einer erfolgreichen Anfrage werden **HTTP 201 (Erstellt)** und das erstellte
 | `type` | String | Der Schematyp. |
 | `definitions` | Objekt | Definiert wiederverwendbare Objekte oder Feldergruppen, die im Schema verwendet werden. Dies umfasst normalerweise die Hauptdatenstruktur und wird im `allOf`-Array referenziert, um den Schemastamm zu definieren. |
 | `allOf` | Array | Gibt das Stammobjekt des Schemas durch Verweis auf eine oder mehrere Definitionen an (z. B. `#/definitions/marketing_customers`). |
-| `meta:extends` | Array | Identifiziert das Schema als modellbasiert (`adhoc-v2`). |
+| `meta:extends` | Array | Identifiziert das Schema als relational (`adhoc-v2`). |
 | `meta:behaviorType` | String | Verhaltenstyp (`record` oder `time-series`, falls aktiviert). |
 | `meta:containerId` | String | Container, in dem das Schema gespeichert ist (z. B. `tenant`). |
 
-Um einem modellbasierten Schema nach der Erstellung Felder hinzuzufügen, stellen Sie eine [PATCH-Anfrage](#patch). Modellbasierte Schemata erben nicht und entwickeln sich nicht automatisch. Strukturelle Änderungen wie das Umbenennen oder Löschen von Feldern sind nur zulässig, wenn keine Daten in den Datensatz aufgenommen wurden. Sobald Daten vorhanden sind **werden nur** additive Änderungen“ (z. B. das Hinzufügen neuer Felder) unterstützt.
+Um einem relationalen Schema nach seiner Erstellung Felder hinzuzufügen, stellen Sie eine [PATCH-Anfrage](#patch). Relationale Schemata erben nicht und entwickeln sich nicht automatisch. Strukturelle Änderungen wie das Umbenennen oder Löschen von Feldern sind nur zulässig, wenn keine Daten in den Datensatz aufgenommen wurden. Sobald Daten vorhanden sind **werden nur** additive Änderungen“ (z. B. das Hinzufügen neuer Felder) unterstützt.
 
 Sie können neue Felder auf Stammebene hinzufügen (innerhalb der Stammdefinition oder des `properties`), aber Sie können den Typ der vorhandenen Felder nicht entfernen, umbenennen oder ändern.
 
@@ -469,7 +469,7 @@ Sie können neue Felder auf Stammebene hinzufügen (innerhalb der Stammdefinitio
 
 ## Schema aktualisieren {#put}
 
-Sie können ein ganzes Schema durch einen PUT-Vorgang ersetzen, indem Sie die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim [&#x200B; eines neuen Schemas in &#x200B;](#create) POST-Anfrage erforderlich sind.
+Sie können ein ganzes Schema durch einen PUT-Vorgang ersetzen, indem Sie die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim [ eines neuen Schemas in ](#create) POST-Anfrage erforderlich sind.
 
 >[!NOTE]
 >
@@ -554,7 +554,7 @@ Sie können einen Teil eines Schemas mithilfe einer PATCH-Anfrage aktualisieren.
 
 >[!NOTE]
 >
->Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, finden Sie weitere Informationen im Abschnitt zum [&#x200B; eines Schemas mithilfe eines PUT-Vorgangs](#put).
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, finden Sie weitere Informationen im Abschnitt zum [ eines Schemas mithilfe eines PUT-Vorgangs](#put).
 
 Einer der häufigsten PATCH-Vorgänge besteht darin, wie im folgenden Beispiel gezeigt, zuvor definierte Feldergruppen zu einem Schema hinzuzufügen.
 
@@ -643,7 +643,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Fe
 
 ## Aktivieren eines Schemas zur Verwendung im Echtzeit-Kundenprofil {#union}
 
-Damit ein Schema am Echtzeit[Kundenprofil teilnehmen kann, &#x200B;](../../profile/home.md) Sie dem `union`-Array des Schemas ein `meta:immutableTags`-Tag hinzufügen. Sie können dies tun, indem Sie eine PATCH-Anfrage für das betreffende Schema stellen.
+Damit ein Schema am Echtzeit[Kundenprofil teilnehmen kann, ](../../profile/home.md) Sie dem `union`-Array des Schemas ein `meta:immutableTags`-Tag hinzufügen. Sie können dies tun, indem Sie eine PATCH-Anfrage für das betreffende Schema stellen.
 
 >[!IMPORTANT]
 >
@@ -726,7 +726,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück un
 }
 ```
 
-Sie können jetzt die Vereinigung für die Klasse dieses Schemas anzeigen, um zu bestätigen, dass die Felder des Schemas dargestellt werden. Weitere Informationen finden Sie [&#x200B; &quot;](./unions.md)-Endpunkthandbuch“.
+Sie können jetzt die Vereinigung für die Klasse dieses Schemas anzeigen, um zu bestätigen, dass die Felder des Schemas dargestellt werden. Weitere Informationen finden Sie [ &quot;](./unions.md)-Endpunkthandbuch“.
 
 ## Löschen eines Schemas {#delete}
 

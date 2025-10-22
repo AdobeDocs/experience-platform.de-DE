@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
 role: Developer
-source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 74%
+source-wordcount: '707'
+ht-degree: 73%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 74%
    * [Best Practices für die Datenmodellierung](schema/best-practices.md)
    * [Vertrauliche und personenbezogene Daten](./schema/sensitive-and-personal-data.md)
    * [Begrenzungen für XDM-Feldtypen](schema/field-constraints.md)
-   * [Modellbasiertes Schema](./schema/model-based.md)
+   * [Relationales Schema](./schema/relational.md)
    * [Namespacing in XDM](./schema/namespaces.md)
    * Datenmodelle für Unternehmen {#industries}
       * [Übersicht](./schema/industries/overview.md)
@@ -47,7 +47,7 @@ ht-degree: 74%
          * [Medikamentenanforderung](./schema/healthcare/field-groups/medication-request.md)
          * [Organisation](./schema/healthcare/field-groups/organization.md)
          * [Patient](./schema/healthcare/field-groups/patient.md)
-         * [Anwendende](./schema/healthcare/field-groups/practioner.md)
+         * [Praktiker](./schema/healthcare/field-groups/practioner.md)
          * [Planung](./schema/healthcare/field-groups/schedule.md)
       * Datentypen {#data-types}
          * [Adresse](./schema/healthcare/data-types/address.md)
@@ -154,7 +154,7 @@ ht-degree: 74%
    * Anbieter {#provider}
       * [Gesundheitsdienstleister](./field-groups/provider/healthcare-provider.md)
    * Freigegeben {#shared}
-      * [Audit-Details des externen Quellsystems](./field-groups/shared/external-source-system-audit-details.md)
+      * [Audit-Details des externen Source-Systems](./field-groups/shared/external-source-system-audit-details.md)
    * [Namensänderungen der Feldergruppe](./field-groups/name-updates.md)
 * Datentypen {#data-types}
    * [Kontodetails](./data-types/account-details.md)
@@ -196,7 +196,7 @@ ht-degree: 74%
    * [Details zur Geo-Interaktion](./data-types/geo-interaction-details.md)
    * [Geo](./data-types/geo.md)
    * [Identität](./data-types/identity.md)
-   * [Details zur Implementierung](./data-types/implementation-details.md)
+   * [Implementierungsdetails](./data-types/implementation-details.md)
    * [Impressions](./data-types/impressions.md)
    * [Interne Site-Suche](./data-types/internal-site-search.md)
    * [Schlüssel-Wert-Paar](./data-types/key-value-pair.md)
@@ -234,7 +234,7 @@ ht-degree: 74%
    * [Web-Informationen](./data-types/web-information.md)
    * [Web-Interaktion](./data-types/web-interaction.md)
    * [Webseitendetails](./data-types/webpage-details.md)
-* [!UICONTROL Schemata] Benutzeroberfläche {#ui}
+* [!UICONTROL Schemas] Benutzeroberfläche {#ui}
    * [Übersicht](./ui/overview.md)
    * [Erkunden von XDM-Ressourcen](./ui/explore.md)
    * Erstellen und Bearbeiten von Ressourcen {#resources}

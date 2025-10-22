@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 54%
+source-wordcount: '1666'
+ht-degree: 48%
 
 ---
 
@@ -30,7 +30,7 @@ Mit Experience Platform können Sie Daten aus unterschiedlichen Quellen an zentr
 
 ## Von Adobe und Partnern erstellte Quellen {#adobe-and-partner-built-sources}
 
-Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Sources SDK&quot; erstellt und &#x200B;](/help/sources/sources-sdk/overview.md) werden. Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector gibt an, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispielsweise wird der [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) von Adobe erstellt, während der [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) vom RainFocus-Team erstellt und gepflegt wird.
+Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Sources SDK&quot; erstellt und ](/help/sources/sources-sdk/overview.md) werden. Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector gibt an, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispielsweise wird der [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) von Adobe erstellt, während der [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) vom RainFocus-Team erstellt und gepflegt wird.
 
 Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (die Kontaktmethode ist jeweils im Hinweis auf der Dokumentationsseite angegeben). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an den Support oder den Kundendienst von Adobe.
 
@@ -282,15 +282,15 @@ Sie können die folgenden Quellen verwenden, um Protokolldaten in Experience Pla
 
 ## Zugriffskontrolle für Quellen zur Datenaufnahme
 
-Zugriffsberechtigungen für die zur Datenaufnahme verwendeten Quellen können über Adobe Admin Console verwaltet werden. Der Zugriff auf die Berechtigungen für ein bestimmtes Produktprofil erfolgt über die ihm zugehörige Registerkarte **[!UICONTROL Berechtigungen]**. Im Bereich **[!UICONTROL Berechtigungen bearbeiten]** können Sie über den Menüeintrag **[!UICONTROL Datenaufnahme]** auf die einer Quelle zugehörigen Berechtigungen zugreifen. Die Berechtigung **[!UICONTROL Quellen anzeigen]** gewährt Lesezugriff auf unter der Registerkarte **[!UICONTROL Katalog]** verfügbare Quellen sowie auf authentifizierte Quellen unter der Registerkarte **[!UICONTROL Durchsuchen]**. Mit der Berechtigung **[!UICONTROL Quellen verwalten]** dagegen wird uneingeschränkter Zugriff zum Anzeigen, Erstellen, Bearbeiten und Deaktivieren von Quellen gewährt.
+Zugriffsberechtigungen für die zur Datenaufnahme verwendeten Quellen können über Adobe Admin Console verwaltet werden. Der Zugriff auf die Berechtigungen für ein bestimmtes Produktprofil erfolgt über die Registerkarte **[!UICONTROL Permissions]** . Über das Bedienfeld **[!UICONTROL Edit Permissions]** können Sie über den Menüeintrag **[!UICONTROL data ingestion]** auf die zu den Quellen gehörenden Berechtigungen zugreifen. Die Berechtigung **[!UICONTROL View Sources]** gewährt schreibgeschützten Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Catalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Browse]** , während die Berechtigung **[!UICONTROL Manage Sources]** vollen Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen gewährt.
 
 Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche bei verschiedenen Kombinationen dieser Berechtigungen verhält:
 
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
-| **[!UICONTROL Quellen anzeigen]** aktiviert | Gewährt Lesezugriff auf die auf der Registerkarte „Katalog“ aufgeführten Quelltypen sowie auf die Registerkarten „Durchsuchen“, „Konten“ und „Datenfluss“. |
-| **[!UICONTROL Quellen verwalten]** aktiviert | Gewährt zusätzlich zu in den **[!UICONTROL Quellen verwalten]** enthaltenen Berechtigungen Zugriff auf die Option **[!UICONTROL Quelle verbinden]** unter **[!UICONTROL Katalog]** sowie auf die Option **[!UICONTROL Daten auswählen]** unter **[!UICONTROL Durchsuchen]**. **[!UICONTROL Quellen verwalten]** beinhaltet außerdem die Berechtigung zum Aktivieren und Deaktivieren von **[!UICONTROL DataFlows]** sowie zur Bearbeitung der zugehörigen Zeitpläne. |
-| **[!UICONTROL Quellen anzeigen]** deaktiviert und **[!UICONTROL Quellen verwalten]** deaktiviert | Sperrt den Zugriff auf alle Quellen. |
+| **[!UICONTROL View Sources]** am | Gewährt Lesezugriff auf die auf der Registerkarte „Katalog“ aufgeführten Quelltypen sowie auf die Registerkarten „Durchsuchen“, „Konten“ und „Datenfluss“. |
+| **[!UICONTROL Manage Sources]** am | Gewährt zusätzlich zu den in **[!UICONTROL View Sources]** enthaltenen Funktionen Zugriff auf **[!UICONTROL Connect Source]** Option in **[!UICONTROL Catalog]** und auf **[!UICONTROL Select Data]** Option in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** ermöglicht Ihnen auch, **[!UICONTROL DataFlows]** zu aktivieren oder zu deaktivieren und ihre Zeitpläne zu bearbeiten. |
+| **[!UICONTROL View Sources]** Aus und **[!UICONTROL Manage Sources]** Aus | Sperrt den Zugriff auf alle Quellen. |
 
 Weitere Informationen zu den verfügbaren Berechtigungen, die über Adobe-Berechtigungen gewährt werden, finden Sie unter [Zugriffssteuerung - Übersicht](../access-control/home.md).
 
@@ -308,11 +308,11 @@ Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfiguratione
 
 - Wenden Sie Kennzeichnungen auf Schemafelder an, um den Zugriff auf bestimmte Schemafelder in Ihrer Organisation zu definieren. Sobald der Zugriff auf bestimmte Schemafelder eingerichtet ist, können Benutzerinnen und Benutzer nur noch Zuordnungen für die Felder erstellen, auf die sie Zugriff haben.
 - Benutzende ohne die entsprechenden Rollen können keine Datenflüsse mit Zuordnungen erstellen oder aktualisieren, die unzugängliche Schemafelder beinhalten. Darüber hinaus können nicht autorisierte Benutzer vorhandene Datenflüsse mit nicht zugänglichen Schemafeldern nicht aktualisieren, löschen, aktivieren oder deaktivieren.
-- Darüber hinaus muss ein Datenfluss in seiner Zuordnung, seinem Zieldatensatz und seiner Zielverbindung exakt dieselbe Schema-ID und Version haben. Dies gilt sowohl für standardmäßige XDM-Schemata als auch für modellbasierte Schemata.
+- Darüber hinaus muss ein Datenfluss in seiner Zuordnung, seinem Zieldatensatz und seiner Zielverbindung exakt dieselbe Schema-ID und Version haben. Dies gilt sowohl für standardmäßige XDM-Schemata als auch für relationale Schemata.
 
 >[!NOTE]
 >
->Modellbasierte Schemata haben zusätzliche Anforderungen, einschließlich der Felder Primärschlüssel und Versionskennung. Weitere Informationen finden Sie unter [Übersicht über modellbasierte Schemata](../xdm/schema/model-based.md).
+>Relationale Schemata haben zusätzliche Anforderungen, einschließlich der Felder Primärschlüssel und Versionskennung. Weitere Informationen finden Sie unter [Übersicht über relationale Schemata](../xdm/schema/relational.md).
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../access-control/abac/overview.md).
 

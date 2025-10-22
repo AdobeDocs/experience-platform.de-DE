@@ -2,16 +2,16 @@
 title: Anfragen zum Löschen von Datensätzen (UI-Workflow)
 description: Erfahren Sie, wie Sie Datensätze in der Adobe Experience Platform-Benutzeroberfläche löschen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
+source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
 workflow-type: tm+mt
-source-wordcount: '2420'
-ht-degree: 15%
+source-wordcount: '2383'
+ht-degree: 13%
 
 ---
 
 # Anfragen zum Löschen von Datensätzen (UI-Workflow) {#record-delete}
 
-Verwenden Sie den [[!UICONTROL Datenlebenszyklus]-Arbeitsbereich](./overview.md), um Datensätze in Adobe Experience Platform basierend auf ihren Primäridentitäten zu löschen. Diese Datensätze können mit einzelnen Verbrauchern oder jeder anderen Entität verknüpft werden, die im Identitätsdiagramm enthalten ist.
+Verwenden Sie den [[!UICONTROL Data Lifecycle] Arbeitsbereich](./overview.md) um Datensätze in Adobe Experience Platform basierend auf ihren primären Identitäten zu löschen. Diese Datensätze können mit einzelnen Verbrauchern oder jeder anderen Entität verknüpft werden, die im Identitätsdiagramm enthalten ist.
 
 >[!IMPORTANT]
 >
@@ -31,35 +31,35 @@ Weitere Informationen zu Identitäten in Experience Platform finden Sie in der f
 
 ## Erstellen einer Anfrage {#create-request}
 
-Wählen Sie zunächst **[!UICONTROL Datenlebenszyklus]** im linken Navigationsbereich der Experience Platform-Benutzeroberfläche aus. Der [!UICONTROL Datenlebenszyklusanfragen] wird angezeigt. Wählen Sie anschließend **[!UICONTROL Anfrage erstellen]** auf der Hauptseite im Arbeitsbereich aus.
+Wählen Sie zunächst im linken Navigationsbereich der Benutzeroberfläche von Experience Platform die Option **[!UICONTROL Data Lifecycle]** aus. Der [!UICONTROL Data lifecycle requests] Arbeitsbereich wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Create request]** auf der Hauptseite im Arbeitsbereich aus.
 
-![Der Arbeitsbereich [!UICONTROL Datenlebenszyklusanfragen] mit [!UICONTROL Anfrage erstellen] ausgewählt.](../images/ui/record-delete/create-request-button.png)
+![Der [!UICONTROL Data lifecycle requests] Arbeitsbereich mit [!UICONTROL Create request] ausgewählten.](../images/ui/record-delete/create-request-button.png)
 
-Der Workflow zur Anfrageerstellung wird angezeigt. Standardmäßig ist die Option **[!UICONTROL Datensatz löschen]** im Abschnitt **[!UICONTROL Angeforderte Aktion]** ausgewählt. Lassen Sie diese Option aktiviert.
+Der Workflow zur Anfrageerstellung wird angezeigt. Standardmäßig ist die Option **[!UICONTROL Delete record]** im Abschnitt **[!UICONTROL Requested Action]** ausgewählt. Lassen Sie diese Option aktiviert.
 
 >[!IMPORTANT]
 > 
->Um die Effizienz zu verbessern und den Datensatzbetrieb kostengünstiger zu gestalten, können Unternehmen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als „delta-migriert“ bezeichnet. Benutzer von Organisationen, die in den Delta-Bereich migriert wurden, können Datensätze aus einem oder allen Datensätzen löschen. Benutzer von Organisationen, die keine Delta-Migration durchgeführt haben, können keine Datensätze selektiv aus einem einzelnen Datensatz oder allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem Abschnitt [Bereitstellen von &#x200B;](#provide-identities)&quot; des Handbuchs fort.
+>Um die Effizienz zu verbessern und den Datensatzbetrieb kostengünstiger zu gestalten, können Unternehmen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als „delta-migriert“ bezeichnet. Benutzer von Organisationen, die in den Delta-Bereich migriert wurden, können Datensätze aus einem oder allen Datensätzen löschen. Benutzer von Organisationen, die keine Delta-Migration durchgeführt haben, können keine Datensätze selektiv aus einem einzelnen Datensatz oder allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem Abschnitt [Bereitstellen von ](#provide-identities)&quot; des Handbuchs fort.
 
-![Der Workflow für die Anfrageerstellung mit [!UICONTROL &#x200B; ausgewählten und hervorgehobenen Option &quot;] löschen“](../images/ui/record-delete/delete-record.png)
+![Der Workflow für die Anfrageerstellung mit ausgewählter und hervorgehobener Option &quot;[!UICONTROL Delete record]&quot;.](../images/ui/record-delete/delete-record.png)
 
 ## Auswählen von Datensätzen {#select-dataset}
 
 Der nächste Schritt besteht darin festzustellen, ob Sie Datensätze aus einem einzelnen Datensatz oder allen Datensätzen löschen möchten. Abhängig von der Konfiguration Ihres Unternehmens ist die Option zur Datensatzauswahl möglicherweise nicht verfügbar. Wenn diese Option nicht angezeigt wird, fahren Sie mit dem Abschnitt [Identitäten angeben](#provide-identities) des Handbuchs fort.
 
-Wählen Sie **[!UICONTROL Abschnitt Datensatzdetails]** Optionsfeld aus, um entweder einen bestimmten Datensatz oder alle Datensätze auszuwählen.
+Wählen Sie im Abschnitt **[!UICONTROL Record Details]** eine Optionsschaltfläche aus, um entweder einen bestimmten Datensatz oder alle Datensätze auszuwählen.
 
-Um aus einem bestimmten Datensatz zu löschen, klicken Sie auf **[!UICONTROL Datensatz auswählen]** und wählen dann das Datenbanksymbol (![Datenbanksymbol](/help/images/icons/database.png)) aus. Wählen Sie im angezeigten Dialogfeld einen Datensatz aus und klicken Sie zur Bestätigung **[!UICONTROL Fertig]**.
+Um aus einem bestimmten Datensatz zu löschen, klicken Sie auf **[!UICONTROL Select dataset]** und wählen dann das Datenbanksymbol (![Datenbanksymbol](/help/images/icons/database.png)). Wählen Sie im angezeigten Dialogfeld einen Datensatz aus und klicken Sie zur Bestätigung auf **[!UICONTROL Done]** .
 
-![Das Dialogfeld [!UICONTROL Datensatz auswählen] mit einem ausgewählten Datensatz und [!UICONTROL Fertig] hervorgehoben.](../images/ui/record-delete/select-dataset.png)
+![Das Dialogfeld &quot;[!UICONTROL Select dataset]&quot; mit ausgewähltem Datensatz und hervorgehobener [!UICONTROL Done].](../images/ui/record-delete/select-dataset.png)
 
-Um aus allen Datensätzen zu löschen, wählen Sie **[!UICONTROL Alle Datensätze]** aus. Diese Option vergrößert den Umfang des Vorgangs und erfordert die Angabe aller relevanten Identitätstypen.
+Um aus allen Datensätzen zu löschen, wählen Sie **[!UICONTROL All datasets]** aus. Diese Option vergrößert den Umfang des Vorgangs und erfordert die Angabe aller relevanten Identitätstypen.
 
-![Das Dialogfeld [!UICONTROL Datensatz auswählen] mit der ausgewählten Option [!UICONTROL Alle &#x200B;]Datensätze)](../images/ui/record-delete/all-datasets.png)
+![Das Dialogfeld &quot;[!UICONTROL Select dataset]&quot; mit ausgewählter Option &quot;[!UICONTROL All datasets]&quot;.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->Wenn Sie **[!UICONTROL Alle Datensätze]** auswählen, wird der Vorgang auf alle Datensätze in Ihrer Organisation erweitert. Jeder Datensatz kann einen anderen primären Identitätstyp verwenden. Sie müssen (**erforderlichen Identitätstypen) angeben** um eine genaue Übereinstimmung sicherzustellen.
+>Durch die Auswahl von **[!UICONTROL All datasets]** wird der Vorgang auf alle Datensätze in Ihrer Organisation erweitert. Jeder Datensatz kann einen anderen primären Identitätstyp verwenden. Sie müssen (**erforderlichen Identitätstypen) angeben** um eine genaue Übereinstimmung sicherzustellen.
 >
 >Wenn ein Identitätstyp fehlt, werden beim Löschen möglicherweise einige Datensätze übersprungen. Dies kann die Verarbeitung verlangsamen und zu (**Ergebnissen)**.
 
@@ -86,7 +86,7 @@ Wie alle Identitätsfelder in Experience Platform besteht ein Identity-Namespace
 
 >[!TIP]
 >
->Wenn Sie den Identity-Namespace für einen bestimmten Datensatz nicht kennen, können Sie ihn in der Experience Platform-Benutzeroberfläche finden. Wählen Sie dazu im Arbeitsbereich **[!UICONTROL Datensätze]** den betreffenden Datensatz aus der Liste aus. Bewegen Sie auf der Detailseite für den Datensatz den Mauszeiger in der rechten Leiste über den Namen des Datensatzschemas. Der Identity-Namespace wird zusammen mit dem Schemanamen und der Beschreibung angezeigt.
+>Wenn Sie den Identity-Namespace für einen bestimmten Datensatz nicht kennen, können Sie ihn in der Experience Platform-Benutzeroberfläche finden. Wählen Sie dazu im Arbeitsbereich **[!UICONTROL Datasets]** den betreffenden Datensatz aus der Liste aus. Bewegen Sie auf der Detailseite für den Datensatz den Mauszeiger in der rechten Leiste über den Namen des Datensatzschemas. Der Identity-Namespace wird zusammen mit dem Schemanamen und der Beschreibung angezeigt.
 >
 >![Das Dashboard „Datensätze“, in dem ein Datensatz ausgewählt und ein Schemadialogfeld im Bedienfeld „Datensatzdetails“ geöffnet wurde. Die primäre ID des Datensatzes ist hervorgehoben.](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -97,7 +97,7 @@ Es gibt zwei Möglichkeiten, beim Löschen von Datensätzen Identitäten bereitz
 
 ### Hochladen einer JSON-Datei {#upload-json}
 
-Um eine JSON-Datei hochzuladen, können Sie die Datei per Drag-and-Drop in den bereitgestellten Bereich ziehen oder &quot;**[!UICONTROL auswählen“]**, um die Datei in Ihrem lokalen Verzeichnis zu suchen und auszuwählen.
+Um eine JSON-Datei hochzuladen, können Sie die Datei per Drag-and-Drop in den entsprechenden Bereich ziehen oder **[!UICONTROL Choose files]** auswählen, um die Datei in Ihrem lokalen Verzeichnis zu suchen und auszuwählen.
 
 ![Der Workflow für die Anfrageerstellung mit der hervorgehobenen Option „Dateien auswählen“ und der hervorgehobenen Drag-and-Drop-Oberfläche für das Hochladen von JSON-Dateien.](../images/ui/record-delete/upload-json.png)
 
@@ -125,15 +125,15 @@ Nach dem Hochladen der Datei können Sie mit dem [Senden der Anfrage](#submit) f
 
 ### Manuelles Eingeben von Identitäten {#manual-identity}
 
-Um Identitäten manuell einzugeben, wählen Sie **[!UICONTROL Identität hinzufügen]** aus.
+Um Identitäten manuell einzugeben, wählen Sie **[!UICONTROL Add identity]** aus.
 
-![Der Workflow zur Anfrageerstellung mit der hervorgehobenen Option [!UICONTROL Identität hinzufügen].](../images/ui/record-delete/add-identity.png)
+![Der Workflow für die Anfrageerstellung mit hervorgehobener Option &quot;[!UICONTROL Add identity]&quot;.](../images/ui/record-delete/add-identity.png)
 
-Es werden Steuerelemente angezeigt, mit denen Sie Identitäten einzeln eingeben können. Wählen **[!UICONTROL unter]** Identity-Namespace) im Dropdown-Menü den Identitätstyp aus. Geben Sie unter **[!UICONTROL Primärer Identitätswert]** den Identity-Namespace-Wert für den Datensatz an.
+Es werden Steuerelemente angezeigt, mit denen Sie Identitäten einzeln eingeben können. Wählen Sie unter **[!UICONTROL identity namespace]** im Dropdown-Menü den Identitätstyp aus. Geben Sie unter **[!UICONTROL Primary Identity Value]** den Identity-Namespace-Wert für den Datensatz an.
 
 ![Der Workflow zur Anfrageerstellung mit einem Identitätsfeld wurde manuell hinzugefügt.](../images/ui/record-delete/identity-added.png)
 
-Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![&#x200B; Pluszeichen ) aus.](/help/images/icons/tree-expand-all.png)) neben einer der Zeilen oder wählen Sie **[!UICONTROL Identität hinzufügen]** aus.
+Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![ Pluszeichen ) aus.](/help/images/icons/tree-expand-all.png)) neben einer der Zeilen oder wählen Sie **[!UICONTROL Add identity]** aus.
 
 ![Der Workflow für die Anfrageerstellung mit dem Pluszeichen und dem hervorgehobenen Symbol „Identität hinzufügen“.](../images/ui/record-delete/more-identities.png)
 
@@ -185,29 +185,33 @@ Wenn für Ihr Unternehmen höhere Limits erforderlich sind, wenden Sie sich zur 
 
 ## Senden der Anfrage {#submit}
 
-Nachdem Sie unter **[!UICONTROL Anfrageeinstellungen]** die Identitäten zur Anfrage hinzugefügt haben, geben Sie einen Namen und eine optionale Beschreibung für die Anfrage ein, bevor Sie **[!UICONTROL Senden]** auswählen.
+Nachdem Sie unter **[!UICONTROL Request settings]** die Identitäten zur Anfrage hinzugefügt haben, geben Sie einen Namen und eine optionale Beschreibung für die Anfrage ein, bevor Sie **[!UICONTROL Submit]** auswählen.
 
 >[!TIP]
 >
 >Sie können über die Benutzeroberfläche bis zu 10.000 Identitäten pro Anfrage senden. Verwenden Sie zum Übermitteln größerer Volumes (bis zu 100.000 IDs pro Anfrage) die [API-Methode](../api/workorder.md#create).
 
-![Die Felder  Name“ und [!UICONTROL Beschreibung] der Anfrageeinstellung mit [!UICONTROL Submit] Hervorhebung.](../images/ui/record-delete/submit.png)
+![Die [!UICONTROL Name]- und [!UICONTROL Description]-Felder der Anfrageeinstellung mit hervorgehobener [!UICONTROL Submit].](../images/ui/record-delete/submit.png)
 
-Ein Dialogfeld [!UICONTROL Anfrage bestätigen] zeigt an, dass die Identitäten nach dem Löschen nicht wiederhergestellt werden können. Wählen Sie **[!UICONTROL Senden]** aus, um die Liste der Identitäten zu bestätigen, deren Daten Sie löschen möchten.
+Es erscheint ein [!UICONTROL Confirm request] Dialogfeld, das anzeigt, dass die Identitäten nach dem Löschen nicht wiederhergestellt werden können. Wählen Sie **[!UICONTROL Submit]** aus, um die Liste der Identitäten zu bestätigen, deren Daten Sie löschen möchten.
 
-![Dialogfeld [!UICONTROL Anforderung bestätigen].](../images/ui/record-delete/confirm-request.png)
+![Der [!UICONTROL Confirm request]-Dialog.](../images/ui/record-delete/confirm-request.png)
 
-Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt und auf der Registerkarte &quot;[!UICONTROL &quot; &#x200B;] Arbeitsbereichs [!UICONTROL Datenlebenszyklus] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
+Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt und auf der Registerkarte [!UICONTROL Record] des Arbeitsbereichs [!UICONTROL Data Lifecycle] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
 
 >[!NOTE]
 >
 >Im Abschnitt „Übersicht“ unter [Timelines und Transparenz](../home.md#record-delete-transparency) finden Sie Einzelheiten darüber, wie Löschvorgänge von Datensätzen verarbeitet werden, sobald sie ausgeführt werden.
 
-![Die Registerkarte [!UICONTROL Datensatz] des Arbeitsbereichs [!UICONTROL Datenlebenszyklus] mit der hervorgehobenen neuen Anfrage.](../images/ui/record-delete/request-log.png)
+![Die Registerkarte &quot;[!UICONTROL Record]&quot; des Arbeitsbereichs &quot;[!UICONTROL Data Lifecycle]&quot; mit hervorgehobener neuer Anfrage.](../images/ui/record-delete/request-log.png)
 
-## Löschen von Datensätzen aus modellbasierten Datensätzen {#model-based-record-delete}
+## Löschen von Datensätzen aus Datensätzen basierend auf relationalen Schemata {#relational-record-delete}
 
-Wenn der Datensatz, aus dem Sie löschen möchten, ein modellbasiertes Schema ist, sollten Sie die folgenden Überlegungen überprüfen, um sicherzustellen, dass Datensätze korrekt entfernt und nicht aufgrund von Diskrepanzen zwischen Experience Platform und Ihrem Quellsystem erneut aufgenommen werden.
+Wenn der Datensatz, aus dem Sie löschen möchten, auf einem relationalen Schema basiert, sollten Sie die folgenden Überlegungen überprüfen, um sicherzustellen, dass Datensätze korrekt entfernt und aufgrund von Diskrepanzen zwischen Experience Platform und Ihrem Quellsystem nicht erneut aufgenommen werden.
+
+>[!NOTE]
+>
+>Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-Dokumentation zuvor als modellbasierte Schemata bezeichnet. Die Funktionalität und das Löschverhalten bleiben unverändert.
 
 ### Verhalten beim Löschen von Datensätzen
 
@@ -224,22 +228,22 @@ Um eine erneute Aufnahme zu verhindern, wenden Sie denselben Löschansatz sowohl
 
 ### Ändern von Datenerfassungs- und Kontrollspalten
 
-Modellbasierte Schemata, die Quellen mit Änderungsdatenerfassung verwenden, können die `_change_request_type` Kontrollspalte verwenden, um Löschvorgänge von Upserts zu unterscheiden. Während der Aufnahme werden Datensätze, die mit `d` gekennzeichnet sind, aus dem Datensatz gelöscht, während Datensätze, die mit `u` oder ohne Spalte gekennzeichnet sind, als Upserts behandelt werden. Die `_change_request_type` Spalte wird nur zur Aufnahmezeit gelesen und nicht im Zielschema gespeichert oder XDM-Feldern zugeordnet.
+Relationale Schemata, die Quellen mit Änderungsdatenerfassung verwenden, können die `_change_request_type` Kontrollspalte verwenden, wenn zwischen Löschvorgängen und Upserts unterschieden wird. Während der Aufnahme werden Datensätze, die mit `d` gekennzeichnet sind, aus dem Datensatz gelöscht, während Datensätze, die mit `u` oder ohne Spalte gekennzeichnet sind, als Upserts behandelt werden. Die `_change_request_type` Spalte wird nur zur Aufnahmezeit gelesen und nicht im Zielschema gespeichert oder XDM-Feldern zugeordnet.
 
 >[!NOTE]
 >
 >Das Löschen von Datensätzen über die Data Lifecycle-Benutzeroberfläche hat keine Auswirkungen auf das Quellsystem. Um Daten aus beiden Speicherorten zu entfernen, löschen Sie sie sowohl in Experience Platform als auch in der Quelle.
 
-### Zusätzliche Löschmethoden für modellbasierte Schemata
+### Zusätzliche Löschmethoden für relationale Schemata
 
-Über den standardmäßigen Löscharbeitsablauf für Datensätze hinaus unterstützen modellbasierte Schemata zusätzliche Methoden für bestimmte Anwendungsfälle:
+Über den standardmäßigen Löscharbeitsablauf für Datensätze hinaus unterstützen relationale Schemata zusätzliche Methoden für bestimmte Anwendungsfälle:
 
 * **Ansatz mit sicherer Kopie des Datensatzes**: Duplizieren Sie den Produktionsdatensatz und wenden Sie Löschvorgänge auf die Kopie an, um sie kontrollierten Tests oder einer Abstimmung zu unterziehen, bevor Sie Änderungen auf die Produktionsdaten anwenden.
 * **Nur-Löschen-Batch-Upload**: Laden Sie eine Datei hoch, die nur Löschvorgänge für eine gezielte Hygiene enthält, wenn Sie bestimmte Datensätze entfernen müssen, ohne andere Daten zu beeinflussen.
 
 ### Deskriptorunterstützung für Hygienevorgänge {#descriptor-support}
 
-Modellbasierte Schemadeskriptoren bieten wichtige Metadaten für präzise Hygienevorgänge:
+Relationale Schemadeskriptoren stellen wichtige Metadaten für präzise Hygienevorgänge bereit:
 
 * **Primärer Schlüsseldeskriptor**: Identifiziert Datensätze eindeutig für zielgerichtete Aktualisierungen oder Löschungen, um sicherzustellen, dass die richtigen Datensätze betroffen sind.
 * **Versionsdeskriptor**: Stellt sicher, dass Löschvorgänge und Aktualisierungen in der richtigen chronologischen Reihenfolge durchgeführt werden, um Vorgänge außerhalb der Sequenz zu verhindern.
@@ -249,7 +253,7 @@ Modellbasierte Schemadeskriptoren bieten wichtige Metadaten für präzise Hygien
 >
 >Hygieneprozesse werden auf Datensatzebene ausgeführt. Bei profilaktivierten Datensätzen sind möglicherweise zusätzliche Profil-Workflows erforderlich, um die Konsistenz über das Echtzeit-Kundenprofil hinweg zu wahren.
 
-### Geplante Aufbewahrung für modellbasierte Schemata
+### Geplante Aufbewahrung für relationale Schemata
 
 Informationen zur automatisierten Hygiene basierend auf dem Datenalter und nicht auf bestimmten Identitäten finden Sie unter [Verwalten der Experience Event-Datensatzaufbewahrung (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) für die geplante Aufbewahrung auf Zeilenebene im Data Lake.
 
@@ -257,7 +261,7 @@ Informationen zur automatisierten Hygiene basierend auf dem Datenalter und nicht
 >
 >Die Gültigkeit auf Zeilenebene wird nur für Datensätze unterstützt, die Zeitreihenverhalten verwenden.
 
-### Best Practices für das modellbasierte Löschen von Datensätzen
+### Best Practices für das Löschen von relationalen Datensätzen
 
 Befolgen Sie die folgenden Best Practices, um eine unbeabsichtigte erneute Aufnahme von Daten zu vermeiden und die Konsistenz der Daten systemübergreifend zu gewährleisten:
 
@@ -265,8 +269,9 @@ Befolgen Sie die folgenden Best Practices, um eine unbeabsichtigte erneute Aufna
 * **Ändern von Datenerfassungsflüssen**: Nachdem Sie Datensätze in Platform gelöscht haben, überwachen Sie Datenflüsse und bestätigen Sie, dass das Quellsystem dieselben Datensätze entfernt oder in `_change_request_type = 'd'` einbezieht.
 * **Quelle bereinigen**: Löschen Sie bei Quellen, die eine vollständige Aktualisierungsaufnahme verwenden, oder Quellen, die Löschvorgänge über die Änderungsdatenerfassung nicht unterstützen, Datensätze direkt aus dem Quellsystem, um eine erneute Aufnahme zu vermeiden.
 
-Weitere Informationen zu Schemaanforderungen finden Sie unter [Modellbasierte Schemadeskriptoranforderungen](../../xdm/schema/model-based.md#model-based-schemas).\
-Informationen zur Funktionsweise der Änderungsdatenerfassung mit Quellen finden Sie unter [Aktivieren der Änderungsdatenerfassung in Quellen](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
+Weitere Informationen zu Schemaanforderungen finden Sie unter [Anforderungen an relationale ](../../xdm/schema/relational.md#relational-schemas).
+
+Informationen zur Funktionsweise der Änderungsdatenerfassung mit Quellen finden Sie unter [Aktivieren der Änderungsdatenerfassung in Quellen](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
 
 ## Nächste Schritte
 

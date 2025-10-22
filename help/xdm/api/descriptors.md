@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-Endpunkt für Deskriptoren
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2916'
 ht-degree: 25%
 
 ---
@@ -34,11 +34,15 @@ Mit dem `/descriptors`-Endpunkt in der [!DNL Schema Registry]-API können Sie De
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-Zusätzlich zu Standarddeskriptoren unterstützt der [!DNL Schema Registry] Deskriptortypen für modellbasierte Schemata wie **Primärschlüssel**, **Version** und **Zeitstempel**. Diese erzwingen Eindeutigkeit, steuern die Versionierung und definieren Zeitreihenfelder auf Schemaebene. Wenn Sie nicht mit modellbasierten Schemata vertraut sind, lesen Sie die technische Referenz zu [Data Mirror](../data-mirror/overview.md) und [modellbasierten Schemata](../schema/model-based.md) bevor Sie fortfahren.
+Zusätzlich zu Standarddeskriptoren unterstützt der [!DNL Schema Registry] Deskriptortypen für relationale Schemata, wie **Primärschlüssel**, **Version** und **Zeitstempel**. Diese erzwingen Eindeutigkeit, steuern die Versionierung und definieren Zeitreihenfelder auf Schemaebene. Wenn Sie nicht mit relationalen Schemata vertraut sind, lesen Sie die [Übersicht über Data Mirror](../data-mirror/overview.md) und die [Technische Referenz zu relationalen Schemata](../schema/relational.md), bevor Sie fortfahren.
+
+>[!NOTE]
+>
+>Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-Dokumentation zuvor als modellbasierte Schemata bezeichnet. Die Deskriptorfunktionalität und die API-Endpunkte bleiben unverändert. Nur die Terminologie wurde aus Gründen der Übersichtlichkeit aktualisiert.
 
 >[!IMPORTANT]
 >
->Einzelheiten zu allen Deskriptortypen finden [&#x200B; im &#x200B;](#defining-descriptors)Anhang).
+>Einzelheiten zu allen Deskriptortypen finden [ im ](#defining-descriptors)Anhang).
 
 ## Abrufen einer Liste von Deskriptoren {#list}
 
@@ -158,7 +162,7 @@ Sie können einen neuen Deskriptor erstellen, indem Sie eine POST-Anfrage an den
 
 >[!IMPORTANT]
 >
->Mit dem [!DNL Schema Registry] können Sie mehrere verschiedene Deskriptortypen definieren. Jeder Deskriptortyp erfordert, dass seine eigenen spezifischen Felder im Anfragetext gesendet werden. Eine vollständige Liste der Deskriptoren [&#x200B; die Felder, die &#x200B;](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
+>Mit dem [!DNL Schema Registry] können Sie mehrere verschiedene Deskriptortypen definieren. Jeder Deskriptortyp erfordert, dass seine eigenen spezifischen Felder im Anfragetext gesendet werden. Eine vollständige Liste der Deskriptoren [ die Felder, die ](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
 
 **API-Format**
 
@@ -226,11 +230,11 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Anfrage**
 
-Diese Anfrage schreibt den Deskriptor im Wesentlichen neu. Daher muss der Anfragetext alle Felder enthalten, die zum Definieren eines Deskriptors dieses Typs erforderlich sind. Mit anderen Worten, die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors ist identisch mit der Payload zum [&#x200B; (POST) eines Deskriptors](#create) desselben Typs.
+Diese Anfrage schreibt den Deskriptor im Wesentlichen neu. Daher muss der Anfragetext alle Felder enthalten, die zum Definieren eines Deskriptors dieses Typs erforderlich sind. Mit anderen Worten, die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors ist identisch mit der Payload zum [ (POST) eines Deskriptors](#create) desselben Typs.
 
 >[!IMPORTANT]
 >
->Wie beim Erstellen von Deskriptoren mithilfe von POST-Anfragen ist es erforderlich, dass für jeden Deskriptortyp eigene spezifische Felder in den Payloads von PUT-Anfragen gesendet werden. Eine vollständige Liste der Deskriptoren [&#x200B; die Felder, die &#x200B;](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
+>Wie beim Erstellen von Deskriptoren mithilfe von POST-Anfragen ist es erforderlich, dass für jeden Deskriptortyp eigene spezifische Felder in den Payloads von PUT-Anfragen gesendet werden. Eine vollständige Liste der Deskriptoren [ die Felder, die ](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
 
 Im folgenden Beispiel wird ein Identitätsdeskriptor aktualisiert, um auf einen anderen `xdm:sourceProperty` (`mobile phone`) zu verweisen und die `xdm:namespace` in `Phone` zu ändern.
 
@@ -263,7 +267,7 @@ Bei einer erfolgreichen Antwort werden der HTTP-Status 201 (Erstellt) und die `@
 }
 ```
 
-Wenn Sie eine [Suchanfrage (GET) &#x200B;](#lookup), um den Deskriptor anzuzeigen, werden die Felder jetzt aktualisiert, damit die in der PUT-Anfrage gesendeten Änderungen widergespiegelt werden.
+Wenn Sie eine [Suchanfrage (GET) ](#lookup), um den Deskriptor anzuzeigen, werden die Felder jetzt aktualisiert, damit die in der PUT-Anfrage gesendeten Änderungen widergespiegelt werden.
 
 ## Löschen eines Deskriptors {#delete}
 
@@ -316,7 +320,7 @@ Die folgenden Abschnitte bieten eine Übersicht über die verfügbaren Deskripto
 
 #### Identitätsdeskriptor {#identity-descriptor}
 
-Ein Identitätsdeskriptor signalisiert, dass &quot;[!UICONTROL sourceProperty]&quot; von &quot;[!UICONTROL sourceSchema]&quot; ein [!DNL Identity] ist, wie vom [Experience Platform Identity Service](../../identity-service/home.md) beschrieben.
+Ein Identitätsdeskriptor signalisiert, dass das &quot;[!UICONTROL sourceProperty]&quot; des &quot;[!UICONTROL sourceSchema]&quot; ein [!DNL Identity] Feld ist, wie vom [Experience Platform Identity Service](../../identity-service/home.md) beschrieben.
 
 ```json
 {
@@ -397,7 +401,7 @@ Verwenden Sie diese Eigenschaften, um zu deklarieren, wie sich ein Quellfeld (Fr
 Die -API unterstützt zwei Muster:
 
 - `xdm:descriptorOneToOne`: Standard-1:1-Beziehung.
-- `xdm:descriptorRelationship`: Allgemeines Muster für neue Arbeits- und modellbasierte Schemata (unterstützt Kardinalität, Benennung und nicht-primäre Schlüsselziele).
+- `xdm:descriptorRelationship`: Allgemeines Muster für neue Arbeit und relationale Schemata (unterstützt Kardinalität, Benennung und nicht-primäre Schlüsselziele).
 
 ##### Eins-zu-eins-Beziehung (Standardschemata)
 
@@ -427,9 +431,9 @@ In der folgenden Tabelle werden die Felder beschrieben, die zum Definieren eines
 | `xdm:destinationVersion` | Die Hauptversion des Referenzschemas. |
 | `xdm:destinationProperty` | (Optional) Pfad zu einem Zielfeld im Referenzschema. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
 
-##### Allgemeine Beziehung (modellbasierte Schemata und empfohlen für neue Projekte)
+##### Allgemeine Beziehung (relationale Schemata und empfohlen für neue Projekte)
 
-Verwenden Sie diesen Deskriptor für alle neuen Implementierungen und für modellbasierte Schemata. Damit können Sie die Kardinalität der Beziehung definieren (z. B. Eins-zu-eins oder Viele-zu-eins), Beziehungsnamen angeben und eine Verknüpfung zu einem Zielfeld erstellen, das nicht der Primärschlüssel ist (Nicht-Primärschlüssel).
+Verwenden Sie diesen Deskriptor für alle neuen Implementierungen und für relationale Schemata. Damit können Sie die Kardinalität der Beziehung definieren (z. B. Eins-zu-eins oder Viele-zu-eins), Beziehungsnamen angeben und eine Verknüpfung zu einem Zielfeld erstellen, das nicht der Primärschlüssel ist (Nicht-Primärschlüssel).
 
 Die folgenden Beispiele zeigen, wie Sie einen allgemeinen Beziehungsdeskriptor definieren.
 
@@ -474,7 +478,7 @@ Verwenden Sie die folgenden Richtlinien, um zu entscheiden, welcher Beziehungsde
 
 | Situation | Zu verwendender Deskriptor |
 | --------------------------------------------------------------------- | ----------------------------------------- |
-| Neue Arbeits- oder modellbasierte Schemata | `xdm:descriptorRelationship` |
+| Neue Arbeit oder relationale Schemata | `xdm:descriptorRelationship` |
 | Vorhandene 1:1-Zuordnung in Standardschemata | Setzen Sie die Verwendung von `xdm:descriptorOneToOne` fort, es sei denn, Sie benötigen Funktionen, die nur von `xdm:descriptorRelationship` unterstützt werden. |
 | Viele-zu-eins- oder optionale Kardinalität erforderlich (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship` |
 | Beziehungsnamen oder -titel für die Lesbarkeit der Benutzeroberfläche/nachgelagerten Elemente erforderlich | `xdm:descriptorRelationship` |
@@ -493,13 +497,13 @@ In der folgenden Tabelle werden die Funktionen der beiden Deskriptortypen vergli
 | Kardinalität | 1:1 | 1:1, 1:0, M:1, M:0 (informativ) |
 | Zielgruppe | Identitäts-/explizites Feld | Primärer Schlüssel standardmäßig oder Nicht-Primärschlüssel über `xdm:destinationProperty` |
 | Benennen von Feldern | Nicht unterstützt | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` und Titel |
-| relationale Anpassung | Limited | Primäres Muster für modellbasierte Schemata |
+| relationale Anpassung | Limited | Primäres Muster für relationale Schemata |
 
 ##### Einschränkungen und Validierung
 
 Befolgen Sie beim Definieren eines allgemeinen Beziehungsdeskriptors diese Anforderungen und Empfehlungen:
 
-- Platzieren Sie bei modellbasierten Schemata das Quellfeld (Fremdschlüssel) auf der Stammebene. Dies ist eine aktuelle technische Einschränkung für die Aufnahme, nicht nur eine Best-Practice-Empfehlung.
+- Platzieren Sie bei relationalen Schemata das Quellfeld (Fremdschlüssel) auf der Stammebene. Dies ist eine aktuelle technische Einschränkung für die Aufnahme, nicht nur eine Best-Practice-Empfehlung.
 - Stellen Sie sicher, dass die Datentypen der Quell- und Zielfelder kompatibel sind (numerisch, Datum, boolesch, Zeichenfolge).
 - Denken Sie daran, dass Kardinalität informativ ist. Datenspeicherung erzwingt sie nicht. Geben Sie die Kardinalität im `<source>:<destination>` an. Akzeptierte Werte sind: `1:1`, `1:0`, `M:1` oder `M:0`.
 
@@ -525,7 +529,7 @@ Der Primärschlüsseldeskriptor (`xdm:descriptorPrimaryKey`) erzwingt Einschrän
 
 >[!NOTE]
 >
->Im Schema-Editor der Benutzeroberfläche wird der Versionsdeskriptor als &quot;[!UICONTROL Versionskennung“ &#x200B;].
+>Im Schema-Editor der Benutzeroberfläche wird der Versionsdeskriptor als &quot;[!UICONTROL Version identifier]&quot; angezeigt.
 
 Der Versionsdeskriptor (`xdm:descriptorVersion`) bezeichnet ein Feld, um Konflikte durch Änderungsereignisse zu erkennen und zu verhindern, die nicht in der richtigen Reihenfolge auftreten.
 
@@ -543,11 +547,11 @@ Der Versionsdeskriptor (`xdm:descriptorVersion`) bezeichnet ein Feld, um Konflik
 | `xdm:sourceSchema` | `$id` URI des Schemas. |
 | `xdm:sourceProperty` | JSON-Zeiger auf das Feld Version . Muss als `required` gekennzeichnet sein. |
 
-#### Zeitstempel-Deskriptor {#timestamp-descriptor}
+#### Zeitstempeldeskriptor {#timestamp-descriptor}
 
 >[!NOTE]
 >
->Im Schema-Editor der Benutzeroberfläche wird der Zeitstempeldeskriptor als &quot;[!UICONTROL Zeitstempelkennung“ &#x200B;].
+>Im Schema-Editor der Benutzeroberfläche wird der Zeitstempeldeskriptor als &quot;[!UICONTROL Timestamp identifier]&quot; angezeigt.
 
 Der Zeitstempeldeskriptor (`xdm:descriptorTimestamp`) bezeichnet ein Datums-/Uhrzeitfeld als Zeitstempel für Schemata mit `"meta:behaviorType": "time-series"`.
 
@@ -567,7 +571,7 @@ Der Zeitstempeldeskriptor (`xdm:descriptorTimestamp`) bezeichnet ein Datums-/Uhr
 
 ##### B2B-Beziehungsdeskriptor {#B2B-relationship-descriptor}
 
-Real-Time CDP B2B edition führt eine alternative Methode zur Definition von Beziehungen zwischen Schemata ein, die Viele-zu-Eins-Beziehungen ermöglicht. Diese neue Beziehung muss den `@type: xdm:descriptorRelationship` aufweisen, und die Payload muss mehr Felder als die `@type: xdm:descriptorOneToOne` enthalten. Weitere Informationen finden Sie im Tutorial [Definieren einer Schemabeziehung für &#x200B;](../tutorials/relationship-b2b.md)B2B edition&quot;.
+Real-Time CDP B2B edition führt eine alternative Methode zur Definition von Beziehungen zwischen Schemata ein, die Viele-zu-Eins-Beziehungen ermöglicht. Diese neue Beziehung muss den `@type: xdm:descriptorRelationship` aufweisen, und die Payload muss mehr Felder als die `@type: xdm:descriptorOneToOne` enthalten. Weitere Informationen finden Sie im Tutorial [Definieren einer Schemabeziehung für ](../tutorials/relationship-b2b.md)B2B edition&quot;.
 
 ```json
 {
@@ -587,7 +591,7 @@ Real-Time CDP B2B edition führt eine alternative Methode zur Definition von Bez
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu definierenden Deskriptors. Für uns mit den folgenden Feldern muss der Wert auf `xdm:descriptorRelationship` gesetzt werden. Weitere Informationen zu zusätzlichen Typen finden Sie [&#x200B; Abschnitt &#x200B;](#relationship-descriptor)Beziehungsdeskriptoren“. |
+| `@type` | Der Typ des zu definierenden Deskriptors. Für uns mit den folgenden Feldern muss der Wert auf `xdm:descriptorRelationship` gesetzt werden. Weitere Informationen zu zusätzlichen Typen finden Sie [ Abschnitt ](#relationship-descriptor)Beziehungsdeskriptoren“. |
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zum Feld im Quellschema, in dem die Beziehung definiert wird. Sollte mit &quot;/&quot; beginnen und nicht mit &quot;/&quot; enden. Schließen Sie „properties“ nicht in den Pfad ein (z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |

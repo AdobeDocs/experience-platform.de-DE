@@ -5,7 +5,7 @@ title: Erstellen eines Datenflusses für Cloud-Speicherquellen mithilfe der Flow
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Einbringen dieser Daten in Experience Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 56%
@@ -33,7 +33,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erstellen einer Quellverbindung {#source}
 
@@ -101,7 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Aufnahme definiert. Die unterstützten komprimierten Dateitypen sind: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` und `tar`. **Hinweis**: Die `compressionType`-Eigenschaft kann nur verwendet werden, wenn durch Trennzeichen getrennte oder JSON-Dateien aufgenommen werden. |
 | `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. Dieser Parameter verweist auf eine einzelne Datei oder einen gesamten Ordner.  **Hinweis**: Sie können ein Sternchen anstelle des Dateinamens verwenden, um die Aufnahme eines gesamten Ordners anzugeben. Beispiel: `/acme/summerCampaign/*.csv` nimmt den gesamten `/acme/summerCampaign/` auf. |
 | `params.type` | Der Dateityp der aufgenommenen Quelldatendatei. Verwenden Sie den Typ `file`, um eine einzelne Datei aufzunehmen, und den Typ `folder`, um einen ganzen Ordner aufzunehmen. |
-| `params.cdcEnabled` | Ein boolescher Wert, der angibt, ob die Erfassung des Änderungsverlaufs aktiviert ist. Bei Verwendung mit modellbasierten Schemata beruht die Änderungsdatenerfassung auf der `_change_request_type` Kontrollspalte (`u` — upsert, `d` — delete), die während der Aufnahme ausgewertet, aber nicht im Zielschema gespeichert wird. Diese Eigenschaft wird von den folgenden Cloud-Speicherquellen unterstützt: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Einen Überblick über diese Funktion finden Sie in der Übersicht zu [Data Mirror](../../../../xdm/data-mirror/overview.md). Informationen zur Implementierung finden Sie im Handbuch unter Verwenden der [Datenerfassung für Änderungen in Quellen](../change-data-capture.md) und in der [technischen Referenz zu modellbasierten Schemata](../../../../xdm/schema/model-based.md). |
+| `params.cdcEnabled` | Ein boolescher Wert, der angibt, ob die Erfassung des Änderungsverlaufs aktiviert ist. Bei Verwendung mit relationalen Schemata beruht die Änderungsdatenerfassung auf der `_change_request_type` Kontrollspalte (`u` — upsert, `d` — delete), die während der Aufnahme ausgewertet, aber nicht im Zielschema gespeichert wird. Diese Eigenschaft wird von den folgenden Cloud-Speicherquellen unterstützt: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Einen Überblick über diese Funktion finden Sie in der Übersicht zu [Data Mirror](../../../../xdm/data-mirror/overview.md). Informationen zur Implementierung finden Sie im Handbuch unter Verwenden der [Datenerfassung für Änderungen in Quellen](../change-data-capture.md) und in der [technischen Referenz zu relationalen Schemata](../../../../xdm/schema/relational.md). |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die mit Ihrer spezifischen Cloud-Speicherquelle verknüpft ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
 
 **Antwort**

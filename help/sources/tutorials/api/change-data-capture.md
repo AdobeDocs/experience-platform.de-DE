@@ -2,9 +2,9 @@
 title: Aktivieren der Änderungsdatenerfassung für Quellverbindungen in der API
 description: Erfahren Sie, wie Sie die Änderungsdatenerfassung für Quellverbindungen in der API aktivieren
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
@@ -17,32 +17,36 @@ Experience Platform unterstützt derzeit **inkrementelle Datenkopie** mit der re
 
 Im Gegensatz dazu erfasst und wendet Change Data Capture Einfügungen, Aktualisierungen und Löschungen nahezu in Echtzeit an. Diese umfassende Änderungsverfolgung stellt sicher, dass Datensätze vollständig mit dem Quellsystem abgestimmt bleiben, und bietet einen vollständigen Änderungsverlauf, der über die Unterstützung inkrementeller Kopien hinausgeht. Löschvorgänge müssen jedoch besonders berücksichtigt werden, da sie sich auf alle Anwendungen auswirken, die die Zieldatensätze verwenden.
 
-Für das Ändern der Datenerfassung in Experience Platform ist **[Data Mirror](../../../xdm/data-mirror/overview.md)** mit [modellbasierten Schemata](../../../xdm/schema/model-based.md) (auch als relationale Schemata bezeichnet) erforderlich. Sie können Änderungsdaten auf zwei Arten für Data Mirror bereitstellen:
+Für das Ändern der Datenerfassung in Experience Platform ist **[Data Mirror](../../../xdm/data-mirror/overview.md)** mit [relationalen Schemata](../../../xdm/schema/relational.md) erforderlich. Sie können Änderungsdaten auf zwei Arten für Data Mirror bereitstellen:
 
 * **[Manuelles Änderungs-Tracking](#file-based-sources)**: Fügen Sie eine `_change_request_type` Spalte in Ihren Datensatz für Quellen ein, die nativ keine Änderungsdatensätze generieren
 * **[Exporte der nativen Änderungsdatenerfassung](#database-sources)**: Verwenden Sie Änderungsdatenerfassungsdatensätze, die direkt aus Ihrem Quellsystem exportiert wurden
 
-Bei beiden Ansätzen ist Data Mirror mit modellbasierten Schemata erforderlich, um Beziehungen beizubehalten und Eindeutigkeit durchzusetzen.
+Bei beiden Ansätzen ist Data Mirror mit relationalen Schemata erforderlich, um Beziehungen beizubehalten und Eindeutigkeit zu erzwingen.
 
-## Data Mirror mit modellbasierten Schemata
+## Data Mirror mit relationalen Schemata
 
 >[!AVAILABILITY]
 >
->Data Mirror und modellbasierte Schemata stehen Adobe Journey Optimizer-Lizenzinhabern (**Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
+>Data Mirror und relationale Schemata stehen Adobe Journey Optimizer-Lizenzinhabern **Orchestrierte Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
+
+>[!NOTE]
+>
+>Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-Dokumentation zuvor als modellbasierte Schemata bezeichnet. Die Funktionalität und die Funktionen zur Datenerfassung für Änderungen bleiben unverändert.
 
 >[!NOTE]
 >
 >**Benutzende mit orchestrierten Kampagnen**: Verwenden Sie die in diesem Dokument beschriebenen Data Mirror-Funktionen, um mit Kundendaten zu arbeiten, die die referenzielle Integrität wahren. Auch wenn Ihre Quelle die Datenerfassungsformatierung für Änderungen nicht verwendet, unterstützt Data Mirror relationale Funktionen wie die Durchsetzung von Primärschlüsseln, Upserts auf Datensatzebene und Schemabeziehungen. Diese Funktionen gewährleisten eine konsistente und zuverlässige Datenmodellierung über verbundene Datensätze hinweg.
 
-Data Mirror verwendet modellbasierte Schemata, um die Änderungsdatenerfassung zu erweitern und erweiterte Datenbanksynchronisierungsfunktionen zu ermöglichen. Einen Überblick über Data Mirror finden Sie unter [Übersicht über Data Mirror](../../../xdm/data-mirror/overview.md).
+Data Mirror verwendet relationale Schemata, um die Änderungsdatenerfassung zu erweitern und erweiterte Datenbanksynchronisierungsfunktionen zu ermöglichen. Einen Überblick über Data Mirror finden Sie unter [Übersicht über Data Mirror](../../../xdm/data-mirror/overview.md).
 
-Modellbasierte Schemata erweitern Experience Platform, um die Eindeutigkeit von Primärschlüsseln zu erzwingen, Änderungen auf Zeilenebene zu verfolgen und Beziehungen auf Schemaebene zu definieren. Bei der Datenerfassung für Änderungen wenden sie Einfügungen, Aktualisierungen und Löschungen direkt im Data Lake an, wodurch die Notwendigkeit von Extract, Transform, Load (ETL) oder manueller Abstimmung reduziert wird.
+Relationale Schemata erweitern Experience Platform, um die Eindeutigkeit von Primärschlüsseln zu erzwingen, Änderungen auf Zeilenebene zu verfolgen und Beziehungen auf Schemaebene zu definieren. Bei der Datenerfassung für Änderungen wenden sie Einfügungen, Aktualisierungen und Löschungen direkt im Data Lake an, wodurch die Notwendigkeit von Extract, Transform, Load (ETL) oder manueller Abstimmung reduziert wird.
 
-Weitere [&#x200B; finden Sie unter Übersicht über &#x200B;](../../../xdm/schema/model-based.md) Schemata .
+Weitere [ finden Sie unter ](../../../xdm/schema/relational.md) zu relationalen Schemata .
 
-### Modellbasierte Schemaanforderungen für die Erfassung von Änderungsdaten
+### Anforderungen an relationale Schemata zur Änderungsdatenerfassung
 
-Bevor Sie ein modellbasiertes Schema mit Änderungsdatenerfassung verwenden, konfigurieren Sie die folgenden Kennungen:
+Bevor Sie ein relationales Schema mit Änderungsdatenerfassung verwenden, konfigurieren Sie die folgenden Kennungen:
 
 * Jeden Datensatz mit einem Primärschlüssel eindeutig identifizieren.
 * Wenden Sie Aktualisierungen nacheinander mithilfe einer Versionskennung an.
@@ -59,9 +63,9 @@ Diese Spalte wird nur während der Aufnahme ausgewertet und nicht gespeichert od
 
 ### Workflow {#workflow}
 
-So aktivieren Sie die Änderungsdatenerfassung mit einem modellbasierten Schema:
+So aktivieren Sie die Änderungsdatenerfassung mit einem relationalen Schema:
 
-1. Erstellen Sie ein modellbasiertes Schema.
+1. Erstellen Sie ein relationales Schema.
 2. Fügen Sie die erforderlichen Deskriptoren hinzu:
    * [Primärer Schlüsseldeskriptor](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [Versionsdeskriptor](../../../xdm/api/descriptors.md#version-descriptor)
@@ -76,13 +80,13 @@ So aktivieren Sie die Änderungsdatenerfassung mit einem modellbasierten Schema:
 
 >[!IMPORTANT]
 >
->**Planung des Löschens von Daten ist erforderlich**. Alle Anwendungen, die modellbasierte Schemata verwenden, müssen die Auswirkungen von Löschungen verstehen, bevor sie die Änderungsdatenerfassung implementieren. Planen Sie, wie sich Löschungen auf zugehörige Datensätze, Compliance-Anforderungen und nachgelagerte Prozesse auswirken. Siehe [Überlegungen zur Datenhygiene](../../../hygiene/ui/record-delete.md#model-based-record-delete) für Anleitungen.
+>**Planung des Löschens von Daten ist erforderlich**. Alle Programme, die relationale Schemata verwenden, müssen die Auswirkungen von Löschungen verstehen, bevor sie die Änderungsdatenerfassung implementieren. Planen Sie, wie sich Löschungen auf zugehörige Datensätze, Compliance-Anforderungen und nachgelagerte Prozesse auswirken. Siehe [Überlegungen zur Datenhygiene](../../../hygiene/ui/record-delete.md#relational-record-delete) für Anleitungen.
 
 ## Bereitstellung von Änderungsdaten für dateibasierte Quellen {#file-based-sources}
 
 >[!IMPORTANT]
 >
->Die dateibasierte Änderungsdatenerfassung erfordert Data Mirror mit modellbasierten Schemata. Bevor Sie die folgenden Dateiformatierungsschritte ausführen, stellen Sie sicher, dass Sie den Data Mirror-Setup-Workflow [&#128279;](#workflow) abgeschlossen haben, der zuvor in diesem Dokument beschrieben wurde. In den folgenden Schritten wird beschrieben, wie Sie Ihre Datendateien formatieren, um Änderungsnachverfolgungsinformationen einzuschließen, die von Data Mirror verarbeitet werden.
+>Die dateibasierte Änderungsdatenerfassung erfordert Data Mirror mit relationalen Schemata. Bevor Sie die folgenden Dateiformatierungsschritte ausführen, stellen Sie sicher, dass Sie den Data Mirror-Setup-Workflow [](#workflow) abgeschlossen haben, der zuvor in diesem Dokument beschrieben wurde. In den folgenden Schritten wird beschrieben, wie Sie Ihre Datendateien formatieren, um Änderungsnachverfolgungsinformationen einzuschließen, die von Data Mirror verarbeitet werden.
 
 Fügen Sie bei dateibasierten Quellen ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] und [!DNL SFTP]) eine `_change_request_type` Spalte in Ihre Dateien ein.
 
@@ -115,7 +119,7 @@ Alle Cloud-Speicherquellen verwenden dasselbe `_change_request_type` Spaltenform
 
 ### [!DNL Azure Databricks]
 
-Um die Änderungsdatenerfassung mit [!DNL Azure Databricks] zu verwenden, müssen Sie sowohl **Datenfeed ändern** in Ihren Quelltabellen aktivieren als auch Data Mirror mit modellbasierten Schemata in Experience Platform konfigurieren.
+Um die Änderungsdatenerfassung mit [!DNL Azure Databricks] zu verwenden, müssen Sie sowohl **Datenfeed ändern** in Ihren Quelltabellen aktivieren als auch Data Mirror mit relationalen Schemata in Experience Platform konfigurieren.
 
 Verwenden Sie die folgenden Befehle, um den Änderungsdaten-Feed in Ihren Tabellen zu aktivieren:
 
@@ -152,7 +156,7 @@ Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdate
 
 ### [!DNL Data Landing Zone]
 
-Um die Änderungsdatenerfassung mit [!DNL Data Landing Zone] zu verwenden, müssen Sie sowohl **Datenfeed ändern** in Ihren Quelltabellen aktivieren als auch Data Mirror mit modellbasierten Schemata in Experience Platform konfigurieren.
+Um die Änderungsdatenerfassung mit [!DNL Data Landing Zone] zu verwenden, müssen Sie sowohl **Datenfeed ändern** in Ihren Quelltabellen aktivieren als auch Data Mirror mit relationalen Schemata in Experience Platform konfigurieren.
 
 Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdatenerfassung für Ihre [!DNL Data Landing Zone]-Quellverbindung aktivieren:
 
@@ -161,7 +165,7 @@ Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdate
 
 ### [!DNL Google BigQuery]
 
-Um die Änderungsdatenerfassung mit [!DNL Google BigQuery] verwenden zu können, müssen Sie sowohl den Änderungsverlauf in Ihren Quelltabellen aktivieren als auch Data Mirror mit modellbasierten Schemata in Experience Platform konfigurieren.
+Um die Änderungsdatenerfassung mit [!DNL Google BigQuery] verwenden zu können, müssen Sie sowohl den Änderungsverlauf in Ihren Quelltabellen aktivieren als auch Data Mirror mit relationalen Schemata in Experience Platform konfigurieren.
 
 Um den Änderungsverlauf in Ihrer [!DNL Google BigQuery]-Quellverbindung zu aktivieren, navigieren Sie in der [!DNL Google BigQuery]-Konsole zu Ihrer [!DNL Google Cloud]-Seite und setzen `enable_change_history` auf `TRUE`. Diese Eigenschaft aktiviert den Änderungsverlauf für Ihre Datentabelle.
 
@@ -174,7 +178,7 @@ Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie die Änderungsdate
 
 ### [!DNL Snowflake]
 
-Um die Änderungsdatenerfassung mit [!DNL Snowflake] verwenden zu können, müssen Sie sowohl **Änderungsverfolgung** in Ihren Quelltabellen aktivieren als auch Data Mirror mit modellbasierten Schemata in Experience Platform konfigurieren.
+Um die Änderungsdatenerfassung mit [!DNL Snowflake] verwenden zu können, müssen Sie sowohl **Änderungsverfolgung“** Ihren Quelltabellen aktivieren als auch Data Mirror mit relationalen Schemata in Experience Platform konfigurieren.
 
 Aktivieren Sie [!DNL Snowflake] die Änderungsverfolgung mithilfe der `ALTER TABLE` und legen Sie `CHANGE_TRACKING` auf `TRUE` fest.
 

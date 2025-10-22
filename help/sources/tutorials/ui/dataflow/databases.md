@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses mithilfe einer Datenbank-Source in der Benut
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Experience Platform-Datensatz aufgenommen werden. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche einen Datenfluss für eine Datenbankquelle erstellen.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
-source-wordcount: '1698'
-ht-degree: 36%
+source-wordcount: '1653'
+ht-degree: 20%
 
 ---
 
@@ -35,7 +35,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ## Daten hinzufügen
 
-Nachdem Sie Ihr Datenbankquellenkonto erstellt haben, wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt, der Ihnen eine Schnittstelle bietet, um die Tabellenhierarchie Ihres Datenbankquellenkontos zu untersuchen.
+Nachdem Sie Ihr Datenbankquellenkonto erstellt haben, wird der Schritt **[!UICONTROL Add data]** angezeigt, der Ihnen eine Schnittstelle bietet, um die Tabellenhierarchie Ihres Datenbankquellenkontos zu untersuchen.
 
 * Die linke Hälfte der Benutzeroberfläche ist ein Browser, der eine Liste der in Ihrem Konto enthaltenen Datentabellen anzeigt. Die Benutzeroberfläche umfasst auch eine Suchoption, mit der Sie die zu verwendenden Quelldaten schnell identifizieren können.
 * Die rechte Hälfte der Benutzeroberfläche ist ein Vorschaufenster, in dem Sie bis zu 100 Datenzeilen in der Vorschau anzeigen können.
@@ -44,33 +44,33 @@ Nachdem Sie Ihr Datenbankquellenkonto erstellt haben, wird der Schritt **[!UICON
 >
 >Die Option Quelldaten suchen steht für alle tabellenbasierten Quellen mit Ausnahme von Adobe Analytics, [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] zur Verfügung.
 
-Nachdem Sie die Quelldaten gefunden haben, wählen Sie die Tabelle aus und klicken Sie auf **[!UICONTROL Weiter]**.
+Nachdem Sie die Quelldaten gefunden haben, wählen Sie die Tabelle aus und klicken Sie dann auf **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
 ## Angeben von Datenflussdetails
 
-Auf der Seite [!UICONTROL Datenflussdetails] können Sie auswählen, ob Sie einen vorhandenen Datensatz oder einen neuen Datensatz verwenden möchten. Während dieses Vorgangs können Sie auch Einstellungen für [!UICONTROL Profildatensatz], [!UICONTROL Fehlerdiagnose], [!UICONTROL Partielle Aufnahme] und [!UICONTROL Warnhinweise] vornehmen.
+Auf der Seite [!UICONTROL Dataflow detail] können Sie auswählen, ob Sie einen vorhandenen Datensatz oder einen neuen Datensatz verwenden möchten. Während dieses Vorgangs können Sie auch Einstellungen für [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion] und [!UICONTROL Alerts] konfigurieren.
 
 ![dataflow-detail](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
 ### Verwenden eines vorhandenen Datensatzes
 
-Um Daten in einen vorhandenen Datensatz aufzunehmen, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Sie können einen vorhandenen Datensatz entweder über die Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü abrufen. Nachdem Sie einen Datensatz ausgewählt haben, geben Sie einen Namen und eine Beschreibung für Ihren Datenfluss ein.
+Um Daten in einen vorhandenen Datensatz aufzunehmen, wählen Sie **[!UICONTROL Existing dataset]** aus. Sie können einen vorhandenen Datensatz entweder über die Option [!UICONTROL Advanced search] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü abrufen. Nachdem Sie einen Datensatz ausgewählt haben, geben Sie einen Namen und eine Beschreibung für Ihren Datenfluss ein.
 
 ![existing-dataset](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
 
 ### Verwenden eines neuen Datensatzes
 
-Für ein Aufnehmen in einen neuen Datensatz wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemata im Dropdown-Menü ein Schema zum Zuordnen aus. Nachdem Sie ein Schema ausgewählt haben, geben Sie einen Namen und eine Beschreibung für Ihren Datenfluss ein.
+Um einen neuen Datensatz aufzunehmen, wählen Sie **[!UICONTROL New dataset]** aus und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Advanced search] oder durch Scrollen durch die Liste der vorhandenen Schemata im Dropdown-Menü ein Schema zum Zuordnen aus. Nachdem Sie ein Schema ausgewählt haben, geben Sie einen Namen und eine Beschreibung für Ihren Datenfluss ein.
 
 ![new-dataset](../../../images/tutorials/dataflow/table-based/new-dataset.png)
 
 ### Aktivieren von [!DNL Profile] und Fehlerdiagnose
 
-Wählen Sie als Nächstes den **[!UICONTROL Profildatensatz]**-Umschalter aus, um Ihren Datensatz für [!DNL Profile] zu aktivieren. Auf diese Weise können Sie eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität erstellen. Daten aus allen [!DNL Profile]-aktivierten Datensätzen werden in [!DNL Profile] eingeschlossen und Änderungen werden wirksam, wenn Sie Ihren Datenfluss speichern.
+Wählen Sie als Nächstes den Umschalter **[!UICONTROL Profile dataset]** aus, um Ihren Datensatz für die [!DNL Profile] zu aktivieren. Auf diese Weise können Sie eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität erstellen. Daten aus allen [!DNL Profile]-aktivierten Datensätzen werden in [!DNL Profile] eingeschlossen und Änderungen werden wirksam, wenn Sie Ihren Datenfluss speichern.
 
-[!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erstellung von Fehlermeldungen für alle fehlerhaften Einträge, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Aufnahme] die Aufnahme von fehlerhaften Daten bis zu einem gewissen Schwellenwert, den Sie manuell definieren, ermöglicht. Weitere Informationen finden Sie in der [Übersicht zur partiellen Batch-Aufnahme](../../../../ingestion/batch-ingestion/partial.md).
+[!UICONTROL Error diagnostics] ermöglicht eine detaillierte Erstellung von Fehlermeldungen für alle fehlerhaften Datensätze, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partial ingestion] die Aufnahme von fehlerhaften Daten bis zu einem gewissen Schwellenwert, den Sie manuell definieren, ermöglicht. Weitere Informationen finden Sie in der [Übersicht zur partiellen Batch-Aufnahme](../../../../ingestion/batch-ingestion/partial.md).
 
 ![profile-and-errors](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
 
@@ -78,33 +78,33 @@ Wählen Sie als Nächstes den **[!UICONTROL Profildatensatz]**-Umschalter aus, u
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status Ihres Datenflusses zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Quellen über die Benutzeroberfläche](../alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ![alerts](../../../images/tutorials/dataflow/table-based/alerts.png)
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
+Der Schritt [!UICONTROL Mapping] wird angezeigt und bietet Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema.
 
 Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
->Stellen Sie bei der Zuordnung zu modellbasierten Schemata sicher, dass Ihre Quelldaten die erforderlichen Felder enthalten, z. B. einen Primärschlüssel und eine Versionskennung oder eine Zeitstempelkennung für Zeitreihenschemas .
+>Stellen Sie bei der Zuordnung zu relationalen Schemata sicher, dass Ihre Quelldaten die erforderlichen Felder enthalten, z. B. einen Primärschlüssel und eine Versionskennung oder eine Zeitstempelkennung für Zeitreihenschemas .
 
 Kontrollspalten wie `_change_request_type`, die für die Änderungsdatenerfassung verwendet werden, werden während der Aufnahme gelesen, aber nicht im Zielschema gespeichert.
 
-Modellbasierte Schemata unterstützen auch Beziehungen zwischen Datensätzen, die Primär- und Fremdschlüsselzuordnungen verwenden.
+Relationale Schemata unterstützen auch Beziehungen zwischen Datensätzen, die Primär- und Fremdschlüsselzuordnungen verwenden.
 
-Weitere Informationen finden Sie in der [Übersicht über &#x200B;](../../../../xdm/data-mirror/overview.md) Data Mirror und in der [technischen Referenz zu modellbasierten Schemata](../../../../xdm/schema/model-based.md).
+Weitere Informationen finden Sie unter [Übersicht über Data Mirror](../../../../xdm/data-mirror/overview.md) und in der [technischen Referenz zu relationalen Schemata](../../../../xdm/schema/relational.md).
 
-Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
+Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Zuordnung](../../../images/tutorials/dataflow/table-based/mapping.png)
 
 ## Planen von Aufnahmedurchgängen
 
-Der Schritt [!UICONTROL Planung] wird angezeigt, in dem Sie einen Aufnahmezeitplan konfigurieren können, um die ausgewählten Quelldaten mithilfe der konfigurierten Zuordnungen automatisch aufzunehmen. Standardmäßig ist die Zeitplanung auf `Once` festgelegt. Um Ihre Aufnahmefrequenz anzupassen, wählen Sie **[!UICONTROL Häufigkeit]** und dann eine Option aus dem Dropdown-Menü aus.
+Der [!UICONTROL Scheduling] Schritt wird angezeigt, in dem Sie einen Aufnahmezeitplan konfigurieren können, um die ausgewählten Quelldaten mithilfe der konfigurierten Zuordnungen automatisch aufzunehmen. Standardmäßig ist die Zeitplanung auf `Once` festgelegt. Um Ihre Aufnahmefrequenz anzupassen, wählen Sie **[!UICONTROL Frequency]** und dann eine Option aus dem Dropdown-Menü aus.
 
 >[!TIP]
 >
@@ -124,19 +124,19 @@ Weitere Informationen zur Planung von Konfigurationen finden Sie in der folgende
 | Intervall | Nachdem Sie eine Häufigkeit ausgewählt haben, können Sie die Intervalleinstellung konfigurieren, um den Zeitrahmen zwischen jeder Aufnahme festzulegen. Wenn Sie beispielsweise Ihre Häufigkeit auf „Tag“ festlegen und das Intervall auf 15 konfigurieren, wird Ihr Datenfluss alle 15 Tage ausgeführt. Das Intervall kann nicht auf null festgelegt werden. Der akzeptierte Mindestintervallwert für jede Häufigkeit ist wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Stunde**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
 | Startzeit | Der Zeitstempel für die projizierte Ausführung, dargestellt in UTC-Zeitzone. |
 | Aufstockung | Die Aufstockung bestimmt, welche Daten anfänglich aufgenommen werden. Wenn die Aufstockung aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Aufnahme aufgenommen. Wenn die Aufstockung deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Aufnahme-Ausführung und der Startzeit geladen werden. Dateien, die vor der Startzeit geladen wurden, werden nicht aufgenommen. |
-| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Das Feld, das Sie für **[!UICONTROL Inkrementelle Daten laden nach]** auswählen, muss seine Datums-/Uhrzeitwerte in der UTC-Zeitzone haben, um die inkrementellen Daten korrekt zu laden. Alle tabellenbasierten Batch-Quellen wählen inkrementelle Daten aus, indem sie einen Delta-Spalten-Zeitstempelwert mit der entsprechenden UTC-Zeit des Flussausführungsfensters vergleichen und dann die Daten aus der Quelle kopieren, wenn neue Daten im UTC-Zeitfenster gefunden werden. |
+| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Das Feld, das Sie für **[!UICONTROL Load incremental data by]** auswählen, muss seine Datums-/Uhrzeitwerte in der UTC-Zeitzone haben, um inkrementelle Daten korrekt zu laden. Alle tabellenbasierten Batch-Quellen wählen inkrementelle Daten aus, indem sie einen Delta-Spalten-Zeitstempelwert mit der entsprechenden UTC-Zeit des Flussausführungsfensters vergleichen und dann die Daten aus der Quelle kopieren, wenn neue Daten im UTC-Zeitfenster gefunden werden. |
 
 ![Aufstockung](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Überprüfen des Datenflusses
 
-Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neuen Datenfluss überprüfen können, bevor er hergestellt wird. Die Details lassen sich wie folgt kategorisieren:
+Der Schritt **[!UICONTROL Review]** wird angezeigt, in dem Sie Ihren neuen Datenfluss überprüfen können, bevor er erstellt wird. Die Details lassen sich wie folgt kategorisieren:
 
-* **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
-* **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt den Datensatz an, in den die Quelldaten aufgenommen werden, sowie das zugehörige Schema. Wenn Sie ein modellbasiertes Schema verwenden, stellen Sie sicher, dass die erforderlichen Felder, wie der Primärschlüssel und die Versionskennung, korrekt zugeordnet sind. Stellen Sie außerdem sicher, dass alle geänderten Datenerfassungssteuerungsspalten ordnungsgemäß konfiguriert sind. Datensätze, die modellbasierte Schemata verwenden, unterstützen mehrere Datenmodelle und ermöglichen [Workflows zur Datenerfassung ändern](../../api/change-data-capture.md).
-* **[!UICONTROL Planung]**: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmezeitplans an.
+* **[!UICONTROL Connection]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
+* **[!UICONTROL Assign dataset & map fields]**: Zeigt den Datensatz an, in den die Quelldaten aufgenommen werden, zusammen mit dem zugehörigen Schema. Wenn Sie ein relationales Schema verwenden, stellen Sie sicher, dass die erforderlichen Felder, wie der Primärschlüssel und die Versionskennung, korrekt zugeordnet sind. Stellen Sie außerdem sicher, dass alle geänderten Datenerfassungssteuerungsspalten ordnungsgemäß konfiguriert sind. Datensätze, die relationale Schemata verwenden, unterstützen mehrere Datenmodelle und ermöglichen [Workflows zur Datenerfassung ändern](../../api/change-data-capture.md).
+* **[!UICONTROL Scheduling]**: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall der Aufnahme an.
 
-Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
+Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Finish]** aus und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
 
 ![überprüfen](../../../images/tutorials/dataflow/table-based/review.png)
 
@@ -146,7 +146,7 @@ Nachdem Ihr Datenfluss hergestellt worden ist, können Sie Daten, die dadurch au
 
 ## Löschen des Datenflusses
 
-Datenflüsse, die nicht mehr erforderlich sind oder nicht korrekt erstellt wurden, können Sie löschen, indem Sie dazu die Funktion **[!UICONTROL Löschen]** im Arbeitsbereich **[!UICONTROL Datenflüsse]** verwenden. Weitere Informationen zum Löschen von Datenflüssen finden Sie im Tutorial [Löschen von Datenflüssen in der Benutzeroberfläche](../delete.md).
+Datenflüsse, die nicht mehr erforderlich sind oder nicht korrekt erstellt wurden, können Sie löschen, indem Sie dazu die Funktion **[!UICONTROL Delete]** im Arbeitsbereich **[!UICONTROL Dataflows]** verwenden. Weitere Informationen zum Löschen von Datenflüssen finden Sie im Tutorial [Löschen von Datenflüssen in der Benutzeroberfläche](../delete.md).
 
 ## Nächste Schritte
 

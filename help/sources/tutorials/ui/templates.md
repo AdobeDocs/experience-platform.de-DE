@@ -3,10 +3,10 @@ description: Erfahren Sie, wie Sie Vorlagen in der Adobe Experience Platform-Ben
 title: Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: f9e3c19fdfd4ca0e03fdf3b3a7b5e82b72490dbc
 workflow-type: tm+mt
-source-wordcount: '2314'
-ht-degree: 39%
+source-wordcount: '2271'
+ht-degree: 34%
 
 ---
 
@@ -53,11 +53,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 >abstract="Wählen Sie den entsprechenden Geschäftstyp für Ihren Anwendungsfall aus. Ihr Zugriff variiert je nach Ihrem Real-time Customer Data Platform-Abonnementkonto."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de" text="Real-Time CDP – Übersicht"
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL linken Navigationsbereich die Option]** Quellen“ aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen und einen Quellkatalog anzuzeigen, der in Experience Platform verfügbar ist.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option **[!UICONTROL Sources]** aus, um auf den Arbeitsbereich [!UICONTROL Sources] zuzugreifen und einen Katalog der in Experience Platform verfügbaren Quellen anzuzeigen.
 
-Verwenden Sie das Menü *[!UICONTROL Kategorien]*, um Quellen nach Kategorie zu filtern. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
+Verwenden Sie das Menü *[!UICONTROL Categories]* , um Quellen nach Kategorie zu filtern. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
-Gehen Sie zur Kategorie [!UICONTROL Adobe], um die [!DNL Marketo Engage] anzuzeigen, und klicken Sie dann auf [!UICONTROL Daten hinzufügen] um zu beginnen.
+Navigieren Sie zur Kategorie [!UICONTROL Adobe applications] , um die Karte [!DNL Marketo Engage] anzuzeigen, und wählen Sie dann [!UICONTROL Add data] aus, um zu beginnen.
 
 ![Katalog des Quellarbeitsbereichs mit hervorgehobener Marketo Engage-Quelle.](../../images/tutorials/templates/catalog.png)
 
@@ -68,11 +68,11 @@ Es wird ein Popup-Fenster angezeigt, in dem Sie die Möglichkeit haben, Vorlagen
 
 >[!NOTE]
 >
->Vorlagen können beim Arbeiten mit Quellen, die Änderungsdatenerfassungs-Workflows erfordern oder mehrere Datenmodelle unterstützen, automatisch modellbasierte Schemata generieren. Diese Schemata ermöglichen Data Mirror-Funktionen für die Echtzeit-Datensynchronisation.\
->Bei Verwendung von Vorlagen mit modellbasierten Schemata enthalten die automatisch generierten Assets die erforderlichen Felder für den Primärschlüssel, die Versionskennung und die Zeitstempelkennung.\
->Data Mirror Weitere Informationen finden Sie unter [Übersicht über &#x200B;](../../../xdm/data-mirror/overview.md) und [Technische Referenz zu modellbasierten Schemata](../../../xdm/schema/model-based.md).
+>Vorlagen können beim Arbeiten mit Quellen, die Änderungsdatenerfassungs-Workflows erfordern oder mehrere Datenmodelle unterstützen, automatisch relationale Schemata generieren. Diese Schemata ermöglichen Data Mirror-Funktionen für die Echtzeit-Datensynchronisation.\
+>Bei Verwendung von Vorlagen mit relationalen Schemata enthalten die automatisch generierten Assets die erforderlichen Felder für den Primärschlüssel, die Versionskennung und die Zeitstempelkennung.\
+>Weitere Informationen finden Sie unter [Übersicht über Data Mirror](../../../xdm/data-mirror/overview.md) und [Technische Referenz zu relationalen Schemata](../../../xdm/schema/relational.md).
 
-Um automatisch generierte Assets zu verwenden, wählen Sie **[!UICONTROL Vorlagen durchsuchen]** und dann **[!UICONTROL Auswählen]** aus.
+Um automatisch generierte Assets zu verwenden, wählen Sie **[!UICONTROL Browse templates]** und dann **[!UICONTROL Select]** aus.
 
 ![Ein Popup-Fenster mit Optionen, um Vorlagen zu durchsuchen oder vorhandene Assets zu verwenden.](../../images/tutorials/templates/browse-templates.png)
 
@@ -84,13 +84,13 @@ Der Authentifizierungsschritt wird angezeigt und Sie werden aufgefordert, entwed
 
 >[!TAB Vorhandenes Konto verwenden]
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie [!UICONTROL Vorhandenes Konto] und dann das Konto, das Sie verwenden möchten, aus der angezeigten Liste aus.
+Um ein vorhandenes Konto zu verwenden, wählen Sie [!UICONTROL Existing account] und dann das Konto, das Sie verwenden möchten, aus der angezeigten Liste aus.
 
 ![Die Auswahlseite für ein vorhandenes Konto mit einer Liste vorhandener Konten, auf die Sie zugreifen können.](../../images/tutorials/templates/existing-account.png)
 
 >[!TAB Neues Konto erstellen]
 
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus und geben Sie dann Ihre Details zur Quellverbindung und Anmeldedaten für die Kontoauthentifizierung an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie dann einige Zeit, bis die neue Verbindung hergestellt ist.
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie dann Ihre Details zur Quellverbindung und Anmeldedaten für die Kontoauthentifizierung an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie dann einige Zeit, bis die neue Verbindung hergestellt ist.
 
 ![Die Authentifizierungsseite für ein neues Konto mit Details zur Quellverbindung und Anmeldedaten zur Kontoauthentifizierung.](../../images/tutorials/templates/new-account.png)
 
@@ -108,7 +108,7 @@ In der folgenden Tabelle sind die Vorlagen aufgeführt, die für die [!DNL Marke
 | Aktivitäten | Die Aktivitätsvorlage erfasst ereignisbasierte Momentaufnahmen von Aktivitäten wie E-Mail-Interaktionen, Website-Interaktionen und Verkaufsanrufen. |
 | Firmen | Die Vorlage „Unternehmen“ erfasst Details zu Geschäftskonten wie firmografische Informationen, Standort und Abrechnungsinformationen. |
 | Benannte Konten | Die Vorlage Benannte Konten erfasst Details für Konten, die als Zielkonten bestimmt wurden, die verfolgt werden sollen. |
-| Opportunitys | Die Opportunities-Vorlage erfasst Details zu Geschäftschancen wie Typ, Verkaufsstufe und verwandte Konten. |
+| Opportunities | Die Opportunities-Vorlage erfasst Details zu Geschäftschancen wie Typ, Verkaufsstufe und verwandte Konten. |
 | Opportunity-Kontaktrollen | Die Vorlage „Opportunity-Kontaktrollen“ erfasst Details zu den Rollen für Leads, die mit einer bestimmten Opportunity verbunden sind. |
 | Personen | Die Vorlage Personen erfasst Attribute für einzelne Personen wie demografische Details, Kontaktinformationen und Einverständnisvoreinstellungen. |
 | Programmmitgliedschaften | Die Vorlage Programmmitgliedschaften erfasst Details zu Kontakten, die mit einer Unternehmenskampagne verbunden sind, einschließlich Pflegekadenzen und Kontaktantworten. |
@@ -131,7 +131,7 @@ In der folgenden Tabelle sind die B2B-Vorlagen aufgeführt, die für die [!DNL S
 | Kampagnen | Die Kampagnenvorlage erfasst Details des Geschäftskontos wie firmeninterne demografische Informationen, Standort und Abrechnungsinformationen. |
 | Kontakte | Die Kontaktvorlage erfasst Attribute für Kontakte wie demografische Details, Kontaktinformationen und zugehörige Geschäftsentitäten. |
 | Leads | Die Lead-Vorlage erfasst Attribute für Leads wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
-| Opportunitys | Die Opportunities-Vorlage erfasst Details zu Geschäftschancen wie Typ, Verkaufsstufe und verwandtes Konto. |
+| Opportunities | Die Opportunities-Vorlage erfasst Details zu Geschäftschancen wie Typ, Verkaufsstufe und verwandtes Konto. |
 | Opportunity-Kontaktrollen | Die Vorlage „Opportunity-Kontaktrollen“ erfasst Details zu den Rollen für Leads, die mit einer bestimmten Opportunity verbunden sind. |
 
 {style="table-layout:auto"}
@@ -161,7 +161,7 @@ In der folgenden Tabelle sind die B2B-Vorlagen aufgeführt, die für die [!DNL M
 | Leads | Die Lead-Vorlage erfasst Attribute für Leads wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
 | Marketing-Liste | Die Marketing-Listenvorlage erfasst eine Gruppe von bestehenden oder potenziellen Kunden, die für eine Marketing-Kampagne oder andere Verkaufszwecke erstellt wurden. |
 | Mitglieder der Marketing-Liste | Die Mitglieder der Marketing-Liste erfassen die Details einer bestimmten Art von Kundendatensätzen, wie Leads, Konten oder Kontakte, in einer Marketing-Liste. |
-| Opportunitys | Die Opportunities-Vorlage erfasst Details zu Geschäftschancen wie Typ, Verkaufsstufe und verwandtes Konto. |
+| Opportunities | Die Opportunities-Vorlage erfasst Details zu Geschäftschancen wie Typ, Verkaufsstufe und verwandtes Konto. |
 | Opportunity-Kontaktrollen | Die Vorlage „Opportunity-Kontaktrollen“ erfasst Details zu den Rollen für Leads, die mit einer bestimmten Opportunity verbunden sind. |
 
 {style="table-layout:auto"}
@@ -184,11 +184,11 @@ Je nach ausgewähltem Geschäftstyp wird eine Liste von Vorlagen angezeigt. Wäh
 
 ![Liste von Vorlagen mit hervorgehobenem Vorschausymbol.](../../images/tutorials/templates/templates.png)
 
-Das Vorschaufenster wird angezeigt, in dem Sie Beispieldaten aus Ihrer Vorlage analysieren und überprüfen können. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verstanden]** aus.
+Das Vorschaufenster wird angezeigt, in dem Sie Beispieldaten aus Ihrer Vorlage analysieren und überprüfen können. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Got it]** aus.
 
 ![Das Vorschaufenster mit Beispieldaten.](../../images/tutorials/templates/preview-sample-data.png)
 
-Wählen Sie als Nächstes aus der Liste die Vorlage aus, die Sie verwenden möchten. Sie können mehrere Vorlagen auswählen und mehrere Datenflüsse gleichzeitig erstellen. Eine Vorlage kann jedoch nur einmal pro Konto verwendet werden. Nachdem Sie Ihre Vorlagen ausgewählt haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit, um die Assets zu generieren.
+Wählen Sie als Nächstes aus der Liste die Vorlage aus, die Sie verwenden möchten. Sie können mehrere Vorlagen auswählen und mehrere Datenflüsse gleichzeitig erstellen. Eine Vorlage kann jedoch nur einmal pro Konto verwendet werden. Nachdem Sie Ihre Vorlagen ausgewählt haben, wählen Sie **[!UICONTROL Finish]** aus und gewähren Sie etwas Zeit, um die Assets zu generieren.
 
 Wenn Sie ein oder mehrere Elemente aus der Liste der verfügbaren Vorlagen auswählen, werden weiterhin alle B2B-Schemata und Identitäts-Namespaces generiert, um sicherzustellen, dass B2B-Beziehungen zwischen Schemata korrekt konfiguriert sind.
 
@@ -210,7 +210,7 @@ Alternativ können Sie Ihre Aufnahmefrequenz auf **Minute**, **Stunde**, **Tag**
 
 In diesem Schritt können Sie auch **Aufstockung“ aktivieren** eine Spalte für die inkrementelle Aufnahme von Daten definieren. Die Aufstockung wird verwendet, um historische Daten aufzunehmen, während die Spalte, die Sie für die inkrementelle Aufnahme definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
 
-Nachdem Sie die Konfiguration Ihres Aufnahmezeitplans abgeschlossen haben, klicken Sie auf **[!UICONTROL Beenden]**.
+Nachdem Sie die Konfiguration Ihres Aufnahmezeitplans abgeschlossen haben, wählen Sie **[!UICONTROL Finish]** aus.
 
 ![Die Planungsschnittstelle für Dynamics- und Salesforce-Vorlagen mit aktivierter Aufstockung.](../../images/tutorials/templates/backfill.png)
 
@@ -221,17 +221,17 @@ Nachdem Sie die Konfiguration Ihres Aufnahmezeitplans abgeschlossen haben, klick
 >title="Überprüfen der automatisch generierten Assets"
 >abstract="Die Generierung aller Assets kann bis zu fünf Minuten dauern. Wenn Sie die Seite verlassen möchten, erhalten Sie die Benachrichtigung zum Zurückkehren, wenn die Assets abgeschlossen sind. Sie können die Assets überprüfen, sobald sie generiert wurden, und jederzeit zusätzliche Konfigurationen an Ihrem Datenfluss vornehmen."
 
-Die Seite [!UICONTROL Vorlagen-Assets überprüfen] zeigt die Assets an, die automatisch als Teil Ihrer Vorlage generiert wurden. Auf dieser Seite können Sie die automatisch generierten Schemata, Datensätze, Identitäts-Namespaces und Datenflüsse anzeigen, die mit Ihrer Quellverbindung verknüpft sind. Die Generierung aller Assets kann bis zu fünf Minuten dauern. Wenn Sie die Seite verlassen möchten, erhalten Sie die Benachrichtigung zum Zurückkehren, wenn die Assets abgeschlossen sind. Sie können die Assets überprüfen, sobald sie generiert wurden, und jederzeit zusätzliche Konfigurationen an Ihrem Datenfluss vornehmen.
+Auf der Seite [!UICONTROL Review template assets] werden die Assets angezeigt, die automatisch als Teil Ihrer Vorlage generiert wurden. Auf dieser Seite können Sie die automatisch generierten Schemata, Datensätze, Identitäts-Namespaces und Datenflüsse anzeigen, die mit Ihrer Quellverbindung verknüpft sind. Die Generierung aller Assets kann bis zu fünf Minuten dauern. Wenn Sie die Seite verlassen möchten, erhalten Sie die Benachrichtigung zum Zurückkehren, wenn die Assets abgeschlossen sind. Sie können die Assets überprüfen, sobald sie generiert wurden, und jederzeit zusätzliche Konfigurationen an Ihrem Datenfluss vornehmen.
 
-Standardmäßig werden automatisch generierte Datenflüsse in einen Entwurfsstatus versetzt, um weitere Anpassungen der Konfigurationen zu ermöglichen, z. B. Zuordnungsregeln oder geplante Häufigkeiten. Klicken Sie auf die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und wählen Sie **[!UICONTROL Zuordnungen in Vorschau anzeigen]**, um die für Ihren Datenflussentwurf erstellten Zuordnungssätze anzuzeigen.
+Standardmäßig werden automatisch generierte Datenflüsse in einen Entwurfsstatus versetzt, um weitere Anpassungen der Konfigurationen zu ermöglichen, z. B. Zuordnungsregeln oder geplante Häufigkeiten. Klicken Sie auf die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und dann auf **[!UICONTROL Preview mappings]** , um die für Ihren Datenflussentwurf erstellten Zuordnungssätze anzuzeigen.
 
 ![Ein Dropdown-Fenster mit ausgewählter Option für die Zuordnungsvorschau.](../../images/tutorials/templates/preview.png)
 
-Eine Vorschauseite wird angezeigt, auf der Sie die Zuordnungsbeziehung zwischen Ihren Quelldatenfeldern und den Zielschemafeldern überprüfen können. Nachdem Sie die Zuordnungen Ihres Datenflusses angezeigt haben. Klicken Sie auf **[!UICONTROL Verstanden]**.
+Eine Vorschauseite wird angezeigt, auf der Sie die Zuordnungsbeziehung zwischen Ihren Quelldatenfeldern und den Zielschemafeldern überprüfen können. Nachdem Sie die Zuordnungen Ihres Datenflusses angezeigt haben. **[!UICONTROL Got it.]** auswählen
 
 ![Das Zuordnungsvorschaufenster.](../../images/tutorials/templates/preview-mappings.png)
 
-Sie können Ihre Datenflüsse jederzeit nach der Ausführung aktualisieren. Klicken Sie auf die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und dann auf **[!UICONTROL Datenfluss aktualisieren]**. Sie gelangen auf die Seite mit dem Quellen-Workflow, auf der Sie Ihre Datenflussdetails aktualisieren können, einschließlich der Einstellungen für die partielle Aufnahme, Fehlerdiagnose und Warnbenachrichtigungen sowie der Zuordnung Ihres Datenflusses.
+Sie können Ihre Datenflüsse jederzeit nach der Ausführung aktualisieren. Klicken Sie auf die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und dann auf **[!UICONTROL Update dataflow]**. Sie gelangen auf die Seite mit dem Quellen-Workflow, auf der Sie Ihre Datenflussdetails aktualisieren können, einschließlich der Einstellungen für die partielle Aufnahme, Fehlerdiagnose und Warnbenachrichtigungen sowie der Zuordnung Ihres Datenflusses.
 
 Sie können die Ansicht des Schema-Editors verwenden, um am automatisch erstellten Schema Aktualisierungen vorzunehmen. Besuchen Sie das Handbuch unter [Verwenden des Schema-Editors](../../../xdm/tutorials/create-schema-ui.md) für weitere Informationen.
 
@@ -239,29 +239,29 @@ Sie können die Ansicht des Schema-Editors verwenden, um am automatisch erstellt
 
 >[!TIP]
 >
->Sie können auf Ihren Datenflussentwurf über die [!UICONTROL Datenflüsse] im Arbeitsbereich Quellen zugreifen. Wählen Sie **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile und wählen Sie dann den Datenfluss, den Sie aktualisieren möchten, aus der Liste aus.
+>Sie können auf Ihren Datenflussentwurf über die Seite [!UICONTROL Dataflows] im Arbeitsbereich Quellen zugreifen. Wählen Sie **[!UICONTROL Dataflows]** in der oberen Kopfzeile und dann den Datenfluss, den Sie aktualisieren möchten, aus der Liste aus.
 >
 >![Eine Liste der vorhandenen Datenflüsse im Datenflusskatalog des Arbeitsbereichs „Quellen“.](../../images/tutorials/templates/dataflows.png)
 
 ### Veröffentlichen des Datenflusses
 
-Beginnen Sie den Veröffentlichungsprozess, indem Sie den Quell-Workflow durchlaufen. Nachdem Sie [!UICONTROL Datenfluss aktualisieren] ausgewählt haben, gelangen Sie zum Schritt *[!UICONTROL Daten hinzufügen]* des Workflows. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+Beginnen Sie den Veröffentlichungsprozess, indem Sie den Quell-Workflow durchlaufen. Nachdem Sie [!UICONTROL Update dataflow] ausgewählt haben, werden Sie zum *[!UICONTROL Add data]* Schritt des Workflows weitergeleitet. Wählen Sie **[!UICONTROL Next]** aus, um fortzufahren.
 
 ![Der Schritt „Daten hinzufügen“ für einen Datenfluss-Entwurf](../../images/tutorials/templates/continue-draft.png)
 
-Bestätigen Sie anschließend Ihre Datenflussdetails und konfigurieren Sie Einstellungen für Fehlerdiagnose, partielle Aufnahme und Warnbenachrichtigungen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+Bestätigen Sie anschließend Ihre Datenflussdetails und konfigurieren Sie Einstellungen für Fehlerdiagnose, partielle Aufnahme und Warnbenachrichtigungen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Der Schritt „Datenflussdetails“ für einen Datenflussentwurf.](../../images/tutorials/templates/dataflow-detail.png)
 
 >[!NOTE]
 >
->Sie können **[!UICONTROL Als Entwurf speichern]** jederzeit auswählen, um die an Ihrem Datenfluss vorgenommenen Änderungen anzuhalten und zu speichern.
+>Sie können jederzeit **[!UICONTROL Save as draft]** auswählen, um die an Ihrem Datenfluss vorgenommenen Änderungen zu stoppen und zu speichern.
 
 Der Schritt Zuordnung wird angezeigt. In diesem Schritt können Sie die Zuordnungskonfigurationen Ihres Datenflusses neu konfigurieren. Eine umfassende Anleitung zu den für die Zuordnung verwendeten Datenvorbereitungsfunktionen finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../data-prep/ui/mapping.md).
 
 ![Der Zuordnungsschritt für einen Datenfluss-Entwurf.](../../images/tutorials/templates/mapping.png)
 
-Überprüfen Sie abschließend die Details Ihres Datenflusses und wählen Sie dann **[!UICONTROL Speichern und Aufnehmen]** aus, um Ihren Entwurf zu veröffentlichen.
+Überprüfen Sie abschließend die Details Ihres Datenflusses und wählen Sie dann **[!UICONTROL Save & ingest]** aus, um Ihren Entwurf zu veröffentlichen.
 
 ![Der Überprüfungsschritt für einen Datenflussentwurf.](../../images/tutorials/templates/review.png)
 
