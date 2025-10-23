@@ -3,10 +3,10 @@ keywords: Katalog;Katalog
 title: Zielkatalog – Übersicht
 description: Der Zielkatalog bietet eine Liste der verfügbaren Ziele, die bereit sind, Daten zu empfangen. Zu diesen Zielen gehören Adobe-Lösungen, Werbeplattformen, Umfrageplattformen, E-Mail-Marketing-Plattformen und mehr.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 10%
+source-wordcount: '140'
+ht-degree: 12%
 
 ---
 
@@ -27,15 +27,15 @@ Durchsuchen Sie den Katalog, um festzustellen, welche Zielplattformen für Ihre 
 
 Sie können Ihre Daten für verschiedene Zielkategorien in Adobe Experience Platform aktivieren. Folgende Links bieten weiterführende Informationen zu einzelnen Zielkategorien:
 
-- [Adobe [!UICONTROL Ziele] Übersicht](adobe/overview.md)
-- [[!UICONTROL Advertising] [!UICONTROL Ziele] Übersicht](advertising/overview.md)
-- [[!UICONTROL Analytics] [!UICONTROL Ziele] Übersicht](analytics/overview.md)
-- [[!UICONTROL Cloud-Speicher] [!UICONTROL Ziele] Übersicht](cloud-storage/overview.md)
-- [[!UICONTROL Data Management Platform] (DMP) [!UICONTROL Ziele] Übersicht](data-management/overview.md)
-- [[!UICONTROL E-Mail-Marketing] [!UICONTROL Ziele] Übersicht](email-marketing/overview.md)
-- [[!UICONTROL Mobile-Interaktion] [!UICONTROL Ziele] Übersicht](mobile-engagement/overview.md)
-- [[!UICONTROL Personalization] [!UICONTROL Ziele] Übersicht](personalization/overview.md)
-- [[!UICONTROL Social] [!UICONTROL destinations] Übersicht](social/overview.md)
-- [[!UICONTROL Streaming] [!UICONTROL Ziele] (Links zum HTTP-Ziel)](streaming/http-destination.md)
-- [[!UICONTROL Umfrage] [!UICONTROL Ziele] Übersicht](survey/overview.md)
-- [[!UICONTROL Sprache des Kunden] [!UICONTROL Ziele] Übersicht](voice/overview.md)
+- [Übersicht über Adobe [!UICONTROL destinations]](adobe/overview.md)
+- [Übersicht über [!UICONTROL Advertising] [!UICONTROL destinations]](advertising/overview.md)
+- [Übersicht über [!UICONTROL Analytics] [!UICONTROL destinations]](analytics/overview.md)
+- [Übersicht über [!UICONTROL Cloud storage] [!UICONTROL destinations]](cloud-storage/overview.md)
+- [[!UICONTROL Data Management Platform] (DMP) [!UICONTROL destinations] - Übersicht](data-management/overview.md)
+- [Übersicht über [!UICONTROL Email marketing] [!UICONTROL destinations]](email-marketing/overview.md)
+- [Übersicht über [!UICONTROL Mobile engagement] [!UICONTROL destinations]](mobile-engagement/overview.md)
+- [Übersicht über [!UICONTROL Personalization] [!UICONTROL destinations]](personalization/overview.md)
+- [Übersicht über [!UICONTROL Social] [!UICONTROL destinations]](social/overview.md)
+- [[!UICONTROL Streaming] [!UICONTROL destinations] (Links zum HTTP-Ziel)](streaming/http-destination.md)
+- [Übersicht über [!UICONTROL Survey] [!UICONTROL destinations]](survey/overview.md)
+- [Übersicht über [!UICONTROL Voice of the Customer] [!UICONTROL destinations]](voice/overview.md)
