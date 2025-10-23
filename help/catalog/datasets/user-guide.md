@@ -78,7 +78,7 @@ Wenn Sie **[!UICONTROL Enable a dataset for Profile]** auswählen, wird ein Best
 
 >[!NOTE]
 >
->Um einen Datensatz für das Profil zu aktivieren, muss das Schema, dem der Datensatz entspricht, für die Verwendung im Echtzeit-Kundenprofil kompatibel sein. Weitere Informationen finden [&#x200B; im Abschnitt „Aktivieren eines Datensatzes &#x200B;](#enable-profile) Profil“.
+>Um einen Datensatz für das Profil zu aktivieren, muss das Schema, dem der Datensatz entspricht, für die Verwendung im Echtzeit-Kundenprofil kompatibel sein. Weitere Informationen finden [ im Abschnitt „Aktivieren eines Datensatzes ](#enable-profile) Profil“.
 
 ![Bestätigungsdialogfeld für Datensatz aktivieren.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
 
@@ -88,7 +88,7 @@ Wenn Sie **[!UICONTROL Delete]** auswählen, wird das Bestätigungsdialogfeld [!
 >
 >Sie können keine Systemdatensätze löschen.
 
-Sie können einen Datensatz auch löschen oder einen Datensatz zur Verwendung mit dem Echtzeit-Kundenprofil über die Inline-Aktionen auf der Registerkarte [!UICONTROL Browse] hinzufügen. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#inline-actions)-Aktionen .
+Sie können einen Datensatz auch löschen oder einen Datensatz zur Verwendung mit dem Echtzeit-Kundenprofil über die Inline-Aktionen auf der Registerkarte [!UICONTROL Browse] hinzufügen. Weitere Informationen finden Sie [ Abschnitt ](#inline-actions)-Aktionen .
 
 ![Bestätigungsdialog zum Löschen eines Datensatzes.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
@@ -165,7 +165,7 @@ Verwenden Sie für zusätzliche Analysen nachgelagerte Services wie [!DNL Query 
 
 Sie können die Data Governance-Beschriftungen für einen Datensatz verwalten, indem Sie die Inline-Optionen auf der Registerkarte [!UICONTROL Browse] auswählen. Wählen Sie die Auslassungszeichen (…) neben dem Datensatznamen aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL Manage data and access labels]** aus dem Dropdown-Menü.
 
-Mit Datennutzungskennzeichnungen, die auf Schemaebene angewendet werden, können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weitere Informationen zu Kennzeichnungen finden Sie [Übersicht zu Data &#x200B;](../../data-governance/home.md)) oder im [Benutzerhandbuch zu Datennutzungskennzeichnungen](../../data-governance/labels/overview.md) mit Anweisungen zum Anwenden von Kennzeichnungen auf Schemata zur Übertragung auf Datensätze.
+Mit Datennutzungskennzeichnungen, die auf Schemaebene angewendet werden, können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weitere Informationen zu Kennzeichnungen finden Sie [Übersicht zu Data ](../../data-governance/home.md)) oder im [Benutzerhandbuch zu Datennutzungskennzeichnungen](../../data-governance/labels/overview.md) mit Anweisungen zum Anwenden von Kennzeichnungen auf Schemata zur Übertragung auf Datensätze.
 
 ## Aktivieren eines Datensatzes für das Echtzeit-Kundenprofil {#enable-profile}
 
@@ -188,7 +188,7 @@ Alternativ können Sie auf dem **[!UICONTROL Dataset activity]** des Datensatzes
 
 ![Der Umschalter Profil wird auf der Seite mit den Datensatzdetails hervorgehoben.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-Datensätze, die für Profil aktiviert wurden, können auch nach diesen Kriterien gefiltert werden. Weitere Informationen finden Sie im Abschnitt [&#x200B; Filtern &#x200B;](#filter-profile-enabled-datasets) Datensätze mit aktiviertem Profil .
+Datensätze, die für Profil aktiviert wurden, können auch nach diesen Kriterien gefiltert werden. Weitere Informationen finden Sie im Abschnitt [ Filtern ](#filter-profile-enabled-datasets) Datensätze mit aktiviertem Profil .
 
 ### Datensatz-Tags verwalten {#manage-tags}
 
@@ -202,7 +202,7 @@ Das Dialogfeld [!UICONTROL Manage tags] wird angezeigt. Geben Sie eine kurze Bes
 
 Das Dialogfeld &quot;[!UICONTROL Manage tags]&quot; kann auch vorhandene Tags aus einem Datensatz entfernen. Wählen Sie einfach das „x“ neben dem Tag aus, das Sie entfernen möchten, und wählen Sie **[!UICONTROL Save]** aus.
 
-Nachdem ein Tag zu einem Datensatz hinzugefügt wurde, können die Datensätze anhand des entsprechenden Tags gefiltert werden. Weitere Informationen finden Sie im Abschnitt [&#x200B; Filtern von Datensätzen nach &#x200B;](#enable-profile) .
+Nachdem ein Tag zu einem Datensatz hinzugefügt wurde, können die Datensätze anhand des entsprechenden Tags gefiltert werden. Weitere Informationen finden Sie im Abschnitt [ Filtern von Datensätzen nach ](#enable-profile) .
 
 Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfachere Erkennung und Kategorisierung finden Sie im Handbuch [Verwalten von Metadatentaxonomien](../../administrative-tags/ui/managing-tags.md). In diesem Handbuch wird erläutert, wie Benutzende mit den entsprechenden Berechtigungen vordefinierte Tags erstellen, Kategorien zuweisen und alle zugehörigen CRUD-Vorgänge in der Benutzeroberfläche von Experience Platform verwalten können.
 
@@ -214,7 +214,7 @@ Verwalten Sie die Einstellungen für die Datensatzgültigkeit und -speicherung m
 >
 >Um Aufbewahrungsregeln für einen ExperienceEvent-Datensatz anzuwenden oder zu aktualisieren, muss Ihre Benutzerrolle die Berechtigung **[!UICONTROL Manage datasets]** enthalten. Diese rollenbasierte Zugriffssteuerung stellt sicher, dass nur autorisierte Benutzer die Einstellungen für die Datensatzaufbewahrung ändern können.
 >
->Weitere Informationen [&#x200B; Zuweisen von Berechtigungen in Adobe Experience Platform finden &#x200B;](../../access-control/home.md#platform-permissions) unter „Zugriffssteuerung - Übersicht“.
+>Weitere Informationen [ Zuweisen von Berechtigungen in Adobe Experience Platform finden ](../../access-control/home.md#platform-permissions) unter „Zugriffssteuerung - Übersicht“.
 
 >[!TIP]
 >
@@ -264,7 +264,7 @@ Wenn Sie mit der Konfiguration zufrieden sind, wählen Sie **[!UICONTROL Save]**
 
 Nachdem Sie Ihre Aufbewahrungseinstellungen konfiguriert haben, verwenden Sie die Monitoring-Benutzeroberfläche, um zu bestätigen, dass Ihre Änderungen vom System ausgeführt wurden. Die Monitoring-Benutzeroberfläche bietet eine zentralisierte Ansicht der Datenaufbewahrungsaktivität für alle Datensätze. Dort können Sie die Ausführung von Aufträgen verfolgen, überprüfen, wie viele Daten gelöscht wurden, und sicherstellen, dass Ihre Aufbewahrungsrichtlinien erwartungsgemäß funktionieren.
 
-Informationen dazu, wie Aufbewahrungsrichtlinien auf verschiedene Services angewendet werden, finden Sie in den entsprechenden Handbüchern [Aufbewahrung von Erlebnisereignis-Datensätzen im &#x200B;](../../profile/event-expirations.md) und [Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake](./experience-event-dataset-retention-ttl-guide.md). Diese Sichtbarkeit unterstützt Governance, Compliance und effizientes Data Lifecycle Management.
+Informationen dazu, wie Aufbewahrungsrichtlinien auf verschiedene Services angewendet werden, finden Sie in den entsprechenden Handbüchern [Aufbewahrung von Erlebnisereignis-Datensätzen im ](../../profile/event-expirations.md) und [Aufbewahrung von Erlebnisereignis-Datensätzen im Data Lake](./experience-event-dataset-retention-ttl-guide.md). Diese Sichtbarkeit unterstützt Governance, Compliance und effizientes Data Lifecycle Management.
 
 Informationen dazu, wie Sie mit dem Überwachungs-Dashboard Quelldatenflüsse in der Experience Platform-Benutzeroberfläche verfolgen können, finden Sie in der Dokumentation [Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche](../../dataflows/ui/monitor-sources.md) .
 
@@ -355,7 +355,7 @@ Standardmäßig werden nur Datensätze angezeigt, in die Sie Daten aufgenommen h
 
 ### Filtern von profilaktivierten Datensätzen {#filter-profile-enabled-datasets}
 
-Die Datensätze, die für Profildaten aktiviert wurden, werden nach der Aufnahme von Daten zum Ausfüllen von Kundenprofilen verwendet. Weitere Informationen finden Sie im Abschnitt [Aktivieren von Datensätzen &#x200B;](#enable-profile) Profil“.
+Die Datensätze, die für Profildaten aktiviert wurden, werden nach der Aufnahme von Daten zum Ausfüllen von Kundenprofilen verwendet. Weitere Informationen finden Sie im Abschnitt [Aktivieren von Datensätzen ](#enable-profile) Profil“.
 
 Um Ihren Datensatz danach zu filtern, ob er für Profil aktiviert wurde, aktivieren Sie das Kontrollkästchen [!UICONTROL Yes] in den Filteroptionen.
 
@@ -423,7 +423,7 @@ Der Schritt **[!UICONTROL Configure dataset]** wird angezeigt. Geben Sie dem Dat
 
 ![Konfigurationsdetails des Datensatzes werden eingefügt. Dazu gehören Details wie der Datensatzname und die Beschreibung.](../images/datasets/user-guide/configure-dataset-schema.png)
 
-Datensätze können aus der Liste der verfügbaren Datensätze in der Benutzeroberfläche mit dem Schemafilter gefiltert werden. Weitere Informationen finden Sie im Abschnitt [&#x200B; Filtern von Datensätzen nach &#x200B;](#filter-by-schema) .
+Datensätze können aus der Liste der verfügbaren Datensätze in der Benutzeroberfläche mit dem Schemafilter gefiltert werden. Weitere Informationen finden Sie im Abschnitt [ Filtern von Datensätzen nach ](#filter-by-schema) .
 
 ### Datensatz mit einer CSV-Datei erstellen {#csv}
 
