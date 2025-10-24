@@ -2,7 +2,7 @@
 title: Verknüpfungslogik zum Identity Service
 description: Erfahren Sie, wie Identity Service unterschiedliche Identitäten verknüpft, um eine umfassende Ansicht eines Kunden zu erstellen.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
+source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -23,10 +23,6 @@ Es gibt zwei Arten von Identitäten, die verknüpft werden:
 * **Profildatensätze**: Diese Identitäten stammen normalerweise aus CRM-Systemen.
 * **Erlebnisereignisse**: Diese Identitäten stammen in der Regel aus der WebSDK-Implementierung oder der Adobe Analytics-Quelle.
 
->[!IMPORTANT]
->
->Bei Identity Service wird zwischen Groß- und Kleinschreibung unterschieden. Beispielsweise würden **abc<span>@gmail.com** und **ABC<span>@GMAIL.COM** als zwei separate E-Mail-Identitäten behandelt.
-
 ## Semantische Bedeutung der Relationserstellung
 
 Eine Identität stellt eine reale Entität dar. Wenn eine Verbindung zwischen zwei Identitäten hergestellt wird, bedeutet dies, dass die beiden Identitäten miteinander verknüpft sind. Im Folgenden finden Sie einige Beispiele, die dieses Konzept veranschaulichen:
@@ -44,6 +40,7 @@ Eine Identität besteht aus einem Identity-Namespace und einem Identitätswert.
 
 * Ein Identity-Namespace ist der Kontext eines angegebenen Identitätswerts, der verwendet werden soll. Häufige Beispiele für Identity-Namespaces sind CRMID, E-Mail und Telefon.
 * Ein Identitätswert ist die Zeichenfolge, die eine reale Entität darstellt. Beispiel: „julien<span>@acme.com“ kann ein Identitätswert für einen E-Mail-Namespace sein und 555-555-1234 kann ein entsprechender Identitätswert für einen Telefon-Namespace sein.
+* Bei Identity Service wird zwischen Groß- und Kleinschreibung unterschieden. Beispielsweise würden **julien<span>@gmail.com** und **JULIEN<span>@GMAIL.COM** als zwei separate E-Mail-Identitäten behandelt.
 
 >[!TIP]
 >
@@ -105,7 +102,7 @@ Sie haben außerdem WebSDK implementiert und einen WebSDK-Datensatz (Erlebnisere
 | `t=3` | ECID:44675 | Startseite anzeigen |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | Kaufverlauf anzeigen |
 
-Die primäre Identität für jedes Ereignis wird anhand der Konfiguration [&#x200B; Datenelementtypen &#x200B;](../../tags/extensions/client/web-sdk/data-element-types.md).
+Die primäre Identität für jedes Ereignis wird anhand der Konfiguration [ Datenelementtypen ](../../tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >
