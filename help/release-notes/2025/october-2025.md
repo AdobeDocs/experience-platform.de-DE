@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise, Oktober 2025
 description: Versionshinweise von Oktober 2025 für Adobe Experience Platform.
-source-git-commit: 7f37ba35111f6fa96d1889d74a66e32302b8ab85
+source-git-commit: 0191fc8419c696d8cd114a5eb575b8cc0a815a72
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1159'
 ht-degree: 13%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 13%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: 22. Oktober 2025**
 
@@ -27,6 +27,7 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 - [Agent Orchestrator](#agent-orchestrator)
 - [Warnhinweise](#alerts)
 - [Ziele](#destinations)
+- [Real-Time CDP B2B Edition](#b2b)
 - [Quellen](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -37,9 +38,9 @@ Adobe Experience Platform Agent Orchestrator ist die neue agentische Schicht in 
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Audience Agent | Die Audience Agent unterstützt jetzt Account-basierte Zielgruppen für die dialogorientierte Zielgruppenexploration und die Erkennung doppelter Zielgruppen. Weitere Informationen finden Sie in der Dokumentation zu [Audience Agent](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+| Audience Agent | Die Audience Agent unterstützt jetzt Account-basierte Zielgruppen für die dialogorientierte Zielgruppenexploration und die Erkennung doppelter Zielgruppen. Weitere Informationen finden Sie in der Dokumentation zu [Audience Agent](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Weitere Informationen zu Agenten finden Sie in der [Dokumentation zu Agent Orchestrator](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/home).
+Weitere Informationen zu Agenten finden Sie in der [Dokumentation zu Agent Orchestrator](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Warnhinweise {#alerts}
 
@@ -63,10 +64,10 @@ Weitere Informationen zu Warnhinweisen finden Sie im Abschnitt [[!DNL Observabil
 
 | Ziel | Beschreibung |
 | --- | --- |
-| [!DNL Adform] | Verwenden Sie dieses Ziel, um Adobe Real-Time CDP-Zielgruppen zur Aktivierung basierend auf der Experience Cloud ID (ECID) und der ID Fusion von [!DNL Adform] an [!DNL Adform] zu senden. ID Fusion von [!DNL Adform] ist ein Service zur ID-Auflösung, mit dem Sie Ihre First-Party-Zielgruppen basierend auf der Experience Cloud ID (ECID) aktivieren können. Weitere Informationen finden [[!DNL Adform]  in &#x200B;](../../destinations/catalog/advertising/adform.md) Dokumentation |
-| [!DNL Amazon Ads] | Es wurde eine zusätzliche Unterstützung für persönliche Identifikatoren hinzugefügt. Dazu gehören Felder wie `firstName`, `lastName`, `street`, `city`, `state`, `zip` und `country`. Die Zuordnung dieser Felder als Zielidentitäten kann die Übereinstimmungsraten der Zielgruppen verbessern. Weitere Informationen finden [[!DNL Amazon Ads]  in der &#x200B;](../../destinations/catalog/advertising/amazon-ads.md). |
-| [!DNL Snowflake Batch] (eingeschränkte Verfügbarkeit) | Erstellen Sie eine Live [!DNL Snowflake]-Datenfreigabe, um tägliche Zielgruppenaktualisierungen direkt als freigegebene Tabellen in Ihrem Konto zu erhalten. Diese Integration ist derzeit für Kundenorganisationen verfügbar, die in der Region VA7 bereitgestellt sind. Weitere Informationen finden [[!DNL Snowflake Batch]  in der &#x200B;](../../destinations/catalog/warehouses/snowflake-batch.md). |
-| [!DNL Snowflake Streaming] (eingeschränkte Verfügbarkeit) | Erstellen Sie eine Live [!DNL Snowflake]-Datenfreigabe, um Aktualisierungen der Streaming-Zielgruppe direkt als freigegebene Tabellen in Ihrem Konto zu erhalten. Diese Integration ist derzeit für Kundenorganisationen verfügbar, die in der Region VA7 bereitgestellt sind. Weitere Informationen finden [[!DNL Snowflake Streaming]  in der &#x200B;](../../destinations/catalog/warehouses/snowflake.md). |
+| [!DNL Adform] | Verwenden Sie dieses Ziel, um Adobe Real-Time CDP-Zielgruppen zur Aktivierung basierend auf der Experience Cloud ID (ECID) und der ID Fusion von [!DNL Adform] an [!DNL Adform] zu senden. ID Fusion von [!DNL Adform] ist ein Service zur ID-Auflösung, mit dem Sie Ihre First-Party-Zielgruppen basierend auf der Experience Cloud ID (ECID) aktivieren können. Weitere Informationen finden [[!DNL Adform]  in ](../../destinations/catalog/advertising/adform.md) Dokumentation |
+| [!DNL Amazon Ads] | Es wurde eine zusätzliche Unterstützung für persönliche Identifikatoren hinzugefügt. Dazu gehören Felder wie `firstName`, `lastName`, `street`, `city`, `state`, `zip` und `country`. Die Zuordnung dieser Felder als Zielidentitäten kann die Übereinstimmungsraten der Zielgruppen verbessern. Weitere Informationen finden [[!DNL Amazon Ads]  in der ](../../destinations/catalog/advertising/amazon-ads.md). |
+| [!DNL Snowflake Batch] (eingeschränkte Verfügbarkeit) | Erstellen Sie eine Live [!DNL Snowflake]-Datenfreigabe, um tägliche Zielgruppenaktualisierungen direkt als freigegebene Tabellen in Ihrem Konto zu erhalten. Diese Integration ist derzeit für Kundenorganisationen verfügbar, die in der Region VA7 bereitgestellt sind. Weitere Informationen finden [[!DNL Snowflake Batch]  in der ](../../destinations/catalog/warehouses/snowflake-batch.md). |
+| [!DNL Snowflake Streaming] (eingeschränkte Verfügbarkeit) | Erstellen Sie eine Live [!DNL Snowflake]-Datenfreigabe, um Aktualisierungen der Streaming-Zielgruppe direkt als freigegebene Tabellen in Ihrem Konto zu erhalten. Diese Integration ist derzeit für Kundenorganisationen verfügbar, die in der Region VA7 bereitgestellt sind. Weitere Informationen finden [[!DNL Snowflake Streaming]  in der ](../../destinations/catalog/warehouses/snowflake.md). |
 
 {style="table-layout:auto"}
 
@@ -83,6 +84,18 @@ Weitere Informationen zu Warnhinweisen finden Sie im Abschnitt [[!DNL Observabil
 
 Weitere Informationen finden Sie unter [Ziele - Übersicht](../../destinations/home.md).
 
+## Real-Time CDP B2B Edition {#b2b}
+
+Real-Time CDP B2B edition bietet umfassende Funktionen für das B2B-Kundendaten-Management, mit denen Unternehmen einheitliche Kundenprofile erstellen, anspruchsvolle B2B-Zielgruppen erstellen und Daten über verschiedene Marketing-Kanäle hinweg aktivieren können.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Einstellung der B2B-Unterstützung für nicht standardmäßige Beziehungen zwischen B2B-Entitäten | Ab Januar 2026 unterstützt Real-Time CDP B2B edition keine (**)** zwischen B2B-Entitäten mehr. Daher werden Sie empfohlen, Ihre B2B-Entitäten zu aktualisieren, um die Standardbeziehungen zu verwenden, die im Handbuch B2B[Namespaces und -Schemata beschrieben ](../../rtcdp/schemas/b2b.md). |
+
+{style="table-layout:auto"}
+
 ## Quellen {#sources}
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
@@ -91,7 +104,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Änderung der Datensatzerstellung für die Adobe Analytics-Quelle | Im Rahmen des Erstellungsprozesses eines Datenflusses zwischen Adobe Analytics und Experience Platform wird ein Datensatz über den Katalog-Service erstellt. Dieser Datensatz dient als Container für die Daten, die aufgenommen werden sollen. Derzeit umfasst dieser Prozess eine DataSource-ID, die aus der Analytics-Report Suite abgerufen, an den Katalog-Service gesendet und dann mit dem neu erstellten Datensatz verknüpft wird. Nach der Änderung ist die Option zum Angeben der Datenquellen-ID während der Erstellung des Datensatzes nicht mehr verfügbar. Daher ist neuen Datensätzen, die von der Analytics-Quelle erstellt wurden, im Katalog-Service keine DataSource-ID mehr zugeordnet. Diese Änderung gilt nur für die Metadaten und ändert in keiner Weise die Speicherung der Daten im Datensatz. Beachten Sie jedoch, dass die vom Katalog-Service bereitgestellte DataSource-ID in neu erstellten Datensätzen für Adobe Analytics nicht mehr verfügbar ist. Weitere Informationen zum Adobe Analytics-Quell-Connector finden [&#x200B; in der Dokumentation zum Adobe Analytics-Quell-Connector für &#x200B;](../../sources/connectors/adobe-applications/analytics.md). |
+| Änderung der Datensatzerstellung für die Adobe Analytics-Quelle | Im Rahmen des Erstellungsprozesses eines Datenflusses zwischen Adobe Analytics und Experience Platform wird ein Datensatz über den Katalog-Service erstellt. Dieser Datensatz dient als Container für die Daten, die aufgenommen werden sollen. Derzeit umfasst dieser Prozess eine DataSource-ID, die aus der Analytics-Report Suite abgerufen, an den Katalog-Service gesendet und dann mit dem neu erstellten Datensatz verknüpft wird. Nach der Änderung ist die Option zum Angeben der Datenquellen-ID während der Erstellung des Datensatzes nicht mehr verfügbar. Daher ist neuen Datensätzen, die von der Analytics-Quelle erstellt wurden, im Katalog-Service keine DataSource-ID mehr zugeordnet. Diese Änderung gilt nur für die Metadaten und ändert in keiner Weise die Speicherung der Daten im Datensatz. Beachten Sie jedoch, dass die vom Katalog-Service bereitgestellte DataSource-ID in neu erstellten Datensätzen für Adobe Analytics nicht mehr verfügbar ist. Weitere Informationen zum Adobe Analytics-Quell-Connector finden [ in der Dokumentation zum Adobe Analytics-Quell-Connector für ](../../sources/connectors/adobe-applications/analytics.md). |
 | Allgemeine Verfügbarkeit der [!DNL Google Ads] (nur API) | Die [API-Version der  [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md)-Quelle ist jetzt allgemein verfügbar. Die API-Dokumentation wurde aktualisiert und zeigt nun, dass die neueste Version `v21` ist. Experience Platform unterstützt alle Versionen v19 und höher. [Die Benutzeroberflächenversion](../../sources/tutorials/ui/create/advertising/ads.md) befindet sich weiterhin in der Beta-Phase und unterstützt nur eine einmalige Aufnahme. Verwenden Sie die API-Route, um die inkrementelle Datenaufnahme zu verwenden. |
 | Unterstützung virtueller [!DNL Azure Event Hubs] | Adobe unterstützt jetzt explizit virtuelle Netzwerkverbindungen zu [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md) und ermöglicht so die Datenübertragung über private Netzwerke anstatt über öffentliche Netzwerke. Auf die Zulassungsliste setzen Kunden können mit Experience Platform VNet den Traffic von Event Hubs privat über das private Azure-Backbone routen und so erweiterte Sicherheit und Compliance für Workflows zur Datenaufnahme bieten. |
 
