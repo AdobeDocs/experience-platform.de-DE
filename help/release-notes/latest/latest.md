@@ -17,9 +17,9 @@ ht-degree: 13%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: 22. Oktober 2025**
 
@@ -39,9 +39,9 @@ Adobe Experience Platform Agent Orchestrator ist die neue agentische Schicht in 
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Audience Agent | Die Audience Agent unterstützt jetzt Account-basierte Zielgruppen für die dialogorientierte Zielgruppenexploration und die Erkennung doppelter Zielgruppen. Weitere Informationen finden Sie in der Dokumentation zu [Audience Agent](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+| Audience Agent | Die Audience Agent unterstützt jetzt Account-basierte Zielgruppen für die dialogorientierte Zielgruppenexploration und die Erkennung doppelter Zielgruppen. Weitere Informationen finden Sie in der Dokumentation zu [Audience Agent](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Weitere Informationen zu Agenten finden Sie in der [Dokumentation zu Agent Orchestrator](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
+Weitere Informationen zu Agenten finden Sie in der [Dokumentation zu Agent Orchestrator](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Warnhinweise {#alerts}
 
