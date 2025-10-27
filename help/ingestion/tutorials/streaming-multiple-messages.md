@@ -5,9 +5,9 @@ title: Senden mehrerer Nachrichten in einer einzigen HTTP-Anfrage
 type: Tutorial
 description: Dieses Dokument enthält ein Tutorial zum Senden mehrerer Nachrichten an Adobe Experience Platform innerhalb einer einzigen HTTP-Anfrage mithilfe der Streaming-Aufnahme.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31c00e69dd92f7c3232e09f02da36c60cd8cf486
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1483'
 ht-degree: 58%
 
 ---
@@ -23,7 +23,7 @@ Dieses Dokument enthält ein Tutorial zum Senden mehrerer Nachrichten an [!DNL E
 Dieses Tutorial setzt ein Grundverständnis der Adobe Experience Platform-[!DNL Data Ingestion] voraus. Bevor Sie mit dem Tutorial beginnen, lesen Sie die folgenden Dokumente:
 
 - [Übersicht über die Datenaufnahme](../home.md): Behandelt die grundlegenden Konzepte der [!DNL Experience Platform Data Ingestion], einschließlich Aufnahmemethoden und Daten-Connectoren.
-- [Streaming-Aufnahme - &#x200B;](../streaming-ingestion/overview.md): Der Workflow und die Bausteine der Streaming-Aufnahme, wie Streaming-Verbindungen, Datensätze, [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent].
+- [Streaming-Aufnahme - ](../streaming-ingestion/overview.md): Der Workflow und die Bausteine der Streaming-Aufnahme, wie Streaming-Verbindungen, Datensätze, [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent].
 
 Für dieses Tutorial müssen Sie auch das Tutorial [Authentifizierung bei Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um [!DNL Experience Platform] APIs erfolgreich aufrufen zu können. Durch Abschließen des Authentifizierungs-Tutorials erhalten Sie den Wert für die Autorisierungs-Kopfzeile, der für alle API-Aufrufe in diesem Tutorial erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
 
@@ -43,7 +43,7 @@ Nach der Registrierung einer Streaming-Verbindung verfügen Sie als Datenproduze
 
 Das folgende Beispiel zeigt, wie mehrere Nachrichten an einen bestimmten Datensatz innerhalb einer einzelnen HTTP-Anfrage gesendet werden. Fügen Sie die Datensatz-ID in die Kopfzeile der Nachricht ein, damit die Nachricht direkt darin aufgenommen wird.
 
-Sie können die ID für einen vorhandenen Datensatz über die [!DNL Experience Platform]-Benutzeroberfläche oder einen Listenvorgang in der API abrufen. Die Datensatz-ID finden Sie auf [Experience Platform](https://platform.adobe.com), indem Sie auf die Registerkarte **[!UICONTROL Datensätze]** klicken, auf den Datensatz klicken, für den Sie die ID benötigen, und die Zeichenfolge aus dem Feld Datensatz-ID auf der Registerkarte **[!UICONTROL Info]** kopieren. Informationen zum Abrufen von Datensätzen mithilfe der API finden Sie unter [Katalogdienst – Überblick](../../catalog/home.md).
+Sie können die ID für einen vorhandenen Datensatz über die [!DNL Experience Platform]-Benutzeroberfläche oder einen Listenvorgang in der API abrufen. Die Datensatz-ID finden Sie auf [Experience Platform](https://platform.adobe.com), indem Sie auf die Registerkarte **[!UICONTROL Datasets]** klicken, auf den Datensatz klicken, für den Sie die ID haben möchten, und die Zeichenfolge aus dem Feld Datensatz-ID auf der Registerkarte **[!UICONTROL Info]** kopieren. Informationen zum Abrufen von Datensätzen mithilfe der API finden Sie unter [Katalogdienst – Überblick](../../catalog/home.md).
 
 Anstatt einen vorhandenen Datensatz zu verwenden, können Sie einen neuen Datensatz erstellen. Weitere Informationen zum Erstellen eines Datensatzes mithilfe von APIs finden Sie im Tutorial [Erstellen eines Datensatzes mithilfe von APIs](../../catalog/api/create-dataset.md).
 
@@ -68,7 +68,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -78,7 +78,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -127,7 +127,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -137,7 +137,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -244,7 +244,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -254,7 +254,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -303,7 +303,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -314,7 +314,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "invalidIMSOrg@AdobeOrg",
         "datasetId": "{DATASET_ID}",
@@ -324,7 +324,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -373,7 +373,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -383,7 +383,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -498,7 +498,7 @@ Die zweite Nachricht schlug fehl, weil der Nachrichtentext fehlte. Die Erfassung
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -510,7 +510,7 @@ Die zweite Nachricht schlug fehl, weil der Nachrichtentext fehlte. Die Erfassung
 
 Die dritte Nachricht schlug aufgrund der Verwendung einer ungültigen Organisations-ID in der Kopfzeile fehl. Die Organisation muss mit der {CONNECTION_ID} übereinstimmen, an die Sie posten möchten. Um festzustellen, welche Organisations-ID mit der von Ihnen verwendeten Streaming-Verbindung übereinstimmt, können Sie eine `GET inlet` mithilfe der [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) ausführen. Ein Beispiel zum Abrufen zuvor erstellter Streaming-Verbindungen finden Sie unter [Abrufen einer Streaming-Verbindung](./create-streaming-connection.md#get-data-collection-url).
 
-Die vierte Meldung ist fehlgeschlagen, da sie nicht dem erwarteten XDM-Schema entsprach. Das `xdmSchema`, das in der Kopfzeile und im Text der Anfrage enthalten ist, stimmt nicht mit dem XDM-Schema der `{DATASET_ID}` überein. Wenn Sie das Schema in der Kopfzeile und im Hauptteil der Nachricht korrigieren, kann es die DCCS-Validierung bestehen und erfolgreich an [!DNL Experience Platform] gesendet werden. Außerdem muss der Nachrichtentext so aktualisiert werden, dass er dem XDM-Schema des `{DATASET_ID}` entspricht, damit die Streaming-Validierung bei [!DNL Experience Platform] erfolgreich ist. Weiterführende Informationen dazu, was mit Nachrichten passiert, die erfolgreich an Experience Platform gestreamt werden, finden [&#x200B; im Abschnitt &quot;](#confirm-messages-ingested) aufgenommener Nachrichten bestätigen“ dieses Tutorials.
+Die vierte Meldung ist fehlgeschlagen, da sie nicht dem erwarteten XDM-Schema entsprach. Das `xdmSchema`, das in der Kopfzeile und im Text der Anfrage enthalten ist, stimmt nicht mit dem XDM-Schema der `{DATASET_ID}` überein. Wenn Sie das Schema in der Kopfzeile und im Hauptteil der Nachricht korrigieren, kann es die DCCS-Validierung bestehen und erfolgreich an [!DNL Experience Platform] gesendet werden. Außerdem muss der Nachrichtentext so aktualisiert werden, dass er dem XDM-Schema des `{DATASET_ID}` entspricht, damit die Streaming-Validierung bei [!DNL Experience Platform] erfolgreich ist. Weiterführende Informationen dazu, was mit Nachrichten passiert, die erfolgreich an Experience Platform gestreamt werden, finden [ im Abschnitt &quot;](#confirm-messages-ingested) aufgenommener Nachrichten bestätigen“ dieses Tutorials.
 
 ### Abrufen fehlgeschlagener Nachrichten von [!DNL Experience Platform]
 
@@ -523,7 +523,7 @@ Weitere Informationen zum Wiederherstellen von fehlgeschlagenen Batch-Nachrichte
 
 Nachrichten, die die DCCS-Validierung bestehen, werden an [!DNL Experience Platform] gestreamt. [!DNL Experience Platform] werden die Batch-Nachrichten durch Streaming-Validierung getestet, bevor sie in die [!DNL Data Lake] aufgenommen werden. Der Status von Batches, ob erfolgreich oder nicht, wird in dem von der `{DATASET_ID}` angegebenen Datensatz angezeigt.
 
-Sie können den Status von Batch-Nachrichten, die erfolgreich an [!DNL Experience Platform] gestreamt werden, mithilfe der [Experience Platform-](https://platform.adobe.com) anzeigen, indem Sie zur Registerkarte **[!UICONTROL Datensätze]** wechseln, auf den Datensatz klicken, an den Sie streamen, und die Registerkarte **[!UICONTROL Datensatzaktivität]** überprüfen.
+Sie können den Status von Batch-Nachrichten, die erfolgreich an [!DNL Experience Platform] gestreamt wurden, mithilfe der [Experience Platform](https://platform.adobe.com)Benutzeroberfläche anzeigen, indem Sie zur Registerkarte **[!UICONTROL Datasets]** gehen, auf den Datensatz klicken, an den Sie streamen, und die Registerkarte **[!UICONTROL Dataset Activity]** überprüfen.
 
 Batch-Nachrichten, die bei der Streaming-Validierung [!DNL Experience Platform] erfolgreich sind, werden in die [!DNL Data Lake] aufgenommen. Die Nachrichten stehen dann für die Analyse oder den Export zur Verfügung.
 
