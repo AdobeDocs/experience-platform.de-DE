@@ -2,10 +2,10 @@
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
+source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
 workflow-type: tm+mt
-source-wordcount: '2338'
-ht-degree: 54%
+source-wordcount: '2957'
+ht-degree: 43%
 
 ---
 
@@ -103,7 +103,7 @@ Daten können in Experience Platform in ein oder mehrere Systeme aufgenommen wer
 
 ### Welche Daten behalten Sie?
 
-Sie können sowohl Datenaufnahme-Filter als auch Ablaufregeln anwenden, um Daten zu entfernen, die für Ihre Anwendungsfälle veraltet sind. In der Regel verbrauchen Verhaltensdaten (z. B. Analytics-Daten) wesentlich mehr Speicher als Datensatzdaten (z. B. CRM-Daten). Viele Experience Platform-Benutzer weisen beispielsweise bis zu 90 % Profile auf, die ausschließlich Verhaltensdaten enthalten, verglichen mit Datensatzdaten. Daher ist die Verwaltung Ihrer Verhaltensdaten von entscheidender Bedeutung, um die Einhaltung Ihrer Lizenzberechtigungen sicherzustellen.
+Sie können sowohl Datenaufnahme-Filter als auch Ablaufregeln anwenden, um Daten zu entfernen, die für Ihre Anwendungsfälle veraltet sind. In der Regel verbrauchen Verhaltensdaten (z. B. Analytics-Daten) wesentlich mehr Speicher als Eintragsdaten (z. B. CRM-Daten). Viele Experience Platform-Benutzer weisen beispielsweise bis zu 90 % Profile auf, die ausschließlich Verhaltensdaten enthalten, verglichen mit Datensatzdaten. Daher ist die Verwaltung Ihrer Verhaltensdaten von entscheidender Bedeutung, um die Einhaltung Ihrer Lizenzberechtigungen sicherzustellen.
 
 Es gibt eine Reihe von Tools, die Ihnen helfen, Ihre Lizenznutzungsberechtigungen einzuhalten:
 
@@ -114,7 +114,7 @@ Es gibt eine Reihe von Tools, die Ihnen helfen, Ihre Lizenznutzungsberechtigunge
 
 Identitätsdiagramme werden nicht auf Ihre gesamte adressierbare Zielgruppenberechtigung angerechnet, da sich adressierbare Zielgruppe auf Ihre Gesamtzahl an Kundenprofilen bezieht.
 
-Aufgrund der Aufteilung von Identitäten können sich jedoch Beschränkungen des Identitätsdiagramms auf Ihre adressierbare Zielgruppe auswirken. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, bleibt die ECID im Echtzeit-Kundenprofil als pseudonymes Profil bestehen. Sie können [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) festlegen, um dieses Verhalten zu umgehen. Weitere Informationen finden Sie unter [&#x200B; für Identity Service-Daten](../../identity-service/guardrails.md).
+Aufgrund der Aufteilung von Identitäten können sich jedoch Beschränkungen des Identitätsdiagramms auf Ihre adressierbare Zielgruppe auswirken. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, bleibt die ECID im Echtzeit-Kundenprofil als pseudonymes Profil bestehen. Sie können [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) festlegen, um dieses Verhalten zu umgehen. Weitere Informationen finden Sie unter [ für Identity Service-Daten](../../identity-service/guardrails.md).
 
 ### Aufnahmefilter {#ingestion-filters}
 
@@ -137,8 +137,8 @@ Der Profilspeicher besteht aus den folgenden Komponenten:
 
 | Profilspeicherkomponente | Beschreibung |
 | --- | --- |
-| Profilfragmente | Jedes Kundenprofil besteht aus mehreren **Profilfragmenten**, die zu einer einzigen Ansicht dieses Kunden zusammengefügt werden. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere **Profilfragmente**, die sich auf diesen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Experience Platform aufgenommen werden, werden sie mithilfe des Identitätsdiagramms zusammengeführt, sodass ein einziges Profil für diesen Kunden entsteht. **Profilfragmente** bestehen aus einem Identity-Namespace als Kennung sowie den zugehörigen Datensatzdaten und/oder Zeitreihedaten. |
-| Datensatzdaten (Attribute) | Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson, die aus vielen **Attributen** besteht (auch als **Datensatzdaten** bezeichnet). So kann etwa ein Produktprofil eine SKU und eine Beschreibung enthalten, während in einem Personenprofil Informationen wie Vorname, Nachname und E-Mail-Adresse erfasst sind. **Datensatzdaten** haben normalerweise geringes/mäßiges Volumen, sind aber über einen langen Zeitraum hinweg wertvoll. |
+| Profilfragmente | Jedes Kundenprofil besteht aus mehreren **Profilfragmenten**, die zu einer einzigen Ansicht dieses Kunden zusammengeführt werden. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere **Profilfragmente**, die sich auf diesen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Experience Platform aufgenommen werden, werden sie mithilfe des Identitätsdiagramms zusammengeführt, sodass ein einziges Profil für diesen Kunden entsteht. **Profilfragmente** bestehen aus einem Identity-Namespace als Kennung sowie den zugehörigen Eintragsdaten und/oder Zeitreihendaten. |
+| Eintragsdaten (Attribute) | Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson, die aus vielen **Attributen** besteht (auch als **Eintragsdaten** bezeichnet). So kann etwa ein Produktprofil eine SKU und eine Beschreibung enthalten, während in einem Personenprofil Informationen wie Vorname, Nachname und E-Mail-Adresse erfasst sind. **Eintragsdaten** haben normalerweise geringes/mäßiges Volumen, sind aber über einen langen Zeitraum hinweg wertvoll. |
 | Zeitreihedaten (Verhalten) | **Zeitreihedaten** liefern Informationen zum Benutzerverhalten. Zeitreihedaten werden durch die Standard-Schemaklasse Experience-Datenmodell (XDM) [!DNL ExperienceEvent] dargestellt. Sie beschreiben Ereignisse wie etwa das Hinzufügen eines Artikels zu einem Warenkorb, das Klicken auf einen Link, das Abspielen eines Videos usw. Der Wert der Verhaltensdaten kann mit der Zeit abnehmen. |
 | Identity-Namespace (Identitäten) | Wenn Kundendaten erfasst werden, werden sie mithilfe von **Identity-Namespaces** zu einem einzigen Profil zusammengeführt. Zudem besteht die Möglichkeit, solche Identitäten zu verknüpfen, sobald mehr Informationen über den jeweiligen Kunden bekannt werden. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identity-Namespaces](../../identity-service/features/namespaces.md). |
 
@@ -159,11 +159,11 @@ Verwenden Sie die Datenablauffunktion für pseudonyme Profile, um automatisch Da
 
 ### Datensatz-Benutzeroberfläche - Aufbewahrung von Erlebnisereignis-Datensätzen {#data-retention}
 
-Konfigurieren Sie die Einstellungen für die Gültigkeit und Aufbewahrung von Datensätzen, um eine feste Aufbewahrungsfrist für Ihre Daten im Data Lake und Profilspeicher zu erzwingen. Nach Ablauf der Aufbewahrungsfrist werden die Daten gelöscht. Ablauf von Erlebnisereignisdaten entfernt nur Ereignisse, keine Profilklassendaten, wodurch das [Gesamtdatenvolumen) &#x200B;](total-data-volume.md) Lizenznutzungsmetriken reduziert wird. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenspeicherungsrichtlinie](../../catalog/datasets/user-guide.md#data-retention-policy).
+Konfigurieren Sie die Einstellungen für die Gültigkeit und Aufbewahrung von Datensätzen, um eine feste Aufbewahrungsfrist für Ihre Daten im Data Lake und Profilspeicher zu erzwingen. Nach Ablauf der Aufbewahrungsfrist werden die Daten gelöscht. Ablauf von Erlebnisereignisdaten entfernt nur Ereignisse, keine Profilklassendaten, wodurch das [Gesamtdatenvolumen) ](total-data-volume.md) Lizenznutzungsmetriken reduziert wird. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenspeicherungsrichtlinie](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Gültigkeitsdauern von Profilerlebnisereignissen {#event-expirations}
 
-Konfigurieren Sie Ablaufzeiten, um Verhaltensdaten automatisch aus Ihrem profilaktivierten Datensatz zu entfernen, sobald sie für Ihre Anwendungsfälle nicht mehr nützlich sind. Weitere Informationen finden Sie in der Übersicht [&#x200B; Gültigkeitsdauern &#x200B;](../../profile/event-expirations.md) Erlebnisereignissen .
+Konfigurieren Sie Ablaufzeiten, um Verhaltensdaten automatisch aus Ihrem profilaktivierten Datensatz zu entfernen, sobald sie für Ihre Anwendungsfälle nicht mehr nützlich sind. Weitere Informationen finden Sie in der Übersicht [ Gültigkeitsdauern ](../../profile/event-expirations.md) Erlebnisereignissen .
 
 ## Zusammenfassung der Best Practices für die Lizenznutzung {#best-practices}
 
@@ -175,3 +175,99 @@ Im Folgenden finden Sie eine Liste empfohlener Best Practices, die Sie befolgen 
 * Konfigurieren Sie [Ablauf von Erlebnisereignissen](../../catalog/datasets/user-guide.md#data-retention-policy) und [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) für sehr häufige Daten wie Web-Daten.
 * Konfigurieren Sie [Time-to-Live (TTL)-Aufbewahrungsrichtlinien für Erlebnisereignis](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md)Datensätze im Data Lake, um veraltete Datensätze automatisch zu entfernen und die Speichernutzung entsprechend Ihren Lizenzberechtigungen zu optimieren.
 * Überprüfen Sie regelmäßig die [Berichte zur Profilzusammensetzung](#profile-store-composition-reports), um sich ein Bild über die Zusammensetzung des Profilspeichers zu machen. Auf diese Weise können Sie die Datenquellen ermitteln, die im Rahmen Ihrer Lizenzberechtigung die meisten Daten nutzen.
+
+## Anwendungsfall: Lizenznutzungs-Compliance
+
+### Gründe für diesen Anwendungsfall
+
+Indem Sie die **Lizenznutzungsbestimmungen** sowohl für den Data Lake als auch für die Profilspeicherung einhalten, können Sie Überschüsse zuverlässig verhindern, Kosten optimieren und Ihre Richtlinien zur Datenspeicherung an Ihre Geschäftsanforderungen anpassen.
+
+### Voraussetzungen und Planung
+
+Beachten Sie die folgenden Voraussetzungen in Ihrem Planungsprozess:
+
+* **Zugriff und**:
+   * Stellen Sie sicher, dass Sie über die Berechtigung **Datensätze verwalten** zur Verwendung der TTL für Erlebnisereignisse verfügen.
+   * Stellen Sie sicher, dass Sie über die **Profileinstellungen verwalten** verfügen, um die TTL für pseudonyme Profile zu verwenden.
+* **Grundlagen zur Datenspeicherungsrichtlinie**:
+   * Organisatorische Policies zur Datenaufbewahrung und Compliance
+   * Geschäftsanforderungen an Lookback-Fenster für die Datenanalyse und Segmentierung
+
+### Benutzeroberflächenfunktionen, Experience Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden
+
+Um diesen Anwendungsfall erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Adobe Experience Platform verwenden. Stellen Sie sicher, dass Sie über die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, diese Berechtigungen zu gewähren.
+
+* Lizenznutzungs-Dashboard : Zeigen Sie Ihre aktuelle Berechtigungsnutzung auf Sandbox-Ebene an.
+* Datensatz-Management - Überwachen und Verwalten von Aufbewahrungsrichtlinien auf Datensatzebene.
+* Zielgruppen (Echtzeit-Kundenprofil): Stellen Sie sicher, dass die Segmentierungsregeln im Lookback-Fenster an die Datenaufbewahrungsfenster angepasst sind.
+* Überwachung und Warnhinweise - Verfolgen Sie Aktualisierungen und erhalten Sie Einblicke in Vorgänge zur Datensatzaufbewahrung.
+
+### Erreichen des Anwendungsfalls: Schrittweise Anweisungen
+
+Lesen Sie die folgenden Abschnitte, die Links zu weiteren Dokumentationen enthalten, durch, um die einzelnen Schritte in der allgemeinen Übersicht oben abzuschließen.
+
+**Überprüfen Sie Ihre aktuelle Lizenznutzung**
+
+Navigieren Sie zunächst zum **Lizenznutzungs-Dashboard** und überprüfen Sie die Nutzung Ihrer Berechtigungen auf Sandbox-Ebene.
+
+>[!BEGINTABS]
+
+>[!TAB Produktions-Sandbox]
+
+Verwenden Sie die [!UICONTROL Metrics], um Ihre Lizenznutzungsmetriken anzuzeigen. Auf der -Benutzeroberfläche werden standardmäßig Informationen zu Ihrer Produktions-Sandbox angezeigt.
+
+![Die Benutzeroberfläche des Lizenznutzungs-Dashboards zeigt Ihre Lizenznutzungsmetriken für eine Produktions-Sandbox an.](../images/data-management/prod-sandbox.png)
+
+>[!TAB Entwicklungs-Sandbox]
+
+Wählen Sie [!UICONTROL Development] aus, um Lizenznutzungsmetriken für Ihre Entwicklungs-Sandboxes anzuzeigen.
+
+![Die Benutzeroberfläche des Lizenznutzungs-Dashboards zeigt Ihre Lizenznutzungsmetriken für Entwicklungs-Sandboxes an.](../images/data-management/dev-sandbox.png)
+
+>[!ENDTABS]
+
+Weitere Informationen finden Sie in der Dokumentation unter [Verwenden des Lizenznutzungs-Dashboards](../../dashboards/guides/license-usage.md).
+
+**Analysieren der Speicherverwendung auf Datensatzebene**
+
+Verwenden Sie die **Datensatz durchsuchen**, um Ihre Datensatznutzungsmetriken sowohl für den Data Lake als auch für das Echtzeit-Kundenprofil zu überprüfen. Wählen Sie die Spaltenüberschriften für **[!UICONTROL Data Lake Storage]** oder **[!UICONTROL Profile Storage]** und dann **[!UICONTROL Sort Descending]** aus dem Popup-Fenster aus.
+
+>[!BEGINTABS]
+
+>[!TAB Data Lake Storage]
+
+Ihre Datensätze im Data Lake werden nach Speichergröße sortiert. Verwenden Sie diese Funktion, um die größten Speicherverbraucher im Data Lake zu identifizieren.
+
+![Die Datensätze im Data Lake werden vom größten zum kleinsten sortiert.](../images/data-management/data-lake-storage.png)
+
+>[!TAB Profilspeicher]
+
+Die Datensätze im Profil werden nach Speichergröße sortiert. Verwenden Sie diese Funktion, um die größten Nutzer von Speicher im Profil zu identifizieren.
+
+![Die Datensätze im Profil werden vom größten zum kleinsten sortiert.](../images/data-management/profile-storage.png)
+
+>[!ENDTABS]
+
+**Auswerten und Konfigurieren der Aufbewahrungsregel**
+
+Bestimmen Sie anschließend, ob Ihre Datensätze über die entsprechenden Aufbewahrungs-Policys verfügen, die auf Lizenzbeschränkungen und Geschäftsanforderungen für Analytics und die Segmentierung basieren. Um die Aufbewahrungsrichtlinie eines Datensatzes anzuzeigen, wählen Sie die Auslassungszeichen (`...`) neben Ihrem Datensatz aus und klicken Sie dann auf **[!UICONTROL Set data retention policy]**.
+
+![Das Popup-Bedienfeld mit Datensatzoptionen, einschließlich „Richtlinie zur Datenaufbewahrung festlegen“](../images/data-management/set-retention-policy.png)
+
+Die *[!UICONTROL Set dataset retention]* wird angezeigt. Verwenden Sie diese Schnittstelle, um eine Aufbewahrungsrichtlinie für Ihren Datensatz zu konfigurieren. Sie können damit auch anzeigen, wie viel Speicherplatz Ihr Datensatz im Data Lake oder im Profil belegt.
+
+![Die Schnittstelle „Datensatzaufbewahrung festlegen“](../images/data-management/dataset-retention.png)
+
+Sie können die Auswirkungen Ihres Datensatzes auf die Datenspeicherung mithilfe des Auswirkungs-Forecasters weiter analysieren. Wählen Sie **[!UICONTROL View ExperienceEvent data distribution]** aus, um ein Diagramm anzuzeigen, das Ihr Aufbewahrungsfenster und den Prozentsatz des gesamten Speichers anzeigt, der ablaufen wird.
+
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save]** aus
+
+![Der Auswirkungs-Forecaster aus der Oberfläche zur Datensatzaufbewahrung.](../images/data-management/impact-forecaster.png)
+
+**Validieren von Aufbewahrungsänderungen**
+
+Nachdem Sie Ihre Aufbewahrungsrichtlinien angewendet haben, können Sie die folgenden Tools verwenden, um Ihre Änderungen zu validieren:
+
+* [Metriken zur Datensatznutzung](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) in der Ansicht zum Durchsuchen von Datensätzen.
+* Das [Überwachungs-Dashboard](../../dataflows/ui/monitor.md) zum Anzeigen und Analysieren der Auswirkungen der Datenspeicherung.
+* Das [Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md), um tägliche Momentaufnahmen, Prognosetrends und Einblicke auf Sandbox-Ebene anzuzeigen.
