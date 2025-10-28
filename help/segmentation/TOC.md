@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von in Adobe Experience Platform generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
 role: User
-source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
+source-git-commit: 0f1ccaf9ea698737eccc25cec6f5b46b7184fc11
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 75%
+source-wordcount: '210'
+ht-degree: 74%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 75%
 
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)
-- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de#segmentation-guardrails)
+- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentation-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
@@ -35,6 +35,7 @@ ht-degree: 75%
    - [Zielgruppen-Dashboard](ui/audience-dashboard.md)
    - [Zielgruppenportal](ui/audience-portal.md)
    - [Zielgruppenkomposition](ui/audience-composition.md)
+   - [Verbesserungen der Zielgruppenkomposition](ui/composition-enchancements.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home)
    - [Aktualisierung der Jahreszeitbegrenzung ignorieren](ui/ignore-year.md)
@@ -45,7 +46,7 @@ ht-degree: 75%
 - Segmentierungsmethoden {#methods}
    - [Überblick](methods/overview.md)
    - [Batch-Segmentierung](methods/batch-segmentation.md)
-   - [Streaming-Segmentierung &#x200B;](methods/streaming-segmentation.md)
+   - [Streaming-Segmentierung ](methods/streaming-segmentation.md)
    - [Edge-Segmentierung](methods/edge-segmentation.md)
    - [Flexible Zielgruppenauswertung](methods/flexible-audience-evaluation.md)
 - Zielgruppentypen {#types}
