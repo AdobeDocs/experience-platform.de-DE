@@ -27,8 +27,8 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
 * **Einrichtung der Richtlinie abgeschlossen**: Sie haben in der Benutzeroberfläche von Adobe Experience Platform mit der Erstellung einer Einverständnisrichtlinie begonnen. Ausführliche Anweisungen finden Sie im [Benutzerhandbuch zu Datennutzungsrichtlinien](user-guide.md#consent-policy).
 
 * **Vertrautheit mit Datenstrukturen**: Diese Referenz setzt Grundkenntnisse der folgenden Kernkonzepte voraus:
-   * **XDM- und Vereinigungsschema**: Erfahren Sie, wie Experience-Datenmodellstrukturen Datenbeziehungen definieren und wie das Vereinigungsschema einheitliche Kundenprofile darstellt. Weitere Informationen finden Sie [ „XDM-](../../xdm/home.md) - Übersicht“.
-   * **Data Governance-Framework**: Wissen, wie Adobe Experience Platform Datennutzungsrichtlinien und Governance-Regeln durchsetzt. Einzelheiten finden Sie [ „Übersicht ](../home.md) Data Governance“.
+   * **XDM- und Vereinigungsschema**: Erfahren Sie, wie Experience-Datenmodellstrukturen Datenbeziehungen definieren und wie das Vereinigungsschema einheitliche Kundenprofile darstellt. Weitere Informationen finden Sie [&#x200B; „XDM-](../../xdm/home.md) - Übersicht“.
+   * **Data Governance-Framework**: Wissen, wie Adobe Experience Platform Datennutzungsrichtlinien und Governance-Regeln durchsetzt. Einzelheiten finden Sie [&#x200B; „Übersicht &#x200B;](../home.md) Data Governance“.
    * **Verarbeitung des Kundeneinverständnisses**: Erfahren Sie, wie Einverständnisdaten in Workflows für Kundenerlebnisse erfasst, gespeichert und angewendet werden. Siehe [Übersicht über die Einverständnisverarbeitung](../../landing/governance-privacy-security/consent/adobe/overview.md).
 
 ## Grundlegende Konzepte: Primitive- und Container-Felder
