@@ -78,7 +78,7 @@ Lesen Sie das [Exportieren von Datensätzen](/help/destinations/ui/export-datase
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Um einen erfolgreichen Datensatzexport zu validieren, können Sie überprüfen, ob Ihr Datensatz erfolgreich in Ihr [Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html) gelangt ist.
+Um einen erfolgreichen Datensatzexport zu validieren, können Sie überprüfen, ob Ihr Datensatz erfolgreich in Ihr [Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=de) gelangt ist.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

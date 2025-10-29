@@ -13,7 +13,7 @@ ht-degree: 22%
 
 ## Überblick {#overview}
 
-Mit dem Ziel Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) können Sie authentifizierte First-Party-Zielgruppen für genehmigte Werbetreibende und Benutzende zur Kampagnenaktivierung mit DSP freigeben. Weitere Informationen zur Integration von Real-Time CDP mit DSP finden Sie unter [Informationen zum Aktivieren authentifizierter Zielgruppen aus Zielgruppenquellen](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+Mit dem Ziel Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) können Sie authentifizierte First-Party-Zielgruppen für genehmigte Werbetreibende und Benutzende zur Kampagnenaktivierung mit DSP freigeben. Weitere Informationen zur Integration von Real-Time CDP mit DSP finden Sie unter [Informationen zum Aktivieren authentifizierter Zielgruppen aus Zielgruppenquellen](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=de).
 
 >[!IMPORTANT]
 >
@@ -35,8 +35,8 @@ Eine Medienagentur mit DSP-Account führt im Namen ihres Kunden, einer Top-Marke
 
 * Einstellungen auf Konto- und Kampagnenebene in DSP, um die Freigabe von Zielgruppen für [!DNL LiveRamp RampID] zu aktivieren. Dadurch werden Kundendaten in [!DNL RampIDs] übersetzt, um Zielgruppensegmente zu erstellen. Diese Konfiguration wird von Ihrem DSP-Konto-Team durchgeführt. [!DNL RampID] ist über eine Partnerschaft zwischen DSP und [!DNL LiveRamp] verfügbar und Sie benötigen keine eigene [!DNL LiveRamp]-Mitgliedschaft, um sie zu verwenden.
 * Die Experience Cloud-Organisations-ID für das Experience Platform-Konto. Sie finden Ihre ID auf der Seite Ihres [!DNL Real-Time CDP] Benutzerprofils.
-* Eine [[!DNL Real-Time CDP] Quelle in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) um Zielgruppen für die Kampagnenaktivierung zu empfangen. Ihr DSP-Konto-Team erstellt die Quelle mit Ihrer Experience Cloud-Organisations-ID.
-* Der Quellschlüssel für das DSP-Konto oder den Advertiser, der generiert wird, wenn eine [[!DNL Real-Time CDP] source in DSP erstellt wird](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen. Sie verwenden sie in Experience Platform, um eine Zielverbindung zum Advertising Cloud DSP-Ziel herzustellen, wie [&#x200B; unten erläutert](#authenticate).
+* Eine [[!DNL Real-Time CDP] Quelle in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=de) um Zielgruppen für die Kampagnenaktivierung zu empfangen. Ihr DSP-Konto-Team erstellt die Quelle mit Ihrer Experience Cloud-Organisations-ID.
+* Der Quellschlüssel für das DSP-Konto oder den Advertiser, der generiert wird, wenn eine [[!DNL Real-Time CDP] source in DSP erstellt wird](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=de). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen. Sie verwenden sie in Experience Platform, um eine Zielverbindung zum Advertising Cloud DSP-Ziel herzustellen, wie [&#x200B; unten erläutert](#authenticate).
 * Kundendaten bestehend aus E-Mails oder Hash-E-Mails.
 
 ## Unterstützte Identitäten {#supported-identities}
@@ -72,7 +72,7 @@ Um eine Verbindung zum Ziel herzustellen, befolgen Sie die Anweisungen zum [Erst
 
 Um eine Verbindung zum Ziel herzustellen, geben Sie den folgenden Parameter im Abschnitt [!UICONTROL Connection type] ein und wählen Sie dann **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Account or Advertiser Key]**: Diese [!UICONTROL Source Key] wird generiert, wenn eine [[!DNL Real-Time CDP] Quelle in der Benutzeroberfläche von DSP erstellt &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
+* **[!UICONTROL Account or Advertiser Key]**: Diese [!UICONTROL Source Key] wird generiert, wenn eine [[!DNL Real-Time CDP] Quelle in der Benutzeroberfläche von DSP erstellt &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=de). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
 
 ![Feld Verbindungstyp](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

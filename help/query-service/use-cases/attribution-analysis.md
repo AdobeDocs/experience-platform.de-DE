@@ -20,7 +20,7 @@ Die SQL-Beispiele in diesem Dokument sind Abfragen, die häufig mit Adobe Analyt
 * [Der Adobe Analytics-Quell-Connector für Report Suite-Daten - Übersicht](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [Die Dokumentation zu Analytics-Feldzuordnungen](../../sources/connectors/adobe-applications/mapping/analytics.md) enthält weitere Informationen zur Aufnahme und Zuordnung von Analysedaten für die Verwendung mit dem Abfrage-Service.
 * [Überblick über Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
-* [Das Handbuch zum Adobe Analytics Attribution Panel](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
+* [Das Handbuch zum Adobe Analytics Attribution Panel](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=de).
 
 Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](../sql/adobe-defined-functions.md#window-functions). Das [Glossar zu Adobe Marketing und Commerce](https://business.adobe.com/glossary/index.html)Begriff kann ebenfalls von Nutzen sein.
 
