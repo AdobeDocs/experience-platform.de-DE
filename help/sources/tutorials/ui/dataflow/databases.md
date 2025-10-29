@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses mithilfe einer Datenbank-Source in der Benut
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Experience Platform-Datensatz aufgenommen werden. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche einen Datenfluss für eine Datenbankquelle erstellen.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: 6de14e210b78b321ed7d2c4c30769c260694f474
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 20%
+source-wordcount: '1787'
+ht-degree: 18%
 
 ---
 
@@ -120,13 +120,20 @@ Weitere Informationen zur Planung von Konfigurationen finden Sie in der folgende
 
 | Konfiguration planen | Beschreibung |
 | --- | --- |
-| Häufigkeit | Konfigurieren Sie die Häufigkeit , um anzugeben, wie oft der Datenfluss ausgeführt werden soll. Sie können Ihre Häufigkeit auf Folgendes festlegen: <ul><li>**Einmal**: Legen Sie für die Häufigkeit `once` fest, um eine einmalige Aufnahme zu erstellen. Konfigurationen für Intervall und Aufstockung sind beim Erstellen eines einmaligen Aufnahme-Datenflusses nicht verfügbar. Standardmäßig ist die Zeitplanfrequenz auf einmal festgelegt.</li><li>**Minute**: Legen Sie für die Häufigkeit `minute` fest, um Ihren Datenfluss so zu planen, dass Daten pro Minute aufgenommen werden.</li><li>**Stunde**: Legen Sie für die Häufigkeit `hour` fest, um den Datenfluss zu planen und Daten stündlich aufzunehmen.</li><li>**Tag**: Legen Sie für Ihre Häufigkeit `day` fest, um Ihren Datenfluss so zu planen, dass Daten täglich aufgenommen werden.</li><li>**Woche**: Legen Sie für Ihre Häufigkeit `week` fest, um Ihren Datenfluss zu planen und Daten pro Woche aufzunehmen.</li></ul> |
+| Häufigkeit | Konfigurieren Sie die Häufigkeit , um anzugeben, wie oft der Datenfluss ausgeführt werden soll. Sie können Ihre Häufigkeit auf Folgendes festlegen: <ul><li>**Einmal**: Legen Sie für die Häufigkeit `once` fest, um eine einmalige Aufnahme zu erstellen. Konfigurationen für Intervall und Aufstockung sind beim Erstellen eines einmaligen Aufnahme-Datenflusses nicht verfügbar. Standardmäßig ist die Zeitplanfrequenz auf einmal festgelegt.</li><li>**Minute**: Legen Sie für die Häufigkeit `minute` fest, um Ihren Datenfluss so zu planen, dass Daten pro Minute aufgenommen werden.</li><li>**Stunde**: Legen Sie für die Häufigkeit `hour` fest, um den Datenfluss zu planen und Daten stündlich aufzunehmen.</li><li>**Tag**: Legen Sie für Ihre Häufigkeit `day` fest, um Ihren Datenfluss so zu planen, dass Daten täglich aufgenommen werden.</li><li>**Woche**: Legen Sie für Ihre Häufigkeit `week` fest, um Ihren Datenfluss zu planen und Daten pro Woche aufzunehmen. Weitere Informationen finden Sie im Abschnitt unter [Wöchentlicher Aufnahmezeitplan] (#weekly).</li></ul> |
 | Intervall | Nachdem Sie eine Häufigkeit ausgewählt haben, können Sie die Intervalleinstellung konfigurieren, um den Zeitrahmen zwischen jeder Aufnahme festzulegen. Wenn Sie beispielsweise Ihre Häufigkeit auf „Tag“ festlegen und das Intervall auf 15 konfigurieren, wird Ihr Datenfluss alle 15 Tage ausgeführt. Das Intervall kann nicht auf null festgelegt werden. Der akzeptierte Mindestintervallwert für jede Häufigkeit ist wie folgt:<ul><li>**Einmal**: nicht zutreffend</li><li>**Minute**: 15</li><li>**Stunde**: 1</li><li>**Tag**: 1</li><li>**Woche**: 1</li></ul> |
 | Startzeit | Der Zeitstempel für die projizierte Ausführung, dargestellt in UTC-Zeitzone. |
 | Aufstockung | Die Aufstockung bestimmt, welche Daten anfänglich aufgenommen werden. Wenn die Aufstockung aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Aufnahme aufgenommen. Wenn die Aufstockung deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Aufnahme-Ausführung und der Startzeit geladen werden. Dateien, die vor der Startzeit geladen wurden, werden nicht aufgenommen. |
 | Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Das Feld, das Sie für **[!UICONTROL Load incremental data by]** auswählen, muss seine Datums-/Uhrzeitwerte in der UTC-Zeitzone haben, um inkrementelle Daten korrekt zu laden. Alle tabellenbasierten Batch-Quellen wählen inkrementelle Daten aus, indem sie einen Delta-Spalten-Zeitstempelwert mit der entsprechenden UTC-Zeit des Flussausführungsfensters vergleichen und dann die Daten aus der Quelle kopieren, wenn neue Daten im UTC-Zeitfenster gefunden werden. |
 
 ![Aufstockung](../../../images/tutorials/dataflow/table-based/backfill.png)
+
+### Grundlagen zum wöchentlichen Aufnahmezeitplan {#weekly}
+
+Wenn Sie Ihren Datenfluss so einstellen, dass er nach einem wöchentlichen Zeitplan ausgeführt wird, wird der Datenfluss auf der Grundlage eines der folgenden Szenarien ausgeführt:
+
+* Wenn Ihre Datenquelle erstellt wurde, aber noch keine Daten aufgenommen wurden, wird der erste wöchentliche Datenfluss 7 Tage nach dem Erstellungsdatum der Quelle ausgeführt. Dieses 7-Tage-Intervall beginnt immer mit dem Zeitpunkt, zu dem die Quelle erstellt wurde, unabhängig davon, wann Sie den Zeitplan einrichten. Nach der ersten Ausführung wird der Datenfluss weiterhin wöchentlich gemäß dem konfigurierten Zeitplan ausgeführt.
+* Wenn Daten aus Ihrer Quelle zuvor aufgenommen wurden und Sie sie erneut für die wöchentliche Aufnahme planen, wird der nächste Datenfluss 7 Tage nach der letzten erfolgreichen Aufnahme ausgeführt.
 
 ## Überprüfen des Datenflusses
 

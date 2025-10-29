@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie einen vorhandenen Quell-Datenfluss in der Experience Platform-Benutzeroberfläche aktualisieren.
 title: Aktualisieren eines Source-Verbindungsdatenflusses in der Benutzeroberfläche
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 10%
+source-wordcount: '885'
+ht-degree: 9%
 
 ---
 
@@ -27,21 +27,21 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 >title="Ablaufdatum des Datensatzes"
 >abstract="Diese Spalte gibt die Anzahl der Tage an, die verbleiben, bis der Zieldatensatz automatisch abläuft.<br>Ein Datenfluss schlägt fehl, wenn der Zieldatensatz abgelaufen ist. Um zu verhindern, dass ein Datenfluss fehlschlägt, muss sichergestellt werden, dass der Zieldatensatz am richtigen Datum abläuft. Informationen zum Aktualisieren der Ablaufdaten finden Sie in der Dokumentation."
 
-Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Quellen]** in der linken Navigationsleiste und wählen Sie dann **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile.
+Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigationsbereich die Option **[!UICONTROL Sources]** und dann in der oberen Zeile die Option **[!UICONTROL Dataflows]** aus.
 
 ![Der Quellkatalog mit der ausgewählten Kopfzeile „Datenflüsse“.](../../images/tutorials/update-dataflows/catalog.png)
 
 >[!TIP]
 >
->Mit Filterfunktionen können Sie Ihre Datenflüsse sortieren und filtern. Weitere Informationen finden Sie [&#x200B; Handbuch unter „Filtern von Quellobjekten in &#x200B;](./filter.md) Benutzeroberfläche“.
+>Mit Filterfunktionen können Sie Ihre Datenflüsse sortieren und filtern. Weitere Informationen finden Sie [ Handbuch unter „Filtern von Quellobjekten in ](./filter.md) Benutzeroberfläche“.
 
-Auf [!UICONTROL &#x200B; Seite &#x200B;]Datenflüsse“ wird eine Liste aller in Ihrem Unternehmen vorhandenen Datenflüsse angezeigt. Suchen Sie den Datenfluss, den Sie aktualisieren möchten, und wählen Sie die Auslassungspunkte (`...`) daneben aus. Es wird ein Dropdown-Menü mit einer Liste von Optionen angezeigt, aus denen Sie auswählen können, um zusätzliche Konfigurationen an Ihrem vorhandenen Datenfluss vorzunehmen.
+Auf der Seite [!UICONTROL Dataflows] wird eine Liste aller vorhandenen Datenflüsse in Ihrer Organisation angezeigt. Suchen Sie den Datenfluss, den Sie aktualisieren möchten, und wählen Sie die Auslassungspunkte (`...`) daneben aus. Es wird ein Dropdown-Menü mit einer Liste von Optionen angezeigt, aus denen Sie auswählen können, um zusätzliche Konfigurationen an Ihrem vorhandenen Datenfluss vorzunehmen.
 
-Um Ihren Datenfluss zu aktualisieren, wählen Sie **[!UICONTROL Datenfluss aktualisieren]** aus.
+Um Ihren Datenfluss zu aktualisieren, wählen Sie **[!UICONTROL Update dataflow]** aus.
 
 ![Das Dropdown-Menü, in dem Optionen zum Aktualisieren von Datenflüssen aufgeführt sind.](../../images/tutorials/update-dataflows/dropdown_update.png)
 
-Sie werden zum Quellen-Workflow weitergeleitet, in dem Sie Aspekte Ihres Datenflusses aktualisieren können, einschließlich der Details im Schritt [!UICONTROL Datenflussdetails angeben].
+Sie werden zum Quellen-Workflow weitergeleitet, in dem Sie Aspekte Ihres Datenflusses aktualisieren können, einschließlich der Details im [!UICONTROL Provide dataflow details] Schritt.
 
 ### Aktualisieren der Zuordnung {#update-mapping}
 
@@ -61,21 +61,30 @@ Nachdem Sie die Zuordnungen Ihres Datenflusses aktualisiert haben, können Sie I
 
 Sie können den Aufnahmezeitplan Ihres Datenflusses auch mithilfe der Option Inline-Aktualisierung aktualisieren, die auf der Seite Datenflüsse bereitgestellt wird.
 
-Wählen Sie auf der Seite Datenflüsse die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und dann **[!UICONTROL Zeitplan bearbeiten]** aus dem angezeigten Dropdown-Menü aus.
+Wählen Sie auf der Seite Datenflüsse die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und wählen Sie dann **[!UICONTROL Edit schedule]** aus dem angezeigten Dropdown-Menü.
 
 ![Der Planungsschritt des Quell-Workflows. Verwenden Sie diesen Schritt, um den Zeitplan Ihres Datenflusses zu aktualisieren.](../../images/tutorials/update-dataflows/dropdown_edit.png)
 
-Das **[!UICONTROL Zeitplan bearbeiten]** bietet Optionen zum Aktualisieren der Aufnahmefrequenz und der Intervallrate Ihres Datenflusses. Nachdem Sie die aktualisierten Häufigkeits- und Intervallwerte festgelegt haben, klicken Sie auf **[!UICONTROL Speichern]**.
+Das Dialogfeld &quot;**[!UICONTROL Edit schedule]**&quot; enthält Optionen zum Aktualisieren der Aufnahmefrequenz und der Intervallrate Ihres Datenflusses. Nachdem Sie die aktualisierten Werte für Häufigkeit und Intervall festgelegt haben, wählen Sie **[!UICONTROL Save]** aus.
 
 ![Ein Popup-Fenster, mit dem Sie den Aufnahmezeitplan Ihres Datenflusses bearbeiten können.](../../images/tutorials/update-dataflows/edit_schedule.png)
 
+Lesen Sie den folgenden Abschnitt für Details zur Funktionsweise wöchentlicher Aufnahmezeitpläne.
+
+#### Grundlagen zum wöchentlichen Aufnahmezeitplan {#weekly}
+
+Wenn Sie Ihren Datenfluss so einstellen, dass er nach einem wöchentlichen Zeitplan ausgeführt wird, wird der Datenfluss auf der Grundlage eines der folgenden Szenarien ausgeführt:
+
+* Wenn Ihre Datenquelle erstellt wurde, aber noch keine Daten aufgenommen wurden, wird der erste wöchentliche Datenfluss 7 Tage nach dem Erstellungsdatum der Quelle ausgeführt. Dieses 7-Tage-Intervall beginnt immer mit dem Zeitpunkt, zu dem die Quelle erstellt wurde, unabhängig davon, wann Sie den Zeitplan einrichten. Nach der ersten Ausführung wird der Datenfluss weiterhin wöchentlich gemäß dem konfigurierten Zeitplan ausgeführt.
+* Wenn Daten aus Ihrer Quelle zuvor aufgenommen wurden und Sie sie erneut für die wöchentliche Aufnahme planen, wird der nächste Datenfluss 7 Tage nach der letzten erfolgreichen Aufnahme ausgeführt.
+
 ### Datenfluss deaktivieren
 
-Sie können Ihren Datenfluss mithilfe desselben Dropdown-Menüs deaktivieren. Um Ihren Datenfluss zu deaktivieren, wählen Sie **[!UICONTROL Datenfluss deaktivieren]** aus.
+Sie können Ihren Datenfluss mithilfe desselben Dropdown-Menüs deaktivieren. Um Ihren Datenfluss zu deaktivieren, wählen Sie **[!UICONTROL Disable dataflow]** aus.
 
 ![Das Dropdown-Menü mit der Option zum Deaktivieren des Datenflusses.](../../images/tutorials/update-dataflows/dropdown_disable.png)
 
-Wählen Sie anschließend [!UICONTROL &#x200B; Popup]Fenster aus, das angezeigt wird.
+Wählen Sie als Nächstes [!UICONTROL Disable] aus dem angezeigten Popup-Fenster aus.
 
 ![Das Popup-Fenster, in dem Sie bestätigen müssen, dass Sie Ihren Datenfluss deaktivieren möchten.](../../images/tutorials/update-dataflows/disable_dataflow.png)
 
@@ -83,6 +92,6 @@ Wenn Sie diesen Datenfluss später erneut aktivieren, plant Experience Platform 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich den Arbeitsbereich [!UICONTROL Quellen] verwendet, um den Aufnahmezeitplan und die Zuordnungssätze Ihres Datenflusses zu aktualisieren.
+In diesem Tutorial haben Sie den [!UICONTROL Sources]-Arbeitsbereich erfolgreich verwendet, um den Aufnahmezeitplan und die Zuordnungssätze Ihres Datenflusses zu aktualisieren.
 
 Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe der [!DNL Flow Service]-API finden Sie im Tutorial zum [Aktualisieren von Datenflüssen mithilfe der Flow Service-API](../../tutorials/api/update-dataflows.md).
