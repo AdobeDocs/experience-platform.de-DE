@@ -30,7 +30,7 @@ Stellen Sie vor der Verwendung von `sendPushSubscription` Folgendes sicher:
 
 Das Senden von Push-Abonnementdaten wird als Aktion innerhalb einer Regel in der Benutzeroberfläche der Datenerfassungs-Tags von Adobe Experience Platform ausgeführt.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Rules]** und wählen Sie dann die gewünschte Regel aus.
