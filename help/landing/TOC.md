@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutorials, wie Sie Ihren Kundinnen und Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: 9df876a730cc1568162f3353bc75258c5ce0e3dd
+source-git-commit: c54749c5f5dadc51d58eb29ff649014bc05ff41d
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '345'
 ht-degree: 51%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 51%
 * [Übersicht zu Experience Platform](home.md)
 * [Übersicht über Experience Platform (Video)](video/platform-overview.md)
 * [Multi-Cloud-Übersicht](multi-cloud.md)
+* [Whitepaper für Unternehmen mit mehreren Regionen und mehreren Marken](./multi-region-multi-brand-whitepaper.md)
 * [Vergleich von Edge Network und Hub](./edge-and-hub-comparison.md)
 * [Experience Platform-Tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=de)
 * [Ein auf Experience Platform basierendes Kundenerlebnis (Video)](video/customer-experience.md)
@@ -48,7 +49,7 @@ ht-degree: 51%
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=de)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=de)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=de)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Integrationen von Experience Platform mit Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Verwaltung, Datenschutz und Sicherheit {#governance-privacy-security}
    * [Überblick](./governance-privacy-security/overview.md)
@@ -84,9 +85,9 @@ ht-degree: 51%
    * [Lizenznutzungs-Dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Lizenznutzung und -kapazität](./license-usage-and-guardrails/capacity.md)
    * [Gesamtes Datenvolumen](./license-usage-and-guardrails/total-data-volume.md)
-   * [Adobe Journey Optimizer-Leitplanken](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=de)
-   * [Customer Journey Analytics-Leitplanken](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=de)
-   * [Real-Time CDP-Leitplanken](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=de)
+   * [Adobe Journey Optimizer-Leitplanken](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Customer Journey Analytics-Leitplanken](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [Real-Time CDP-Leitplanken](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Migration von Data Lake Gen2](adls2-gen2-migration.md)
 * [Glossar](glossary.md)
