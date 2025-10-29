@@ -68,7 +68,7 @@ Informationen zu den wichtigsten Funktionen von [!DNL JupyterLab] und Anweisunge
 
 ### Zugriff auf [!DNL JupyterLab] {#access-jupyterlab}
 
-Wählen Sie in [](https://platform.adobe.com)Adobe Experience Platform **[!UICONTROL Notebooks]** in der linken Navigationsspalte aus. Warten Sie etwas, bis [!DNL JupyterLab] vollständig initialisiert wurde.
+Wählen Sie in [&#128279;](https://platform.adobe.com)Adobe Experience Platform **[!UICONTROL Notebooks]** in der linken Navigationsspalte aus. Warten Sie etwas, bis [!DNL JupyterLab] vollständig initialisiert wurde.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -124,7 +124,7 @@ Wählen Sie in [!DNL JupyterLab] oben rechts das Zahnradsymbol aus, um *Notebook
 
 In [!DNL JupyterLab] können Sie Ihre Sitzung beenden, um die Verwendung weiterer Ressourcen zu verhindern. Wählen Sie zunächst das **Ein/Aus** Symbol ![Ein/Aus](/help/images/icons/power.png) und wählen Sie dann im angezeigten Popup die Option **[!UICONTROL Shut Down]** aus, um Ihre Sitzung zu beenden. Notebook-Sitzungen werden nach 12 Stunden ohne Aktivität automatisch beendet.
 
-Um [!DNL JupyterLab] neu zu starten, wählen Sie **Neustart-**![ Neustart](/help/images/icons/restart.png)Symbol direkt links neben dem Ein/Aus-Symbol und dann **[!UICONTROL Restart]** aus dem angezeigten Popup aus.
+Um [!DNL JupyterLab] neu zu starten, wählen Sie **Neustart-**![&#x200B; Neustart](/help/images/icons/restart.png)Symbol direkt links neben dem Ein/Aus-Symbol und dann **[!UICONTROL Restart]** aus dem angezeigten Popup aus.
 
 ![Beenden von JupyterLab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 

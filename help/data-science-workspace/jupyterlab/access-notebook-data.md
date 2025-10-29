@@ -29,7 +29,7 @@ Bevor Sie dieses Handbuch lesen, lesen Sie [[!DNL JupyterLab] Benutzerhandbuch](
 
 >[!IMPORTANT]
 >
->Für PySpark- und Scala-Notebooks, wenn Sie einen Fehler mit der Ursache „Remote-RPC-Client getrennt“ erhalten. Dies bedeutet in der Regel, dass dem Treiber oder einem Executor nicht mehr genügend Speicher zur Verfügung steht. Versuchen Sie, in [ „Batch“-Modus ](#mode) wechseln, um diesen Fehler zu beheben.
+>Für PySpark- und Scala-Notebooks, wenn Sie einen Fehler mit der Ursache „Remote-RPC-Client getrennt“ erhalten. Dies bedeutet in der Regel, dass dem Treiber oder einem Executor nicht mehr genügend Speicher zur Verfügung steht. Versuchen Sie, in [&#x200B; „Batch“-Modus &#x200B;](#mode) wechseln, um diesen Fehler zu beheben.
 
 Die folgenden Informationen definieren die maximale Datenmenge, die gelesen werden kann, den verwendeten Datentyp und den geschätzten Zeitrahmen für das Lesen der Daten.
 
@@ -398,7 +398,7 @@ Ein benutzerdefinierter [!DNL Data Science Workspace] Magic-Befehl zum Lesen ode
 > - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 > 
-> Weitere Informationen finden [ im ](../troubleshooting-guide.md) zur Fehlerbehebung .
+> Weitere Informationen finden [&#x200B; im &#x200B;](../troubleshooting-guide.md) zur Fehlerbehebung .
 
 Sie können die oben genannten Beispiele automatisch in JupyterLab generieren, indem Sie die folgende Methode verwenden:
 
@@ -498,7 +498,7 @@ In Scala können Sie `clientContext` importieren, um Experience Platform-Werte a
 > - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 > 
-> Weitere Informationen finden [ im ](../troubleshooting-guide.md) zur Fehlerbehebung .
+> Weitere Informationen finden [&#x200B; im &#x200B;](../troubleshooting-guide.md) zur Fehlerbehebung .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -555,7 +555,7 @@ In Scala können Sie `clientContext` importieren, um Experience Platform-Werte a
 > - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 > 
-> Weitere Informationen finden [ im ](../troubleshooting-guide.md) zur Fehlerbehebung .
+> Weitere Informationen finden [&#x200B; im &#x200B;](../troubleshooting-guide.md) zur Fehlerbehebung .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}

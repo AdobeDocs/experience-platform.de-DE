@@ -458,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 Die folgenden Beispiele für Funktionen höherer Ordnung werden im Rahmen des Anwendungsfalls zum Abrufen ähnlicher Datensätze erläutert. Ein Beispiel und eine Erläuterung der Verwendung jeder Funktion finden Sie im entsprechenden Abschnitt dieses Dokuments.
 
-Das [`transform` Beispiel ](../use-cases/retrieve-similar-records.md#length-adjustment) die Tokenisierung einer Produktliste.
+Das [`transform` Beispiel &#x200B;](../use-cases/retrieve-similar-records.md#length-adjustment) die Tokenisierung einer Produktliste.
 
-Das Beispiel der [`filter`-Funktion ](../use-cases/retrieve-similar-records.md#filter-results) eine verfeinerte und präzisere Extraktion relevanter Informationen aus Textdaten.
+Das Beispiel der [`filter`-Funktion &#x200B;](../use-cases/retrieve-similar-records.md#filter-results) eine verfeinerte und präzisere Extraktion relevanter Informationen aus Textdaten.
 
-Die [`reduce` Funktion ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) die Ableitung von kumulierten Werten oder Aggregaten, die in verschiedenen Analyse- und Planungsprozessen von zentraler Bedeutung sein können.
+Die [`reduce` Funktion &#x200B;](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) die Ableitung von kumulierten Werten oder Aggregaten, die in verschiedenen Analyse- und Planungsprozessen von zentraler Bedeutung sein können.

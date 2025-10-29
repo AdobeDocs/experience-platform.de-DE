@@ -117,7 +117,7 @@ Derzeit gibt es keine standardmäßigen Auswertungsmetriken für [!DNL Python] o
 
 Für benutzerdefinierte Auswertungsmetriken müssen für den Auswerter zwei Hauptmethoden implementiert werden: `split()` und `evaluate()`.
 
-[!DNL Python] würden diese Methoden in „evaluator.py[ für ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) Klasse `Evaluator` definiert. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
+[!DNL Python] würden diese Methoden in „evaluator.py[&#x200B; für &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) Klasse `Evaluator` definiert. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
 
 Um Auswertungsmetriken in [!DNL Python] zu erstellen, muss der Benutzer die `evaluate()`- und `split()` implementieren.
 

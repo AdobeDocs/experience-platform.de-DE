@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >Die Feldergruppenerstellung über SQL schlägt fehl, wenn das `label`-Flag nicht in der Anweisung angegeben wird oder wenn die Feldergruppe bereits vorhanden ist.
->>Stellen Sie sicher, dass die Abfrage eine `IF NOT EXISTS`-Klausel enthält, um zu vermeiden, dass die Abfrage fehlschlägt, da die Feldergruppe bereits vorhanden ist.
+>&#x200B;>Stellen Sie sicher, dass die Abfrage eine `IF NOT EXISTS`-Klausel enthält, um zu vermeiden, dass die Abfrage fehlschlägt, da die Feldergruppe bereits vorhanden ist.
 
 Ein reales Beispiel könnte in etwa wie unten dargestellt aussehen.
 
@@ -199,7 +199,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 Bei erfolgreicher Ausführung dieser Anweisung wird die erstellte Feldergruppen-ID zurückgegeben. Beispiel `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Weitere Informationen zu alternativen Methoden finden Sie in [ Dokumentation zum Erstellen einer neuen Feldergruppe ](../../../xdm/ui/resources/field-groups.md#create) Schema-Editor oder [ Verwendung ](../../../xdm/api/field-groups.md#create) Schema-Registrierungs-API .
+Weitere Informationen zu alternativen Methoden finden Sie in [&#x200B; Dokumentation zum Erstellen einer neuen Feldergruppe &#x200B;](../../../xdm/ui/resources/field-groups.md#create) Schema-Editor oder [&#x200B; Verwendung &#x200B;](../../../xdm/api/field-groups.md#create) Schema-Registrierungs-API .
 
 ### Feldergruppe ablegen
 

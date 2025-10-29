@@ -63,8 +63,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > Standardmäßig erwartet der Uploader Adobe I/O-Anmeldeinformationen für einen OAuth-Fluss von Server zu Server. Die alten `jwt-auth` Anmeldedaten
-> > kann verwendet werden, indem `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
-> > Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> &#x200B;> kann verwendet werden, indem `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
+> &#x200B;> Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
 Der Uploader verlangt, dass Sie nur wenige Informationen eingeben. `clientId` und `clientSecret` können über die Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die richtige Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL View]**.
 

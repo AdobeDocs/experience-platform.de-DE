@@ -79,4 +79,4 @@ Cloud-Speicher-Ziele unterstützen die folgenden Exporttypen:
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie ausgewählt haben, welches der [unterstützten Cloud-Ziele](#supported-destinations) Sie verwenden möchten, lesen Sie das [Tutorial zum Herstellen einer Verbindung mit Zielen](/help/destinations/ui/connect-destination.md) um zu erfahren, wie Sie eine Verbindung zum Ziel herstellen. Lesen Sie dann das Aktivierungs-Tutorial für dateibasierte Ziele, um zu erfahren, wie Sie mit dem [ (Exportieren](/help/destinations/ui/activate-batch-profile-destinations.md) von Daten in Ihr Cloud-Speicherziel beginnen.
+Nachdem Sie ausgewählt haben, welches der [unterstützten Cloud-Ziele](#supported-destinations) Sie verwenden möchten, lesen Sie das [Tutorial zum Herstellen einer Verbindung mit Zielen](/help/destinations/ui/connect-destination.md) um zu erfahren, wie Sie eine Verbindung zum Ziel herstellen. Lesen Sie dann das Aktivierungs-Tutorial für dateibasierte Ziele, um zu erfahren, wie Sie mit dem [&#x200B; (Exportieren](/help/destinations/ui/activate-batch-profile-destinations.md) von Daten in Ihr Cloud-Speicherziel beginnen.

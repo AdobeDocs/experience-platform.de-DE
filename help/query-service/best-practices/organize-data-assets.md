@@ -17,13 +17,13 @@ Es ist wichtig, Ihre Datenelemente beim Wachstum innerhalb der Experience Platfo
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Dokument fortfahren, sollten Sie über gute Kenntnisse der Funktionen [Abfrage-Service](../home.md) verfügen und das [Handbuch zur Benutzeroberfläche) ](../ui/user-guide.md).
+Bevor Sie mit diesem Dokument fortfahren, sollten Sie über gute Kenntnisse der Funktionen [Abfrage-Service](../home.md) verfügen und das [Handbuch zur Benutzeroberfläche) &#x200B;](../ui/user-guide.md).
 
 ## Organisieren von Daten im Abfrage-Service
 
 Die folgenden Beispiele zeigen die Konstrukte, die Ihnen über den Abfrage-Service von Adobe Experience Platform zur Verfügung stehen, um Ihre Daten logisch mit der standardmäßigen SQL-Syntax zu organisieren. Erstellen Sie zunächst eine Datenbank, die als Container für Ihre Datenpunkte fungiert. Eine Datenbank kann ein oder mehrere Schemata enthalten. Jedes Schema kann dann einen oder mehrere Verweise auf ein Daten-Asset haben (Datensätze, Ansichten, temporäre Tabellen usw.). Diese Verweise umfassen alle Beziehungen oder Zuordnungen zwischen den Datensätzen.
 
-Ausführliche Anleitungen [ Verwendung der Abfrage-Service](../ui/user-guide.md)Benutzeroberfläche zum Erstellen von SQL-Abfragen finden Sie im Benutzerhandbuch zum Abfrage-Editor .
+Ausführliche Anleitungen [&#x200B; Verwendung der Abfrage-Service](../ui/user-guide.md)Benutzeroberfläche zum Erstellen von SQL-Abfragen finden Sie im Benutzerhandbuch zum Abfrage-Editor .
 
 Die folgenden SQL-Konstrukte werden unterstützt, um Datensätze in einer Sandbox logisch zu organisieren.
 

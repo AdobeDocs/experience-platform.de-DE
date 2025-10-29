@@ -49,7 +49,7 @@ Zunächst müssen Sie eine [[!DNL Salesforce] verbundene App](https://help.sales
 
 Aktivieren Sie als Nächstes [!DNL OAuth Settings for API Integration] für die [!DNL Salesforce connected app]. Eine Anleitung dazu finden Sie in der [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) Dokumentation .
 
-Stellen Sie außerdem sicher[ dass die unten ](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US)Bereiche“ für die [!DNL Salesforce connected app] ausgewählt sind.
+Stellen Sie außerdem sicher[&#x200B; dass die unten &#x200B;](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US)Bereiche“ für die [!DNL Salesforce connected app] ausgewählt sind.
 
 * ``chatter_api``
 * ``lightning``
@@ -62,11 +62,11 @@ Stellen Sie außerdem sicher[ dass die unten ](https://help.salesforce.com/s/art
 * ``refresh_token``
 * ``offline_access``
 
-Stellen Sie abschließend sicher, dass die `password` in Ihrem [!DNL Salesforce]-Konto aktiviert ist. Weitere Informationen finden Sie in der [!DNL Salesforce] [OAuth 2.0 Benutzername-Kennwort-Fluss für ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5)-Szenarien“.
+Stellen Sie abschließend sicher, dass die `password` in Ihrem [!DNL Salesforce]-Konto aktiviert ist. Weitere Informationen finden Sie in der [!DNL Salesforce] [OAuth 2.0 Benutzername-Kennwort-Fluss für &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5)-Szenarien“.
 
 >[!IMPORTANT]
 >
->Wenn Ihr [!DNL Salesforce]-Kontoadministrator den Zugriff auf vertrauenswürdige IP-Bereiche beschränkt hat, müssen Sie sich an ihn wenden, um [Experience Platform auf die Zulassungsliste setzen IPs](/help/destinations/catalog/streaming/ip-address-allow-list.md) zu erhalten. Weitere Anleitungen finden Sie in der [!DNL Salesforce] [Zugriff auf vertrauenswürdige IP-Bereiche für eine ](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) App beschränken“.
+>Wenn Ihr [!DNL Salesforce]-Kontoadministrator den Zugriff auf vertrauenswürdige IP-Bereiche beschränkt hat, müssen Sie sich an ihn wenden, um [Experience Platform auf die Zulassungsliste setzen IPs](/help/destinations/catalog/streaming/ip-address-allow-list.md) zu erhalten. Weitere Anleitungen finden Sie in der [!DNL Salesforce] [Zugriff auf vertrauenswürdige IP-Bereiche für eine &#x200B;](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) App beschränken“.
 
 #### Erstellen benutzerdefinierter Felder in [!DNL Salesforce] {#prerequisites-custom-field}
 
@@ -74,12 +74,12 @@ Beim Aktivieren von Zielgruppen für das [!DNL Salesforce CRM]-Ziel müssen Sie 
 
 [!DNL Salesforce CRM] erfordert diesen Wert, um Zielgruppen aus Experience Platform korrekt zu lesen und zu interpretieren und ihren Zielgruppenstatus in [!DNL Salesforce] zu aktualisieren. Weitere Informationen finden Sie in der Experience Platform[Dokumentation für die Schemafeldgruppe „Details zur Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) , wenn Sie Anleitungen zu Zielgruppenstatus benötigen.
 
-Für jede Zielgruppe, die Sie von Experience Platform in [!DNL Salesforce CRM] aktivieren, müssen Sie ein benutzerdefiniertes Feld des Typs `Text Area (Long)` in [!DNL Salesforce] erstellen. Sie können die Feldzeichenlänge beliebiger Größe zwischen 256 und 131.072 Zeichen entsprechend Ihren Geschäftsanforderungen definieren. Weitere Informationen zu benutzerdefinierten Feldtypen finden [!DNL Salesforce] auf [ Dokumentationsseite ](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&type=5)Benutzerdefinierte Feldtypen“. Weitere Informationen finden Sie auch in der [!DNL Salesforce]-Dokumentation [Erstellen benutzerdefinierter Felder](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) , wenn Sie Hilfe bei der Felderstellung benötigen.
+Für jede Zielgruppe, die Sie von Experience Platform in [!DNL Salesforce CRM] aktivieren, müssen Sie ein benutzerdefiniertes Feld des Typs `Text Area (Long)` in [!DNL Salesforce] erstellen. Sie können die Feldzeichenlänge beliebiger Größe zwischen 256 und 131.072 Zeichen entsprechend Ihren Geschäftsanforderungen definieren. Weitere Informationen zu benutzerdefinierten Feldtypen finden [!DNL Salesforce] auf [&#x200B; Dokumentationsseite &#x200B;](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&type=5)Benutzerdefinierte Feldtypen“. Weitere Informationen finden Sie auch in der [!DNL Salesforce]-Dokumentation [Erstellen benutzerdefinierter Felder](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) , wenn Sie Hilfe bei der Felderstellung benötigen.
 
 >[!IMPORTANT]
 >
 >Verwenden Sie keine Leerzeichen im Feldnamen. Verwenden Sie stattdessen den Unterstrich `(_)` als Trennzeichen.
->>In [!DNL Salesforce] müssen Sie benutzerdefinierte Felder mit einem **[!UICONTROL Field Name]** erstellen, der genau mit dem Wert übereinstimmt, der in **[!UICONTROL Mapping ID]** für jedes aktivierte Experience Platform-Segment angegeben ist. Der folgende Screenshot zeigt beispielsweise ein benutzerdefiniertes Feld mit dem Namen `crm_2_seg`. Fügen Sie beim Aktivieren einer Zielgruppe für dieses Ziel `crm_2_seg` als **[!UICONTROL Mapping ID]** hinzu, um Zielgruppen aus Experience Platform in dieses benutzerdefinierte Feld einzufügen.
+>&#x200B;>In [!DNL Salesforce] müssen Sie benutzerdefinierte Felder mit einem **[!UICONTROL Field Name]** erstellen, der genau mit dem Wert übereinstimmt, der in **[!UICONTROL Mapping ID]** für jedes aktivierte Experience Platform-Segment angegeben ist. Der folgende Screenshot zeigt beispielsweise ein benutzerdefiniertes Feld mit dem Namen `crm_2_seg`. Fügen Sie beim Aktivieren einer Zielgruppe für dieses Ziel `crm_2_seg` als **[!UICONTROL Mapping ID]** hinzu, um Zielgruppen aus Experience Platform in dieses benutzerdefinierte Feld einzufügen.
 
 Ein Beispiel für die Erstellung benutzerdefinierter Felder in [!DNL Salesforce], *Schritt 1 - Wählen Sie den Datentyp aus*, wird unten angezeigt:
 ![Screenshot der Salesforce-Benutzeroberfläche mit der Erstellung benutzerdefinierter Felder, Schritt 1: Wählen Sie den Datentyp aus.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
@@ -106,20 +106,20 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Salesforce CRM]-Zie
 | --- | --- | --- |
 | `Username` | Benutzername Ihres [!DNL Salesforce]. | |
 | `Password` | Ihr [!DNL Salesforce]-Passwort. | |
-| `Security Token` | Ihr [!DNL Salesforce]-Sicherheits-Token, das Sie später an das Ende Ihres [!DNL Salesforce]-Kennworts anhängen, um eine verkettete Zeichenfolge zu erstellen, die als **[!UICONTROL Password]** bei der ([ beim Ziel) ](#authenticate) wird.<br> Informationen zum Zurücksetzen Ihres Sicherheits-Tokens finden [!DNL Salesforce] in der [-Dokumentation](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5) um zu erfahren, wie Sie es über die [!DNL Salesforce]-Oberfläche neu generieren, wenn Sie das Sicherheits-Token nicht haben. |  |
+| `Security Token` | Ihr [!DNL Salesforce]-Sicherheits-Token, das Sie später an das Ende Ihres [!DNL Salesforce]-Kennworts anhängen, um eine verkettete Zeichenfolge zu erstellen, die als **[!UICONTROL Password]** bei der ([&#x200B; beim Ziel) &#x200B;](#authenticate) wird.<br> Informationen zum Zurücksetzen Ihres Sicherheits-Tokens finden [!DNL Salesforce] in der [-Dokumentation](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5) um zu erfahren, wie Sie es über die [!DNL Salesforce]-Oberfläche neu generieren, wenn Sie das Sicherheits-Token nicht haben. |  |
 | `Custom Domain` | Ihr [!DNL Salesforce] Domain-Präfix. <br> Informationen zum Abrufen dieses Werts aus der [[!DNL Salesforce] -](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) finden Sie in der [!DNL Salesforce]Dokumentation. | Wenn Ihre [!DNL Salesforce] Domain ist<br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, <br> Sie `d5i000000isb4eak-dev-ed` als Wert benötigen. |
 | `Client ID` | Ihr Salesforce-`Consumer Key`. <br> Informationen zum Abrufen dieses Werts aus der [[!DNL Salesforce] -](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) finden Sie in der [!DNL Salesforce]Dokumentation. | |
 | `Client Secret` | Ihr Salesforce-`Consumer Secret`. <br> Informationen zum Abrufen dieses Werts aus der [[!DNL Salesforce] -](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) finden Sie in der [!DNL Salesforce]Dokumentation. | |
 
 ### Leitlinien {#guardrails}
 
-[!DNL Salesforce] gleicht Transaktionslasten ab, indem Sie Limits für Anfragen, Raten und Zeitüberschreitungen festlegen. Weitere Informationen finden Sie unter [API-Anfrage-Limits und ](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm)&quot;.
+[!DNL Salesforce] gleicht Transaktionslasten ab, indem Sie Limits für Anfragen, Raten und Zeitüberschreitungen festlegen. Weitere Informationen finden Sie unter [API-Anfrage-Limits und &#x200B;](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm)&quot;.
 
-Wenn der Administrator Ihres [!DNL Salesforce]-Kontos IP-Einschränkungen durchgesetzt hat, müssen Sie [Experience Platform-IP-](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adressen) zu den vertrauenswürdigen IP-Bereichen Ihrer [!DNL Salesforce]-Konten hinzufügen. Weitere Anleitungen finden Sie in der [!DNL Salesforce] [Zugriff auf vertrauenswürdige IP-Bereiche für eine ](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) App beschränken“.
+Wenn der Administrator Ihres [!DNL Salesforce]-Kontos IP-Einschränkungen durchgesetzt hat, müssen Sie [Experience Platform-IP-](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adressen) zu den vertrauenswürdigen IP-Bereichen Ihrer [!DNL Salesforce]-Konten hinzufügen. Weitere Anleitungen finden Sie in der [!DNL Salesforce] [Zugriff auf vertrauenswürdige IP-Bereiche für eine &#x200B;](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) App beschränken“.
 
 >[!IMPORTANT]
 >
->Beim [Aktivieren ](#activate) Segmente müssen Sie entweder zwischen dem Typ *Kontakt* oder *Lead* wählen. Sie müssen sicherstellen, dass Ihre Zielgruppen über die entsprechende Datenzuordnung entsprechend dem ausgewählten Typ verfügen.
+>Beim [Aktivieren &#x200B;](#activate) Segmente müssen Sie entweder zwischen dem Typ *Kontakt* oder *Lead* wählen. Sie müssen sicherstellen, dass Ihre Zielgruppen über die entsprechende Datenzuordnung entsprechend dem ausgewählten Typ verfügen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -144,7 +144,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -152,7 +152,7 @@ Suchen Sie in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** nach [!DN
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Connect to destination]** aus. Eine Anleitung dazu finden [ im Abschnitt  [!DNL Salesforce CRM] Sammeln](#gather-credentials)Anmeldeinformationen“.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Connect to destination]** aus. Eine Anleitung dazu finden [&#x200B; im Abschnitt  [!DNL Salesforce CRM] Sammeln](#gather-credentials)Anmeldeinformationen“.
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -190,7 +190,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -200,14 +200,14 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
 
 Die in der **[!UICONTROL Target field]** angegebenen Attribute sollten genau wie in der Tabelle der Attributzuordnungen beschrieben benannt werden, da diese Attribute den Anfragetext bilden.
 
-Die in der **[!UICONTROL Source field]** angegebenen Attribute entsprechen keiner dieser Einschränkungen. Sie können sie nach Bedarf zuordnen, stellen jedoch sicher, dass das Format der Eingabedaten gemäß der [[!DNL Salesforce] Dokumentation) gültig ](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5). Wenn die Eingabedaten ungültig sind, schlägt der Aktualisierungsaufruf an [!DNL Salesforce] fehl und Ihre Kontakte/Leads werden nicht aktualisiert.
+Die in der **[!UICONTROL Source field]** angegebenen Attribute entsprechen keiner dieser Einschränkungen. Sie können sie nach Bedarf zuordnen, stellen jedoch sicher, dass das Format der Eingabedaten gemäß der [[!DNL Salesforce] Dokumentation) gültig &#x200B;](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5). Wenn die Eingabedaten ungültig sind, schlägt der Aktualisierungsaufruf an [!DNL Salesforce] fehl und Ihre Kontakte/Leads werden nicht aktualisiert.
 
 Um Ihre XDM-Felder den [!DNL (API) Salesforce CRM]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
 1. Wenn Sie im **[!UICONTROL Mapping]** Schritt **[!UICONTROL Add new mapping]** auswählen, wird eine neue Zuordnungszeile auf dem Bildschirm angezeigt.
    Beispiel-Screenshot der Experience Platform-Benutzeroberfläche für „Neue Zuordnung hinzufügen“.![](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 1. Wählen Sie im **[!UICONTROL Select source field]** die Kategorie **[!UICONTROL Select attributes]** und dann das XDM-Attribut aus, oder wählen Sie die **[!UICONTROL Select identity namespace]** und dann eine Identität aus.
-1. Wählen Sie im **[!UICONTROL Select target field]**-Fenster den **[!UICONTROL Select identity namespace]** und dann eine Identität aus, oder wählen Sie **[!UICONTROL Select custom attributes]** Kategorie aus und wählen Sie ein Attribut aus, oder definieren Sie eines mithilfe des **[!UICONTROL Attribute name]**. Anleitungen zu unterstützten Attributen finden [[!DNL Salesforce CRM]  in der ](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5)Dokumentation).
+1. Wählen Sie im **[!UICONTROL Select target field]**-Fenster den **[!UICONTROL Select identity namespace]** und dann eine Identität aus, oder wählen Sie **[!UICONTROL Select custom attributes]** Kategorie aus und wählen Sie ein Attribut aus, oder definieren Sie eines mithilfe des **[!UICONTROL Attribute name]**. Anleitungen zu unterstützten Attributen finden [[!DNL Salesforce CRM]  in der &#x200B;](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5)Dokumentation).
    * Wiederholen Sie diese Schritte, um die folgenden Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL (API) Salesforce CRM] hinzuzufügen:
 
    **Arbeiten mit Kontakten**
@@ -248,7 +248,7 @@ Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, 
 
 Bei der Durchführung des [Exportierens von Zielgruppen planen](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) müssen Sie die in Experience Platform aktivierten Zielgruppen manuell dem entsprechenden benutzerdefinierten Feld in [!DNL Salesforce] zuordnen.
 
-Wählen Sie dazu jedes Segment aus und geben Sie dann den benutzerdefinierten Feldnamen aus [!DNL Salesforce] in das Feld [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** ein. Anleitungen und Best Practices [ Erstellen benutzerdefinierter Felder in  [!DNL Salesforce]](#prerequisites-custom-field) finden Sie im Abschnitt zum Erstellen benutzerdefinierter Felder in [!DNL Salesforce].
+Wählen Sie dazu jedes Segment aus und geben Sie dann den benutzerdefinierten Feldnamen aus [!DNL Salesforce] in das Feld [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** ein. Anleitungen und Best Practices [&#x200B; Erstellen benutzerdefinierter Felder in  [!DNL Salesforce]](#prerequisites-custom-field) finden Sie im Abschnitt zum Erstellen benutzerdefinierter Felder in [!DNL Salesforce].
 
 Wenn Ihr [!DNL Salesforce] benutzerdefiniertes Feld beispielsweise `crm_2_seg` ist, geben Sie diesen Wert im [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** an, um Zielgruppen aus Experience Platform in dieses benutzerdefinierte Feld einzufügen.
 
@@ -292,7 +292,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
    * Wenn Sie in *Experience Platform-* „Kontakte“ ausgewählt haben, navigieren Sie zur Seite **[!DNL Apps]** > **[!DNL Contacts]** .
      ![Screenshot von Salesforce CRM mit der Seite „Kontakte“ und den Profilen aus dem Segment.](../../assets/catalog/crm/salesforce/contacts.png)
 
-   * Wählen Sie einen *Kontakt* aus und überprüfen Sie, ob die Felder aktualisiert wurden. Sie können sehen, dass jeder Zielgruppenstatus in [!DNL Salesforce CRM] mit dem entsprechenden Zielgruppenstatus von Experience Platform aktualisiert wurde, basierend auf dem **[!UICONTROL Mapping ID]** Wert, der während der Zielgruppenplanung [ wurde](#schedule-segment-export-example).
+   * Wählen Sie einen *Kontakt* aus und überprüfen Sie, ob die Felder aktualisiert wurden. Sie können sehen, dass jeder Zielgruppenstatus in [!DNL Salesforce CRM] mit dem entsprechenden Zielgruppenstatus von Experience Platform aktualisiert wurde, basierend auf dem **[!UICONTROL Mapping ID]** Wert, der während der Zielgruppenplanung [&#x200B; wurde](#schedule-segment-export-example).
      ![Screenshot von Salesforce CRM mit der Seite „Kontaktdetails“ und aktualisierten Zielgruppenstatus.](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **Arbeiten mit Leads**
@@ -300,7 +300,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
    * Wenn Sie *Leads* innerhalb Ihres Experience Platform-Segments ausgewählt haben, navigieren Sie zur Seite **[!DNL Apps]** > **[!DNL Leads]** .
      ![Screenshot von Salesforce CRM mit der Seite „Leads“ und den Profilen aus dem Segment.](../../assets/catalog/crm/salesforce/leads.png)
 
-   * Wählen Sie einen *Lead* aus und überprüfen Sie, ob die Felder aktualisiert wurden. Sie können sehen, dass jeder Zielgruppenstatus in [!DNL Salesforce CRM] mit dem entsprechenden Zielgruppenstatus von Experience Platform aktualisiert wurde, basierend auf dem **[!UICONTROL Mapping ID]** Wert, der während der Zielgruppenplanung [ wurde](#schedule-segment-export-example).
+   * Wählen Sie einen *Lead* aus und überprüfen Sie, ob die Felder aktualisiert wurden. Sie können sehen, dass jeder Zielgruppenstatus in [!DNL Salesforce CRM] mit dem entsprechenden Zielgruppenstatus von Experience Platform aktualisiert wurde, basierend auf dem **[!UICONTROL Mapping ID]** Wert, der während der Zielgruppenplanung [&#x200B; wurde](#schedule-segment-export-example).
      ![Screenshot des Salesforce CRM mit der Seite „Lead-Details“ und aktualisierten Zielgruppenstatus.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
@@ -314,10 +314,10 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 * Beim Überprüfen einer Datenflussausführung kann die folgende Fehlermeldung auftreten: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
   Screenshot der ![Experience Platform-Benutzeroberfläche mit Fehlermeldung.](../../assets/catalog/crm/salesforce/error.png)
 
-   * Um diesen Fehler zu beheben, überprüfen Sie, ob der **[!UICONTROL Mapping ID]**, den Sie im Aktivierungs-Workflow für das [!DNL Salesforce CRM]-Ziel angegeben haben, genau mit dem Wert des benutzerdefinierten Feldtyps übereinstimmt, den Sie in [!DNL Salesforce] erstellt haben. Eine Anleitung finden [ im Abschnitt Erstellen  [!DNL Salesforce]](#prerequisites-custom-field) benutzerdefinierten Feldern in .
+   * Um diesen Fehler zu beheben, überprüfen Sie, ob der **[!UICONTROL Mapping ID]**, den Sie im Aktivierungs-Workflow für das [!DNL Salesforce CRM]-Ziel angegeben haben, genau mit dem Wert des benutzerdefinierten Feldtyps übereinstimmt, den Sie in [!DNL Salesforce] erstellt haben. Eine Anleitung finden [&#x200B; im Abschnitt Erstellen  [!DNL Salesforce]](#prerequisites-custom-field) benutzerdefinierten Feldern in .
 
 * Beim Aktivieren eines Segments erhalten Sie möglicherweise eine Fehlermeldung: `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * Wenden Sie sich zur Behebung dieses Fehlers an Ihren [!DNL Salesforce]-Kontoadministrator, um [Experience Platform-IP](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adressen) zu den vertrauenswürdigen IP-Bereichen Ihrer [!DNL Salesforce] hinzuzufügen. Weitere Anleitungen finden Sie in der [!DNL Salesforce] [Zugriff auf vertrauenswürdige IP-Bereiche für eine ](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) App beschränken“.
+   * Wenden Sie sich zur Behebung dieses Fehlers an Ihren [!DNL Salesforce]-Kontoadministrator, um [Experience Platform-IP](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adressen) zu den vertrauenswürdigen IP-Bereichen Ihrer [!DNL Salesforce] hinzuzufügen. Weitere Anleitungen finden Sie in der [!DNL Salesforce] [Zugriff auf vertrauenswürdige IP-Bereiche für eine &#x200B;](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) App beschränken“.
 
 ## Weitere Ressourcen {#additional-resources}
 

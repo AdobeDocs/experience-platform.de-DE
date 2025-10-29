@@ -16,7 +16,7 @@ ht-degree: 38%
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-Vor der Aktivierung von Daten müssen Sie eine Verbindung zum Ziel herstellen, indem Sie zunächst ein Zielkonto einrichten. In diesem Tutorial werden die Schritte zum Löschen von Zielkonten beschrieben, die nicht mehr benötigt werden, indem die -[[!DNL Flow Service]  verwendet ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Vor der Aktivierung von Daten müssen Sie eine Verbindung zum Ziel herstellen, indem Sie zunächst ein Zielkonto einrichten. In diesem Tutorial werden die Schritte zum Löschen von Zielkonten beschrieben, die nicht mehr benötigt werden, indem die -[[!DNL Flow Service]  verwendet &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Vor der Aktivierung von Daten müssen Sie eine Verbindung zum Ziel herstellen, i
 
 ## Erste Schritte {#get-started}
 
-Für dieses Tutorial benötigen Sie eine gültige Verbindungs-ID. Die Verbindungs-ID stellt die Kontoverbindung zum Ziel dar. Wenn Sie keine gültige Verbindungs-ID haben, wählen Sie Ihr Ziel aus dem [Zielkatalog](../catalog/overview.md) und führen Sie die zum Herstellen einer [ mit dem Ziel beschriebenen Schritte aus, ](../ui/connect-destination.md) Sie dieses Tutorial ausführen.
+Für dieses Tutorial benötigen Sie eine gültige Verbindungs-ID. Die Verbindungs-ID stellt die Kontoverbindung zum Ziel dar. Wenn Sie keine gültige Verbindungs-ID haben, wählen Sie Ihr Ziel aus dem [Zielkatalog](../catalog/overview.md) und führen Sie die zum Herstellen einer [&#x200B; mit dem Ziel beschriebenen Schritte aus, &#x200B;](../ui/connect-destination.md) Sie dieses Tutorial ausführen.
 
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -147,7 +147,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Bevor Sie das Zielkonto löschen, müssen Sie alle vorhandenen Datenflüsse zum Zielkonto löschen.
->>Informationen zum Löschen vorhandener Datenflüsse finden Sie auf den folgenden Seiten:
+>&#x200B;>Informationen zum Löschen vorhandener Datenflüsse finden Sie auf den folgenden Seiten:
 >
 >* [Verwenden der Experience Platform-Benutzeroberfläche](../ui/delete-destinations.md) um vorhandene Datenflüsse zu löschen;
 >* [Verwenden der Flow Service-API](delete-destination-dataflow.md) um vorhandene Datenflüsse zu löschen.

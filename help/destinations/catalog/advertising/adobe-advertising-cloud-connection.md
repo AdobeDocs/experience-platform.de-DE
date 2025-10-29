@@ -36,7 +36,7 @@ Eine Medienagentur mit DSP-Account führt im Namen ihres Kunden, einer Top-Marke
 * Einstellungen auf Konto- und Kampagnenebene in DSP, um die Freigabe von Zielgruppen für [!DNL LiveRamp RampID] zu aktivieren. Dadurch werden Kundendaten in [!DNL RampIDs] übersetzt, um Zielgruppensegmente zu erstellen. Diese Konfiguration wird von Ihrem DSP-Konto-Team durchgeführt. [!DNL RampID] ist über eine Partnerschaft zwischen DSP und [!DNL LiveRamp] verfügbar und Sie benötigen keine eigene [!DNL LiveRamp]-Mitgliedschaft, um sie zu verwenden.
 * Die Experience Cloud-Organisations-ID für das Experience Platform-Konto. Sie finden Ihre ID auf der Seite Ihres [!DNL Real-Time CDP] Benutzerprofils.
 * Eine [[!DNL Real-Time CDP] Quelle in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) um Zielgruppen für die Kampagnenaktivierung zu empfangen. Ihr DSP-Konto-Team erstellt die Quelle mit Ihrer Experience Cloud-Organisations-ID.
-* Der Quellschlüssel für das DSP-Konto oder den Advertiser, der generiert wird, wenn eine [[!DNL Real-Time CDP] source in DSP erstellt wird](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen. Sie verwenden sie in Experience Platform, um eine Zielverbindung zum Advertising Cloud DSP-Ziel herzustellen, wie [ unten erläutert](#authenticate).
+* Der Quellschlüssel für das DSP-Konto oder den Advertiser, der generiert wird, wenn eine [[!DNL Real-Time CDP] source in DSP erstellt wird](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen. Sie verwenden sie in Experience Platform, um eine Zielverbindung zum Advertising Cloud DSP-Ziel herzustellen, wie [&#x200B; unten erläutert](#authenticate).
 * Kundendaten bestehend aus E-Mails oder Hash-E-Mails.
 
 ## Unterstützte Identitäten {#supported-identities}
@@ -64,7 +64,7 @@ In der folgenden Tabelle finden Sie Informationen zum Zielexporttyp und zur Häu
 
 >[!IMPORTANT]
 > 
->Experience Platform Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[ für ](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Experience Platform Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[&#x200B; für &#x200B;](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung zum Ziel herzustellen, befolgen Sie die Anweisungen zum [Erstellen einer Zielverbindung](/help/destinations/ui/connect-destination.md) mithilfe der Experience Platform-Benutzeroberfläche. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -72,7 +72,7 @@ Um eine Verbindung zum Ziel herzustellen, befolgen Sie die Anweisungen zum [Erst
 
 Um eine Verbindung zum Ziel herzustellen, geben Sie den folgenden Parameter im Abschnitt [!UICONTROL Connection type] ein und wählen Sie dann **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Account or Advertiser Key]**: Diese [!UICONTROL Source Key] wird generiert, wenn eine [[!DNL Real-Time CDP] Quelle in der Benutzeroberfläche von DSP erstellt ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
+* **[!UICONTROL Account or Advertiser Key]**: Diese [!UICONTROL Source Key] wird generiert, wenn eine [[!DNL Real-Time CDP] Quelle in der Benutzeroberfläche von DSP erstellt &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
 
 ![Feld Verbindungstyp](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -96,7 +96,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 

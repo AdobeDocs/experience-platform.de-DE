@@ -108,7 +108,7 @@ Sie können auf die Konfigurations-JSON über jede Klassenmethode zugreifen, die
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-Ein ausführlicheres Konfigurationsbeispiel finden Sie in [ Datei ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json)pipeline.json“, die von Data Science Workspace bereitgestellt wird.
+Ein ausführlicheres Konfigurationsbeispiel finden Sie in [&#x200B; Datei &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json)pipeline.json“, die von Data Science Workspace bereitgestellt wird.
 
 ### Vorbereiten der Eingabedaten mit DataLoader {#prepare-the-input-data-with-dataloader}
 

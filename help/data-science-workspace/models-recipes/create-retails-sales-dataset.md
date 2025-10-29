@@ -34,7 +34,7 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
    - x-gw-ims-org-id: `{ORG_ID}`
    - Client-Geheimnis: `{CLIENT_SECRET}`
    - Client-Zertifikat: `{PRIVATE_KEY}`
-- Beispieldaten und Quelldateien für das [Rezept „Einzelhandelsumsätze“](../pre-built-recipes/retail-sales.md). Laden Sie die für dieses und andere [!DNL Data Science Workspace] Tutorials erforderlichen Assets aus dem [öffentlichen Adobe-Git-Repository ](https://github.com/adobe/experience-platform-dsw-reference/).
+- Beispieldaten und Quelldateien für das [Rezept „Einzelhandelsumsätze“](../pre-built-recipes/retail-sales.md). Laden Sie die für dieses und andere [!DNL Data Science Workspace] Tutorials erforderlichen Assets aus dem [öffentlichen Adobe-Git-Repository &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/).
 - [Python >= 2.7](https://www.python.org/downloads/) und die folgenden [!DNL Python]:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)

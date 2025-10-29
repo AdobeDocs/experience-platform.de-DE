@@ -38,8 +38,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > Standardmäßig erwartet der Release-Benutzer Adobe I/O-Anmeldeinformationen für einen OAuth-Fluss von Server zu Server. Die alten `jwt-auth` Anmeldedaten
-> > kann verwendet werden, indem `npx @adobe/reactor-releaser@v3.1.3` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
-> > Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> &#x200B;> kann verwendet werden, indem `npx @adobe/reactor-releaser@v3.1.3` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
+> &#x200B;> Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
 Für den -Releaser müssen Sie nur wenige Informationen eingeben. `clientId` und `clientSecret` können über die Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die richtige Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL View]**.
 
