@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zu Query Service-Anmeldeinformationen
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrem Unternehmen gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 58018684a5f042bd4e121f4162e7c1663597c19a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2023'
+source-wordcount: '1975'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ Mit dem Abfrage-Service von Adobe Experience Platform können Sie eine Verbindun
 
 >[!NOTE]
 >
->Der Bereich für Anmeldedaten steht nicht automatisch allen Benutzenden zur Verfügung. Wenden Sie sich an Ihr Adobe-Konto-Team, um bei Bedarf die Registerkarte [!UICONTROL Anmeldeinformationen] anzufordern, die in den Arbeitsbereich des Abfrage-Services aufgenommen werden soll. Auf Anforderung ist diese Änderung organisationsweit und wird vom Engineering-Team von Adobe durchgeführt. Es handelt sich nicht um eine von Benutzern gesteuerte Einstellung.
+>Der Bereich für Anmeldedaten steht nicht automatisch allen Benutzenden zur Verfügung. Wenden Sie sich an Ihr Adobe-Accountteam , um bei Bedarf die Registerkarte &quot;[!UICONTROL Credentials]&quot; in den Arbeitsbereich „Abfrage-Service“ aufzunehmen. Auf Anforderung ist diese Änderung organisationsweit und wird vom Engineering-Team von Adobe durchgeführt. Es handelt sich nicht um eine von Benutzern gesteuerte Einstellung.
 
 ## Ablaufende Anmeldeinformationen {#expiring-credentials}
 
@@ -30,15 +30,15 @@ Sie können ablaufende Anmeldeinformationen verwenden, um schnell eine Verbindun
 
 ![Die Registerkarte „Anmeldeinformationen“ des Abfrage-Dashboards mit hervorgehobenem Abschnitt „Ablaufende Anmeldeinformationen“.](../images/ui/credentials/expiring-credentials.png)
 
-Der **[!UICONTROL Ablaufende Anmeldeinformationen]** enthält die folgenden Informationen:
+Im Abschnitt **[!UICONTROL Expiring credentials]** finden Sie die folgenden Informationen:
 
 - **[!UICONTROL Host]**: Der Name des Hosts, mit dem Ihr Client verbunden werden soll. Diese enthält den Namen Ihres Unternehmens, wie er im oberen Menüband der Experience Platform-Benutzeroberfläche zu sehen ist.
 - **[!UICONTROL Port]**: Die Port-Nummer des Hosts, mit dem eine Verbindung hergestellt werden soll.
-- **[!UICONTROL Datenbank]**: Der Name der Datenbank, mit der ein Client verbunden werden soll.
-- **[!UICONTROL Benutzername]**: Der Benutzername, mit dem eine Verbindung zum Abfrage-Service hergestellt wird.
+- **[!UICONTROL Database]**: Der Name der Datenbank, mit der ein Client verbunden werden soll.
+- **[!UICONTROL Username]**: Der Benutzername, mit dem die Verbindung mit dem Abfrage-Service hergestellt wird.
 - **[!UICONTROL Password]**: Das Kennwort für die Verbindung mit dem Abfrage-Service. Kennwörter in der Benutzeroberfläche wurden aus Sicherheitsgründen gehasht. Wählen Sie das Kopiersymbol (![Das Kopiersymbol.](/help/images/icons/copy.png)), um Ihre vollständigen, nicht gehashten Anmeldeinformationen in die Zwischenablage zu kopieren.
-- **[!UICONTROL PSQL-Befehl]** Ein Befehl, der automatisch alle relevanten Informationen eingefügt hat, damit Sie über PSQL in der Befehlszeile eine Verbindung zum Abfrage-Service herstellen können.
-- **[!UICONTROL Expires]**: Ablaufdatum und -uhrzeit für die ablaufenden Anmeldeinformationen. Die Standardgültigkeitsdauer des Tokens beträgt 24 Stunden, kann jedoch in den erweiterten Einstellungen der Admin Console geändert werden.
+- **[!UICONTROL PSQL command]**: Ein Befehl, der automatisch alle relevanten Informationen für die Verbindung mit dem Abfrage-Service mithilfe von PSQL in der Befehlszeile eingefügt.
+- **[!UICONTROL Expires]**: Ablaufdatum und -uhrzeit der ablaufenden Anmeldeinformationen. Die Standardgültigkeitsdauer des Tokens beträgt 24 Stunden, kann jedoch in den erweiterten Einstellungen der Admin Console geändert werden.
 
 >[!TIP]
 >
@@ -46,7 +46,7 @@ Der **[!UICONTROL Ablaufende Anmeldeinformationen]** enthält die folgenden Info
 >
 >![Die Registerkarte &quot;Admin Console-Einstellungen“ mit hervorgehobenen Optionen „Datenschutz und Sicherheit“, „Authentifizierungseinstellungen“ und „Maximale Sitzungsdauer“.](../images/ui/credentials/max-session-life.png)
 >
->Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/de/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
+>Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
 
 ### Verbinden mit Customer Journey Analytics-Daten in Abfragesitzungen {#connect-to-customer-journey-analytics}
 
@@ -58,7 +58,7 @@ In der Dokumentation erfahren Sie, wie Sie [Query Service mit einer Vielzahl von
 >
 >Um diese Funktion verwenden zu können, sind ein Customer Journey Analytics Workspace-Projekt und eine Datenansicht erforderlich.
 
-Um entweder in Power BI oder Tableau auf Ihre Customer Journey Analytics-Daten zuzugreifen, wählen Sie das Dropdown-Menü [!UICONTROL Datenbank] und dann `prod:cja` aus den verfügbaren Optionen aus. Kopieren Sie als Nächstes Ihre [!DNL Postgres] Anmeldedaten-Parameter (Host, Port, Datenbank, Benutzername und andere) zur Verwendung in Ihrer Power BI- oder Tableau-Konfiguration.
+Um entweder in Power BI oder Tableau auf Ihre Customer Journey Analytics-Daten zuzugreifen, wählen Sie das Dropdown-Menü [!UICONTROL Database] und dann `prod:cja` aus den verfügbaren Optionen aus. Kopieren Sie als Nächstes Ihre [!DNL Postgres] Anmeldedaten-Parameter (Host, Port, Datenbank, Benutzername und andere) zur Verwendung in Ihrer Power BI- oder Tableau-Konfiguration.
 
 ![Die Registerkarte „Anmeldeinformationen für den Abfrage-Service“ mit hervorgehobenem Datenbank-Dropdown-Menü.](../images/ui/credentials/database-dropdown.png)
 
@@ -66,9 +66,9 @@ Um entweder in Power BI oder Tableau auf Ihre Customer Journey Analytics-Daten z
 >
 >Wenn Sie Power BI oder Tableau mit Customer Journey Analytics verbinden, wird die Berechtigung „Gleichzeitige Sitzungen“ des Abfrage-Services genutzt. Wenn zusätzliche Sitzungen und Abfragen erforderlich sind, kann ein zusätzliches Add-on für das Benutzerpaket für Ad-hoc-Abfragen erworben werden, um fünf zusätzliche gleichzeitige Sitzungen und eine zusätzliche gleichzeitige Abfrage zu erhalten.
 
-Sie können auf Ihre Customer Journey Analytics-Daten auch direkt über den Abfrage-Editor oder die Postgres-CLI zugreifen. Verweisen Sie dazu beim Schreiben Ihrer Abfrage auf die `cja`-Datenbank. Weitere Informationen zum Schreiben[&#x200B; Ausführen und Speichern von Abfragen finden &#x200B;](./user-guide.md#query-authoring) im Abfrage-Editor (Handbuch zur Abfrageerstellung).
+Sie können auf Ihre Customer Journey Analytics-Daten auch direkt über den Abfrage-Editor oder die Postgres-CLI zugreifen. Verweisen Sie dazu beim Schreiben Ihrer Abfrage auf die `cja`-Datenbank. Weitere Informationen zum Schreiben[ Ausführen und Speichern von Abfragen finden ](./user-guide.md#query-authoring) im Abfrage-Editor (Handbuch zur Abfrageerstellung).
 
-Umfassende Anweisungen für den Zugriff auf [&#x200B; Datenansichten mit SQL finden &#x200B;](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
+Umfassende Anweisungen für den Zugriff auf [ Datenansichten mit SQL finden ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
 
 ## Unbefristete Anmeldedaten {#non-expiring-credentials}
 
@@ -88,7 +88,7 @@ Sie können nicht ablaufende Anmeldeinformationen verwenden, um eine permanenter
 >Für nicht ablaufende Zugangsdaten gelten die folgenden Einschränkungen:
 >
 >- Benutzer müssen sich mit ihrem Benutzernamen und Kennwort im Format `{technicalAccountId}:{credential}` anmelden. Weitere Informationen finden Sie im Abschnitt [Anmeldeinformationen generieren](#generate-credentials) .
->- Standardmäßig erhalten nicht ablaufende Anmeldeinformationen die Berechtigung, nur `SELECT` Abfragen auszuführen. Um `CTAS` oder `ITAS` Abfragen auszuführen, fügen Sie die Berechtigungen „Datensatz verwalten“ und „Schemata verwalten“ manuell zu der Rolle hinzu, die mit den nicht ablaufenden Anmeldedaten verknüpft ist. Die Berechtigung „Schemata verwalten“ befindet sich im Abschnitt „Datenmodellierung“ und die Berechtigung „Datensätze verwalten“ befindet sich im Abschnitt „Daten-Management“ der [Adobe Developer Console](<https://developer.adobe.com/console/>).
+>- Standardmäßig erhalten nicht ablaufende Anmeldeinformationen die Berechtigung, nur `SELECT` Abfragen auszuführen. Um `CTAS` oder `ITAS` Abfragen auszuführen, fügen Sie die Berechtigungen „Datensatz verwalten“ und „Schemata verwalten“ manuell zu der Rolle hinzu, die mit den nicht ablaufenden Anmeldedaten verknüpft ist. Die Berechtigung „Schemata verwalten“ befindet sich im Abschnitt „Datenmodellierung“ und die Berechtigung „Datensätze verwalten“ befindet sich im Abschnitt „Daten-Management“ der [Adobe Developer Console](https://developer.adobe.com/console/).
 >- Die Leistung von Drittanbieter-Clients beim Auflisten von Abfrageobjekten kann anders als erwartet ausfallen. Beispielsweise zeigen einige Drittanbieter-Clients wie [!DNL DB Visualizer] den Ansichtsnamen nicht im linken Bereich an. Der Ansichtsname ist jedoch verfügbar, wenn er in einer `SELECT` Abfrage aufgerufen wird. Ebenso führen [!DNL PowerUI] möglicherweise die temporären Ansichten, die durch SQL zur Auswahl bei der Dashboard-Erstellung erstellt wurden, nicht auf.
 
 ### Voraussetzungen
@@ -108,24 +108,24 @@ Ausführliche Informationen zum Zuweisen von Berechtigungen finden Sie in der [D
 
 ### Anmeldedaten erstellen {#generate-credentials}
 
-Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Experience Platform-Benutzeroberfläche zurück und wählen Sie im **[!UICONTROL Navigationsbereich]** Abfragen aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Anmeldeinformationen]** und dann **[!UICONTROL Anmeldeinformationen generieren]** aus.
+Um einen Satz nicht ablaufender Anmeldeinformationen zu erstellen, kehren Sie zur Experience Platform-Benutzeroberfläche zurück und wählen Sie in der linken Navigationsleiste **[!UICONTROL Queries]** aus, um auf den [!UICONTROL Queries] Workspace zuzugreifen. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Credentials]** und dann **[!UICONTROL Generate credentials]** aus.
 
 ![Das Dashboard „Abfragen“ mit hervorgehobener Registerkarte „Anmeldeinformationen“ und hervorgehobener Option „Anmeldeinformationen generieren“.](../images/ui/credentials/generate-credentials.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie Anmeldeinformationen generieren können. Um nicht ablaufende Zugangsdaten zu erstellen, müssen Sie die folgenden Details angeben:
 
 - **[!UICONTROL Name]**: Der Name der Anmeldeinformationen, die Sie generieren.
-- **[!UICONTROL Beschreibung]**: (Optional) Eine Beschreibung für die Anmeldeinformationen, die Sie generieren.
-- **[!UICONTROL Zugewiesen an]**: Der Benutzer, dem die Anmeldeinformationen zugewiesen werden. Dieser Wert sollte die E-Mail-Adresse des Benutzers sein, der die Anmeldeinformationen erstellt.
-- **[!UICONTROL Kennwort]** (Optional) Ein optionales Kennwort für Ihre Anmeldeinformationen. Wenn das Kennwort nicht festgelegt ist, generiert Adobe automatisch ein Kennwort für Sie.
+- **[!UICONTROL Description]**: (Optional) Eine Beschreibung für die Anmeldeinformationen, die Sie generieren.
+- **[!UICONTROL Assigned to]**: Der Benutzer, dem die Anmeldeinformationen zugewiesen werden. Dieser Wert sollte die E-Mail-Adresse des Benutzers sein, der die Anmeldeinformationen erstellt.
+- **[!UICONTROL Password]** (Optional) Ein optionales Kennwort für Ihre Anmeldeinformationen. Wenn das Kennwort nicht festgelegt ist, generiert Adobe automatisch ein Kennwort für Sie.
 
-Nachdem Sie alle erforderlichen Details angegeben haben, wählen Sie **[!UICONTROL Anmeldedaten generieren]** aus, um Ihre Anmeldedaten zu generieren.
+Nachdem Sie alle erforderlichen Details angegeben haben, wählen Sie **[!UICONTROL Generate credentials]** aus, um Ihre Anmeldeinformationen zu generieren.
 
 ![Das Dialogfeld „Anmeldeinformationen generieren“ ist hervorgehoben.](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->Wenn **[!UICONTROL Anmeldeinformationen generieren]** ausgewählt ist, wird eine JSON-Konfigurationsdatei auf Ihren lokalen Computer heruntergeladen. Da Adobe **generierten** nicht aufzeichnet, müssen Sie die heruntergeladene Datei sicher speichern und die Anmeldeinformationen aufzeichnen.
+>Wenn **[!UICONTROL Generate credentials]** ausgewählt ist, wird eine JSON-Konfigurationsdatei auf den lokalen Computer heruntergeladen. Da Adobe **generierten** nicht aufzeichnet, müssen Sie die heruntergeladene Datei sicher speichern und die Anmeldeinformationen aufzeichnen.
 >
 >Wenn die Anmeldeinformationen 90 Tage lang nicht verwendet werden, werden sie außerdem gelöscht.
 
@@ -135,7 +135,7 @@ Die JSON-Konfigurationsdatei enthält Informationen wie den Namen des technische
 {"technicalAccountName":"9F0A21EE-B8F3-4165-9871-846D3C8BC49E@TECHACCT.ADOBE.COM","credential":"3d184fa9e0b94f33a7781905c05203ee","technicalAccountId":"4F2611B8613AA3670A495E55"}
 ```
 
-Nachdem Sie die generierten Anmeldedaten gespeichert haben, klicken Sie auf **[!UICONTROL Schließen]**. Sie können jetzt eine Liste aller Ihrer nicht ablaufenden Anmeldedaten sehen.
+Nachdem Sie die generierten Anmeldedaten gespeichert haben, klicken Sie auf **[!UICONTROL Close]**. Sie können jetzt eine Liste aller Ihrer nicht ablaufenden Anmeldedaten sehen.
 
 ![Die Registerkarte „Anmeldeinformationen“ des Abfrage-Dashboards mit hervorgehobenem Abschnitt „Nicht ablaufende Anmeldeinformationen“.](../images/ui/credentials/list-credentials.png)
 
@@ -144,12 +144,12 @@ Sie können Ihre nicht ablaufenden Anmeldedaten entweder bearbeiten oder lösche
 Beim Bearbeiten von nicht ablaufenden Zugangsdaten wird ein Modal angezeigt. Sie können die folgenden Details angeben, um zu aktualisieren:
 
 - **[!UICONTROL Name]**: Der Name der Anmeldeinformationen, die Sie generieren.
-- **[!UICONTROL Beschreibung]**: (Optional) Eine Beschreibung für die Anmeldeinformationen, die Sie generieren.
-- **[!UICONTROL Zugewiesen an]**: Der Benutzer, dem die Anmeldeinformationen zugewiesen werden. Dieser Wert sollte die E-Mail-Adresse des Benutzers sein, der die Anmeldeinformationen erstellt.
+- **[!UICONTROL Description]**: (Optional) Eine Beschreibung für die Anmeldeinformationen, die Sie generieren.
+- **[!UICONTROL Assigned to]**: Der Benutzer, dem die Anmeldeinformationen zugewiesen werden. Dieser Wert sollte die E-Mail-Adresse des Benutzers sein, der die Anmeldeinformationen erstellt.
 
 ![Der Dialog Konto aktualisieren.](../images/ui/credentials/update-credentials.png)
 
-Nachdem Sie alle erforderlichen Details angegeben haben, wählen Sie **[!UICONTROL Konto aktualisieren]** aus, um die Aktualisierung Ihrer Anmeldeinformationen abzuschließen.
+Nachdem Sie alle erforderlichen Details angegeben haben, wählen Sie **[!UICONTROL Update account]** aus, um die Aktualisierung Ihrer Anmeldeinformationen abzuschließen.
 
 ### Migrieren von Anmeldeinformationen zu OAuth {#migrate-credentials}
 
@@ -175,16 +175,16 @@ In der folgenden Tabelle sind die Parameter aufgeführt, die normalerweise für 
 
 >[!NOTE]
 >
->Wenn Sie eine Verbindung zu einem Host mit nicht ablaufenden Anmeldeinformationen herstellen, müssen Sie weiterhin alle Parameter verwenden, die im Abschnitt [!UICONTROL ABLAUFENDE ANMELDEINFORMATIONEN] aufgeführt sind, mit Ausnahme des Kennworts und des Benutzernamens.
->&#x200B;>Das Format für die Eingabe Ihres Benutzernamens und Kennworts verwendet durch Doppelpunkt getrennte Werte, wie in diesem Beispiel `username:{your_username}` und `password:{password_string}` dargestellt.
+>Wenn Sie eine Verbindung zu einem Host mit nicht ablaufenden Anmeldeinformationen herstellen, ist es weiterhin erforderlich, alle im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] aufgeführten Parameter mit Ausnahme des Kennworts und des Benutzernamens zu verwenden.
+>>Das Format für die Eingabe Ihres Benutzernamens und Kennworts verwendet durch Doppelpunkt getrennte Werte, wie in diesem Beispiel `username:{your_username}` und `password:{password_string}` dargestellt.
 
 | Parameter | Beschreibung | Beispiel |
 |---|---|---|
-| **Server/Host** | Der Name des Servers/Hosts, mit dem Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet und hat die Form von `server.adobe.io`. Der Wert befindet sich unter **[!UICONTROL Host]** im Abschnitt [!UICONTROL ABLAUFENDE ANMELDEINFORMATIONEN].</ul></li> | `acme.platform.adobe.io` |
-| **Port** | Der Port für den Server/Host, zu dem Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet und befindet sich unter **[!UICONTROL Port]** im Abschnitt [!UICONTROL ABLAUFENDE ANMELDEINFORMATIONEN].</ul></li> | `80` |
-| **Datenbank** | Die Datenbank, mit der Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet und befindet sich unter **[!UICONTROL Datenbank]** im Abschnitt [!UICONTROL ABLAUFENDE ANMELDEINFORMATIONEN]. </ul></li> | `prod:all` |
-| **Benutzername** | Der Benutzername für den Benutzer, der eine Verbindung zum externen Client herstellt. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet. Sie hat die Form einer alphanumerischen Zeichenfolge vor der `@AdobeOrg`. Dieser Wert befindet sich unter **[!UICONTROL Benutzername]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **Passwort** | Das Kennwort des Benutzers, der eine Verbindung zum externen Client herstellt. <ul><li>Wenn Sie ablaufende Anmeldeinformationen verwenden, finden Sie diese unter **[!UICONTROL Kennwort]** im Abschnitt [!UICONTROL ABLAUFENDE ANMELDEINFORMATIONEN].</li><li>Wenn Sie nicht ablaufende Anmeldeinformationen verwenden, ist dieser Wert die verketteten Argumente aus der TechnicalAccountID und die Anmeldeinformationen aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Ein ablaufendes Berechtigungskennwort umfasst mehr als tausend Zeichen alphanumerische Zeichenfolge. Es wird kein Beispiel gegeben.</li><li>Ein nicht ablaufendes Berechtigungskennwort lautet wie folgt:<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **Server/Host** | Der Name des Servers/Hosts, mit dem Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet und hat die Form von `server.adobe.io`. Der Wert befindet sich unter **[!UICONTROL Host]** im [!UICONTROL EXPIRING CREDENTIALS].</ul></li> | `acme.platform.adobe.io` |
+| **Port** | Der Port für den Server/Host, zu dem Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet und befindet sich unter **[!UICONTROL Port]** im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] .</ul></li> | `80` |
+| **Datenbank** | Die Datenbank, mit der Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet und befindet sich unter **[!UICONTROL Database]** im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] . </ul></li> | `prod:all` |
+| **Benutzername** | Der Benutzername für den Benutzer, der eine Verbindung zum externen Client herstellt. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet. Sie hat die Form einer alphanumerischen Zeichenfolge vor der `@AdobeOrg`. Dieser Wert befindet sich unter **[!UICONTROL Username]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
+| **Passwort** | Das Kennwort des Benutzers, der eine Verbindung zum externen Client herstellt. <ul><li>Wenn Sie ablaufende Anmeldeinformationen verwenden, finden Sie diese unter **[!UICONTROL Password]** im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] .</li><li>Wenn Sie nicht ablaufende Anmeldeinformationen verwenden, ist dieser Wert die verketteten Argumente aus der TechnicalAccountID und die Anmeldeinformationen aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Ein ablaufendes Berechtigungskennwort umfasst mehr als tausend Zeichen alphanumerische Zeichenfolge. Es wird kein Beispiel gegeben.</li><li>Ein nicht ablaufendes Berechtigungskennwort lautet wie folgt:<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 

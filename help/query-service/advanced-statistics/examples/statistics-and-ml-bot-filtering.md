@@ -1,7 +1,8 @@
 ---
 title: Bot-Filterung mithilfe von Statistiken und maschinellem Lernen
 description: Erfahren Sie, wie Sie mit Data Distiller-Statistiken und maschinellem Lernen Bot-Aktivitäten identifizieren und filtern können, um genaue Analysen und eine verbesserte Datenintegrität sicherzustellen.
-source-git-commit: a8abbf61bdc646c0834c296a64b27c71c98ea1d3
+exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -168,7 +169,7 @@ Dieses zweite Beispiel baut auf der grundlegenden SQL-Filterung auf, indem masch
 
 Bereiten Sie zunächst einen Datensatz mit flachen und verschachtelten Strukturen vor, die das Modell für maschinelles Lernen verwenden kann (wie oben beschrieben). Weitere Anleitungen dazu finden Sie in der Dokumentation [Arbeiten mit verschachtelten Datenstrukturen](../../key-concepts/nested-data-structures.md). Gruppieren Sie die Daten nach Zeitstempel, Benutzer-ID und Webseitenname, um Muster in beiden Aktivitäten zu identifizieren.
 
-### Verwenden der Klauseln TRANSFORM und OPTIONS für die Modellerstellung {#transform-and-preprocess}
+### Verwenden von TRANSFORM- und OPTIONS-Klauseln für die Modellerstellung {#transform-and-preprocess}
 
 Gehen Sie wie folgt vor, um Ihren Datensatz zu transformieren und Ihr Modell für maschinelles Lernen effektiv zu konfigurieren. Die Schritte beschreiben, wie Nullwerte verarbeitet, Funktionen vorbereitet und die Parameter des Modells für eine optimale Leistung definiert werden.
 
@@ -209,7 +210,7 @@ In den unten angezeigten Ergebnissen wird der `bot_filtering_model` mit einer ei
 
 ```console
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -244,7 +245,7 @@ Die Antwort enthält Metriken wie Genauigkeit, Präzision, Rückruf und AUC-ROC.
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -282,7 +283,7 @@ Die Antwort enthält Prognosen für jeden Benutzer (`id`) sowie Details zu seine
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0

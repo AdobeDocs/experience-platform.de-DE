@@ -5,9 +5,9 @@ title: Daten mit Notebooks analysieren
 type: Tutorial
 description: In diesem Tutorial wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace erstellt wurden, auf Ihre Daten zugreifen, sie erkunden und visualisieren können.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1727'
 ht-degree: 22%
 
 ---
@@ -44,7 +44,7 @@ Standardmäßig funktionieren Tensorflow-Rezepte in einem GPU-Cluster und Python
 
 ### Erstellen eines neuen Notebooks
 
-Wählen Sie in der [!DNL Adobe Experience Platform]-Benutzeroberfläche [!UICONTROL Datenwissenschaft] im oberen Menü aus, um zur Datenwissenschafts-Workspace zu gelangen. Wählen Sie auf dieser Seite die Option [!DNL JupyterLab] aus, um den [!DNL JupyterLab]-Starter zu öffnen. Sie sollten eine Seite sehen, die der folgenden ähnelt.
+Wählen Sie in der [!DNL Adobe Experience Platform]-Benutzeroberfläche im oberen Menü die Option [!UICONTROL Data Science] aus, um zur Data Science Workspace zu gelangen. Wählen Sie auf dieser Seite die Option [!DNL JupyterLab] aus, um den [!DNL JupyterLab]-Starter zu öffnen. Sie sollten eine Seite sehen, die der folgenden ähnelt.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
@@ -58,7 +58,7 @@ Das Rezept für Einzelhandelsumsätze ist ein eigenständiges Beispiel, das dens
 
 >[!NOTE]
 >
->Der `data_access_sdk_python` ist veraltet und wird nicht mehr empfohlen. Informationen zum Konvertieren von [&#x200B; finden Sie im Tutorial zum Konvertieren von Datenzugriff auf SDK &#x200B;](../authoring/platform-sdk.md) Experience Platform SDK . Die folgenden Schritte gelten auch für dieses Tutorial.
+>Der `data_access_sdk_python` ist veraltet und wird nicht mehr empfohlen. Informationen zum Konvertieren von [ finden Sie im Tutorial zum Konvertieren von Datenzugriff auf SDK ](../authoring/platform-sdk.md) Experience Platform SDK . Die folgenden Schritte gelten auch für dieses Tutorial.
 
 Wir werden den internen Zugriff auf Daten von [!DNL Adobe Experience Platform] und den externen Zugriff auf Daten überprüfen. Wir verwenden die `data_access_sdk_python`-Bibliothek für den Zugriff auf interne Daten wie Datensätze und XDM-Schemata. Für externe Daten verwenden wir die [!DNL Python]-Bibliothek von Pandas.
 
@@ -84,7 +84,7 @@ Jetzt werden wir über den Zugriff auf [!DNL Experience Platform] Daten gehen.
 
 Für diesen Abschnitt verwenden wir den Einzelhandelsumsatz-Datensatz. Dies ist derselbe Datensatz, der auch im Beispiel-Notebook für Einzelhandelsumsätze verwendet wird.
 
-In Jupyter Notebook können Sie auf Ihre Daten über die Registerkarte **Daten** ![Daten](../images/jupyterlab/analyze-data/dataset-tab.png) auf der linken Seite zugreifen. Nach Auswahl der Registerkarte werden zwei Ordner bereitgestellt. Wählen Sie den **[!UICONTROL Datensätze]** aus.
+In Jupyter Notebook können Sie auf Ihre Daten über die Registerkarte **Daten** ![Daten](../images/jupyterlab/analyze-data/dataset-tab.png) auf der linken Seite zugreifen. Nach Auswahl der Registerkarte werden zwei Ordner bereitgestellt. Wählen Sie den **[!UICONTROL Datasets]** Ordner aus.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
@@ -120,6 +120,7 @@ Wenn Sie Ihren Kernel neu starten und alle Zellen erneut ausführen, sollten Sie
 ### Erkunden von Daten
 
 Nachdem wir nun auf Ihre Daten zugreifen können, konzentrieren wir uns auf die Daten selbst, indem wir Statistiken und Visualisierungen verwenden. Der Datensatz, den wir verwenden, ist ein Einzelhandels-Datensatz, der verschiedene Informationen zu 45 verschiedenen Geschäften an einem bestimmten Tag liefert. Zu den Merkmalen einer bestimmten `date` und `store` gehören die folgenden:
+
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -161,6 +162,7 @@ Dies bedeutet, dass 22 Speicher `storeType` `A`, 17 `storeType` `B` und 6 `store
 #### Datenvisualisierung
 
 Da wir unsere Dataframe-Werte nun kennen, möchten wir sie um Visualisierungen ergänzen, damit sich Muster leichter erkennen lassen. Diagramme sind auch bei der Übermittlung der Ergebnisse an eine Zielgruppe nützlich. Zu den [!DNL Python] Bibliotheken, die für die Visualisierung nützlich sind, gehören:
+
 - [matplotlib](https://matplotlib.org/)
 - [Pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -201,8 +203,9 @@ Achten Sie auf die Diagonale von 1 in der Mitte. Das bedeutet, dass eine Variabl
 ## Nächste Schritte
 
 In diesem Tutorial wurde beschrieben, wie Sie ein neues Jupyter-Notebook in der Data Science Workspace erstellen und wie Sie extern sowie aus [!DNL Adobe Experience Platform] auf Daten zugreifen können. Im Einzelnen haben wir die folgenden Schritte ausgeführt:
+
 - Erstellen eines neuen Jupyter-Notebooks
 - Zugreifen auf Datensätze und Schemata
-- Erkunden von Datensätzen
+- Datensätze erkunden
 
-Jetzt können Sie mit dem [&#x200B; Abschnitt fortfahren, &#x200B;](../models-recipes/package-source-files-recipe.md) ein Rezept zu verpacken und es in Data Science Workspace zu importieren.
+Jetzt können Sie mit dem [ Abschnitt fortfahren, ](../models-recipes/package-source-files-recipe.md) ein Rezept zu verpacken und es in Data Science Workspace zu importieren.

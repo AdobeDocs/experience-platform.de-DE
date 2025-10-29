@@ -5,7 +5,7 @@ title: Allgemeine Leitlinien für die Ausführung von Abfragen im Abfrage-Servic
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen beschrieben, die Sie beim Schreiben von Abfragen in Adobe Experience Platform Query Service beachten sollten.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 4%
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Query Service] verfügt über zwei Modelle der A
 
 ### Interaktive Abfrageausführung
 
-Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service]-Benutzeroberfläche oder [über einen verbundenen Client) gesendet &#x200B;](../clients/overview.md). Wenn [!DNL Query Service] über einen verbundenen Client ausgeführt wird, wird eine aktive Sitzung zwischen dem Client und [!DNL Query Service] ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung auftritt.
+Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service]-Benutzeroberfläche oder [über einen verbundenen Client) gesendet ](../clients/overview.md). Wenn [!DNL Query Service] über einen verbundenen Client ausgeführt wird, wird eine aktive Sitzung zwischen dem Client und [!DNL Query Service] ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung auftritt.
 
 Die interaktive Ausführung von Abfragen hat die folgenden Einschränkungen:
 
@@ -86,7 +86,7 @@ Beide obigen Beispielabfragen geben ein reduziertes Objekt anstelle eines einzel
 
 ```console
               endUserIds._experience.mcid   
---------------------------------------------------------
+|--------------------------------------------------------
  (48168239533518554367684086979667672499,"(ECID)",true)
 (1 row)
 ```
@@ -109,7 +109,7 @@ LIMIT 1
 
 ```console
      endUserIds._experience.mcid.id 
-----------------------------------------
+|----------------------------------------
  48168239533518554367684086979667672499
 (1 row)
 ```
@@ -210,7 +210,7 @@ Der Befehl `\d` zeigt die standardmäßige [!DNL PostgreSQL] für die Auflistung
 ```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
---------+-----------------+-------+----------
+|--------+-----------------+-------+----------
  public | luma_midvalues  | table | postgres
  public | luma_postvalues | table | postgres
 (2 rows)
@@ -222,7 +222,7 @@ Der Befehl `\d` zeigt die standardmäßige [!DNL PostgreSQL] für die Auflistung
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
------------------+--------------------------+----------------+-------------+----------
+|-----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues | 5c86b896b3c162151785b43c | Luma midValues |             | false
 (2 rows)
@@ -237,7 +237,7 @@ Das folgende Beispiel zeigt die Schemainformationen für die `luma_midvalues`, d
 ```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
--------------------+-----------------------------+-----------+----------+---------
+|-------------------+-----------------------------+-----------+----------+---------
  timestamp         | timestamp                   |           |          | 
  _id               | text                        |           |          | 
  productlistitems  | anyarray                    |           |          | 
@@ -262,7 +262,7 @@ Das folgende Beispiel zeigt zusätzliche Informationen für die `web` Spalte und
 ```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
-----------------+-----------------------------------+-----------+----------+---------
+|----------------+-----------------------------------+-----------+----------+---------
  webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
  webreferrer    | web_webreferrer                   |           |          | 
 ```

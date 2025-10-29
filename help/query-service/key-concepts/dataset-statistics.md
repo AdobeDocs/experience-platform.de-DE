@@ -2,7 +2,7 @@
 title: Berechnung der Datensatzstatistiken
 description: In diesem Dokument wird beschrieben, wie Sie mit SQL-Befehlen Statistiken auf Spaltenebene für Azure Data Lake Storage(ADLS)-Datensätze berechnen.
 exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 100%
@@ -17,7 +17,7 @@ Sie können nun Statistiken auf Spaltenebene für [!DNL Azure Data Lake Storage]
 >
 >Berechnete Statistiken werden in temporären Tabellen gespeichert, die eine Persistenz auf Sitzungsebene aufweisen. Sie können jederzeit während dieser Sitzung auf die Ergebnisse der Berechnungen zugreifen. Ein Zugriff über verschiedene PSQL-Sitzungen hinweg ist nicht möglich.
 
-Um die mit dem Befehl `ANALYZE TABLE COMPUTE STATISTICS` berechneten Statistiken anzuzeigen, können Sie eine SELECT-Abfrage auf den Aliasnamen oder die Statistik-ID verwenden. Sie können den Umfang der statistischen Analyse auch auf den gesamten Datensatz, eine Untergruppe eines Datensatzes, alle Spalten oder eine Untergruppe von Spalten beschränken.
+Um die mit dem Befehl `ANALYZE TABLE COMPUTE STATISTICS` berechneten Statistiken anzuzeigen, können Sie eine SELECT-Abfrage auf den Aliasnamen oder die Statistik-ID verwenden. Sie können den Umfang der statistischen Analyse auch auf den gesamten Datensatz, eine Teilmenge eines Datensatzes, alle Spalten oder eine Teilmenge von Spalten beschränken.
 
 >[!IMPORTANT]
 >
@@ -78,7 +78,7 @@ Die Ausgabe berechneter Statistiken ähnelt möglicherweise dem unten stehenden 
 
 ```console
  columnName                                                 |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
-------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
+|------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
  _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
@@ -102,7 +102,7 @@ Eine Beispielausgabe von `SHOW STATISTICS` wird unten angezeigt.
 
 ```console
       statsId         |   tableName   | columnSet |         filterContext       |      timestamp
-----------------------+---------------+-----------+-----------------------------+--------------------
+|----------------------+---------------+-----------+-----------------------------+--------------------
 adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
 demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26

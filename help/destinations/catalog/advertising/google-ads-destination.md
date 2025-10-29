@@ -2,10 +2,10 @@
 title: Google Ads-Verbindung
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen ermöglicht, Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 76%
+source-wordcount: '928'
+ht-degree: 73%
 
 ---
 
@@ -48,7 +48,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -58,8 +58,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe in das Google-Ziel. |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Audience export]** | Sie exportieren alle Mitglieder einer Zielgruppe in das Google-Ziel. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -77,7 +77,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 >[!NOTE]
 >
 >Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Ads]-Ziel in Experience Platform einrichten. Stellen Sie sicher, dass der unten beschriebene Zulassungsauflistungsprozess von [!DNL Google] abgeschlossen wurde, bevor Sie ein Ziel erstellen.
->Die Ausnahme für diese Regel betrifft [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de)-Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut zu durchlaufen. Sie können mit den nächsten Schritten fortfahren.
+>>Die Ausnahme für diese Regel betrifft [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de)-Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut zu durchlaufen. Sie können mit den nächsten Schritten fortfahren.
 
 Bevor Sie das [!DNL Google Ads]-Ziel in Experience Platform erstellen, müssen Sie sich an [!DNL Google] wenden, damit Adobe in die Liste der zulässigen Datenanbieter aufgenommen wird und Ihr Konto der Zulassungsliste hinzugefügt werden kann. Kontaktieren Sie [!DNL Google] und machen Sie folgende Angaben:
 
@@ -90,7 +90,7 @@ Bevor Sie das [!DNL Google Ads]-Ziel in Experience Platform erstellen, müssen S
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
@@ -98,22 +98,22 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tut
 
 Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-* **[!UICONTROL Name]**: Geben Sie den gewünschten Namen für das Ziel ein.
-* **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
-* **[!UICONTROL Kontotyp]**: AdWords ist die einzige verfügbare Option.
-* **[!UICONTROL Konto-ID]**: Geben Sie Ihre Konto-ID bei [!DNL Google Ads] ein. Das Format der Kennung lautet in der Regel 123-456-7890.
+* **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
+* **[!UICONTROL Description]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
+* **[!UICONTROL Account Type]**: AdWords ist die einzige verfügbare Option.
+* **[!UICONTROL Account ID]**: Geben Sie Ihre Konto-ID für [!DNL Google Ads] ein. Das Format der Kennung lautet in der Regel 123-456-7890.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
@@ -131,6 +131,6 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#prerequisites) nicht erfüllen, oder wenn Kundinnen bzw. Kunden versuchen, das Ziel ohne vorhandenes [!DNL Google Ads]-Konto zu konfigurieren.
 
-[!DNL Google] hat neue [!DNL Google Ads]-Cookie-Integrationen mit Drittanbietern abgeschafft. Auf die Zulassungsliste setzen Um die Schritte [&#128279;](#allow-listing) ausführen zu können, müssen Sie über eine vorhandene Integration mit [!DNL Google Ads] verfügen.
+[!DNL Google] hat neue [!DNL Google Ads]-Cookie-Integrationen mit Drittanbietern abgeschafft. Auf die Zulassungsliste setzen Um die Schritte [](#allow-listing) ausführen zu können, müssen Sie über eine vorhandene Integration mit [!DNL Google Ads] verfügen.
 
 Der empfohlene Ansatz für die Verwendung von [!DNL Google Ads] ist das Einrichten einer [[!DNL Google Customer Match]](google-customer-match.md)-Integration.

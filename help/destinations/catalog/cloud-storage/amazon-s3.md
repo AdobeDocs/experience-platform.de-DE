@@ -2,10 +2,10 @@
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem S3-Speicher in Amazon Web Services (AWS), um in regelmäßigen Abständen CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1818'
-ht-degree: 40%
+source-wordcount: '1773'
+ht-degree: 36%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 40%
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| Januar 2024 | Funktions- und Dokumentationsaktualisierung | Der Amazon S3-Ziel-Connector unterstützt jetzt einen neuen Authentifizierungstyp mit angenommener Rolle. Weitere Informationen hierzu finden Sie [&#x200B; Abschnitt „Authentifizierung](#assumed-role-authentication). |
+| Januar 2024 | Funktions- und Dokumentationsaktualisierung | Der Amazon S3-Ziel-Connector unterstützt jetzt einen neuen Authentifizierungstyp mit angenommener Rolle. Weitere Informationen hierzu finden Sie [ Abschnitt „Authentifizierung](#assumed-role-authentication). |
 | Juli 2023 | Funktions- und Dokumentationsaktualisierung | Mit der Experience Platform-Version vom Juli 2023 bietet das [!DNL Amazon S3]-Ziel neue Funktionen, wie unten aufgeführt: <br><ul><li>[Unterstützung für den Datensatzexport](/help/destinations/ui/export-datasets.md)</li><li>Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Möglichkeit zum Festlegen benutzerdefinierter Datei-Kopfzeilen in exportierten Dateien durch den [verbesserten Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Möglichkeit zum Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
 
 {style="table-layout:auto"}
@@ -28,7 +28,7 @@ ht-degree: 40%
 ## Herstellen einer Verbindung zu Ihrem [!DNL Amazon S3] über API oder Benutzeroberfläche {#connect-api-or-ui}
 
 * Um über die Experience Platform-Benutzeroberfläche eine Verbindung zu Ihrem [!DNL Amazon S3]-Speicherort herzustellen, lesen Sie die Abschnitte [Mit dem Ziel verbinden](#connect) und [Zielgruppen für dieses Ziel aktivieren](#activate).
-* Um programmgesteuert eine Verbindung zu Ihrem [!DNL Amazon S3]-Speicherort herzustellen, lesen Sie das Handbuch zum [&#x200B; von Zielgruppen für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
+* Um programmgesteuert eine Verbindung zu Ihrem [!DNL Amazon S3]-Speicherort herzustellen, lesen Sie das Handbuch zum [ von Zielgruppen für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -36,7 +36,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -46,8 +46,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](../../ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](../../ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -58,8 +58,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 
-* So [&#x200B; Sie Datensätze mithilfe der Benutzeroberfläche von Experience Platform &#x200B;](/help/destinations/ui/export-datasets.md).
-* So [&#x200B; Sie Datensätze mithilfe der Flow Service-API programmgesteuert &#x200B;](/help/destinations/api/export-datasets.md).
+* So [ Sie Datensätze mithilfe der Benutzeroberfläche von Experience Platform ](/help/destinations/ui/export-datasets.md).
+* So [ Sie Datensätze mithilfe der Flow Service-API programmgesteuert ](/help/destinations/api/export-datasets.md).
 
 ## Dateiformat der exportierten Daten {#file-format}
 
@@ -71,7 +71,7 @@ Beim Exportieren *Datensätze* erstellt Experience Platform eine `.parquet`- ode
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -82,7 +82,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 >title="Öffentlicher RSA-Schlüssel"
 >abstract="Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Schlüssel finden Sie im folgenden Dokumentations-Link."
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**. Das Amazon S3-Ziel unterstützt zwei Authentifizierungsmethoden:
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Connect to destination]** aus. Das Amazon S3-Ziel unterstützt zwei Authentifizierungsmethoden:
 
 * Authentifizierung mit Zugriffsschlüssel und Geheimschlüssel
 * Authentifizierung der übernommenen Rolle
@@ -94,7 +94,7 @@ Verwenden Sie diese Authentifizierungsmethode, wenn Sie Ihren Amazon S3-Zugriffs
 ![Abbildung der erforderlichen Felder bei der Auswahl von Zugriffsschlüssel und Authentifizierung mit geheimen Schlüsseln.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
 * **[!DNL Amazon S3]-** und **[!DNL Amazon S3]geheimer Schlüssel**: Generieren Sie [!DNL Amazon S3] ein `access key - secret access key`, um Experience Platform Zugriff auf Ihr [!DNL Amazon S3]-Konto zu gewähren. Weitere Informationen finden Sie in der [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
+* **[!UICONTROL Encryption key]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
   ![Abbildung mit einem Beispiel für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -110,9 +110,9 @@ Verwenden Sie diese Authentifizierungstyp, wenn Sie Konto- und Geheimschlüssel 
 ![Bild der erforderlichen Felder bei der Auswahl der angenommenen Rollenauthentifizierung.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
 * **[!DNL Role]**: Fügen Sie den ARN der Rolle ein, die Sie in AWS für den Adobe-Benutzer erstellt haben. Das Muster ähnelt `arn:aws:iam::800873819705:role/destinations-role-customer`. Detaillierte Anleitungen zum korrekten Konfigurieren des S3-Zugriffs finden Sie in den folgenden Schritten.
-* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
+* **[!UICONTROL Encryption key]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-Dazu müssen Sie in der AWS-Konsole eine zugewiesene Rolle für Adobe mit den [erforderlichen Berechtigungen) erstellen, &#x200B;](#minimum-permissions-iam-user) in Ihre Amazon S3-Buckets zu schreiben.
+Dazu müssen Sie in der AWS-Konsole eine zugewiesene Rolle für Adobe mit den [erforderlichen Berechtigungen) erstellen, ](#minimum-permissions-iam-user) in Ihre Amazon S3-Buckets zu schreiben.
 
 **Erstellen Sie eine Richtlinie mit den erforderlichen Berechtigungen**
 
@@ -156,8 +156,8 @@ Dazu müssen Sie in der AWS-Konsole eine zugewiesene Rolle für Adobe mit den [e
 3. Wählen Sie **Ein AWS-Konto** > **Ein anderes AWS-** aus und geben Sie die Adobe-Konto-ID ein: `670664943635`
 4. Hinzufügen von Berechtigungen mithilfe der zuvor erstellten Richtlinie
 5. Geben Sie einen Rollennamen ein (z. B. `destinations-role-customer`). Der Rollenname sollte wie ein Kennwort vertraulich behandelt werden. Er kann bis zu 64 Zeichen lang sein und alphanumerische Zeichen sowie die folgenden Sonderzeichen enthalten: `+=,.@-_`. Überprüfen Sie dann, ob:
-   * Die Adobe-Konto-ID `670664943635` ist im Abschnitt **[!UICONTROL Vertrauenswürdige Entitäten auswählen]** vorhanden
-   * Die zuvor erstellte Richtlinie ist in der **[!UICONTROL Zusammenfassung der Berechtigungsrichtlinie“]**
+   * Die Adobe-Konto-ID `670664943635` ist im Abschnitt **[!UICONTROL Select trusted entities]** vorhanden
+   * Die zuvor erstellte Richtlinie ist in **[!UICONTROL Permissions policy summary]** vorhanden
 
 **Geben Sie die Rolle an, die Adobe übernehmen soll**
 
@@ -212,12 +212,12 @@ Weitere Informationen finden Sie in der [AWS-Dokumentation zum Erstellen von Rol
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels hilft.
-* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für dieses Ziel ein.
-* **[!UICONTROL Behältername]**: Geben Sie den Namen des [!DNL Amazon S3]-Behälters ein, der von diesem Ziel verwendet werden soll.
-* **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, in dem die exportierten Dateien gespeichert werden.
-* **[!UICONTROL Dateityp]**: Wählen Sie das Format aus, das Experience Platform für die exportierten Dateien verwenden soll. Bei Auswahl der Option [!UICONTROL CSV] können Sie auch [die Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den Experience Platform für die exportierten Dateien verwenden soll.
-* **[!UICONTROL Manifestdatei einschließen]**: Schalten Sie diese Option ein, wenn die Exporte eine JSON-Manifestdatei enthalten sollen, die Informationen zum Exportspeicherort, zur Exportgröße und mehr enthält. Das Manifest wird mit dem Format `manifest-<<destinationId>>-<<dataflowRunId>>.json` benannt. Anzeigen einer [Beispielmanifestdatei](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Die Manifestdatei enthält die folgenden Felder:
+* **[!UICONTROL Description]**: Geben Sie eine Beschreibung für dieses Ziel ein.
+* **[!UICONTROL Bucket name]**: Geben Sie den Namen des [!DNL Amazon S3]-Behälters ein, der von diesem Ziel verwendet werden soll.
+* **[!UICONTROL Folder path]**: Geben Sie den Pfad zum Zielordner ein, in dem die exportierten Dateien gespeichert werden.
+* **[!UICONTROL File type]**: Wählen Sie das Format aus, das Experience Platform für die exportierten Dateien verwenden soll. Bei Auswahl der Option [!UICONTROL CSV] können Sie auch [die Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: Wählen Sie den Komprimierungstyp aus, den Experience Platform für die exportierten Dateien verwenden soll.
+* **[!UICONTROL Include manifest file]**: Schalten Sie diese Option ein, wenn die Exporte eine JSON-Manifestdatei enthalten sollen, die Informationen zum Exportspeicherort, zur Exportgröße und mehr enthält. Das Manifest wird mit dem Format `manifest-<<destinationId>>-<<dataflowRunId>>.json` benannt. Anzeigen einer [Beispielmanifestdatei](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Die Manifestdatei enthält die folgenden Felder:
    * `flowRunId`: Die [Datenflussausführung](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die die exportierte Datei generiert hat.
    * `scheduledTime`: Die Zeit in UTC, zu der die Datei exportiert wurde.
    * `exportResults.sinkPath`: Der Pfad an Ihrem Speicherort, an dem die exportierte Datei abgelegt wird.
@@ -232,7 +232,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ### Erforderliche [!DNL Amazon S3]-Berechtigungen {#required-s3-permission}
 
@@ -291,10 +291,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden Sie &#x200B;](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
 
 ## Überprüfen auf einen erfolgreichen Datenexport {#exported-data}
 

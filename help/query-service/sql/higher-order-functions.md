@@ -2,7 +2,7 @@
 title: Verwalten von Array- und Zuordnungstypen mit Funktionen höherer Ordnung
 description: Erfahren Sie, wie Sie im Abfrage-Service Array- und Zuordnungstypen mit Funktionen höherer Ordnung verwalten. Beispiele werden mit häufigen Anwendungsfällen bereitgestellt.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 1%
@@ -46,7 +46,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
  productListItems | price_in_inr
--------------------+----------------
+|-------------------+----------------
 (8376, NULL, NULL) | 611448.0
 {(Burbank Hills Jeans, NULL, NULL), (Thermomax Steel, NULL, NULL), (Bruin Point Shearling Boots, NULL, NULL), (Uintas Pro Ski Gloves, NULL, NULL), (Timberline Survival Knife, NULL, NULL), (Thermomax Steel, NULL, NULL), (Timpanogos Scarf, NULL, NULL), (Lost Prospector Beanie, NULL, NULL), (Timpanogos Scarf, NULL, NULL), (Uintas Pro Ski Gloves, NULL, NULL)} | {0.0,0.0.0.0,0,0,0,0,0,0,0,0,0,0,0,0,0.0}
 (84763,NULL, NULL) | 6187699.0
@@ -80,7 +80,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
 productListItems
------------------
+|-----------------
 {(123679, NULL,NULL)}
 {(123679, NULL, NULL)}
 {(123679, NULL, NULL), (150196, NULL, NULL)}
@@ -120,7 +120,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
 productListItems | _filter
------------------+---------
+|-----------------+---------
 (123679, NULL, NULL) (123679, NULL, NULL)
 (1346, NULL, NULL) |
 (98347, NULL, NULL) |
@@ -159,7 +159,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
 productListItems | max_value
------------------+---------
+|-----------------+---------
 (123679, NULL, NULL) | 247358
 (1346,NULL, NULL) | 2692
 (98347, NULL, NULL) | 196694
@@ -193,7 +193,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
 productListItems     | zip_with
----------------------+---------
+|---------------------+---------
                      | {(1,NULL), (2,NULL), (3,NULL),(4,NULL), (5,NULL)}
 (123679, NULL, NULL) | {(1,123679), (2,NULL), (3,NULL), (4,NULL), (5,NULL)}
                      | {(1,NULL), (2,NULL),(3,NULL),(4,NULL), (5,NULL)}
@@ -232,7 +232,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)"]
@@ -278,7 +278,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)"]
@@ -321,7 +321,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)",2 -> "(123679, NULL, NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)",2 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)",2 -> "(98347, NULL, NULL)"]
@@ -363,7 +363,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
                                                                   identitymap                                            |  element_at(identitymap, AAID) 
--------------------------------------------------------------------------------------------------------------------------+-------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------+-------------------------------------
 [AAID -> "(3617FBB942466D79-5433F727AD6A0AD, false)",ECID -> "(67383754798169392543508586197135045866,true)"]            | (3617FBB942466D79-5433F727AD6A0AD, false) 
 [AAID -> "[AAID -> "(533F56A682C059B1-396437F68879F61D, false)",ECID -> "(91989370462250197735311833131353001213,true)"] | (533F56A682C059B1-396437F68879F61D, false) 
 [AAID -> "(22E195F8A8ECCC6A-A39615C93B72A9F, false)",ECID -> "(57699241367342030964647681192998909474,true)"]            | (22E195F8A8ECCC6A-A39615C93B72A9F, false) 
@@ -401,7 +401,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
                                                                   identitymap                                            |  size(identitymap) 
--------------------------------------------------------------------------------------------------------------------------+-------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------+-------------------------------------
 [AAID -> "(3617FBB942466D79-5433F727AD6A0AD, false)",ECID -> "(67383754798169392543508586197135045866,true)"]            |      2  
 [AAID -> "[AAID -> "(533F56A682C059B1-396437F68879F61D, false)",ECID -> "(91989370462250197735311833131353001213,true)"] |      2  
 [AAID -> "(22E195F8A8ECCC6A-A39615C93B72A9F, false)",ECID -> "(57699241367342030964647681192998909474,true)"]            |      2  
@@ -439,7 +439,7 @@ Die Ergebnisse für diese SQL-Abfrage ähneln denen unten.
 
 ```console
 productListItems     | array_distinct(productListItems)
----------------------+---------------------------------
+|---------------------+---------------------------------
                      |
 (123679, NULL, NULL) | (123679, NULL, NULL)
                      |
@@ -458,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 Die folgenden Beispiele für Funktionen höherer Ordnung werden im Rahmen des Anwendungsfalls zum Abrufen ähnlicher Datensätze erläutert. Ein Beispiel und eine Erläuterung der Verwendung jeder Funktion finden Sie im entsprechenden Abschnitt dieses Dokuments.
 
-Das [`transform` Beispiel &#x200B;](../use-cases/retrieve-similar-records.md#length-adjustment) die Tokenisierung einer Produktliste.
+Das [`transform` Beispiel ](../use-cases/retrieve-similar-records.md#length-adjustment) die Tokenisierung einer Produktliste.
 
-Das Beispiel der [`filter`-Funktion &#x200B;](../use-cases/retrieve-similar-records.md#filter-results) eine verfeinerte und präzisere Extraktion relevanter Informationen aus Textdaten.
+Das Beispiel der [`filter`-Funktion ](../use-cases/retrieve-similar-records.md#filter-results) eine verfeinerte und präzisere Extraktion relevanter Informationen aus Textdaten.
 
-Die [`reduce` Funktion &#x200B;](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) die Ableitung von kumulierten Werten oder Aggregaten, die in verschiedenen Analyse- und Planungsprozessen von zentraler Bedeutung sein können.
+Die [`reduce` Funktion ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) die Ableitung von kumulierten Werten oder Aggregaten, die in verschiedenen Analyse- und Planungsprozessen von zentraler Bedeutung sein können.

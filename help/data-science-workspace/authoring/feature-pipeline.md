@@ -4,7 +4,7 @@ title: Erstellen einer Feature Pipeline mit dem Model Authoring SDK
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie benutzerdefinierte Funktions-Pipelines erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework-Laufzeit Feature Engineering im benötigten Umfang durchzuführen. In diesem Dokument werden die verschiedenen Klassen beschrieben, die in einer Funktions-Pipeline zu finden sind, und eine schrittweise Anleitung zum Erstellen einer benutzerdefinierten Funktions-Pipeline mithilfe der Modellerstellungs-SDK in PySpark bereitgestellt.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 27%
@@ -40,6 +40,7 @@ Der folgende Workflow findet statt, wenn eine Funktions-Pipeline ausgeführt wir
 ## Erste Schritte
 
 Um ein Rezept in einer beliebigen Organisation auszuführen, ist Folgendes erforderlich:
+
 - Ein Eingabedatensatz.
 - Das Schema des Datensatzes.
 - Ein umgewandeltes Schema und ein leerer Datensatz, der auf diesem Schema basiert.
@@ -107,7 +108,7 @@ Sie können auf die Konfigurations-JSON über jede Klassenmethode zugreifen, die
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-Ein ausführlicheres Konfigurationsbeispiel finden Sie in [&#x200B; Datei &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json)pipeline.json“, die von Data Science Workspace bereitgestellt wird.
+Ein ausführlicheres Konfigurationsbeispiel finden Sie in [ Datei ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json)pipeline.json“, die von Data Science Workspace bereitgestellt wird.
 
 ### Vorbereiten der Eingabedaten mit DataLoader {#prepare-the-input-data-with-dataloader}
 
@@ -416,7 +417,7 @@ Als Nächstes müssen Sie [ein Experiment erstellen](../api/experiments.md#creat
 
 ### Angeben der Aufgabe „Experimentausführungsfunktion-Pipeline“ {#specify-feature-pipeline-task}
 
-Nachdem Sie ein Experiment erstellt haben, müssen Sie den Modus des Experiments in `featurePipeline` ändern. Um den Modus zu ändern, führen Sie einen zusätzlichen POST-Test durch, um mit Ihrem `EXPERIMENT_ID` zu [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring), und senden Sie im Hauptteil `{ "mode":"featurePipeline"}`, um eine Experimentierausführung für die Funktions-Pipeline anzugeben.
+Nachdem Sie ein Experiment erstellt haben, müssen Sie den Modus des Experiments in `featurePipeline` ändern. Um den Modus zu ändern, führen Sie einen zusätzlichen POST-Test durch, um mit Ihrem [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) zu `EXPERIMENT_ID`, und senden Sie im Hauptteil `{ "mode":"featurePipeline"}`, um eine Experimentierausführung für die Funktions-Pipeline anzugeben.
 
 Stellen Sie nach Abschluss eine GET-Anfrage an `/experiments/{EXPERIMENT_ID}` , um [den Experimentstatus abzurufen](../api/experiments.md#retrieve-specific) und warten Sie, bis der Experimentstatus aktualisiert wurde.
 

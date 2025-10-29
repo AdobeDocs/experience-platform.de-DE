@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Insights;Attributions-KI;beliebte Themen;Attributions-KI-Insights
 feature: Attribution AI
-title: Einblicke in Attribution AI
+title: Einblicke in Attributions-KI
 description: Dieses Dokument dient als Handbuch für die Interaktion mit Einblicken der Dienstinstanz in der Benutzeroberfläche von Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1655'
-ht-degree: 47%
+source-wordcount: '1583'
+ht-degree: 39%
 
 ---
 
-# Einblicke in Attribution AI
+# Einblicke in Attributions-KI
 
 Die Instanzen des Attribution AI-Service bieten Einblicke, anhand derer Marketing-Entscheidungen in Bezug auf Marketing-Performance und ROI getroffen und gemessen werden können. Durch die Auswahl einer Dienstinstanz erhalten Sie Visualisierungen und Filter, anhand derer Sie die Auswirkungen jeder Kundeninteraktion in jeder Phase der Customer Journey verstehen können.
 
@@ -23,7 +23,7 @@ Um Einblicke für Attribution AI zu verwenden, benötigen Sie eine Dienstinstanz
 
 ## Übersicht über Einblicke von Dienstinstanzen
 
-Wählen Sie in der [!DNL Adobe Experience Platform]-Benutzeroberfläche **[!UICONTROL Dienste]** im linken Navigationsbereich aus. Der **[!UICONTROL Dienste]**-Browser wird geöffnet und zeigt verfügbare Adobe Intelligent Services an. Wählen Sie im Container für Attribution AI die Option **[!UICONTROL Öffnen]**.
+Wählen Sie in der [!DNL Adobe Experience Platform]-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Services]** aus. Der **[!UICONTROL Services]** wird angezeigt und zeigt die verfügbaren Adobe Intelligent Services an. Wählen Sie im Container für Attributions-KI **[!UICONTROL Open]** aus.
 
 ![Zugreifen auf Ihre Instanz](./images/insights/open_Attribution_ai.png)
 
@@ -41,7 +41,7 @@ Als Nächstes wird die Seite mit den Einblicken für diese Dienstinstanz angezei
 
 ### Details zur Dienstinstanz
 
-Um zusätzliche Details für eine Service-Instanz anzuzeigen, wählen **[!UICONTROL oben]** „Weitere anzeigen“ aus.
+Um zusätzliche Details für eine Service-Instanz anzuzeigen, wählen Sie oben rechts **[!UICONTROL Show more]** aus.
 
 ![Mehr anzeigen](./images/insights/show-more.png)
 
@@ -51,22 +51,22 @@ Es wird eine detaillierte Liste angezeigt. Weitere Informationen zu den aufgelis
 
 ### Bearbeiten einer Instanz
 
-Um eine Instanz zu bearbeiten, wählen **[!UICONTROL Bearbeiten]** in der oberen rechten Navigationsleiste aus.
+Um eine Instanz zu bearbeiten, wählen Sie in der oberen rechten Navigationsleiste **[!UICONTROL Edit]** aus.
 ![Auf Bearbeiten-Schaltfläche klicken](./images/insights/edit-button.png)
 
-Das Dialogfeld „Bearbeiten“ wird angezeigt, in dem Sie den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten können. Wenn der Instanzstatus deaktiviert ist, kann die Scoring-Häufigkeit nicht bearbeitet werden. Um Ihre Änderungen zu bestätigen und das Dialogfeld zu schließen, wählen **[!UICONTROL in]** rechten unteren Ecke „Speichern“ aus.
+Das Dialogfeld „Bearbeiten“ wird angezeigt, in dem Sie den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten können. Wenn der Instanzstatus deaktiviert ist, kann die Scoring-Häufigkeit nicht bearbeitet werden. Um Ihre Änderungen zu bestätigen und das Dialogfeld zu schließen, wählen Sie **[!UICONTROL Save]** in der rechten unteren Ecke aus.
 
 ![Bearbeiten-Popup-Fenster](./images/insights/edit-popover.png)
 
 ### Mehr Aktionen {#more-actions}
 
-Die Schaltfläche **[!UICONTROL Mehr Aktionen]** befindet sich in der oberen rechten Navigation neben **[!UICONTROL Bearbeiten]**. Wenn Sie **[!UICONTROL Mehr Aktionen]** auswählen, wird ein Dropdown-Menü geöffnet, in dem Sie einen der folgenden Vorgänge auswählen können:
+Die Schaltfläche **[!UICONTROL More actions]** befindet sich in der oberen rechten Navigationsleiste neben **[!UICONTROL Edit]**. Wenn Sie **[!UICONTROL More actions]** auswählen, wird ein Dropdown-Menü geöffnet, in dem Sie einen der folgenden Vorgänge auswählen können:
 
-- **[!UICONTROL Klonen]**: Klont die Instanz.
-- **[!UICONTROL Löschen]**: Löscht die Instanz.
-- **[!UICONTROL Zusammenfassungsdaten herunterladen]**: Lädt eine CSV-Datei mit den Zusammenfassungsdaten herunter.
-- **[!UICONTROL Auf Scores zugreifen]**: Wenn Sie **[!UICONTROL Auf Scores zugreifen]** werden Sie zum Tutorial [Auf Scores für Attribution AI zugreifen“ &#x200B;](./download-scores.md).
-- **[!UICONTROL Ausführungsverlauf anzeigen]**: Ein Popup-Fenster mit einer Liste aller mit der Dienstinstanz verbundenen Bewertungsläufe wird angezeigt.
+- **[!UICONTROL Clone]**: Klont die Instanz.
+- **[!UICONTROL Delete]**: Löscht die Instanz.
+- **[!UICONTROL Download summary data]**: Lädt eine CSV-Datei mit den Zusammenfassungsdaten herunter.
+- **[!UICONTROL Access scores]**: Wenn Sie **[!UICONTROL Access scores]** auswählen, werden Sie zum Tutorial [Zugriff auf Scores für Attributions-KI](./download-scores.md) weitergeleitet.
+- **[!UICONTROL View run history]**: Ein Pop-up mit einer Liste aller mit der Service-Instanz verbundenen Scoring-Durchgänge wird angezeigt.
 
 ![Mehr Aktionen](./images/insights/more-actions.png)
 
@@ -78,13 +78,13 @@ Mithilfe von Attribution AI-Einblicken können Sie Ihre Daten filtern und die Vi
 
 Wenn Sie eine neue Instanz in Attribution AI erstellen, ist eines der erforderlichen Felder „Konversionsereignisse“. Konversionsereignisse sind Unternehmensziele, die die Auswirkungen von Marketing-Aktivitäten wie E-Commerce-Bestellungen, In-Store-Käufen und Website-Besuchen ermitteln.
 
-Innerhalb der Instanz können Sie mit dem Dropdown-Menü **[!UICONTROL Konversionsereignisse]** eines der für Ihre Instanz definierten Ereignisse auswählen, um Ihre Daten zu filtern. Wenn Sie bestimmte Ereignisse auswählen, werden die Visualisierungen der Benutzeroberfläche so geändert, dass nur Konversionen aus diesen Ereignissen gefüllt werden.
+Innerhalb der Instanz können Sie mit dem Dropdown-Menü **[!UICONTROL Conversion events]** eines der für Ihre Instanz definierten Ereignisse auswählen, um Ihre Daten zu filtern. Wenn Sie bestimmte Ereignisse auswählen, werden die Visualisierungen der Benutzeroberfläche so geändert, dass nur Konversionen aus diesen Ereignissen gefüllt werden.
 
 ![Konversionsereignis](./images/insights/conversion-event.png)
 
 ### Attributionsmodell
 
-Wenn Sie **[!UICONTROL Attributionsmodell]** auswählen, wird eine Dropdown-Liste mit allen verfügbaren Attributionsmodellen geöffnet. Sie können mehrere Modelle zum Vergleich der Ergebnisse auswählen. Weitere Informationen zu den verschiedenen Attributionsmodellen und ihrer Funktionsweise finden Sie in der Übersicht über [Attribution AI](./overview.md), die eine Tabelle mit Informationen zu den einzelnen Modellen enthält.
+Wenn Sie **[!UICONTROL Attribution Model]** auswählen, wird ein Dropdown-Menü mit allen verfügbaren Attributionsmodellen geöffnet. Sie können mehrere Modelle zum Vergleich der Ergebnisse auswählen. Weitere Informationen zu den verschiedenen Attributionsmodellen und ihrer Funktionsweise finden Sie in der Übersicht über [Attribution AI](./overview.md), die eine Tabelle mit Informationen zu den einzelnen Modellen enthält.
 
 ![Attributionsmodell](./images/insights/attribution-model.png)
 
@@ -92,22 +92,22 @@ Wenn Sie **[!UICONTROL Attributionsmodell]** auswählen, wird eine Dropdown-List
 
 >[!NOTE]
 >
->Dieser Filter ist nur vorhanden, wenn Sie beim Erstellen [&#x200B; Dienstinstanz den optionalen Schritt Regionsbasierte Modellierung](./user-guide.md#region-based-modeling-optional) im Handbuch zur Attribution AI-Benutzeroberfläche ausgeführt haben.
+>Dieser Filter ist nur vorhanden, wenn Sie beim Erstellen Ihrer Service[Instanz im Handbuch zur Attributions](./user-guide.md#region-based-modeling-optional)KI-Benutzeroberfläche den optionalen Schritt „Regionsbasierte Modellierung“ ausgeführt haben.
 
 Mit diesem Filter können Sie alle Regionen auswählen, die Sie beim Erstellen der Instanz eingerichtet haben.
 
 ### Filter hinzufügen
 
-Sie können zusätzliche Filter hinzufügen, indem Sie auf das Symbol **Filter** klicken, um das Pop **[!UICONTROL up „Filter hinzufügen]** zu öffnen. Das **[!UICONTROL Filter hinzufügen]** ermöglicht die Filterung nach Kanal, Geografie, Medientyp und Produkt. Nur die entsprechenden Filter für eine Dienstinstanz werden vom Popover ausgefüllt. Wenn Sie beispielsweise keine geografischen Daten oder einen Medientyp angegeben haben, sind diese Filterattribute für Ihre Instanz nicht verfügbar.
+Sie können zusätzliche Filter hinzufügen, indem Sie auf das Symbol **Filter** klicken, um das **[!UICONTROL Add filters]**-Popover zu öffnen. Das **[!UICONTROL Add filters]**-Popover ermöglicht die Filterung nach Kanal, Geografie, Medientyp und Produkt. Nur die entsprechenden Filter für eine Dienstinstanz werden vom Popover ausgefüllt. Wenn Sie beispielsweise keine geografischen Daten oder einen Medientyp angegeben haben, sind diese Filterattribute für Ihre Instanz nicht verfügbar.
 
 ![zusätzliche Filter](./images/insights/additional-filters.png)
 
 ![Filter-Popover](./images/insights/filter-popover.png)
 
-- **[!UICONTROL channel]:** Wenn Sie das Kanalattribut auswählen, können Sie jeden Ihrer verfügbaren Marketing-Kanäle filtern. Sie können mehrere Kanäle zum Vergleich auswählen.
-- **[!UICONTROL Geography]:** Durch Auswahl des Attributs „geography“ können Sie Länder-Codes anhand von regionsbasierten Modellen filtern. Abhängig von Ihren -Daten kann dieser Filter vorhanden sein oder nicht. Länder-Codes sind zwei Zeichen lang. Die vollständige Länder-Code-Liste [hier](https://datahub.io/core/country-list).
-- **[!UICONTROL Medientyp]:** Durch Auswahl des Medientypattributs können Sie einen beliebigen Ihrer definierten Medientypen filtern.
-- **[!UICONTROL Produkt]:** Wenn Sie das Produktattribut auswählen, können Sie aus allen Produkten filtern, die ursprünglich bei der Erstellung Ihrer Instanz aufgenommen wurden.
+- **[!UICONTROL Channel]:** Wenn Sie das Kanalattribut auswählen, können Sie einen beliebigen Ihrer verfügbaren Marketing-Kanäle filtern. Sie können mehrere Kanäle zum Vergleich auswählen.
+- **[!UICONTROL Geography]:** Durch Auswahl des Attributs „geography“ können Sie Länder-Codes nach regionsbasierten Modellen filtern. Abhängig von Ihren -Daten kann dieser Filter vorhanden sein oder nicht. Länder-Codes sind zwei Zeichen lang. Die vollständige Länder-Code-Liste [hier](https://datahub.io/core/country-list).
+- **[!UICONTROL Media type]:** Wenn Sie das Medienartattribut auswählen, können Sie einen beliebigen Ihrer definierten Medientypen filtern.
+- **[!UICONTROL Product]:** Wenn Sie das Produktattribut auswählen, können Sie aus allen Produkten filtern, die ursprünglich bei der Erstellung Ihrer Instanz aufgenommen wurden.
 
 ### Datumsbereich
 
@@ -117,13 +117,13 @@ Wählen Sie das Kalendersymbol aus, um das Popover „Datumsbereich“ zu öffne
 
 ## Übersicht über Ihre Daten
 
-Die Karte **[!UICONTROL Übersicht]** zeigt Ihre Konversionen insgesamt nach Attributionsmodell an. Die Gesamtzahl ändert sich je nach Art der Suche anhand der zuvor in diesem Dokument beschriebenen Filter. Durch die Auswahl weiterer Modelle werden der Übersicht zusätzliche Kreise hinzugefügt, jeder mit einer eigenen Farbe entsprechend der Legende.
+Die Karte **[!UICONTROL Overview]** zeigt Ihre gesamten Konversionen nach Attributionsmodell an. Die Gesamtzahl ändert sich je nach Art der Suche anhand der zuvor in diesem Dokument beschriebenen Filter. Durch die Auswahl weiterer Modelle werden der Übersicht zusätzliche Kreise hinzugefügt, jeder mit einer eigenen Farbe entsprechend der Legende.
 
 ![Übersicht](./images/insights/Overview.png)
 
 ## Wöchentliche Trends
 
-Die Karte **[!UICONTROL Wöchentliche Trends]** unterteilt Ihre Konversionen insgesamt nach dem Datumsbereich, den Sie während des Filtervorgangs festgelegt haben.
+Die **[!UICONTROL Weekly trends]**-Karte schlüsselt Ihre Gesamtkonvertierung nach dem Datumsbereich auf, den Sie während des Filtervorgangs festgelegt haben.
 
 Wenn Sie oben rechts auf der Karte **Wöchentliche Trends** auf die Auslassungszeichen klicken, wird eine Dropdown-Liste angezeigt, in der Sie tägliche, wöchentliche oder monatliche Trends auswählen können.
 
@@ -133,47 +133,47 @@ Wenn Sie den Mauszeiger über die Datenzeile eines bestimmten Attributionsmodell
 
 ## Aufschlüsselung nach Kanal
 
-Die Karte **[!UICONTROL Aufschlüsselung nach Kanal]** wird verwendet, um die Gesamtanzahl der Konversionen im Verhältnis zu den einzelnen Kanälen zu ermitteln. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanäle und die ROI getroffen werden.
+Die **[!UICONTROL Breakdown by channel]**-Karte wird verwendet, um die Gesamtzahl der Konversionen in Bezug auf jeden Kanal zu bestimmen. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanäle und die ROI getroffen werden.
 
-Wenn Sie oben rechts auf der Karte **[!UICONTROL Aufschlüsselung nach Kanal“ auf die Ellipsen klicken]** wird eine Dropdown-Liste geöffnet, in der Sie Daten basierend auf Touchpoints auffüllen können.
+Wenn Sie oben rechts auf der **[!UICONTROL Breakdown by channel]** die Auslassungszeichen auswählen, wird eine Dropdown-Liste geöffnet, in der Sie Daten basierend auf Touchpoints ausfüllen können.
 
 ![Aufschlüsseln der Kanäle](./images/insights/channel-breakdown.png)
 
 ## Topkampagnen
 
-Auf der Karte **[!UICONTROL Topkampagnen]** wird ein Überblick über Ihre Kampagnen und die Leistung der Kampagne in den einzelnen Kanälen angezeigt. Diese Karte kann dabei helfen, Ihr Team über die Effektivität einer bestimmten Kampagne für einen bestimmten Kanal zu informieren, und bietet Einblicke, z. B. in welche Kampagnen Sie weiter investieren sollten.
+Die Karte **[!UICONTROL Top campaigns]** zeigt einen Überblick über Ihre Kampagnen und deren Leistung in den einzelnen Kanälen an. Diese Karte kann dabei helfen, Ihr Team über die Effektivität einer bestimmten Kampagne für einen bestimmten Kanal zu informieren, und bietet Einblicke, z. B. in welche Kampagnen Sie weiter investieren sollten.
 
 ![Topkampagnen](./images/insights/top-campaigns.png)
 
 ## Aufschlüsselung nach Touchpoint-Position
 
-Wenn Sie die Registerkarte **[!UICONTROL Pfadanalyse]** auswählen, werden die Diagramme **[!UICONTROL Aufschlüsselung nach Touchpoint-Position]** und **[!UICONTROL Top-Konversionspfade]** geladen.
+Wenn Sie die Registerkarte **[!UICONTROL Path Analysis]** auswählen, werden die **[!UICONTROL Breakdown by touchpoint position]**- und **[!UICONTROL Top conversion paths]**-Diagramme geladen.
 
-Das Diagramm **[!UICONTROL Aufschlüsselung nach Touchpoint]** ist eine Aufschlüsselung der zugewiesenen Konversionen nach Position des Touchpoints im Vergleich zu allen Konversionspfaden. Dieses Diagramm zeigt Ihnen, welche Touchpoints in verschiedenen Phasen des Konversionspfads effektiver sind. Die Bühnen sind Starter, Spieler und näher.
+Das **[!UICONTROL Breakdown by touchpoint position]** Diagramm enthält eine Aufschlüsselung der zugewiesenen Konversionen nach Position des Touchpoints im Vergleich zu allen Konversionspfaden. Dieses Diagramm zeigt Ihnen, welche Touchpoints in verschiedenen Phasen des Konversionspfads effektiver sind. Die Bühnen sind Starter, Spieler und näher.
 
 - **Starter:** Zeigt an, dass der Touchpoint der erste Touch in einem Konversionspfad war.
 - **Player:** Zeigt an, dass der Touchpoint nicht der erste oder der letzte Touch war, der zu einer Konversion geführt hat.
 - **Closer:** Zeigt an, dass der Touchpoint der letzte Touch vor einer Konversion war.
 
+>[!NOTE]
 >
->
-> Die Summe des prozentualen Beitrags für ein Attributionsmodell über alle Touchpoints und Positionen hinweg sollte 100 betragen.
+>Die Summe des prozentualen Beitrags für ein Attributionsmodell über alle Touchpoints und Positionen hinweg sollte 100 betragen.
 
 ![Touchpoint für die Aufschlüsselung des Benutzerpfads](./images/insights/user-paths.png)
 
 ## Top-Konversionspfade
 
-Das Diagramm **[!UICONTROL Top-Konversionspfade]** zeigt die beeinflussten und algorithmischen Werte auf den Top-Konversionspfaden in den ausgewählten Regionen an. In diesem Diagramm können Sie visualisieren, welche Touchpoints zu Konversionen beitragen und wie der Attributionswert für jeden Touchpoint aussieht. Mithilfe dieser Informationen können Sie die häufigsten Pfade in einer bestimmten Region anzeigen und sehen, ob Muster zwischen den verschiedenen Sätzen von Touchpoints auftreten.
+Das **[!UICONTROL Top conversion paths]** Diagramm zeigt die beeinflussten und algorithmischen Werte auf den obersten Konversionspfaden in den ausgewählten Regionen. In diesem Diagramm können Sie visualisieren, welche Touchpoints zu Konversionen beitragen und wie der Attributionswert für jeden Touchpoint aussieht. Mithilfe dieser Informationen können Sie die häufigsten Pfade in einer bestimmten Region anzeigen und sehen, ob Muster zwischen den verschiedenen Sätzen von Touchpoints auftreten.
 
 ![Die häufigsten Benutzerpfade](./images/insights/Touchpoint-paths.png)
 
 ## Touchpoint-Effektivität
 
-Wenn Sie die Registerkarte **[!UICONTROL Touchpoint]** Effektivität auswählen, wird die Karte **[!UICONTROL Touchpoint]** geladen. Diese Karte verwendet die Datenverteilung von Attribution AI, um Informationen für jeden Touchpoint anzuzeigen. Die Daten für diese Tabelle werden nur für bestimmte Zeiträume generiert, die durch das **[!UICONTROL Ab]**-Datum oben rechts auf der Karte angegeben werden.
+Wenn Sie die Registerkarte **[!UICONTROL Touchpoint Effectiveness]** auswählen, wird die **[!UICONTROL Touchpoint effectiveness]** geladen. Diese Karte verwendet die Attribution AI-Datenverteilung, um Informationen zu jedem Touchpoint anzuzeigen. Die Daten für diese Tabelle werden nur für bestimmte Zeiträume generiert, die durch das **[!UICONTROL As of]** oben rechts auf der Karte angegeben werden.
 
 ![Touchpoint Effektivität auswählen](./images/insights/Touchpoint-effectiveness.png)
 
-Sie können die Karteninformationen **[!UICONTROL Touchpoint-Effektivität]** verwenden, um zu verstehen, wie ein Touchpoint zu einer Konversion beiträgt. Mit den folgenden Leistungsmetriken können Sie auch sehen, wie effektiv jeder Touchpoint ist:
+Mithilfe der **[!UICONTROL Touchpoint effectiveness]**-Karteninformationen lässt sich erkennen, wie ein Touchpoint zu einer Konversion beiträgt. Mit den folgenden Leistungsmetriken können Sie auch sehen, wie effektiv jeder Touchpoint ist:
 
 **Pfade mit Touchpoint**: Diese Metrik zeigt einen Prozentsatz der Pfade an, die eine Konversion für den Touchpoint erzielen/nicht erreichen. Höhere zugewiesene Konversionen werden angezeigt, wenn das Verhältnis der Pfade (in Prozent), die eine Konversion erzielen, zu den Pfaden, die keine Konversion erzielen, hoch ist.
 
@@ -191,8 +191,8 @@ Sie können die Karteninformationen **[!UICONTROL Touchpoint-Effektivität]** ve
 
 Sobald Sie die Daten gefiltert haben und die entsprechenden Informationen anzeigen können, können Sie auf die Bewertungen zuzugreifen. Eine ausführliche Anleitung zum Zugriff auf Ihre Bewertungen finden Sie im [Tutorial für den Zugriff auf Bewertungen in Attribution AI](./download-scores.md). Darüber hinaus können Sie die Zusammenfassungsdaten herunterladen, wie in [Mehr Aktionen](#more-actions) angegeben. Wenn Sie „Zusammenfassungsdaten herunterladen“ auswählen, werden die nach Datumsangaben aggregierten Zusammenfassungsdaten heruntergeladen.
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
-Das folgende Video soll Ihnen dabei helfen zu lernen, wie Sie die Attribution AI-Insights-Seite verwenden, um den ROI von Marketing-Kanälen und -Kampagnen zu verstehen.
+Das folgende Video soll Ihnen dabei helfen zu lernen, wie Sie die Insights-Seite „Attribution AI“ verwenden können, um den ROI von Marketing-Kanälen und -Kampagnen zu verstehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)

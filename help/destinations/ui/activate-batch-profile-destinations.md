@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ec0a51bc8a6151a6d713d8f4639d6733989bbb16
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '4678'
-ht-degree: 50%
+source-wordcount: '4506'
+ht-degree: 39%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 50%
 
 >[!IMPORTANT]
 > 
-> * Zum Aktivieren von Zielgruppen und Aktivieren [Zuordnungsschritts](#mapping) des Workflows sind die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **&#x200B;**&#x200B;Segmente anzeigen[&#x200B; erforderlich](/help/access-control/home.md#permissions).
-> * Um Zielgruppen zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Zielgruppen und Aktivieren des [Zuordnungsschritts](#mapping) des Workflows sind die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) erforderlich.
+>* Um Zielgruppen zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 > 
 > Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
@@ -39,19 +39,19 @@ Beim Exportieren von Audiences werden die folgenden Dateiformate unterstützt:
 
 Beachten Sie, dass der Export von CSV-Dateien Ihnen mehr Flexibilität bei der Strukturierung Ihrer exportierten Dateien bietet. Lesen Sie mehr über [Dateiformatierungskonfiguration für CSV-Dateien](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
 
-Wählen Sie das gewünschte Dateiformat für den Export aus[&#x200B; wenn Sie eine Verbindung mit dem dateibasierten Ziel &#x200B;](/help/destinations/ui/connect-destination.md).
+Wählen Sie das gewünschte Dateiformat für den Export aus[ wenn Sie eine Verbindung mit dem dateibasierten Ziel ](/help/destinations/ui/connect-destination.md).
 
 ## Auswählen des Ziels {#select-destination}
 
-1. Navigieren Sie zu **[!UICONTROL Verbindungen und Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
+1. Wechseln Sie zu **[!UICONTROL Connections > Destinations]** und wählen Sie die Registerkarte **[!UICONTROL Catalog]** aus.
 
    ![Abbildung mit hervorgehobenen Informationen zum Zugriff auf die Registerkarte „Zielkatalog“.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. Wählen Sie **[!UICONTROL Zielgruppen aktivieren]** auf der Karte, die dem Zielort entspricht, an dem Sie Ihre Zielgruppen aktivieren möchten, wie in der Abbildung unten dargestellt.
+1. Wählen Sie **[!UICONTROL Activate audiences]** auf der Karte, die dem Ziel entspricht, für das Sie Ihre Zielgruppen aktivieren möchten, wie in der Abbildung unten dargestellt.
 
    ![Zielgruppen-Steuerelement aktivieren, das auf der Katalogseite hervorgehoben ist.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
-1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Zielgruppen verwenden möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
+1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Zielgruppen verwenden möchten, und klicken Sie dann auf **[!UICONTROL Next]**.
 
    ![Markierte Kontrollkästchen zur Auswahl eines oder mehrerer Ziele, für die Zielgruppen aktiviert werden sollen.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
@@ -59,12 +59,12 @@ Wählen Sie das gewünschte Dateiformat für den Export aus[&#x200B; wenn Sie ei
 
 ## Audiences auswählen {#select-audiences}
 
-Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen und klicken Sie dann auf **[!UICONTROL Weiter]**.
+Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen und klicken Sie dann auf **[!UICONTROL Next]**.
 
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
-* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience). Die Auswahl von Zielgruppen aus **[!UICONTROL benutzerdefinierten Uploads]** aktiviert automatisch den Schritt [Anreicherungsattribute auswählen](#select-enrichment-attributes).
+* **[!UICONTROL Segmentation Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
+* **[!UICONTROL Custom upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience). Die Auswahl von Zielgruppen aus **[!UICONTROL Custom uploads]** aktiviert automatisch den Schritt [Anreicherungsattribute auswählen](#select-enrichment-attributes).
 * Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
 >[!IMPORTANT]
@@ -75,7 +75,7 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 >[!TIP]
 >
->Um Zielgruppen aus vorhandenen Aktivierungsflüssen zu entfernen, verwenden Sie die Seite **[!UICONTROL Aktivierungsdaten]** . Weitere Informationen finden Sie im Abschnitt [Entfernen mehrerer Zielgruppen aus &#x200B;](../ui/destination-details-page.md#bulk-remove)-Flüssen“.
+>Um Zielgruppen aus vorhandenen Aktivierungsflüssen zu entfernen, verwenden Sie die Seite **[!UICONTROL Activation data]** . Weitere Informationen finden Sie im Abschnitt [Entfernen mehrerer Zielgruppen aus ](../ui/destination-details-page.md#bulk-remove)-Flüssen“.
 
 ## Planen eines Zielgruppenexports {#scheduling}
 
@@ -94,19 +94,19 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 >title="Monatliche Exporte"
 >abstract="<sup>*</sup> Wählen Sie das Startdatum aus. Nachfolgende Exporte erfolgen bis zum ausgewählten Enddatum an diesem Datum des Monats. Bei Monaten mit weniger als 30 oder 31 Tagen erfolgt der Export am letzten Tag des Monats."
 
-[!DNL Adobe Experience Platform] exportiert Daten für E-Mail-Marketing- und Cloud-Speicher-Ziele [verschiedene Dateitypen](#supported-file-formats-export). Auf der **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Audience konfigurieren, die Sie exportieren.
+[!DNL Adobe Experience Platform] exportiert Daten für E-Mail-Marketing- und Cloud-Speicher-Ziele [verschiedene Dateitypen](#supported-file-formats-export). Auf der Seite **[!UICONTROL Scheduling]** können Sie den Zeitplan und die Dateinamen für jede Audience konfigurieren, die Sie exportieren.
 
 Experience Platform legt automatisch einen Standardzeitplan für jeden Dateiexport fest. Sie können den Standardzeitplan Ihren Anforderungen entsprechend ändern, indem Sie auf das Stiftsymbol neben jedem Zeitplan klicken und einen benutzerdefinierten Zeitplan definieren.
 
 ![Steuerung „Zeitplan bearbeiten“ im Schritt „Planung“ hervorgehoben.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
-Um mehrere Zeitpläne gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen, indem Sie die Kontrollkästchen auf der linken Seite des Bildschirms aktivieren, und wählen Sie dann **[!UICONTROL Zeitplan bearbeiten]**. Der konfigurierte Zeitplan wird dann auf alle exportierten Dateien für die ausgewählten Zielgruppen angewendet.
+Um mehrere Zeitpläne gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen, indem Sie die Kontrollkästchen links im Bildschirm aktivieren, und klicken Sie dann auf **[!UICONTROL Edit schedule]**. Der konfigurierte Zeitplan wird dann auf alle exportierten Dateien für die ausgewählten Zielgruppen angewendet.
 
 ![Abbildung der Benutzeroberfläche von Experience Platform mit der Option „Zeitplan bearbeiten“ für mehrere ausgewählte Zielgruppen.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
->Sie können Zielgruppen-Aktivierungspläne für vorhandene Aktivierungsflüsse über die Seite **[!UICONTROL Aktivierungsdaten]** bearbeiten. Weitere Informationen finden Sie in [&#x200B; Dokumentation unter &#x200B;](../ui/destination-details-page.md#bulk-edit-schedule) für die Massenbearbeitung .
+>Sie können Zielgruppen-Aktivierungspläne für vorhandene Aktivierungsflüsse über die Seite **[!UICONTROL Activation data]** bearbeiten. Weitere Informationen finden Sie in [ Dokumentation unter ](../ui/destination-details-page.md#bulk-edit-schedule) für die Massenbearbeitung .
 
 >[!IMPORTANT]
 >
@@ -132,16 +132,16 @@ Um mehrere Zeitpläne gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen
 >title="Geplante Aktivierung"
 >abstract="Die Aktivierung erfolgt zu einer festen Tageszeit."
 
-Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]**, um den Export einer Datei mit einer vollständigen Momentaufnahme aller Profilqualifikationen für die ausgewählte Zielgruppe Trigger.
+Wählen Sie **[!UICONTROL Export full files]** aus, um den Export einer Datei mit einer vollständigen Momentaufnahme aller Profilqualifikationen für die ausgewählte Zielgruppe Trigger.
 
 ![Umschalter „Vollständige Dateien exportieren“ ausgewählt.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. Verwenden Sie den **[!UICONTROL Häufigkeitsselektor]** zur Auswahl der Exportfrequenz:
+1. Verwenden Sie den **[!UICONTROL Frequency]**, um die Exportfrequenz auszuwählen:
 
-   * **[!UICONTROL Einmal]**: plant einen einmaligen, bedarfsgesteuerten Export einer vollständigen Datei.
-   * **[!UICONTROL Täglich]**: plant vollständige Dateiexporte einmal täglich zum angegebenen Zeitpunkt.
-   * **[!UICONTROL Wöchentlich]**: Wählen Sie das Startdatum aus. Nachfolgende Exporte erfolgen an diesem Wochentag bis zum ausgewählten Enddatum.
-   * **[!UICONTROL Monatlich]** Wählen Sie das Startdatum aus. Nachfolgende Exporte erfolgen an diesem Datum des Monats bis zum ausgewählten Enddatum. Bei Monaten mit weniger als 30 oder 31 Tagen erfolgt der Export am letzten Tag des Monats.
+   * **[!UICONTROL Once]**: Planen Sie einen einmaligen, bedarfsgesteuerten Export einer vollständigen Datei.
+   * **[!UICONTROL Daily]**: plant vollständige Dateiexporte einmal täglich, jeden Tag, zum von Ihnen festgelegten Zeitpunkt.
+   * **[!UICONTROL Weekly]**: Wählen Sie das Startdatum aus. Nachfolgende Exporte erfolgen an diesem Wochentag bis zum ausgewählten Enddatum.
+   * **[!UICONTROL Monthly]**: Wählen Sie das Startdatum aus. Nachfolgende Exporte erfolgen an diesem Datum des Monats bis zum ausgewählten Enddatum. Bei Monaten mit weniger als 30 oder 31 Tagen erfolgt der Export am letzten Tag des Monats.
 
    >[!NOTE]
    >
@@ -155,9 +155,9 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]**, um den Export ei
    > 
    > Die Optionen für die wöchentliche und monatliche Planung sind für andere Zieltypen nicht verfügbar.
 
-2. Verwenden Sie den Umschalter **[!UICONTROL Zeit]**, um festzulegen, ob der Export unmittelbar nach der Zielgruppenbewertung oder zu einem bestimmten, geplanten Zeitpunkt erfolgen soll. Bei Auswahl der Option **[!UICONTROL Geplant]** können Sie mit dem Selektor die Tageszeit für den Export im [!DNL UTC]-Format wählen.
+2. Verwenden Sie den Umschalter **[!UICONTROL Time]** , um festzulegen, ob der Export unmittelbar nach der Zielgruppenbewertung oder zu einem bestimmten, geplanten Zeitpunkt erfolgen soll. Bei Auswahl der Option **[!UICONTROL Scheduled]** können Sie mit dem Selektor die Tageszeit für [!DNL UTC] Export auswählen.
 
-   Verwenden Sie die Option **[!UICONTROL Nach der Segmentevaluierung]**, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Experience Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Diese Option stellt sicher, dass bei der Ausführung des Aktivierungsvorgangs die aktuellsten Profile an Ihr Ziel exportiert werden. Abhängig von Ihren Aktionen kann dies dazu führen, dass eine Zielgruppe mehrmals am Tag exportiert wird.
+   Verwenden Sie die Option **[!UICONTROL After segment evaluation]** , damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Experience Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Diese Option stellt sicher, dass bei der Ausführung des Aktivierungsvorgangs die aktuellsten Profile an Ihr Ziel exportiert werden. Abhängig von Ihren Aktionen kann dies dazu führen, dass eine Zielgruppe mehrmals am Tag exportiert wird.
 
    >[!IMPORTANT]
    >
@@ -166,7 +166,7 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]**, um den Export ei
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![Abbildung mit hervorgehobener Option „Nach der Segmentauswertung“ im Aktivierungsfluss für Batch-Ziele](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-Verwenden Sie die Option **[!UICONTROL Geplant]**, damit der Aktivierungsvorgang zu einem festen Zeitpunkt ausgeführt wird. Diese Option stellt sicher, dass Experience Platform-Profildaten jeden Tag zur gleichen Zeit exportiert werden. Die Profile, die Sie exportieren, sind jedoch möglicherweise nicht auf dem neuesten Stand, je nachdem, ob der Batch-Segmentierungsauftrag vor dem Start des Aktivierungsauftrags abgeschlossen wurde.
+Verwenden Sie die Option **[!UICONTROL Scheduled]** , damit der Aktivierungsvorgang zu einem festen Zeitpunkt ausgeführt wird. Diese Option stellt sicher, dass Experience Platform-Profildaten jeden Tag zur gleichen Zeit exportiert werden. Die Profile, die Sie exportieren, sind jedoch möglicherweise nicht auf dem neuesten Stand, je nachdem, ob der Batch-Segmentierungsauftrag vor dem Start des Aktivierungsauftrags abgeschlossen wurde.
 
    ![Abbildung mit hervorgehobener Option „Geplant“ im Aktivierungsfluss für Batch-Ziele und Anzeige der Zeitauswahl](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -174,13 +174,13 @@ Verwenden Sie die Option **[!UICONTROL Geplant]**, damit der Aktivierungsvorgang
    >
    >Legen Sie beim Zuordnen einer Zielgruppe, die innerhalb der letzten 24 Stunden erstellt und mithilfe der [Batch-Segmentierung](../../segmentation/methods/batch-segmentation.md) ausgewertet wurde, den täglichen Exportplan so fest, dass er frühestens am folgenden Tag beginnt. Dadurch wird sichergestellt, dass der tägliche Batch-Auswertungsauftrag zuerst ausgeführt wird und Sie vollständige Zielgruppendaten exportieren.
 
-3. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll. Für tägliche Exporte empfiehlt es sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
+3. Verwenden Sie den **[!UICONTROL Date]**, um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll. Für tägliche Exporte empfiehlt es sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
 
    >[!IMPORTANT]
    >
    > Bei der Auswahl eines Exportintervalls wird der letzte Tag des Intervalls nicht in die Exporte einbezogen. Wenn Sie beispielsweise ein Intervall vom 4. bis 11. Januar auswählen, findet der letzte Dateiexport am 10. Januar statt.
 
-4. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
+4. Wählen Sie **[!UICONTROL Create]** aus, um den Zeitplan zu speichern.
 
 ### Exportieren von inkrementellen Dateien
 
@@ -189,7 +189,7 @@ Verwenden Sie die Option **[!UICONTROL Geplant]**, damit der Aktivierungsvorgang
 >title="Konfigurieren des Dateinamens"
 >abstract="Bei dateibasierten Zielen wird pro Zielgruppe ein eindeutiger Dateiname generiert. Verwenden Sie den Dateinamen-Editor, um einen eindeutigen Dateinamen zu erstellen und zu bearbeiten oder den Standardnamen beizubehalten."
 
-Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]**, um einen Export Trigger, bei dem die erste Datei eine vollständige Momentaufnahme aller Profilqualifikationen für die ausgewählte Zielgruppe ist und die nachfolgenden Dateien aus den inkrementellen Profilqualifikationen seit dem letzten Export bestehen.
+Wählen Sie **[!UICONTROL Export incremental files]** aus, um einen Export Trigger, bei dem die erste Datei eine vollständige Momentaufnahme aller Profilqualifikationen für die ausgewählte Zielgruppe ist und die nachfolgenden Dateien aus den inkrementellen Profilqualifikationen seit dem vorherigen Export bestehen.
 
 >[!IMPORTANT]
 >
@@ -197,21 +197,21 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]**, um einen Export 
 
 ![Umschalter „Inkrementelle Dateien exportieren“ ausgewählt.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. Verwenden Sie den **[!UICONTROL Häufigkeitsselektor]** zur Auswahl der Exportfrequenz:
+1. Verwenden Sie den **[!UICONTROL Frequency]**, um die Exportfrequenz auszuwählen:
 
-   * **[!UICONTROL Täglich]**: plant inkrementelle Dateiexporte einmal täglich zum angegebenen Zeitpunkt.
-   * **[!UICONTROL Stündlich]**: plant inkrementelle Dateiexporte alle 3, 6, 8 oder 12 Stunden.
+   * **[!UICONTROL Daily]**: Planung von inkrementellen Dateiexporten einmal täglich, jeden Tag, zum von Ihnen festgelegten Zeitpunkt.
+   * **[!UICONTROL Hourly]**: plant inkrementelle Dateiexporte alle 3, 6, 8 oder 12 Stunden.
 
 
-2. Verwenden Sie den **[!UICONTROL Zeitselektor]** zur Auswahl der Tageszeit im Format [!DNL UTC], zu der der Export erfolgen soll.
+2. Verwenden Sie den **[!UICONTROL Time]**, um die Tageszeit [!DNL UTC] Format auszuwählen, zu der der Export erfolgen soll.
 
-3. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um das Intervall auszuwählen, in dem der Export stattfinden soll. Es empfiehlt sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
+3. Verwenden Sie den **[!UICONTROL Date]**-Selektor, um das Intervall auszuwählen, in dem der Export stattfinden soll. Es empfiehlt sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
 
    >[!IMPORTANT]
    >
    >Der letzte Tag des Intervalls ist nicht in den Exporten enthalten. Wenn Sie beispielsweise ein Intervall vom 4. bis 11. Januar auswählen, findet der letzte Dateiexport am 10. Januar statt.
 
-4. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
+4. Wählen Sie **[!UICONTROL Create]** aus, um den Zeitplan zu speichern.
 
 ### Konfigurieren der Dateinamen {#configure-file-names}
 
@@ -238,47 +238,47 @@ Zielname und Zielgruppen-ID können nicht aus Dateinamen entfernt werden. Zusät
 
 | Dateinamenoption | Beschreibung |
 |---------|----------|
-| **[!UICONTROL Zielgruppenname]** | Der Name der exportierten Zielgruppe. |
-| **[!UICONTROL Datum und Uhrzeit]** | Wählen Sie zwischen dem Hinzufügen eines `MMDDYYYY_HHMMSS` Formats oder eines 10-stelligen UNIX-Zeitstempels für den Zeitpunkt, zu dem die Dateien generiert werden. Wählen Sie eine dieser Optionen aus, wenn für Ihre Dateien bei jedem inkrementellen Export ein dynamischer Dateiname erstellt werden soll. |
-| **[!UICONTROL Benutzerdefinierter Text]** | Beliebiger benutzerdefinierter Text, den Sie den Dateinamen hinzufügen möchten. |
-| **[!UICONTROL Ziel-ID]** | Die ID des Ziel-Datenflusses, den Sie zum Exportieren der Zielgruppe verwenden. |
-| **[!UICONTROL Zielname]** | Der Name des Ziel-Datenflusses, den Sie zum Exportieren der Zielgruppe verwenden. |
-| **[!UICONTROL Organisationsname]** | Ihr Organisationsname in Experience Platform. |
-| **[!UICONTROL Sandbox-Name]** | Die ID der Sandbox, die Sie zum Exportieren der Zielgruppe verwenden. |
+| **[!UICONTROL Audience name]** | Der Name der exportierten Zielgruppe. |
+| **[!UICONTROL Date and time]** | Wählen Sie zwischen dem Hinzufügen eines `MMDDYYYY_HHMMSS` Formats oder eines 10-stelligen UNIX-Zeitstempels für den Zeitpunkt, zu dem die Dateien generiert werden. Wählen Sie eine dieser Optionen aus, wenn für Ihre Dateien bei jedem inkrementellen Export ein dynamischer Dateiname erstellt werden soll. |
+| **[!UICONTROL Custom text]** | Beliebiger benutzerdefinierter Text, den Sie den Dateinamen hinzufügen möchten. |
+| **[!UICONTROL Destination ID]** | Die ID des Ziel-Datenflusses, den Sie zum Exportieren der Zielgruppe verwenden. |
+| **[!UICONTROL Destination name]** | Der Name des Ziel-Datenflusses, den Sie zum Exportieren der Zielgruppe verwenden. |
+| **[!UICONTROL Organization name]** | Ihr Organisationsname in Experience Platform. |
+| **[!UICONTROL Sandbox name]** | Die ID der Sandbox, die Sie zum Exportieren der Zielgruppe verwenden. |
 
 {style="table-layout:auto"}
 
-Um mehrere Dateinamen gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen, indem Sie die Kontrollkästchen auf der linken Seite des Bildschirms aktivieren, und wählen Sie dann **[!UICONTROL Dateinamen bearbeiten]**. Die von Ihnen konfigurierten Dateinamenoptionen werden dann für die ausgewählten Zielgruppen auf alle exportierten Dateien angewendet.
+Um mehrere Dateinamen gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen mithilfe der Kontrollkästchen auf der linken Seite des Bildschirms und klicken Sie dann auf **[!UICONTROL Edit file name]**. Die von Ihnen konfigurierten Dateinamenoptionen werden dann für die ausgewählten Zielgruppen auf alle exportierten Dateien angewendet.
 
 ![Abbildung der Benutzeroberfläche von Experience Platform mit der Option „Dateinamen bearbeiten“ für mehrere ausgewählte Zielgruppen.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
-Klicken Sie auf **[!UICONTROL Änderungen übernehmen]**, um Ihre Auswahl zu bestätigen.
+Wählen Sie **[!UICONTROL Apply changes]** aus, um Ihre Auswahl zu bestätigen.
 
 >[!IMPORTANT]
 > 
->Wenn Sie die Komponente **[!UICONTROL Datum und Uhrzeit]** nicht verwenden, sind die Dateinamen statisch und die neue exportierte Datei überschreibt die vorherige Datei an Ihrem Speicherort bei jedem Export. Diese Option wird bei der Ausführung eines wiederkehrenden Importvorgangs von einem Speicherort zu einer E-Mail-Marketing-Plattform empfohlen.
+>Wenn Sie die **[!UICONTROL Date and Time]** nicht auswählen, sind die Dateinamen statisch und die neue exportierte Datei überschreibt die vorherige Datei an Ihrem Speicherort bei jedem Export. Diese Option wird bei der Ausführung eines wiederkehrenden Importvorgangs von einem Speicherort zu einer E-Mail-Marketing-Plattform empfohlen.
 
-Nachdem Sie alle Zielgruppen konfiguriert haben, klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+Nachdem Sie alle Zielgruppen konfiguriert haben, wählen Sie **[!UICONTROL Next]** aus, um fortzufahren.
 
 ## Zuordnung {#mapping}
 
 In diesem Schritt müssen Sie die Profilattribute auswählen, die Sie zu den an das Ziel exportierten Dateien hinzufügen möchten. So wählen Sie Profilattribute und Identitäten für den Export aus:
 
-1. Wählen Sie auf **[!UICONTROL Seite]** Zuordnung“ **[!UICONTROL Neue Zuordnung hinzufügen]** aus.
+1. Wählen Sie auf der **[!UICONTROL Mapping]** Seite **[!UICONTROL Add new mapping]** aus.
 
    ![Hervorgehobene Steuerung „Neues Feld hinzufügen“ im Zuordnungs-Workflow](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. Wählen Sie den Pfeil rechts neben dem Eintrag **[!UICONTROL Quellfeld]** aus.
+1. Wählen Sie den Pfeil rechts neben dem **[!UICONTROL Source field]** aus.
 
    ![Hervorgehobene Steuerung zur Auswahl des Quellfelds im Zuordnungs-Workflow](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-1. Wählen Sie auf der Seite **[!UICONTROL Quellfeld auswählen]** die Profilattribute und Identitäten aus, die Sie in die exportierten Dateien am Ziel einbeziehen möchten, und wählen Sie dann **[!UICONTROL Auswählen]**.
+1. Wählen Sie auf der Seite **[!UICONTROL Select source field]** die Profilattribute und Identitäten aus, die Sie in die exportierten Dateien am Ziel einbeziehen möchten, und wählen Sie dann **[!UICONTROL Select]** aus.
 
    >[!TIP]
    > 
    >Sie können das Suchfeld verwenden, um die Auswahl einzugrenzen, wie in der Abbildung unten dargestellt.
 
-   Verwenden Sie den Umschalter **[!UICONTROL Nur Felder mit Daten anzeigen]**, um nur Schemafelder anzuzeigen, die mit Werten gefüllt sind. Standardmäßig werden nur ausgefüllte Schemafelder angezeigt.
+   Verwenden Sie den Umschalter **[!UICONTROL Show only fields with data]** , um nur Schemafelder anzuzeigen, die mit Werten ausgefüllt sind. Standardmäßig werden nur ausgefüllte Schemafelder angezeigt.
 
    ![Modales Fenster mit Profilattributen, die an das Ziel exportiert werden können](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
@@ -291,7 +291,7 @@ In diesem Schritt müssen Sie die Profilattribute auswählen, die Sie zu den an 
 
    ![Modales Fenster mit Profilattributen, die an das Ziel exportiert werden können](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
-1. Geben Sie auf der Seite **[!UICONTROL Zielfeld auswählen]** den gewünschten Namen für den Header in der exportierten Datei ein und wählen Sie **[!UICONTROL Auswählen]**.
+1. Geben Sie auf der Seite **[!UICONTROL Select target field]** den gewünschten Namen für die Kopfzeile in der exportierten Datei ein und wählen Sie dann **[!UICONTROL Select]** aus.
 
    ![Modales Fenster mit eingegebenem Anzeigenamen für einen Header](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
 
@@ -341,8 +341,8 @@ Deduplizierungsschlüssel verhindern die Möglichkeit, mehrere Einträge desselb
 
 Es gibt drei Möglichkeiten, Deduplizierungsschlüssel in [!DNL Experience Platform] zu verwenden:
 
-* Verwenden eines einzelnen Identitäts-Namespace als [!UICONTROL Deduplizierungsschlüssel]
-* Verwenden eines einzelnen Profilattributs aus einem [!DNL XDM]-Profil als [!UICONTROL Deduplizierungsschlüssel]
+* Verwenden eines einzelnen Identity-Namespace als [!UICONTROL deduplication key]
+* Verwenden eines einzelnen Profilattributs aus einem [!DNL XDM] als [!UICONTROL deduplication key]
 * Verwenden einer Kombination zweier Profilattribute aus einem [!DNL XDM]-Profil als zusammengesetzten Schlüssel
 
 >[!IMPORTANT]
@@ -466,7 +466,7 @@ Adobe empfiehlt das Auswählen eines Identitäts-Namespace, z. B. einer [!DNL CR
 
 ### Deduplizierungsverhalten für Profile mit demselben Zeitstempel {#deduplication-same-timestamp}
 
-Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Dieser Zeitstempel stellt den Zeitpunkt dar, zu dem die Zielgruppenzugehörigkeit oder das Identitätsdiagramm eines Profils zuletzt aktualisiert wurde. Weitere Informationen dazu, wie Profile aktualisiert und exportiert werden, finden Sie im Dokument [Verhalten beim Profilexport](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Dieser Zeitstempel stellt den Zeitpunkt dar, zu dem die Zielgruppenzugehörigkeit oder das Identitätsdiagramm eines Profils zuletzt aktualisiert wurde. Weitere Informationen dazu, wie Profile aktualisiert und exportiert werden, finden Sie im Dokument [Verhalten beim Profilexport](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Wichtige Aspekte
 
@@ -503,11 +503,11 @@ Sie können das Steuerelement [Berechnete Felder](/help/destinations/ui/data-tra
 
 ### Bekannte Einschränkungen {#known-limitations}
 
-Die neue Seite **[!UICONTROL Zuordnung]** weist die folgenden bekannten Einschränkungen auf:
+Die neue **[!UICONTROL Mapping]** weist die folgenden bekannten Einschränkungen auf:
 
 #### Attribut für die Zielgruppenzugehörigkeit kann nicht über den Zuordnungs-Workflow ausgewählt werden
 
-Aufgrund einer bekannten Einschränkung können Sie das Fenster **[!UICONTROL Feld auswählen]** derzeit nicht verwenden, um `segmentMembership.seg_namespace.seg_id.status` zu Ihren Dateiexporten hinzuzufügen. Stattdessen müssen Sie den Wert `xdm: segmentMembership.seg_namespace.seg_id.status` wie unten dargestellt manuell in das Schemafeld einfügen.
+Aufgrund einer bekannten Einschränkung können Sie das **[!UICONTROL Select field]**-Fenster derzeit nicht verwenden, um `segmentMembership.seg_namespace.seg_id.status` zu Ihren Dateiexporten hinzuzufügen. Stattdessen müssen Sie den Wert `xdm: segmentMembership.seg_namespace.seg_id.status` wie unten dargestellt manuell in das Schemafeld einfügen.
 
 ![Bildschirmaufzeichnung, die die Problemumgehung für die Zielgruppenzugehörigkeit im Zuordnungsschritt des Aktivierungs-Workflows zeigt.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
@@ -521,14 +521,14 @@ Aufgrund einer bekannten Einschränkung können Sie das Fenster **[!UICONTROL Fe
 
 Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg_namespace.seg_id.status` ausgewählt ist:
 
-* Wenn das Feld `segmentMembership.seg_namespace.seg_id.status` ausgewählt ist, enthalten exportierte Dateien **[!UICONTROL Active]**-Elemente in der ersten vollständigen Momentaufnahme sowie neu **[!UICONTROL Active]** und **[!UICONTROL Expired]**-Elemente in nachfolgenden inkrementellen Exporten.
-* Wenn die Variable `segmentMembership.seg_namespace.seg_id.status` nicht ausgewählt ist, umfassen exportierte Dateien sowohl in der ersten vollständigen Momentaufnahme als auch in nachfolgenden inkrementellen Exporten nur die **[!UICONTROL aktiven]** Mitglieder.
+* Wenn das Feld `segmentMembership.seg_namespace.seg_id.status` ausgewählt ist, enthalten exportierte Dateien **[!UICONTROL Active]** Mitglieder in der ersten vollständigen Momentaufnahme sowie neu **[!UICONTROL Active]** und **[!UICONTROL Expired]** Mitglieder in nachfolgenden inkrementellen Exporten.
+* Wenn das Feld `segmentMembership.seg_namespace.seg_id.status` nicht ausgewählt ist, umfassen exportierte Dateien sowohl in der ersten vollständigen Momentaufnahme als auch in nachfolgenden inkrementellen Exporten nur **[!UICONTROL Active]** Mitglieder.
 
 Weitere Informationen [Verhalten beim Profilexport für dateibasierte Ziele](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### Identitäts-Namespaces derzeit nicht für Exporte auswählbar
 
-Die Auswahl von Identitäts-Namespaces für den Export, wie in der Abbildung unten dargestellt, wird derzeit nicht unterstützt. Die Auswahl von Identitäts-Namespaces für den Export führt zu einem Fehler im **[!UICONTROL Überprüfungsschritt]**.
+Die Auswahl von Identitäts-Namespaces für den Export, wie in der Abbildung unten dargestellt, wird derzeit nicht unterstützt. Die Auswahl von Identitäts-Namespaces für den Export führt zu einem Fehler im **[!UICONTROL Review]**.
 
 ![Nicht unterstützte Zuordnung mit Identitätsexporten.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
@@ -540,21 +540,21 @@ Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identitäts-Names
 
 >[!IMPORTANT]
 > 
->Alle Cloud-Speicher-Ziele im Katalog können einen verbesserten [[!UICONTROL Zuordnungsschritt] sehen, &#x200B;](#mapping) den in diesem Abschnitt beschriebenen **[!UICONTROL Attribute]**&quot; ersetzt.
+>Für alle Cloud-Speicher-Ziele im Katalog kann ein verbesserter [[!UICONTROL Mapping] angezeigt werden](#mapping) der den in diesem Abschnitt beschriebenen **[!UICONTROL Select attributes]** ersetzt.
 >
->Dieser **[!UICONTROL Attribute auswählen]**-Schritt wird weiterhin für die E-Mail-Marketing-Ziele Adobe Campaign, Oracle Responsys, Oracle Eloqua und Salesforce Marketing Cloud angezeigt.
+>Dieser **[!UICONTROL Select attributes]** Schritt wird weiterhin für die E-Mail-Marketing-Ziele Adobe Campaign, Oracle Responsys, Oracle Eloqua und Salesforce Marketing Cloud angezeigt.
 
 Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie an das Ziel senden möchten.
 
-1. Wählen Sie auf der Seite **[!UICONTROL Attribute auswählen]** die Option **[!UICONTROL Neues Feld hinzufügen]**.
+1. Wählen Sie auf der **[!UICONTROL Select attributes]** Seite **[!UICONTROL Add new field]** aus.
 
    ![Abbildung mit hervorgehobener Schaltfläche „Neues Feld hinzufügen“](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
-2. Wählen Sie den Pfeil rechts neben dem Eintrag **[!UICONTROL Schemafeld]**.
+2. Wählen Sie den Pfeil rechts neben dem **[!UICONTROL Schema field]** aus.
 
    ![Abbildung mit hervorgehobenen Informationen zur Auswahl eines Quellfelds](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-3. Wählen **[!UICONTROL auf der Seite &quot;]**&quot; die XDM-Attribute oder Identity-Namespaces aus, die Sie an das Ziel senden möchten, und wählen Sie dann **[!UICONTROL Auswählen]**.
+3. Wählen Sie auf der Seite **[!UICONTROL Select field]** die XDM-Attribute oder Identity-Namespaces aus, die Sie an das Ziel senden möchten, und wählen Sie dann **[!UICONTROL Select]** aus.
 
    ![Abbildung mit den verschiedenen als Quellfelder verfügbaren Feldern](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
@@ -568,14 +568,14 @@ Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie a
 
 >[!IMPORTANT]
 >
->Aufgrund einer bekannten Einschränkung können Sie das Fenster **[!UICONTROL Feld auswählen]** derzeit nicht verwenden, um `segmentMembership.seg_namespace.seg_id.status` zu Ihren Dateiexporten hinzuzufügen. Stattdessen müssen Sie den Wert `xdm: segmentMembership.seg_namespace.seg_id.status` wie unten dargestellt manuell in das Schemafeld einfügen.
+>Aufgrund einer bekannten Einschränkung können Sie das **[!UICONTROL Select field]**-Fenster derzeit nicht verwenden, um `segmentMembership.seg_namespace.seg_id.status` zu Ihren Dateiexporten hinzuzufügen. Stattdessen müssen Sie den Wert `xdm: segmentMembership.seg_namespace.seg_id.status` wie unten dargestellt manuell in das Schemafeld einfügen.
 >
 >![Bildschirmaufzeichnung, die die Problemumgehung für die Zielgruppenzugehörigkeit im Zuordnungsschritt des Aktivierungs-Workflows zeigt.](../assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg_namespace.seg_id.status` ausgewählt ist:
 
-* Wenn das Feld `segmentMembership.seg_namespace.seg_id.status` ausgewählt ist, enthalten exportierte Dateien in der ersten vollständigen Momentaufnahme die **[!UICONTROL aktiven]** Mitglieder und in nachfolgenden inkrementellen Exporten die **[!UICONTROL aktiven]** und die **[!UICONTROL abgelaufenen]** Mitglieder.
-* Wenn die Variable `segmentMembership.seg_namespace.seg_id.status` nicht ausgewählt ist, umfassen exportierte Dateien sowohl in der ersten vollständigen Momentaufnahme als auch in nachfolgenden inkrementellen Exporten nur die **[!UICONTROL aktiven]** Mitglieder.
+* Wenn das Feld `segmentMembership.seg_namespace.seg_id.status` ausgewählt ist, enthalten exportierte Dateien in der ersten vollständigen Momentaufnahme **[!UICONTROL Active]** Mitglieder und in nachfolgenden inkrementellen Exporten **[!UICONTROL Active]** und **[!UICONTROL Expired]** Mitglieder.
+* Wenn das Feld `segmentMembership.seg_namespace.seg_id.status` nicht ausgewählt ist, umfassen exportierte Dateien sowohl in der ersten vollständigen Momentaufnahme als auch in nachfolgenden inkrementellen Exporten nur **[!UICONTROL Active]** Mitglieder.
 
 ## Auswählen von Anreicherungsattributen {#select-enrichment-attributes}
 
@@ -586,28 +586,28 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg
 
 >[!IMPORTANT]
 >
->Dieser Schritt wird nur angezeigt, wenn Sie im Schritt **[!UICONTROL Zielgruppenauswahl]** Zielgruppen [benutzerdefiniert hochladen](#select-audiences) ausgewählt haben.
+>Dieser Schritt wird nur angezeigt, wenn Sie **[!UICONTROL Custom upload]** Zielgruppen während des Schritts [Zielgruppenauswahl“ ](#select-audiences).
 
-Anreicherungsattribute entsprechen benutzerdefinierten hochgeladenen Zielgruppen, die in Experience Platform als **[!UICONTROL benutzerdefinierte Uploads“ aufgenommen]**. In diesem Schritt können Sie für jede ausgewählte externe Zielgruppe auswählen, welche Attribute Sie in Ihr Ziel exportieren möchten.
+Anreicherungsattribute entsprechen benutzerdefinierten hochgeladenen Zielgruppen, die in Experience Platform als **[!UICONTROL Custom uploads]** aufgenommen werden. In diesem Schritt können Sie für jede ausgewählte externe Zielgruppe auswählen, welche Attribute Sie in Ihr Ziel exportieren möchten.
 
 ![UI-Bild, das den Auswahlschritt der Anreicherungsattribute anzeigt.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 
 Gehen Sie wie folgt vor, um Anreicherungsattribute für jede externe Zielgruppe auszuwählen:
 
-1. Wählen Sie in der **[!UICONTROL Anreicherungsattribute]** die Schaltfläche ![Bearbeiten](/help/images/icons/edit.png) (Bearbeiten) aus.
-1. Wählen Sie **[!UICONTROL Anreicherungsattribut hinzufügen]** aus. Ein neues leeres Schemafeld wird angezeigt.
+1. Wählen Sie in der Spalte **[!UICONTROL Enrichment attributes]** die Schaltfläche ![Bearbeiten](/help/images/icons/edit.png) (Bearbeiten) aus.
+1. Wählen Sie **[!UICONTROL Add enrichment attribute]** aus. Ein neues leeres Schemafeld wird angezeigt.
    ![UI-Bild, das den modalen Bildschirm mit Anreicherungsattributen anzeigt.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 1. Klicken Sie auf die Schaltfläche rechts neben dem leeren Feld, um den Bildschirm für die Feldauswahl zu öffnen.
 1. Wählen Sie die Attribute aus, die Sie für die Zielgruppe exportieren möchten.
    ![UI-Bild, das die Liste der Anreicherungsattribute anzeigt.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-1. Nachdem Sie alle Attribute hinzugefügt haben, die Sie exportieren möchten, wählen Sie **[!UICONTROL Speichern und schließen]**.
+1. Nachdem Sie alle Attribute hinzugefügt haben, die Sie exportieren möchten, wählen Sie **[!UICONTROL Save and close]** aus.
 1. Wiederholen Sie diese Schritte für jede externe Zielgruppe.
 
-Wenn Sie externe Zielgruppen für Ihre Ziele aktivieren möchten, ohne Attribute zu exportieren, aktivieren Sie den Umschalter **[!UICONTROL Anreicherungsattribute ausschließen]**. Diese Option exportiert die Profile aus den externen Zielgruppen, aber keines der entsprechenden Attribute wird an Ihr Ziel gesendet.
+Wenn Sie externe Zielgruppen für Ihre Ziele aktivieren möchten, ohne Attribute zu exportieren, aktivieren Sie den Umschalter **[!UICONTROL Exclude enrichment attributes]** . Diese Option exportiert die Profile aus den externen Zielgruppen, aber keines der entsprechenden Attribute wird an Ihr Ziel gesendet.
 
 ![UI-Bild, das den Umschalter Anreicherungsattribute ausschließen anzeigt.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
-Wählen Sie **[!UICONTROL Weiter]** aus, um zum Schritt [Überprüfen](#review) zu wechseln.
+Wählen Sie **[!UICONTROL Next]** aus, um zum Schritt [Überprüfen](#review) zu wechseln.
 
 ## Überprüfung {#review}
 
@@ -620,7 +620,7 @@ Wählen Sie **[!UICONTROL Weiter]** aus, um zum Schritt [Überprüfen](#review) 
 >
 > Wenn beispielsweise das Feld `person.name.firstName` über bestimmte Datennutzungs-Labels verfügt, die im Konflikt mit der Marketing-Aktion des Ziels stehen, wird Ihnen im Überprüfungsschritt eine Verletzung der Datennutzungsrichtlinien angezeigt. Weitere Informationen finden Sie unter [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
+Auf der Seite **[!UICONTROL Review]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Cancel]** aus, um den Fluss zu unterbrechen, **[!UICONTROL Back]**, Ihre Einstellungen zu ändern, oder **[!UICONTROL Finish]** , um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 ![Zusammenfassung der Auswahl wird im Überprüfungsschritt angezeigt.](../assets/ui/activate-batch-profile-destinations/review.png)
 
@@ -629,13 +629,13 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_viewApplicableConsentPolicies"
 >title="Aktuelle Einverständnisrichtlinien anzeigen"
->abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
+>abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
 ### Prüfung der Datennutzungsrichtlinien {#data-usage-policy-checks}
 
-Im Schritt **[!UICONTROL Überprüfen]** prüft Experience Platform auch, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Zielgruppenaktivierungs-Workflow erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Dokumentationsabschnitt zur Data Governance.
+Im **[!UICONTROL Review]** Schritt prüft Experience Platform auch, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Zielgruppenaktivierungs-Workflow erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Dokumentationsabschnitt zur Data Governance.
 
 ![Beispiel für eine Datenrichtlinienverletzung, das im Aktivierungs-Workflow angezeigt wird.](../assets/common/data-policy-violation.png)
 
@@ -645,7 +645,7 @@ In diesem Schritt können Sie auch die auf der Seite verfügbaren Filter verwend
 
 ![Bildschirmaufzeichnung mit den verfügbaren Zielgruppenfiltern im Überprüfungsschritt.](../assets/ui/activate-batch-profile-destinations/filter-audiences-batch-review.gif)
 
-Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Beenden]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
+Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Finish]** aus, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 ## Zielgruppenaktivierung überprüfen {#verify}
 

@@ -3,10 +3,10 @@ title: Moengage-Verbindung
 description: Moengage ist eine Plattform zur Kundeninteraktion, die kundenorientierte Interaktionen zwischen Verbrauchern und Marken in Echtzeit ermöglicht.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 35%
+source-wordcount: '987'
+ht-degree: 32%
 
 ---
 
@@ -49,8 +49,8 @@ Beachten Sie die folgenden Voraussetzungen, bevor Sie Ihre Adobe Experience Plat
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den Kennungen (user_id, anonymous_id) zusammen mit benutzerdefinierten Attributen, die von Ihnen in [!DNL Moengage] exportiert wurden. |
+|---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den Kennungen (user_id, anonymous_id) zusammen mit benutzerdefinierten Attributen, die von Ihnen in [!DNL Moengage] exportiert wurden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -59,13 +59,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Connect to destination]** aus.
 
 ![MoEngage-Zielauthentifizierung](../../assets/catalog/mobile-engagement/moengage/authentication.png)
 
@@ -73,26 +73,27 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 ![MoEngage-Zielauthentifizierung](../../assets/catalog/mobile-engagement/moengage/settings.png)
-* **[!UICONTROL BENUTZERNAME]**: DATA APP-ID der Einstellungsseite [!DNL Moengage] Dashboards.
-* **[!UICONTROL KENNWORT]**: DATA APP KEY auf der Seite „Einstellungen“ [!DNL Moengage] Dashboards.
+
+* **[!UICONTROL USERNAME]**: DATA APP-ID der Einstellungsseite [!DNL Moengage] Dashboards.
+* **[!UICONTROL PASSWORD]**: DATEN-APP-SCHLÜSSEL von der Einstellungsseite [!DNL Moengage] Dashboards.
 
 ![MoEngage-Zielauthentifizierung](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Region]**: Ihre Anwendung *Rechenzentrum*.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Region]**: Ihre App *Rechenzentrum*.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md).
 
@@ -104,36 +105,38 @@ Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres 
 
 Um Ihre XDM-Felder den [!DNL Moengage]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
-Wählen [!UICONTROL &#x200B; Schritt &#x200B;]Zuordnung“ **[!UICONTROL Kontrollkästchen]** aus.
+Wählen Sie im [!UICONTROL Mapping] Schritt **[!UICONTROL Checkbox]** aus.
 
 ![MoEngage-Ziel - Zuordnung hinzufügen](../../assets/catalog/mobile-engagement/moengage/segments.png)
 
-Wählen [!UICONTROL &#x200B; Schritt &#x200B;]Zuordnung“ **[!UICONTROL Neue Zuordnung hinzufügen]** aus.
+Wählen Sie im [!UICONTROL Mapping] Schritt **[!UICONTROL Add new mapping]** aus.
 
 ![MoEngage-Ziel - Zuordnung hinzufügen](../../assets/catalog/mobile-engagement/moengage/mapping.png)
 
-Wählen Sie im Abschnitt [!UICONTROL Source] die Pfeilschaltfläche neben dem leeren Feld aus.
+Klicken Sie im Abschnitt [!UICONTROL Source Field] auf die Pfeilschaltfläche neben dem leeren Feld.
 
 ![MoEngage-Ziel-Source-Zuordnung](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
 
-Im Fenster [!UICONTROL Quellfeld auswählen] können Sie zwischen zwei Kategorien von XDM-Feldern wählen:
-* [!UICONTROL Attribute auswählen]: Verwenden Sie diese Option, um ein bestimmtes Feld aus Ihrem XDM-Schema [!DNL Moengage] Attribut zuzuordnen.
+Im [!UICONTROL Select source field] können Sie zwischen zwei Kategorien von XDM-Feldern wählen:
+
+* [!UICONTROL Select attributes]: Verwenden Sie diese Option, um ein bestimmtes Feld aus Ihrem XDM-Schema [!DNL Moengage] Attribut zuzuordnen.
 
 ![Source-Attribut für die Moengage-Zielzuordnung](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
 
-Wählen Sie Ihr Quellfeld und dann **[!UICONTROL Auswählen]** aus.
+Wählen Sie Ihr Quellfeld und dann **[!UICONTROL Select]** aus.
 
-Wählen [!UICONTROL &#x200B; im Abschnitt &#x200B;]Zielfeld“ das Zuordnungssymbol rechts neben dem Feld aus.
+Wählen Sie im Abschnitt [!UICONTROL Target Field] das Zuordnungssymbol rechts neben dem Feld aus.
 
 ![MoEngage-Zielgruppen-Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
-Im Fenster [!UICONTROL Zielfeld auswählen] können Sie zwischen zwei Kategorien von Zielfeldern wählen:
-* [!UICONTROL Identity-Namespace auswählen]: Verwenden Sie diese Option, um [!DNL Experience Platform] Identity-Namespaces [!DNL Moengage] Identity-Namespaces zuzuordnen.
-* [!UICONTROL Benutzerdefinierte Attribute auswählen]: Verwenden Sie diese Option, um XDM-Attribute benutzerdefinierten [!DNL Moengage] zuzuordnen, die Sie in Ihrem [!DNL Moengage]-Konto definiert haben. <br> Sie können diese Option auch verwenden, um vorhandene XDM-Attribute in [!DNL Moengage] umzubenennen. Wenn Sie beispielsweise ein `lastName` XDM-Attribut einem benutzerdefinierten `Last_Name`-Attribut in [!DNL Moengage] zuordnen, wird das `Last_Name`-Attribut in [!DNL Moengage] erstellt, falls es noch nicht vorhanden ist, und ihm wird das `lastName` XDM-Attribut zugeordnet.
+Im [!UICONTROL Select target field] können Sie zwischen zwei Kategorien von Zielfeldern wählen:
+
+* [!UICONTROL Select identity namespace]: Verwenden Sie diese Option, um [!DNL Experience Platform] Identity-Namespaces [!DNL Moengage] Identity-Namespaces zuzuordnen.
+* [!UICONTROL Select custom attributes]: Verwenden Sie diese Option, um XDM-Attribute benutzerdefinierten [!DNL Moengage] zuzuordnen, die Sie in Ihrem [!DNL Moengage]-Konto definiert haben. <br> Sie können diese Option auch verwenden, um vorhandene XDM-Attribute in [!DNL Moengage] umzubenennen. Wenn Sie beispielsweise ein `lastName` XDM-Attribut einem benutzerdefinierten `Last_Name`-Attribut in [!DNL Moengage] zuordnen, wird das `Last_Name`-Attribut in [!DNL Moengage] erstellt, falls es noch nicht vorhanden ist, und ihm wird das `lastName` XDM-Attribut zugeordnet.
 
 ![MoEngage-Ziel-Zuordnungsfelder](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 
-Wählen Sie Ihr Zielfeld und dann **[!UICONTROL Auswählen]** aus.
+Wählen Sie Ihr Zielfeld und dann **[!UICONTROL Select]** aus.
 
 Die Feldzuordnung sollte nun in der Liste angezeigt werden.
 

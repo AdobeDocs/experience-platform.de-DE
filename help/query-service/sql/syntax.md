@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: In diesem Dokument wird die vom Abfrage-Service von Adobe Experience Platform unterstützte SQL-Syntax beschrieben.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '4686'
 ht-degree: 4%
@@ -223,8 +223,8 @@ AS (select_query)
 | `schema` | Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie die neue Tabelle mit einem vorhandenen XDM-Schema verknüpfen möchten. |
 | `rowvalidation` | (Optional) Aktiviert die Validierung auf Zeilenebene für jeden Batch, der in den Datensatz aufgenommen wird. Der Standardwert ist „true“. |
 | `label` | (Optional) Verwenden Sie den Wert `PROFILE` , um den Datensatz als für die Profilaufnahme aktiviert zu kennzeichnen. |
-| `transform` | (Optional) Wendet vor der Materialisierung des Datensatzes technische Umwandlungen an (z. B. Zeichenfolgenindizierung, One-Hot-Kodierung oder TF-IDF). Diese Klausel wird für die Vorschau von umgewandelten Funktionen verwendet. Weitere Informationen finden Sie in der [&#128279;](#transform) zur `TRANSFORM`-Klausel . |
-| `select_query` | Eine standardmäßige `SELECT`, die den Datensatz definiert. Weitere Informationen finden Sie [&#128279;](#select-queries) Abschnitt `SELECT` . |
+| `transform` | (Optional) Wendet vor der Materialisierung des Datensatzes technische Umwandlungen an (z. B. Zeichenfolgenindizierung, One-Hot-Kodierung oder TF-IDF). Diese Klausel wird für die Vorschau von umgewandelten Funktionen verwendet. Weitere Informationen finden Sie in der [`TRANSFORM` zur ](#transform)-Klausel . |
+| `select_query` | Eine standardmäßige `SELECT`, die den Datensatz definiert. Weitere Informationen finden Sie [`SELECT` Abschnitt ](#select-queries) . |
 
 >[!NOTE]
 >
@@ -302,9 +302,9 @@ Die `TRANSFORM`-Klausel kann in den folgenden Anweisungen verwendet werden:
 - `CREATE TABLE`
 - `CREATE TEMP TABLE`
 
-Detaillierte Anweisungen zur Verwendung [&#x200B; ERSTELLEN &#x200B;](../advanced-statistics/models.md), einschließlich der Definition von Transformationen, der Festlegung von Modelloptionen und der Konfiguration von Trainingsdaten, finden Sie in der Dokumentation zu Modellen .
+Detaillierte Anweisungen zur Verwendung [ ERSTELLEN ](../advanced-statistics/models.md), einschließlich der Definition von Transformationen, der Festlegung von Modelloptionen und der Konfiguration von Trainingsdaten, finden Sie in der Dokumentation zu Modellen .
 
-Informationen zur Verwendung mit `CREATE TABLE` finden Sie [&#x200B; Abschnitt „CREATE TABLE AS SELECT](#create-table-as-select).
+Informationen zur Verwendung mit `CREATE TABLE` finden Sie [ Abschnitt „CREATE TABLE AS SELECT](#create-table-as-select).
 
 #### MODELLBEISPIEL ERSTELLEN
 
@@ -486,7 +486,7 @@ SHOW VIEWS;
 
 ```console
  Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
-----------------------------------------------------------------------------------------------
+|----------------------------------------------------------------------------------------------
  qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
           |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
 (2 rows)
@@ -674,7 +674,7 @@ Die Ergebnisse lauten wie folgt:
 
 ```console
                 _id                |                                _experience                                 | application  |                   commerce                   | dataSource |                               device                               |                       endUserIDs                       |                                                                                                environment                                                                                                |                     identityMap                     |                              placeContext                               |   receivedTimestamp   |       timestamp       | userActivityRegion |                                         web                                          | _adcstageforpqs
------------------------------------+----------------------------------------------------------------------------+--------------+----------------------------------------------+------------+--------------------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------+-----------------------+-----------------------+--------------------+--------------------------------------------------------------------------------------+-----------------
+|-----------------------------------+----------------------------------------------------------------------------+--------------+----------------------------------------------+------------+--------------------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------+-----------------------+-----------------------+--------------------+--------------------------------------------------------------------------------------+-----------------
  31892EE15DE00000-401D52664FF48A52 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE080007B35-E6CE00000000000,"(AAID)",t)")")  | ("(en-US,f,f,t,1.6,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",490,1125)",xo.net,64.3.235.13)     | [AAID -> "{(31892EE080007B35-E6CE00000000000,t)}"]  | ("("(34.01,-84.0)",lawrenceville,US,524,30043,ga)",600)                 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Search Results,"(1.0)")","(http://www.google.com/search?ie=UTF-8&q=,internal)") |
  31892EE15DE00000-401B92664FF48AE8 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE100007BF3-215FE00000000001,"(AAID)",t)")") | ("(en-US,f,f,t,1.5,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",768,556)",ntt.net,219.165.108.145) | [AAID -> "{(31892EE100007BF3-215FE00000000001,t)}"] | ("("(34.989999999999995,138.42)",shizuoka,JP,392005,420-0812,22)",-240) | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Home - JJEsquire,"(1.0)")","(NULL,typed_bookmarked)")                           |
 (2 rows)  
@@ -686,7 +686,7 @@ Die folgende Tabelle zeigt die unterschiedlichen Ergebnisse, die die `auto_to_js
 
 ```console
                 _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
------------------------------------+-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------
+|-----------------------------------+-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------
  31892EE15DE00000-401D52664FF48A52 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE080007B35-E6CE00000000000","namespace":{"code":"AAID"},"primary":true}}}  | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.6","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":490,"viewportWidth":1125},"domain":"xo.net","ipV4":"64.3.235.13"}     | {"AAID":[{"id":"31892EE080007B35-E6CE00000000000","primary":true}]}  | {"geo":{"_schema":{"latitude":34.01,"longitude":-84.0},"city":"lawrenceville","countryCode":"US","dmaID":524,"postalCode":"30043","stateProvince":"ga"},"localTimezoneOffset":600}                 | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Search Results","pageViews":{"value":1.0}},"webReferrer":{"URL":"http://www.google.com/search?ie=UTF-8&q=","type":"internal"}} |
  31892EE15DE00000-401B92664FF48AE8 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE100007BF3-215FE00000000001","namespace":{"code":"AAID"},"primary":true}}} | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.5","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":768,"viewportWidth":556},"domain":"ntt.net","ipV4":"219.165.108.145"} | {"AAID":[{"id":"31892EE100007BF3-215FE00000000001","primary":true}]} | {"geo":{"_schema":{"latitude":34.989999999999995,"longitude":138.42},"city":"shizuoka","countryCode":"JP","dmaID":392005,"postalCode":"420-0812","stateProvince":"22"},"localTimezoneOffset":-240} | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Home - JJEsquire","pageViews":{"value":1.0}},"webReferrer":{"type":"typed_bookmarked"}}                                        |
 (2 rows)
@@ -746,7 +746,7 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Ausführlichere Erläuterungen zu Best Practices für den Abfrage[Service finden Sie im Handbuch &#x200B;](../best-practices/organize-data-assets.md)Logische Organisation von Daten-Assets“.
+Ausführlichere Erläuterungen zu Best Practices für den Abfrage[Service finden Sie im Handbuch ](../best-practices/organize-data-assets.md)Logische Organisation von Daten-Assets“.
 
 ## Tabelle vorhanden
 
@@ -857,7 +857,7 @@ Der Befehl `ANALYZE TABLE` berechnet Statistiken für eine Tabelle im beschleuni
 ANALYZE TABLE <original_table_name>
 ```
 
-Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendung des `ANALYZE TABLE`-Befehls verfügbar sind:
+Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendung des `ANALYZE TABLE`-Befehls verfügbar sind:-
 
 | Berechnete Werte | Beschreibung |
 |---|---|
@@ -873,7 +873,7 @@ Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendu
 
 #### BERECHNEN VON STATISTIKEN zum Data Lake {#compute-statistics-data-lake}
 
-Sie können jetzt mit dem `COMPUTE STATISTICS` SQL-Befehl Statistiken auf Spaltenebene für [!DNL Azure Data Lake Storage] (ADLS)-Datensätze berechnen. Spaltenstatistiken entweder für den gesamten Datensatz, eine Teilmenge eines Datensatzes, alle Spalten oder eine Teilmenge von Spalten berechnen.
+Sie können jetzt mit dem [!DNL Azure Data Lake Storage] SQL-Befehl Statistiken auf Spaltenebene für `COMPUTE STATISTICS` (ADLS)-Datensätze berechnen. Spaltenstatistiken entweder für den gesamten Datensatz, eine Teilmenge eines Datensatzes, alle Spalten oder eine Teilmenge von Spalten berechnen.
 
 `COMPUTE STATISTICS` erweitert den `ANALYZE TABLE`. Die Befehle `COMPUTE STATISTICS`, `FILTERCONTEXT` und `FOR COLUMNS` werden jedoch in beschleunigten Speichertabellen nicht unterstützt. Diese Erweiterungen für den `ANALYZE TABLE`-Befehl werden derzeit nur für ADLS-Tabellen unterstützt.
 
@@ -915,13 +915,13 @@ Nachfolgend finden Sie eine Beispielausgabe von SHOW STATISTICS.
 
 ```console
       statsId         |   tableName   | columnSet |         filterContext       |      timestamp
-----------------------+---------------+-----------+-----------------------------+--------------------
+|----------------------+---------------+-----------+-----------------------------+--------------------
 adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
 demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../key-concepts/dataset-statistics.md) zu Datensatzstatistiken .
+Weitere Informationen finden [ in der ](../key-concepts/dataset-statistics.md) zu Datensatzstatistiken .
 
 #### TABELLENBEISPIEL {#tablesample}
 
@@ -940,7 +940,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../key-concepts/dataset-samples.md) zu Datensatzbeispielen .
+Weitere Informationen finden [ in der ](../key-concepts/dataset-samples.md) zu Datensatzbeispielen .
 
 ### BEGIN
 
@@ -1035,7 +1035,7 @@ EXPLAIN SELECT * FROM foo;
 
 ```console
                        QUERY PLAN
----------------------------------------------------------
+|---------------------------------------------------------
  Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
@@ -1141,7 +1141,7 @@ SHOW DateStyle;
 
 ```console
  DateStyle
------------
+|-----------
  ISO, MDY
 (1 row)
 ```
@@ -1242,7 +1242,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Weitere Informationen finden Sie im Dokument zum [&#x200B; von Identitäten in Ad-hoc-Datensätzen](../data-governance/ad-hoc-schema-identities.md).
+Weitere Informationen finden Sie im Dokument zum [ von Identitäten in Ad-hoc-Datensätzen](../data-governance/ad-hoc-schema-identities.md).
 
 #### SPALTE HINZUFÜGEN
 
@@ -1315,7 +1315,7 @@ SHOW PRIMARY KEYS
 
 ```console
     tableName | columnName    | datatype | namespace
-------------------+----------------------+----------+-----------
+|------------------+----------------------+----------+-----------
  table_name_1 | column_name1  | text     | "ECID"
  table_name_2 | column_name2  | text     | "AAID"
 ```
@@ -1330,7 +1330,7 @@ SHOW FOREIGN KEYS
 
 ```console
     tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
-------------------+---------------------+----------+---------------------+----------------------+-----------
+|------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
 ```

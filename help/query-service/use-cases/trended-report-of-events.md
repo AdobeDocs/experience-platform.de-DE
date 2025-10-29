@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage
 title: Erstellen eines Trendberichts mit Ereignissen
 description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um einen Trend-Bericht mit Ereignissen über einen bestimmten Datumsbereich gruppiert nach Datum zu erstellen.
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 6%
@@ -12,7 +12,7 @@ ht-degree: 6%
 
 # Erstellen eines Trendberichts mit Ereignissen
 
-Dieses Dokument enthält ein Beispiel für den erforderlichen SQL-Code, um einen Trend-Bericht zu Ereignissen nach Tag über einen bestimmten Datumsbereich zu erstellen. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die ExperienceEvent-Klasse des Experience-Datenmodells (XDM) dargestellt, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Service interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Weitere Anwendungsfälle, bei [&#128279;](#next-steps) Besucherberichte erstellt werden [!DNL Experience Events], finden Sie  Abschnitt „Nächste Schritte“.
+Dieses Dokument enthält ein Beispiel für den erforderlichen SQL-Code, um einen Trend-Bericht zu Ereignissen nach Tag über einen bestimmten Datumsbereich zu erstellen. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die ExperienceEvent-Klasse des Experience-Datenmodells (XDM) dargestellt, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Service interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Weitere Anwendungsfälle, bei [ Besucherberichte erstellt werden ](#next-steps), finden Sie [!DNL Experience Events] Abschnitt „Nächste Schritte“.
 
 Berichte bieten Ihnen Zugriff auf Ihre Experience Platform-Daten, um die strategischen geschäftlichen Einblicke Ihres Unternehmens zu nutzen. Mit diesen Berichten können Sie Ihre Experience Platform-Daten auf verschiedene Weise untersuchen, Schlüsselmetriken in leicht verständlichen Formaten anzeigen und die resultierenden Erkenntnisse teilen.
 
@@ -47,7 +47,7 @@ Die Ergebnisse dieser Abfrage werden unten angezeigt.
 
 ```console
      Day     | pageViews |   A    |   B   |    C    | viewedParkas
--------------+-----------+--------+-------+---------+--------------
+|-------------+-----------+--------+-------+---------+--------------
  2019-03-01  |   55317.0 | 8503.0 | 804.0 | 1578.0  |           73
  2019-03-02  |   55302.0 | 8600.0 | 854.0 | 1528.0  |           86
  2019-03-03  |   54613.0 | 8162.0 | 795.0 | 1568.0  |          100

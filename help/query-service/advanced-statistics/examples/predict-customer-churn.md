@@ -1,7 +1,8 @@
 ---
 title: Prognostizieren der Kundenabwanderung mit SQL-basierter logistischer Regression
 description: Erfahren Sie, wie Sie mithilfe einer SQL-basierten logistischen Regression Kundenabwanderungen vorhersagen können. Dieses Handbuch behandelt den gesamten Prozess von der Modellerstellung bis zur Bewertung und Prognose. Gewinnen Sie umsetzbare Einblicke aus dem Kaufverhalten des Kunden, um proaktive Aufbewahrungsstrategien zu implementieren und Geschäftsentscheidungen zu optimieren.
-source-git-commit: 95c7ad3f8eb86cacd42077008824eea9e25b4db0
+exl-id: 3b18870d-104c-4dce-8549-a6818dc40d24
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 1%
@@ -128,7 +129,7 @@ Der Ausgabedatensatz enthält kundenbezogene Metriken und deren Abwanderungsstat
 
 ```console
  customer_id  | total_purchases | total_revenue | avg_order_value  | customer_lifetime | days_since_last_purchase | purchase_frequency | churned |
---------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
+|--------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
   100001      | 25              | 1250.00       | 50.00            | 540               | 20                       | 10                 | 0       
   100002      | 3               | 90.00         | 30.00            | 120               | 95                       | 1                  | 1       
   100003      | 60              | 7200.00       | 120.00           | 800               | 5                        | 24                 | 0       
@@ -144,7 +145,7 @@ Der Ausgabedatensatz enthält kundenbezogene Metriken und deren Abwanderungsstat
 
 Bewerten Sie anschließend das Abwanderungsvorhersagungsmodell, um seine Effektivität bei der Identifizierung gefährdeter Kunden zu bestimmen. Bewerten Sie die Modellleistung mit Schlüsselmetriken, die Genauigkeit und Zuverlässigkeit messen.
 
-Verwenden Sie die `model_evaluate`-Funktion, um die Genauigkeit des `retention_model_logistic_reg`-Modells bei der Prognose der Kundenabwanderung zu messen. Im folgenden SQL-Beispiel wird das Modell mithilfe eines Datensatzes ausgewertet, der wie die Trainingsdaten strukturiert ist:
+Verwenden Sie die `retention_model_logistic_reg`-Funktion, um die Genauigkeit des `model_evaluate`-Modells bei der Prognose der Kundenabwanderung zu messen. Im folgenden SQL-Beispiel wird das Modell mithilfe eines Datensatzes ausgewertet, der wie die Trainingsdaten strukturiert ist:
 
 ```sql
 SELECT * 
@@ -203,7 +204,7 @@ Die Auswertungsausgabe enthält wichtige Leistungsmetriken wie AUC-ROC, Genauigk
 
 ```console
  auc_roc | accuracy | precision | recall 
----------+----------+-----------+--------
+|---------+----------+-----------+--------
 1        | 0.99998  |  1        |  1      
 ```
 
@@ -279,7 +280,7 @@ Der Ausgabedatensatz enthält wichtige Kundenfunktionen und den prognostizierten
 
 ```console
  total_purchases | total_revenue | avg_order_value | customer_lifetime | days_since_last_purchase | purchase_frequency | churned | prediction
------------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
+|-----------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
  2               | 299           | 149.5           | 0                 | 13                        | 1                  | 0       | 0
  1               | 710           | 710.00          | 0                 | 149                       | 1                  | 1       | 1
  1               | 19.99         | 19.99           | 0                 | 30                        | 1                  | 0       | 0

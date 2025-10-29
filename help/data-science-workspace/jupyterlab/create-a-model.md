@@ -5,9 +5,9 @@ title: Erstellen eines Modells mit JupyterLab-Notebooks
 type: Tutorial
 description: Dieses Tutorial führt Sie durch die erforderlichen Schritte, um ein Rezept mithilfe der Rezept-Builder-Vorlage für JupyterLab-Notebooks zu erstellen.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2079'
 ht-degree: 28%
 
 ---
@@ -37,21 +37,21 @@ Bevor Sie mit diesem Tutorial fortfahren, müssen Sie die erforderlichen Schemat
 
 Ein Rezept kann in [!DNL Data Science Workspace] von Grund auf neu erstellt werden. Navigieren Sie zunächst zu [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie links die Registerkarte **[!UICONTROL Notebooks]** aus. Um ein neues Notebook zu erstellen, wählen Sie die Rezept-Builder -Vorlage aus der [!DNL JupyterLab Launcher] aus.
 
-Mit dem [!UICONTROL Recipe Builder]-Notebook können Sie Trainings- und Bewertungsdurchgänge im Notebook ausführen. So können Sie zwischen laufenden Experimenten für Trainings- und Scoring-Daten flexibel Änderungen an den `train()`- und `score()`-Methoden vorzunehmen. Sobald Sie mit den Ergebnissen des Trainings und der Bewertung zufrieden sind, können Sie das Rezept erstellen und es außerdem als Modell veröffentlichen, indem Sie die Funktion Rezept zum Modellieren verwenden.
+Mit dem [!UICONTROL Recipe Builder] Notebook können Sie Trainings- und Scoring-Läufe im Notebook ausführen. So können Sie zwischen laufenden Experimenten für Trainings- und Scoring-Daten flexibel Änderungen an den `train()`- und `score()`-Methoden vorzunehmen. Sobald Sie mit den Ergebnissen des Trainings und der Bewertung zufrieden sind, können Sie das Rezept erstellen und es außerdem als Modell veröffentlichen, indem Sie die Funktion Rezept zum Modellieren verwenden.
 
 >[!NOTE]
 >
->Das [!UICONTROL Recipe Builder]-Notebook unterstützt die Arbeit mit allen Dateiformaten, aber derzeit unterstützt die Funktion „Rezept erstellen“ nur [!DNL Python].
+>Das [!UICONTROL Recipe Builder]-Notebook unterstützt die Arbeit mit allen Dateiformaten, aber die Funktion „Rezept erstellen“ unterstützt derzeit nur [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
-Wenn Sie das Notebook [!UICONTROL Recipe Builder] aus dem Starter auswählen, wird das Notebook in einer neuen Registerkarte geöffnet.
+Wenn Sie das [!UICONTROL Recipe Builder] Notebook über den Starter auswählen, wird das Notebook in einer neuen Registerkarte geöffnet.
 
-Auf der neuen Notebook-Registerkarte oben wird eine Symbolleiste geladen, die drei zusätzliche Aktionen enthält: **&#x200B;**, **[!UICONTROL Ergebnis]** und **[!UICONTROL Rezept erstellen]**. Diese Symbole erscheinen nur im [!UICONTROL Recipe Builder]-Notebook. Weitere Informationen zu diesen Aktionen finden Sie [&#x200B; Abschnitt „Training und Bewertung](#training-and-scoring) nachdem Sie Ihr Rezept im Notebook erstellt haben.
+Auf der neuen Notebook-Registerkarte oben wird eine Symbolleiste geladen, die drei zusätzliche Aktionen enthält: **[!UICONTROL Train]**, **[!UICONTROL Score]** und **[!UICONTROL Create Recipe]**. Diese Symbole werden nur im [!UICONTROL Recipe Builder] Notebook angezeigt. Weitere Informationen zu diesen Aktionen finden Sie [ Abschnitt „Training und Bewertung](#training-and-scoring) nachdem Sie Ihr Rezept im Notebook erstellt haben.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Erste Schritte mit dem [!UICONTROL Recipe Builder]-Notebook
+## Erste Schritte mit dem [!UICONTROL Recipe Builder] Notebook
 
 Im bereitgestellten Asset-Ordner befindet sich ein Luma-`propensity_model.ipynb`. Laden Sie mithilfe der Option Notebook hochladen in JupyterLab das bereitgestellte Modell hoch und öffnen Sie das Notebook.
 
@@ -69,7 +69,7 @@ Der Rest dieses Tutorials behandelt die folgenden Dateien, die im Notebook für 
 
 Im folgenden Video-Tutorial wird das Luma-Tendenzmodell-Notebook erläutert:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452501?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### Anforderungsdatei {#requirements-file}
 
@@ -139,6 +139,7 @@ Ein ausführliches Tutorial zur Verwendung des `platform_sdk` Data Loaders finde
 ### Externe Quellen {#external-sources}
 
 Dieser Abschnitt veranschaulicht, wie Sie eine JSON- oder CSV-Datei in ein pandas-Objekt importieren können. Die offizielle Dokumentation der pandas-Bibliothek finden Sie hier:
+
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
@@ -178,6 +179,7 @@ def load(config_properties):
 >[!NOTE]
 >
 >Wie im Abschnitt [Konfigurationsdatei](#configuration-files) erwähnt, werden die folgenden Konfigurationsparameter für den Zugriff auf Daten aus Experience Platform mithilfe von `client_context = get_client_context(config_properties)` festgelegt:
+>
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -221,7 +223,7 @@ Der Zweck des Trainings besteht darin, ein Modell mit Funktionen und Beschriftun
 
 ![DEF-Zug](../images/jupyterlab/create-recipe/def_train.png)
 
-Die `score()`-Funktion sollte den Scoring-Algorithmus enthalten und einen Messwert zurückgeben, der angibt, wie gut das Modell funktioniert. Die `score()`-Funktion nutzt die Bezeichnungen des Scoring-Datensatzes und das trainierte Modell, um eine Reihe von prognostizierten Funktionen zu generieren. Die prognostizierten Werte werden dann mit den tatsächlichen Funktionen im Scoring-Datensatz abgeglichen. In diesem Beispiel verwendet die Funktion `score()` das trainierte Modell, um Funktionen mithilfe der Bezeichnungen aus dem Scoring-Datensatz vorherzusagen. Die prognostizierten Funktionen werden zurückgegeben.
+Die `score()`-Funktion sollte den Scoring-Algorithmus enthalten und einen Messwert zurückgeben, der angibt, wie gut das Modell funktioniert. Die `score()`-Funktion nutzt die Labels des Scoring-Datensatzes und das trainierte Modell, um eine Reihe von prognostizierten Funktionen zu generieren. Die prognostizierten Werte werden dann mit den tatsächlichen Funktionen im Scoring-Datensatz abgeglichen. In diesem Beispiel verwendet die Funktion `score()` das trainierte Modell, um Funktionen mithilfe der Labels aus dem Scoring-Datensatz vorherzusagen. Die prognostizierten Funktionen werden zurückgegeben.
 
 ![def-Wert](../images/jupyterlab/create-recipe/def_score.png)
 
@@ -257,7 +259,7 @@ Die `datasaver.py`-Datei enthält die `save()` Funktion und wird verwendet, um I
 
 Wenn Sie Ihre Änderungen am Notebook vorgenommen haben und Ihr Rezept trainieren möchten, können Sie die zugehörigen Schaltflächen oben in der Leiste auswählen, um einen Trainings-Lauf in der Zelle zu erstellen. Nach Auswahl der Schaltfläche wird ein Protokoll mit Befehlen und Ausgaben aus dem Trainings-Skript im Notebook (unter der `evaluator.py`) angezeigt. Conda installiert zunächst alle Abhängigkeiten, dann wird das Training initiiert.
 
-Beachten Sie, dass Sie ein Training mindestens einmal ausführen müssen, bevor Sie mit dem Scoring fortfahren können. Durch Auswahl der Schaltfläche **[!UICONTROL Bewertung ausführen]** wird die Bewertung für das trainierte Modell ausgeführt, das während des Trainings generiert wurde. Das Bewertungsskript wird unter `datasaver.py` angezeigt.
+Beachten Sie, dass Sie ein Training mindestens einmal ausführen müssen, bevor Sie mit dem Scoring fortfahren können. Durch Auswahl der Schaltfläche **[!UICONTROL Run Scoring]** wird die Bewertung für das trainierte Modell durchgeführt, das während des Trainings generiert wurde. Das Bewertungsskript wird unter `datasaver.py` angezeigt.
 
 Wenn Sie zum Debuggen die ausgeblendete Ausgabe anzeigen möchten, fügen Sie `debug` am Ende der Ausgabenzelle hinzu und führen Sie das Scoring erneut aus.
 
@@ -265,15 +267,15 @@ Wenn Sie zum Debuggen die ausgeblendete Ausgabe anzeigen möchten, fügen Sie `d
 
 ## Rezept erstellen {#create-recipe}
 
-Wenn Sie das Bearbeiten des Rezepts abgeschlossen und mit der Trainings-/Bewertungsausgabe zufrieden sind, können Sie ein Rezept aus dem Notebook erstellen, indem Sie oben rechts **[!UICONTROL Rezept erstellen]** auswählen.
+Wenn Sie das Bearbeiten des Rezepts abgeschlossen und mit der Trainings-/Bewertungsausgabe zufrieden sind, können Sie ein Rezept aus dem Notebook erstellen, indem Sie oben rechts **[!UICONTROL Create Recipe]** auswählen.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Nachdem Sie **[!UICONTROL Rezept erstellen]** ausgewählt haben, werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das auf [!DNL Experience Platform] erstellt wurde.
+Nach Auswahl von **[!UICONTROL Create Recipe]** werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das auf [!DNL Experience Platform] erstellt wurde.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Sobald Sie **[!UICONTROL OK]** auswählen, beginnt der Prozess der Rezepterstellung. Dies kann einige Zeit dauern, und anstelle der Schaltfläche Rezept erstellen wird eine Fortschrittsleiste angezeigt. Nachdem Sie fertig sind, können Sie die Schaltfläche **[!UICONTROL Rezepte anzeigen]** auswählen, um zur Registerkarte **[!UICONTROL Rezepte]** unter **[!UICONTROL ML-Modelle zu gelangen]**
+Wenn Sie **[!UICONTROL Ok]** auswählen, beginnt der Prozess der Rezepterstellung. Dies kann einige Zeit dauern, und anstelle der Schaltfläche Rezept erstellen wird eine Fortschrittsleiste angezeigt. Nachdem Sie fertig sind, können Sie auf die Schaltfläche **[!UICONTROL View Recipes]** klicken, um zur Registerkarte **[!UICONTROL Recipes]** unter **[!UICONTROL ML Models]** zu gelangen
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -285,6 +287,6 @@ Sobald Sie **[!UICONTROL OK]** auswählen, beginnt der Prozess der Rezepterstell
 
 ## Nächste Schritte {#next-steps}
 
-Durch Abschluss dieses Tutorials haben Sie gelernt, wie Sie ein Modell für maschinelles Lernen im [!UICONTROL Recipe Builder“-] erstellen. Sie haben auch gelernt, wie Sie den Workflow Notebook-Rezepte trainieren.
+Durch Abschluss dieses Tutorials haben Sie gelernt, wie Sie ein Modell für maschinelles Lernen im [!UICONTROL Recipe Builder]-Notebook erstellen. Sie haben auch gelernt, wie Sie den Workflow Notebook-Rezepte trainieren.
 
 Um weiterhin zu lernen, wie Sie mit Ressourcen in [!DNL Data Science Workspace] arbeiten, besuchen Sie die Dropdown-Liste [!DNL Data Science Workspace] Rezepte und Modelle .

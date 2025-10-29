@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über die Benutzeroberfläche von JupyterLab
 description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project Jupyter und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftlerinnen und Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten. In diesem Dokument erhalten Sie einen Überblick über JupyterLab und die Funktionen sowie Anleitungen zum Durchführen häufiger Aktionen.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1838'
-ht-degree: 95%
+source-wordcount: '1831'
+ht-degree: 91%
 
 ---
 
@@ -68,7 +68,7 @@ Informationen zu den wichtigsten Funktionen von [!DNL JupyterLab] und Anweisunge
 
 ### Zugriff auf [!DNL JupyterLab] {#access-jupyterlab}
 
-Wählen Sie in [Adobe Experience Platform](https://platform.adobe.com) in der linken Navigationsspalte die Option **[!UICONTROL Notebooks]** aus. Warten Sie etwas, bis [!DNL JupyterLab] vollständig initialisiert wurde.
+Wählen Sie in [](https://platform.adobe.com)Adobe Experience Platform **[!UICONTROL Notebooks]** in der linken Navigationsspalte aus. Warten Sie etwas, bis [!DNL JupyterLab] vollständig initialisiert wurde.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -112,7 +112,7 @@ Der Hauptarbeitsbereich in [!DNL JupyterLab] ermöglicht es Ihnen, Dokumente und
 
 ### GPU- und Speicher-Server-Konfiguration in [!DNL Python]/R
 
-Wählen Sie in [!DNL JupyterLab] oben rechts das Zahnradsymbol aus, um *Notebook-Server-Konfiguration* zu öffnen. Sie können die GPU-Option umschalten und die benötigte Speichermenge mithilfe des Reglers zuweisen. Wie viel Arbeitsspeicher Sie zuweisen können, hängt davon ab, wie viel Ihre Organisation bereitgestellt hat. Wählen Sie **[!UICONTROL Konfigurationen aktualisieren]** aus, um zu speichern.
+Wählen Sie in [!DNL JupyterLab] oben rechts das Zahnradsymbol aus, um *Notebook-Server-Konfiguration* zu öffnen. Sie können die GPU-Option umschalten und die benötigte Speichermenge mithilfe des Reglers zuweisen. Wie viel Arbeitsspeicher Sie zuweisen können, hängt davon ab, wie viel Ihre Organisation bereitgestellt hat. **[!UICONTROL Update configs]** zum Speichern auswählen.
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ Wählen Sie in [!DNL JupyterLab] oben rechts das Zahnradsymbol aus, um *Notebook
 
 ### Beenden und Neustarten von [!DNL JupyterLab]
 
-In [!DNL JupyterLab] können Sie Ihre Sitzung beenden, um die Verwendung weiterer Ressourcen zu verhindern. Wählen Sie zunächst das **Ein/Aus-Symbol** ![Ein/Aus-Symbol](/help/images/icons/power.png) und dann im angezeigten Popup die Option **[!UICONTROL Herunterfahren]** aus, um Ihre Sitzung zu beenden. Notebook-Sitzungen enden nach 12 Stunden ohne Aktivität automatisch.
+In [!DNL JupyterLab] können Sie Ihre Sitzung beenden, um die Verwendung weiterer Ressourcen zu verhindern. Wählen Sie zunächst das **Ein/Aus** Symbol ![Ein/Aus](/help/images/icons/power.png) und wählen Sie dann im angezeigten Popup die Option **[!UICONTROL Shut Down]** aus, um Ihre Sitzung zu beenden. Notebook-Sitzungen werden nach 12 Stunden ohne Aktivität automatisch beendet.
 
-Um [!DNL JupyterLab] neu zu starten, wählen Sie das **Neustart-Symbol** ![Neustart-Symbol](/help/images/icons/restart.png) direkt links neben dem Ein/Aus-Symbol und dann im angezeigten Popup die Option **[!UICONTROL Neu starten]** aus.
+Um [!DNL JupyterLab] neu zu starten, wählen Sie **Neustart-**![ Neustart](/help/images/icons/restart.png)Symbol direkt links neben dem Ein/Aus-Symbol und dann **[!UICONTROL Restart]** aus dem angezeigten Popup aus.
 
 ![Beenden von JupyterLab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
@@ -140,7 +140,7 @@ Häufige Zellaktionen werden nachfolgend beschrieben:
 
 * **Zelle verschieben:** Platzieren Sie den Cursor rechts neben der Zelle, die Sie verschieben möchten, und ziehen Sie die Zelle dann an eine neue Position. Wenn Sie eine Zelle von einem Notebook in ein anderes verschieben, wird die Zelle zusammen mit ihrem Inhalt repliziert.
 
-* **Zelle ausführen:** Klicken Sie auf den Text der Zelle, die Sie ausführen möchten, und klicken Sie dann auf das **Wiedergabesymbol** (**▶**) im Notebook-Menü. Im Ausführungszähler der Zelle wird ein Sternchen (**\***) angezeigt, wenn der Kernel die Ausführung verarbeitet, und nach Abschluss durch eine Ganzzahl ersetzt.
+* **Zelle ausführen:** Klicken Sie auf den Text der Zelle, die Sie ausführen möchten, und klicken Sie dann auf das **Play**-Symbol (**▶**) im Notebook-Menü. Im Ausführungszähler der Zelle wird ein Sternchen (**\***) angezeigt, wenn der Kernel die Ausführung verarbeitet, und nach Abschluss durch eine Ganzzahl ersetzt.
 
 * **Zelle löschen:** Klicken Sie auf den Text der Zelle, die Sie löschen möchten, und klicken Sie dann auf das Symbol **Schere**.
 
@@ -264,6 +264,7 @@ Für eine Liste der unterstützten Pakete in Python, R und PySpark kopieren Sie 
 ![Beispiel](../images/jupyterlab/user-guide/libraries.PNG)
 
 Darüber hinaus werden die folgenden Abhängigkeiten verwendet, aber nicht aufgelistet:
+
 * CUDA 11.2
 * CUDNN 8.1
 

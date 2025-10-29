@@ -2,9 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;von Adobe definierte Funktionen;SQL;
 solution: Experience Platform
 title: Adobe-definierte SQL-Funktionen im Abfrage-Service
-description: Dieses Dokument enthält Informationen zu Adobe-definierten Funktionen, die im Abfrage-Service von Adobe Experience Platform verfügbar sind.
+description: Dieses Dokument enthält Informationen zu in Adobe definierten Funktionen, die im Abfrage-Service von Adobe Experience Platform verfügbar sind.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 13%
@@ -13,19 +13,19 @@ ht-degree: 13%
 
 # Adobe-definierte SQL-Funktionen im Abfrage-Service
 
-Adobe-definierte Funktionen, hier als ADFs bezeichnet, sind vordefinierte Funktionen im Adobe Experience Platform Query Service, die Sie bei der Durchführung gängiger geschäftsbezogener Aufgaben im Zusammenhang mit [!DNL Experience Event]-Daten unterstützen. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=de) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=de) wie die in Adobe Analytics.
+Adobe-definierte Funktionen, hier als ADFs bezeichnet, sind vordefinierte Funktionen im Abfrage-Service von Adobe Experience Platform, die Sie bei der Durchführung gängiger geschäftsbezogener Aufgaben im Zusammenhang mit [!DNL Experience Event] unterstützen. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) wie die in Adobe Analytics.
 
-Dieses Dokument enthält Informationen zu Adobe-definierten Funktionen, die in [!DNL Query Service] verfügbar sind.
+Dieses Dokument enthält Informationen zu in Adobe definierten Funktionen, die in [!DNL Query Service] verfügbar sind.
 
 >[!NOTE]
 >
->Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
+>Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
 
 ## Window-Funktionen {#window-functions}
 
 Ein großer Teil der Business-Logik setzt voraus, die Kontaktpunkte (bzw. „Touchpoints“) zu erfassen, an denen ein Kunde mit Ihrem Unternehmen interagiert, und diese nach dem Zeitpunkt ihres Eintretens zu sortieren. Diese Unterstützung wird durch [!DNL Spark] SQL in Form von Fensterfunktionen bereitgestellt. Window-Funktionen sind Teil von Standard-SQL und werden von einer Vielzahl anderer SQL-Engines unterstützt.
 
-Eine Window-Funktion aktualisiert eine Aggregation und gibt für jede Zeile in Ihrer sortierten Untergruppe ein einzelnes Element zurück. Die einfachste Aggregationsfunktion lautet `SUM()`. `SUM()` berechnet aus den von Ihnen angegebenen Zeilen die Summe. Wenden Sie `SUM()` stattdessen auf ein Fenster an, wird es in eine Window-Funktion umgewandelt und die kumulative Summe für jede Zeile ausgegeben.
+Eine Window-Funktion aktualisiert eine Aggregation und gibt für jede Zeile in Ihrer sortierten Teilmenge ein einzelnes Element zurück. Die einfachste Aggregationsfunktion lautet `SUM()`. `SUM()` berechnet aus den von Ihnen angegebenen Zeilen die Summe. Wenden Sie `SUM()` stattdessen auf ein Fenster an, wird es in eine Window-Funktion umgewandelt und die kumulative Summe für jede Zeile ausgegeben.
 
 Der Großteil der [!DNL Spark] SQL-Helper sind Fensterfunktionen, die jede Zeile im Fenster aktualisieren, wobei der Status dieser Zeile hinzugefügt wird.
 
@@ -47,7 +47,7 @@ Wenn Sie mit [!DNL Experience Event] Daten arbeiten, die von einer Website, eine
 
 Diese Gruppierung oder Sitzungserstellung von Daten hilft bei der Verknüpfung der Ereignisse, um mehr Kontext über das Kundenerlebnis zu erfahren.
 
-Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation unter [Kontextabhängige Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=de).
+Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation unter [Kontextabhängige Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Abfragesyntax**
 
@@ -82,7 +82,7 @@ LIMIT 10
 
 ```console
                 id                |       timestamp       |      session       
-----------------------------------+-----------------------+--------------------
+|----------------------------------+-----------------------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
@@ -147,7 +147,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isLaunch |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
@@ -212,7 +212,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isExit   |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
@@ -281,7 +281,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
------------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -333,7 +333,7 @@ LIMIT 10
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
------------------------------------+-----------------------+-------------------------------------+---------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+---------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -401,7 +401,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_since_registration 
------------------------------------+------------------------------------
+|-----------------------------------+------------------------------------
                                    |                                   
  Account Registration|Confirmation |                                0.0
  Seasonal                          |                   5.47029702970297
@@ -463,7 +463,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
------------------------------------+------------------------------------------
+|-----------------------------------+------------------------------------------
  Shopping Cart|Order Confirmation  |                                      0.0
  Men                               |                       -9.465295629820051
  Equipment                         |                       -9.682098765432098
@@ -481,10 +481,10 @@ Für die angegebene Beispielabfrage werden die Ergebnisse in der Spalte `average
 
 ## Nächste Schritte
 
-Mithilfe der hier beschriebenen Funktionen können Sie Abfragen schreiben, um mithilfe von [!DNL Query Service] auf Ihre eigenen [!DNL Experience Event]-Datensätze zuzugreifen. Weitere Informationen zum Erstellen von Abfragen in [!DNL Query Service] finden Sie in der Dokumentation unter [Erstellen von Abfragen](../best-practices/writing-queries.md).
+Mithilfe der hier beschriebenen Funktionen können Sie Abfragen schreiben, um mithilfe von [!DNL Experience Event] auf Ihre eigenen [!DNL Query Service]-Datensätze zuzugreifen. Weitere Informationen zum Erstellen von Abfragen in [!DNL Query Service] finden Sie in der Dokumentation unter [Erstellen von Abfragen](../best-practices/writing-queries.md).
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Darüber hinaus verwendet das Video Beispiele für einzelne Eigenschaften in einem XDM-Objekt, für die Verwendung von Adobe-definierten Funktionen und für die Verwendung von CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/33392?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)

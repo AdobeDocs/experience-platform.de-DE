@@ -2,10 +2,10 @@
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analysen und Commerce. Damit können Sie Aktivitäten automatisieren und verwalten, von der CRM-Lead-Verwaltung und Kundeninteraktion bis hin zu Account-basiertem Marketing und Umsatzzuordnung.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 891484b279d2521115c6b1edc58f45c594a55382
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 27%
+source-wordcount: '847'
+ht-degree: 21%
 
 ---
 
@@ -29,8 +29,8 @@ ht-degree: 27%
 
 Zu den Verbesserungen am Marketo V2-Ziel gehören:
 
-* In Marketo V1 mussten Sie im Schritt **[!UICONTROL Segment planen]** des Aktivierungs-Workflows manuell eine **Zuordnungs-ID** hinzufügen, um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
-* Im Schritt **[!UICONTROL Zuordnung]** des Aktivierungs-Workflows konnten Sie XDM-Felder in Marketo V1 nur drei Zielfeldern in Marketo zuordnen: `firstName`, `lastName` und `companyName`. Mit der Version Marketo V2 können Sie jetzt XDM-Felder vielen weiteren Feldern in Marketo zuordnen. Weitere Informationen finden Sie im Abschnitt [Unterstützte Attribute](#supported-attributes) weiter unten.
+* Im **[!UICONTROL Schedule segment]** Schritt des Aktivierungs-Workflows mussten Sie in Marketo V1 manuell eine **Zuordnungs-ID“ hinzufügen** um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
+* Im **[!UICONTROL Mapping]** Schritt des Aktivierungs-Workflows konnten Sie XDM-Felder in Marketo V1 nur drei Zielfeldern in Marketo zuordnen: `firstName`, `lastName` und `companyName`. Mit der Version Marketo V2 können Sie jetzt XDM-Felder vielen weiteren Feldern in Marketo zuordnen. Weitere Informationen finden Sie im Abschnitt [Unterstützte Attribute](#supported-attributes) weiter unten.
 
 ## Überblick {#overview}
 
@@ -63,7 +63,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -73,8 +73,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (E-Mail, ECID), die im [!DNL Marketo Engage]-Ziel verwendet werden. |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Audience export]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (E-Mail, ECID), die im [!DNL Marketo Engage]-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -83,8 +83,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->* Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions)
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Detaillierte Anweisungen zum Einrichten des Ziels und Aktivieren von Zielgruppen finden Sie unter [Pushen einer Adobe Experience Platform-Zielgruppe in eine statische Marketo-Liste](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) in der Dokumentation zu Marketo.
 
@@ -95,11 +95,11 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels
 >Das Video spiegelt die aktuelle Funktion nicht vollständig wider. Die aktuellsten Informationen finden Sie in dem oben verlinkten Handbuch. Die folgenden Teile des Videos sind veraltet:
 > 
 >* Die Zielkarte, die Sie in der Experience Platform-Benutzeroberfläche verwenden sollten, ist **[!UICONTROL Marketo V2]**.
->* Das Video zeigt nicht das neue Auswahlfeld **[!UICONTROL Personenerstellung]** im Workflow Mit Ziel verbinden . Um dieses Feld zu verwenden, müssen Sie während des Schritts zur Attributzuordnung sowohl den Vor- als auch den Nachnamen zuordnen.
+>* Im Video wird das neue **[!UICONTROL Person creation]**-Auswahlfeld im Workflow Mit Ziel verbinden nicht angezeigt. Um dieses Feld zu verwenden, müssen Sie während des Schritts zur Attributzuordnung sowohl den Vor- als auch den Nachnamen zuordnen.
 >* Die beiden im Video genannten Einschränkungen gelten nicht mehr. Zusätzlich zu den Informationen zur Zielgruppenzugehörigkeit, die zum Zeitpunkt der Videoaufzeichnung unterstützt wurden, können Sie jetzt viele weitere Profilattributfelder zuordnen. Sie können auch Zielgruppenmitglieder, die noch nicht in Ihren statischen Marketo-Listen vorhanden sind, nach Marketo exportieren. Diese werden dann den Listen hinzugefügt.
->* Im Schritt **[!UICONTROL Zielgruppe planen]** des Aktivierungs-Workflows mussten Sie in Marketo V1 manuell eine **[!UICONTROL Zuordnungs-ID“ hinzufügen]** um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
+>* Im **[!UICONTROL Schedule audience step]** des Aktivierungs-Workflows mussten Sie in Marketo V1 manuell eine **[!UICONTROL Mapping ID]** hinzufügen, um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440167?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Ziel überwachen {#monitor-destination}
 

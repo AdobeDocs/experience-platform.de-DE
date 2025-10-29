@@ -4,10 +4,10 @@ title: LINE-Verbindung
 description: Mit dem LINE-Ziel können Sie Ihrer Experience Platform-Zielgruppe Profile hinzufügen und vernetzten Benutzern personalisierte Erlebnisse bereitstellen.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 37%
+source-wordcount: '1147'
+ht-degree: 33%
 
 ---
 
@@ -21,7 +21,7 @@ Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt
 
 [!DNL LINE] verwendet Bearer-Token als Authentifizierungsmechanismus für die Kommunikation mit der [!DNL LINE] Messaging-API. Anweisungen zur Authentifizierung bei Ihrer [!DNL LINE] finden Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
-## Anwendungsszenarien {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Als Marketing-Experte können Sie Benutzende in einem Ziel für mobile Interaktion ansprechen, wobei Zielgruppen in [!DNL Adobe Experience Platform] integriert sind. Darüber hinaus können Sie ihnen personalisierte Erlebnisse auf der Grundlage von Attributen aus ihren [!DNL Adobe Experience Platform] Profilen bereitstellen, sobald Zielgruppen und Profile in [!DNL Adobe Experience Platform] aktualisiert werden.
 
@@ -36,7 +36,7 @@ Beachten Sie die folgenden Voraussetzungen in [!DNL LINE], um Daten aus Experien
 Sie müssen sich registrieren und ein [!DNL LINE] Konto erstellen, falls Sie noch keines haben. So erstellen Sie ein Konto:
 
 1. Navigieren Sie zur [!DNL LINE] [Kontoanmeldung](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) Seite
-2. Wählen Sie **[!UICONTROL Konto erstellen]** aus.
+2. Wählen Sie **[!UICONTROL Create an account]** aus.
 
 #### Sammeln Sie die [!DNL LINE channel access token (long-lived)] aus der [!DNL LINE] Developer Console {#gather-credentials}
 
@@ -50,7 +50,7 @@ Damit Experience Platform auf [!DNL LINE] Ressourcen zugreifen kann, benötigen 
 | --- | --- | --- |
 | `[!DNL Channel access token (long-lived)]` | Ihre [!DNL LINE Channel access token (long-lived)]. | `aaa2112XSMWqLXR7..........nyilFU=` |
 
-Anleitungen zum Erstellen [[!DNL LINE]  Kanals oder Hinzufügen eines Kanals zu Ihrem vorhandenen [!DNL LINE]-Konto über die [!DNL LINE] Entwicklerkonsole finden Sie in der Dokumentation](https://developers.line.biz/en/docs/messaging-api/getting-started/).
+Anleitungen zum Erstellen [[!DNL LINE]  Kanals oder Hinzufügen eines Kanals zu Ihrem vorhandenen ](https://developers.line.biz/en/docs/messaging-api/getting-started/)-Konto über die [!DNL LINE] Entwicklerkonsole finden Sie in der Dokumentation[!DNL LINE].
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -66,8 +66,8 @@ Anleitungen zum Erstellen [[!DNL LINE]  Kanals oder Hinzufügen eines Kanals zu 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL LINE]-Ziel verwendet werden. |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL LINE]-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -76,21 +76,22 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL LINE]. Alternativ können Sie es unter der Kategorie **[!UICONTROL Mobile-Interaktion]** finden.
+Suchen Sie in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** nach [!DNL LINE]. Alternativ können Sie es unter der Kategorie **[!UICONTROL Mobile engagement]** finden.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
+Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Connect to destination]** aus.
 Screenshot der ![Experience Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Füllen Sie die erforderlichen Felder aus.
-* **[!UICONTROL Bearer-Token]**: Ihr [!DNL LINE Channel access token (long-lived)] über die [!DNL LINE] Entwicklerkonsole. Siehe den Abschnitt [Sammeln von Anmeldeinformationen](#gather-credentials).
 
-Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Status **[!UICONTROL Verbunden]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
+* **[!UICONTROL Bearer token]**: Ihr [!DNL LINE Channel access token (long-lived)] über die [!DNL LINE]-Entwicklerkonsole. Siehe den Abschnitt [Sammeln von Anmeldeinformationen](#gather-credentials).
+
+Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche einen **[!UICONTROL Connected]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -98,21 +99,21 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Zielgruppentyp]**: Wählen Sie **[!UICONTROL ID für Werbetreibende (IFAs)]** aus, wenn die Identitäten, die exportiert werden sollen, vom Typ *ID für Werbetreibende (IFAs)*. Wählen Sie **[!UICONTROL LINE-Benutzer]** IDs aus, wenn die Identitäten, die exportiert werden sollen, vom Typ *LINE-Benutzer-IDs* sind. Weitere Informationen zu den Identitätstypen [&#x200B; Sie &#x200B;](#supported-identities) Abschnitt „Unterstützte Identitäten“.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Audience Type]**: Wählen Sie **[!UICONTROL ID for Advertisers(IFAs)]** aus, wenn die Identitäten, die exportiert werden sollen, vom Typ *ID für Advertiser (IFAs)*. Wählen Sie **[!UICONTROL LINE user IDs]** aus, wenn die zu exportierenden Identitäten vom Typ (LINE *Benutzer-IDs)*. Weitere Informationen zu den Identitätstypen [ Sie ](#supported-identities) Abschnitt „Unterstützte Identitäten“.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -141,11 +142,11 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 
 1. Melden Sie sich [!DNL LINE] bei der [Manager-Konsole](https://manager.line.biz/) an.
 
-1. Navigieren Sie dann zu **[!UICONTROL Datensteuerelemente]** > **[!UICONTROL Zielgruppen]** und überprüfen Sie den Namen, der mit der ausgewählten Zielgruppe in der Spalte **[!UICONTROL Zielgruppenname]** übereinstimmt.
+1. Navigieren Sie dann zu **[!UICONTROL Data Controls]** > **[!UICONTROL Audiences]** und überprüfen Sie in der Spalte **[!UICONTROL Audience name]** den Namen, der mit der ausgewählten Audience übereinstimmt.
 
 1. Das aktualisierte Volumen würde mit der Anzahl innerhalb des Segments übereinstimmen.
 
-1. In der Spalte *Typ* wird **[!UICONTROL Benutzer-ID]** angegeben, wenn die exportierten Identitäten vom Typ *Benutzer-ID* sind. In ähnlicher Weise wird in der Spalte *Typ* &quot;**[!UICONTROL -ID“]**, wenn die exportierten Identitäten vom Typ *IDFA* sind.
+1. In der Spalte *Typ* wird **[!UICONTROL UserID]** angegeben, wenn die exportierten Identitäten vom Typ *Benutzer-ID* sind. In der Spalte *Typ* wird ebenfalls **[!UICONTROL Mobile ad Id]** angegeben, wenn die exportierten Identitäten vom Typ *IDFA* sind.
 
 Im Folgenden finden Sie ein Beispiel-Setup in [!DNL LINE]:
 ![Screenshot der LINE-Benutzeroberfläche mit dem Zielgruppen-Volumen.](../../assets/catalog/mobile-engagement/line/audience-volume.png)

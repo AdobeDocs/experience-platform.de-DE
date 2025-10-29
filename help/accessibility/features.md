@@ -4,7 +4,7 @@ title: Allgemeine Funktionen zur Barrierefreiheit in Experience Platform
 type: Documentation
 description: Erfahren Sie mehr über die allgemeinen Funktionen zur Barrierefreiheit, die von Adobe Experience Platform unterstützt werden, einschließlich Tastaturnavigation, Farbpaletten und Kontrast sowie Unterstützung durch Hilfstechnologien.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 92%
@@ -17,13 +17,14 @@ Adobe Experience Platform möchte allen Personen barrierefreie und inklusive Fun
 
 ## Hilfstechnologien
 
-Benutzer mit Beeinträchtigungen verlassen sich häufig auf Hardware und Software, sogenannte Hilfstechnologien, um auf digitale Inhalte zuzugreifen und Software-Produkte zu verwenden. Adobe Experience Platform unterstützt verschiedene Arten von Hilfstechnologien wie Bildschirmlesehilfen, Zoom und Spracherkennungs-Software. Hierzu werden die Best Practices für Barrierefreiheit befolgt, beispielsweise die Verwendung von semantischem Code, Textäquivalenten, Beschriftungen und ARIA. Interaktive Elemente in der Benutzeroberfläche von Experience Platform verwenden entsprechende Beschriftungen, barrierefreie Namen und Rollen, die sowohl ihren Zweck als auch ihren aktuellen Status identifizieren. Dadurch wird sichergestellt, dass Hilfstechnologien wie Bildschirmlesehilfen die Beschriftungen und andere Informationen für Benutzer auslesen können, damit diese problemlos mit den Steuerelementen interagieren können.
+Benutzer mit Beeinträchtigungen verlassen sich häufig auf Hardware und Software, sogenannte Hilfstechnologien, um auf digitale Inhalte zuzugreifen und Software-Produkte zu verwenden. Adobe Experience Platform unterstützt verschiedene Arten von Hilfstechnologien wie Bildschirmlesehilfen, Zoom und Spracherkennungs-Software. Hierzu werden die Best Practices für Barrierefreiheit befolgt, beispielsweise die Verwendung von semantischem Code, Textäquivalenten, Labels und ARIA. Interaktive Elemente in der Benutzeroberfläche von Experience Platform verwenden entsprechende Labels, barrierefreie Namen und Rollen, die sowohl ihren Zweck als auch ihren aktuellen Status identifizieren. Dadurch wird sichergestellt, dass Hilfstechnologien wie Bildschirmlesehilfen die Labels und andere Informationen für Benutzer auslesen können, damit diese problemlos mit den Steuerelementen interagieren können.
 
 ## Tastaturzugriff
 
 Experience Platform unterstützt die volle Barrierefreiheit der Tastatur.
 
 Die folgenden Navigationselemente erleichtern die Zugänglichkeit:
+
 * Die Tabulatortaste wechselt zwischen Benutzeroberflächenelementen, Abschnitten und Menügruppen.
 * Mit den Pfeiltasten kann zwischen Elementen innerhalb von Menügruppen navigiert werden, um den Fokus auf einzelne aktive Elemente zu legen.
 * Über die Tastenkombination „Umschalt+Tab“ werden die Registerkarten in umgekehrter Reihenfolge durchlaufen.
@@ -41,6 +42,6 @@ Experience Platform strebt die Konformität mit [WCAG 2.1 AA](https://www.w3.org
 
 ## Validierung von erforderlichen Feldern
 
-Beim Hinzufügen von Daten, Erstellen von Schemata oder Definieren von Segmenten werden die erforderlichen Felder sowohl visuell, mit einem Sternchen neben der Textbeschriftung eines Felds, als auch programmatisch angezeigt. Bei diesen Feldern wird bei der Eingabe von ungültigen Daten und beim Speichern eine Validierung ausgelöst. Wenn die Validierung bei einem erforderlichen Feld nicht erfolgreich ist, wird das Feld mit einem Fehlersymbol und in roter Farbe gekennzeichnet. Zusätzlich wird auch eine schriftliche Beschreibung des zu behebenden Problems angezeigt.
+Beim Hinzufügen von Daten, Erstellen von Schemata oder Definieren von Segmenten werden die erforderlichen Felder sowohl visuell, mit einem Sternchen neben dem Text-Label eines Felds, als auch programmatisch angezeigt. Bei diesen Feldern wird bei der Eingabe von ungültigen Daten und beim Speichern eine Validierung ausgelöst. Wenn die Validierung bei einem erforderlichen Feld nicht erfolgreich ist, wird das Feld mit einem Fehlersymbol und in roter Farbe gekennzeichnet. Zusätzlich wird auch eine schriftliche Beschreibung des zu behebenden Problems angezeigt.
 
 ![Detailansicht eines erforderlichen Felds, dessen Validierung nicht erfolgreich war. Das Feld erscheint in roter Farbe und ist mit einem Fehlersymbol gekennzeichnet.](images/field-validation.png)

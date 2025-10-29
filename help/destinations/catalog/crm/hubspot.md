@@ -3,10 +3,10 @@ title: HubSpot-Verbindung
 description: Mit dem HubSpot-Ziel können Sie Kontakteinträge in Ihrem HubSpot-Konto verwalten.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 35%
+source-wordcount: '1499'
+ht-degree: 30%
 
 ---
 
@@ -30,7 +30,7 @@ In den folgenden Abschnitten finden Sie alle Voraussetzungen, die Sie in Experie
 
 ### Voraussetzungen für Experience Platform {#prerequisites-in-experience-platform}
 
-Bevor Sie Daten für das [!DNL HubSpot]-Ziel aktivieren, müssen Sie ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=de) in [!DNL Experience Platform] erstellt haben.
+Bevor Sie Daten für das [!DNL HubSpot]-Ziel aktivieren, müssen Sie ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) in [!DNL Experience Platform] erstellt haben.
 
 Weitere Informationen finden Sie in der Experience Platform[Dokumentation für die Schemafeldgruppe „Details zur Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) , wenn Sie Anleitungen zu Zielgruppenstatus benötigen.
 
@@ -51,8 +51,8 @@ Wenn Sie keine private App haben, befolgen Sie die Dokumentation unter [Erstelle
 >[!IMPORTANT]
 >
 > Der privaten App sollten die folgenden Bereiche zugewiesen werden:
-> `crm.objects.contacts.write`, `crm.objects.contacts.read`
-> `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
+> > `crm.objects.contacts.write`, `crm.objects.contacts.read`
+> > `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ Wenn Sie keine private App haben, befolgen Sie die Dokumentation unter [Erstelle
 
 ## Leitlinien {#guardrails}
 
-[!DNL HubSpot] private Apps unterliegen [Ratenbeschränkungen](https://developers.hubspot.com/docs/api/usage-details). Die Anzahl der Aufrufe, die Ihre private App tätigen kann, hängt von Ihrem [!DNL HubSpot]-Kontoabonnement ab und davon, ob Sie das API-Add-on erworben haben. Siehe auch &quot;[&#x200B; Beschränkungen](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] private Apps unterliegen [Ratenbeschränkungen](https://developers.hubspot.com/docs/api/usage-details). Die Anzahl der Aufrufe, die Ihre private App tätigen kann, hängt von Ihrem [!DNL HubSpot]-Kontoabonnement ab und davon, ob Sie das API-Add-on erworben haben. Siehe auch &quot;[ Beschränkungen](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -89,8 +89,8 @@ Dieses Ziel unterstützt auch die Aktivierung der in der folgenden Tabelle besch
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li> Darüber hinaus wird in [!DNL HubSpot] für jede der ausgewählten Zielgruppen eine neue Eigenschaft unter Verwendung des Zielgruppennamen erstellt, deren Wert mit dem entsprechenden Zielgruppenstatus aus Experience Platform übereinstimmt.</li></ul> |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profile-based]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li> Darüber hinaus wird in [!DNL HubSpot] für jede der ausgewählten Zielgruppen eine neue Eigenschaft unter Verwendung des Zielgruppennamen erstellt, deren Wert mit dem entsprechenden Zielgruppenstatus aus Experience Platform übereinstimmt.</li></ul> |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -99,21 +99,22 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL HubSpot]. Alternativ können Sie es unter der **[!UICONTROL CRM]**-Kategorie finden.
+Suchen Sie in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** nach [!DNL HubSpot]. Alternativ können Sie es unter der Kategorie **[!UICONTROL CRM]** finden.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [&#x200B; im Abschnitt  [!DNL HubSpot] -Zugriffstoken für private &#x200B;](#gather-credentials) .
-* **[!UICONTROL Bearer-Token]**: Das Zugriffstoken für Ihre [!DNL HubSpot] private App.
+Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [ im Abschnitt  [!DNL HubSpot] -Zugriffstoken für private ](#gather-credentials) .
 
-Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
+* **[!UICONTROL Bearer token]**: Das Zugriffstoken für Ihre [!DNL HubSpot] private App.
+
+Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Connect to destination]** aus.
 Screenshot der ![Experience Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
-Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Status **[!UICONTROL Verbunden]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
+Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche einen **[!UICONTROL Connected]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -121,19 +122,19 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/crm/hubspot/destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 >
->Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -146,11 +147,12 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL HubSpot]-Zielfeldern korre
 #### Zuordnen der `Email` Identität
 
 Die `Email` Identität ist eine obligatorische Zuordnung für dieses Ziel. Gehen Sie wie folgt vor, um sie zuzuordnen:
-1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
-   Screenshot der Experience Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.![&#128279;](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** den **[!UICONTROL Identity-Namespace]** und wählen Sie eine Identität aus.
+
+1. Wählen Sie im **[!UICONTROL Mapping]** Schritt **[!UICONTROL Add new mapping]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
+   Screenshot der Experience Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.![](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+1. Wählen Sie im **[!UICONTROL Select source field]** die **[!UICONTROL Select identity namespace]** und dann eine Identität aus.
    ![Screenshot der Experience Platform-Benutzeroberfläche mit Auswahl von E-Mail als Quellattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
-1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Option **[!UICONTROL Attribute auswählen]** und wählen Sie `email` aus.
+1. Wählen Sie im **[!UICONTROL Select target field]** die **[!UICONTROL Select attributes]** und dann `email` aus.
    ![Screenshot der Experience Platform-Benutzeroberfläche mit Auswahl von E-Mail als Zielattribut, das als Identität zugeordnet werden soll.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
 | Quellfeld | Zielfeld | Obligatorisch |
@@ -163,11 +165,12 @@ Beispiel-Screenshot der ![Experience Platform-Benutzeroberfläche mit E-Mail-Ide
 #### Zuordnung **optional** Attribute
 
 Um weitere Attribute hinzuzufügen, die Sie zwischen Ihrem XDM-Profilschema und Ihrem [!DNL HubSpot]-Konto aktualisieren möchten, wiederholen Sie die folgenden Schritte:
-1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
-   Screenshot der Experience Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.![&#128279;](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut aus.
+
+1. Wählen Sie im **[!UICONTROL Mapping]** Schritt **[!UICONTROL Add new mapping]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
+   Screenshot der Experience Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche „Neue Zuordnung hinzufügen“.![](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+1. Wählen Sie im **[!UICONTROL Select source field]** die Kategorie **[!UICONTROL Select attributes]** und dann das XDM-Attribut aus.
    Screenshot der ![Experience Platform-Benutzeroberfläche mit Auswahl des Vornamens als Quellattribut.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
-1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** und wählen Sie aus der Liste der Attribute aus, die automatisch aus Ihrem [!DNL HubSpot]-Konto ausgefüllt werden. Das Ziel verwendet die [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties)-API, um diese Informationen abzurufen. Sowohl [!DNL HubSpot] [Standardeigenschaften](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) als auch alle benutzerdefinierten Eigenschaften werden zur Auswahl als Zielfelder abgerufen.
+1. Wählen Sie im **[!UICONTROL Select target field]**-Fenster **[!UICONTROL Select attributes]** Kategorie und wählen Sie aus der Liste der Attribute aus, die automatisch aus Ihrem [!DNL HubSpot]-Konto eingefügt werden. Das Ziel verwendet die [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties)-API, um diese Informationen abzurufen. Sowohl [!DNL HubSpot] [Standardeigenschaften](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) als auch alle benutzerdefinierten Eigenschaften werden zur Auswahl als Zielfelder abgerufen.
    Screenshot der ![Experience Platform-Benutzeroberfläche mit Auswahl des Vornamens als Zielattribut.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
 
 Nachfolgend finden Sie einige verfügbare Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Hubspot]:
@@ -183,25 +186,26 @@ Nachfolgend finden Sie einige verfügbare Zuordnungen zwischen Ihrem XDM-Profils
 Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Attributzuordnungen:
 Beispiel-Screenshot der ![Experience Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
-Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Überprüfen des Datenexports {#exported-data}
 
 Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichtet haben:
 
-1. Melden Sie sich bei der [!DNL HubSpot]-Website an und navigieren Sie dann zur Seite **[!UICONTROL Kontakte]**, um den Status der Zielgruppe zu überprüfen. Diese Liste kann so konfiguriert werden, dass Spalten für die benutzerdefinierten Eigenschaften angezeigt werden, die mit dem Zielgruppennamen erstellt wurden, wobei deren Wert die Zielgruppenstatus sind.
+1. Melden Sie sich bei der [!DNL HubSpot]-Website an und navigieren Sie dann zur Seite **[!UICONTROL Contacts]** , um den Status der Zielgruppe zu überprüfen. Diese Liste kann so konfiguriert werden, dass Spalten für die benutzerdefinierten Eigenschaften angezeigt werden, die mit dem Zielgruppennamen erstellt wurden, wobei deren Wert die Zielgruppenstatus sind.
    ![Screenshot der HubSpot-Benutzeroberfläche mit der Seite „Kontakte“ mit Spaltenüberschriften, die den Namen der Zielgruppe und die Zellen des Zielgruppenstatus enthalten](../../assets/catalog/crm/hubspot/contacts.png)
 
-1. Alternativ können Sie einen Drilldown zu einer einzelnen **[!UICONTROL Person]**-Seite durchführen und zu den Eigenschaften navigieren, in denen der Zielgruppenname und der Zielgruppenstatus angezeigt werden.
+1. Alternativ können Sie einen Drilldown zu einer einzelnen **[!UICONTROL Person]** durchführen und zu den Eigenschaften navigieren, in denen der Zielgruppenname und der Zielgruppenstatus angezeigt werden.
    ![Screenshot der HubSpot-Benutzeroberfläche mit der Kontaktseite mit benutzerdefinierten Eigenschaften, auf der der Zielgruppenname und der Zielgruppenstatus angezeigt werden.](../../assets/catalog/crm/hubspot/contact.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance – Übersicht](/help/data-governance/home.md).
 
-## Zusätzliche Ressourcen {#additional-resources}
+## Weitere Ressourcen {#additional-resources}
 
 Weitere nützliche Informationen aus der [!DNL HubSpot] Dokumentation finden Sie unten:
+
 * [Authentifizierungsmethoden auf HubSpot](https://developers.hubspot.com/docs/api/intro-to-auth)
 * [!DNL HubSpot] API-Referenzen für die [Kontakte](https://developers.hubspot.com/docs/api/crm/contacts) und [Eigenschaften](https://developers.hubspot.com/docs/api/crm/properties) APIs.
 

@@ -2,7 +2,7 @@
 title: Attributionsanalyse
 description: In diesem Dokument wird erläutert, wie Sie mit dem Abfrage-Service eine Marketing-Wirksamkeitsmessungstechnik erstellen können, die auf dem Marketing-Attributionsmodell des Erstkontakts und des Letztkontakts basiert.
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 10%
@@ -19,10 +19,10 @@ Die SQL-Beispiele in diesem Dokument sind Abfragen, die häufig mit Adobe Analyt
 
 * [Der Adobe Analytics-Quell-Connector für Report Suite-Daten - Übersicht](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [Die Dokumentation zu Analytics-Feldzuordnungen](../../sources/connectors/adobe-applications/mapping/analytics.md) enthält weitere Informationen zur Aufnahme und Zuordnung von Analysedaten für die Verwendung mit dem Abfrage-Service.
-* [Der Attribution IQ im Überblick](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=de)
-* [Das Handbuch zum Adobe Analytics Attribution Panel](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=de).
+* [Überblick über Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Das Handbuch zum Adobe Analytics Attribution Panel](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
-Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](../sql/adobe-defined-functions.md#window-functions). Das Terminologieglossar für [Adobe-Marketing und Commerce](https://business.adobe.com/glossary/index.html) kann ebenfalls von Nutzen sein.
+Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](../sql/adobe-defined-functions.md#window-functions). Das [Glossar zu Adobe Marketing und Commerce](https://business.adobe.com/glossary/index.html)Begriff kann ebenfalls von Nutzen sein.
 
 Für jeden der folgenden Anwendungsfälle wird ein parametrisiertes SQL-Abfragebeispiel als Vorlage bereitgestellt, die Sie anpassen können. Geben Sie Parameter an, wo immer Sie `{ }` in den SQL-Beispielen sehen, die Sie auswerten möchten.
 
@@ -72,7 +72,7 @@ Die nachstehende Abfrage gibt den Wert der Erstkontakt-Attribution und Details d
 
 >[!NOTE]
 >
->Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
+>Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
 
 **Abfragesyntax**
 
@@ -80,7 +80,7 @@ Die nachstehende Abfrage gibt den Wert der Erstkontakt-Attribution und Details d
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 
@@ -102,7 +102,7 @@ In den folgenden Ergebnissen wird die anfängliche Trackingcode-`em:946426` aus 
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:06:12.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:02.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:55.0 |              | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
@@ -149,7 +149,7 @@ In den unten angezeigten Ergebnissen ist der Trackingcode im zurückgegebenen -O
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:06:12.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:06:12.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:02.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:55.0 |              | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
@@ -179,7 +179,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 
@@ -200,7 +200,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id               |       timestamp       | trackingCode |                   first_touch                   
-----------------------------------+-----------------------+--------------+-------------------------------------------------
+|----------------------------------+-----------------------+--------------+-------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -230,7 +230,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 
@@ -251,7 +251,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -281,7 +281,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 
@@ -302,7 +302,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+------------------------------------------------
+|-----------------------------------+-----------------------+--------------+------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
@@ -330,7 +330,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 
@@ -351,7 +351,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)

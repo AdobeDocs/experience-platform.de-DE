@@ -3,7 +3,7 @@ title: Rendern von personalisierten Inhalten mit der Adobe Experience Platform W
 description: Erfahren Sie, wie Sie mit der Adobe Experience Platform Web SDK personalisierte Inhalte rendern können.
 keywords: Personalisierung;renderDecisions;sendEvent;decisionScopes;Vorschläge;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 2%
@@ -16,7 +16,7 @@ Adobe Experience Platform Web SDK unterstützt das Abrufen personalisierter Inha
 
 Darüber hinaus ermöglicht der Web-SDK die Personalisierung derselben Seite und der nächsten Seite über Adobe Experience Platform-Personalisierungsziele wie [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) und die [benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren von Experience Platform für die Personalisierung der gleichen und der nächsten Seite finden Sie im [Handbuch zu diesem Thema](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-Inhalte, die in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de) und der [Web Campaign-Benutzeroberfläche von Adobe Journey Optimizer erstellt &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=de), können von SDK automatisch abgerufen und gerendert werden. Inhalte, die in Adobe Target [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de), Adobe Journey Optimizers [Code-Based Experience Channel](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based) oder Offer Decisioning erstellt wurden, können nicht automatisch von SDK gerendert werden. Stattdessen müssen Sie diesen Inhalt mit der SDK anfordern und dann den Inhalt manuell selbst rendern.
+Inhalte, die in Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) und der [Web Campaign-Benutzeroberfläche von Adobe Journey Optimizer erstellt ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), können von SDK automatisch abgerufen und gerendert werden. Inhalte, die in Adobe Target [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de), Adobe Journey Optimizers [Code-Based Experience Channel](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based) oder Offer Decisioning erstellt wurden, können nicht automatisch von SDK gerendert werden. Stattdessen müssen Sie diesen Inhalt mit der SDK anfordern und dann den Inhalt manuell selbst rendern.
 
 ## Inhalt automatisch rendern {#automatic}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### Anwendungsfall 2: Vorschläge rendern, die keinen Selektor haben
 
-Dieser Anwendungsfall gilt für Erlebnisse, die mit dem [!DNL Target Form-based Experience Composer] oder dem ([-basierten Erlebniskanal) von Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
+Dieser Anwendungsfall gilt für Erlebnisse, die mit dem [!DNL Target Form-based Experience Composer] oder dem ([-basierten Erlebniskanal) von Adobe Journey Optimizer ](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
 
 Sie müssen den Selektor, die Aktion und den Umfang im `applyPropositions`-Aufruf angeben.
 
@@ -388,9 +388,9 @@ alloy("sendEvent", {
                     "_experience": {
                         "decisioning": {
                             "propositions": [{
-                              	"id": id,
+                                "id": id,
                                 "scope": scope,
-                              	"scopeDetails": scopeDetails
+                                  "scopeDetails": scopeDetails
                             }],
                             "propositionEventType": {
                                 "display": 1

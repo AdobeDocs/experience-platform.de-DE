@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Abrufen der Fehlerdiagnose für die Datenaufnahme
 description: Dieses Dokument enthält Informationen zur Überwachung der Batch-Aufnahme, zur Verwaltung von Fehlern bei der partiellen Batch-Aufnahme sowie eine Referenz für Typen der partiellen Batch-Aufnahme.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 36%
@@ -374,7 +374,7 @@ Eine erfolgreiche Antwort gibt eine Liste der Dateien zurück, die Fehler aufwei
 }
 ```
 
-Sie können dann detaillierte Informationen zu den Fehlern über den Endpunkt [Diagnoseabruf“ &#x200B;](#retrieve-diagnostics).
+Sie können dann detaillierte Informationen zu den Fehlern über den Endpunkt [Diagnoseabruf“ ](#retrieve-diagnostics).
 
 Nachfolgend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
 

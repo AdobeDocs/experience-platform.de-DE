@@ -5,9 +5,9 @@ title: Aufnehmen von Parquet-Daten aus einem Cloud-Speichersystem eines Drittanb
 type: Tutorial
 description: In diesem Tutorial wird die Flow Service-API verwendet, um Sie durch die Schritte zur Aufnahme von Apache Parquet-Daten aus einem Cloud-Speichersystem eines Drittanbieters zu führen.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1072'
 ht-degree: 44%
 
 ---
@@ -259,7 +259,10 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 Um externe Daten in [!DNL Experience Platform] aufzunehmen, muss zunächst eine [!DNL Experience Platform] Datensatz-Basisverbindung abgerufen werden.
 
-Um eine Datensatzbasisverbindung zu erstellen, führen Sie die Schritte aus, die im Abschnitt [Tutorial zur Datensatzbasisverbindung](./create-dataset-base-connection.md) beschrieben sind.
+<!--
+broken link. this file not in TOC.
+To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](./create-dataset-base-connection.md).
+-->
 
 Fahren Sie mit den im Entwicklerhandbuch beschriebenen Schritten fort, bis Sie eine Datensatz-Basisverbindung erstellt haben. Rufen Sie die eindeutige Kennung (`$id`) ab, speichern Sie sie und verwenden Sie sie im nächsten Schritt, um eine Zielverbindung zu erstellen, als Basisverbindungs-ID.
 

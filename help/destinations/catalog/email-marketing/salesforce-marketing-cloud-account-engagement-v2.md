@@ -4,10 +4,11 @@ description: Erfahren Sie, wie Sie mit dem Ziel (V2) Salesforce Marketing Cloud 
 badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: d1405237698271607fa672ccae1ac731d66df263
+exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1809'
-ht-degree: 20%
+source-wordcount: '1742'
+ht-degree: 18%
 
 ---
 
@@ -23,8 +24,8 @@ Dieses Ziel verwendet die -[[!DNL Salesforce Import API v5]](https://developer.s
 >[!IMPORTANT]
 > 
 > Dies ist die V2-Version des Ziels [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md). Diese Version ersetzt das vorherige Ziel und befindet sich derzeit in der Alpha-Version.
-> &#x200B;> <br>
-> &#x200B;> Wenn Sie derzeit die vorherige Version des Ziels [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) verwenden, müssen Sie vor dem **. Januar 2026 zu dieser Version 2**. Nach Januar 2026 wird Adobe die Vorgängerversion einstellen und nicht mehr verfügbar sein.
+> > <br>
+> > Wenn Sie derzeit die vorherige Version des Ziels [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) verwenden, müssen Sie vor dem **. Januar 2026 zu dieser Version 2**. Nach Januar 2026 wird Adobe die Vorgängerversion einstellen und nicht mehr verfügbar sein.
 
 
 ## Anwendungsfälle {#use-cases}
@@ -65,7 +66,7 @@ Schreiben Sie die folgenden Elemente auf, bevor Sie sich beim [!DNL (V2) Marketi
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Business Unit-ID für Kontointeraktion]** | Ihre Geschäftseinheits-ID für die [!DNL Salesforce]-Kontointeraktion. Weitere Informationen zum Ermitteln der ID finden [&#x200B; in &#x200B;](https://help.salesforce.com/s/articleView?id=000381973&type=1) Salesforce-Dokumentation . |
+| **[!UICONTROL Account Engagement Business Unit ID]** | Ihre Geschäftseinheits-ID für die [!DNL Salesforce]-Kontointeraktion. Weitere Informationen zum Ermitteln der ID finden [ in ](https://help.salesforce.com/s/articleView?id=000381973&type=1) Salesforce-Dokumentation . |
 
 {style="table-layout:auto"}
 
@@ -88,8 +89,8 @@ Wenn mithilfe einer dieser Kennungen eine Übereinstimmung gefunden wird, wird d
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li>Dieses Ziel unterstützt den Batch-Export von Profildaten mithilfe der Salesforce Import-API v5.</li></ul> |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profile-based]** | <ul><li>Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern *z. B. E-Mail-Adresse, Telefonnummer, Nachname)* entsprechend Ihrer Feldzuordnung.</li><li>Dieses Ziel unterstützt den Batch-Export von Profildaten mithilfe der Salesforce Import-API v5.</li></ul> |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | <ul><li>**Anfänglicher Export**: Vollständiger Export unmittelbar nach der Zuordnung</li><li>**Nachfolgende Exporte**: Inkrementelle Exporte alle 3 Stunden</li><li>Dieser Zeitplan ist fest und kann in Alpha nicht angepasst werden</li></ul> |
 
 {style="table-layout:auto"}
@@ -98,48 +99,48 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Connect to destination]** aus.
 
 ![Zielverbindungs-Workflow für Salesforce Marketing Cloud Account Engagement V2](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/connect-to-destination.png "Zielverbindungs-Workflow für Salesforce Marketing Cloud Account Engagement V2")
 
-Sie werden zur Anmeldeseite von [!DNL Salesforce] weitergeleitet. Geben Sie Ihre [!DNL Marketing Cloud Account Engagement] Kontoanmeldeinformationen ein und wählen Sie **[!UICONTROL Anmelden]**.
+Sie werden zur Anmeldeseite von [!DNL Salesforce] weitergeleitet. Geben Sie Ihre [!DNL Marketing Cloud Account Engagement] Kontoanmeldeinformationen ein und wählen Sie **[!UICONTROL Log In]** aus.
 
 ![Salesforce-Anmeldeseite](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce-Anmeldeseite.")
 
-Wählen Sie anschließend **[!UICONTROL Zulassen]** aus, um der **Adobe Experience Platform**-App Berechtigungen für den Zugriff auf Ihr [!DNL Salesforce Marketing Cloud Account Engagement] zu erteilen. *Sie müssen dies nur einmal tun*.
+Wählen Sie als Nächstes **[!UICONTROL Allow]** aus, um der **Adobe Experience Platform**-App Berechtigungen für den Zugriff auf Ihr [!DNL Salesforce Marketing Cloud Account Engagement] zu erteilen. *Sie müssen dies nur einmal tun*.
 
 ![Bestätigungs-Popup für den Screenshot der Salesforce-App, um der Experience Platform-App Berechtigungen für den Zugriff auf die Marketing Cloud-Kontointeraktion zu erteilen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
-Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche eine Meldung an: *Sie haben erfolgreich eine Verbindung mit dem (V2) Salesforce Marketing Cloud Account Engagement Account* hergestellt **[!UICONTROL und einen]**-Status mit einem grünen Häkchen.
+Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche eine Meldung an: *Sie haben erfolgreich eine Verbindung mit dem (V2) Salesforce Marketing Cloud Account Engagement Account* hergestellt und einen **[!UICONTROL Connected]** mit einem grünen Häkchen.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Business Unit-ID für Kontointeraktion]**: Ihre [!DNL Salesforce] `Account Engagement Business Unit ID`.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Account Engagement Business Unit ID]**: Ihr [!DNL Salesforce] `Account Engagement Business Unit ID`.
 * **[!UICONTROL Account Engagement API]**: Wählen Sie aus, ob Sie die Produktions- (`https://pi.pardot.com`) oder Demo- (`https://pi.demo.pardot.com`) Endpunkte der Account Engagement API verwenden möchten.
-* **[!UICONTROL Account Engagement Campaign ID]**: Jeder [!DNL Account Engagement] Interessent muss einer Kampagne zugeordnet sein. Wenn Sie keine Kampagnen-ID festlegen, versucht Account Engagement automatisch, eine ID zuzuweisen, wenn in Ihrem Salesforce-Konto eine Standardeinstellung vorhanden ist.
+* **[!UICONTROL Account Engagement Campaign ID]**: Jeder [!DNL Account Engagement] Interessent muss mit einer Kampagne verknüpft sein. Wenn Sie keine Kampagnen-ID festlegen, versucht Account Engagement automatisch, eine ID zuzuweisen, wenn in Ihrem Salesforce-Konto eine Standardeinstellung vorhanden ist.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -147,7 +148,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Um Zielgruppendaten von Adobe Experience Platform an das [!DNL (V2) Marketing Cloud Account Engagement] Ziel zu senden, müssen Sie Ihre Schemafelder des Experience-Datenmodells (XDM) den entsprechenden Feldern im Ziel zuordnen.
 
-Eine vollständige Liste der unterstützten [&#x200B; finden Sie in der Dokumentation zur &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)Salesforce Prospect API v5. Beachten Sie[&#x200B; dass &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html)benutzerdefinierte Felder“ in der Alpha-Version nicht unterstützt werden.
+Eine vollständige Liste der unterstützten [ finden Sie in der Dokumentation zur ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)Salesforce Prospect API v5. Beachten Sie[ dass ](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html)benutzerdefinierte Felder“ in der Alpha-Version nicht unterstützt werden.
 
 #### Unterstützte Attribute {#supported-attributes}
 
@@ -171,7 +172,7 @@ Das Ziel Salesforce Marketing Cloud-Kontointeraktion unterstützt die in der fol
 
 Bevor Sie mit der Zuordnung Ihrer Daten beginnen, überprüfen Sie die erforderlichen Feldzuordnungen unten.
 
-| Zielfeld | Typ | Erforderlich | Verwendung |
+| Zielfeld | Typ | Erforderlich | Verwendungszeitpunkt |
 |---|---|---|---|
 | `email` | Attribut | Immer erforderlich | Die E-Mail-Adresse des Interessenten. Dies ist die primäre Kennung, um Interessentendatensätze in Account Engagement zu finden und abzugleichen, wenn Sie keine `matchId` oder `matchSalesforceId` haben. <br> **Hinweis:** Bei der Funktion „Mehrere Interessenten mit derselben E-Mail-Adresse zulassen“ von Account Engagement kann die ausschließliche Verwendung von E-Mails zu Unklarheiten führen, wenn mehrere Interessenten mit derselben E-Mail vorhanden sind. Bei der Kontointeraktion wird in der Regel in solchen Fällen standardmäßig der Interessent mit der neuesten Aktivität aktualisiert. |
 | `matchId` | Identität | Mindestens eine dieser drei Identitäten ist erforderlich | Eine eindeutige Kennung, die von Account Engagement für jeden einzelnen Interessentendatensatz generiert wird. Verwenden Sie diese Option, wenn Sie bereits über die Account Engagement Prospect ID verfügen und sicherstellen möchten, dass Aktualisierungen auf den richtigen Interessenten angewendet werden, insbesondere wenn mehrere Interessenten dieselbe E-Mail-Adresse teilen. |
@@ -180,9 +181,9 @@ Bevor Sie mit der Zuordnung Ihrer Daten beginnen, überprüfen Sie die erforderl
 
 Gehen Sie wie folgt vor, um die richtigen Felder zuzuordnen.
 
-1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
-1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut oder den **[!UICONTROL Identity-Namespace auswählen]** und wählen Sie eine Identität aus.
-1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Kategorie **[!UICONTROL Identity-Namespace auswählen]** und wählen Sie eine Identität aus oder wählen Sie **[!UICONTROL Benutzerdefinierte Attribute auswählen]** und geben Sie in der Liste der standardmäßigen Felder für Interessenten für Account-Interaktion an.
+1. Wählen Sie im **[!UICONTROL Mapping]** Schritt **[!UICONTROL Add new mapping]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
+1. Wählen Sie im **[!UICONTROL Select source field]** die Kategorie **[!UICONTROL Select attributes]** und dann das XDM-Attribut aus, oder wählen Sie die **[!UICONTROL Select identity namespace]** und dann eine Identität aus.
+1. Wählen Sie im **[!UICONTROL Select target field]**-Fenster den **[!UICONTROL Select identity namespace]** und dann eine Identität aus, oder wählen Sie **[!UICONTROL Select custom attributes]** Kategorie aus und geben Sie in der Liste der standardmäßigen Felder für Interessenten für Account-Interaktionen an.
 
 ![Zuordnen von XDM-Feldern und Identitäten zu Salesforce Marketing Cloud Account Engagement V2-Feldern](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/mapping.png "Beispiel für die Zuordnung von XDM-Feldern und Identitäten zu Salesforce Marketing Cloud Account Engagement V2-Feldern")
 
@@ -190,7 +191,7 @@ Gehen Sie wie folgt vor, um die richtigen Felder zuzuordnen.
 
 Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichtet haben:
 
-1. Navigieren Sie zu einer der ausgewählten Zielgruppen. Wählen Sie die Registerkarte **[!DNL Activation data]** aus. Die Spalte **[!UICONTROL Zuordnungs]** zeigt den Namen des benutzerdefinierten Felds an, das innerhalb der [!DNL Marketing Cloud Account Engagement Prospects] generiert wird.
+1. Navigieren Sie zu einer der ausgewählten Zielgruppen. Wählen Sie die Registerkarte **[!DNL Activation data]** aus. Die Spalte **[!UICONTROL Mapping ID]** zeigt den Namen des benutzerdefinierten Felds an, das innerhalb der [!DNL Marketing Cloud Account Engagement Prospects] generiert wird.
    Beispiel-Screenshot der ![Experience Platform-Benutzeroberfläche mit der Zuordnungs-ID für ein ausgewähltes Segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
 1. Melden Sie sich bei der [[!DNL Salesforce]](https://login.salesforce.com/)-Website an. Navigieren Sie dann zur Seite **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** und überprüfen Sie, ob die potenziellen Kunden aus der Audience hinzugefügt/aktualisiert wurden. Alternativ können Sie auch auf [[!DNL Account Engagement]](https://pi.pardot.com/) und die **[!DNL Prospects]** zugreifen.
@@ -203,7 +204,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance – Übersicht](/help/data-governance/home.md).
 
-## Zusätzliche Ressourcen {#additional-resources}
+## Weitere Ressourcen {#additional-resources}
 
 * [!DNL Marketing Cloud Account Engagement] [API-Dokumentation](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html)
 * [Dokumentation zur Salesforce-Import-API v5](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html)

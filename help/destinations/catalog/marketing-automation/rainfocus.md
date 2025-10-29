@@ -3,10 +3,10 @@ title: RainFocus-Teilnehmerprofile
 description: Erfahren Sie, wie Sie mit dem Ziel-Connector für RainFocus-Teilnehmerprofile Zielgruppenprofile mit dem globalen RainFocus-Teilnehmerprofil synchronisieren können.
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 44%
+source-wordcount: '967'
+ht-degree: 37%
 
 ---
 
@@ -20,7 +20,7 @@ Verwenden Sie das [!DNL RainFocus Attendee Profiles] Ziel, um Kundenprofile aus 
 >
 >Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL RainFocus]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an `clientcare@rainfocus.com` oder besuchen Sie das RainFocus [Hilfezentrum](https://help.rainfocus.com/hc/en-us).
 
-## Anwendungsszenarien {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das RainFocus-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel bewältigen können.
 
@@ -48,7 +48,7 @@ Sie müssen außerdem über eine RainFocus-Kennung **Ereigniscode** verfügen, a
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
 
 {style="table-layout:auto"}
 
@@ -57,8 +57,8 @@ Sie müssen außerdem über eine RainFocus-Kennung **Ereigniscode** verfügen, a
 In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Ziel exportieren können.
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
----------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -68,8 +68,8 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -78,19 +78,19 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[. ](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Connect to destination]** aus.
 
 ![Geben Sie Authentifizierungsdetails für den RainFocus-Ziel-Connector an](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
 
-* **[!UICONTROL Client-ID]**: Füllen Sie die vom RainFocus-API-Profil bereitgestellten [!DNL Client ID] aus.
-* **[!UICONTROL Client-Geheimnis]**: Füllen Sie die vom RainFocus-API-Profil bereitgestellten [!DNL Client Secret] aus.
-* **[!UICONTROL Umgebung]**: Geben Sie an, mit welcher RainFocus-Umgebung Sie eine Verbindung herstellen möchten, z. B. `dev`, `prod`.
+* **[!UICONTROL Client ID]**: Füllen Sie die vom RainFocus-API-Profil bereitgestellten [!DNL Client ID] aus.
+* **[!UICONTROL Client secret]**: Füllen Sie die vom RainFocus-API-Profil bereitgestellten [!DNL Client Secret] aus.
+* **[!UICONTROL Environment]**: Geben Sie an, mit welcher RainFocus-Umgebung Sie eine Verbindung herstellen möchten, z. B. `dev`, `prod`.
 * **[!UICONTROL Org ID]**: Geben Sie die eindeutige `orgid` für Ihre Instanz von RainFocus an.
 
 ### Ausfüllen der Zieldetails {#destination-details}
@@ -100,20 +100,20 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 ![Angeben von Verbindungsdetails für den RainFocus-Ziel-Connector](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Ereignis-ID]**: Ihre [!DNL RainFocus] Ereigniscode-Kennung, an die Profile gesendet werden sollen.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Event ID]**: Ihre [!DNL RainFocus] Ereigniscode-Kennung, an die Profile gesendet werden sollen.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -158,4 +158,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [RainFocus Streaming Source-Connector](https://experienceleague.adobe.com/de/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [RainFocus Streaming Source-Connector](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

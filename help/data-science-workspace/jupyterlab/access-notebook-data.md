@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datenzugriff in JupyterLab-Notebooks
 description: In diesem Handbuch wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace erstellt wurden, auf Ihre Daten zugreifen können.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3346'
-ht-degree: 23%
+source-wordcount: '3274'
+ht-degree: 22%
 
 ---
 
@@ -29,7 +29,7 @@ Bevor Sie dieses Handbuch lesen, lesen Sie [[!DNL JupyterLab] Benutzerhandbuch](
 
 >[!IMPORTANT]
 >
->Für PySpark- und Scala-Notebooks, wenn Sie einen Fehler mit der Ursache „Remote-RPC-Client getrennt“ erhalten. Dies bedeutet in der Regel, dass dem Treiber oder einem Executor nicht mehr genügend Speicher zur Verfügung steht. Versuchen Sie, in [&#x200B; „Batch“-Modus &#x200B;](#mode) wechseln, um diesen Fehler zu beheben.
+>Für PySpark- und Scala-Notebooks, wenn Sie einen Fehler mit der Ursache „Remote-RPC-Client getrennt“ erhalten. Dies bedeutet in der Regel, dass dem Treiber oder einem Executor nicht mehr genügend Speicher zur Verfügung steht. Versuchen Sie, in [ „Batch“-Modus ](#mode) wechseln, um diesen Fehler zu beheben.
 
 Die folgenden Informationen definieren die maximale Datenmenge, die gelesen werden kann, den verwendeten Datentyp und den geschätzten Zeitrahmen für das Lesen der Daten.
 
@@ -154,13 +154,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Schreiben in einen Datensatz in Python {#write-python}
 
-Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie die Registerkarte Datensymbol (unten hervorgehoben) im linken Navigationsbereich von JupyterLab aus. Die Verzeichnisse **[!UICONTROL Datensätze]** und **[!UICONTROL Schemata]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des Datensatzes, den Sie verwenden möchten, die Option **[!UICONTROL Daten in Notebook schreiben]** aus. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie die Registerkarte Datensymbol (unten hervorgehoben) im linken Navigationsbereich von JupyterLab aus. Die Ordner **[!UICONTROL Datasets]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datasets]** aus, klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des Datensatzes, den Sie verwenden möchten, die Option **[!UICONTROL Write Data in Notebook]** . Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- Verwenden Sie **[!UICONTROL Daten in Notebook schreiben]**, um eine Schreibzelle mit Ihrem ausgewählten Datensatz zu generieren.
-- Verwenden Sie **[!UICONTROL Erkunden von Daten in Notebook]**, um eine Lesezelle mit Ihrem ausgewählten Datensatz zu generieren.
-- Verwenden Sie **[!UICONTROL Abfragedaten in Notebook]**, um eine einfache Abfragezelle mit Ihrem ausgewählten Datensatz zu generieren.
+- Verwenden Sie **[!UICONTROL Write Data in Notebook]** , um eine Schreibzelle mit Ihrem ausgewählten Datensatz zu generieren.
+- Verwenden Sie **[!UICONTROL Explore Data in Notebook]** , um eine Lesezelle mit Ihrem ausgewählten Datensatz zu generieren.
+- Verwenden Sie **[!UICONTROL Query Data in Notebook]** , um eine einfache Abfragezelle mit Ihrem ausgewählten Datensatz zu generieren.
 
 Alternativ können Sie die folgende Code-Zelle kopieren und einfügen. Ersetzen Sie sowohl die `{DATASET_ID}` als auch die `{PANDA_DATAFRAME}`.
 
@@ -179,7 +179,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 Bevor Sie den [!DNL Query Service] in [!DNL JupyterLab] verwenden, sollten Sie Grundlagenkenntnisse zur [[!DNL Query Service] -SQL-Syntax](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=de) besitzen.
 
-Für die Abfrage von Daten mit [!DNL Query Service] müssen Sie den Namen des Zieldatensatzes angeben. Sie können die erforderlichen Code-Zellen generieren, indem Sie den gewünschten Datensatz mit dem **[!UICONTROL Data Explorer]** suchen. Klicken Sie mit der rechten Maustaste auf die Datensatzliste und klicken Sie auf **[!UICONTROL Daten in Notebook abfragen]**, um zwei Code-Zellen in Ihrem Notebook zu generieren. Diese beiden Zellen werden im Folgenden genauer beschrieben.
+Für die Abfrage von Daten mit [!DNL Query Service] müssen Sie den Namen des Zieldatensatzes angeben. Sie können die erforderlichen Code-Zellen generieren, indem Sie den gewünschten Datensatz mithilfe der **[!UICONTROL Data explorer]** finden. Klicken Sie mit der rechten Maustaste auf die Datensatzliste und dann auf **[!UICONTROL Query Data in Notebook]** , um zwei Code-Zellen in Ihrem Notebook zu generieren. Diese beiden Zellen werden im Folgenden genauer beschrieben.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -290,12 +290,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Schreiben in einen Datensatz in R {#write-r}
 
-Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie die Registerkarte Datensymbol (unten hervorgehoben) im linken Navigationsbereich von JupyterLab aus. Die Verzeichnisse **[!UICONTROL Datensätze]** und **[!UICONTROL Schemata]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des Datensatzes, den Sie verwenden möchten, die Option **[!UICONTROL Daten in Notebook schreiben]** aus. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie die Registerkarte Datensymbol (unten hervorgehoben) im linken Navigationsbereich von JupyterLab aus. Die Ordner **[!UICONTROL Datasets]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datasets]** aus, klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des Datensatzes, den Sie verwenden möchten, die Option **[!UICONTROL Write Data in Notebook]** . Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Verwenden Sie **[!UICONTROL Daten in Notebook schreiben]**, um eine Schreibzelle mit Ihrem ausgewählten Datensatz zu generieren.
-- Verwenden Sie **[!UICONTROL Erkunden von Daten in Notebook]**, um eine Lesezelle mit Ihrem ausgewählten Datensatz zu generieren.
+- Verwenden Sie **[!UICONTROL Write Data in Notebook]** , um eine Schreibzelle mit Ihrem ausgewählten Datensatz zu generieren.
+- Verwenden Sie **[!UICONTROL Explore Data in Notebook]** , um eine Lesezelle mit Ihrem ausgewählten Datensatz zu generieren.
 
 Alternativ können Sie die folgende Code-Zelle kopieren und einfügen:
 
@@ -398,20 +398,20 @@ Ein benutzerdefinierter [!DNL Data Science Workspace] Magic-Befehl zum Lesen ode
 > - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 > 
-> Weitere Informationen finden [&#x200B; im &#x200B;](../troubleshooting-guide.md) zur Fehlerbehebung .
+> Weitere Informationen finden [ im ](../troubleshooting-guide.md) zur Fehlerbehebung .
 
 Sie können die oben genannten Beispiele automatisch in JupyterLab generieren, indem Sie die folgende Methode verwenden:
 
-Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte mit dem Datensymbol (siehe unten) aus. Die Verzeichnisse **[!UICONTROL Datensätze]** und **[!UICONTROL Schemata]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des Datensatzes, den Sie verwenden möchten, die Option **[!UICONTROL Daten in Notebook schreiben]** aus. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte mit dem Datensymbol (siehe unten) aus. Die Ordner **[!UICONTROL Datasets]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datasets]** aus, klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des Datensatzes, den Sie verwenden möchten, die Option **[!UICONTROL Write Data in Notebook]** . Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
-- Verwenden Sie **[!UICONTROL Erkunden von Daten in Notebook]**, um eine Lesezelle zu generieren.
+- Verwenden Sie **[!UICONTROL Explore Data in Notebook]**, um eine gelesene Zelle zu generieren.
 - Verwenden Sie **[!UICONTROL Write Data in Notebook]**, um eine Schreibzelle zu generieren.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
 ### Erstellen eines lokalen Datenrahmens {#pyspark-create-dataframe}
 
-Verwenden Sie SQL-Abfragen, um einen lokalen Datenrahmen mit PySpark 3 zu erstellen. z. B.:
+Verwenden Sie SQL-Abfragen, um einen lokalen Datenrahmen mit PySpark 3 zu erstellen. Beispiel:
 
 ```scala
 date_aggregation.createOrReplaceTempView("temp_df")
@@ -498,7 +498,7 @@ In Scala können Sie `clientContext` importieren, um Experience Platform-Werte a
 > - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 > 
-> Weitere Informationen finden [&#x200B; im &#x200B;](../troubleshooting-guide.md) zur Fehlerbehebung .
+> Weitere Informationen finden [ im ](../troubleshooting-guide.md) zur Fehlerbehebung .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -534,9 +534,11 @@ df1.show(10)
 
 Sie können das obige Beispiel automatisch in JupyterLab generieren, indem Sie die folgende Methode verwenden:
 
-Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte mit dem Datensymbol (siehe unten) aus. Die Verzeichnisse **[!UICONTROL Datensätze]** und **[!UICONTROL Schemata]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** aus, klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des Datensatzes, den Sie verwenden möchten, die Option **[!UICONTROL Daten in Notebook erkunden]** aus. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte mit dem Datensymbol (siehe unten) aus. Die Ordner **[!UICONTROL Datasets]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datasets]** aus, klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des Datensatzes, den Sie verwenden möchten, die Option **[!UICONTROL Explore Data in Notebook]** . Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+
 Und
-- Verwenden Sie **[!UICONTROL Erkunden von Daten in Notebook]**, um eine Lesezelle zu generieren.
+
+- Verwenden Sie **[!UICONTROL Explore Data in Notebook]**, um eine gelesene Zelle zu generieren.
 - Verwenden Sie **[!UICONTROL Write Data in Notebook]**, um eine Schreibzelle zu generieren.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
@@ -553,7 +555,7 @@ In Scala können Sie `clientContext` importieren, um Experience Platform-Werte a
 > - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 > 
-> Weitere Informationen finden [&#x200B; im &#x200B;](../troubleshooting-guide.md) zur Fehlerbehebung .
+> Weitere Informationen finden [ im ](../troubleshooting-guide.md) zur Fehlerbehebung .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -586,7 +588,7 @@ df1.write.format("com.adobe.platform.query")
 
 ### Erstellen eines lokalen Datenrahmens {#scala-create-dataframe}
 
-Um einen lokalen Datenrahmen mit Scala zu erstellen, sind SQL-Abfragen erforderlich. z. B.:
+Um einen lokalen Datenrahmen mit Scala zu erstellen, sind SQL-Abfragen erforderlich. Beispiel:
 
 ```scala
 sparkdf.createOrReplaceTempView("sparkdf")

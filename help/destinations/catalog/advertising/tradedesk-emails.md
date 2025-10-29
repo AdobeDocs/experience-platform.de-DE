@@ -3,10 +3,10 @@ title: The Trade Desk - CRM-Verbindung
 description: Profile für Ihr Trade Desk-Konto aktivieren, um Zielgruppen-Targeting und -Unterdrückung auf der Grundlage von CRM-Daten durchzuführen.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1122'
-ht-degree: 17%
+source-wordcount: '1088'
+ht-degree: 15%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 17%
 >[!IMPORTANT]
 >
 >Mit Veröffentlichung der EUID (European Unified ID) sehen Sie jetzt zwei [!DNL The Trade Desk - CRM]-Ziele im [Zielkatalog](/help/destinations/catalog/overview.md).
+>
 >* Wenn Sie Daten in der EU beziehen, verwenden Sie bitte das **[!DNL The Trade Desk - CRM (EU)]**-Ziel.
 >* Wenn Sie Daten in der APAC- oder NAMER-Region beziehen, verwenden Sie das **[!DNL The Trade Desk - CRM (NAMER & APAC)]**-Ziel.
 >
@@ -40,7 +41,7 @@ Dieser Connector sendet Daten an den [!DNL The Trade Desk] Erstanbieter-Endpunkt
 
 ## Anforderungen für den ID-Abgleich {#id-matching-requirements}
 
-Je nach Typ der IDs, die Sie in Adobe Experience Platform aufnehmen, müssen Sie die entsprechenden Anforderungen erfüllen. Weitere Informationen finden Sie [&#x200B; „Übersicht &#x200B;](/help/identity-service/features/namespaces.md) Identitäts-Namespaces“.
+Je nach Typ der IDs, die Sie in Adobe Experience Platform aufnehmen, müssen Sie die entsprechenden Anforderungen erfüllen. Weitere Informationen finden Sie [ „Übersicht ](/help/identity-service/features/namespaces.md) Identitäts-Namespaces“.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -74,9 +75,9 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Audience mit den IDs (E-Mail oder Hash-E-Mail), die im Trade Desk-Ziel verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da ein Profil in Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert wird, werden die Profile (Identitäten) einmal täglich nachgelagert auf der Zielplattform aktualisiert. Weitere Informationen über [Batch-Exporte](/help/destinations/destination-types.md#file-based). |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Audience export]** | Sie exportieren alle Mitglieder einer Audience mit den IDs (E-Mail oder Hash-E-Mail), die im Trade Desk-Ziel verwendet werden. |
+| Exporthäufigkeit | **[!UICONTROL Daily Batch]** | Da ein Profil in Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert wird, werden die Profile (Identitäten) einmal täglich nachgelagert auf der Zielplattform aktualisiert. Weitere Informationen über [Batch-Exporte](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -90,25 +91,25 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen Sie eine Verbindung zu Ihrer eigenen Zielplattform einrichten. Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-* **[!UICONTROL Kontotyp]**: Wählen Sie die Option **[!UICONTROL Vorhandenes Konto]** aus.
+* **[!UICONTROL Account Type]**: Bitte wählen Sie die **[!UICONTROL Existing Account]** Option.
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Advertiser-ID]**: Ihr [!DNL Trade Desk Advertiser ID], das entweder von Ihrem [!DNL Trade Desk] Account Manager freigegeben werden kann oder unter [!DNL Advertiser Preferences] in der [!DNL Trade Desk]-Benutzeroberfläche zu finden ist.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Advertiser ID]**: Ihr [!DNL Trade Desk Advertiser ID], das entweder von Ihrem [!DNL Trade Desk] Account Manager freigegeben werden kann oder unter [!DNL Advertiser Preferences] in der [!DNL Trade Desk]-Benutzeroberfläche zu finden ist.
 
 Screenshot der ![Experience Platform-Benutzeroberfläche mit Informationen zum Ausfüllen der Zieldetails.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Weitere Einzelheiten finden Sie in der [&#x200B; zu Experience Platform &#x200B;](/help/data-governance/policies/overview.md)Übersicht zu Data Governance).
+Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Weitere Einzelheiten finden Sie in der [ zu Experience Platform ](/help/data-governance/policies/overview.md)Übersicht zu Data Governance).
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für ein Ziel finden Sie &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
+Anweisungen [ Aktivieren von Zielgruppen für ein Ziel finden Sie ](/help/destinations/ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
 
-Auf der **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Audience konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
+Auf der Seite **[!UICONTROL Scheduling]** können Sie den Zeitplan und die Dateinamen für jede Audience konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
 
 Screenshot der ![Experience Platform-Benutzeroberfläche zum Planen der Zielgruppenaktivierung.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
@@ -118,7 +119,7 @@ Screenshot der ![Experience Platform-Benutzeroberfläche zum Planen der Zielgrup
 
 Screenshot der ![Experience Platform-Benutzeroberfläche zum Planen der Zielgruppenaktivierung.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
-Auf der **[!UICONTROL Zuordnung]** müssen Sie Attribute oder Identity-Namespaces aus der Quellspalte auswählen und der Zielspalte zuordnen.
+Auf der Seite **[!UICONTROL Mapping]** müssen Sie Attribute oder Identity-Namespaces aus der Quellspalte auswählen und der Zielspalte zuordnen.
 
 Screenshot der ![Experience Platform-Benutzeroberfläche zur Zuordnung der Zielgruppenaktivierung.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
@@ -142,9 +143,9 @@ Auswählen der Zielfelder:
 
 Um zu überprüfen, ob die Daten korrekt aus Experience Platform in [!DNL The Trade Desk] exportiert werden, durchsuchen Sie die Zielgruppen unter der Adobe 1PD-Datenkachel in [!DNL The Trade Desk] Data Management Platform (DMP). Im Folgenden finden Sie die Schritte zum Auffinden der entsprechenden ID in der [!DNL Trade Desk]-Benutzeroberfläche:
 
-1. Wählen Sie zunächst die Registerkarte **[!UICONTROL Daten]** und lesen Sie den Abschnitt **[!UICONTROL Erstanbieter]**.
-2. Scrollen Sie auf der Seite nach unten **[!UICONTROL Importierte Daten]** finden Sie die **[!UICONTROL Adobe 1PD-Kachel]**.
-3. Klicken Sie auf die Kachel **[!UICONTROL Adobe 1PD]**. Dort werden alle Zielgruppen aufgelistet, die für das [!DNL Trade Desk]-Ziel Ihres Advertisers aktiviert sind. Sie können auch die Suchfunktion verwenden.
+1. Wählen Sie zunächst die Registerkarte **[!UICONTROL Data]** aus und lesen Sie den Abschnitt **[!UICONTROL First-Party]** .
+2. Scrollen Sie auf der Seite nach unten, unter **[!UICONTROL Imported Data]** finden Sie die **[!UICONTROL Adobe 1PD Tile]**.
+3. Klicken Sie auf die Kachel **[!UICONTROL Adobe 1PD]**. Dort werden alle Zielgruppen aufgelistet, die für das [!DNL Trade Desk]-Ziel für Ihren Advertiser aktiviert sind. Sie können auch die Suchfunktion verwenden.
 4. Die Segment-ID # aus Experience Platform wird als Segmentname in der [!DNL Trade Desk] Benutzeroberfläche angezeigt.
 
 ## Datennutzung und -Governance {#data-usage-governance}

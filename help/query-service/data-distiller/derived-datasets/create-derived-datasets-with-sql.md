@@ -2,7 +2,7 @@
 title: Erstellen abgeleiteter Datensätze mit SQL
 description: Erfahren Sie, wie Sie SQL verwenden, um einen abgeleiteten Datensatz zu erstellen, der für Profil aktiviert ist, und wie Sie den Datensatz für das Echtzeit-Kundenprofil und den Segmentierungs-Service verwenden.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 2%
@@ -101,7 +101,7 @@ Markieren Sie eine vorhandene Spalte in einem Datensatz als primären Identität
 ALTER TABLE <your_table_name> ADD CONSTRAINT primary identity NAMESPACE
 ```
 
-z. B.:
+Beispiel:
 
 ```sql
 ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
@@ -117,7 +117,7 @@ Wenn Sie Ihre Tabelle für die Verwendung durch Profile deaktivieren möchten, m
 ALTER TABLE table_name DROP LABEL 'PROFILE';
 ```
 
-z. B.:
+Beispiel:
 
 ```sql
 ALTER TABLE decile_table DROP label 'PROFILE';
@@ -135,7 +135,7 @@ Nachfolgend finden Sie eine Beispielanweisung mit dem richtigen Format.
 ALTER TABLE table_name ADD LABEL 'UPSERT';
 ```
 
-z. B.:
+Beispiel:
 
 ```sql
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
@@ -153,7 +153,7 @@ Nachfolgend finden Sie eine Beispielanweisung mit dem richtigen Format.
 ALTER TABLE table_name DROP LABEL 'UPSERT';
 ```
 
-z. B.:
+Beispiel:
 
 ```sql
 ALTER TABLE table_with_a_decile DROP label 'UPSERT';
@@ -167,7 +167,7 @@ Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
 
 ```sql
        name          |        dataSetId         |     dataSet    | description | labels 
----------------------+--------------------------+----------------+-------------+----------
+|---------------------+--------------------------+----------------+-------------+----------
  luma_midvalues      | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues     | 5c86b896b3c162151785b43c | Luma midValues |             | false
  table_with_a_decile | 5c86b896b3c162151785b43c | Luma midValues |             | 'UPSERT', 'PROFILE'
@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >Die Feldergruppenerstellung über SQL schlägt fehl, wenn das `label`-Flag nicht in der Anweisung angegeben wird oder wenn die Feldergruppe bereits vorhanden ist.
->Stellen Sie sicher, dass die Abfrage eine `IF NOT EXISTS`-Klausel enthält, um zu vermeiden, dass die Abfrage fehlschlägt, da die Feldergruppe bereits vorhanden ist.
+>>Stellen Sie sicher, dass die Abfrage eine `IF NOT EXISTS`-Klausel enthält, um zu vermeiden, dass die Abfrage fehlschlägt, da die Feldergruppe bereits vorhanden ist.
 
 Ein reales Beispiel könnte in etwa wie unten dargestellt aussehen.
 
@@ -199,7 +199,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 Bei erfolgreicher Ausführung dieser Anweisung wird die erstellte Feldergruppen-ID zurückgegeben. Beispiel `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Weitere Informationen zu alternativen Methoden finden Sie in [&#x200B; Dokumentation zum Erstellen einer neuen Feldergruppe &#x200B;](../../../xdm/ui/resources/field-groups.md#create) Schema-Editor oder [&#x200B; Verwendung &#x200B;](../../../xdm/api/field-groups.md#create) Schema-Registrierungs-API .
+Weitere Informationen zu alternativen Methoden finden Sie in [ Dokumentation zum Erstellen einer neuen Feldergruppe ](../../../xdm/ui/resources/field-groups.md#create) Schema-Editor oder [ Verwendung ](../../../xdm/api/field-groups.md#create) Schema-Registrierungs-API .
 
 ### Feldergruppe ablegen
 
@@ -209,7 +209,7 @@ Gelegentlich kann es erforderlich sein, eine Feldergruppe aus der Schemaregistri
 DROP FIELDGROUP [IF EXISTS] <your_field_group_id>;
 ```
 
-z. B.:
+Beispiel:
 
 ```sql
 DROP FIELDGROUP field_group_for_test123;
@@ -227,7 +227,7 @@ Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
 
 ```sql
        name                      |        fieldgroupId                             |     owner      |
----------------------------------+-------------------------------------------------+-----------------
+|---------------------------------+-------------------------------------------------+-----------------
  AEP Mobile Lifecycle Details    | _experience.aep-mobile-lifecycle-details        | Luma midValues |
  AEP Web SDK ExperienceEvent     | _experience.aep-web-sdk-experienceevent         | Luma midValues |
  AJO Classification Fields       | _experience.journeyOrchestration.classification | Luma midValues |

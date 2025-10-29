@@ -2,11 +2,11 @@
 keywords: Experience Platform;Entwicklerhandbuch;Datenwissenschafts-Arbeitsbereich;beliebte Themen;maschinelles Lernen in Echtzeit;
 solution: Experience Platform
 title: Übersicht zu maschinellem Lernen in Echtzeit
-description: Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Ableitungen in Echtzeit und kontinuierlichem Lernen auf dem Experience Platform-Edge Network ermöglicht.
+description: Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Ableitungen in Echtzeit und kontinuierlichem Lernen im Experience Platform Edge Network ermöglicht.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '574'
 ht-degree: 89%
 
 ---
@@ -49,7 +49,7 @@ Erstellen Sie ein Modell für maschinelles Lernen in Echtzeit, indem Sie es von 
 
 ### Bereitstellung
 
-Stellen Sie Ihr Modell für die [!DNL Edge Network] bereit, um einen Service für maschinelles Lernen in Echtzeit in der [!UICONTROL Service-Galerie“ &#x200B;] dem Prognose-API-Endpunkt zu erstellen.
+Stellen Sie Ihr Modell für die [!DNL Edge Network] bereit, um einen Service für maschinelles Lernen in Echtzeit in der [!UICONTROL Service Gallery] mithilfe des Prognose-API-Endpunkts zu erstellen.
 
 ### Folgerung   
 
@@ -66,6 +66,7 @@ Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die
 >[!NOTE]
 >
 > Alpha-Einschränkungen:
+>
 > - Derzeit werden nur ONNX-basierte Modelle unterstützt.
 > - In Knoten verwendete Funktionen können nicht serialisiert werden, beispielsweise eine Lambda-Funktion, die in einem Pandas-Knoten verwendet wird.
 > - Nach der manuellen Bereitstellung von [!DNL Edge] folgt ein 20 Sekunden langer Ruhezustand.

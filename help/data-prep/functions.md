@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funktionen zur Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '6028'
+source-wordcount: '6009'
 ht-degree: 3%
 
 ---
@@ -33,19 +33,19 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 Darüber hinaus enthalten reservierte Keywords auch alle auf dieser Seite aufgelisteten Mapper-Funktionen.
 
-Auf Daten innerhalb von Unterfeldern kann mit der Punktnotation zugegriffen werden. Wenn beispielsweise ein `name` vorhanden ist, verwenden Sie `name.firstName`, um auf das `firstName`-Feld zuzugreifen.
+Auf Daten innerhalb von Unterfeldern kann mit der Punktnotation zugegriffen werden. Wenn beispielsweise ein `name` vorhanden ist, verwenden Sie `firstName`, um auf das `name.firstName`-Feld zuzugreifen.
 
 ## Funktionsliste
 
 In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgelistet, einschließlich Beispielausdrücke und der resultierenden Ausgaben.
 
-### Zeichenfolgen-Funktionen {#string}
+### Zeichenfolgenfunktionen {#string}
 
 >[!NOTE]
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Verkettet die angegebenen Zeichenfolgen. | <ul><li>STRING: Die Zeichenfolgen, die verkettet werden.</li></ul> | concat(STRING_1, STRING_2) | concat(„Hallo, &quot;, „dort“, &quot;!„) | `"Hi, there!"` |
 | explode | Teilt die Zeichenfolge auf der Basis eines Regex und gibt ein Array von Teilen zurück. Kann optional einen Regex enthalten, um die Zeichenfolge zu teilen. Standardmäßig wird die Aufspaltung zu &quot;,“ aufgelöst. Die folgenden Trennzeichen **müssen** mit `\` maskiert werden: `+, ?, ^, \|, ., [, (, {, ), *, $, \` Wenn Sie mehrere Zeichen als Trennzeichen verwenden, wird das Trennzeichen als Trennzeichen mit mehreren Zeichen behandelt. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die aufgeteilt werden muss.</li><li>REGEX: *Optional* Der reguläre Ausdruck, der zum Aufteilen der Zeichenfolge verwendet werden kann.</li></ul> | explode(STRING, REGEX) | explode(„Hallo, da!“, &quot; „) | `["Hi,", "there"]` |
@@ -70,7 +70,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgelis
 
 ### Funktionen mit reguläreren Ausdrücken
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | Extrahiert Gruppen aus der Eingabezeichenfolge basierend auf einem regulären Ausdruck. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, aus der Sie die Gruppen extrahieren.</li><li>REGEX: **Erforderlich** Der reguläre Ausdruck, dem die Gruppe entsprechen soll.</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(„E259,E259B_009,1_1“&#x200B;, „([^,]+),[^,]*,([^,]+)„) | [„E259,E259B_009,1_1“, „E259“, „1_1“] |
 | matches_regex | Prüft, ob die Zeichenfolge mit dem eingegebenen regulären Ausdruck übereinstimmt. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die Sie überprüfen, entspricht dem regulären Ausdruck.</li><li>REGEX: **Erforderlich** Der reguläre Ausdruck, mit dem Sie vergleichen.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(„E259,E259B_009,1_1“, „([^,]+),[^,]*,([^,]+)„) | wahr |
@@ -83,7 +83,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgelis
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | Verwendet eine Eingabe und erzeugt einen Hash-Wert mit dem sicheren Hash-Algorithmus 1 (SHA-1). | <ul><li>INPUT: **Erforderlich** Der Text, der gehasht werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | sha1(EINGANG, ZEICHEN) | sha1(„Mein Text“, „UTF-8„) | C3599C11E47719DF18A24&#x200B;48690840C5DFCCE3C80 |
 | SHA256 | Verwendet eine Eingabe und erzeugt einen Hash-Wert mit dem sicheren Hash-Algorithmus 256 (SHA-256). | <ul><li>INPUT: **Erforderlich** Der Text, der gehasht werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | sha256(EINGANG, ZEICHEN) | sha256(„Mein Text“, „UTF-8„) | 7330d2b39ca35eaf4cb95fc846c21&#x200B;ee6a39af698154a83a586ee270a0d372104 |
@@ -99,13 +99,13 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgelis
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | get_url_protocol | Gibt das Protokoll der angegebenen URL aus. Wenn die Eingabe ungültig ist, wird null zurückgegeben. | <ul><li>URL: **Erforderlich** Die URL, aus der das Protokoll extrahiert werden muss.</li></ul> | get_url_protocol&#x200B;(URL) | get_url_protocol(“https://platform&#x200B;.adobe.com/home„) | https |
 | get_url_host | Gibt den Host der angegebenen URL zurück. Wenn die Eingabe ungültig ist, wird null zurückgegeben. | <ul><li>URL: **Erforderlich** Die URL, aus der der Host extrahiert werden muss.</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(“https://platform&#x200B;.adobe.com/home„) | platform.adobe.com |
 | get_url_port | Gibt den Port der angegebenen URL zurück. Wenn die Eingabe ungültig ist, wird null zurückgegeben. | <ul><li>URL: **Erforderlich** Die URL, aus der der Port extrahiert werden muss.</li></ul> | get_url_port(URL) | get_url_port&#x200B;(“sftp://example.com//home/&#x200B;joe/employee.csv„) | 22 |
 | get_url_path | Gibt den Pfad der angegebenen URL zurück. Standardmäßig wird der vollständige Pfad zurückgegeben. | <ul><li>URL: **Erforderlich** Die URL, aus der der Pfad extrahiert werden muss.</li><li>FULL_PATH: *Optional* Ein boolescher Wert, der bestimmt, ob der vollständige Pfad zurückgegeben wird. Wenn auf „false“ gesetzt, wird nur das Ende des Pfads zurückgegeben.</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(“sftp://example.com//&#x200B;home/joe/employee.csv„) | &quot;//home/joe/&#x200B;employee.csv“ |
-| get_url_query_str | Gibt die Abfragezeichenfolge einer angegebenen URL als Zuordnung des Namens der Abfragezeichenfolge und des Werts der Abfragezeichenfolge zurück. | <ul><li>URL: **Erforderlich** Die URL, von der Sie die Abfragezeichenfolge abrufen möchten.</li><li>ANKER: **Erforderlich** Legt fest, was mit dem Anker in der Abfragezeichenfolge geschehen soll. Kann einer von drei Werten sein: „retain“, „remove“ oder „append“.<br><br>Wenn der Wert „retain“ lautet, wird der Anker an den zurückgegebenen Wert angehängt.<br>Wenn der Wert „remove“ ist, wird der Anker aus dem zurückgegebenen Wert entfernt.<br>Wenn der Wert „append“ ist, wird der Anker als separater Wert zurückgegeben.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | GET_URL_QUERY_STR&#x200B;(“foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose“, „retain„)<br>GET_URL_QUERY_STR&#x200B;(“foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose“, „remove„)<br>GET_URL_QUERY_STR&#x200B; &#x200B; &#x200B;(“foo://example.com:8042/over/thereName?name=ferret#nose“, „append„) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | Gibt die Abfragezeichenfolge einer angegebenen URL als Zuordnung des Namens der Abfragezeichenfolge und des Werts der Abfragezeichenfolge zurück. | <ul><li>URL: **Erforderlich** Die URL, von der Sie die Abfragezeichenfolge abrufen möchten.</li><li>ANKER: **Erforderlich** Legt fest, was mit dem Anker in der Abfragezeichenfolge geschehen soll. Kann einer von drei Werten sein: „retain“, „remove“ oder „append“.<br><br>Wenn der Wert „retain“ lautet, wird der Anker an den zurückgegebenen Wert angehängt.<br>Wenn der Wert „remove“ ist, wird der Anker aus dem zurückgegebenen Wert entfernt.<br>Wenn der Wert „append“ ist, wird der Anker als separater Wert zurückgegeben.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str&#x200B;(“foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose“, „retain„)<br>get_url_query_str&#x200B;(“foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose“, „remove„)<br>get_url_query_str&#x200B; &#x200B; &#x200B;(“foo://example.com:8042/over/there?name=ferret#nose“, „append„) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 | get_url_coded | Diese Funktion verwendet eine URL als Eingabe und ersetzt oder codiert die Sonderzeichen durch ASCII-Zeichen. Weitere Informationen zu Sonderzeichen finden Sie in der [Liste von Sonderzeichen](#special-characters) im Anhang dieses Dokuments. | <ul><li>URL: **Erforderlich** Die Eingabe-URL mit Sonderzeichen, die Sie ersetzen oder mit ASCII-Zeichen kodieren möchten.</li></ul> | get_url_coded(URL) | get_url_coded(„https</span>://example.com/partneralliance_Asia-Pacific_2022„) | https%3A%2F%2Fexample.com%2Fpartneralliance_Asia-Pacific_2022 |
 | get_url_decoded | Diese Funktion nimmt eine URL als Eingabe und decodiert die ASCII-Zeichen in Sonderzeichen.  Weitere Informationen zu Sonderzeichen finden Sie in der [Liste von Sonderzeichen](#special-characters) im Anhang dieses Dokuments. | <ul><li>URL: **Erforderlich** Die Eingabe-URL mit ASCII-Zeichen, die Sie in Sonderzeichen decodieren möchten.</li></ul> | get_url_decoded(URL) | get_url_decoded(„https%3A%2F%2Fexample.com%2Fpartneralliance_Asia-Pacific_2022„) | https</span>://example.com/partneralliance_asia-Pacific_2022 |
 
@@ -115,18 +115,18 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgelis
 
 >[!NOTE]
 >
->Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen. Weitere Informationen zur `date` finden Sie im Abschnitt „Datumsangaben“ [&#x200B; Handbuchs zur Handhabung von Datenformaten](./data-handling.md#dates).
+>Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen. Weitere Informationen zur `date` finden Sie im Abschnitt „Datumsangaben“ [ Handbuchs zur Handhabung von Datenformaten](./data-handling.md#dates).
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Ruft die aktuelle Zeit ab. | | now() | now() | `2021-10-26T10:10:24Z` |
 | Zeitstempel | Ruft die aktuelle Unix-Zeit ab. | | timestamp() | timestamp() | 1571850624571 |
 | Format | Formatiert das Eingabedatum entsprechend einem angegebenen Format. | <ul><li>DATE: **required** Das Eingabedatum, das Sie als ZonedDateTime-Objekt formatieren möchten.</li><li>FORMAT: **Erforderlich** Das Format, in das das Datum geändert werden soll.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;`yyyy-MM-dd HH:mm:ss`„) | `2019-10-23 11:24:35` |
 | formatieren | Konvertiert einen Zeitstempel in eine Datumszeichenfolge gemäß einem angegebenen Format. | <ul><li>ZEITSTEMPEL: **Erforderlich** Der Zeitstempel, den Sie formatieren möchten. Dies wird in Millisekunden geschrieben.</li><li>FORMAT: **Erforderlich** Das Format, das der Zeitstempel werden soll.</li></ul> | dformat(TIMESTAMP, FORMAT) | DFORMAT(1571829875000, &quot;`yyyy-MM-dd'T'HH:mm:ss.SSSX`„) | `2019-10-23T11:24:35.000Z` |
-| date | Konvertiert eine Datumszeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATE: **Required** Die Zeichenfolge, die das Datum darstellt.</li><li>FORMAT: **Erforderlich** Die Zeichenfolge, die das Format des Quelldatums darstellt.**Hinweis:** Dies **nicht** das Format dar, in das Sie die Datums-Zeichenfolge konvertieren möchten. </li><li>DEFAULT_DATE: **Erforderlich** Das Standarddatum wird zurückgegeben, wenn das angegebene Datum null ist.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | Datum(„2019-10-23 11:24“, „JJJJ-MM-TT HH:mm“, jetzt()) | `2019-10-23T11:24:00Z` |
-| date | Konvertiert eine Datumszeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATE: **Required** Die Zeichenfolge, die das Datum darstellt.</li><li>FORMAT: **Erforderlich** Die Zeichenfolge, die das Format des Quelldatums darstellt.**Hinweis:** Dies **nicht** das Format dar, in das Sie die Datums-Zeichenfolge konvertieren möchten. </li></ul> | date(DATE, FORMAT) | Datum(„2019-10-23 11:24“, „JJJJ-MM-TT HH:mm„) | `2019-10-23T11:24:00Z` |
+| date | Konvertiert eine Datumszeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATE: **Required** Die Zeichenfolge, die das Datum darstellt.</li><li>FORMAT: **Erforderlich** Die Zeichenfolge, die das Format des Quelldatums darstellt.**Hinweis:** Dies **nicht** das Format dar, in das Sie die Datums-Zeichenfolge konvertieren möchten. </li><li>DEFAULT_DATE: **Erforderlich** Das Standarddatum wird zurückgegeben, wenn das angegebene Datum null ist.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | Datum(„2019-10-23 11:24&quot;, „JJJJ-MM-TT HH:mm&quot;, jetzt()) | `2019-10-23T11:24:00Z` |
+| date | Konvertiert eine Datumszeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATE: **Required** Die Zeichenfolge, die das Datum darstellt.</li><li>FORMAT: **Erforderlich** Die Zeichenfolge, die das Format des Quelldatums darstellt.**Hinweis:** Dies **nicht** das Format dar, in das Sie die Datums-Zeichenfolge konvertieren möchten. </li></ul> | date(DATE, FORMAT) | date(„2019-10-23 11:24&quot;, „JJJJ-MM-TT HH:mm„) | `2019-10-23T11:24:00Z` |
 | date | Konvertiert eine Datumszeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATE: **Required** Die Zeichenfolge, die das Datum darstellt.</li></ul> | date(DATE) | Datum(„2019-10-23 11:24„) | „2019-10-23T11:24:00Z“ |
-| date_part | Ruft die Teile des Datums ab. Die folgenden Komponentenwerte werden unterstützt: <br><br>„Jahr“<br>„JJJJ“<br>&quot;<br><br>„Quartal“<br>„qq“<br>„q“<br><br>&quot;<br>„mm“<br>„m“<br><br>„dayofyear“<br>„dy“<br>„Tag„dd„TT“<br>„TT„Woche“<br><br>„WW“<br>„w„w„w„w“<br><br> <br> <br> <br><br> <br> <br> <br> <br><br> <br> <br> <br><br> <br> <br> <br><br> <br>„TT„w„TT„w“<br>&quot;<br><br>„h„254“<br> | <ul><li>COMPONENT: **Erforderlich** Eine Zeichenfolge, die den Teil des Datums darstellt. </li><li>DATE: **Erforderlich** Das Datum im Standardformat.</li></ul> | date_part&#x200B;(COMPONENT, DATE) | date_part(„MM“, date(„2019-10-17 11:55:12„)) | 10 |
+| date_part | Ruft die Teile des Datums ab. Die folgenden Komponentenwerte werden unterstützt: <br><br>„Jahr“<br>„JJJJ“<br>&quot;<br><br>„Quartal“<br>„qq“<br>„q“<br><br>&quot;<br>„mm“<br>„m“<br><br>„dayofyear“<br>„dy“<br>„Tag„dd„TT“<br><br>„TT„Woche“<br>„WW“<br>„w„w„w„w“<br><br> <br> <br> <br><br> <br> <br> <br><br> <br> <br> <br> <br><br> <br> <br> <br><br> <br>„TT„w„TT„w“<br>&quot;<br><br>„h„254“<br> | <ul><li>COMPONENT: **Erforderlich** Eine Zeichenfolge, die den Teil des Datums darstellt. </li><li>DATE: **Erforderlich** Das Datum im Standardformat.</li></ul> | date_part&#x200B;(COMPONENT, DATE) | date_part(„MM“, date(„2019-10-17 11:55:12„)) | 10 |
 | set_date_part | Ersetzt eine Komponente in einem bestimmten Datum. Folgende Komponenten werden akzeptiert: <br><br>„year“<br>„yyyy“<br>„yy“<br><br>„month“<br>„mm“<br>„m“<br><br>„day“<br>„dd“<br>„d“<br><br>„hour“<br>„hh“<br><br>„minute“<br>„mi“<br>&quot;„n“<br><br>„second“<br>„ss“<br>„s“ | <ul><li>COMPONENT: **Erforderlich** Eine Zeichenfolge, die den Teil des Datums darstellt. </li><li>WERT: **Erforderlich** Der Wert, der für die Komponente für ein bestimmtes Datum festgelegt werden soll.</li><li>DATE: **Erforderlich** Das Datum im Standardformat.</li></ul> | set_date_part&#x200B;(COMPONENT, VALUE, DATE) | set_date_part(„m“, 4, date(„2016-11-09T11:44:44.797„) | „2016-04-09T11:44:44Z“ |
 | make_date_time | Erstellt ein Datum aus Teilen. Diese Funktion kann auch mit make_timestamp eingeleitet werden. | <ul><li>JAHR: **Erforderlich** Das Jahr, mit vier Ziffern geschrieben.</li><li>MONTH: **Erforderlich** Der Monat. Zulässige Werte sind 1 bis 12.</li><li>TAG: **Erforderlich** Der Tag. Zulässige Werte sind 1 bis 31.</li><li>STUNDE: **Erforderlich** Die Stunde. Die zulässigen Werte sind 0 bis 23.</li><li>MINUTE: **Erforderlich** Die Minute. Die zulässigen Werte sind 0 bis 59.</li><li>NANOSECOND: **Erforderlich** Die Nanosekundenwerte. Die zulässigen Werte sind 0 bis 999999999.</li><li>ZEITZONE: **Erforderlich** Die Zeitzone für das Datum/die Uhrzeit.</li></ul> | make_date_time&#x200B;(JAHR, MONAT, TAG, STUNDE, MINUTE, SEKUNDE, NANOSEKUNDE, ZEITZONE) | make_date_time&#x200B;(2019, 10, 17, 11, 55, 12, 999, „America/Los_Angeles„) | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | Konvertiert ein Datum in einer beliebigen Zeitzone in ein Datum in UTC. | <ul><li>DATE: **Required** Das Datum, das Sie konvertieren möchten.</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
@@ -140,7 +140,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgelis
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Prüft, ob ein Objekt leer ist. | <ul><li>INPUT: **Erforderlich** Das Objekt, das Sie überprüfen möchten, ist leer.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
 | arrays_to_object | Erstellt eine Liste von Objekten. | <ul><li>INPUT: **Erforderlich** Eine Gruppierung von Schlüssel- und Array-Paaren.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
@@ -167,7 +167,7 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Gibt das erste Objekt zurück, das nicht null ist, in einem angegebenen Array. | <ul><li>INPUT: **Erforderlich** Das Array, von dem Sie das erste Objekt finden möchten, das nicht null ist.</li></ul> | zusammenfügen (EINGABE) | COALESCE(null, null, null, „first“, null, „second„) | „Erste“ |
 | first | Ruft das erste Element des angegebenen Arrays ab. | <ul><li>INPUT: **Erforderlich** Das Array, in dem Sie das erste Element finden möchten.</li></ul> | first(INPUT) | first(„1“, „2“, „3„) | „1“ |
@@ -178,10 +178,10 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 | size_of | Gibt die Größe der Eingabe zurück. | <ul><li>INPUT: **Erforderlich** Das Objekt, dessen Größe Sie suchen.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | Mit dieser Funktion werden alle Elemente im gesamten Eingabe-Array an das Ende des Arrays im Profil angehängt. Diese Funktion ist **nur** während Aktualisierungen anwendbar. Bei Verwendung im Kontext von Einfügungen gibt diese Funktion die Eingabe wie vorliegend zurück. | <ul><li>ARRAY: **Erforderlich** Das Array zum Anhängen des Arrays im Profil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123 456 ] |
 | upsert_array_replace | Diese Funktion wird verwendet, um Elemente in einem Array zu ersetzen. Diese Funktion ist **nur** während Aktualisierungen anwendbar. Bei Verwendung im Kontext von Einfügungen gibt diese Funktion die Eingabe wie vorliegend zurück. | <ul><li>ARRAY: **Erforderlich** Das Array, das das Array im Profil ersetzen soll.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123 456 ] |
-| [!BADGE Nur Ziele]{type=Informative} array_to_string | Verbindet die Zeichenfolgendarstellungen der Elemente in einem Array mit dem angegebenen Trennzeichen. Wenn das Array mehrdimensional ist, wird es reduziert, bevor es verbunden wird. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [&#x200B; in der &#x200B;](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>SEPARATOR: **Erforderlich** Das Trennzeichen, das zum Verbinden der Elemente im Array verwendet wird.</li><li>ARRAY: **Erforderlich** Das Array, das verbunden werden soll (nach dem Reduzieren).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | „Hallo;Welt“ |
-| [!BADGE Nur Ziele]{type=Informative} filterArray* | Filtert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [&#x200B; in der &#x200B;](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu filternde Array</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7 ] |
-| [!BADGE Nur Ziele]{type=Informative} transformArray* | Transformiert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [&#x200B; in der &#x200B;](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu transformierende Array.</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8 ] |
-| [!BADGE Nur Ziele]{type=Informative} flachenArray* | Reduziert das angegebene (mehrdimensionale) Array auf ein eindimensionales Array. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [&#x200B; in der &#x200B;](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das Array, das reduziert werden soll.</li></ul> | flachenArray(Array) | flachenArray(&lbrack;[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]])) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
+| [!BADGE Nur Ziele]{type=Informative} array_to_string | Verbindet die Zeichenfolgendarstellungen der Elemente in einem Array mit dem angegebenen Trennzeichen. Wenn das Array mehrdimensional ist, wird es reduziert, bevor es verbunden wird. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>SEPARATOR: **Erforderlich** Das Trennzeichen, das zum Verbinden der Elemente im Array verwendet wird.</li><li>ARRAY: **Erforderlich** Das Array, das verbunden werden soll (nach dem Reduzieren).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | „Hallo;Welt“ |
+| [!BADGE Nur Ziele]{type=Informative} filterArray* | Filtert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu filternde Array</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7 ] |
+| [!BADGE Nur Ziele]{type=Informative} transformArray* | Transformiert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu transformierende Array.</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8 ] |
+| [!BADGE Nur Ziele]{type=Informative} flachenArray* | Reduziert das angegebene (mehrdimensionale) Array auf ein eindimensionales Array. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das Array, das reduziert werden soll.</li></ul> | flachenArray(Array) | flachenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]])) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -191,9 +191,9 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| array_to_map | Diese Funktion akzeptiert ein Objekt-Array und einen Schlüssel als Eingabe und gibt eine Zuordnung des Schlüsselfelds mit dem Wert als Schlüssel und dem Array-Element als Wert zurück. | <ul><li>INPUT: **Erforderlich** Das Objekt-Array, von dem Sie das erste Objekt finden möchten, das nicht null ist.</li><li>KEY: **Required** Der Schlüssel muss ein Feldname im Objekt-Array und das Objekt als Wert sein.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Ein Codebeispiel finden [&#x200B; im &#x200B;](#object_to_map)Anhang“. |
+| array_to_map | Diese Funktion akzeptiert ein Objekt-Array und einen Schlüssel als Eingabe und gibt eine Zuordnung des Schlüsselfelds mit dem Wert als Schlüssel und dem Array-Element als Wert zurück. | <ul><li>INPUT: **Erforderlich** Das Objekt-Array, von dem Sie das erste Objekt finden möchten, das nicht null ist.</li><li>KEY: **Required** Der Schlüssel muss ein Feldname im Objekt-Array und das Objekt als Wert sein.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Ein Codebeispiel finden [ im ](#object_to_map)Anhang“. |
 | object_to_map | Diese Funktion akzeptiert ein -Objekt als Argument und gibt eine Zuordnung von Schlüssel-Wert-Paaren zurück. | <ul><li>INPUT: **Erforderlich** Das Objekt-Array, von dem Sie das erste Objekt finden möchten, das nicht null ist.</li></ul> | object_to_map(OBJECT_INPUT) | „object_to_map(address) where input is &quot; + „address: {line1 : \„345 park ave\&quot;,line2: \„bldg 2\&quot;,city : \„san jose\&quot;,state : \„CA\&quot;,type: \„office\&quot;}&quot; | Gibt eine Zuordnung mit angegebenen Feldnamen- und Wertepaaren zurück oder null, wenn die Eingabe null ist. Beispiel: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
 | to_map | Diese Funktion nimmt eine Liste von Schlüssel-Wert-Paaren und gibt eine Zuordnung von Schlüssel-Wert-Paaren zurück. | | to_map(OBJECT_INPUT) | „to_map(\„firstName\&quot;, \„John\&quot;, \„lastName\&quot;, \„Doe\„)“ | Gibt eine Zuordnung mit angegebenen Feldnamen- und Wertepaaren zurück oder null, wenn die Eingabe null ist. Beispiel: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
@@ -205,7 +205,7 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decode | Wenn ein Schlüssel und eine Liste von Schlüsselwertpaaren als Array reduziert sind, gibt die Funktion den Wert zurück, wenn der Schlüssel gefunden wird, oder gibt einen Standardwert zurück, wenn er im Array vorhanden ist. | <ul><li>KEY: **Required** Der Schlüssel, der abgeglichen werden soll.</li><li>OPTIONS: **Erforderlich** Ein reduziertes Array von Schlüssel/Wert-Paaren. Optional kann ein Standardwert am Ende eingefügt werden.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, „ca“, „California“, „pa“, „Pennsylvania“, „N/A„) | Wenn der angegebene stateCode „ca“, „California“ lautet.<br>Wenn der angegebene stateCode „pa“, „Pennsylvania“ lautet.<br>Wenn der stateCode nicht dem folgenden Wert entspricht, „K. A.“. |
 | IIF | Wertet einen gegebenen booleschen Ausdruck aus und gibt den angegebenen Wert basierend auf dem Ergebnis zurück. | <ul><li>AUSDRUCK: **Erforderlich** Der boolesche Ausdruck, der ausgewertet wird.</li><li>TRUE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck „true“ ergibt.</li><li>FALSE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck als „false“ ausgewertet wird.</li></ul> | IF(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | if(„s“.equalsIgnoreCase(„S„), „True“, „False„) | „TRUE“ |
@@ -218,7 +218,7 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Gibt das Minimum der angegebenen Argumente zurück. Verwendet eine natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | min(OPTIONS) | MIN(3, 1, 4) | 1 |
 | max | Gibt das Maximum der angegebenen Argumente zurück. Verwendet eine natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
@@ -231,7 +231,7 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | to_bigint | Konvertiert eine Zeichenfolge in eine BigInteger. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die in eine BigInteger-Zahl konvertiert werden soll.</li></ul> | to_bigint(ZEICHENFOLGE) | to_bigint&#x200B;(„1000000.34„) | 1000000,34 |
 | to_decimal | Konvertiert eine Zeichenfolge in Double. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die in eine Double-Zeichenfolge konvertiert werden soll.</li></ul> | to_decimal(ZEICHENFOLGE) | to_decimal(„20.5„) | 20,5 |
@@ -246,9 +246,9 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | Deserialisieren von JSON-Inhalten aus der angegebenen Zeichenfolge. | <ul><li>STRING: **Erforderlich** Die zu deserialisierende JSON-Zeichenfolge.</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({„info“:{„firstName“:„John“,„lastName“: „Doe“}}) | Ein Objekt, das die JSON darstellt. |
+| json_to_object | Deserialisieren von JSON-Inhalten aus der angegebenen Zeichenfolge. | <ul><li>STRING: **Erforderlich** Die zu deserialisierende JSON-Zeichenfolge.</li></ul> | json_to_object&#x200B;(STRING) | `json_to_object&#x200B;({"info":{"firstName":"John","lastName": "Doe"}})` | Ein Objekt, das die JSON darstellt. |
 
 {style="table-layout:auto"}
 
@@ -258,7 +258,7 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Erzeugt eine pseudo-zufällige ID. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 | `fpid_to_ecid ` | Diese Funktion wandelt eine FPID-Zeichenfolge in eine ECID um, die in Adobe Experience Platform- und Adobe Experience Cloud-Anwendungen verwendet werden kann. | <ul><li>STRING: **Erforderlich** Die FPID-Zeichenfolge, die in eine ECID konvertiert werden soll.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
@@ -278,7 +278,7 @@ Weitere Informationen zu Gerätefeldwerten finden Sie in der [Liste der Gerätef
 >
 >Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Extrahiert den Betriebssystemnamen aus der Benutzeragenten-Zeichenfolge. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(„Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3„) | iOS |
 | ua_os_version_major | Extrahiert die Hauptversion des Betriebssystems aus der Benutzeragenten-Zeichenfolge. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(„Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3„) | IOS 5 |
@@ -297,7 +297,7 @@ Weitere Informationen zu Gerätefeldwerten finden Sie in der [Liste der Gerätef
 >
 >Sie können nur die folgenden Analysefunktionen für WebSDK- und Adobe Analytics-Flüsse verwenden.
 
-| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | aa_get_event_id | Extrahiert die Ereignis-ID aus einer Analytics-Ereigniszeichenfolge. | <ul><li>EVENT_STRING: **Erforderlich** Die kommagetrennte Analytics-Ereigniszeichenfolge.</li><li>EVENT_NAME: **Erforderlich** Der Ereignisname, aus dem extrahiert werden soll und die ID.</li></ul> | aa_get_event_id(EVENT_STRING, EVENT_NAME) | aa_get_event_id(„event101=5:123456,scOpen“, „event101„) | 123456 |
 | aa_get_event_value | Extrahiert den Ereigniswert aus einer Analytics-Ereigniszeichenfolge. Wenn der Ereigniswert nicht angegeben ist, wird 1 zurückgegeben. | <ul><li>EVENT_STRING: **Erforderlich** Die kommagetrennte Analytics-Ereigniszeichenfolge.</li><li>EVENT_NAME: **Erforderlich** Der Ereignisname, aus dem ein Wert extrahiert werden soll.</li></ul> | aa_get_event_value(EVENT_STRING, EVENT_NAME) | aa_get_event_value(„event101=5:123456,scOpen“, „event101„) | 5 |
@@ -305,7 +305,7 @@ Weitere Informationen zu Gerätefeldwerten finden Sie in der [Liste der Gerätef
 | aa_get_product_names | Extrahiert den Produktnamen aus einer Analytics-Produktzeichenfolge. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li></ul> | aa_get_product_names(PRODUCTS_STRING) | aa_get_product_names(“;Beispielprodukt 1;1;3.50,Beispielkategorie 2;Beispielprodukt 2;1;5.99„) | [„Beispielprodukt 1“,„Beispielprodukt 2“] |
 | aa_get_product_quantity | Extrahiert die Mengen aus einer Analytics-Produktzeichenfolge. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li></ul> | aa_get_product_quantity(PRODUCTS_STRING) | aa_get_product_quantity(“;Beispielprodukt 1;1;3.50,Beispielkategorie 2;Beispielprodukt 2„) | [„1“, null] |
 | aa_get_product_prices | Extrahiert den Preis aus einer Analytics-Produktzeichenfolge. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li></ul> | aa_get_product_prices(PRODUCTS_STRING) | aa_get_product_prices(“;Beispielprodukt 1;1;3.50,Beispielkategorie 2;Beispielprodukt 2„) | [„3.50“, null] |
-| aa_get_product_event_values | Extrahiert Werte für das benannte Ereignis aus der Produktzeichenfolge als Zeichenfolgen-Array. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li><li>EVENT_NAME: **Erforderlich** Der Ereignisname, aus dem Werte extrahiert werden sollen.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(“;Beispielprodukt 1;1;4.20;event1=2.3\|event2=5:1,;Beispielprodukt 2;1;4.20;event1=3\|event2=2:2“, „event1„) | [„2.3“, „3“] |
+| aa_get_product_event_values | Extrahiert Werte für das benannte Ereignis aus der Produktzeichenfolge als Zeichenfolgen-Array. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li><li>EVENT_NAME: **Erforderlich** Der Ereignisname, aus dem Werte extrahiert werden sollen.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(“;Beispielprodukt 1;1;4.20;event1=2.3\|event2=5:1,;Beispielprodukt 2;1;4.20;event1=3\|event2=2:2&quot;, „event1„) | [„2.3“, „3“] |
 | aa_get_product_evars | Extrahiert die eVar-Werte für das benannte Ereignis aus der Produktzeichenfolge als Zeichenfolgen-Array. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li><li>EVAR_NAME: **Erforderlich** Der zu extrahierende eVar-Name.</li></ul> | aa_get_product_evars(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_evars(“;Beispielprodukt;1;6.69;;eVar1=Merchandising-Wert“, &quot;eVar1„) | [„Merchandising-Wert“] |
 
 {style="table-layout:auto"}
@@ -387,9 +387,9 @@ In der folgenden Tabelle finden Sie eine Liste der reservierten Zeichen und der 
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5b |
+| [ | %5b |
 | | | %5C |
-| &rbrack; | %5d |
+| ] | %5d |
 | ^ | %5E |
 | &quot; | %60 |
 | ~ | %7E |
@@ -431,7 +431,7 @@ In der folgenden Tabelle finden Sie eine Liste der Gerätefeldwerte und die ents
 
 #### map_get_values {#map-get-values}
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
  example = "map_get_values(book_details,\"author\") where input is : {\n" +
@@ -449,7 +449,7 @@ In der folgenden Tabelle finden Sie eine Liste der Gerätefeldwerte und die ents
 
 #### map_has_keys {#map_has_keys}
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
  example = "map_has_keys(book_details,\"author\")where input is : {\n" +
@@ -467,7 +467,7 @@ In der folgenden Tabelle finden Sie eine Liste der Gerätefeldwerte und die ents
 
 #### add_to_map {#add_to_map}
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
 example = "add_to_map(book_details, book_details2) where input is {\n" +
@@ -505,7 +505,7 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
 
 **Syntax 1**
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
 example = "object_to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")",
@@ -516,7 +516,7 @@ result = "{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"
 
 **Syntax 2**
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
 example = "object_to_map(address) where input is " +
@@ -528,7 +528,7 @@ result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State 
 
 **Syntax 3**
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
 example = "object_to_map(addresses,type)" +
@@ -588,7 +588,7 @@ result = "{\n" +
 
 #### array_to_map {#array_to_map}
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
 example = "array_to_map(addresses, \"type\") where addresses is\n" +

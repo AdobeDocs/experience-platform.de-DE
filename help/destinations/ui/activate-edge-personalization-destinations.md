@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen aus Adobe Experience Platform für Personalisierungs-Anwendungsfälle der gleichen Seite und der nächsten Seite für Edge-Ziele aktivieren.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 14%
+source-wordcount: '1885'
+ht-degree: 8%
 
 ---
 
@@ -25,9 +25,9 @@ Beispiele für Edge-Ziele sind die [Adobe Target](../../destinations/catalog/per
 
 >[!IMPORTANT]
 > 
-> * Um Daten zu aktivieren und den [Zuordnungsschritt](#mapping) des Workflows zu aktivieren, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **&#x200B;**&#x200B;Segmente anzeigen[Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
-> * Um Daten zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren und den [Zuordnungsschritt](#mapping) des Workflows zu aktivieren, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+>* Um Daten zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 > 
 > Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
@@ -39,11 +39,11 @@ Einen kurzen Überblick über die Konfiguration der Adobe Target-Verbindung für
 >
 >Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie in den Konfigurationsschritten, die in den folgenden Abschnitten beschrieben werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449802/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Einen kurzen Überblick darüber, wie Sie Audiences und Profilattribute für Adobe Target und benutzerdefinierte Personalisierungsziele freigeben können, erhalten Sie im folgenden Video.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447364/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Anwendungsfälle {#use-cases}
 
@@ -77,11 +77,11 @@ Ein Unternehmen, das Häuser vermietet und verkauft, möchte seine Startseite mi
 
 Der erste Schritt bei der Einrichtung Ihres Personalisierungsziels besteht darin, einen Datenstrom für das Experience Platform Web SDK zu konfigurieren. Dies erfolgt in der Benutzeroberfläche für die Datenerfassung.
 
-Stellen Sie beim Konfigurieren des Datenstroms unter **[!UICONTROL Adobe Experience Platform]** sicher, dass sowohl **[!UICONTROL Edge-Segmentierung]** als auch **[!UICONTROL Personalisierungsziele]** ausgewählt sind.
+Stellen Sie beim Konfigurieren des Datenstroms unter **[!UICONTROL Adobe Experience Platform]** sicher, dass sowohl **[!UICONTROL Edge Segmentation]** als auch **[!UICONTROL Personalization Destinations]** ausgewählt sind.
 
 >[!TIP]
 >
->Ab der Version April 2024 müssen Sie beim Konfigurieren der Verbindung zu Adobe Target das Kontrollkästchen [Edge-Segmentierung“ nicht &#x200B;](/help/destinations/catalog/personalization/adobe-target-connection.md). In diesem Fall ist [Personalisierung der nächsten Sitzung](#next-session) der einzige verfügbare Anwendungsfall für die Personalisierung.
+>Ab der Version April 2024 müssen Sie beim Konfigurieren der Verbindung zu Adobe Target das Kontrollkästchen [Edge-Segmentierung“ nicht ](/help/destinations/catalog/personalization/adobe-target-connection.md). In diesem Fall ist [Personalisierung der nächsten Sitzung](#next-session) der einzige verfügbare Anwendungsfall für die Personalisierung.
 
 ![Datenstromkonfiguration mit hervorgehobener Edge-Segmentierung und hervorgehobenen Personalization-Zielen!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -95,13 +95,13 @@ Nachdem Sie Ihre Zielverbindung erstellt haben, müssen Sie eine [!DNL Active-On
 >
 >Derzeit unterstützen Edge-Ziele nur die Aktivierung von Zielgruppen, die die [Active-On-Edge-Zusammenführungsrichtlinie](../../segmentation/ui/segment-builder.md#merge-policies) als Standard festlegen. Wenn Sie Zielgruppen, die eine andere Zusammenführungsrichtlinie verwenden, Edge-Zielen zuordnen, werden diese Zielgruppen nicht ausgewertet.
 
-Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
+Befolgen Sie die Anweisungen unter [Erstellen einer Zusammenführungsrichtlinie](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie den Umschalter **[!UICONTROL Active-On-Edge Merge Policy]** aktivieren.
 
 ### Erstellen einer neuen Zielgruppe in Experience Platform {#create-audience}
 
 Nachdem Sie die [!DNL Active-On-Edge] Zusammenführungsrichtlinie erstellt haben, müssen Sie eine neue Zielgruppe in Experience Platform erstellen.
 
-Befolgen Sie die [Audience Builder](../../segmentation/ui/segment-builder.md)-Anleitung zum Erstellen Ihrer neuen Zielgruppe und stellen Sie sicher, [&#x200B; Sie &#x200B;](../../segmentation/ui/segment-builder.md#merge-policies) im vorherigen Schritt erstellte [!DNL Active-On-Edge]-Zusammenführungsrichtlinie „zuweisen“.
+Befolgen Sie die [Audience Builder](../../segmentation/ui/segment-builder.md)-Anleitung zum Erstellen Ihrer neuen Zielgruppe und stellen Sie sicher, [ Sie ](../../segmentation/ui/segment-builder.md#merge-policies) im vorherigen Schritt erstellte [!DNL Active-On-Edge]-Zusammenführungsrichtlinie „zuweisen“.
 
 ### Erstellen einer Zielverbindung {#connect-destination}
 
@@ -118,15 +118,15 @@ Je nach Ziel, das Sie konfigurieren, finden Sie in den folgenden Artikeln zielsp
 
 Nachdem Sie die Voraussetzungen erfüllt haben, können Sie jetzt das Edge-Personalisierungsziel auswählen, das für die Personalisierung der gleichen Seite und der nächsten Seite verwendet werden soll.
 
-1. Navigieren Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
+1. Wechseln Sie zu **[!UICONTROL Connections > Destinations]** und wählen Sie die Registerkarte **[!UICONTROL Catalog]** aus.
 
    ![Registerkarte „Zielkatalog“ in der Experience Platform-Benutzeroberfläche hervorgehoben.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. Wählen Sie **[!UICONTROL Zielgruppen aktivieren]** auf der Karte, die dem Personalisierungsziel entspricht, an dem Sie Ihre Zielgruppen aktivieren möchten, wie in der Abbildung unten dargestellt.
+1. Wählen Sie **[!UICONTROL Activate audiences]** auf der Karte, die dem Personalisierungsziel entspricht, für das Sie Ihre Zielgruppen aktivieren möchten, wie in der Abbildung unten dargestellt.
 
    ![Zielgruppen-Steuerelement aktivieren, das auf einer Zielkarte im Katalog hervorgehoben ist.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Zielgruppen verwenden möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
+1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Zielgruppen verwenden möchten, und klicken Sie dann auf **[!UICONTROL Next]**.
 
    ![Zielschritt im Aktivierungs-Workflow auswählen.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
@@ -134,14 +134,14 @@ Nachdem Sie die Voraussetzungen erfüllt haben, können Sie jetzt das Edge-Perso
 
 ## Audiences auswählen {#select-audiences}
 
-Aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen, um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
+Aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen, um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, und klicken Sie dann auf **[!UICONTROL Next]**.
 
-Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen und klicken Sie dann auf **[!UICONTROL Weiter]**.
+Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen und klicken Sie dann auf **[!UICONTROL Next]**.
 
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
-* **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Segmentation Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
+* **[!UICONTROL Custom upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
 * Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
 ![Schritt „Zielgruppen auswählen“ des Aktivierungs-Workflows mit mehreren hervorgehobenen Zielgruppen.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert **[!UICONTROL Ziel „Benutzerdefinierte Personalization]** die Verwendung der [Edge Network-API](https://developer.adobe.com/data-collection-apis/docs/) beim Konfigurieren des Ziels für die attributbasierte Personalisierung. Alle Edge Network-API-Aufrufe müssen in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) erfolgen.
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert das **[!UICONTROL Custom Personalization]**-Ziel, dass Sie beim Konfigurieren des Ziels für [ Attribut-basierte Personalisierung die ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network-API verwenden. Alle Edge Network-API-Aufrufe müssen in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) erfolgen.
 >
 ><br>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Edge Network-API abrufen, indem Sie eine serverseitige Integration hinzufügen.
 >
@@ -164,13 +164,13 @@ Das Hinzufügen von Attributen ist optional, und Sie können trotzdem mit dem n�
 
 ### Quellattribute auswählen {#select-source-attributes}
 
-Um Quellattribute hinzuzufügen, wählen Sie das Steuerelement **[!UICONTROL Neues Feld hinzufügen]** in der Spalte **[!UICONTROL Source-]** aus und suchen oder navigieren Sie zum gewünschten XDM-Attributfeld, wie unten dargestellt.
+Um Quellattribute hinzuzufügen, wählen Sie die **[!UICONTROL Add new field]** in der Spalte **[!UICONTROL Source field]** aus und suchen oder navigieren Sie zum gewünschten XDM-Attributfeld, wie unten dargestellt.
 
 ![Bildschirmaufzeichnung, die zeigt, wie ein Zielattribut im Zuordnungsschritt ausgewählt wird.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Auswählen der Zielattribute {#select-target-attributes}
 
-Um Zielattribute hinzuzufügen, wählen Sie das Steuerelement **[!UICONTROL Neues Feld hinzufügen]** in der Spalte **[!UICONTROL Zielfeld]** aus und geben Sie den benutzerdefinierten Attributnamen ein, dem Sie das Quellattribut zuordnen möchten.
+Um Zielattribute hinzuzufügen, wählen Sie das **[!UICONTROL Add new field]** in der Spalte **[!UICONTROL Target field]** aus und geben Sie den benutzerdefinierten Attributnamen ein, dem Sie das Quellattribut zuordnen möchten.
 
 >[!NOTE]
 >
@@ -180,31 +180,31 @@ Um Zielattribute hinzuzufügen, wählen Sie das Steuerelement **[!UICONTROL Neue
 
 ## Planen eines Zielgruppenexports {#scheduling}
 
-Standardmäßig werden auf der [!UICONTROL Zielgruppen-Zeitplan] nur die neu ausgewählten Zielgruppen angezeigt, die Sie im aktuellen Aktivierungsfluss ausgewählt haben.
+Standardmäßig werden auf der Seite [!UICONTROL Audience schedule] nur die neu ausgewählten Zielgruppen angezeigt, die Sie im aktuellen Aktivierungsfluss ausgewählt haben.
 
-Um alle für Ihr Ziel aktivierten Zielgruppen anzuzeigen, verwenden Sie die Filteroption und deaktivieren Sie den Filter **[!UICONTROL Nur neue Zielgruppen anzeigen]**.
+Um alle für Ihr Ziel aktivierten Zielgruppen anzuzeigen, verwenden Sie die Filteroption und deaktivieren Sie den **[!UICONTROL Show new audiences only]**.
 
 ![Filter „Alle Zielgruppen“ hervorgehoben.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
-Wählen Sie auf **[!UICONTROL Seite Zielgruppen]** jede Zielgruppe aus und verwenden Sie dann die Selektoren **[!UICONTROL Startdatum]** und **[!UICONTROL Enddatum]** zum Konfigurieren des Zeitintervalls für den Versand von Daten an Ihr Ziel.
+Wählen Sie auf der Seite **[!UICONTROL Audience schedule]** jede Zielgruppe aus und konfigurieren Sie dann mit den Selektoren **[!UICONTROL Start date]** und **[!UICONTROL End date]** das Zeitintervall für das Senden von Daten an Ihr Ziel.
 
 ![Audience-Zeitplanschritt des Aktivierungs-Workflows mit hervorgehobenem Start- und Enddatum.](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
-Wählen Sie **[!UICONTROL Weiter]** aus, um zur Seite [!UICONTROL Überprüfen] zu wechseln.
+Wählen Sie **[!UICONTROL Next]** aus, um zur Seite [!UICONTROL Review] zu wechseln.
 
 ## Überprüfung {#review}
 
-Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
+Auf der Seite **[!UICONTROL Review]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Cancel]** aus, um den Fluss zu unterbrechen, **[!UICONTROL Back]**, Ihre Einstellungen zu ändern, oder **[!UICONTROL Finish]** , um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 ![Zusammenfassung der Auswahl im Überprüfungsschritt.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
 ### Prüfung der Datennutzungsrichtlinien {#data-usage-policy-checks}
 
-Im Schritt **[!UICONTROL Überprüfen]** prüft Experience Platform auch, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Zielgruppenaktivierungs-Workflow erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Dokumentationsabschnitt zur Data Governance.
+Im **[!UICONTROL Review]** Schritt prüft Experience Platform auch, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Zielgruppenaktivierungs-Workflow erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Dokumentationsabschnitt zur Data Governance.
 
 ![Beispiel für eine Datenrichtlinienverletzung.](../assets/common/data-policy-violation.png)
 
@@ -214,7 +214,7 @@ In diesem Schritt können Sie die auf der Seite verfügbaren Filter verwenden, u
 
 ![Bildschirmaufzeichnung mit den verfügbaren Zielgruppenfiltern im Überprüfungsschritt.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
-Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Beenden]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
+Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Finish]** aus, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 <!--
 

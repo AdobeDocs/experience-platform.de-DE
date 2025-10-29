@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API testen können, ob Ihr Streaming-Ziel richtig konfiguriert ist, und wie Sie die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel überprüfen.
 title: Testen Ihres Streaming-Ziels mit Beispielprofilen
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 99%
@@ -26,9 +26,9 @@ Sie können die [API zur Profilerstellung](sample-profile-generation-api.md) ver
 
 >[!IMPORTANT]
 >
->* Um diese API verwenden zu können, müssen Sie über eine bestehende Verbindung zu Ihrem Ziel in der Experience Platform-Benutzeroberfläche verfügen. Lesen Sie [Herstellen einer Verbindung zum Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) und [Aktivieren von Profilen und Zielgruppen für ein Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=de) für weitere Informationen.
-> * Nachdem Sie die Verbindung zu Ihrem Ziel hergestellt haben, rufen Sie die ID der Zielinstanz ab, die Sie in API-Aufrufen an diesen Endpunkt verwenden sollten, wenn Sie [eine Verbindung mit Ihrem Ziel durchsuchen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=de).
->![Bild der Benutzeroberfläche, wie Sie die Ziel-Instanz-ID abrufen](../../assets/testing-api/get-destination-instance-id.png)
+>* Um diese API verwenden zu können, müssen Sie über eine bestehende Verbindung zu Ihrem Ziel in der Experience Platform-Benutzeroberfläche verfügen. Lesen Sie [Herstellen einer Verbindung zum Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) und [Aktivieren von Profilen und Zielgruppen für ein Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) für weitere Informationen.
+>* Nachdem Sie die Verbindung zu Ihrem Ziel hergestellt haben, rufen Sie die ID der Zielinstanz ab, die Sie in API-Aufrufen an diesen Endpunkt verwenden sollten, wenn Sie [eine Verbindung mit Ihrem Ziel durchsuchen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>  >![Bild der Benutzeroberfläche, wie Sie die Ziel-Instanz-ID abrufen](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Erste Schritte mit API-Vorgängen für Zieltests {#get-started}
 

@@ -5,10 +5,10 @@ title: Bewerten eines Modells in der Data Science Workspace-Benutzeroberfläche
 type: Tutorial
 description: Scoring in Adobe Experience Platform Data Science Workspace kann durch Einspeisung von Eingabedaten in ein vorhandenes trainiertes Modell erreicht werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 30%
+source-wordcount: '641'
+ht-degree: 31%
 
 ---
 
@@ -38,15 +38,15 @@ Finden Sie den optimalen Training-Lauf, um dessen Konfigurationen für das Scori
 
 ![Trainings-Durchgang auswählen](../images/models-recipes/score/select-run.png)
 
-Wählen Sie auf **[!UICONTROL Registerkarte]** Test **[!UICONTROL oben rechts]** Bildschirm die Option Score aus. Ein neuer Scoring-Workflow beginnt.
+Wählen Sie auf der Registerkarte Trainings-Durchgang **[!UICONTROL Evaluation]** rechts oben auf dem Bildschirm **[!UICONTROL Score]** aus. Ein neuer Scoring-Workflow beginnt.
 
 ![](../images/models-recipes/score/training_run_overview.png)
 
-Wählen Sie den Eingabe-Bewertungsdatensatz aus und klicken Sie auf **[!UICONTROL Weiter]**.
+Wählen Sie den Eingabebewertungsdatensatz aus und klicken Sie auf **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/score/scoring_input.png)
 
-Wählen Sie den Ergebnis-Scoring-Datensatz aus. Hierbei handelt es sich um den dedizierten Ausgabedatensatz, in dem die Scoring-Ergebnisse gespeichert werden. Bestätigen Sie Ihre Auswahl und klicken Sie auf **[!UICONTROL Weiter]**.
+Wählen Sie den Ergebnis-Scoring-Datensatz aus. Hierbei handelt es sich um den dedizierten Ausgabedatensatz, in dem die Scoring-Ergebnisse gespeichert werden. Bestätigen Sie Ihre Auswahl und wählen Sie **[!UICONTROL Next]** aus.
 
 ![](../images/models-recipes/score/scoring_results.png)
 
@@ -55,17 +55,18 @@ Beachten Sie, dass Sie keine übernommenen Parameter entfernen können, die bei 
 
 ![Konfiguration](../images/models-recipes/score/configuration.png)
 
-Prüfen und bestätigen Sie die Scoring-Konfigurationen und wählen Sie **[!UICONTROL Beenden]**, um den Scoring-Durchgang zu erstellen und auszuführen. Sie werden zur Registerkarte **[!UICONTROL Scoring-Durchgänge]** weitergeleitet und der neue Scoring-Durchgang mit dem Status **[!UICONTROL Ausstehend]** wird angezeigt.
+Prüfen und bestätigen Sie die Scoring-Konfigurationen und wählen Sie **[!UICONTROL Finish]** aus, um den Scoring-Durchgang zu erstellen und auszuführen. Sie werden zur Registerkarte **[!UICONTROL Scoring Runs]** weitergeleitet, wo der neue Scoring-Durchgang mit dem Status **[!UICONTROL Pending]** angezeigt wird.
 
 ![Registerkarte „Scoring-Durchgänge“](../images/models-recipes/score/scoring_runs_tab.png)
 
 Ein Scoring-Durchgang kann mit einem der folgenden Status angezeigt werden:
+
 - Ausstehend
 - Abgeschlossen
 - Fehlgeschlagen
 - Läuft
 
-Status werden automatisch aktualisiert. Fahren Sie mit dem nächsten Schritt fort, wenn der Status **[!UICONTROL Abgeschlossen]** oder **[!UICONTROL Fehlgeschlagen]** ist.
+Status werden automatisch aktualisiert. Fahren Sie mit dem nächsten Schritt fort, wenn der Status **[!UICONTROL Complete]** oder **[!UICONTROL Failed]** ist.
 
 ## Scoring-Ergebnisse anzeigen
 
@@ -73,7 +74,7 @@ Um die Bewertungsergebnisse anzuzeigen, wählen Sie zunächst einen Trainings-La
 
 ![Trainings-Durchgang auswählen](../images/models-recipes/score/select-run.png)
 
-Sie werden zur Seite mit den Trainings-Läufen **[!UICONTROL Test]** weitergeleitet. Wählen Sie oben auf der Bewertungsseite für den Trainings-Durchgang die Registerkarte **[!UICONTROL Scoring-Durchgänge]** aus, um eine Liste der vorhandenen Scoring-Durchgänge anzuzeigen.
+Sie werden zur Seite Trainings-Läufe **[!UICONTROL Evaluation]** weitergeleitet. Wählen Sie oben auf der Bewertungsseite für den Trainings-Durchgang die Registerkarte **[!UICONTROL Scoring Runs]** aus, um eine Liste der vorhandenen Scoring-Durchgänge anzuzeigen.
 
 ![Auswertungsseite](../images/models-recipes/score/view_scoring_runs.png)
 
@@ -81,15 +82,15 @@ Wählen Sie als Nächstes einen Scoring-Durchgang aus, um die Details des Durchg
 
 ![Ausführungsdetails](../images/models-recipes/score/view_details.png)
 
-Wenn der ausgewählte Scoring-Durchgang den Status „Abgeschlossen“ oder „Fehlgeschlagen“ hat **[!UICONTROL wird der Link &quot;]** anzeigen“ zur Verfügung gestellt. Schlägt ein Scoring-Durchgang fehl, können die Ausführungsprotokolle nützliche Informationen zur Ermittlung der Fehlerursache liefern. Um die Ausführungsprotokolle herunterzuladen, wählen Sie **[!UICONTROL Aktivitätsprotokolle anzeigen]**.
+Wenn der ausgewählte Scoring-Durchgang den Status „Abgeschlossen“ oder „Fehlgeschlagen“ hat, wird der **[!UICONTROL View Activity Logs]** Link zur Verfügung gestellt. Schlägt ein Scoring-Durchgang fehl, können die Ausführungsprotokolle nützliche Informationen zur Ermittlung der Fehlerursache liefern. Um die Ausführungsprotokolle herunterzuladen, wählen Sie **[!UICONTROL View Activity Logs]** aus.
 
 ![Protokolle anzeigen auswählen](../images/models-recipes/score/view_logs.png)
 
-Das **[!UICONTROL Anzeigen von Aktivitätsprotokollen]** wird angezeigt. URL auswählen, um die zugehörigen Protokolle automatisch herunterzuladen.
+Das **[!UICONTROL View activity logs]**-Popover wird angezeigt. URL auswählen, um die zugehörigen Protokolle automatisch herunterzuladen.
 
 ![](../images/models-recipes/score/activity_logs.png)
 
-Sie haben auch die Möglichkeit, Ihre Scoring-Ergebnisse anzuzeigen, indem Sie **[!UICONTROL Scoring-Ergebnisdatensatz in der Vorschau]**.
+Sie haben auch die Möglichkeit, Ihre Scoring-Ergebnisse durch Auswahl von **[!UICONTROL Preview scoring results dataset]** anzuzeigen.
 
 ![Vorschauergebnisse auswählen](../images/models-recipes/score/view_results.png)
 
@@ -97,7 +98,7 @@ Eine Vorschau des Ausgabedatensatzes wird bereitgestellt.
 
 ![Vorschau der Ergebnisse](../images/models-recipes/score/preview_results.png)
 
-Wählen Sie für den vollständigen Satz der Bewertungsergebnisse den **[!UICONTROL Datensatz für Bewertungsergebnisse]** in der rechten Spalte aus.
+Wählen Sie für alle Bewertungsergebnisse den **[!UICONTROL Scoring Results Dataset]** Link in der rechten Spalte aus.
 
 ## Nächste Schritte
 

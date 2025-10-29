@@ -2,7 +2,7 @@
 title: Freigeben privater Erweiterungspakete in der Reactor-API
 description: Erfahren Sie, wie Sie andere Unternehmen autorisieren, private Erweiterungspakete in der Reactor-API freizugeben.
 exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
-source-git-commit: eaed3a1434491bbcaed4b82b8ee78b119fb2468c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 3%
@@ -82,7 +82,7 @@ PATCH //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORIZ
 
 **Anfrage**
 
-Die folgende PATCH-Anfrage setzt den `state` einer Autorisierung auf `approved`.
+Die folgende PATCH-Anfrage legt die `state` einer Autorisierung auf `approved` fest.
 
 ```shell
 curl -X PATCH \
@@ -94,10 +94,10 @@ curl -X PATCH \
   -d '{
         "data": {
           "attributes": {
-	          "state": "approved"
-	        },
-	        "id": ":extension_package_usage_authorization_id",
-	        "type": "extension_package_usage_authorizations"
+            "state": "approved"
+            },
+            "id": ":extension_package_usage_authorization_id",
+            "type": "extension_package_usage_authorizations"
         }
       }
 ```
@@ -126,7 +126,7 @@ DELETE //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORI
 
 **Anfrage**
 
-Mit der folgenden DELETE-Anfrage werden Autorisierungsberechtigungen für ein Unternehmen entfernt.
+Die folgende DELETE-Anfrage entfernt Autorisierungsberechtigungen für ein Unternehmen.
 
 ```shell
 curl -X DELETE \

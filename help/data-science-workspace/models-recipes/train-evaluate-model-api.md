@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;Trainieren und Auswerten;Data Science Workspace;beliebte Themen;Sensei Machine Learning-API
+keywords: Experience Platform;Trainieren und Auswerten;Datenwissenschafts-Workspace;beliebte Themen;Sensei Machine Learning-API
 solution: Experience Platform
 title: Trainieren und Bewerten eines Modells mit der Sensei-API für maschinelles Lernen
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning-API-Aufrufen erstellen, trainieren und bewerten.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 79%
@@ -26,7 +26,7 @@ In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von API-Aufrufen er
 
 Folgen Sie dem [Importieren eines verpackten Rezepts mit der API](./import-packaged-recipe-api.md) zum Erstellen einer Engine, die zur Schulung und Auswertung für ein Modell mit der API erforderlich ist.
 
-Befolgen Sie das Tutorial zur [Experience Platform-API](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de)Authentifizierung, um mit API-Aufrufen zu beginnen.
+Befolgen Sie das Tutorial zur [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de)API-Authentifizierung, um mit API-Aufrufen zu beginnen.
 
 Sie sollten nun die folgenden Werte aus dem Tutorial haben:
 
@@ -438,6 +438,7 @@ Der GET-Aufruf stellt den Status im `state`-Parameter wie folgt bereit:
 `{EXPERIMENT_ID}`: Die ID, die das Experiment darstellt, unter dem sich der Experimentablauf befindet.
 
 Neben dem Status `DONE` gibt es auch folgende Status:
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`
@@ -491,9 +492,9 @@ Die Antwort stellt das Schulungsmodell dar, das erstellt wurde.
 `{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht, unter dem sich der Experimentablauf befindet.\
 `{EXPERIMENT_RUN_ID}`: Die Kennung, die dem Experimentablauf entspricht.
 
-### Beenden und Löschen eines geplanten Experiments
+### Stoppen und Löschen eines geplanten Experiments
 
-Wenn Sie die Ausführung eines geplanten Experiments vor dessen `endTime` abbrechen möchten, können Sie eine DELETE-Anfrage an die `{EXPERIMENT_ID}` senden
+Wenn Sie die Ausführung eines geplanten Experiments vor dessen `endTime` stoppen möchten, können Sie eine DELETE-Anfrage an die `{EXPERIMENT_ID}` senden
 
 **Anfrage**
 
@@ -510,7 +511,7 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->Der API-Aufruf deaktiviert die Erstellung neuer Experimentausführungen. Die Ausführung bereits ausgeführter Experimentabläufe wird jedoch nicht beendet.
+>Der API-Aufruf deaktiviert die Erstellung neuer Experimentausführungen. Die Ausführung bereits ausgeführter Experimentabläufe wird jedoch nicht gestoppt.
 
 Im Folgenden finden Sie die Antwort, die darauf hinweist, dass das Experiment erfolgreich gelöscht wurde.
 

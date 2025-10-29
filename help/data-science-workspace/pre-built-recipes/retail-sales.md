@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;Einzelhandelsverkaufsrezept;Data Science Workspace;beliebte Themen;Rezepte;Rezept vorab erstellen
+keywords: Experience Platform;Einzelhandelsrezept;Data Science Workspace;beliebte Themen;Rezepte;Rezept vorab erstellen
 solution: Experience Platform
 title: Rezept für Einzelhandelsumsätze
 description: Mit dem Rezept für Einzelhandelsumsätze können Sie eine Absatzprognose für alle Läden vorhersagen, die für einen bestimmten Zeitraum vorinstalliert wurden. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 20%
@@ -22,6 +22,7 @@ ht-degree: 20%
 Mit dem Rezept für Einzelhandelsumsätze können Sie eine Absatzprognose für alle Läden vorhersagen, die für einen bestimmten Zeitraum vorinstalliert wurden. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
 
 Das folgende Dokument beantwortet Fragen wie:
+
 * Für wen ist dieses Rezept gedacht?
 * Was macht dieses Rezept?
 * Wie sehen die ersten Schritte aus?
@@ -61,7 +62,7 @@ Dieses Rezept verwendet [XDM-Schemata](../../xdm/schema/field-dictionary.md) um 
 
 ## Algorithmus
 
-Zunächst wird der Trainings-Datensatz im *DSWRetailSales*-Schema geladen. Von hier aus wird das Modell mit einem „Gradienten-[&#x200B; Regressor-Algorithmus“ trainiert](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Beim Gradientenboosting wird die Idee verwendet, dass schwache Lernende (eine Lernende, die zumindest etwas besser ist als eine Zufallsfolge) eine Folge von Lernenden bilden können, die sich darauf konzentrieren, die Schwächen des vorherigen Lernenden zu verbessern. Zusammen können sie verwendet werden, um ein leistungsfähiges prädiktives Modell zu erstellen.
+Zunächst wird der Trainings-Datensatz im *DSWRetailSales*-Schema geladen. Von hier aus wird das Modell mit einem „Gradienten-[ Regressor-Algorithmus“ trainiert](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Beim Gradientenboosting wird die Idee verwendet, dass schwache Lernende (eine Lernende, die zumindest etwas besser ist als eine Zufallsfolge) eine Folge von Lernenden bilden können, die sich darauf konzentrieren, die Schwächen des vorherigen Lernenden zu verbessern. Zusammen können sie verwendet werden, um ein leistungsfähiges prädiktives Modell zu erstellen.
 
 Der Prozess umfasst drei Elemente: eine Verlustfunktion, einen schwachen Lernenden und ein additives Modell.
 

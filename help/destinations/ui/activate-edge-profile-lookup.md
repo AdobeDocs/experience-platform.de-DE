@@ -3,16 +3,16 @@ title: Nachschlagen von Edge-Profilattributen in Echtzeit
 description: Erfahren Sie, wie Sie Edge-Profilattribute mithilfe des benutzerdefinierten Personalization-Ziels und der Edge Network-API in Echtzeit suchen
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1911'
-ht-degree: 7%
+source-wordcount: '1843'
+ht-degree: 3%
 
 ---
 
 # Profilattribute am Edge in Echtzeit nachschlagen
 
-Adobe Experience Platform verwendet das [Echtzeit-Kundenprofil](../../profile/home.md) als zentrale Datenquelle für alle Profildaten. Für den schnellen Datenabruf in Echtzeit werden [Edge-Profile](../../profile/edge-profiles.md) verwendet, bei denen es sich um einfache Profile handelt, die über die gesamte [Edge Network verteilt &#x200B;](../../collection/home.md#edge). Dies ermöglicht Anwendungsfälle für die schnelle Personalisierung in Echtzeit.
+Adobe Experience Platform verwendet das [Echtzeit-Kundenprofil](../../profile/home.md) als zentrale Datenquelle für alle Profildaten. Für den schnellen Datenabruf in Echtzeit werden [Edge-Profile](../../profile/edge-profiles.md) verwendet, bei denen es sich um einfache Profile handelt, die über die gesamte [Edge Network verteilt ](../../collection/home.md#edge). Dies ermöglicht Anwendungsfälle für die schnelle Personalisierung in Echtzeit.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -46,24 +46,24 @@ Anwendungsfälle für die Profilsuche in Edge unterliegen den spezifischen Leist
 Führen Sie die Schritte in der Dokumentation [Datenstromkonfiguration](../../datastreams/configure.md#create-a-datastream) aus, um einen neuen Datenstrom mit den folgenden **[!UICONTROL Service]**-Einstellungen zu erstellen:
 
 * **[!UICONTROL Service]**: [!UICONTROL Adobe Experience Platform]
-* **[!UICONTROL Personalization-]**: Aktiviert
-* **[!UICONTROL Edge-]**: Aktivieren Sie diese Option, wenn Sie eine Edge-Segmentierung benötigen. Wenn Sie nur an der Suche nach Profilattributen am Edge interessiert sind, aber keine Segmentierung basierend auf den Edge-Profilen durchführen möchten, lassen Sie diese Option deaktiviert.
+* **[!UICONTROL Personalization Destinations]**: aktiviert
+* **[!UICONTROL Edge Segmentation]**: Wenn Sie die Edge-Segmentierung benötigen, aktivieren Sie diese Option. Wenn Sie nur an der Suche nach Profilattributen am Edge interessiert sind, aber keine Segmentierung basierend auf den Edge-Profilen durchführen möchten, lassen Sie diese Option deaktiviert.
 
 
-  <!-- >[!IMPORTANT]
-    >
-    >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
+<!-- >[!IMPORTANT]
+>
+>Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  ![Bild der Experience Platform-Benutzeroberfläche mit dem Bildschirm für die Datenstromkonfiguration.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+    ![Bild der Experience Platform-Benutzeroberfläche mit dem Bildschirm für die Datenstromkonfiguration.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Schritt 2: Konfigurieren Sie Ihre Zielgruppen für die Edge-Evaluierung. {#audience-edge-evaluation}
 
 Für das Nachschlagen von Profilattributen am Edge müssen Ihre Zielgruppen für die Edge-Evaluierung konfiguriert werden.
 
-Stellen Sie sicher, dass für die Zielgruppen, die Sie aktivieren möchten, die [Zusammenführungsrichtlinie „Active-On-Edge](../../segmentation/ui/segment-builder.md#merge-policies) als Standard festgelegt ist. Die [!DNL Active-On-Edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [on the Edge) ausgewertet &#x200B;](../../segmentation/methods/edge-segmentation.md) für Anwendungsfälle der Echtzeit-Personalisierung verfügbar sind.
+Stellen Sie sicher, dass für die Zielgruppen, die Sie aktivieren möchten, die [Zusammenführungsrichtlinie „Active-On-Edge](../../segmentation/ui/segment-builder.md#merge-policies) als Standard festgelegt ist. Die [!DNL Active-On-Edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [on the Edge) ausgewertet ](../../segmentation/methods/edge-segmentation.md) für Anwendungsfälle der Echtzeit-Personalisierung verfügbar sind.
 
-Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
+Befolgen Sie die Anweisungen unter [Erstellen einer Zusammenführungsrichtlinie](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie den Umschalter **[!UICONTROL Active-On-Edge Merge Policy]** aktivieren.
 
 >[!IMPORTANT]
 >
@@ -71,13 +71,13 @@ Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](.
 
 ## Schritt 3: Senden von Profilattributdaten an Edge Network{#configure-custom-personalization-connection}
 
-Um Edge-Profile, einschließlich Attributen und Daten zur Zielgruppenzugehörigkeit, in Echtzeit zu suchen, müssen die Daten auf der Edge Network verfügbar gemacht werden. Dazu müssen Sie eine Verbindung zu einem Ziel **[!UICONTROL Benutzerdefinierte Personalization mit Attributen]** herstellen und die Zielgruppen aktivieren, einschließlich der Attribute, die Sie in den Edge-Profilen nachschlagen möchten.
+Um Edge-Profile, einschließlich Attributen und Daten zur Zielgruppenzugehörigkeit, in Echtzeit zu suchen, müssen die Daten auf der Edge Network verfügbar gemacht werden. Dazu müssen Sie eine Verbindung zu einem **[!UICONTROL Custom Personalization With Attributes]** Ziel erstellen und die Zielgruppen aktivieren, einschließlich der Attribute, die Sie in den Edge-Profilen nachschlagen möchten.
 
 +++ Konfigurieren einer benutzerdefinierten Personalization mit Verbindungsattributen
 
 Im [Tutorial zur Erstellung von Zielverbindungen](../ui/connect-destination.md) finden Sie detaillierte Anweisungen zum Erstellen einer neuen Zielverbindung.
 
-Wählen Sie beim Konfigurieren des neuen Ziels den Datenstrom aus, den Sie in [Schritt 1](#create-datastream) im Feld **[!UICONTROL Datenstrom-ID]** erstellt haben. Für **[!UICONTROL Integrationsalias]** können Sie jeden Wert verwenden, der Ihnen dabei hilft, diese Zielverbindung in Zukunft zu identifizieren, z. B. den Zielnamen.
+Wählen Sie beim Konfigurieren des neuen Ziels den Datenstrom aus, den Sie in [Schritt 1](#create-datastream) im Feld **[!UICONTROL Datastream ID]** erstellt haben. **[!UICONTROL Integration alias]** können Sie jeden Wert verwenden, der Ihnen bei der zukünftigen Identifizierung dieser Zielverbindung hilft, z. B. den Zielnamen.
 
 ![Bild der Experience Platform-Benutzeroberfläche mit dem Konfigurationsbildschirm für benutzerdefinierte Personalization mit Attributen.](../assets/ui/activate-edge-profile-lookup/destination-config.png)
 
@@ -85,63 +85,63 @@ Wählen Sie beim Konfigurieren des neuen Ziels den Datenstrom aus, den Sie in [S
 
 +++Aktivieren Sie Ihre Zielgruppen für die Verbindung Benutzerdefinierte Personalization mit Attributen .
 
-Nachdem Sie eine **[!UICONTROL Benutzerdefinierte Personalization mit Attributen]**-Verbindung erstellt haben, können Sie jetzt Profildaten an die Edge Network senden.
+Nachdem Sie eine **[!UICONTROL Custom Personalization With Attributes]** erstellt haben, können Sie jetzt Profildaten an Edge Network senden.
 
 >[!IMPORTANT]
 > 
-> * Um Daten zu aktivieren und den [Zuordnungsschritt](#mapping) des Workflows zu aktivieren, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **&#x200B;**&#x200B;Segmente anzeigen[Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+> * Um Daten zu aktivieren und den [Zuordnungsschritt](#mapping) des Workflows zu aktivieren, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 > 
 > Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-1. Navigieren Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
+1. Wechseln Sie zu **[!UICONTROL Connections > Destinations]** und wählen Sie die Registerkarte **[!UICONTROL Catalog]** aus.
 
    ![Registerkarte „Zielkatalog“ in der Experience Platform-Benutzeroberfläche hervorgehoben.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. Suchen Sie die Zielkarte **[!UICONTROL Benutzerdefiniertes Personalization mit]**) und wählen Sie dann **[!UICONTROL Zielgruppen aktivieren]** aus, wie in der Abbildung unten dargestellt.
+1. Suchen Sie die **[!UICONTROL Custom Personalization With Attributes]** Zielkarte und wählen Sie dann **[!UICONTROL Activate audiences]** aus, wie in der Abbildung unten dargestellt.
 
    ![Zielgruppen-Steuerelement aktivieren, das auf einer Zielkarte im Katalog hervorgehoben ist.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. Wählen Sie die zuvor konfigurierte Zielverbindung aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+1. Wählen Sie die zuvor konfigurierte Zielverbindung aus und klicken Sie dann auf **[!UICONTROL Next]**.
 
    ![Zielschritt im Aktivierungs-Workflow auswählen.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
-1. Auswählen Ihrer Zielgruppen. Aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen, um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
+1. Auswählen Ihrer Zielgruppen. Aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen, um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, und klicken Sie dann auf **[!UICONTROL Next]**.
 
    Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
-   * **[!UICONTROL Segmentierungs-Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
-   * **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen werden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Segmentation Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden Sie [Segmentierungsdokumentation](../../segmentation/ui/overview.md) .
+   * **[!UICONTROL Custom upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/overview.md#import-audience).
    * Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
      ![Schritt „Zielgruppen auswählen“ des Aktivierungs-Workflows mit mehreren hervorgehobenen Zielgruppen.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 1. Wählen Sie die Profilattribute aus, die Sie für die Edge-Profile verfügbar machen möchten.
 
-   * **Quellattribute auswählen**. Um Quellattribute hinzuzufügen, wählen Sie das Steuerelement **[!UICONTROL Neues Feld hinzufügen]** in der Spalte **[!UICONTROL Source-]** aus und suchen oder navigieren Sie zum gewünschten XDM-Attributfeld, wie unten dargestellt.
+   * **Quellattribute auswählen**. Um Quellattribute hinzuzufügen, wählen Sie die **[!UICONTROL Add new field]** in der Spalte **[!UICONTROL Source field]** aus und suchen oder navigieren Sie zum gewünschten XDM-Attributfeld, wie unten dargestellt.
 
      ![Bildschirmaufzeichnung, die zeigt, wie ein Zielattribut im Zuordnungsschritt ausgewählt wird.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
-   * **Auswählen der Zielattribute**. Um Zielattribute hinzuzufügen, wählen Sie das Steuerelement **[!UICONTROL Neues Feld hinzufügen]** in der Spalte **[!UICONTROL Zielfeld]** aus und geben Sie den benutzerdefinierten Attributnamen ein, dem Sie das Quellattribut zuordnen möchten.
+   * **Auswählen der Zielattribute**. Um Zielattribute hinzuzufügen, wählen Sie das **[!UICONTROL Add new field]** in der Spalte **[!UICONTROL Target field]** aus und geben Sie den benutzerdefinierten Attributnamen ein, dem Sie das Quellattribut zuordnen möchten.
 
      ![Bildschirmaufzeichnung, die zeigt, wie ein XDM-Attribut im Zuordnungsschritt ausgewählt wird](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
 
 
-Wenn Sie mit der Zuordnung von Profilattributen fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit der Zuordnung von Profilattributen fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
-Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Beenden]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Profildaten an die Edge Network zu beginnen.
+Auf der Seite **[!UICONTROL Review]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Cancel]** aus, um den Fluss zu unterbrechen, **[!UICONTROL Back]**, Ihre Einstellungen zu ändern, oder **[!UICONTROL Finish]** , um Ihre Auswahl zu bestätigen und mit dem Senden von Profildaten an die Edge Network zu beginnen.
 
 ![Zusammenfassung der Auswahl im Überprüfungsschritt.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
 +++
 
-+++Bewertung der Einverständnisrichtlinie
++++Auswertung der Einverständnisrichtlinie
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
 **Prüfungen der Datennutzungsrichtlinien**
 
-Im Schritt **[!UICONTROL Überprüfen]** prüft Experience Platform auch, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Zielgruppenaktivierungs-Workflow erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Dokumentationsabschnitt zur Data Governance.
+Im **[!UICONTROL Review]** Schritt prüft Experience Platform auch, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Zielgruppenaktivierungs-Workflow erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Dokumentationsabschnitt zur Data Governance.
 
 ![Beispiel für eine Datenrichtlinienverletzung.](../assets/common/data-policy-violation.png)
 
@@ -149,12 +149,12 @@ Im Schritt **[!UICONTROL Überprüfen]** prüft Experience Platform auch, ob Ver
 
 +++Audiences filtern
 
-Im Schritt **[!UICONTROL Überprüfen]** können Sie die auf der Seite verfügbaren Filter verwenden, um nur die Zielgruppen anzuzeigen, deren Zeitplan oder Zuordnung im Rahmen dieses Workflows aktualisiert wurde. Sie können auch umschalten, welche Tabellenspalten angezeigt werden sollen.
+Im **[!UICONTROL Review]** Schritt können Sie die auf der Seite verfügbaren Filter verwenden, um nur die Zielgruppen anzuzeigen, deren Zeitplan oder Zuordnung im Rahmen dieses Workflows aktualisiert wurde. Sie können auch umschalten, welche Tabellenspalten angezeigt werden sollen.
 
 ![Bildschirmaufzeichnung mit den verfügbaren Zielgruppenfiltern im Überprüfungsschritt.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
 
-Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen festgestellt wurden, klicken Sie auf **[!UICONTROL Beenden]**, um Ihre Auswahl zu bestätigen.
+Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Finish]** aus, um Ihre Auswahl zu bestätigen.
 
 +++
 
@@ -167,9 +167,9 @@ Der nächste Schritt besteht darin, Ihre Personalisierungslösung so zu konfigur
 >[!IMPORTANT]
 >
 >Profilattribute können vertrauliche Daten enthalten. Zum Schutz dieser Daten müssen Sie die Profilattribute über die [Edge Network-API abrufen](https://developer.adobe.com/data-collection-apis/docs/getting-started/). Darüber hinaus müssen Sie die Profilattribute über die Edge Network-API [Endpunkt für die interaktive Datenerfassung](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) abrufen, damit die API-Aufrufe authentifiziert werden.
-><br>Wenn Sie die oben genannten Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Zielgruppenzugehörigkeit, und Ihnen stehen keine Profilattribute zur Verfügung.
+>><br>Wenn Sie die oben genannten Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Zielgruppenzugehörigkeit, und Ihnen stehen keine Profilattribute zur Verfügung.
 
-Der in [Schritt 1) konfigurierte Datenstrom &#x200B;](#create-datastream) jetzt eingehende Ereignisdaten akzeptieren und mit Edge-Profilinformationen antworten.
+Der in [Schritt 1) konfigurierte Datenstrom ](#create-datastream) jetzt eingehende Ereignisdaten akzeptieren und mit Edge-Profilinformationen antworten.
 
 Konfigurieren Sie Ihre Integration, um Edge-Profilinformationen abzurufen, wie in den Beispielen unten gezeigt.
 
@@ -203,7 +203,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Ja. | Die Datenstrom-ID des Datenstroms, den Sie in ([&#x200B; 1) erstellt &#x200B;](#create-datastream). |
+| `dataStreamId` | `String` | Ja. | Die Datenstrom-ID des Datenstroms, den Sie in ([ 1) erstellt ](#create-datastream). |
 
 ### Antwort {#response}
 
@@ -277,10 +277,10 @@ Das `handle`-Objekt stellt die in der folgenden Tabelle beschriebenen Informatio
 |---------|----------|
 | `payload` | Das `payload`, das die Edge-Lookup-Informationen enthält. Die Antwort kann mehrere zusätzliche `payload`-Objekte enthalten, die nicht mit der Edge-Suche zusammenhängen. |
 | `type` | Payloads werden in der Antwort nach ihrem Typ gruppiert. Der Payload-Typ für die Edge-Profilsuche ist immer auf `profileLookup` festgelegt. |
-| `destinationId` | Die ID der **[!UICONTROL benutzerdefinierten Personalization]**-Verbindungsinstanz, die Sie in [Schritt 3) erstellt &#x200B;](#configure-custom-personalization-connection). |
+| `destinationId` | Die ID der **[!UICONTROL Custom Personalization]** Verbindungsinstanz, die Sie in ([ 3) erstellt ](#configure-custom-personalization-connection). |
 | `alias` | Der Alias der Zielverbindung, der von den Benutzenden beim Erstellen der Zielverbindung [Benutzerdefinierte Personalization](../catalog/personalization/custom-personalization.md) konfiguriert wird. |
-| `attributes` | Dieses Array enthält die Edge-Profilattribute der Zielgruppen, die Sie in ([&#x200B; 3) aktiviert &#x200B;](#configure-custom-personalization-connection). |
-| `segments` | Dieses Array enthält die Zielgruppen, die Sie in ([&#x200B; 3) aktiviert &#x200B;](#configure-custom-personalization-connection). |
+| `attributes` | Dieses Array enthält die Edge-Profilattribute der Zielgruppen, die Sie in ([ 3) aktiviert ](#configure-custom-personalization-connection). |
+| `segments` | Dieses Array enthält die Zielgruppen, die Sie in ([ 3) aktiviert ](#configure-custom-personalization-connection). |
 | `type` | `handle` Objekte werden nach Typ gruppiert. Bei Anwendungsfällen für die Kantenprofilsuche wird der Typ des `handle` immer `activation:pull`. |
 | `eventIndex` | Die Edge Network empfängt Ereignisse vom Client in Form von Arrays. Die Reihenfolge der Ereignisse im Array wird während ihrer Verarbeitung beibehalten und von diesem Index übernommen. Die Ereignisindizierung beginnt mit `0`. |
 

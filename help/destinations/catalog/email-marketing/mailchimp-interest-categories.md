@@ -3,10 +3,10 @@ title: Mailchimp-Interessenkategorien
 description: Mailchimp (auch bekannt als Intuit Mailchimp) ist eine beliebte Marketing-Automatisierungsplattform und E-Mail-Marketing-Service, der von Unternehmen verwendet wird, um Kontakte (Kunden, Kunden oder andere interessierte Parteien) mithilfe von Mailing-Listen und E-Mail-Marketing-Kampagnen zu verwalten und mit ihnen zu sprechen. Verwenden Sie diesen Connector, um Ihre Kontakte nach deren Interessen und Präferenzen zu sortieren.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2312'
-ht-degree: 19%
+source-wordcount: '2218'
+ht-degree: 18%
 
 ---
 
@@ -36,7 +36,7 @@ In den folgenden Abschnitten finden Sie alle Voraussetzungen, die Sie in Experie
 
 ### Voraussetzungen in Experience Platform {#prerequisites-in-experience-platform}
 
-Vor der Aktivierung der Daten für das [!DNL Mailchimp Interest Categories]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) verfügen, die in [!DNL Experience Platform] erstellt wurden.
+Vor der Aktivierung der Daten für das [!DNL Mailchimp Interest Categories]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) verfügen, die in [!DNL Experience Platform] erstellt wurden.
 
 ### Voraussetzungen für das [!DNL Mailchimp Interest Categories] Ziel {#prerequisites-destination}
 
@@ -72,9 +72,9 @@ Weitere Anleitungen finden Sie in der Dokumentation zu [[!DNL Mailchimp] Grundla
 
 ### Leitlinien {#guardrails}
 
-Jede Ihrer [!DNL Mailchimp] Zielgruppen kann bis zu 60 Gruppennamen (oder Interessenkategorien) in einer einzelnen Gruppe oder über mehrere Gruppen innerhalb derselben Zielgruppe hinweg enthalten. Unter [!DNL Mailchimp]Gruppen[&#x200B; finden &#x200B;](https://mailchimp.com/help/getting-started-with-groups/) weitere Informationen. Wenn Sie dieses Limit erreichen, erhalten Sie von der [!DNL Mailchimp]-API eine `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` als Fehlerantwort.
+Jede Ihrer [!DNL Mailchimp] Zielgruppen kann bis zu 60 Gruppennamen (oder Interessenkategorien) in einer einzelnen Gruppe oder über mehrere Gruppen innerhalb derselben Zielgruppe hinweg enthalten. Unter [!DNL Mailchimp]Gruppen[ finden ](https://mailchimp.com/help/getting-started-with-groups/) weitere Informationen. Wenn Sie dieses Limit erreichen, erhalten Sie von der `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)`-API eine [!DNL Mailchimp] als Fehlerantwort.
 
-Weitere Informationen zu den von der [!DNL Mailchimp]-API auferlegten Beschränkungen finden [!DNL Mailchimp] [&#x200B; unter &#x200B;](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)Ratenbeschränkungen .
+Weitere Informationen zu den von der [!DNL Mailchimp]-API auferlegten Beschränkungen finden [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) unter [!DNL Mailchimp]Ratenbeschränkungen .
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -91,8 +91,8 @@ Weitere Informationen zu den von der [!DNL Mailchimp]-API auferlegten Beschränk
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Für jede ausgewählte Zielgruppe in Experience Platform wird der entsprechende [!DNL Mailchimp Interest Categories] Segmentstatus mit dem Zielgruppenstatus aus Experience Platform aktualisiert.</li></ul> |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profile-based]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Für jede ausgewählte Zielgruppe in Experience Platform wird der entsprechende [!DNL Mailchimp Interest Categories] Segmentstatus mit dem Zielgruppenstatus aus Experience Platform aktualisiert.</li></ul> |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert wird, sendet der Connector die Aktualisierung nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -101,26 +101,26 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-Suchen Sie **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL Mailchimp Interest Categories]. Alternativ können Sie es unter der Kategorie **[!UICONTROL E-Mail-Marketing]** finden.
+Suchen Sie in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** nach [!DNL Mailchimp Interest Categories]. Alternativ können Sie es unter der Kategorie **[!UICONTROL Email marketing]** finden.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Connect to destination]** aus.
 
 | Feld | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Benutzername]** | Ihr [!DNL Mailchimp Interest Categories]. |
-| **[!UICONTROL Passwort]** | Ihr [!DNL Mailchimp] **API-**), den Sie im Abschnitt [Sammeln [!DNL Mailchimp] Anmeldeinformationen](#gather-credentials) notiert hatten.<br> Ihr API-Schlüssel hat die Form von `{KEY}-{DC}`, wobei der `{KEY}` Teil auf den Wert verweist, der im Abschnitt [[!DNL Mailchimp] API-Schlüssel](#gather-credentials) angegeben ist, und der `{DC}` Teil auf das [[!DNL Mailchimp] Rechenzentrum](#identify-data-center). <br>Sie können entweder den `{KEY}` Teil oder das gesamte Formular angeben.<br> Wenn Ihr API-Schlüssel beispielsweise <br>*`0123456789abcdef0123456789abcde-us14`*ist, können <br> entweder *`0123456789abcdef0123456789abcde`*oder *`0123456789abcdef0123456789abcde-us14`*als Wert angeben. |
+| **[!UICONTROL Username]** | Ihr [!DNL Mailchimp Interest Categories]. |
+| **[!UICONTROL Password]** | Ihr [!DNL Mailchimp] **API-**), den Sie im Abschnitt [Sammeln [!DNL Mailchimp] Anmeldeinformationen](#gather-credentials) notiert hatten.<br> Ihr API-Schlüssel hat die Form von `{KEY}-{DC}`, wobei der `{KEY}` Teil auf den Wert verweist, der im Abschnitt [[!DNL Mailchimp] API-Schlüssel](#gather-credentials) angegeben ist, und der `{DC}` Teil auf das [[!DNL Mailchimp] Rechenzentrum](#identify-data-center). <br>Sie können entweder den `{KEY}` Teil oder das gesamte Formular angeben.<br> Wenn Ihr API-Schlüssel beispielsweise <br>*`0123456789abcdef0123456789abcde-us14`*ist, können <br> entweder *`0123456789abcdef0123456789abcde`*oder *`0123456789abcdef0123456789abcde-us14`*als Wert angeben. |
 
 {style="table-layout:auto"}
 
 Screenshot der ![Experience Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
-Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Status **[!UICONTROL Verbunden]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
+Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche einen **[!UICONTROL Connected]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -131,29 +131,29 @@ Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](.
 | Feld | Beschreibung |
 | --- | --- |
 | **[!UICONTROL Name]** | Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können. |
-| **[!UICONTROL Beschreibung]** | Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren. |
-| **[!UICONTROL Rechenzentrum]** | Ihr [!DNL Mailchimp]-Konto `data center`. Eine Anleitung dazu finden [&#x200B; im Abschnitt  [!DNL Mailchimp] Identifizieren](#identify-data-center)Datenzentrum“. |
-| **[!UICONTROL Zielgruppenname (bitte zuerst Rechenzentrum auswählen)]** | Nachdem Sie Ihr **[!UICONTROL Rechenzentrum]** ausgewählt haben, werden in dieser Dropdown-Liste automatisch die Zielgruppennamen aus Ihrem [!DNL Mailchimp]-Konto angezeigt. Wählen Sie die Zielgruppe aus, die Sie mit Daten aus Experience Platform aktualisieren möchten. |
-| **[!UICONTROL Interessenkategorie (Bitte wählen Sie zuerst Datenzentrum und Zielgruppenname aus)]** | Nachdem Sie Ihren **[!UICONTROL Zielgruppennamen]** ausgewählt haben, wird dieses Dropdown-Menü automatisch mit den Namen der Interessengruppen-Kategorien aus Ihrem [!DNL Mailchimp]-Konto gefüllt. Wählen Sie den Kategorienamen aus, den Sie mit Daten aus Experience Platform aktualisieren möchten. |
+| **[!UICONTROL Description]** | Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren. |
+| **[!UICONTROL Data center]** | Ihr [!DNL Mailchimp]-Konto `data center`. Eine Anleitung dazu finden [ im Abschnitt  [!DNL Mailchimp] Identifizieren](#identify-data-center)Datenzentrum“. |
+| **[!UICONTROL Audience Name (Please select Data center first)]** | Nachdem Sie Ihren **[!UICONTROL Data center]** ausgewählt haben, wird dieses Dropdown-Menü automatisch mit den Zielgruppennamen aus Ihrem [!DNL Mailchimp]-Konto gefüllt. Wählen Sie die Zielgruppe aus, die Sie mit Daten aus Experience Platform aktualisieren möchten. |
+| **[!UICONTROL Interest Category (Please select Data center and Audience Name first)]** | Nachdem Sie Ihren **[!UICONTROL Audience Name]** ausgewählt haben, wird dieses Dropdown-Menü automatisch mit den Namen der Interessengruppen-Kategorien aus Ihrem [!DNL Mailchimp]-Konto gefüllt. Wählen Sie den Kategorienamen aus, den Sie mit Daten aus Experience Platform aktualisieren möchten. |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> Wenn der von Ihnen im Feld **[!UICONTROL Kennwort]** angegebene API-Schlüssel oder der Wert **[!UICONTROL Rechenzentrum]** falsch sind, zeigt die Benutzeroberfläche eine [!DNL Mailchimp] API-Fehlerantwort an: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* wie unten dargestellt. In diesem Fall können Sie keinen Wert aus dem Feld **[!UICONTROL Zielgruppenname (Bitte zuerst Rechenzentrum auswählen)]** auswählen. Um diesen Fehler zu beheben, geben Sie die richtigen Werte an.
+> Wenn der von Ihnen im Feld **[!UICONTROL Password]** angegebene API-Schlüssel oder der **[!UICONTROL Data center]** falsch sind, zeigt die Benutzeroberfläche eine [!DNL Mailchimp] API-Fehlerantwort an: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* wie unten dargestellt. In diesem Fall können Sie keinen Wert aus dem Feld **[!UICONTROL Audience Name (Please select Data center first)]** auswählen. Um diesen Fehler zu beheben, geben Sie die richtigen Werte an.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -163,9 +163,9 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
 
 Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL Mailchimp Interest Categories]-Zielfeldern korrekt zuzuordnen:
 
-1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
-1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut oder den **[!UICONTROL Identity-Namespace auswählen]** und wählen Sie eine Identität aus.
-1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Kategorie **[!UICONTROL Identity-Namespace auswählen]** und wählen Sie eine Identität oder **[!UICONTROL Attribute auswählen]** aus der Liste der Attribute aus, die von der [!DNL Mailchimp]-API ausgefüllt werden. *Alle benutzerdefinierten Attribute, die Sie der ausgewählten [!DNL Mailchimp]-Zielgruppe hinzugefügt haben, stehen auch als Zielfelder zur Auswahl.*
+1. Wählen Sie im **[!UICONTROL Mapping]** Schritt **[!UICONTROL Add new mapping]** aus. Auf dem Bildschirm wird nun eine neue Zuordnungszeile angezeigt.
+1. Wählen Sie im **[!UICONTROL Select source field]** die Kategorie **[!UICONTROL Select attributes]** und dann das XDM-Attribut aus, oder wählen Sie die **[!UICONTROL Select identity namespace]** und dann eine Identität aus.
+1. Wählen Sie im **[!UICONTROL Select target field]** die **[!UICONTROL Select identity namespace]** und dann eine Identität aus oder wählen Sie **[!UICONTROL Select attributes]** Kategorie und dann aus der Liste der Attribute aus, die von der [!DNL Mailchimp]-API ausgefüllt werden. *Alle benutzerdefinierten Attribute, die Sie der ausgewählten [!DNL Mailchimp]-Zielgruppe hinzugefügt haben, stehen auch als Zielfelder zur Auswahl.*
 
    Folgende Zuordnungen sind zwischen Ihrem XDM-Profilschema und [!DNL Mailchimp Interest Categories] verfügbar:
 
@@ -176,7 +176,7 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL Mailchimp Interest Categor
    | `xdm: person.name.lastName` | `Attribute: LNAME` | |
    | `xdm: person.birthDayAndMonth` | `Attribute: BIRTHDAY` | |
 
-   Darüber hinaus ist `ADDRESS` ein spezielles Zielfeld, das in Ihrer [!DNL Mailchimp]-Zielgruppe als `merge field` bezeichnet wird. In [[!DNL Mailchimp] Dokumentation](https://mailchimp.com/developer/marketing/docs/merge-fields/) werden die erforderlichen Schlüssel wie `addr1`, `city`, `state` und `zip` sowie die optionalen Schlüssel `addr2` und `country` definiert. Die Werte für diese Felder müssen Zeichenfolgen sein. Wenn eine der `ADDRESS` Feldzuordnungen vorhanden ist, übergibt das Ziel das `ADDRESS` zur Aktualisierung an die [!DNL Mailchimp]-API. Für alle `ADDRESS` Felder, die nicht zugeordnet werden, ist standardmäßig `NULL` festgelegt, mit Ausnahme des Landes, das standardmäßig `US`.
+   Darüber hinaus ist `ADDRESS` ein spezielles Zielfeld, das in Ihrer `merge field`-Zielgruppe als [!DNL Mailchimp] bezeichnet wird. In [[!DNL Mailchimp] Dokumentation](https://mailchimp.com/developer/marketing/docs/merge-fields/) werden die erforderlichen Schlüssel wie `addr1`, `city`, `state` und `zip` sowie die optionalen Schlüssel `addr2` und `country` definiert. Die Werte für diese Felder müssen Zeichenfolgen sein. Wenn eine der `ADDRESS` Feldzuordnungen vorhanden ist, übergibt das Ziel das `ADDRESS` zur Aktualisierung an die [!DNL Mailchimp]-API. Für alle `ADDRESS` Felder, die nicht zugeordnet werden, ist standardmäßig `NULL` festgelegt, mit Ausnahme des Landes, das standardmäßig `US`.
 
    Für das Feld `ADDRESS` sind die folgenden Zuordnungen verfügbar:
 
@@ -192,9 +192,9 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL Mailchimp Interest Categor
    Sie möchten beispielsweise den Wert für `country` mit den vorhandenen Adressfeldwerten `addr1`, `city`, `state` und `zip` des Kontakts wie `132, My Street, Kingston`, `New York`, `New York` und `12401` aktualisieren. Um die `country` zu aktualisieren, müssen Sie die vorhandenen Werte mit Änderungen *(falls vorhanden)* und den neuen Wert für Land übergeben. Daher sollten die Werte in Ihrem Datensatz `132, My Street, Kingston`, `New York`, `New York`, `12401` und `US` sein. Um es noch einmal zu wiederholen: Wenn Sie nur `country` übergeben und keine Werte für `addr1`, `city`, `state` und `zip` angeben, werden diese von `NULL` überschrieben.
 
    Nachfolgend finden Sie ein Beispiel mit den abgeschlossenen Zuordnungen:
-   Beispiel-Screenshot der Experience Platform-Benutzeroberfläche mit Feldzuordnungen.![&#128279;](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
+   Beispiel-Screenshot der Experience Platform-Benutzeroberfläche mit Feldzuordnungen.![](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
-Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Überprüfen des Datenexports {#exported-data}
 
@@ -205,7 +205,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 ![Screenshot der Mailchimp-Benutzeroberfläche mit der Seite „Zielgruppe“.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
 * Wählen Sie die Gruppe aus und überprüfen Sie, ob die ausgewählten Zielgruppen als Kategorien mit dem Zielgruppennamen aus Experience Platform erstellt wurden, auf den möglicherweise ein automatisch generiertes Suffix folgt.
-   * Dieses Ziel verwendet die Namen der ausgewählten Segmente, um die Interessenkategorie mithilfe der API [[!DNL Mailchimp] Interessenkategorie hinzufügen“ &#x200B;](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/) erstellen. Wenn Sie ein neues Ziel erstellen und dieselben Zielgruppen erneut aktivieren, fügt [!DNL Mailchimp] ein Suffix hinzu, um zwischen den vorhandenen und den neuen Segmenten zu unterscheiden.
+   * Dieses Ziel verwendet die Namen der ausgewählten Segmente, um die Interessenkategorie mithilfe der API [[!DNL Mailchimp] Interessenkategorie hinzufügen“ ](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/) erstellen. Wenn Sie ein neues Ziel erstellen und dieselben Zielgruppen erneut aktivieren, fügt [!DNL Mailchimp] ein Suffix hinzu, um zwischen den vorhandenen und den neuen Segmenten zu unterscheiden.
 * Kontakte, deren E-Mails nicht in der Gruppe vorhanden waren, werden der neu erstellten Kategorie hinzugefügt.
 * Bei Kontakten, die bereits in der Gruppe vorhanden sind, werden die Attributfelddaten aktualisiert und der Kontakt zur neu erstellten Kategorie hinzugefügt.
 
@@ -219,7 +219,7 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ### Fehler aufgetreten, wenn [!DNL Mailchimp] API-Schlüssel oder die Werte des Rechenzentrums falsch sind {#incorrect-credentials-error}
 
-Wenn der von Ihnen im Feld **[!UICONTROL Kennwort]** angegebene API-Schlüssel oder der Wert **[!UICONTROL Rechenzentrum]** falsch sind, zeigt die Benutzeroberfläche eine [!DNL Mailchimp] API-Fehlerantwort an: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* wie unten dargestellt. In diesem Fall können Sie keinen Wert aus dem Feld **[!UICONTROL Zielgruppenname (Bitte zuerst Rechenzentrum auswählen)]** auswählen.
+Wenn der von Ihnen im Feld **[!UICONTROL Password]** angegebene API-Schlüssel oder der **[!UICONTROL Data center]** falsch sind, zeigt die Benutzeroberfläche eine [!DNL Mailchimp] API-Fehlerantwort an: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* wie unten dargestellt. In diesem Fall können Sie keinen Wert aus dem Feld **[!UICONTROL Audience Name (Please select Data center first)]** auswählen.
 
 ![Screenshot der Experience Platform-Benutzeroberfläche mit einer Fehlermeldung, wenn der Mailchimp-API-Schlüssel oder die Werte des Rechenzentrums falsch sind.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
@@ -234,9 +234,10 @@ Beim Erstellen des Ziels erhalten Sie möglicherweise die folgenden Fehlermeldun
 
 Auf der [[!DNL Mailchimp] Fehlerseite](https://mailchimp.com/developer/marketing/docs/errors/) finden Sie eine umfassende Liste von Status- und Fehler-Codes mit Erläuterungen.
 
-## Zusätzliche Ressourcen {#additional-resources}
+## Weitere Ressourcen {#additional-resources}
 
 Weitere nützliche Informationen aus der [!DNL Mailchimp] Dokumentation finden Sie unten:
+
 * [Erste Schritte mit [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Erste Schritte mit Audiences](https://mailchimp.com/help/getting-started-audience/)
 * [Zielgruppe erstellen](https://mailchimp.com/help/create-audience/)

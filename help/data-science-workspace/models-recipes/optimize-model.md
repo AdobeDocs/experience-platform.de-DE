@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Optimieren;Modell;Data Science Workspace;beliebte Themen;Modelleinblicke
+keywords: Experience Platform;Optimieren;Modell;Datenwissenschaft Workspace;beliebte Themen;Modelleinblicke
 solution: Experience Platform
 title: Optimieren eines Modells mithilfe des Model Insights-Frameworks
 type: Tutorial
 description: Das Model Insights Framework stellt dem Datenwissenschaftler in Data Science Workspace Tools zur Verfügung, um schnelle und fundierte Entscheidungen für optimale Modelle für maschinelles Lernen auf der Grundlage von Experimenten zu treffen.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 80%
+source-wordcount: '1209'
+ht-degree: 78%
 
 ---
 
@@ -25,6 +25,7 @@ Das Modell-Insights-Framework bietet Datenwissenschaftlern Tools, [!DNL Data Sci
 ## Was sind Metriken?
 
 Nach dem Implementieren und Trainieren eines Modells würde ein Data Scientist als Nächstes ermitteln, wie gut das Modell funktionieren wird. Es werden verschiedene Metriken verwendet, um herauszufinden, wie gut ein Modell im Vergleich zu anderen abschneidet. Einige Beispiele für verwendete Metriken:
+
 - Klassifizierungsgenauigkeit
 - Fläche unter Kurve
 - Konfusionsmatrix
@@ -33,6 +34,7 @@ Nach dem Implementieren und Trainieren eines Modells würde ein Data Scientist a
 ## Konfigurieren von Rezept-Code
 
 Derzeit unterstützt das Model Insights Framework folgende Laufzeitumgebungen:
+
 - [Scala](#scala)
 - [Python/TensorFlow](#pythontensorflow)
 - [R](#r)
@@ -89,11 +91,11 @@ In der folgenden Tabelle sind die Standardmetriken für jede Klasse aufgeführt.
 
 #### Benutzerdefinierte Auswertungsmetriken für Scala
 
-Der benutzerdefinierte Auswerter kann angegeben werden, indem Sie die Oberfläche von `MLEvaluator.scala` in Ihrer `Evaluator.scala`-Datei erweitern. In der Beispieldatei [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) definieren wir benutzerdefinierte `split()`- und `evaluate()`-Funktionen. Die `split()`-Funktion teilt unsere Daten im Verhältnis von 8:2 zufällig auf; die `evaluate()`-Funktion definiert und gibt drei Metriken zurück: MAPE, MAE und RMSE.
+Der benutzerdefinierte Auswerter kann angegeben werden, indem Sie die Oberfläche von `MLEvaluator.scala` in Ihrer `Evaluator.scala`-Datei erweitern. In der Beispieldatei [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) definieren wir benutzerdefinierte `split()`- und `evaluate()`-Funktionen. Unsere `split()` teilt unsere Daten zufällig mit einem Verhältnis von 8 auf :2 und unsere `evaluate()` definiert und gibt 3 Metriken zurück: MAPE, MAE und RMSE.
 
 >[!IMPORTANT]
 >
->Verwenden Sie für die `MLMetric`-Klasse beim Erstellen eines neuen `MLMetric` keine `"measures"` für `valueType`, da die Metrik sonst nicht in die Tabelle mit benutzerdefinierten Auswertungsmetriken eingefügt wird.
+>Verwenden Sie für die `MLMetric`-Klasse beim Erstellen eines neuen `"measures"` keine `valueType` für `MLMetric`, da die Metrik sonst nicht in die Tabelle mit benutzerdefinierten Auswertungsmetriken eingefügt wird.
 >  
 > Führen Sie folgende Schritte aus: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > Und nicht: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
@@ -115,7 +117,7 @@ Derzeit gibt es keine standardmäßigen Auswertungsmetriken für [!DNL Python] o
 
 Für benutzerdefinierte Auswertungsmetriken müssen für den Auswerter zwei Hauptmethoden implementiert werden: `split()` und `evaluate()`.
 
-[!DNL Python] würden diese Methoden in „evaluator.py[&#x200B; für &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) Klasse `Evaluator` definiert. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
+[!DNL Python] würden diese Methoden in „evaluator.py[ für ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) Klasse `Evaluator` definiert. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
 
 Um Auswertungsmetriken in [!DNL Python] zu erstellen, muss der Benutzer die `evaluate()`- und `split()` implementieren.
 
@@ -154,6 +156,7 @@ Derzeit gibt es keine standardmäßigen Auswertungsmetriken für R. Um Auswertun
 Hauptaufgabe des `applicationEvaluator` ist es, ein JSON-Objekt zurückzugeben, das Schlüssel-Wert-Paare von Metriken enthält.
 
 Dieser [applicationEvaluator.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) kann als Beispiel verwendet werden. In diesem Beispiel wird der `applicationEvaluator` in drei vertraute Abschnitte unterteilt:
+
 - Laden von Daten
 - Datenvorbereitung/Funktionsentwicklung
 - Abrufen des gespeicherten Modells und Auswerten

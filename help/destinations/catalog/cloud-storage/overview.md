@@ -3,7 +3,7 @@ keywords: Cloud-Speicherziel;Cloud-Speicher
 title: Übersicht über die Cloud-Speicher-Ziele
 description: Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 38%
@@ -73,9 +73,10 @@ Ordnerpfad an Ihrem Speicherort: `acme/campaigns/2021/Luxury Audience/25768be6-e
 ## Datenexporttyp {#export-type}
 
 Cloud-Speicher-Ziele unterstützen die folgenden Exporttypen:
+
 * **Profil-basierter Export**. Das bedeutet, dass Sie Details zu den Einzelpersonen in der Zielgruppe exportieren. Diese Details sind für die Personalisierung erforderlich und können Attribute, Ereignisse, Zielgruppenmitgliedschaften und mehr umfassen.
 * **Datensatzexport**. Mit dieser Funktion können Sie ganze Datensätze in Cloud-Speicher-Ziele exportieren. [Weitere Informationen](/help/destinations/ui/export-datasets.md) über die Funktion.
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie ausgewählt haben, welches der [unterstützten Cloud-Ziele](#supported-destinations) Sie verwenden möchten, lesen Sie das [Tutorial zum Herstellen einer Verbindung mit Zielen](/help/destinations/ui/connect-destination.md) um zu erfahren, wie Sie eine Verbindung zum Ziel herstellen. Lesen Sie dann das Aktivierungs-Tutorial für dateibasierte Ziele, um zu erfahren, wie Sie mit dem [&#x200B; (Exportieren](/help/destinations/ui/activate-batch-profile-destinations.md) von Daten in Ihr Cloud-Speicherziel beginnen.
+Nachdem Sie ausgewählt haben, welches der [unterstützten Cloud-Ziele](#supported-destinations) Sie verwenden möchten, lesen Sie das [Tutorial zum Herstellen einer Verbindung mit Zielen](/help/destinations/ui/connect-destination.md) um zu erfahren, wie Sie eine Verbindung zum Ziel herstellen. Lesen Sie dann das Aktivierungs-Tutorial für dateibasierte Ziele, um zu erfahren, wie Sie mit dem [ (Exportieren](/help/destinations/ui/activate-batch-profile-destinations.md) von Daten in Ihr Cloud-Speicherziel beginnen.

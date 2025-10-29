@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Rezept für Produktkaufprognosen
 description: Mit dem Rezept für die Prognose von Produktkäufen können Sie die Wahrscheinlichkeit eines bestimmten Kundenkaufereignisses vorhersagen, z. B. eines Produktkaufs.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 11%
@@ -24,6 +24,7 @@ Mit dem Rezept für die Prognose von Produktkäufen können Sie die Wahrscheinli
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
 Das folgende Dokument beantwortet Fragen wie:
+
 * Für wen ist dieses Rezept gedacht?
 * Was macht dieses Rezept?
 
@@ -62,6 +63,6 @@ Dieses Rezept verwendet [XDM-Schemata](../../xdm/home.md) um die Daten zu modell
 
 ## Algorithmus
 
-Zunächst wird der Trainings-Datensatz im *ProductPrediction*-Schema geladen. Von hier aus wird das Modell mit einem [Random Forest Classifier“ &#x200B;](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random Forest Classifier ist eine Art von verkettetem Algorithmus, der sich auf einen Algorithmus bezieht, der mehrere Algorithmen kombiniert, um eine verbesserte Vorhersageleistung zu erhalten. Die Idee hinter dem Algorithmus ist, dass die zufällige Waldklassifizierung mehrere Entscheidungsbäume erstellt und sie zusammenführt, um eine genauere und stabilere Vorhersage zu erstellen.
+Zunächst wird der Trainings-Datensatz im *ProductPrediction*-Schema geladen. Von hier aus wird das Modell mit einem [Random Forest Classifier“ ](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random Forest Classifier ist eine Art von verkettetem Algorithmus, der sich auf einen Algorithmus bezieht, der mehrere Algorithmen kombiniert, um eine verbesserte Vorhersageleistung zu erhalten. Die Idee hinter dem Algorithmus ist, dass die zufällige Waldklassifizierung mehrere Entscheidungsbäume erstellt und sie zusammenführt, um eine genauere und stabilere Vorhersage zu erstellen.
 
 Dieser Prozess beginnt mit der Erstellung eines Satzes von Entscheidungsbäumen, die zufällig Untergruppen von Trainingsdaten auswählen. Danach werden die Ergebnisse jedes Entscheidungsbaums gemittelt.

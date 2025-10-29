@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform; Rezept für Produktempfehlungen; Data Science Workspace; beliebte Themen; Rezepte; Rezept vorab erstellen
+keywords: Experience Platform;Produktempfehlungsrezept;Data Science Workspace;beliebte Themen;Rezepte;Rezept vorab erstellen
 solution: Experience Platform
 title: Rezept für Produktempfehlungen
 description: Mit dem Rezept „Produktempfehlungen“ können Sie personalisierte Produktempfehlungen bereitstellen, die auf die Bedürfnisse und Interessen Ihrer Kunden zugeschnitten sind. Mit einem präzisen Prognosemodell können Sie anhand der Einkaufshistorie von Kunden feststellen, für welche Produkte sie sich interessieren.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 86%
@@ -31,7 +31,7 @@ Das Rezept „Produktempfehlungen“ verwendet maschinelles Lernen, um frühere 
 
 ## Wie sehen die ersten Schritte aus?
 
-Beginnen Sie mit dem Tutorial zum Adobe Experience Platform Lab (siehe Lab-Link unten). In diesem Tutorial erfahren Sie, wie Sie das Produktrezept für Recommendations in einem Jupyter-Notebook erstellen, indem Sie dem Workflow [Notebook zu Rezept](../jupyterlab/create-a-model.md) folgen und das Rezept in [!DNL Experience Platform] [!DNL Data Science Workspace] implementieren.
+Beginnen Sie mit dem Tutorial zum Adobe Experience Platform Lab (siehe Lab-Link unten). In diesem Tutorial erfahren Sie, wie Sie das Rezept für Produktempfehlungen in einem Jupyter-Notebook erstellen, indem Sie dem Workflow [Notebook zu Rezept](../jupyterlab/create-a-model.md) folgen und das Rezept in [!DNL Experience Platform] [!DNL Data Science Workspace] implementieren.
 
 * [Lab: Prognostizieren der Zukunft mit Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Lab-Ressourcen](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
@@ -59,7 +59,8 @@ Dieses Rezept nutzt benutzerdefinierte [XDM-Schemata](../../xdm/schema/field-dic
 ## Algorithmus
 
 Das Rezept „Produktempfehlungen“ nutzt kollaborative Filterung, um eine personalisierte Liste mit Produktempfehlungen für Ihre Kunden zu generieren. Kollaborative Filterung erfordert im Gegensatz zu einem inhaltsbasierten Ansatz keine Informationen über ein bestimmtes Produkt, sondern nutzt vielmehr die historischen Präferenzen eines Kunden für eine Reihe von Produkten. Dieses leistungsstarke Empfehlungsverfahren basiert auf zwei einfachen Annahmen:
+
 * Es gibt Kunden mit ähnlichen Interessen; diese lassen sich gruppieren, indem man ihr Einkaufs- und Browsing-Verhalten miteinander vergleicht.
 * Kunden sind eher an Empfehlungen interessiert, an denen auch Kunden mit einem ähnlichen Einkaufs- und Browsing-Verhalten Interesse haben.
 
-Dieses Verfahren ist in zwei Hauptschritte unterteilt. Zunächst definieren Sie eine Untergruppe ähnlicher Kunden. Dann identifizieren Sie innerhalb dieser Gruppe ähnliche Merkmale bei den Kunden, um eine Empfehlung für den Zielkunden zurückzugeben.
+Dieses Verfahren ist in zwei Hauptschritte unterteilt. Zunächst definieren Sie eine Teilmenge ähnlicher Kunden. Dann identifizieren Sie innerhalb dieser Gruppe ähnliche Merkmale bei den Kunden, um eine Empfehlung für den Zielkunden zurückzugeben.

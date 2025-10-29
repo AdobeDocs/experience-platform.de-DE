@@ -4,16 +4,16 @@ title: Qualtrics Automations
 description: Synchronisieren Sie Erlebnis- und operative Kundendaten, um Personalisierung in jedem Maßstab zu ermöglichen. Verwenden Sie die Aggregation mehrerer betrieblicher Datenquellen in Adobe Experience Platform als Eingabe in der Qualtrics Experience ID, um Ihre Kunden besser zu verstehen und eine gezielte Kontaktaufnahme zu ermöglichen, um die Lücke beim Verständnis von Intent-, Emotions- und Erlebnistreibenden zu schließen.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1139'
-ht-degree: 29%
+source-wordcount: '1120'
+ht-degree: 26%
 
 ---
 
 # Qualtrics Automations
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Synchronisieren Sie Erlebnis- und operative Kundendaten, um Personalisierung in jedem Maßstab zu ermöglichen.
 
@@ -21,7 +21,7 @@ Verwenden Sie die Aggregation mehrerer betrieblicher Datenquellen in Adobe Exper
 
 >[!IMPORTANT]
 >
->Der Ziel-Connector und die Dokumentationsseite werden vom Qualtrics-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an die Kontaktperson, indem Sie sich beim [Customer Success Hub“ &#x200B;](https://support-portal.qualtrics.com/).
+>Der Ziel-Connector und die Dokumentationsseite werden vom Qualtrics-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an die Kontaktperson, indem Sie sich beim [Customer Success Hub“ ](https://support-portal.qualtrics.com/).
 
 ## Anwendungsfälle {#use-cases}
 
@@ -61,7 +61,7 @@ Im Folgenden finden Sie die erforderlichen Schritte zum Abrufen eines API-Tokens
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| E-Mail | Nur-Text-E-Mail-Adressen | Qualtrics unterstützt nur Nur-Text-E-Mail-Adressen. |
+| email | Nur-Text-E-Mail-Adressen | Qualtrics unterstützt nur Nur-Text-E-Mail-Adressen. |
 | EXTERNAL_ID | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
 {style="table-layout:auto"}
@@ -71,8 +71,8 @@ Im Folgenden finden Sie die erforderlichen Schritte zum Abrufen eines API-Tokens
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im Ziel *Qualtrics-*&quot; verwendet werden. |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Segment export]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im Ziel *Qualtrics-*&quot; verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -81,7 +81,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -96,8 +96,8 @@ Im Rahmen der Authentifizierung müssen Sie einen **Benutzernamen** und ein **Ke
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* Trigger **[!UICONTROL URL]**: Die im JSON-[&#x200B; gefundene URL](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) die Ihren [Workflow in Qualtrics) &#x200B;](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). Ein Beispiel finden Sie im folgenden Screenshot.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL URL]**: Die im JSON-[ gefundene URL](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) mit Triggern zu Ihrem [Workflow in Qualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). Ein Beispiel finden Sie im folgenden Screenshot.
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 
@@ -105,13 +105,13 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 

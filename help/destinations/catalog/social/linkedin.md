@@ -3,10 +3,10 @@ keywords: LinkedIn-Verbindung;LinkedIn-Verbindung;LinkedIn-Ziele;LinkedIn;
 title: LinkedIn Matched Audiences-Verbindung
 description: Aktivieren Sie Profile für Ihre LinkedIn-Kampagnen zum Zielgruppen-Targeting, zur Personalisierung und zur Unterdrückung auf der Grundlage von gehashten E-Mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 31%
+source-wordcount: '1202'
+ht-degree: 27%
 
 ---
 
@@ -36,7 +36,7 @@ Ein Software-Unternehmen organisiert eine Konferenz und möchte mit den Teilnehm
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mails. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-](#id-matching-requirements-id-matching-requirements)-Anforderungen“ und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mails. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
 
 {style="table-layout:auto"}
 
@@ -46,7 +46,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -56,15 +56,15 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer und sonstiges), die im [!DNL LinkedIn Matched Audiences]-Ziel verwendet werden. |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Audience export]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer und sonstiges), die im [!DNL LinkedIn Matched Audiences]-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Voraussetzungen für LinkedIn-Konto {#LinkedIn-account-prerequisites}
 
-Bevor Sie das Ziel [!UICONTROL LinkedIn Matched Audience] verwenden können, stellen Sie sicher, dass Ihr [!DNL LinkedIn Campaign Manager]-Konto über die [!DNL Creative Manager] Berechtigungsstufe oder höher verfügt.
+Bevor Sie das [!UICONTROL LinkedIn Matched Audience]-Ziel verwenden können, stellen Sie sicher, dass Ihr [!DNL LinkedIn Campaign Manager]-Konto die [!DNL Creative Manager] Berechtigungsstufe oder höher hat.
 
 Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager]-Benutzerberechtigungen finden Sie unter [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Advertising-Konten](https://www.linkedin.com/help/lms/answer/5753) in der LinkedIn-Dokumentation.
 
@@ -92,11 +92,11 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 >[!NOTE]
 >
 >Daten aus nicht gehashten Namespaces werden von [!DNL Experience Platform] bei der Aktivierung automatisch gehasht.
->&#x200B;> Attributquelldaten werden nicht automatisch gehasht.
+>> Attributquelldaten werden nicht automatisch gehasht.
 > 
-> Wenn Ihr [&#x200B; ungehashte Attribute enthält, aktivieren Sie im Schritt „Identitätszuordnung](../../ui/activate-segment-streaming-destinations.md#mapping) die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht.
+> Wenn Ihr [ ungehashte Attribute enthält, ](../../ui/activate-segment-streaming-destinations.md#mapping) Sie während des Schritts „Identitätszuordnung“ die Option &quot;**[!UICONTROL Apply transformation]**&quot;, damit [!DNL Experience Platform] Daten bei Aktivierung automatisch hasht.
 > 
-> Die Option **[!UICONTROL Umwandlung anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Er wird bei der Auswahl von Namespaces nicht angezeigt.
+> Die Option **[!UICONTROL Apply transformation]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Er wird bei der Auswahl von Namespaces nicht angezeigt.
 
 ![Umwandlung der Identitätszuordnung](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -104,13 +104,13 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedIn Matched Audiences] Ziels und zum Aktivieren von Zielgruppen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475120/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -118,23 +118,23 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedI
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-1. Suchen Sie das [!DNL LinkedIn Matched Audiences] im Zielkatalog und wählen Sie **[!UICONTROL Einrichten]**.
-2. Wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+1. Suchen Sie das [!DNL LinkedIn Matched Audiences] im Zielkatalog und wählen Sie **[!UICONTROL Set Up]** aus.
+2. Wählen Sie **[!UICONTROL Connect to destination]** aus.
    ![Authentifizierung bei LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. Geben Sie Ihre LinkedIn-Anmeldedaten ein und wählen Sie **Anmelden** aus.
 
 ### Authentifizierungsdaten aktualisieren {#refresh-authentication-credentials}
 
-LinkedIn-Token laufen alle 60 Tage ab. Sie können das Ablaufdatum Ihres Tokens über die Spalte **[!UICONTROL Account-Ablaufdatum]** entweder auf den Registerkarten **[[!UICONTROL Konten]](../../ui/destinations-workspace.md#accounts)** oder **[[!UICONTROL Durchsuchen]](../../ui/destinations-workspace.md#browse)** überwachen.
+LinkedIn-Token laufen alle 60 Tage ab. Sie können das Ablaufdatum Ihres Tokens über die Spalte **[!UICONTROL Account expiration date]** auf der Registerkarte **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** oder **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** überwachen.
 
 Sobald das Token abgelaufen ist, funktionieren Datenexporte an das Ziel nicht mehr. Um dies zu verhindern, authentifizieren Sie sich erneut, indem Sie die folgenden Schritte ausführen:
 
-1. Navigieren Sie **[!UICONTROL Ziele]** > **[!UICONTROL Konten]**
+1. Navigieren Sie zu **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optional) Verwenden Sie die verfügbaren Filter auf der Seite, um nur LinkedIn-Konten anzuzeigen.
    ![Filtern, um nur LinkedIn-Konten anzuzeigen](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
-3. Wählen Sie das Konto aus, das Sie aktualisieren möchten, klicken Sie auf das Auslassungszeichen und wählen Sie **[!UICONTROL Details bearbeiten]**.
+3. Wählen Sie das Konto aus, das Sie aktualisieren möchten, klicken Sie auf die Auslassungspunkte und wählen Sie **[!UICONTROL Edit details]** aus.
    ![Wählen Sie das Steuerelement „Details bearbeiten“](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. Wählen Sie im modalen Fenster die Option **[!UICONTROL OAuth erneut verbinden]** und authentifizieren Sie sich erneut mit Ihren LinkedIn-Anmeldeinformationen.
+4. Wählen Sie im modalen Fenster die Option **[!UICONTROL Reconnect OAuth]** aus und authentifizieren Sie sich erneut mit Ihren LinkedIn-Anmeldeinformationen.
    ![Modales Fenster mit Option „OAuth erneut verbinden“](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -151,21 +151,21 @@ Sobald das Token abgelaufen ist, funktionieren Datenexporte an das Ziel nicht me
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Ihre [!DNL LinkedIn Campaign Manager Account ID]. Diese ID finden Sie in Ihrem [!DNL LinkedIn Campaign Manager].
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Account ID]**: Ihre [!DNL LinkedIn Campaign Manager Account ID]. Diese ID finden Sie in Ihrem [!DNL LinkedIn Campaign Manager].
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 

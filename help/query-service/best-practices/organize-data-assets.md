@@ -2,7 +2,7 @@
 title: Best Practices für die Organisation von Daten-Assets in Query Service
 description: In diesem Dokument wird eine logische Möglichkeit zur Organisation von Daten für eine einfache Verwendung mit dem Abfrage-Service beschrieben.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -17,13 +17,13 @@ Es ist wichtig, Ihre Datenelemente beim Wachstum innerhalb der Experience Platfo
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Dokument fortfahren, sollten Sie über gute Kenntnisse der Funktionen [Abfrage-Service](../home.md) verfügen und das [Handbuch zur Benutzeroberfläche) &#x200B;](../ui/user-guide.md).
+Bevor Sie mit diesem Dokument fortfahren, sollten Sie über gute Kenntnisse der Funktionen [Abfrage-Service](../home.md) verfügen und das [Handbuch zur Benutzeroberfläche) ](../ui/user-guide.md).
 
 ## Organisieren von Daten im Abfrage-Service
 
 Die folgenden Beispiele zeigen die Konstrukte, die Ihnen über den Abfrage-Service von Adobe Experience Platform zur Verfügung stehen, um Ihre Daten logisch mit der standardmäßigen SQL-Syntax zu organisieren. Erstellen Sie zunächst eine Datenbank, die als Container für Ihre Datenpunkte fungiert. Eine Datenbank kann ein oder mehrere Schemata enthalten. Jedes Schema kann dann einen oder mehrere Verweise auf ein Daten-Asset haben (Datensätze, Ansichten, temporäre Tabellen usw.). Diese Verweise umfassen alle Beziehungen oder Zuordnungen zwischen den Datensätzen.
 
-Ausführliche Anleitungen [&#x200B; Verwendung der Abfrage-Service](../ui/user-guide.md)Benutzeroberfläche zum Erstellen von SQL-Abfragen finden Sie im Benutzerhandbuch zum Abfrage-Editor .
+Ausführliche Anleitungen [ Verwendung der Abfrage-Service](../ui/user-guide.md)Benutzeroberfläche zum Erstellen von SQL-Abfragen finden Sie im Benutzerhandbuch zum Abfrage-Editor .
 
 Die folgenden SQL-Konstrukte werden unterstützt, um Datensätze in einer Sandbox logisch zu organisieren.
 
@@ -66,7 +66,7 @@ Beim Auflisten aller Datenbanken unter `dbname="all"` werden drei verfügbare Da
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 databaseB
 databaseC
@@ -78,7 +78,7 @@ In der Liste aller Schemata unter `dbname="all"` werden die drei Schemata angeze
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 databaseB      | schema3
@@ -90,14 +90,14 @@ Wenn Sie eine [!DNL PostgreSQL] Verbindung mithilfe von `dbname="databaseA"` her
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
  
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 ```
@@ -108,20 +108,20 @@ Mit der Punktnotation können Sie auf jede Tabelle zugreifen, die mit einem best
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 
 
 SHOW tables;
 name       | type
-----------------------
+|----------------------
 dataset1| table
 dataset2| table
 dataset3| table

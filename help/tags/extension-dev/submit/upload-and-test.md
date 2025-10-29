@@ -2,10 +2,10 @@
 title: Hochladen und Implementieren von End-to-End-Tests für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform validieren, hochladen und testen können.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2347'
-ht-degree: 85%
+source-wordcount: '2344'
+ht-degree: 84%
 
 ---
 
@@ -63,10 +63,10 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > Standardmäßig erwartet der Uploader Adobe I/O-Anmeldeinformationen für einen OAuth-Fluss von Server zu Server. Die alten `jwt-auth` Anmeldedaten
-> kann verwendet werden, indem `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
-> Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> > kann verwendet werden, indem `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
+> > Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-Der Uploader verlangt, dass Sie nur wenige Informationen eingeben. `clientId` und `clientSecret` können über die Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die korrekte Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL Ansicht]**.
+Der Uploader verlangt, dass Sie nur wenige Informationen eingeben. `clientId` und `clientSecret` können über die Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die richtige Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL View]**.
 
 - Was ist Ihr `clientId`? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
 - Was ist Ihr `clientSecret`? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
@@ -82,11 +82,11 @@ Das Erweiterungspaket wird dann hochgeladen und Uploader gibt die ID des extensi
 >
 >Wenn Sie den Uploader häufig ausführen möchten, kann es umständlich sein, diese Informationen jedes Mal eingeben zu müssen. Sie können sie auch als Argument in der Befehlszeile eingeben. Weitere Informationen finden Sie im Abschnitt [Befehlszeilenargumente](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) der NPM-Dokumentation.
 
-Wenn Sie das Hochladen Ihrer Erweiterung direkt über die API verwalten möchten, finden Sie weitere Details in den Beispielaufrufen zum [Erstellen](../../api/endpoints/extension-packages.md/#create) oder [Aktualisieren](../../api/endpoints/extension-packages.md#update) eines Erweiterungspakets in den API-Dokumenten.
+Wenn Sie das Hochladen Ihrer Erweiterung direkt über die API verwalten möchten, finden Sie weitere Details in den Beispielaufrufen zum [Erstellen](../../api/endpoints/extension-packages.md#create) oder [Aktualisieren](../../api/endpoints/extension-packages.md#update) eines Erweiterungspakets in den API-Dokumenten.
 
 ## Erstellen einer Entwicklungseigenschaft {#property}
 
-Nachdem Sie sich bei der Benutzeroberfläche angemeldet und im linken **&quot;**&#x200B;[!UICONTROL &quot; ausgewählt haben, &#x200B;] der Bildschirm Eigenschaften“ angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
+Nachdem Sie sich bei der Benutzeroberfläche angemeldet und im linken Navigationsbereich **[!UICONTROL Tags]** ausgewählt haben, wird der [!UICONTROL Properties] angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
 
 ![](../images/getting-started/properties-screen.png)
 

@@ -3,10 +3,10 @@ keywords: Luftschiffattribute;Luftschiffziel
 title: Airship Attributes-Verbindung
 description: Nahtlose Übergabe von Adobe-Zielgruppendaten an Airship als Zielgruppenattribute für das Targeting in Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 31%
+source-wordcount: '1002'
+ht-degree: 28%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 31%
 
 [!DNL Airship] ist die führende Experience Platform für Kundeninteraktion und hilft Ihnen, Ihren Anwendern in jeder Phase des Kundenlebenszyklus aussagekräftige, personalisierte Omni-Channel-Messaging bereitzustellen.
 
-Durch diese Integration werden Adobe-Profildaten zum Targeting oder [&#x200B; als &#x200B;](https://docs.airship.com/guides/audience/attributes/) an [!DNL Airship] übergeben.
+Durch diese Integration werden Adobe-Profildaten zum Targeting oder [!DNL Airship] als [ an ](https://docs.airship.com/guides/audience/attributes/) übergeben.
 
 Weitere Informationen zu [!DNL Airship] finden Sie unter [Airship Docs](https://docs.airship.com).
 
@@ -33,7 +33,7 @@ Bevor Sie Ihre Zielgruppen an [!DNL Airship] senden können, müssen Sie Folgend
 
 >[!TIP]
 >
->Erstellen Sie über [diesen Anmelde-Link](https://go.airship.eu/accounts/register/plan/starter/) ein [!DNL Airship]-Konto, falls noch nicht geschehen.
+>Erstellen Sie über [!DNL Airship]diesen Anmelde-Link[ ein ](https://go.airship.eu/accounts/register/plan/starter/)-Konto, falls noch nicht geschehen.
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -41,7 +41,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -51,8 +51,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung. |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -61,17 +61,17 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Adobe Experience Platform-Profilattribute ähneln [!DNL Airship] und können mithilfe des unten auf dieser Seite gezeigten Zuordnungs-Tools einfach in Experience Platform zugeordnet werden.
 
-[!DNL Airship] Projekte verfügen über mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es zuerst in [!DNL Airship] definieren. Weitere [&#x200B; finden Sie unter „Einrichten und Verwalten &#x200B;](https://docs.airship.com/tutorials/audience/attributes/) Attributen“.
+[!DNL Airship] Projekte verfügen über mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es zuerst in [!DNL Airship] definieren. Weitere [ finden Sie unter „Einrichten und Verwalten ](https://docs.airship.com/tutorials/audience/attributes/) Attributen“.
 
 ## Bearer-Token generieren {#bearer-token}
 
-Navigieren Sie **[!UICONTROL Einstellungen]**&quot; **[!UICONTROL APIs und Integrationen]** im [Airship-Dashboard](https://go.airship.com) und wählen Sie **[!UICONTROL Token]** im linken Menü aus.
+Gehen Sie zu **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** im [Airship Dashboard](https://go.airship.com) und wählen Sie **[!UICONTROL Tokens]** im Menü links aus.
 
-Klicken Sie **[!UICONTROL Token erstellen]**.
+Klicken Sie auf **[!UICONTROL Create Token]**.
 
 Geben Sie einen benutzerfreundlichen Namen für Ihr Token an, z. B. „Ziel der Adobe-Attribute“, und wählen Sie „Zugriff auf alle“ für die Rolle aus.
 
-Klicken Sie **[!UICONTROL Token erstellen]** und speichern Sie die Details als vertraulich.
+Klicken Sie auf **[!UICONTROL Create Token]** und speichern Sie die Details als vertraulich.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -89,42 +89,42 @@ Nutzen Sie Attribute aus Adobe Experience Platform, um [!DNL Airship] Profile we
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Connect to destination]** aus.
 
-* **[!UICONTROL Bearer-Token]**: Das Bearer-Token, das Sie aus dem [!DNL Airship]-Dashboard generiert haben.
+* **[!UICONTROL Bearer token]**: Das Bearer-Token, das Sie aus dem [!DNL Airship]-Dashboard generiert haben.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels hilft.
-* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für dieses Ziel ein.
-* **[!UICONTROL Domain]**: Wählen Sie entweder ein US- oder EU-Rechenzentrum aus, je nachdem, welches [!DNL Airship] Rechenzentrum für dieses Ziel gilt.
+* **[!UICONTROL Description]**: Geben Sie eine Beschreibung für dieses Ziel ein.
+* **[!UICONTROL Domain]**: Wählen Sie entweder ein US- oder ein EU-Rechenzentrum aus, je nachdem, welches [!DNL Airship] Rechenzentrum für dieses Ziel gilt.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
 ## Zuordnungsüberlegungen {#mapping-considerations}
 
-[!DNL Airship] können entweder auf einem Kanal, der eine Geräteinstanz darstellt, z. B. iPhone, oder einem benannten Benutzer festgelegt werden, der alle Geräte eines Benutzers einer gemeinsamen Kennung wie einer Kunden-ID zuordnet. Wenn Sie in Ihrem Schema E-Mail-Adressen im Klartext (ungehasht) als primäre Identität haben, wählen Sie das E-Mail-Feld in Ihren **[!UICONTROL Source-]** aus und ordnen Sie sie dem [!DNL Airship] namens Benutzer in der rechten Spalte unter **[!UICONTROL Zielidentitäten]** zu, wie unten dargestellt.
+[!DNL Airship] können entweder auf einem Kanal, der eine Geräteinstanz darstellt, z. B. iPhone, oder einem benannten Benutzer festgelegt werden, der alle Geräte eines Benutzers einer gemeinsamen Kennung wie einer Kunden-ID zuordnet. Wenn Sie in Ihrem Schema E-Mail-Adressen im Klartext (ungehasht) als primäre Identität haben, wählen Sie das E-Mail-Feld in Ihrem **[!UICONTROL Source Attributes]** aus und ordnen Sie sie dem [!DNL Airship] namens Benutzer in der rechten Spalte unter **[!UICONTROL Target Identities]** zu, wie unten dargestellt.
 
 ![Benannte Benutzerzuordnung](../../assets/catalog/mobile-engagement/airship/mapping.png)
 

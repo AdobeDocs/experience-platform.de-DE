@@ -3,9 +3,9 @@ title: API-Endpunkt für die Segmentsuche
 description: In der Segmentierungs-Service-API von Adobe Experience Platform wird die Segmentsuche verwendet, um Felder aus verschiedenen Datenquellen zu suchen und sie nahezu in Echtzeit zurückzugeben. Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche sowie Beispiele für API-Aufrufe zum Ausführen einfacher Aktionen mithilfe der -API.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1178'
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert darstellt, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `s={SEARCH_TERM}` | *(Optional)* Dabei stellt {SEARCH_TERM} eine Abfrage dar, die der Microsoft-Implementierung der [Suchsyntax von Lucene) &#x200B;](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben wird, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `s={SEARCH_TERM}` | *(Optional)* Dabei stellt {SEARCH_TERM} eine Abfrage dar, die der Microsoft-Implementierung der [Suchsyntax von Lucene) ](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben wird, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
 
 **Anfrage**
 
@@ -223,9 +223,11 @@ Nach dem Lesen dieses Handbuchs wissen Sie jetzt besser, wie die Segmentsuche fu
 
 ## Anhang {#appendix}
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einer Segmentdefinition mit dem Namen AAM oder [!DNL Platform] zu suchen, würden Sie die folgende Suchabfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
+Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einer Segmentdefinition mit dem Namen AAM oder [!DNL Platform] zu suchen, verwenden Sie die folgende Suchabfrage: `s=segmentName:AAM%20OR%20Platform`.
 
->  Für Best Practices sollte der Suchausdruck HTML-kodiert sein, wie im Beispiel oben gezeigt.
+>[!NOTE]
+>
+>Als Best Practices sollte der Suchausdruck wie im Beispiel oben HTML-kodiert sein.
 
 ### Suchfelder {#search-fields}
 
@@ -244,11 +246,13 @@ In der folgenden Tabelle sind die Felder aufgeführt, die mit dem Abfrageparamet
 
 In der folgenden Tabelle sind die Besonderheiten der Funktionsweise von Suchabfragen bei Verwendung der Segmentsuche-API aufgeführt.
 
->  Die folgenden Beispiele werden zur besseren Übersichtlichkeit in einem nicht-HTML-kodierten Format angezeigt. Bewährte Verfahren finden Sie unter HTML-Kodierung Ihres Suchausdrucks.
+>[!NOTE]
+>
+>Die folgenden Beispiele werden der besseren Übersichtlichkeit halber in einem nicht HTML-kodierten Format angezeigt. Bewährte Verfahren finden Sie, indem Sie Ihren Suchausdruck mit HTML kodieren.
 
 | Beispielsuchausdruck | Beschreibung |
 | ------------------------- | ----------- |
-| foo | Suchen Sie nach einem beliebigen Wort. Dies gibt Ergebnisse zurück, wenn das Wort „foo“ in einem der durchsuchbaren Felder gefunden wird. |
+| treiben | Suchen Sie nach einem beliebigen Wort. Dies gibt Ergebnisse zurück, wenn das Wort „foo“ in einem der durchsuchbaren Felder gefunden wird. |
 | Lebensmittel UND Bar | Eine boolesche Suche. Dies gibt Ergebnisse zurück **wenn** beide“ Wörter „foo“ und „bar“ in einem der durchsuchbaren Felder gefunden werden. |
 | Fußleiste ODER | Eine boolesche Suche. Dies gibt Ergebnisse zurück **wenn entweder** Wort „foo“ oder das Wort „bar“ in einem der durchsuchbaren Felder gefunden wird. |
 | Foo NOT bar | Eine boolesche Suche. Dies gibt Ergebnisse zurück, wenn das Wort „foo“ gefunden wird, aber das Wort „bar“ in keinem der durchsuchbaren Felder gefunden wird. |

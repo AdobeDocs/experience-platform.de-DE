@@ -4,10 +4,10 @@ title: Braze-Verbindung
 description: Braze ist eine umfassende Plattform zur Kundeninteraktion, die relevante und einprägsame Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 2440a4d4ec5d572d1d44228fe99914a01e19d60d
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1123'
-ht-degree: 31%
+source-wordcount: '1068'
+ht-degree: 30%
 
 ---
 
@@ -25,7 +25,7 @@ Um Profildaten an [!DNL Braze] zu senden, müssen Sie zunächst eine Verbindung 
 
 Beachten Sie folgende Details, die speziell für das [!DNL Braze]-Ziel gelten:
 
-* [!DNL Adobe Experience Platform] Zielgruppen werden unter dem `AdobeExperiencePlatformSegments` Attribut in [!DNL Braze] exportiert.
+* [!DNL Adobe Experience Platform] Zielgruppen werden unter dem [!DNL Braze] Attribut in `AdobeExperiencePlatformSegments` exportiert.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -61,8 +61,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung.[!DNL Adobe Experience Platform] Zielgruppen werden unter dem `AdobeExperiencePlatformSegments` Attribut in [!DNL Braze] exportiert. |
+|---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung.[!DNL Adobe Experience Platform] Zielgruppen werden unter dem [!DNL Braze] Attribut in `AdobeExperiencePlatformSegments` exportiert. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -71,36 +71,36 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Connect to destination]** aus.
 
-* **[!UICONTROL Braze Account Token]**: Dies ist Ihr [!DNL Braze] [!DNL API]. Detaillierte Anweisungen zum Abrufen Ihres [!DNL API] finden Sie hier: [REST API Key Overview](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL Braze account token]**: Dies ist Ihr [!DNL Braze] [!DNL API]. Detaillierte Anweisungen zum Abrufen Ihres [!DNL API] finden Sie hier: [REST API Key Overview](https://www.braze.com/docs/api/api_key/).
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, um dieses Ziel in Zukunft zu erkennen.
-* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Endpunktinstanz]**: Fragen Sie Ihren [!DNL Braze], welche Endpunktinstanz Sie verwenden sollten.
+* **[!UICONTROL Description]**: Geben Sie eine Beschreibung ein, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Endpoint Instance]**: Fragen Sie Ihren [!DNL Braze], welche Endpunktinstanz Sie verwenden sollten.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
@@ -112,36 +112,38 @@ Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres 
 
 Um Ihre XDM-Felder den [!DNL Braze]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
-Klicken Sie [!UICONTROL &#x200B; Schritt &#x200B;]Zuordnung“ auf **[!UICONTROL Neue Zuordnung hinzufügen]**.
+Klicken Sie im [!UICONTROL Mapping] Schritt auf **[!UICONTROL Add new mapping]**.
 
 ![Braze-Ziel - Zuordnung hinzufügen](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-Klicken Sie im Abschnitt [!UICONTROL Source] auf die Pfeilschaltfläche neben dem leeren Feld.
+Klicken Sie im Abschnitt [!UICONTROL Source Field] auf die Pfeilschaltfläche neben dem leeren Feld.
 
 ![Braze-Ziel-Source-Zuordnung](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
-Im Fenster [!UICONTROL Quellfeld auswählen] können Sie zwischen zwei Kategorien von XDM-Feldern wählen:
-* [!UICONTROL Attribute auswählen]: Verwenden Sie diese Option, um ein bestimmtes Feld aus Ihrem XDM-Schema einem [!DNL Braze] Attribut zuzuordnen.
+Im [!UICONTROL Select source field] können Sie zwischen zwei Kategorien von XDM-Feldern wählen:
+
+* [!UICONTROL Select attributes]: Verwenden Sie diese Option, um ein bestimmtes Feld aus Ihrem XDM-Schema einem [!DNL Braze] zuzuordnen.
 
 ![Braze-Zielzuordnung - Source-Attribut](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Identity-Namespace auswählen]: Verwenden Sie diese Option, um einen [!DNL Experience Platform] Identity-Namespace einem [!DNL Braze]-Namespace zuzuordnen.
+* [!UICONTROL Select identity namespace]: Verwenden Sie diese Option, um einen [!DNL Experience Platform] Identity-Namespace einem [!DNL Braze]-Namespace zuzuordnen.
 
 ![Braze-Zielzuordnung - Source-Namespace](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Wählen Sie Ihr Quellfeld aus und klicken Sie dann auf **[!UICONTROL Auswählen]**.
+Wählen Sie Ihr Quellfeld aus und klicken Sie dann auf **[!UICONTROL Select]**.
 
-Klicken [!UICONTROL &#x200B; im Abschnitt &#x200B;]Zielfeld“ auf das Zuordnungssymbol rechts neben dem Feld.
+Klicken Sie im Abschnitt [!UICONTROL Target Field] auf das Zuordnungssymbol rechts neben dem Feld .
 
 ![Braze-Ziel-Mapping](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-Im Fenster [!UICONTROL Zielfeld auswählen] können Sie zwischen zwei Kategorien von Zielfeldern wählen:
-* [!UICONTROL Identity-Namespace auswählen]: Verwenden Sie diese Option, um [!DNL Experience Platform] Identity-Namespaces [!DNL Braze] Identity-Namespaces zuzuordnen.
-* [!UICONTROL Benutzerdefinierte Attribute auswählen]: Verwenden Sie diese Option, um XDM-Attribute benutzerdefinierten [!DNL Braze] zuzuordnen, die Sie in Ihrem [!DNL Braze]-Konto definiert haben. <br> Sie können diese Option auch verwenden, um vorhandene XDM-Attribute in [!DNL Braze] umzubenennen. Wenn Sie beispielsweise ein `lastName` XDM-Attribut einem benutzerdefinierten `Last_Name`-Attribut in [!DNL Braze] zuordnen, wird das `Last_Name`-Attribut in [!DNL Braze] erstellt, falls es noch nicht vorhanden ist, und ihm wird das `lastName` XDM-Attribut zugeordnet.
+Im [!UICONTROL Select target field] können Sie zwischen zwei Kategorien von Zielfeldern wählen:
+
+* [!UICONTROL Select identity namespace]: Verwenden Sie diese Option, um [!DNL Experience Platform] Identity-Namespaces [!DNL Braze] Identity-Namespaces zuzuordnen.
+* [!UICONTROL Select custom attributes]: Verwenden Sie diese Option, um XDM-Attribute benutzerdefinierten [!DNL Braze] zuzuordnen, die Sie in Ihrem [!DNL Braze]-Konto definiert haben. <br> Sie können diese Option auch verwenden, um vorhandene XDM-Attribute in [!DNL Braze] umzubenennen. Wenn Sie beispielsweise ein `lastName` XDM-Attribut einem benutzerdefinierten `Last_Name`-Attribut in [!DNL Braze] zuordnen, wird das `Last_Name`-Attribut in [!DNL Braze] erstellt, falls es noch nicht vorhanden ist, und ihm wird das `lastName` XDM-Attribut zugeordnet.
 
 ![Braze-Ziel-Mapping-Felder](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Wählen Sie Ihr Zielfeld aus und klicken Sie dann auf **[!UICONTROL Auswählen]**.
+Wählen Sie Ihr Zielfeld aus und klicken Sie dann auf **[!UICONTROL Select]**.
 
 Die Feldzuordnung sollte nun in der Liste angezeigt werden.
 
@@ -164,7 +166,7 @@ Die korrekte Zuordnung würde wie folgt aussehen:
 
 ## Exportierte Daten {#exported-data}
 
-Um sich zu vergewissern, dass die Daten erfolgreich in das [!DNL Braze]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Braze]-Konto. [!DNL Adobe Experience Platform] Zielgruppen werden unter dem `AdobeExperiencePlatformSegments` Attribut in [!DNL Braze] exportiert.
+Um sich zu vergewissern, dass die Daten erfolgreich in das [!DNL Braze]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Braze]-Konto. [!DNL Adobe Experience Platform] Zielgruppen werden unter dem [!DNL Braze] Attribut in `AdobeExperiencePlatformSegments` exportiert.
 
 ## Fehlerbehebung {#troubleshooting}
 
