@@ -1,10 +1,10 @@
 ---
 title: Push-Benachrichtigungen
 description: Konfigurieren Sie Push-Benachrichtigungen für Web SDK, um browserbasiertes Push-Messaging zu aktivieren.
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 2%
+source-wordcount: '510'
+ht-degree: 3%
 
 ---
 
@@ -57,16 +57,16 @@ Im Folgenden finden Sie ein Beispiel für die Installation des Service Workers:
 
 Führen Sie die folgenden Schritte aus, um Push-Benachrichtigungen zu aktivieren und zu konfigurieren:
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
-1. Navigieren Sie **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]** auf der Karte [!UICONTROL Adobe Experience Platform Web SDK].
-1. Aktivieren Sie **[!UICONTROL Abschnitt Benutzerdefinierte Build-]** die Option **[!UICONTROL Push-Benachrichtigungen]**.
-1. Scrollen Sie nach unten, um den Abschnitt [!UICONTROL Push-Benachrichtigungen] zu finden.
+1. Navigieren Sie zu **[!UICONTROL Extensions]** und klicken Sie dann auf der **[!UICONTROL Configure]** auf [!UICONTROL Adobe Experience Platform Web SDK] .
+1. Aktivieren Sie im Abschnitt **[!UICONTROL Custom build components]** die Option **[!UICONTROL Push notifications]**.
+1. Scrollen Sie nach unten, um den Abschnitt [!UICONTROL Push Notifications] zu finden.
 1. Geben Sie im Feld **[!UICONTROL VAPID Public Key]** Ihren gültigen öffentlichen Schlüssel ein.
-1. Geben Sie Ihre Anwendungs-ID im Feld **[!UICONTROL Anwendungs-ID]** ein.
-1. Geben Sie Ihre Tracking-Datensatz-ID im Feld **[!UICONTROL Tracking-Datensatz-ID]** ein.
-1. Klicken Sie **[!UICONTROL Speichern]** und veröffentlichen Sie Ihre Änderungen.
+1. Geben Sie Ihre Anwendungs-ID im Feld **[!UICONTROL Application ID]** ein.
+1. Geben Sie Ihre Tracking-Datensatz-ID in das Feld **[!UICONTROL Tracking Dataset ID]** ein.
+1. Klicken Sie auf **[!UICONTROL Save]** und veröffentlichen Sie Ihre Änderungen.
 
 >[!NOTE]
 >
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie Push-Benachrichtigungen konfiguriert haben, verwenden Sie den Befehl [`sendPushSubscription`](../sendPushSubscription.md) , um Push-Abonnements bei Adobe Experience Platform zu registrieren.
+Nachdem Sie Push-Benachrichtigungen konfiguriert haben, verwenden Sie den Befehl [`sendPushSubscription`](../sendpushsubscription.md) , um Push-Abonnements bei Adobe Experience Platform zu registrieren.

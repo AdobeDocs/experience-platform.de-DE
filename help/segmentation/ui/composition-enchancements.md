@@ -3,7 +3,7 @@ title: Verbesserungen bei der Zielgruppenkomposition
 description: Erfahren Sie mehr über die Verbesserungen bei der Audience-Komposition mit Zielgruppenanreicherung und schnellerer Aktivierung.
 hide: true
 hidefromtoc: true
-source-git-commit: 9c790f0b47161301fa8c02c4afb7edfb925e1499
+source-git-commit: 065990790307124e0992731139abe9641a742a1b
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%
@@ -48,12 +48,16 @@ Beachten Sie bei der Verwendung der Zielgruppenanreicherung die folgenden Detail
 - Der erste innerhalb der Komposition verwendete Block **muss** eine regelbasierte Zielgruppe sein.
 - Sie **keine** Vorgänge innerhalb der Komposition verwenden.
 - Nach der Veröffentlichung **Sie die Komposition** der regelbasierten Zielgruppe nicht mehr bearbeiten.
+
    - Sie ** die Komposition in einen Entwurf kopieren und den Entwurf bearbeiten, wenn Sie Änderungen an der Basiskomposition oder der regelbasierten Zielgruppe vornehmen möchten.
+
 - Es **nur** Objekt-Array verwendet werden, um die Anreicherungs-Payload innerhalb einer einzigen Zielgruppe zu generieren
+
    - Das Payload-Array kann in einem Objekt verschachtelt sein (bis zu sieben Ebenen innerhalb des Profilschemas), **kann** in einem anderen Array enthalten sein.
    - Das Payload-Array **muss** 50 oder weniger Zeilen enthalten.
    - Alle in der Payload ausgegebenen Spalten **müssen** ein primitiver Typ sein.
    - Nur die ersten **20** Spalten des Arrays werden ausgegeben.
+
 - Derzeit **nur 10** Zielgruppenkompositionen zur Verwendung verfügbar
 
 ## Schnellere Aktivierung {#faster-activation}
