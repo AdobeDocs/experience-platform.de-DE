@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über die partielle Batch-Aufnahme
 description: Dieses Dokument enthält eine Anleitung zum Verwalten der partiellen Batch-Erfassung.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: bc72f77b1b4a48126be9b49c5c663ff11e9054ea
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 45%
+source-wordcount: '1209'
+ht-degree: 30%
 
 ---
 
@@ -54,7 +54,7 @@ Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandb
 
 Sie können einen neuen Batch mit aktivierter partieller Aufnahme erstellen.
 
-Um einen neuen Batch zu erstellen, befolgen Sie die Schritte im [Entwicklerhandbuch zur Batch-Aufnahme](./api-overview.md). Nachdem Sie den Schritt **[!UICONTROL Batch erstellen]** erreicht haben, fügen Sie das folgende Feld zum Anfrageinhalt hinzu:
+Um einen neuen Batch zu erstellen, befolgen Sie die Schritte im [Entwicklerhandbuch zur Batch-Aufnahme](./api-overview.md). Sobald Sie den **[!UICONTROL Create batch]** Schritt erreicht haben, fügen Sie das folgende Feld im Anfrageinhalt hinzu:
 
 ```json
 {
@@ -75,21 +75,21 @@ Um einen neuen Batch zu erstellen, befolgen Sie die Schritte im [Entwicklerhandb
 >
 >In diesem Abschnitt wird beschrieben, wie Sie einen Batch für die partielle Batch-Aufnahme über die Benutzeroberfläche aktivieren. Wenn Sie bereits einen Batch für die partielle Batch-Aufnahme mithilfe der API aktiviert haben, können Sie mit dem nächsten Abschnitt fortfahren.
 
-Um einen Batch für die partielle Aufnahme über die [!DNL Experience Platform]-Benutzeroberfläche zu aktivieren, können Sie einen neuen Batch über Quellverbindungen erstellen, einen neuen Batch in einem vorhandenen Datensatz erstellen oder einen neuen Batch über den &quot;[!UICONTROL CSV-XDM-Fluss zuordnen] erstellen.
+Um einen Batch für die partielle Aufnahme über die [!DNL Experience Platform]-Benutzeroberfläche zu aktivieren, können Sie einen neuen Batch über Quellverbindungen erstellen, einen neuen Batch in einem vorhandenen Datensatz erstellen oder einen neuen Batch über die &quot;[!UICONTROL Map CSV to XDM flow]&quot; erstellen.
 
 ### Erstellen einer neuen Quellverbindung {#new-source}
 
-Um eine neue Quellverbindung zu erstellen, führen Sie die in der [Quellen - Übersicht](../../sources/home.md) aufgelisteten Schritte aus. Nachdem Sie den Schritt **[!UICONTROL Datenflussdetails]** erreicht haben, notieren Sie sich die Felder **[!UICONTROL Partielle Aufnahme]** und **[!UICONTROL Fehlerdiagnose]**.
+Um eine neue Quellverbindung zu erstellen, führen Sie die in der [Quellen - Übersicht](../../sources/home.md) aufgelisteten Schritte aus. Beachten Sie beim Erreichen des **[!UICONTROL Dataflow detail]** die Felder **[!UICONTROL Partial ingestion]** und **[!UICONTROL Error diagnostics]** .
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-Mit dem Umschalter **[!UICONTROL Partielle Erfassung]** können Sie die Verwendung der partiellen Batch-Erfassung aktivieren oder deaktivieren.
+Mit dem Umschalter **[!UICONTROL Partial ingestion]** können Sie die Verwendung der partiellen Batch-Aufnahme aktivieren oder deaktivieren.
 
-Der Umschalter **[!UICONTROL Fehlerdiagnose]** wird nur angezeigt, wenn **[!UICONTROL Umschalter Partielle Aufnahme]** deaktiviert ist. Mit dieser Funktion können [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partielle Aufnahme]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+Der Umschalter **[!UICONTROL Error diagnostics]** wird nur angezeigt, wenn der Umschalter **[!UICONTROL Partial ingestion]** deaktiviert ist. Mit dieser Funktion können [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partial ingestion]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-Mit dem **[!UICONTROL Fehlerschwellenwert]** können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+Mit der **[!UICONTROL Error threshold]** können Sie den Prozentsatz der akzeptablen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
 
 ### Verwenden eines vorhandenen Datensatzes {#existing-dataset}
 
@@ -97,29 +97,129 @@ Um einen vorhandenen Datensatz zu verwenden, wählen Sie zunächst einen Datensa
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-Mit dem Umschalter **[!UICONTROL Partielle Erfassung]** können Sie die Verwendung der partiellen Batch-Erfassung aktivieren oder deaktivieren.
+Mit dem Umschalter **[!UICONTROL Partial ingestion]** können Sie die Verwendung der partiellen Batch-Aufnahme aktivieren oder deaktivieren.
 
-Der Umschalter **[!UICONTROL Fehlerdiagnose]** wird nur angezeigt, wenn **[!UICONTROL Umschalter Partielle Aufnahme]** deaktiviert ist. Mit dieser Funktion können [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partielle Aufnahme]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+Der Umschalter **[!UICONTROL Error diagnostics]** wird nur angezeigt, wenn der Umschalter **[!UICONTROL Partial ingestion]** deaktiviert ist. Mit dieser Funktion können [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partial ingestion]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-Mit dem **[!UICONTROL Fehlerschwellenwert]** können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+Mit der **[!UICONTROL Error threshold]** können Sie den Prozentsatz der akzeptablen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
 
 Jetzt können Sie Daten mit der Schaltfläche **Daten hinzufügen** hochladen und sie werden mit der partiellen Aufnahme aufgenommen.
 
-### Verwenden des Flusses &quot;[!UICONTROL CSV zu XDM-Schema &#x200B;]&quot; {#map-flow}
+### Fluss &quot;[!UICONTROL Map CSV to XDM schema]&quot; verwenden {#map-flow}
 
-Um den Fluss &quot;[!UICONTROL CSV zu XDM-Schema zuordnen] zu verwenden, führen Sie die im Tutorial [Zuordnen einer CSV-Datei“ &#x200B;](../tutorials/map-csv/overview.md) Schritte aus. Nachdem Sie den Schritt **[!UICONTROL Daten hinzufügen]** erreicht haben, notieren Sie sich die Felder **[!UICONTROL Partielle Aufnahme]** und **[!UICONTROL Fehlerdiagnose]**.
+Um den Fluss &quot;[!UICONTROL Map CSV to XDM schema]&quot; zu verwenden, führen Sie die im Tutorial [Zuordnen einer CSV-Datei“ ](../tutorials/map-csv/overview.md) Schritte aus. Beachten Sie beim Erreichen des **[!UICONTROL Add data]** die Felder **[!UICONTROL Partial ingestion]** und **[!UICONTROL Error diagnostics]** .
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-Mit dem Umschalter **[!UICONTROL Partielle Erfassung]** können Sie die Verwendung der partiellen Batch-Erfassung aktivieren oder deaktivieren.
+Mit dem Umschalter **[!UICONTROL Partial ingestion]** können Sie die Verwendung der partiellen Batch-Aufnahme aktivieren oder deaktivieren.
 
-Der Umschalter **[!UICONTROL Fehlerdiagnose]** wird nur angezeigt, wenn **[!UICONTROL Umschalter Partielle Aufnahme]** deaktiviert ist. Mit dieser Funktion können [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partielle Aufnahme]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+Der Umschalter **[!UICONTROL Error diagnostics]** wird nur angezeigt, wenn der Umschalter **[!UICONTROL Partial ingestion]** deaktiviert ist. Mit dieser Funktion können [!DNL Experience Platform] detaillierte Fehlermeldungen über Ihre aufgenommenen Batches generieren. Wenn der Umschalter **[!UICONTROL Partial ingestion]** aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-Mit **[!UICONTROL Fehlerschwellenwert]** können Sie den Prozentsatz der akzeptablen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+Mit **[!UICONTROL Error threshold]** können Sie den Prozentsatz der akzeptablen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+
+## Aktivieren der partiellen Aufnahme und Fehlerdiagnose für einen vorhandenen Datenfluss
+
+Wenn ein Datenfluss in Experience Platform erstellt wurde, ohne die partielle Aufnahme oder Fehlerdiagnose zu aktivieren, können Sie diese Funktionen dennoch aktivieren, ohne den Fluss neu zu erstellen. Durch die Aktivierung der partiellen Aufnahme und einer robusten Fehlerdiagnose können Sie die Zuverlässigkeit und Fehlerbehebung in Ihren Datenaufnahme-Workflows erheblich verbessern. Lesen Sie die folgenden Abschnitte, um zu erfahren, wie Sie die partielle Aufnahme und Fehlerdiagnose für einen vorhandenen Datenfluss mithilfe der [!DNL Flow Service]-API aktivieren.
+
+Standardmäßig ist bei Datenflüssen die partielle Aufnahme oder Fehlerdiagnose möglicherweise nicht aktiviert. Diese Funktionen sind hilfreich, um Probleme bei der Datenaufnahme zu identifizieren und zu isolieren. Mit der [!DNL Flow Service]-API können Sie Ihre aktuelle Datenflusskonfiguration abrufen und die erforderlichen Änderungen mithilfe einer PATCH-Anfrage anwenden.
+
+Gehen Sie wie folgt vor, um die partielle Aufnahme und Fehlerdiagnose für einen vorhandenen Datenfluss zu aktivieren.
+
+### Abrufen von Flussdetails
+
+Um Ihre Datenflusskonfigurationen abzurufen, stellen Sie eine GET-Anfrage an den `/flows/{FLOW_ID}`-Endpunkt und geben Sie die ID Ihres Datenflusses an. Weitere Informationen zum Abrufen von Datenflussdetails finden Sie im [Aktualisieren von Datenflüssen mithilfe der  [!DNL Flow Service] -API](../../sources/tutorials/api/update-dataflows.md).
+
+Stellen Sie sicher, dass Sie den Wert des in der Antwort zurückgegebenen `etag`-Felds speichern. Dies ist für die Aktualisierungsanfrage erforderlich, um die Versionskonsistenz sicherzustellen.
+
+### Flusskonfiguration aktualisieren
+
+Stellen Sie als Nächstes eine PATCH-Anfrage an den `/flows/`-Endpunkt und geben Sie die ID des Datenflusses an, für den Sie die partielle Aufnahme und Fehlerdiagnose aktivieren möchten.
+
+>[!IMPORTANT]
+>
+>- Schließen Sie den zuvor gespeicherten `etag`-Wert mit dem Schlüssel If-Match in die Anfrage-Kopfzeile ein.
+>- Sie können den `partialIngestionPercent` an Ihre spezifischen Anforderungen anpassen.
+
+**API-Format**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Anfrage**
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+        {
+            "op": "add",
+            "path": "/options",
+            "value": {
+                "partialIngestionPercent": "10"
+            }
+        },
+        {
+            "op": "add",
+            "path": "/options/errorDiagnosticsEnabled",
+            "value": true
+        }
+    ]'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt die `id` Ihres Datenflusses und eine aktualisierte `etag` zurück.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
+### Überprüfen des Updates
+
+Nachdem die PATCH abgeschlossen ist, stellen Sie eine GET-Anfrage und rufen Sie Ihren Datenfluss ab, um zu überprüfen, ob die Änderungen erfolgreich abgeschlossen wurden.
+
+**API-Format**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+**Anfrage**
+
+Mit der folgenden Anfrage werden aktualisierte Informationen zu Ihrer Fluss-ID abgerufen.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwort**
+
+Bei einer erfolgreichen Antwort werden Ihre Datenflussdetails zurückgegeben und bestätigt, dass die partielle Aufnahme und Fehlerdiagnose jetzt im Abschnitt `options` aktiviert sind.
+
+```json
+"options": {
+    "partialIngestionPercent": 10,
+    "errorDiagnosticsEnabled": true
+}
+```
 
 ## Nächste Schritte {#next-steps}
 
