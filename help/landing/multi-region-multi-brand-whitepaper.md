@@ -102,7 +102,7 @@ Mit der Sandbox-Tooling-Funktion können Sie verschiedene Objekte auswählen und
 
 Sie haben die Möglichkeit, Experience Platform-APIs zur Automatisierung von Sandbox-Bereitstellungen und Konfigurationsaufgaben zu verwenden. APIs ermöglichen eine programmierbare Steuerung für sich wiederholende Aufgaben wie das Exportieren, Importieren oder Ändern von Sandbox-Konfigurationen und bieten so Flexibilität, wenn Sie automatisierte Workflows bevorzugen.
 
-Weitere Informationen zum Sandbox-Tooling finden Sie in der [Sandbox-Tooling-Dokumentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Weitere Informationen zum Sandbox-Tooling finden Sie in der [Sandbox-Tooling-Dokumentation](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Paket erstellen](./images/whitepaper/create-package.png) | ![CDP-Listenpakete](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -229,7 +229,7 @@ Darüber hinaus können Sie Experience Platform Segment Match verwenden, eine Fu
 
 Dieser Segmentfreigabedienst ermöglicht es zwei oder mehr Benutzern, Segmentdaten auf sichere, verwaltete und datenschutzfreundliche Weise auszutauschen.
 
-Weitere Informationen zur Funktion Segment Match finden Sie in der [Dokumentation zu Segment Match](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
+Weitere Informationen zur Funktion Segment Match finden Sie in der [Dokumentation zu Segment Match](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Eine Mischung aus Ansätzen für globale Operationen, regionale und markenspezifische
 
