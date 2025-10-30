@@ -11,7 +11,7 @@ ht-degree: 12%
 
 # Google-Datenschicht-Erweiterung
 
-Mit der Google-Datenschichterweiterung können Sie eine Google-Datenschicht in Ihrer Tags-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und mit der Open-Source-Bibliothek [Datenschicht-Helper) von Google verwendet ](https://github.com/google/data-layer-helper).
+Mit der Google-Datenschichterweiterung können Sie eine Google-Datenschicht in Ihrer Tags-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und mit der Open-Source-Bibliothek [Datenschicht-Helper) von Google verwendet &#x200B;](https://github.com/google/data-layer-helper).
 
 Die Helper-Bibliothek bietet ähnliche ereignisgesteuerte Funktionen wie die Adobe Client Data Layer (ACDL). Die Datenelemente, Regeln und Aktionen der Google-Datenschichterweiterung bieten ähnliche Funktionen wie die [ACDL-Erweiterung](../client-data-layer/overview.md).
 

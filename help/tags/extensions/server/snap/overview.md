@@ -18,16 +18,16 @@ Die [!DNL Snap] Conversion API-Erweiterung ist eine sichere [Edge Network-API](h
 
 So verwenden Sie die [!DNL Snapchat] Conversions-API:
 
-* Adobe Experience Platform Sie müssen eine [Ereignisweiterleitungseigenschaft“ in ](/help/tags/ui/event-forwarding/getting-started.md) eingerichtet haben.
+* Adobe Experience Platform Sie müssen eine [Ereignisweiterleitungseigenschaft“ in &#x200B;](/help/tags/ui/event-forwarding/getting-started.md) eingerichtet haben.
 * Sie müssen auch über die [erforderlichen Berechtigungen](/help/collection/permissions.md) verfügen, um die Eigenschaft zu bearbeiten.
 
 Erstellen Sie [Datenstrom](/help/tags/ui/event-forwarding/getting-started.md) und fügen Sie ihm [Ereignisweiterleitungs-Service](/help/tags/ui/event-forwarding/getting-started.md#enable-event-forwarding) hinzu.
 
-Für die Verwendung **[!DNL Snapchat]** Konversions-API ist ein [ ](https://business.snapchat.com/)Business Manager“-Konto erforderlich. Business Manager hilft Werbetreibenden, die Marketing-Maßnahmen von **[!DNL Snapchat]** in ihr Unternehmen und mit externen Partnern zu integrieren. Lesen Sie den **[!DNL Snapchat]** [Hilfezentrum-Artikel](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) über das Erstellen eines Business Manager-Kontos, wenn Sie noch keines haben.
+Für die Verwendung **[!DNL Snapchat]** Konversions-API ist ein [&#x200B; &#x200B;](https://business.snapchat.com/)Business Manager“-Konto erforderlich. Business Manager hilft Werbetreibenden, die Marketing-Maßnahmen von **[!DNL Snapchat]** in ihr Unternehmen und mit externen Partnern zu integrieren. Lesen Sie den **[!DNL Snapchat]** [Hilfezentrum-Artikel](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) über das Erstellen eines Business Manager-Kontos, wenn Sie noch keines haben.
 
-Im Snapchat Ads Manager muss ein [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) eingerichtet sein und Sie müssen Zugriff haben, um die `Pixel ID` anzuzeigen. Die `Pixel ID` finden Sie im Abschnitt [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
+Im Snapchat Ads Manager muss ein [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) eingerichtet sein und Sie müssen Zugriff haben, um die `Pixel ID` anzuzeigen. Die `Pixel ID` finden Sie im Abschnitt [[!UICONTROL [Events Manager]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
 
-Sie benötigen ein statisches, langlebiges API-Token. Informationen zum Abrufen [[!DNL Snapchat]  Tokens finden Sie ](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) der Dokumentation zur Konversions-API .
+Sie benötigen ein statisches, langlebiges API-Token. Informationen zum Abrufen [[!DNL Snapchat]  Tokens finden Sie &#x200B;](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) der Dokumentation zur Konversions-API .
 
 ## Installieren und Konfigurieren der [!DNL Snapchat] Web Events API-Erweiterung {#install}
 
@@ -75,7 +75,7 @@ Sie müssen das Datenelement konfigurieren, da `snapClickId` sich unter `_snap.i
 
 ![Bild mit dem Bildschirm Datenelement bearbeiten](../../../images/extensions/server/snap/edit_data_element.png)
 
-Weitere [ zum Erstellen von Datenelementen finden Sie ](/help/tags/ui/event-forwarding/overview.md#data-elements) Dokumentation zu Ereignisweiterleitungs-Eigenschaften .
+Weitere [&#x200B; zum Erstellen von Datenelementen finden Sie &#x200B;](/help/tags/ui/event-forwarding/overview.md#data-elements) Dokumentation zu Ereignisweiterleitungs-Eigenschaften .
 
 ## Erstellen von Regeln zum Senden von Konversionsereignissen an Snap {#create-snap-rules}
 
@@ -101,7 +101,7 @@ Weitere [ zum Erstellen von Datenelementen finden Sie ](/help/tags/ui/event-forw
 
    ![Bild mit dem Aktionskonfigurationsbildschirm](../../../images/extensions/server/snap/action_configuration.png)
 
-4. Konfigurieren Sie [CAPI-Parameterwerte](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) die Sie für das Ereignis im Abschnitt **[!UICONTROL Data Bindings]** im rechten Bedienfeld senden möchten. Die Felder in der Erweiterung werden wie unten dargestellt CAPI-Parametern zugeordnet. Weitere Informationen zu den einzelnen Parametern finden [ in der ](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) zur Snapchat Conversions-API .
+4. Konfigurieren Sie [CAPI-Parameterwerte](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) die Sie für das Ereignis im Abschnitt **[!UICONTROL Data Bindings]** im rechten Bedienfeld senden möchten. Die Felder in der Erweiterung werden wie unten dargestellt CAPI-Parametern zugeordnet. Weitere Informationen zu den einzelnen Parametern finden [&#x200B; in der &#x200B;](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) zur Snapchat Conversions-API .
 
 | Datenbindungsfeld | Snap-API-Parameter |
 | --- | --- |
@@ -154,7 +154,7 @@ Für jedes Ereignis ist eine `event_source` erforderlich, die immer auf `WEB.` f
 
 * Für `Purchase` Ereignisse sind die Felder `Currency` und `Price` erforderlich.
 
-* Durch Aktivieren des Kontrollkästchens **[!UICONTROL Test Mode]** werden Ereignisse als Testereignisse gesendet, die im Testereignis-Tool anstelle der standardmäßigen Berichterstellung angezeigt werden. Weitere Informationen finden Sie [ diesem Artikel ](https://businesshelp.snapchat.com/s/article/capi-event-testing?language=en_US#:~:text=Snap's%20Conversions%20API%20(CAPI)%20Test,being%20processed%20as%20production%20results.) Business Help Center .
+* Durch Aktivieren des Kontrollkästchens **[!UICONTROL Test Mode]** werden Ereignisse als Testereignisse gesendet, die im Testereignis-Tool anstelle der standardmäßigen Berichterstellung angezeigt werden. Weitere Informationen finden Sie [&#x200B; diesem Artikel &#x200B;](https://businesshelp.snapchat.com/s/article/capi-event-testing?language=en_US#:~:text=Snap's%20Conversions%20API%20(CAPI)%20Test,being%20processed%20as%20production%20results.) Business Help Center .
 
 * Der `contents`-Parameter sollte eine JSON-Zeichenfolge sein, die mindestens eines der folgenden Felder enthält:
 
@@ -177,7 +177,7 @@ Beispiel:
 }
 ```
 
-Um [benutzerdefinierte Konversionswerte und ROAS-Berichte“ ](https://businesshelp.snapchat.com/s/article/custom-conversions-value-roas?language=en_US) verwenden, schließen Sie relevante Parameter in das Feld `contents` ein. Eine Beispielkonfiguration für ein Kaufereignis könnte wie folgt aussehen: `brand`, `item_price`, `id`.
+Um [benutzerdefinierte Konversionswerte und ROAS-Berichte“ &#x200B;](https://businesshelp.snapchat.com/s/article/custom-conversions-value-roas?language=en_US) verwenden, schließen Sie relevante Parameter in das Feld `contents` ein. Eine Beispielkonfiguration für ein Kaufereignis könnte wie folgt aussehen: `brand`, `item_price`, `id`.
 
 Beispielkonfiguration für ein `Purchase`:
 
@@ -191,7 +191,7 @@ Nachdem Sie den Namen, die Bedingung und die Aktion der Regel wie oben beschrieb
 
 ![Bild mit aktivierter Regel](../../../images/extensions/server/snap/enabled_rule.png)
 
-Sie können diese Änderungen jetzt in Ihrer Eigenschaft veröffentlichen. Weitere Informationen finden Sie in [ Dokumentation ](/help/tags/ui/publishing/overview.md) Veröffentlichungsablauf .
+Sie können diese Änderungen jetzt in Ihrer Eigenschaft veröffentlichen. Weitere Informationen finden Sie in [&#x200B; Dokumentation &#x200B;](/help/tags/ui/publishing/overview.md) Veröffentlichungsablauf .
 
 ## Fehler beheben {#troubleshoot}
 

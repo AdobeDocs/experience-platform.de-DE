@@ -34,7 +34,7 @@ Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, w
 * Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Bitte teilen Sie Adobe einen API-Aufruf an Ihren Ziel-Endpunkt und die API-Antwort, die von Ihrem Ziel-Endpunkt empfangen wurde.
 * Eine Bildschirmaufzeichnung, die das Benutzererlebnis für jemanden zeigt, der eine Verbindung zu Ihrem Ziel herstellt und die Aktivierungsschritte durchläuft.
 * Zusätzliche Anforderungen für dateibasierte Ziele:
-   * Geben Sie eine Anfrage und ein Beispiel für eine Antwort frei, nachdem Sie die Test[API verwendet haben, um Ihr dateibasiertes Ziel mit Beispielprofilen zu ](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+   * Geben Sie eine Anfrage und ein Beispiel für eine Antwort frei, nachdem Sie die Test[API verwendet haben, um Ihr dateibasiertes Ziel mit Beispielprofilen zu &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Hängen Sie eine Beispieldatei an, die von Ihrem Ziel generiert und an Ihren Speicherort exportiert wurde.
    * Senden Sie eine Form des Nachweises, dass Sie die exportierte Datei vom Speicherort erfolgreich in Ihr System aufgenommen haben.
 * Nachweis, dass Sie eine Anfrage zur Veröffentlichung eines Ziels für Ihr Ziel mithilfe der [Zielveröffentlichungs-API](../publishing-api/create-publishing-request.md) übermittelt haben.
@@ -234,7 +234,7 @@ Bei dateibasierten Zielen müssen Sie einen zusätzlichen Nachweis dafür erbrin
 
 ### Testen der API-Antwort {#testing-api-response-file-based}
 
-Fügen Sie nach Verwendung der Test-API eine Anfrage und ein Antwortbeispiel [, um Ihr dateibasiertes Ziel mit Beispielprofilen zu ](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+Fügen Sie nach Verwendung der Test-API eine Anfrage und ein Antwortbeispiel [, um Ihr dateibasiertes Ziel mit Beispielprofilen zu &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md).
 
 ### Exportierte Datei anhängen {#attach-exported-file}
 

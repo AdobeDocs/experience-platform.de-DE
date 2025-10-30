@@ -27,11 +27,11 @@ Sie müssen bei Ihrem Geschäftskonto angemeldet sein, um [!DNL TikTok] Pixel mi
 3. Wählen Sie **[!UICONTROL Set Up Web Events]** aus.
 4. Wählen Sie **[!UICONTROL Partner Setup]** als Verbindungsmethode aus.
 
-Weitere Informationen [ Einrichten des ](https://ads.tiktok.com/help/article/get-started-pixel) Pixels finden Sie [!DNL TikTok] Handbuch „Erste Schritte mit Pixeln“.
+Weitere Informationen [&#x200B; Einrichten des &#x200B;](https://ads.tiktok.com/help/article/get-started-pixel) Pixels finden Sie [!DNL TikTok] Handbuch „Erste Schritte mit Pixeln“.
 
 Sie können ein Zugriffs-Token generieren, sobald das Pixel erfolgreich erstellt wurde. Navigieren Sie dazu zum Pixel und wählen Sie die Registerkarte **[!UICONTROL Settings]** aus. Wählen Sie unter Ereignis-API die Option **[!UICONTROL Generate Access Token]** aus.
 
-Weitere Informationen [[!DNL TikTok]  Einrichten des Pixel-Codes ](https://business-api.tiktok.com/portal/docs?id=1739584855420929) Zugriffstokens finden Sie im Abschnitt Erste Schritte .
+Weitere Informationen [[!DNL TikTok]  Einrichten des Pixel-Codes &#x200B;](https://business-api.tiktok.com/portal/docs?id=1739584855420929) Zugriffstokens finden Sie im Abschnitt Erste Schritte .
 
 ## Installieren und Konfigurieren der [!DNL TikTok] Web Events API-Erweiterung {#install}
 
@@ -64,7 +64,7 @@ Web-Ereignisse und -Parameter enthalten allgemeine Informationen zum Ereignis. S
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| Ereignisname | Der Name des Ereignisses. Hierbei handelt es sich um Aktionen mit vordefinierten Namen, die von [!DNL TikTok] erstellt wurden und ein erforderliches Feld sind. Weitere Informationen zu unterstützten Ereignissen finden [[!DNL TikTok]  in der ](https://business-api.tiktok.com/portal/docs?id=1741601162187777) zur Marketing-API . |
+| Ereignisname | Der Name des Ereignisses. Hierbei handelt es sich um Aktionen mit vordefinierten Namen, die von [!DNL TikTok] erstellt wurden und ein erforderliches Feld sind. Weitere Informationen zu unterstützten Ereignissen finden [[!DNL TikTok]  in der &#x200B;](https://business-api.tiktok.com/portal/docs?id=1741601162187777) zur Marketing-API . |
 | Ereigniszeit | Datum-Uhrzeit als Zeichenfolge in ISO 8601 oder im `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Dies ist ein Pflichtfeld. |
 | Ereignis-ID | Die eindeutige ID, die von Werbetreibenden generiert wird, um jedes Ereignis anzugeben. Dies ist ein optionales Feld, das für die Deduplizierung verwendet wird. |
 

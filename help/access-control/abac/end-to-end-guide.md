@@ -140,7 +140,7 @@ Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin <50]**.
 
 >[!NOTE]
 >
-> Weisen Sie verschiedenen Objekten in Adobe Journey Optimizer im [!UICONTROL Permissions] Workspace erstellte Beschriftungen (z. B. die Segmentbeschriftungen oben) mithilfe der [Zugriffssteuerung auf Objektebene“ ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
+> Weisen Sie verschiedenen Objekten in Adobe Journey Optimizer im [!UICONTROL Permissions] Workspace erstellte Beschriftungen (z. B. die Segmentbeschriftungen oben) mithilfe der [Zugriffssteuerung auf Objektebene“ &#x200B;](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
 
 ## Aktivieren der Zugriffssteuerungsrichtlinie {#policy}
 

@@ -15,7 +15,7 @@ Mit dem Validierungs-Editor können Sie JavaScript-Funktionen schnell und einfac
 
 ## Erste Schritte mit dem Validierungs-Editor
 
-Assurance Wählen [ nach dem Einrichten von ](../tutorials/implement-assurance.md) in der **[!UICONTROL Home]** Ansicht **[!UICONTROL Validation Editor]** aus.
+Assurance Wählen [&#x200B; nach dem Einrichten von &#x200B;](../tutorials/implement-assurance.md) in der **[!UICONTROL Home]** Ansicht **[!UICONTROL Validation Editor]** aus.
 
 ![validation-editor-screen-shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -57,7 +57,7 @@ Von der Validierungsfunktion wird erwartet, dass sie ein -Objekt zurückgibt, da
 | :--- | :--- | :--- |
 | `message` | Zeichenfolge | Die Validierungsmeldung, die in der Ergebniszusammenfassung angezeigt werden soll. |
 | `events` | Array | Ein Array von Ereignis-UUIDs, die als übereinstimmend oder nicht übereinstimmend gemeldet werden. |
-| `links` | Array | Ein Array von `ValidationResultLink`-Objekten, um auf die Dokumentation und andere Ressourcen `{( type: 'doc'`&amp;vert;`'product', url: String )}` zu verweisen |
+| `links` | Array | Ein Array von `ValidationResultLink`-Objekten, um auf die Dokumentation und andere Ressourcen `{( type: 'doc'`&vert;`'product', url: String )}` zu verweisen |
 | `result` | String | Dies ist das Validierungsergebnis. Es wird erwartet, dass es eine der Aufzählungszeichenfolgen ist: „angewandt“, „nicht zugeordnet“, „unbekannt“ |
 
 ## Validierungsergebnisse anzeigen

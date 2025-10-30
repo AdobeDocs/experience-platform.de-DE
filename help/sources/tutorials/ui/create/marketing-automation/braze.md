@@ -15,7 +15,7 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->Die [!DNL Braze Currents]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Braze Currents]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 [!DNL Braze] ermöglicht kundenorientierte Interaktionen zwischen Verbrauchern und Marken in Echtzeit. [!DNL Braze Currents] ist ein Echtzeit-Datenstrom von Interaktionsereignissen von der Braze-Plattform, der der robusteste und zugleich granularste Export aus der [!DNL Braze]-Plattform ist.
 
@@ -25,7 +25,7 @@ Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Interaktionsereignisdat
 
 Um die Schritte in diesem Handbuch abzuschließen, benötigen Sie Folgendes:
 
-* Eine Anmeldung bei [Adobe Experience Platform ](https://platform.adobe.com) die Berechtigung zum Erstellen einer neuen Streaming-Quellverbindung.
+* Eine Anmeldung bei [Adobe Experience Platform &#x200B;](https://platform.adobe.com) die Berechtigung zum Erstellen einer neuen Streaming-Quellverbindung.
 * Eine Anmeldung bei Ihrem [[!DNL Braze] Dashboard](https://dashboard.braze.com/sign_in), eine nicht verwendete [Aktuelle Connector-](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)) und Berechtigungen zum Erstellen eines Connectors. Weitere Informationen finden Sie unter [Voraussetzungen für die Einrichtung [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ## Erste Schritte
@@ -39,13 +39,13 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Dieses Tutorial erfordert auch ein Grundverständnis von [[!DNL Braze] Strömungen](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents).
 
-Wenn Sie bereits über eine [!DNL Braze] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [ eines Datenflusses ](../../dataflow/marketing-automation.md).
+Wenn Sie bereits über eine [!DNL Braze] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [&#x200B; eines Datenflusses &#x200B;](../../dataflow/marketing-automation.md).
 
 ## Erstellen eines XDM-Schemas
 
 >[!TIP]
 >
->Sie müssen ein Experience-Datenmodell-Schema (XDM) erstellen, wenn Sie zum ersten Mal eine [!DNL Braze Currents] Verbindung erstellen. Wenn Sie bereits ein Schema für [!DNL Braze Currents] erstellt haben, können Sie diesen Schritt überspringen und mit dem Schritt &quot;[ Ihres Kontos mit Experience Platform&quot; ](#connect).
+>Sie müssen ein Experience-Datenmodell-Schema (XDM) erstellen, wenn Sie zum ersten Mal eine [!DNL Braze Currents] Verbindung erstellen. Wenn Sie bereits ein Schema für [!DNL Braze Currents] erstellt haben, können Sie diesen Schritt überspringen und mit dem Schritt &quot;[&#x200B; Ihres Kontos mit Experience Platform&quot; &#x200B;](#connect).
 
 Verwenden Sie in der Benutzeroberfläche von Experience Platform den linken Navigationsbereich und wählen Sie dann **[!UICONTROL Schemas]** , um auf den [!UICONTROL Schemas]-Arbeitsbereich zuzugreifen. Wählen Sie als Nächstes **[!UICONTROL Create schema]** und dann **[!UICONTROL Experience Event]** aus. Um fortzufahren, wählen Sie **[!UICONTROL Next]** aus.
 
@@ -63,12 +63,12 @@ Wählen Sie unter *Kategorie* Marketing-Automatisierung“ **[!UICONTROL Braze C
 
 ![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit der ausgewählten Quelle „Braze-Ströme“.](../../../../images/tutorials/create/braze/catalog.png)
 
-Laden Sie als Nächstes die bereitgestellte Beispieldatei [Braze-Ströme“ ](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). Diese Datei enthält alle möglichen Felder, die Braze im Rahmen eines Ereignisses senden könnte.
+Laden Sie als Nächstes die bereitgestellte Beispieldatei [Braze-Ströme“ &#x200B;](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). Diese Datei enthält alle möglichen Felder, die Braze im Rahmen eines Ereignisses senden könnte.
 
 ![Der Bildschirm „Daten hinzufügen“.](../../../../images/tutorials/create/braze/select-data.png)
 
 Nach dem Hochladen der Datei müssen Sie Ihre Datenflussdetails angeben, einschließlich Informationen zu Ihrem Datensatz und dem Schema, dem Sie zuordnen.  Wenn dies das erste Mal ist, dass Sie eine Braze-Stromquelle verbinden, erstellen Sie einen neuen Datensatz.  Andernfalls können Sie einen beliebigen vorhandenen Datensatz verwenden, der auf das Braze-Schema verweist.  Wenn Sie einen neuen Datensatz erstellen, verwenden Sie das Schema , das wir im vorherigen Abschnitt erstellt haben.
-![ Bildschirm „Datenflussdetails“ mit hervorgehobener Option „Datensatzdetails“](../../../../images/tutorials/create/braze/dataflow-detail.png)
+![&#x200B; Bildschirm „Datenflussdetails“ mit hervorgehobener Option „Datensatzdetails“](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Konfigurieren Sie dann die Zuordnung für Ihre Daten mithilfe der Zuordnungsschnittstelle.
 
@@ -94,7 +94,7 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus. Bestätigen Sie auf
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Nachdem Ihre Verbindung erstellt wurde, müssen Sie die folgenden Werte für die Anmeldeinformationen erfassen, die Sie dann im Braze-Dashboard angeben, um Daten an Experience Platform zu senden. Weitere Informationen finden Sie im [!DNL Braze] ([ zum Navigieren zu Strömen](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Nachdem Ihre Verbindung erstellt wurde, müssen Sie die folgenden Werte für die Anmeldeinformationen erfassen, die Sie dann im Braze-Dashboard angeben, um Daten an Experience Platform zu senden. Weitere Informationen finden Sie im [!DNL Braze] ([&#x200B; zum Navigieren zu Strömen](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Feld | Beschreibung |
 | --- | --- |

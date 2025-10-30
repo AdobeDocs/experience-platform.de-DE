@@ -35,7 +35,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ## Erstellen einer Flussausführung für eine tabellenbasierte Quelle
 
@@ -106,7 +106,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Flussausführung z
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [ finden Sie ](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
+| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [&#x200B; finden Sie &#x200B;](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
 | `etag` | Die Ressourcenversion der Flussausführung. |
 
 <!-- 
@@ -188,7 +188,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Flussausführung z
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [ finden Sie ](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
+| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [&#x200B; finden Sie &#x200B;](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
 | `etag` | Die Ressourcenversion der Flussausführung. |
 
 ## Überwachen von Flussausführungen

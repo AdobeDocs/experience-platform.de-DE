@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Die [!DNL Relay Connector]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Relay Connector]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Mit [!DNL Relay Connector] können Sie Ihren Kunden personalisierte Erlebnisse zu den wichtigsten Zeitpunkten im Journey bereitstellen und so engere Beziehungen aufbauen sowie die Kundentreue und den Wert steigern, indem Sie eine eingehende Verbindung erstellen, um Ereignisse aus Ihrer [!DNL Relay Network]-Integration in Adobe Experience Platform zu streamen.
 

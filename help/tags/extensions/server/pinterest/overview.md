@@ -15,7 +15,7 @@ ht-degree: 5%
 
 [!DNL Pinterest] ist eine visuelle Discovery-Engine zum Finden von Ideen wie Rezepten, Wohnkultur, Stilinspiration und mehr. Es gibt Milliarden von Pins auf [!DNL Pinterest], die auch mit anderen auf [!DNL Pinterest] geteilt werden können. Sie können die Benutzerinteraktionsereignisse zusammenstellen und [!DNL Pinterest Analytics] nutzen, um das Benutzerverhalten zu verstehen und zielgerichtete Anzeigen auszuführen.
 
-Mit der [[!DNL Pinterest] Conversions](https://developers.pinterest.com/docs/conversions/conversion-management/)-API [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) können Sie die in Adobe Experience Platform Edge Network erfassten Daten nutzen und an [!DNL Pinterest] senden. In diesem Dokument werden die Anwendungsfälle der Erweiterung, deren Installation und die Integration der Funktionen in die Ereignisweiterleitung ([) ](../../../ui/managing-resources/rules.md).
+Mit der [[!DNL Pinterest] Conversions](https://developers.pinterest.com/docs/conversions/conversion-management/)-API [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) können Sie die in Adobe Experience Platform Edge Network erfassten Daten nutzen und an [!DNL Pinterest] senden. In diesem Dokument werden die Anwendungsfälle der Erweiterung, deren Installation und die Integration der Funktionen in die Ereignisweiterleitung ([) &#x200B;](../../../ui/managing-resources/rules.md).
 
 Konversionen-Zugriffstoken sind die Authentifizierungsmethode, die von [!DNL Pinterest] bei der Interaktion mit der [!DNL Pinterest]-API verwendet wird.
 
@@ -31,9 +31,9 @@ Weitere Informationen zu [!DNL Pinterest]-spezifischen Anwendungsfällen finden 
 
 ## Voraussetzungen für [!DNL Pinterest] {#prerequisites}
 
-Sie müssen über ein gültiges [!DNL Pinterest]Geschäftskonto[ verfügen](https://help.pinterest.com/en/business/article/get-a-business-account) um diese Erweiterung verwenden zu können. Navigieren Sie zur [[!DNL Pinterest] Registrierungsseite](https://www.pinterest.com/business/create/), um sich zu registrieren und ein Konto zu erstellen, falls Sie noch keines haben.
+Sie müssen über ein gültiges [!DNL Pinterest]Geschäftskonto[&#x200B; verfügen](https://help.pinterest.com/en/business/article/get-a-business-account) um diese Erweiterung verwenden zu können. Navigieren Sie zur [[!DNL Pinterest] Registrierungsseite](https://www.pinterest.com/business/create/), um sich zu registrieren und ein Konto zu erstellen, falls Sie noch keines haben.
 
-Sie benötigen außerdem ein [!DNL Pinterest] Entwicklerkonto, das mit Ihrem [!DNL Pinterest] Business-Konto verknüpft werden muss. Informationen zum Verknüpfen Ihres Entwicklerkontos mit Ihrem Geschäftskonto finden Sie unter [[!DNL Pinterest ] Entwicklerkonto](https://developers.pinterest.com/account-setup/).
+Sie benötigen außerdem ein [!DNL Pinterest] Entwicklerkonto, das mit Ihrem [!DNL Pinterest] Business-Konto verknüpft werden muss. Informationen zum Verknüpfen Ihres Entwicklerkontos mit Ihrem Geschäftskonto finden Sie unter [[!DNL Pinterest &#x200B;] Entwicklerkonto](https://developers.pinterest.com/account-setup/).
 
 ### Sammeln erforderlicher Konfigurationsdetails {#configuration-details}
 
@@ -42,11 +42,11 @@ Um den Experience Platform mit [!DNL Pinterest] zu verbinden, sind die folgenden
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
 | Werbekonto-ID | Ihre [!DNL Pinterest] Ads-Konto-ID. Eine Anleitung finden Sie in der [[!DNL Pinterest] Dokumentation](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager). | 123456789012 |
-| Konversionszugriffstoken | Ihr [!DNL Pinterest]-Konversions-Zugriffstoken. Eine Anleitung dazu finden [[!DNL Pinterest]  im Dokument ](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token)Konversions-API“. <br> **Sie müssen dies nur einmal tun, da dieses Token nicht abläuft.** | {YOUR_PINTEREST_BEARER_TOKEN} |
+| Konversionszugriffstoken | Ihr [!DNL Pinterest]-Konversions-Zugriffstoken. Eine Anleitung dazu finden [[!DNL Pinterest]  im Dokument &#x200B;](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token)Konversions-API“. <br> **Sie müssen dies nur einmal tun, da dieses Token nicht abläuft.** | {YOUR_PINTEREST_BEARER_TOKEN} |
 
 ## Installieren und Konfigurieren der [!DNL Pinterest] {#install}
 
-Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
 Wählen Sie in der linken Navigation **[!UICONTROL Extensions]** aus. Wählen Sie **[!UICONTROL Install]** auf der Karte für die [!DNL Pinterest] auf der Registerkarte **[!UICONTROL Catalog]** aus.
 
@@ -82,8 +82,8 @@ Zum Erstellen der neuen Regel sind die folgenden Ereignisdaten erforderlich:
 
 | Feldname | Beschreibung | Beispiel |
 | --- | --- | --- | 
-| [!UICONTROL Event Name] | Der Typ des Benutzerereignisses. Dies kann ein beliebiger Ereignistyp sein. Zur Nutzung [!DNL Pinterest Analytics] wird jedoch die Verwendung von [[!DNL Pinterest] Ereignis-Codes“ ](https://help.pinterest.com/en/business/article/add-event-codes) | &amp;ast; <br> &amp;ast; add_to_cart <br> &amp;ast; page_visit <br> &amp;ast; <br> &amp;ast; [Benutzerdefiniertes Ereignis] |
-| [!UICONTROL Action Source] | Die Quelle, die angibt, wo das Konversionsereignis aufgetreten ist. | &amp;ast; app_android <br> &amp;ast; app_ios-<br> &amp;ast; Web-<br> &amp;ast; offline |
+| [!UICONTROL Event Name] | Der Typ des Benutzerereignisses. Dies kann ein beliebiger Ereignistyp sein. Zur Nutzung [!DNL Pinterest Analytics] wird jedoch die Verwendung von [[!DNL Pinterest] Ereignis-Codes“ &#x200B;](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; <br> &ast; [Benutzerdefiniertes Ereignis] |
+| [!UICONTROL Action Source] | Die Quelle, die angibt, wo das Konversionsereignis aufgetreten ist. | &ast; app_android <br> &ast; app_ios-<br> &ast; Web-<br> &ast; offline |
 | [!UICONTROL Event Time] | Dies bezieht sich auf die Ereigniszeit. Das standardmäßig verwendete Zeitformat ist UNIX und das Format `<seconds>.<miliseconds>` abhängig von Ihrer lokalen Zeitzone. Weitere Informationen finden Sie unter [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 gibt 1433188255 Sekunden und 500 Millisekunden nach Epoche oder Montag, den 1. Juni 2015, um 19:50:55 Uhr GMT an. |
 | [!UICONTROL Event ID] | Eine eindeutige ID-Zeichenfolge, die dieses Ereignis identifiziert und für die Deduplizierung zwischen Ereignissen verwendet werden kann, die sowohl über die Konversions-API als auch über das Pinterest-Tracking aufgenommen werden. Andernfalls werden die Daten des Ereignisses wahrscheinlich doppelt gezählt und eine metrische Inflation gemeldet. | BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD |
 | [!UICONTROL Event Properties] | Ein JSON-Objekt mit benutzerdefinierten Eigenschaften des Ereignisses. Wählen Sie aus der Bereitstellung von unformatiertem JSON oder der Verwendung eines vereinfachten Satzes von Schlüssel-Wert-Eingaben. | { „event_source_url“: &quot;http://site.com&quot; } |

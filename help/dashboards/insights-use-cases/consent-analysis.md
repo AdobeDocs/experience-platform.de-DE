@@ -28,7 +28,7 @@ Um ein Einverständnis-Dashboard zu erstellen, müssen Sie zunächst eine Zielgr
 
 ![Das [!UICONTROL Audiences]-Dashboard mit hervorgehobenen [!UICONTROL Customer], [!UICONTROL Audiences] und [!UICONTROL Create segment].](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-Der Segment Builder wird angezeigt. Wählen Sie anschließend **[!UICONTROL XDM Individual Profile]** aus den verfügbaren Optionen aus. Weitere Informationen zur Arbeitsfläche des Regel[Builders finden Sie in der ](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
+Der Segment Builder wird angezeigt. Wählen Sie anschließend **[!UICONTROL XDM Individual Profile]** aus den verfügbaren Optionen aus. Weitere Informationen zur Arbeitsfläche des Regel[Builders finden Sie in der &#x200B;](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
 
 ![Der Segment Builder mit dem hervorgehobenen Ordner &quot;[!UICONTROL XDM Individual Profile]&quot;.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
@@ -112,7 +112,7 @@ Nachdem Sie eine einverständnisbezogene Zielgruppe erstellt haben, z. B. „Ein
 
 Sie können auch eigene Widgets mit benutzerdefinierten Dashboards erstellen. Wenn Sie Ihr eigenes Widget erstellen, haben Sie die vollständige Kontrolle über den Typ des Widgets sowie die Möglichkeit, Filter und vieles mehr direkt in Adobe Real-Time CDP hinzuzufügen.
 
-Beispiel: Sie möchten mehrere Einverständnis-Zielgruppen im selben Diagramm im Trend anzeigen, sodass Sie im Laufe der Zeit sehen können, wie sich Ihre Einverständnisvoreinstellungen geändert haben. Diese Art der Visualisierung ist mit benutzerdefinierten Dashboards in minimalen Schritten und einer einmaligen Einrichtung möglich. Wählen Sie zunächst **[!UICONTROL Dashboards]** in der linken Navigationsleiste aus. Der [!UICONTROL Dashboards] Arbeitsbereich wird angezeigt. Wählen Sie dann **[!UICONTROL Create dashboard]** aus. Vollständige Anweisungen zum [ (Erstellen eines Dashboards und eines benutzerdefinierten ](../standard-dashboards.md)) finden Sie im Handbuch zu benutzerdefinierten Dashboards .
+Beispiel: Sie möchten mehrere Einverständnis-Zielgruppen im selben Diagramm im Trend anzeigen, sodass Sie im Laufe der Zeit sehen können, wie sich Ihre Einverständnisvoreinstellungen geändert haben. Diese Art der Visualisierung ist mit benutzerdefinierten Dashboards in minimalen Schritten und einer einmaligen Einrichtung möglich. Wählen Sie zunächst **[!UICONTROL Dashboards]** in der linken Navigationsleiste aus. Der [!UICONTROL Dashboards] Arbeitsbereich wird angezeigt. Wählen Sie dann **[!UICONTROL Create dashboard]** aus. Vollständige Anweisungen zum [&#x200B; (Erstellen eines Dashboards und eines benutzerdefinierten &#x200B;](../standard-dashboards.md)) finden Sie im Handbuch zu benutzerdefinierten Dashboards .
 
 ![Der Arbeitsbereich „Dashboards“ mit hervorgehobenen Optionen „Dashboards“ und „Dashboard erstellen“.](../images/standard-dashboards/create-dashboard.png)
 
