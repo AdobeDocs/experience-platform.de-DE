@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform für Unternehmen mit mehreren Regionen und mehreren Marken
 description: Erfahren Sie, wie Sie Ihre Implementierungsteams mit den Tools und Erkenntnissen ausstatten können, die für eine effektive Navigation durch die Feinheiten von Adobe Experience Platform erforderlich sind.
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 6e96cf7660a9a7fe1b4eaef645bca55ed89b7673
 workflow-type: tm+mt
-source-wordcount: '5325'
+source-wordcount: '5322'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Beim Untersuchen von Bereitstellungsoptionen müssen Sie die Rollen verstehen un
 - Schwerpunkt: Datengenauigkeit und -qualität.
 - Ziele: Gewährleistung von Datenschutz und Vertrauen, Entwerfen von Schemata und Datenmodellen, Verwalten von Datenquellen.
 
-### &#x200B;1. Ein Unternehmen, das mit begrenzter Datenisolierung arbeitet
+### Ein Unternehmen, das mit begrenzter Datenisolierung arbeitet
 
 Ein wichtiges Architekturprinzip in Experience Platform besteht darin, dass Kundendaten auf der Grundlage von Governance-Richtlinien und -Anforderungen auf eine bestimmte Produktions-Sandbox beschränkt sind.
 
@@ -102,12 +102,12 @@ Mit der Sandbox-Tooling-Funktion können Sie verschiedene Objekte auswählen und
 
 Sie haben die Möglichkeit, Experience Platform-APIs zur Automatisierung von Sandbox-Bereitstellungen und Konfigurationsaufgaben zu verwenden. APIs ermöglichen eine programmierbare Steuerung für sich wiederholende Aufgaben wie das Exportieren, Importieren oder Ändern von Sandbox-Konfigurationen und bieten so Flexibilität, wenn Sie automatisierte Workflows bevorzugen.
 
-Weitere Informationen zum Sandbox-Tooling finden Sie in der [Sandbox-Tooling-Dokumentation](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Weitere Informationen zum Sandbox-Tooling finden Sie in der [Sandbox-Tooling-Dokumentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Paket erstellen](./images/whitepaper/create-package.png) | ![CDP-Listenpakete](./images/whitepaper/list-packages.png) |
 | --- | --- |
 
-### &#x200B;2. Region oder markenspezifische Datenisolierung
+### Region oder markenspezifische Datenisolierung
 
 Wenn Sie eine vollständige Isolation benötigen (z. B. regional oder markenbasiert), können Sie unter Einhaltung strenger Datenzugriffsrichtlinien oder gesetzlicher Anforderungen arbeiten, die den Zugriff Ihrer Markenteams auf Daten beschränken, die für ihre jeweiligen Regionen oder Marken spezifisch sind. Sie definieren Zugriffsmuster auf der Grundlage von Regions- oder markenspezifischen Daten und stellen so die Einhaltung interner, behördlicher und Data Governance-Protokolle sicher. Dieser Ansatz ist wichtig, wenn Sie in stark regulierten Branchen tätig sind (z. B. bei der Verarbeitung von personenbezogenen Daten) oder für verschiedene geografische Regionen oder Markenidentitäten unterschiedliche und segmentierte Daten pflegen müssen.
 
@@ -229,9 +229,9 @@ Darüber hinaus können Sie Experience Platform Segment Match verwenden, eine Fu
 
 Dieser Segmentfreigabedienst ermöglicht es zwei oder mehr Benutzern, Segmentdaten auf sichere, verwaltete und datenschutzfreundliche Weise auszutauschen.
 
-Weitere Informationen zur Funktion Segment Match finden Sie in der [Dokumentation zu Segment Match](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/ui/segment-match/overview).
+Weitere Informationen zur Funktion Segment Match finden Sie in der [Dokumentation zu Segment Match](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
-### 3. Eine Mischung aus Ansätzen für globale Operationen, regionale und markenspezifische
+### Eine Mischung aus Ansätzen für globale Operationen, regionale und markenspezifische
 
 Viele Unternehmen mit mehreren Marken sind auf globaler Ebene tätig und streben daher häufig eine Mischung aus einheitlichen und isolierten Datenmanagement-Ansätzen an. In diesem Szenario sollen Daten für mehrere Regionen oder Länder getrennt werden. Marken innerhalb des Unternehmens können damit rechnen, ausschließlich mit den Daten zu arbeiten, die mit ihrer jeweiligen Marke verknüpft sind, und das alles innerhalb derselben Datengrenzen einer Region oder eines Landes. Dieser Ansatz ermöglicht ein zentralisiertes regionales oder länderspezifisches Daten-Management und erleichtert gleichzeitig markenspezifische Marketing- und Datenoperationen. Dieses Modell kombiniert die Vorteile eines einheitlichen Daten-Managements mit der Notwendigkeit einer marken- und regionsspezifischen Isolierung.
 
@@ -434,7 +434,7 @@ Experience Platform bietet Unternehmen ein robustes Framework, um Kundendaten ü
 
    - Sie müssen sorgfältig abwägen, ob **mehrere Organisations-IDs oder mehrere Sandboxes** bereitgestellt werden sollen, je nach Datenresidenz, Compliance und betrieblichen Anforderungen.
 
-   - **Organisations-IDs** bieten vollständige Isolierung **&#x200B; während Multi-Sandbox-Setups innerhalb eines gemeinsamen Governance-Frameworks für operative Flexibilität sorgen**.
+   - **Organisations-IDs** bieten vollständige Isolierung** während Multi-Sandbox-Setups innerhalb eines gemeinsamen Governance-Frameworks für operative Flexibilität sorgen**.
 
 ## Abschließende Gedanken
 
