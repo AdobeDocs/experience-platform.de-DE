@@ -109,7 +109,7 @@ Jetzt können Sie Daten mit der Schaltfläche **Daten hinzufügen** hochladen un
 
 ### Fluss &quot;[!UICONTROL Map CSV to XDM schema]&quot; verwenden {#map-flow}
 
-Um den Fluss &quot;[!UICONTROL Map CSV to XDM schema]&quot; zu verwenden, führen Sie die im Tutorial [Zuordnen einer CSV-Datei“ ](../tutorials/map-csv/overview.md) Schritte aus. Beachten Sie beim Erreichen des **[!UICONTROL Add data]** die Felder **[!UICONTROL Partial ingestion]** und **[!UICONTROL Error diagnostics]** .
+Um den Fluss &quot;[!UICONTROL Map CSV to XDM schema]&quot; zu verwenden, führen Sie die im Tutorial [Zuordnen einer CSV-Datei“ &#x200B;](../tutorials/map-csv/overview.md) Schritte aus. Beachten Sie beim Erreichen des **[!UICONTROL Add data]** die Felder **[!UICONTROL Partial ingestion]** und **[!UICONTROL Error diagnostics]** .
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
