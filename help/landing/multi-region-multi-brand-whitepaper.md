@@ -434,7 +434,7 @@ Experience Platform bietet Unternehmen ein robustes Framework, um Kundendaten ü
 
    - Sie müssen sorgfältig abwägen, ob **mehrere Organisations-IDs oder mehrere Sandboxes** bereitgestellt werden sollen, je nach Datenresidenz, Compliance und betrieblichen Anforderungen.
 
-   - **Organisations-IDs** bieten vollständige Isolierung** während Multi-Sandbox-Setups innerhalb eines gemeinsamen Governance-Frameworks für operative Flexibilität sorgen**.
+   - **Organisations-IDs** bieten vollständige Isolierung **&#x200B; während Multi-Sandbox-Setups innerhalb eines gemeinsamen Governance-Frameworks für operative Flexibilität sorgen**.
 
 ## Abschließende Gedanken
 
