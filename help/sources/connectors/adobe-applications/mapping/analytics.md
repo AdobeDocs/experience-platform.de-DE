@@ -2,10 +2,10 @@
 title: Zuordnen von Feldern für den Adobe Analytics Source Connector
 description: Zuordnen von Adobe Analytics-Feldern zu XDM-Feldern mithilfe des Analytics Source Connectors.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 316879afe8c94657156c768cdc14d4710da9fd35
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3914'
-ht-degree: 28%
+source-wordcount: '3854'
+ht-degree: 25%
 
 ---
 
@@ -25,8 +25,8 @@ In der folgenden Tabelle finden Sie Informationen zu Streaming-Medienparametern.
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | Zeichenfolge | Der Name des Medienautors. |
 | `videoaudioartist` | `mediaReporting.sessionDetails.artist` | Zeichenfolge | Der Name des Interpreten oder der Gruppe, die die Musikaufnahme oder das Video aufführt. |
 | `videoaudioalbum` | `mediaReporting.sessionDetails.album` | Zeichenfolge | Der Name des Albums, zu dem die Musikaufnahme oder das Video gehört. |
-| `videolength` | `mediaReporting.sessionDetails.length ` | integer | Die Länge oder Laufzeit des Videos. |
-| `videoshowtype` | `mediaReporting.sessionDetails.showType` | string |
+| `videolength` | `mediaReporting.sessionDetails.length` | integer | Die Länge oder Laufzeit des Videos. |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | string |  |
 | `video` | `mediaReporting.sessionDetails.name` | string | Die ID des Videos. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | Zeichenfolge | Der Name des Programms oder der Serie. Der Name des Programms/der Serie ist nur erforderlich, wenn die Sendung Teil einer Serie ist. |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | Zeichenfolge | Der Typ der Streaming-Medien wie „Video“ oder „Audio“. |
@@ -34,12 +34,12 @@ In der folgenden Tabelle finden Sie Informationen zu Streaming-Medienparametern.
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | Zeichenfolge | Die Nummer der Folge. |
 | `videogenre` | `mediaReporting.sessionDetails.genreList[]` | Zeichenfolge[] | Das Genre des Videos. |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | Zeichenfolge | Eine Kennung für eine Instanz eines Inhalts-Streams, die für eine einzelne Wiedergabe eindeutig ist. |
-| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | Zeichenfolge | Der Name des Video-Players. |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName` | Zeichenfolge | Der Name des Video-Players. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | Zeichenfolge | Der Verteilungskanal, von dem aus der Inhalt wiedergegeben wurde. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | Zeichenfolge | Der Typ der Stream-Bereitstellung, die für den Inhalt verwendet wird. Diese Einstellung wird für alle Videoansichten automatisch auf „Video“ gesetzt. Empfohlene Werte sind: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Hörbuch und Song. |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | Zeichenfolge | Der Netzwerk- oder Kanalname. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | Zeichenfolge | Der Feed-Typ. Dabei kann es sich entweder um tatsächliche Feed-bezogene Daten wie „East HD“ oder „SD“ oder um die Quelle des Feeds wie eine URL handeln. |
-| `videosegment` | `mediaReporting.sessionDetails.segment` | Zeichenfolge |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | Zeichenfolge |  |
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | Boolescher Wert | Ein boolescher Wert, der angibt, ob das Video gestartet wurde oder nicht. Dies tritt auf, sobald der/die Benutzende die Wiedergabeschaltfläche auswählt, und zählt auch dann, wenn Pre-Roll-Anzeigen, Pufferung, Fehler usw. vorhanden sind. |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | Boolescher Wert | Ein boolescher Wert, der angibt, ob das erste Medienbild gestartet wurde. Wenn der Benutzer während einer Anzeige- oder Pufferzeit fällt, ist der „Inhaltsstart“ nicht qualifiziert. |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | Die Dauer (in Sekunden) für alle Ereignisse von `type=PLAY` im Hauptinhalt. |
@@ -57,7 +57,7 @@ In der folgenden Tabelle finden Sie Informationen zu Streaming-Medienparametern.
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | Die Gesamtdauer (in Sekunden), in der die Wiedergabe von einem Benutzer angehalten wurde. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | Zeichenfolge | Eine über die Adobe-Authentifizierung bereitgestellte MVPD-Kennung. |
 | `videoauthorized` | `mediaReporting.sessionDetails.authorized` | Zeichenfolge | Definiert, dass der Benutzer über die Adobe-Authentifizierung autorisiert wurde. |
-| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Definiert die Tageszeit, zu der der Inhalt ausgetrahlt oder abgespielt wurde. |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Definiert die Tageszeit, zu der der Inhalt gesendet oder wiedergegeben wurde. |  |
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | Boolescher Wert | Ein boolescher Wert, der jede Wiedergabe kennzeichnet, die nach mehr als 30 Minuten Puffer, Pause oder Anhaltezeit wieder aufgenommen wurde. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | Boolescher Wert | Ein boolescher Wert, der angibt, dass mindestens ein Frame angezeigt wurde. Dieser Frame muss nicht der erste Frame sein. |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | Zeichenfolge | Der Name der Datensatzkennzeichnung. |
@@ -133,7 +133,7 @@ In der folgenden Tabelle finden Sie Informationen zu Qualitätsparametern.
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | number | Die durchschnittliche Bitrate (in kbps, Ganzzahl). Diese Metrik wird als gewichteter Durchschnitt aller Bitratenwerte im Zusammenhang mit der Wiedergabedauer berechnet, die während einer Wiedergabesitzung aufgetreten sind. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | Boolescher Wert | Ein boolescher Wert, der die Anzahl der Streams angibt, in denen Bitratenänderungen aufgetreten sind. Diese Metrik wird nur dann auf „true“ gesetzt, wenn während einer Wiedergabesitzung mindestens ein Bitratenänderungsereignis aufgetreten ist. |
-| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer |
+| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer |  |
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | Zeichenfolge | Die Anzahl der Bitratenänderungen Dieser Wert wird als Summe aller Bitratenänderungsereignisse berechnet, die während einer Wiedergabesitzung aufgetreten sind. |
 | `videoqoetimetostartevar` | `mediaReporting.qoeDataDetails.timeToStart` | integer | Die Dauer in Sekunden, die zwischen dem Laden des Videos und dem Start des Videos vergangen ist. |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | Boolescher Wert | Ein boolescher Wert, der die Anzahl der Streams angibt, in denen Frames verworfen wurden. Diese Metrik wird nur dann auf „true“ gesetzt, wenn während einer Wiedergabesitzung mindestens ein Frame gelöscht wurde. |
@@ -155,7 +155,7 @@ In diesem Abschnitt finden Sie Informationen zu veralteten Analytics-Zuordnungsf
 
 ### Direkte Zuordnungsfelder
 
-+++Wählen Sie diese Option aus, um eine Tabelle mit veralteten direkten Zuordnungsfeldern anzuzeigen
++++Wählen Sie aus, um eine Tabelle veralteter direkter Zuordnungsfelder anzuzeigen
 
 | Daten-Feed | XDM-Feld | XDM-Typ | Beschreibung |
 | --- | --- | --- | --- |
@@ -182,7 +182,7 @@ In diesem Abschnitt finden Sie Informationen zu veralteten Analytics-Zuordnungsf
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | Zeichenfolge | Variable, die zum Ausfüllen der Dimension „Postleitzahl“ dient. |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | Zeichenfolge | Liste aller zulässigen Sprachen, wie in der HTTP-Kopfzeile „Accept-Language“ angegeben. |
 | `homepage` | `web.webPageDetails.isHomePage` | Boolescher Wert | Wird nicht mehr verwendet. Wird angezeigt, wenn die aktuelle URL die Browser-Startseite ist. |
-| `ipv6` | `environment.ipV6` | string |
+| `ipv6` | `environment.ipV6` | string |  |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | string | Die vom Browser unterstützte Version von JavaScript. |
 | `user_agent` | `environment.browserDetails.userAgent` | Zeichenfolge | Die in der HTTP-Kopfzeile gesendete Benutzeragenten-Zeichenfolge. |
 | `mobileappid` | `application.name` | Zeichenfolge | Die App-ID, die im folgenden Format gespeichert wird: `[AppName][BundleVersion]`. |
@@ -196,21 +196,21 @@ In diesem Abschnitt finden Sie Informationen zu veralteten Analytics-Zuordnungsf
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | number | Mobile Services – Haupt-Beacon. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | number | Mobile Services – Neben-Beacon. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | Zeichenfolge | Mobile Services-Beacon UUID. |
-| `mobileinstalls` | `application.firstLaunches` | Objekt | Wird beim ersten Ausführen nach der Installation oder Neuinstallation ausgelöst | {id (string), value (number)} |
-| `mobileupgrades` | `application.upgrades` | Objekt | Gibt die Zahl der App-Upgrades an. Wird beim ersten Ausführen nach einem Upgrade oder immer dann ausgelöst, wenn sich die Versionsnummer ändert. | {id (string), value (number)} |
-| `mobilelaunches` | `application.launches` | Objekt | Häufigkeit, mit der die App gestartet wurde. | {id (string), value (number)} |
-| `mobilecrashes` | `application.crashes` | Objekt |  | {id (string), value (number)} |
-| `mobilemessageclicks` | `directMarketing.clicks` | Objekt |  | {id (string), value (number)} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Objekt | | {id (string), value (number)} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Objekt | | {id (string), value (number)} |
-| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Objekt | Videoqualität – Startzeitpunkt. | {id (string), value (number)} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Objekt | | {id (string), value (number)} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Objekt | Videoqualität – Anzahl Puffer | {id (string), value (number)} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Objekt | Videoqualitätspufferzeit | {id (string), value (number)} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Objekt | Videoqualität – Anzahl Änderungen | {id (string), value (number)} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Objekt | Videoqualität – Durchschnittliche Bitrate | {id (string), value (number)} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Objekt | Videoqualität – Anzahl Fehler | {id (string), value (number)} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Objekt | | {id (string), value (number)} |
+| `mobileinstalls` | `application.firstLaunches` | Objekt | Dies wird beim ersten Ausführen nach der Installation oder Neuinstallation ausgelöst `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | Objekt | Gibt die Zahl der App-Upgrades an. Wird beim ersten Ausführen nach einem Upgrade oder immer dann ausgelöst, wenn sich die Versionsnummer ändert. | `{id (string), value (number)}` |
+| `mobilelaunches` | `application.launches` | Objekt | Die Häufigkeit, mit der die App gestartet wurde.  `{id (string), value (number)}` |
+| `mobilecrashes` | `application.crashes` | Objekt | `{id (string), value (number)}` |
+| `mobilemessageclicks` | `directMarketing.clicks` | Objekt | `{id (string), value (number)}` |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Objekt | `{id (string), value (number)}` |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Objekt | `{id (string), value (number)}` |
+| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Objekt | Die Zeit bis zum Start der Videoqualität `{id (string), value (number)}` |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Objekt | `{id (string), value (number)}` |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Objekt | Puffer-Anzahl der Videoqualität `{id (string), value (number)}` |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Objekt | Pufferzeit für Videoqualität `{id (string), value (number)}` |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Objekt | Anzahl der Änderungen der Videoqualität `{id (string), value (number)}` |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Objekt | Durchschnittliche Bitrate der Videoqualität `{id (string), value (number)}` |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Objekt | Anzahl der Fehler in der Videoqualität `{id (string), value (number)}` |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Objekt | `{id (string), value (number)}` |
 
 {style="table-layout:auto"}
 
@@ -220,7 +220,7 @@ In diesem Abschnitt finden Sie Informationen zu veralteten Analytics-Zuordnungsf
 
 Ausgewählte Felder aus dem ADC müssen transformiert werden, sodass in XDM Logiken generiert werden müssen, die über eine direkte Kopie aus Adobe Analytics hinausgehen.
 
-+++Wählen Sie diese Option aus, um eine Tabelle veralteter generierter Zuordnungsfelder anzuzeigen.
++++Auswählen, um eine Tabelle veralteter generierter Zuordnungsfelder anzuzeigen
 
 | Daten-Feed | XDM-Feld | XDM-Typ | Beschreibung |
 | --- | --- | --- | --- |
@@ -276,7 +276,7 @@ Ausgewählte Felder aus dem ADC müssen transformiert werden, sodass in XDM Logi
 
 Diese Felder verfügen über eine einzige Quelle, sind aber **mehreren** XDM-Positionen zugeordnet.
 
-+++Wählen Sie diese Option aus, um eine Tabelle mit veralteten Aufspaltungs-Zuordnungsfeldern anzuzeigen.
++++Wählen Sie diese Option aus, um eine Tabelle veralteter Aufspaltungs-Zuordnungsfelder anzuzeigen
 
 | Daten-Feed | XDM-Feld | XDM-Typ | Beschreibung |
 | --- | --- | --- | --- |
@@ -291,11 +291,11 @@ Diese Felder verfügen über eine einzige Quelle, sind aber **mehreren** XDM-Pos
 
 Ausgewählte Felder (so genannte „Post-Werte„) enthalten Daten, nachdem Adobe ihre Werte mithilfe von Verarbeitungsregeln, VISTA-Regeln und Lookup-Tabellen angepasst hat. Die meisten Nachbearbeitungswerte haben ein vorverarbeitetes Gegenstück.
 
-Der Analytics-Quell-Connector sendet vorverarbeitete Daten in einen Datensatz in Experience Platform. Sie können diese Daten mithilfe von Transformationen in ihre nachbearbeiteten Gegenstücke umwandeln. Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte &#x200B;](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
+Der Analytics-Quell-Connector sendet vorverarbeitete Daten in einen Datensatz in Experience Platform. Sie können diese Daten mithilfe von Transformationen in ihre nachbearbeiteten Gegenstücke umwandeln. Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte ](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
 
-Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte &#x200B;](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
+Weitere Informationen zum Ausführen dieser Umwandlungen mit dem Abfrage-Service finden Sie unter [Adobe-definierte ](/help/query-service/sql/adobe-defined-functions.md) im Benutzerhandbuch zum Abfrage-Service.
 
-+++Wählen Sie diese Option aus, um eine Tabelle veralteter erweiterter Zuordnungsfelder anzuzeigen
++++Wählen Sie aus, um eine Tabelle veralteter erweiterter Zuordnungsfelder anzuzeigen
 
 | Daten-Feed | XDM-Feld | XDM-Typ | Beschreibung |
 | — | — | — | — ||

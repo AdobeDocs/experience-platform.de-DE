@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 6afb8d56b8af8e5b0450f769414d3afcac1d58eb
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2038'
-ht-degree: 42%
+source-wordcount: '1977'
+ht-degree: 38%
 
 ---
 
@@ -55,15 +55,15 @@ Die *[!DNL Amazon Ads]*-Verbindung unterstützt die Aktivierung von Identitäten
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Experience Platform] die Daten bei Aktivierung automatisch hasht. |
-| `firstName` | Vorname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
-| `lastName` | Nachname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
+| `firstName` | Vorname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
+| `lastName` | Nachname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
 | `street` | Adresse des Benutzers auf Straßenebene | Es wird nur eine SHA256-Hash-Eingabe unterstützt. Normalisieren vor dem Hashing. Aktivieren **nicht** die Adobe-seitige Umwandlung. |
-| `city` | Stadt des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
-| `state` | Bundesland oder Kanton des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
-| `zip` | Postleitzahl des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
-| `country` | Land des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Umwandlung anwenden] in der Adobe-Benutzeroberfläche. |
+| `city` | Stadt des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
+| `state` | Bundesland oder Kanton des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
+| `zip` | Postleitzahl des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
+| `country` | Land des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 | ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im *[!DNL Amazon Ads]*-Ziel verwendet werden. |
+| Exporttyp | **[!UICONTROL Audience export]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im *[!DNL Amazon Ads]*-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -82,13 +82,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Connect to destination]** aus.
 
 Sie gelangen zur [!DNL Amazon Ads]-Verbindungsschnittstelle, über die Sie zunächst die Advertiser-Konten auswählen, mit denen Sie eine Verbindung herstellen möchten. Bei Verbindungsherstellung werden Sie mit einer neuen Verbindung zurück zu Adobe Experience Platform geleitet, wobei die ID des von Ihnen ausgewählten Advertiser-Kontos angegeben ist. Wählen Sie im Zielkonfigurationsbildschirm das entsprechende Advertiser-Konto aus, um fortzufahren.
 
@@ -97,16 +97,16 @@ Sie gelangen zur [!DNL Amazon Ads]-Verbindungsschnittstelle, über die Sie zunä
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Amazon Ads-Verbindung]**: Wählen Sie die ID für das Ziel-[!DNL Amazon Ads] aus, das für das Ziel verwendet wird.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Amazon Ads Connection]**: Wählen Sie die ID für das Ziel-[!DNL Amazon Ads] aus, das für das Ziel verwendet wird.
 
 >[!NOTE]
 >
 >Nach dem Speichern der Zielkonfiguration können Sie die [!DNL Amazon Ads] Advertiser-ID nicht mehr ändern, selbst wenn Sie sich über Ihr Amazon-Konto erneut authentifizieren. Um eine andere [!DNL Amazon Ads] Advertiser-ID zu verwenden, müssen Sie eine neue Zielverbindung erstellen. Werbetreibende, die bereits eine Integration mit ADSP eingerichtet haben, um einen neuen Zielfluss erstellen zu können, wenn ihre Zielgruppen an AMC oder ein anderes ADSP-Konto gesendet werden sollen.
 
-* **[!UICONTROL Advertiser-Region]**: Wählen Sie die gewünschte Region aus, in der Ihr Advertiser gehostet wird. Weitere Informationen zu den von den einzelnen Regionen unterstützten Marktplätzen finden Sie in der [Amazon Ads-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
+* **[!UICONTROL Advertiser Region]**: Wählen Sie die entsprechende Region aus, in der Ihr Advertiser gehostet wird. Weitere Informationen zu den von den einzelnen Regionen unterstützten Marktplätzen finden Sie in der [Amazon Ads-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-* **[!UICONTROL Amazon Ads-Einverständnissignal]**: Bestätigen Sie, dass alle über diese Verbindung gesendeten Daten der Verwendung personenbezogener Daten für Werbezwecke zugestimmt haben. „ERTEILT“ bedeutet, dass Amazon damit einverstanden ist, die personenbezogenen Daten des Kunden für Werbezwecke zu verwenden. Zulässige Werte sind „GRANTED“ und „DENIED“. Alle Datensätze, die über Verbindungen mit „ABGELEHNT“ gesendet werden, werden für die weitere Verwendung in Amazon Ads abgelehnt.
+* **[!UICONTROL Amazon Ads Consent Signal]**: Bestätigen Sie, dass alle über diese Verbindung gesendeten Daten der Verwendung personenbezogener Daten für Werbezwecke zugestimmt haben. „ERTEILT“ bedeutet, dass Amazon damit einverstanden ist, die personenbezogenen Daten des Kunden für Werbezwecke zu verwenden. Zulässige Werte sind „GRANTED“ und „DENIED“. Alle Datensätze, die über Verbindungen mit „ABGELEHNT“ gesendet werden, werden für die weitere Verwendung in Amazon Ads abgelehnt.
 
 ![Neues Ziel konfigurieren](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
@@ -114,14 +114,14 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -154,13 +154,13 @@ Nach dem Hochladen Ihrer Zielgruppe können Sie mithilfe der folgenden Schritte 
 
 **Für Amazon DSP**
 
-Navigieren Sie zu **[!UICONTROL Advertiser-ID]** > **[!UICONTROL Zielgruppen]** > **[!UICONTROL Advertiser-Zielgruppen]**. Wenn Ihre Zielgruppe erfolgreich erstellt wurde und die Mindestanzahl an Zielgruppenmitgliedern erreicht, wird der Status von `Active` angezeigt. Weitere Informationen zur Größe und Reichweite Ihrer Zielgruppe finden Sie im Bedienfeld „Prognostizierte Reichweite“ auf der rechten Seite der Benutzeroberfläche von Amazon DSP.
+Navigieren Sie zu Ihrem **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]**. Wenn Ihre Zielgruppe erfolgreich erstellt wurde und die Mindestanzahl an Zielgruppenmitgliedern erreicht, wird der Status von `Active` angezeigt. Weitere Informationen zur Größe und Reichweite Ihrer Zielgruppe finden Sie im Bedienfeld „Prognostizierte Reichweite“ auf der rechten Seite der Benutzeroberfläche von Amazon DSP.
 
 ![Validierung der Erstellung von Amazon DSP-Zielgruppen](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **Für[!DNL Amazon Marketing Cloud]**
 
-Suchen Sie im linken Schema-Browser Ihre Zielgruppe unter **[!UICONTROL Advertiser hochgeladen]** > **[!UICONTROL aep_audiences]**. Anschließend können Sie Ihre Audience im AMC SQL-Editor mit der folgenden Klausel abfragen:
+Suchen Sie im Schema-Browser auf der linken Seite unter **[!UICONTROL Advertiser Uploaded]** > **[!UICONTROL aep_audiences]** Ihre Zielgruppe. Anschließend können Sie Ihre Audience im AMC SQL-Editor mit der folgenden Klausel abfragen:
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
@@ -184,8 +184,8 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| Oktober 2025 | Unterstützung für zusätzliche Identitätsfelder hinzugefügt | Es wurden zusätzliche persönliche IDs hinzugefügt, die Unterstützung von `firstName`, `lastName`, `street`, `city`, `state`, `zip` und `country` bieten. Die Zuordnung dieser Felder kann die Übereinstimmungsraten der Zielgruppen verbessern. |
-| Februar 2025 | Es wurde die Anforderung hinzugefügt, **[!UICONTROL Amazon Ads-Einverständnissignal]** zum Exportieren von Datenflüssen hinzuzufügen, und das Ziel von der Beta-Version in „Allgemein verfügbar“ hochgestuft. |
+| Oktober 2025 | Unterstützung für zusätzliche Identitätsfelder hinzugefügt | Es wurden zusätzliche persönliche IDs hinzugefügt, die Unterstützung von `firstName`, `lastName`, `street`, `city`, `state`, `zip` und `country` bieten. Die Zuordnung dieser Felder kann die Übereinstimmungsraten der Zielgruppen verbessern. |
+| Februar 2025 | Es wurde die Anforderung hinzugefügt, **[!UICONTROL Amazon Ads Consent Signal]** zum Exportieren von Datenflüssen hinzuzufügen, und das Ziel wurde von der Beta-Version in „Allgemein verfügbar“ hochgestuft. |  |
 | Mai 2024 | Funktions- und Dokumentationsaktualisierung | Es wurde die Zuordnungsoption zum Exportieren `countryCode` Parameters in Amazon Ads hinzugefügt. Verwenden Sie `countryCode` im [Zuordnungsschritt](#map) um die Übereinstimmungsraten Ihrer Identitäten mit Amazon zu verbessern. |
 | März 2024 | Funktions- und Dokumentationsaktualisierung | Es wurde die Option zum Exportieren von Zielgruppen hinzugefügt, die in [!DNL Amazon Marketing Cloud] (AMC) verwendet werden sollen. |
 | Mai 2023 | Funktions- und Dokumentationsaktualisierung | <ul><li>Unterstützung für die Auswahl der Advertiser-Region im [Zielverbindungs-Workflow](#destination-details) hinzugefügt.</li><li>Dokumentation aktualisiert, um das Hinzufügen der Auswahl der Advertiser-Region widerzuspiegeln. Weitere Informationen zum Auswählen der richtigen Advertiser-Region finden Sie in der [Amazon-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |

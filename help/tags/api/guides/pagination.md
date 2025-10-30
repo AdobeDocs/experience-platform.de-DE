@@ -2,16 +2,16 @@
 title: Paginieren von Antworten in der Reactor-API
 description: Erfahren Sie, wie Sie bei der Auflistung von Ressourcen in der Reactor-API Ergebnisse paginieren.
 exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '102'
-ht-degree: 100%
+ht-degree: 86%
 
 ---
 
 # Paginieren von Antworten in der Reactor-API
 
-Die von der Reactor-API zurückgegebenen Antworten werden paginiert. Die standardmäßige Seitengröße beträgt 25 Elemente. Details zur Paginierung finden Sie im Abschnitt `meta.pagination `des API-Antwortobjekts:
+Die von der Reactor-API zurückgegebenen Antworten werden paginiert. Die standardmäßige Seitengröße beträgt 25 Elemente. Details zur Paginierung finden Sie im Abschnitt `meta.pagination` des API-Antwortobjekts:
 
 ```json
 "meta": {

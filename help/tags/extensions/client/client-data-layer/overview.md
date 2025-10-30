@@ -2,7 +2,7 @@
 title: Adobe Client-Datenschicht-Erweiterung
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Client Data Layer“ in Adobe Experience Platform vertraut.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 95%
@@ -51,12 +51,12 @@ Wenn Sie diese Option auswählen, überwacht Ihr Ereignis-Listener alle Änderun
 
 Das folgende Beispiel für Push-Ereignisse wird vom Listener verfolgt:
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 Das folgende Beispiel für ein Push-Ereignis wird vom Listener nicht verfolgt:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### Überwachen aller Ereignisse
 
@@ -64,8 +64,8 @@ Wenn Sie diese Option auswählen, überwacht Ihr Ereignis-Listener alle Ereignis
 
 Das folgende Beispiel für Push-Ereignisse wird vom Listener verfolgt:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 Das folgende Beispiel für ein Push-Ereignis wird vom Listener nicht verfolgt:
 

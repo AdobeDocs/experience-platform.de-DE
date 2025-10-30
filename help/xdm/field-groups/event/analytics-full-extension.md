@@ -2,22 +2,22 @@
 title: Adobe Analytics ExperienceEvent Full Extension – Schemafeldgruppe
 description: Erfahren Sie mehr über die Schemafeldgruppe "Adobe Analytics ExperienceEvent Full Extension“.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 93%
+source-wordcount: '793'
+ht-degree: 87%
 
 ---
 
 # Schemafeldgruppe [!UICONTROL Adobe Analytics ExperienceEvent Full Extension]
 
-[!UICONTROL Adobe Analytics ExperienceEvent Full Extension] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), die allgemeine von Adobe Analytics erfasste Metriken erfasst.
+[!UICONTROL Adobe Analytics ExperienceEvent Full Extension] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md) die allgemeine von Adobe Analytics erfasste Metriken erfasst.
 
 In diesem Dokument werden die Struktur und der Anwendungsfall der Feldgruppe der Analytics-Erweiterung beschrieben.
 
 >[!NOTE]
 >
->Aufgrund des Umfangs und der Anzahl der sich wiederholenden Elemente in dieser Feldgruppe wurden viele der in diesem Handbuch angezeigten Felder reduziert, um Platz zu sparen. Um die gesamte Struktur dieser Feldergruppe zu untersuchen, können Sie sie [in der Experience Platform-Benutzeroberfläche nachschlagen](../../ui/explore.md) oder das vollständige Schema im [öffentlichen XDM-Repository“ &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>Aufgrund des Umfangs und der Anzahl der sich wiederholenden Elemente in dieser Feldgruppe wurden viele der in diesem Handbuch angezeigten Felder reduziert, um Platz zu sparen. Um die gesamte Struktur dieser Feldergruppe zu untersuchen, können Sie sie [in der Experience Platform-Benutzeroberfläche nachschlagen](../../ui/explore.md) oder das vollständige Schema im [öffentlichen XDM-Repository“ ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## Feldgruppenstruktur
 
@@ -46,7 +46,7 @@ Die Feldgruppe stellt ein einzelnes `_experience`-Objekt für ein Schema bereit,
 | `eVars` | Objekt | Ein Objekt, das bis zu 250 Konvertierungsvariablen ([eVars](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=de)) erfasst. Die Eigenschaften dieses Objekts sind von `eVar1` bis `eVar250` nummeriert und akzeptieren nur Zeichenfolgen für ihren Datentyp. |
 | `hierarchies` | Objekt | Ein Objekt, das bis zu fünf benutzerdefinierte Hierarchievariablen ([hiers](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=de)) erfasst. Die Eigenschaften dieses Objekts werden als `hier1` bis `hier5` verschlüsselt. Dies sind selbst Objekte mit den folgenden Untereigenschaften:<ul><li>`delimiter`: Das ursprüngliche Trennzeichen, das zur Erstellung der Liste unter `values` verwendet wurde.</li><li>`values`: Eine durch Trennzeichen getrennte Liste von Namen der Hierarchieebenen, dargestellt als Zeichenfolge.</li></ul> |
 | `listProps` | Objekt | Ein Objekt, das bis zu 75 [Listen-Props](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=de#listen-props) erfasst. Die Eigenschaften dieses Objekts werden als `prop1` bis `prop75` verschlüsselt. Dies sind selbst Objekte mit den folgenden Untereigenschaften:<ul><li>`delimiter`: Das ursprüngliche Trennzeichen, das zur Erstellung der Liste unter `values` verwendet wurde.</li><li>`values`: Eine durch Trennzeichen getrennte Liste von Werten für die Eigenschaft, dargestellt als Zeichenfolge.</li></ul> |
-| `lists` | Objekt | Ein Objekt, das bis zu drei [Listen](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=de) erfasst. Die Eigenschaften dieses Objekts werden als `list1` bis `list3` verschlüsselt. Jede dieser Eigenschaften enthält ein `list`-Array von Datentypen für [[!UICONTROL Schlüssel-Wert-Paare]](../../data-types/key-value-pair.md). |
+| `lists` | Objekt | Ein Objekt, das bis zu drei [Listen](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=de) erfasst. Die Eigenschaften dieses Objekts werden als `list1` bis `list3` verschlüsselt. Jede dieser Eigenschaften enthält ein einzelnes `list`-Array [[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md) Datentypen. |
 | `props` | Objekt | Ein Objekt, das bis zu 75 [Eigenschaften](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=de) erfasst. Die Eigenschaften dieses Objekts werden als `prop1` bis `prop75` verschlüsselt und akzeptieren als Datentyp nur Zeichenfolgen. |
 | `postalCode` | Zeichenfolge | Eine vom Kunden bereitgestellte Postleitzahl. |
 | `stateProvince` | Zeichenfolge | Ein vom Kunden bereitgestellter Bundeslands- oder Regionsstandort. |
@@ -61,8 +61,8 @@ Die Feldgruppe stellt ein einzelnes `_experience`-Objekt für ein Schema bereit,
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `firstWeb` | [[!UICONTROL Web-Informationen]](../../data-types/web-information.md) | Die Informationen zu Web-Seite, Link und Referrer aus dem ersten Erlebnisereignis für diesen Endbenutzer. |
-| `firstTimestamp` | Ganzzahl | Ein Unix-Zeitstempel für das erste Erlebnisereignis für diesen Endbenutzer. |
+| `firstWeb` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | Die Informationen zu Web-Seite, Link und Referrer aus dem ersten Erlebnisereignis für diesen Endbenutzer. |
+| `firstTimestamp` | Ganzzahl | Ein Unix-Zeitstempel für das erste ExperienceEvent für diesen Endbenutzer. |
 
 ## `environment` {#environment}
 
@@ -81,7 +81,7 @@ Die Feldergruppe der Analytics-Erweiterung enthält zehn Objektfelder, die jewei
 
 Jedes Ereignisobjekt der obersten Ebene enthält die einzelnen Ereignisobjekte für den jeweiligen Bereich. Beispiel: `event101to200` enthält die Ereignisse, die von `event101` bis `event200` verschlüsselt wurden.
 
-Jedes lineare Objekt verwendet den Datentyp [[!UICONTROL Kennzahl]](../../data-types/measure.md) und stellt eine eindeutige Kennung und einen quantifizierbaren Wert bereit.
+Jedes lineare Objekt verwendet den Datentyp [[!UICONTROL Measure]](../../data-types/measure.md) und stellt eine eindeutige Kennung und einen quantifizierbaren Wert bereit.
 
 ![Feld für benutzerdefiniertes Ereignis](../../images/field-groups/analytics-full-extension/event-vars.png)
 
@@ -93,8 +93,8 @@ Jedes lineare Objekt verwendet den Datentyp [[!UICONTROL Kennzahl]](../../data-t
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `search` | [[!UICONTROL Durchsuchen]](../../data-types/search.md) | Erfasst Informationen zur Web- oder Mobile-Suche nach dem Sitzungseintrag. |
-| `web` | [[!UICONTROL Web-Informationen]](../../data-types/web-information.md) | Erfasst Informationen zu Link-Klicks, Web-Seitendetails, Informationen zur verweisenden Stelle sowie Browser-Details für den Sitzungseintrag. |
+| `search` | [[!UICONTROL Search]](../../data-types/search.md) | Erfasst Informationen zur Web- oder Mobile-Suche nach dem Sitzungseintrag. |
+| `web` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | Erfasst Informationen zu Link-Klicks, Web-Seitendetails, Informationen zur verweisenden Stelle sowie Browser-Details für den Sitzungseintrag. |
 | `depth` | Ganzzahl | Die aktuelle Sitzungstiefe (z. B. die Seitenzahl) für den Endbenutzer. |
 | `num` | Ganzzahl | Die aktuelle Sitzungsnummer für den Endbenutzer. |
 | `timestamp` | Ganzzahl | Ein Unix-Zeitstempel für den Sitzungseintrag. |

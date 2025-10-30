@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Batch-Aufnahme
 description: Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform-APIs für die Batch-Aufnahme von Daten.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 97%
@@ -272,4 +272,4 @@ Es gibt zwei Gründe, warum möglicherweise keine Metriken für Ihren Batch verf
 | 200 | Der Batch wurde zur Verarbeitung angenommen und wird einen endgültigen Status wie „Aktiv“ oder „Fehler“ erhalten. Nach der Übermittlung kann der Batch mithilfe des `GetBatch`-Endpunkts überwacht werden. |
 | 400 | Ungültige Anfrage. Wird zurückgegeben, wenn ein Batch fehlende oder überlappende Abschnitte enthält. |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

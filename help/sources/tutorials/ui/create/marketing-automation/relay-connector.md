@@ -2,9 +2,9 @@
 title: Verbinden von Relay mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine benutzerdefinierte Quellverbindung für einen Relay-Connector erstellen.
 exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '544'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Die [!DNL Relay Connector]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Relay Connector]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Mit [!DNL Relay Connector] können Sie Ihren Kunden personalisierte Erlebnisse zu den wichtigsten Zeitpunkten im Journey bereitstellen und so engere Beziehungen aufbauen sowie die Kundentreue und den Wert steigern, indem Sie eine eingehende Verbindung erstellen, um Ereignisse aus Ihrer [!DNL Relay Network]-Integration in Adobe Experience Platform zu streamen.
 
@@ -25,19 +25,19 @@ Lesen Sie dieses Handbuch, um zu erfahren, wie Sie die [!DNL Relay Connector] im
 
 ## [!DNL Relay Connector] verbinden
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können. Sie können die entsprechende Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen oder die Suchoption verwenden, um eine bestimmte Quelle zu finden.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste **[!UICONTROL Sources]** aus, um auf den [!UICONTROL Sources]-Arbeitsbereich zuzugreifen. Der Bildschirm [!UICONTROL Catalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können. Sie können die entsprechende Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen oder die Suchoption verwenden, um eine bestimmte Quelle zu finden.
 
-Wählen Sie unter *[!UICONTROL Kategorie]* Marketing-Automatisierung“ die Karte [!DNL Relay Connector] und anschließend **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter der Kategorie *[!UICONTROL Marketing automation]* die Karte Quelle [!DNL Relay Connector] und dann **[!UICONTROL Add data]** aus.
 
 >[!TIP]
 >
->Wenn kein authentifiziertes Konto vorhanden ist, wird für Quellen im **[!UICONTROL die Option]** Einrichten“ angezeigt. Nach der Authentifizierung eines Kontos ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
+>Quellen im Quellkatalog zeigen die **[!UICONTROL Set up]** an, wenn kein authentifiziertes Konto vorhanden ist. Nach der Authentifizierung eines Kontos ändert sich diese Option in **[!UICONTROL Add data]**.
 
 ![Die Katalogseite des Quellarbeitsbereichs.](../../../../images/tutorials/create/relay-connector/relay-source.jpg)
 
 ### Daten auswählen
 
-Die Schnittstelle **[!UICONTROL Connect Relay Connector source]** wird angezeigt. Verwenden Sie die Schnittstelle *[!UICONTROL Daten auswählen]* um das Quelldatenschema zu durchsuchen oder anzugeben. Alternativ können Sie eine JSON-Beispieldatei hochladen, um das Quellschema zu definieren.
+Die **[!UICONTROL Connect Relay Connector source]** wird angezeigt. Verwenden Sie die *[!UICONTROL Select data]*, um das Quelldatenschema zu durchsuchen oder anzugeben. Alternativ können Sie eine JSON-Beispieldatei hochladen, um das Quellschema zu definieren.
 
 >[!NOTE]
 >
@@ -45,15 +45,15 @@ Die Schnittstelle **[!UICONTROL Connect Relay Connector source]** wird angezeigt
 
 ![Die ausgewählte Datenschnittstelle](../../../../images/tutorials/create/relay-connector/upload-data.jpg)
 
-Nachdem die Daten hochgeladen wurden, können Sie den Abschnitt [!UICONTROL Vorschau der Beispieldaten] verwenden, um eine Vorschau der Daten anzuzeigen.
+Nachdem die Daten hochgeladen wurden, können Sie den Abschnitt &quot;[!UICONTROL Preview sample data]&quot; verwenden, um eine Vorschau der Daten anzuzeigen.
 
 ![Die hochgeladenen Daten.](../../../../images/tutorials/create/relay-connector/uploaded-data.jpg)
 
 ### Datenflussdetails
 
-Verwenden Sie anschließend die Schnittstelle *[!UICONTROL Datenflussdetails]*, um einen **Namen** und eine **optionale Beschreibung** für Ihren Datenfluss bereitzustellen. Wählen Sie außerdem den **[!UICONTROL Zieldatensatz]** aus, den Sie verwenden möchten. Sie können entweder einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
+Verwenden Sie anschließend die *[!UICONTROL Dataflow details]*, um einen **Namen** und eine **optionale Beschreibung** für Ihren Datenfluss anzugeben. Wählen Sie außerdem die **[!UICONTROL Target dataset]** aus, die Sie verwenden möchten. Sie können entweder einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
 
-![Die Schnittstelle für Datenflussdetails. &#x200B;](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
+![Die Schnittstelle für Datenflussdetails.](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### Zuordnung
 
@@ -79,7 +79,7 @@ Nachdem Sie den Datenfluss erstellt haben, finden Sie die *Streaming-Endpunkt* U
 
 Verwenden Sie diese Werte, um den Webhook in der **Relay-Konsole“**. Detaillierte Anweisungen zum Konfigurieren der Push-Benachrichtigung finden Sie in der Relay-Dokumentation: [Konfigurieren der Push-API](https://docs.relaynetwork.com/docs/configuring-the-push-api).
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
-* [Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API](https://experienceleague.adobe.com/de/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Verbinden Sie sich über die Benutzeroberfläche mit Ihrer Quelle](https://experienceleague.adobe.com/de/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Verbinden Sie sich über die Benutzeroberfläche mit Ihrer Quelle](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

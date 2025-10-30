@@ -3,7 +3,8 @@ keywords: Integration von adform; adform;
 title: Adform-Integration für nicht authentifiziertes Retargeting
 description: Durch diese Adobe Experience Platform-Integration können Sie Benutzende basierend auf ECID erneut ansprechen.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 23da6e12b1f5bdc37240d7aa11a44e040b29e3f7
+exl-id: 37eb9453-fc3c-481e-94ea-54d9b1545631
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 3%
@@ -47,7 +48,7 @@ Stellen Sie vor der Integration von Adform mit Adobe sicher, dass die folgenden 
 2. **CDP- oder Verbindungs-SKU**: Sie müssen entweder über die Adobe Customer Data Platform (CDP) Prime- oder Ultimate-SKU oder über die Verbindungs-SKU verfügen, um eine nahtlose Client- und Server-seitige Kommunikation zu ermöglichen.
 
 3. **Adobe Experience Platform Edge Network-Konfiguration**:
-   * Stellen Sie sicher, dass der Edge Network für die Unterstützung der Echtzeit-Ereignisweiterleitung für Offsite-Retargeting konfiguriert ist. Weitere Informationen finden Sie [&#x200B; Handbuch „Erste Schritte &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/tags/event-forwarding/getting-started) der Ereignisweiterleitung“ von Adobe.
+   * Stellen Sie sicher, dass der Edge Network für die Unterstützung der Echtzeit-Ereignisweiterleitung für Offsite-Retargeting konfiguriert ist. Weitere Informationen finden Sie [ Handbuch „Erste Schritte ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) der Ereignisweiterleitung“ von Adobe.
    * Dieser Schritt ist wichtig, um Daten effizient an den Server-seitigen Endpunkt von Adform zu übertragen.
 
 Sobald diese Voraussetzungen erfüllt sind, können Sie mit der Konfiguration und Bereitstellung der [!DNL Adform]-Erweiterung fortfahren.
@@ -105,6 +106,7 @@ Die Erweiterung muss an eine Regel angehängt sein, damit sie ordnungsgemäß fu
 ## Validieren und Bereitstellen
 
 Stellen Sie sicher, dass die Erweiterung korrekt installiert und konfiguriert ist und dass alle erforderlichen Datenelemente zugeordnet werden, einschließlich:
+
 * [ECID](/help/identity-service/features/ecid.md)
 * Seitenname
 * Verweis-URL

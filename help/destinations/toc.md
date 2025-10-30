@@ -5,7 +5,7 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1325'
 ht-degree: 73%
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -50,7 +50,7 @@ ht-degree: 73%
       * [Exportieren von Dateien nach Bedarf an Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
       * [Exportieren von Datensätzen mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
       * [Erweitern der Zeitpläne für den Datensatzexport für Datenflüsse, die vor November 2024 erstellt wurden](./ui/dataset-expiration-update.md)
-      * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
+      * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifizierungszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
       * [Exportieren von Arrays, Zuordnungen und Objekten](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Durchführen von Umwandlungen an Daten, die in Cloud-Speicher-Ziele exportiert wurden](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
@@ -264,7 +264,7 @@ ht-degree: 73%
          * [Konfiguration von Zielgruppen-Metadaten](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
          * [Aggregationsrichtlinie](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)
          * [Batch-Konfiguration](./destination-sdk/functionality/destination-configuration/batch-configuration.md)
-         * [Historische Profilqualifikationen](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
+         * [Historische Profilqualifizierungen](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
       * [Ratenbegrenzungs- und Wiederholungsrichtlinie für Streaming-Ziele](./destination-sdk/functionality/rate-limiting-retry-policy.md)
       * [Verwaltung von Zielgruppen-Metadaten](./destination-sdk/functionality/audience-metadata-management.md)
    * Handbücher {#guides}

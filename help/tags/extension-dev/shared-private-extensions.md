@@ -1,9 +1,9 @@
 ---
 title: Freigegebene private Erweiterungspakete
 description: Erfahren Sie, wie Sie private Erweiterungspakete in Adobe Experience Platform Tags freigeben können.
-source-git-commit: f45f58b4679b619708204cdb0c18174a4836ce8d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ Adobe Experience Platform Tags unterstützt jetzt **[!UICONTROL Usage Authorizat
 
 >[!NOTE]
 >
->Erweiterungspakete müssen eine private oder öffentliche Version aufweisen, damit sie über „Verwendungsautorisierungen“ [!UICONTROL &#x200B; werden &#x200B;]. Versionen, die als Entwicklungsverfügbarkeit gekennzeichnet sind, können nicht freigegeben werden und werden nicht in der Autorisierungs-Dropdown-Liste angezeigt. Dies gilt auch dann, wenn bereits eine frühere Version (z. B. 1.0.0) freigegeben wurde. Neuere Versionen (z. B. 1.0.1) müssen mindestens als privat eingestuft werden, bevor sie von empfangenden Organisationen autorisiert oder installiert werden können.
+>Erweiterungspakete müssen eine private oder öffentliche Version aufweisen, damit sie über [!UICONTROL Usage Authorizations] freigegeben werden können. Versionen, die als Entwicklungsverfügbarkeit gekennzeichnet sind, können nicht freigegeben werden und werden nicht in der Autorisierungs-Dropdown-Liste angezeigt. Dies gilt auch dann, wenn bereits eine frühere Version (z. B. 1.0.0) freigegeben wurde. Neuere Versionen (z. B. 1.0.1) müssen mindestens als privat eingestuft werden, bevor sie von empfangenden Organisationen autorisiert oder installiert werden können.
 >
 >Alle Hinweise zur Freigabe privater Erweiterungspakete gelten auch, wenn Sie diese Pakete später veröffentlichen. Dieselben Überlegungen hinsichtlich Sichtbarkeit, Versionierung, Sicherheit, Kompatibilität, Support und Dokumentation bleiben unabhängig vom Verfügbarkeitsstatus des Pakets relevant.
 
-Sowohl öffentliche als auch private Erweiterungspakete können über [!UICONTROL Verwendungsautorisierungen“ freigegeben werden] wobei für Erweiterungen in der Entwicklungsverfügbarkeit keine Berechtigungen erforderlich sind.
+Sowohl öffentliche als auch private Erweiterungspakete können über [!UICONTROL Usage Authorizations] freigegeben werden, wobei für Erweiterungen in der Entwicklungsverfügbarkeit keine Berechtigungen erforderlich sind.
 
 Unternehmen entwickeln häufig spezielle Erweiterungen, die auf ihre individuellen Geschäftsanforderungen zugeschnitten sind. Diese Erweiterungen können proprietäre Logik, benutzerdefinierte Integrationen oder vertrauliche Konfigurationen enthalten, die nicht öffentlich zugänglich gemacht werden sollten. Nutzungsautorisierungen lösen diese Herausforderung, indem sie Folgendes ermöglichen:
 
@@ -38,40 +38,40 @@ Wenn eine private Version freigegeben wird, erhält die empfangende Organisation
 
 ## Erstellen einer Autorisierung für die Verwendung von Erweiterungspaketen
 
-Um eine Erweiterung freizugeben, navigieren Sie zur Datenerfassungs-Benutzeroberfläche und wählen **[!UICONTROL Tags]** in der linken Navigationsleiste aus. Wählen Sie hier eine vorhandene Eigenschaft aus oder erstellen Sie eine neue Eigenschaft.
+Um eine Erweiterung freizugeben, navigieren Sie zur Datenerfassungs-Benutzeroberfläche und wählen Sie **[!UICONTROL Tags]** in der linken Navigationsleiste aus. Wählen Sie hier eine vorhandene Eigenschaft aus oder erstellen Sie eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken **[!UICONTROL auf]** Erweiterungen und wählen Sie dann die Registerkarte **[!UICONTROL Nutzungsberechtigungen]** aus.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Extensions]** und wählen Sie dann die Registerkarte **[!UICONTROL Usage Authorizations]** aus.
 
 Hier sehen Sie eine Liste der vorhandenen freigegebenen Berechtigungen, die in zwei Kategorien unterteilt sind:
 
 - **Für diese Organisation freigegeben**: Erweiterungen, die andere Organisationen für Sie freigegeben haben.
 - **Für andere Organisationen freigegeben**: Erweiterungen, die Sie für andere Organisationen freigegeben haben.
 
-Wählen Sie **[!UICONTROL Berechtigung hinzufügen]** aus.
+Wählen Sie **[!UICONTROL Add Authorization]** aus.
 
-![Die Registerkarte [!UICONTROL Nutzungsberechtigungen] mit einer Liste von Erweiterungen, die für diese Organisation freigegeben wurden, Hervorhebung [!UICONTROL Autorisierung hinzufügen]](../images/shared-extensions/add-authorization.png)
+![Die Registerkarte &quot;[!UICONTROL Usage Authorizations]&quot; mit einer Liste der für diese Organisation freigegebenen Erweiterungen und hervorgehobener [!UICONTROL Add Authorization]](../images/shared-extensions/add-authorization.png)
 
 >[!IMPORTANT]
 >
 >Sie müssen die **`Organization ID`** der Zielorganisation als Verantwortlichen der Organisation abrufen. Organisationen können nicht nach Namen durchsucht werden.
 
-Wählen Sie **[!UICONTROL Erweiterung]** aus, die Sie aus Ihren verfügbaren Erweiterungen im Dropdown-Menü freigeben möchten. In der Liste werden Erweiterungen angezeigt, die Ihrem Unternehmen gehören, zusammen mit ihrem Verfügbarkeitsstatus. Erweiterungen, deren neueste Version die Verfügbarkeit **Entwicklung** aufweist, werden nicht in dieser Liste angezeigt.
+Wählen Sie in der Dropdown-Liste die **[!UICONTROL Extension]** aus, die Sie aus Ihren verfügbaren Erweiterungen freigeben möchten. In der Liste werden Erweiterungen angezeigt, die Ihrem Unternehmen gehören, zusammen mit ihrem Verfügbarkeitsstatus. Erweiterungen, deren neueste Version die Verfügbarkeit **Entwicklung** aufweist, werden nicht in dieser Liste angezeigt.
 
-Geben Sie als Nächstes die Kennung der empfangenden Organisation ein und wählen Sie dann **[!UICONTROL Speichern]**.
+Geben Sie anschließend die Kennung der empfangenden Organisation ein und wählen Sie dann **[!UICONTROL Save]** aus.
 
-![Die Seite [!UICONTROL Verwendungsautorisierung des Erweiterungspakets erstellen] auf der eine ausgewählte Erweiterung und die eingegebene Adobe-Organisations-ID angezeigt werden, wobei [!UICONTROL &#x200B; hervorgehoben ist]](../images/shared-extensions/save-authorization.png)
+![Die [!UICONTROL Create extension package usage authorization] mit der ausgewählten Erweiterung und der eingegebenen Adobe-Organisations-ID, wobei [!UICONTROL Save]](../images/shared-extensions/save-authorization.png) hervorgehoben wird
 
-Sie kehren zur Registerkarte [!UICONTROL Nutzungsberechtigungen] zurück, auf der Sie die Erweiterung in Ihrer Liste **[!UICONTROL Für andere Organisationen freigegeben]** sehen. Der Status **„Genehmigung ausstehend**, bis die empfangende Organisation die Autorisierung genehmigt hat. Anschließend wird sie auf &quot;**&quot;**.
+Sie kehren zur Registerkarte [!UICONTROL Usage Authorizations] zurück, auf der Sie die Erweiterung in Ihrer **[!UICONTROL Shared with other orgs]** sehen können. Der Status **„Genehmigung ausstehend**, bis die empfangende Organisation die Autorisierung genehmigt hat. Anschließend wird sie auf &quot;**&quot;**.
 
-![Die Registerkarte [!UICONTROL Nutzungsberechtigungen] mit einer Liste der für andere Organisationen freigegebenen Erweiterungen, in der die neue Autorisierung hervorgehoben ist](../images/shared-extensions/new-authorization.png)
+![Die Registerkarte &quot;[!UICONTROL Usage Authorizations]&quot; mit einer Liste der für andere Organisationen freigegebenen Erweiterungen, auf der die neue Autorisierung hervorgehoben ist](../images/shared-extensions/new-authorization.png)
 
 >[!TIP]
 >
->Sie können Erweiterungen auch direkt über den **[!UICONTROL Erweiterungskatalog“ freigeben]** indem Sie auf der Erweiterungskarte das Menü (⋯) auswählen und dann im Menü die Option Freigeben auswählen.
+>Sie können Erweiterungen auch direkt über die **[!UICONTROL Extension Catalog]** freigeben, indem Sie auf das Menü (⋯) auf der Erweiterungskarte klicken und dann im Menü die Option Freigeben auswählen.
 
 Wenn eine Autorisierung aktiv ist, zeigt die freigegebene Erweiterung im Katalog ein ***Freigabe***-Badge an, das angibt, dass sie für andere Organisationen freigegeben wird.
 
-![Die Registerkarte [!UICONTROL Katalog] mit der freigegebenen Erweiterung und dem Badge](../images/shared-extensions/sharing-badge.png)
+![Die Registerkarte &quot;[!UICONTROL Catalog]&quot;, auf der die freigegebene Erweiterung mit dem Badge angezeigt wird](../images/shared-extensions/sharing-badge.png)
 
 ## Freigegebene Erweiterungen autorisieren und verwalten
 
@@ -79,37 +79,39 @@ Wenn eine Autorisierung aktiv ist, zeigt die freigegebene Erweiterung im Katalog
 >
 >Als empfangende Organisation können Sie nur freigegebene Erweiterungen genehmigen oder ablehnen. Sie können die Autorisierungsdetails nicht verwalten oder ändern, da diese von der Freigabeorganisation gesteuert werden.
 
-Um eine freigegebene Erweiterung für Ihr Unternehmen zu autorisieren, navigieren Sie zur Datenerfassungs-Benutzeroberfläche, wählen **[!UICONTROL Tags]** aus dem linken Navigationsbereich aus und wählen Sie die Eigenschaft aus. Wählen Sie anschließend **[!UICONTROL linken Navigationsbereich]** Erweiterungen“ und dann die Registerkarte **[!UICONTROL Nutzungsberechtigungen]** aus.
+Um eine freigegebene Erweiterung für Ihr Unternehmen zu autorisieren, navigieren Sie zur Datenerfassungs-Benutzeroberfläche, wählen Sie im linken Navigationsbereich **[!UICONTROL Tags]** aus und wählen Sie die Eigenschaft aus. Wählen Sie anschließend im linken Navigationsbereich **[!UICONTROL Extensions]** und dann die Registerkarte **[!UICONTROL Usage Authorizations]** aus.
 
-Eine Liste der freigegebenen Erweiterungen, einschließlich der Erweiterungen **Genehmigung ausstehend** finden Sie im Abschnitt **[!UICONTROL Freigegeben für diese Organisation]** . Wählen Sie die Erweiterung aus, die Sie genehmigen möchten, und wählen Sie dann **[!UICONTROL Genehmigen]**.
+Eine Liste der freigegebenen Erweiterungen, einschließlich der Erweiterungen **Genehmigung ausstehend** finden Sie im Abschnitt **[!UICONTROL Shared with this org]** . Wählen Sie die Erweiterung aus, die Sie genehmigen möchten, und klicken Sie dann auf **[!UICONTROL Approve]**.
 
-![Die Registerkarte [!UICONTROL Nutzungsberechtigungen] mit einer Liste von Erweiterungen, die für diese Organisation freigegeben wurden, mit der ausgewählten Erweiterung, die auf Genehmigung wartet, Hervorhebung [!UICONTROL Genehmigen]](../images/shared-extensions/approve-authorization.png)
+![Die Registerkarte &quot;[!UICONTROL Usage Authorizations]&quot; mit einer Liste der für diese Organisation freigegebenen Erweiterungen und der ausgewählten Erweiterung, die auf Genehmigung wartet, wobei [!UICONTROL Approve]](../images/shared-extensions/approve-authorization.png) hervorgehoben ist
 
 >[!NOTE]
 >
->Sie können eine Anfrage auch auf der Registerkarte **[!UICONTROL Nutzungsberechtigungen]** ablehnen, wenn die freigegebene Erweiterung für Ihre Organisation nicht mehr erforderlich ist.
+>Sie können eine Anfrage auch auf der Registerkarte **[!UICONTROL Usage Authorizations]** ablehnen, wenn die freigegebene Erweiterung für Ihre Organisation nicht mehr erforderlich ist.
 
-Wählen **[!UICONTROL OK]** im Dialogfeld **[!UICONTROL Verwendung für Autorisierung]** aus.
+Wählen Sie **[!UICONTROL OK]** im Dialogfeld **[!UICONTROL Authorization Usages]** aus.
 
-![Dialogfeld [!UICONTROL Autorisierungsverwendungen], Hervorhebung [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
+![Das Dialogfeld &quot;[!UICONTROL Authorization Usages]&quot;, Hervorhebung [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
 
-Sie kehren zur Registerkarte [!UICONTROL Nutzungsberechtigungen“ zurück] auf der die Erweiterung angezeigt wird und nun den Status **Genehmigt** aufweist.
+Sie kehren zur Registerkarte [!UICONTROL Usage Authorizations] zurück, auf der Sie sehen können, dass die Erweiterung jetzt den Status **Genehmigt** aufweist.
 
-![Die Registerkarte [!UICONTROL Nutzungsberechtigungen] mit einer Liste der für diese Organisation freigegebenen Erweiterungen, wobei die Erweiterung mit dem Status Genehmigt hervorgehoben wird](../images/shared-extensions/approved-authorization.png)
+![Die Registerkarte &quot;[!UICONTROL Usage Authorizations]&quot; mit einer Liste der für diese Organisation freigegebenen Erweiterungen, wobei die Erweiterung mit dem Status „Genehmigt“ hervorgehoben wird](../images/shared-extensions/approved-authorization.png)
 
 Sobald die Autorisierung genehmigt wurde, ist die Erweiterung in Ihrem Katalog verfügbar und kann wie jede andere Erweiterung installiert und verwendet werden. Die freigegebene Erweiterung weist mit einem ***Empfangen*** -Badge darauf hin, dass es sich um eine Erweiterung handelt, die von einer anderen Organisation für Sie freigegeben wurde.
 
-![Die Registerkarte [!UICONTROL Katalog] mit der freigegebenen Erweiterung mit dem Badge „Empfangen“](../images/shared-extensions/receiving-badge.png)
+![Die Registerkarte &quot;[!UICONTROL Catalog]&quot;, auf der die freigegebene Erweiterung mit dem Badge „Empfangen“ angezeigt wird](../images/shared-extensions/receiving-badge.png)
 
 ## Widerrufen von Berechtigungen
 
 Als Eigentümerorganisation können Sie eine Autorisierung jederzeit löschen, unabhängig von ihrem aktuellen Status (Warten auf Genehmigung, Abgelehnt oder Genehmigt).
 
 **Wenn Ihre Erweiterung nie veröffentlicht wurde:**
+
 - Alle privaten Versionen, die die empfangende Organisation bereits installiert hat, werden weiterhin in der Liste der installierten Erweiterungen angezeigt.
 - Wenn die empfangende Organisation Ihre Erweiterung nie installiert hat, wird sie an keiner Stelle mehr in der Benutzeroberfläche angezeigt.
 
 **Wenn Ihre Erweiterung veröffentlicht wurde:**
+
 - Alle privaten Versionen, die von der empfangenden Organisation installiert wurden, bleiben in der Liste der installierten Erweiterungen sichtbar.
 - Wenn Ihre private Version nie installiert wurde, wird die neueste öffentliche Version weiterhin im Katalog angezeigt und kann installiert werden.
 - Sie können bei Bedarf auch ein Downgrade von Ihrer privaten Version auf die neueste verfügbare öffentliche Version durchführen.

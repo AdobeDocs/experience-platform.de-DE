@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;
 title: Erstellen einer Flussausführung für die On-Demand-Aufnahme mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Flussausführung für die On-Demand-Aufnahme erstellen
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: b2b835faf9cf52ea0461d43b29076eaf7b0688f1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 10%
@@ -35,7 +35,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ## Erstellen einer Flussausführung für eine tabellenbasierte Quelle
 
@@ -106,7 +106,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Flussausführung z
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [&#x200B; finden Sie &#x200B;](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
+| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [ finden Sie ](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
 | `etag` | Die Ressourcenversion der Flussausführung. |
 
 <!-- 
@@ -188,7 +188,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Flussausführung z
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [&#x200B; finden Sie &#x200B;](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
+| `id` | Die ID der neu erstellten Flussausführung. Weitere Informationen zu tabellenbasierten [ finden Sie ](../api/collect/database-nosql.md#specs) Handbuch unter Abrufen von Flussspezifikationen . |
 | `etag` | Die Ressourcenversion der Flussausführung. |
 
 ## Überwachen von Flussausführungen

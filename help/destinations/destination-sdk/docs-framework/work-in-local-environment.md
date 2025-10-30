@@ -2,7 +2,7 @@
 title: Verwenden eines Texteditors in der lokalen Umgebung, um eine Zieldokumentationsseite zu erstellen
 description: Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie mit einem Texteditor in Ihrer lokalen Umgebung eine Dokumentationsseite für Ihr Experience Platform-Ziel erstellen und zur Überprüfung senden können.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 4%
@@ -16,18 +16,19 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 >[!TIP]
 >
 >Weitere Informationen finden Sie auch in der unterstützenden Dokumentation im Adobe-Handbuch für Mitwirkende:
->* [Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=de)
->* [Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de)
->* [GitHub-Beitrags-Workflow für wichtige &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=de).
+>
+>* [Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [GitHub-Beitrags-Workflow für wichtige ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Verbinden mit GitHub und Einrichten der lokalen Authoring-Umgebung {#set-up-environment}
 
 1. Navigieren Sie im Browser zu `https://github.com/AdobeDocs/experience-platform.en`
-2. Um [Verzweigung](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de#fork-the-repository) das Repository anzuzeigen, klicken Sie auf **Verzweigung** wie unten dargestellt. Dadurch wird eine Kopie des Experience Platform-Repositorys in Ihrem eigenen GitHub-Konto erstellt.
+2. Um [Verzweigung](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) das Repository anzuzeigen, klicken Sie auf **Verzweigung** wie unten dargestellt. Dadurch wird eine Kopie des Experience Platform-Repositorys in Ihrem eigenen GitHub-Konto erstellt.
 
    ![Fork Adobe-Dokumentations-Repository](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. Klonen Sie das Repository auf Ihrem lokalen Computer. Wählen Sie **Code > HTTPS > Mit GitHub Desktop öffnen** aus, wie unten dargestellt. Stellen Sie sicher, dass [GitHub Desktop](https://desktop.github.com/) installiert ist. Weitere Informationen finden Sie unter [Erstellen eines lokalen Klons des Repositorys](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de#create-a-local-clone-of-the-repository) im Adobe Contributor Guide.
+3. Klonen Sie das Repository auf Ihrem lokalen Computer. Wählen Sie **Code > HTTPS > Mit GitHub Desktop öffnen** aus, wie unten dargestellt. Stellen Sie sicher, dass [GitHub Desktop](https://desktop.github.com/) installiert ist. Weitere Informationen finden Sie unter [Erstellen eines lokalen Klons des Repositorys](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) im Adobe Contributor Guide.
 
    ![Klonen Sie das Dokumentations-Repository von Adobe in eine lokale Umgebung](../assets/docs-framework/clone-local.png)
 
@@ -35,11 +36,11 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 
 ## Erstellen der Dokumentationsseite für Ihr Ziel {#author-documentation}
 
-1. Ihre Dokumentationsseite basiert auf der [Self-Service-Zielvorlage](../docs-framework/self-service-template.md). Laden Sie die [Zielvorlage“ &#x200B;](../assets/docs-framework/yourdestination-template.zip). Entpacken Sie sie und extrahieren Sie die Datei `yourdestination-template.md` in das in Schritt 4 oben erwähnte Verzeichnis.  Benennen Sie die Datei `YOURDESTINATION.md` um, wobei YOURDESTINATION der Name Ihres Ziels in Adobe Experience Platform ist. Wenn Ihre Firma beispielsweise Moviestar heißt, würden Sie Ihre Datei `moviestar.md` nennen.
-2. Öffnen Sie die neue Datei in Ihrem [Texteditor Ihrer Wahl](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=de#understand-markdown-editors). Adobe empfiehlt die Verwendung von [Visual Studio Code](https://code.visualstudio.com/) und die Installation der Adobe Markdown Authoring-Erweiterung. Um die Erweiterung zu installieren, öffnen Sie Visual Studio Code, wählen Sie die Registerkarte **[!DNL Extensions]** auf der linken Seite des Bildschirms aus und suchen Sie nach `adobe markdown authoring`. Wählen Sie die Erweiterung aus und klicken Sie auf **[!DNL Install]**.
+1. Ihre Dokumentationsseite basiert auf der [Self-Service-Zielvorlage](../docs-framework/self-service-template.md). Laden Sie die [Zielvorlage“ ](../assets/docs-framework/yourdestination-template.zip). Entpacken Sie sie und extrahieren Sie die Datei `yourdestination-template.md` in das in Schritt 4 oben erwähnte Verzeichnis.  Benennen Sie die Datei `YOURDESTINATION.md` um, wobei YOURDESTINATION der Name Ihres Ziels in Adobe Experience Platform ist. Wenn Ihre Firma beispielsweise Moviestar heißt, würden Sie Ihre Datei `moviestar.md` nennen.
+2. Öffnen Sie die neue Datei in Ihrem [Texteditor Ihrer Wahl](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors). Adobe empfiehlt die Verwendung von [Visual Studio Code](https://code.visualstudio.com/) und die Installation der Adobe Markdown Authoring-Erweiterung. Um die Erweiterung zu installieren, öffnen Sie Visual Studio Code, wählen Sie die Registerkarte **[!DNL Extensions]** auf der linken Seite des Bildschirms aus und suchen Sie nach `adobe markdown authoring`. Wählen Sie die Erweiterung aus und klicken Sie auf **[!DNL Install]**.
    ![Installieren der Adobe Markdown Authoring-Erweiterung](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. Bearbeiten Sie die Vorlage mit relevanten Informationen für Ihr Ziel. Befolgen Sie die Anweisungen in der Vorlage.
-4. Screenshots oder Bilder, die Sie Ihrer Dokumentation hinzufügen möchten, finden Sie unter `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]` , wobei `[...]` die gewünschte Kategorie für Ihr Ziel ist. Wenn Sie beispielsweise ein Personalisierungsziel zu Experience Platform hinzufügen, wählen Sie den Ordner `personalization` aus. Erstellen Sie einen neuen Ordner für Ihr Ziel und speichern Sie Ihre Bilder hier. Sie müssen von der Seite, die Sie erstellen, aus eine Verknüpfung zu ihnen herstellen. Siehe [Anweisungen zum Verknüpfen mit Bildern](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=de#link-to-images).
+4. Screenshots oder Bilder, die Sie Ihrer Dokumentation hinzufügen möchten, finden Sie unter `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]` , wobei `[...]` die gewünschte Kategorie für Ihr Ziel ist. Wenn Sie beispielsweise ein Personalisierungsziel zu Experience Platform hinzufügen, wählen Sie den Ordner `personalization` aus. Erstellen Sie einen neuen Ordner für Ihr Ziel und speichern Sie Ihre Bilder hier. Sie müssen von der Seite, die Sie erstellen, aus eine Verknüpfung zu ihnen herstellen. Siehe [Anweisungen zum Verknüpfen mit Bildern](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 5. Wenn Sie fertig sind, speichern Sie die Datei, an der Sie arbeiten.
 
 ## Reichen Sie Ihre Dokumentation zur Überprüfung ein {#submit-review}
@@ -82,4 +83,4 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 
 >[!TIP]
 >
->Informationen zum Hinzufügen von Bildern und Links zu Ihrer Dokumentation sowie zu allen anderen Fragen rund um Markdown finden Sie unter [Verwenden von &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=de)) im Handbuch für gemeinsames Schreiben in Adobe.
+>Informationen zum Hinzufügen von Bildern und Links zu Ihrer Dokumentation sowie zu allen anderen Fragen rund um Markdown finden Sie unter [Verwenden von ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)) im Handbuch für gemeinsames Schreiben in Adobe.

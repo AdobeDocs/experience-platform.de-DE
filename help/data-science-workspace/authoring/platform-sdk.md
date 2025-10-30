@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Modellerstellung mit der Adobe Experience Platform SDK
 description: In diesem Tutorial erhalten Sie Informationen zum Konvertieren von data_access_sdk_python in das neue Python platform_sdk sowohl in Python als auch in R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 58%
+source-wordcount: '508'
+ht-degree: 57%
 
 ---
 
@@ -161,7 +161,7 @@ Die neue [!DNL Experience Platform] SDK unterstützt die folgenden Vorgänge:
 | Niedriger als (`<`) | `lt()` |
 | Kleiner oder gleich (`<=`) | `le()` |
 | Und (`&`) | `And()` |
-| Oder (`|`) | `Or()` |
+| Oder ( &amp;vert; ) | `Or()` |
 
 ## Nach ausgewählten Spalten filtern {#filter-by-selected-columns}
 

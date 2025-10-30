@@ -2,22 +2,22 @@
 title: Google-Datenschicht-Erweiterung
 description: Machen Sie sich mit der Tag-Erweiterung "Google Client Data Layer“ in Adobe Experience Platform vertraut.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 12%
 
 ---
 
 # Google-Datenschicht-Erweiterung
 
-Mit der Google-Datenschichterweiterung können Sie eine Google-Datenschicht in Ihrer Tags-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und mit der Open-Source-Bibliothek [Datenschicht-Helper) von Google verwendet &#x200B;](https://github.com/google/data-layer-helper).
+Mit der Google-Datenschichterweiterung können Sie eine Google-Datenschicht in Ihrer Tags-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und mit der Open-Source-Bibliothek [Datenschicht-Helper) von Google verwendet ](https://github.com/google/data-layer-helper).
 
-Die Helper-Bibliothek bietet ähnliche ereignisgesteuerte Funktionen wie die Adobe-Client-Datenschicht (ACDL). Die Datenelemente, Regeln und Aktionen der Google-Datenschichterweiterung bieten ähnliche Funktionen wie die [ACDL-Erweiterung](../client-data-layer/overview.md).
+Die Helper-Bibliothek bietet ähnliche ereignisgesteuerte Funktionen wie die Adobe Client Data Layer (ACDL). Die Datenelemente, Regeln und Aktionen der Google-Datenschichterweiterung bieten ähnliche Funktionen wie die [ACDL-Erweiterung](../client-data-layer/overview.md).
 
 ## Installation
 
-Um die Erweiterung zu installieren, navigieren Sie in der Datenerfassungs-UI zum Erweiterungskatalog und wählen Sie **[!UICONTROL Google-Datenschicht]** aus.
+Um die Erweiterung zu installieren, navigieren Sie in der Datenerfassungs-Benutzeroberfläche zum Erweiterungskatalog und wählen Sie **[!UICONTROL Google Data Layer]** aus.
 
 Nach der Installation erstellt die Erweiterung bei jedem Laden der Adobe Experience Platform Tags-Bibliothek eine Datenschicht oder greift darauf zu.
 
@@ -31,11 +31,12 @@ Der standardmäßige Datenschichtname ist der Google-Standardname `dataLayer`.
 >
 >Es spielt keine Rolle, ob Google- oder Adobe-Code zuerst geladen wird und die Datenschicht erstellt. Beide Systeme verhalten sich gleich: Erstellen Sie die Datenschicht, wenn sie nicht vorhanden ist, oder verwenden Sie die vorhandene Datenschicht.
 
-## Events
+## Ereignisse
 
 >[!NOTE]
 >
 >Das Wort _Ereignis_ wird überladen, wenn eine ereignisgesteuerte Datenschicht in Adobe Experience Platform Tags verwendet wird. _Ereignisse_ können sein:
+>
 > - Adobe Experience Platform Tags-Ereignisse (Bibliothek geladen usw.).
 > - JavaScript-Ereignisse.
 > - Daten, die mit dem Schlüsselwort _event“ an_ Datenschicht gepusht werden.
@@ -49,7 +50,7 @@ Die Erweiterung bietet Ihnen die Möglichkeit, auf Änderungen in der Datenschic
 
 ### Google-Ereignistypen
 
-Google unterstützt zwei Methoden zum Pushen von Ereignissen: Google Tag Manager mit der `push()` und Google Analytics 4 mit der `gtag()`.
+Google unterstützt zwei Methoden zum Pushen von Ereignissen: den Tag-Manager von Google mit der `push()` und Google Analytics 4 mit der `gtag()`.
 
 Google Data Layer-Erweiterungsversionen vor 1.2.1 unterstützten nur von `push()` erstellte Ereignisse, wie in den Code-Beispielen auf dieser Seite dargestellt.
 

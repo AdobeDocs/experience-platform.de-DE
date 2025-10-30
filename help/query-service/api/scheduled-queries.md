@@ -5,9 +5,9 @@ title: Zeitpläne-Endpunkt
 description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie für geplante Abfragen mit der Abfrage-Service-API ausführen können.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1409'
 ht-degree: 23%
 
 ---
@@ -26,7 +26,7 @@ Mit einem persönlichen Benutzerkonto erstellte Abfragen schlagen fehl, wenn der
 >
 >Wichtige Überlegungen beim Verwalten geplanter Abfragen:<ul><li>Geplante Abfragen schlagen fehl, wenn das Konto (technisch oder benutzerseitig), mit dem sie erstellt wurden, Zugriff oder Berechtigungen verliert.</li><li>Geplante Abfragen müssen vor dem Löschen über die API oder die Benutzeroberfläche deaktiviert werden.</li><li>Eine Planung auf unbestimmte Zeit ohne Enddatum wird nicht unterstützt; ein Enddatum muss immer angegeben werden.</li></ul>
 
-Ausführliche Anleitungen zu Kontoanforderungen, zur Einrichtung von Berechtigungen und zur Verwaltung geplanter Abfragen finden Sie in der [Dokumentation zu Abfragezeitplänen](../ui/query-schedules.md#technical-account-user-requirements). Schrittweise Anweisungen zum Erstellen und Konfigurieren eines technischen Kontos finden Sie unter [Developer Console-Setup](https://experienceleague.adobe.com/de/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) und [End-to-End-Einrichtung eines technischen Kontos](https://experienceleague.adobe.com/de/docs/platform-learn/tutorial-comprehensive-technical/setup).
+Ausführliche Anleitungen zu Kontoanforderungen, zur Einrichtung von Berechtigungen und zur Verwaltung geplanter Abfragen finden Sie in der [Dokumentation zu Abfragezeitplänen](../ui/query-schedules.md#technical-account-user-requirements). Schrittweise Anweisungen zum Erstellen und Konfigurieren eines technischen Kontos finden Sie unter [Developer Console-Setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) und [End-to-End-Einrichtung eines technischen Kontos](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Beispiel-API-Aufrufe
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | Die SQL-Abfrage, die nach dem definierten Zeitplan ausgeführt werden soll. |
 | `query.name` | Der Name der geplanten Abfrage. |
 | `query.description` | Eine optionale Beschreibung für die geplante Abfrage. |
-| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Unter [Crontab.guru](https://crontab.guru/) finden Sie eine interaktive Möglichkeit, Cron-Ausdrücke zu erstellen, zu validieren und zu verstehen. In diesem Beispiel bedeutet „30 * * *&quot;, dass die Abfrage stündlich mit der 30-Minuten-Markierung ausgeführt wird.<br><br>Alternativ können Sie die folgenden kurzen Ausdrücke verwenden:<ul><li>`@once`: Die Abfrage wird nur einmal ausgeführt.</li><li>`@hourly`: Die Abfrage wird stündlich zu Beginn der Stunde ausgeführt. Dies entspricht dem Cron-Ausdruck `0 * * * *`.</li><li>`@daily`: Die Abfrage wird einmal täglich um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * *`.</li><li>`@weekly`: Die Abfrage wird einmal pro Woche, am Sonntag um Mitternacht, ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * 0`.</li><li>`@monthly`: Die Abfrage wird einmal monatlich am ersten Tag des Monats um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 * *`.</li><li>`@yearly`: Die Abfrage wird einmal jährlich am 1. Januar um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 1 *`. |
+| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Unter [Crontab.guru](https://crontab.guru/) finden Sie eine interaktive Möglichkeit, Cron-Ausdrücke zu erstellen, zu validieren und zu verstehen. In diesem Beispiel bedeutet &quot;`30 * * * *`&quot;, dass die Abfrage jede Stunde mit der 30-Minuten-Marke ausgeführt wird.<br><br>Alternativ können Sie die folgenden kurzen Ausdrücke verwenden:<ul><li>`@once`: Die Abfrage wird nur einmal ausgeführt.</li><li>`@hourly`: Die Abfrage wird stündlich zu Beginn der Stunde ausgeführt. Dies entspricht dem Cron-Ausdruck `0 * * * *`.</li><li>`@daily`: Die Abfrage wird einmal täglich um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * *`.</li><li>`@weekly`: Die Abfrage wird einmal pro Woche, am Sonntag um Mitternacht, ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * 0`.</li><li>`@monthly`: Die Abfrage wird einmal monatlich am ersten Tag des Monats um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 * *`.</li><li>`@yearly`: Die Abfrage wird einmal jährlich am 1. Januar um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 1 *`. |
 | `schedule.startDate` | Das Startdatum für Ihre geplante Abfrage, geschrieben als UTC-Zeitstempel. |
 
 **Antwort**

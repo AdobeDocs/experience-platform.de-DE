@@ -2,10 +2,10 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 93%
+source-wordcount: '771'
+ht-degree: 88%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 93%
 >
 >Die Versionshinweise für Tags und Ereignisweiterleitung werden künftig nicht mehr auf dieser Seite bereitgestellt. Die neuesten ausführlichen Informationen zu Tags und zur Ereignisweiterleitung finden Sie in den aktuellen [Versionshinweisen zu Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest#data-collection?lang=de).
 
-## 26. April 2023
+## &#x200B;26. April 2023
 
 * **OAuth JWT-Geheimnis**: Das [OAuth JWT-Geheimnis](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets?lang=de) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und Google-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung.
 
@@ -23,11 +23,12 @@ Die folgende neue Erweiterung wurde veröffentlicht:
 
 * **[!DNL Pinterest Conversions API]-Erweiterung**: Mit der Ereignisweiterleitungserweiterung [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Pinterest Conversions API] an [!DNL Pinterest] gesendet werden.
 
-## 29. März 2023
+## &#x200B;29. März 2023
 
 **Schnellstart-Workflows (Beta)**
 
 Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Die folgenden Workflows stehen Kundinnen und Kunden jetzt als öffentliche Beta-Version zur Verfügung.
+
 * **[Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview?lang=de#quick-start)**: Kundinnen und Kunden mit Ereignisweiterleitung können Ereignisdaten schnell erfassen und Server-seitig an Meta weiterleiten, um Anzeigenkonversionen in nur wenigen einfachen Schritten zu ermöglichen.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Kundinnen und Kunden können das Mobile SDK schnell implementieren und einfache Ereignisse auf Mobilgeräten in nur wenigen einfachen Schritten validieren.
 
@@ -35,9 +36,9 @@ Es wurden neue Erweiterungen veröffentlicht:
 
 * **[!DNL Braze]-Erweiterung zur Ereignisweiterleitung**: Mit der Ereignisweiterleitungserweiterung [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und in Form von Server-seitigen Ereignissen mithilfe der APIs von [!DNL Braze] für die Benutzernachverfolgung an [!DNL Braze] senden.
 * Ereignisweiterleitungserweiterung mit der **[Epsilon-Ereignisse-API]**: Mit der Erweiterung [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) zur Ereignisweiterleitung können Sie Ereignisinformationen im Adobe Experience Platform Edge Network erfassen und über die Ereignis-API von [!DNL Epsilon] an [!DNL Epsilon] senden.
-* **[!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung**: Mit der [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) [!DNL Mixpanel]-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an zu senden.
+* **[!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung**: Mit der [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de)[!DNL Mixpanel]-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an zu senden.
 
-## 25. Januar 2023
+## &#x200B;25. Januar 2023
 
 * **Neuer Startbildschirm**: Die Startseite der Datenerfassungs-Benutzeroberfläche wurde aktualisiert und enthält jetzt hilfreiche Onboarding-Informationen und Links zur Optimierung der Produktivität. Dazu gehören:
    1. Dokumentation und empfohlene Workflows für die ersten Schritte
@@ -58,18 +59,18 @@ Es wurden neue Erweiterungen veröffentlicht:
 * **[!DNL Splunk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Splunk] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Splunk] Übersicht der Erweiterungen](../extensions/server/splunk/overview.md).
 * **[!DNL Zendesk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Zendesk] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Zendesk] Übersicht der Erweiterungen](../extensions/server/zendesk/overview.md).
 
-## 28. September 2022
+## &#x200B;28. September 2022
 
-* **Integration der linken Navigationsleiste von Adobe Experience Platform**: Alle Funktionen, die bisher ausschließlich in der Datenerfassungs-Benutzeroberfläche verfügbar waren (einschließlich Tags und Ereignisweiterleitung), sind jetzt auch über die linke Navigation in der Benutzeroberfläche von Experience Platform verfügbar, und zwar unter der Kategorie **[!UICONTROL Datensammlung]**. Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Experience Platform zwischen Benutzeroberflächen zu wechseln.
+* **Integration der linken Navigationsleiste von Adobe Experience Platform**: Alle Funktionen, die bisher ausschließlich in der Datenerfassungs-Benutzeroberfläche verfügbar waren (einschließlich Tags und Ereignisweiterleitung), sind jetzt auch über die linke Navigationsleiste in der Benutzeroberfläche von Experience Platform unter der Kategorie **[!UICONTROL Data Collection]** verfügbar. Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Experience Platform zwischen Benutzeroberflächen zu wechseln.
 * **Benutzerzuordnung in Tags und Ereignisweiterleitung**: Bei der Auflistung der verfügbaren Eigenschaften in Tags und Ereignisweiterleitung wird jetzt für jede aufgeführte Eigenschaft angezeigt, wann und von wem sie zuletzt aktualisiert wurde.
 * **[[!DNL Snap Conversions API] Erweiterung](https://exchange.adobe.com/apps/ec/108550) für die Ereignisweiterleitung**: Sie können jetzt mit einer Erweiterung für die [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) Daten an [!DNL Snapchat Conversions API] senden. Weitere Informationen zur Authentifizierung und Verwendung der API finden Sie in der [[!DNL Snapchat Marketing API] Dokumentation](https://marketingapi.snapchat.com/docs/conversion.html).
 
-## 27. Juli 2022
+## &#x200B;27. Juli 2022
 
 * Der Zugriff auf Tags und Ereignisweiterleitungsfunktionen wird jetzt über die Adobe Admin Console unter der Karte für Adobe Experience Platform Datenerfassung verwaltet. Weitere Informationen finden Sie im Handbuch zu [Datenerfassungsberechtigungen](../../collection/permissions.md).
 * Die Unterstützung für Internet Explorer 10 und 11 wurde [eingestellt](../ie-deprecation.md).
 
-## 22. Juni 2022
+## &#x200B;22. Juni 2022
 
 Es wurden neue Erweiterungen veröffentlicht:
 

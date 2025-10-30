@@ -3,9 +3,9 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '801'
 ht-degree: 52%
 
 ---
@@ -28,7 +28,7 @@ Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die über 
 
 ## Verbindungen {#connections}
 
-**[!UICONTROL Profilexport]**, **[!UICONTROL Streaming-Zielgruppenexport]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundenprofil](../profile/home.md) zu bilden, wenden die Segmentierung an und exportieren Zielgruppen und qualifizierte Profile zu Zielen.
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundenprofil](../profile/home.md) zu bilden, wenden die Segmentierung an und exportieren Zielgruppen und qualifizierte Profile zu Zielen.
 
 ## Profilexportziele {#profile-export}
 
@@ -71,14 +71,14 @@ Erfahren Sie mehr darüber, wie Sie [Personalisierungsziele für die Personalisi
 
 Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen geführt:
 
->[!VIDEO](https://video.tv.adobe.com/v/33170?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## Typen von exportierten Zielgruppen {#exported-audiences-types}
 
 Sie können drei Arten von Zielgruppen aus Experience Platform in verschiedene Ziele exportieren:
 
 * Personen und Zielgruppen
-* Konto-Zielgruppen
+* Kontozielgruppen
 * Potenzielle Zielgruppen
 
 Erfahren Sie mehr über [verschiedene Zielgruppentypen](/help/segmentation/types/account-audiences.md#terminology).

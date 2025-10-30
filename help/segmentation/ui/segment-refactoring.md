@@ -4,9 +4,9 @@ title: Handbuch zur umgestalteten Benutzeroberfläche für Segmentierungszeitbes
 description: Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '352'
 ht-degree: 26%
 
 ---
@@ -24,7 +24,7 @@ Vor der Version vom Januar 2024 bezogen sich alle Zeitbeschränkungen auf Regel-
 
 Zuvor konnten einem einzelnen Ereignis mehrere Zeitbeschränkungsregeln beigefügt werden. Im Rahmen dieser letzten Aktualisierung führt der Versuch, einer Regel eine Zeitbeschränkung hinzuzufügen, jetzt zu einem **Fehler**.
 
-![Die Zeitbeschränkung auf Regelebene ist hervorgehoben. Der anschließend auftretende Fehler wird ebenfalls hervorgehoben. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
+![Die Zeitbeschränkung auf Regelebene ist hervorgehoben. Der anschließend auftretende Fehler wird ebenfalls hervorgehoben.](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 Zeitbeschränkungen können jetzt nur auf der Arbeitsflächen- oder Kartenebene angewendet werden.
 
@@ -32,12 +32,12 @@ Beim Anwenden einer Zeitbeschränkung auf Arbeitsflächen-Ebene können Sie denn
 
 >[!NOTE]
 >
->Wenn auf der Arbeitsfläche nur **eine** Karte vorhanden ist, entspricht das Anwenden der Zeitbeschränkung auf die Karte **&#x200B;**&#x200B;dem Anwenden der Zeitbeschränkung auf der Arbeitsfläche.
+>Wenn auf der Arbeitsfläche nur **eine** Karte vorhanden ist, entspricht das Anwenden der Zeitbeschränkung auf die Karte **** dem Anwenden der Zeitbeschränkung auf der Arbeitsfläche.
 >
 >Wenn sich **(mehrere** Karten auf der Arbeitsfläche befinden, wird diese Zeitbeschränkung durch Anwenden der Zeitbeschränkung auf die Arbeitsfläche-Ebene auf **alle** Karten auf der Arbeitsfläche angewendet.
 
 ![Die Zeitbeschränkung auf Arbeitsflächen-Ebene ist hervorgehoben.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-Um eine Zeitbeschränkung auf Kartenebene anzuwenden, wählen Sie die Karte aus, auf die Sie die Zeitbeschränkung anwenden möchten. Der **[!UICONTROL Ereignisregeln]**-Container wird angezeigt. Jetzt können Sie die Zeitbeschränkung auswählen, die Sie auf die Karte anwenden möchten.
+Um eine Zeitbeschränkung auf Kartenebene anzuwenden, wählen Sie die Karte aus, auf die Sie die Zeitbeschränkung anwenden möchten. Der **[!UICONTROL Event Rules]** Container wird angezeigt. Jetzt können Sie die Zeitbeschränkung auswählen, die Sie auf die Karte anwenden möchten.
 
 ![Die Zeitbeschränkung auf Kartenebene ist hervorgehoben.](../images/ui/segment-refactoring/card-time-constraint.png)

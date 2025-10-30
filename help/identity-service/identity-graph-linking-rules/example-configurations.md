@@ -2,7 +2,7 @@
 title: Konfigurationshandbuch für Identitätsdiagramm-Verknüpfungsregeln
 description: Erfahren Sie mehr über die verschiedenen Implementierungstypen, die Sie mit Regeln für die Verknüpfung von Identitätsdiagrammen konfigurieren können.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 8%
@@ -407,6 +407,7 @@ Lesen Sie diesen Abschnitt für erweiterte Implementierungen von [!DNL Identity 
 >[!NOTE]
 >
 >Um die folgenden Implementierungen durchzuführen, müssen Sie benutzerdefinierte Namespaces mit den Identitätssymbolen (von Schreibweise abhängig) erstellen:
+>
 >* `CRMID`
 >* `loginID`
 

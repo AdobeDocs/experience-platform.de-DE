@@ -3,7 +3,7 @@ title: Erstellen eines Datenflusses für Datenbankquellen mit der Flow Service-A
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API einen Datenfluss erstellen und Daten aus Ihrer Datenbank in Experience Platform aufnehmen.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 71%
@@ -12,7 +12,7 @@ ht-degree: 71%
 
 # Erstellen eines Datenflusses für Datenbankquellen mithilfe der [!DNL Flow Service]-API
 
-Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen und Daten aus Ihrer [[!DNL Flow Service]  in Adobe Experience Platform &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen und Daten aus Ihrer [[!DNL Flow Service]  in Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erstellen einer Quellverbindung {#source}
 

@@ -3,7 +3,7 @@ keywords: Plattform;Ziele;Arbeitsbereich Ziele;Arbeitsbereich;Benutzeroberfläch
 title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich „Ziele“ besteht aus fünf Bereichen: Übersicht, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: de71e9e7825ab9a3eaf1e06d03046636406493db
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2150'
 ht-degree: 22%
@@ -68,7 +68,7 @@ Weitere Informationen zu Zielkategorien und Informationen zu den einzelnen Ziele
 
 >[!NOTE]
 >
->Aufgrund der Konfigurationen von Zugriffsbeschriftungen können Ziel-Datenflüsse, auf die ein Benutzer keinen Zugriff hat, in der Benutzeroberfläche ausgegraut angezeigt werden. Weitere Informationen finden Sie in [&#x200B; Dokumentation unter „Verwenden von Zugriffsbeschriftungen zur Verwaltung des Benutzerzugriffs &#x200B;](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know) Zieldatenflüsse“.
+>Aufgrund der Konfigurationen von Zugriffsbeschriftungen können Ziel-Datenflüsse, auf die ein Benutzer keinen Zugriff hat, in der Benutzeroberfläche ausgegraut angezeigt werden. Weitere Informationen finden Sie in [ Dokumentation unter „Verwenden von Zugriffsbeschriftungen zur Verwaltung des Benutzerzugriffs ](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know) Zieldatenflüsse“.
 
 Auf der Registerkarte **[!UICONTROL Browse]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben.
 
@@ -83,12 +83,12 @@ Bei Zielen, für die der Umschalter **[!UICONTROL Enabled/Disabled]** aktiviert 
 > ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
 > 
 > * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Zielgruppen aktivieren](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]**, um Zielgruppen oder Datensätze in dieses Ziel zu exportieren.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Ziel bearbeiten &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;zum Bearbeiten vorhandener Zielverbindungen. Lesen Sie das Tutorial [Bearbeiten von Zielen](/help/destinations/ui/edit-destination.md) für weitere Informationen.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Ziel bearbeiten ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**zum Bearbeiten vorhandener Zielverbindungen. Lesen Sie das Tutorial [Bearbeiten von Zielen](/help/destinations/ui/edit-destination.md) für weitere Informationen.
 > * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Marketing-Aktionen bearbeiten](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]**, um [die Marketing-Aktionen zu ändern](/help/destinations/ui/edit-activation.md#edit-marketing-actions) für das ausgewählte Ziel.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Löschen](/help/images/icons/delete.png) **[!UICONTROL Delete]**, um eine bestehende Verbindung zu einem Ziel [&#x200B; &#x200B;](delete-destinations.md) entfernen.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Löschen](/help/images/icons/delete.png) **[!UICONTROL Delete]**, um eine bestehende Verbindung zu einem Ziel [ ](delete-destinations.md) entfernen.
 > * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Im Monitoring anzeigen](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]**, um Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) anzuzeigen.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Warnhinweise abonnieren &#x200B;](/help/images/icons/alert-add.png) **[!UICONTROL Subscribe to alerts]**, um Ziel-Datenfluss-Warnhinweise zu abonnieren. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Detaillierte [&#x200B; zu Ziel-Datenfluss-Warnhinweisen finden &#x200B;](alerts.md) unter Abonnieren von kontextabhängigen Ziel-Warnhinweisen .
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das ![-Steuerelement &#x200B;](/help/images/icons/manage-tags.png)Tags verwalten **[!UICONTROL Manage tags]**, um Tags zu einem Ziel hinzuzufügen oder daraus zu entfernen. Ausführliche Informationen zur Verwendung von Tags finden [&#x200B; im Abschnitt &#x200B;](#manage-tags)Verwalten von Ziel-Tags“.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Warnhinweise abonnieren](/help/images/icons/alert-add.png) **[!UICONTROL Subscribe to alerts]**, um Ziel-Datenfluss-Warnhinweise zu abonnieren. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Detaillierte [ zu Ziel-Datenfluss-Warnhinweisen finden ](alerts.md) unter Abonnieren von kontextabhängigen Ziel-Warnhinweisen .
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das ![-Steuerelement ](/help/images/icons/manage-tags.png)Tags verwalten **[!UICONTROL Manage tags]**, um Tags zu einem Ziel hinzuzufügen oder daraus zu entfernen. Ausführliche Informationen zur Verwendung von Tags finden [ im Abschnitt ](#manage-tags)Verwalten von Ziel-Tags“.
 
 Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte [!UICONTROL Browse] bereitgestellt werden.
 
@@ -101,7 +101,7 @@ Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Zie
 | [!UICONTROL Destination] | Die Zielplattform, die Sie für Ihren Aktivierungsfluss ausgewählt haben. |
 | [!UICONTROL Account Expiration Date] | Das Datum, an dem die Verbindungsautorisierung zu diesem Ziel abläuft. <br> Ein Warnsymbol ![Warnung: Konto-Ablaufsymbol](/help/images/icons/alert-expiration.png) wird vor dem Ablaufdatum angezeigt, um Sie darauf hinzuweisen, dass die Verbindung abläuft und möglicherweise erneuert werden muss. Datenflüsse zu abgelaufenen Verbindungen werden angehalten und Sie müssen sich erneut authentifizieren, um Ihre Aktivierungs-Workflows fortzusetzen. <br>**Wichtig**: Diese Spalte ist derzeit nur für die Verbindungen [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) und [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) verfügbar. <br> ![Beispiel einer Warnung zur Kontogültigkeit auf der Registerkarte „Durchsuchen“](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."} |
 | [!UICONTROL Username] | Die Kontoanmeldedaten, die Sie für den Zielfluss ausgewählt haben. |
-| [!UICONTROL Activation Data] | Gibt die Anzahl der Zielgruppen an, die für dieses Ziel aktiviert werden. Wählen Sie dieses Steuerelement aus, um mehr über die aktivierten Zielgruppen zu erfahren. Weitere Informationen zu [&#x200B; aktivierten Zielgruppen finden &#x200B;](/help/destinations/ui/destination-details-page.md#activation-data) auf der Zieldetailseite unter „Aktivierungsdaten“. |
+| [!UICONTROL Activation Data] | Gibt die Anzahl der Zielgruppen an, die für dieses Ziel aktiviert werden. Wählen Sie dieses Steuerelement aus, um mehr über die aktivierten Zielgruppen zu erfahren. Weitere Informationen zu [ aktivierten Zielgruppen finden ](/help/destinations/ui/destination-details-page.md#activation-data) auf der Zieldetailseite unter „Aktivierungsdaten“. |
 | [!UICONTROL Created] | Datum und Uhrzeit der Erstellung des Aktivierungsflusses zum Ziel. Klicken Sie auf das Symbol mit dem Pfeil nach oben/unten, um nach den neuesten oder ältesten Aktivierungsflüssen zu sortieren. |
 | [!UICONTROL Modified] | Datum und Uhrzeit der letzten Änderung des Aktivierungsflusses zum Ziel. |
 | [!UICONTROL Status] | `Enabled` oder `Disabled`. Gibt an, ob für dieses Ziel Daten aktiviert sind. |
@@ -183,18 +183,18 @@ Die Registerkarte **[!UICONTROL Accounts]** zeigt Details zu den Verbindungen an
 
 >[!TIP]
 >
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Kontrolle aktivieren &#x200B;](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**, um Zielgruppen oder Datensätze in dieses Ziel zu exportieren.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Details bearbeiten &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit details]**, um [&#x200B; Details eines vorhandenen &#x200B;](update-accounts.md) zu aktualisieren.
-> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Löschen &#x200B;](/help/images/icons/delete.png)**[!UICONTROL Delete]**, um [&#x200B; vorhandenes &#x200B;](delete-destination-account.md) zu löschen.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Kontrolle aktivieren ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**, um Zielgruppen oder Datensätze in dieses Ziel zu exportieren.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Details bearbeiten ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**, um [ Details eines vorhandenen ](update-accounts.md) zu aktualisieren.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Löschen ](/help/images/icons/delete.png)**[!UICONTROL Delete]**, um [ vorhandenes ](delete-destination-account.md) zu löschen.
 
 ![Registerkarte „Konten“](../assets/ui/workspace/accounts-tab.png)
 
 | Element | Beschreibung |
 |---|---|
-| [!UICONTROL Name] | Der Name, den Sie dem Zielkonto beim [&#x200B; des Ziels &#x200B;](connect-destination.md#authenticate) haben. Wählen Sie die Spaltenüberschrift aus, um auf die Sortieroptionen zuzugreifen (**[!UICONTROL Sort Ascending]**, **[!UICONTROL Sort Descending]**). |
+| [!UICONTROL Name] | Der Name, den Sie dem Zielkonto beim [ des Ziels ](connect-destination.md#authenticate) haben. Wählen Sie die Spaltenüberschrift aus, um auf die Sortieroptionen zuzugreifen (**[!UICONTROL Sort Ascending]**, **[!UICONTROL Sort Descending]**). |
 | [!UICONTROL Destination] | Der Ziel-Connector, für den Sie die Verbindung eingerichtet haben. |
 | [!UICONTROL Connection Type] | Gibt den Kontoverbindungstyp zu Ihrem Speicher-Behälter oder Ziel an. Je nach Ziel stehen folgende Authentifizierungsoptionen zur Verfügung: <ul><li>Bei E-Mail-Marketing-Zielen: S3, FTP oder Azure Blob.</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li><li>Bei Amazon S3-Cloud-Speicherzielen: Zugriffsschlüssel. </li><li>Bei SFTP-Cloud-Speicherzielen: Grundlegende Authentifizierung für SFTP.</li><li>OAuth 1- oder OAuth 2-Authentifizierung</li><li>Authentifizierung über Bearer-Token</li></ul> |
-| [!UICONTROL Username] | Der Benutzername, den Sie im Workflow [Ziel verbinden“ ausgewählt &#x200B;](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Username] | Der Benutzername, den Sie im Workflow [Ziel verbinden“ ausgewählt ](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Connections] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Ziel-Datenflüsse an, die für ein Ziel erstellt wurden, zusammen mit grundlegenden Informationen. |
 | [!UICONTROL Authorization date] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
 | [!UICONTROL Expiration date] | Das Datum, an dem die Verbindungsautorisierung zu diesem Ziel abläuft. <br> Ein Warnsymbol ![Warnsymbol „Konto abgelaufen“.](/help/images/icons/alert-expiration.png) wird vor dem Ablaufdatum angezeigt, um Sie darauf hinzuweisen, dass die Verbindung abläuft und möglicherweise erneuert werden muss. Datenflüsse zu abgelaufenen Verbindungen werden angehalten und Sie müssen sich erneut authentifizieren, um Ihre Aktivierungs-Workflows fortzusetzen. <br>**Wichtig**: Diese Spalte ist derzeit nur für die Verbindungen [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) und [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) verfügbar. <br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |

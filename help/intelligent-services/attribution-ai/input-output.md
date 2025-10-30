@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Eingabe und Ausgabe in Attributions-KI
 description: Im folgenden Dokument werden die verschiedenen Eingaben und Ausgaben beschrieben, die in Attributions-KI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2467'
 ht-degree: 3%
 
 ---
@@ -49,7 +49,7 @@ Sie können die Touchpoints mithilfe der unten empfohlenen Felder im Schema oder
 | Marketing.trackingCode | Kontaktpunkt |
 | Marketing.campaignname | Kontaktpunkt |
 | Marketing.campaigngroup | Kontaktpunkt |
-| Commerce | Konversion |
+| Commerce | Konvertierung |
 
 Normalerweise wird die Attribution in Konversionsspalten wie Bestellung, Käufe und Checkouts unter „Commerce“ ausgeführt. Die Spalten für „Kanal“ und „Marketing“ werden verwendet, um Touchpoints für Attributions-KI zu definieren (z. B. `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Für optimale Ergebnisse und Einblicke wird dringend empfohlen, so viele Konversions- und Touchpoint-Spalten wie möglich einzubeziehen. Darüber hinaus sind Sie nicht auf die obigen Spalten beschränkt. Sie können jede andere empfohlene oder benutzerdefinierte Spalte als Konversions- oder Touchpoint-Definition einbeziehen.
 
@@ -64,6 +64,7 @@ Erlebnisereignis (EE)-Datensätze müssen nicht explizit Kanal- und Marketing-Mi
 >[!IMPORTANT]
 >
 > Die Mindestmenge an Daten, die erforderlich ist, damit Attribution AI funktioniert, beträgt:
+>
 > - Sie müssen mindestens 3 Monate (90 Tage) an Daten bereitstellen, um ein gutes Modell auszuführen.
 > - Sie benötigen mindestens 1000 Konversionen.
 
@@ -98,13 +99,14 @@ Attribution AI gibt Folgendes aus:
 
 ### Granulare Rohwerte {#raw-granular-scores}
 
-Attribution AI gibt Attributionsbewertungen auf der detailliertesten Ebene aus, sodass Sie die Bewertungen in beliebige Score-Spalten aufteilen können. Um diese Bewertungen in der Benutzeroberfläche anzuzeigen, lesen Sie den Abschnitt unter [Anzeigen von Rohwertpfaden](#raw-score-path). Informationen zum Herunterladen der Scores über die API finden Sie [&#x200B; Dokument „Herunterladen von Scores in Attributions-KI](./download-scores.md) .
+Attribution AI gibt Attributionsbewertungen auf der detailliertesten Ebene aus, sodass Sie die Bewertungen in beliebige Score-Spalten aufteilen können. Um diese Bewertungen in der Benutzeroberfläche anzuzeigen, lesen Sie den Abschnitt unter [Anzeigen von Rohwertpfaden](#raw-score-path). Informationen zum Herunterladen der Scores über die API finden Sie [ Dokument „Herunterladen von Scores in Attributions-KI](./download-scores.md) .
 
 >[!NOTE]
 >
-> Sie können jede gewünschte Berichtsspalte aus dem Eingabedatensatz im Score-Ausgabedatensatz nur sehen, wenn eine der folgenden Bedingungen zutrifft:
-> - Die Berichtsspalte ist auf der Konfigurationsseite entweder als Teil der Touchpoint- oder Konversionsdefinitionskonfiguration enthalten.
-> - Die Berichtsspalte ist in zusätzlichen Bewertungs-Datensatzspalten enthalten.
+>Sie können jede gewünschte Berichtsspalte aus dem Eingabedatensatz im Score-Ausgabedatensatz nur sehen, wenn eine der folgenden Bedingungen zutrifft:
+>
+>- Die Berichtsspalte ist auf der Konfigurationsseite entweder als Teil der Touchpoint- oder Konversionsdefinitionskonfiguration enthalten.
+>- Die Berichtsspalte ist in zusätzlichen Bewertungs-Datensatzspalten enthalten.
 
 In der folgenden Tabelle sind die Schemafelder in der Beispielausgabe „Rohbewertungen“ aufgeführt:
 
@@ -137,18 +139,18 @@ In der folgenden Tabelle sind die Schemafelder in der Beispielausgabe „Rohbewe
 | Identität (Objekt) | False | Enthält die Details des Benutzers, der zum Erstellen des Modells verwendet wird, z. B. `id` und `namespace`. |
 | id (String) | True | Identitäts-ID des Benutzers wie Cookie-ID, Adobe Analytics-ID (AAID) oder Experience Cloud-ID (ECID, auch als ECID oder als Besucher-ID bezeichnet) usw. <br> **Beispiel:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Identitäts-Namespace zum Erstellen der Pfade und somit des Modells <br> **Beispiel:** aaid |
-| TouchpointsDetail (Objekt-Array) | True | Die Liste der Touchpoint-Details, die zur Konversion führen, sortiert nach | Touchpoint-Vorkommen oder Zeitstempel. |
+| TouchpointsDetail (Objekt-Array) | True | Die Liste der Touchpoint-Details, die zur Konversion führen, sortiert nach Touchpoint-Vorkommen oder Zeitstempel. |
 | TouchpointName (Zeichenfolge) | True | Name des Touchpoints, der bei der Einrichtung konfiguriert wurde. <br> **Beispiel:** PAID_SEARCH_CLICK |
-| Scores (Objekt) | True | Touchpoint-Beitrag zu dieser Konversion als Score. Weitere Informationen zu den in diesem Objekt erzielten Scores finden Sie im Abschnitt [aggregierte &#x200B;](#aggregated-attribution-scores)). |
+| Scores (Objekt) | True | Touchpoint-Beitrag zu dieser Konversion als Score. Weitere Informationen zu den in diesem Objekt erzielten Scores finden Sie im Abschnitt [aggregierte ](#aggregated-attribution-scores)). |
 | TouchPoint (Objekt) | True | Touchpoint-Metadaten. Weitere Informationen zu den in diesem Objekt erzielten Scores finden Sie im Abschnitt [aggregierte Scores](#aggregated-scores). |
 
 ### Anzeigen von Rohwertpfaden (Benutzeroberfläche) {#raw-score-path}
 
-Sie können den Pfad zu Ihren Rohwertungen in der Benutzeroberfläche anzeigen. Wählen Sie zunächst **[!UICONTROL Schemata]** in der Experience Platform-Benutzeroberfläche aus und suchen Sie dann auf der Registerkarte **[!UICONTROL Durchsuchen]** nach Ihrem Attributions-KI-Bewertungsschema.
+Sie können den Pfad zu Ihren Rohwertungen in der Benutzeroberfläche anzeigen. Wählen Sie zunächst **[!UICONTROL Schemas]** in der Experience Platform-Benutzeroberfläche aus und suchen Sie dann auf der Registerkarte &quot;**[!UICONTROL Browse]**&quot; nach Ihrem Schema für Attributions-KI-Bewertungen und wählen Sie es aus.
 
 ![Wählen Sie Ihr Schema](./images/input-output/schemas_browse.png)
 
-Wählen Sie anschließend ein Feld im Fenster **[!UICONTROL Struktur]** der Benutzeroberfläche aus. Die Registerkarte **[!UICONTROL Feldeigenschaften]** wird geöffnet. In **[!UICONTROL Feldeigenschaften]** ist das Pfadfeld, das Ihren Rohwertungen zugeordnet ist.
+Wählen Sie als Nächstes ein Feld im **[!UICONTROL Structure]** Fenster der Benutzeroberfläche aus. Die Registerkarte **[!UICONTROL Field properties]** wird geöffnet. In **[!UICONTROL Field properties]** befindet sich das Pfadfeld, das Ihren Rohwertungen zugeordnet ist.
 
 ![Schema auswählen](./images/input-output/field_properties.png)
 
@@ -236,7 +238,7 @@ Die folgende Tabelle ordnet die aggregierten Scores den Rohbewertungen zu. Wenn 
 >
 > - Attribution AI verwendet nur aktualisierte Daten für die Weiterbildung und Bewertung. Ebenso verzichtet Kunden-KI auf die Verwendung der gelöschten Daten, wenn Sie eine Löschung von Daten anfordern.
 > - Attributions-KI nutzt Experience Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken Experience Platform Privacy Service verwenden, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.
-> - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur Datenverschlüsselung finden [&#x200B; in der Dokumentation](../../../help/landing/governance-privacy-security/encryption.md)
+> - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur Datenverschlüsselung finden [ in der Dokumentation](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Nächste Schritte {#next-steps}
 

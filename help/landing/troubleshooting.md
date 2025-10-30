@@ -9,10 +9,10 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1817'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -32,7 +32,7 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 Anfrageformate variieren je nach der verwendeten [!DNL Experience Platform]-API. Am einfachsten erfahren Sie, wie Sie API-Aufrufe strukturieren können, indem Sie sich die in der Dokumentation für einzelne [!DNL Experience Platform]-Services angegebenen Beispiele ansehen.
 
-Weitere Informationen zum Erstellen von API-Anfragen finden Sie in den Ersten Schritten für die Experience Platform-API [&#x200B; Abschnitt zum Lesen &#x200B;](./api-guide.md#sample-api) Beispiel-API-Aufrufen .
+Weitere Informationen zum Erstellen von API-Anfragen finden Sie in den Ersten Schritten für die Experience Platform-API [ Abschnitt zum Lesen ](./api-guide.md#sample-api) Beispiel-API-Aufrufen .
 
 ## Was ist meine Organisation? {#what-is-my-ims-organization}
 
@@ -73,11 +73,15 @@ Viele PATCH-Vorgänge in [!DNL Experience Platform]-APIs verwenden [JSON-Zeiger]
 Je nachdem, ob Sie die Benutzeroberfläche oder API verwenden, gelten die folgenden Systemanforderungen:
 
 **Für UI-basierte Vorgänge:**
+
 - Ein moderner, standardmäßiger Webbrowser. Zwar wird die neueste Version von [!DNL Chrome] empfohlen, doch werden auch aktuelle und frühere Hauptversionen von [!DNL Firefox], [!DNL Internet Explorer] und Safari unterstützt.
+
    - Bei jeder Veröffentlichung einer neuen Hauptversion beginnt [!DNL Experience Platform] mit der Unterstützung der neuesten Version, während die Unterstützung für die drittneueste Version eingestellt wird.
+
 - Bei allen Browsern müssen Cookies und JavaScript aktiviert sein.
 
 **Für Interaktionen mit APIs und Entwicklern:**
+
 - Eine Entwicklungsumgebung für die Entwicklung von REST-, Streaming- und Webhook-Integrationen.
 
 ## Fehler und Fehlerbehebung {#errors-and-troubleshooting}
@@ -92,9 +96,9 @@ Die folgenden Status-Codes können bei jeder [!DNL Experience Platform]-API auft
 |--- | --- | ---|
 | 400 | Ungültige Anfrage | Die Anfrage wurde falsch erstellt, es fehlen wichtige Informationen und/oder die Syntax ist falsch. |
 | 401 | Authentifizierung fehlgeschlagen | Die Anfrage hat eine Authentifizierungsprüfung nicht bestanden. Ihr Zugriffstoken fehlt oder ist ungültig. Weiterführende Informationen finden Sie im Abschnitt [OAuth-Token-Fehler](#oauth-token-is-missing). |
-| 403 | Verboten | Die Ressource wurde zwar gefunden, Sie verfügen jedoch über nicht die richtigen Anmeldedaten zur Anzeige. <br> Eine Ursache für diesen Fehler ist wahrscheinlich, dass Sie nicht über die erforderliche [Zugriffssteuerungsberechtigungen](/help/access-control/home.md) verfügen, um auf die Ressource zuzugreifen oder sie zu bearbeiten. Erfahren Sie[&#x200B; wie Sie die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen abrufen, &#x200B;](/help/landing/api-authentication.md#get-abac-permissions) Experience Platform-APIs zu verwenden. </p> |
+| 403 | Verboten | Die Ressource wurde zwar gefunden, Sie verfügen jedoch über nicht die richtigen Anmeldedaten zur Anzeige. <br> Eine Ursache für diesen Fehler ist wahrscheinlich, dass Sie nicht über die erforderliche [Zugriffssteuerungsberechtigungen](/help/access-control/home.md) verfügen, um auf die Ressource zuzugreifen oder sie zu bearbeiten. Erfahren Sie[ wie Sie die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen abrufen, ](/help/landing/api-authentication.md#get-abac-permissions) Experience Platform-APIs zu verwenden. </p> |
 | 404 | Nicht gefunden | Die angeforderte Ressource konnte auf dem Server nicht gefunden werden. Die Ressource wurde möglicherweise gelöscht oder der angefragte Pfad wurde falsch eingegeben. |
-| 500 | Interner Server-Fehler | Dies ist ein Server-seitiger Fehler. Wenn Sie viele simultane Aufrufe ausführen, erreichen Sie möglicherweise das API-Limit und müssen Ihre Ergebnisse filtern. (Weitere Informationen finden Sie im Entwicklerhandbuch für die [!DNL Catalog Service]-API unter [Filtern &#x200B;](../catalog/api/filter-data.md) Daten .) Warten Sie einen Moment, bevor Sie Ihre Anfrage erneut versuchen, und wenden Sie sich an Ihren Administrator, wenn das Problem weiterhin besteht. |
+| 500 | Interner Server-Fehler | Dies ist ein Server-seitiger Fehler. Wenn Sie viele simultane Aufrufe ausführen, erreichen Sie möglicherweise das API-Limit und müssen Ihre Ergebnisse filtern. (Weitere Informationen finden Sie im Entwicklerhandbuch für die [!DNL Catalog Service]-API unter [Filtern ](../catalog/api/filter-data.md) Daten .) Warten Sie einen Moment, bevor Sie Ihre Anfrage erneut versuchen, und wenden Sie sich an Ihren Administrator, wenn das Problem weiterhin besteht. |
 
 ## Fehler in der Anfragekopfzeile {#request-header-errors}
 
@@ -201,6 +205,7 @@ Diese Fehlermeldung wird angezeigt, wenn eine POST-, PUT- oder PATCH-Anfrage ein
 ```
 
 Diese Fehlermeldung wird in einem der beiden folgenden Fälle angezeigt:
+
 - Wenn eine falsche oder falsch formatierte Kopfzeile der Organisation (`x-gw-ims-org-id`) in einer API-Anfrage übergeben wird. Stellen Sie sicher, dass die richtige ID Ihrer Organisation vorhanden ist, bevor Sie es erneut versuchen.
 - Wenn Ihr Konto (wie durch die angegebenen Authentifizierungs-Anmeldedaten dargestellt) nicht mit einem Produktprofil für Experience Platform verknüpft ist. Befolgen Sie die Schritte [Generieren von Zugriffsberechtigungen](./api-authentication.md#authentication-for-each-session) im Tutorial zur Experience Platform-API-Authentifizierung , um Experience Platform zu Ihrem Konto hinzuzufügen und Ihre Authentifizierungsberechtigungen entsprechend zu aktualisieren.
 

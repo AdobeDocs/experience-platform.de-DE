@@ -2,9 +2,9 @@
 title: Aufnehmen verschlüsselter Daten in der Quellen-Benutzeroberfläche Workspace
 description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quell-Benutzeroberfläche aufnehmen.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1414'
 ht-degree: 9%
 
 ---
@@ -51,19 +51,19 @@ Sie können Ihr Verschlüsselungsschlüsselpaar über die Experience Platform-Be
 
 >[!ENDSHADEBOX]
 
-Navigieren Sie in der Experience Platform-Benutzeroberfläche zum Arbeitsbereich „Quellen“ und wählen Sie [!UICONTROL Schlüsselpaare] in der oberen Kopfzeile aus.
+Navigieren Sie in der Experience Platform-Benutzeroberfläche zum Arbeitsbereich Quellen und wählen Sie [!UICONTROL Key Pairs] in der oberen Kopfzeile aus.
 
 ![Der Quellkatalog mit ausgewählter Kopfzeile „Schlüsselpaare“.](../../images/tutorials/edi/catalog.png)
 
-Sie gelangen zu einer Seite, auf der eine Liste der in Ihrer Organisation vorhandenen Verschlüsselungsschlüsselpaare angezeigt wird. Auf dieser Seite finden Sie Informationen zu Titel, ID, Typ, Verschlüsselungsalgorithmus, Ablauf und Status eines bestimmten Schlüssels. Um ein neues Schlüsselpaar zu erstellen, wählen Sie **[!UICONTROL Schlüssel erstellen]** aus.
+Sie gelangen zu einer Seite, auf der eine Liste der in Ihrer Organisation vorhandenen Verschlüsselungsschlüsselpaare angezeigt wird. Auf dieser Seite finden Sie Informationen zu Titel, ID, Typ, Verschlüsselungsalgorithmus, Ablauf und Status eines bestimmten Schlüssels. Um ein neues Schlüsselpaar zu erstellen, wählen Sie **[!UICONTROL Create Key]** aus.
 
 ![Die Seite „Schlüsselpaare“, auf der „Verschlüsselungsschlüssel“ als Schlüsseltyp und die Schaltfläche „Schlüssel erstellen“ ausgewählt sind.](../../images/tutorials/edi/encryption_key_page.png)
 
-Wählen Sie als Nächstes den Schlüsseltyp aus, den Sie erstellen möchten. Um einen Verschlüsselungsschlüssel zu erstellen, wählen Sie **[!UICONTROL Verschlüsselungsschlüssel]** und dann **[!UICONTROL Weiter]** aus.
+Wählen Sie als Nächstes den Schlüsseltyp aus, den Sie erstellen möchten. Um einen Verschlüsselungsschlüssel zu erstellen, wählen Sie **[!UICONTROL Encryption Key]** und dann **[!UICONTROL Continue]** aus.
 
 ![Das Fenster zur Schlüsselerstellung mit ausgewähltem Verschlüsselungsschlüssel.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
-Geben Sie einen Titel und eine Passphrase für Ihren Verschlüsselungsschlüssel an. Die Passphrase ist eine zusätzliche Schutzschicht für Ihre Verschlüsselungsschlüssel. Bei der Erstellung speichert Experience Platform die Passphrase in einem anderen sicheren Tresor als den öffentlichen Schlüssel. Sie müssen eine nicht leere Zeichenfolge als Passphrase angeben. Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
+Geben Sie einen Titel und eine Passphrase für Ihren Verschlüsselungsschlüssel an. Die Passphrase ist eine zusätzliche Schutzschicht für Ihre Verschlüsselungsschlüssel. Bei der Erstellung speichert Experience Platform die Passphrase in einem anderen sicheren Tresor als den öffentlichen Schlüssel. Sie müssen eine nicht leere Zeichenfolge als Passphrase angeben. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Create]** aus.
 
 ![Das Fenster zur Erstellung des Verschlüsselungsschlüssels, in dem ein Titel und eine Passphrase angegeben sind.](../../images/tutorials/edi/create_encryption_key.png)
 
@@ -71,7 +71,7 @@ Bei erfolgreicher Ausführung wird ein neues Fenster angezeigt, in dem Ihr neuer
 
 ![Das Fenster, das Informationen zu dem neu erstellten Verschlüsselungsschlüsselpaar anzeigt.](../../images/tutorials/edi/encryption_key_details.png)
 
-Um Informationen zu einem vorhandenen Verschlüsselungsschlüssel anzuzeigen, klicken Sie auf die Auslassungszeichen (`...`) neben dem Schlüsseltitel. Wählen Sie **[!UICONTROL Schlüsseldetails]** aus, um den öffentlichen Schlüssel und die Schlüssel-ID anzuzeigen. Wenn Sie den Verschlüsselungsschlüssel löschen möchten, wählen Sie alternativ **[!UICONTROL Löschen]** aus.
+Um Informationen zu einem vorhandenen Verschlüsselungsschlüssel anzuzeigen, klicken Sie auf die Auslassungszeichen (`...`) neben dem Schlüsseltitel. Wählen Sie **[!UICONTROL Key details]** aus, um den öffentlichen Schlüssel und die Schlüssel-ID anzuzeigen. Wenn Sie den Verschlüsselungsschlüssel löschen möchten, wählen Sie **[!UICONTROL Delete]** aus.
 
 ![Die Seite Schlüsselpaare , auf der eine Liste der Verschlüsselungsschlüssel angezeigt wird. Die Auslassungszeichen neben „acme-encryption-key“ sind ausgewählt und die Dropdown-Liste zeigt Optionen zum Anzeigen von Schlüsseldetails oder zum Löschen der Schlüssel an.](../../images/tutorials/edi/configuration_options.png)
 
@@ -90,11 +90,11 @@ Ein Zeichenüberprüfungsschlüssel ist ein weiterer Verschlüsselungsmechanismu
 
 >[!ENDSHADEBOX]
 
-Um einen Signaturüberprüfungsschlüssel zu erstellen, wählen Sie **[!UICONTROL Signaturüberprüfungsschlüssel]** aus dem Auswahlfenster für den Schlüsseltyp aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+Um einen Vorzeichenüberprüfungsschlüssel zu erstellen, wählen Sie im Auswahlfenster für den Schlüsseltyp die Option **[!UICONTROL Sign Verification Key]** und dann **[!UICONTROL Continue]** aus.
 
 ![Das Auswahlfenster für den Schlüsseltyp, in dem der Bestätigungsschlüssel für das Zeichen ausgewählt ist.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
-Geben Sie als Nächstes einen Titel und einen [!DNL Base64] PGP-Schlüssel als öffentlichen Schlüssel an und wählen Sie dann **[!UICONTROL Erstellen]**.
+Geben Sie als Nächstes einen Titel und einen [!DNL Base64] PGP-Schlüssel als öffentlichen Schlüssel an und wählen Sie dann **[!UICONTROL Create]** aus.
 
 ![Das Fenster zum Erstellen eines Signaturüberprüfungsschlüssels.](../../images/tutorials/edi/create_sign_verification_key.png)
 
@@ -127,15 +127,15 @@ Sie können verschlüsselte Daten mithilfe der folgenden Cloud-Speicher-Batch-Qu
 * [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
 * [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
 
-Authentifizierung mit der von Ihnen ausgewählten Cloud-Speicherquelle. Wählen Sie während des Datenauswahlschritts des Workflows die aufzunehmende verschlüsselte Datei bzw. den aufzunehmenden Ordner aus und aktivieren Sie dann den Umschalter **[!UICONTROL Ist die Datei verschlüsselt]**.
+Authentifizierung mit der von Ihnen ausgewählten Cloud-Speicherquelle. Wählen Sie während des Datenauswahlschritts des Workflows die aufzunehmende verschlüsselte Datei oder den aufzunehmenden Ordner aus und aktivieren Sie dann den **[!UICONTROL Is the file encrypted]**-Umschalter.
 
-![&#x200B; Schritt „Daten auswählen“ des Quell-Workflows, in dem eine verschlüsselte Datendatei zur Aufnahme ausgewählt wird.](../../images/tutorials/edi/select_data.png)
+![ Schritt „Daten auswählen“ des Quell-Workflows, in dem eine verschlüsselte Datendatei zur Aufnahme ausgewählt wird.](../../images/tutorials/edi/select_data.png)
 
 Wählen Sie anschließend eine Beispieldatei aus Ihren Quelldaten aus. Da Ihre Daten verschlüsselt sind, benötigt Experience Platform eine Beispieldatei, um ein XDM-Schema zu erstellen, das Ihren Quelldaten zugeordnet werden kann.
 
-![Die „Ist diese Datei verschlüsselt?“ Aktivieren Sie den Umschalter und klicken Sie auf die Schaltfläche „Beispieldatei auswählen“. &#x200B;](../../images/tutorials/edi/select_sample_file.png)
+![Die „Ist diese Datei verschlüsselt?“ Aktivieren Sie den Umschalter und klicken Sie auf die Schaltfläche „Beispieldatei auswählen](../../images/tutorials/edi/select_sample_file.png).
 
-Nachdem Sie die Beispieldatei ausgewählt haben, konfigurieren Sie die Einstellungen Ihrer Daten, z. B. das entsprechende Datenformat, das Trennzeichen und den Komprimierungstyp. Warten Sie einige Zeit, bis die Vorschauoberfläche vollständig gerendert ist, und wählen Sie dann **[!UICONTROL Speichern]** aus.
+Nachdem Sie die Beispieldatei ausgewählt haben, konfigurieren Sie die Einstellungen Ihrer Daten, z. B. das entsprechende Datenformat, das Trennzeichen und den Komprimierungstyp. Warten Sie einige Zeit, bis die Vorschauoberfläche vollständig gerendert ist, und wählen Sie dann **[!UICONTROL Save]** aus.
 
 ![Ein Beispiel wird für die Aufnahme ausgewählt und die Dateivorschau ist vollständig geladen.](../../images/tutorials/edi/file_preview.png)
 
@@ -147,7 +147,7 @@ Wenn Sie auch das Schlüsselpaar für die Zeichenverifizierung verwendet haben, 
 
 ![Der Titel des Signaturüberprüfungsschlüssels der Schlüssel-ID, die Ihrer Signaturüberprüfungsverschlüsselung entspricht.](../../images/tutorials/edi/custom_key_id.png)
 
-Wenn Sie fertig sind, wählen **[!UICONTROL Weiter]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 Führen Sie die verbleibenden Schritte im Quellen-Workflow aus, um die Erstellung Ihres Datenflusses abzuschließen.
 

@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 38%
@@ -51,7 +51,7 @@ Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform
 
 | Funktion | Beschreibung |
 |------- | -----------|
-| Editor für benutzerdefinierte Dateinamen | Aktualisierung des Datenaktivierungs-Workflows für E-Mail-Marketing- und Cloud-Speicher-Ziele, mit dem Sie den Namen der exportierten Dateien bearbeiten können. Weitere Informationen finden Sie im [&#x200B; „Konfigurieren](../../destinations/ui/activate-batch-profile-destinations.md) im Aktivierungs-Workflow. |
+| Editor für benutzerdefinierte Dateinamen | Aktualisierung des Datenaktivierungs-Workflows für E-Mail-Marketing- und Cloud-Speicher-Ziele, mit dem Sie den Namen der exportierten Dateien bearbeiten können. Weitere Informationen finden Sie im [ „Konfigurieren](../../destinations/ui/activate-batch-profile-destinations.md) im Aktivierungs-Workflow. |
 | Empfohlene Attribute | Aktualisierung des Datenaktivierungs-Workflows für E-Mail-Marketing- und Cloud-Speicher-Ziele, der empfohlene Attribute anzeigt, die Sie den exportierten Dateien hinzufügen können. Weitere Informationen finden Sie im Schritt [Auswählen von Attributen](../../destinations/ui/activate-batch-profile-destinations.md) im Aktivierungs-Workflow. |
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
@@ -76,7 +76,7 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Überwachung des Flussdurchgangs | Benutzer können alle Flussausführungen überwachen und eine detaillierte Ansicht jeder Ausführung anzeigen, einschließlich Abschlussstatus, Ausführungsdauer, Liste der verarbeiteten Dateien, Fehler und Metriken. Weitere Informationen finden [&#x200B; im Dokument &#x200B;](../../sources/tutorials/ui/monitor.md)Überwachen von Datenflüssen“. |
+| Überwachung des Flussdurchgangs | Benutzer können alle Flussausführungen überwachen und eine detaillierte Ansicht jeder Ausführung anzeigen, einschließlich Abschlussstatus, Ausführungsdauer, Liste der verarbeiteten Dateien, Fehler und Metriken. Weitere Informationen finden [ im Dokument ](../../sources/tutorials/ui/monitor.md)Überwachen von Datenflüssen“. |
 | Flusslaufbenachrichtigungen | Benutzer können Ereignisse abonnieren und Webhooks registrieren, um Echtzeitbenachrichtigungen über Status, Metriken und Fehler bei Flussausführungen zu erhalten. |
 | Verbesserungen am UI-Katalog | Der Quellkatalogbildschirm wurde aktualisiert, um den Zugriff auf primäre Aktionen ausgewählter Objekte zu erleichtern. |
 

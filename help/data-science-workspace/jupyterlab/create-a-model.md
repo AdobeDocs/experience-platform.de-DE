@@ -5,7 +5,7 @@ title: Erstellen eines Modells mit JupyterLab-Notebooks
 type: Tutorial
 description: Dieses Tutorial führt Sie durch die erforderlichen Schritte, um ein Rezept mithilfe der Rezept-Builder-Vorlage für JupyterLab-Notebooks zu erstellen.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 28%
@@ -47,7 +47,7 @@ Mit dem [!UICONTROL Recipe Builder] Notebook können Sie Trainings- und Scoring-
 
 Wenn Sie das [!UICONTROL Recipe Builder] Notebook über den Starter auswählen, wird das Notebook in einer neuen Registerkarte geöffnet.
 
-Auf der neuen Notebook-Registerkarte oben wird eine Symbolleiste geladen, die drei zusätzliche Aktionen enthält: **[!UICONTROL Train]**, **[!UICONTROL Score]** und **[!UICONTROL Create Recipe]**. Diese Symbole werden nur im [!UICONTROL Recipe Builder] Notebook angezeigt. Weitere Informationen zu diesen Aktionen finden Sie [&#x200B; Abschnitt „Training und Bewertung](#training-and-scoring) nachdem Sie Ihr Rezept im Notebook erstellt haben.
+Auf der neuen Notebook-Registerkarte oben wird eine Symbolleiste geladen, die drei zusätzliche Aktionen enthält: **[!UICONTROL Train]**, **[!UICONTROL Score]** und **[!UICONTROL Create Recipe]**. Diese Symbole werden nur im [!UICONTROL Recipe Builder] Notebook angezeigt. Weitere Informationen zu diesen Aktionen finden Sie [ Abschnitt „Training und Bewertung](#training-and-scoring) nachdem Sie Ihr Rezept im Notebook erstellt haben.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -69,7 +69,7 @@ Der Rest dieses Tutorials behandelt die folgenden Dateien, die im Notebook für 
 
 Im folgenden Video-Tutorial wird das Luma-Tendenzmodell-Notebook erläutert:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452501?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### Anforderungsdatei {#requirements-file}
 
@@ -93,7 +93,7 @@ Für das Luma-Tendenzmodell-Notebook müssen die Anforderungen nicht aktualisier
 
 Mit den Konfigurationsdateien `training.conf` und `scoring.conf` werden die Datensätze angegeben, die Sie für das Training und Scoring sowie das Hinzufügen von Hyperparametern nutzen möchten. Es gibt separate Konfigurationen für Training und Scoring.
 
-Damit ein Modell das Training ausführen kann, müssen Sie die `trainingDataSetId`, die `ACP_DSW_TRAINING_XDM_SCHEMA` und die `tenantId` angeben. Zur Bewertung müssen Sie außerdem die `scoringDataSetId`, die `tenantId` und die `scoringResultsDataSetId ` angeben.
+Damit ein Modell das Training ausführen kann, müssen Sie die `trainingDataSetId`, die `ACP_DSW_TRAINING_XDM_SCHEMA` und die `tenantId` angeben. Zur Bewertung müssen Sie außerdem die `scoringDataSetId`, die `tenantId` und die `scoringResultsDataSetId` angeben.
 
 Um die Datensatz- und Schema-IDs zu finden, wechseln Sie in Notebooks in der linken Navigationsleiste ![Registerkarte „Daten](../images/jupyterlab/create-recipe/dataset-tab.png) (unter dem Ordnersymbol). Es müssen drei verschiedene Datensatz-IDs angegeben werden. Der `scoringResultsDataSetId` wird zum Speichern der Modellbewertungsergebnisse verwendet und sollte ein leerer Datensatz sein. Diese Datensätze wurden zuvor im Schritt [Erforderliche Assets](#assets) erstellt.
 

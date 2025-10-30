@@ -2,10 +2,10 @@
 title: Ansicht des Validierungs-Editors
 description: Dieses Handbuch enthält Informationen zur Ansicht „Validierungs-Editor“ in Adobe Experience Platform Assurance.
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 4%
+source-wordcount: '496'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ Mit dem Validierungs-Editor können Sie JavaScript-Funktionen schnell und einfac
 
 ## Erste Schritte mit dem Validierungs-Editor
 
-Nachdem [Assurance eingerichtet](../tutorials/implement-assurance.md) wählen Sie in der Ansicht **[!UICONTROL Startseite]** die Option **[!UICONTROL Validierungs-Editor]** aus.
+Assurance Wählen [ nach dem Einrichten von ](../tutorials/implement-assurance.md) in der **[!UICONTROL Home]** Ansicht **[!UICONTROL Validation Editor]** aus.
 
 ![validation-editor-screen-shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -23,11 +23,11 @@ Nachdem [Assurance eingerichtet](../tutorials/implement-assurance.md) wählen Si
 
 Mit dieser Funktion können Sie Validierungsfunktionen für Ihre Adobe Experience Platform Assurance-Sitzungen erstellen, bearbeiten oder löschen.
 
-1. Wählen **[!UICONTROL Neue Validierung erstellen]** aus.
+1. Wählen Sie **[!UICONTROL Create a New Validation]** aus.
 2. Geben Sie einen **Namen** ein, um die Validierung zu identifizieren, und geben Sie dann eine **Kategorie** und eine **Beschreibung** an.
 3. Bearbeiten Sie den Code im Editor, um die Ereignisse für Ihre Assurance-Sitzung zu validieren.
 
-Nachdem die Funktionstests abgeschlossen sind, wählen Sie **[!UICONTROL Publish]** aus, um Ihre Validierung zu speichern.
+Wählen Sie nach Abschluss der Funktionstests die Option **[!UICONTROL Publish]** aus, um die Validierung zu speichern.
 
 ### Ereignisdefinition
 
@@ -57,7 +57,7 @@ Von der Validierungsfunktion wird erwartet, dass sie ein -Objekt zurückgibt, da
 | :--- | :--- | :--- |
 | `message` | Zeichenfolge | Die Validierungsmeldung, die in der Ergebniszusammenfassung angezeigt werden soll. |
 | `events` | Array | Ein Array von Ereignis-UUIDs, die als übereinstimmend oder nicht übereinstimmend gemeldet werden. |
-| `links` | Array | Ein Array von `ValidationResultLink`-Objekten, um auf die Dokumentation und andere Ressourcen zu verweisen`{( type: 'doc'|'product', url: String )}` |
+| `links` | Array | Ein Array von `ValidationResultLink`-Objekten, um auf die Dokumentation und andere Ressourcen `{( type: 'doc'`&amp;vert;`'product', url: String )}` zu verweisen |
 | `result` | String | Dies ist das Validierungsergebnis. Es wird erwartet, dass es eine der Aufzählungszeichenfolgen ist: „angewandt“, „nicht zugeordnet“, „unbekannt“ |
 
 ## Validierungsergebnisse anzeigen

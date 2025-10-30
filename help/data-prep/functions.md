@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Funktionen zur Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '6009'
 ht-degree: 3%
@@ -115,7 +115,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgelis
 
 >[!NOTE]
 >
->Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen. Weitere Informationen zur `date` finden Sie im Abschnitt „Datumsangaben“ [&#x200B; Handbuchs zur Handhabung von Datenformaten](./data-handling.md#dates).
+>Bitte nach links/rechts scrollen, um den vollständigen Inhalt der Tabelle anzuzeigen. Weitere Informationen zur `date` finden Sie im Abschnitt „Datumsangaben“ [ Handbuchs zur Handhabung von Datenformaten](./data-handling.md#dates).
 
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -154,8 +154,8 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgelis
 | map_has_keys | Wenn eine oder mehrere Eingabetasten bereitgestellt werden, gibt die Funktion „true“ zurück. Wenn ein Zeichenfolgen-Array als Eingabe bereitgestellt wird, gibt die Funktion für den ersten gefundenen Schlüssel „true“ zurück. | <ul><li>ZUORDNUNG: **Erforderlich** Die Eingabe-Zuordnungsdaten</li><li>KEY: **Erforderlich** Der Schlüssel kann eine einzelne Zeichenfolge oder ein Zeichenfolgen-Array sein. Wenn ein anderer primitiver Typ (Daten/Zahl) angegeben wird, wird er als Zeichenfolge behandelt.</li></ul> | map_has_keys(MAP, KEY) | Ein Codebeispiel finden Sie [Anhang](#map_has_keys) . | |
 | add_to_map | Akzeptiert mindestens zwei Eingaben. Als Eingabe können beliebig viele Zuordnungen bereitgestellt werden. Die Datenvorbereitung gibt eine einzelne Zuordnung zurück, die alle Schlüssel-Wert-Paare aus allen Eingaben enthält. Wenn ein oder mehrere Schlüssel wiederholt werden (in derselben Zuordnung oder in allen Zuordnungen), dedupliziert die Datenvorbereitung die Schlüssel, sodass das erste Schlüssel-Wert-Paar in der Reihenfolge verbleibt, in der sie in der Eingabe übergeben wurden. | ZUORDNUNG: **Erforderlich** Die Eingabe-Zuordnungsdaten. | add_to_map(MAP 1, MAP 2, MAP 3, …) | Ein Codebeispiel finden Sie [Anhang](#add_to_map) . | |
 | object_to_map (Syntax 1) | Mit dieser Funktion können Sie Datentypen zuordnen erstellen. | <ul><li>KEY: **Required** Schlüssel müssen eine Zeichenfolge sein. Wenn andere primitive Werte wie Ganzzahlen oder Datumswerte angegeben werden, werden sie automatisch in Zeichenfolgen konvertiert und als Zeichenfolgen behandelt.</li><li>ANY_TYPE: **Erforderlich** Bezieht sich auf jeden unterstützten XDM-Datentyp außer Zuordnungen.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, … ) | Ein Codebeispiel finden Sie [Anhang](#object_to_map) . | |
-| object_to_map (Syntax 2) | Mit dieser Funktion können Sie Datentypen zuordnen erstellen. | <ul><li>OBJECT: **Erforderlich** Sie können ein eingehendes Objekt oder Objekt-Array bereitstellen und auf ein Attribut innerhalb des Objekts als Schlüssel verweisen.</li></ul> | object_to_map(OBJECT) | Ein Codebeispiel finden Sie [Anhang](#object_to_map) . |
-| object_to_map (Syntax 3) | Mit dieser Funktion können Sie Datentypen zuordnen erstellen. | <ul><li>OBJECT: **Erforderlich** Sie können ein eingehendes Objekt oder Objekt-Array bereitstellen und auf ein Attribut innerhalb des Objekts als Schlüssel verweisen.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Ein Codebeispiel finden Sie [Anhang](#object_to_map) . |
+| object_to_map (Syntax 2) | Mit dieser Funktion können Sie Datentypen zuordnen erstellen. | <ul><li>OBJECT: **Erforderlich** Sie können ein eingehendes Objekt oder Objekt-Array bereitstellen und auf ein Attribut innerhalb des Objekts als Schlüssel verweisen.</li></ul> | object_to_map(OBJECT) | Ein Codebeispiel finden Sie [Anhang](#object_to_map) . |  |
+| object_to_map (Syntax 3) | Mit dieser Funktion können Sie Datentypen zuordnen erstellen. | <ul><li>OBJECT: **Erforderlich** Sie können ein eingehendes Objekt oder Objekt-Array bereitstellen und auf ein Attribut innerhalb des Objekts als Schlüssel verweisen.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Ein Codebeispiel finden Sie [Anhang](#object_to_map) . |  |
 
 {style="table-layout:auto"}
 
@@ -178,10 +178,10 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 | size_of | Gibt die Größe der Eingabe zurück. | <ul><li>INPUT: **Erforderlich** Das Objekt, dessen Größe Sie suchen.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | Mit dieser Funktion werden alle Elemente im gesamten Eingabe-Array an das Ende des Arrays im Profil angehängt. Diese Funktion ist **nur** während Aktualisierungen anwendbar. Bei Verwendung im Kontext von Einfügungen gibt diese Funktion die Eingabe wie vorliegend zurück. | <ul><li>ARRAY: **Erforderlich** Das Array zum Anhängen des Arrays im Profil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123 456 ] |
 | upsert_array_replace | Diese Funktion wird verwendet, um Elemente in einem Array zu ersetzen. Diese Funktion ist **nur** während Aktualisierungen anwendbar. Bei Verwendung im Kontext von Einfügungen gibt diese Funktion die Eingabe wie vorliegend zurück. | <ul><li>ARRAY: **Erforderlich** Das Array, das das Array im Profil ersetzen soll.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123 456 ] |
-| [!BADGE Nur Ziele]{type=Informative} array_to_string | Verbindet die Zeichenfolgendarstellungen der Elemente in einem Array mit dem angegebenen Trennzeichen. Wenn das Array mehrdimensional ist, wird es reduziert, bevor es verbunden wird. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [&#x200B; in der &#x200B;](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>SEPARATOR: **Erforderlich** Das Trennzeichen, das zum Verbinden der Elemente im Array verwendet wird.</li><li>ARRAY: **Erforderlich** Das Array, das verbunden werden soll (nach dem Reduzieren).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | „Hallo;Welt“ |
-| [!BADGE Nur Ziele]{type=Informative} filterArray* | Filtert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [&#x200B; in der &#x200B;](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu filternde Array</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7 ] |
-| [!BADGE Nur Ziele]{type=Informative} transformArray* | Transformiert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [&#x200B; in der &#x200B;](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu transformierende Array.</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8 ] |
-| [!BADGE Nur Ziele]{type=Informative} flachenArray* | Reduziert das angegebene (mehrdimensionale) Array auf ein eindimensionales Array. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [&#x200B; in der &#x200B;](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das Array, das reduziert werden soll.</li></ul> | flachenArray(Array) | flachenArray(&lbrack;[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]])) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
+| [!BADGE Nur Ziele]{type=Informative} array_to_string | Verbindet die Zeichenfolgendarstellungen der Elemente in einem Array mit dem angegebenen Trennzeichen. Wenn das Array mehrdimensional ist, wird es reduziert, bevor es verbunden wird. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>SEPARATOR: **Erforderlich** Das Trennzeichen, das zum Verbinden der Elemente im Array verwendet wird.</li><li>ARRAY: **Erforderlich** Das Array, das verbunden werden soll (nach dem Reduzieren).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | „Hallo;Welt“ |
+| [!BADGE Nur Ziele]{type=Informative} filterArray* | Filtert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu filternde Array</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7 ] |
+| [!BADGE Nur Ziele]{type=Informative} transformArray* | Transformiert das angegebene Array basierend auf einer Eigenschaft. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das zu transformierende Array.</li><li>PRÄDIKAT: **Erforderlich** Das Prädikat, das auf jedes Element des angegebenen Arrays angewendet werden soll. | transformArray(ARRAY, PREDICATE) | `transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8 ] |
+| [!BADGE Nur Ziele]{type=Informative} flachenArray* | Reduziert das angegebene (mehrdimensionale) Array auf ein eindimensionales Array. **Hinweis**: Diese Funktion wird in Zielen verwendet. Weitere Informationen finden [ in der ](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>ARRAY: **Erforderlich** Das Array, das reduziert werden soll.</li></ul> | flachenArray(Array) | flachenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]])) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,7 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| array_to_map | Diese Funktion akzeptiert ein Objekt-Array und einen Schlüssel als Eingabe und gibt eine Zuordnung des Schlüsselfelds mit dem Wert als Schlüssel und dem Array-Element als Wert zurück. | <ul><li>INPUT: **Erforderlich** Das Objekt-Array, von dem Sie das erste Objekt finden möchten, das nicht null ist.</li><li>KEY: **Required** Der Schlüssel muss ein Feldname im Objekt-Array und das Objekt als Wert sein.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Ein Codebeispiel finden [&#x200B; im &#x200B;](#object_to_map)Anhang“. |
+| array_to_map | Diese Funktion akzeptiert ein Objekt-Array und einen Schlüssel als Eingabe und gibt eine Zuordnung des Schlüsselfelds mit dem Wert als Schlüssel und dem Array-Element als Wert zurück. | <ul><li>INPUT: **Erforderlich** Das Objekt-Array, von dem Sie das erste Objekt finden möchten, das nicht null ist.</li><li>KEY: **Required** Der Schlüssel muss ein Feldname im Objekt-Array und das Objekt als Wert sein.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Ein Codebeispiel finden [ im ](#object_to_map)Anhang“. |  |
 | object_to_map | Diese Funktion akzeptiert ein -Objekt als Argument und gibt eine Zuordnung von Schlüssel-Wert-Paaren zurück. | <ul><li>INPUT: **Erforderlich** Das Objekt-Array, von dem Sie das erste Objekt finden möchten, das nicht null ist.</li></ul> | object_to_map(OBJECT_INPUT) | „object_to_map(address) where input is &quot; + „address: {line1 : \„345 park ave\&quot;,line2: \„bldg 2\&quot;,city : \„san jose\&quot;,state : \„CA\&quot;,type: \„office\&quot;}&quot; | Gibt eine Zuordnung mit angegebenen Feldnamen- und Wertepaaren zurück oder null, wenn die Eingabe null ist. Beispiel: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
 | to_map | Diese Funktion nimmt eine Liste von Schlüssel-Wert-Paaren und gibt eine Zuordnung von Schlüssel-Wert-Paaren zurück. | | to_map(OBJECT_INPUT) | „to_map(\„firstName\&quot;, \„John\&quot;, \„lastName\&quot;, \„Doe\„)“ | Gibt eine Zuordnung mit angegebenen Feldnamen- und Wertepaaren zurück oder null, wenn die Eingabe null ist. Beispiel: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
@@ -261,7 +261,7 @@ Informationen zur Funktion zum Kopieren von Objekten finden Sie im Abschnitt [un
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Erzeugt eine pseudo-zufällige ID. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
-| `fpid_to_ecid ` | Diese Funktion wandelt eine FPID-Zeichenfolge in eine ECID um, die in Adobe Experience Platform- und Adobe Experience Cloud-Anwendungen verwendet werden kann. | <ul><li>STRING: **Erforderlich** Die FPID-Zeichenfolge, die in eine ECID konvertiert werden soll.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
+| `fpid_to_ecid` | Diese Funktion wandelt eine FPID-Zeichenfolge in eine ECID um, die in Adobe Experience Platform- und Adobe Experience Cloud-Anwendungen verwendet werden kann. | <ul><li>STRING: **Erforderlich** Die FPID-Zeichenfolge, die in eine ECID konvertiert werden soll.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 
@@ -387,9 +387,9 @@ In der folgenden Tabelle finden Sie eine Liste der reservierten Zeichen und der 
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5b |
+| [ | %5b |
 | | | %5C |
-| &rbrack; | %5d |
+| ] | %5d |
 | ^ | %5E |
 | &quot; | %60 |
 | ~ | %7E |

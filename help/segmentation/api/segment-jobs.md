@@ -4,7 +4,7 @@ title: API-Endpunkt für Segmentaufträge
 description: Mit dem Segmentauftrags-Endpunkt in der Segmentierungs-Service-API von Adobe Experience Platform können Sie Segmentaufträge für Ihr Unternehmen programmgesteuert verwalten.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 18%
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | Gibt den Startversatz für die zurückgegebenen Segmentaufträge an. | `start=1` |
 | `limit` | Gibt die Anzahl der pro Seite zurückgegebenen Segmentaufträge an. | `limit=20` |
 | `status` | Filtert die Ergebnisse anhand ihres Status. Unterstützte Werte sind „NEW“ (neu), „QUEUED“ (in Warteschlange), „PROCESSING“ (Verarbeitung läuft), „SUCCEEDED“ (erfolgreich abgeschlossen), „FAILED“ (fehlgeschlagen), „CANCELLING“ (wird abgebrochen) und „CANCELLED“ (abgebrochen). | `status=NEW` |
-| `sort` | Ordnet die zurückgegebenen Segmentaufträge. Ist im Format `[attributeName]:[desc|asc]` geschrieben. | `sort=creationTime:desc` |
+| `sort` | Ordnet die zurückgegebenen Segmentaufträge. Wird im Format `[attributeName]:[desc|asc]` geschrieben. `sort=creationTime:desc` |
 | `property` | Filtert Segmentaufträge und erhält genaue Übereinstimmungen für den angegebenen Filter. Das kann in einem der folgenden Formate geschrieben sein: <ul><li>`[jsonObjectPath]==[value]` – Filtern nach dem Objektschlüssel</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` – Filtern innerhalb des Arrays</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++
@@ -70,7 +70,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit einer Liste von Segm
 >
 >Die folgende Antwort wurde aus Platzgründen gekürzt und zeigt nur den ersten zurückgegebenen Auftrag an.
 
-+++ Eine Beispielantwort beim Abrufen einer Liste von Segmentvorgängen.
++++ Eine Beispielantwort beim Abrufen einer Liste von Segmentvorgängen. 
 
 ```json
 {

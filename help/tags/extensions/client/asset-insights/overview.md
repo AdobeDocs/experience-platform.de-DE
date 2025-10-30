@@ -2,9 +2,9 @@
 title: AEM Asset Insights-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „AEM Asset Insights“ in Adobe Experience Platform vertraut.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 98%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Diese Erweiterung sollte zusammen mit [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de) verwendet werden. Genauer gesagt ersetzt es den „pageTracker“-Prozess und den Einbettungscode. Wenn diese Erweiterung konfiguriert ist, sendet sie Metriken bezüglich *Impressions* und *Klicks* auf Kreativelemente an Adobe Analytics. Danach werden diese in AEM Asset Insights-Berichte importiert. Die Asset-Metriken können dann entweder über AEM Asset Insights oder Adobe Analytics Project Workspaces in Berichten dargestellt werden.
+Diese Erweiterung sollte zusammen mit [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de) verwendet werden. Genauer gesagt ersetzt es den „pageTracker“-Prozess und den Einbettungs-Code. Wenn diese Erweiterung konfiguriert ist, sendet sie Metriken bezüglich *Impressions* und *Klicks* auf Kreativelemente an Adobe Analytics. Danach werden diese in AEM Asset Insights-Berichte importiert. Die Asset-Metriken können dann entweder über AEM Asset Insights oder Adobe Analytics Project Workspaces in Berichten dargestellt werden.
 
 ## Voraussetzungen für die Erweiterung
 
@@ -28,22 +28,23 @@ Die AEM Asset-Berichte in Analytics enthalten drei AEM-Dimensionen:
 * Angeklicktes Kreativelement
 
 Es gibt auch zwei Metriken:
+
 * Kreativelement-Impressions
 * Kreativelement-Klicks.
 
-Diese Berichte müssen unter Verwendung von Analytics Administrator aktiviert werden (klicken Sie auf **[!UICONTROL Analytics] > [!UICONTROL Admin] > [!UICONTROL Report Suites] > `<report suite>` > [!UICONTROL Einstellungen bearbeiten] > [!UICONTROL AEM] > [!UICONTROL AEM Assets-Berichte]**). Danach können sie über diese Erweiterung befüllt werden.
+Diese Berichte müssen mit Analytics Administrator aktiviert werden (über **[!UICONTROL Analytics]> [!UICONTROL Admin] > [!UICONTROL Report Suites] > `<report suite>` > [!UICONTROL Edit Settings] > [!UICONTROL AEM] >[!UICONTROL AEM Assets Reporting]**), bevor sie unter Verwendung dieser Erweiterung mit Daten versehen werden können.
 
 Die Tag-Erweiterung *Adobe Analytics* für Adobe Experience Platform muss in dieselbe Web-Eigenschaft installiert werden.
 
 ### Adobe Experience Manager (AEM)
 
-1. Aktivieren Sie [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de). Wählen Sie in AEM **[!UICONTROL Tools > Assets]** aus und öffnen Sie dann das Bedienfeld **[!UICONTROL Insights-Konfiguration]**.
+1. Aktivieren Sie [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de). Wählen Sie in AEM **[!UICONTROL Tools > Assets]** aus und öffnen Sie dann das Bedienfeld **[!UICONTROL Insights Configuration]**.
 
 1. Deaktivieren Sie UUID-Tracking.
 
    >[!IMPORTANT]
    >
-   >Diese Erweiterung funktioniert *nicht*, wenn die AEM Asset-Konfigurationseinstellung **[!UICONTROL UUID-Tracking deaktivieren]** aktiviert ist. Sie ist standardmäßig deaktiviert.
+   >Diese Erweiterung funktioniert *nicht*, wenn die AEM Asset-Konfigurationseinstellung **[!UICONTROL Disable UUID Tracking]** aktiviert ist. Sie ist standardmäßig deaktiviert.
 
    ![UUID-Tracking deaktivieren](images/disableassets.jpg)
 

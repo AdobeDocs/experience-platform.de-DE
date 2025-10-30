@@ -4,9 +4,9 @@ title: API-Endpunkt für Zeitpläne
 description: Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsvorgänge automatisch einmal täglich ausgeführt werden können.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2088'
 ht-degree: 15%
 
 ---
@@ -110,7 +110,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Zei
 | `children.type` | Der Typ des Auftrags als Zeichenfolge. Die beiden unterstützten Typen sind „batch_segmentation“ und „export“. |
 | `children.properties` | Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
 | `children.properties.segments` | Durch die Verwendung von `["*"]` wird sichergestellt, dass alle Segmente enthalten sind. |
-| `children.schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur für die Ausführung einmal täglich geplant werden, d. h., Sie können nicht festlegen, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet „0 0 1 * *&quot;, dass dieser Zeitplan jeden Tag um 1 Uhr morgens ausgeführt wird. |
+| `children.schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur für die Ausführung einmal täglich geplant werden, d. h., Sie können nicht festlegen, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;`0 0 1 * *`&quot;, dass dieser Zeitplan jeden Tag um 1 Uhr morgens ausgeführt wird. |
 | `children.state` | Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind „aktiv“ und „inaktiv“. Standardmäßig ist der Status auf „inaktiv“ festgelegt. |
 
 +++
@@ -127,7 +127,7 @@ POST /config/schedules
 
 **Anfrage**
 
-+++ Beispielanfrage zum Erstellen eines Zeitplans.
++++ Beispielanfrage zum Erstellen eines Zeitplans. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Erforderlich.** Der Auftragstyp als Zeichenfolge. Die beiden unterstützten Typen sind „batch_segmentation“ und „export“. |
 | `properties` | **Erforderlich.** Ein Objekt, das zusätzliche dem Zeitplan zugehörige Eigenschaften enthält. |
 | `properties.segments` | **Erforderlich, wenn `type` gleich „batch_segmentation“ ist.** Mit `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
-| `schedule` | *Optional.* Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur für die Ausführung einmal täglich geplant werden, d. h., Sie können nicht festlegen, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet „0 0 1 * *&quot;, dass dieser Zeitplan jeden Tag um 1 Uhr morgens ausgeführt wird. <br><br>Wenn diese Zeichenfolge nicht angegeben wird, wird automatisch ein systemgenerierter Zeitplan generiert. |
+| `schedule` | *Optional.* Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur für die Ausführung einmal täglich geplant werden, d. h., Sie können nicht festlegen, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;`0 0 1 * *`&quot;, dass dieser Zeitplan jeden Tag um 1 Uhr morgens ausgeführt wird. <br><br>Wenn diese Zeichenfolge nicht angegeben wird, wird automatisch ein systemgenerierter Zeitplan generiert. |
 | `state` | *Optional.* Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind „aktiv“ und „inaktiv“. Standardmäßig ist der Status auf „inaktiv“ festgelegt. |
 
 +++
@@ -195,7 +195,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum von Ihn
 
 ## Abrufen einzelner Zeitpläne {#get}
 
-Sie können detaillierte Informationen zu einem bestimmten Zeitplan abrufen, indem Sie eine GET-Anfrage an den `/config/schedules`-Endpunkt senden und im Anfragepfad die ID des Zeitplans angeben, den Sie abrufen möchten.
+Sie können detaillierte Informationen zu einem bestimmten Zeitplan abrufen, indem Sie eine GET-Anfrage an den `/config/schedules`-Endpunkt senden und im Anfragepfad die Kennung des Zeitplans angeben, den Sie abrufen möchten.
 
 **API-Format**
 
@@ -209,7 +209,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Anfrage**
 
-+++ Eine Beispielanfrage zum Abrufen eines Zeitplans.
++++ Eine Beispielanfrage zum Abrufen eines Zeitplans. 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
@@ -257,7 +257,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum angegeb
 | `type` | Der Typ des Auftrags als Zeichenfolge. Unterstützt werden die Typen `batch_segmentation` und `export`. |
 | `properties` | Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
 | `properties.segments` | Durch die Verwendung von `["*"]` wird sichergestellt, dass alle Segmente enthalten sind. |
-| `schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet „0 0 1 * *&quot;, dass dieser Zeitplan jeden Tag um 1 Uhr morgens ausgeführt wird. |
+| `schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;`0 0 1 * *`&quot;, dass dieser Zeitplan jeden Tag um 1 Uhr morgens ausgeführt wird. |
 | `state` | Eine Zeichenfolge, die den Status des Zeitplans enthält. Unterstützt werden die Status `active` und `inactive`. Standardmäßig lautet der Status `inactive`. |
 
 +++
@@ -406,9 +406,9 @@ In einer Cron-Ausdruckszeichenfolge steht das erste Feld für die Sekunden, das 
 | Minutes | Ja | 0-59 | `, - * /` |
 | Stunden | Ja | 0-23 | `, - * /` |
 | Tag des Monats | Ja | 1-31 | `, - * ? / L W` |
-| Monat | Ja | 1-12, JAN-DEZ | `, - * /` |
+| Month | Ja | 1-12, JAN-DEZ | `, - * /` |
 | Wochentag | Ja | 1-7, SUN-SAT | `, - * ? / L #` |
-| Jahr | Nein | Leer, 1970-2099 | `, - * /` |
+| Year | Nein | Leer, 1970-2099 | `, - * /` |
 
 >[!NOTE]
 >
@@ -434,10 +434,10 @@ Die folgende Tabelle zeigt Beispielzeichenfolgen für Cron-Ausdrücke und erläu
 | Ausdruck | Erklärung |
 | ---------- | ----------- |
 | `0 0 13 * * ?` | Die Veranstaltung findet jeden Tag um 13 Uhr statt. |
-| `0 30 9 * * ? 2022` | Die Veranstaltung wird im Jahr 2022 jeden Tag um 9.30 Uhr stattfinden. |
-| `0 * 18 * * ?` | Das Ereignis wird jede Minute ausgelöst, beginnend um 18 Uhr und endend um 18:59 Uhr, jeden Tag. |
+| `0 30 9 * * ? 2022` | Die Veranstaltung wird im Jahr 2022 jeden :30AM um 9 Uhr stattfinden. |
+| `0 * 18 * * ?` | Das Ereignis wird jede Minute ausgelöst, beginnend um 18 Uhr und endend um 18 :59PM, jeden Tag. |
 | `0 0/10 17 * * ?` | Die Veranstaltung wird alle zehn Minuten ausgelöst, beginnend um 17 Uhr und endend um 18 Uhr, jeden Tag. |
-| `0 13,38 5 ? 6 WED` | Die Veranstaltung wird jeden Mittwoch im Juni um 5:13 Uhr und um 5:38 Uhr stattfinden. |
-| `0 30 12 ? * 4#3` | Die Veranstaltung findet jeden Monat um 12:30 Uhr am dritten Mittwoch statt. |
-| `0 30 12 ? * 6L` | Die Veranstaltung wird am letzten Freitag eines jeden Monats um 12:30 Uhr stattfinden. |
-| `0 45 11 ? * MON-THU` | Die Veranstaltung wird jeden Montag, Dienstag, Mittwoch und Donnerstag um 11:45 Uhr ausgelöst. |
+| `0 13,38 5 ? 6 WED` | Die Veranstaltung findet jeden Mittwoch im Juni um :13AM und :38AM Uhr statt. |
+| `0 30 12 ? * 4#3` | Die Veranstaltung findet jeden :30PM um 12 Uhr am dritten Mittwoch statt. |
+| `0 30 12 ? * 6L` | Die Veranstaltung wird am letzten Freitag :30PM Monats um 12 Uhr stattfinden. |
+| `0 45 11 ? * MON-THU` | Die Veranstaltung wird jeden Montag:45AM Dienstag, Mittwoch und Donnerstag um 11 Uhr stattfinden. |

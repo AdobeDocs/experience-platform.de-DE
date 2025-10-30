@@ -5,7 +5,7 @@ title: API-Endpunkt für Abfragen
 description: In den folgenden Abschnitten werden Aufrufe beschrieben, die Sie mit dem /queries-Endpunkt in der Abfrage-Service-API ausführen können.
 role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 20%
@@ -20,7 +20,7 @@ In den folgenden Abschnitten werden Aufrufe beschrieben, die Sie mit dem `/queri
 
 ### Abrufen einer Liste von Abfragen
 
-Sie können eine Liste aller Abfragen für Ihre Organisation abrufen, indem Sie eine GET-Anfrage an den `/queries`-Endpunkt senden.
+Sie können eine Liste aller Abfragen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den `/queries`-Endpunkt senden.
 
 **API-Format**
 
@@ -329,7 +329,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `op` | Der Typ des Vorgangs, der mit der Ressource durchgeführt werden soll. Die zulässigen Werte sind `cancel` und `soft_delete`. Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert `cancel ` festlegen. Beachten Sie, dass der Soft Delete-Vorgang verhindert, dass die Abfrage bei GET-Anfragen zurückgegeben wird, sie jedoch nicht aus dem System löscht. |
+| `op` | Der Typ des Vorgangs, der mit der Ressource durchgeführt werden soll. Die zulässigen Werte sind `cancel` und `soft_delete`. Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert `cancel` festlegen. Beachten Sie, dass der Soft Delete-Vorgang verhindert, dass die Abfrage bei GET-Anfragen zurückgegeben wird, sie jedoch nicht aus dem System löscht. |
 
 **Antwort**
 

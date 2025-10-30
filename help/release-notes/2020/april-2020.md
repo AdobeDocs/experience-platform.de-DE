@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: Versionshinweise;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 58%
@@ -18,9 +18,11 @@ ht-degree: 58%
 **Veröffentlichungsdatum: Donnerstag, 8. April 2020**
 
 Neue Funktionen in Adobe Experience Platform:
+
 * [[!DNL Intelligent Services]](#intelligent)
 
 Aktualisierungen vorhandener Funktionen:
+
 * [[!DNL Experience Data Model (XDM)]](#xdm)
 * [Data Governance](#governance)
 * [[!DNL Destinations]](#destinations)
@@ -70,7 +72,7 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien und Technologien zur Verwaltung von Kundendaten sowie zur Gewährleistung der Einhaltung von Vorschriften, Beschränkungen und Datennutzungsrichtlinien. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, wie z. B. bei Katalogisierung, Bestimmung der Datenherkunft, Datennutzungsbezeichnung, Datenzugriffsrichtlinien und Zugriffssteuerung für Daten bei Marketing-Aktionen.
 
-Das Thema Data Governance erfordert ein tiefgehendes Verständnis aller für Ihre Kundendaten geltenden gesetzlichen Bestimmungen, vertraglichen Pflichten und Unternehmensrichtlinien. Anschließend lassen sich Daten mithilfe der entsprechenden Datennutzungsbezeichnungen klassifizieren und ihre Verwendung durch Definition von Datennutzungsrichtlinien steuern.
+Das Thema Data Governance erfordert ein tiefgehendes Verständnis aller für Ihre Kundendaten geltenden gesetzlichen Bestimmungen, vertraglichen Pflichten und Unternehmensrichtlinien. Anschließend lassen sich Daten mithilfe der entsprechenden Datennutzungs-Labels klassifizieren und ihre Verwendung durch Definition von Datennutzungsrichtlinien steuern.
 
 Das Data Governance-Framework vereinfacht und optimiert die Kategorisierung von Daten und die Erstellung von Datennutzungsrichtlinien über die [!DNL Experience Platform]-Benutzeroberfläche und die [!DNL Policy Service]-API.
 

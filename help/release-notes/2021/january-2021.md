@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '722'
 ht-degree: 86%
 
 ---
@@ -64,7 +64,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Löschen eines Datensatzes aus dem Profilspeicher | Wenn Sie einen Datensatz aus Experience Platform Data Lake löschen, wird er automatisch auch aus dem Profilspeicher gelöscht. Sie müssen nicht mehr den Vorgangs-API-Endpunkt von Profile System verwenden, um eine Löschanfrage zu erstellen und den Datensatz aus dem Profilspeicher zu löschen. Weitere Informationen finden Sie im [Handbuch zum Vorgangs-API-Endpunkt von Profile System](../../profile/api/profile-system-jobs.md). |
 | Geschätzte Anzahl der IDs pro Namespace für ein bestimmtes Segment | Die Vorschau-API meldet nun Folgendes für die Anzahl der geschätzten Profile:<ul><li>Gesamtanzahl der geschätzten Profile in einem Segment für einen bestimmten Namespace.</li><li>Gesamtanzahl der geschätzten Profil im Profil-Vereinigungsschema für einen bestimmten Namespace.</li></ul>Weitere Informationen finden Sie im [Handbuch zum Profilvorschau-API-Endpunkt](../../profile/api/preview-sample-status.md). |
 
-Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile], finden Sie in der Übersicht [&#x200B; Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile], finden Sie in der Übersicht [ Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -80,6 +80,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Verbesserungen am [!DNL Google BigQuery]-Quell-Connector | Mit dem [!DNL BigQuery]-Quell-Connector können Sie jetzt Dateien mit mehr als 10 GB in einem Durchgang aufnehmen. Informationen dazu finden Sie in der [[!DNL BigQuery] Übersicht zum Quell-Connector](../../sources/connectors/databases/bigquery.md). |
 | Unterstützung komplexer Datentypen für die Cloud-Datenspeicherung | Sie können jetzt komplexe Datentypen, wie z. B. Arrays in JSON-Dateien, aufnehmen, wenn Sie einen Cloud-Quell-Connector verwenden. Weitere Informationen finden Sie in den Tutorials zum Erstellen eines Cloud-Datenspeicherungs-Datenflusses [in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) oder [mit der  [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Unterstützung der Authentifizierung über einen Schlüssel für die [!DNL Microsoft Dynamics]-Quelle | Alternativ zur kennwortbasierten Authentifizierung können Sie sich jetzt mit einem Schlüssel bei Ihrem [!DNL Dynamics]-Konto authentifizieren. Weitere Informationen dazu finden Sie in der [[!DNL Dynamics] Übersicht zum Quell-Connector](../../sources/connectors/crm/ms-dynamics.md). |
-| Benutzeroberflächenunterstützung für benutzerdefinierte Trennzeichen in Cloud-Datenspeicherungsquellen | Sie können jetzt ein benutzerdefiniertes Spaltentrennzeichen wie Komma (`,`), Tabulator (`\t`) oder Pipe (`|`) festlegen, um durch Trennzeichen getrennte Dateien in der Benutzeroberfläche zu erfassen. Weitere Informationen finden Sie im Tutorial zum [Erstellen eines Datenflusses mit einem Quell-Connector für die Cloud-Datenspeicherung](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Benutzeroberflächenunterstützung für benutzerdefinierte Trennzeichen in Cloud-Datenspeicherungsquellen | Sie können jetzt ein benutzerdefiniertes Spaltentrennzeichen wie Komma (`,`), Tabulator (`\t`) oder Pipe (&amp;vert;) festlegen, um durch Trennzeichen getrennte Dateien in der Benutzeroberfläche zu erfassen. Weitere Informationen finden Sie im Tutorial zum [Erstellen eines Datenflusses mit einem Quell-Connector für die Cloud-Datenspeicherung](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).

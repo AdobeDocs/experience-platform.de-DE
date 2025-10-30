@@ -2,10 +2,10 @@
 title: Übersicht über die Splunk-Erweiterung
 description: Erfahren Sie mehr über die Splunk-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 98%
+source-wordcount: '958'
+ht-degree: 95%
 
 ---
 
@@ -61,13 +61,13 @@ Wählen Sie **Erweiterungen** in der linken Navigation aus. Wählen Sie unter **
 
 ![Auswahl der Schaltfläche „Konfigurieren“ für die Splunk-Erweiterung in der Benutzeroberfläche](../../../images/extensions/server/splunk/configure.png)
 
-Geben Sie für **[!UICONTROL HTTP Event Collector URL]** die Adresse und den Port Ihrer Splunk-Plattforminstanz ein. Geben Sie unter **[!UICONTROL Zugriffs-Token]** Ihren [!DNL Event Collector Token]-Wert ein. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
+Geben Sie **[!UICONTROL HTTP Event Collector URL]** die Adresse und den Port Ihrer Splunk-Plattforminstanz ein. Geben Sie unter **[!UICONTROL Access Token]** Ihren [!DNL Event Collector Token] ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save]** aus.
 
 ![In der Benutzeroberfläche ausgefüllte Konfigurationsoptionen](../../../images/extensions/server/splunk/input.png)
 
 ## Konfigurieren einer Ereignisweiterleitungsregel {#config_rule}
 
-Beginnen Sie mit der Erstellung einer neuen [Regel](../../../ui/managing-resources/rules.md) für die Ereignisweiterleitung und konfigurieren Sie die Bedingungen nach Bedarf. Wählen Sie bei der Auswahl der Aktionen für die Regel die [!UICONTROL Splunk]-Erweiterung und wählen Sie dann den Aktionstyp [!UICONTROL Ereignis erstellen] aus. Es erscheinen zusätzliche Steuerelemente, um das Splunk-Ereignis weiter zu konfigurieren.
+Beginnen Sie mit der Erstellung einer neuen [Regel](../../../ui/managing-resources/rules.md) für die Ereignisweiterleitung und konfigurieren Sie die Bedingungen nach Bedarf. Wählen Sie bei der Auswahl der Aktionen für die Regel die [!UICONTROL Splunk] Erweiterung und wählen Sie dann den [!UICONTROL Create Event] Aktionstyp aus. Es erscheinen zusätzliche Steuerelemente, um das Splunk-Ereignis weiter zu konfigurieren.
 
 ![Definieren der Aktionskonfiguration](../../../images/extensions/server/splunk/action-configurations.png)
 
@@ -75,13 +75,13 @@ Der nächste Schritt besteht darin, die Eigenschaften des Splunk-Ereignisses Dat
 
 | Feldname | Beschreibung |
 | --- | --- |
-| [!UICONTROL Ereignis &#x200B;]<br><br>**(ERFORDERLICH)** | Geben Sie an, wie Sie die Ereignisdaten bereitstellen möchten. Ereignisdaten können dem `event`-Schlüssel im JSON-Objekt in der HTTP-Anfrage zugewiesen sein oder es kann sich um rohen Text handeln. Der `event`-Schlüssel befindet sich im JSON-Ereignis-Paket auf derselben Ebene wie die Metadatenschlüssel. Innerhalb der geschweiften Klammern des `event`-Schlüsselwerts können die Daten in jeder gewünschten Form vorliegen (z. B. Zeichenfolge, Zahl, ein anderes JSON-Objekt usw.). |
+| [!UICONTROL Event]<br><br>**(ERFORDERLICH)** | Geben Sie an, wie Sie die Ereignisdaten bereitstellen möchten. Ereignisdaten können dem `event`-Schlüssel im JSON-Objekt in der HTTP-Anfrage zugewiesen sein oder es kann sich um rohen Text handeln. Der `event`-Schlüssel befindet sich im JSON-Ereignis-Paket auf derselben Ebene wie die Metadatenschlüssel. Innerhalb der geschweiften Klammern des `event`-Schlüsselwerts können die Daten in jeder gewünschten Form vorliegen (z. B. Zeichenfolge, Zahl, ein anderes JSON-Objekt usw.). |
 | [!UICONTROL Host] | Der Host-Name des Clients, von dem Sie Daten senden. |
-| [!UICONTROL Quellentyp] | Der Quelltyp, der den Ereignisdaten zugewiesen werden soll. |
-| [!UICONTROL Quelle] | Der Quellwert, der den Ereignisdaten zugewiesen werden soll. Wenn Sie beispielsweise Daten von einer App senden, die Sie entwickeln, legen Sie diesen Schlüssel auf den Namen der App fest. |
+| [!UICONTROL Source Type] | Der Quelltyp, der den Ereignisdaten zugewiesen werden soll. |
+| [!UICONTROL Source] | Der Quellwert, der den Ereignisdaten zugewiesen werden soll. Wenn Sie beispielsweise Daten von einer App senden, die Sie entwickeln, legen Sie diesen Schlüssel auf den Namen der App fest. |
 | [!UICONTROL Index] | Der Name des Index der Ereignisdaten. Der hier angegebene Index muss sich in der Liste der zulässigen Indizes befinden, wenn der Indexparameter des Tokens festgelegt ist. |
-| [!UICONTROL Zeit] | Die Ereigniszeit. Das Standardzeitformat ist UNIX-Zeit (im Format `<sec>.<ms>`) und hängt von Ihrer lokalen Zeitzone ab. Beispiel: `1433188255.500` gibt 1433188255 Sekunden und 500 Millisekunden nach Epoche oder Montag, den 1. Juni 2015, um 19:50:55 Uhr GMT an. |
-| [!UICONTROL Felder] | Geben Sie ein unformatiertes JSON-Objekt oder einen Satz von Schlüssel-Wert-Paaren an, die explizite benutzerdefinierte Felder enthalten, die zur Indexzeit definiert werden sollen.  Die `fields`-Schlüssel gilt nicht für Rohdaten.<br><br>Abfragen, die die Eigenschaft `fields` enthalten, müssen an den `/collector/event`-Endpunkt gesendet werden, da sie sonst nicht indiziert werden. Weitere Informationen finden Sie in der Splunk-Dokumentation zu [indizierten Feldextraktionen](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Time] | Die Ereigniszeit. Das Standardzeitformat ist UNIX-Zeit (im Format `<sec>.<ms>`) und hängt von Ihrer lokalen Zeitzone ab. Beispiel: `1433188255.500` gibt 1433188255 Sekunden und 500 Millisekunden nach Epoche oder Montag, den 1. Juni 2015, um 19:50:55 Uhr GMT an. |
+| [!UICONTROL Fields] | Geben Sie ein unformatiertes JSON-Objekt oder einen Satz von Schlüssel-Wert-Paaren an, die explizite benutzerdefinierte Felder enthalten, die zur Indexzeit definiert werden sollen.  Die `fields`-Schlüssel gilt nicht für Rohdaten.<br><br>Abfragen, die die Eigenschaft `fields` enthalten, müssen an den `/collector/event`-Endpunkt gesendet werden, da sie sonst nicht indiziert werden. Weitere Informationen finden Sie in der Splunk-Dokumentation zu [indizierten Feldextraktionen](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Validieren von Daten in Splunk {#validate}
 

@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API Ihre Streaming-Zielkonfiguration testen können, bevor Sie sie veröffentlichen.
 title: Streaming-Zieltest-API – Überblick
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 100%
@@ -25,10 +25,12 @@ Nachstehend wird gezeigt, wie das Testen Ihres Ziels in den [Zielkonfigurations-
 Verwenden Sie das Test-Tool für Ziele, um Ihre Zielkonfiguration zu testen, indem Sie Nachrichten an den Partnerendpunkt senden, den Sie im Abschnitt [Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md) bereitgestellt haben.
 
 Bevor Sie das Tool verwenden, stellen Sie Folgendes sicher:
+
 * Konfigurieren Sie Ihr Ziel, indem Sie die im [Zielkonfigurations-Workflow](../../authoring-api/destination-configuration/create-destination-configuration.md)beschriebenen Schritte ausführen, und
 * Erstellen Sie eine Verbindung zu Ihrem Ziel, wie im Abschnitt [Abrufen der Ziel-Instanz-ID](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id) beschrieben.
 
 Mit diesem Tool haben Sie nach der Konfiguration Ihres Ziels folgende Möglichkeiten:
+
 * Testen, ob Ihr Ziel richtig konfiguriert ist.
 * Überprüfen der Integrität der Datenflüsse zu Ihrem konfigurierten Ziel.
 
@@ -43,6 +45,7 @@ Sie können den Zieltest-API-Endpunkt mit oder ohne Hinzufügen von Profilen zur
 Wenn Sie der Anfrage keine Profile hinzufügen, generiert Adobe diese intern und fügt sie der Anfrage hinzu. Informationen zum Generieren von Profilen für die Verwendung in dieser Anfrage finden Sie in der [API-Referenz zur Profilgenerierung](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Sie müssen Profile basierend auf dem Quell-XDM-Schema generieren, wie in der [API-Referenz](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema) beschrieben. Beachten Sie, dass das Quellschema das [Vereinigungsschema](../../../../profile/ui/union-schema.md) der von Ihnen verwendeten Sandbox ist.
 
 Die Antwort enthält das Ergebnis der Verarbeitung der Zielanfrage. Die Anfrage umfasst drei Hauptabschnitte:
+
 * Die von Adobe für das Ziel generierte Anfrage.
 * Die von Ihrem Ziel erhaltene Antwort.
 * Die Liste der in der Anfrage gesendeten Profile, unabhängig davon, ob es sich um Profile handelt, [die Sie in der Anfrage hinzugefügt haben](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles) oder ob sie von Adobe generiert wurden, falls [der Hauptteil der Zieltestanfrage leer war](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).

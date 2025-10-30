@@ -1,9 +1,9 @@
 ---
 title: Push-Benachrichtigungen
 description: Konfigurieren Sie Push-Benachrichtigungen für Web SDK, um browserbasiertes Push-Messaging zu aktivieren.
-source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '511'
 ht-degree: 3%
 
 ---
@@ -57,7 +57,7 @@ Im Folgenden finden Sie ein Beispiel für die Installation des Service Workers:
 
 Führen Sie die folgenden Schritte aus, um Push-Benachrichtigungen zu aktivieren und zu konfigurieren:
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und klicken Sie dann auf der **[!UICONTROL Configure]** auf [!UICONTROL Adobe Experience Platform Web SDK] .
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie Push-Benachrichtigungen konfiguriert haben, verwenden Sie den Befehl [`sendPushSubscription`](../sendpushsubscription.md) , um Push-Abonnements bei Adobe Experience Platform zu registrieren.
+Nachdem Sie Push-Benachrichtigungen konfiguriert haben, verwenden Sie den Befehl [sendPushSubscription](../sendpushsubscription.md), um Push-Abonnements bei Adobe Experience Platform zu registrieren.

@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutz
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '971'
 ht-degree: 16%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->Die [!DNL Braze Currents]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Braze Currents]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 [!DNL Braze] ermöglicht kundenorientierte Interaktionen zwischen Verbrauchern und Marken in Echtzeit. [!DNL Braze Currents] ist ein Echtzeit-Datenstrom von Interaktionsereignissen von der Braze-Plattform, der der robusteste und zugleich granularste Export aus der [!DNL Braze]-Plattform ist.
 
@@ -25,7 +25,7 @@ Lesen Sie das folgende Tutorial, um zu erfahren, wie Sie Interaktionsereignisdat
 
 Um die Schritte in diesem Handbuch abzuschließen, benötigen Sie Folgendes:
 
-* Eine Anmeldung bei [Adobe Experience Platform &#x200B;](https://platform.adobe.com) die Berechtigung zum Erstellen einer neuen Streaming-Quellverbindung.
+* Eine Anmeldung bei [Adobe Experience Platform ](https://platform.adobe.com) die Berechtigung zum Erstellen einer neuen Streaming-Quellverbindung.
 * Eine Anmeldung bei Ihrem [[!DNL Braze] Dashboard](https://dashboard.braze.com/sign_in), eine nicht verwendete [Aktuelle Connector-](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)) und Berechtigungen zum Erstellen eines Connectors. Weitere Informationen finden Sie unter [Voraussetzungen für die Einrichtung [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ## Erste Schritte
@@ -39,36 +39,36 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Dieses Tutorial erfordert auch ein Grundverständnis von [[!DNL Braze] Strömungen](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents).
 
-Wenn Sie bereits über eine [!DNL Braze] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [&#x200B; eines Datenflusses &#x200B;](../../dataflow/marketing-automation.md).
+Wenn Sie bereits über eine [!DNL Braze] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [ eines Datenflusses ](../../dataflow/marketing-automation.md).
 
 ## Erstellen eines XDM-Schemas
 
 >[!TIP]
 >
->Sie müssen ein Experience-Datenmodell-Schema (XDM) erstellen, wenn Sie zum ersten Mal eine [!DNL Braze Currents] Verbindung erstellen. Wenn Sie bereits ein Schema für [!DNL Braze Currents] erstellt haben, können Sie diesen Schritt überspringen und mit dem Schritt &quot;[&#x200B; Ihres Kontos mit Experience Platform&quot; &#x200B;](#connect).
+>Sie müssen ein Experience-Datenmodell-Schema (XDM) erstellen, wenn Sie zum ersten Mal eine [!DNL Braze Currents] Verbindung erstellen. Wenn Sie bereits ein Schema für [!DNL Braze Currents] erstellt haben, können Sie diesen Schritt überspringen und mit dem Schritt &quot;[ Ihres Kontos mit Experience Platform&quot; ](#connect).
 
-Verwenden Sie in der Benutzeroberfläche von Experience Platform den linken Navigationsbereich und wählen Sie dann **[!UICONTROL Schemata]**, um auf den Arbeitsbereich [!UICONTROL Schemata] zuzugreifen. Wählen Sie anschließend **[!UICONTROL Schema erstellen]** und dann **[!UICONTROL Erlebnisereignis]** aus. Um fortzufahren, klicken Sie auf **[!UICONTROL Weiter]**.
+Verwenden Sie in der Benutzeroberfläche von Experience Platform den linken Navigationsbereich und wählen Sie dann **[!UICONTROL Schemas]** , um auf den [!UICONTROL Schemas]-Arbeitsbereich zuzugreifen. Wählen Sie als Nächstes **[!UICONTROL Create schema]** und dann **[!UICONTROL Experience Event]** aus. Um fortzufahren, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Ein abgeschlossenes Schema.](../../../../images/tutorials/create/braze/schema.png)
 
-Geben Sie einen Namen und eine Beschreibung für Ihr Schema an. Verwenden Sie dann das Bedienfeld [!UICONTROL Komposition], um Ihre Schemaattribute zu konfigurieren. Wählen [!UICONTROL &#x200B; unter &#x200B;]Feldergruppen“ die Option **[!UICONTROL Hinzufügen]** aus und fügen Sie die Feldergruppe [!UICONTROL Benutzerereignis „Braze-]&quot; hinzu. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
+Geben Sie einen Namen und eine Beschreibung für Ihr Schema an. Verwenden Sie dann das Bedienfeld [!UICONTROL Composition] , um Ihre Schemaattribute zu konfigurieren. Wählen Sie unter [!UICONTROL Field groups] die Option **[!UICONTROL Add]** aus und fügen Sie die Feldergruppe [!UICONTROL Braze Currents User Event] hinzu. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save]** aus.
 
 Weitere Informationen zu Schemata finden Sie im Handbuch zu [Erstellen von Schemata in der Benutzeroberfläche](../../../../../xdm/tutorials/create-schema-ui.md).
 
 ## Verbinden Ihres [!DNL Braze] mit Experience Platform {#connect}
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option **[!UICONTROL Sources]** , um auf den [!UICONTROL Sources]-Arbeitsbereich zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie *Marketing* die Option **[!UICONTROL Braze-Ströme]** und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter *Kategorie* Marketing-Automatisierung“ **[!UICONTROL Braze Currents]** und dann **[!UICONTROL Add data]** aus.
 
 ![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit der ausgewählten Quelle „Braze-Ströme“.](../../../../images/tutorials/create/braze/catalog.png)
 
-Laden Sie als Nächstes die bereitgestellte Beispieldatei [Braze-Ströme“ &#x200B;](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). Diese Datei enthält alle möglichen Felder, die Braze im Rahmen eines Ereignisses senden könnte.
+Laden Sie als Nächstes die bereitgestellte Beispieldatei [Braze-Ströme“ ](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). Diese Datei enthält alle möglichen Felder, die Braze im Rahmen eines Ereignisses senden könnte.
 
 ![Der Bildschirm „Daten hinzufügen“.](../../../../images/tutorials/create/braze/select-data.png)
 
 Nach dem Hochladen der Datei müssen Sie Ihre Datenflussdetails angeben, einschließlich Informationen zu Ihrem Datensatz und dem Schema, dem Sie zuordnen.  Wenn dies das erste Mal ist, dass Sie eine Braze-Stromquelle verbinden, erstellen Sie einen neuen Datensatz.  Andernfalls können Sie einen beliebigen vorhandenen Datensatz verwenden, der auf das Braze-Schema verweist.  Wenn Sie einen neuen Datensatz erstellen, verwenden Sie das Schema , das wir im vorherigen Abschnitt erstellt haben.
-![&#x200B; Bildschirm „Datenflussdetails“ mit hervorgehobener Option „Datensatzdetails“](../../../../images/tutorials/create/braze/dataflow-detail.png)
+![ Bildschirm „Datenflussdetails“ mit hervorgehobener Option „Datensatzdetails“](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Konfigurieren Sie dann die Zuordnung für Ihre Daten mithilfe der Zuordnungsschnittstelle.
 
@@ -78,23 +78,23 @@ Die Zuordnung weist die folgenden Probleme auf, die gelöst werden müssen.
 
 In den Quelldaten wird *id* fälschlicherweise *_braze.appID* zugeordnet. Sie müssen das Zielgruppen-Mapping-Feld auf der *des Schemas in*_id ändern. Stellen Sie als Nächstes sicher *dass &quot;.is_amp*&quot; *_braze.messaging.email.isAMP* zugeordnet ist.
 
-Löschen Sie als Nächstes die Zuordnung *Zeit* zu *Zeitstempel*, klicken Sie dann auf das Symbol „Hinzufügen (`+`)“ und wählen Sie **[!UICONTROL Berechnetes Feld hinzufügen]**. Geben Sie in das bereitgestellte Feld *time \* 1000* ein und wählen Sie **[!UICONTROL Speichern]**.
+Löschen Sie als Nächstes die Zuordnung *Zeit* zu *Zeitstempel*, klicken Sie dann auf das Symbol zum Hinzufügen (`+`) und wählen Sie dann **[!UICONTROL Add calculated field]** aus. Geben Sie in das bereitgestellte Feld *time \* 1000* ein und wählen Sie **[!UICONTROL Save]** aus.
 
-Nachdem das neue berechnete Feld hinzugefügt wurde, wählen Sie **[!UICONTROL Zielfeld zuordnen]** neben dem neuen Quellfeld aus und ordnen Sie es *Zeitstempel* auf der Stammebene des Schemas zu. Wählen Sie dann **[!UICONTROL Validieren]** aus, um sicherzustellen, dass Sie keine Fehler mehr haben.
+Nachdem das neue berechnete Feld hinzugefügt wurde, wählen Sie **[!UICONTROL Map target field]** neben dem neuen Quellfeld aus und ordnen Sie es *Zeitstempel* auf der Stammebene des Schemas zu. Sie sollten dann **[!UICONTROL Validate]** auswählen, um sicherzustellen, dass Sie keine Fehler mehr haben.
 
 >[!IMPORTANT]
 >
 >Braze-Zeitstempel werden nicht in Millisekunden, sondern in Sekunden ausgedrückt. Damit die Zeitstempel in Experience Platform genau wiedergegeben werden, müssen Sie berechnete Felder in Millisekunden erstellen. Die Berechnung „Zeit * 1000“ wird korrekt in Millisekunden konvertiert, sodass sie einem Zeitstempelfeld in Experience Platform zugeordnet werden kann.
 >
->![Erstellen eines berechneten Felds für Zeitstempel &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![Erstellen eines berechneten Felds für den Zeitstempel](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![Die Zuordnung ohne Fehler.](../../../../images/tutorials/create/braze/completed_mapping.png)
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Weiter]** aus. Bestätigen Sie auf der Seite Überprüfen die Details Ihres Datenflusses und wählen Sie dann **[!UICONTROL Beenden]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus. Bestätigen Sie auf der Seite Überprüfen die Details Ihres Datenflusses und wählen Sie dann **[!UICONTROL Finish]** aus.
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Nachdem Ihre Verbindung erstellt wurde, müssen Sie die folgenden Werte für die Anmeldeinformationen erfassen, die Sie dann im Braze-Dashboard angeben, um Daten an Experience Platform zu senden. Weitere Informationen finden Sie im [!DNL Braze] ([&#x200B; zum Navigieren zu Strömen](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Nachdem Ihre Verbindung erstellt wurde, müssen Sie die folgenden Werte für die Anmeldeinformationen erfassen, die Sie dann im Braze-Dashboard angeben, um Daten an Experience Platform zu senden. Weitere Informationen finden Sie im [!DNL Braze] ([ zum Navigieren zu Strömen](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Feld | Beschreibung |
 | --- | --- |

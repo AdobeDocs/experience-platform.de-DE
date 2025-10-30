@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '5248'
-ht-degree: 64%
+source-wordcount: '5161'
+ht-degree: 55%
 
 ---
 
@@ -52,21 +52,21 @@ Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereigniss
 >
 >Ein Attribut verfügt jedoch **nicht** über Zusammenfassungsdaten, wenn es sich um Daten mit mehreren Entitäten handelt, die über eine Beziehung mit dem Profil verknüpft sind. Wenn Sie beispielsweise über ein benutzerdefiniertes Schema mit dem Namen `Vehicle` verfügen **verfügen die** Eigenschaften) im `Vehicle` Schema **nicht** über Zusammenfassungsdaten.
 
-Sie können diese Bausteine im Abschnitt **[!UICONTROL Felder]** links im Arbeitsbereich von [!DNL Segment Builder] sehen. Der Abschnitt **[!UICONTROL Felder]** enthält eine Registerkarte für jeden der Hauptbausteine: [!UICONTROL Attribute], [!UICONTROL Ereignisse] und [!UICONTROL Zielgruppen].
+Sie können diese Bausteine im Abschnitt **[!UICONTROL Fields]** auf der linken Seite des Arbeitsbereichs von [!DNL Segment Builder] sehen. **[!UICONTROL Fields]** enthält eine Registerkarte für jeden Hauptbaustein: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; und &quot;[!UICONTROL Audiences]&quot;.
 
 ![Der Segment Builder-Abschnitt „Felder“ ist hervorgehoben.](../images/ui/segment-builder/segment-fields.png)
 
 ### Attribute
 
-Auf der Registerkarte **[!UICONTROL Attribute]** können Sie [!DNL Profile]-Attribute durchsuchen, die zur [!DNL XDM Individual Profile]-Klasse gehören. Jeder Ordner lässt sich erweitern, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs in die Arbeitsfläche des Regel-Builders gezogen werden kann. Die [Arbeitsfläche des Regel-Builders](#rule-builder-canvas) wird weiter unten in diesem Handbuch erläutert.
+Auf der Registerkarte **[!UICONTROL Attributes]** können Sie [!DNL Profile] Attribute durchsuchen, die zur [!DNL XDM Individual Profile]-Klasse gehören. Jeder Ordner lässt sich erweitern, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs in die Arbeitsfläche des Regel-Builders gezogen werden kann. Die [Arbeitsfläche des Regel-Builders](#rule-builder-canvas) wird weiter unten in diesem Handbuch erläutert.
 
 ![Der Abschnitt „Attribute“ der Segment Builder-Felder ist hervorgehoben.](../images/ui/segment-builder/attributes.png)
 
 ### Ereignisse
 
-Auf der Registerkarte **[!UICONTROL Ereignisse]** können Sie mit [!DNL XDM ExperienceEvent]-Datenelementen eine Zielgruppe erstellen, die auf stattgefundenen Ereignissen oder Aktionen basiert. Sie finden Ereignistypen auch auf der Registerkarte **[!UICONTROL Ereignisse]**. Dabei handelt es sich um eine Sammlung häufig verwendeter Ereignisse, mit denen Sie Segmentdefinitionen schneller erstellen können.
+Auf der Registerkarte **[!UICONTROL Events]** können Sie mit [!DNL XDM ExperienceEvent] Datenelementen eine Zielgruppe erstellen, die auf stattgefundenen Ereignissen oder Aktionen basiert. Sie finden Ereignistypen auch auf dem Tab **[!UICONTROL Events]** . Dabei handelt es sich um eine Sammlung häufig verwendeter Ereignisse, mit der Sie Ihre Segmentdefinitionen schneller erstellen können.
 
-Sie können nicht nur nach [!DNL ExperienceEvent]-Elementen suchen, sondern auch nach Ereignistypen. Ereignistypen verwenden dieselbe Codierungs-Logik wie [!DNL ExperienceEvents], ohne dass Sie die [!DNL XDM ExperienceEvent]-Klasse nach dem richtigen Ereignis durchsuchen müssen. Wenn Sie z. B. über die Suchleiste nach „cart“ suchen, werden die Ereignistypen „[!UICONTROL AddCart]“ und „[!UICONTROL RemoveCart]“ zurückgegben. Dabei handelt es sich um zwei sehr häufig genutzte Warenkorbaktionen beim Erstellen von Segmentdefinitionen.
+Sie können nicht nur nach [!DNL ExperienceEvent]-Elementen suchen, sondern auch nach Ereignistypen. Ereignistypen verwenden dieselbe Codierungs-Logik wie [!DNL ExperienceEvents], ohne dass Sie die [!DNL XDM ExperienceEvent]-Klasse nach dem richtigen Ereignis durchsuchen müssen. Wenn Sie beispielsweise über die Suchleiste nach „cart“ suchen, werden die Ereignistypen &quot;[!UICONTROL AddCart]&quot; und &quot;[!UICONTROL RemoveCart]&quot; zurückgegeben. Dabei handelt es sich um zwei sehr häufig verwendete Warenkorbaktionen beim Erstellen von Segmentdefinitionen.
 
 Sie können nach beliebigen Komponenten suchen, indem Sie ihren Namen in die Suchleiste eingeben; diese verwendet die [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Die Suchergebnisse beginnen sich mit der Eingabe ganzer Wörter zu füllen. Wenn Sie beispielsweise eine Regel auf Grundlage des XDM-Felds `ExperienceEvent.commerce.productViews` erstellen möchten, geben Sie im Suchfeld zunächst „product views“ ein. Sobald Sie das Wort „product“ eingegeben haben, werden Suchergebnisse angezeigt. Jedes Ergebnis enthält die Objekthierarchie, zu der es gehört.
 
@@ -74,11 +74,11 @@ Sie können nach beliebigen Komponenten suchen, indem Sie ihren Namen in die Suc
 >
 >Es kann bis zu 24 Stunden dauern, bis benutzerdefinierte Schemafelder, die von Ihrer Organisation definiert wurden, angezeigt und zum Erstellen von Regeln verfügbar werden.
 
-Anschließend können Sie [!DNL ExperienceEvents] und „[!UICONTROL Ereignistypen]“ einfach per Drag-und-Drop in Ihre Segmentdefinition ziehen.
+Anschließend können Sie [!DNL ExperienceEvents] und &quot;[!UICONTROL Event Types]&quot; einfach per Drag-and-Drop in Ihre Segmentdefinition ziehen.
 
 ![Der Abschnitt „Ereignisse“ der Segment Builder-Benutzeroberfläche ist hervorgehoben.](../images/ui/segment-builder/events.png)
 
-Standardmäßig werden nur ausgefüllte Schemafelder aus Ihrem Datenspeicher angezeigt. Dies schließt „[!UICONTROL Ereignistypen]“ ein. Wenn die Liste „[!UICONTROL Ereignistypen]“ nicht sichtbar ist oder Sie nur „[!UICONTROL Beliebig]“ als „[!UICONTROL Ereignistyp]“ auswählen können, klicken Sie auf das **Zahnradsymbol** neben **[!UICONTROL Felder]** und wählen Sie dann die Option **[!UICONTROL Vollständiges XDM-Schema anzeigen]** unter **[!UICONTROL Verfügbare Felder]** aus. Wählen Sie erneut das **Zahnradsymbol** aus, um zur Registerkarte **[!UICONTROL Felder]** zurückzukehren. Jetzt sollten Sie mehrere [!UICONTROL Ereignistypen] und Schemafelder sehen, unabhängig davon, ob diese Daten enthalten oder nicht.
+Standardmäßig werden nur ausgefüllte Schemafelder aus Ihrem Datenspeicher angezeigt. Dazu gehört &quot;[!UICONTROL Event Types]&quot;. Wenn die Liste &quot;[!UICONTROL Event Types]&quot; nicht sichtbar ist oder Sie nur &quot;[!UICONTROL Any]&quot; als &quot;[!UICONTROL Event Type]&quot; auswählen können, klicken Sie auf das **Zahnradsymbol** neben **[!UICONTROL Fields]** und wählen Sie dann **[!UICONTROL Show full XDM schema]** unter **[!UICONTROL Available Fields]** aus. Wählen Sie erneut **Zahnradsymbol**, um zur Registerkarte &quot;**[!UICONTROL Fields]**&quot; zurückzukehren. Jetzt sollten Sie mehrere &quot;[!UICONTROL Event Types]&quot;- und Schemafelder sehen, unabhängig davon, ob diese Daten enthalten oder nicht.
 
 ![Optionsfelder, mit denen Sie auswählen können, ob nur Felder mit Daten oder alle XDM-Felder angezeigt werden sollen, sind hervorgehoben.](../images/ui/segment-builder/show-populated.png)
 
@@ -137,9 +137,9 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 >
 >Für Zielgruppen, die in Experience Platform erstellt werden, werden nur Zielgruppen angezeigt **die dieselbe** haben.
 
-Auf **[!UICONTROL Registerkarte]** Zielgruppen“ werden alle Zielgruppen, die aus externen Quellen (wie Adobe Audience Manager oder Customer Journey Analytics) importiert wurden, sowie alle in [!DNL Experience Platform] erstellten Zielgruppen aufgelistet.
+Auf der Registerkarte **[!UICONTROL Audiences]** werden alle Zielgruppen, die aus externen Quellen (wie Adobe Audience Manager oder Customer Journey Analytics) importiert wurden, sowie alle in [!DNL Experience Platform] erstellten Zielgruppen aufgelistet.
 
-Auf der Registerkarte **[!UICONTROL Zielgruppen]** können Sie alle verfügbaren Quellen als eine Ordnergruppe anzeigen. Wenn Sie diese Ordner auswählen, werden verfügbare Unterordner und Zielgruppen angezeigt. Außerdem können Sie das Ordnersymbol auswählen (wie im Bild ganz rechts), um die Ordnerstruktur anzuzeigen (ein Häkchen gibt den Ordner an, in dem Sie sich befinden), und durch einfaches Auswählen eines Ordnernamens im Baum durch die Ordnerstruktur zurücknavigieren.
+Auf der Registerkarte **[!UICONTROL Audiences]** können Sie alle verfügbaren Quellen als eine Ordnergruppe anzeigen. Wenn Sie diese Ordner auswählen, werden verfügbare Unterordner und Zielgruppen angezeigt. Außerdem können Sie das Ordnersymbol auswählen (wie im Bild ganz rechts), um die Ordnerstruktur anzuzeigen (ein Häkchen gibt den Ordner an, in dem Sie sich befinden), und durch einfaches Auswählen eines Ordnernamens im Baum durch die Ordnerstruktur zurücknavigieren.
 
 Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Zielgruppe fahren, können Sie Informationen zur Zielgruppe anzeigen, einschließlich Kennung, Beschreibung und Ordnerhierarchie zum Auffinden der Zielgruppe.
 
@@ -157,7 +157,7 @@ Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Zielgruppe fahren, können
 
 Eine Segmentdefinition ist eine Kollektion von Regeln, die zur Beschreibung der Hauptmerkmale oder Verhaltensweisen einer Zielgruppe dienen. Diese Regeln werden mithilfe der Arbeitsfläche des Regel-Builders in der Mitte von [!DNL Segment Builder] erstellt.
 
-Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus dem Tab **[!UICONTROL Felder]** und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab. Anschließend werden Ihnen je nach Art der hinzugefügten Daten kontextspezifische Optionen angezeigt. Zu den verfügbaren Datentypen gehören: Zeichenfolgen, Datumsangaben, [!DNL ExperienceEvents], [!UICONTROL Ereignistypen] und Zielgruppen.
+Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus der Registerkarte **[!UICONTROL Fields]** und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab. Anschließend werden Ihnen je nach Art der hinzugefügten Daten kontextspezifische Optionen angezeigt. Zu den verfügbaren Datentypen gehören: Zeichenfolgen, Datumsangaben, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot; und Zielgruppen.
 
 ![Die leere Arbeitsfläche des Regel-Builders](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -173,11 +173,11 @@ Wenn Sie einen Wert aus dieser Aufzählungsliste auswählen, wird der Wert mit e
 
 ![Eine Warnung, die angezeigt wird, wenn Sie einen Wert einfügen, der nicht zur Aufzählungsliste gehört](../images/ui/segment-builder/enum-warning.png)
 
-Wenn Sie mehrere Werte erstellen, können Sie sie alle gleichzeitig hinzufügen, indem Sie den Massen-Upload verwenden. Wählen Sie das ![Pluszeichen](/help/images/icons/add-circle.png), um das Pop-up **[!UICONTROL Werte in Massen hinzufügen]** anzuzeigen.
+Wenn Sie mehrere Werte erstellen, können Sie sie alle gleichzeitig hinzufügen, indem Sie den Massen-Upload verwenden. Wählen Sie das ![Plus-Symbol](/help/images/icons/add-circle.png) aus, um das **[!UICONTROL Add values in bulk]** Pop-up anzuzeigen.
 
 ![Das Pluszeichen wird hervorgehoben und zeigt die Schaltfläche an, auf die Sie klicken können, um auf das Pop-up für den Massen-Upload zuzugreifen.](../images/ui/segment-builder/add-bulk-values.png)
 
-Im Pop-up **[!UICONTROL Werte in Massen hinzufügen]** können Sie eine CSV- oder TSV-Datei hochladen.
+Im **[!UICONTROL Add values in bulk]**-Popover können Sie eine CSV- oder TSV-Datei hochladen.
 
 ![Das Pop-up „Werte in Massen hinzufügen“ wird angezeigt. Das Dialogfeld, das Sie auswählen können, um eine CSV- oder TSV-Datei hochzuladen, ist hervorgehoben.](../images/ui/segment-builder/bulk-values-popover.png)
 
@@ -196,7 +196,7 @@ Beachten Sie, dass maximal 250 Werte zulässig sind. Wenn Sie diese Grenze über
 >title="Aktualisierungen der Suchfunktion"
 >abstract="Das bestehende Suchsystem wurde aktualisiert und verwendet jetzt die einheitliche Suche. Mit der einheitlichen Suche können Sie die Zielgruppen einfacher und robuster nach Segmentzugehörigkeit durchsuchen."
 
-Sie können eine Zielgruppe per Drag-and-Drop vom Tab **[!UICONTROL Zielgruppe]** auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Zielgruppenzugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie die Zielgruppenzugehörigkeit als Attribut in den Regeln der neuen Segmentdefinition ein- oder ausschließen.
+Sie können eine Zielgruppe per Drag-and-Drop vom Tab **[!UICONTROL Audience]** auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Zielgruppenzugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie die Zielgruppenzugehörigkeit als Attribut in den Regeln der neuen Segmentdefinition ein- oder ausschließen.
 
 Bei [!DNL Experience Platform]-Zielgruppen, die mit [!DNL Segment Builder] erstellt werden, haben Sie die Möglichkeit, die Zielgruppe in den Regelsatz zu konvertieren, der in der Segmentdefinition für diese Zielgruppe verwendet wurde. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition verändert werden kann. Vergewissern Sie sich, dass Sie die letzten Änderungen an Ihrer Segmentdefinition gespeichert haben, bevor Sie sie in eine Regellogik konvertieren.
 
@@ -210,23 +210,23 @@ Wenn beim Konvertieren von Zielgruppen in Regeln Konflikte auftreten, versucht [
 
 ### Code-Ansicht
 
-Alts Alternative können Sie eine Code-basierte Version einer in [!DNL Segment Builder] erstellten Regel anzeigen. Nachdem Sie Ihre Regel auf der Arbeitsfläche des Regel-Builders erstellt haben, können Sie **[!UICONTROL Code-Ansicht]** auswählen, um Ihr Segment als PQL anzuzeigen.
+Alts Alternative können Sie eine Code-basierte Version einer in [!DNL Segment Builder] erstellten Regel anzeigen. Nachdem Sie Ihre Regel auf der Arbeitsfläche des Regel-Builders erstellt haben, können Sie **[!UICONTROL Code view]** auswählen, um Ihre Segmentdefinition als PQL anzuzeigen.
 
 ![Die Schaltfläche für die Code-Ansicht ist hervorgehoben, sodass Sie die Segmentdefinition als PQL sehen können.](../images/ui/segment-builder/code-view.png)
 
 Die Code-Ansicht bietet eine Schaltfläche, mit der Sie den Wert der Segmentdefinition kopieren können, der in API-Aufrufen verwendet werden kann. Um die neueste Version der Segmentdefinition zu erhalten, stellen Sie sicher, dass Sie die letzten Änderungen an der Segmentdefinition gespeichert haben.
 
-![Die Schaltfläche zum Kopieren des Codes ist hervorgehoben.](../images/ui/segment-builder/copy-code.png)
+![Die Schaltfläche zum Kopieren des Codes ist hervorgehoben](../images/ui/segment-builder/copy-code.png)
 
 ### Aggregationsfunktionen
 
 Eine Aggregation in [!DNL Segment Builder] ist eine Berechnung für eine Gruppe von XDM-Attributen, deren Datentyp eine Zahl ist (entweder vom Typ „Double“ oder „Integer“). Die vier unterstützten Aggregationsfunktionen in Segment Builder sind SUM, AVERAGE, MIN und MAX.
 
-Um eine Aggregationsfunktion zu erstellen, wählen Sie in der linken Leiste ein Ereignis aus und fügen Sie es in den Container [!UICONTROL Ereignisse] ein.
+Um eine Aggregationsfunktion zu erstellen, wählen Sie in der linken Leiste ein Ereignis aus und fügen Sie es in den [!UICONTROL Events] ein.
 
 ![Der Abschnitt „Ereignisse“ ist hervorgehoben.](../images/ui/segment-builder/events.png)
 
-Nachdem Sie das Ereignis im Ereignis-Container platziert haben, wählen Sie das Auslassungssymbol (...) und dann **[!UICONTROL Aggregat]** aus.
+Nachdem Sie das Ereignis im Ereignis-Container platziert haben, wählen Sie das Auslassungssymbol (…) und dann **[!UICONTROL Aggregate]** aus.
 
 ![Der Aggregationstext ist hervorgehoben. Mit dieser Option können Sie Aggregationsfunktionen auswählen.](../images/ui/segment-builder/add-aggregation.png)
 
@@ -238,11 +238,11 @@ Die Aggregation wird jetzt hinzugefügt. Nun können Sie die Aggregationsfunktio
 
 Mit den Zählungsfunktionen in Segment Builder können Sie nach bestimmten Ereignissen suchen und zählen, wie oft sie durchgeführt wurden. Die unterstützten Zählungsfunktionen in Segment Builder sind „Mindestens“, „Höchstens“, „Genau“, „Zwischen“ und „Alle“.
 
-Um eine Zählungsfunktionen zu erstellen, wählen Sie in der linken Leiste ein Ereignis aus und fügen Sie es in den Container [!UICONTROL Ereignisse] ein.
+Um eine Zählungsfunktion zu erstellen, wählen Sie in der linken Leiste ein Ereignis aus und fügen Sie es in den [!UICONTROL Events] ein.
 
 ![Die Ereignisfelder sind hervorgehoben.](../images/ui/segment-builder/events.png)
 
-Nachdem Sie das Ereignis im Ereignis-Container platziert haben, wählen Sie die Schaltfläche [!UICONTROL Mindestens 1] aus.
+Nachdem Sie das Ereignis im Ereignis-Container platziert haben, wählen Sie die Schaltfläche [!UICONTROL At least 1] aus.
 
 ![Die Schaltfläche „Mindestens“ ist hervorgehoben und zeigt den Bereich an, der auszuwählen ist, um eine vollständige Liste der Zählungsfunktionen aufzurufen.](../images/ui/segment-builder/add-count.png)
 
@@ -270,7 +270,7 @@ Die Liste der verfügbaren Zeitbeschränkungen sieht wie folgt aus:
 >
 >Alle Zeitbeschränkungen basieren auf UTC.
 >
->Wenn das Kontrollkästchen [!UICONTROL Jahr ignorieren] aktiviert ist, wird das Jahr **nicht** als Teil der Segmentdefinitionsbewertung verglichen.
+>Wenn das Kontrollkästchen [!UICONTROL Ignore year] aktiviert ist, wird das Jahr **nicht** im Rahmen der Segmentdefinitionsbewertung verglichen.
 
 | Zeitliche Beschränkung | Beschreibung | Kann Jahr ignorieren aktivieren | Beispiel |
 | --------------- | ----------- | ------------------- | ------- |
@@ -281,7 +281,7 @@ Die Liste der verfügbaren Zeitbeschränkungen sieht wie folgt aus:
 | Benutzerdefiniertes Datum | Das zu vergleichende Attribut oder Ereignis **muss** an dem angegebenen Datum auftreten. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Benutzerdefiniertes Datum“.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
 | Letzte | Das zu vergleichende Attribut oder Ereignis **muss** innerhalb des letzten ausgewählten Zeitraums auftreten. Dieser Zeitraum ist **einschließlich** bis zur Auswertungszeit. | Nein | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „In Last“.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
 | Von (bis) | Das zu vergleichende Attribut oder Ereignis **muss** innerhalb der beiden ausgewählten Kalenderdaten auftreten. Dieser Zeitraum umfasst **einschließlich** der beiden Datumsangaben. | Ja, wenn benutzerdefiniertes Datum | ![Ein Beispiel für die Verwendung von „Von zu“](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| Während | Das zu vergleichende Attribut oder Ereignis **muss** innerhalb des ausgewählten Monats oder Jahres auftreten. Wenn ein Monat ausgewählt ist, müssen Sie sowohl den Monat als auch das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat.  Wenn ein Jahr ausgewählt ist, müssen Sie einfach das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat. Wenn Sie einen Monat auswählen, können Sie auch das Kontrollkästchen [!UICONTROL Jahr ignorieren] aktivieren. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Während“.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Während | Das zu vergleichende Attribut oder Ereignis **muss** innerhalb des ausgewählten Monats oder Jahres auftreten. Wenn ein Monat ausgewählt ist, müssen Sie sowohl den Monat als auch das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat.  Wenn ein Jahr ausgewählt ist, müssen Sie einfach das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat. Wenn Sie einen Monat auswählen, können Sie auch das Kontrollkästchen [!UICONTROL Ignore year] aktivieren. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Während“.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
 | Innerhalb (+/-) | Das zu vergleichende Attribut oder Ereignis **muss** innerhalb von Tagen, Wochen, Monaten oder Jahren nach dem ausgewählten Datum auftreten. Dieser Zeitraum umfasst **einschließlich** der beiden Datumsangaben. Das ausgewählte Datum kann Heute, Gestern oder ein anderes benutzerdefiniertes Datum Ihrer Wahl sein. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Innerhalb von“.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
 | Vorher | Das zu vergleichende Attribut oder Ereignis **muss** vor dem ausgewählten Datum liegen. Das ausgewählte Datum kann ein benutzerdefiniertes Datum Ihrer Wahl oder eine Auswahl zwischen Tagen, Wochen, Monaten oder Jahren sein. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Vor“.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
 | Nachher | Das zu vergleichende Attribut oder Ereignis **muss** nach dem ausgewählten Datum auftreten. Das ausgewählte Datum kann ein benutzerdefiniertes Datum Ihrer Wahl oder eine Auswahl zwischen Tagen, Wochen, Monaten oder Jahren sein. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Nach“.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
@@ -304,7 +304,7 @@ Wenn Sie eine Zeitbeschränkung auf der Arbeitsflächen-Ebene anwenden, wird die
 
 #### Einschränkung auf Kartenebene
 
-Um eine Beschränkung auf Kartenebene anzuwenden, wählen Sie die Karte aus, auf die Sie die Zeitbeschränkung anwenden möchten, gefolgt vom Symbol mit den Auslassungspunkten und **[!UICONTROL Zeitregel anwenden]**. Auf diese Weise können Sie eine Zeitbeschränkung im Container **[!UICONTROL Ereignisregeln]** auswählen.
+Um eine Beschränkung auf Kartenebene anzuwenden, wählen Sie die Karte aus, auf die Sie die Zeitbeschränkung anwenden möchten, gefolgt vom Symbol mit den Auslassungspunkten, und **[!UICONTROL Apply time rule]**. Auf diese Weise können Sie eine Zeitbeschränkung innerhalb des **[!UICONTROL Event Rules]**-Containers auswählen.
 
 ![Die Zeitbeschränkungsauswahl auf Kartenebene ist hervorgehoben.](../images/ui/segment-builder/time-constraints/card-level.png)
 
@@ -330,7 +330,7 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 >[!NOTE]
 >
 >Bei Verwendung der Zeitbeschränkung „Nach“ kann letzteres Ereignis länger als die in der Zeitbeschränkung aufgeführte Zeit stattfinden. >
->&#x200B;>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
+>>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbeschränkung „Nach 1 Stunde“ zwischen diese beiden Ereignisse setzen, wäre eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis qualifiziert.
 >
 >Darüber hinaus können diese beiden Zeitbeschränkungen in Abstimmung miteinander verwendet werden.
 >
@@ -342,17 +342,17 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 
 Segmentregeln werden in der Reihenfolge ausgewertet, in der sie aufgelistet sind. Container ermöglichen eine Steuerung der Ausführungsreihenfolge durch Verwendung verschachtelter Abfragen.
 
-Nachdem Sie der Arbeitsfläche des Regel-Builders mindestens eine Kachel hinzugefügt haben, können Sie beginnen, Container hinzuzufügen. Um einen neuen Container zu erstellen, wählen Sie oben rechts auf der Kachel das Auslassungszeichen (...) und dann die Option **[!UICONTROL Container hinzufügen]** aus.
+Nachdem Sie der Arbeitsfläche des Regel-Builders mindestens eine Kachel hinzugefügt haben, können Sie beginnen, Container hinzuzufügen. Um einen neuen Container zu erstellen, wählen Sie oben rechts auf der Kachel das Auslassungszeichen (…) und dann **[!UICONTROL Add container]** aus.
 
 ![Die Schaltfläche „Container hinzufügen“ ist hervorgehoben, sodass Sie einen Container als untergeordnetes Element des ersten Containers hinzufügen können.](../images/ui/segment-builder/add-container.png)
 
-Ein neuer Container wird als untergeordnetes Element des ersten Containers angezeigt. Sie können die Hierarchie jedoch durch Ziehen und Verschieben der Container anpassen. Das Standardverhalten eines Containers besteht darin, das angegebene Attribut, das angegebene Ereignis oder die angegebene Zielgruppe [!UICONTROL einzuschließen]. Sie können die Regel so einrichten, dass Profile, die den Kriterien des Containers entsprechen, [!UICONTROL ausgeschlossen] werden, indem Sie oben links auf der Kachel erst **[!UICONTROL Einschließen]** und dann [!UICONTROL Ausschließen] auswählen.
+Ein neuer Container wird als untergeordnetes Element des ersten Containers angezeigt. Sie können die Hierarchie jedoch durch Ziehen und Verschieben der Container anpassen. Das Standardverhalten eines Containers besteht darin, das angegebene Attribut, das angegebene Ereignis oder die angegebene Zielgruppe zu &quot;[!UICONTROL Include]&quot;. Sie können die Regel so einrichten, dass Profile, die den Kriterien des Containers entsprechen, [!UICONTROL Exclude] werden, indem Sie oben links auf der Kachel **[!UICONTROL Include]** auswählen und auf &quot;[!UICONTROL Exclude]&quot; klicken.
 
 Ein untergeordneter Container kann auch extrahiert und inline zum übergeordneten Container hinzugefügt werden, indem Sie im untergeordneten Container die Option „Container entpacken“ auswählen. Wählen Sie oben rechts im untergeordneten Container das Auslassungszeichen (...) aus, um auf diese Option zuzugreifen.
 
 ![Optionen zum Entpacken oder Löschen des Containers sind hervorgehoben.](../images/ui/segment-builder/include-exclude.png)
 
-Wenn Sie **[!UICONTROL Container entpacken]** auswählen, wird der untergeordnete Container entfernt und die Kriterien erscheinen inline.
+Wenn Sie **[!UICONTROL Unwrap container]** auswählen, wird der untergeordnete Container entfernt und die Kriterien erscheinen inline.
 
 >[!NOTE]
 >
@@ -371,7 +371,7 @@ Mit [!DNL Experience Platform] können Sie Daten aus verschiedenen Quellen zusam
 
 Sie können eine Zusammenführungsrichtlinie auswählen, die Ihrem Marketing-Zweck für diese Zielgruppe entspricht, oder die standardmäßige Zusammenführungsrichtlinie von [!DNL Experience Platform] nutzen. Sie können verschiedene, für Ihre Organisation eindeutige Zusammenführungsrichtlinien erstellen, einschließlich einer eigenen standardmäßigen Zusammenführungsrichtlinie. Schrittweise Anweisungen zum Erstellen von Zusammenführungsrichtlinien für Ihre Organisation finden Sie in der [Übersicht zu Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md).
 
-Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, wählen Sie auf der Registerkarte **[!UICONTROL Felder]** das Zahnradsymbol und dann im Dropdown-Menü die Option **[!UICONTROL Zusammenführungsrichtlinie]** aus, um die gewünschte Zusammenführungsrichtlinie festzulegen.
+Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, wählen Sie auf der Registerkarte **[!UICONTROL Fields]** das Zahnradsymbol und dann im Dropdown-Menü **[!UICONTROL Merge Policy]** die gewünschte Zusammenführungsrichtlinie aus.
 
 ![Die Auswahl für die Zusammenführungsrichtlinie ist hervorgehoben. Auf diese Weise können Sie auswählen, welche Zusammenführungsrichtlinie für Ihre Segmentdefinition ausgewählt werden soll.](../images/ui/segment-builder/merge-policy-selector.png)
 
@@ -398,23 +398,23 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >title="Geschätzte Profile"
 >abstract="„Geschätzte Profile“ gibt eine ungefähre Anzahl von Profilen auf Grundlage des Beispielauftrags an, die für die Regeln der Zielgruppe qualifiziert wären."
 
-Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe der resultierenden Segmentdefinition an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
+Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Audience properties]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe der resultierenden Segmentdefinition an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 
-**[!UICONTROL Qualifizierte Profile]** gibt die **tatsächliche** Anzahl von Profilen an, die den Regeln der Segmentdefinition entsprechen. Diese Zahl wird alle 24 Stunden nach Ausführung des Segmentauswertungsauftrags aktualisiert.
+**[!UICONTROL Qualified Profiles]** gibt die **tatsächliche** Anzahl von Profilen an, die den Regeln der Segmentdefinition entsprechen. Diese Zahl wird alle 24 Stunden nach Ausführung des Segmentauswertungsauftrags aktualisiert.
 
 Der Zeitstempel für qualifizierte Profile gibt den neuesten Segmentauswertungsauftrag **Batch** an und wird **für Segmentdefinitionen angezeigt,** mithilfe von Streaming oder Edge-Segmentierung ausgewertet wurden. Wenn Sie die Segmentdefinition bearbeiten, bleibt die Anzahl der qualifizierten Profile gleich, bis der nächste Segmentauswertungsauftrag ausgeführt wird.
 
-**[!UICONTROL Geschätzte Profile]** gibt einen **ungefähren Bereich** von Profilen an, basierend auf dem **Beispielvorgang**. Dies bedeutet, dass die Beispieldaten auf den größeren Profilsatz projiziert werden, was zu einer geschätzten Anzahl führt, die von der tatsächlichen Anzahl qualifizierter Profile abweichen kann. Die geschätzte Profilstichprobe weist ein Konfidenzintervall von 95 % auf.
+**[!UICONTROL Estimated Profiles]** gibt einen **ungefähren Bereich** von Profilen an, basierend auf dem **Beispielvorgang**. Dies bedeutet, dass die Beispieldaten auf den größeren Profilsatz projiziert werden, was zu einer geschätzten Anzahl führt, die von der tatsächlichen Anzahl qualifizierter Profile abweichen kann. Die geschätzte Profilstichprobe weist ein Konfidenzintervall von 95 % auf.
 
-Wenn Sie Änderungen an den Regeln der Zielgruppe vornehmen, können Sie auf die Schaltfläche **[!UICONTROL Schätzung aktualisieren]** klicken, um eine aktualisierte Anzahl geschätzter Profile anzuzeigen. Diese Zahl basiert jedoch weiterhin auf dem vorherigen Beispielvorgang. Der Beispielvorgang wird aktualisiert, wenn die Änderung der Kundendaten mehr als 3 % beträgt oder der letzte Beispielvorgang älter als drei Tage ist.
+Wenn Sie Änderungen an den Regeln der Zielgruppe vornehmen, können Sie auf die Schaltfläche **[!UICONTROL Refresh estimate]** klicken, um die aktualisierte Anzahl der geschätzten Profile anzuzeigen. Diese Zahl basiert jedoch weiterhin auf dem vorherigen Beispielvorgang. Der Beispielvorgang wird aktualisiert, wenn die Änderung der Kundendaten mehr als 3 % beträgt oder der letzte Beispielvorgang älter als drei Tage ist.
 
 Bei Auswahl der Informationsblase werden Datum und Uhrzeit der letzten Ausführung des Beispielauftrags angezeigt.
 
 ![Qualifizierte Profile und „Geschätzte Profile“ werden im Abschnitt mit den Zielgruppeneigenschaften hervorgehoben.](../images/ui/segment-builder/audience-estimates.png)
 
-Im Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** können Sie außerdem wichtige Informationen zu Ihrer Zielgruppe angeben, einschließlich des Namens, der Beschreibung und des Auswertungstyps. Namen werden verwendet, um Ihre Segmentdefinition unter den von Ihrer Organisation definierten zu identifizieren. Sie sollten daher beschreibend, prägnant und eindeutig sein.
+Im Abschnitt **[!UICONTROL Audience properties]** können Sie außerdem wichtige Informationen zur Zielgruppe angeben, einschließlich des Namens, der Beschreibung und des Auswertungstyps. Namen werden verwendet, um Ihre Segmentdefinition unter den von Ihrer Organisation definierten zu identifizieren. Sie sollten daher beschreibend, prägnant und eindeutig sein.
 
-Wenn Sie mit der Erstellung Ihrer Audience fortfahren, können Sie eine paginierte Vorschau der Audience anzeigen, indem Sie **[!UICONTROL Profile anzeigen]** auswählen.
+Wenn Sie mit der Erstellung Ihrer Audience fortfahren, können Sie eine paginierte Vorschau der Audience anzeigen, indem Sie **[!UICONTROL View Profiles]** auswählen.
 
 ![Der Abschnitt mit den Zielgruppeneigenschaften ist hervorgehoben. Zu den Zielgruppeneigenschaften gehören u. a. der Name, die Beschreibung und die Auswertungsmethode.](../images/ui/segment-builder/segment-properties.png)
 
@@ -428,9 +428,9 @@ Wenn Sie mit der Erstellung Ihrer Audience fortfahren, können Sie eine paginier
 
 Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Auswertungsmethode Sie verwenden möchten, können Sie die gewünschte Auswertungsmethode über die Dropdown-Liste auswählen. Wenn Sie wissen möchten, für welche Auswertungstypen diese Segmentdefinition qualifiziert ist, können Sie das Durchsuchen-Symbol ![Ordnersymbol mit Lupe](/help/images/icons/folder-search.png) auswählen, um eine Liste der verfügbaren Auswertungsmethoden für die Segmentdefinition anzuzeigen.
 
-Das Popup-Fenster [!UICONTROL Berechtigung der Auswertungsmethode] angezeigt. In diesem Popup-Fenster werden die verfügbaren Auswertungsmethoden angezeigt, und zwar Batch, Streaming und Edge. Das Popup-Fenster gibt darüber Aufschluss, welche Auswertungsmethoden geeignet und welche nicht geeignet sind. Abhängig von den Parametern, die Sie in Ihrer Segmentdefinition verwendet haben, ist es möglicherweise nicht für bestimmte Auswertungsmethoden qualifiziert. Weitere Informationen zu den Anforderungen der einzelnen Auswertungsmethoden finden Sie in der Übersicht zur [Streaming-Segmentierung](../methods/streaming-segmentation.md#query-types) bzw. [Edge-Segmentierung](../methods/edge-segmentation.md#query-types).
+Das [!UICONTROL Evaluation method eligibility]-Popover wird angezeigt. In diesem Popup-Fenster werden die verfügbaren Auswertungsmethoden angezeigt, und zwar Batch, Streaming und Edge. Das Popup-Fenster gibt darüber Aufschluss, welche Auswertungsmethoden geeignet und welche nicht geeignet sind. Abhängig von den Parametern, die Sie in Ihrer Segmentdefinition verwendet haben, ist es möglicherweise nicht für bestimmte Auswertungsmethoden qualifiziert. Weitere Informationen zu den Anforderungen der einzelnen Auswertungsmethoden finden Sie in der Übersicht zur [Streaming-Segmentierung](../methods/streaming-segmentation.md#query-types) bzw. [Edge-Segmentierung](../methods/edge-segmentation.md#query-types).
 
-Sie können auch die Auswertungsmethode der Segmentdefinition ändern, nachdem Sie sie fertig erstellt haben. Wenn Sie die Auswertungsmethode von Edge oder Streaming in Batch ändern, können **nicht** sie wieder in Edge oder Streaming ändern. Die Änderung an der Auswertungsmethode wird **nur** wirksam, sobald Sie im Popup **[!UICONTROL Speichern]** auswählen. Durch Abbrechen des Dialogfelds **die ursprüngliche** beibehalten.
+Sie können auch die Auswertungsmethode der Segmentdefinition ändern, nachdem Sie sie fertig erstellt haben. Wenn Sie die Auswertungsmethode von Edge oder Streaming in Batch ändern, können **nicht** sie wieder in Edge oder Streaming ändern. Die Änderung an der Auswertungsmethode wird **nur** wirksam, sobald Sie **[!UICONTROL Save]** im Popover auswählen. Durch Abbrechen des Dialogfelds **die ursprüngliche** beibehalten.
 
 ![Das Popup-Fenster „Berechtigung der Auswertungsmethode“ wird angezeigt. Dieses gibt Aufschluss darüber, welche Methoden zur Auswertung für die Segmentdefinition infrage kommen und welche nicht.](../images/ui/segment-builder/select-evaluation-method.png)
 

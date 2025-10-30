@@ -2,7 +2,7 @@
 title: Search-Endpunkt
 description: Erfahren Sie, wie Sie den /search-Endpunkt in der Reactor-API aufrufen.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 97%
@@ -33,6 +33,7 @@ Alle Abfragen sind auf Ihre aktuelle Firma und die zugänglichen Eigenschaften b
 >[!IMPORTANT]
 >
 >Die Suchfunktion hat die folgenden Einschränkungen und Ausnahmen:
+>
 >* Meta ist nicht durchsuchbar und wird nicht in den Suchergebnissen zurückgegeben.
 >* Schemafelder für Delegaten von Erweiterungspaketen (Aktionen, Bedingungen usw.) können als Text durchsucht werden, nicht als verschachtelte Datenstruktur.
 >* Bereichsabfragen unterstützen derzeit nur Ganzzahlen.
@@ -229,7 +230,7 @@ In der folgenden Tabelle werden die Konventionen für den Abgleich für allgemei
 | Feldtyp | Konventionen für den Abgleich |
 | --- | --- |
 | Zeichenfolgen | Text mit partieller Begriffsanalyse, ohne Unterscheidung zwischen Groß- und Kleinschreibung |
-| Enum-Werte | Exakte Übereinstimmung unter Berücksichtigung von Groß- und Kleinschreibung |
+| Aufzählungswerte | Exakte Übereinstimmung unter Berücksichtigung von Groß- und Kleinschreibung |
 | Ganzzahlen | Exakte Übereinstimmung |
 | Fließkommazahlen | Exakte Übereinstimmung |
 | Zeitstempel | Exakte Übereinstimmung (DateTime-Format) |

@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Streaming-Aufnahme;Aufn
 solution: Experience Platform
 title: Streamen von Zeitreihendaten mithilfe von Streaming-Aufnahme-APIs
 type: Tutorial
-description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
+description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnahme-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 55%
@@ -28,7 +28,7 @@ Darüber hinaus setzt dieses Tutorial voraus, dass Sie bereits eine Streaming-Ve
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../landing/api-guide.md).
 
 ## Schema erstellen auf Grundlage der XDM ExperienceEvent-Klasse
 
@@ -221,7 +221,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Informationen zum neu ers
 
 ## Datensatz für Zeitreihendaten erstellen
 
-Nachdem Sie Ihr Schema erstellt haben, müssen Sie nun einen Datensatz für die Erfassung von Datensatzdaten anlegen.
+Nachdem Sie Ihr Schema erstellt haben, müssen Sie nun einen Datensatz für die Erfassung von Eintragsdaten anlegen.
 
 >[!NOTE]
 >
@@ -401,8 +401,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zur neu gest
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | Die `inletId` der zuvor erstellten Streaming-Verbindung. |
-| `xactionId` | Eine eindeutige Kennung, die für den soeben gesendeten Datensatz Server-seitig generiert wurde. Diese Kennung hilft Adobe bei der Verfolgung des Lebenszyklus dieses Datensatzes in verschiedenen Systemen sowie beim Debugging. |
-| `receivedTimeMs`: Ein Zeitstempel (Epoche in Millisekunden), der angibt, wann die Anfrage empfangen wurde. |
+| `xactionId` | Eine eindeutige Kennung, die für den soeben gesendeten Eintrag Server-seitig generiert wurde. Diese Kennung hilft Adobe bei der Verfolgung des Lebenszyklus dieses Eintrags in verschiedenen Systemen sowie beim Debugging. |
+| `receivedTimeMs`: Ein Zeitstempel (Epoche in Millisekunden), der angibt, wann die Anfrage empfangen wurde. |  |
 | `syncValidation.status` | Da der Abfrageparameter `syncValidation=true` hinzugefügt wurde, wird dieser Wert angezeigt. Wenn die Validierung erfolgreich war, lautet der Status `pass`. |
 
 ## Die neu erfassten Zeitreihendaten abrufen
@@ -511,4 +511,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den angeforder
 
 Durch das Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Experience Platform] aufnehmen. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie über [!DNL Experience Platform] Benutzeroberfläche mit der Überwachung Ihrer aufgenommenen Daten beginnen. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
 
-Weitere allgemeine Informationen zur Streaming-Erfassung finden Sie in der [Streaming-Erfassung – Übersicht](../streaming-ingestion/overview.md).
+Weitere allgemeine Informationen zur Streaming-Aufnahme finden Sie in der [Streaming-Aufnahme – Übersicht](../streaming-ingestion/overview.md).

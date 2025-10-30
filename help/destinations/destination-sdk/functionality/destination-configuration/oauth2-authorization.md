@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 title: OAuth 2-Autorisierung
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 78%
@@ -12,7 +12,7 @@ ht-degree: 78%
 
 # OAuth 2-Autorisierung
 
-Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu &#x200B;](https://tools.ietf.org/html/rfc6749).
+Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu ](https://tools.ietf.org/html/rfc6749).
 
 Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 
@@ -33,7 +33,7 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 
 ### Voraussetzungen in Ihrem System {#prerequisites}
 
-Als ersten Schritt müssen Sie in Ihrem System eine Anwendung für Adobe Experience Platform erstellen oder anderweitig Experience Platform in Ihrem System registrieren. Das Ziel besteht darin, eine Client-ID und ein Client-Geheimnis zu generieren, die zum Authentifizieren des Experience Platform bei Ihrem Ziel erforderlich sind.
+Als ersten Schritt müssen Sie in Ihrem System eine Anwendung für Adobe Experience Platform erstellen oder anderweitig Experience Platform in Ihrem System registrieren. Das Ziel besteht darin, eine Client-ID und ein Client-Geheimnis zu generieren, die zum Authentifizieren von Experience Platform bei Ihrem Ziel erforderlich sind.
 
 Als Teil dieser Konfiguration in Ihrem System benötigen Sie die Adobe Experience Platform OAuth 2-Umleitungs-/Callback-URLs, die Sie in der folgenden Liste finden.
 
@@ -49,13 +49,14 @@ Als Teil dieser Konfiguration in Ihrem System benötigen Sie die Adobe Experienc
 >Der Schritt zum Registrieren einer Umleitungs-/Callback-URL für Adobe Experience Platform in Ihrem System ist nur für den Gewährungstyp [OAuth 2 mit Autorisierungs-Code](#authorization-code) erforderlich. Für die beiden anderen unterstützten Gewährungstypen (Kennwort und Client-Anmeldedaten) können Sie diesen Schritt überspringen.
 
 Am Ende dieses Schritts sollten Sie über Folgendes verfügen:
+
 * eine Client-ID;
 * ein Client-Geheimnis;
 * die Callback-URL von Adobe (für die Gewährung des Autorisierungs-Codes).
 
 ### Was Sie in Destination SDK tun müssen {#to-do-in-destination-sdk}
 
-Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details unter dem `customerAuthenticationConfigurations`-Parameter zur [Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md) hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach Gewährungstyp der OAuth 2-Autorisierung zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
+Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details unter dem [-Parameter zur ](../../authoring-api/destination-configuration/create-destination-configuration.md)Zielkonfiguration`customerAuthenticationConfigurations` hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach Gewährungstyp der OAuth 2-Autorisierung zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
 
 ## Unterstützte OAuth 2-Gewährungstypen {#oauth2-grant-types}
 
@@ -74,11 +75,12 @@ Experience Platform unterstützt die drei OAuth 2-Gewährungstypen in der folgen
 
 {style="table-layout:auto"}
 
-In der obigen Tabelle sind die Felder aufgeführt, die in standardmäßigen OAuth 2-Flüssen verwendet werden. Zusätzlich zu diesen Standardfeldern können verschiedene Partnerintegrationen zusätzliche Eingaben und Ausgaben erfordern. Adobe hat ein flexibles OAuth 2-Autorisierungs-Framework für die Destination SDK entwickelt, das Varianten des oben genannten Standardfeldmusters handhaben kann und gleichzeitig einen Mechanismus zur automatischen Neuerstellung ungültiger Ausgaben unterstützt, z. B. abgelaufene Zugriffstoken.
+In der obigen Tabelle sind die Felder aufgeführt, die in standardmäßigen OAuth 2-Flüssen verwendet werden. Zusätzlich zu diesen Standardfeldern können verschiedene Partnerintegrationen zusätzliche Eingaben und Ausgaben erfordern. Adobe hat ein flexibles OAuth 2-Autorisierungs-Framework für Destination SDK entwickelt, das Varianten des oben genannten Standardfeldmusters handhaben kann und gleichzeitig einen Mechanismus zur automatischen Neuerstellung ungültiger Ausgaben unterstützt, z. B. abgelaufene Zugriffstoken.
 
-Die Ausgabe enthält in allen Fällen ein Zugriffstoken, das von Experience Platform verwendet wird, um sich zu authentifizieren und die Autorisierung für Ihr Ziel zu bewahren.
+Die Ausgabe enthält in allen Fällen ein Zugriffstoken, das von Experience Platform verwendet wird, um sich zu authentifizieren und die Autorisierung für Ihr Ziel zu verwalten.
 
-Das System, das von Adobe für die OAuth 2-Autorisierung entwickelt wurde:
+Das System, das Adobe für die OAuth 2-Autorisierung entwickelt hat:
+
 * Unterstützt alle drei OAuth 2-Gewährungstypen und berücksichtigt dabei alle Variationen in ihnen, z. B. zusätzliche Datenfelder, nicht standardmäßige API-Aufrufe und mehr.
 * Unterstützt Zugriffstoken mit variierenden Lebenszeitwerten (90 Tage, 30 Minuten oder ein beliebiger anderer von Ihnen angegebener Lebenszeitwert).
 * Unterstützt OAuth 2-Autorisierungsflüsse mit oder ohne Aktualisierungs-Token.
@@ -129,7 +131,7 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
 
 ## OAUth 2 mit Passwortgewährung
 
-Für die OAuth 2-Passwortgewährung (lesen Sie die [RFC-Standardspezifikationen](https://tools.ietf.org/html/rfc6749#section-4.3)) erfordert Experience Platform den Benutzernamen und das Passwort der Benutzerin bzw. des Benutzers. Im Autorisierungsfluss tauscht Experience Platform diese Anmeldeinformationen gegen ein Zugriffs-Token und optional ein Aktualisierungs-Token aus.
+Für die OAuth 2-Passwortgewährung (lesen Sie die [RFC-Standardspezifikationen](https://tools.ietf.org/html/rfc6749#section-4.3)) erfordert Experience Platform den Benutzernamen und das Passwort der Benutzerin bzw. des Benutzers. Im Autorisierungsfluss tauscht Experience Platform diese Anmeldeinformationen gegen ein Zugriffstoken und optional ein Aktualisierungstoken aus.
 Adobe verwendet die folgenden Standardeingaben, um die Zielkonfiguration zu vereinfachen und Werte zu überschreiben:
 
 | OAuth 2-Gewährung | Eingaben | Ausgaben |
@@ -475,11 +477,11 @@ Abhängig von Ihrer Autorisierungsanpassung müssen Sie möglicherweise auf Date
 
 | Präfix | Beschreibung | Beispiel |
 |---------|----------|---------|
-| authData | Zugriff auf den Wert eines beliebigen Partner- oder Kundendatenfelds. | ``{{ authData.accessToken }}`` |
-| response.body | HTTP-Antworttext | ``{{ response.body.access_token }}`` |
-| response.status | HTTP-Antwortstatus | ``{{ response.status }}`` |
-| response.headers | HTTP-Antwort-Header | ``{{ response.headers.server[0] }}`` |
-| userContext | Zugriff auf Informationen zum aktuellen Autorisierungsversuch | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authorization attempt `</li></ul> |
+| authData | Zugriff auf den Wert eines beliebigen Partner- oder Kundendatenfelds. | `{{ authData.accessToken }}` |
+| response.body | HTTP-Antworttext | `{{ response.body.access_token }}` |
+| response.status | HTTP-Antwortstatus | `{{ response.status }}` |
+| response.headers | HTTP-Antwort-Header | `{{ response.headers.server[0] }}` |
+| userContext | Zugriff auf Informationen zum aktuellen Autorisierungsversuch | <ul><li>`{{ userContext.sandboxName }}`</li><li>`{{ userContext.sandboxId }}`</li><li>`{{ userContext.imsOrgId }}`</li><li>`{{ userContext.client }} // the client executing the authorization attempt`</li></ul> |
 
 {style="table-layout:auto"}
 

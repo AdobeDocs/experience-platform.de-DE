@@ -2,9 +2,9 @@
 title: Überwachen der Aufnahme von Streaming-Profilen
 description: Erfahren Sie, wie Sie die Aufnahme von Streaming-Profilen mit dem Überwachungs-Dashboard überwachen können
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1932'
 ht-degree: 20%
 
 ---
@@ -91,7 +91,7 @@ Verwenden Sie die Tabelle Metriken für spezifische Informationen zu Ihren Daten
 | Anfragedurchsatz | Diese Metrik stellt die Anzahl der in das Aufnahmesystem eingehenden Ereignisse pro Sekunde dar. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
 | Verarbeitungsdurchsatz | Diese Metrik stellt die Anzahl der erfolgreich vom System aufgenommenen Ereignisse pro Sekunde dar. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
 | P95-Aufnahmelatenz | Diese Metrik misst die Latenz im 95. Perzentil von dem Zeitpunkt an, an dem ein Ereignis in Experience Platform eintrifft, bis zu dem Zeitpunkt, an dem es erfolgreich in den Profilspeicher aufgenommen wird. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
-| Maximaler Durchsatz | Diese Metrik stellt die maximale Anzahl eingehender Anfragen pro Sekunde dar, die in die Streaming-Profilaufnahme eintreten | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> |
+| Maximaler Durchsatz | Diese Metrik stellt die maximale Anzahl eingehender Anfragen pro Sekunde dar, die in die Streaming-Profilaufnahme eintreten | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> |  |
 | Aufgenommene Einträge | Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters in den Profilspeicher aufgenommen werden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
 | Fehlgeschlagene Einträge | Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Fehlern nicht in den Profilspeicher aufgenommen wurden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
 | Übersprungene Einträge | Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Konfigurations- oder Kapazitätsverstößen verworfen wurden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
@@ -101,31 +101,31 @@ Verwenden Sie die Tabelle Metriken für spezifische Informationen zu Ihren Daten
 
 ## Verwenden des Überwachungs-Dashboards für die Aufnahme von Streaming-Profilen
 
-Um auf das Überwachungs-Dashboard für die Aufnahme von Streaming-Profilen zuzugreifen, gehen Sie zur Benutzeroberfläche von Experience Platform, wählen Sie **[!UICONTROL Überwachung]** in der linken Navigationsleiste aus und wählen Sie dann **[!UICONTROL Streaming End-to-End]** aus.
+Um auf das Überwachungs-Dashboard für die Aufnahme von Streaming-Profilen zuzugreifen, gehen Sie zur Benutzeroberfläche von Experience Platform, wählen Sie **[!UICONTROL Monitoring]** in der linken Navigationsleiste aus und klicken Sie dann auf **[!UICONTROL Streaming end-to-end]**.
 
 ![Das Überwachungs-Dashboard für die Aufnahme von Streaming-Profilen.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Die Karte mit den Profilmetriken finden Sie in der oberen *[!UICONTROL des Dashboards]*. Verwenden Sie diese Anzeige, um Informationen zu den aufgenommenen, fehlgeschlagenen und übersprungenen Datensätzen sowie Informationen zum aktuellen Status von Anfragedurchsatz und Latenz anzuzeigen.
+Die Karte mit den *[!UICONTROL Profile]* Metriken finden Sie in der oberen Kopfzeile des Dashboards. Verwenden Sie diese Anzeige, um Informationen zu den aufgenommenen, fehlgeschlagenen und übersprungenen Datensätzen sowie Informationen zum aktuellen Status von Anfragedurchsatz und Latenz anzuzeigen.
 
 ![Die Profilkarte.](../assets/ui/streaming-profiles/profile-card.png)
 
 Verwenden Sie als Nächstes die -Benutzeroberfläche, um detaillierte Informationen zu Ihren Metriken zur Aufnahme von Streaming-Profilen anzuzeigen. Verwenden Sie die Kalenderfunktion, um zwischen verschiedenen Zeitrahmen umzuschalten. Sie können aus den folgenden vorkonfigurierten Zeitfenstern auswählen:
 
-* [!UICONTROL Letzte 6 Stunden]
-* [!UICONTROL Letzte 12 Stunden]
-* [!UICONTROL Letzte 24 Stunden]
-* [!UICONTROL Letzte 7 Tage]
-* [!UICONTROL Letzte 30 Tage]
+* [!UICONTROL Last 6 hours]
+* [!UICONTROL Last 12 hours]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
 Alternativ können Sie Ihren eigenen Zeitrahmen manuell mithilfe des Kalenders konfigurieren.
 
-Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden[!UICONTROL &#x200B; „Durchsatz], [!UICONTROL Aufnahme] und [!UICONTROL Latenz].
+Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden: [!UICONTROL Throughput], [!UICONTROL Ingestion] und [!UICONTROL Latency].
 
 >[!BEGINTABS]
 
 >[!TAB Durchsatz]
 
-Wählen Sie **[!UICONTROL Durchsatz]** aus, um Informationen zur Datenmenge anzuzeigen, die Experience Platform in einem konfigurierten Zeitraum verarbeitet. Beziehen Sie sich auf diese Metrik, um die Effizienz und Kapazität Ihres Systems zu bewerten.
+Wählen Sie **[!UICONTROL Throughput]** aus, um Informationen zur Datenmenge anzuzeigen, die Experience Platform in einem konfigurierten Zeitraum verarbeitet. Beziehen Sie sich auf diese Metrik, um die Effizienz und Kapazität Ihres Systems zu bewerten.
 
 ![Das Dashboard mit auf „Durchsatz“ eingestellter Anzeige.](../assets/ui/streaming-profiles/throughput.png)
 
@@ -135,7 +135,7 @@ Wählen Sie **[!UICONTROL Durchsatz]** aus, um Informationen zur Datenmenge anzu
 
 >[!TAB Aufnahme]
 
-**Aufnahme**: Wählen Sie **[!UICONTROL Aufnahme]** aus, um Informationen zu den Aufnahmevorgängen in Ihrer Sandbox anzuzeigen. Diese Aufnahmevorgänge werden in drei verschiedenen Metriken gemessen.
+**Aufnahme**: Wählen Sie **[!UICONTROL Ingestion]** aus, um Informationen zu den Aufnahmevorgängen in Ihrer Sandbox anzuzeigen. Diese Aufnahmevorgänge werden in drei verschiedenen Metriken gemessen.
 
 ![Das Dashboard mit der auf „Aufnahme“ gesetzten Anzeige.](../assets/ui/streaming-profiles/ingestion.png)
 
@@ -145,7 +145,7 @@ Wählen Sie **[!UICONTROL Durchsatz]** aus, um Informationen zur Datenmenge anzu
 
 >[!TAB Latenz]
 
-Wählen Sie **[!UICONTROL Latenz]** aus, um Informationen zur Zeitdauer anzuzeigen, die Experience Platform benötigt, um innerhalb eines bestimmten Zeitraums auf eine Anfrage zu reagieren oder einen Vorgang abzuschließen.
+Wählen Sie **[!UICONTROL Latency]** aus, um Informationen zur Zeitdauer anzuzeigen, die Experience Platform benötigt, um innerhalb eines bestimmten Zeitraums auf eine Anfrage zu reagieren oder einen Vorgang abzuschließen.
 
 ![Das Dashboard mit der auf „Latenz“ gesetzten Anzeige.](../assets/ui/streaming-profiles/latency.png)
 
@@ -155,7 +155,7 @@ Wählen Sie **[!UICONTROL Latenz]** aus, um Informationen zur Zeitdauer anzuzeig
 
 In der Datenfluss-Tabelle sind alle Streaming-Aufnahme-Aktivitäten mit den entsprechenden Metriken für das Echtzeit-Kundenprofil aufgeführt. Jeder Datenfluss wird mit dem zugehörigen Datensatz aufgelistet.
 
-Wenn Sie sich den Beschränkungen der Kapazität auf Sandbox-Ebene nähern, können Sie die Spalte [!UICONTROL Max. Durchsatz] heranziehen, um alle vorhandenen Datenflüsse zu identifizieren, die zu Ihren Verbrauchsraten beitragen. Weitere Informationen zu Best [&#x200B; für die Datenflussverwaltung finden &#x200B;](#best-practices) im Abschnitt „Best Practices“.
+Wenn Sie sich den Beschränkungen der Kapazität auf Sandbox-Ebene nähern, können Sie in der Spalte [!UICONTROL Max throughput] alle vorhandenen Datenflüsse identifizieren, die zu Ihren Verbrauchsraten beitragen. Weitere Informationen zu Best [ für die Datenflussverwaltung finden ](#best-practices) im Abschnitt „Best Practices“.
 
 Um die Daten zu überwachen, die in einen bestimmten Datenfluss aufgenommen werden, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben dem Datenflussnamen aus.
 
@@ -194,7 +194,7 @@ Wenn Ihr aktuelles Limit von **1.500 Ereignissen pro Sekunde** nicht ausreicht, 
 | Faktor | Was es ist | Auswirkungen auf Anwendungsfälle | Best Practices |
 | --- | --- | --- | --- |
 | Konvertierung von Batch zu Streaming | Batch-Workloads, die in Streaming konvertiert werden, können den Durchsatz erheblich erhöhen und sich auf die Leistung und Ressourcenzuweisung auswirken. Beispielsweise die Durchführung einer Massenaktualisierung von Profilen nach einem Ereignis ohne Ratenbeschränkungen. | Streaming-Strategien sind für Batch-Anwendungsfälle unnötig, wenn eine Verarbeitung mit geringer Latenz nicht erforderlich ist. | Bewerten Sie die Anforderungen an Anwendungsfälle. Für das Batch-Outbound-Marketing sollten Sie [Batch-Aufnahme](../../ingestion/batch-ingestion/overview.md) anstelle von Streaming verwenden, um die Datenaufnahme effizienter zu verwalten. |
-| Unnötige Datenaufnahme | Die Aufnahme von Daten, die nicht für die Personalisierung erforderlich sind, erhöht den Durchsatz, ohne einen Mehrwert zu erzielen, und verschwendet Ressourcen. Beispielsweise wird der gesamte Analytics-Traffic unabhängig von der Relevanz in Profile aufgenommen. | Übermäßige Mengen nicht relevanter Daten verursachen Rauschen, wodurch die Identifizierung wirkungsvoller Datenpunkte erschwert wird. Außerdem kann es beim Definieren und Verwalten von Audiences und Profilen zu Reibungen kommen. | Nehmen Sie nur Daten auf, die für Ihre Anwendungsfälle erforderlich sind. Stellen Sie sicher, dass Sie unnötige Daten herausfiltern.<ul><li>**Adobe Analytics**: Verwenden Sie [Filterung auf Zeilenebene](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) um die Datenaufnahme zu optimieren.</li><li>**Quellen**: Verwenden Sie die [[!DNL Flow Service] API zum Filtern von Daten auf Zeilenebene](../../sources/tutorials/api/filter.md) für unterstützte Quellen wie [!DNL Snowflake] und [!DNL Google BigQuery].</li></li>**Edge-Datenstrom**: Konfigurieren Sie [dynamische &#x200B;](../../datastreams/configure-dynamic-datastream.md)), um Traffic aus WebSDK auf Zeilenebene zu filtern.</li></ul> |
+| Unnötige Datenaufnahme | Die Aufnahme von Daten, die nicht für die Personalisierung erforderlich sind, erhöht den Durchsatz, ohne einen Mehrwert zu erzielen, und verschwendet Ressourcen. Beispielsweise wird der gesamte Analytics-Traffic unabhängig von der Relevanz in Profile aufgenommen. | Übermäßige Mengen nicht relevanter Daten verursachen Rauschen, wodurch die Identifizierung wirkungsvoller Datenpunkte erschwert wird. Außerdem kann es beim Definieren und Verwalten von Audiences und Profilen zu Reibungen kommen. | Nehmen Sie nur Daten auf, die für Ihre Anwendungsfälle erforderlich sind. Stellen Sie sicher, dass Sie unnötige Daten herausfiltern.<ul><li>**Adobe Analytics**: Verwenden Sie [Filterung auf Zeilenebene](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) um die Datenaufnahme zu optimieren.</li><li>**Quellen**: Verwenden Sie die [[!DNL Flow Service] API zum Filtern von Daten auf Zeilenebene](../../sources/tutorials/api/filter.md) für unterstützte Quellen wie [!DNL Snowflake] und [!DNL Google BigQuery].</li></li>**Edge-Datenstrom**: Konfigurieren Sie [dynamische ](../../datastreams/configure-dynamic-datastream.md)), um Traffic aus WebSDK auf Zeilenebene zu filtern.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -206,17 +206,17 @@ In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zur Überw
 
 +++Antwort
 
-Das [!UICONTROL Monitoring]-Dashboard zeigt Echtzeitmetriken für die Aufnahme und Verarbeitung an. Diese Zahlen sind exakte Metriken, die zum Zeitpunkt der Aktivität erfasst wurden. Umgekehrt verwendet [!UICONTROL &#x200B; Dashboard &#x200B;]Kapazität“ einen Glättungsmechanismus für die Berechnung der Durchsatzkapazität. Dieser Mechanismus trägt dazu bei, kurzlebige Spitzen zu reduzieren, die davon ausgehen, dass sie sofort als Verstöße eingestuft werden, und stellt sicher, dass sich Kapazitätswarnungen auf nachhaltige Trends und nicht auf vorübergehende Bursts konzentrieren.
+Das [!UICONTROL Monitoring]-Dashboard zeigt Echtzeitmetriken für die Aufnahme und Verarbeitung an. Diese Zahlen sind exakte Metriken, die zum Zeitpunkt der Aktivität erfasst wurden. Umgekehrt verwendet das [!UICONTROL Capacity]-Dashboard einen Glättungsmechanismus für die Berechnung der Durchsatzkapazität. Dieser Mechanismus trägt dazu bei, kurzlebige Spitzen zu reduzieren, die davon ausgehen, dass sie sofort als Verstöße eingestuft werden, und stellt sicher, dass sich Kapazitätswarnungen auf nachhaltige Trends und nicht auf vorübergehende Bursts konzentrieren.
 
 Aufgrund des Glättungsmechanismus kann Folgendes auftreten:
 
-* Kleine Spitzen in [!UICONTROL Überwachung] die nicht in [!UICONTROL Kapazität] angezeigt werden.
-* Etwas niedrigere Werte in [!UICONTROL Kapazität] im Vergleich zu [!UICONTROL Monitoring] zum gleichen Zeitstempel.
+* Kleine Spitzen in [!UICONTROL Monitoring], die nicht in [!UICONTROL Capacity] erscheinen.
+* Etwas niedrigere Werte in [!UICONTROL Capacity] im Vergleich zu [!UICONTROL Monitoring] zur gleichen Zeit.
 
 Die beiden Dashboards sind präzise, jedoch für verschiedene Zwecke konzipiert.
 
-* [!UICONTROL Überwachung]: Detaillierte, operative Transparenz für jeden Augenblick.
-* [!UICONTROL Kapazität]: Strategische Ansicht zur Ermittlung von Nutzungs- und Verletzungsmustern.
+* [!UICONTROL Monitoring]: Detaillierte operative Sichtbarkeit für jeden einzelnen Moment.
+* [!UICONTROL Capacity]: Strategische Ansicht zur Identifizierung von Nutzungs- und Verletzungsmustern.
 
 +++
 
@@ -225,4 +225,4 @@ Die beiden Dashboards sind präzise, jedoch für verschiedene Zwecke konzipiert.
 In diesem Tutorial haben Sie gelernt, wie Sie Aufnahmen von Streaming-Profilen in Ihrer Organisation überwachen. In den folgenden Dokumenten finden Sie zusätzliche Informationen zur Überwachung von Daten für das Echtzeit-Kundenprofil.
 
 * [Verwenden des Überwachungs-Dashboards](./monitor.md).
-* [Überwachen von &#x200B;](./monitor-profiles.md).
+* [Überwachen von ](./monitor-profiles.md).

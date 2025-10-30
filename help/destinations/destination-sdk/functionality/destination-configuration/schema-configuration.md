@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie das Partnerschema für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration des Partnerschemas
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1912'
 ht-degree: 77%
 
 ---
@@ -148,7 +148,7 @@ In einer dynamischen Schemakonfiguration wird das Array `profileFields` durch de
 
 | Parameter | Typ | Erforderlich/Optional | Beschreibung |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | Zeichenfolge | Erforderlich | Gibt an, wie [!DNL Experience Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Experience Platform-Kundinnen und -Kunden über eine der [hier) beschriebenen Authentifizierungsmethoden bei &#x200B;](customer-authentication.md) System anmelden. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Experience Platform]-Kunde keine Authentifizierungs-Anmeldedaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie [ein Anmeldeinformationsobjekt erstellen](../../credentials-api/create-credential-configuration.md) mithilfe der Anmeldeinformationen-API und die ID des Anmeldeinformationsobjekts im `authenticationId` Parameter in der Konfiguration [Zielversand](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) übergeben. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
+| `dynamicEnum.authenticationRule` | Zeichenfolge | Erforderlich | Gibt an, wie [!DNL Experience Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Experience Platform-Kundinnen und -Kunden über eine der [hier) beschriebenen Authentifizierungsmethoden bei ](customer-authentication.md) System anmelden. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Experience Platform]-Kunde keine Authentifizierungs-Anmeldedaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie [ein Anmeldeinformationsobjekt erstellen](../../credentials-api/create-credential-configuration.md) mithilfe der Anmeldeinformationen-API und die ID des Anmeldeinformationsobjekts im `authenticationId` Parameter in der Konfiguration [Zielversand](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) übergeben. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `dynamicEnum.destinationServerId` | Zeichenfolge | Erforderlich | Die `instanceId` des dynamischen Schema-Servers. Dieser Ziel-Server enthält den API-Endpunkt, den Experience Platform aufruft, um das dynamische Schema abzurufen. |
 | `dynamicEnum.value` | Zeichenfolge | Erforderlich | Der Name des dynamischen Schemas, wie in der Konfiguration des dynamischen Schema-Servers definiert. |
 | `dynamicEnum.responseFormat` | Zeichenfolge | Erforderlich | Die Einstellung ist immer `SCHEMA`, wenn ein dynamisches Schema definiert wird. |
@@ -167,6 +167,7 @@ Beispielsweise können Sie erzwingen, dass das Feld für die E-Mail-Adresse imme
 >[!NOTE]
 >
 >Die folgenden Kombinationen erforderlicher Zuordnungen werden derzeit unterstützt:
+>
 >* Sie können ein erforderliches Quellfeld und ein erforderliches Zielfeld konfigurieren. In diesem Fall können Benutzerinnen und Benutzer keines der beiden Felder bearbeiten oder auswählen und nur die Auswahl anzeigen.
 >* Sie können auch nur ein erforderliches Zielfeld konfigurieren. In diesem Fall können Benutzerinnen und Benutzer ein Quellfeld auswählen, das dem Ziel zugeordnet werden soll.
 >
@@ -203,7 +204,7 @@ Das folgende Beispiel zeigt die erforderlichen Quell- und Zielzuordnungen. Wenn 
 
 {style="table-layout:auto"}
 
-Daher werden die Abschnitte **[!UICONTROL Source-Feld]** und **[!UICONTROL Target]** in der Experience Platform-Benutzeroberfläche ausgegraut.
+Daher werden die **[!UICONTROL Source field]** und **[!UICONTROL Target field]** Abschnitte in der Experience Platform-Benutzeroberfläche ausgegraut.
 
 ![Bild der erforderlichen Zuordnungen im UI-Aktivierungsfluss.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +234,7 @@ Das folgende Beispiel zeigt eine erforderliche Zielzuordnung. Wenn nur das Zielf
 
 {style="table-layout:auto"}
 
-Daher wird der Abschnitt **[!UICONTROL Zielfeld]** in der Experience Platform-Benutzeroberfläche ausgegraut, während der Abschnitt **[!UICONTROL Source]** aktiv ist und Benutzende damit interagieren können. Die Optionen **[!UICONTROL Obligatorischer Schlüssel]** und **[!UICONTROL Deduplizierungsschlüssel]** sind aktiviert und können von Benutzenden geändert werden.
+Daher wird der Abschnitt **[!UICONTROL Target field]** in der Experience Platform-Benutzeroberfläche ausgegraut, während der Abschnitt **[!UICONTROL Source field]** aktiv ist und Benutzende damit interagieren können. Die Optionen **[!UICONTROL Mandatory key]** und **[!UICONTROL Deduplication key]** sind aktiviert und können von Benutzenden nicht geändert werden.
 
 ![Bild der erforderlichen Zuordnungen im UI-Aktivierungsfluss.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
@@ -250,7 +251,7 @@ Um Ihr Ziel so zu konfigurieren, dass es die Aktivierung [extern generierter Zie
 }
 ```
 
-Weitere Informationen zur [-Funktion finden Sie &#x200B;](#attributes-schema) den Eigenschaftsbeschreibungen in `segmentNamespaceDenyList`Tabelle) weiter oben auf dieser Seite.
+Weitere Informationen zur [-Funktion finden Sie ](#attributes-schema) den Eigenschaftsbeschreibungen in `segmentNamespaceDenyList`Tabelle) weiter oben auf dieser Seite.
 
 ## Nächste Schritte {#next-steps}
 
@@ -268,4 +269,4 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](aggregation-policy.md)
 * [Batch-Konfiguration](batch-configuration.md)
-* [Historische Profilqualifikationen](historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](historical-profile-qualifications.md)

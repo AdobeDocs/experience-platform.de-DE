@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie über den Endpunkt „/destination-servers“ Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren, die mit Adobe Experience Platform Destination SDK erstellt wurden.
 title: Konfiguration der Dateiformatierung
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 88%
@@ -24,7 +24,7 @@ Je nach Zielkonfiguration sehen Benutzerinnen und Benutzer bestimmte Optionen in
 
 Dateiformatierungseinstellungen sind Teil der Ziel-Server-Konfiguration für dateibasierte Ziele.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden der -Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden von Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Die Dateiformatierungsoptionen können über den Endpunkt `/authoring/destination-servers` konfiguriert werden. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
@@ -199,8 +199,8 @@ Nachstehend finden Sie eine vollständige Referenz aller verfügbaren Dateiforma
 | `csvOptions.timestampFormat.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolge für ein Zeitstempelformat fest. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | – | – |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren des Escape-Zeichens für das Anführungszeichen verwendet wird. | `\` wenn Escape- und Anführungszeichen unterschiedlich sind. `\0` wenn Escape- und Anführungszeichen identisch sind. | – | – |
 | `csvOptions.emptyValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines leeren Werts fest. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | Optional | Gibt die maximale Anzahl von Zeilen pro exportierter Datei an, zwischen 1.000.000 und 10.000.000 Zeilen. | 5.000.000 |
-| `includeFileManifest` | Optional | Ermöglicht den Export eines Dateimanifests zusammen mit den Dateiexporten. Die JSON-Manifestdatei enthält Informationen zum Exportspeicherort, zur Exportgröße und mehr. Das Manifest wird mit dem Format `manifest-<<destinationId>>-<<dataflowRunId>>.json` benannt. | Anzeigen einer [Beispielmanifestdatei](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Die Manifestdatei enthält die folgenden Felder: <ul><li>`flowRunId`: Die [Datenflussausführung](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die die exportierte Datei generiert hat.</li><li>`scheduledTime`: Die Zeit in UTC, zu der die Datei exportiert wurde. </li><li>`exportResults.sinkPath`: Der Pfad an Ihrem Speicherort, an dem die exportierte Datei abgelegt wird. </li><li>`exportResults.name`: Der Name der exportierten Datei.</li><li>`size`: Die Größe der exportierten Datei in Byte.</li></ul> |
+| `maxFileRowCount` | Optional | Gibt die maximale Anzahl von Zeilen pro exportierter Datei an, zwischen 1.000.000 und 10.000.000 Zeilen. | 5.000.000 | – | – |
+| `includeFileManifest` | Optional | Ermöglicht den Export eines Dateimanifests zusammen mit den Dateiexporten. Die JSON-Manifestdatei enthält Informationen zum Exportspeicherort, zur Exportgröße und mehr. Das Manifest wird mit dem Format `manifest-<<destinationId>>-<<dataflowRunId>>.json` benannt. | Anzeigen einer [Beispielmanifestdatei](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Die Manifestdatei enthält die folgenden Felder: <ul><li>`flowRunId`: Die [Datenflussausführung](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die die exportierte Datei generiert hat.</li><li>`scheduledTime`: Die Zeit in UTC, zu der die Datei exportiert wurde. </li><li>`exportResults.sinkPath`: Der Pfad an Ihrem Speicherort, an dem die exportierte Datei abgelegt wird. </li><li>`exportResults.name`: Der Name der exportierten Datei.</li><li>`size`: Die Größe der exportierten Datei in Byte.</li></ul> | – | – |
 
 {style="table-layout:auto"}
 

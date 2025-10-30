@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Beispiel-ETL-Transformationen
 description: Dieser Artikel zeigt die folgenden Beispiel-Transformationen, auf die ein Extrakt-, Transform-, Load-(ETL-)Entwickler stoßen kann.
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 88%
+source-wordcount: '452'
+ht-degree: 84%
 
 ---
 
@@ -19,7 +19,7 @@ Dieser Artikel zeigt die folgenden Beispiel-Transformationen, auf die ein Extrak
 
 ### Beispieldateien
 
-CSV- und JSON-Beispieldateien sind im öffentlichen ETL-Referenz- [!DNL GitHub] -Repository verfügbar, das von Adobe verwaltet wird:
+CSV- und JSON-Beispieldateien sind im öffentlichen ETL-Referenz-[!DNL GitHub]-Repository von Adobe verfügbar:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -42,6 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Zuordnung
 
 Die Zuordnungsanforderungen für die CRM-Daten sind in der folgenden Tabelle aufgeführt und umfassen die folgenden Transformationen:
+
 - Identitätsspalten in `identityMap`-Eigenschaften
 - Geburtsdatum in Jahr und Monat
 - Zeichenfolgen in Dubletten oder kurzen Ganzzahlen.
@@ -54,10 +55,10 @@ Die Zuordnungsanforderungen für die CRM-Daten sind in der folgenden Tabelle auf
 | GESCHLECHT | person.gender | Geschlecht als entsprechenden „person.gender-enum“-Wert transformieren |
 | GEBURTSDATUM | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | birthDayAndMonth als Zeichenfolge transformieren<br/>birthDate als Zeichenfolge transformieren<br/>birthyear als “short intr”-Wert transformieren |
 | E-MAIL | personalEmail.address | Als Zeichenfolge kopieren |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Kopieren Sie dies als Zeichenfolge in das CRMID-Array in „identityMap“ und setzen Sie „Primary as false“ |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | Kopieren Sie dies als Zeichenfolge in den ersten Eintrag im ECID-Array in „identityMap“ und setzen Sie „Primary as false“ |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Kopieren Sie dies als Zeichenfolge in das LOYALTYID-Array in „identityMap“ und setzen Sie „Primary as true“ |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Kopieren Sie dies als Zeichenfolge in den zweiten Eintrag im ECID-Array in „identityMap“ und setzen Sie „Primary as false“ |
+| CRMID | identityMap.CRMID[{„id“:x, primary:false}] | Kopieren Sie dies als Zeichenfolge in das CRMID-Array in „identityMap“ und setzen Sie „Primary as false“ |
+| ECID | identityMap.ECID[{„id“:x, primär: false}] | Kopieren Sie dies als Zeichenfolge in den ersten Eintrag im ECID-Array in „identityMap“ und setzen Sie „Primary as false“ |
+| LOYALTYID | identityMap.LOYALTYID[{„id“:x, primary:true}] | Kopieren Sie dies als Zeichenfolge in das LOYALTYID-Array in „identityMap“ und setzen Sie „Primary as true“ |
+| ECID2 | identityMap.ECID[{„id“:x, primary:false}] | Kopieren Sie dies als Zeichenfolge in den zweiten Eintrag im ECID-Array in „identityMap“ und setzen Sie „Primary as false“ |
 | TELEFON | homePhone.number | Als Zeichenfolge kopieren |
 | STRASSE | homeAddress.street1 | Als Zeichenfolge kopieren |
 | STADT | homeAddress.city | Als Zeichenfolge kopieren |
@@ -284,9 +285,9 @@ Die Zuordnungsanforderungen für das Array von Identitäten sind in der folgende
 
 | Identitätsfeld | identityMap-Feld | Datentyp |
 | -------------- | ----------------- | --------- |
-| identities[0].id | identityMap[Email][{"id"}] | Als Zeichenfolge kopieren |
-| identities[1].id | identityMap[CRMID][{"id"}] | Als Zeichenfolge kopieren |
-| identities[2].id | identityMap[LOYALTYID][{"id"}] | Als Zeichenfolge kopieren |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | Als Zeichenfolge kopieren |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | Als Zeichenfolge kopieren |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | Als Zeichenfolge kopieren |
 
 ### Ausgabe in XDM
 

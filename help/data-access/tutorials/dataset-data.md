@@ -5,7 +5,7 @@ title: Anzeigen von Datensatzdaten mithilfe der Datenzugriffs-API
 type: Tutorial
 description: Erfahren Sie, wie Sie in einem Datensatz gespeicherte Daten mithilfe der Datenzugriffs-API in Adobe Experience Platform finden, darauf zugreifen und sie herunterladen können. In diesem Dokument werden einige der einzigartigen Funktionen der Datenzugriffs-API vorgestellt, wie Paging und partielle Downloads.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 13%
@@ -18,7 +18,7 @@ In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mithilfe der [!DNL
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis darüber voraus, wie ein Datensatz erstellt und aufgefüllt wird. Weitere Informationen finden [&#x200B; im Tutorial &#x200B;](../../catalog/datasets/create.md) Datensatzerstellung .
+Dieses Tutorial setzt ein Grundverständnis darüber voraus, wie ein Datensatz erstellt und aufgefüllt wird. Weitere Informationen finden [ im Tutorial ](../../catalog/datasets/create.md) Datensatzerstellung .
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Experience Platform-APIs erfolgreich aufrufen zu können.
 
@@ -28,7 +28,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ &#x200B;](../../landing/api-authentication.md). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](../../landing/api-authentication.md). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -428,7 +428,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{FILE_ID} ` | Die Kennung der Datei. |
+| `{FILE_ID}` | Die Kennung der Datei. |
 | `{FILE_NAME}` | Der Dateiname (z. B. profiles.parquet) |
 
 **Anfrage**

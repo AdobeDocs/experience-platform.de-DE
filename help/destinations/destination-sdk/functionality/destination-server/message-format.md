@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2489'
 ht-degree: 87%
@@ -71,7 +71,7 @@ Um den Prozess der Profilumwandlung zu demonstrieren, verwendet das folgende Bei
 
 >[!NOTE]
 >
->Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche zu, und zwar im Schritt **Zuordnung** [&#x200B; des Zielaktivierungs-Workflows](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche zu, und zwar im Schritt **Zuordnung** [ des Zielaktivierungs-Workflows](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Nehmen wir an, Ihre Plattform kann ein Nachrichtenformat wie das Folgende erhalten:
 
@@ -94,7 +94,7 @@ In Bezug auf das Nachrichtenformat lauten die entsprechenden Umwandlungen wie fo
 
 | Attribut im Partner-XDM-Schema auf der Adobe-Seite | Umwandlung | Attribut in HTTP-Nachricht auf Ihrer Seite |
 |---------|----------|---------|
-| `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
+| `_your_custom_schema.firstName` | `attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
@@ -176,7 +176,7 @@ Adobe verwendet [Pebble-Vorlagen](https://pebbletemplates.io/), eine Vorlagenspr
 
 In diesem Abschnitt finden Sie mehrere Beispiele dafür, wie diese Transformationen vorgenommen werden – vom Eingabe-XDM-Schema über die Vorlage und die Ausgabe in Payload-Formaten, die von Ihrem Ziel akzeptiert werden. Die folgenden Beispiele werden mit zunehmender Komplexität wie folgt dargestellt:
 
-1. Einfache Transformationsbeispiele. Erfahren Sie, wie die Vorlage mit einfachen Transformationen für die Felder [Profilattribute](#attributes), [Zielgruppenmitgliedschaft](#segment-membership) und [Identität](#identities) arbeitet.
+1. Einfache Transformationsbeispiele. Erfahren Sie, wie die Vorlage mit einfachen Transformationen für die Felder [Profilattribute](#attributes), [Zielgruppenzugehörigkeit](#segment-membership) und [Identität](#identities) arbeitet.
 2. Beispiele für komplexere Vorlagen, die die oben genannten Felder kombinieren: [Erstellen einer Vorlage zum Senden von Zielgruppen und Identitäten](./message-format.md#segments-and-identities) und [Erstellen einer Vorlage zum Senden von Segmenten, Identitäten und Profilattributen](#segments-identities-attributes).
 3. Vorlagen, die den Aggregationsschlüssel enthalten. Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in der Zielkonfiguration verwenden, gruppiert Experience Platform die in Ihr Ziel exportierten Profile anhand von Kriterien wie Zielgruppen-ID, Zielgruppenstatus oder Identity-Namespaces.
 
@@ -263,7 +263,7 @@ Profil 2:
 }
 ```
 
-### Zielgruppenmitgliedschaft {#audience-membership}
+### Zielgruppenzugehörigkeit {#audience-membership}
 
 Das XDM-Attribut [segmentMembership](../../../../xdm/schema/field-dictionary.md) informiert darüber, zu welchen Zielgruppen ein Profil gehört.
 Lesen Sie zu den drei verschiedenen Werten im Feld `status` die Dokumentation zur [Schemafeldgruppe der Zielgruppenzugehörigkeitsdetails](../../../../xdm/field-groups/profile/segmentation.md).
@@ -1205,7 +1205,7 @@ Die nachstehende Tabelle enthält Beschreibungen der Funktionen in den obigen Be
 
 | Funktion | Beschreibung | Beispiel |
 |---------|----------|----------|
-| `input.profile` | Das Profil, dargestellt als ein [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Folgt dem weiter oben erwähnten Partner-XDM-Schema auf dieser Seite. |
+| `input.profile` | Das Profil, dargestellt als ein [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Folgt dem weiter oben erwähnten Partner-XDM-Schema auf dieser Seite. |  |
 | `hasSegments` | Diese Funktion akzeptiert eine Zuordnung von Namespace-Zielgruppen-IDs als Parameter. Die Funktion gibt `true` zurück, wenn sich mindestens eine Zielgruppe in der Zuordnung befindet (unabhängig vom Status), `false` andernfalls. Mit dieser Funktion können Sie entscheiden, ob Sie eine Zuordnung von Zielgruppen durchlaufen oder nicht. | `hasSegments(input.profile.segmentMembership)` |
 | `destination.namespaceSegmentAliases` | Zuordnung von Zielgruppen-IDs in einem bestimmten Adobe Experience Platform-Namespace zu Zielgruppen-Aliassen im System des Partners. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
 | `destination.namespaceSegmentNames` | Zuordnung von Zielgruppennamen in bestimmten Adobe Experience Platform-Namespaces zu Zielgruppennamen im System des Partners. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |

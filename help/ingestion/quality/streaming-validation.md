@@ -5,14 +5,14 @@ title: Validierung der Streaming-Aufnahme
 type: Tutorial
 description: 'Mit der Streaming-Aufnahme können Sie Ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in Adobe Experience Platform hochladen. Streaming-Aufnahme-APIs unterstützen zwei Validierungsmodi: synchron und asynchron.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 23%
 
 ---
 
-# Validieren der Streaming-Erfasssung
+# Validieren der Streaming-Aufnahme
 
 Mit der Streaming-Aufnahme können Sie Ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in Adobe Experience Platform hochladen. Streaming-Aufnahme-APIs unterstützen zwei Validierungsmodi: synchron und asynchron.
 
@@ -50,9 +50,10 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 ### Validierungsabdeckung
 
 [!DNL Streaming Validation Service] umfasst die Validierung in den folgenden Bereichen:
+
 - Bereich
 - Präsenz
-- Enum
+- Aufzählung
 - Muster
 - Typ
 - Format

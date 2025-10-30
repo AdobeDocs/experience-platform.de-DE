@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 41%
+source-wordcount: '887'
+ht-degree: 39%
 
 ---
 
@@ -54,7 +54,7 @@ Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, au
 | Neue API-Endpunkte | Der Basispfad für die [!DNL Privacy Service]-API wurde von `/data/privacy/gdpr` auf `/data/core/privacy/jobs` aktualisiert. |
 | Neue erforderliche `regulation`-Eigenschaft | Bei der Erstellung neuer Aufträge in der [!DNL Privacy Service]-API muss eine `regulation`-Eigenschaft in der Anfrage-Payload angegeben werden, die angibt, nach welcher Vorschrift der Auftrag verfolgt werden soll. Akzeptierte Werte sind `gdpr` und `ccpa`. |
 | Unterstützung für [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] akzeptiert jetzt Zugriffs-/Löschanfragen von Adobe [!DNL Primetime Authentication] und verwendet `primetimeAuthentication` als Produktwert. |
-| Verbesserungen der Privacy Service-Benutzeroberfläche | Separate Auftrags-Tracking-Seiten für DSGVO- und CCPA-Vorschriften. Neuer **Regulierungstyp** Dropdown zum Umschalten zwischen Tracking-Daten für DSGVO und CCPA. |
+| Verbesserungen der Privacy Service-Benutzeroberfläche | Separate Auftrags-Tracking-Seiten für DSGVO- und CCPA-Vorschriften. Neue Dropdown-Liste **Vorschriftentyp**, um zwischen den Verfolgungsdaten für DSGVO und CCPA zu wechseln. |
 
 **Bekannte Probleme**
 
@@ -81,7 +81,7 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 | Kategorie | Berechtigung | Beschreibung |
 |--- | --- | ---|
 | Datenerfassung | Verwalten von Quellen | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
-| Datenerfassung | Anzeigen von Quellen | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
+| Datenerfassung | Anzeigen von Quellen | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Catalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Browse]** . |
 
 **Bekannte Probleme**
 
@@ -104,7 +104,7 @@ In [Real-Time CDP](../../rtcdp/overview.md) sind Ziele vorgefertigte Integration
 | Kategorie | Berechtigung | Beschreibung |
 |--- | --- | ---|
 | Ziele | Verwalten von Zielen | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen. |
-| Ziele | Anzeigen von Zielen | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Ziele auf der Registerkarte **Durchsuchen**. |
+| Ziele | Anzeigen von Zielen | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Catalog]** und authentifizierte Ziele auf der Registerkarte **Durchsuchen**. |
 | Ziele | Aktivieren von Zielen | Möglichkeit, Daten für Ziele zu aktivieren. Für diese Berechtigung ist es erforderlich, dass dem Produktprofil entweder „Ziele verwalten“ oder „Ziele anzeigen“ hinzugefügt wird. |
 
 **Bekannte Probleme**

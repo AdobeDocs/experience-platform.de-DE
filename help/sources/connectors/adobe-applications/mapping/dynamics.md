@@ -2,7 +2,7 @@
 title: Microsoft Dynamics-Zuordnungsfelder
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen Microsoft Dynamics-Quellfeldern und den zugehörigen XDM-Feldern.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 40%
@@ -17,44 +17,44 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 | Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
-| `address1_addressid` | `workAddress._id` |
-| `address1_city` | `workAddress.city` |
-| `address1_country` | `workAddress.country` |
-| `address1_county` | `workAddress.stateProvince` |
-| `address1_latitude` | `workAddress._schema.latitude` |
-| `address1_line1` | `workAddress.street1` |
-| `address1_line2` | `workAddress.street2` |
-| `address1_line3` | `workAddress.street3` |
-| `address1_longitude` | `workAddress._schema.longitude` |
-| `address1_postalcode` | `workAddress.postalCode` |
-| `address1_postofficebox` | `workAddress.postOfficeBox` |
-| `address1_stateorprovince` | `workAddress.state` |
-| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |
-| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
-| `birthdate` | `person.birthDate` |
-| `"Dynamics"` | `b2b.personKey.sourceType` |
+| `address1_addressid` | `workAddress._id` |  |
+| `address1_city` | `workAddress.city` |  |
+| `address1_country` | `workAddress.country` |  |
+| `address1_county` | `workAddress.stateProvince` |  |
+| `address1_latitude` | `workAddress._schema.latitude` |  |
+| `address1_line1` | `workAddress.street1` |  |
+| `address1_line2` | `workAddress.street2` |  |
+| `address1_line3` | `workAddress.street3` |  |
+| `address1_longitude` | `workAddress._schema.longitude` |  |
+| `address1_postalcode` | `workAddress.postalCode` |  |
+| `address1_postofficebox` | `workAddress.postOfficeBox` |  |
+| `address1_stateorprovince` | `workAddress.state` |  |
+| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |  |
+| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |  |
+| `birthdate` | `person.birthDate` |  |
+| `"Dynamics"` | `b2b.personKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
-| `contactid` | `b2b.personKey.sourceID` |
+| `contactid` | `b2b.personKey.sourceID` |  |
 | `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
-| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
-| `department` | `extendedWorkDetails.departments` |
-| `fullname` | `person.name.fullName` |
-| `suffix` | `person.name.suffix` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |
-| `createdon` | `extSourceSystemAudit.createdDate` |
+| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |  |
+| `department` | `extendedWorkDetails.departments` |  |
+| `fullname` | `person.name.fullName` |  |
+| `suffix` | `person.name.suffix` |  |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |  |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |  |
+| `createdon` | `extSourceSystemAudit.createdDate` |  |
 | `emailaddress1` | `workEmail.address` | Sekundäre Kennung. |
-| `emailaddress2` | `personalEmail.address` |
-| `emailaddress1` | `personComponents.workEmail.address` |
-| `firstname` | `person.name.firstName` |
-| `fullname` | `person.name.fullName` |
-| `lastname` | `person.name.lastName` |
-| `jobtitle` | `extendedWorkDetails.jobTitle` |
-| `middlename` | `person.name.middleName` |
-| `mobilephone` | `mobilePhone.number` |
-| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
-| `salutation` | `person.name.courtesyTitle` |
-| `telephone1` | `workPhone.number` |
+| `emailaddress2` | `personalEmail.address` |  |
+| `emailaddress1` | `personComponents.workEmail.address` |  |
+| `firstname` | `person.name.firstName` |  |
+| `fullname` | `person.name.fullName` |  |
+| `lastname` | `person.name.lastName` |  |
+| `jobtitle` | `extendedWorkDetails.jobTitle` |  |
+| `middlename` | `person.name.middleName` |  |
+| `mobilephone` | `mobilePhone.number` |  |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |  |
+| `salutation` | `person.name.courtesyTitle` |  |
+| `telephone1` | `workPhone.number` |  |
 
 {style="table-layout:auto"}
 
@@ -134,7 +134,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 {style="table-layout:auto"}
 
-## Opportunitys {#opportunities}
+## Opportunities {#opportunities}
 
 | Quellfeld | XDM-Zielfeld | Anmerkungen |
 | --- | --- | --- |
@@ -171,8 +171,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [&#x200B; Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu &#x200B;](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record1objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [&#x200B; Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu &#x200B;](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record2objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [ Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu ](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record1objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [ Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu ](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record2objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
 {style="table-layout:auto"}
 
@@ -240,7 +240,7 @@ Sie können [berechnete Felder](../../../../data-prep/ui/mapping.md#calculated-f
 
 Das Feld `genderCode` enthält beispielsweise zwei Optionen:
 
-| Wert | Kennzeichnung |
+| Wert | Label |
 | --- | --- |
 | 1 | `male` |
 | 2 | `female` |

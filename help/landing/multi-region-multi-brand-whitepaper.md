@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform für Unternehmen mit mehreren Regionen und mehreren Marken
 description: Erfahren Sie, wie Sie Ihre Implementierungsteams mit den Tools und Erkenntnissen ausstatten können, die für eine effektive Navigation durch die Feinheiten von Adobe Experience Platform erforderlich sind.
-source-git-commit: e930b070f18e220cc1fa97bb0183520d495f33be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '5325'
 ht-degree: 1%
@@ -28,14 +28,17 @@ Wenn Sie ein Unternehmen mit mehreren Marken und mehreren Regionen betreiben, ge
 Beim Untersuchen von Bereitstellungsoptionen müssen Sie die Rollen verstehen und berücksichtigen, die mit Experience Platform und plattformbasierten Anwendungen interagieren werden. Die Gestaltung ihrer Erfahrungen auf der Grundlage ihrer Rollen und Interessen stellt eine erfolgreiche Implementierung sicher. Im Folgenden finden Sie drei wichtige Rollen, die Sie bei der Untersuchung der Optionen berücksichtigen sollten:
 
 **Mary, die Marketingexpertin:**
+
 - Schwerpunkt: Kundenakquise und skalierte Erlebnispersonalisierung.
 - Ziele: Erstellen umfassender Profile, Steigerung der Medieneffizienz.
 
 **Ted, der Technologe**
+
 - Schwerpunkt: Organisatorisches Daten-Management.
 - Ziele: Gewährleistung der Compliance, Verwaltung von Datensilos, Wartung verschiedener Geschäftsbereiche.
 
 **Dan, der Datenarchitekt**
+
 - Schwerpunkt: Datengenauigkeit und -qualität.
 - Ziele: Gewährleistung von Datenschutz und Vertrauen, Entwerfen von Schemata und Datenmodellen, Verwalten von Datenquellen.
 
@@ -83,7 +86,7 @@ Falls gewünscht, sollten Sie granulare Zugriffssteuerungen hinzufügen, um den 
 
 **Entwicklungslebenszyklus mit Entwicklungs-Sandboxes**
 
-Eine Entwicklungs-Sandbox verhält sich in allen funktionalen Aspekten genauso wie eine Produktions-Sandbox. Der Unterschied besteht darin, dass es einige vertragliche Leitplanken gibt, die Sie innerhalb Ihrer Lizenzbeschränkungen halten. Sie wurde ausschließlich für die Entwicklung und Tests mit Nicht-Produktionsprofilen entwickelt und unterstützt bis zu 10 % Ihrer lizenzierten Profilverpflichtung (kumulativ über alle autorisierten Entwicklungs-Sandboxes gemessen). Weitere Informationen und Leitplanken finden Sie in der [Sandbox-Übersichtsdokumentation](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/home) und auf der [Produktbeschreibungsseite](https://helpx.adobe.com/de/legal/product-descriptions.html) für Berechtigungsdetails.
+Eine Entwicklungs-Sandbox verhält sich in allen funktionalen Aspekten genauso wie eine Produktions-Sandbox. Der Unterschied besteht darin, dass es einige vertragliche Leitplanken gibt, um Sie innerhalb Ihrer Lizenzbeschränkungen zu halten. Sie wurde ausschließlich für die Entwicklung und Tests mit Nicht-Produktionsprofilen entwickelt und unterstützt bis zu 10 % Ihrer lizenzierten Profilverpflichtung (kumulativ über alle autorisierten Entwicklungs-Sandboxes gemessen). Weitere Informationen und Leitplanken finden Sie in der [Sandbox-Übersichtsdokumentation](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/home) und auf der [Produktbeschreibungsseite](https://helpx.adobe.com/de/legal/product-descriptions.html) für Berechtigungsdetails.
 
 Sie können mehrere Entwicklungs-Sandboxes (bis zu 4 in diesem Unternehmensbeispiel, da wir eine einzige Produktions-Sandbox verwenden) für den Entwicklungs- und Testlebenszyklus verwenden.
 
@@ -99,7 +102,7 @@ Mit der Sandbox-Tooling-Funktion können Sie verschiedene Objekte auswählen und
 
 Sie haben die Möglichkeit, Experience Platform-APIs zur Automatisierung von Sandbox-Bereitstellungen und Konfigurationsaufgaben zu verwenden. APIs ermöglichen eine programmierbare Steuerung für sich wiederholende Aufgaben wie das Exportieren, Importieren oder Ändern von Sandbox-Konfigurationen und bieten so Flexibilität, wenn Sie automatisierte Workflows bevorzugen.
 
-Weitere Informationen zum Sandbox-Tooling finden Sie in der [Sandbox-Tooling-Dokumentation](https://experienceleague.adobe.com/de/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Weitere Informationen zum Sandbox-Tooling finden Sie in der [Sandbox-Tooling-Dokumentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Paket erstellen](./images/whitepaper/create-package.png) | ![CDP-Listenpakete](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -226,11 +229,11 @@ Darüber hinaus können Sie Experience Platform Segment Match verwenden, eine Fu
 
 Dieser Segmentfreigabedienst ermöglicht es zwei oder mehr Benutzern, Segmentdaten auf sichere, verwaltete und datenschutzfreundliche Weise auszutauschen.
 
-Weitere Informationen zur Funktion Segment Match finden Sie in der [Dokumentation zu Segment Match](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/ui/segment-match/overview).
+Weitere Informationen zur Funktion Segment Match finden Sie in der [Dokumentation zu Segment Match](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Eine Mischung aus Ansätzen für globale Operationen, regionale und markenspezifische
 
-Viele Unternehmen mit mehreren Marken sind auf globaler Ebene tätig und streben daher häufig eine Mischung aus einheitlichen und isolierten Datenmanagement-Ansätzen an. In diesem Szenario sollen Daten für mehrere Regionen oder Länder getrennt werden. Marken innerhalb des Unternehmens können damit rechnen, ausschließlich mit den Daten zu arbeiten, die mit ihrer jeweiligen Marke verknüpft sind, und das alles innerhalb derselben Datengrenzen einer Region oder eines Landes. Dieser Ansatz ermöglicht ein zentralisiertes regionales oder länderspezifisches Daten-Management und erleichtert gleichzeitig markenspezifische Marketing- und Datenoperationen. Es ist ein Modell, das die Vorteile eines einheitlichen Daten-Managements mit der Notwendigkeit einer marken- und regionsspezifischen Isolation kombiniert.
+Viele Unternehmen mit mehreren Marken sind auf globaler Ebene tätig und streben daher häufig eine Mischung aus einheitlichen und isolierten Datenmanagement-Ansätzen an. In diesem Szenario sollen Daten für mehrere Regionen oder Länder getrennt werden. Marken innerhalb des Unternehmens können damit rechnen, ausschließlich mit den Daten zu arbeiten, die mit ihrer jeweiligen Marke verknüpft sind, und das alles innerhalb derselben Datengrenzen einer Region oder eines Landes. Dieser Ansatz ermöglicht ein zentralisiertes regionales oder länderspezifisches Daten-Management und erleichtert gleichzeitig markenspezifische Marketing- und Datenoperationen. Dieses Modell kombiniert die Vorteile eines einheitlichen Daten-Managements mit der Notwendigkeit einer marken- und regionsspezifischen Isolierung.
 
 Angesichts dieser unterschiedlichen Anforderungen kann Experience Platform so konfiguriert werden, dass Sie über eine hochgradig anpassbare und flexible Datenverwaltungslösung verfügen, mit der Mehrmarken- und Multiregionenunternehmen Ihr Unternehmen effektiv innerhalb der Plattform repräsentieren können. Unabhängig davon, ob es darum geht, die kollektiven Kundendaten zu maximieren, eine strikte Datenisolierung aufrechtzuerhalten oder ein Gleichgewicht zwischen ihnen zu erreichen, Experience Platform ist für die vielfältigen Anforderungen Ihres Unternehmens gerüstet.
 
@@ -264,7 +267,7 @@ Rollen und Benutzerberechtigungen:
 
 - Erstellen Sie Rollen und gewähren Sie nur Zugriff auf bestimmte Funktionen für die richtige Rolle. Beispielsweise erhielten die Benutzerrollen &quot;**Marketer—Germany**&quot; und &quot;**Marketer—France**&quot; nur die Berechtigung zum Erstellen, Anzeigen und Verwalten von Zielgruppen für Länderdaten, die durch eine Kombination aus Zugriffssteuerung auf Feldebene, Zugriffssteuerung auf Objektebene und Standard-Zielgruppen ermöglicht wird.
 
-- Erstellen Sie die Rolle **Technologe - Global** und gewähren Sie die richtigen Berechtigungen zum Erstellen und Verwalten von Schemas, Datensätzen, Richtlinien, Quellen usw. Diese Rolle wäre für alle erforderlichen Administrations- und Konfigurationsvorgänge verantwortlich.
+- Erstellen Sie die Rolle &quot;**Technologe - Global** und gewähren Sie die richtigen Berechtigungen zum Erstellen und Verwalten von Schemas, Datensätzen, Richtlinien, Quellen usw. Diese Rolle wäre für alle erforderlichen Administrations- und Konfigurationsvorgänge verantwortlich.
 
 ###### Schema-Design und attributbasierte Zugriffssteuerung: Zugriffssteuerung auf Feldebene
 
@@ -285,23 +288,23 @@ Schema für individuelles XDM-Profil:
 ```
 \- PII
 \- Germany
-	\- name --> Label: "Germany"
-	\- email --> Label: "Germany"
-	\- birthdate --> Label: "Germany"
+    \- name --> Label: "Germany"
+    \- email --> Label: "Germany"
+    \- birthdate --> Label: "Germany"
 
 \- France
-	\- name --> Label: "France"
-	\- email --> Label: "France"
-	\- birthdate --> Label: "France"
+    \- name --> Label: "France"
+    \- email --> Label: "France"
+    \- birthdate --> Label: "France"
 
 \- Netherland
-	\- name --> Label: "Netherland", "Germany"
-	\- email --> Label: "Netherland", "Germany"
-	\- birthdate --> Label: "Netherland", "Germany"
+    \- name --> Label: "Netherland", "Germany"
+    \- email --> Label: "Netherland", "Germany"
+    \- birthdate --> Label: "Netherland", "Germany"
 
 \- Loyalty
-	\- member
-	\- registrationDate
+    \- member
+    \- registrationDate
 ```
 
 ###### Zielgruppen: Attributbasierte Zugriffssteuerung verwenden: Zugriffssteuerung auf Objektebene zur Steuerung des Zugriffs auf marken-/länderspezifische Zielgruppen
@@ -431,7 +434,7 @@ Experience Platform bietet Unternehmen ein robustes Framework, um Kundendaten ü
 
    - Sie müssen sorgfältig abwägen, ob **mehrere Organisations-IDs oder mehrere Sandboxes** bereitgestellt werden sollen, je nach Datenresidenz, Compliance und betrieblichen Anforderungen.
 
-   - **Organisations-IDs** bieten vollständige Isolierung **&#x200B; während Multi-Sandbox-Setups innerhalb eines gemeinsamen Governance-Frameworks für operative Flexibilität sorgen**.
+   - **Organisations-IDs** bieten vollständige Isolierung** während Multi-Sandbox-Setups innerhalb eines gemeinsamen Governance-Frameworks für operative Flexibilität sorgen**.
 
 ## Abschließende Gedanken
 
