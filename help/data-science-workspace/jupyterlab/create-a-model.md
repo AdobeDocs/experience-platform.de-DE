@@ -69,7 +69,7 @@ Der Rest dieses Tutorials behandelt die folgenden Dateien, die im Notebook für 
 
 Im folgenden Video-Tutorial wird das Luma-Tendenzmodell-Notebook erläutert:
 
->[!VIDEO](https://video.tv.adobe.com/v/333570)
+>[!VIDEO](https://video.tv.adobe.com/v/3452501?captions=ger)
 
 ### Anforderungsdatei {#requirements-file}
 
