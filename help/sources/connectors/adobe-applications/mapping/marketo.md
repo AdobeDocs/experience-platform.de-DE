@@ -23,7 +23,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 
 Die [!DNL Marketo]-Quelle unterstützt jetzt zusätzliche Standardaktivitäten. Um Standardaktivitäten zu verwenden, müssen Sie Ihr Schema mithilfe des [Dienstprogramms zur automatischen Schemaerstellung](../marketo/marketo-namespaces.md) aktualisieren, denn wenn Sie einen neuen `activities`-Datenfluss erstellen, ohne Ihr Schema zu aktualisieren, schlagen die Zuordnungsvorlagen fehl, da die neuen Zielfelder nicht in Ihrem Schema vorhanden sind. Wenn Sie sich dafür entscheiden, Ihr Schema nicht zu aktualisieren, können Sie trotzdem einen neuen Datenfluss erstellen und etwaige Fehler ignorieren. Neue oder aktualisierte Felder werden jedoch nicht in Experience Platform aufgenommen.
 
-Weitere Informationen zu den XDM[Klassen und XDM-Feldergruppen finden ](../../../../xdm/classes/experienceevent.md) in der Dokumentation zur XDM Experience Event-Klasse.
+Weitere Informationen zu den XDM[Klassen und XDM-Feldergruppen finden &#x200B;](../../../../xdm/classes/experienceevent.md) in der Dokumentation zur XDM Experience Event-Klasse.
 
 >[!NOTE]
 >
