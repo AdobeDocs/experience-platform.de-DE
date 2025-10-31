@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zuordnen von Feldern für die Marketo Engage-Quelle
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 41%
@@ -23,7 +23,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 
 Die [!DNL Marketo]-Quelle unterstützt jetzt zusätzliche Standardaktivitäten. Um Standardaktivitäten zu verwenden, müssen Sie Ihr Schema mithilfe des [Dienstprogramms zur automatischen Schemaerstellung](../marketo/marketo-namespaces.md) aktualisieren, denn wenn Sie einen neuen `activities`-Datenfluss erstellen, ohne Ihr Schema zu aktualisieren, schlagen die Zuordnungsvorlagen fehl, da die neuen Zielfelder nicht in Ihrem Schema vorhanden sind. Wenn Sie sich dafür entscheiden, Ihr Schema nicht zu aktualisieren, können Sie trotzdem einen neuen Datenfluss erstellen und etwaige Fehler ignorieren. Neue oder aktualisierte Felder werden jedoch nicht in Experience Platform aufgenommen.
 
-Weitere Informationen zu den XDM[Klassen und XDM-Feldergruppen finden &#x200B;](../../../../xdm/classes/experienceevent.md) in der Dokumentation zur XDM Experience Event-Klasse.
+Weitere Informationen zu den XDM[Klassen und XDM-Feldergruppen finden ](../../../../xdm/classes/experienceevent.md) in der Dokumentation zur XDM Experience Event-Klasse.
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ Weitere Informationen zu den XDM[Klassen und XDM-Feldergruppen finden &#x200B;](
 | primaryAttributeValueId bei activityTypeId in (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → BLOCKIERT</li><li>1003 → SPAM AUF SOURCE GESPERRT</li><li>1004 → SPAM IN NACHRICHT GESPERRT</li><li>E-MAIL-ADRESSE → 2003 UNGÜLTIG</li><li>E-MAIL→ADRESSFEHLER 2001</li><li>*` &rarr;`UNBEKANNTER GRUND FÜR EINEN BOUNCE</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → NICHT AKZEPTIERT</li><li>3001 → POSTFACH VOLL</li><li>3004 → TIMEOUT AUFGETRETEN</li><li>4003 → DNS-FEHLER</li><li>4002 → NACHRICHT ZU GROSS</li><li>4006 → RICHTLINIENVERLETZUNG</li><li>4999 → VORÜBERGEHENDER FEHLER</li><li>9999 → FEHLERHAFTE ANTWORT ERHALTEN</li><li>*→ UNBEKANNTER GRUND FÜR SOFTBOUNCE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → BLOCKIERT</li><li>1003 → SPAM AUF SOURCE GESPERRT</li><li>1004 → SPAM IN NACHRICHT GESPERRT</li><li>E-MAIL-ADRESSE → 2003 UNGÜLTIG</li><li>E-MAIL→ADRESSFEHLER 2001</li><li> `&rarr;` UNBEKANNTER GRUND FÜR EINEN BOUNCE</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → NICHT AKZEPTIERT</li><li>3001 → POSTFACH VOLL</li><li>3004 → TIMEOUT AUFGETRETEN</li><li>4003 → DNS-FEHLER</li><li>4002 → NACHRICHT ZU GROSS</li><li>4006 → RICHTLINIENVERLETZUNG</li><li>4999 → VORÜBERGEHENDER FEHLER</li><li>9999 → FEHLERHAFTE ANTWORT ERHALTEN</li><li> → UNBEKANNTER GRUND FÜR SOFTBOUNCE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |
