@@ -2,7 +2,7 @@
 title: Quellen-Fehlermeldungen
 description: Erfahren Sie mehr über die Fehlermeldungen, die bei Verwendung des Flow Service für Quellen auftreten können.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 70%
@@ -24,8 +24,8 @@ Dieses Dokument enthält einen Katalog mit Fehlermeldungen, Beschreibungen und e
 | `1004-415` | Nicht unterstützter Medientyp | Das angegebene Payload-Format wird nicht unterstützt. Bitte die angegebene Anfrage überprüfen und erneut versuchen. |
 | `1005-500` | Interner Fehler | Ein unbekannter Fehler ist aufgetreten. Bitte erneut versuchen und den Support kontaktieren, wenn das Problem weiterhin besteht. |
 | `1006-408` | Zeitüberschreitung der Anfrage | Bei der Verarbeitung der Anfrage ist ein Fehler aufgetreten. Die Zeit für die Anfrage wurde überschritten. Bitte erneut versuchen und den Support kontaktieren, wenn das Problem weiterhin besteht. |
-| `1007-400` | Ungültiger Kopfzeilenparameter | Ein ungültiger Kopfzeilenparameter: {headerName} wurde empfangen. Bitte die Kopfzeilenparameter überprüfen und erneut versuchen. |
-| `1008-401` | | Ungültiges Autorisierungs-Token | Das Autorisierungs-Token hat keinen Zugriff auf diese Organisation oder die Organisation existiert nicht. Bitte sicherstellen, dass die Organisation vorhanden ist, oder Admin kontaktieren, um Zugriff zu erhalten. |
+| `1007-400` | Ungültiger Kopfzeilenparameter | Ein ungültiger Kopfzeilenparameter: `{headerName}` wurde empfangen. Bitte die Kopfzeilenparameter überprüfen und erneut versuchen. |
+| `1008-401` | Ungültiges Autorisierungs-Token | Das Autorisierungs-Token hat keinen Zugriff auf diese Organisation oder die Organisation existiert nicht. Bitte sicherstellen, dass die Organisation vorhanden ist, oder Admin kontaktieren, um Zugriff zu erhalten. |
 | `1009-403` | Die IMS-Organisations-ID fehlt oder ist leer | Die Anfragekopfzeile für die Organisations-ID fehlt oder ist leer. Bitte den Wert der Kopfzeile aktualisieren und erneut versuchen. |
 | `1010-500` | Ungültige detaillierte Nachricht | Der Parameter in der detaillierten Nachricht wurde nicht ordnungsgemäß angegeben. Bitte den Parameter in der detaillierten Nachricht überprüfen und erneut versuchen. |
 | `1011-503` | Dienst nicht verfügbar | Der Dienst ist derzeit nicht verfügbar. Bitte erneut versuchen und den Support kontaktieren, wenn das Problem weiterhin besteht. |
@@ -44,7 +44,7 @@ Dieses Dokument enthält einen Katalog mit Fehlermeldungen, Beschreibungen und e
 | `1104-504` | Gateway-Zeitüberschreitung | Es ist eine Gateway-Zeitüberschreitung aufgetreten. Bitte erneut versuchen und den Support kontaktieren, wenn das Problem weiterhin besteht. |
 | `1105-401` | Nicht autorisiert | Der Benutzer ist nicht autorisiert. {detailedMessage} |
 | `1106-403` | Verboten | Der angeforderte Vorgang ist verboten. {detailedMessage} |
-| `1107-412` | Vorbedingung fehlgeschlagen | Die durch die Kopfzeilen If-Unmodified-Since oder If-None-Match definierte Bedingung ist nicht erfüllt. {detailedMessage} |
+| `1107-412` | Vorbedingung fehlgeschlagen | Die durch die Kopfzeilen If-Unmodified-Since oder If-None-Match definierte Bedingung ist nicht erfüllt. `{detailedMessage}` |
 
 ## Verschlüsselungsfehler
 

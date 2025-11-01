@@ -1,13 +1,13 @@
 ---
 title: Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket
 description: Erstellen Sie einen benutzerdefinierten Web-SDK-Build, der nur die benötigten Module enthält.
-source-git-commit: 0f77023b07102ac2bc812034afacb1522ef209e5
+exl-id: 0ba5ae55-9ec0-41b6-9675-e76ade8ca4cd
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 7%
 
 ---
-
 
 # Erstellen eines benutzerdefinierten Web-SDK-Builds
 
@@ -27,7 +27,7 @@ Wenn Sie nur Benutzermetriken erfassen müssen und nicht planen, Adobe Target od
 
 ## Voraussetzungen {#prerequisites}
 
-Zum Erstellen eines benutzerdefinierten Web-SDK-Builds benötigen Sie das NPM-Paket für Web-SDK . Stellen Sie sicher, dass [Node.js](https://nodejs.org/en/download/package-manager/all) auf Ihrem Computer installiert ist. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Installieren von Web SDK mithilfe &#x200B;](npm.md) NPM-Pakets .
+Zum Erstellen eines benutzerdefinierten Web-SDK-Builds benötigen Sie das NPM-Paket für Web-SDK . Stellen Sie sicher, dass [Node.js](https://nodejs.org/en/download/package-manager/all) auf Ihrem Computer installiert ist. Weitere Informationen finden Sie in der Dokumentation [ Installieren von Web SDK mithilfe ](npm.md) NPM-Pakets .
 
 ## Komponenten und Abhängigkeiten {#components-dependencies}
 
@@ -37,13 +37,13 @@ Die folgende Tabelle zeigt die Beziehung zwischen Web SDK-Modulen und den darin 
 
 | Modulabhängigkeit | Konfigurationsparameter | Commands | Größenklasse |
 |---------|----------|---------|---------|
-| Aktivitätssammler | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | K. A. | Mittel |
+| Aktivitätssammler | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | k. A. | Mittel |
 | Zielgruppen | K. A. | K. A. | Gering |
-| Kontext | [`context`](../commands/configure/context.md) | K. A. | Gering |
-| Regel-Engine | `personalizationStorageEnabled` | | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Mittel |
-| Ereignis-Zusammenführung | K. A. | `createEventMergeId` | Gering |
-| Media Analytics Bridge | K. A. | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | Groß |
-| Personalisierung | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul> | K. A. | Groß |
+| Kontext | [`context`](../commands/configure/context.md) | k. A. | Gering |
+| Regel-Engine | `personalizationStorageEnabled` | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Mittel |
+| Ereignis-Zusammenführung | k. A. | `createEventMergeId` | Gering |
+| Media Analytics Bridge | k. A. | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | Groß |
+| Personalisierung | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul> | k. A. | Groß |
 | Einverständnis | [`defaultConsent`](../commands/configure/defaultconsent.md) | [`setConsent`](../commands/setconsent.md) | Gering |
 | Streaming-Medien | [`streamingMedia`](../commands/configure/streamingmedia.md) | <ul><li>[`createMediaSession`](../commands/createmediasession.md)</li><li>[`sendMediaEvent`](../commands/sendmediaevent.md)</li></ul> | Groß |
 
@@ -71,4 +71,3 @@ Die folgende Tabelle zeigt die Beziehung zwischen Web SDK-Modulen und den darin 
 1. Nachdem Sie den Speicherort bestätigt haben, wird Ihr benutzerdefinierter Build generiert und gespeichert.
 
    ![Bild eines Terminals, das den Speicherort des benutzerdefinierten Builds anzeigt.](../assets/custom-build/saved.png)
-

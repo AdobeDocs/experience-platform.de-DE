@@ -2,9 +2,9 @@
 title: Verbinden der Data Landing Zone mit Adobe Experience Platform mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit der Data Landing Zone verbinden.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1417'
 ht-degree: 13%
 
 ---
@@ -28,13 +28,13 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 Für dieses Tutorial müssen Sie auch das Handbuch unter [Erste Schritte mit Experience Platform-APIs](../../../../../landing/api-guide.md) lesen, um zu erfahren, wie Sie sich bei Experience Platform-APIs authentifizieren und die in der Dokumentation bereitgestellten Beispielaufrufe interpretieren.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine [!DNL Data Landing Zone]-Quellverbindung erstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Data Landing Zone]-API erfolgreich eine [!DNL Flow Service]-Quellverbindung erstellen zu können.
 
 ## Abrufen einer verwendbaren Landing Zone
 
 >[!IMPORTANT]
 >
->Sie müssen über die Zugriffssteuerungsberechtigung **[!UICONTROL Quellen verwalten]** verfügen, um die [!DNL Data Landing Zone]-APIs verwenden und `type=user_drop_zone` abrufen zu können. Weitere Informationen finden Sie unter [Zugriffskontrolle - Übersicht](../../../../../access-control/home.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Sie müssen über die **[!UICONTROL Manage Sources]** Zugriffssteuerungsberechtigung verfügen, um die [!DNL Data Landing Zone]-APIs verwenden und `type=user_drop_zone` abrufen zu können. Weitere Informationen finden Sie unter [Zugriffskontrolle - Übersicht](../../../../../access-control/home.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Der erste Schritt bei der Verwendung von APIs für den Zugriff auf [!DNL Data Landing Zone] besteht darin, eine GET-Anfrage an den `/landingzone`-Endpunkt der [!DNL Connectors]-API zu stellen und dabei `type=user_drop_zone` als Teil Ihres Anfrage-Headers bereitzustellen.
 
@@ -395,7 +395,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Parameter | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | Die Verbindungsspezifikations-ID, die [!DNL Data Landing Zone] entspricht. Diese feste ID lautet: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | Die Verbindungsspezifikations-ID, die [!DNL Data Landing Zone] entspricht. Diese feste ID lautet: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |  |
 | `{OBJECT_TYPE}` | Der Typ des Objekts, auf das Sie zugreifen möchten. | `file` |
 | `{OBJECT}` | Der Pfad und der Name des Objekts, auf das Sie zugreifen möchten. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | Der Typ der Datei. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -487,8 +487,8 @@ In der folgenden Tabelle sind verschiedene Szenarien aufgeführt, auf die Sie st
 
 | `determineProperties` | `queryParams` | Antwort |
 | --- | --- | --- |
-| True | K. A. | Wenn `determineProperties` als Abfrageparameter angegeben wird, erfolgt die Erkennung der Dateieigenschaften, und die Antwort gibt einen neuen `properties` zurück, der Informationen zum Dateityp, zum Komprimierungstyp und zum Spaltentrennzeichen enthält. |
-| K. A. | True | Wenn die Werte für Dateityp, Komprimierungstyp und Spaltentrennzeichen manuell als Teil von `queryParams` bereitgestellt werden, werden sie zum Generieren des Schemas verwendet und dieselben Eigenschaften werden als Teil der Antwort zurückgegeben. |
+| True | k. A. | Wenn `determineProperties` als Abfrageparameter angegeben wird, erfolgt die Erkennung der Dateieigenschaften, und die Antwort gibt einen neuen `properties` zurück, der Informationen zum Dateityp, zum Komprimierungstyp und zum Spaltentrennzeichen enthält. |
+| k. A. | True | Wenn die Werte für Dateityp, Komprimierungstyp und Spaltentrennzeichen manuell als Teil von `queryParams` bereitgestellt werden, werden sie zum Generieren des Schemas verwendet und dieselben Eigenschaften werden als Teil der Antwort zurückgegeben. |
 | True | True | Wenn beide Optionen gleichzeitig ausgeführt werden, wird ein Fehler zurückgegeben. |
 | K. A. | K. A. | Wenn keine der beiden Optionen bereitgestellt wird, wird ein Fehler zurückgegeben, da es keine Möglichkeit gibt, Eigenschaften für die Antwort abzurufen. |
 
@@ -517,7 +517,7 @@ curl -X GET \
 
 Bei einer erfolgreichen Antwort wird die Struktur der abgefragten Datei zurückgegeben, einschließlich Dateinamen und Datentypen sowie eines `properties` Schlüssels, der Informationen zu `fileType`, `compressionType` und `columnDelimiter` enthält.
 
-+++Hier klicken
++++Mich anklicken
 
 ```json
 {
@@ -673,4 +673,4 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre [!DNL Data Landing Zone]-Anmeldeinformationen abgerufen, die Dateistruktur untersucht, um die Datei zu finden, die Sie in Experience Platform importieren möchten, und eine Quellverbindung erstellt, um mit dem Übertragen Ihrer Daten an Experience Platform zu beginnen. Sie können jetzt mit dem nächsten Tutorial fortfahren, in dem Sie erfahren, wie Sie [einen Datenfluss erstellen, um Cloud-Speicherdaten mithilfe der -API  [!DNL Flow Service]  Experience Platform zu &#x200B;](../../collect/cloud-storage.md).
+In diesem Tutorial haben Sie Ihre [!DNL Data Landing Zone]-Anmeldeinformationen abgerufen, die Dateistruktur untersucht, um die Datei zu finden, die Sie in Experience Platform importieren möchten, und eine Quellverbindung erstellt, um mit dem Übertragen Ihrer Daten an Experience Platform zu beginnen. Sie können jetzt mit dem nächsten Tutorial fortfahren, in dem Sie erfahren, wie Sie [einen Datenfluss erstellen, um Cloud-Speicherdaten mithilfe der -API  [!DNL Flow Service]  Experience Platform zu ](../../collect/cloud-storage.md).

@@ -2,7 +2,7 @@
 title: Verbinden von Salesforce Marketing Cloud mit Experience Platform mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Ihr Salesforce Marketing Cloud-Konto mithilfe von APIs mit Experience Platform verbinden.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 6%
@@ -24,18 +24,18 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Azure Synapse Analytics] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Azure Synapse Analytics]-API eine Verbindung zu [!DNL Flow Service] herstellen zu können.
 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
-Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit [!DNL Salesforce Marketing Cloud] verbinden zu können.
+Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Salesforce Marketing Cloud]-API erfolgreich mit [!DNL Flow Service] verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Salesforce Marketing Cloud]  Sie in &#x200B;](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md)Authentifizierungsübersicht“.
+Informationen zur Authentifizierung [[!DNL Salesforce Marketing Cloud]  Sie in ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md)Authentifizierungsübersicht“.
 
 ### Verwenden von Experience Platform-APIs
 
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `auth.params.host` |
+| `auth.params.host` |  |
 | `auth.params.clientId` | Die mit Ihrem [!DNL Salesforce Marketing Cloud] Programm verknüpfte Client-ID. |
 | `auth.params.clientSecret` | Das mit Ihrer [!DNL Salesforce Marketing Cloud]-Anwendung verknüpfte Client-Geheimnis. |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL Salesforce Marketing Cloud]-Verbindung: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
@@ -177,7 +177,7 @@ curl -X POST \
 
 Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung zurück, einschließlich ihrer eindeutigen Kennung (`id`).
 
-+++Beispiel für eine Antwort anzeigen
++++Beispiel für eine Anfrageantwort
 
 ```json
 {
@@ -191,4 +191,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung zurüc
 
 ## Erstellen eines Datenflusses für [!DNL Salesforce Marketing Cloud] Daten
 
-Nachdem Sie Ihr [!DNL Salesforce Marketing Cloud]-Konto erfolgreich verbunden haben, können Sie jetzt [einen Datenfluss erstellen und Daten von Ihrem Marketing-Automatisierungsanbieter in Experience Platform &#x200B;](../../collect/marketing-automation.md).
+Nachdem Sie Ihr [!DNL Salesforce Marketing Cloud]-Konto erfolgreich verbunden haben, können Sie jetzt [einen Datenfluss erstellen und Daten von Ihrem Marketing-Automatisierungsanbieter in Experience Platform ](../../collect/marketing-automation.md).

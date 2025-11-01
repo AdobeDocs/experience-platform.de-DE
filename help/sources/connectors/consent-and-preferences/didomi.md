@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Didomi über die Benutzeroberfläche mit Adob
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '893'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Didomi]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Didomi]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 [!DNL Didomi] ist eine Plattform zur Einverständnis- und Präferenzverwaltung, die Unternehmen dabei hilft, Benutzerentscheidungen in Bezug auf personenbezogene Daten auf Websites, in Apps und internen Tools zu erfassen, zu verwalten und durchzusetzen.
 
@@ -35,7 +35,7 @@ Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, be
 
 ### Konfigurieren von Berechtigungen für Experience Platform
 
-Sie müssen sowohl **[!UICONTROL Quellen anzeigen]** als auch **[!UICONTROL Quellen verwalten]** für Ihr Konto aktiviert haben, um Ihr [!DNL Didomi]-Konto mit Experience Platform zu verbinden. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/ui/overview.md).
+Für Ihr Konto müssen sowohl **[!UICONTROL View Sources]**- als auch **[!UICONTROL Manage Sources]** aktiviert sein, um Ihr [!DNL Didomi] mit Experience Platform verbinden zu können. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/ui/overview.md).
 
 ### Sammeln von Adobe-API-Anmeldeinformationen
 
@@ -51,9 +51,9 @@ Lesen Sie das Handbuch [Erste Schritte mit Experience Platform-APIs](../../../la
 
 Ein **Experience-Datenmodell (XDM)-** definiert die Struktur der Daten, die Sie von [!DNL Didomi] (z. B. Benutzer-IDs, Einverständniszwecke) an Experience Platform senden.
 
-Um ein Schema zu erstellen, wählen Sie [!UICONTROL Schemata] im linken Navigationsbereich der Experience Platform-Benutzeroberfläche aus und klicken Sie auf **[!UICONTROL Schema erstellen]**. Wählen Sie als Nächstes **[!UICONTROL Standard]** als Schematyp aus und wählen Sie dann **[!UICONTROL Manuell]**, um Ihre Felder manuell zu erstellen. Wählen Sie eine Basisklasse für Ihr Schema aus und geben Sie einen Namen für Ihr Schema an.
+Um ein Schema zu erstellen, wählen Sie [!UICONTROL Schemas] im linken Navigationsbereich der Experience Platform-Benutzeroberfläche und anschließend **[!UICONTROL Create schema]** aus. Wählen Sie als Nächstes **[!UICONTROL Standard]** als Schematyp und dann **[!UICONTROL Manual]** aus, um die Felder manuell zu erstellen. Wählen Sie eine Basisklasse für Ihr Schema aus und geben Sie einen Namen für Ihr Schema an.
 
-Aktualisieren Sie das Schema nach der Erstellung, indem Sie eines der erforderlichen Felder hinzufügen. Stellen Sie sicher, dass mindestens ein Feld ein [!UICONTROL Identitätsfeld] ist, um Experience Platform über Ihre primären Identitätswerte zu informieren. Stellen Sie abschließend sicher, dass Sie den Umschalter [!UICONTROL Profil] aktivieren, um Ihre Daten erfolgreich zu speichern.
+Aktualisieren Sie das Schema nach der Erstellung, indem Sie eines der erforderlichen Felder hinzufügen. Stellen Sie sicher, dass mindestens ein Feld ein [!UICONTROL Identity] ist, um Experience Platform über Ihre primären Identitätswerte zu informieren. Stellen Sie abschließend sicher, dass Sie den Umschalter [!UICONTROL Profile] aktivieren, um Ihre Daten erfolgreich zu speichern.
 
 ![create-schema](../../images/tutorials/create/didomi/create-schema.png)
 
@@ -67,7 +67,7 @@ Weitere Informationen finden Sie im Handbuch unter [Erstellen von Schemata in de
 
 Ein **Datensatz** in Experience Platform wird verwendet, um eingehende Daten basierend auf dem von Ihnen definierten Schema zu speichern.
 
-Um einen Datensatz zu erstellen, wählen Sie [!UICONTROL Datensätze] im linken Navigationsbereich der Experience Platform-Benutzeroberfläche aus und klicken Sie dann auf **[!UICONTROL Datensatz erstellen]**. Wählen Sie als Nächstes **[!UICONTROL Datensatz aus Schema erstellen]** und wählen Sie dann Ihr Schema aus, das mit Ihrem neuen Datensatz verknüpft werden soll.
+Um einen Datensatz zu erstellen, klicken Sie im linken Navigationsbereich der Experience Platform-Benutzeroberfläche auf [!UICONTROL Datasets] und wählen Sie dann **[!UICONTROL Create dataset]** aus. Wählen Sie als Nächstes **[!UICONTROL Create dataset from schema]** und dann Ihr Schema aus, das mit Ihrem neuen Datensatz verknüpft werden soll.
 
 ![create-dataset](../../images/tutorials/create/didomi/create-dataset.png)
 
@@ -82,7 +82,7 @@ Um die Kompatibilität mit Experience Platform sicherzustellen, muss Ihr Webhook
 | Feld | Beschreibung | Beispiel |
 | --- | --- | --- | 
 | Client-Geheimnis | Der mit Ihren Adobe-API-Anmeldeinformationen verknüpfte geheime Schlüssel. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
-| API-Schlüssel | Der öffentliche API-Schlüssel, der zum Authentifizieren von Anfragen an Adobe-Services verwendet wird. |
+| API-Schlüssel | Der öffentliche API-Schlüssel, der zum Authentifizieren von Anfragen an Adobe-Services verwendet wird. |  |
 | Gewährungstyp | Die Methode, mit der eine Anwendung ein Zugriffstoken vom Autorisierungs-Server erhält. Legen Sie diesen Wert auf `client_credentials` fest. | `client_credentials` |
 | Anwendungsbereich | Die Autorisierungsumfänge definieren die spezifischen Berechtigungen oder Zugriffsebenen, die eine Anwendung vom API-Anbieter anfordert. | `openid,AdobeID,read_organizations,additional_info.projectedProductContext,session` |
 | Authentifizierungs-Header | Die zusätzlichen Kopfzeilen, die für die Adobe-Token-Anfrage erforderlich sind. | `{"Content-type": "application/x-www-form-urlencoded"}` |

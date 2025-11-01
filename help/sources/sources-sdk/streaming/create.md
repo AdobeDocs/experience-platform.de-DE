@@ -3,10 +3,10 @@ title: Erstellen einer neuen Verbindungsspezifikation für Streaming-SDK mithilf
 description: Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der Flow Service-API und zum Integrieren einer neuen Quelle über Self-Service-Quellen.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 36%
+source-wordcount: '744'
+ht-degree: 37%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Selbstbedienungsquellen-Streaming SDK befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Eine Verbindungsspezifikation stellt die Struktur einer Quelle dar. Sie enthält Informationen zu den Authentifizierungsanforderungen einer Quelle, definiert, wie Quelldaten untersucht und geprüft werden können, und enthält Informationen zu den Attributen einer bestimmten Quelle. Der `/connectionSpecs`-Endpunkt in der [!DNL Flow Service]-API ermöglicht Ihnen die programmgesteuerte Verwaltung der Verbindungsspezifikationen innerhalb Ihrer Organisation.
 
@@ -26,7 +26,7 @@ Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.
 
 ## Sammeln von Artefakten
 
-Um eine neue Streaming-Quelle mithilfe von Selbstbedienungsquellen zu erstellen, müssen Sie sich zunächst mit Adobe abstimmen, ein privates Git-Repository anfordern und sich bei Adobe an den Details zu Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle ausrichten.
+Um eine neue Streaming-Quelle mithilfe von Selbstbedienungsquellen zu erstellen, müssen Sie sich zunächst mit Adobe abstimmen, ein privates Git-Repository anfordern und sich mit Adobe bezüglich Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle abstimmen.
 
 Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukturieren:
 
@@ -42,9 +42,9 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 | Artefakte (Dateinamen) | Beschreibung | Beispiel |
 | --- | --- | --- |
 | {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte im Zusammenhang mit Ihrer Quelle in Ihrem privaten Git-Repository enthalten. | `medallia` |
-| {your_source}-category.txt | Die Kategorie, zu der Ihre Quelle gehört, formatiert als Textdatei. **Hinweis**: Wenn Sie glauben, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um das Problem zu besprechen. | `medallia-category.txt` Geben Sie in der Datei die Kategorie Ihrer Quelle an, z. B.: `streaming`. |
-| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Medallia] ist eine Marketing-Automatisierungsquelle, mit der Sie [!DNL Medallia] auf Experience Platform übertragen können. |
-| {your_source}-icon.svg | Das Bild, das zur Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |
+| {your_source}-category.txt | Die Kategorie, zu der Ihre Quelle gehört, formatiert als Textdatei. **Hinweis**: Wenn Sie der Meinung sind, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich an den Adobe-Support, um Folgendes zu besprechen. | `medallia-category.txt` Geben Sie in der Datei die Kategorie Ihrer Quelle an, z. B.: `streaming`. |
+| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Medallia] ist eine Marketing-Automatisierungsquelle, mit der Sie [!DNL Medallia] in Experience Platform übertragen können. |
+| {your_source}-icon.svg | Das Bild, das zur Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |  |
 | {your_source}-label.txt | Der Name Ihrer Quelle, wie er im Experience Platform-Quellkatalog angezeigt werden sollte. | Medallien |
 | {your_source}-connectionSpec.json | Eine JSON-Datei, die die Verbindungsspezifikation Ihrer Quelle enthält. Diese Datei ist zunächst nicht erforderlich, da Sie während der Ausführung dieses Handbuchs Ihre Verbindungsspezifikation ausfüllen werden. | `medallia-connectionSpec.json` |
 
@@ -54,7 +54,7 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 >
 >Während des Testzeitraums Ihrer Verbindungsspezifikation können Sie anstelle von Schlüsselwerten `text` in der Verbindungsspezifikation verwenden.
 
-Nachdem Sie die erforderlichen Dateien zu Ihrem privaten Git-Repository hinzugefügt haben, müssen Sie eine Pull-Anfrage (PR) für das Adobe erstellen, um sie zu überprüfen. Wenn Ihr Pull Request genehmigt und zusammengeführt wird, erhalten Sie eine ID, die für Ihre Verbindungsspezifikation verwendet werden kann, um auf den Titel, die Beschreibung und das Symbol Ihrer Quelle zu verweisen.
+Nachdem Sie die erforderlichen Dateien zu Ihrem privaten Git-Repository hinzugefügt haben, müssen Sie eine Pull-Anfrage (PR) erstellen, damit Adobe sie überprüfen kann. Wenn Ihr Pull Request genehmigt und zusammengeführt wird, erhalten Sie eine ID, die für Ihre Verbindungsspezifikation verwendet werden kann, um auf den Titel, die Beschreibung und das Symbol Ihrer Quelle zu verweisen.
 
 Führen Sie anschließend die unten beschriebenen Schritte aus, um Ihre Verbindungsspezifikation zu konfigurieren. Weitere Anleitungen zu den verschiedenen Funktionen, die Sie Ihrer Quelle hinzufügen können, z. B. erweiterte Planung, benutzerdefiniertes Schema oder verschiedene Paginierungstypen, finden Sie im Handbuch unter [Konfigurieren von Quellspezifikationen](../config/sourcespec.md).
 
@@ -72,7 +72,7 @@ Nachdem Sie die erforderlichen Artefakte gesammelt haben, kopieren Sie die unten
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/de-DE/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/de-DE/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ Bei einer erfolgreichen Antwort wird die neu erstellte Verbindungsspezifikation 
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/de-DE/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false

@@ -2,10 +2,10 @@
 title: Cloud Connector-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Cloud Connector-Ereignisweiterleitungserweiterung in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: e832694fed5dbb86b5ed544473d6a79e500a6222
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 79%
+source-wordcount: '1681'
+ht-degree: 75%
 
 ---
 
@@ -25,7 +25,7 @@ In diesem Abschnitt wird der Aktionstyp „Daten senden“ beschrieben, der in d
 
 ### Anfragetyp
 
-Zur Auswahl des für den Endpunkt erforderlichen Anfragetyps wählen Sie den entsprechenden Typ in der Dropdown-Liste [!UICONTROL Anfragetyp] aus.
+Zur Auswahl des für den Endpunkt erforderlichen Anfragetyps wählen Sie den entsprechenden Typ in der Dropdown-Liste [!UICONTROL Request Type] aus.
 
 | Methode | Beschreibung |
 |---|---|
@@ -45,15 +45,15 @@ Verwenden Sie die einzelnen Registerkarten (Abfrageparameter, Header und Nachric
 
 #### Abfrageparameter
 
-Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie als Abfragezeichenfolge-Parameter senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um auf den Wert eines Datenelements mit dem Namen „siteSection“ als Schlüssel oder Wert zu verweisen, geben Sie `{{siteSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
+Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie als Abfragezeichenfolge-Parameter senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um den Wert eines Datenelements mit dem Namen „siteSection“ als Schlüssel oder Wert zu referenzieren, geben Sie `{{siteSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
 
-Um weitere Abfrageparameter hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
+Um weitere Abfrageparameter hinzuzufügen, wählen Sie **[!UICONTROL Add Another]** aus.
 
 #### Header
 
-Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie als Header senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um auf den Wert eines Datenelements mit dem Namen „pageName“ als Schlüssel oder Wert zu verweisen, geben Sie `{{pageName}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
+Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie als Header senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um den Wert eines Datenelements mit dem Namen „pageName“ als Schlüssel oder Wert zu referenzieren, geben Sie `{{pageName}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
 
-Um weitere Header hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
+Um weitere Header hinzuzufügen, wählen Sie **[!UICONTROL Add Another]** aus.
 
 In der folgenden Tabelle sind die vordefinierten Header aufgeführt. Sie sind nicht auf diese Header beschränkt und können bei Bedarf eigene benutzerdefinierte Header hinzufügen. Diese stehen jedoch als Unterstützung zur Verfügung.
 
@@ -90,12 +90,12 @@ In der folgenden Tabelle sind die vordefinierten Header aufgeführt. Sie sind ni
 | [If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
 | [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
 | [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) | |
-| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Implementierungsspezifischer Header, der an jeder Stelle der Anfrage-Antwort-Kette verschiedene Effekte haben kann. Wird für Abwärtskompatibilität mit HTTP/1.0-Caches verwendet, bei denen der Cache-Control-Header noch nicht vorhanden ist. | |
-| [Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [Bereich](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Gibt den Teil eines Dokuments an, der vom Server zurückgegeben werden soll. | |
-| [Referrer](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Referer) | Die Adresse der vorherigen Web-Seite, von der einem Link zur aktuell angeforderten Seite gefolgt wurde. | |
+| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Implementierungsspezifischer Header, der an jeder Stelle der Anfrage-Antwort-Kette verschiedene Effekte haben kann. Wird für Abwärtskompatibilität mit HTTP/1.0-Caches verwendet, bei denen der Cache-Control-Header noch nicht vorhanden ist. |
+| [Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |  |
+| [Bereich](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Gibt den Teil eines Dokuments an, der vom Server zurückgegeben werden soll. |
+| [Referrer](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Referer) | Die Adresse der vorherigen Web-Seite, von der einem Link zur aktuell angeforderten Seite gefolgt wurde. |
 | TE | Gibt die Übertragungskodierungen an, die der Benutzeragent akzeptiert. (Sie könnten es informell `Accept-Transfer-Encoding` nennen, was intuitiver wäre). |
-| Upgrade | Das relevante RFC-Dokument für das [`Upgrade`-Header-Feld ist RFC 7230, Abschnitt 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Der Standard legt Regeln für die Aktualisierung oder den Wechsel zu einem anderen Protokoll in der aktuellen Client-, Server- und Transportprotokollverbindung fest. Dieser Header-Standard ermöglicht es beispielsweise einem Client, von HTTP 1.1 zu HTTP 2.0 zu wechseln, vorausgesetzt, der Server entscheidet, das `Upgrade`-Header-Feld zu bestätigen und zu implementieren. Keine der Parteien muss die im `Upgrade`-Header-Feld angegebenen Bedingungen akzeptieren. Es kann sowohl in Client- als auch in Server-Headern verwendet werden. Wenn das `Upgrade`-Header-Feld angegeben ist, MUSS der Absender auch das `Connection`-Header-Feld mit der `upgrade`-Option senden. | |
+| Upgrade | Das relevante RFC-Dokument für das [`Upgrade`-Header-Feld ist RFC 7230, Abschnitt 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Der Standard legt Regeln für die Aktualisierung oder den Wechsel zu einem anderen Protokoll in der aktuellen Client-, Server- und Transportprotokollverbindung fest. Dieser Header-Standard ermöglicht es beispielsweise einem Client, von HTTP 1.1 zu HTTP 2.0 zu wechseln, vorausgesetzt, der Server entscheidet, das `Upgrade`-Header-Feld zu bestätigen und zu implementieren. Keine der Parteien muss die im `Upgrade`-Header-Feld angegebenen Bedingungen akzeptieren. Es kann sowohl in Client- als auch in Server-Headern verwendet werden. Wenn das `Upgrade`-Header-Feld angegeben ist, MUSS der Absender auch das `Connection`-Header-Feld mit der `upgrade`-Option senden. |
 | [User-Agent](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/User-Agent) | Enthält eine charakteristische Zeichenfolge, die es den Netzwerkprotokoll-Peers ermöglicht, den Programmtyp, das Betriebssystem, den Software-Hersteller oder die Software-Version des anfragenden Software-Benutzeragenten zu identifizieren. |
 | [Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Wird von Proxies hinzugefügt, sowohl von Forward- als auch von Reverse-Proxies, und kann in den Anfrage-Headern und in den Antwort-Headern vorhanden sein. |
 | [Warnung](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | Allgemeine Warnhinweise zu möglichen Problemen. |
@@ -104,19 +104,19 @@ In der folgenden Tabelle sind die vordefinierten Header aufgeführt. Sie sind ni
 
 #### Nachrichtenkörper als JSON
 
-Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie im Nachrichtenkörper der Anfrage senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um auf den Wert eines Datenelements mit dem Namen „appSection“ als Schlüssel oder Wert zu verweisen, geben Sie `{{appSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
+Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie im Nachrichtenkörper der Anfrage senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um den Wert eines Datenelements mit dem Namen „appSection“ als Schlüssel oder Wert zu referenzieren, geben Sie `{{appSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
 
-Um weitere Schlüssel-Wert-Paare hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
+Um weitere Schlüssel-Wert-Paare hinzuzufügen, wählen Sie **[!UICONTROL Add Another]** aus.
 
 #### Nachrichtenkörper als Rohtext
 
-Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie im Nachrichtenkörper der Anfrage senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um auf den Wert eines Datenelements mit dem Namen „appSection“ als Schlüssel oder Wert zu verweisen, geben Sie `{{appSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen. Sie können ein oder mehrere Datenelemente hinzufügen.
+Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie im Nachrichtenkörper der Anfrage senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um den Wert eines Datenelements mit dem Namen „appSection“ als Schlüssel oder Wert zu referenzieren, geben Sie `{{appSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen. Sie können ein oder mehrere Datenelemente hinzufügen.
 
 ### Erweitert
 
-Aktionen innerhalb von Regeln in der Ereignisweiterleitung werden sequenziell ausgeführt. In bestimmten Szenarien möchten Sie aber womöglich Daten von einer externen Quelle abrufen, die nicht im vom Client eingehenden Ereignis vorhanden ist, um im Rahmen einer einzelnen Regel die in dieser Antwort enthaltenen Daten entweder umzuwandeln oder an ein in einer nachfolgenden Aktion enthaltenes endgültiges Ziel zu senden. Die Option „Save the request response“ (Anfrageantwort speichern) im Bereich „Advanced“ (Erweitert) ermöglicht dies.
+Aktionen innerhalb von Regeln in der Ereignisweiterleitung werden sequenziell ausgeführt. In bestimmten Szenarien möchten Sie aber womöglich Daten von einer externen Quelle abrufen, die nicht im vom Client eingehenden Ereignis vorhanden ist, um im Rahmen einer einzelnen Regel die in dieser Antwort enthaltenen Daten entweder umzuwandeln oder an ein in einer nachfolgenden Aktion enthaltenes endgültiges Ziel zu senden. Die Option „Speichern der Anfrageantwort“ im erweiterten Abschnitt aktiviert dies.
 
-Um den von einem Endpunkt erhaltenen Antworttext zu speichern, aktivieren Sie das Kontrollkästchen **[!UICONTROL Anfrageantwort speichern]** und legen Sie im Textfeld einen Antwortschlüssel fest.
+Um den von einem Endpunkt erhaltenen Antworttext zu speichern, aktivieren Sie das Kontrollkästchen **[!UICONTROL Save the request response]** und legen Sie im Textfeld einen Antwortschlüssel fest.
 
 Wenn Sie den Antwortschlüssel als `productDetails` festgelegt haben, verweisen Sie in einem Datenelement auf diese Daten sowie in einer nachfolgenden Aktion innerhalb derselben Regel auf dieses Datenelement. Um ein Datenelement zu erstellen, das auf `productDetail` verweist, erstellen Sie ein Datenelement vom Typ `path` und geben Sie den folgenden Pfad ein:
 
@@ -132,9 +132,9 @@ Das [!DNL mTLS]-Zertifikat ist eine digitale Berechtigung, die die Identität ei
 
 ### Installieren der Adobe Cloud Connector-Erweiterung {#install}
 
-Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
-Wählen **[!UICONTROL Erweiterungen]** im linken Bedienfeld aus. Wählen Sie auf der **[!UICONTROL Katalog]** die Karte **[!UICONTROL Adobe Cloud Connector]** und dann **[!UICONTROL Installieren]** aus.
+Wählen Sie **[!UICONTROL Extensions]** im linken Bedienfeld aus. Klicken Sie auf der Registerkarte **[!UICONTROL Catalog]** auf die Karte **[!UICONTROL Adobe Cloud Connector]** und klicken Sie dann auf **[!UICONTROL Install]**.
 
 ![Der Erweiterungskatalog mit der [!DNL Adobe Cloud Connector] Erweiterungskarte, in der install hervorgehoben ist.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -146,15 +146,15 @@ Wählen **[!UICONTROL Erweiterungen]** im linken Bedienfeld aus. Wählen Sie auf
 
 Nach der Installation der Erweiterung können Sie eine Ereignisweiterleitungsregel erstellen, die [!DNL mTLS] verwendet, und sie zu Ihrer Bibliothek hinzufügen.
 
-Erstellen Sie eine neue [&#x200B; (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Geben Sie einen Namen für Ihre Regel an und fügen Sie dann unter **[!UICONTROL Aktionen]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Adobe Cloud Connector]** fest. Wählen Sie als Nächstes **[!UICONTROL Abrufaufruf ausführen]** für den **[!UICONTROL Aktionstyp]**.
+Erstellen Sie eine neue [ (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Geben Sie einen Namen für Ihre Regel an und fügen Sie dann unter **[!UICONTROL Actions]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Adobe Cloud Connector]** fest. Wählen Sie als Nächstes **[!UICONTROL Make Fetch Call]** für die **[!UICONTROL Action Type]** aus.
 
 ![Die Ansicht mit den Eigenschaftsregeln für die Ereignisweiterleitung mit den Feldern, die zum Hinzufügen einer Regelkonfiguration für die Ereignisweiterleitung erforderlich sind, ist hervorgehoben.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-Nachdem Sie Ihre Auswahl getroffen haben, werden zusätzliche Steuerelemente angezeigt, um die Methode und das Ziel für die [!DNL mTLS]-Anfrage zu konfigurieren. Um die Verwendung aktiver Zertifikate in den Umgebungen zu aktivieren, wählen Sie **[!UICONTROL Aktivieren in[!DNL mTLS]]** und dann **[!UICONTROL Änderungen beibehalten]** aus, um die Regel zu speichern.
+Nachdem Sie Ihre Auswahl getroffen haben, werden zusätzliche Steuerelemente angezeigt, um die Methode und das Ziel für die [!DNL mTLS]-Anfrage zu konfigurieren. Um die Verwendung aktiver Zertifikate in den Umgebungen zu aktivieren, klicken Sie auf **[!UICONTROL Enable in [!DNL mTLS]]** und anschließend auf **[!UICONTROL Keep Changes]** , um die Regel zu speichern.
 
 ![Die Ansicht mit den Eigenschaftenregeln für die Ereignisweiterleitung mit den zusätzlichen Steuerelementfeldern und hervorgehobenen Änderungen.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
-Ihre neue Regel ist jetzt bereit. Wählen Sie **[!UICONTROL In Bibliothek speichern]** und dann **[!UICONTROL Erstellen]** aus, um sie bereitzustellen. Die [!DNL mTLS] Anfrage ist jetzt aktiv und in Ihrer Bibliothek verfügbar.
+Ihre neue Regel ist jetzt bereit. Wählen Sie **[!UICONTROL Save to Library]** und dann **[!UICONTROL Build]** aus, um sie bereitzustellen. Die [!DNL mTLS] Anfrage ist jetzt aktiv und in Ihrer Bibliothek verfügbar.
 
 ![Die Ereignisweiterleitungsregel mit Hervorhebung von „In Bibliothek speichern“ und „Erstellen“.](../../../images/extensions/server/cloud-connector/save-build.png)
 

@@ -3,7 +3,7 @@ title: Erstellen einer Microsoft SQL Server-Basisverbindung mithilfe der Flow Se
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Microsoft SQL-Server verbinden.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 39%
@@ -14,7 +14,7 @@ ht-degree: 39%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Lesen Sie dieses Tutorial, um zu erfahren, wie Sie eine Basisverbindung für [!DNL Microsoft SQL Server] mithilfe der [[!DNL Flow Service] API) &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Tutorial, um zu erfahren, wie Sie eine Basisverbindung für [!DNL Microsoft SQL Server] mithilfe der [[!DNL Flow Service] API) ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -23,7 +23,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API eine Verbindung zu [!DNL Microsoft SQL Server] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Microsoft SQL Server]-API eine Verbindung zu [!DNL Flow Service] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldedaten {#gather-required-credentials}
 
@@ -32,13 +32,13 @@ Um eine Verbindung zu [!DNL Microsoft SQL Server] herzustellen, müssen Sie die 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
 | `connectionString` | Die mit Ihrem [!DNL Microsoft SQL Server]-Konto verknüpfte Verbindungszeichenfolge. Ihr Verbindungszeichenfolgenmuster hängt davon ab, ob Sie den Servernamen oder Instanznamen für Ihre Datenquelle verwenden:<ul><li>Verbindungszeichenfolge unter Verwendung des Server-Namens: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Verbindungszeichenfolge unter Verwendung des Instanznamens: `Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Microsoft SQL Server] ist `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Microsoft SQL Server] ist `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |  |
 
 Weiterführende Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in diesem [[!DNL Microsoft SQL Server] Dokument](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -81,7 +81,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `auth.params.connectionString` | Die mit Ihrem [!DNL Microsoft SQL Server]-Konto verknüpfte Verbindungszeichenfolge. Weitere Informationen finden Sie im Abschnitt [Sammeln erforderlicher &#x200B;](#gather-required-credentials)&quot;. |
+| `auth.params.connectionString` | Die mit Ihrem [!DNL Microsoft SQL Server]-Konto verknüpfte Verbindungszeichenfolge. Weitere Informationen finden Sie im Abschnitt [Sammeln erforderlicher ](#gather-required-credentials)&quot;. |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL Microsoft SQL Server]-Verbindung lautet: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Antwort**

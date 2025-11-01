@@ -2,7 +2,7 @@
 title: Microsoft Dynamics-Zuordnungsfelder
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen Microsoft Dynamics-Quellfeldern und den zugehörigen XDM-Feldern.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 40%
@@ -171,8 +171,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |  |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |  |
 | `connectionrole1.name` | `personRole` |  |
-| `record1objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [&#x200B; Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu &#x200B;](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record1objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [&#x200B; Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu &#x200B;](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record2objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [ Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu ](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record1objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert werden.* Weitere Informationen finden Sie im Anhang mit [ Schritten zum Zuordnen eines Quellfelds vom Typ Auswahlliste zu ](#picklist-type-fields) XDM-Zielschema . | Eine Liste der möglichen Werte und Beschriftungen für das `record2objecttypecode`-Quellfeld finden Sie in diesem [[!DNL Microsoft Dynamics] Referenzdokument für Verbindungsentitäten](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
 {style="table-layout:auto"}
 
@@ -222,7 +222,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
-| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
+| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |  |
 | `listmemberid` | `marketingListMemberKey.sourceID` |  |
 | `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |  |

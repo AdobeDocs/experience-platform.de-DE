@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Konfigurieren von Authentifizierungsspezifikationen für Selbstbedienungsquellen (Batch-SDK)
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Selbstbedienungsquellen (Batch-SDK) vorbereiten müssen.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 4%
@@ -116,20 +116,20 @@ Ein OAuth 2-Aktualisierungs-Code ermöglicht den sicheren Zugriff auf eine Anwen
 | --- | --- | --- |
 | `authSpec.name` | Zeigt den Namen des unterstützten Authentifizierungstyps an. | `oAuth2-refresh-code` |
 | `authSpec.type` | Definiert den Authentifizierungstyp, der von der Quelle unterstützt wird. | `oAuth2-refresh-code` |
-| `authSpec.spec` | Enthält Informationen zum Schema, zum Datentyp und zu den Eigenschaften der Authentifizierung. |
+| `authSpec.spec` | Enthält Informationen zum Schema, zum Datentyp und zu den Eigenschaften der Authentifizierung. |  |
 | `authSpec.spec.$schema` | Definiert das für die Authentifizierung verwendete Schema. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definiert den Datentyp des Schemas. | `object` |
-| `authSpec.spec.properties` | Enthält Informationen zu den für die Authentifizierung verwendeten Anmeldeinformationen. |
-| `authSpec.spec.properties.description` | Zeigt eine kurze Beschreibung der Berechtigung an. |
+| `authSpec.spec.properties` | Enthält Informationen zu den für die Authentifizierung verwendeten Anmeldeinformationen. |  |
+| `authSpec.spec.properties.description` | Zeigt eine kurze Beschreibung der Berechtigung an. |  |
 | `authSpec.spec.properties.type` | Definiert den Datentyp der Berechtigung. | `string` |
-| `authSpec.spec.properties.clientId` | Die mit Ihrer Anwendung verknüpfte Client-ID. Die Client-ID wird zusammen mit Ihrem Client-Geheimnis verwendet, um Ihr Zugriffs-Token abzurufen. |
-| `authSpec.spec.properties.clientSecret` | Das mit Ihrer Anwendung verknüpfte Client-Geheimnis. Das Client-Geheimnis wird zusammen mit Ihrer Client-ID verwendet, um Ihr Zugriffs-Token abzurufen. |
-| `authSpec.spec.properties.accessToken` | Das Zugriffstoken autorisiert den sicheren Zugriff auf Ihre Anwendung. |
-| `authSpec.spec.properties.refreshToken` | Das Aktualisierungs-Token wird verwendet, um ein neues Zugriffs-Token zu generieren, wenn das Zugriffs-Token abläuft. |
-| `authSpec.spec.properties.expirationDate` | Definiert das Ablaufdatum des Zugriffstokens. |
-| `authSpec.spec.properties.refreshTokenUrl` | Die URL, die zum Abrufen Ihres Aktualisierungs-Tokens verwendet wird. |
-| `authSpec.spec.properties.accessTokenUrl` | Die URL, die zum Abrufen Ihres Aktualisierungs-Tokens verwendet wird. |
-| `authSpec.spec.properties.requestParameterOverride` | Ermöglicht die Angabe von Berechtigungsparametern, die bei der Authentifizierung überschrieben werden sollen. |
+| `authSpec.spec.properties.clientId` | Die mit Ihrer Anwendung verknüpfte Client-ID. Die Client-ID wird zusammen mit Ihrem Client-Geheimnis verwendet, um Ihr Zugriffs-Token abzurufen. |  |
+| `authSpec.spec.properties.clientSecret` | Das mit Ihrer Anwendung verknüpfte Client-Geheimnis. Das Client-Geheimnis wird zusammen mit Ihrer Client-ID verwendet, um Ihr Zugriffs-Token abzurufen. |  |
+| `authSpec.spec.properties.accessToken` | Das Zugriffstoken autorisiert den sicheren Zugriff auf Ihre Anwendung. |  |
+| `authSpec.spec.properties.refreshToken` | Das Aktualisierungs-Token wird verwendet, um ein neues Zugriffs-Token zu generieren, wenn das Zugriffs-Token abläuft. |  |
+| `authSpec.spec.properties.expirationDate` | Definiert das Ablaufdatum des Zugriffstokens. |  |
+| `authSpec.spec.properties.refreshTokenUrl` | Die URL, die zum Abrufen Ihres Aktualisierungs-Tokens verwendet wird. |  |
+| `authSpec.spec.properties.accessTokenUrl` | Die URL, die zum Abrufen Ihres Aktualisierungs-Tokens verwendet wird. |  |
+| `authSpec.spec.properties.requestParameterOverride` | Ermöglicht die Angabe von Berechtigungsparametern, die bei der Authentifizierung überschrieben werden sollen. |  |
 | `authSpec.spec.required` | Zeigt die für die Authentifizierung erforderlichen Anmeldeinformationen an. | `accessToken` |
 
 {style="table-layout:auto"}
@@ -173,13 +173,13 @@ Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie über e
 | --- | --- | --- |
 | `authSpec.name` | Zeigt den Namen des unterstützten Authentifizierungstyps an. | `Basic Authentication` |
 | `authSpec.type` | Definiert den Authentifizierungstyp, der von der Quelle unterstützt wird. | `BasicAuthentication` |
-| `authSpec.spec` | Enthält Informationen zum Schema, zum Datentyp und zu den Eigenschaften der Authentifizierung. |
+| `authSpec.spec` | Enthält Informationen zum Schema, zum Datentyp und zu den Eigenschaften der Authentifizierung. |  |
 | `authSpec.spec.$schema` | Definiert das für die Authentifizierung verwendete Schema. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definiert den Datentyp des Schemas. | `object` |
-| `authSpec.spec.description` | Zeigt weitere Informationen für Ihren Authentifizierungstyp an. |
-| `authSpec.spec.properties` | Enthält Informationen zu den für die Authentifizierung verwendeten Anmeldeinformationen. |
-| `authSpec.spec.properties.username` | Der mit Ihrem Programm verknüpfte Benutzername für das Konto. |
-| `authSpec.spec.properties.password` | Das mit Ihrer Anwendung verknüpfte Kontokennwort. |
+| `authSpec.spec.description` | Zeigt weitere Informationen für Ihren Authentifizierungstyp an. |  |
+| `authSpec.spec.properties` | Enthält Informationen zu den für die Authentifizierung verwendeten Anmeldeinformationen. |  |
+| `authSpec.spec.properties.username` | Der mit Ihrem Programm verknüpfte Benutzername für das Konto. |  |
+| `authSpec.spec.properties.password` | Das mit Ihrer Anwendung verknüpfte Kontokennwort. |  |
 | `authSpec.spec.required` | Gibt die Felder an, die als obligatorische Werte für die Eingabe in Experience Platform erforderlich sind. | `username` |
 
 {style="table-layout:auto"}
@@ -267,7 +267,7 @@ Sie können den `restAttributes`-Parameter verwenden, um zu definieren, wie der 
 
 Jeder Authentifizierungsschlüssel (z. B. `authKey1`, `authKey2` usw.) kann mit `restAttributes` verknüpft werden, um anzugeben, wie sie als Anfragen gesendet werden.
 
-Wenn `authKey1` `"headerParamName": "X-Auth-Key1"` hat. Das bedeutet, dass der Anfrage-Header `X-Auth-Key:{YOUR_AUTH_KEY1}` enthalten sollte. Außerdem müssen der Schlüsselname und die `headerParamName` nicht unbedingt identisch sein. z. B.:
+Wenn `authKey1` `"headerParamName": "X-Auth-Key1"` hat. Das bedeutet, dass der Anfrage-Header `X-Auth-Key:{YOUR_AUTH_KEY1}` enthalten sollte. Außerdem müssen der Schlüsselname und die `headerParamName` nicht unbedingt identisch sein. Beispiel:
 
 * Der `authKey1` kann `headerParamName: X-Custom-Auth-Key` haben. Das bedeutet, dass der Anfrage-Header `X-Custom-Auth-Key` anstelle von `authKey1` verwendet.
 * Umgekehrt können `authKey1` `headerParamName: authKey1` haben. Das bedeutet, dass der Name des Anfrage-Headers unverändert bleibt.
@@ -282,7 +282,7 @@ GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
 
 Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungsspezifikation unter Verwendung einer [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 
-+++Beispiel-Authentifizierungsspezifikation anzeigen
++++Beispiel für Authentifizierungsspezifikation anzeigen
 
 ```json
   "authSpec": [
