@@ -185,7 +185,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit der angegebenen Anz
 | `segmentMembership` | Ein Zuordnungsobjekt, das die Zielgruppenzugehörigkeiten der Person beschreibt. Weitere Informationen zu `segmentMembership` finden Sie unter [Details zur Zielgruppenzugehörigkeit](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=de). |
 | `lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
 | `xdm:status` | Ein Zeichenfolgenfeld, das angibt, ob die Zielgruppenzugehörigkeit im Rahmen der aktuellen Anfrage realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`realized`: Das Profil ist Teil des Segments.</li><li>`exited`: Das Profil verlässt die Zielgruppe im Rahmen der aktuellen Anfrage.</li></ul> |
-| `identityMap` | Ein Feld vom Typ „Zuordnung“, das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen zu `identityMap` finden Sie unter [Grundlage der Schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
+| `identityMap` | Ein Feld vom Typ „Zuordnung“, das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen zu `identityMap` finden Sie unter [Grundlage der Schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de#identityMap). |
 
 {style="table-layout:auto"}
 
