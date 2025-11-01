@@ -14,7 +14,7 @@ ht-degree: 39%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Lesen Sie dieses Tutorial, um zu erfahren, wie Sie eine Basisverbindung für [!DNL Microsoft SQL Server] mithilfe der [[!DNL Flow Service] API) ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Tutorial, um zu erfahren, wie Sie eine Basisverbindung für [!DNL Microsoft SQL Server] mithilfe der [[!DNL Flow Service] API) &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -38,7 +38,7 @@ Weiterführende Informationen zum Abrufen einer Verbindungszeichenfolge finden S
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -81,7 +81,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `auth.params.connectionString` | Die mit Ihrem [!DNL Microsoft SQL Server]-Konto verknüpfte Verbindungszeichenfolge. Weitere Informationen finden Sie im Abschnitt [Sammeln erforderlicher ](#gather-required-credentials)&quot;. |
+| `auth.params.connectionString` | Die mit Ihrem [!DNL Microsoft SQL Server]-Konto verknüpfte Verbindungszeichenfolge. Weitere Informationen finden Sie im Abschnitt [Sammeln erforderlicher &#x200B;](#gather-required-credentials)&quot;. |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL Microsoft SQL Server]-Verbindung lautet: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Antwort**

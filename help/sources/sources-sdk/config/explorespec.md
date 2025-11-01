@@ -84,4 +84,4 @@ In den Erkundungsspezifikationen werden die Parameter definiert, die zum Untersu
 
 ## Nächste Schritte
 
-Wenn Ihre Erkundungsspezifikationen ausgefüllt sind, können Sie mit der Erstellung einer vollständigen Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API fortfahren. Weitere Informationen finden [ im API-Handbuch ](../api/api-overview.md) Selbstbedienungsquellen (Batch-SDK) .
+Wenn Ihre Erkundungsspezifikationen ausgefüllt sind, können Sie mit der Erstellung einer vollständigen Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API fortfahren. Weitere Informationen finden [&#x200B; im API-Handbuch &#x200B;](../api/api-overview.md) Selbstbedienungsquellen (Batch-SDK) .
