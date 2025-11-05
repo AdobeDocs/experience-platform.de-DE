@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Konfigurieren von Quellspezifikationen für Selbstbedienungsquellen (Batch-SDK)
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Selbstbedienungsquellen (Batch-SDK) vorbereiten müssen.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2107'
 ht-degree: 38%
 
 ---
@@ -231,6 +231,7 @@ Ein Beispiel für eine vollständig angegebene Quellspezifikation finden Sie im 
 | --- | --- | --- |
 | `sourceSpec.attributes` | Enthält Informationen zu der Quelle, die für die UI oder API spezifisch ist. |  |
 | `sourceSpec.attributes.uiAttributes` | Zeigt Informationen zu der UI-spezifischen Quelle an. |  |
+| `sourceSpec.attributes.uiAttributes.isPreview` | Ein boolesches Attribut, das angibt, ob die Quelle als Vorschau angezeigt wird (nicht für Produktion/allgemeine Verfügbarkeit). | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Ein boolesches Attribut, das anzeigt, ob die Quelle mehr Kunden-Feedback benötigt, das ihre Funktionalität erweitert. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Definiert die Kategorie der Quelle. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Definiert das Symbol, das zum Rendern der Quelle in der Experience Platform-Benutzeroberfläche verwendet wird. | `mailchimp-icon.svg` |
