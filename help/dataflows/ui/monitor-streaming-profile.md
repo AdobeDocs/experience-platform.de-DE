@@ -2,16 +2,16 @@
 title: Überwachen der Aufnahme von Streaming-Profilen
 description: Erfahren Sie, wie Sie die Aufnahme von Streaming-Profilen mit dem Überwachungs-Dashboard überwachen können
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
-source-wordcount: '1932'
-ht-degree: 20%
+source-wordcount: '1835'
+ht-degree: 19%
 
 ---
 
 # Überwachen der Aufnahme von Streaming-Profilen
 
-Sie können das Überwachungs-Dashboard in der Adobe Experience Platform-Benutzeroberfläche verwenden, um die Aufnahme von Streaming-Profilen in Echtzeit in Ihrem Unternehmen zu überwachen. Verwenden Sie diese Funktion, um auf eine größere Transparenz bei Metriken für Durchsatz, Latenz und Datenqualität im Zusammenhang mit Ihren Streaming-Daten zuzugreifen. Verwenden Sie diese Funktion außerdem für proaktive Warnhinweise und den Abruf umsetzbarer Einblicke, um potenzielle Kapazitätsverletzungen und Probleme bei der Datenaufnahme zu identifizieren.
+Sie können das Überwachungs-Dashboard in der Adobe Experience Platform-Benutzeroberfläche verwenden, um die Aufnahme von Streaming-Profilen in Echtzeit in Ihrem Unternehmen zu überwachen. Verwenden Sie diese Funktion, um auf eine größere Transparenz in Durchsatz- und Datenqualitätsmetriken im Zusammenhang mit Ihren Streaming-Daten zuzugreifen. Verwenden Sie diese Funktion außerdem für proaktive Warnhinweise und den Abruf umsetzbarer Einblicke, um potenzielle Kapazitätsverletzungen und Probleme bei der Datenaufnahme zu identifizieren.
 
 Lesen Sie das folgende Handbuch, um zu erfahren, wie Sie mit dem Monitoring-Dashboard Raten und Metriken für Streaming-Profilaufnahmevorgänge in Ihrer Organisation verfolgen können.
 
@@ -21,7 +21,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 * [Datenflüsse](../home.md): Datenflüsse stellen Datenaufträge dar, die Informationen über Experience Platform übertragen. Sie werden in verschiedenen -Services konfiguriert, um das Verschieben von Daten von Quell-Connectoren in Zieldatensätze sowie zu Identity Service, Echtzeit-Kundenprofil und Zielen zu erleichtern.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Das Echtzeit-Kundenprofil kombiniert Daten aus verschiedenen Quellen - Online-, Offline-, CRM- und Drittanbieter-Daten - in einer zentralen, verwertbaren Ansicht jedes Kunden, was konsistente und personalisierte Erlebnisse über alle Kontaktpunkte hinweg ermöglicht.
-* [Streaming-Aufnahme](../../ingestion/streaming-ingestion/overview.md): Die Streaming-Aufnahme für Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden. Mit Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse bereitstellen, indem Sie ein Echtzeit-Kundenprofil für jeden einzelnen Ihrer Kunden generieren. &#x200B;Die Streaming-Aufnahme spielt eine Schlüsselrolle beim Erstellen dieser Profile mit so geringer Latenz wie möglich.
+* [Streaming-Aufnahme](../../ingestion/streaming-ingestion/overview.md): Die Streaming-Aufnahme für Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden. Mit Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse bereitstellen, indem Sie ein Echtzeit-Kundenprofil für jeden einzelnen Ihrer Kunden generieren. .
 * [Kapazitäten](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform teilen Ihnen die Kapazitäten mit, ob Ihr Unternehmen eine Ihrer Leitplanken überschritten hat, und erhalten Informationen zur Behebung dieser Probleme.
 
 >[!NOTE]
@@ -33,7 +33,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Überwachen der Aufnahme von Streaming-Profilen"
->abstract="Das Dashboard „Monitoring“ für Streaming-Profile zeigt Informationen zu Durchsatz, Aufnahmeraten und Latenz an. Verwenden Sie dieses Dashboard, um die Datenverarbeitungsmetriken anzuzeigen, zu verstehen und zu analysieren. Ihrer Streaming-Profile in Experience Platform."
+>abstract="Das Monitoring-Dashboard für Streaming-Profile zeigt Informationen über den Durchsatz und die Aufnahmeraten an. Verwenden Sie dieses Dashboard, um die Datenverarbeitungsmetriken anzuzeigen, zu verstehen und zu analysieren. Ihrer Streaming-Profile in Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -90,7 +90,6 @@ Verwenden Sie die Tabelle Metriken für spezifische Informationen zu Ihren Daten
 | --- | --- | --- | --- |
 | Anfragedurchsatz | Diese Metrik stellt die Anzahl der in das Aufnahmesystem eingehenden Ereignisse pro Sekunde dar. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
 | Verarbeitungsdurchsatz | Diese Metrik stellt die Anzahl der erfolgreich vom System aufgenommenen Ereignisse pro Sekunde dar. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
-| P95-Aufnahmelatenz | Diese Metrik misst die Latenz im 95. Perzentil von dem Zeitpunkt an, an dem ein Ereignis in Experience Platform eintrifft, bis zu dem Zeitpunkt, an dem es erfolgreich in den Profilspeicher aufgenommen wird. | Sandbox/Datenfluss | Echtzeitüberwachung mit einer Datenaktualisierung alle 60 Sekunden. |
 | Maximaler Durchsatz | Diese Metrik stellt die maximale Anzahl eingehender Anfragen pro Sekunde dar, die in die Streaming-Profilaufnahme eintreten | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> |  |
 | Aufgenommene Einträge | Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters in den Profilspeicher aufgenommen werden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
 | Fehlgeschlagene Einträge | Diese Metrik stellt die Gesamtanzahl der Einträge dar, die innerhalb eines konfigurierten Zeitfensters aufgrund von Fehlern nicht in den Profilspeicher aufgenommen wurden. | <ul><li>Sandbox/Datenfluss</li><li>Datenflussausführung</li></ul> | <ul><li>Sandbox/Datenfluss: Echtzeit-Überwachung mit einer Datenaktualisierung alle 60 Sekunden.</li><li>Datenflussausführung: in 15 Minuten gruppiert.</li></ul> |
@@ -105,7 +104,7 @@ Um auf das Überwachungs-Dashboard für die Aufnahme von Streaming-Profilen zuzu
 
 ![Das Überwachungs-Dashboard für die Aufnahme von Streaming-Profilen.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Die Karte mit den *[!UICONTROL Profile]* Metriken finden Sie in der oberen Kopfzeile des Dashboards. Verwenden Sie diese Anzeige, um Informationen zu den aufgenommenen, fehlgeschlagenen und übersprungenen Datensätzen sowie Informationen zum aktuellen Status von Anfragedurchsatz und Latenz anzuzeigen.
+Die Karte mit den *[!UICONTROL Profile]* Metriken finden Sie in der oberen Kopfzeile des Dashboards. In dieser Anzeige können Sie Informationen zu den aufgenommenen, fehlgeschlagenen und übersprungenen Datensätzen sowie Informationen zum aktuellen Status des Anfragedurchsatzes anzeigen.
 
 ![Die Profilkarte.](../assets/ui/streaming-profiles/profile-card.png)
 
@@ -119,7 +118,7 @@ Verwenden Sie als Nächstes die -Benutzeroberfläche, um detaillierte Informatio
 
 Alternativ können Sie Ihren eigenen Zeitrahmen manuell mithilfe des Kalenders konfigurieren.
 
-Im Monitoring-Dashboard können Sie drei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden: [!UICONTROL Throughput], [!UICONTROL Ingestion] und [!UICONTROL Latency].
+Im Monitoring-Dashboard können Sie zwei verschiedene Metrikkategorien für die Streaming-Profilaufnahme verwenden: [!UICONTROL Throughput] und [!UICONTROL Ingestion].
 
 >[!BEGINTABS]
 
@@ -143,19 +142,13 @@ Wählen Sie **[!UICONTROL Throughput]** aus, um Informationen zur Datenmenge anz
 * **Übersprungene Datensätze**: Die Gesamtzahl der Datensätze, die aufgrund von Fehlern nicht aufgenommen wurden.
 * **Übersprungene Datensätze**: Die Gesamtzahl der Datensätze, die aufgrund von Verstößen gegen Kapazitätsbeschränkungen gelöscht wurden.
 
->[!TAB Latenz]
-
-Wählen Sie **[!UICONTROL Latency]** aus, um Informationen zur Zeitdauer anzuzeigen, die Experience Platform benötigt, um innerhalb eines bestimmten Zeitraums auf eine Anfrage zu reagieren oder einen Vorgang abzuschließen.
-
-![Das Dashboard mit der auf „Latenz“ gesetzten Anzeige.](../assets/ui/streaming-profiles/latency.png)
-
 >[!ENDTABS]
 
 ### Verwenden der Tabelle Datenflussmetriken
 
 In der Datenfluss-Tabelle sind alle Streaming-Aufnahme-Aktivitäten mit den entsprechenden Metriken für das Echtzeit-Kundenprofil aufgeführt. Jeder Datenfluss wird mit dem zugehörigen Datensatz aufgelistet.
 
-Wenn Sie sich den Beschränkungen der Kapazität auf Sandbox-Ebene nähern, können Sie in der Spalte [!UICONTROL Max throughput] alle vorhandenen Datenflüsse identifizieren, die zu Ihren Verbrauchsraten beitragen. Weitere Informationen zu Best [&#x200B; für die Datenflussverwaltung finden &#x200B;](#best-practices) im Abschnitt „Best Practices“.
+Wenn Sie sich den Beschränkungen der Kapazität auf Sandbox-Ebene nähern, können Sie in der Spalte [!UICONTROL Max throughput] alle vorhandenen Datenflüsse identifizieren, die zu Ihren Verbrauchsraten beitragen. Weitere Informationen zu Best [ für die Datenflussverwaltung finden ](#best-practices) im Abschnitt „Best Practices“.
 
 Um die Daten zu überwachen, die in einen bestimmten Datenfluss aufgenommen werden, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben dem Datenflussnamen aus.
 
@@ -194,7 +187,7 @@ Wenn Ihr aktuelles Limit von **1.500 Ereignissen pro Sekunde** nicht ausreicht, 
 | Faktor | Was es ist | Auswirkungen auf Anwendungsfälle | Best Practices |
 | --- | --- | --- | --- |
 | Konvertierung von Batch zu Streaming | Batch-Workloads, die in Streaming konvertiert werden, können den Durchsatz erheblich erhöhen und sich auf die Leistung und Ressourcenzuweisung auswirken. Beispielsweise die Durchführung einer Massenaktualisierung von Profilen nach einem Ereignis ohne Ratenbeschränkungen. | Streaming-Strategien sind für Batch-Anwendungsfälle unnötig, wenn eine Verarbeitung mit geringer Latenz nicht erforderlich ist. | Bewerten Sie die Anforderungen an Anwendungsfälle. Für das Batch-Outbound-Marketing sollten Sie [Batch-Aufnahme](../../ingestion/batch-ingestion/overview.md) anstelle von Streaming verwenden, um die Datenaufnahme effizienter zu verwalten. |
-| Unnötige Datenaufnahme | Die Aufnahme von Daten, die nicht für die Personalisierung erforderlich sind, erhöht den Durchsatz, ohne einen Mehrwert zu erzielen, und verschwendet Ressourcen. Beispielsweise wird der gesamte Analytics-Traffic unabhängig von der Relevanz in Profile aufgenommen. | Übermäßige Mengen nicht relevanter Daten verursachen Rauschen, wodurch die Identifizierung wirkungsvoller Datenpunkte erschwert wird. Außerdem kann es beim Definieren und Verwalten von Audiences und Profilen zu Reibungen kommen. | Nehmen Sie nur Daten auf, die für Ihre Anwendungsfälle erforderlich sind. Stellen Sie sicher, dass Sie unnötige Daten herausfiltern.<ul><li>**Adobe Analytics**: Verwenden Sie [Filterung auf Zeilenebene](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) um die Datenaufnahme zu optimieren.</li><li>**Quellen**: Verwenden Sie die [[!DNL Flow Service] API zum Filtern von Daten auf Zeilenebene](../../sources/tutorials/api/filter.md) für unterstützte Quellen wie [!DNL Snowflake] und [!DNL Google BigQuery].</li></li>**Edge-Datenstrom**: Konfigurieren Sie [dynamische &#x200B;](../../datastreams/configure-dynamic-datastream.md)), um Traffic aus WebSDK auf Zeilenebene zu filtern.</li></ul> |
+| Unnötige Datenaufnahme | Die Aufnahme von Daten, die nicht für die Personalisierung erforderlich sind, erhöht den Durchsatz, ohne einen Mehrwert zu erzielen, und verschwendet Ressourcen. Beispielsweise wird der gesamte Analytics-Traffic unabhängig von der Relevanz in Profile aufgenommen. | Übermäßige Mengen nicht relevanter Daten verursachen Rauschen, wodurch die Identifizierung wirkungsvoller Datenpunkte erschwert wird. Außerdem kann es beim Definieren und Verwalten von Audiences und Profilen zu Reibungen kommen. | Nehmen Sie nur Daten auf, die für Ihre Anwendungsfälle erforderlich sind. Stellen Sie sicher, dass Sie unnötige Daten herausfiltern.<ul><li>**Adobe Analytics**: Verwenden Sie [Filterung auf Zeilenebene](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) um die Datenaufnahme zu optimieren.</li><li>**Quellen**: Verwenden Sie die [[!DNL Flow Service] API zum Filtern von Daten auf Zeilenebene](../../sources/tutorials/api/filter.md) für unterstützte Quellen wie [!DNL Snowflake] und [!DNL Google BigQuery].</li></li>**Edge-Datenstrom**: Konfigurieren Sie [dynamische ](../../datastreams/configure-dynamic-datastream.md)), um Traffic aus WebSDK auf Zeilenebene zu filtern.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -225,4 +218,4 @@ Die beiden Dashboards sind präzise, jedoch für verschiedene Zwecke konzipiert.
 In diesem Tutorial haben Sie gelernt, wie Sie Aufnahmen von Streaming-Profilen in Ihrer Organisation überwachen. In den folgenden Dokumenten finden Sie zusätzliche Informationen zur Überwachung von Daten für das Echtzeit-Kundenprofil.
 
 * [Verwenden des Überwachungs-Dashboards](./monitor.md).
-* [Überwachen von &#x200B;](./monitor-profiles.md).
+* [Überwachen von ](./monitor-profiles.md).
