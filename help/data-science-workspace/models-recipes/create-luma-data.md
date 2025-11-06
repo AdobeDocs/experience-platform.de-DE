@@ -36,7 +36,7 @@ In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle an
 
 ## Herunterladen der Assets {#assets}
 
-Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Bevor Sie fortfahren[ laden Sie den ZIP-Ordner der erforderlichen ](../assets/DSW-course-sample-assets.7z) herunter. Dieser Ordner enthält:
+Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Bevor Sie fortfahren[&#x200B; laden Sie den ZIP-Ordner der erforderlichen &#x200B;](../assets/DSW-course-sample-assets.7z) herunter. Dieser Ordner enthält:
 
 - Das Notebook mit der Kaufneigung
 - Ein Notebook, mit dem Daten in einen Trainings- und Scoring-Datensatz aufgenommen werden (einen Teil der Luma-Web-Daten)
