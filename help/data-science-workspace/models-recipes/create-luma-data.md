@@ -5,9 +5,9 @@ title: Erstellen der Luma-Web-Schemata und -Datensätze
 type: Tutorial
 description: In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für das Demo-Tendenzmodell von Luma erforderlich sind.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 219305a71c70a5bbec2fad591c166761e3aaa9ee
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle an
 
 ## Herunterladen der Assets {#assets}
 
-Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Bevor Sie fortfahren[&#x200B; laden Sie den ZIP-Ordner der erforderlichen &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) herunter. Dieser Ordner enthält:
+Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Bevor Sie fortfahren[ laden Sie den ZIP-Ordner der erforderlichen ](../assets/DSW-course-sample-assets.7z) herunter. Dieser Ordner enthält:
 
 - Das Notebook mit der Kaufneigung
 - Ein Notebook, mit dem Daten in einen Trainings- und Scoring-Datensatz aufgenommen werden (einen Teil der Luma-Web-Daten)
@@ -49,15 +49,15 @@ Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell.
 
 ### Erstellen des Luma-Web-Datenschemas und Aufnehmen der Daten
 
-Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Experience Platform verfügen, der zum Trainieren und Bewerten Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?lang=de&recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Aufnahme der vom Kaufneigungsmodell verwendeten Daten.
+Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Experience Platform verfügen, der zum Trainieren und Bewerten Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Aufnahme der vom Kaufneigungsmodell verwendeten Daten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447163?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/333312)
 
 ### Erstellen der Datensätze für Schulungs-, Scoring- und Scoring-Ergebnisse
 
 Um das Rezept-Builder-Notebook auszuführen oder die API zum Trainieren und Bewerten eines Modells zu verwenden, müssen Sie den/die Datensatz/Datensätze und Schema(s) angeben, die für das Training/die Bewertung verwendet werden. Das folgende Video-Tutorial führt Sie durch die Einrichtung der Datensätze für Schulungs-, Scoring- und Scoring-Ergebnisse sowie des Schemas für Scoring-Ergebnisse, das im Kaufneigungsmodell Luma verwendet wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447430?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/333426)
 
 ## Nächste Schritte
 
