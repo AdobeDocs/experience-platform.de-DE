@@ -3,18 +3,14 @@ solution: Experience Platform
 title: Lookalike-Zielgruppen
 description: Erfahren Sie, wie Sie mithilfe von Lookalike-Zielgruppen neue hochwertige Zielgruppen in Adobe Experience Platform ansprechen können.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
+source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
 workflow-type: tm+mt
-source-wordcount: '2299'
-ht-degree: 9%
+source-wordcount: '2250'
+ht-degree: 10%
 
 ---
 
 # Handbuch zu Lookalike-Zielgruppen
-
->[!AVAILABILITY]
->
->Lookalike-Einblicke und Lookalike-Zielgruppen sind nur in der B2C **Edition**.
 
 >[!IMPORTANT]
 >
@@ -85,15 +81,15 @@ Mit Add-on-Paketen, die zu einem späteren Zeitpunkt verfügbar sein werden, erh
 
 ## Zugriff {#access}
 
-Um zu bestätigen, ob Sie Zugriff auf Lookalike-Zielgruppen haben, wählen Sie eine beliebige Zielgruppe im Zielgruppen-Portal aus und überprüfen Sie, ob die Registerkarte **[!UICONTROL Lookalike]** Einblicke“ sichtbar ist.
+Um zu bestätigen, ob Sie Zugriff auf Lookalike-Zielgruppen haben, wählen Sie eine beliebige Zielgruppe im Zielgruppen-Portal aus und überprüfen Sie, ob die Registerkarte **[!UICONTROL Look-alike insights]** sichtbar ist.
 
 ## Lookalike-Einblicke anzeigen {#view}
 
-Lookalike-Einblicke sind in der Seite mit den Zielgruppendetails integriert. Um sich die Lookalike-Einblicke für eine Zielgruppe anzuschauen, wählen Sie **[!UICONTROL Zielgruppen]** in der linken Navigationsleiste aus, gefolgt von **[!UICONTROL Durchsuchen]** und der Zielgruppe, für die Sie die Einblicke anzeigen möchten.
+Lookalike-Einblicke sind in der Seite mit den Zielgruppendetails integriert. Um sich die Lookalike-Einblicke für eine Zielgruppe anzuschauen, wählen Sie in der linken Navigationsleiste **[!UICONTROL Audiences]** aus, gefolgt von **[!UICONTROL Browse]** und der Zielgruppe, für die Sie die Einblicke anzeigen möchten.
 
 ![Die Schaltfläche „Zielgruppen“ ist hervorgehoben, ebenso wie die für die Look-alike-Modellierung verwendete Basis-Zielgruppe.](../images/types/lookalike/browse.png)
 
-Die Seite mit den Details zur Zielgruppe wird angezeigt. Wählen Sie **[!UICONTROL Registerkarte]** Lookalike-Insights“ aus, um die Lookalike-Insights der Zielgruppe anzuzeigen. Die **[!UICONTROL Lookalike-Insights]** wird angezeigt. Diese Seite hat drei Hauptelemente - das Ähnlichkeits- und Reichweitendiagramm, die Lookalike-Zielgruppen und die Einflussfaktoren.
+Die Seite mit den Details zur Zielgruppe wird angezeigt. Wählen Sie **[!UICONTROL Look-alike insights]** Registerkarte aus, um die Lookalike-Einblicke der Zielgruppe anzuzeigen. Die Seite **[!UICONTROL Look-alike insights]** wird angezeigt. Diese Seite hat drei Hauptelemente - das Ähnlichkeits- und Reichweitendiagramm, die Lookalike-Zielgruppen und die Einflussfaktoren.
 
 ![Die Registerkarte „Lookalike-Insights“ ist hervorgehoben und zeigt die Lookalike-Insights für die Basis-Audience an.](../images/types/lookalike/look-alike-insights.png)
 
@@ -155,17 +151,17 @@ Diese Buckets werden regelmäßig neu berechnet, um sicherzustellen, dass die Da
 >
 >Eine Lookalike **Zielgruppe kann nicht** als Basis-Zielgruppe für eine andere Lookalike-Zielgruppe verwendet werden. Das heißt, Sie können **nicht** verkettete Lookalike-Zielgruppen erstellen.
 
-Um eine Lookalike-Zielgruppe zu erstellen, müssen Sie die Zielgruppe auswählen, auf der Sie die Lookalike-Zielgruppe basieren möchten. Um auf Ihre Liste der verfügbaren Zielgruppen zuzugreifen, wählen Sie **[!UICONTROL Zielgruppen]** in der linken Navigationsleiste und dann **[!UICONTROL Durchsuchen]**. Die Liste der Zielgruppen wird angezeigt. Auf dieser Seite können Sie die Zielgruppe auswählen, die Sie als Basis-Zielgruppe verwenden möchten.
+Um eine Lookalike-Zielgruppe zu erstellen, müssen Sie die Zielgruppe auswählen, auf der Sie die Lookalike-Zielgruppe basieren möchten. Um auf Ihre Liste der verfügbaren Zielgruppen zuzugreifen, wählen Sie in der linken Navigationsleiste **[!UICONTROL Audiences]** und dann **[!UICONTROL Browse]** aus. Die Liste der Zielgruppen wird angezeigt. Auf dieser Seite können Sie die Zielgruppe auswählen, die Sie als Basis-Zielgruppe verwenden möchten.
 
 ![Die Schaltfläche „Zielgruppen“ ist hervorgehoben, ebenso wie die für die Look-alike-Modellierung verwendete Basis-Zielgruppe.](../images/types/lookalike/browse.png)
 
-Wählen Sie auf der Seite mit den Zielgruppendetails **[!UICONTROL Lookalike-Zielgruppe erstellen]** aus, um mit der Erstellung einer Lookalike-Zielgruppe zu beginnen.
+Wählen Sie auf der Seite mit den Zielgruppendetails die Option **[!UICONTROL Create look-alike audience]** aus, um mit der Erstellung einer Lookalike-Zielgruppe zu beginnen.
 
-![Die Schaltfläche [!UICONTROL Lookalike-Zielgruppe erstellen] ist hervorgehoben.](../images/types/lookalike/create-look-alike-audience.png)
+![Die Schaltfläche &quot;[!UICONTROL Create look-alike audience]&quot; ist hervorgehoben.](../images/types/lookalike/create-look-alike-audience.png)
 
-Das **[!UICONTROL Lookalike-Zielgruppe erstellen]** wird angezeigt. Auf dieser Seite können Sie den Ähnlichkeitsprozentsatz für die Lookalike-Zielgruppe festlegen.
+Das **[!UICONTROL Create a look-alike audience]**-Popover wird angezeigt. Auf dieser Seite können Sie den Ähnlichkeitsprozentsatz für die Lookalike-Zielgruppe festlegen.
 
-![Das [!UICONTROL Lookalike-Zielgruppe erstellen] wird angezeigt.](../images/types/lookalike/create-audience.png)
+![Das [!UICONTROL Create a look-alike audience]-Popover wird angezeigt.](../images/types/lookalike/create-audience.png)
 
 Sie können diesen Ähnlichkeitsprozentsatz auf drei verschiedene Arten festlegen:
 
@@ -175,17 +171,17 @@ Sie können diesen Ähnlichkeitsprozentsatz auf drei verschiedene Arten festlege
 
 Sie können auch Details zur Lookalike-Zielgruppe aktualisieren, einschließlich ihres Namens und ihrer Beschreibung. Standardmäßig wird der Name der Lookalike-Zielgruppe basierend auf dem Namen der Basis-Zielgruppe und dem zuvor angegebenen Ähnlichkeitsprozentsatz generiert.
 
-![Die grundlegenden Informationen werden im Pop-up [!UICONTROL Lookalike-Zielgruppe erstellen] hervorgehoben.](../images/types/lookalike/basic-info.png)
+![Die grundlegenden Informationen werden im [!UICONTROL Create a look-alike audience]-Pop-up hervorgehoben.](../images/types/lookalike/basic-info.png)
 
-Wählen Sie **[!UICONTROL Erstellen]** aus, um die Erstellung Ihrer Lookalike-Zielgruppe abzuschließen.
+Wählen Sie **[!UICONTROL Create]** aus, um die Erstellung Ihrer Lookalike-Zielgruppe abzuschließen.
 
-![Die Schaltfläche „Erstellen“ ist im Pop-up [!UICONTROL Lookalike-Zielgruppe erstellen] hervorgehoben.](../images/types/lookalike/create-audience.png)
+![Die Schaltfläche „Erstellen“ ist im Pop-up &quot;[!UICONTROL Create a look-alike audience]&quot; hervorgehoben.](../images/types/lookalike/create-audience.png)
 
-Die neu erstellte Lookalike-Zielgruppe kann im Abschnitt **[!UICONTROL Lookalike-Zielgruppen]** der Seite mit den Zielgruppendetails aufgerufen werden und ist auch im Zielgruppen-Portal und für andere nachgelagerte Verwendungen verfügbar. Beachten Sie, dass es einige Zeit dauern wird, bis die Lookalike-Zielgruppe bewertet wird. Bis zur Bewertung wird die Profilanzahl mit 0 angezeigt.
+Die neu erstellte Lookalike-Zielgruppe ist im Abschnitt **[!UICONTROL Look-alike audiences]** der Seite mit den Zielgruppendetails verfügbar und auch im Zielgruppen-Portal und für andere nachgelagerte Verwendungen verfügbar. Beachten Sie, dass es einige Zeit dauern wird, bis die Lookalike-Zielgruppe bewertet wird. Bis zur Bewertung wird die Profilanzahl mit 0 angezeigt.
 
 ## Lookalike-Zielgruppendetails anzeigen {#view-details}
 
-Um Details einer Lookalike-Zielgruppe anzuzeigen, wählen Sie die Lookalike-Zielgruppe im Abschnitt **[!UICONTROL Lookalike]** der Basis-Zielgruppe aus.
+Um Details einer Lookalike-Zielgruppe anzuzeigen, wählen Sie die Lookalike-Zielgruppe im Abschnitt **[!UICONTROL Look-alike audiences]** der Basis-Zielgruppe aus.
 
 ![Der Abschnitt „Lookalike-Zielgruppen“ ist hervorgehoben.](../images/types/lookalike/select-laa.png)
 
