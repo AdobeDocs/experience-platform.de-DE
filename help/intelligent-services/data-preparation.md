@@ -96,7 +96,7 @@ Wie alle XDM ExperienceEvent-Schemata erfasst auch das CEE-Schema den zeitreihen
 
 Wie alle XDM-Schemata ist die Schemafeldgruppe CEE erweiterbar. Mit anderen Worten können der CEE-Feldergruppe zusätzliche Felder hinzugefügt werden und verschiedene Varianten können bei Bedarf in mehrere Schemata aufgenommen werden.
 
-Ein vollständiges Beispiel für die Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Darüber hinaus können Sie die folgende (JSON[Datei) anzeigen und kopieren](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um ein Beispiel dafür zu erhalten, wie Daten entsprechend dem CEE-Schema strukturiert werden können. Siehe beide Beispiele, während Sie mehr über die im folgenden Abschnitt beschriebenen Schlüsselfelder erfahren, um zu bestimmen, wie Sie Ihre eigenen Daten dem Schema zuordnen können.
+Ein vollständiges Beispiel für die Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Darüber hinaus können Sie die folgende (JSON[Datei) anzeigen und kopieren](https://github.com/AdobeDocs/experience-platform.de-DE/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um ein Beispiel dafür zu erhalten, wie Daten entsprechend dem CEE-Schema strukturiert werden können. Siehe beide Beispiele, während Sie mehr über die im folgenden Abschnitt beschriebenen Schlüsselfelder erfahren, um zu bestimmen, wie Sie Ihre eigenen Daten dem Schema zuordnen können.
 
 ## Schlüsselfelder
 
@@ -355,7 +355,7 @@ Wenn Sie Daten aus einer lokalen CSV-Datei erfassen, können Sie mit dem nächst
 
 #### Zuordnen und Aufnehmen von Daten {#ingest}
 
-Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Experience Platform aufnehmen. Anweisungen dazu, wie Sie [&#x200B; der Benutzeroberfläche durchführen, finden Sie im Tutorial &#x200B;](../ingestion/tutorials/map-csv/overview.md) Zuordnen einer CSV-Datei zu einem XDM-Schema . Sie können die folgende [JSON-Beispieldatei) verwenden](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um den Aufnahmeprozess zu testen, bevor Sie Ihre eigenen Daten verwenden.
+Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Experience Platform aufnehmen. Anweisungen dazu, wie Sie [&#x200B; der Benutzeroberfläche durchführen, finden Sie im Tutorial &#x200B;](../ingestion/tutorials/map-csv/overview.md) Zuordnen einer CSV-Datei zu einem XDM-Schema . Sie können die folgende [JSON-Beispieldatei) verwenden](https://github.com/AdobeDocs/experience-platform.de-DE/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um den Aufnahmeprozess zu testen, bevor Sie Ihre eigenen Daten verwenden.
 
 Sobald ein Datensatz ausgefüllt wurde, kann derselbe Datensatz zum Aufnehmen zusätzlicher Datendateien verwendet werden.
 

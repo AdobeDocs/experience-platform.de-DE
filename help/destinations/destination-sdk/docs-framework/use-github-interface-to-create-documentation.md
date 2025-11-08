@@ -23,7 +23,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 
 ## Einrichten der GitHub-Authoring-Umgebung {#set-up-environment}
 
-1. Navigieren Sie im Browser zu `https://github.com/AdobeDocs/experience-platform.en`.
+1. Navigieren Sie im Browser zu `https://github.com/AdobeDocs/experience-platform.de-DE`.
 1. Um [Verzweigung](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de#fork-the-repository) das Repository anzuzeigen, klicken Sie auf **Verzweigung** wie unten dargestellt. Dadurch wird eine Kopie des Experience Platform-Repositorys in Ihrem eigenen GitHub-Konto erstellt.
 
    ![Fork Adobe-Dokumentations-Repository](../assets/docs-framework/ssd-fork-repository.gif)
@@ -75,7 +75,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 
 1. An dieser Stelle wird eine Benachrichtigung angezeigt, die Sie auffordert, die Adobe Contributor License Agreement (CLA) zu unterzeichnen. Dies ist ein obligatorischer Schritt. Nachdem Sie die CLA signiert haben, aktualisieren Sie die PR-Seite und senden Sie die Pull-Anfrage.
 
-1. Sie können bestätigen, dass die Pull-Anfrage gesendet wurde, indem Sie die Registerkarte **Pull-Anfragen** in `https://github.com/AdobeDocs/experience-platform.en` überprüfen.
+1. Sie können bestätigen, dass die Pull-Anfrage gesendet wurde, indem Sie die Registerkarte **Pull-Anfragen** in `https://github.com/AdobeDocs/experience-platform.de-DE` überprüfen.
 
    ![PR erfolgreich](../assets/docs-framework/ssd-pr-successful.png)
 

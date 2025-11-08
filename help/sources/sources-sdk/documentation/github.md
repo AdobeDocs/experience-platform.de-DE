@@ -21,7 +21,7 @@ In diesem Dokument wird beschrieben, wie Sie mit der GitHub-Web-Oberfläche eine
 
 ## Einrichten der GitHub-Umgebung
 
-Der erste Schritt beim Einrichten Ihrer GitHub-Umgebung besteht darin, zum [Adobe Experience Platform GitHub-Repository zu &#x200B;](https://github.com/AdobeDocs/experience-platform.en).
+Der erste Schritt beim Einrichten Ihrer GitHub-Umgebung besteht darin, zum [Adobe Experience Platform GitHub-Repository zu &#x200B;](https://github.com/AdobeDocs/experience-platform.de-DE).
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -33,11 +33,11 @@ Wenn die Verzweigung abgeschlossen ist, wählen **Master** und geben Sie im ange
 
 ![create-branch](../assets/create-branch.png)
 
-Navigieren Sie in der GitHub-Ordnerstruktur Ihres abgespalteten Repositorys zu [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) und wählen Sie dann die entsprechende Kategorie für Ihre Quelle aus der Liste aus. Wenn Sie beispielsweise die Dokumentation für eine neue CRM-Quelle erstellen, wählen Sie **crm** aus.
+Navigieren Sie in der GitHub-Ordnerstruktur Ihres abgespalteten Repositorys zu [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.de-DE/tree/main/help/sources/tutorials/api/create) und wählen Sie dann die entsprechende Kategorie für Ihre Quelle aus der Liste aus. Wenn Sie beispielsweise die Dokumentation für eine neue CRM-Quelle erstellen, wählen Sie **crm** aus.
 
 >[!TIP]
 >
->Wenn Sie Dokumentation für die Benutzeroberfläche erstellen, navigieren Sie zu [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) und wählen Sie die entsprechende Kategorie für Ihre Quelle aus. Um Ihre Bilder hinzuzufügen, navigieren Sie zu [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) und fügen Sie dann Ihre Screenshots zum Ordner `sdk` hinzu.
+>Wenn Sie Dokumentation für die Benutzeroberfläche erstellen, navigieren Sie zu [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.de-DE/tree/main/help/sources/tutorials/ui/create) und wählen Sie die entsprechende Kategorie für Ihre Quelle aus. Um Ihre Bilder hinzuzufügen, navigieren Sie zu [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.de-DE/tree/main/help/sources/images/tutorials/create) und fügen Sie dann Ihre Screenshots zum Ordner `sdk` hinzu.
 
 ![crm](../assets/crm.png)
 
@@ -77,6 +77,6 @@ Stellen Sie sicher, dass die Basis- und Vergleichsverzweigungen korrekt sind. F�
 
 An dieser Stelle wird eine Benachrichtigung angezeigt, die Sie auffordert, die Adobe Contributor License Agreement (CLA) zu unterzeichnen. Dies ist ein obligatorischer Schritt. Nachdem Sie die CLA signiert haben, aktualisieren Sie die PR-Seite und senden Sie die Pull-Anfrage.
 
-Sie können bestätigen, dass die Pull-Anforderung gesendet wurde, indem Sie die Registerkarte Pull-Anforderungen in https://github.com/AdobeDocs/experience-platform.en überprüfen.
+Sie können bestätigen, dass die Pull-Anforderung gesendet wurde, indem Sie die Registerkarte Pull-Anforderungen in https://github.com/AdobeDocs/experience-platform.de-DE überprüfen.
 
 ![confirm-pr](../assets/confirm-pr.png)
