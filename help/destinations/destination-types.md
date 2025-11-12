@@ -3,10 +3,10 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d57af88cc9507e0164b044a7203c66fe9fd9240e
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 52%
+source-wordcount: '831'
+ht-degree: 51%
 
 ---
 
@@ -52,6 +52,12 @@ Zu den erweiterten Unternehmenszielen gehören:
 * [HTTP-API-Ziel](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
+* [Snowflake-Streaming](catalog/warehouses/snowflake.md)
+* [Snowflake Batch](catalog/warehouses/snowflake-batch.md)
+
+>[!NOTE]
+>
+>Die Snowflake-Ziele sind derzeit nur für US-Kunden verfügbar. Wenn Sie Zugriff außerhalb der USA benötigen, wenden Sie sich bitte an Ihr Adobe Account Team.
 
 ### Batch-Ziele (dateibasiert) {#file-based}
 
@@ -71,7 +77,7 @@ Erfahren Sie mehr darüber, wie Sie [Personalisierungsziele für die Personalisi
 
 Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen geführt:
 
->[!VIDEO](https://video.tv.adobe.com/v/33170?captions=ger&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## Typen von exportierten Zielgruppen {#exported-audiences-types}
 
