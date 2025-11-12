@@ -77,7 +77,7 @@ Erfahren Sie mehr darüber, wie Sie [Personalisierungsziele für die Personalisi
 
 Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen geführt:
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33170?captions=ger&quality=12)
 
 ## Typen von exportierten Zielgruppen {#exported-audiences-types}
 
