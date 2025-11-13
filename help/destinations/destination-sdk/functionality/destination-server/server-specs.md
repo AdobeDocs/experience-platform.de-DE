@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Ziel-Server-Spezifikationen im Adobe Experience Platform Destination SDK über den Endpunkt „/authoring/destination-servers“ konfigurieren.
 title: Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 89%
+source-wordcount: '2775'
+ht-degree: 88%
 
 ---
 
@@ -63,7 +63,7 @@ Sowohl hartcodierte als auch vorlagenbasierte Felder haben ihre eigene Verwendun
 
 **Herstellen einer Verbindung zu Ihrem Ziel ohne Benutzereingabe**
 
-Wenn Benutzerinnen [&#x200B; Benutzer in der Experience Platform](../../../ui/connect-destination.md)Benutzeroberfläche eine Verbindung zu Ihrem Ziel herstellen, möchten Sie möglicherweise den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
+Wenn Benutzerinnen [ Benutzer in der Experience Platform](../../../ui/connect-destination.md)Benutzeroberfläche eine Verbindung zu Ihrem Ziel herstellen, möchten Sie möglicherweise den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
 
 Dazu können Sie die Verbindungsparameter der Zielplattform in der Server-Spezifikation hartcodieren. Wenn Sie in Ihrer Ziel-Server-Konfiguration hartcodierte Parameterwerte verwenden, wird die Verbindung zwischen Adobe Experience Platform und Ihrer Zielplattform ohne Benutzereingabe veranlasst.
 
@@ -78,7 +78,7 @@ Im folgenden Beispiel erstellt ein Partner einen Data Landing Zone(DLZ)-Ziel-Ser
          "templatingStrategy":"NONE",
          "value":"Your/hardcoded/path/here"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -106,7 +106,7 @@ Im folgenden Beispiel erstellt ein Partner eine [Echtzeit (Streaming)](#streamin
 }
 ```
 
-Damit Benutzerinnen und Benutzer einen Wert in der Experience Platform-Benutzeroberfläche auswählen können, muss der `region` auch in der [Zielkonfiguration“ &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) ein Kundendatenfeld definiert werden, wie unten dargestellt:
+Damit Benutzerinnen und Benutzer einen Wert in der Experience Platform-Benutzeroberfläche auswählen können, muss der `region` auch in der [Zielkonfiguration“ ](../../authoring-api/destination-configuration/create-destination-configuration.md) ein Kundendatenfeld definiert werden, wie unten dargestellt:
 
 ```json
 "customerDataFields":[
@@ -307,7 +307,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -318,6 +318,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 | `destinationServerType` | Zeichenfolge | Legen Sie diesen Wert entsprechend Ihrer Zielplattform fest. Wählen Sie für [!DNL Data Landing Zone]-Ziele `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | Zeichenfolge | *Erforderlich*. Legen Sie diesen Wert entsprechend dem Typ des im Feld `path.value` verwendeten Wertes fest.<ul><li>Wenn Sie möchten, dass Ihre Benutzerinnen und Benutzer ihr eigenes [!DNL Data Landing Zone] -Konto in der Experience Platform-Benutzeroberfläche eingeben, setzen Sie diesen Wert auf `PEBBLE_V1`. In diesem Fall müssen Sie das Feld `path.value` mit einer Vorlage versehen, um einen Wert aus den [Kundendatenfeldern](../destination-configuration/customer-data-fields.md), die von den Benutzenden ausgefüllt werden, zu lesen. Dieser Anwendungsfall wird im obigen Beispiel gezeigt.</li><li>Wenn Sie einen hartcodierten für Ihre Integration verwenden, z. B. `"path.value": "https://myaccount.blob.core.windows.net/"`, setzen Sie diesen Wert auf `NONE`. |
 | `fileBasedDlzDestination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
+| `fileBasedDlzDestination.useCase` | Zeichenfolge | *Erforderlich*. Legen Sie dies auf `"dlz_destination"` fest. Diese Eigenschaft identifiziert das Ziel als [!DNL Data Landing Zone]. Diese Eigenschaft wird nur beim Erstellen eines [!DNL Data Landing Zone] verwendet. |
 
 {style="table-layout:auto"}
 
