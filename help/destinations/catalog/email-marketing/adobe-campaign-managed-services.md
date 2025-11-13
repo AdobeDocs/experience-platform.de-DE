@@ -13,7 +13,7 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 >
->Diese Integration funktioniert mit [Adobe Campaign Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
+>Diese Integration funktioniert mit [Adobe Campaign Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=de#release-8-4-1).
 
 ## Überblick {#overview}
 
@@ -106,7 +106,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL Select instance]**: Ihre **[!DNL Campaign]** Marketing-Instanz.
-* **[!UICONTROL Target mapping]**: Wählen Sie das Zielgruppen-Mapping aus, das Sie **[!DNL Adobe Campaign]** Versand verwenden. [Weitere Informationen](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Target mapping]**: Wählen Sie das Zielgruppen-Mapping aus, das Sie **[!DNL Adobe Campaign]** Versand verwenden. [Weitere Informationen](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=de).
 * **[!UICONTROL Select sync type]**
 
    * **[!UICONTROL Audience sync]**: Verwenden Sie diese Option, um Adobe Experience Platform-Zielgruppen an Adobe Campaign zu senden.
@@ -131,7 +131,7 @@ Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Datennutzu
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppendaten für dieses Ziel finden Sie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
+Anweisungen [&#x200B; Aktivieren von Zielgruppendaten für dieses Ziel finden Sie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
