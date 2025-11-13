@@ -25,10 +25,10 @@ Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Mailch
 
 ## Verbinden von [!DNL Mailchimp Campaigns] mit Experience Platform
 
-* [Erstellen Sie eine Quellverbindung, um - [!DNL Mailchimp Campaigns]  mithilfe von APIs in Experience Platform zu ](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
+* [Erstellen Sie eine Quellverbindung, um - [!DNL Mailchimp Campaigns]  mithilfe von APIs in Experience Platform zu &#x200B;](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
 * [Erstellen Sie eine Quellverbindung, um - [!DNL Mailchimp Campaigns]  über die Benutzeroberfläche in Experience Platform zu importieren](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
 ## Verbinden von [!DNL Mailchimp Members] mit Experience Platform
 
-* [Erstellen Sie eine Quellverbindung, um - [!DNL Mailchimp Members]  mithilfe von APIs in Experience Platform zu ](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+* [Erstellen Sie eine Quellverbindung, um - [!DNL Mailchimp Members]  mithilfe von APIs in Experience Platform zu &#x200B;](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 * [Erstellen Sie eine Quellverbindung, um - [!DNL Mailchimp Members]  über die Benutzeroberfläche in Experience Platform zu importieren](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).

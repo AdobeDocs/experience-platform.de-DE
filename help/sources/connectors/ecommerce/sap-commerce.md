@@ -15,7 +15,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Die [!DNL SAP Commerce]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+>Die [!DNL SAP Commerce]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 [[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html) ist eine Cloud-basierte E-Commerce-Plattformlösung für B2B- und B2C-Unternehmen als Teil des SAP Customer Experience Portfolios verfügbar. [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) ist ein Produkt aus dem Portfolio und ermöglicht durch standardisierte Integrationen ein vollständiges Abonnement-Lifecycle-Management mit vereinfachten Verkaufs- und Zahlungserlebnissen.
 
@@ -34,7 +34,7 @@ Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, be
 
 Bevor Sie Ihre [!DNL SAP Commerce] Daten in Experience Platform übertragen können, müssen Sie zunächst sicherstellen, dass Folgendes vorhanden ist:
 
-* Ein [!DNL SAP Subscription Billing]. Wenn Sie noch kein gültiges Abrechnungskonto haben, wenden Sie sich bitte an Ihren [!DNL SAP] Account Manager. Weitere Informationen finden Sie [[!DNL SAP]  Dokument ](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf)Platform-Konfiguration“.
+* Ein [!DNL SAP Subscription Billing]. Wenn Sie noch kein gültiges Abrechnungskonto haben, wenden Sie sich bitte an Ihren [!DNL SAP] Account Manager. Weitere Informationen finden Sie [[!DNL SAP]  Dokument &#x200B;](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf)Platform-Konfiguration“.
 
 * Service-Schlüssel [!DNL SAP]. Mit dem [!DNL SAP]-Dienstschlüssel können Sie über Experience Platform auf die [!DNL SAP Subscription Billing]-API zugreifen. [!DNL SAP Commerce] erfordert Folgendes:
    * Client-ID
@@ -73,6 +73,6 @@ Bevor Sie Ihre [!DNL SAP Commerce] Daten in Experience Platform übertragen kön
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL SAP Commerce] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
-* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL SAP Commerce]  mithilfe von APIs in Experience Platform zu ](../../tutorials/api/create/ecommerce/sap-commerce.md).
+* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL SAP Commerce]  mithilfe von APIs in Experience Platform zu &#x200B;](../../tutorials/api/create/ecommerce/sap-commerce.md).
 * [Verbinden Ihres - [!DNL SAP Commerce]  mit Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/ecommerce/sap-commerce.md).
 * [Erstellen eines Datenflusses für eine Quelle mithilfe der Benutzeroberfläche](../../tutorials/ui/dataflow/ecommerce.md)

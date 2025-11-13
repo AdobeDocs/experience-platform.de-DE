@@ -45,5 +45,5 @@ Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Zendes
 
 ## Verbinden von [!DNL Zendesk] mit Experience Platform über die Benutzeroberfläche
 
-* [Erstellen einer  [!DNL Zendesk ]-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/customer-success/zendesk.md)
+* [Erstellen einer  [!DNL Zendesk &#x200B;]-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Erstellen eines Datenflusses für eine Customer-Success-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/customer-success.md)

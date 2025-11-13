@@ -86,7 +86,7 @@ Sie müssen ein XDM-Schema erstellen, um einen Datensatz zu beschreiben, in dem 
 
 >[!TAB Kosten]
 
-In [!DNL Stripe] stellen **Gebühren** Versuche dar, Geld in Ihre [!DNL Stripe] zu verschieben. Weitere Informationen zu bestimmten [[!DNL Stripe]  finden Sie ](https://docs.stripe.com/api/charges) API-Handbuch zu Gebühren .
+In [!DNL Stripe] stellen **Gebühren** Versuche dar, Geld in Ihre [!DNL Stripe] zu verschieben. Weitere Informationen zu bestimmten [[!DNL Stripe]  finden Sie &#x200B;](https://docs.stripe.com/api/charges) API-Handbuch zu Gebühren .
 
 +++Auswählen, um das Stripe-Gebührenobjekt anzuzeigen  
 
@@ -181,7 +181,7 @@ In [!DNL Stripe] stellen **Gebühren** Versuche dar, Geld in Ihre [!DNL Stripe] 
 
 >[!TAB Abonnements]
 
-In [!DNL Stripe] können Sie **Abonnements** verwenden, um wiederkehrend eine Kundin oder einen Kunden zu berechnen. Weitere Informationen zu [[!DNL Stripe]  Abonnementattributen finden ](https://docs.stripe.com/api/subscriptions) im API-Handbuch Abonnements .
+In [!DNL Stripe] können Sie **Abonnements** verwenden, um wiederkehrend eine Kundin oder einen Kunden zu berechnen. Weitere Informationen zu [[!DNL Stripe]  Abonnementattributen finden &#x200B;](https://docs.stripe.com/api/subscriptions) im API-Handbuch Abonnements .
 
 +++Auswählen, um das Stripe-Abonnementobjekt anzuzeigen
 
@@ -359,7 +359,7 @@ In [!DNL Stripe] können Sie &quot;**&quot; verwenden** um eine zuvor erstellte 
 
 >[!TAB Saldotransaktionen]
 
-[!DNL Stripe] stellen **Saldotransaktionen** die Geldbewegung zwischen Ihren [!DNL Stripe] dar. Weitere [[!DNL Stripe]  zu bestimmten Saldotransaktionsattributen finden ](https://docs.stripe.com/api/balance_transactions) im API-Handbuch zu Saldotransaktionen .
+[!DNL Stripe] stellen **Saldotransaktionen** die Geldbewegung zwischen Ihren [!DNL Stripe] dar. Weitere [[!DNL Stripe]  zu bestimmten Saldotransaktionsattributen finden &#x200B;](https://docs.stripe.com/api/balance_transactions) im API-Handbuch zu Saldotransaktionen .
 
 +++Wählen Sie aus, um das Stripe-Saldotransaktionsobjekt anzuzeigen
 
@@ -427,7 +427,7 @@ In [!DNL Stripe] repräsentieren **Kunden** einen bestimmten Kunden Ihres Untern
 
 >[!TAB Preise]
 
-[!DNL Stripe] stellen **Preise** die Stückkosten, die Währung und den optionalen Abrechnungszyklus sowohl für wiederkehrende als auch für einmalige Käufe von Produkten dar. Weitere Informationen zu [[!DNL Stripe]  Preisattributen finden ](https://docs.stripe.com/api/prices) im „API-Handbuch Preise“.
+[!DNL Stripe] stellen **Preise** die Stückkosten, die Währung und den optionalen Abrechnungszyklus sowohl für wiederkehrende als auch für einmalige Käufe von Produkten dar. Weitere Informationen zu [[!DNL Stripe]  Preisattributen finden &#x200B;](https://docs.stripe.com/api/prices) im „API-Handbuch Preise“.
 
 +++Auswählen, um das Stripe-Preisobjekt anzuzeigen
 

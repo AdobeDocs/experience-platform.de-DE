@@ -35,14 +35,14 @@ Damit [!DNL Flow Service] eine Verbindung mit Ihrem [!DNL Amazon Kinesis]-Konto 
 | ---------- | ----------- |
 | `accessKeyId` | Die Zugriffsschlüssel-ID entspricht der Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Experience Platform verwendet wird. |
 | `secretKey` | Der geheime Zugriffsschlüssel ist die andere Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Experience Platform verwendet wird. |
-| `region` | Die Region für Ihr [!DNL Kinesis]. Weitere Informationen zu Regionen [ Sie im Handbuch zum Hinzufügen von IP](../../../../ip-address-allow-list.md)Adressen zu Ihrer Zulassungsliste . |
+| `region` | Die Region für Ihr [!DNL Kinesis]. Weitere Informationen zu Regionen [&#x200B; Sie im Handbuch zum Hinzufügen von IP](../../../../ip-address-allow-list.md)Adressen zu Ihrer Zulassungsliste . |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Spezifikations-ID der [!DNL Kinesis]-Verbindung lautet: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 Weiterführende Informationen zu [!DNL Kinesis] Zugriffsschlüsseln und deren Generierung finden Sie in diesem [[!DNL AWS] Handbuch zum Verwalten von Zugriffsschlüsseln für IAM-Benutzer](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
