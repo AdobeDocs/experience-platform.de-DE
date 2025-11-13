@@ -3,10 +3,10 @@ title: Übersicht über den Oracle Eloqua-Connector
 description: Erfahren Sie, wie Sie Oracle Eloqua mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 55%
+source-wordcount: '254'
+ht-degree: 39%
 
 ---
 
@@ -20,9 +20,9 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Der Support für Anbieter von Marketing-Automatisierung umfasst [!DNL Oracle Eloqua].
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Oracle Eloqua] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 

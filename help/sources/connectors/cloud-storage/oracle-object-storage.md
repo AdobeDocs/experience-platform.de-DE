@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über den Oracle Object Storage Source Connector
 description: Erfahren Sie, wie Sie den Oracle-Objektspeicher mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 54%
+source-wordcount: '411'
+ht-degree: 46%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie A
 
 Cloud-Speicherquellen können Ihre Daten in Experience Platform übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Experience Platform können Sie Daten aus [!DNL Oracle Object Storage] durch Batches importieren.
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Informationen finden [&#x200B; im Dokument &#x200B;](../../ip-address-allow-list.md)Zulassungsliste von IP-Adressen“.
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 

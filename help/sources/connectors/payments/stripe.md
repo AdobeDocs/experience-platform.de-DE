@@ -2,10 +2,10 @@
 title: Stripe
 description: Erfahren Sie, wie Sie Zahlungsdaten von Ihrem Stripe-Konto in Adobe Experience Platform aufnehmen
 exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 8%
+source-wordcount: '773'
+ht-degree: 2%
 
 ---
 
@@ -86,7 +86,7 @@ Sie müssen ein XDM-Schema erstellen, um einen Datensatz zu beschreiben, in dem 
 
 >[!TAB Kosten]
 
-In [!DNL Stripe] stellen **Gebühren** Versuche dar, Geld in Ihre [!DNL Stripe] zu verschieben. Weitere Informationen zu bestimmten [[!DNL Stripe]  finden Sie &#x200B;](https://docs.stripe.com/api/charges) API-Handbuch zu Gebühren .
+In [!DNL Stripe] stellen **Gebühren** Versuche dar, Geld in Ihre [!DNL Stripe] zu verschieben. Weitere Informationen zu bestimmten [[!DNL Stripe]  finden Sie ](https://docs.stripe.com/api/charges) API-Handbuch zu Gebühren .
 
 +++Auswählen, um das Stripe-Gebührenobjekt anzuzeigen  
 
@@ -181,7 +181,7 @@ In [!DNL Stripe] stellen **Gebühren** Versuche dar, Geld in Ihre [!DNL Stripe] 
 
 >[!TAB Abonnements]
 
-In [!DNL Stripe] können Sie **Abonnements** verwenden, um wiederkehrend eine Kundin oder einen Kunden zu berechnen. Weitere Informationen zu [[!DNL Stripe]  Abonnementattributen finden &#x200B;](https://docs.stripe.com/api/subscriptions) im API-Handbuch Abonnements .
+In [!DNL Stripe] können Sie **Abonnements** verwenden, um wiederkehrend eine Kundin oder einen Kunden zu berechnen. Weitere Informationen zu [[!DNL Stripe]  Abonnementattributen finden ](https://docs.stripe.com/api/subscriptions) im API-Handbuch Abonnements .
 
 +++Auswählen, um das Stripe-Abonnementobjekt anzuzeigen
 
@@ -359,7 +359,7 @@ In [!DNL Stripe] können Sie &quot;**&quot; verwenden** um eine zuvor erstellte 
 
 >[!TAB Saldotransaktionen]
 
-[!DNL Stripe] stellen **Saldotransaktionen** die Geldbewegung zwischen Ihren [!DNL Stripe] dar. Weitere [[!DNL Stripe]  zu bestimmten Saldotransaktionsattributen finden &#x200B;](https://docs.stripe.com/api/balance_transactions) im API-Handbuch zu Saldotransaktionen .
+[!DNL Stripe] stellen **Saldotransaktionen** die Geldbewegung zwischen Ihren [!DNL Stripe] dar. Weitere [[!DNL Stripe]  zu bestimmten Saldotransaktionsattributen finden ](https://docs.stripe.com/api/balance_transactions) im API-Handbuch zu Saldotransaktionen .
 
 +++Wählen Sie aus, um das Stripe-Saldotransaktionsobjekt anzuzeigen
 
@@ -427,7 +427,7 @@ In [!DNL Stripe] repräsentieren **Kunden** einen bestimmten Kunden Ihres Untern
 
 >[!TAB Preise]
 
-[!DNL Stripe] stellen **Preise** die Stückkosten, die Währung und den optionalen Abrechnungszyklus sowohl für wiederkehrende als auch für einmalige Käufe von Produkten dar. Weitere Informationen zu [[!DNL Stripe]  Preisattributen finden &#x200B;](https://docs.stripe.com/api/prices) im „API-Handbuch Preise“.
+[!DNL Stripe] stellen **Preise** die Stückkosten, die Währung und den optionalen Abrechnungszyklus sowohl für wiederkehrende als auch für einmalige Käufe von Produkten dar. Weitere Informationen zu [[!DNL Stripe]  Preisattributen finden ](https://docs.stripe.com/api/prices) im „API-Handbuch Preise“.
 
 +++Auswählen, um das Stripe-Preisobjekt anzuzeigen
 
@@ -466,13 +466,13 @@ In [!DNL Stripe] repräsentieren **Kunden** einen bestimmten Kunden Ihres Untern
 >[!ENDTABS]
 
 
-### IP-Adressen-Zulassungsliste
+### Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 ### Konfigurieren von Berechtigungen für Experience Platform
 
-Sie müssen sowohl **[!UICONTROL Quellen anzeigen]** als auch **[!UICONTROL Quellen verwalten]** für Ihr Konto aktiviert haben, um Ihr [!DNL Stripe]-Konto mit Experience Platform zu verbinden. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/ui/overview.md).
+Für Ihr Konto müssen sowohl **[!UICONTROL View Sources]**- als auch **[!UICONTROL Manage Sources]** aktiviert sein, um Ihr [!DNL Stripe] mit Experience Platform verbinden zu können. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/ui/overview.md).
 
 ## Nächste Schritte
 

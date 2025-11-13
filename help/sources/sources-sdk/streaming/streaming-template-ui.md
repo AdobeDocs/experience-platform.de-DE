@@ -3,10 +3,10 @@ title: Dokumentationsvorlage für Selbstbedienungs-Streaming in der SDK-Benutzer
 description: Erfahren Sie, wie Sie Streaming-Daten aus einer Quelle mithilfe der Benutzeroberfläche in Adobe Experience Platform übertragen.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: Beta
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 16%
+source-wordcount: '1164'
+ht-degree: 7%
 
 ---
 
@@ -30,7 +30,7 @@ In diesem Tutorial werden Schritte zum Erstellen eines *YOURSOURCE*-Quell-Connec
 
 *Fügen Sie in diesem Abschnitt Informationen zu allen Dingen hinzu, die Kundinnen und Kunden beachten müssen, bevor Sie die -Quelle in der Benutzeroberfläche von Adobe Experience Platform einrichten. Dies kann sein über:*
 
-* *muss zu einer Zulassungsliste hinzugefügt werden*
+* auf die Zulassungsliste setzen *muss zu einer hinzugefügt werden*
 * *Anforderungen für E-Mail-Hashing*
 * *Alle Kontospezifikationen auf Ihrer Seite*
 * *Wie Sie die Authentifizierungsdaten erhalten, um eine Verbindung zu Ihrer Plattform herzustellen*
@@ -53,11 +53,11 @@ Weitere Informationen zu diesen Anmeldeinformationen finden Sie in der Dokumenta
 
 ## Verbinden Ihres *YOURSOURCE*-Kontos
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste **[!UICONTROL Sources]** aus, um auf den [!UICONTROL Sources]-Arbeitsbereich zuzugreifen. Der Bildschirm [!UICONTROL Catalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter **Kategorie** Streaming“ die Option *IHRE*) und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter **Kategorie** Streaming *die Option* IHRE QUELLE“ und dann die Option **[!UICONTROL Add data]** aus.
 
 >[!TIP]
 >
@@ -67,18 +67,18 @@ Wählen Sie unter **Kategorie** Streaming“ die Option *IHRE*) und dann **[!UIC
 
 ## Daten auswählen
 
-Der Schritt **[!UICONTROL Daten auswählen]** wird angezeigt und bietet eine Schnittstelle zur Auswahl der Daten, die Sie an Experience Platform übermitteln.
+Der Schritt **[!UICONTROL Select data]** wird angezeigt und bietet Ihnen eine Schnittstelle zur Auswahl der Daten, die Sie zu Experience Platform bringen.
 
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Teil der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Datenzeilen aus einer JSON-Datei anzeigen.
 
-Wählen Sie **[!UICONTROL Dateien hochladen]** aus, um eine JSON-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop in das Bedienfeld [!UICONTROL Dateien per Drag-and-Drop &#x200B;].
+Wählen Sie **[!UICONTROL Upload files]** aus, um eine JSON-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop in das [!UICONTROL Drag and drop files]-Bedienfeld ziehen.
 
 ![Der Schritt „Daten hinzufügen“ des Quell-Workflows.](../assets/streaming/add-data.png)
 
-Nachdem Ihre Datei hochgeladen wurde, wird die Vorschau-Oberfläche aktualisiert, um eine Vorschau des hochgeladenen Schemas anzuzeigen. In der Vorschauoberfläche können Sie den Inhalt und die Struktur einer Datei überprüfen. Sie können auch das Dienstprogramm [!UICONTROL Suchfeld] verwenden, um innerhalb Ihres Schemas auf bestimmte Elemente zuzugreifen.
+Nachdem Ihre Datei hochgeladen wurde, wird die Vorschau-Oberfläche aktualisiert, um eine Vorschau des hochgeladenen Schemas anzuzeigen. In der Vorschauoberfläche können Sie den Inhalt und die Struktur einer Datei überprüfen. Sie können auch das Dienstprogramm [!UICONTROL Search field] verwenden, um von Ihrem Schema aus auf bestimmte Elemente zuzugreifen.
 
-Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Der Vorschauschritt des Quell-Workflows.](../assets/streaming/preview.png)
 
@@ -86,28 +86,28 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Der Schritt **Datenflussdetails** wird angezeigt und bietet Ihnen Optionen zum Verwenden eines vorhandenen Datensatzes oder zum Einrichten eines neuen Datensatzes für Ihren Datenfluss sowie die Möglichkeit, einen Namen und eine Beschreibung für Ihren Datenfluss anzugeben. In diesem Schritt können Sie auch Einstellungen für die Profilaufnahme, Fehlerdiagnose, partielle Aufnahme und Warnhinweise konfigurieren.
 
-Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Der Schritt „Datenflussdetails“ des Quell-Workflows.](../assets/streaming/dataflow-detail.png)
 
 ## Zuordnung
 
-Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
+Der Schritt [!UICONTROL Mapping] wird angezeigt und bietet Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema.
 
-Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=de).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
-Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
+Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Der Zuordnungsschritt des Quell-Workflows.](../assets/streaming/mapping.png)
 
 ## Überprüfung
 
-Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neuen Datenfluss überprüfen können, bevor er hergestellt wird. Die Details lassen sich wie folgt kategorisieren:
+Der Schritt **[!UICONTROL Review]** wird angezeigt, in dem Sie Ihren neuen Datenfluss überprüfen können, bevor er erstellt wird. Die Details lassen sich wie folgt kategorisieren:
 
-* **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
-* **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt an, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
+* **[!UICONTROL Connection]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
+* **[!UICONTROL Assign dataset & map fields]**: Zeigt an, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
 
-Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
+Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Finish]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
 
 ![Der Überprüfungsschritt des Quell-Workflows.](../assets/streaming/review.png)
 
@@ -115,7 +115,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 Nachdem Sie Ihren Streaming-Datenfluss erstellt haben, können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen. Dieser Endpunkt wird verwendet, um Ihren Webhook zu abonnieren, sodass Ihre Streaming-Quelle mit Experience Platform kommunizieren kann.
 
-Um Ihren Streaming-Endpunkt abzurufen, gehen Sie zur Seite [!UICONTROL Datenflussaktivität] des soeben erstellten Datenflusses und kopieren Sie den Endpunkt am unteren Rand des Bedienfelds [!UICONTROL Eigenschaften].
+Um Ihren Streaming-Endpunkt abzurufen, gehen Sie zur Seite [!UICONTROL Dataflow activity] des soeben erstellten Datenflusses und kopieren Sie den Endpunkt unten im [!UICONTROL Properties].
 
 ![Der Streaming-Endpunkt in der Datenflussaktivität.](../assets/testing/endpoint-test.png)
 
@@ -123,8 +123,8 @@ Um Ihren Streaming-Endpunkt abzurufen, gehen Sie zur Seite [!UICONTROL Datenflus
 
 *Die Workflows für die verbleibenden Schritte zum Erstellen eines Datenflusses werden modularisiert. Wenn Sie bestimmte Aufrufe bezüglich Ihrer Quelle durchführen möchten, lesen Sie bitte den Abschnitt Zusätzliche Ressourcen unten.*
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem *YOURSOURCE*-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=de).
+In diesem Tutorial haben Sie eine Verbindung zu Ihrem *YOURSOURCE*-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 *Dies ist ein optionaler Abschnitt, in dem Sie weitere Links zu Ihrer Produktdokumentation oder anderen Schritten, Screenshots und Nuancen bereitstellen können, die Sie für den Erfolg des Kunden als wichtig erachten. In diesem Abschnitt können Sie Informationen oder Tipps zum gesamten Workflow Ihrer Quelle hinzufügen, insbesondere wenn es bestimmte „Fallstricke“ gibt, auf die ein Endbenutzer stoßen könnte.*

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: FTP Source Connector - Übersicht
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen FTP-Server mit Adobe Experience Platform verbinden.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 73%
+source-wordcount: '439'
+ht-degree: 64%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Der FTP-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
+>Der FTP-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Connectoren finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“ .
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen übernehmen können.
 
@@ -25,9 +25,9 @@ Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Experience Pla
 >
 >Beim Erstellen eines Datenflusses mit dem FTP-Quell-Connector wird dringend empfohlen, einen einmaligen Aufnahmezeitplan festzulegen, da Probleme mit inkrementellen Aktualisierungen in FTP-Servern fortbestehen.
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 

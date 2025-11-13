@@ -4,10 +4,10 @@ solution: Experience Platform
 title: GreenPlum Source Connector - Übersicht
 description: Erfahren Sie, wie Sie GreenPlum mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 36%
+source-wordcount: '178'
+ht-degree: 11%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wi
 
 Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, einschließlich relativer, NoSQL- oder Data Warehouses. Der Support für Datenbankanbieter umfasst [!DNL GreenPlum].
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL GreenPlum] mit [!DNL Experience Platform] mithilfe von APIs oder der Benutzeroberfläche:
 

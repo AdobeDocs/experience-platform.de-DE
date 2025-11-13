@@ -3,16 +3,16 @@ title: Übersicht über den Mixpanel Source Connector
 description: Erfahren Sie, wie Sie Mixpanel mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 17%
+source-wordcount: '431'
+ht-degree: 13%
 
 ---
 
 # [!DNL Mixpanel]
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Experience Platform unterstützt die Aufnahme von Daten aus einem Analyseprogramm eines Drittanbieters. Der Support für Analytics-Anbieter umfasst [!DNL Mixpanel].
 
@@ -20,9 +20,9 @@ Experience Platform unterstützt die Aufnahme von Daten aus einem Analyseprogram
 
 Sources nutzt die [Mixpanel-Ereignisexport-API > Download](https://developer.mixpanel.com/reference/raw-event-export), um Ihre Ereignisdaten so herunterzuladen, wie sie in [!DNL Mixpanel] empfangen und gespeichert werden, sowie alle Ereigniseigenschaften (einschließlich `distinct_id`) und den genauen Zeitstempel, an den das Ereignis an Experience Platform gesendet wurde. Mixpanel verwendet Bearer-Token als Authentifizierungsmechanismus für die Kommunikation mit der Mixpanel-Ereignisexport-API.
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 ## [!DNL Mixpanel] authentifizieren
 
@@ -34,7 +34,7 @@ Nachdem Sie ein [!DNL Mixpanel]-Konto erfolgreich erstellt haben, navigieren Sie
 
 ![mixpanel-project-settings](../../images/tutorials/create/mixpanel-export-events/mixpanel-project-settings.png)
 
-Navigieren Sie dann auf der [!DNL Project Settings] in der [!DNL Mixpanel]-Benutzeroberfläche zur Registerkarte [!DNL Service Accounts] , um Ihre Anmeldedaten für das Service-Konto abzurufen.
+Navigieren Sie dann auf der [!DNL Service Accounts] in der [!DNL Project Settings]-Benutzeroberfläche zur Registerkarte [!DNL Mixpanel] , um Ihre Anmeldedaten für das Service-Konto abzurufen.
 
 >[!TIP]
 >

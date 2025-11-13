@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ServiceNow Source Connector - Übersicht
 description: Erfahren Sie, wie Sie ServiceNow mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 67%
+source-wordcount: '202'
+ht-degree: 48%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 [!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einem Drittanbieter-Customer-Success-System. Zu den Anbietern, die Customer Success unterstützen, gehören [!DNL ServiceNow].
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL ServiceNow] mit [!DNL Experience Platform] mithilfe von APIs oder der Benutzeroberfläche:
 

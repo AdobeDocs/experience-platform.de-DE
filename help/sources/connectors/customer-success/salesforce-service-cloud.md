@@ -2,10 +2,10 @@
 title: Übersicht über den Salesforce Service Cloud Source Connector
 description: Erfahren Sie, wie Sie Salesforce Service Cloud mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 34%
+source-wordcount: '238'
+ht-degree: 35%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 ## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [&#x200B; Seite &#x200B;](../../ip-address-allow-list.md)IP-Adresse“.
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Salesforce Service Cloud] mit [!DNL Experience Platform] mithilfe von APIs oder der Benutzeroberfläche:
 

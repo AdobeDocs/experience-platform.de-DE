@@ -2,16 +2,16 @@
 title: Übersicht über den SFTP-Quell-Connector
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen SFTP-Server mit Adobe Experience Platform verbinden.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 42%
+source-wordcount: '1205'
+ht-degree: 44%
 
 ---
 
 # SFTP-Connector
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Lesen Sie dieses Dokument über die erforderlichen Schritte, die Sie durchführen müssen, um Ihr [!DNL SFTP]-Konto erfolgreich mit Experience Platform zu verbinden.
 
@@ -25,7 +25,7 @@ In diesem Abschnitt finden Sie die erforderlichen Schritte, die Sie ausführen m
 
 ### Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [&#x200B; Seite &#x200B;](../../ip-address-allow-list.md)IP-Adresse“.
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 ### Namensbeschränkungen für Dateien und Verzeichnisse
 

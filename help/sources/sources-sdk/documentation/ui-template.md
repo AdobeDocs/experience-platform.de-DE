@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Self-Service-Dokumentationsvorlage für die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung für YOURSOURCE erstellen.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 14%
+source-wordcount: '710'
+ht-degree: 10%
 
 ---
 
@@ -30,7 +30,7 @@ In diesem Tutorial werden Schritte zum Erstellen eines *YOURSOURCE*-Quell-Connec
 
 *Fügen Sie in diesem Abschnitt Informationen zu allen Dingen hinzu, die Kundinnen und Kunden beachten müssen, bevor Sie die -Quelle in der Benutzeroberfläche von Adobe Experience Platform einrichten. Dies kann sein über:*
 
-* *muss zu einer Zulassungsliste hinzugefügt werden*
+* auf die Zulassungsliste setzen *muss zu einer hinzugefügt werden*
 * *Anforderungen für E-Mail-Hashing*
 * *Alle Kontospezifikationen auf Ihrer Seite*
 * *Wie Sie die Authentifizierungsdaten erhalten, um eine Verbindung zu Ihrer Plattform herzustellen*
@@ -49,11 +49,11 @@ Weitere Informationen zu diesen Anmeldeinformationen finden Sie in der Dokumenta
 
 ## Verbinden Ihres *YOURSOURCE*-Kontos
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste **[!UICONTROL Sources]** aus, um auf den [!UICONTROL Sources]-Arbeitsbereich zuzugreifen. Der Bildschirm [!UICONTROL Catalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen *unter der Kategorie* YOURSOURCE“ die Option *YOURSOURCE* und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen *unter der Kategorie* YOURSOURCE“ die Option *YOURSOURCE* und klicken Sie dann auf **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
@@ -61,17 +61,17 @@ Wählen *unter der Kategorie* YOURSOURCE“ die Option *YOURSOURCE* und dann **[
 
 ![Katalog](../assets/ui/catalog.png)
 
-Die **[!UICONTROL Verbinden Sie Ihr SOURCE-Konto]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Connect YOURSOURCE account]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie das *YOURSOURCE*-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+Um ein vorhandenes Konto zu verwenden, wählen Sie das *YOURSOURCE*-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Next]** , um fortzufahren.
 
 ![vorhanden](../assets/ui/existing.png)
 
 ### Neues Konto
 
-Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre -Anmeldeinformationen an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre -Anmeldeinformationen an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie dann einige Zeit, bis die neue Verbindung hergestellt ist.
 
 ![neu](../assets/ui/new.png)
 
@@ -79,8 +79,8 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 *Die Workflows für die verbleibenden Schritte zum Erstellen eines Datenflusses werden modularisiert. Wenn Sie bestimmte Aufrufe bezüglich Ihrer Quelle durchführen möchten, lesen Sie bitte den Abschnitt Zusätzliche Ressourcen unten.*
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem *YOURSOURCE*-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=de).
+In diesem Tutorial haben Sie eine Verbindung zu Ihrem *YOURSOURCE*-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in Experience Platform zu importieren](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 *Dies ist ein optionaler Abschnitt, in dem Sie weitere Links zu Ihrer Produktdokumentation oder anderen Schritten, Screenshots und Nuancen bereitstellen können, die Sie für den Erfolg des Kunden als wichtig erachten. In diesem Abschnitt können Sie Informationen oder Tipps zum gesamten Workflow Ihrer Quelle hinzufügen, insbesondere wenn es bestimmte „Fallstricke“ gibt, auf die ein Endbenutzer stoßen könnte.*

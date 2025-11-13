@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 90%
 
 ---
@@ -398,7 +398,7 @@ ht-degree: 90%
    - [Fehlermeldungen in Quellen](./errors/sources-errors.md)
    - [Fehlermeldungen in Flow Service](./errors/flow-service-errors.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
-- [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
+- [Zulassungsliste von IP-Adressen](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Versionshinweise zu Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über den SQL Server Source Connector
 description: Erfahren Sie, wie Sie Microsoft SQL Server mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 42%
+source-wordcount: '233'
+ht-degree: 24%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 [!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einer Drittanbieterdatenbank. [!DNL Experience Platform] können eine Verbindung zu verschiedenen Datenbanktypen herstellen, z. B. relationale Datenbanken, NoSQL oder Data Warehouses. Unterstützung für Datenbankanbieter umfasst [!DNL Microsoft] SQL Server.
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 Die folgende Dokumentation enthält Informationen zum Verbinden [!DNL Microsoft] SQL Server mit [!DNL Experience Platform] mithilfe von APIs oder der Benutzeroberfläche:
 

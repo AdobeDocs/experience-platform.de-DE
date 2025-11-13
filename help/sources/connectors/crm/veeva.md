@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Veeva CRM Source Connector - Übersicht
 description: Erfahren Sie, wie Sie Veeva CRM über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 68%
+source-wordcount: '211'
+ht-degree: 49%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einem CRM-System eines Drittanbieters. Unterstützung für CRM-Anbieter umfasst [!DNL Veeva CRM].
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL Veeva CRM] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 

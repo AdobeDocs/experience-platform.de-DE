@@ -4,10 +4,10 @@ solution: Experience Platform
 title: HubSpot Source Connector - Übersicht
 description: Erfahren Sie, wie Sie HubSpot mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 64%
+source-wordcount: '204'
+ht-degree: 44%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 [!DNL Experience Platform]unterstützt die Aufnahme von Daten aus einem Marketing-Automatisierungssystem eines Drittanbieters. Der Support für Anbieter von Marketing-Automatisierung umfasst [!DNL HubSpot].
 
-## IP-Adressen-Zulassungsliste
+## Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL HubSpot] mit [!DNL Experience Platform] mithilfe von APIs oder der Benutzeroberfläche:
 

@@ -3,10 +3,10 @@ title: Übersicht über PathFactory Source
 description: Erfahren Sie, wie Sie PathFactory mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2024-04-30T00:00:00Z
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 11%
+source-wordcount: '429'
+ht-degree: 4%
 
 ---
 
@@ -22,9 +22,9 @@ Sie können Daten aus [[!DNL PathFactory]](https://www.pathfactory.com/) mithilf
 
 Lesen Sie das folgende Dokument, um Informationen zum Einrichten Ihres [!DNL PathFactory]-Quellkontos zu erhalten.
 
-## IP-Adressen-Zulassungsliste {#ip-allow-list}
+## Zulassungsliste von IP-Adressen {#ip-allow-list}
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste möglicherweise eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Sie müssen Ihrer Zulassungsliste regionsspezifische IP-Adressen hinzufügen, bevor Sie Ihre Quellen mit Experience Platform verbinden. Weitere Informationen finden Sie im Handbuch unter [Zulassungsauflistung von IP-Adressen für die Verbindung mit Experience Platform](../../ip-address-allow-list.md) .
 
 ## Voraussetzungen {#prerequisites}
 
@@ -56,12 +56,12 @@ Ausführliche Anweisungen zum Abrufen Ihres Benutzernamens, Kennworts, Ihrer Dom
 
 ### Konfigurieren von Berechtigungen für Experience Platform
 
-Sie müssen sowohl **[!UICONTROL Quellen anzeigen]** als auch **[!UICONTROL Quellen verwalten]** für Ihr Konto aktiviert haben, um Ihr [!DNL PathFactory]-Konto mit Experience Platform zu verbinden. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/ui/overview.md).
+Für Ihr Konto müssen sowohl **[!UICONTROL View Sources]**- als auch **[!UICONTROL Manage Sources]** aktiviert sein, um Ihr [!DNL PathFactory] mit Experience Platform verbinden zu können. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/ui/overview.md).
 
 ## Verbinden von [!DNL PathFactory] mit Experience Platform {#pathfactory-connect}
 
 Die folgende Dokumentation enthält Informationen zum Verbinden von [!DNL PathFactory] mit Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
-* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL PathFactory]  mithilfe von APIs in Experience Platform zu &#x200B;](../../tutorials/api/create/marketing-automation/pathfactory.md).
+* [Erstellen Sie eine Quellverbindung und einen Datenfluss, um  [!DNL PathFactory]  mithilfe von APIs in Experience Platform zu ](../../tutorials/api/create/marketing-automation/pathfactory.md).
 * [Verbinden Ihres - [!DNL PathFactory]  mit Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/pathfactory.md).
 * [Erstellen eines Datenflusses für eine Quellverbindung mithilfe der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md).
