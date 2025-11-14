@@ -2,10 +2,10 @@
 title: Adobe Analytics mit Experience Platform verbinden
 description: Erfahren Sie, wie Sie Ihre Report Suite-Daten von Adobe Analytics in Experience Platform übertragen
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: d6a290b9891b3507d531a595a5428955c7e9ee90
+source-git-commit: d9dad6b5da413740559e6c8de7392bc2e169d5d9
 workflow-type: tm+mt
-source-wordcount: '2750'
-ht-degree: 18%
+source-wordcount: '2731'
+ht-degree: 14%
 
 ---
 
@@ -26,7 +26,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dokument verwendet werden:
 
 * **Standardattribut**: Standardattribute sind alle Attribute, die von Adobe vordefiniert wurden. Sie haben dieselbe Bedeutung für alle Kunden und sind in den Analytics-Quelldaten und Analytics-Schemafeldergruppen verfügbar.
-* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in Analytics. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Ihre Verwendung kann sich von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. Weitere Informationen zu eVars finden [&#x200B; in der folgenden &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=de)Analytics-Dokumentation zu Konversionsvariablen).
+* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in Analytics. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Ihre Verwendung kann sich von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. Weitere Informationen zu eVars finden [ in der folgenden ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)Analytics-Dokumentation zu Konversionsvariablen).
 * **Attribute in benutzerdefinierten Feldgruppen**: Attribute, die aus von Kunden erstellten Feldgruppen stammen, sind alle benutzerdefiniert und gelten weder als Standard- noch als benutzerdefinierte Attribute.
 
 ## Navigieren im Quellkatalog
@@ -38,7 +38,7 @@ Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dok
 >* Ein Datenfluss, der eine 13-monatige Aufstockung historischer Report Suite-Daten in den Data Lake durchführt. Dieser Datenfluss endet, wenn die Aufstockung abgeschlossen ist.
 >* Ein Datenfluss, der Live-Daten an den Data Lake und an [!DNL Real-Time Customer Profile] sendet. Dieser Datenfluss läuft kontinuierlich.
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Wählen Sie in der Kategorie *[!UICONTROL Adobe]* Programme die Karte Adobe Analytics und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option **[!UICONTROL Sources]** , um auf den [!UICONTROL Sources] Arbeitsbereich zuzugreifen. Wählen Sie in der Kategorie *[!UICONTROL Adobe applications]* die Karte Adobe Analytics und dann **[!UICONTROL Add data]** aus.
 
 ![Der Quellkatalog mit der ausgewählten Adobe Analytics-Quellkarte.](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -55,7 +55,7 @@ Sie können Report Suites aus jeder Region (Vereinigte Staaten, Vereinigtes Kön
 
 Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report Suites in dieselbe Sandbox zu bringen. Wenn die Report Suites unterschiedliche Schemata für Variablen aufweisen (z. B. eVars oder Ereignisse), sollten sie bestimmten Feldern in den benutzerdefinierten Feldergruppen zugeordnet werden, um Datenkonflikte mithilfe der [Datenvorbereitung](../../../../../data-prep/ui/mapping.md) zu vermeiden. Report Suites können nur zu einer einzigen Sandbox hinzugefügt werden.
 
-Wählen Sie **[!UICONTROL Report Suite]** aus und verwenden Sie dann die Benutzeroberfläche *[!UICONTROL Analytics-Quelle - Daten hinzufügen]* um durch die Liste zu navigieren und die Analytics-Report Suite zu identifizieren, die Sie in Experience Platform aufnehmen möchten. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+Wählen Sie **[!UICONTROL Report suite]** aus und verwenden Sie dann die *[!UICONTROL Analytics source add data]*, um durch die Liste zu navigieren und die Analytics-Report Suite zu identifizieren, die Sie in Experience Platform aufnehmen möchten. Wählen Sie **[!UICONTROL Next]** aus, um fortzufahren.
 
 ![Eine Analytics Report Suite ist für die Aufnahme ausgewählt und die Schaltfläche „Weiter“ ist hervorgehoben](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -73,19 +73,19 @@ Bevor Sie Ihre Analytics-Daten einem Ziel-XDM-Schema zuordnen können, müssen S
 
 >[!TAB Standardschema]
 
-Ein Standardschema erstellt in Ihrem Auftrag ein neues Schema. Dieses neu erstellte Schema enthält die [!DNL Adobe Analytics ExperienceEvent Template] Feldergruppe. Um ein Standardschema zu verwenden, wählen Sie **[!UICONTROL Standardschema]** aus.
+Ein Standardschema erstellt in Ihrem Auftrag ein neues Schema. Dieses neu erstellte Schema enthält die [!DNL Adobe Analytics ExperienceEvent Template] Feldergruppe. Um ein Standardschema zu verwenden, wählen Sie **[!UICONTROL Default schema]** aus.
 
 ![Der Schritt zur Schemaauswahl des Analytics-Quell-Workflows, wobei „Standardschema“ ausgewählt ist.](../../../../images/tutorials/create/analytics/default-schema.png)
 
 >[!TAB Benutzerdefiniertes Schema]
 
-Mit einem benutzerdefinierten Schema können Sie jedes verfügbare Schema für Ihre Analytics-Daten auswählen, sofern dieses Schema die [!DNL Adobe Analytics ExperienceEvent Template] Feldergruppe enthält. Um ein benutzerdefiniertes Schema zu verwenden, wählen Sie **[!UICONTROL Benutzerdefiniertes Schema]** aus.
+Mit einem benutzerdefinierten Schema können Sie jedes verfügbare Schema für Ihre Analytics-Daten auswählen, sofern dieses Schema die [!DNL Adobe Analytics ExperienceEvent Template] Feldergruppe enthält. Um ein benutzerdefiniertes Schema zu verwenden, wählen Sie **[!UICONTROL Custom schema]** aus.
 
 ![Der Schritt zur Schemaauswahl des Analytics-Quell-Workflows, wobei „Benutzerdefiniertes Schema“ ausgewählt ist.](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 >[!ENDTABS]
 
-Verwenden Sie die *[!UICONTROL Zuordnung]*, um Quellfelder ihren entsprechenden Zielschemafeldern zuzuordnen. Sie können neue Schemafeldgruppen benutzerdefinierte Variablen zuordnen und Berechnungen anwenden, die von der Datenvorbereitung unterstützt werden. Wählen Sie ein Zielschema aus, um den Zuordnungsprozess zu starten.
+Verwenden Sie die *[!UICONTROL Mapping]*, um Quellfelder ihren entsprechenden Zielschemafeldern zuzuordnen. Sie können neue Schemafeldgruppen benutzerdefinierte Variablen zuordnen und Berechnungen anwenden, die von der Datenvorbereitung unterstützt werden. Wählen Sie ein Zielschema aus, um den Zuordnungsprozess zu starten.
 
 >[!TIP]
 >
@@ -93,17 +93,17 @@ Verwenden Sie die *[!UICONTROL Zuordnung]*, um Quellfelder ihren entsprechenden 
 
 ![Das Auswahlfeld „Zielschema“ der Zuordnungsschnittstelle.](../../../../images/tutorials/create/analytics/select-schema.png)
 
-Im Bedienfeld [!UICONTROL Standardfelder zuordnen] finden Sie Metriken zu Ihren [!UICONTROL Standardzuordnungen angewendet]. [!UICONTROL Standardzuordnungen mit Deskriptornamenskonflikten] und [!DNL Custom mappings].
+Im Bedienfeld [!UICONTROL Map standard fields] finden Sie Metriken zu Ihren [!UICONTROL Standard mappings applied]. [!UICONTROL Standard mappings with descriptor name conflicts] und [!DNL Custom mappings].
 
 | Standardfelder zuordnen | Beschreibung |
 | --- | --- |
-| [!UICONTROL Angewandte Standard-Zuordnungen] | Das Bedienfeld [!UICONTROL Angewandte Standard-Zuordnungen] zeigt die Gesamtzahl der zugeordneten Attribute an. Standardzuordnungen beziehen sich auf Zuordnungen zwischen allen Attributen in den Analytics-Quelldaten und entsprechenden Attributen in der Analytics-Feldgruppe. Diese sind vorab zugeordnet und können nicht bearbeitet werden. |
-| [!UICONTROL Standardzuordnungen mit Deskriptornamenskonflikten] | Der [!UICONTROL Bereich „Standardzuordnungen mit Deskriptornamenskonflikten] bezieht sich auf die Anzahl der zugeordneten Attribute, die Namenskonflikte enthalten. Diese Konflikte treten auf, wenn Sie ein Schema wiederverwenden, das bereits über einen ausgefüllten Satz von Felddeskriptoren aus einer anderen Report Suite verfügt. Sie können mit Ihrem Analytics-Datenfluss auch bei Namenskonflikten fortfahren. |
-| [!UICONTROL Benutzerdefinierte Zuordnungen] | Das Bedienfeld [!UICONTROL Benutzerdefinierte Zuordnungen] zeigt die Anzahl der zugeordneten benutzerdefinierten Attribute an, einschließlich eVars, Props und Listen. Benutzerdefinierte Zuordnungen beziehen sich auf die Zuordnung zwischen benutzerdefinierten Attributen in den Analytics-Quelldaten und Attributen in benutzerdefinierten Feldergruppen, die im ausgewählten Schema enthalten sind. |
+| [!UICONTROL Standard mappings applied] | Im Bedienfeld [!UICONTROL Standard mappings applied] wird die Gesamtzahl der zugeordneten Attribute angezeigt. Standardzuordnungen beziehen sich auf Zuordnungen zwischen allen Attributen in den Analytics-Quelldaten und entsprechenden Attributen in der Analytics-Feldgruppe. Diese sind vorab zugeordnet und können nicht bearbeitet werden. |
+| [!UICONTROL Standard mappings with descriptor name conflicts] | Das [!UICONTROL Standard mappings with descriptor name conflicts]-Bedienfeld bezieht sich auf die Anzahl der zugeordneten Attribute, die Namenskonflikte enthalten. Diese Konflikte treten auf, wenn Sie ein Schema wiederverwenden, das bereits über einen ausgefüllten Satz von Felddeskriptoren aus einer anderen Report Suite verfügt. Sie können mit Ihrem Analytics-Datenfluss auch bei Namenskonflikten fortfahren. |
+| [!UICONTROL Custom mappings] | Das Bedienfeld [!UICONTROL Custom mappings] zeigt die Anzahl der zugeordneten benutzerdefinierten Attribute an, einschließlich eVars, Props und Listen. Benutzerdefinierte Zuordnungen beziehen sich auf die Zuordnung zwischen benutzerdefinierten Attributen in den Analytics-Quelldaten und Attributen in benutzerdefinierten Feldergruppen, die im ausgewählten Schema enthalten sind. |
 
 ### Standardzuordnungen {#standard-mappings}
 
-Experience Platform erkennt Ihre Zuordnung automatisch für Namenskonflikte. Wenn keine Konflikte mit Ihren Zuordnungen auftreten, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Experience Platform erkennt Ihre Zuordnung automatisch für Namenskonflikte. Wenn keine Konflikte mit Ihren Zuordnungen auftreten, wählen Sie **[!UICONTROL Next]** aus, um fortzufahren.
 
 ![Die Standardzuordnungs-Kopfzeile, die keine Namenskonflikte anzeigt](../../../../images/tutorials/create/analytics/standard.png)
 
@@ -113,15 +113,15 @@ Experience Platform erkennt Ihre Zuordnung automatisch für Namenskonflikte. Wen
 
 ## Benutzerdefinierte Zuordnungen {#custom-mappings}
 
-Mit Datenvorbereitungsfunktionen können Sie neue benutzerdefinierte Zuordnungen oder berechnete Felder für benutzerdefinierte Attribute hinzufügen. Um benutzerdefinierte Zuordnungen hinzuzufügen, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
+Mit Datenvorbereitungsfunktionen können Sie neue benutzerdefinierte Zuordnungen oder berechnete Felder für benutzerdefinierte Attribute hinzufügen. Um benutzerdefinierte Zuordnungen hinzuzufügen, wählen Sie **[!UICONTROL Custom]** aus.
 
 ![Die Registerkarte „Benutzerdefinierte Zuordnung“ im Analytics-Quell-Workflow.](../../../../images/tutorials/create/analytics/custom.png)
 
-* **[!UICONTROL Felder filtern]**: Verwenden Sie die Texteingabe [!UICONTROL Felder filtern] um nach bestimmten Zuordnungsfeldern in Ihren Zuordnungen zu filtern.
-* **[!UICONTROL Neue Zuordnung hinzufügen]**: Um eine neue Zuordnung für Quellfelder und Zielfelder hinzuzufügen, wählen Sie **[!UICONTROL Neue Zuordnung hinzufügen]** aus.
-* **[!UICONTROL Berechnetes Feld hinzufügen]** Bei Bedarf können Sie **[!UICONTROL Berechnetes Feld hinzufügen]** auswählen, um ein neues berechnetes Feld für Ihre Zuordnungen zu erstellen.
-* **[!UICONTROL Zuordnung importieren]**: Mit der Funktion „Zuordnung importieren“ der Datenvorbereitung können Sie die manuelle Konfigurationszeit Ihres Datenaufnahmevorgangs verkürzen und Fehler einschränken. Wählen Sie **[!UICONTROL Zuordnung importieren]** aus, um Zuordnungen aus einem vorhandenen Fluss oder aus einer exportierten Datei zu importieren. Weitere Informationen finden Sie [Handbuch zum Importieren und Exportieren von Zuordnungen](../../../../../data-prep/ui/mapping.md#import-mapping).
-* **[!UICONTROL Vorlage herunterladen]**: Sie können auch eine CSV-Kopie Ihrer Zuordnungen herunterladen und Ihre Zuordnungen auf Ihrem lokalen Gerät konfigurieren. Wählen Sie **[!UICONTROL Vorlage herunterladen]** aus, um eine CSV-Kopie Ihrer Zuordnungen herunterzuladen. Sie müssen sicherstellen, dass Sie nur die Felder verwenden, die in Ihrer Quelldatei und im Zielschema bereitgestellt werden.
+* **[!UICONTROL Filter fields]**: Verwenden Sie die [!UICONTROL Filter fields] Texteingabe, um nach bestimmten Zuordnungsfeldern in Ihren Zuordnungen zu filtern.
+* **[!UICONTROL Add new mapping]**: Um ein neues Quellfeld und eine neue Zielfeld-Zuordnung hinzuzufügen, wählen Sie **[!UICONTROL Add new mapping]** aus.
+* **[!UICONTROL Add calculated field]**: Bei Bedarf können Sie **[!UICONTROL Add calculated field]** auswählen, um ein neues berechnetes Feld für Ihre Zuordnungen zu erstellen.
+* **[!UICONTROL Import mapping]**: Sie können die manuelle Konfigurationszeit Ihres Datenaufnahmevorgangs reduzieren und Fehler begrenzen, indem Sie die Funktion „Mapping importieren“ der Datenvorbereitung verwenden. Wählen Sie **[!UICONTROL Import mapping]** aus, um Zuordnungen aus einem vorhandenen Fluss oder aus einer exportierten Datei zu importieren. Weitere Informationen finden Sie [Handbuch zum Importieren und Exportieren von Zuordnungen](../../../../../data-prep/ui/mapping.md#import-mapping).
+* **[!UICONTROL Download template]**: Sie können auch eine CSV-Kopie Ihrer Zuordnungen herunterladen und Ihre Zuordnungen auf Ihrem lokalen Gerät konfigurieren. Wählen Sie **[!UICONTROL Download template]** aus, um eine CSV-Kopie Ihrer Zuordnungen herunterzuladen. Sie müssen sicherstellen, dass Sie nur die Felder verwenden, die in Ihrer Quelldatei und im Zielschema bereitgestellt werden.
 
 Weitere Informationen zur Datenvorbereitung finden Sie in der folgenden Dokumentation.
 
@@ -196,7 +196,7 @@ Nachdem Sie die Zuordnungen für Ihre Analytics Report Suite-Daten abgeschlossen
 
 Sie können Daten für die Profilaufnahme auf Zeilen- und Spaltenebene filtern. Verwenden Sie die Filterung auf Zeilenebene, um Kriterien wie Zeichenfolgen zu definieren, die enthalten, gleich, beginnt oder endet mit. Sie können auch eine Filterung auf Zeilenebene verwenden, um Bedingungen mithilfe von `AND` und `OR` zu verknüpfen und Bedingungen mithilfe von `NOT` zu negieren.
 
-Um Ihre Analytics-Daten auf Zeilenebene zu filtern, wählen Sie **[!UICONTROL Zeilenfilter]** und verwenden Sie die linke Leiste, um durch die Schemahierarchie zu navigieren und das Schemaattribut zu identifizieren, das Sie auswählen möchten.
+Um Ihre Analytics-Daten auf Zeilenebene zu filtern, wählen Sie **[!UICONTROL Row filter]** aus und verwenden Sie die linke Leiste, um durch die Schemahierarchie zu navigieren und das Schemaattribut zu identifizieren, das Sie auswählen möchten.
 
 ![Die Zeilenfilterschnittstelle für Analytics-Daten.](../../../../images/tutorials/create/analytics/row-filter.png)
 
@@ -204,41 +204,41 @@ Nachdem Sie das Attribut identifiziert haben, das Sie konfigurieren möchten, w�
 
 ![Das Attribut „Hersteller“, das zum Filtern ausgewählt wurde.](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
-Um verschiedene Bedingungen zu konfigurieren, wählen Sie **[!UICONTROL Gleich]** und dann im angezeigten Dropdown-Fenster eine Bedingung aus.
+Um verschiedene Bedingungen zu konfigurieren, wählen Sie **[!UICONTROL equals]** und dann im angezeigten Dropdown-Fenster eine Bedingung aus.
 
 Die Liste der konfigurierbaren Bedingungen umfasst:
 
-* [!UICONTROL Gleich]
-* [!UICONTROL Ist nicht gleich]
-* [!UICONTROL Beginnt mit]
-* [!UICONTROL Endet mit]
-* [!UICONTROL Endet nicht mit]
-* [!UICONTROL Enthält]
-* [!UICONTROL Enthält nicht]
-* [!UICONTROL vorhanden]
-* [!UICONTROL Ist nicht vorhanden]
+* [!UICONTROL equals]
+* [!UICONTROL does not equal]
+* [!UICONTROL starts with]
+* [!UICONTROL ends with]
+* [!UICONTROL does not end with]
+* [!UICONTROL contains]
+* [!UICONTROL does not contain]
+* [!UICONTROL exists]
+* [!UICONTROL does not exist]
 
 ![Das Dropdown-Menü „Bedingungen“ mit einer Liste von Bedingungsoperatoren.](../../../../images/tutorials/create/analytics/conditions.png)
 
-Geben Sie als Nächstes die Werte ein, die Sie basierend auf dem ausgewählten Attribut einbeziehen möchten. Im folgenden Beispiel werden [!DNL Apple] und [!DNL Google] als Teil des Attributs **[!UICONTROL Hersteller]** für die Aufnahme ausgewählt.
+Geben Sie als Nächstes die Werte ein, die Sie basierend auf dem ausgewählten Attribut einbeziehen möchten. Im folgenden Beispiel werden [!DNL Apple] und [!DNL Google] als Teil des **[!UICONTROL Manufacturer]**-Attributs für die Aufnahme ausgewählt.
 
 ![Das Filterbedienfeld mit den ausgewählten Attributen und Werten.](../../../../images/tutorials/create/analytics/include.png)
 
-Um Ihre Filterbedingungen weiter zu spezifizieren, fügen Sie ein weiteres Attribut aus dem Schema hinzu und fügen Sie dann Werte hinzu, die auf diesem Attribut basieren. Im folgenden Beispiel wird das Attribut **[!UICONTROL model]** hinzugefügt und Modelle wie die [!DNL iPhone 16] und [!DNL Google Pixel 9] werden zur Aufnahme gefiltert.
+Um Ihre Filterbedingungen weiter zu spezifizieren, fügen Sie ein weiteres Attribut aus dem Schema hinzu und fügen Sie dann Werte hinzu, die auf diesem Attribut basieren. Im folgenden Beispiel wird das Attribut **[!UICONTROL Model]** hinzugefügt und Modelle wie die [!DNL iPhone 16] und [!DNL Google Pixel 9] werden zur Aufnahme gefiltert.
 
 ![Zusätzliche Attribute und Werte, die im Container enthalten sind.](../../../../images/tutorials/create/analytics/include-model.png)
 
-Um einen neuen Container hinzuzufügen, wählen Sie oben rechts in der Filterschnittstelle die Auslassungspunkte (`...`) und dann **[!UICONTROL Container hinzufügen]** aus.
+Um einen neuen Container hinzuzufügen, wählen Sie oben rechts in der Filterschnittstelle die Auslassungspunkte (`...`) und dann **[!UICONTROL Add container]** aus.
 
 ![Das Dropdown-Menü „Container hinzufügen“ ist ausgewählt.](../../../../images/tutorials/create/analytics/add-container.png)
 
-Nachdem ein neuer Container hinzugefügt wurde, wählen Sie **[!UICONTROL Einschließen]** und dann **[!UICONTROL Ausschließen]** aus dem Dropdown-Menü aus. Fügen Sie die Attribute und Werte hinzu, die Sie ausschließen möchten, und klicken Sie abschließend auf **[!UICONTROL Weiter]**.
+Nachdem ein neuer Container hinzugefügt wurde, wählen Sie **[!UICONTROL Include]** und dann **[!UICONTROL Exclude]** aus dem Dropdown-Menü aus. Fügen Sie die Attribute und Werte hinzu, die Sie ausschließen möchten, und wählen Sie anschließend **[!UICONTROL Next]** aus.
 
 ![Die Attribute und Werte, die zum Ausschluss gefiltert wurden.](../../../../images/tutorials/create/analytics/exclude.png)
 
 ### Filterung auf Spaltenebene
 
-Wählen Sie **[!UICONTROL Spaltenfilter]** aus der Kopfzeile aus, um die Filterung auf Spaltenebene anzuwenden.
+Wählen Sie **[!UICONTROL Column filter]** aus der Kopfzeile aus, um die Filterung auf Spaltenebene anzuwenden.
 
 Die Seite wird in eine interaktive Schemastruktur aktualisiert, wobei Ihre Schemaattribute auf Spaltenebene angezeigt werden. Hier können Sie die Datenspalten auswählen, die bei der Profilaufnahme ausgeschlossen werden sollen. Alternativ können Sie eine Spalte erweitern und bestimmte Attribute für den Ausschluss auswählen.
 
@@ -248,7 +248,7 @@ Standardmäßig gehen alle Analytics-Daten an das Profil . Dieser Prozess ermög
 
 ### Sekundäre Identitäten filtern
 
-Verwenden Sie einen Spaltenfilter, um sekundäre Identitäten von der Profilaufnahme auszuschließen. Um sekundäre Identitäten zu filtern, wählen Sie **[!UICONTROL Spaltenfilter]** und dann **[!UICONTROL _identities aus]**.
+Verwenden Sie einen Spaltenfilter, um sekundäre Identitäten von der Profilaufnahme auszuschließen. Um sekundäre Identitäten zu filtern, wählen Sie **[!UICONTROL Column filter]** und dann **[!UICONTROL _identities]** aus.
 
 Der Filter gilt nur, wenn eine Identität als sekundär markiert ist. Wenn Identitäten ausgewählt sind, aber ein Ereignis mit einer der als primär markierten Identitäten eintrifft, werden diese nicht herausgefiltert.
 
@@ -256,24 +256,32 @@ Der Filter gilt nur, wenn eine Identität als sekundär markiert ist. Wenn Ident
 
 ### Angeben von Datenflussdetails
 
-Der Schritt **[!UICONTROL Datenflussdetails]** wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Klicken Sie auf **[!UICONTROL Weiter]**, wenn Sie fertig sind.
+Der Schritt **[!UICONTROL Dataflow detail]** wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Wählen Sie **[!UICONTROL Next]** aus, wenn Sie fertig sind.
 
 ![Die Datenflussdetailschnittstelle. des Aufnahme-Workflows zurück.](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
 ### Überprüfung
 
-Der Schritt [!UICONTROL Überprüfen] wird angezeigt, in dem Sie Ihren neuen Analytics-Datenfluss überprüfen können, bevor er erstellt wird. Details der Verbindung werden nach Kategorien gruppiert, darunter:
+Der Schritt [!UICONTROL Review] wird angezeigt, in dem Sie Ihren neuen Analytics-Datenfluss überprüfen können, bevor er erstellt wird. Details der Verbindung werden nach Kategorien gruppiert, darunter:
 
-* [!UICONTROL Verbindung]: Zeigt die Quellplattform der Verbindung an.
-* [!UICONTROL Datentyp]: Zeigt die ausgewählte Report Suite und die zugehörige Report Suite-ID an.
+* [!UICONTROL Connection]: Zeigt die Quellplattform der Verbindung an.
+* [!UICONTROL Data type]: Zeigt die ausgewählte Report Suite und die zugehörige Report Suite-ID an.
 
 ![Die Überprüfungsoberfläche des Aufnahme-Workflows.](../../../../images/tutorials/create/analytics/review.png)
 
+>[!TIP]
+>
+>Befolgen Sie diese Best Practices, um zu vermeiden, dass Ihre Lizenzberechtigungen überschritten werden und Ihre Metriken für Speicher und Datenreichhaltigkeit insgesamt überfordert werden:
+>
+>* Richten Sie zu Beginn die TTL (Time-to-Live) für die Aufbewahrung von Erlebnisereignissen ein, um die Verwaltung des Datenlebenszyklus und die Speichereffizienz zu optimieren. Weitere Informationen finden Sie in der Anleitung zum [Verwalten der Datensatzaufbewahrung für Erlebnisereignisse im Data Lake mithilfe von TTL](../../../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+>
+>* Wenn Sie einen Analytics-Quell-Datenfluss erstellen, konfigurieren Sie zunächst den Connector so, dass nur Daten in den Data Lake aufgenommen werden. Nachdem Sie bestätigt haben, dass der Datenfluss funktioniert, können Sie die Profilaufnahme für den Datensatz aktivieren. Dieser Ansatz funktioniert am besten, wenn Zeilen- und Spaltenfilter das Datenvolumen effektiv reduzieren.
+
 ## Überwachen Ihres Datenflusses {#monitor-your-dataflow}
 
-Sobald Ihr Datenfluss abgeschlossen ist, können Sie die *[!UICONTROL Datenflüsse]* verwenden, um den Status Ihres Analytics-Datenflusses zu überwachen.
+Sobald Ihr Datenfluss abgeschlossen ist, können Sie die *[!UICONTROL Dataflows]* verwenden, um den Status Ihres Analytics-Datenflusses zu überwachen.
 
-Verwenden Sie die [!UICONTROL Datensatzaktivität], um Informationen zum Fortschritt der Daten zu erhalten, die von Analytics an Experience Platform gesendet werden. Die Benutzeroberfläche zeigt Metriken wie die Gesamtzahl der Datensätze im vorherigen Monat, die Gesamtzahl der in den letzten sieben Tagen aufgenommenen Datensätze und die Datengröße im vorherigen Monat an.
+Verwenden Sie die [!UICONTROL Dataset activity], um Informationen zum Fortschritt der Daten zu erhalten, die von Analytics an Experience Platform gesendet werden. Die Benutzeroberfläche zeigt Metriken wie die Gesamtzahl der Datensätze im vorherigen Monat, die Gesamtzahl der in den letzten sieben Tagen aufgenommenen Datensätze und die Datengröße im vorherigen Monat an.
 
 Die -Quelle instanziiert zwei Datensatzflüsse. Ein Fluss stellt Aufstockungsdaten dar, der andere ist für Live-Daten. Aufstockungsdaten werden nicht für die Aufnahme in das Echtzeit-Kundenprofil konfiguriert, sondern für analytische und datenwissenschaftliche Anwendungsfälle an den Data Lake gesendet.
 
@@ -291,7 +299,7 @@ Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenz
 >
 >Sie können einen Analytics-Datenfluss nicht deaktivieren. Um den Fluss der Analytics-Daten zu stoppen, müssen Sie **Datenfluss** löschen.
 
-Um Ihren Analytics-Datenfluss zu löschen, wählen **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile des Arbeitsbereichs „Quellen“ aus. Suchen Sie auf der Seite Datenflüsse den Analytics-Datenfluss, den Sie löschen möchten, und wählen Sie dann die Auslassungspunkte (`...`) daneben aus. Verwenden Sie als Nächstes das Dropdown-Menü und wählen Sie **[!UICONTROL Löschen]**.
+Um Ihren Analytics-Datenfluss zu löschen, wählen Sie **[!UICONTROL Dataflows]** in der oberen Kopfzeile des Arbeitsbereichs Quellen aus. Suchen Sie auf der Seite Datenflüsse den Analytics-Datenfluss, den Sie löschen möchten, und wählen Sie dann die Auslassungspunkte (`...`) daneben aus. Verwenden Sie anschließend das Dropdown-Menü und wählen Sie **[!UICONTROL Delete]** aus.
 
 * Durch das Löschen des Live Analytics-Datenflusses wird auch der zugrunde liegende Datensatz gelöscht.
 * Durch das Löschen des Analytics-Datenflusses zur Aufstockung wird nicht der zugrunde liegende Datensatz gelöscht, sondern der Aufstockungsprozess für die entsprechende Report Suite gestoppt. Wenn Sie den Aufstockungs-Datenfluss löschen, können aufgenommene Daten weiterhin über den Datensatz angezeigt werden.
@@ -311,5 +319,5 @@ Das folgende Video soll Ihnen helfen, das Aufnehmen von Daten mithilfe des Adobe
 >
 > Die im folgenden Video angezeigte [!DNL Experience Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432289?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
