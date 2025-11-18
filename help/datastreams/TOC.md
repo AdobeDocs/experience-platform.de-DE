@@ -6,10 +6,10 @@ breadcrumb-title: Handbuch zu Datenströmen
 user-guide-description: Erfahren Sie, wie Sie Datenströme in Adobe Experience Platform erstellen.
 feature: Datastreams
 role: Developer
-source-git-commit: 4f3bec03d26c7606e70db75320cf3ba39d9d2b0d
+source-git-commit: 5e2445e2f1ec71aeeb2b6abbd032dad607a7427b
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 83%
+source-wordcount: '42'
+ht-degree: 78%
 
 ---
 
@@ -22,6 +22,3 @@ ht-degree: 83%
 * [Konfigurieren der Bot-Erkennung für Datenströme](bot-detection.md)
 * [Konfigurieren von Überschreibungen für Datenströme](overrides.md)
 * [Datenvorbereitung für die Datenerfassung](data-prep.md)
-* Datenanreicherung {#data-enrichment}
-   * [Wetterdaten von „The Weather Channel“](data-enrichment/weather.md)
-   * [Wetterdaten-Feldzuordnungen](data-enrichment/weather-reference.md)
