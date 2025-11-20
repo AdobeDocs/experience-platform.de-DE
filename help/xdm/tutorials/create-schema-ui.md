@@ -409,7 +409,7 @@ Das Schema „Mitglieder des Treueprogramms“ steht auch zur Ansicht und Verwal
 
 Das folgende Video zeigt, wie ein einfaches Schema in der [!DNL Experience Platform]-Benutzeroberfläche erstellt wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430216?captions=ger&quality=12&learn=on)
 
 Das folgende Video soll Ihr Verständnis für die Arbeit mit Feldergruppen und Klassen verbessern.
 

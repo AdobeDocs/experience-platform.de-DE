@@ -78,7 +78,7 @@ In der folgenden Tabelle erfahren Sie, welche Datensatztypen Sie je nach Program
 
 Sehen Sie sich das folgende Video an, um eine End-to-End-Erklärung des auf dieser Seite beschriebenen Workflows, die Vorteile der Verwendung der Funktion „Datensatz exportieren“ und einige vorgeschlagene Anwendungsfälle zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+>[!VIDEO](https://video.tv.adobe.com/v/3448827?captions=ger)
 
 ## Unterstützte Ziele {#supported-destinations}
 

@@ -116,7 +116,7 @@ Um einen Benutzer aus einer Rolle zu entfernen, klicken Sie auf das Symbol **X**
 
 Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer für diese Rolle verwalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475982/?captions=ger&learn=on)
 
 ## Verwalten von API-Anmeldeinformationen für eine Rolle {#manage-api-credentials-for-role}
 

@@ -22,7 +22,7 @@ Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile 
 
 Das folgende Video soll Ihnen dabei helfen, Intelligent Services besser zu verstehen. In diesem Video werden anhand von Beispielfällen für geschäftliche Nutzung ein Workflow auf hoher Ebene sowie die Funktionen von Attributions-KI und Kunden-KI erläutert.
 
->[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36560?captions=ger&learn=on&quality=12)
 
 ## Vorteile von Intelligent Services
 

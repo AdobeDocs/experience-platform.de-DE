@@ -182,4 +182,4 @@ Die verfügbaren vorkonfigurierten Metriken und Visualisierungen für die Dashbo
 
 Sehen Sie sich das folgende Video an, um Dashboards in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422737?captions=ger&quality=12&learn=on)

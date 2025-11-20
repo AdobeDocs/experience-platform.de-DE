@@ -55,7 +55,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Überblick über die Verknüpfungsregeln für Identitätsdiagramme" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Überblick über die Verknüpfungsregeln für Identitätsdiagramme"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448281/?captions=ger&format=jpeg&nocache=1747851655227" alt="Überblick über die Verknüpfungsregeln für Identitätsdiagramme"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Regeln zum Verknüpfen von Identitätsdiagrammen - Diagrammsimulation" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Regeln zum Verknüpfen von Identitätsdiagrammen - Diagrammsimulation"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444052/?captions=ger&format=jpeg&nocache=1747851655237" alt="Regeln zum Verknüpfen von Identitätsdiagrammen - Diagrammsimulation"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -101,7 +101,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475971/?captions=ger&format=jpeg&nocache=1747851655218" alt="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

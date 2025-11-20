@@ -185,4 +185,4 @@ Um mehr über die Prinzipien und Best Practices beim Erstellen von Schemata zu e
 
 Sehen Sie sich das folgende Video an, um [!DNL XDM System] in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38505?captions=ger&quality=12&learn=on)
