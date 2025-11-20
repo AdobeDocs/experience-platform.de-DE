@@ -23,7 +23,7 @@ Verwenden Sie einfache Abfragen im [!UICONTROL Permission Manager], um knappe Be
 >id="platform_permission_manager"
 >title="Berechtigungs-Manager"
 >abstract="Verwenden Sie die Dropdown-Auswahl auf der Seite, um Berichte auf Zugriffsebene mit unterschiedlichen Granularitätsstufen für Benutzende und Rollen zu erhalten."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=de" text="Permission manager" -->
 
 Wählen Sie über die Dropdown-Liste die **[!UICONTROL Users]** aus.
 
