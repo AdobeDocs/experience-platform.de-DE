@@ -16,7 +16,7 @@ ht-degree: 40%
 >title="Löschen unerwünschter oder abgelaufener Kundeneinträge und -datensätze"
 >abstract="<h2>Beschreibung</h2><p>Um den Lebenszyklus der Experience Platform-Daten unabhängig von der Einhaltung gesetzlicher Vorschriften zu verwalten, können Kundeneinträge gelöscht und Ablaufdaten für Datensätze geplant werden. Informationen zum Erstellen oder Verwalten von Anfragen betroffener Personen sind im Abschnitt über den Anwendungsfall „Berücksichtigen von Datenschutzanträgen betroffener Personen“ zu finden.</p>"
 
-Der Arbeitsbereich [[!UICONTROL Data Lifecycle] in ](./overview.md) Benutzeroberfläche von Adobe Experience Platform ermöglicht Ihnen, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als abgeschlossen markiert.
+Der Arbeitsbereich [[!UICONTROL Data Lifecycle] in &#x200B;](./overview.md) Benutzeroberfläche von Adobe Experience Platform ermöglicht Ihnen, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als abgeschlossen markiert.
 
 >[!WARNING]
 >
@@ -55,7 +55,7 @@ Der Workflow zur Anfrageerstellung wird angezeigt. Wählen Sie im Abschnitt [!UI
 
 ### Auswählen von Datum und Datensatz {#select-date-and-dataset}
 
-Wählen Sie im Abschnitt **[!UICONTROL Requested Action]** ein Datum aus, an dem der Datensatz gelöscht werden soll. Sie können das Datum manuell eingeben (im Format `mm/dd/yyyy`) oder das Kalendersymbol auswählen (![ Kalendersymbol).](/help/images/icons/calendar.png)), um das Datum aus einem Dialogfeld auszuwählen.
+Wählen Sie im Abschnitt **[!UICONTROL Requested Action]** ein Datum aus, an dem der Datensatz gelöscht werden soll. Sie können das Datum manuell eingeben (im Format `mm/dd/yyyy`) oder das Kalendersymbol auswählen (![&#x200B; Kalendersymbol).](/help/images/icons/calendar.png)), um das Datum aus einem Dialogfeld auszuwählen.
 
 ![Ein Kalenderdialogfeld mit ausgewähltem Ablaufdatum, das für den Datensatz hervorgehoben ist.](../images/ui/ttl/select-date.png)
 

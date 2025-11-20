@@ -17,7 +17,7 @@ ht-degree: 27%
 >title="Vorlage herunterladen"
 >abstract="CSV-Vorlage herunterladen, um die Zuordnung offline durchzuführen."
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie [Datenvorbereitungs](../home.md)-Zuordnungsfunktionen in der Adobe Experience Platform-Benutzeroberfläche verwenden können, um CSV-Dateien einem [Experience-Datenmodell (XDM)-Schema ](../../xdm/home.md).
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie [Datenvorbereitungs](../home.md)-Zuordnungsfunktionen in der Adobe Experience Platform-Benutzeroberfläche verwenden können, um CSV-Dateien einem [Experience-Datenmodell (XDM)-Schema &#x200B;](../../xdm/home.md).
 
 ## Erste Schritte
 
@@ -62,8 +62,8 @@ Als Nächstes können Sie die in der Kopfzeile aufgelisteten Optionen verwenden,
 | --- | --- |
 | [!UICONTROL Search source fields] | Navigieren Sie mithilfe der Suchleiste zu einem bestimmten Quellfeld. |
 | [!UICONTROL All fields] | Wählen Sie **[!UICONTROL All fields]** aus, um ein Dropdown-Menü mit Optionen zum Filtern Ihrer Zuordnungen nach anzuzeigen. Zu den verfügbaren Filteroptionen gehören:<ul><li>**[!UICONTROL Required fields]**: Filtert die Benutzeroberfläche so, dass nur die zum Abschließen des Workflows erforderlichen Felder angezeigt werden.</li><li> **[!UICONTROL Identity fields]**: Filtert die Benutzeroberfläche so, dass nur als Identitäten markierte Felder angezeigt werden.</li><li>**[!UICONTROL Mapped fields]**: Filtert die Benutzeroberfläche so, dass nur Felder angezeigt werden, die bereits zugeordnet wurden.</li><li>**[!UICONTROL Unmapped fields]**: Filtert die Benutzeroberfläche so, dass nur Felder angezeigt werden, die noch zugeordnet werden müssen.</li><li>**[!UICONTROL Fields with errors]**: Filtert die Benutzeroberfläche so, dass nur Felder mit Fehlern angezeigt werden.</li></ul> |
-| [!UICONTROL New field type] | Wählen Sie **[!UICONTROL New field type]** aus, um entweder ein neues Feld oder ein berechnetes Feld hinzuzufügen. Weitere Informationen finden Sie im Abschnitt zum [ eines neuen Feldtyps](#add-a-new-field-type). |
-| [!UICONTROL Import mappings] | Wählen Sie **[!UICONTROL Import mappings]** aus, um Zuordnungen aus einer vorhandenen Datei oder einem Datenfluss zu importieren. Weitere Informationen finden Sie im Abschnitt zum [ von Zuordnungen](#import-mapping). |
+| [!UICONTROL New field type] | Wählen Sie **[!UICONTROL New field type]** aus, um entweder ein neues Feld oder ein berechnetes Feld hinzuzufügen. Weitere Informationen finden Sie im Abschnitt zum [&#x200B; eines neuen Feldtyps](#add-a-new-field-type). |
+| [!UICONTROL Import mappings] | Wählen Sie **[!UICONTROL Import mappings]** aus, um Zuordnungen aus einer vorhandenen Datei oder einem Datenfluss zu importieren. Weitere Informationen finden Sie im Abschnitt zum [&#x200B; von Zuordnungen](#import-mapping). |
 | [!UICONTROL Validate] | Wählen Sie **[!UICONTROL Validate]** aus, um Ihre Zuordnungen auf Fehler zu überprüfen. |
 | [!UICONTROL Download template] | Wählen Sie **[!UICONTROL Download template]** aus, um eine CSV-Datei Ihrer Zuordnungen zu exportieren und herunterzuladen. |
 | [!UICONTROL Preview data] | Wählen Sie **[!UICONTROL Preview data]** aus, um das Bedienfeld „Vorschau“ zu verwenden und die Struktur und den Inhalt Ihres Quelldatensatzes zu überprüfen. |

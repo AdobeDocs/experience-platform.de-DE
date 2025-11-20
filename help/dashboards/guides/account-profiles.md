@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Die Benutzeroberfläche von Adobe Experience Platform verfügt über ein Dashboard, über das Sie wichtige Informationen zu Ihren Kontoprofilen anzeigen können. Diese Informationen werden bei einem täglichen Schnappschuss erfasst. In diesem Handbuch wird beschrieben, wie Sie das [!UICONTROL Account Profiles]-Dashboard in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Dieses Dokument bietet einen Überblick über die Funktionen im [!UICONTROL Account Profiles]-Dashboard und beschreibt ausführlich die verfügbaren Standard-Einblicke. Ausführliche Informationen zu den verfügbaren Funktionen finden [[!UICONTROL Account Profiles] im Handbuch zur ](../../rtcdp/accounts/account-profile-ui-guide.md)-Benutzeroberfläche .
+Dieses Dokument bietet einen Überblick über die Funktionen im [!UICONTROL Account Profiles]-Dashboard und beschreibt ausführlich die verfügbaren Standard-Einblicke. Ausführliche Informationen zu den verfügbaren Funktionen finden [[!UICONTROL Account Profiles] im Handbuch zur &#x200B;](../../rtcdp/accounts/account-profile-ui-guide.md)-Benutzeroberfläche .
 
 ## Erste Schritte
 
@@ -61,7 +61,7 @@ Wählen Sie die [!UICONTROL Profile ID] aus den Ergebnissen aus, die auf der Reg
 
 ![Die Registerkarte zum Durchsuchen von Account-Profilen mit den angezeigten Ergebnissen und der hervorgehobenen Profil-ID.](../images/account-profiles/account-profiles-browse-tab.png)
 
-Die auf der Registerkarte [!UICONTROL Details] angezeigten Kontoprofilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kontos zu erstellen. Weitere Informationen zu den Funktionen [ Kontoprofilanzeige in der Experience Platform-Benutzeroberfläche finden ](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) in der Dokumentation unter „Durchsuchen von Kontoprofilen in Adobe Real-Time Customer Data Platform&quot;.
+Die auf der Registerkarte [!UICONTROL Details] angezeigten Kontoprofilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kontos zu erstellen. Weitere Informationen zu den Funktionen [&#x200B; Kontoprofilanzeige in der Experience Platform-Benutzeroberfläche finden &#x200B;](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) in der Dokumentation unter „Durchsuchen von Kontoprofilen in Adobe Real-Time Customer Data Platform&quot;.
 
 ## Standard-Widgets {#standard-widgets}
 
@@ -239,4 +239,4 @@ Um das Problem zu beheben, müssen Sie B2B-Entitätsdaten, z. B *Opportunity-*, 
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Dokuments sollten Sie jetzt wissen, wie Sie das [!UICONTROL Account Profiles]-Dashboard finden und auch die in den verfügbaren Widgets angezeigten Metriken verstehen. Weitere Informationen zum Arbeiten mit Account-Profilen als Teil Ihrer B2B-Daten in der Experience Platform-Benutzeroberfläche finden Sie in der Übersicht [ Account-Profile ](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP, B2B edition.
+Durch Befolgen dieses Dokuments sollten Sie jetzt wissen, wie Sie das [!UICONTROL Account Profiles]-Dashboard finden und auch die in den verfügbaren Widgets angezeigten Metriken verstehen. Weitere Informationen zum Arbeiten mit Account-Profilen als Teil Ihrer B2B-Daten in der Experience Platform-Benutzeroberfläche finden Sie in der Übersicht [&#x200B; Account-Profile &#x200B;](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP, B2B edition.

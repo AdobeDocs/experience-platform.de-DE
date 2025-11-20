@@ -28,7 +28,7 @@ In diesem Artikel wird erläutert, wie Sie mit der Experience Platform-Benutzero
 
 Mit der **[!UICONTROL Export file now]** können Sie eine vollständige Datei exportieren, ohne den aktuellen Exportzeitplan einer zuvor geplanten Zielgruppe zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nichts an der Exportfrequenz der Zielgruppe. Der Dateiexport wird sofort ausgelöst und die neuesten Ergebnisse der Segmentierungsdurchgänge von Experience Platform werden abgerufen.
 
-Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[ wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren ](/help/destinations/api/ad-hoc-activation-api.md).
+Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[&#x200B; wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren &#x200B;](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Voraussetzungen {#prerequisites}
 

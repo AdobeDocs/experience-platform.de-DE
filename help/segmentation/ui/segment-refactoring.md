@@ -32,7 +32,7 @@ Beim Anwenden einer Zeitbeschränkung auf Arbeitsflächen-Ebene können Sie denn
 
 >[!NOTE]
 >
->Wenn auf der Arbeitsfläche nur **eine** Karte vorhanden ist, entspricht das Anwenden der Zeitbeschränkung auf die Karte **** dem Anwenden der Zeitbeschränkung auf der Arbeitsfläche.
+>Wenn auf der Arbeitsfläche nur **eine** Karte vorhanden ist, entspricht das Anwenden der Zeitbeschränkung auf die Karte **&#x200B;**&#x200B;dem Anwenden der Zeitbeschränkung auf der Arbeitsfläche.
 >
 >Wenn sich **(mehrere** Karten auf der Arbeitsfläche befinden, wird diese Zeitbeschränkung durch Anwenden der Zeitbeschränkung auf die Arbeitsfläche-Ebene auf **alle** Karten auf der Arbeitsfläche angewendet.
 

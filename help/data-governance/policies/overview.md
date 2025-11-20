@@ -23,7 +23,7 @@ Damit Datennutzungs-Labels die Datenkonformität effektiv unterstützen können,
 Es sind zwei Richtlinientypen verfügbar:
 
 * **[!UICONTROL Data governance policy]**: Beschränken Sie die Datenaktivierung auf der Grundlage der durchgeführten Marketing-Aktion und der von den betreffenden Daten getragenen Datennutzungskennzeichnungen.
-* **[!UICONTROL Consent policy]**: Filtern Sie die Profile, die für ([) ](../../destinations/home.md) aktiviert werden können, basierend auf der Zustimmung oder den Voreinstellungen Ihrer Kunden
+* **[!UICONTROL Consent policy]**: Filtern Sie die Profile, die für ([) &#x200B;](../../destinations/home.md) aktiviert werden können, basierend auf der Zustimmung oder den Voreinstellungen Ihrer Kunden
 
 >[!NOTE]
 >

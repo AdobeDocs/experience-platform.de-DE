@@ -131,7 +131,7 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 
 +++ Antwort
 
-- Das Identity Service-[ „first-in, first-out“-Löschsystem ](../identity-service/guardrails.md) ECIDs aus dem Identitätsdiagramm löschen, die in Identity Service gespeichert sind.
+- Das Identity Service-[&#x200B; „first-in, first-out“-Löschsystem &#x200B;](../identity-service/guardrails.md) ECIDs aus dem Identitätsdiagramm löschen, die in Identity Service gespeichert sind.
 - Wenn dieses Löschverhalten dazu führt, dass ein Nur-ECID-Profil im Echtzeit-Kundenprofil (Profilspeicher) gespeichert wird, wird dieses Profil nach Ablauf von Daten pseudonymer Profile aus dem Profilspeicher gelöscht.
 
 +++

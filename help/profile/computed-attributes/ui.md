@@ -150,9 +150,9 @@ Bei Auswahl eines Entwurfs für ein berechnetes Attribut wird die Seite **[!UICO
 
 >[!IMPORTANT]
 >
->Wenn Sie ein berechnetes Attribut mit der Funktion **Zuletzt verwendet** in einer Segmentdefinition verwenden, **müssen** sowohl **** Wert als auch den Zeitstempelwert im berechneten Attributobjekt einbeziehen.
+>Wenn Sie ein berechnetes Attribut mit der Funktion **Zuletzt verwendet** in einer Segmentdefinition verwenden, **müssen** sowohl **&#x200B;**&#x200B;Wert als auch den Zeitstempelwert im berechneten Attributobjekt einbeziehen.
 >
->Wenn Sie beispielsweise eine Segmentdefinition erstellen, die nach „Alle Profile mit einer gültigen E-Mail-Adresse“ sucht, in der das Feld „E-Mail-Adresse“ mit einem berechneten Attribut mit der neuesten Funktion gefüllt ist, **Sie** sowohl den Wert der E-Mail-Adresse als auch **** Zeitstempel der E-Mail-Adresse“ einbeziehen.
+>Wenn Sie beispielsweise eine Segmentdefinition erstellen, die nach „Alle Profile mit einer gültigen E-Mail-Adresse“ sucht, in der das Feld „E-Mail-Adresse“ mit einem berechneten Attribut mit der neuesten Funktion gefüllt ist, **Sie** sowohl den Wert der E-Mail-Adresse als auch **&#x200B;**&#x200B;Zeitstempel der E-Mail-Adresse“ einbeziehen.
 
 Nachdem Sie ein berechnetes Attribut erstellt haben, können Sie **veröffentlichte** berechneten Attribute in anderen nachgelagerten -Services verwenden. Da berechnete Attribute Profilattributfelder sind, die für Ihr Profilvereinigungsschema erstellt wurden, können Sie berechnete Attributwerte für ein Echtzeit-Kundenprofil nachschlagen, sie in einer Zielgruppe verwenden, für ein Ziel aktivieren oder sie für die Personalisierung in Journey in Adobe Journey Optimizer verwenden.
 

@@ -88,4 +88,4 @@ Die folgenden Informationen werden für jede Rolle angezeigt, die Ihren Kriterie
 
 ## Nächste Schritte
 
-Sie haben jetzt gelernt, wie Sie Berichte für Benutzer und Rollen erstellen. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter &quot;[ Zugriffssteuerung - Übersicht](../overview.md).
+Sie haben jetzt gelernt, wie Sie Berichte für Benutzer und Rollen erstellen. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter &quot;[&#x200B; Zugriffssteuerung - Übersicht](../overview.md).

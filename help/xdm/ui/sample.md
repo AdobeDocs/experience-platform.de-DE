@@ -33,4 +33,4 @@ In diesem Handbuch wurde beschrieben, wie Sie eine JSON-Beispieldatei aus einem 
 
 Wenn Sie bereit sind, mit der Aufnahme von Daten zu beginnen, erfahren Sie in der Anleitung zum [Zuordnen einer CSV-Datei zu XDM](../../ingestion/tutorials/map-csv/overview.md) , wie Sie eine einfache Datendatei (z. B. eine CSV-Datei) einem XDM-Schema zuordnen und in Experience Platform aufnehmen. Alternativ können Sie eine [Quellverbindung“ einrichten](../../sources/home.md) um Ihre Daten aus einer externen Quelle einzubringen und sie XDM zuzuordnen.
 
-Weiterführende Informationen zu den Funktionen von [!UICONTROL Schemas] Workspace in der Benutzeroberfläche finden Sie im Abschnitt Übersicht über [[!UICONTROL Schemas] Workspace ](./overview.md).
+Weiterführende Informationen zu den Funktionen von [!UICONTROL Schemas] Workspace in der Benutzeroberfläche finden Sie im Abschnitt Übersicht über [[!UICONTROL Schemas] Workspace &#x200B;](./overview.md).

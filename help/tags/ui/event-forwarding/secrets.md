@@ -188,7 +188,7 @@ Um ein geheimes [!DNL LinkedIn] OAuth 2-Geheimnis zu erstellen, wählen Sie **[!
 
 Ein Popup wird angezeigt, das Sie darüber informiert, dass die geheimen Daten manuell über [!DNL LinkedIn] autorisiert werden müssen. Wählen Sie **[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]** aus, um fortzufahren.
 
-![ Popover „LinkedIn-Autorisierung“ mit hervorgehobener Schaltfläche „Geheimnis mit LinkedIn erstellen und autorisieren“.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![&#x200B; Popover „LinkedIn-Autorisierung“ mit hervorgehobener Schaltfläche „Geheimnis mit LinkedIn erstellen und autorisieren“.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL LinkedIn] aufgefordert werden. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung Zugriff auf Ihre Daten zu gewähren.
 
@@ -208,7 +208,7 @@ Drei Monate vor den geheimen Daten, für die eine erneute Autorisierung erforder
 
 Sie werden zur Registerkarte [!UICONTROL Secrets] weitergeleitet. Die auf dieser Seite aufgelisteten geheimen Daten werden so gefiltert, dass nur die geheimen Daten angezeigt werden, die erneut autorisiert werden müssen. Wählen Sie **[!UICONTROL Auth Needed]** für die geheimen Daten aus, die Sie erneut autorisieren müssen.
 
-![Die hervorgehobene Registerkarte &quot;[!UICONTROL Secret][!UICONTROL Auth Needed] für das [!DNL LinkedIn] Geheimnis.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![Die hervorgehobene Registerkarte &quot;[!UICONTROL Secret]&#x200B;[!UICONTROL Auth Needed] für das [!DNL LinkedIn] Geheimnis.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL LinkedIn]-Anmeldeinformationen aufgefordert werden. Befolgen Sie die Anweisungen, um Ihre geheimen Daten erneut zu autorisieren.
 

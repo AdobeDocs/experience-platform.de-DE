@@ -102,7 +102,7 @@ Sie haben außerdem WebSDK implementiert und einen WebSDK-Datensatz (Erlebnisere
 | `t=3` | ECID:44675 | Startseite anzeigen |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | Kaufverlauf anzeigen |
 
-Die primäre Identität für jedes Ereignis wird anhand der Konfiguration [ Datenelementtypen ](../../tags/extensions/client/web-sdk/data-element-types.md).
+Die primäre Identität für jedes Ereignis wird anhand der Konfiguration [&#x200B; Datenelementtypen &#x200B;](../../tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >

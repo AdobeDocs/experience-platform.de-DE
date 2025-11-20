@@ -90,17 +90,17 @@ Wählen Sie anschließend im Fenster *[!UICONTROL Customize table]* die Spalten 
 
 ![Das Popup-Fenster „Spalte anpassen“ im Monitoring-Dashboard.](../assets/ui/monitor-sources/customize-table.png)
 
-Um die Daten zu überwachen, die in einen bestimmten Datenfluss aufgenommen werden, wählen Sie das Filtersymbol (![) ](/help/images/icons/filter-add.png) einer Quelle aus.
+Um die Daten zu überwachen, die in einen bestimmten Datenfluss aufgenommen werden, wählen Sie das Filtersymbol (![) &#x200B;](/help/images/icons/filter-add.png) einer Quelle aus.
 
 >[!TIP]
 >
->Sie können das Überwachungs-Dashboard verwenden, um Datenlöschmetriken für gelöschte Datensätze mithilfe von Datenspeicherungsrichtlinien zu überwachen. Weitere Informationen zur Datenaufbewahrung finden Sie im Handbuch unter [ von Richtlinien zur Datenaufbewahrung](../../catalog/datasets/user-guide.md#data-retention-policy).
+>Sie können das Überwachungs-Dashboard verwenden, um Datenlöschmetriken für gelöschte Datensätze mithilfe von Datenspeicherungsrichtlinien zu überwachen. Weitere Informationen zur Datenaufbewahrung finden Sie im Handbuch unter [&#x200B; von Richtlinien zur Datenaufbewahrung](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ![Überwachen Sie einen bestimmten Datenfluss, indem Sie das Filtersymbol neben einer bestimmten Quelle auswählen.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 Die Tabelle Metriken wird in eine Tabelle mit aktiven Datenflüssen aktualisiert, die der ausgewählten Quelle entsprechen. In diesem Schritt können Sie zusätzliche Informationen zu Ihren Datenflüssen anzeigen, einschließlich des entsprechenden Datensatzes und Datentyps sowie eines Zeitstempels, der angibt, wann sie zuletzt aktiv waren.
 
-Um einen Datenfluss weiter zu untersuchen, wählen Sie das Filtersymbol (![) ](/help/images/icons/filter-add.png) einem Datenfluss aus.
+Um einen Datenfluss weiter zu untersuchen, wählen Sie das Filtersymbol (![) &#x200B;](/help/images/icons/filter-add.png) einem Datenfluss aus.
 
 ![Die Datenfluss-Tabelle im Monitoring-Dashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -148,4 +148,4 @@ Verwenden Sie den Abschnitt [!UICONTROL Records failed] , um Metriken zu Datens�
 In diesem Tutorial haben Sie gelernt, wie Sie die Data-Lake-Aufnahmerate mithilfe des **[!UICONTROL Monitoring]**-Dashboards überwachen. Außerdem haben Sie gelernt, Fehler zu identifizieren, die Datenflussfehler während der Aufnahme verursachen. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Identitätsdaten überwachen](./monitor-identities.md).
-* [Überwachen von ](./monitor-profiles.md).
+* [Überwachen von &#x200B;](./monitor-profiles.md).

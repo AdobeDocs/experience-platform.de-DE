@@ -53,7 +53,7 @@ In der Widget-Bibliothek können Sie die standardmäßigen und benutzerdefiniert
 
 ### SQL anzeigen {#view-sql}
 
-Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im [!UICONTROL Overview] Arbeitsbereich anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Experience Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche ](../view-sql.md).
+Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im [!UICONTROL Overview] Arbeitsbereich anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Experience Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche &#x200B;](../view-sql.md).
 
 ## Standard-Widgets {#default-widgets}
 
@@ -66,7 +66,7 @@ Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßig
 >[!NOTE]
 >
 >Seit dem 26. Juli 2023 wurden [!UICONTROL Profiles]-, [!UICONTROL Audiences]- und [!UICONTROL Destinations]-Übersichts-Dashboards für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf einen neuen Standard-Widget-Ladevorgang zurückgesetzt.
->Weitere Informationen dazu, welche Widgets als Teil der Standard[Widget-Ladevorgänge enthalten sind, finden Sie in der Dokumentation ](./profiles.md#default-widgets) den Abschnitten „Profile[ und ](./audiences.md#default-widgets)Zielgruppen der Standard-Widgets“. Sie können Ihre Dashboard-Widgets wie zuvor anpassen.
+>Weitere Informationen dazu, welche Widgets als Teil der Standard[Widget-Ladevorgänge enthalten sind, finden Sie in der Dokumentation &#x200B;](./profiles.md#default-widgets) den Abschnitten „Profile[&#x200B; und &#x200B;](./audiences.md#default-widgets)Zielgruppen der Standard-Widgets“. Sie können Ihre Dashboard-Widgets wie zuvor anpassen.
 
 ## Standard-Widgets {#standard-widgets}
 
@@ -294,7 +294,7 @@ Das [!UICONTROL Activated audiences across all destinations]-Widget gibt in eine
 
 ![Das Widget „Aktivierte Zielgruppen für alle Ziele“.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Wählen Sie **[!UICONTROL Audiences]** aus, um zur Registerkarte [!UICONTROL Browse] zu navigieren. Diese Seite enthält eine Liste aller aktivierten Ziele und zahlreiche relevante Metriken. Weitere Informationen zur Registerkarte [[!UICONTROL Browse] finden Sie in der Dokumentation ](../../destinations/ui/destinations-workspace.md#browse).
+Wählen Sie **[!UICONTROL Audiences]** aus, um zur Registerkarte [!UICONTROL Browse] zu navigieren. Diese Seite enthält eine Liste aller aktivierten Ziele und zahlreiche relevante Metriken. Weitere Informationen zur Registerkarte [[!UICONTROL Browse] finden Sie in der Dokumentation &#x200B;](../../destinations/ui/destinations-workspace.md#browse).
 
 Lesen Sie den Abschnitt Voraussetzungen für die [Definitionen der verwendeten Begriffe](#prerequisites) in dieser Beschreibung.
 

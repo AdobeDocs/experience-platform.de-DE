@@ -41,7 +41,7 @@ Dieses Dokument enthält ein Tutorial zum Definieren einer Beziehung zwischen zw
 
 >[!NOTE]
 >
->Anweisungen zum Erstellen einer Viele-zu-eins-Beziehung in Adobe Real-Time Customer Data Platform B2B edition finden Sie im Handbuch zum [ von B2B-Beziehungen](./relationship-b2b.md).
+>Anweisungen zum Erstellen einer Viele-zu-eins-Beziehung in Adobe Real-Time Customer Data Platform B2B edition finden Sie im Handbuch zum [&#x200B; von B2B-Beziehungen](./relationship-b2b.md).
 
 ## Erste Schritte
 
@@ -57,7 +57,7 @@ Wir gehen davon aus, dass Sie die beiden Schemata, die in der Beziehung definier
 
 >[!IMPORTANT]
 >
->Um eine Beziehung herzustellen, müssen beide Schemata über definierte primäre Identitäten verfügen und für die [!DNL Real-Time Customer Profile] aktiviert sein. Wenn Sie Anleitungen zur entsprechenden Konfiguration Ihrer Schemata benötigen[ lesen Sie im Tutorial zur Schemaerstellung den Abschnitt ](./create-schema-ui.md#profile)Aktivieren eines Schemas zur Verwendung im Profil“.
+>Um eine Beziehung herzustellen, müssen beide Schemata über definierte primäre Identitäten verfügen und für die [!DNL Real-Time Customer Profile] aktiviert sein. Wenn Sie Anleitungen zur entsprechenden Konfiguration Ihrer Schemata benötigen[&#x200B; lesen Sie im Tutorial zur Schemaerstellung den Abschnitt &#x200B;](./create-schema-ui.md#profile)Aktivieren eines Schemas zur Verwendung im Profil“.
 
 Schemabeziehungen werden durch ein dediziertes Feld innerhalb eines **Quellschemas** dargestellt, das auf ein anderes Feld innerhalb eines **Referenzschemas** verweist. In den folgenden Schritten ist &quot;[!DNL Loyalty Members]&quot; das Quellschema, während &quot;[!DNL Hotels]&quot; als Referenzschema dient.
 
@@ -119,7 +119,7 @@ Das Dialogfeld [!UICONTROL Add relationship] wird angezeigt. In diesem Dialogfel
 
 >[!NOTE]
 >
->Wenn Sie Zugriff auf Real-Time CDP B2B edition haben, können Sie die Steuerelemente der rechten Leiste der Arbeitsfläche verwenden, um ein Beziehungsfeld zu definieren und mithilfe [ Dialogfelds eine Viele-zu-eins-Beziehung ](./relationship-b2b.md#relationship-field).
+>Wenn Sie Zugriff auf Real-Time CDP B2B edition haben, können Sie die Steuerelemente der rechten Leiste der Arbeitsfläche verwenden, um ein Beziehungsfeld zu definieren und mithilfe [&#x200B; Dialogfelds eine Viele-zu-eins-Beziehung &#x200B;](./relationship-b2b.md#relationship-field).
 
 ![Der Dialog Beziehung hinzufügen.](../images/tutorials/relationship/add-relationship-dialog.png)
 
@@ -143,13 +143,13 @@ Um das Referenzschema zu ändern, wählen Sie ein Feld mit einer vorhandenen Bez
 
 ![Der Schema-Editor mit hervorgehobener Option „Beziehung bearbeiten“](../images/tutorials/relationship/edit-relationship.png)
 
-Das Dialogfeld [!UICONTROL Edit relationship] wird angezeigt. Von hier aus können Sie dem unter „Definieren eines Beziehungsfelds[ beschriebenen Prozess folgen ](#relationship-field) die Beziehung löschen. Wählen Sie **[!UICONTROL Delete relationship]** aus, um die Beziehung zum Referenzschema zu entfernen.
+Das Dialogfeld [!UICONTROL Edit relationship] wird angezeigt. Von hier aus können Sie dem unter „Definieren eines Beziehungsfelds[&#x200B; beschriebenen Prozess folgen &#x200B;](#relationship-field) die Beziehung löschen. Wählen Sie **[!UICONTROL Delete relationship]** aus, um die Beziehung zum Referenzschema zu entfernen.
 
 ![Der Dialog Beziehung bearbeiten.](../images/tutorials/relationship/edit-relationship-dialog.png)
 
 ## Filtern und Suchen nach Beziehungen {#filter-and-search}
 
-Sie können auf der Registerkarte [!UICONTROL Relationships] des Arbeitsbereichs [!UICONTROL Schemas] nach bestimmten Beziehungen innerhalb Ihrer Schemata filtern und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [ Dokument unter ](../ui/explore.md#lookup) von Schemaressourcen .
+Sie können auf der Registerkarte [!UICONTROL Relationships] des Arbeitsbereichs [!UICONTROL Schemas] nach bestimmten Beziehungen innerhalb Ihrer Schemata filtern und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [&#x200B; Dokument unter &#x200B;](../ui/explore.md#lookup) von Schemaressourcen .
 
 ![Registerkarte „Beziehungen“ im Arbeitsbereich „Schemata“.](../images/tutorials/relationship-b2b/relationship-tab.png)
 

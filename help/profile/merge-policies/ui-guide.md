@@ -217,4 +217,4 @@ Um mehr über Data Governance in Adobe Experience Platform zu erfahren, lesen Si
 
 ## Nächste Schritte
 
-Nachdem Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellt und konfiguriert haben, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Experience Platform anzupassen und aus Ihren Profildaten Zielgruppen zu erstellen. Weitere Informationen [ Erstellen und Verwenden von Audiences mithilfe der ](../../segmentation/home.md)-Benutzeroberfläche und von APIs finden Sie in der [!DNL Experience Platform]Segmentierungsübersicht) .
+Nachdem Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellt und konfiguriert haben, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Experience Platform anzupassen und aus Ihren Profildaten Zielgruppen zu erstellen. Weitere Informationen [&#x200B; Erstellen und Verwenden von Audiences mithilfe der &#x200B;](../../segmentation/home.md)-Benutzeroberfläche und von APIs finden Sie in der [!DNL Experience Platform]Segmentierungsübersicht) .

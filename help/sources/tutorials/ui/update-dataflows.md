@@ -33,7 +33,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigations
 
 >[!TIP]
 >
->Mit Filterfunktionen können Sie Ihre Datenflüsse sortieren und filtern. Weitere Informationen finden Sie [ Handbuch unter „Filtern von Quellobjekten in ](./filter.md) Benutzeroberfläche“.
+>Mit Filterfunktionen können Sie Ihre Datenflüsse sortieren und filtern. Weitere Informationen finden Sie [&#x200B; Handbuch unter „Filtern von Quellobjekten in &#x200B;](./filter.md) Benutzeroberfläche“.
 
 Auf der Seite [!UICONTROL Dataflows] wird eine Liste aller vorhandenen Datenflüsse in Ihrer Organisation angezeigt. Suchen Sie den Datenfluss, den Sie aktualisieren möchten, und wählen Sie die Auslassungspunkte (`...`) daneben aus. Es wird ein Dropdown-Menü mit einer Liste von Optionen angezeigt, aus denen Sie auswählen können, um zusätzliche Konfigurationen an Ihrem vorhandenen Datenfluss vorzunehmen.
 

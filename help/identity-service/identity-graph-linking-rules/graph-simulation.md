@@ -16,7 +16,7 @@ ht-degree: 4%
 >title="Diagrammsimulation"
 >abstract="Simulieren Sie Diagramme, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus der Identitätsoptimierung funktioniert."
 
-[!DNL Graph Simulation] ist ein Tool in der Identity Service-Benutzeroberfläche, mit dem Sie simulieren können, wie sich ein Identitätsdiagramm bei einer bestimmten Kombination von Identitäten verhält und wie Sie den [Identitätsoptimierungsalgorithmus“ ](./identity-optimization-algorithm.md).
+[!DNL Graph Simulation] ist ein Tool in der Identity Service-Benutzeroberfläche, mit dem Sie simulieren können, wie sich ein Identitätsdiagramm bei einer bestimmten Kombination von Identitäten verhält und wie Sie den [Identitätsoptimierungsalgorithmus“ &#x200B;](./identity-optimization-algorithm.md).
 
 Sehen Sie sich das folgende Video an, um zusätzliche Informationen zur Verwendung der [!DNL Graph Simulation] im Arbeitsbereich der Identity Service-Benutzeroberfläche zu erhalten:
 

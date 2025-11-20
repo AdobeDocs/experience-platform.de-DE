@@ -11,7 +11,7 @@ ht-degree: 11%
 
 # Verwalten von Datennutzungs-Labels für ein Schema
 
-Alle Daten, die in Adobe Experience Platform importiert werden, sind durch Experience-Datenmodell(XDM)-Schemata eingeschränkt. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Aus diesem Grund ermöglicht Ihnen Experience Platform, die Verwendung bestimmter Datensätze und Felder durch die Verwendung von [Datennutzungskennzeichnungen“ ](../../data-governance/labels/overview.md) beschränken.
+Alle Daten, die in Adobe Experience Platform importiert werden, sind durch Experience-Datenmodell(XDM)-Schemata eingeschränkt. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Aus diesem Grund ermöglicht Ihnen Experience Platform, die Verwendung bestimmter Datensätze und Felder durch die Verwendung von [Datennutzungskennzeichnungen“ &#x200B;](../../data-governance/labels/overview.md) beschränken.
 
 Eine Kennzeichnung, die auf ein Schemafeld angewendet wird, gibt die Nutzungsrichtlinien an, die für die in diesem bestimmten Feld enthaltenen Daten gelten.
 

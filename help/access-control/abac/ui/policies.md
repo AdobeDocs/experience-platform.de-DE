@@ -16,7 +16,7 @@ Zugriffssteuerungsrichtlinien sind Anweisungen, die Attribute zusammenführen, u
 
 >[!IMPORTANT]
 >
->Zugriffsrichtlinien sind nicht mit Datennutzungsrichtlinien zu verwechseln, die steuern, wie Daten in Adobe Experience Platform verwendet werden, und nicht, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Weitere Informationen finden Sie im Handbuch [ Erstellen ](../../../data-governance/policies/create.md) Datennutzungsrichtlinien .
+>Zugriffsrichtlinien sind nicht mit Datennutzungsrichtlinien zu verwechseln, die steuern, wie Daten in Adobe Experience Platform verwendet werden, und nicht, welche Benutzenden in Ihrem Unternehmen Zugriff darauf haben. Weitere Informationen finden Sie im Handbuch [&#x200B; Erstellen &#x200B;](../../../data-governance/policies/create.md) Datennutzungsrichtlinien .
 
 <!-- ## Create a new policy
 
