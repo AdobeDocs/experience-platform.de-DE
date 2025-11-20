@@ -20,9 +20,9 @@ ht-degree: 96%
 
 Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich ist. Darüber hinaus können Marketing-Experten Prognosen in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] und Programmen anderer Anbieter aktivieren.
 
-Das folgende Video soll Ihnen dabei helfen, Intelligent Services besser zu verstehen. In diesem Video werden anhand von Beispielfällen für geschäftliche Nutzung ein Arbeitsablauf auf hoher Ebene sowie die Funktionen von Attributions-KI und Kunden-KI erläutert.
+Das folgende Video soll Ihnen dabei helfen, Intelligent Services besser zu verstehen. In diesem Video werden anhand von Beispielfällen für geschäftliche Nutzung ein Workflow auf hoher Ebene sowie die Funktionen von Attributions-KI und Kunden-KI erläutert.
 
->[!VIDEO](https://video.tv.adobe.com/v/36560?learn=on&quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Vorteile von Intelligent Services
 

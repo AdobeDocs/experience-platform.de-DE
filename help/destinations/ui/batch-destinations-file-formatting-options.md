@@ -4,8 +4,8 @@ title: Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1228'
-ht-degree: 48%
+source-wordcount: '1191'
+ht-degree: 47%
 
 ---
 
@@ -55,11 +55,11 @@ Verwenden Sie dieses Steuerelement, um ein Trennzeichen für jedes Feld und jede
 
 Sehen Sie sich die folgenden Beispiele für den Inhalt in den exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL Doppelpunkt`(:)`]** ausgewählt: `male:John:Doe`
-* Beispielausgabe mit **[!UICONTROL Komma`(,)`]** ausgewählt: `male,John,Doe`
-* Beispielausgabe mit **[!UICONTROL Pipe`(|)`]** ausgewählt: `male|John|Doe`
-* Beispielausgabe mit **[!UICONTROL Semikolon`(;)`]** ausgewählt: `male;John;Doe`
-* Beispielausgabe mit **[!UICONTROL Registerkarte`(\t)`]** ausgewählt: `male \t John \t Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Colon `(:)`]**: `male:John:Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Comma `(,)`]**: `male,John,Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Pipe `(|)`]**: `male|John|Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Semicolon `(;)`]**: `male;John;Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Tab `(\t)`]**: `male \t John \t Doe`
 
 ### Anführungszeichen {#quote-character}
 
@@ -72,8 +72,8 @@ Verwenden Sie diese Option, um zu steuern, ob doppelte Anführungszeichen entfer
 
 Folgende Optionen sind verfügbar:
 
-* **[!UICONTROL NULL (\0000)]**. Verwenden Sie diese Option, um doppelte Anführungszeichen aus exportierten CSV-Dateien zu entfernen.
-* **[!UICONTROL Anführungszeichen („)]**. Verwenden Sie diese Option, wenn die Zeichenfolgenwerte ein Trennzeichen oder doppelte Anführungszeichen enthalten. Mit dieser Option können Sie die Trennzeichen oder doppelten Anführungszeichen in Ihren exportierten CSV-Dateien beibehalten, sodass Sie korrekt identifizieren können, welcher Wert welchem Feld entspricht.
+* **[!UICONTROL Null Character (\0000)]**. Verwenden Sie diese Option, um doppelte Anführungszeichen aus exportierten CSV-Dateien zu entfernen.
+* **[!UICONTROL Double Quotes (")]**. Verwenden Sie diese Option, wenn die Zeichenfolgenwerte ein Trennzeichen oder doppelte Anführungszeichen enthalten. Mit dieser Option können Sie die Trennzeichen oder doppelten Anführungszeichen in Ihren exportierten CSV-Dateien beibehalten, sodass Sie korrekt identifizieren können, welcher Wert welchem Feld entspricht.
 
 #### Beispiele
 
@@ -81,8 +81,8 @@ Betrachten Sie den Eingabewert `Anna,"Doe,John"`.
 
 Sehen Sie sich die folgenden Beispiele für den Inhalt aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL Null-Zeichen (\0000)]** ausgewählt: `Anna,Doe,John`
-* Beispielausgabe mit **[!UICONTROL doppelten Anführungszeichen („)]** ausgewählt: `Anna,"Doe,John"`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Null Character (\0000)]**: `Anna,Doe,John`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Double Quotes (")]**: `Anna,"Doe,John"`
 
 ### Escape-Zeichen {#escape-character}
 
@@ -100,8 +100,8 @@ Verwenden Sie diese Option, um ein einzelnes Zeichen zum Maskieren von Anführun
 
 Sehen Sie sich die folgenden Beispiele für den Inhalt aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL Zurück-Schrägstrich`(\)`]**: `"Test,\"John\",LastName"`
-* Beispielausgabe mit &quot;**[!UICONTROL Anführungszeichen`(')`]** ausgewählt: `"Test,'"John'",LastName"`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Back slash `(\)`]**: `"Test,\"John\",LastName"`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Single quote `(')`]**: `"Test,'"John'",LastName"`
 
 ### Ausgabe leerer Werte {#empty-value-output}
 
@@ -114,15 +114,15 @@ Verwenden Sie dieses Steuerelement, um die Zeichenfolgendarstellung eines leeren
 
 * **[!UICONTROL Null (null)]**
 * **Leere Zeichenfolge in doppelten Anführungszeichen (“„)**
-* **[!UICONTROL Leere Zeichenfolge]**
+* **[!UICONTROL Empty string]**
 
 #### Beispiele
 
 Sehen Sie sich die folgenden Beispiele für den Inhalt aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL null]** ausgewählt: `male,NULL,TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in einen Nullwert um.
+* Beispielausgabe mit ausgewähltem **[!UICONTROL null]**: `male,NULL,TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in einen Nullwert um.
 * Beispielausgabe mit **&quot;&quot;** ausgewählt: `male,"",TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in ein Paar doppelter Anführungszeichen um.
-* Beispielausgabe mit **[!UICONTROL Leere]**: `male,,TestLastName`. In diesem Fall behält die Experience Platform den leeren Wert bei und exportiert ihn unverändert (ohne doppelte Anführungszeichen).
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Empty string]**: `male,,TestLastName`. In diesem Fall behält die Experience Platform den leeren Wert bei und exportiert ihn unverändert (ohne doppelte Anführungszeichen).
 
 >[!TIP]
 >
@@ -139,15 +139,15 @@ Verwenden Sie dieses Steuerelement, um die Zeichenfolgendarstellung eines Nullwe
 
 * **[!UICONTROL Null (null)]**
 * **Leere Zeichenfolge in doppelten Anführungszeichen (“„)**
-* **[!UICONTROL Leere Zeichenfolge]**
+* **[!UICONTROL Empty string]**
 
 #### Beispiele
 
 Sehen Sie sich die folgenden Beispiele für den Inhalt aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL null]** ausgewählt: `male,NULL,TestLastName`. In diesem Fall findet keine Umwandlung statt und die CSV-Datei enthält den Nullwert.
+* Beispielausgabe mit ausgewähltem **[!UICONTROL null]**: `male,NULL,TestLastName`. In diesem Fall findet keine Umwandlung statt und die CSV-Datei enthält den Nullwert.
 * Beispielausgabe mit **&quot;&quot;** ausgewählt: `male,"",TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch doppelte Anführungszeichen um eine leere Zeichenfolge.
-* Beispielausgabe mit **[!UICONTROL Leere]**: `male,,TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch eine leere Zeichenfolge (ohne doppelte Anführungszeichen).
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Empty string]**: `male,,TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch eine leere Zeichenfolge (ohne doppelte Anführungszeichen).
 
 ### Komprimierungsformat {#compression-format}
 
@@ -176,15 +176,15 @@ Standardmäßig werden alle Werte mit Escape-Zeichen versehen, die ein Anführun
 
 *Nicht im Screenshot der Benutzeroberfläche dargestellt*. Eine Markierung, die angibt, ob vorangestellte Leerzeichen in den zu exportierenden Werten ignoriert werden sollen.
 
-Beispielausgabe mit **[!UICONTROL True]** ausgewählt: `"male","John","TestLastName"`
-Beispielausgabe mit **[!UICONTROL False]** ausgewählt: `" male","John","TestLastName"`
+Beispielausgabe mit ausgewähltem **[!UICONTROL True]**: `"male","John","TestLastName"`
+Beispielausgabe mit ausgewähltem **[!UICONTROL False]**: `" male","John","TestLastName"`
 
 ### Nachfolgende Leerzeichen ignorieren
 
 Nicht im Screenshot der Benutzeroberfläche dargestellt. Eine Markierung, die angibt, ob nachfolgende Leerzeichen in den zu exportierenden Werten ignoriert werden sollen.
 
-Beispielausgabe mit **[!UICONTROL True]** ausgewählt: `"male","John","TestLastName"`
-Beispielausgabe mit **[!UICONTROL False]** ausgewählt: `"male ","John","TestLastName"`
+Beispielausgabe mit ausgewähltem **[!UICONTROL True]**: `"male","John","TestLastName"`
+Beispielausgabe mit ausgewähltem **[!UICONTROL False]**: `"male ","John","TestLastName"`
 
 ### Nächste Schritte {#next-steps}
 

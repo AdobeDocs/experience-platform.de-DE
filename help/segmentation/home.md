@@ -96,7 +96,7 @@ Batch-Zielgruppen werden automatisch alle 24 Stunden ausgewertet. Wenn Sie eine 
 >abstract="Bei der Edge-Segmentierung werden Segmente in Experience Platform sofort im Edge-Netzwerk ausgewertet, was Anwendungsszenarien mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/methods/edge-segmentation" text="Handbuch zur Edge-Segmentierung"
 
-Bei der Segmentierung in Edge werden Segmente in Experience Platform sofort ([&#x200B; Edge Network) ausgewertet](../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+Bei der Segmentierung in Edge werden Segmente in Experience Platform sofort ([ Edge Network) ausgewertet](../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 Weitere Informationen zur Edge-Segmentierung finden Sie in der [Übersicht zur Edge-Segmentierung](./methods/edge-segmentation.md).
 

@@ -1,13 +1,13 @@
 ---
 title: Konto-Zielgruppen
 description: Erfahren Sie, wie Sie Konto-Zielgruppen erstellen und verwenden, um Account-Profile in nachgelagerten Zielen auszuwählen.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 21%
+source-wordcount: '1498'
+ht-degree: 23%
 
 ---
 
@@ -35,11 +35,11 @@ Bevor Sie mit Konto-Zielgruppen beginnen, überprüfen Sie die Unterschiede zwis
 
 ## Zugriff {#access}
 
-Um auf Konto-Zielgruppen zuzugreifen, wählen Sie **[!UICONTROL Zielgruppen]** im Abschnitt **[!UICONTROL Konten]** aus.
+Um auf Konto-Zielgruppen zuzugreifen, wählen Sie **[!UICONTROL Audiences]** im Abschnitt **[!UICONTROL Accounts]** aus.
 
 ![Die Schaltfläche „Zielgruppen“ ist im Abschnitt „Konten“ hervorgehoben.](../images/types/account/select.png)
 
-Die Seite [!UICONTROL Durchsuchen] wird mit einer Liste aller Konto-Zielgruppen für die Organisation angezeigt.
+Die Seite [!UICONTROL Browse] wird mit einer Liste aller Konto-Zielgruppen für die Organisation angezeigt.
 
 ![Die Konto-Zielgruppen, die zur Organisation gehören, werden angezeigt.](../images/types/account/browse.png)
 
@@ -53,19 +53,19 @@ Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimm
 >
 >Account-Zielgruppen werden mithilfe der **Batch**-Segmentierung ausgewertet und alle 24 Stunden ausgewertet.
 
-Um eine Konto-Zielgruppe zu erstellen, wählen **[!UICONTROL auf der Seite]** Durchsuchen[!UICONTROL &#x200B; die Option &#x200B;]Zielgruppe erstellen“ aus.
+Um eine Konto-Zielgruppe zu erstellen, wählen Sie auf der Seite **[!UICONTROL Create audience]** die Option [!UICONTROL Browse] aus.
 
-![Die Schaltfläche [!UICONTROL Zielgruppe erstellen] auf der Seite zum Durchsuchen von Kontozielgruppen ist hervorgehoben.](../images/types/account/select-create-audience.png)
+![Die Schaltfläche &quot;[!UICONTROL Create audience]&quot; ist auf der Seite zum Durchsuchen von Konto-Zielgruppen hervorgehoben.](../images/types/account/select-create-audience.png)
 
-Der Segment Builder wird angezeigt. Die Kontoattribute und Zielgruppen werden in der linken Navigationsleiste angezeigt. Auf der Registerkarte [!UICONTROL Attribute] können Sie sowohl von Experience Platform erstellte als auch benutzerdefinierte Attribute hinzufügen.
+Der Segment Builder wird angezeigt. Die Kontoattribute und Zielgruppen werden in der linken Navigationsleiste angezeigt. Auf der Registerkarte [!UICONTROL Attributes] können Sie sowohl von Experience Platform erstellte als auch benutzerdefinierte Attribute hinzufügen.
 
 ![Der Segment Builder wird angezeigt. Beachten Sie, dass nur die Attribute und Zielgruppen angezeigt werden.](../images/types/account/segment-builder.png)
 
-Beachten Sie beim Erstellen von Konto-Zielgruppen, dass Ereignisse unter **[!UICONTROL Personen]** aufgeführt werden, anstatt als eigene Registerkarte zu fungieren, da diese Attribute mit Personen verknüpft sind.
+Beachten Sie beim Erstellen von Account-Zielgruppen, dass Ereignisse unter **[!UICONTROL People]** aufgeführt werden und nicht als eigene Registerkarte fungieren, da diese Attribute mit Personen verknüpft sind.
 
-![Der Speicherort für die Suche nach Ereignissen, der sich im Ordner [!UICONTROL People] befindet, ist hervorgehoben.](../images/types/account/attributes.png)
+![Der Ort, an dem Ereignisse gefunden werden sollen, der sich im Ordner &quot;[!UICONTROL People]&quot; befindet, ist hervorgehoben.](../images/types/account/attributes.png)
 
-Auf der Registerkarte [!UICONTROL Zielgruppen] können Sie zuvor erstellte personenbasierte Zielgruppen hinzufügen, auf die Sie bei der Erstellung Ihrer eigenen Konto-Zielgruppe aufbauen können.
+Auf der Registerkarte [!UICONTROL Audiences] können Sie zuvor erstellte personenbasierte Zielgruppen hinzufügen, auf die Sie bei der Erstellung Ihrer eigenen Konto-Zielgruppe aufbauen können.
 
 ![Die Registerkarte „Zielgruppen“ im Segment Builder ist hervorgehoben.](../images/types/account/audiences.png)
 
@@ -79,11 +79,11 @@ Um die alternativen Beziehungstypen zu verwenden, wählen Sie ![Einstellungssymb
 
 ![Das Einstellungssymbol ist im Abschnitt Felder hervorgehoben.](../images/types/account/select-settings.png)
 
-Wählen Sie auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Einstellungen **[!UICONTROL im Abschnitt]** Beziehung der Felder **[!UICONTROL die Option]** Beziehungsselektoren anzeigen“ aus.
+Wählen Sie auf der Registerkarte [!UICONTROL Settings] im Abschnitt **[!UICONTROL Show relationship selectors]** die Option **[!UICONTROL Relationship of fields]** aus.
 
 ![Der Umschalter Beziehungsselektoren anzeigen ist im Abschnitt Beziehung von Feldern auf der Registerkarte Einstellungen ausgewählt.](../images/types/account/show-relation-selectors.png)
 
-Wählen Sie erneut ![Einstellungssymbol](../../images/icons/settings.png) aus, um zur Registerkarte [!UICONTROL Felder] zurückzukehren. Jetzt können Sie den Abschnitt **[!UICONTROL Beziehungen herstellen]** sehen, in dem Sie festlegen können, wie das Konto mit der Person verbunden ist und wie die Person mit der Opportunity verbunden ist.
+Wählen Sie erneut ![Einstellungssymbol](../../images/icons/settings.png), um zur Registerkarte [!UICONTROL Fields] zurückzukehren. Jetzt können Sie den Abschnitt **[!UICONTROL Establish relationships]** sehen, in dem Sie festlegen können, wie das Konto mit der Person verbunden ist und wie die Person mit der Opportunity verbunden ist.
 
 ![Der Abschnitt Beziehungen herstellen ist hervorgehoben und zeigt die Optionen zum Verbinden eines Kontos mit einer Person und zum Verbinden einer Person mit einer Opportunity an.](../images/types/account/establish-relationships.png)
 
@@ -112,11 +112,11 @@ Nachdem Sie die gewünschte Beziehung hergestellt haben, können Sie die erforde
 
 Nachdem Sie Ihr Zielgruppenkonto erstellt haben, können Sie die Zielgruppe für andere nachgelagerte Services aktivieren.
 
-Wählen Sie die Zielgruppe aus, die Sie aktivieren möchten, und dann **[!UICONTROL Für Ziel aktivieren]**.
+Wählen Sie die Zielgruppe aus, die Sie aktivieren möchten, und dann **[!UICONTROL Activate to destination]**.
 
-![Die Schaltfläche [!UICONTROL Für Ziel aktivieren] ist im Schnellaktionsmenü für die ausgewählte Zielgruppe hervorgehoben.](../images/types/account/activate.png)
+![Die Schaltfläche &quot;[!UICONTROL Activate to destination]&quot; ist im Schnellaktionsmenü für die ausgewählte Zielgruppe hervorgehoben.](../images/types/account/activate.png)
 
-Die [!UICONTROL Ziel aktivieren] wird angezeigt. Weitere Informationen zum Aktivierungsprozess, einschließlich unterstützter Ziele und Details zu Feldzuordnungen, finden Sie im Tutorial [Aktivieren von Konto](/help/destinations/ui/activate-account-audiences.md) .
+Die Seite [!UICONTROL Activate destination] wird angezeigt. Weitere Informationen zum Aktivierungsprozess, einschließlich unterstützter Ziele und Details zu Feldzuordnungen, finden Sie im Tutorial [Aktivieren von Konto](/help/destinations/ui/activate-account-audiences.md) .
 
 ## Nächste Schritte {#next-steps}
 

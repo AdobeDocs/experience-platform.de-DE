@@ -4,8 +4,8 @@ description: Erfahren Sie mehr über die Namespace-Priorität in Identity Servic
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
 workflow-type: tm+mt
-source-wordcount: '2120'
-ht-degree: 2%
+source-wordcount: '2119'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 2%
 Jede Kundenimplementierung ist einzigartig und auf die Ziele einer bestimmten Organisation zugeschnitten. Daher variiert die Bedeutung eines bestimmten Namespace von Kunde zu Kunde. Beispiele aus der Praxis sind:
 
 * Ihr Unternehmen könnte jede E-Mail-Adresse als Einzelperson-Entität betrachten und daher [Identitätseinstellungen](./identity-settings-ui.md) verwenden, um den E-Mail-Namespace als eindeutig zu konfigurieren. Ein anderes Unternehmen möchte jedoch möglicherweise Einzelpersonen-Entitäten mit mehreren E-Mail-Adressen darstellen und daher den E-Mail-Namespace als nicht eindeutig konfigurieren. Diese Unternehmen müssen einen anderen Identity-Namespace als eindeutig verwenden, z. B. einen CRMID-Namespace, sodass es eine Einzelpersonen-Kennung geben kann, die mit den mehreren E-Mail-Adressen verknüpft ist.
-* Sie können das Online-Verhalten mithilfe eines „Anmelde-ID“-Namespace erfassen. Diese Anmelde-ID könnte eine 1:1-Beziehung mit der CRMID haben, die dann Attribute aus einem CRM-System speichert und als der wichtigste Namespace betrachtet werden kann. In diesem Fall stellen Sie dann fest, dass der CRM-Namespace eine genauere Darstellung einer Person ist, während der Namespace der Anmelde-ID der zweitwichtigste ist.
+* Sie können das Online-Verhalten mithilfe eines „Anmelde-ID“-Namespace erfassen. Diese Anmelde-ID könnte eine 1::1-Beziehung mit der CRMID haben, die dann Attribute aus einem CRM-System speichert und als der wichtigste Namespace betrachtet werden kann. In diesem Fall stellen Sie dann fest, dass der CRM-Namespace eine genauere Darstellung einer Person ist, während der Namespace der Anmelde-ID der zweitwichtigste ist.
 
 Sie müssen in Identity Service Konfigurationen vornehmen, die die Bedeutung Ihrer Namespaces widerspiegeln, da dies beeinflusst, wie Profile und ihre zugehörigen Identitätsdiagramme gebildet und aufgeteilt werden.
 
@@ -57,7 +57,7 @@ Sobald Sie eine Vorstellung davon haben, wie Sie Ihre Namespaces priorisieren we
 
 ## Namespace-Priorität konfigurieren
 
-Die Namespace-Priorität kann mithilfe der [Benutzeroberfläche für Identitätseinstellungen“ konfiguriert &#x200B;](./identity-settings-ui.md). In der Benutzeroberfläche für Identitätseinstellungen können Sie einen Namespace per Drag-and-Drop verschieben, um dessen relative Bedeutung zu bestimmen.
+Die Namespace-Priorität kann mithilfe der [Benutzeroberfläche für Identitätseinstellungen“ konfiguriert ](./identity-settings-ui.md). In der Benutzeroberfläche für Identitätseinstellungen können Sie einen Namespace per Drag-and-Drop verschieben, um dessen relative Bedeutung zu bestimmen.
 
 >[!IMPORTANT]
 >
@@ -65,7 +65,7 @@ Die Namespace-Priorität kann mithilfe der [Benutzeroberfläche für Identitäts
 
 ## Verwendung der Namespace-Priorität
 
-Derzeit beeinflusst die Namespace-Priorität das Systemverhalten des Echtzeit-Kundenprofils. Das folgende Diagramm veranschaulicht dieses Konzept. Weitere Informationen finden Sie im Handbuch zu [Architekturdiagrammen für Adobe Experience Platform und Programme](https://experienceleague.adobe.com/de/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Derzeit beeinflusst die Namespace-Priorität das Systemverhalten des Echtzeit-Kundenprofils. Das folgende Diagramm veranschaulicht dieses Konzept. Weitere Informationen finden Sie im Handbuch zu [Architekturdiagrammen für Adobe Experience Platform und Programme](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Ein Diagramm zum Anwendungsbereich mit Namespace-Priorität.](../images/namespace-priority/application-scope.png "Ein Diagramm zum Anwendungsbereich mit Namespace-Priorität."){zoomable="yes"}
 
@@ -82,7 +82,7 @@ Bei relativ komplexen Diagrammstrukturen spielt die Namespace-Priorität eine wi
    * Alle Felder, die in einem XDM-Erlebnisereignis-Klassenschema als primäre Identität gekennzeichnet sind.
    * Standardeinstellungen für die primäre Identität im Adobe Analytics-Quell-Connector (ECID oder AAID).
 * Dagegen bestimmt **Namespace-Priorität nicht die primäre Identität für Profildatensätze**.
-   * Für Profildatensätze sollten Sie weiterhin Ihre Identitätsfelder im Schema definieren, einschließlich der primären Identität. Weitere Informationen finden Sie im Handbuch unter [Definieren von Identitätsfeldern in &#x200B;](../../xdm/ui/fields/identity.md) Benutzeroberfläche“.
+   * Für Profildatensätze sollten Sie weiterhin Ihre Identitätsfelder im Schema definieren, einschließlich der primären Identität. Weitere Informationen finden Sie im Handbuch unter [Definieren von Identitätsfeldern in ](../../xdm/ui/fields/identity.md) Benutzeroberfläche“.
 
 >[!TIP]
 >
@@ -98,7 +98,7 @@ Angenommen, die folgenden Konfigurationen werden für eine bestimmte Sandbox fes
 
 | Namespace | Reale Anwendung des Namespace | Priorität |
 | --- | --- | --- |
-| CRMID | Benutzer | 1 |
+| CRMID | Benutzerin bzw. Benutzer | 1 |
 | IDFA | Apple-Hardwaregerät (iPhone, IPad usw.) | 2 |
 | GAID | Google-Hardwaregerät (Google Pixel, Pixelbook usw.) | 3 |
 | ECID | Webbrowser (Firefox, Safari, Google Chrome usw.) | 4 |
@@ -141,7 +141,7 @@ Wenn die Segmentqualifikationskriterien ausschließlich auf anonymen Ereignissen
 
 In diesem Abschnitt wird beschrieben, wie sich die Namespace-Priorität auf andere Experience Platform-Services auswirken kann.
 
-### Erweitertes Daten-Lifecycle-Management
+### Erweiterte Verwaltung des Datenlebenszyklus
 
 Anfragen zum Löschen von Datenhygiene-Datensätzen funktionieren für eine bestimmte Identität wie folgt:
 
@@ -204,17 +204,17 @@ Im Zusammenhang mit [!DNL Identity Graph Linking Rules] gibt es zwei wichtige Ve
 
 #### Edge-Segmentierung
 
-Stellen Sie bei einem bestimmten Ereignis sicher, dass alle Ihre Namespaces, die eine Personenentität darstellen, in der `identityMap` enthalten sind, da [Identitäten, die als XDM-Felder gesendet &#x200B;](../../xdm/ui/fields/identity.md), ignoriert werden und nicht für die Speicherung von Metadaten für die Segmentzugehörigkeit verwendet werden.
+Stellen Sie bei einem bestimmten Ereignis sicher, dass alle Ihre Namespaces, die eine Personenentität darstellen, in der `identityMap` enthalten sind, da [Identitäten, die als XDM-Felder gesendet ](../../xdm/ui/fields/identity.md), ignoriert werden und nicht für die Speicherung von Metadaten für die Segmentzugehörigkeit verwendet werden.
 
 * **Ereignisanwendbarkeit**: Dieses Verhalten gilt nur für Ereignisse, die direkt an die Edge Network gesendet werden (z. B. WebSDK und Mobile SDK). Ereignisse, die vom [Experience Platform-Hub](../../landing/edge-and-hub-comparison.md) aufgenommen werden, z. B. Ereignisse, die mit der HTTP-API-Quelle, anderen Streaming-Quellen und Batch-Quellen aufgenommen werden, unterliegen nicht dieser Einschränkung.
-* **Spezifität der Edge**-Segmentierung: Dieses Verhalten ist spezifisch für die Edge-Segmentierung. Batch- und Streaming-Segmentierung sind separate Services, die am Hub ausgewertet werden und nicht demselben Prozess folgen. Weitere Informationen finden [&#x200B; im &#x200B;](../../segmentation/methods/edge-segmentation.md) zur Edge-Segmentierung .
-* Weitere Informationen finden Sie in den [Architekturdiagrammen für Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/de/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) Anwendungen und auf den [Vergleichsseiten &#x200B;](../../landing/edge-and-hub-comparison.md) Edge Network und Hub .
+* **Spezifität der Edge**-Segmentierung: Dieses Verhalten ist spezifisch für die Edge-Segmentierung. Batch- und Streaming-Segmentierung sind separate Services, die am Hub ausgewertet werden und nicht demselben Prozess folgen. Weitere Informationen finden [ im ](../../segmentation/methods/edge-segmentation.md) zur Edge-Segmentierung .
+* Weitere Informationen finden Sie in den [Architekturdiagrammen für Adobe Experience Platform ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) Anwendungen und auf den [Vergleichsseiten ](../../landing/edge-and-hub-comparison.md) Edge Network und Hub .
 
 #### Edge Network-Programme
 
 Um sicherzustellen, dass Programme auf der Edge Network ohne Verzögerung Zugriff auf das Edge-Profil haben, stellen Sie sicher, dass Ihre Ereignisse `primary=true` auf der CRMID enthalten. Dadurch wird eine sofortige Verfügbarkeit sichergestellt, ohne auf Aktualisierungen des Identitätsdiagramms vom Hub zu warten.
 
 * Programme auf Edge Network wie Adobe Target, Offer Decisioning und benutzerdefinierte Personalization-Ziele hängen auch weiterhin von der Primäridentität in den Ereignissen ab, um auf Profile über das Edge-Profil zuzugreifen.
-* Lesen Sie das Architekturdiagramm für [Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/de/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment), um weitere Informationen zum Verhalten von Edge Network zu erhalten.
-* SDK Weitere Informationen zum Konfigurieren [&#x200B; Primäridentität in Web finden Sie in der Dokumentation &#x200B;](../../tags/extensions/client/web-sdk/data-element-types.md)Datenelementtypen und [Identitätsdaten in Web &#x200B;](../../web-sdk/identity/overview.md)SDK).
+* Lesen Sie das Architekturdiagramm für [Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment), um weitere Informationen zum Verhalten von Edge Network zu erhalten.
+* SDK Weitere Informationen zum Konfigurieren [ Primäridentität in Web finden Sie in der Dokumentation ](../../tags/extensions/client/web-sdk/data-element-types.md)Datenelementtypen und [Identitätsdaten in Web ](../../web-sdk/identity/overview.md)SDK).
 * Stellen Sie sicher, dass die ECID im Erlebnisereignis enthalten ist. Wenn die ECID fehlt, wird sie der Ereignis-Payload mit `primary=true` hinzugefügt, was zu unerwarteten Ergebnissen führen kann.

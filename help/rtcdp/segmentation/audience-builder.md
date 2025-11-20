@@ -2,12 +2,12 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Erfahren Sie, wie Sie mit dem Audience Builder in Real-Time Customer Data Platform Zielgruppen erstellen.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 10%
+source-wordcount: '957'
+ht-degree: 11%
 
 ---
 
@@ -42,19 +42,19 @@ Sie können das Symbol ![Einstellungen](../../images/icons/settings.png) auswäh
 
 >[!NOTE]
 >
->Der Abschnitt **[!UICONTROL Feldoptionen]** befindet sich derzeit in der Beta-Phase und steht nur ausgewählten Kundinnen und Kunden zur Verfügung. Wenden Sie sich an die Adobe-Kundenunterstützung, um weitere Informationen zu erhalten.
+>Der Abschnitt **[!UICONTROL Field options]** befindet sich derzeit in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Bitte wenden Sie sich an die Adobe-Kundenunterstützung, um weitere Informationen zu erhalten.
 
-Der [!UICONTROL Einstellungen] wird angezeigt. In diesem Abschnitt können Sie festlegen, welche Felder angezeigt werden und wie die Beziehung der Felder aussieht.
+Der [!UICONTROL Settings] wird angezeigt. In diesem Abschnitt können Sie festlegen, welche Felder angezeigt werden und wie die Beziehung der Felder aussieht.
 
-Für die **[!UICONTROL Feldoptionen]** können Sie entweder nur die Felder anzeigen, die Daten enthalten, oder das vollständige XDM-Schema.
+Für die **[!UICONTROL Field options]** können Sie entweder nur die Felder anzeigen, die Daten enthalten, oder das vollständige XDM-Schema.
 
-Für die **[!UICONTROL Beziehung von Feldern]** können Sie entweder die Standardbeziehungen für Ihre Organisation verwenden oder die Beziehungsselektoren anzeigen.
+Für die **[!UICONTROL Relationship of fields]** können Sie entweder die Standardbeziehungen für Ihre Organisation verwenden oder die Beziehungsselektoren anzeigen.
 
 ![Das Einstellungsmodul wird angezeigt.](../assets/segmentation/audience-builder/settings.png){width="300"}
 
 ### Attribute {#attributes}
 
-Auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Attribute“ können Sie Account-Attribute, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute durchsuchen. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [&#x200B; Arbeitsfläche &#x200B;](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
+Auf der Registerkarte [!UICONTROL Attributes] können Sie Account-Attribute durchsuchen, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [ Arbeitsfläche ](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
 
 ![Die Registerkarte Attribute wird im Audience Builder angezeigt](../assets/segmentation/audience-builder/attributes.png)
 
@@ -76,7 +76,7 @@ Eine detailliertere Anleitung zum Audience Builder finden Sie im [Audience Build
 
 ### Zielgruppen {#audiences}
 
-Auf **[!UICONTROL Registerkarte]** Zielgruppen“ werden alle personenbasierten und kontobasierten Zielgruppen aufgelistet, die in Experience Platform verfügbar sind.
+Auf der Registerkarte **[!UICONTROL Audiences]** werden alle in Experience Platform verfügbaren Zielgruppen für Personen und Konten aufgelistet.
 
 Sie können den Mauszeiger über das ![Informationssymbol](../../images/icons/info.png) neben einer Zielgruppe bewegen, um Informationen über die Zielgruppe anzuzeigen, einschließlich ihrer ID, Beschreibung und der Ordnerhierarchie zum Auffinden der Zielgruppe.
 
@@ -86,7 +86,7 @@ Sie können den Mauszeiger über das ![Informationssymbol](../../images/icons/in
 
 Eine in Audience Builder erstellte Zielgruppe ist eine Sammlung von Regeln, mit denen wichtige Merkmale oder Verhaltensweisen einer Zielgruppe beschrieben werden. Diese Regeln werden mithilfe der Arbeitsfläche des Regel-Builders in der Mitte von Audience Builder erstellt.
 
-Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus der Registerkarte **[!UICONTROL Felder]** und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab.
+Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus der Registerkarte **[!UICONTROL Fields]** und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab.
 
 ![Die Arbeitsfläche des Regel-Builders mit einem hinzugefügten Feld.](../assets/segmentation/audience-builder/added-field.png){zoomable="yes"}
 
@@ -100,25 +100,25 @@ Weitere Informationen zu Containern finden Sie in der [Segment Builder-Dokumenta
 
 ## Zielgruppen-Eigenschaften {#properties}
 
-Im Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** werden Informationen zur Zielgruppe angezeigt, einschließlich einer geschätzten Größe der Zielgruppe. Sie können auch Details zu Ihrer Audience angeben, einschließlich Name, Beschreibung und Tags.
+Im Abschnitt **[!UICONTROL Audience properties]** werden Informationen zur Zielgruppe angezeigt, einschließlich einer geschätzten Größe der Zielgruppe. Sie können auch Details zu Ihrer Audience angeben, einschließlich Name, Beschreibung und Tags.
 
 ![Der Abschnitt mit den Zielgruppeneigenschaften wird für die Zielgruppe in Audience Builder angezeigt.](../assets/segmentation/audience-builder/audience-properties.png){width="300"}
 
-Die **[!UICONTROL Qualifizierte Konten]** gibt die tatsächliche Anzahl von Konten an, die den Regeln der Zielgruppe entsprechen. Diese Zahl wird nach Ausführung des Segmentierungsauftrags alle 24 Stunden aktualisiert.
+Die **[!UICONTROL Qualified accounts]** gibt die tatsächliche Anzahl von Konten an, die den Regeln der Zielgruppe entsprechen. Diese Zahl wird nach Ausführung des Segmentierungsauftrags alle 24 Stunden aktualisiert.
 
-Die **[!UICONTROL Geschätzte Konten]** gibt die ungefähre Anzahl von Konten basierend auf dem Beispielvorgang an. Sie können diesen Wert aktualisieren, nachdem Sie neue Regeln oder Bedingungen hinzugefügt und **[!UICONTROL Schätzung aktualisieren]** ausgewählt haben.
+Die **[!UICONTROL Estimated accounts]** zeigt die ungefähre Anzahl von Konten basierend auf dem Beispielvorgang an. Sie können diesen Wert aktualisieren, nachdem Sie neue Regeln oder Bedingungen hinzugefügt und **[!UICONTROL Refresh estimate]** ausgewählt haben.
 
 ![Der Abschnitt „Schätzungen“ im Abschnitt „Zielgruppeneigenschaften“ wird angezeigt.](../assets/segmentation/audience-builder/account-estimates.png){width="300"}
 
-Sie können auf **[!UICONTROL Konten anzeigen]** klicken, um ein Stichprobenverfahren für die Konten anzuzeigen, die mit den aktuellen Regeln für die Zielgruppe qualifiziert wären.
+Sie können **[!UICONTROL View accounts]** auswählen, um eine Auswahl der Konten anzuzeigen, die sich mit den aktuellen Regeln für die Zielgruppe qualifizieren würden.
 
 ![Die Schaltfläche „Konten anzeigen“ ist hervorgehoben.](../assets/segmentation/audience-builder/view-accounts.png){width="300"}
 
-Die **[!UICONTROL Code]** Ansicht) bietet eine textbasierte Code-Beschreibung der Regeln der Zielgruppe.
+Die **[!UICONTROL Code view]** bietet eine textbasierte Code-Beschreibung der Regeln der Zielgruppe.
 
 ![Die Code-Ansichtsversion der Konto-Zielgruppe.](../assets/segmentation/audience-builder/code-view.png)
 
-Sie können **[!UICONTROL Zugriffskennzeichnungen anwenden]** auswählen, um die entsprechenden Zugriffskennzeichnungen für die Zielgruppe anzuwenden. Weitere Informationen zu Zugriffsbeschriftungen finden Sie im [Handbuch zum Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md){target="_blank"}.
+Sie können **[!UICONTROL Apply access labels]** auswählen, um die entsprechenden Zugriffsbeschriftungen für die Zielgruppe anzuwenden. Weitere Informationen zu Zugriffsbeschriftungen finden Sie im [Handbuch zum Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md){target="_blank"}.
 
 ![Das Pop-up „Zugriff anwenden“ und „Data Governance-Beschriftungen“ wird angezeigt.](../assets/segmentation/audience-builder/apply-access-labels.png)
 

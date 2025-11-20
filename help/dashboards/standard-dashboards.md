@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und v
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 3%
+source-wordcount: '1553'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## Erstellen eines benutzerdefinierten Dashboards
 
-Um ein benutzerdefiniertes Dashboard zu erstellen, navigieren Sie zunächst zum Dashboard-Inventar. Wählen **[!UICONTROL Dashboards]** im linken Navigationsbereich der Experience Platform-Benutzeroberfläche aus und klicken Sie dann auf **[!UICONTROL Dashboard erstellen]**.
+Um ein benutzerdefiniertes Dashboard zu erstellen, navigieren Sie zunächst zum Dashboard-Inventar. Wählen Sie **[!UICONTROL Dashboards]** aus dem linken Navigationsbereich der Benutzeroberfläche von Experience Platform und anschließend **[!UICONTROL Create dashboard]** aus.
 
 ![Das Dashboard-Inventar mit Dashboards im linken Navigationsbereich und hervorgehobener Option „Dashboard erstellen“.](./images/standard-dashboards/create-dashboard.png)
 
@@ -33,11 +33,11 @@ Bevor Sie ein benutzerdefiniertes Dashboard hinzufügen, ist das Dashboard-Inven
 >To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
-Das [!UICONTROL Dashboard erstellen] wird angezeigt. Geben Sie einen benutzerfreundlichen, beschreibenden Namen für die Sammlung von Widgets ein, die Sie erstellen möchten, und wählen Sie **[!UICONTROL Speichern]** aus.
+Das Dialogfeld [!UICONTROL Create dashboard] wird angezeigt. Geben Sie einen benutzerfreundlichen, beschreibenden Namen für die Sammlung von Widgets ein, die Sie erstellen möchten, und wählen Sie **[!UICONTROL Save]** aus.
 
 ![Das Dialogfeld „Dashboard erstellen“](./images/standard-dashboards/create-dashboard-dialog.png)
 
-Benutzende, die die Data Distiller SKU erworben haben, haben die Möglichkeit, benutzerdefinierte SQL-Abfragen zu verwenden, um ihre Einblicke zu erstellen. Anweisungen zu diesem Workflow finden [&#x200B; in der &#x200B;](./sql-insights-query-pro-mode/overview.md)Query Pro-Modus - Übersicht“.
+Benutzende, die die Data Distiller SKU erworben haben, haben die Möglichkeit, benutzerdefinierte SQL-Abfragen zu verwenden, um ihre Einblicke zu erstellen. Anweisungen zu diesem Workflow finden [ in der ](./sql-insights-query-pro-mode/overview.md)Query Pro-Modus - Übersicht“.
 
 Das neu erstellte leere Dashboard wird mit dem ausgewählten Namen oben links in der Ansicht angezeigt.
 
@@ -46,25 +46,25 @@ Das neu erstellte leere Dashboard wird mit dem ausgewählten Namen oben links in
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Maximale Anzahl an Widgets"
->abstract="Dashboard-Service unterstützt bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, wird die Option [!UICONTROL Neues Widget hinzufügen] deaktiviert und ausgegraut."
+>abstract="Dashboard-Service unterstützt bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, ist die Option [!UICONTROL Add new widget] deaktiviert und wird grau angezeigt."
 
-Wählen Sie in Ihrer neuen Dashboard-Ansicht **[!UICONTROL Neues Widget hinzufügen]** aus, um mit der Erstellung des Widgets zu beginnen.
+Wählen Sie in Ihrer neuen Dashboard-Ansicht die Option **[!UICONTROL Add new widget]** aus, um mit der Erstellung des Widgets zu beginnen.
 
 >[!IMPORTANT]
 >
->Jedes Dashboard unterstützt bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, wird die Option [!UICONTROL Neues Widget hinzufügen] deaktiviert und ausgegraut.
+>Jedes Dashboard unterstützt bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, ist die Option [!UICONTROL Add new widget] deaktiviert und wird grau angezeigt.
 
 ![Das neue leere Dashboard mit hervorgehobener Option „Neues Widget hinzufügen“.](./images/standard-dashboards/add-new-widget.png)
 
 ### Widget-Composer
 
-Der Widget-Composer-Arbeitsbereich wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Daten auswählen]**, um das Datenmodell auszuwählen, aus dem Sie Ihren Widgets Attribute hinzufügen möchten.
+Der Widget-Composer-Arbeitsbereich wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Select data]** aus, um das Datenmodell auszuwählen, aus dem Sie Ihren Widgets Attribute hinzufügen möchten.
 
 ![Der Widget-Composer-Arbeitsbereich.](./images/standard-dashboards/widget-composer.png)
 
 #### Datenmodell auswählen {#select-data-model}
 
-Das [!UICONTROL Datenmodell auswählen] wird angezeigt. Wählen Sie ein Datenmodell aus der linken Spalte aus, um eine Vorschauliste aller verfügbaren Tabellen anzuzeigen. Das vorkonfigurierte Datenmodell für Real-Time Customer Data Platform heißt [!UICONTROL CDPInsights].
+Das Dialogfeld [!UICONTROL Select data model] wird angezeigt. Wählen Sie ein Datenmodell aus der linken Spalte aus, um eine Vorschauliste aller verfügbaren Tabellen anzuzeigen. Das vorkonfigurierte Datenmodell für Real-Time Customer Data Platform heißt [!UICONTROL CDPInsights].
 
 >[!TIP]
 >
@@ -76,31 +76,31 @@ Die Vorschauliste enthält Details zu den im Datenmodell enthaltenen Tabellen. D
 
 | Spaltenfeld | Beschreibung |
 |---|---|
-| [!UICONTROL Titel] | Der Name der Tabelle. |
-| [!UICONTROL Tabellentyp] | Der Typ der Tabelle. Mögliche Typen sind: `fact`, `dimension` und `none`. |
-| [!UICONTROL Datensätze] | Die Anzahl der Datensätze, die mit der ausgewählten Tabelle verknüpft sind. |
-| [!UICONTROL Suchen] | Die Anzahl der mit der ausgewählten Tabelle verbundenen Tabellen. |
-| [!UICONTROL Attribute] | Die Anzahl der Attribute für die ausgewählte Tabelle. |
+| [!UICONTROL Title] | Der Name der Tabelle. |
+| [!UICONTROL Table type] | Der Typ der Tabelle. Mögliche Typen sind: `fact`, `dimension` und `none`. |
+| [!UICONTROL Records] | Die Anzahl der Datensätze, die mit der ausgewählten Tabelle verknüpft sind. |
+| [!UICONTROL Lookups] | Die Anzahl der mit der ausgewählten Tabelle verbundenen Tabellen. |
+| [!UICONTROL Attributes] | Die Anzahl der Attribute für die ausgewählte Tabelle. |
 
-Klicken Sie **[!UICONTROL Weiter]**, um Ihre Auswahl des Datenmodells zu bestätigen. Die nächste Ansicht zeigt eine Liste der verfügbaren Tabellen in der linken Leiste an. Wählen Sie eine Tabelle aus, um eine umfassende Aufschlüsselung der in Ihrer ausgewählten Tabelle enthaltenen Daten anzuzeigen.
+Wählen Sie **[!UICONTROL Next]** aus, um Ihre Auswahl des Datenmodells zu bestätigen. Die nächste Ansicht zeigt eine Liste der verfügbaren Tabellen in der linken Leiste an. Wählen Sie eine Tabelle aus, um eine umfassende Aufschlüsselung der in Ihrer ausgewählten Tabelle enthaltenen Daten anzuzeigen.
 
 ### Widget befüllen {#populate-widget}
 
-Das Bedienfeld [!UICONTROL Vorschau] enthält Registerkarten für [!UICONTROL Beispieldatensätze] und [!UICONTROL Attribute]. Die [!UICONTROL Beispieldatensätze] stellt eine Teilmenge der Datensätze aus der ausgewählten Tabelle in einer Tabellenansicht bereit. Die Registerkarte [!UICONTROL Attribute] enthält den Attributnamen, den Datentyp und die Quelltabelle für jedes Attribut, das mit der ausgewählten Tabelle verknüpft ist.
+Das Bedienfeld [!UICONTROL Preview] enthält Registerkarten für [!UICONTROL Sample records] und [!UICONTROL Attributes]. Die Registerkarte [!UICONTROL Sample records] stellt eine Teilmenge der Datensätze aus der ausgewählten Tabelle in einer Tabellenansicht bereit. Die Registerkarte [!UICONTROL Attributes] enthält den Attributnamen, den Datentyp und die Quelltabelle für jedes Attribut, das mit der ausgewählten Tabelle verknüpft ist.
 
-Wählen Sie eine Tabelle aus der Liste in der linken Leiste aus, um Daten für Ihr Widget bereitzustellen, und wählen Sie **[!UICONTROL Auswählen]** aus, um zum Widget-Composer zurückzukehren.
+Wählen Sie eine Tabelle aus der Liste in der linken Leiste aus, um Daten für Ihr Widget bereitzustellen, und wählen Sie **[!UICONTROL Select]** aus, um zum Widget-Composer zurückzukehren.
 
 ![Das Dialogfeld „Daten auswählen“ mit hervorgehobener Option „Auswählen“](./images/standard-dashboards/select-a-table.png)
 
 Der Widget-Composer wird jetzt mit Daten aus der ausgewählten Tabelle gefüllt.
 
-Das Datenmodell und die aktuell ausgewählte Tabelle werden oben in der linken Leiste angezeigt. Die zum Erstellen Ihres Widgets verfügbaren Attribute werden in der Spalte [!UICONTROL Attribute] aufgeführt. Sie können über die Suchleiste nach Attributen suchen, anstatt in der Liste zu scrollen, oder das ausgewählte Datenmodell ändern, indem Sie das Stiftsymbol (![) auswählen.](/help/images/icons/edit.png)) in der linken Leiste.
+Das Datenmodell und die aktuell ausgewählte Tabelle werden oben in der linken Leiste angezeigt. Die zum Erstellen Ihres Widgets verfügbaren Attribute werden in der Spalte [!UICONTROL Attributes] aufgeführt. Sie können über die Suchleiste nach Attributen suchen, anstatt in der Liste zu scrollen, oder das ausgewählte Datenmodell ändern, indem Sie das Stiftsymbol (![) auswählen.](/help/images/icons/edit.png)) in der linken Leiste.
 
 ![Ein Widget, das mit Daten im Widget-Composer gefüllt wird.](./images/standard-dashboards/populated-widget-composer.png)
 
 #### Hinzufügen und Filtern von Attributen {#add-and-filter-attributes}
 
-Wählen Sie das Symbol zum Hinzufügen (![Symbol zum Hinzufügen) aus.](/help/images/icons/add-circle.png)) neben einem Attributnamen, um Ihrem Widget ein Attribut hinzuzufügen. Im angezeigten Dropdown-Menü können Sie ein Attribut für Ihr Widget als X-Achse, Y-Achse, Farbe oder Filter hinzufügen. Mit dem [!UICONTROL Color]-Attribut können Sie die Ergebnisse der X- und Y-Achsenmarkierungen anhand der Farbe unterscheiden. Dies erfolgt, indem die Ergebnisse basierend auf ihrer Zusammensetzung eines dritten Attributs in verschiedene Farben aufgeteilt werden.
+Wählen Sie das Symbol zum Hinzufügen (![Symbol zum Hinzufügen) aus.](/help/images/icons/add-circle.png)) neben einem Attributnamen, um Ihrem Widget ein Attribut hinzuzufügen. Im angezeigten Dropdown-Menü können Sie ein Attribut für Ihr Widget als X-Achse, Y-Achse, Farbe oder Filter hinzufügen. Mit dem Attribut [!UICONTROL Color] können Sie die Ergebnisse der X- und Y-Achsenmarkierungen anhand der Farbe unterscheiden. Dies erfolgt, indem die Ergebnisse basierend auf ihrer Zusammensetzung eines dritten Attributs in verschiedene Farben aufgeteilt werden.
 
 >[!TIP]
 >
@@ -108,39 +108,39 @@ Wählen Sie das Symbol zum Hinzufügen (![Symbol zum Hinzufügen) aus.](/help/im
 
 ![Der Widget-Composer mit hervorgehobener Dropdown-Liste mit dem Add-Symbol.](./images/standard-dashboards/attributes-dropdown.png)
 
-Um den Typ des Diagramms oder Diagramms Ihres Widgets zu ändern, wählen Sie die Dropdown-Liste [!UICONTROL Markierungen] aus und wählen Sie aus den verfügbaren Optionen aus. Zu den Optionen gehören Balken, Punkte, Häkchen, Linien oder Flächen. Nach der Auswahl wird eine Vorschauvisualisierung der aktuellen Einstellungen Ihres Widgets generiert.
+Um den Typ des Diagramms oder Diagramms Ihres Widgets zu ändern, wählen Sie die Dropdown-Liste [!UICONTROL Marks] und aus den verfügbaren Optionen aus. Zu den Optionen gehören Balken, Punkte, Häkchen, Linien oder Flächen. Nach der Auswahl wird eine Vorschauvisualisierung der aktuellen Einstellungen Ihres Widgets generiert.
 
 ![Der Widget-Composer mit hervorgehobenem Dropdown-Menü „Marken“.](./images/standard-dashboards/marks-dropdown.png)
 
-Durch Hinzufügen eines Attributs als Filter können Sie auswählen, welche Werte in das Widget ein- oder ausgeschlossen werden sollen. Nachdem Sie einen Filter aus der Attributliste hinzugefügt haben, wird [!UICONTROL &#x200B; Dialogfeld „Filter] angezeigt, in dem Sie Werte mithilfe ihres Kontrollkästchens auswählen oder die Auswahl aufheben können.
+Durch Hinzufügen eines Attributs als Filter können Sie auswählen, welche Werte in das Widget ein- oder ausgeschlossen werden sollen. Nachdem Sie einen Filter aus der Attributliste hinzugefügt haben, wird das Dialogfeld [!UICONTROL Filter] angezeigt, in dem Sie Werte mithilfe ihres Kontrollkästchens auswählen oder die Auswahl aufheben können.
 
 ![Das Filterdialogfeld zum Filtern von Werten aus Ihrem Widget.](./images/standard-dashboards/filter-dialog.png)
 
 #### Herausfiltern historischer Daten {#filter-historical-data}
 
-Um historische Daten aus den von Ihrem Widget generierten Einblicken herauszufiltern, fügen Sie das `date_key`-Attribut als Filter hinzu und wählen Sie **[!UICONTROL Letztes Datum]** gefolgt von **[!UICONTROL Anwenden]** aus. Dieser Filter stellt sicher, dass die Daten, die zur Ableitung von Einblicken verwendet werden, aus dem neuesten System-Snapshot stammen.
+Um historische Daten aus den von Ihrem Widget generierten Einblicken herauszufiltern, fügen Sie das `date_key` als Filter hinzu und wählen Sie **[!UICONTROL Recent date]** gefolgt von **[!UICONTROL Apply]** aus. Dieser Filter stellt sicher, dass die Daten, die zur Ableitung von Einblicken verwendet werden, aus dem neuesten System-Snapshot stammen.
 
-![Das Dialogfeld [!UICONTROL Filter: date_key] mit [!UICONTROL Letztes Datum] und [!UICONTROL Anwenden] hervorgehoben.](./images/standard-dashboards/recent-date.png)
+![Das Dialogfeld &quot;[!UICONTROL Filter: date_key]&quot; mit hervorgehobenen [!UICONTROL Recent date] und [!UICONTROL Apply].](./images/standard-dashboards/recent-date.png)
 
-Alternativ können Sie einen benutzerdefinierten Zeitraum erstellen, nach dem Ihre Daten gefiltert werden. Wählen Sie **[!UICONTROL Datum auswählen]**, um das Dialogfeld mit einer Liste der verfügbaren Daten zu erweitern. Aktivieren oder deaktivieren Sie **[!UICONTROL Kontrollkästchen]** Alle auswählen“ alle verfügbaren Optionen oder aktivieren Sie das Kontrollkästchen für jeden Tag einzeln. Wählen Sie abschließend **[!UICONTROL Übernehmen]** aus, um Ihre Auswahl zu bestätigen.
+Alternativ können Sie einen benutzerdefinierten Zeitraum erstellen, nach dem Ihre Daten gefiltert werden. Wählen Sie **[!UICONTROL Select dates]** aus, um das Dialogfeld mit einer Liste der verfügbaren Daten zu erweitern. Aktivieren oder deaktivieren Sie mit dem Kontrollkästchen **[!UICONTROL Select all]** alle verfügbaren Optionen, oder aktivieren Sie das Kontrollkästchen für jeden Tag einzeln. Wählen Sie abschließend **[!UICONTROL Apply]** aus, um Ihre Auswahl zu bestätigen.
 
 >[!NOTE]
 >
->Wenn das Attribut `date_key` bereits als Filter hinzugefügt wurde, wählen Sie aus den Dropdown-Optionen das Auslassungszeichen gefolgt von **[!UICONTROL Bearbeiten]** aus, um den Filterzeitraum zu ändern.
+>Wenn das Attribut `date_key` bereits als Filter hinzugefügt wurde, wählen Sie die Auslassungszeichen gefolgt von **[!UICONTROL Edit]** aus den Dropdown-Optionen aus, um den Filterzeitraum zu ändern.
 
-![Das Dialogfeld [!UICONTROL Filter: date_key] mit aktivierten und nicht aktivierten Kontrollkästchen für einzelne Tage.](./images/standard-dashboards/select-dates.png)
+![Das [!UICONTROL Filter: date_key]-Dialogfeld mit aktivierten und nicht aktivierten Kontrollkästchen für einzelne Tage.](./images/standard-dashboards/select-dates.png)
 
 ### Widget-Eigenschaften
 
-Wählen Sie das Eigenschaftensymbol (![das Eigenschaftensymbol.](/help/images/icons/properties.png)) in der rechten Leiste aus, um den Bereich „Eigenschaften“ zu öffnen. Geben Sie [!UICONTROL &#x200B; Bedienfeld &#x200B;]Eigenschaften“ einen Namen für das Widget in das Textfeld [!UICONTROL Widget-Titel] ein.
+Wählen Sie das Eigenschaftensymbol (![das Eigenschaftensymbol.](/help/images/icons/properties.png)) in der rechten Leiste aus, um den Bereich „Eigenschaften“ zu öffnen. Geben Sie im [!UICONTROL Properties] Bedienfeld einen Namen für das Widget in das [!UICONTROL Widget title] Textfeld ein.
 
 ![Das Eigenschaftenbedienfeld mit dem Symbol „Eigenschaften“ und dem hervorgehobenen Feld „Widget-Titel“.](./images/standard-dashboards/properties-panel.png)
 
-Im Bedienfeld Widget-Eigenschaften können Sie verschiedene Aspekte Ihres Widgets bearbeiten. Sie haben die vollständige Kontrolle, um den Speicherort der Widget-Legende zu bearbeiten. Um die Legende zu verschieben, wählen Sie [!UICONTROL &#x200B; Dropdown-Liste &#x200B;]Legendenplatzierung“ aus und wählen Sie Ihre gewünschte Position aus der Liste der verfügbaren Optionen aus. Sie können die Beschriftung, die der Legende zugeordnet ist, sowie die X- oder Y-Achse auch umbenennen, indem Sie einen neuen Namen in das Textfeld [!UICONTROL Legendentitel] bzw. [!UICONTROL Achsenbeschriftung] eingeben.
+Im Bedienfeld Widget-Eigenschaften können Sie verschiedene Aspekte Ihres Widgets bearbeiten. Sie haben die vollständige Kontrolle, um den Speicherort der Widget-Legende zu bearbeiten. Um die Legende zu verschieben, wählen Sie das Dropdown-Menü [!UICONTROL Legend placement] und dann die gewünschte Position aus der Liste der verfügbaren Optionen aus. Sie können die Beschriftung, die der Legende zugeordnet ist, sowie die X- oder Y-Achse auch umbenennen, indem Sie einen neuen Namen in das [!UICONTROL Legend title] bzw. [!UICONTROL Axis label] Textfeld eingeben.
 
 #### Widget speichern {#save-widget}
 
-Beim Speichern im Widget Composer wird das Widget lokal im Dashboard gespeichert. Wenn Sie Ihre Arbeit speichern und zu einem späteren Zeitpunkt fortsetzen möchten, wählen Sie **[!UICONTROL Speichern]**. Ein Häkchen unter dem Widget-Namen zeigt an, dass das Widget gespeichert wurde. Wenn Sie mit Ihrem Widget zufrieden sind, können Sie alternativ auf **[!UICONTROL Speichern und schließen]** klicken, um das Widget für alle anderen Benutzer mit Zugriff auf Ihr Dashboard verfügbar zu machen. Wählen Sie **[!UICONTROL Abbrechen]** aus, um Ihre Arbeit abzubrechen und zu Ihrem benutzerdefinierten Dashboard zurückzukehren.
+Beim Speichern im Widget Composer wird das Widget lokal im Dashboard gespeichert. Wenn Sie Ihre Arbeit speichern und zu einem späteren Zeitpunkt fortsetzen möchten, wählen Sie **[!UICONTROL Save]** aus. Ein Häkchen unter dem Widget-Namen zeigt an, dass das Widget gespeichert wurde. Wenn Sie mit Ihrem Widget zufrieden sind, können Sie das Widget auch **[!UICONTROL Save and close]** auswählen, damit es allen anderen Benutzern mit Zugriff auf Ihr Dashboard zur Verfügung steht. Wählen Sie **[!UICONTROL Cancel]** aus, um Ihre Arbeit abzubrechen und zu Ihrem benutzerdefinierten Dashboard zurückzukehren.
 
 ![Bestätigung zum Speichern des neuen Widgets.](./images/standard-dashboards/save-confirmation.png)
 
@@ -148,7 +148,7 @@ Beim Speichern im Widget Composer wird das Widget lokal im Dashboard gespeichert
 >
 >Wählen Sie das Eigenschaftensymbol (![das Eigenschaftensymbol.](/help/images/icons/properties.png)) neben dem Dashboard-Namen, um Details zu seiner Erstellung anzuzeigen. Sie können den Namen Ihres Dashboards im angezeigten Dialogfeld ändern.
 
-Widgets können in diesem Arbeitsbereich neu angeordnet werden und ihre Größe kann geändert werden. Wählen Sie **[!UICONTROL Speichern]** aus, um Ihren Dashboard-Namen und das konfigurierte Layout beizubehalten.
+Widgets können in diesem Arbeitsbereich neu angeordnet werden und ihre Größe kann geändert werden. Wählen Sie **[!UICONTROL Save]** aus, um Ihren Dashboard-Namen und das konfigurierte Layout beizubehalten.
 
 ![Das benutzerdefinierte Dashboard mit einem benutzerdefinierten Widget und der hervorgehobenen Schaltfläche „Speichern“.](./images/standard-dashboards/user-defined-dashboard.png)
 
@@ -172,7 +172,7 @@ Wählen Sie als Nächstes die Auslassungszeichen oben rechts im Widget aus, die 
 
 >[!NOTE]
 >
->Durch Duplizierung können Sie die Attribute einer insight anpassen, um ein eindeutiges Widget zu erstellen, ohne von Grund auf neu beginnen zu müssen. Wenn Sie ein Widget duplizieren, wird es in Ihrem benutzerdefinierten Dashboard angezeigt. Sie können dann die Auslassungszeichen für Ihr neues Widget auswählen und dann **[!UICONTROL Bearbeiten]**, um Ihre insight anzupassen.
+>Durch Duplizierung können Sie die Attribute einer insight anpassen, um ein eindeutiges Widget zu erstellen, ohne von Grund auf neu beginnen zu müssen. Wenn Sie ein Widget duplizieren, wird es in Ihrem benutzerdefinierten Dashboard angezeigt. Sie können dann die Auslassungszeichen für Ihr neues Widget und dann **[!UICONTROL Edit]** auswählen, um Ihre insight anzupassen.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
@@ -182,4 +182,4 @@ Die verfügbaren vorkonfigurierten Metriken und Visualisierungen für die Dashbo
 
 Sehen Sie sich das folgende Video an, um Dashboards in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3422737?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

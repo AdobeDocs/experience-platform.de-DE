@@ -5,8 +5,8 @@ description: Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1077'
-ht-degree: 13%
+source-wordcount: '1062'
+ht-degree: 14%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 13%
 >Darüber hinaus können Sie Felder vom Typ Zuordnung an die folgenden Ziele exportieren: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
-Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud[Speicherziele &#x200B;](/help/destinations/catalog/cloud-storage/overview.md). Darüber hinaus können Sie Felder vom Typ „Zuordnung“ in [Unternehmensziele](/help/destinations/destination-types.md#advanced-enterprise-destinations) und eingeschränkte [Edge-Personalisierungsziele](/help/destinations/destination-types.md#edge-personalization-destinations) exportieren. Lesen Sie dieses Dokument, um den Export-Workflow, die durch diese Funktion aktivierten Anwendungsfälle und die bekannten Einschränkungen zu verstehen. In der folgenden Tabelle finden Sie die verfügbaren Funktionen pro Zieltyp.
+Erfahren Sie, wie Sie Arrays, Zuordnungen und Objekte aus Real-Time CDP in Cloud[Speicherziele ](/help/destinations/catalog/cloud-storage/overview.md). Darüber hinaus können Sie Felder vom Typ „Zuordnung“ in [Unternehmensziele](/help/destinations/destination-types.md#advanced-enterprise-destinations) und eingeschränkte [Edge-Personalisierungsziele](/help/destinations/destination-types.md#edge-personalization-destinations) exportieren. Lesen Sie dieses Dokument, um den Export-Workflow, die durch diese Funktion aktivierten Anwendungsfälle und die bekannten Einschränkungen zu verstehen. In der folgenden Tabelle finden Sie die verfügbaren Funktionen pro Zieltyp.
 
 | Zieltyp | Möglichkeit zum Exportieren von Arrays, Karten und anderen benutzerdefinierten Objekten |
 |---|---|
@@ -71,11 +71,11 @@ Zusätzlich zu Arrays können Sie auch Zuordnungen und Objekte aus Experience Pl
 
 ## Voraussetzungen {#prerequisites}
 
-[Verbinden](/help/destinations/ui/connect-destination.md) mit dem gewünschten Cloud-Speicher-Ziel, schreiten Sie durch die [Aktivierungsschritte für Cloud-Speicher-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) und gelangen Sie zum Schritt [Zuordnung](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Beim Herstellen einer Verbindung zum gewünschten Cloud-Ziel müssen Sie den Umschalter **[!UICONTROL Arrays exportieren, Karten, Objekte]**. Weitere Informationen finden Sie im folgenden Abschnitt.
+[Verbinden](/help/destinations/ui/connect-destination.md) mit dem gewünschten Cloud-Speicher-Ziel, schreiten Sie durch die [Aktivierungsschritte für Cloud-Speicher-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) und gelangen Sie zum Schritt [Zuordnung](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Beim Herstellen einer Verbindung zum gewünschten Cloud-Ziel müssen Sie den Umschalter **[!UICONTROL Export arrays, maps, objects]** aktivieren. Weitere Informationen finden Sie im folgenden Abschnitt.
 
 >[!NOTE]
 >
->Für Unternehmens- und Edge-Personalisierungsziele ist die Exportunterstützung für Felder vom Typ Zuordnung verfügbar, ohne dass ein **[!UICONTROL Exportieren von Arrays, Karten, Objekten]** ausgewählt werden muss. Dieser Umschalter ist beim Herstellen einer Verbindung mit diesen Zieltypen nicht verfügbar oder erforderlich.
+>Für Unternehmens- und Edge-Personalisierungsziele ist die Exportunterstützung für Felder vom Typ Zuordnung verfügbar, ohne dass ein **[!UICONTROL Export arrays, maps, objects]**-Umschalter ausgewählt werden muss. Dieser Umschalter ist beim Herstellen einer Verbindung mit diesen Zieltypen nicht verfügbar oder erforderlich.
 
 ## Umschalter zum Exportieren von Arrays, Zuordnungen und Objekten {#export-arrays-maps-objects-toggle}
 
@@ -84,11 +84,11 @@ Zusätzlich zu Arrays können Sie auch Zuordnungen und Objekte aus Experience Pl
 >title="Exportieren von Arrays, Zuordnungen und Objekten"
 >abstract="<p> Schalten Sie diese Einstellung auf <b>ein</b>, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren. Sie können diese Objekttypen in der Quellfeldansicht des Zuordnungsschritts auswählen. Wenn der Umschalter aktiviert ist, können Sie die Option „Berechnete Felder“ im Zuordnungsschritt nicht verwenden.</p><p>Wenn dieser Umschalter auf <b>aus</b> steht, können Sie die Option „Berechnete Felder“ verwenden und beim Aktivieren von Zielgruppen verschiedene Datenumwandlungsfunktionen anzuwenden. Allerdings können Sie Arrays, Zuordnungen und Objekte <i>nicht</i> in JSON- oder Parquet-Dateien exportieren, sondern müssen dafür ein separates Ziel konfigurieren.</p>"
 
-Beim Herstellen einer Verbindung zu einem dateibasierten Cloud-Speicher-Ziel können Sie die Optionen **[!UICONTROL Exportieren von Arrays, Karten, Objekten]** ein- oder ausschalten.
+Beim Herstellen einer Verbindung zu einem dateibasierten Cloud-Speicher-Ziel können Sie den **[!UICONTROL Export arrays, maps, objects]** ein- oder ausschalten.
 
 ![Exportieren Sie Arrays, Karten, Objekte ein- oder ausschalten und markieren Sie das Pop-up.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
-Schalten Sie diese Einstellung auf **ein**, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren. Sie können diese Objekttypen in der Ansicht der Quellfelder des [Zuordnungsschritts“ auswählen, &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) Sie Zielgruppen für Cloud-Speicher-Ziele aktivieren. Wenn diese Einstellung jedoch aktiviert ist, können Sie die Option „Berechnete Felder“ nicht verwenden, um Daten bei Aktivierung umzuwandeln.
+Schalten Sie diese Einstellung auf **ein**, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren. Sie können diese Objekttypen in der Ansicht der Quellfelder des [Zuordnungsschritts“ auswählen, ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) Sie Zielgruppen für Cloud-Speicher-Ziele aktivieren. Wenn diese Einstellung jedoch aktiviert ist, können Sie die Option „Berechnete Felder“ nicht verwenden, um Daten bei Aktivierung umzuwandeln.
 
 Wenn dieser Umschalter auf **aus** steht, können Sie die Option „Berechnete Felder“ verwenden und beim Aktivieren von Zielgruppen verschiedene Datenumwandlungsfunktionen anzuwenden. Sie können jedoch keine Arrays, Zuordnungen und Objekte in JSON- oder Parquet-Dateien exportieren und müssen dafür ein separates Ziel konfigurieren.
 
@@ -98,7 +98,7 @@ Wenn diese Einstellung aktiviert ist, können Sie ganze Objekte (z. B. `person.n
 
 ![Wählen Sie Objekte über die Quellfeldauswahl im Zuordnungsschritt des Aktivierungs-Workflows aus.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-Wenn diese Option aktiviert ist, verhindert die Benutzeroberfläche, dass Benutzer berechnete Felder verwenden, und das Steuerelement **[!UICONTROL Berechnete Felder hinzufügen]** ist deaktiviert, wie unten dargestellt. Um berechnete Felder für Datenumwandlungen zu verwenden, richten Sie eine Zielverbindung ein, während Sie den Umschalter deaktivieren.
+Wenn diese Option aktiviert ist, verhindert die Benutzeroberfläche, dass Benutzer berechnete Felder verwenden, und das **[!UICONTROL Add calculated fields]**-Steuerelement ist deaktiviert, wie unten dargestellt. Um berechnete Felder für Datenumwandlungen zu verwenden, richten Sie eine Zielverbindung ein, während Sie den Umschalter deaktivieren.
 
 ![Steuerung der berechneten Felder deaktiviert.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 
@@ -106,7 +106,7 @@ Wenn diese Option aktiviert ist, verhindert die Benutzeroberfläche, dass Benutz
 
 Wenn diese Option auf *Aus* gesetzt ist, können Sie die Option Berechnete Felder verwenden und beim Aktivieren von Zielgruppen verschiedene Datenumwandlungsfunktionen anwenden. Sie können jedoch keine Arrays, Zuordnungen und Objekte in JSON- oder Parquet-Dateien exportieren und müssen dafür ein separates Ziel konfigurieren.
 
-Sie *können* Arrays, Zuordnungen und Objekte mithilfe der Funktion „Berechnete Felder“ in CSV-Dateien exportieren und mithilfe der Funktion &quot;`array_to_string`&quot; zu einer Zeichenfolge verketten. [Weitere Informationen &#x200B;](#array-to-string-function-export-arrays) Verwendung dieser Funktion.
+Sie *können* Arrays, Zuordnungen und Objekte mithilfe der Funktion „Berechnete Felder“ in CSV-Dateien exportieren und mithilfe der Funktion &quot;`array_to_string`&quot; zu einer Zeichenfolge verketten. [Weitere Informationen ](#array-to-string-function-export-arrays) Verwendung dieser Funktion.
 
 Erfahren Sie mehr über die Arbeit mit berechneten Feldern, um [Umwandlungen an Daten durchzuführen, die an Cloud-Speicherziele exportiert wurden](/help/destinations/ui/data-transformations-calculated-fields.md).
 

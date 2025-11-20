@@ -77,7 +77,7 @@ Weniger identifizierte Profile bestehen möglicherweise nur aus anonymen Verhalt
 
 Je mehr Daten zu einem Profil gesammelt werden, desto zuverlässiger wird der Bestand an personenbezogenen Daten, Identifizierungsinformationen, Kontaktdaten und Kommunikationsvorlieben einer Person.
 
-Weitere Informationen zur Struktur und [[!UICONTROL XDM Individual Profile] Anwendungsfall der Felder einer Klasse finden Sie im &#x200B;](./classes/individual-profile.md)-Referenzhandbuch .
+Weitere Informationen zur Struktur und [[!UICONTROL XDM Individual Profile] Anwendungsfall der Felder einer Klasse finden Sie im ](./classes/individual-profile.md)-Referenzhandbuch .
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -89,7 +89,7 @@ Es ist zwar nicht einfach, alle Ereignisse in allen Datenquellen zu kategorisier
 
 ![Eine Infografik der Kunden-Journey, die mit Erlebnisereignissen im Laufe der Zeit visualisiert wurde.](images/overview/experience-event-journey.png)
 
-Weitere Informationen zur Struktur und [[!UICONTROL XDM ExperienceEvent] Anwendungsfall der Felder einer Klasse finden Sie im &#x200B;](./classes/experienceevent.md)-Referenzhandbuch .
+Weitere Informationen zur Struktur und [[!UICONTROL XDM ExperienceEvent] Anwendungsfall der Felder einer Klasse finden Sie im ](./classes/experienceevent.md)-Referenzhandbuch .
 
 ## XDM-Schemata und Experience Platform-Services {#schemas-and-platform-services}
 
@@ -103,7 +103,7 @@ Katalogdaten werden im Data Lake gespeichert, einem hochgradig granularen Datens
 
 Um mit der Aufnahme von Daten in Experience Platform zu beginnen, können Sie mithilfe von Catalog Service einen Datensatz erstellen. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der aufzunehmenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, leitet Experience Platform ein „festgestelltes Schema“ ab, indem Typ und Inhalt der erfassten Datenfelder überprüft werden. Datensätze werden dann im Katalog-Service verfolgt und im Data Lake zusammen mit den Schemas und festgestellten Schemas, auf denen sie basieren, gespeichert.
 
-Weitere Informationen finden Sie [&#x200B; „Übersicht &#x200B;](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [&#x200B; finden &#x200B;](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
+Weitere Informationen finden Sie [ „Übersicht ](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [ finden ](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
 
 ### Data Mirror und relationale Schemata {#relational-schemas}
 
@@ -157,7 +157,7 @@ Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgeric
 
 Das Echtzeit-Kundenprofil nutzt schemaformatierte Daten basierend auf den Klassen [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] und reagiert auf Abfragen, die auf diesen Daten basieren.
 
-Das System bildet für jedes Kundenprofil eine Instanz und vereint Daten einer Person zu einer „Single Source of Truth“. Diese zusammengeführten Daten werden mithilfe eines so genannten „Vereinigungsschemas“ dargestellt (auch als „Vereinigungsansicht“ bezeichnet). Ein Vereinigungsschema aggregiert die Felder aller Schemas, die dieselbe Klasse implementieren, in ein einziges Schema. Wenn Sie ein Schema mithilfe der Benutzeroberfläche oder API erstellen, können Sie es aktivieren, damit es mit dem Echtzeit-Kundenprofil verwendet werden kann, und es zur Aufnahme in die Vereinigung mit einem Tag versehen. Das mit einem Tag versehene Schema wird dann Teil der Schemadefinition, die an das Profil übergeben wird.
+Das System bildet für jedes Kundenprofil eine Instanz und führt Daten einer Person zu einer „Single Source of Truth“ zusammen. Diese zusammengeführten Daten werden mithilfe eines so genannten „Vereinigungsschemas“ dargestellt (auch als „Vereinigungsansicht“ bezeichnet). Ein Vereinigungsschema aggregiert die Felder aller Schemas, die dieselbe Klasse implementieren, in ein einziges Schema. Wenn Sie ein Schema mithilfe der Benutzeroberfläche oder API erstellen, können Sie es aktivieren, damit es mit dem Echtzeit-Kundenprofil verwendet werden kann, und es zur Aufnahme in die Vereinigung mit einem Tag versehen. Das mit einem Tag versehene Schema wird dann Teil der Schemadefinition, die an das Profil übergeben wird.
 
 Wenn [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] Daten in den Data Lake aufgenommen werden, nimmt das Echtzeit-Kundenprofil alle Daten auf, die für dessen Verwendung aktiviert wurden. Je mehr Interaktionen und Details aufgenommen werden, desto zuverlässiger werden die einzelnen Profile.
 
@@ -185,4 +185,4 @@ Um mehr über die Prinzipien und Best Practices beim Erstellen von Schemata zu e
 
 Sehen Sie sich das folgende Video an, um [!DNL XDM System] in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/38505?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

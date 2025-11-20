@@ -4,7 +4,7 @@ title: Überwachen der Data Lake-Aufnahme
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1430'
 ht-degree: 15%
 
 ---
@@ -44,13 +44,13 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 >abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data-Lake-Dienst, einschließlich der aufgenommenen und fehlgeschlagenen Einträge. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition."
 >text="Learn more in documentation"
 
-Wählen **[!UICONTROL Data Lake]** aus der Hauptkopfzeile im Monitoring-Dashboard aus, um Ihre Data-Lake-Aufnahmerate anzuzeigen.
+Wählen Sie **[!UICONTROL Data lake]** aus der Hauptkopfzeile im Monitoring-Dashboard aus, um Ihre Data-Lake-Aufnahmerate anzuzeigen.
 
 ![Das Überwachungs-Dashboard mit der ausgewählten Quellenkarte.](../assets/ui/monitor-sources/data-lake.png)
 
-Das Diagramm [!UICONTROL Aufnahmerate] zeigt Ihre Datenaufnahmerate basierend auf Ihrem konfigurierten Zeitrahmen an. Standardmäßig zeigt das Überwachungs-Dashboard die Aufnahmeraten der letzten 24 Stunden an. Anweisungen zum Konfigurieren Ihres Zeitrahmens finden Sie im Handbuch unter [Konfigurieren des Zeitrahmens für die Überwachung](monitor.md#configure-monitoring-time-frame).
+Das [!UICONTROL Ingestion rate] Diagramm zeigt Ihre Datenaufnahmerate basierend auf Ihrem konfigurierten Zeitrahmen an. Standardmäßig zeigt das Überwachungs-Dashboard die Aufnahmeraten der letzten 24 Stunden an. Anweisungen zum Konfigurieren Ihres Zeitrahmens finden Sie im Handbuch unter [Konfigurieren des Zeitrahmens für die Überwachung](monitor.md#configure-monitoring-time-frame).
 
-Das Diagramm ist standardmäßig für die Anzeige aktiviert. Um das Diagramm auszublenden, wählen Sie **[!UICONTROL Metriken und Diagramme]** aus, um den Umschalter zu deaktivieren und das Diagramm auszublenden.
+Das Diagramm ist standardmäßig für die Anzeige aktiviert. Um das Diagramm auszublenden, wählen Sie **[!UICONTROL Metrics and graphs]** aus, um den Umschalter zu deaktivieren und das Diagramm auszublenden.
 
 ![Das Diagramm mit den Metriken zur Aufnahmerate.](../assets/ui/monitor-sources/metrics-graph.png)
 
@@ -75,10 +75,10 @@ Sie können Ihre Daten mithilfe der Optionen weiter filtern, die oben in der Tab
 | Filteroptionen | Beschreibung |
 | --- | --- |
 | Durchsuchen | Verwenden Sie die Suchleiste, um Ihre Ansicht nach einem einzelnen Quelltyp zu filtern. |
-| Quellen | Wählen Sie **[!UICONTROL Quellen]** aus, um Ihre Ansicht zu filtern und Metrikdaten nach Quelltyp anzuzeigen. Dies ist die Standardanzeige, die vom Monitoring-Dashboard verwendet wird. |
-| Datenflüsse | Wählen Sie **[!UICONTROL Datenflüsse]** aus, um Ihre Ansicht zu filtern und Metrikdaten pro Datenfluss anzuzeigen. |
-| Nur Fehlschläge zeigen | Wählen Sie **[!UICONTROL Nur Fehler anzeigen]** aus, um Ihre Ansicht zu filtern und nur Datenflüsse anzuzeigen, die Aufnahmefehler gemeldet haben. |
-| Meine Quellen | Sie können Ihre Ansicht mithilfe des Dropdown-Menüs [!UICONTROL Meine Quellen] weiter filtern. Verwenden Sie das Dropdown-Menü, um Ihre Ansicht nach Kategorie zu filtern. Alternativ können Sie auf **[!UICONTROL Alle Quellen]** klicken, um Metriken zu allen - oder -Quellen anzuzeigen, oder auf **[!UICONTROL Meine Quellen]** klicken, um nur die Quellen anzuzeigen, für die Sie über ein entsprechendes -Konto verfügen. |
+| Quellen | Wählen Sie **[!UICONTROL Sources]** aus, um Ihre Ansicht zu filtern und Metrikdaten nach Quelltyp anzuzeigen. Dies ist die Standardanzeige, die vom Monitoring-Dashboard verwendet wird. |
+| Datenflüsse | Wählen Sie **[!UICONTROL Dataflows]** aus, um Ihre Ansicht zu filtern und Metrikdaten pro Datenfluss anzuzeigen. |
+| Nur Fehlschläge zeigen | Wählen Sie **[!UICONTROL Show failures only]** aus, um Ihre Ansicht zu filtern und nur Datenflüsse anzuzeigen, die Aufnahmefehler gemeldet haben. |
+| Meine Quellen | Sie können Ihre Ansicht mithilfe des Dropdown-Menüs [!UICONTROL My sources] weiter filtern. Verwenden Sie das Dropdown-Menü, um Ihre Ansicht nach Kategorie zu filtern. Alternativ können Sie **[!UICONTROL All sources]** auswählen, um Metriken für alle - oder -Quellen anzuzeigen, oder **[!UICONTROL My sources]** auswählen, um nur die Quellen anzuzeigen, für die Sie über ein entsprechendes -Konto verfügen. |
 
 {style="table-layout:auto"}
 
@@ -86,21 +86,21 @@ Um die Anzeige der Spalten anzupassen, wählen Sie das Symbol für die Spaltenei
 
 ![Das Monitoring-Dashboard mit ausgewähltem Symbol für die Spalteneinstellungen.](../assets/ui/monitor-sources/edit-columns.png)
 
-Wählen Sie anschließend im Fenster *[!UICONTROL Tabelle anpassen]* die Spalten aus, die Ihr Dashboard anzeigen soll. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
+Wählen Sie anschließend im Fenster *[!UICONTROL Customize table]* die Spalten aus, die Ihr Dashboard anzeigen soll. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Apply]** aus.
 
 ![Das Popup-Fenster „Spalte anpassen“ im Monitoring-Dashboard.](../assets/ui/monitor-sources/customize-table.png)
 
-Um die Daten zu überwachen, die in einen bestimmten Datenfluss aufgenommen werden, wählen Sie das Filtersymbol (![) &#x200B;](/help/images/icons/filter-add.png) einer Quelle aus.
+Um die Daten zu überwachen, die in einen bestimmten Datenfluss aufgenommen werden, wählen Sie das Filtersymbol (![) ](/help/images/icons/filter-add.png) einer Quelle aus.
 
 >[!TIP]
 >
->Sie können das Überwachungs-Dashboard verwenden, um Datenlöschmetriken für gelöschte Datensätze mithilfe von Datenspeicherungsrichtlinien zu überwachen. Weitere Informationen zur Datenaufbewahrung finden Sie im Handbuch unter [&#x200B; von Richtlinien zur Datenaufbewahrung](../../catalog/datasets/user-guide.md#data-retention-policy).
+>Sie können das Überwachungs-Dashboard verwenden, um Datenlöschmetriken für gelöschte Datensätze mithilfe von Datenspeicherungsrichtlinien zu überwachen. Weitere Informationen zur Datenaufbewahrung finden Sie im Handbuch unter [ von Richtlinien zur Datenaufbewahrung](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ![Überwachen Sie einen bestimmten Datenfluss, indem Sie das Filtersymbol neben einer bestimmten Quelle auswählen.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 Die Tabelle Metriken wird in eine Tabelle mit aktiven Datenflüssen aktualisiert, die der ausgewählten Quelle entsprechen. In diesem Schritt können Sie zusätzliche Informationen zu Ihren Datenflüssen anzeigen, einschließlich des entsprechenden Datensatzes und Datentyps sowie eines Zeitstempels, der angibt, wann sie zuletzt aktiv waren.
 
-Um einen Datenfluss weiter zu untersuchen, wählen Sie das Filtersymbol (![) &#x200B;](/help/images/icons/filter-add.png) einem Datenfluss aus.
+Um einen Datenfluss weiter zu untersuchen, wählen Sie das Filtersymbol (![) ](/help/images/icons/filter-add.png) einem Datenfluss aus.
 
 ![Die Datenfluss-Tabelle im Monitoring-Dashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -135,9 +135,9 @@ Auf der Seite mit den Datenflussausführungs-Details können Sie Metriken und In
 
 {style="table-layout:auto"}
 
-Wenn bei der Datenflussausführung Fehler auftreten, können Sie über die Benutzeroberfläche „Datenflussausführungsfehler[!UICONTROL &#x200B; einen Bildlauf nach unten &#x200B;].
+Wenn bei der Ausführung des Datenflusses Fehler auftreten, können Sie über die [!UICONTROL Dataflow run errors] nach unten auf der Seite scrollen.
 
-Verwenden Sie den Abschnitt [!UICONTROL Fehlgeschlagene Datensätze] um Metriken zu Datensätzen anzuzeigen, die aufgrund von Fehlern nicht aufgenommen wurden. Um einen umfassenden Fehlerbericht anzuzeigen, wählen Sie **[!UICONTROL Fehlerdiagnose in der Vorschau anzeigen]**. Um eine Kopie Ihrer Fehlerdiagnose und Ihres Dateimanifests herunterzuladen, wählen Sie **[!UICONTROL Herunterladen]** und kopieren Sie dann den Beispiel-API-Aufruf, der mit der [!DNL Data Access]-API verwendet werden soll.
+Verwenden Sie den Abschnitt [!UICONTROL Records failed] , um Metriken zu Datensätzen anzuzeigen, die aufgrund von Fehlern nicht aufgenommen wurden. Um einen umfassenden Fehlerbericht anzuzeigen, wählen Sie **[!UICONTROL Preview error diagnostics]** aus. Um eine Kopie Ihrer Fehlerdiagnose und Ihres Dateimanifests herunterzuladen, wählen Sie **[!UICONTROL Download]** aus und kopieren Sie dann den Beispiel-API-Aufruf, der mit der [!DNL Data Access]-API verwendet werden soll.
 
 >[!NOTE]
 >
@@ -145,7 +145,7 @@ Verwenden Sie den Abschnitt [!UICONTROL Fehlgeschlagene Datensätze] um Metriken
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie gelernt, wie Sie die Data-Lake-Aufnahmegeschwindigkeit mit dem Dashboard **[!UICONTROL Monitoring]** überwachen. Außerdem haben Sie gelernt, Fehler zu identifizieren, die Datenflussfehler während der Aufnahme verursachen. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie gelernt, wie Sie die Data-Lake-Aufnahmerate mithilfe des **[!UICONTROL Monitoring]**-Dashboards überwachen. Außerdem haben Sie gelernt, Fehler zu identifizieren, die Datenflussfehler während der Aufnahme verursachen. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Identitätsdaten überwachen](./monitor-identities.md).
-* [Überwachen von &#x200B;](./monitor-profiles.md).
+* [Überwachen von ](./monitor-profiles.md).

@@ -5,18 +5,18 @@ description: Dieses Dokument enthält Informationen zum Verwalten von Beschriftu
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 37%
+source-wordcount: '238'
+ht-degree: 38%
 
 ---
 
-# Verwalten von Kennzeichnungen
+# Verwalten von Labels
 
 >[!NOTE]
 >
 >Um berechnete Attribute mit Feldern zu erstellen oder anzuzeigen, die eine bestimmte Kennzeichnung enthalten, benötigen Sie Zugriff auf diese Kennzeichnung.
 
-Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Datennutzungs- und Zugriffsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Experience Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Experience Platform mit einer Beschriftung zu versehen.
+Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Datennutzungs- und Zugriffsrichtlinien kategorisieren. Labels können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Experience Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Experience Platform mit einer Beschriftung zu versehen.
 
 ## Erstellen einer neuen Kennzeichnung {#create-new-label}
 
@@ -29,18 +29,18 @@ Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für die
 >id="platform_permissions_labels_about_create"
 >title="Erstellen neuer Kennzeichnungen"
 >abstract="Sie können eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren. Mithilfe benutzerdefinierter Kennzeichnungen können Sie auf Ihre Daten Konfigurationen für Data Governance und Zugriffssteuerung anwenden."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#manage-labels" text="Verwalten von benutzerdefinierten Kennzeichnungen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#manage-labels" text="Verwalten von benutzerdefinierten Labels"
 
 >[!NOTE]
 >
->Es gibt nur eine Kennzeichnungsliste für eine gesamte Organisation. Um eine benutzerdefinierte Kennzeichnung zu erstellen, benötigen Sie **[!UICONTROL Nutzungskennzeichnungen verwalten]** -Berechtigungen für die Produktions-Sandbox. Das Löschen von Kennzeichnungen wird derzeit nicht unterstützt.
+>Es gibt nur eine Kennzeichnungsliste für eine gesamte Organisation. Um eine benutzerdefinierte Kennzeichnung zu erstellen, benötigen Sie **[!UICONTROL Manage Usage Labels]** für die Produktions-Sandbox. Das Löschen von Kennzeichnungen wird derzeit nicht unterstützt.
 
-Um eine neue Beschriftung zu erstellen, wählen Sie die Registerkarte **[!UICONTROL Beschriftungen]** in der Seitenleiste aus und klicken Sie auf **[!UICONTROL Beschriftung erstellen]**.
+Um eine neue Beschriftung zu erstellen, wählen Sie die Registerkarte **[!UICONTROL Labels]** in der Seitenleiste aus und klicken Sie auf **[!UICONTROL Create Label]**.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-Das **[!UICONTROL Erstellen einer neuen Beschriftung]** wird angezeigt, in dem Sie aufgefordert werden, einen Namen, einen optionalen Anzeigenamen und eine optionale Beschreibung einzugeben.
+Das Dialogfeld **[!UICONTROL Create a new label]** wird angezeigt und fordert Sie zur Eingabe eines Namens, eines optionalen Anzeigenamens und einer optionalen Beschreibung auf.
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Bestätigen]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Confirm]** aus.

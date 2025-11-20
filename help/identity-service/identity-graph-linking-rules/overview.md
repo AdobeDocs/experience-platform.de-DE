@@ -40,12 +40,12 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +55,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Überblick über die Verknüpfungsregeln für Identitätsdiagramme" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448281/?format=jpeg&nocache=1747851655227&captions=ger" alt="Überblick über die Verknüpfungsregeln für Identitätsdiagramme"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Überblick über die Verknüpfungsregeln für Identitätsdiagramme"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -68,7 +68,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
                     <p class="is-size-6">Verschaffen Sie sich einen Überblick darüber, wie Datenarchitektinnen und -architekten mit Regeln für die Verknüpfung von Identitätsdiagrammen genaue Kundenprofile sicherstellen und das Reduzieren von Diagrammen verhindern können.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
                 </a>
             </div>
         </div>
@@ -77,8 +77,8 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Regeln zur Verknüpfung von Identitätsdiagrammen - Diagrammsimulation" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444052/?format=jpeg&nocache=1747851655237&captions=ger" alt="Regeln zur Verknüpfung von Identitätsdiagrammen - Diagrammsimulation"
+                    <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Regeln zum Verknüpfen von Identitätsdiagrammen - Diagrammsimulation" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Regeln zum Verknüpfen von Identitätsdiagrammen - Diagrammsimulation"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -91,7 +91,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
                     <p class="is-size-6">Erfahren Sie, wie Sie mit dem Diagrammsimulator Identitätsdiagramm-Verknüpfungsregeln testen können.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
                 </a>
             </div>
         </div>
@@ -101,7 +101,7 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475971/?captions=ger&format=jpeg&nocache=1747851655218" alt="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -109,12 +109,12 @@ Sehen Sie sich die folgenden Videos an, um mehr über einige der grundlegenden A
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen">Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Verknüpfungsregeln für Identitätsdiagramme - Identitätseinstellungen">Regeln für die Verknüpfung von Identitätsdiagrammen – Identitätseinstellungen</a>
                     </p>
                     <p class="is-size-6">Erfahren Sie, wie Sie Regeln zur Identitätsdiagramm-Verknüpfung aktivieren und konfigurieren, um genaue Kundenprofile zu erstellen</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">beobachten</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
                 </a>
             </div>
         </div>
@@ -138,7 +138,7 @@ Es gibt Fälle, in denen sich ein Gerät mehrmals anmelden kann:
 
 | Freigegebenes Gerät | Beschreibung |
 | --- | --- |
-| Familien-Computer und Tablets | Ehemann und Ehefrau melden sich beide auf ihren jeweiligen Bankkonten an. |
+| Computer und Tablets für Familien | Mann und Frau Log-in beide auf ihre jeweiligen Bankkonten. |
 | Öffentlicher Kiosk | Reisende an einem Flughafen, die sich mit ihrem Treueprogramm-Ausweis einloggen, um ihre Gepäckstücke einzuchecken und Bordkarten auszudrucken. |
 | Callcenter | Callcenter-Mitarbeiter melden sich auf einem einzelnen Gerät im Namen von Kunden an, die den Support anrufen, um Probleme zu lösen. |
 
@@ -174,37 +174,37 @@ Diese Identitäten können zu folgenden Diagrammen führen, bei denen mehrere CR
 
 ![Ein Diagrammbeispiel für Identitätsdaten mit fehlerhaften oder fehlerhaften Identitätswerten.](../images/identity-settings/bad-data.png "Ein Diagrammbeispiel für Identitätsdaten mit fehlerhaften oder fehlerhaften Identitätswerten."){zoomable="yes"}
 
-Mit [!DNL Identity Graph Linking Rules] können Sie die CRMID als eindeutige Kennung konfigurieren, um das Reduzieren unerwünschter Profile aufgrund dieses Datentyps zu verhindern.
+Mit [!DNL Identity Graph Linking Rules] können Sie die CRMID als eindeutige Kennung konfigurieren, um zu verhindern, dass unerwünschte Profil aufgrund dieser Art von Daten zusammenbrechen.
 
 ## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
 Mit [!DNL Identity Graph Linking Rules] können Sie:
 
-* Erstellen Sie für jeden Benutzer ein einzelnes Identitätsdiagramm bzw. ein zusammengeführtes Profil, indem Sie eindeutige Namespaces konfigurieren. Dadurch wird verhindert, dass zwei unterschiedliche Personenkennungen zu einem Identitätsdiagramm zusammengeführt werden.
-* Verknüpfen Sie authentifizierte Online-Ereignisse mit der Person, indem Sie Prioritäten konfigurieren
+* Erstellen ein einzelnes Identitätsdiagramm / eine zusammengeführte Profil für jede User, indem eindeutige Namespaces konfiguriert werden, wodurch verhindert wird, dass zwei unterschiedliche Personenbezeichner zu einem Identitätsdiagramm zusammengeführt werden.
+* Verknüpfen Sie online authentifizierte Ereignisse mit der Person, indem Sie Prioritäten konfigurieren
 
 ### Terminologie {#terminology}
 
 | Terminologie | Beschreibung |
 | --- | --- |
-| Eindeutiger Namespace | Ein eindeutiger Namespace ist ein Identity-Namespace, der im Kontext eines Identitätsdiagramms als eigenständig eingerichtet wurde. Sie können einen Namespace mithilfe der Benutzeroberfläche so konfigurieren, dass er eindeutig ist. Nachdem ein Namespace als eindeutig definiert wurde, kann ein Diagramm nur eine Identität haben, die diesen Namespace enthält. |
+| Eindeutiger Namespace | Eine eindeutige Namespace ist eine Identitäts Namespace, die im Kontext eines Identitätsdiagramms als eindeutig eingerichtet wurde. Mithilfe der UI können Sie eine Namespace als eindeutig konfigurieren. Sobald ein Namespace als eindeutig definiert ist, kann ein Graph nur noch eine Identität haben, die diese Namespace enthält. |
 | Namespace-Priorität | Die Namespace-Priorität bezieht sich auf die relative Bedeutung von Namespaces untereinander. Die Namespace-Priorität kann über die Benutzeroberfläche konfiguriert werden. Sie können Namespaces in einem bestimmten Identitätsdiagramm nach Rang ordnen. Nach der Aktivierung werden Prioritätsnamen in verschiedenen Szenarien verwendet, z. B. als Eingabe für den Identitätsoptimierungsalgorithmus und zur Bestimmung der primären Identität für Erlebnisereignisfragmente. |
 | Algorithmus der Identitätsoptimierung | Der Algorithmus zur Identitätsoptimierung stellt sicher, dass Richtlinien, die durch die Konfiguration eines eindeutigen Namespace und von Namespace-Prioritäten erstellt wurden, in einem bestimmten Identitätsdiagramm durchgesetzt werden. |
 
 ### Eindeutiger Namespace {#unique-namespace}
 
-Sie können einen Namespace mithilfe des Arbeitsbereichs der Benutzeroberfläche für Identitätseinstellungen so konfigurieren, dass er eindeutig ist. Dadurch wird dem Identitätsoptimierungsalgorithmus mitgeteilt, dass ein bestimmtes Diagramm nur eine Identität haben kann, die diesen eindeutigen Namespace enthält. Dadurch wird verhindert, dass zwei unterschiedliche Personenkennungen innerhalb desselben Diagramms zusammengeführt werden.
+Sie können eine Namespace so konfigurieren, dass sie eindeutig ist, indem Sie die Identitätseinstellungen UI Arbeitsbereich. Dadurch wird der Identitätsoptimierungsalgorithmus darüber informiert, dass ein bestimmtes Diagramm möglicherweise nur eine Identität aufweist, die diese eindeutige Namespace enthält. Dadurch wird verhindert, dass zwei unterschiedliche Personenkennungen im selben Diagramm zusammengeführt werden.
 
-Betrachten Sie das folgende Szenario:
+Betrachten wir das folgende Szenario:
 
-* Scott verwendet ein Tablet und öffnet seinen Google Chrome-Browser, um zu acme<span>.com zu gehen, wo er sich anmeldet und nach neuen Basketballschuhen sucht.
-   * Hinter den Kulissen werden in diesem Szenario die folgenden Identitäten protokolliert:
-      * Ein ECID-Namespace und ein -Wert, die die Verwendung des Browsers darstellen
-      * Ein CRMID-Namespace und ein -Wert zur Darstellung des authentifizierten Benutzers (Scott hat sich mit seiner Kombination aus Benutzername und Kennwort angemeldet).
-* Sein Sohn Peter verwendet dann das gleiche Tablet und verwendet auch Google Chrome, um zu acme<span>.com zu gehen, wo er sich mit seinem eigenen Konto anmeldet, um nach Fußballgeräten zu suchen.
-   * Hinter den Kulissen werden in diesem Szenario die folgenden Identitäten protokolliert:
-      * Derselbe ECID-Namespace und derselbe Wert für den Browser.
-      * Ein neuer CRMID-Namespace und -Wert, der den authentifizierten Benutzer darstellt.
+* Scott benutzt ein Tablet und öffnet seine Google Chrom Browser, um zu acme<span>.com zu gehen, wo er sich anmeldet und nach neuen Basketballschuhen sucht.
+   * Hinter den Kulissen protokolliert dieses Szenario die folgenden Identitäten:
+      * Eine ECID-Namespace und ein Wert zur Darstellung der Verwendung des Browser
+      * Eine CRMID-Namespace und ein Wert für die authentifizierte User (Scott hat sich mit seinem Benutzernamen und einer Kennwort Kombination angemeldet).
+* Sein Sohn Peter nutzt dann dasselbe Tablet und auch Google-Chrom, um zu acme<span>.com zu gelangen, wo er sich mit seinem eigenen Konto anmeldet, um nach Fußballausrüstung zu suchen.
+   * Hinter den Kulissen protokolliert dieses Szenario die folgenden Identitäten:
+      * Die gleiche ECID-Namespace und der gleiche Wert für die Browser.
+      * Eine neue CRMID-Namespace und ein neuer Wert für die authentifizierte User.
 
 Wenn CRMID als eindeutiger Namespace konfiguriert wurde, teilt der Identitätsoptimierungsalgorithmus die CRMIDs in zwei separate Identitätsdiagramme auf, anstatt sie zusammenzuführen.
 
@@ -216,7 +216,7 @@ Sie müssen einen eindeutigen Namespace konfigurieren, um den Identitätsoptimie
 
 Die Namespace-Priorität bezieht sich auf die relative Bedeutung von Namespaces untereinander. Die Namespace-Priorität kann über die Benutzeroberfläche konfiguriert werden, und Sie können Namespaces in einem bestimmten Identitätsdiagramm nach Rang ordnen.
 
-Eine Möglichkeit, die Namespace-Priorität zu verwenden, besteht darin, die primäre Identität von Erlebnisereignisfragmenten (Benutzerverhalten) im Echtzeit-Kundenprofil zu bestimmen. Wenn Prioritätseinstellungen konfiguriert sind, wird die primäre Identitätseinstellung in Web SDK nicht mehr verwendet, um zu bestimmen, welche Profilfragmente gespeichert werden.
+Eine Möglichkeit, Namespace Priorität zu verwenden, besteht darin, die primäre Identität von Erlebnis Ereignis Fragmenten (User Verhalten) im Real-Zeit-Kundenprofil zu bestimmen. Wenn Prioritätseinstellungen konfiguriert sind, wird die primäre Identitätseinstellung im Web-SDK nicht mehr verwendet, um zu bestimmen, welche Profil Fragmente gespeichert werden.
 
 Eindeutige Namespaces und Namespace-Prioritäten können beide im Arbeitsbereich der Benutzeroberfläche für Identitätseinstellungen konfiguriert werden. Die Auswirkungen ihrer Konfigurationen sind jedoch unterschiedlich:
 
@@ -229,7 +229,7 @@ Eindeutige Namespaces und Namespace-Prioritäten können beide im Arbeitsbereich
 * **Die Namespace-Priorität ist ein numerischer Wert** der einem Namespace zugewiesen ist, um dessen relative Bedeutung anzugeben. Dies ist eine Eigenschaft eines Namespace.
 * **Die Primäre Identität ist die Identität, für die ein Profilfragment gespeichert wird**. Ein Profilfragment ist ein Datensatz mit Daten, die Informationen zu einem bestimmten Benutzer speichern: Attribute (normalerweise über CRM-Datensätze aufgenommen) oder Ereignisse (normalerweise aus Erlebnisereignissen oder Online-Daten aufgenommen).
 * Die Namespace-Priorität bestimmt die primäre Identität für Experience Event-Fragmente.
-   * Für Profildatensätze können Sie den Arbeitsbereich Schemata in der Experience Platform-Benutzeroberfläche verwenden, um Identitätsfelder zu definieren, einschließlich der Primäridentität. Weitere Informationen finden Sie im Handbuch unter [Definieren von Identitätsfeldern in &#x200B;](../../xdm/ui/fields/identity.md) Benutzeroberfläche“.
+   * Für Profildatensätze können Sie den Arbeitsbereich Schemata in der Experience Platform-Benutzeroberfläche verwenden, um Identitätsfelder zu definieren, einschließlich der Primäridentität. Weitere Informationen finden Sie im Handbuch unter [Definieren von Identitätsfeldern in ](../../xdm/ui/fields/identity.md) Benutzeroberfläche“.
 * Wenn ein Erlebnisereignis zwei oder mehr Identitäten mit der höchsten Namespace-Priorität in der identityMap hat, wird es bei der Aufnahme abgelehnt, da es als „fehlerhafte Daten“ betrachtet wird. Wenn die identityMap beispielsweise `{ECID: 111, CRMID: John, CRMID: Jane}` enthält, wird das gesamte Ereignis als ungültige Daten zurückgewiesen, da dies bedeutet, dass das Ereignis gleichzeitig sowohl `CRMID: John` als auch `CRMID: Jane` zugeordnet ist.
 
 Weitere Informationen finden Sie im Handbuch unter [Namespace-Priorität](./namespace-priority.md).
@@ -244,4 +244,4 @@ Weitere Informationen zu [!DNL Identity Graph Linking Rules] finden Sie in der f
 * [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
 * [Namespace-Priorität](./namespace-priority.md)
 * [Benutzeroberfläche für die Diagrammsimulation](./graph-simulation.md)
-* [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md)
+* [Identitätseinstellungen UI](./identity-settings-ui.md)

@@ -77,14 +77,14 @@ Aktivieren Sie in der rechten Leiste das Kontrollkästchen **[!UICONTROL Version
 >
 >Ein relationales Schema muss ein Feld zur Versionskennung enthalten, um Aktualisierungen auf Datensatzebene zu unterstützen und die Datenerfassung zu ändern.
 
-Um Beziehungen zu definieren, wählen Sie im Schema-Editor die Option **[!UICONTROL Add Relationship]** aus, um Primär-/Fremdschlüsselbeziehungen auf Schemaebene zu erstellen. Weitere Informationen finden Sie im Tutorial [Hinzufügen &#x200B;](../../tutorials/relationship-ui.md#relationship-field) Beziehungen auf Schemaebene“.
+Um Beziehungen zu definieren, wählen Sie im Schema-Editor die Option **[!UICONTROL Add Relationship]** aus, um Primär-/Fremdschlüsselbeziehungen auf Schemaebene zu erstellen. Weitere Informationen finden Sie im Tutorial [Hinzufügen ](../../tutorials/relationship-ui.md#relationship-field) Beziehungen auf Schemaebene“.
 
 Fahren Sie anschließend mit [Definieren von Primärschlüsseln](../fields/identity.md#define-a-identity-field) und [Hinzufügen zusätzlicher Felder](#add-field-groups) fort. Anleitungen zum Aktivieren der Änderungsdatenerfassung in Experience Platform-Quellen finden Sie [Handbuch zur Aufnahme der Änderungsdatenerfassung](../../../sources/tutorials/api/change-data-capture.md).
 
 >[!NOTE]
 >
->Nach dem Speichern zeigt das [!UICONTROL Type] Feld in der [!UICONTROL &#x200B; Schema properties] Seitenleiste an, dass es sich um ein [!UICONTROL Relational] handelt. Dies wird auch in der Detailseitenleiste in der Schema-Bestandsansicht angezeigt.
->&#x200B;>![Die Arbeitsfläche des Schema-Editors, auf der eine leere relationale Schemastruktur mit hervorgehobenem relationalen Typ angezeigt wird.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>Nach dem Speichern zeigt das [!UICONTROL Type] Feld in der [!UICONTROL  Schema properties] Seitenleiste an, dass es sich um ein [!UICONTROL Relational] handelt. Dies wird auch in der Detailseitenleiste in der Schema-Bestandsansicht angezeigt.
+>![Die Arbeitsfläche des Schema-Editors, auf der eine leere relationale Schemastruktur mit hervorgehobenem relationalen Typ angezeigt wird.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Hochladen einer DDL-Datei {#upload-ddl-file}
 
@@ -115,7 +115,7 @@ Während der Aufnahme sind Kontrollspalten wie `_change_request_type` zwar erfor
 
 Das Schema wird im Schema-Editor geöffnet, wo Sie die Struktur vor dem Speichern anpassen können.
 
-Fahren Sie als Nächstes mit [Hinzufügen zusätzlicher Felder](#add-field-groups) und [Hinzufügen zusätzlicher Beziehungen auf &#x200B;](../../tutorials/relationship-ui.md#relationship-field) fort.
+Fahren Sie als Nächstes mit [Hinzufügen zusätzlicher Felder](#add-field-groups) und [Hinzufügen zusätzlicher Beziehungen auf ](../../tutorials/relationship-ui.md#relationship-field) fort.
 
 Anleitungen zum Aktivieren der Änderungsdatenerfassung in Experience Platform-Quellen finden Sie [Handbuch zur Aufnahme der Änderungsdatenerfassung](../../../sources/tutorials/api/change-data-capture.md).
 
@@ -127,7 +127,7 @@ Wenn Sie im Dropdown-Menü „Schematyp auswählen“ die Option „Standardsche
 
 ### [!BADGE Beta]{type=Informative} Manuelle oder ML-unterstützte Schemaerstellung {#manual-or-assisted}
 
-Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Schemastruktur basierend auf einer CSV-Datei zu empfehlen, finden Sie [&#x200B; Handbuch zur Erstellung von Schemata durch maschinelles Lernen](../ml-assisted-schema-creation.md). Dieses Handbuch für die Benutzeroberfläche konzentriert sich auf den Workflow zur manuellen Erstellung.
+Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Schemastruktur basierend auf einer CSV-Datei zu empfehlen, finden Sie [ Handbuch zur Erstellung von Schemata durch maschinelles Lernen](../ml-assisted-schema-creation.md). Dieses Handbuch für die Benutzeroberfläche konzentriert sich auf den Workflow zur manuellen Erstellung.
 
 ### Manuelle Schemaerstellung {#manual-creation}
 
@@ -169,7 +169,7 @@ Der Schema-Editor wird angezeigt, wobei die Schemastruktur auf der Arbeitsfläch
 
 >[!NOTE]
 >
->Nachdem ein Schema gespeichert und bei der Datenaufnahme verwendet wurde, können nur additive Änderungen daran vorgenommen werden. Weitere Informationen finden [&#x200B; unter „Regeln &#x200B;](../../schema/composition.md#evolution) Schemaentwicklung“.
+>Nachdem ein Schema gespeichert und bei der Datenaufnahme verwendet wurde, können nur additive Änderungen daran vorgenommen werden. Weitere Informationen finden [ unter „Regeln ](../../schema/composition.md#evolution) Schemaentwicklung“.
 
 Um ein vorhandenes Schema zu bearbeiten, wählen Sie die Registerkarte **[!UICONTROL Browse]** und dann den Namen des Schemas aus, das Sie bearbeiten möchten. Sie können auch die Suchleiste verwenden, um die Liste der verfügbaren Optionen einzugrenzen.
 
@@ -245,7 +245,7 @@ Der [!DNL Schema Editor] wird erneut mit den von den Feldergruppen bereitgestell
 
 >[!NOTE]
 >
->Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Schlosssymbol (![&#x200B; Schlosssymbol) gekennzeichnet.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+>Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Schlosssymbol (![ Schlosssymbol) gekennzeichnet.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 >
 >![Der Schema-Editor mit hervorgehobenem Vorhängeschloss-Symbol](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -258,7 +258,7 @@ Nachdem Sie eine Feldergruppe zu einem Schema hinzugefügt haben, können Sie Fe
 >[!IMPORTANT]
 >
 >Durch Auswahl von **[!UICONTROL Remove]** wird das Feld aus der Feldergruppe selbst gelöscht, was sich auf *alle* Schemata auswirkt, die diese Feldergruppe verwenden.
->&#x200B;>Verwenden Sie diese Option nur, wenn Sie **Feld aus jedem Schema entfernen möchten, das die Feldergruppe**.
+>Verwenden Sie diese Option nur, wenn Sie **Feld aus jedem Schema entfernen möchten, das die Feldergruppe**.
 
 Um ein Feld aus der Feldergruppe zu löschen, wählen Sie es auf der Arbeitsfläche aus und wählen Sie in der rechten Leiste **[!UICONTROL Remove]** aus. Dieses Beispiel zeigt das `taxId` Feld aus der **[!UICONTROL Demographic Details]**.
 
@@ -297,7 +297,7 @@ Nachdem Sie eine Feldergruppe zu einem Schema hinzugefügt haben, können Sie zu
 
 Wenn ein benutzerdefiniertes Feld zu einer Standardfeldgruppe hinzugefügt wird, wird diese Feldgruppe außerdem in eine benutzerdefinierte Feldgruppe konvertiert, und die ursprüngliche Standardfeldgruppe ist nicht mehr verfügbar.
 
-Wenn Sie ein benutzerdefiniertes Feld zu einer Standardfeldgruppe hinzufügen möchten, finden Sie im [&#x200B; Abschnitt unten &#x200B;](#custom-fields-for-standard-groups) spezifische Anweisungen. Wenn Sie Felder zu einer benutzerdefinierten Feldergruppe hinzufügen, lesen Sie den Abschnitt [Bearbeiten benutzerdefinierter Feldergruppen](./field-groups.md) im Handbuch zur Benutzeroberfläche für Feldergruppen.
+Wenn Sie ein benutzerdefiniertes Feld zu einer Standardfeldgruppe hinzufügen möchten, finden Sie im [ Abschnitt unten ](#custom-fields-for-standard-groups) spezifische Anweisungen. Wenn Sie Felder zu einer benutzerdefinierten Feldergruppe hinzufügen, lesen Sie den Abschnitt [Bearbeiten benutzerdefinierter Feldergruppen](./field-groups.md) im Handbuch zur Benutzeroberfläche für Feldergruppen.
 
 Wenn Sie keine vorhandenen Feldergruppen ändern möchten, können Sie stattdessen [neue benutzerdefinierte Feldergruppe erstellen](./field-groups.md#create) um zusätzliche Felder zu definieren.
 
@@ -424,7 +424,7 @@ Nachdem Sie Ihre Änderungen angewendet haben, wird das neue Feld unter dem Name
 
 >[!IMPORTANT]
 >
->Um ein Schema für die [!DNL Profile] zu aktivieren, muss ein primäres Identitätsfeld definiert sein. Weitere Informationen finden Sie im Handbuch [Definieren &#x200B;](../fields/identity.md) Identitätsfeldern“.
+>Um ein Schema für die [!DNL Profile] zu aktivieren, muss ein primäres Identitätsfeld definiert sein. Weitere Informationen finden Sie im Handbuch [Definieren ](../fields/identity.md) Identitätsfeldern“.
 
 Um das Schema zu aktivieren, wählen Sie zunächst den Namen des Schemas in der linken Leiste und dann den Umschalter **[!UICONTROL Profile]** in der rechten Leiste aus.
 
@@ -492,6 +492,6 @@ Nach Bestätigung der Klassenänderung wird die Arbeitsfläche zurückgesetzt un
 
 In diesem Dokument wurden die Grundlagen zum Erstellen und Bearbeiten von Schemata in der Experience Platform-Benutzeroberfläche behandelt. Es wird dringend empfohlen, das [Tutorial zur Schemaerstellung](../../tutorials/create-schema-ui.md) durchzugehen, um einen umfassenden Workflow zum Erstellen eines vollständigen Schemas in der Benutzeroberfläche zu erhalten, einschließlich der Erstellung benutzerdefinierter Feldergruppen und Datentypen für individuelle Anwendungsfälle.
 
-Weiterführende Informationen zu den Funktionen von [!UICONTROL Schemas] Workspace finden Sie in der Übersicht zu [[!UICONTROL Schemas] Workspace &#x200B;](../overview.md).
+Weiterführende Informationen zu den Funktionen von [!UICONTROL Schemas] Workspace finden Sie in der Übersicht zu [[!UICONTROL Schemas] Workspace ](../overview.md).
 
 Informationen zum Verwalten von Schemas in der [!DNL Schema Registry]-API finden Sie im [Handbuch zu Schemas-Endpunkten](../../api/schemas.md).

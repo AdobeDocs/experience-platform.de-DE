@@ -6,7 +6,7 @@ description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren d
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1260'
 ht-degree: 54%
 
 ---
@@ -49,15 +49,15 @@ Ein Profil kommt für den Ablauf von pseudonymen Daten infrage, wenn es die folg
 >
 >Weitere Informationen zu Berechtigungen in Experience Platform finden Sie unter [Zugriffssteuerung - Übersicht](../access-control/home.md#permissions).
 
-Um Ablauf von Daten pseudonymer Profile zu Ihrer Organisation hinzuzufügen, gehen Sie zum Profil-Dashboard und wählen Sie **[!UICONTROL Einstellungen]** aus.
+Um Ablauf von Daten pseudonymer Profile zu Ihrer Organisation hinzuzufügen, gehen Sie zum Profil-Dashboard und wählen Sie **[!UICONTROL Settings]** aus.
 
 ![Die Schaltfläche „Einstellungen“ im Profil-Dashboard ist hervorgehoben.](./images/pseudonymous-profiles/profile-settings.png)
 
-Das [!UICONTROL Profileinstellungen] wird angezeigt. In diesem Popover können Sie die Anzahl der Tage für den Ablauf von Daten pseudonymer Profile sowie den Identity-Namespace festlegen, der für den Ablauf von Daten verwendet wird.
+Das [!UICONTROL Profile settings]-Popover wird angezeigt. In diesem Popover können Sie die Anzahl der Tage für den Ablauf von Daten pseudonymer Profile sowie den Identity-Namespace festlegen, der für den Ablauf von Daten verwendet wird.
 
 Bei Produktions-Sandboxes beträgt der standardmäßige Ablauf von Daten pseudonymer Profile 14 Tage, wobei der Mindestzeitraum 1 Tag und der Höchstzeitraum 365 Tage beträgt. Bei Entwicklungs-Sandboxes beträgt der standardmäßige Ablauf von Daten pseudonymer Profile 3 Tage, wobei der Mindestzeitraum 1 Tag und der Höchstzeitraum 365 Tage beträgt.
 
-Wählen Sie **[!UICONTROL Anwenden]**, um Ihre Einstellungen für den Datenablauf zu speichern.
+Wählen Sie **[!UICONTROL Apply]** aus, um Ihre Einstellungen für den Datenablauf zu speichern.
 
 ![Das Popover zum Hinzufügen von Ablauf von Daten pseudonymer Profile zu den Profilen Ihres Unternehmens. Die Schaltfläche „Anwenden“ ist hervorgehoben.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
@@ -81,13 +81,13 @@ Ablauf von Erlebnisereignisdaten funktioniert auf **Datensatz**-Ebene. Daher kan
 
 Ablauf von Daten pseudonymer Profile berücksichtigt **nur** Profile mit Identitätsdiagrammen, die vom Kunden ausgewählte Identity-Namespaces enthalten, z. B. `ECID`, `AAID` oder andere Arten von Cookies. Wenn das Profil **irgendeine Art von** zusätzlichen Identity-Namespaces hat, die **nicht** in der ausgewählten Liste des Kunden waren, wird das Profil **nicht** gelöscht.
 
-Ablauf von Erlebnisereignisdaten entfernt Ereignisse **nur** basierend auf dem Zeitstempel des Ereignisdatensatzes. Die darin enthaltenen Identity-Namespaces werden für den Zweck des Datenablaufs **ignoriert**.
+Ablauf von Erlebnisereignisdaten entfernt Ereignisse **nur** basierend auf dem Zeitstempel des Ereigniseintrags. Die darin enthaltenen Identity-Namespaces werden für den Zweck des Datenablaufs **ignoriert**.
 
 #### Entfernte Elemente
 
-Ablauf von Daten pseudonymer Profile entfernt Ereignis- **und** Profildatensätze. Daher werden auch die Profilklassendaten entfernt.
+Ablauf von Daten pseudonymer Profile entfernt Ereignis- **und** Profileinträge. Daher werden auch die Profilklassendaten entfernt.
 
-Ablauf von Erlebnisereignisdaten entfernt **nur** Ereignisse, **keine** Profilklassendaten. Die Profilklassendaten werden nur entfernt, wenn alle Daten über **alle** Datensätze hinweg entfernt werden und es **keine** Profilklassendatensätze gibt, die für das Profil verbleiben.
+Ablauf von Erlebnisereignisdaten entfernt **nur** Ereignisse, **keine** Profilklassendaten. Die Profilklassendaten werden nur entfernt, wenn alle Daten über **alle** Datensätze hinweg entfernt werden und es **keine** Profilklasseneinträge gibt, die für das Profil verbleiben.
 
 +++
 
@@ -131,7 +131,7 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 
 +++ Antwort
 
-- Das Identity Service-[&#x200B; „first-in, first-out“-Löschsystem &#x200B;](../identity-service/guardrails.md) ECIDs aus dem Identitätsdiagramm löschen, die in Identity Service gespeichert sind.
+- Das Identity Service-[ „first-in, first-out“-Löschsystem ](../identity-service/guardrails.md) ECIDs aus dem Identitätsdiagramm löschen, die in Identity Service gespeichert sind.
 - Wenn dieses Löschverhalten dazu führt, dass ein Nur-ECID-Profil im Echtzeit-Kundenprofil (Profilspeicher) gespeichert wird, wird dieses Profil nach Ablauf von Daten pseudonymer Profile aus dem Profilspeicher gelöscht.
 
 +++

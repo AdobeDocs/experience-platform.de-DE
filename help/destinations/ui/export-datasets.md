@@ -5,8 +5,8 @@ description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in 
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
 workflow-type: tm+mt
-source-wordcount: '2721'
-ht-degree: 35%
+source-wordcount: '2656'
+ht-degree: 25%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 35%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- oder Ultimate-Paket, Adobe Journey Optimizer oder Customer Journey Analytics erworben haben. Weitere Informationen erhalten Sie vom Adobe-Support.
+>Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- oder Ultimate-Paket, Adobe Journey Optimizer oder Customer Journey Analytics erworben haben. Wenden Sie sich an den Adobe-Support, um weitere Informationen zu erhalten.
 
 >[!IMPORTANT]
 >
@@ -22,11 +22,11 @@ ht-degree: 35%
 >
 >Für jeden dieser Datenflüsse müssen Sie das Enddatum im Datenfluss vor dem Enddatum manuell aktualisieren, da Ihre Exporte sonst an diesem Datum anhalten. Verwenden Sie die Experience Platform-Benutzeroberfläche, um anzuzeigen, welche Datenflüsse am 1. September 2025 beendet werden sollen.
 >
->Weitere Informationen [&#x200B; Bearbeiten des Enddatums &#x200B;](#scheduling) Datensatzexport-Datenflusses finden Sie im Abschnitt „Planung“.
+>Weitere Informationen [ Bearbeiten des Enddatums ](#scheduling) Datensatzexport-Datenflusses finden Sie im Abschnitt „Planung“.
 
 In diesem Artikel wird der Workflow erläutert, der zum Exportieren [Datensätze](/help/catalog/datasets/overview.md) von Adobe Experience Platform an Ihren bevorzugten Cloud-Speicherort, z. B. [!DNL Amazon S3], SFTP-Speicherorte oder [!DNL Google Cloud Storage], mithilfe der Experience Platform-Benutzeroberfläche erforderlich ist.
 
-Sie können auch die Experience Platform-APIs zum Exportieren von Datensätzen verwenden. Weitere Informationen finden [&#x200B; im Tutorial &#x200B;](/help/destinations/api/export-datasets.md) Exportieren von Datensätzen .
+Sie können auch die Experience Platform-APIs zum Exportieren von Datensätzen verwenden. Weitere Informationen finden [ im Tutorial ](/help/destinations/api/export-datasets.md) Exportieren von Datensätzen .
 
 ## Datensätze, die exportiert werden können {#datasets-to-export}
 
@@ -50,16 +50,16 @@ In der folgenden Tabelle erfahren Sie, welche Datensatztypen Sie je nach Program
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche nach der Aufnahme oder Erfassung von Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erstellt wurden.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=de#profile-attribute-datasets">Systemgenerierter Profil-Snapshot-Datensatz</a>.</li></td>
+    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche nach der Aufnahme oder Erfassung von Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erstellt wurden.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Systemgenerierter Profil-Snapshot-Datensatz</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
+    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
+    <td>Weitere Informationen finden Sie in der <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Dokumentation </a> Adobe Journey Optimizer.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ In der folgenden Tabelle erfahren Sie, welche Datensatztypen Sie je nach Program
 
 Sehen Sie sich das folgende Video an, um eine End-to-End-Erklärung des auf dieser Seite beschriebenen Workflows, die Vorteile der Verwendung der Funktion „Datensatz exportieren“ und einige vorgeschlagene Anwendungsfälle zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448827?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Unterstützte Ziele {#supported-destinations}
 
@@ -98,7 +98,7 @@ Derzeit können Sie Datensätze in die Cloud-Speicher-Ziele exportieren, die im 
 Einige dateibasierte Ziele im Experience Platform-Katalog unterstützen sowohl die Zielgruppenaktivierung als auch den Datensatzexport.
 
 * Erwägen Sie die Aktivierung von Zielgruppen, wenn Ihre Daten in Profilen gruppiert nach Zielgruppeninteressen oder Qualifikationen strukturiert sein sollen.
-* Alternativ können Sie Datensatzexporte in Betracht ziehen, wenn Sie Rohdatensätze exportieren möchten, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Sie können diese Daten für Berichte, Datenwissenschafts-Workflows und viele andere Anwendungsfälle verwenden. Als Administrator, Datentechniker oder Analyst können Sie beispielsweise Daten aus Experience Platform exportieren, um sie mit Ihrem Data Warehouse zu synchronisieren, in BI-Analyse-Tools oder externen Cloud-ML-Tools verwenden oder in Ihrem System für langfristige Speicheranforderungen speichern.
+* Alternativ können Sie Datensatzexporte in Betracht ziehen, wenn Sie Rohdatensätze exportieren möchten, die nicht nach Zielgruppeninteressen oder Qualifizierungen gruppiert oder strukturiert sind. Sie können diese Daten für Berichte, Datenwissenschafts-Workflows und viele andere Anwendungsfälle verwenden. Als Administrator, Datentechniker oder Analyst können Sie beispielsweise Daten aus Experience Platform exportieren, um sie mit Ihrem Data Warehouse zu synchronisieren, in BI-Analyse-Tools oder externen Cloud-ML-Tools verwenden oder in Ihrem System für langfristige Speicheranforderungen speichern.
 
 Dieses Dokument enthält alle Informationen, die zum Exportieren von Datensätzen erforderlich sind. Wenn Sie „Zielgruppen *für Cloud* Speicher- oder E-Mail-Marketing-Ziele aktivieren möchten, lesen Sie [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -111,35 +111,35 @@ Beachten Sie die folgenden Voraussetzungen, um Datensätze zu exportieren:
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Exportieren von Datensätzen benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Datensätze anzeigen]** und **[!UICONTROL Datensatzziele verwalten und aktivieren]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** und **[!UICONTROL Manage and Activate Dataset Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Exportieren von Datensätzen verfügen und dass das Ziel den Export von Datensätzen unterstützt, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über die Steuerung **[!UICONTROL Aktivieren]** oder **[!UICONTROL Datensätze exportieren]** verfügt, dann haben Sie die entsprechenden Berechtigungen.
+Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Exportieren von Datensätzen verfügen und dass das Ziel den Export von Datensätzen unterstützt, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über eine **[!UICONTROL Activate]** oder ein **[!UICONTROL Export datasets]** verfügt, verfügen Sie über die entsprechenden Berechtigungen.
 
 ## Auswählen des Ziels {#select-destination}
 
 Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datensätze exportieren können:
 
-1. Navigieren Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
+1. Wechseln Sie zu **[!UICONTROL Connections > Destinations]** und wählen Sie die Registerkarte **[!UICONTROL Catalog]** aus.
 
    ![Registerkarte „Zielkatalog“ mit hervorgehobenem Katalog-Steuerelement.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. Wählen Sie **[!UICONTROL Aktivieren]** oder **[!UICONTROL Datensätze exportieren]** auf der Karte aus, die dem Ziel entspricht, an das Sie Datensätze exportieren möchten.
+1. Wählen Sie **[!UICONTROL Activate]** oder **[!UICONTROL Export datasets]** auf der Karte aus, die dem Ziel entspricht, an das Sie Datensätze exportieren möchten.
 
    ![Registerkarte „Zielkatalog“ mit hervorgehobenem Steuerelement „Aktivieren“.](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-1. Wählen Sie **[!UICONTROL Datentypdatensätze]** und dann die Zielverbindung aus, in die Sie Datensätze exportieren möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
+1. Klicken Sie auf **[!UICONTROL Data type Datasets]** und wählen Sie die Zielverbindung aus, in die Sie Datensätze exportieren möchten, und klicken Sie dann auf **[!UICONTROL Next]**.
 
 >[!TIP]
 > 
->Wenn Sie ein neues Ziel zum Exportieren von Datensätzen einrichten möchten, wählen Sie **[!UICONTROL Neues Ziel konfigurieren]** aus, um den Workflow [Mit Ziel verbinden](/help/destinations/ui/connect-destination.md) auszulösen.
+>Wenn Sie ein neues Ziel zum Exportieren von Datensätzen einrichten möchten, wählen Sie **[!UICONTROL Configure new destination]** aus, um den Workflow [Mit Ziel verbinden](/help/destinations/ui/connect-destination.md) Trigger.
 
 ![Zielaktivierungs-Workflow mit hervorgehobenem Steuerelement „Datensätze“.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
-1. Die Ansicht **[!UICONTROL Datensätze auswählen]** wird angezeigt. Fahren Sie mit dem nächsten Abschnitt fort, um die [Datensätze auszuwählen](#select-datasets), die exportiert werden sollen.
+1. Die **[!UICONTROL Select datasets]** wird angezeigt. Fahren Sie mit dem nächsten Abschnitt fort, um die [Datensätze auszuwählen](#select-datasets), die exportiert werden sollen.
 
 ## Auswählen Ihrer Datensätze {#select-datasets}
 
-Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Datensätze auszuwählen, die Sie für das Ziel aktivieren möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
+Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Datensätze auszuwählen, die Sie an das Ziel exportieren möchten, und klicken Sie dann auf **[!UICONTROL Next]**.
 
 ![Workflow für den Datensatzexport, der den Schritt „Datensätze auswählen“ zeigt, in dem Sie auswählen können, welche Datensätze exportiert werden sollen.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
@@ -160,17 +160,17 @@ Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Date
 >title="Aktualisieren des Enddatums für diesen Datenflusshauptteil"
 >abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat als standardmäßiges Enddatum den 1. September 2025 festgelegt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum gestoppt."
 
-Verwenden Sie den **[!UICONTROL Zeitplan]**-Schritt, um:
+Verwenden Sie den **[!UICONTROL Scheduling]** Schritt, um:
 
 * Legen Sie ein Start- und Enddatum sowie eine Exportkadenz für Ihre Datensatzexporte fest.
 * Konfigurieren Sie, ob die exportierten Datensatzdateien die vollständige Mitgliedschaft des Datensatzes exportieren sollen oder nur inkrementelle Änderungen an der Mitgliedschaft bei jedem Exportereignis.
-* Passen Sie den Ordnerpfad an Ihrem Speicherort an, an den Datensätze exportiert werden sollen. Weitere Informationen zum [&#x200B; (Bearbeiten des Exportordnerpfads](#edit-folder-path).
+* Passen Sie den Ordnerpfad an Ihrem Speicherort an, an den Datensätze exportiert werden sollen. Weitere Informationen zum [ (Bearbeiten des Exportordnerpfads](#edit-folder-path).
 
-Verwenden Sie das Steuerelement **[!UICONTROL Zeitplan bearbeiten]** auf der Seite, um die Exportkadenz von Exporten zu bearbeiten und auszuwählen, ob vollständige oder inkrementelle Dateien exportiert werden sollen.
+Verwenden Sie das **[!UICONTROL Edit schedule]** auf der Seite, um die Exportkadenz von Exporten zu bearbeiten und auszuwählen, ob vollständige oder inkrementelle Dateien exportiert werden sollen.
 
 ![Steuerung „Zeitplan bearbeiten“ im Schritt „Planung“ hervorgehoben.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
-Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist standardmäßig ausgewählt. Dies führt zu einem Trigger einer oder mehrerer Dateien, die einen vollständigen Schnappschuss des Datensatzes darstellen. Nachfolgende Dateien sind inkrementelle Ergänzungen zum Datensatz seit dem vorherigen Export. Sie können auch **[!UICONTROL Vollständige Dateien exportieren]** auswählen. Wählen Sie in diesem Fall die Häufigkeit **[!UICONTROL Einmal]** für einen einmaligen vollständigen Export des Datensatzes aus.
+Die Option **[!UICONTROL Export incremental files]** ist standardmäßig ausgewählt. Dies führt zu einem Trigger einer oder mehrerer Dateien, die einen vollständigen Schnappschuss des Datensatzes darstellen. Nachfolgende Dateien sind inkrementelle Ergänzungen zum Datensatz seit dem vorherigen Export. Sie können auch **[!UICONTROL Export full files]** auswählen. Wählen Sie in diesem Fall die **[!UICONTROL Once]** für einen einmaligen vollständigen Export des Datensatzes aus.
 
 >[!IMPORTANT]
 >
@@ -178,16 +178,16 @@ Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist standardmäßi
 
 ![Workflow für den Datensatzexport, der den Planungsschritt zeigt.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
-1. Verwenden Sie den **[!UICONTROL Häufigkeitsselektor]** zur Auswahl der Exportfrequenz:
+1. Verwenden Sie den **[!UICONTROL Frequency]**, um die Exportfrequenz auszuwählen:
 
-   * **[!UICONTROL Täglich]**: Planung von inkrementellen Dateiexporten einmal täglich, jeden Tag, zum von Ihnen festgelegten Zeitpunkt.
-   * **[!UICONTROL Stündlich]**: Planung von inkrementellen Dateiexporten alle 3, 6, 8 oder 12 Stunden.
+   * **[!UICONTROL Daily]**: Planung von inkrementellen Dateiexporten einmal täglich, jeden Tag, zum angegebenen Zeitpunkt.
+   * **[!UICONTROL Hourly]**: Planung von inkrementellen Dateiexporten alle 3, 6, 8 oder 12 Stunden.
 
-2. Verwenden Sie den **[!UICONTROL Zeitselektor]** zur Auswahl der Tageszeit im Format [!DNL UTC], zu der der Export erfolgen soll.
+2. Verwenden Sie den **[!UICONTROL Time]**, um die Tageszeit [!DNL UTC] Format auszuwählen, zu der der Export erfolgen soll.
 
-3. Verwenden Sie den **[!UICONTROL Datum]**-Selektor, um das Intervall auszuwählen, in dem der Export stattfinden soll.
+3. Verwenden Sie den **[!UICONTROL Date]**-Selektor, um das Intervall auszuwählen, in dem der Export stattfinden soll.
 
-4. Wählen Sie **[!UICONTROL Speichern]** aus, um den Zeitplan zu speichern, und fahren Sie mit dem Schritt **[!UICONTROL Überprüfen]** fort.
+4. Wählen Sie **[!UICONTROL Save]** aus, um den Zeitplan zu speichern, und fahren Sie mit dem **[!UICONTROL Review]** Schritt fort.
 
 >[!NOTE]
 > 
@@ -205,7 +205,7 @@ Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist standardmäßi
 >title="Vorschau des Datensatzordnerpfads"
 >abstract="Sehen Sie sich eine Vorschau der Ordnerstruktur an, die basierend auf den in diesem Fenster hinzugefügten Makros am Speicherort erstellt wird."
 
-Wählen Sie **[!UICONTROL Ordnerpfad bearbeiten]**, um die Ordnerstruktur in Ihrem Speicherort, in dem exportierte Datensätze abgelegt werden, anzupassen.
+Wählen Sie **[!UICONTROL Edit folder path]** aus, um die Ordnerstruktur an Ihrem Speicherort anzupassen, an dem exportierte Datensätze abgelegt werden.
 
 ![Das Steuerelement „Ordnerpfad bearbeiten“ ist im Planungsschritt hervorgehoben.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
 
@@ -213,15 +213,15 @@ Sie können mehrere verfügbare Makros verwenden, um einen gewünschten Ordnerna
 
 ![Makroauswahl im modalen Fenster des benutzerdefinierten Ordners hervorgehoben.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-Nach Auswahl der gewünschten Makros können Sie eine Vorschau der Ordnerstruktur anzeigen, die an Ihrem Speicherort erstellt wird. Die erste Ebene in der Ordnerstruktur stellt den **[!UICONTROL Ordnerpfad“ dar]** den Sie angegeben haben, als Sie [mit dem Ziel verbunden) &#x200B;](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) Datensätze exportieren.
+Nach Auswahl der gewünschten Makros können Sie eine Vorschau der Ordnerstruktur anzeigen, die an Ihrem Speicherort erstellt wird. Die erste Ebene in der Ordnerstruktur stellt die **[!UICONTROL Folder path]** dar, die Sie angegeben haben, als Sie [mit dem Ziel verbunden) ](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) Datensätze exportieren.
 
 ![Vorschau des Ordnerpfads im modalen Fenster des benutzerdefinierten Ordners hervorgehoben.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
 ## Überprüfung {#review}
 
-Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]** aus, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertigstellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Datensätzen an das Ziel zu beginnen.
+Auf der Seite **[!UICONTROL Review]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Cancel]** aus, um den Fluss abzubrechen, **[!UICONTROL Back]**, Ihre Einstellungen zu ändern, oder **[!UICONTROL Finish]**, Ihre Auswahl zu bestätigen und mit dem Exportieren von Datensätzen an das Ziel zu beginnen.
 
-![Arbeitsablauf für den Datensatzexport, der den Überprüfungsschritt anzeigt.](/help/destinations/assets/ui/export-datasets/review.png)
+![Workflow für den Datensatzexport, der den Überprüfungsschritt anzeigt.](/help/destinations/assets/ui/export-datasets/review.png)
 
 ## Überprüfen eines erfolgreichen Datensatzexports {#verify}
 
@@ -231,7 +231,7 @@ Experience Platform erstellt eine Ordnerstruktur am angegebenen Speicherort, in 
 
 >[!TIP]
 > 
->Die erste Ebene in dieser Ordnerstruktur - `folder-name-you-provided` - stellt den **[!UICONTROL Ordnerpfad]** dar, den Sie angegeben haben, als Sie [mit dem Ziel verbunden](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) Datensätze exportieren.
+>Die erste Ebene in dieser Ordnerstruktur - `folder-name-you-provided` - stellt die **[!UICONTROL Folder path]** dar, die Sie angegeben haben, als Sie [mit dem Ziel verbunden](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) Datensätze exportieren.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -258,7 +258,7 @@ Exporte in JSON-Dateien werden unterstützt *nur im komprimierten Modus*. Export
 
 Gehen Sie wie folgt vor, um Datensätze aus einem vorhandenen Datenfluss zu entfernen:
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://experience.adobe.com/platform/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Durchsuchen]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziel-Datenflüsse anzuzeigen.
+1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform ](https://experience.adobe.com/platform/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziel-Datenflüsse anzuzeigen.
 
    ![Die Ansicht „Ziel durchsuchen“, wobei eine Zielverbindung angezeigt wird und der Rest unscharf gemacht wurde.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -266,27 +266,27 @@ Gehen Sie wie folgt vor, um Datensätze aus einem vorhandenen Datenfluss zu entf
    > 
    >Wählen Sie das Symbol ![Filter](/help/images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
-2. Wählen Sie in der Spalte **[!UICONTROL Aktivierungsdaten]** das Steuerelement für Datensätze aus, um alle Datensätze anzuzeigen, die diesem Exportdatenfluss zugeordnet sind.
+2. Wählen Sie in der Spalte **[!UICONTROL Activation data]** das Steuerelement für Datensätze aus, um alle Datensätze anzuzeigen, die diesem Exportdatenfluss zugeordnet sind.
 
    ![Die verfügbare Navigationsoption für Datensätze, die in der Spalte „Aktivieriungsdaten“ hervorgehoben ist.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. Die Seite **[!UICONTROL Aktivierungsdaten]** für dieses Ziel wird angezeigt. Aktivieren Sie die Kontrollkästchen links in der Datensatzliste, um die Datensätze auszuwählen, die Sie entfernen möchten, und wählen Sie dann **[!UICONTROL Datensätze entfernen]** in der rechten Leiste aus, um den Trigger zum Entfernen des Datensatzbestätigungsdialogfelds anzuzeigen.
+3. Die **[!UICONTROL Activation data]** für das Ziel wird angezeigt. Aktivieren Sie die Kontrollkästchen links in der Datensatzliste, um die Datensätze auszuwählen, die Sie entfernen möchten, und klicken Sie dann in der rechten Leiste auf **[!UICONTROL Remove datasets]** , um den Trigger zum Bestätigungsdialogfeld zum Entfernen des Datensatzes anzuzeigen.
 
    ![Der Dialog „Datensatz entfernen“, der die Steuerung „Datensatz entfernen“ in der rechten Leiste anzeigt.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-4. Wählen Sie im Bestätigungsdialog die Option **[!UICONTROL Entfernen]** aus, um den Datensatz sofort aus den Exporten in das Ziel zu entfernen.
+4. Wählen Sie im Bestätigungsdialog die Option **[!UICONTROL Remove]** aus, um den Datensatz sofort aus den Exporten in das Ziel zu entfernen.
 
    ![Dialogfeld mit der Option „Löschen des Datensatzes aus dem Datenfluss bestätigen“.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
 ## Berechtigungen für den Datensatzexport {#licensing-entitlement}
 
-Informationen dazu, wie viele Daten Sie pro Jahr für jede Experience Platform-Anwendung exportieren dürfen, finden Sie in den Produktbeschreibungsdokumenten. Sie können beispielsweise die Real-Time CDP-Produktbeschreibung ([) &#x200B;](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Informationen dazu, wie viele Daten Sie pro Jahr für jede Experience Platform-Anwendung exportieren dürfen, finden Sie in den Produktbeschreibungsdokumenten. Sie können beispielsweise die Real-Time CDP-Produktbeschreibung ([) ](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 Beachten Sie, dass die Berechtigungen für den Datenexport für verschiedene Programme nicht additiv sind. Wenn Sie beispielsweise Real-Time CDP Ultimate und Adobe Journey Optimizer Ultimate erwerben, ist die Berechtigung für den Profilexport gemäß den Produktbeschreibungen höher als die beiden Berechtigungen. Die Berechnung Ihrer Volumenberechtigungen erfolgt anhand der Gesamtzahl der lizenzierten Profile und der Multiplikation mit 500 KB für Real-Time CDP Prime bzw. 700 KB für Real-Time CDP Ultimate, um zu bestimmen, wie viel Datenvolumen Ihnen zusteht.
 
 Wenn Sie dagegen Add-ons wie Data Distiller erworben haben, stellt das Datenexportlimit, zu dem Sie berechtigt sind, die Summe aus der Produktebene und dem Add-on dar.
 
-Sie können Ihre Profilexporte anhand Ihrer vertraglichen Beschränkungen im Dashboard [Lizenznutzung“ anzeigen und &#x200B;](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md).
+Sie können Ihre Profilexporte anhand Ihrer vertraglichen Beschränkungen im Dashboard [Lizenznutzung“ anzeigen und ](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md).
 
 ## Bekannte Einschränkungen {#known-limitations}
 

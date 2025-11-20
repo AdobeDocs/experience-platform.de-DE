@@ -6,12 +6,12 @@ description: In der Benutzeroberfläche von Adobe Experience Platform können Si
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1190'
 ht-degree: 2%
 
 ---
 
-# Handbuch [!UICONTROL Vereinigungsschema] Benutzeroberfläche
+# Handbuch für die [!UICONTROL Union schema]-Benutzeroberfläche
 
 In der Benutzeroberfläche von Adobe Experience Platform können Sie problemlos jedes Vereinigungsschema innerhalb Ihres Unternehmens anzeigen und eine Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schemata für eine bestimmte Klasse anzeigen. Dieses Handbuch enthält detaillierte Informationen zum Anzeigen und Erkunden von Vereinigungsschemata mithilfe der Experience Platform-Benutzeroberfläche.
 
@@ -40,15 +40,15 @@ Das Arbeiten mit Vereinigungsschemata erfordert ein tiefes Verständnis von XDM-
 
 ## Vereinigungsschemata anzeigen {#view-union-schemas}
 
-Um in der Experience Platform-Benutzeroberfläche zu den Vereinigungsschemata zu navigieren, wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Profile“ und dann die Registerkarte **[!UICONTROL Vereinigungsschema]** aus. Die Registerkarte [!UICONTROL Vereinigungsschema] wird geöffnet, um das Vereinigungsschema für die aktuell ausgewählte Klasse anzuzeigen.
+Um in der Experience Platform-Benutzeroberfläche zu den Vereinigungsschemata zu navigieren, wählen Sie im linken Navigationsbereich **[!UICONTROL Profiles]** und dann die Registerkarte **[!UICONTROL Union Schema]** aus. Die Registerkarte [!UICONTROL Union Schema] wird geöffnet und zeigt das Vereinigungsschema für die aktuell ausgewählte Klasse an.
 
 ![Die Seite „Vereinigungsschema“ wird angezeigt, wobei die Registerkarte „Profil“ und „Vereinigungsschema“ hervorgehoben sind.](../images/union-schema/landing.png)
 
 ## Klasse auswählen {#select-a-class}
 
-Um das Vereinigungsschema für eine bestimmte XDM-Klasse anzuzeigen, wählen Sie die Klasse aus dem Dropdown-Menü **[!UICONTROL Klasse]** aus. Da nicht alle Klassen Vereinigungsschemata haben, sind in der Dropdown-Liste nur Klassen mit Vereinigungsschemata (d. h. Klassen mit Schemata, die für Profil aktiviert wurden) verfügbar.
+Um das Vereinigungsschema für eine bestimmte XDM-Klasse anzuzeigen, wählen Sie die Klasse aus der Dropdown-Liste **[!UICONTROL Class]** aus. Da nicht alle Klassen Vereinigungsschemata haben, sind in der Dropdown-Liste nur Klassen mit Vereinigungsschemata (d. h. Klassen mit Schemata, die für Profil aktiviert wurden) verfügbar.
 
-Nachdem eine Klasse ausgewählt wurde, wird das angezeigte Schema aktualisiert, um das Vereinigungsschema für die ausgewählte Klasse widerzuspiegeln. Sie können beispielsweise auf **[!UICONTROL Individuelles XDM-Profil]** klicken, um das Vereinigungsschema für diese Klasse anzuzeigen.
+Nachdem eine Klasse ausgewählt wurde, wird das angezeigte Schema aktualisiert, um das Vereinigungsschema für die ausgewählte Klasse widerzuspiegeln. Sie können beispielsweise **[!UICONTROL XDM Individual Profile]** auswählen, um das Vereinigungsschema für diese Klasse anzuzeigen.
 
 ![Ein Dropdown-Menü mit den Klassen des Vereinigungsschemas ist hervorgehoben.](../images/union-schema/class.png)
 
@@ -70,7 +70,7 @@ Weitere Informationen zu Datensätzen, einschließlich der Anzeige von Datensatz
 
 ## Beitragende Schemata anzeigen {#view-contributing-schemas}
 
-Sie können auch anzeigen, welche spezifischen Schemata zum Vereinigungsschema beitragen, indem Sie &quot;**[!UICONTROL beitragenden Schemata“]**, um die Liste der Schemata zu erweitern. Je nach ausgewählter Klasse und der Anzahl der Schemata, die Ihr Unternehmen in Experience Platform erstellt hat, kann es sich um eine kurze Liste mit einem einzigen Schema oder eine lange Liste mit vielen Schemata handeln.
+Sie können auch anzeigen, welche spezifischen Schemata zum Vereinigungsschema beitragen, indem Sie **[!UICONTROL All contributing schemas]** auswählen, um die Liste der Schemata zu erweitern. Je nach ausgewählter Klasse und der Anzahl der Schemata, die Ihr Unternehmen in Experience Platform erstellt hat, kann es sich um eine kurze Liste mit einem einzigen Schema oder eine lange Liste mit vielen Schemata handeln.
 
 ![Die Liste der Schemata, die zum Vereinigungsschema beitragen, ist hervorgehoben.](../images/union-schema/contributing-schemas.png)
 
@@ -80,7 +80,7 @@ Wenn Sie den Namen eines bestimmten Schemas auswählen, werden die Felder innerh
 
 ## Anzeigen von Identitäten {#view-identities}
 
-Über die Benutzeroberfläche können Sie eine Liste von Identitäten anzeigen, die im Vereinigungsschema enthalten sind, indem Sie **[!UICONTROL Identitäten]** auswählen, um die Liste zu erweitern.
+Über die Benutzeroberfläche können Sie eine Liste von Identitäten anzeigen, die im Vereinigungsschema enthalten sind, indem Sie **[!UICONTROL Identities]** auswählen, um die Liste zu erweitern.
 
 ![Die Identitäten, die zum Vereinigungsschema gehören, sind hervorgehoben.](../images/union-schema/identities.png)
 
@@ -94,7 +94,7 @@ Das Identitätsfeld wird innerhalb des Vereinigungsschemas hervorgehoben und die
 
 In der Benutzeroberfläche des Vereinigungsschemas können Sie auch Beziehungen sehen, die für Schemas basierend auf der ausgewählten Schemaklasse definiert wurden. Durch das Definieren einer Beziehung können zwei Schemata miteinander verbunden werden, die zu verschiedenen Klassen gehören, um komplexere Einblicke in Kundendaten zu erhalten.
 
-Wenn Beziehungen für die ausgewählte Klasse hergestellt wurden, wird durch Auswahl von **[!UICONTROL Beziehungen]** eine Liste der Felder angezeigt, die zum Erstellen von Beziehungen verwendet werden. Nicht alle Schemas verwenden Beziehungen oder müssen definiert werden. Daher ist es üblich, dass der Abschnitt Beziehungen keine Felder enthält.
+Wenn Beziehungen für die ausgewählte Klasse hergestellt wurden, wird bei Auswahl von **[!UICONTROL Relationships]** eine Liste der Felder angezeigt, die zum Erstellen von Beziehungen verwendet werden. Nicht alle Schemas verwenden Beziehungen oder müssen definiert werden. Daher ist es üblich, dass der Abschnitt Beziehungen keine Felder enthält.
 
 Weitere Informationen zu Schemabeziehungen, einschließlich ihrer Definition mithilfe der Benutzeroberfläche, finden Sie [diesem Dokument zu Schemabeziehungen](../../xdm/tutorials/relationship-ui.md).
 

@@ -5,7 +5,7 @@ description: Dieses Dokument enthält Informationen zum Verwalten von Sandboxes 
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '258'
 ht-degree: 40%
 
 ---
@@ -32,7 +32,7 @@ Die Registerkarte Details bietet einen Überblick über die Sandbox. In der Übe
 
 ![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-Wählen Sie die Registerkarte **[!UICONTROL Rollen]** aus, um die Rollen anzuzeigen, denen die Sandbox zugewiesen ist.
+Wählen Sie die Registerkarte **[!UICONTROL Roles]** aus, um die Rollen anzuzeigen, denen die Sandbox zugewiesen ist.
 
 ![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
 

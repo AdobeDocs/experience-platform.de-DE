@@ -5,7 +5,7 @@ description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht auf Ihr
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1921'
 ht-degree: 5%
 
 ---
@@ -22,13 +22,13 @@ Dieses Handbuch für die Benutzeroberfläche setzt ein Verständnis der verschie
 * [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert die [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, während sie in [!DNL Experience Platform] aufgenommen werden.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 
-## [!UICONTROL Übersicht]
+## [!UICONTROL Overview]
 
-Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Profile]** im linken Navigationsbereich aus, um die Registerkarte **[!UICONTROL Übersicht]** mit dem Profil-Dashboard zu öffnen.
+Wählen Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Profiles]** aus, um die Registerkarte **[!UICONTROL Overview]** mit dem Profil-Dashboard zu öffnen.
 
 >[!NOTE]
 >
->Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, wird das Dashboard [!UICONTROL Profile] nicht angezeigt. Stattdessen werden auf [!UICONTROL &#x200B; Registerkarte &#x200B;]Übersicht“ Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
+>Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das [!UICONTROL Profiles]-Dashboard nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Overview] Links und Dokumentationen angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen können.
 
 ### Profil-Dashboard {#profile-dashboard}
 
@@ -38,9 +38,9 @@ Weitere Informationen finden Sie im [Handbuch zum Profil-Dashboard](../../dashbo
 
 ![Das Profil-Dashboard wird angezeigt.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## Registerkarte [!UICONTROL Durchsuchen]
+## Registerkarte [!UICONTROL Browse]
 
-Auf der Registerkarte **[!UICONTROL Durchsuchen]** können Sie Ihre Profile entweder in einer **Kartenansicht** oder einer **Diagrammansicht anzeigen** indem Sie den Umschalter auswählen.
+Auf der Registerkarte **[!UICONTROL Browse]** können Sie Ihre Profile entweder in einer **-,**- oder **-** anzeigen, indem Sie den Umschalter auswählen.
 
 ![Der Umschalter für die Karten- und Diagrammansicht ist hervorgehoben.](../images/user-guide/card-graph-view.png)
 
@@ -48,45 +48,45 @@ Darüber hinaus können Sie Ihre Profile mithilfe einer Zusammenführungsrichtli
 
 ![Die Profile, die zur Organisation gehören, werden angezeigt.](../images/user-guide/profile-browse.png)
 
-### Durchsuchen nach [!UICONTROL Zusammenführungsrichtlinie]
+### Durchsuchen nach [!UICONTROL Merge policy]
 
-Die **[!UICONTROL Durchsuchen]** ist standardmäßig auf die standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festgelegt. Um eine andere Zusammenführungsrichtlinie auszuwählen, wählen Sie die `X` neben dem Namen der Zusammenführungsrichtlinie aus und öffnen Sie dann mit der Auswahl das Dialogfeld **[!UICONTROL Zusammenführungsrichtlinie auswählen]**.
+Auf der Registerkarte **[!UICONTROL Browse]** ist standardmäßig die standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festgelegt. Um eine andere Zusammenführungsrichtlinie auszuwählen, wählen Sie die `X` neben dem Namen der Zusammenführungsrichtlinie aus und öffnen Sie dann das Dialogfeld **[!UICONTROL Select merge policy]** über die Auswahl.
 
 >[!NOTE]
 >
->Wenn keine Zusammenführungsrichtlinie ausgewählt ist, verwenden Sie die Auswahlschaltfläche neben dem Feld **[!UICONTROL Zusammenführungsrichtlinie]**, um das Auswahldialogfeld zu öffnen.
+>Wenn keine Zusammenführungsrichtlinie ausgewählt ist, verwenden Sie die Auswahlschaltfläche neben dem **[!UICONTROL Merge policy]**, um das Auswahldialogfeld zu öffnen.
 
 ![Die Auswahl für die Zusammenführungsrichtlinie ist hervorgehoben.](../images/user-guide/browse-by-merge-policy.png)
 
-Um eine Zusammenführungsrichtlinie im Dialogfeld **[!UICONTROL Zusammenführungsrichtlinie auswählen]** auszuwählen, wählen Sie das Optionsfeld neben dem Richtliniennamen aus und verwenden Sie dann **[!UICONTROL Auswählen]**, um zur Registerkarte [!UICONTROL Durchsuchen] zurückzukehren. Sie können dann auf **[!UICONTROL Anzeigen]** klicken, um die Beispielprofile zu aktualisieren und ein Sampling der Profile mit der neuen angewendeten Zusammenführungsrichtlinie anzuzeigen.
+Um eine Zusammenführungsrichtlinie aus dem Dialogfeld **[!UICONTROL Select merge policy]** auszuwählen, wählen Sie das Optionsfeld neben dem Richtliniennamen aus und verwenden Sie dann **[!UICONTROL Select]** , um zur Registerkarte [!UICONTROL Browse] zurückzukehren. Sie können dann **[!UICONTROL View]** auswählen, um die Beispielprofile zu aktualisieren und ein Sampling der Profile mit der neuen angewendeten Zusammenführungsrichtlinie anzuzeigen.
 
 ![Es wird ein Dialogfeld angezeigt, in dem Sie die Zusammenführungsrichtlinie auswählen können, nach der gefiltert werden soll.](../images/user-guide/select-merge-policy.png)
 
 Die angezeigten Profile stellen ein Beispiel von bis zu 20 Profilen aus dem Profilspeicher Ihres Unternehmens dar, nachdem die ausgewählte Zusammenführungsrichtlinie angewendet wurde. Die Beispielprofile für die ausgewählte Zusammenführungsrichtlinie werden aktualisiert, wenn neue Daten zum Profilspeicher Ihres Unternehmens hinzugefügt werden.
 
-Um die Details eines der Beispielprofile anzuzeigen, wählen Sie die **[!UICONTROL Profilkennung]** aus. Weitere Informationen finden Sie im Abschnitt weiter unten in diesem Handbuch [Anzeigen von Profildetails](#profile-detail).
+Um die Details eines der Beispielprofile anzuzeigen, wählen Sie die **[!UICONTROL Profile ID]** aus. Weitere Informationen finden Sie im Abschnitt weiter unten in diesem Handbuch [Anzeigen von Profildetails](#profile-detail).
 
 ![Beispielprofile, die mit der Zusammenführungsrichtlinie übereinstimmen, werden angezeigt.](../images/user-guide/profile-browse-table.png)
 
 Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Experience Platform finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
-### Durchsuchen nach [!UICONTROL Identität] {#browse-identity}
+### Durchsuchen nach [!UICONTROL Identity] {#browse-identity}
 
-Auf der Registerkarte **[!UICONTROL Durchsuchen]** können Sie einen Identity-Namespace verwenden, um ein bestimmtes Profil anhand eines Identitätswerts nachzuschlagen. Zum Durchsuchen nach einer Identität müssen Sie eine Zusammenführungsrichtlinie, einen Identity-Namespace und einen Identitätswert angeben.
+Auf der Registerkarte **[!UICONTROL Browse]** können Sie einen Identity-Namespace verwenden, um ein bestimmtes Profil anhand eines Identitätswerts nachzuschlagen. Zum Durchsuchen nach einer Identität müssen Sie eine Zusammenführungsrichtlinie, einen Identity-Namespace und einen Identitätswert angeben.
 
 ![Die Auswahl für die Zusammenführungsrichtlinie ist hervorgehoben.](../images/user-guide/browse-by-merge-policy.png)
 
-Verwenden Sie bei Bedarf die Auswahl **[!UICONTROL Zusammenführungsrichtlinie]** , um das Dialogfeld **[!UICONTROL Zusammenführungsrichtlinie auswählen]** zu öffnen und die Zusammenführungsrichtlinie auszuwählen, die Sie verwenden möchten.
+Verwenden Sie bei Bedarf die **[!UICONTROL Merge policy]**, um das Dialogfeld &quot;**[!UICONTROL Select merge policy]**&quot; zu öffnen, und wählen Sie die Zusammenführungsrichtlinie aus, die Sie verwenden möchten.
 
 ![Es wird ein Dialogfeld angezeigt, in dem Sie die Zusammenführungsrichtlinie auswählen können, nach der gefiltert werden soll.](../images/user-guide/select-merge-policy.png)
 
-Verwenden Sie dann die **[!UICONTROL Identity-Namespace]**, um das Dialogfeld **[!UICONTROL Identity-Namespace auswählen]** zu öffnen und den Namespace auszuwählen, nach dem gesucht werden soll. Wenn Ihr Unternehmen über viele Namespaces verfügt, können Sie über die Suchleiste im Dialogfeld mit der Eingabe des Namens eines Namespace beginnen.
+Verwenden Sie dann die **[!UICONTROL Identity namespace]**, um das Dialogfeld **[!UICONTROL Select identity namespace]** zu öffnen, und wählen Sie den Namespace aus, nach dem Sie suchen möchten. Wenn Ihr Unternehmen über viele Namespaces verfügt, können Sie über die Suchleiste im Dialogfeld mit der Eingabe des Namens eines Namespace beginnen.
 
-Sie können einen Namespace auswählen, um zusätzliche Details anzuzeigen, oder das Optionsfeld auswählen, um einen Namespace auszuwählen. Sie können dann **[!UICONTROL Auswählen]** verwenden, um fortzufahren.
+Sie können einen Namespace auswählen, um zusätzliche Details anzuzeigen, oder das Optionsfeld auswählen, um einen Namespace auszuwählen. Sie können dann **[!UICONTROL Select]** verwenden, um fortzufahren.
 
 ![Es wird ein Dialogfeld angezeigt, in dem Sie den Identity-Namespace auswählen können, nach dem gefiltert werden soll.](../images/user-guide/select-identity-namespace.png)
 
-Nachdem Sie einen [!UICONTROL Identity-Namespace] ausgewählt und zur Registerkarte [!UICONTROL Durchsuchen] zurückgekehrt sind, können Sie einen **[!UICONTROL Identitätswert]** eingeben, der sich auf den ausgewählten Namespace bezieht.
+Nachdem Sie einen [!UICONTROL Identity namespace] ausgewählt und zur Registerkarte [!UICONTROL Browse] zurückgekehrt sind, können Sie einen **[!UICONTROL Identity value]** eingeben, der sich auf den von Ihnen ausgewählten Namespace bezieht.
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ Nachdem Sie einen [!UICONTROL Identity-Namespace] ausgewählt und zur Registerka
 
 ![Der Identitätswert, nach dem gefiltert werden soll, ist hervorgehoben.](../images/user-guide/browse-identity.png)
 
-Nachdem Sie einen Wert eingegeben haben, wählen Sie **[!UICONTROL Anzeigen]** und ein einzelnes Profil, das dem Wert entspricht, wird zurückgegeben. Wählen Sie die **[!UICONTROL Profil-ID]** aus, um ein Profil anzuzeigen.
+Nachdem Sie einen Wert eingegeben haben, wählen Sie **[!UICONTROL View]** aus und ein einzelnes Profil, das dem Wert entspricht, wird zurückgegeben. Wählen Sie die **[!UICONTROL Profile ID]** aus, um ein Profil anzuzeigen.
 
 ![Das Profil, das dem Identitätswert entspricht, ist hervorgehoben.](../images/user-guide/filtered-identity-value.png)
 
@@ -105,7 +105,7 @@ Nachdem Sie einen Wert eingegeben haben, wählen Sie **[!UICONTROL Anzeigen]** u
 >title="Entität nicht gefunden"
 >abstract="Das bedeutet, dass die angeforderte Entität von Experience Platform nicht gefunden wurde. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Profilkennung in der URL der Entität aufgeführt ist, auf die Sie zugreifen möchten.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Entität verfügen, auf die Sie zugreifen möchten.</li></ul>"
 
-Nach Auswahl einer **[!UICONTROL Profil-ID]** wird die Registerkarte **[!UICONTROL Detail]** geöffnet. Die auf der Registerkarte **[!UICONTROL Detail]** angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kunden zu erstellen. Dazu gehören Kundendetails wie grundlegende Attribute, verknüpfte Identitäten und Kanalvoreinstellungen.
+Nach Auswahl eines **[!UICONTROL Profile ID]** wird die Registerkarte **[!UICONTROL Detail]** geöffnet. Die auf der Registerkarte **[!UICONTROL Detail]** angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kunden zu erstellen. Dazu gehören Kundendetails wie grundlegende Attribute, verknüpfte Identitäten und Kanalvoreinstellungen.
 
 Darüber hinaus können Sie weitere Details zu Profilen anzeigen, z. B. [Attribute](#attributes), [Ereignisse](#events) und [Zielgruppenzugehörigkeit](#audience-membership).
 
@@ -121,7 +121,7 @@ Darüber hinaus können Sie ein- oder ausschalten, ob die KI-generierten Einblic
 
 #### Kundenprofil-Erkenntnisse {#customer-profile-insights}
 
-Im **[!UICONTROL Kundenprofil-Insights]** wird eine kurze Einführung in die Attribute des Profils angezeigt. Dazu gehören die Profil-ID, die E-Mail-Adresse, die Telefonnummer, das Geschlecht, das Geburtsdatum sowie die Identitäten und Zielgruppenzugehörigkeiten des Profils.
+Im Abschnitt **[!UICONTROL Customer profile insights]** wird eine kurze Einführung in die Attribute des Profils angezeigt. Dazu gehören die Profil-ID, die E-Mail-Adresse, die Telefonnummer, das Geschlecht, das Geburtsdatum sowie die Identitäten und Zielgruppenzugehörigkeiten des Profils.
 
 ![Der Abschnitt „Kundenprofil-Insights“ wird angezeigt.](../images/user-guide/customer-profile-insights.png)
 
@@ -129,19 +129,19 @@ Im **[!UICONTROL Kundenprofil-Insights]** wird eine kurze Einführung in die Att
 
 [!BADGE Alpha]{type=Informative} Diese Funktion befindet sich derzeit in Alpha.
 
-Der Abschnitt **[!UICONTROL AI insight Widgets]** zeigt Widgets an, die von AI generiert werden. Diese Widgets bieten schnelle Einblicke in das Profil, basierend auf den Profildaten, einschließlich Demografie (wie Alter, Geschlecht oder Standort), Benutzerverhalten (wie Kaufverlauf, Website-Aktivität oder Social-Media-Interaktion) sowie Psychografie (wie Interessen, Vorlieben oder Lifestyle-Entscheidungen). Alle KI-Widgets verwenden Daten, **bereits** Profil vorhanden sind.
+Im Abschnitt **[!UICONTROL AI insight widgets]** werden Widgets angezeigt, die von KI generiert werden. Diese Widgets bieten schnelle Einblicke in das Profil, basierend auf den Profildaten, einschließlich Demografie (wie Alter, Geschlecht oder Standort), Benutzerverhalten (wie Kaufverlauf, Website-Aktivität oder Social-Media-Interaktion) sowie Psychografie (wie Interessen, Vorlieben oder Lifestyle-Entscheidungen). Alle KI-Widgets verwenden Daten, **bereits** Profil vorhanden sind.
 
 ![Der Abschnitt KI-insight-Widgets wird angezeigt.](../images/user-guide/ai-insight-widgets.png)
 
 #### Anpassbare Widgets {#customizable-widgets}
 
-Der **[!UICONTROL Anpassbare Widgets]** Abschnitt zeigt Widgets an, die Sie an Ihre Geschäftsanforderungen anpassen können. Sie können Attribute in separaten Widgets gruppieren, unerwünschte Widgets entfernen oder das Layout der Widgets anpassen.
+Im **[!UICONTROL Customizable widgets]** Abschnitt werden Widgets angezeigt, die Sie an Ihre Geschäftsanforderungen anpassen können. Sie können Attribute in separaten Widgets gruppieren, unerwünschte Widgets entfernen oder das Layout der Widgets anpassen.
 
 Die Standardfelder können auch auf Organisationsebene geändert werden, um die bevorzugten Profilattribute anzuzeigen. Weitere Informationen zum Anpassen dieser Felder, einschließlich schrittweiser Anweisungen zum Hinzufügen und Entfernen von Attributen und zum Ändern der Größe von Dashboard-Bedienfeldern, finden Sie im [Handbuch zur Anpassung von Profildetails](profile-customization.md).
 
 ![Der Abschnitt Anpassbare Widgets wird angezeigt.](../images/user-guide/customizable-widgets.png)
 
-Sie können auch zwischen der Anzeige der Attributnamen als Anzeigenamen und der Feldpfadnamen umschalten. Um zwischen diesen beiden Displays zu wechseln, wählen Sie den Umschalter **[!UICONTROL Anzeigenamen anzeigen]**.
+Sie können auch zwischen der Anzeige der Attributnamen als Anzeigenamen und der Feldpfadnamen umschalten. Um zwischen diesen beiden Anzeigen zu wechseln, wählen Sie den Umschalter **[!UICONTROL Show display names]** aus.
 
 ![Der Umschalter „Anzeigenamen anzeigen“ ist hervorgehoben.](../images/user-guide/show-display-names.png)
 
@@ -149,9 +149,9 @@ Sie können auch zwischen der Anzeige der Attributnamen als Anzeigenamen und der
 
 [!BADGE Alpha]{type=Informative} Diese Funktion befindet sich derzeit in Alpha.
 
-Der Abschnitt **[!UICONTROL Automatisch klassifizierte Widgets]** zeigt Widgets an, die das Vereinigungsschema nutzen, um die Quellfeldgruppen zu bestimmen, zu denen ein Attribut gehört, und so einen klareren Kontext bieten, woher die Daten stammen. Sie können die Suchleiste verwenden, um in Ihren Widgets leichter nach Keywords zu suchen.
+Im Abschnitt **[!UICONTROL Auto-classified widgets]** werden Widgets angezeigt, die das Vereinigungsschema nutzen, um die Quellfeldgruppen zu bestimmen, zu denen ein Attribut gehört, und einen klareren Kontext bereitstellen, woher die Daten stammen. Sie können die Suchleiste verwenden, um in Ihren Widgets leichter nach Keywords zu suchen.
 
-Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ &#x200B;](#customizable-widgets) strukturieren.
+Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ ](#customizable-widgets) strukturieren.
 
 >[!NOTE]
 >
@@ -161,13 +161,13 @@ Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereigniss
 
 ### Registerkarte „Attribute“ {#attributes}
 
-Die **[!UICONTROL Attribute]** bietet eine Listenansicht, in der alle Attribute zusammengefasst sind, die sich auf ein einzelnes Profil beziehen, nachdem die angegebene Zusammenführungsrichtlinie angewendet wurde.
+Die Registerkarte **[!UICONTROL Attributes]** enthält eine Listenansicht, in der alle Attribute zusammengefasst sind, die sich auf ein einzelnes Profil beziehen, nachdem die angegebene Zusammenführungsrichtlinie angewendet wurde.
 
-Diese Attribute können auch als JSON-Objekt angezeigt werden, indem Sie auf &quot;**[!UICONTROL anzeigen“]**. Dies ist hilfreich für alle Benutzenden, die besser verstehen möchten, wie die Profilattribute in Experience Platform aufgenommen werden.
+Diese Attribute können auch als JSON-Objekt angezeigt werden, indem Sie auf **[!UICONTROL View JSON]** klicken. Dies ist hilfreich für alle Benutzenden, die besser verstehen möchten, wie die Profilattribute in Experience Platform aufgenommen werden.
 
 ![Die Registerkarte Attribute ist hervorgehoben. Die Profilattribute werden angezeigt.](../images/user-guide/attributes.png)
 
-Um die in der Edge verfügbaren Attribute anzuzeigen, wählen Sie **[!UICONTROL Edge]** in der Datenspeicherortauswahl aus.
+Um die in der Edge verfügbaren Attribute anzuzeigen, klicken Sie in der Datenspeicherort-Auswahl auf **[!UICONTROL Edge]** .
 
 ![Die Datenspeicherortauswahl auf der Registerkarte „Attribute“ ist hervorgehoben.](../images/user-guide/attributes-select.png)
 
@@ -175,27 +175,27 @@ Weitere Informationen zu Edge-Profilen finden Sie in der [Dokumentation zu Edge-
 
 ### Registerkarte „Ereignisse“ {#events}
 
-Die Registerkarte **[!UICONTROL Ereignisse]** enthält Daten aus den 100 neuesten ExperienceEvents, die mit dem Kunden verknüpft sind. Diese Daten können E-Mail-Öffnungen, Warenkorbaktivitäten und Seitenansichten umfassen. Wenn Sie **[!UICONTROL Alle anzeigen]** für ein einzelnes Ereignis auswählen, werden zusätzliche Felder und Werte als Teil des Ereignisses erfasst.
+Die Registerkarte **[!UICONTROL Events]** enthält Daten aus den 100 neuesten ExperienceEvents, die mit dem Kunden verknüpft sind. Diese Daten können E-Mail-Öffnungen, Warenkorbaktivitäten und Seitenansichten umfassen. Die Auswahl von **[!UICONTROL View all]** für ein einzelnes Ereignis bietet zusätzliche Felder und Werte, die als Teil des Ereignisses erfasst werden.
 
-Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie auf **[!UICONTROL JSON anzeigen“]**. Dies ist hilfreich, um zu verstehen, wie Ereignisse in Experience Platform erfasst werden.
+Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie auf **[!UICONTROL View JSON]** klicken. Dies ist hilfreich, um zu verstehen, wie Ereignisse in Experience Platform erfasst werden.
 
 ![Die Registerkarte Ereignisse ist hervorgehoben. Die Profilereignisse werden angezeigt.](../images/user-guide/events.png)
 
 ### Registerkarte „Zielgruppenzugehörigkeit“ {#audience-membership}
 
-Auf **[!UICONTROL Registerkarte]** Zielgruppenzugehörigkeit“ wird eine Liste mit dem Namen und der Beschreibung der Zielgruppen angezeigt, zu denen das einzelne Kundenprofil derzeit gehört. Diese Liste wird automatisch aktualisiert, wenn das Profil für Zielgruppen geeignet ist oder von diesen abläuft. Die Gesamtzahl der Zielgruppen, für die das Profil derzeit qualifiziert ist, wird auf der rechten Seite der Registerkarte angezeigt.
+Auf der Registerkarte **[!UICONTROL Audience membership]** wird eine Liste mit dem Namen und der Beschreibung der Zielgruppen angezeigt, zu denen das einzelne Kundenprofil derzeit gehört. Diese Liste wird automatisch aktualisiert, wenn das Profil für Zielgruppen geeignet ist oder von diesen abläuft. Die Gesamtzahl der Zielgruppen, für die das Profil derzeit qualifiziert ist, wird auf der rechten Seite der Registerkarte angezeigt.
 
 Weitere Informationen zur Segmentierung in Experience Platform finden Sie in der Dokumentation [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
 ![Die Registerkarte „Zielgruppenmitgliedschaft“ ist hervorgehoben. Die Details zur Zielgruppenzugehörigkeit des Profils werden angezeigt.](../images/user-guide/audience-membership.png)
 
-Um die Zielgruppenzugehörigkeit der Profile anzuzeigen, die in der Edge verfügbar sind, wählen Sie **[!UICONTROL Edge]** in der Datenspeicherortauswahl aus. Weitere Informationen zur Edge-Segmentierung finden Sie im [Handbuch zur Edge-Segmentierung](../../segmentation/methods/edge-segmentation.md).
+Um die Zielgruppenzugehörigkeit der Profile anzuzeigen, die in der Edge verfügbar sind, wählen Sie **[!UICONTROL Edge]** in der Datenspeicherort-Auswahl aus. Weitere Informationen zur Edge-Segmentierung finden Sie im [Handbuch zur Edge-Segmentierung](../../segmentation/methods/edge-segmentation.md).
 
 ![Die Datenspeicherortauswahl auf der Registerkarte für die Zielgruppenzugehörigkeit ist hervorgehoben.](../images/user-guide/audience-membership-select.png)
 
 ## Zusammenführungsrichtlinien
 
-Wählen Sie im Hauptmenü **[!UICONTROL Profile]** die Registerkarte **[!UICONTROL Zusammenführungsrichtlinien]**, um eine Liste der Zusammenführungsrichtlinien anzuzeigen, die zu Ihrer Organisation gehören. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, und die Schemaklasse, für die sie gilt.
+Wählen Sie im **[!UICONTROL Profiles]** Hauptmenü die Registerkarte **[!UICONTROL Merge Policies]** , um eine Liste der Zusammenführungsrichtlinien anzuzeigen, die zu Ihrer Organisation gehören. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, und die Schemaklasse, für die sie gilt.
 
 Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](../merge-policies/overview.md).
 
@@ -203,7 +203,7 @@ Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [
 
 ## Vereinigungsschema {#union-schema}
 
-Wählen Sie im Hauptmenü **[!UICONTROL Profile]** die Registerkarte **[!UICONTROL Vereinigungsschema]** aus, um verfügbare Vereinigungsschemata für Ihre aufgenommenen Daten anzuzeigen. Ein Vereinigungsschema ist eine Zusammenführung aller [!DNL Experience Data Model] (XDM)-Felder unter derselben Klasse, deren Schemata für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert wurden.
+Wählen Sie im **[!UICONTROL Profiles]** Hauptmenü die Registerkarte **[!UICONTROL Union Schema]** aus, um verfügbare Vereinigungsschemata für Ihre aufgenommenen Daten anzuzeigen. Ein Vereinigungsschema ist eine Zusammenführung aller [!DNL Experience Data Model] (XDM)-Felder unter derselben Klasse, deren Schemata für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert wurden.
 
 Weitere Informationen zu Vereinigungsschemata finden Sie im [Handbuch zur Vereinigungsschema-Benutzeroberfläche](union-schema.md).
 
@@ -211,7 +211,7 @@ Weitere Informationen zu Vereinigungsschemata finden Sie im [Handbuch zur Verein
 
 ## Berechnete Attribute {#computed-attributes}
 
-Wählen Sie im Hauptmenü **[!UICONTROL Profile]** die Registerkarte **[!UICONTROL Berechnete Attribute]**, um eine Liste der berechneten Attribute anzuzeigen, die zu Ihrer Organisation gehören.
+Wählen Sie im **[!UICONTROL Profiles]** Hauptmenü die Registerkarte **[!UICONTROL Computed attributes]** , um eine Liste der berechneten Attribute anzuzeigen, die zu Ihrer Organisation gehören.
 
 ![Die Registerkarte „Berechnete Attribute“ ist hervorgehoben.](../images/user-guide/computed-attributes.png)
 

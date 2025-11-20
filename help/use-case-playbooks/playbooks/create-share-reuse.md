@@ -6,14 +6,14 @@ role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 81%
+source-wordcount: '769'
+ht-degree: 71%
 
 ---
 
 # Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen
 
-Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anwendungsfälle] > [!UICONTROL Playbooks]**. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
+Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
 
 ## Erstellen einer Playbook-Instanz {#create-playbook-instance}
 
@@ -22,7 +22,7 @@ Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anw
 >title="Erstellen einer Instanz"
 >abstract="Erstellen Sie eine Liste mit Assets wie Journeys, Zielgruppen, Schemata oder Zielen, die für Journeys oder Aktivierungsszenarien verwendet werden können."
 
-Bevor Sie eine Playbook-Instanz erstellen, erkunden Sie die verfügbaren Playbooks, um [das richtige Playbook auszuwählen](/help/use-case-playbooks/playbooks/choose.md). Wenn Sie bereit sind, mit einem Playbook fortzufahren und eine Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]** aus, um mit dem Playbook fortzufahren und technische Assets zu generieren.
+Bevor Sie eine Playbook-Instanz erstellen, erkunden Sie die verfügbaren Playbooks, um [das richtige Playbook auszuwählen](/help/use-case-playbooks/playbooks/choose.md). Wenn Sie bereit sind, mit einem Playbook fortzufahren und eine Instanz zu erstellen, wählen Sie **[!UICONTROL Create Instance]** aus, um mit dem Playbook fortzufahren und technische Assets zu generieren.
 
 ![Erstellen einer Playbook-Instanz.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -32,7 +32,7 @@ Diese Aktion generiert mehrere Assets, die Sie für den im Playbook beschriebene
 
 ### Bearbeiten von Instanznamen und -beschreibungen mithilfe von Konfigurationssteuerelementen {#edit-instance-metadata}
 
-Nachdem Sie eine Instanz basierend auf einem Playbook erstellt haben, können Sie sie personalisieren, um sie von anderen Instanzen zu unterscheiden, die anhand desselben Playbooks erstellt wurden. Wählen Sie das Konfigurationssteuerelement aus, wie unten gezeigt. Bearbeiten Sie den Namen, die Beschreibung und die Notizen und wählen Sie **[!UICONTROL Speichern]** aus, wenn Sie fertig sind.
+Nachdem Sie eine Instanz basierend auf einem Playbook erstellt haben, können Sie sie personalisieren, um sie von anderen Instanzen zu unterscheiden, die anhand desselben Playbooks erstellt wurden. Wählen Sie das Konfigurationssteuerelement aus, wie unten gezeigt. Bearbeiten Sie den Namen, die Beschreibung und die Notizen und wählen Sie **[!UICONTROL Save]** aus, wenn Sie fertig sind.
 
 ![Bearbeiten des Namens und der Beschreibung einer Instanz.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
 
@@ -45,9 +45,9 @@ Nachdem Sie eine Instanz basierend auf einem Playbook erstellt haben, können Si
 Es ist wichtig zu verstehen, dass die generierten Assets je nach aktiviertem Anwendungsfall unterschiedlich sind:
 
 * Für verschiedene Arten von Playbooks werden verschiedene Assets generiert. Diese Assets werden speziell für den auf dem Playbook basierenden Anwendungsfall erstellt. Beispielsweise generiert ein Playbook ein Schema, eine Zielgruppe, eine Journey und Nachrichten. Ein anderes Playbook generiert ein Schema, eine Zielgruppe und ein Ziel, für das Daten aktiviert werden können.
-* Die Assets selbst unterscheiden sich zwischen den Playbooks. Für das Playbook **[!UICONTROL Geburtstagsnachricht an Gäste senden]** gilt für die erstellte Zielgruppe etwa die Regel `birthday=today AND year=any`.
+* Die Assets selbst unterscheiden sich zwischen den Playbooks. Für das Playbook &quot;**[!UICONTROL Send A Birthday Message To Guests]**&quot; hat beispielsweise die erstellte Zielgruppe die `birthday=today AND year=any`.
 
-Beispiel: Für das Playbook **[!UICONTROL Abgebrochener Warenkorb: Artikel]** können Sie sehen, dass eine bestimmte Journey erstellt wurde, die die für diesen Anwendungsfall erstellten Nachrichten enthält.
+Um ein Beispiel zu veranschaulichen, können Sie für das **[!UICONTROL Abandoned Cart: Merchandise]** Playbook sehen, dass eine bestimmte Journey erstellt wird, die die für diesen Anwendungsfall erstellten Nachrichten enthält.
 
 ![Mit der Option „Playbooks für Anwendungsfälle“ erstellte Journey.](/help/use-case-playbooks/assets/playbooks/ui-guide/journey-preview.png)
 

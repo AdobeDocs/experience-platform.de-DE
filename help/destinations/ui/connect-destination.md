@@ -5,8 +5,8 @@ description: Erfahren Sie, wie Sie in Adobe Experience Platform eine Verbindung 
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1280'
-ht-degree: 66%
+source-wordcount: '1236'
+ht-degree: 64%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 66%
 
 >[!IMPORTANT]
 > 
->* Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um eine Verbindung mit einem Ziel herzustellen, das Datensatzexporte unterstützt, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Datensatzziele verwalten und aktivieren]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um eine Verbindung mit einem Ziel herzustellen, das Datensatzexporte unterstützt, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage and Activate Dataset Destinations]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 ## Übersicht {#overview}
 
@@ -23,29 +23,29 @@ Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindu
 
 ## Suchen des gewünschten Ziels im Katalog {#setup}
 
-1. Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus.
+1. Wechseln Sie zu **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** und wählen Sie die Registerkarte **[!UICONTROL Catalog]** aus.
 
    ![Screenshot der Experience Platform-Benutzeroberfläche mit der Zielkatalogseite.](../assets/ui/connect-destinations/catalog.png)
 
 2. Zielkarten im Katalog verfügen möglicherweise über verschiedene Aktionssteuerelemente, je nachdem, ob Sie über eine bestehende Verbindung mit dem Ziel verfügen und ob die Ziele das Aktivieren von Zielgruppen, den Export von Datensätzen oder beides unterstützen. Möglicherweise werden die folgenden Steuerelemente für Zielkarten angezeigt:
 
-   * **[!UICONTROL Einrichten]**. Bevor Sie Zielgruppen aktivieren oder Datensätze exportieren können, muss zunächst eine Verbindung zu diesem Ziel eingerichtet werden.
-   * **[!UICONTROL Aktivieren]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt die Zielgruppenaktivierung und den Export von Datensätzen.
-   * **[!UICONTROL Zielgruppen aktivieren]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt nur die Zielgruppenaktivierung.
+   * **[!UICONTROL Set up]**. Bevor Sie Zielgruppen aktivieren oder Datensätze exportieren können, muss zunächst eine Verbindung zu diesem Ziel eingerichtet werden.
+   * **[!UICONTROL Activate]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt die Zielgruppenaktivierung und den Export von Datensätzen.
+   * **[!UICONTROL Activate audiences]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt nur die Zielgruppenaktivierung.
 
    Weitere Informationen zum Unterschied zwischen diesen Steuerelementen finden Sie auch im Abschnitt [Katalog](../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
-   Wählen Sie entweder **[!UICONTROL Einrichten]**, **[!UICONTROL Aktivieren]** oder **[!UICONTROL Zielgruppen aktivieren]**, je nachdem, welches Steuerelement Ihnen zur Verfügung steht.
+   Wählen Sie entweder **[!UICONTROL Set up]**, **[!UICONTROL Activate]** oder **[!UICONTROL Activate audiences]** aus, je nachdem, welches Steuerelement Ihnen zur Verfügung steht.
 
    ![Screenshot der Experience Platform-Benutzeroberfläche, auf der die Zielkatalogseite mit dem hervorgehobenen Steuerelement „Einrichten“ dargestellt ist.](../assets/ui/connect-destinations/set-up.png)
 
    ![Screenshot der Experience Platform-Benutzeroberfläche, auf der die Zielkatalogseite mit dem hervorgehobenen Steuerelement „Zielgruppen aktivieren“ dargestellt ist.](../assets/ui/connect-destinations/activate-segments.png)
 
-3. Wenn Sie **[!UICONTROL Einrichten]** ausgewählt haben, springen Sie zum nächsten Schritt, um die [Authentifizierung](#authenticate) beim Ziel durchzuführen.
+3. Wenn Sie **[!UICONTROL Set up]** ausgewählt haben, springen Sie zum nächsten Schritt, um [Authentifizieren](#authenticate) zum Ziel zu gelangen.
 
-   Wenn Sie **[!UICONTROL Aktivieren]**, **[!UICONTROL Zielgruppen aktivieren]** oder **[!UICONTROL Datensätze exportieren]** ausgewählt haben, können Sie jetzt eine Liste der vorhandenen Zielverbindungen sehen.
+   Wenn Sie **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]** oder **[!UICONTROL Export datasets]** ausgewählt haben, können Sie jetzt eine Liste der vorhandenen Zielverbindungen sehen.
 
-   Wählen Sie **[!UICONTROL Neues Ziel konfigurieren]** aus, um eine neue Verbindung mit dem Ziel herzustellen.
+   Wählen Sie **[!UICONTROL Configure new destination]** aus, um eine neue Verbindung mit dem Ziel herzustellen.
 
    ![Screenshot der Experience Platform-Benutzeroberfläche, auf der eine Liste der verfügbaren Ziele und das hervorgehobene Steuerelement „Neues Ziel konfigurieren“ dargestellt sind.](../assets/ui/connect-destinations/configure-new-destination.png)
 
@@ -60,10 +60,10 @@ Der erste Schritt beim Herstellen einer Verbindung mit einem Ziel besteht darin,
 
 Je nach Ziel, mit dem Sie eine Verbindung herstellen, gelangen Sie möglicherweise zur Seite des Zielpartners, um sich zu authentifizieren. Möglicherweise werden Sie aber auch direkt im Experience Platform-Workflow aufgefordert, Anmeldeinformationen zur Authentifizierung einzugeben.
 
-Beim Einrichten einer neuen Zielverbindung müssen Sie einen **[!UICONTROL Kontonamen]** und optional eine &quot;**[!UICONTROL &quot;]**. Diese Felder sind für alle Ziele verfügbar.
+Beim Einrichten einer neuen Zielverbindung müssen Sie eine **[!UICONTROL Account name]** und optional eine **[!UICONTROL Description]** angeben. Diese Felder sind für alle Ziele verfügbar.
 
-* **[!UICONTROL Kontoname]**: Geben Sie einen Namen ein, der Ihnen hilft, dieses Zielkonto in Zukunft einfach zu identifizieren. Dies ist besonders nützlich, wenn Sie mehrere Verbindungen mit demselben Ziel haben.
-* **[!UICONTROL Beschreibung]** (optional): Fügen Sie zusätzliche Details hinzu, die Ihnen oder Ihrem Team helfen, zwischen Konten zu unterscheiden, z. B. den Zweck der Verbindung oder den relevanten Geschäftskontext.
+* **[!UICONTROL Account name]**: Geben Sie einen Namen ein, der Ihnen hilft, dieses Zielkonto in Zukunft einfach zu identifizieren. Dies ist besonders nützlich, wenn Sie mehrere Verbindungen mit demselben Ziel haben.
+* **[!UICONTROL Description]** (optional): Fügen Sie zusätzliche Details hinzu, die Ihnen oder Ihrem Team helfen, zwischen Konten zu unterscheiden, z. B. den Zweck der Verbindung oder den relevanten Geschäftskontext.
 
 Wenn Sie klare und beschreibende Informationen in diesen Feldern bereitstellen, können Sie beim Aktivieren von Zielgruppen das richtige Zielkonto leichter verwalten und auswählen.
 
@@ -99,7 +99,7 @@ Für dateibasierte Ziele können Sie verschiedene Einstellungen für die Formati
 
 ### Einrichten der Zielverbindung für Zielgruppenaktivierung, Kontoaktivierung, Interessentenaktivierung oder Datensatzexporte {#segment-activation-or-dataset-exports}
 
-Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannte Kundinnen und Kunden, Account-Kundinnen und -Kunden oder Interessenten sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, mit der Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Konten](/help/destinations/ui/activate-account-audiences.md), [Interessenten](/help/destinations/ui/activate-prospect-audiences.md) oder [&#x200B; Datensätze exportieren](/help/destinations/ui/export-datasets.md).
+Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannte Kundinnen und Kunden, Account-Kundinnen und -Kunden oder Interessenten sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, mit der Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Konten](/help/destinations/ui/activate-account-audiences.md), [Interessenten](/help/destinations/ui/activate-prospect-audiences.md) oder [ Datensätze exportieren](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >
@@ -113,7 +113,7 @@ Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannt
 
    ![Das Dialogfeld „Neues Ziel konfigurieren“ mit hervorgehobenen Abonnementoptionen für kontextabhängige Ziel-Warnhinweise.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
-2. Klicken Sie auf **[!UICONTROL Weiter]**.
+2. Wählen Sie **[!UICONTROL Next]** aus.
 
    ![Das Dialogfeld „Neues Ziel konfigurieren“ mit hervorgehobener Option „Nächstes Steuerelement“, mit der der Benutzer zum nächsten Schritt im Workflow fortfahren kann.](../assets/ui/connect-destinations/next.png)
 
@@ -123,7 +123,7 @@ Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannt
 
    ![Das Dialogfeld „Neues Ziel konfigurieren“ mit Hervorhebung der verfügbaren Marketing-Aktionen. Die verfügbaren Steuerelemente zum Abschließen des Workflows „Mit Ziel verbinden“ sind ebenfalls hervorgehoben.](../assets/ui/connect-destinations/governance.png)
 
-2. Klicken Sie auf **[!UICONTROL Speichern und beenden]**, um die Zielkonfiguration zu speichern, oder auf **[!UICONTROL Weiter]**, um mit dem [Aktivierungsfluss](activation-overview.md) der Zielgruppendaten fortzufahren
+2. Wählen Sie **[!UICONTROL Save & Exit]** aus, um die Zielkonfiguration zu speichern, oder wählen Sie **[!UICONTROL Next]** aus, um mit den Zielgruppendaten [Aktivierungsfluss) ](activation-overview.md).
 
 ## Nächste Schritte {#next-steps}
 

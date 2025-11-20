@@ -5,14 +5,14 @@ title: Abonnieren von kontextbezogenen Zielwarnhinweisen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '935'
 ht-degree: 17%
 
 ---
 
 # Abonnieren von kontextbezogenen Zielwarnhinweisen
 
-Mit Adobe Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../../observability/api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Arbeitsablaufs erreicht wurde oder ob Fehler aufgetreten sind.
+Mit Adobe Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../../observability/api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Workflows erreicht wurde oder ob Fehler aufgetreten sind.
 
 Sie können beim Erstellen eines Datenflusses Warnhinweise abonnieren, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 
@@ -38,11 +38,11 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >
 >Sie müssen sofortige E-Mail-Benachrichtigungen für Ihr Experience Platform-Konto aktivieren, um E-Mail-basierte Warnhinweise für Ihre Datenflüsse zu erhalten.
 
-Sie können Warnhinweise für Ihre Datenflüsse während des [!UICONTROL Neues Ziel konfigurieren] des Workflows [Zielverbindung](connect-destination.md) aktivieren.
+Sie können Warnhinweise für Ihre Datenflüsse während des [!UICONTROL Configure new destination] Schritts des Workflows [Zielverbindung](connect-destination.md) aktivieren.
 
 ![UI-Bild, das den Abschnitt „Ziel-Warnhinweise“ anzeigt.](../assets/ui/alerts/destination-alerts.png)
 
-Wählen Sie die Warnhinweise aus, die Sie abonnieren möchten, und wählen Sie dann **[!UICONTROL Weiter]**, um Ihren Datenfluss zu überprüfen und abzuschließen.
+Wählen Sie die Warnhinweise aus, die Sie abonnieren möchten, und wählen Sie dann **[!UICONTROL Next]** aus, um Ihren Datenfluss zu überprüfen und abzuschließen.
 
 Die für Ziel-Datenflüsse verfügbaren Warnhinweise werden in der folgenden Tabelle beschrieben.
 
@@ -79,11 +79,11 @@ Wählen Sie die Warnmeldung aus, um spezifische Informationen zu Ihrem Datenflus
 
 ![UI-Bild, das zeigt, wie eine Benachrichtigung ausgewählt wird](../assets/ui/alerts/select-alert-message.png)
 
-Die [!UICONTROL Datenflussausführungs-Details] wird angezeigt. In der oberen Hälfte des Bildschirms wird ein Überblick über Ihren Datenfluss angezeigt, einschließlich Informationen zu den Attributen, der entsprechenden Datenflussausführungs-ID und der allgemeinen Fehlerzusammenfassung.
+Die Seite [!UICONTROL Dataflow run details] wird angezeigt. In der oberen Hälfte des Bildschirms wird ein Überblick über Ihren Datenfluss angezeigt, einschließlich Informationen zu den Attributen, der entsprechenden Datenflussausführungs-ID und der allgemeinen Fehlerzusammenfassung.
 
 ![UI-Bild, das die Seite mit den Datenflussausführungs-Details anzeigt.](../assets/ui/alerts/dataflow-overview.png)
 
-In der unteren Hälfte der Seite werden alle &quot;[!UICONTROL -Ausführungsfehler“ angezeigt] die während der Datenflussausführungsstufe aufgetreten sind. Von hier aus können Sie eine Vorschau der Fehlerdiagnose anzeigen oder die [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) verwenden, um Fehlerdiagnosen oder das Dateimanifest herunterzuladen, das Ihrem Datenfluss entspricht.
+Die untere Hälfte der Seite zeigt alle [!UICONTROL Dataflow run errors] an, die während der Datenflussausführungsstufe aufgetreten sind. Von hier aus können Sie eine Vorschau der Fehlerdiagnose anzeigen oder die [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) verwenden, um Fehlerdiagnosen oder das Dateimanifest herunterzuladen, das Ihrem Datenfluss entspricht.
 
 ![UI-Bild, das die Seite mit den Datenflussausführungs-Details zeigt, mit einer Hervorhebung des Abschnitts „Fehler“.](../assets/ui/alerts/dataflow-run-error.png)
 
@@ -95,21 +95,21 @@ Warnhinweise für Ihre Datenflüsse werden Ihnen auch per E-Mail zugestellt. Wä
 
 ![Screenshot einer Benachrichtigungs-E-Mail](../assets/ui/alerts/email.png)
 
-Ähnlich wie beim Warnhinweis in der Benutzeroberfläche wird die Seite [!UICONTROL Übersicht über die Datenflussausführung] angezeigt, auf der Sie eine Oberfläche zur Untersuchung von Fehlern erhalten, die mit Ihrem Datenfluss verbunden sind.
+Ähnlich wie beim Warnhinweis in der Benutzeroberfläche wird die Seite [!UICONTROL Dataflow run overview] angezeigt, auf der Sie eine Oberfläche zur Untersuchung von Fehlern erhalten, die mit Ihrem Datenfluss verbunden sind.
 
 ![Datenfluss-Übersicht](../assets/ui/alerts/dataflow-overview.png)
 
 ## Warnungen abonnieren und abmelden {#subscribe-and-unsubscribe}
 
-Sie können weitere Warnhinweise abonnieren oder sich von eingerichteten Warnhinweisen für einen vorhandenen Ziel-Datenfluss auf der Seite Ziele [!UICONTROL Durchsuchen] abmelden.
+Sie können weitere Warnhinweise abonnieren oder sich von eingerichteten Warnhinweisen für einen vorhandenen Ziel-Datenfluss auf der [!UICONTROL Browse] „Ziele“ abmelden.
 
 ![UI-Bild, das die Seite zum Durchsuchen von Zielen zeigt](../assets/ui/alerts/destination-list.png)
 
-Suchen Sie die Zielverbindung, für die Sie Warnhinweise erhalten möchten, und wählen Sie die Auslassungszeichen (`...`) aus, um ein Dropdown-Menü mit Optionen anzuzeigen. Wählen Sie als Nächstes **[!UICONTROL Warnhinweise abonnieren]**, um die Warnhinweiseinstellungen Ihres Ziel-Datenflusses zu ändern.
+Suchen Sie die Zielverbindung, für die Sie Warnhinweise erhalten möchten, und wählen Sie die Auslassungszeichen (`...`) aus, um ein Dropdown-Menü mit Optionen anzuzeigen. Wählen Sie als Nächstes **[!UICONTROL Subscribe to alerts]** aus, um die Warnhinweiseinstellungen Ihres Ziel-Datenflusses zu ändern.
 
 ![UI-Bild, das die Zieloptionen zeigt](../assets/ui/alerts/destination-alerts-subscribe.png)
 
-Ein Popup-Fenster wird angezeigt, das eine Liste der Ziel-Warnhinweise enthält. Wählen Sie alle Warnhinweise aus, die Sie abonnieren möchten, oder heben Sie die Auswahl der Warnhinweise auf, die Sie kündigen möchten. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
+Ein Popup-Fenster wird angezeigt, das eine Liste der Ziel-Warnhinweise enthält. Wählen Sie alle Warnhinweise aus, die Sie abonnieren möchten, oder heben Sie die Auswahl der Warnhinweise auf, die Sie kündigen möchten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save]** aus.
 
 ![UI-Bild, das die Ziel-Warnhinweis-Abonnementseite anzeigt](../assets/ui/alerts/destination-alerts-list.png)
 

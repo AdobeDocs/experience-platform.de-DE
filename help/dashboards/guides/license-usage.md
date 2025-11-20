@@ -6,8 +6,8 @@ type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3438'
-ht-degree: 39%
+source-wordcount: '3275'
+ht-degree: 41%
 
 ---
 
@@ -132,51 +132,51 @@ ht-degree: 39%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
-Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens im Dashboard Adobe Experience Platform [!UICONTROL Lizenznutzung] anzeigen. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Experience Platform-Instanz erfasst.
+Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens über das Adobe Experience Platform-[!UICONTROL License usage]-Dashboard anzeigen. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Experience Platform-Instanz erfasst.
 
 Lizenznutzungsberichte bieten ein hohes Maß an Granularität. Die meisten Metriken werden über mehrere Produkte hinweg gemeinsam genutzt und spiegeln die aggregierte Nutzung über alle Produkte hinweg wider, die sie verwenden, nicht über die Gesamtwerte pro Produkt. Das Dashboard bietet eine konsolidierte Verwendung dieser Metriken in allen Produktions- oder Entwicklungs-Sandboxes sowie die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Programme können mit Nutzungsmetriken verfolgt werden: Real-Time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
 In diesem Handbuch wird beschrieben, wie Sie das Lizenznutzungs-Dashboard in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).
 
-## [!UICONTROL Lizenznutzung] Dashboard-Daten
+## Dashboard-Daten [!UICONTROL License usage]
 
-Das Dashboard [!UICONTROL Lizenznutzung] zeigt eine Liste aller von Ihnen erworbenen Experience Platform-Produkte und aller Add-ons für diese Produkte an. In diesem Dashboard finden Sie einen Schnappschuss der lizenzbezogenen Daten Ihres Unternehmens für Experience Platform in jeder zugehörigen Sandbox.
+Das [!UICONTROL License usage]-Dashboard zeigt eine Liste aller von Ihnen erworbenen Experience Platform-Produkte und aller Add-ons für diese Produkte an. In diesem Dashboard finden Sie einen Schnappschuss der lizenzbezogenen Daten Ihres Unternehmens für Experience Platform in jeder zugehörigen Sandbox.
 
 Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zum Zeitpunkt der Momentaufnahme aufgetreten sind. Es handelt sich nicht um eine Annäherung oder Stichprobe, aber das Dashboard wird nicht in Echtzeit aktualisiert.
 
 >[!NOTE]
 >
->Die meisten Metriken im Dashboard werden täglich aktualisiert, basierend auf einer Momentaufnahme Ihrer Experience Platform-Instanz. [!UICONTROL Verfügbare CJA-]: bildet eine Ausnahme und wird monatlich aktualisiert. Mit „Packs“ gekennzeichnete Metriken wie [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs] und [!UICONTROL Streaming Segmentation No of Packs] spiegeln Lizenzberechtigungen für Add-on-Angebote wider und verfolgen die laufende Nutzung nicht. Änderungen, die nach der Momentaufnahme vorgenommen werden, sind erst sichtbar, wenn die nächste Momentaufnahme erstellt wird.
+>Die meisten Metriken im Dashboard werden täglich aktualisiert, basierend auf einer Momentaufnahme Ihrer Experience Platform-Instanz. [!UICONTROL CJA Rows Available] bildet eine Ausnahme und wird monatlich aktualisiert. Mit „Packs“ gekennzeichnete Metriken wie [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs] und [!UICONTROL Streaming Segmentation No of Packs] spiegeln Lizenzberechtigungen für Add-on-Angebote wider und verfolgen die laufende Nutzung nicht. Änderungen, die nach der Momentaufnahme vorgenommen werden, sind erst sichtbar, wenn die nächste Momentaufnahme erstellt wird.
 
 ## Genauere Informationen zum Lizenznutzungs-Dashboard {#explore}
 
-Um in der Experience Platform-Benutzeroberfläche zum Lizenznutzungs-Dashboard zu navigieren, wählen **[!UICONTROL in der linken]** „Lizenznutzung“ aus. Das Dashboard enthält zwei Registerkarten: **[!UICONTROL Metriken]** und **[!UICONTROL Produkte]**.
+Um in der Experience Platform-Benutzeroberfläche zum Lizenznutzungs-Dashboard zu navigieren, wählen Sie **[!UICONTROL License usage]** in der linken Leiste aus. Das Dashboard enthält zwei Registerkarten: **[!UICONTROL Metrics]** und **[!UICONTROL Products]**.
 
 >[!NOTE]
 >
 >Das Lizenznutzungs-Dashboard ist standardmäßig nicht aktiviert. Benutzern muss die Berechtigung „Anzeigen des Lizenznutzungs-Dashboards“ gewährt werden, um das Dashboard anzeigen zu können. Anweisungen zum Gewähren von Zugriffsberechtigungen finden Sie im [Handbuch zu Dashboard-Berechtigungen](../permissions.md).
 
-## Registerkarte [!UICONTROL Metriken] {#metrics-tab}
+## Registerkarte [!UICONTROL Metrics] {#metrics-tab}
 
-Die **[!UICONTROL Metriken]** bietet eine zentrale Ansicht aller Lizenznutzungsmetriken in Ihrem Unternehmen. Da die meisten Metriken produktübergreifend verwendet werden, gibt es keine separate Aufschlüsselung pro Produkt für diese Metriken.
+Die Registerkarte **[!UICONTROL Metrics]** bietet eine zentrale Ansicht aller Lizenznutzungsmetriken in Ihrem Unternehmen. Da die meisten Metriken produktübergreifend verwendet werden, gibt es keine separate Aufschlüsselung pro Produkt für diese Metriken.
 
 Die Tabelle Metriken enthält die folgenden Spalten:
 
 | Spaltenname | Beschreibung |
 |---|---|
-| **[!UICONTROL Metrikname]** | Der Name der Lizenznutzungsmetrik. Jeder Eintrag enthält ein Informationssymbol (`ⓘ`), das eine Beschreibung und eine Liste der zugehörigen Produkte anzeigt. |
-| **[!UICONTROL Lizenziert]** | Die Anzahl der Einheiten, zu deren Nutzung Ihr Unternehmen berechtigt ist, wie in Ihrem Vertrag definiert. Diese Metrik ist derselbe Wert wie der **Lizenzbetrag** auf der Registerkarte Produkte . |
-| **[!UICONTROL Gemessen]** | Die Menge der Metrik, die derzeit von Ihrer Organisation verwendet wird. |
-| **[!UICONTROL Nutzung %]** | Der Prozentsatz Ihres lizenzierten Werts, der derzeit verwendet wird. |
-| **[!UICONTROL Prognostizierte Nutzung %]** | Der prognostizierte Bereich der Metriknutzung über die nächsten 6 Wochen. |
+| **[!UICONTROL Metric Name]** | Der Name der Lizenznutzungsmetrik. Jeder Eintrag enthält ein Informationssymbol (`ⓘ`), das eine Beschreibung und eine Liste der zugehörigen Produkte anzeigt. |
+| **[!UICONTROL Licensed]** | Die Anzahl der Einheiten, zu deren Nutzung Ihr Unternehmen berechtigt ist, wie in Ihrem Vertrag definiert. Diese Metrik ist derselbe Wert wie der **Lizenzbetrag** auf der Registerkarte Produkte . |
+| **[!UICONTROL Measured]** | Die Menge der Metrik, die derzeit von Ihrer Organisation verwendet wird. |
+| **[!UICONTROL Usage %]** | Der Prozentsatz Ihres lizenzierten Werts, der derzeit verwendet wird. |
+| **[!UICONTROL Predicted Usage %]** | Der prognostizierte Bereich der Metriknutzung über die nächsten 6 Wochen. |
 
-Verwenden Sie den Umschalter **[!UICONTROL Produktion]** oder **[!UICONTROL Entwicklung]** Sandbox , um die von Sandboxes angezeigten Metriken zu filtern.
+Verwenden Sie den Umschalter **[!UICONTROL Production]** oder Sandbox **[!UICONTROL Development]** , um die nach Sandboxes angezeigten Metriken zu filtern.
 
 >[!NOTE]
 >
->Berichte zum Verbrauch sind kumulativ nach Sandbox-Typ. Wenn Sie [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] auswählen, wird die kombinierte Nutzung in allen Sandboxes dieses Typs angezeigt.
+>Berichte zum Verbrauch sind kumulativ nach Sandbox-Typ. Wenn Sie [!UICONTROL Production] oder [!UICONTROL Development] auswählen, wird die kombinierte Verwendung in allen Sandboxes dieses Typs angezeigt.
 
 ![Die Registerkarte Metriken im Lizenznutzungs-Dashboard mit einer Liste von Metriken, Lizenzbeträgen und Nutzungsdaten.](../images/license-usage/metrics-tab.png)
 
@@ -204,33 +204,33 @@ Jedes Diagramm enthält Dropdown-Menüs zum Filtern der Daten. Verwenden Sie das
 
 ![Die Detailansicht der adressierbaren Zielgruppenmetrik mit historischem Nutzungsdiagramm, Sandbox-Tabelle und Exportschaltfläche.](../images/license-usage/metric-details-view.png)
 
-Sie können auch ein **[!UICONTROL Benutzerdefiniertes Datum]** auswählen, um den angezeigten Zeitraum auszuwählen.
+Sie können auch einen **[!UICONTROL Custom date]** auswählen, um den angezeigten Zeitraum auszuwählen.
 
 ![Die Registerkarte „Übersicht“ des Lizenznutzungs-Dashboards mit hervorgehobenen benutzerdefinierten Datumsbereichsoptionen.](../images/license-usage/custom-date-range.png)
 
 ### CSV-Export {#export-metric-usage-data}
 
-Sie können historische Nutzungsdaten für die ausgewählte Metrik und Sandbox direkt aus der Detailansicht der Metrik als CSV-Datei exportieren. Wählen Sie das **[!UICONTROL Exportieren]**, um die Diagrammdaten im Tabellenformat herunterzuladen. Die exportierte CSV-Datei erleichtert die Offline-Analyse von Trends oder die Freigabe von Nutzungseinblicken über Teams hinweg.
+Sie können historische Nutzungsdaten für die ausgewählte Metrik und Sandbox direkt aus der Detailansicht der Metrik als CSV-Datei exportieren. Wählen Sie das Symbol **[!UICONTROL Export]** aus, um die Daten des Diagramms im Tabellenformat herunterzuladen. Die exportierte CSV-Datei erleichtert die Offline-Analyse von Trends oder die Freigabe von Nutzungseinblicken über Teams hinweg.
 
-## Registerkarte [!UICONTROL Produkte] {#products-tab}
+## Registerkarte [!UICONTROL Products] {#products-tab}
 
-Auf **[!UICONTROL Registerkarte]** Produkte“ werden Lizenznutzungsdaten nach gekauften Produkten und zugehörigen Add-ons gruppiert angezeigt. Die [!UICONTROL Produkte] enthält zwei Tabellen:
+Auf der Registerkarte **[!UICONTROL Products]** werden Lizenznutzungsdaten nach gekauften Produkten und zugehörigen Add-ons gruppiert angezeigt. Die Registerkarte [!UICONTROL Products] enthält zwei Tabellen:
 
-- **[!UICONTROL Kernprodukte] Tabelle**: In dieser Tabelle sind die wichtigsten von Ihrem Unternehmen lizenzierten Adobe Experience Platform-Produkte aufgeführt. Jedes Produkt listet seine primäre Metrik, Nutzungsverfolgung und prognostizierte Nutzung auf.
-- **[!UICONTROL Add-ons] Tabelle**: Listet zusätzliche Elemente auf, deren Lizenzbeträge zu Kernproduktmetriken beitragen. Add-ons verfügen nicht über separate Metriken, sondern verbessern die Nutzungsverfolgung der Kernprodukte, mit denen sie verknüpft sind.
+- **[!UICONTROL Core products]Tabelle**: In dieser Tabelle sind die wichtigsten von Ihrem Unternehmen lizenzierten Adobe Experience Platform-Produkte aufgeführt. Jedes Produkt listet seine primäre Metrik, Nutzungsverfolgung und prognostizierte Nutzung auf.
+- **[!UICONTROL Add-ons]Tabelle**: Listet zusätzliche Elemente auf, deren Lizenzbeträge zu Kernproduktmetriken beitragen. Add-ons verfügen nicht über separate Metriken, sondern verbessern die Nutzungsverfolgung der Kernprodukte, mit denen sie verknüpft sind.
 
 | Spaltenname | Beschreibung |
 |---|---|
-| **[!UICONTROL Produkt]** | Die von Ihrem Unternehmen lizenzierte Adobe-Lösung. |
-| **[!UICONTROL Primäre Metrik]** | Die primäre Metrik, die für das Tracking innerhalb dieses Produkts verwendet wird. |
-| **[!UICONTROL Lizenzbetrag]** | Der kontrahierte Wert für den Höchstbetrag der primären Metrik. |
-| **[!UICONTROL Verwendung]** | Der Betrag Ihrer primären Metrik, der verwendet wird. |
-| **[!UICONTROL Nutzung %]** | Der Prozentsatz Ihrer primären Metrik, der entsprechend Ihrem Lizenzbetrag verwendet wird. |
-| **[!UICONTROL Prognostizierte Nutzung]** | Der prognostizierte Nutzungsprozentsatz Ihrer primären Metrik. |
+| **[!UICONTROL Product]** | Die von Ihrem Unternehmen lizenzierte Adobe-Lösung. |
+| **[!UICONTROL Primary Metric]** | Die primäre Metrik, die für das Tracking innerhalb dieses Produkts verwendet wird. |
+| **[!UICONTROL License Amount]** | Der kontrahierte Wert für den Höchstbetrag der primären Metrik. |
+| **[!UICONTROL Usage]** | Der Betrag Ihrer primären Metrik, der verwendet wird. |
+| **[!UICONTROL Usage %]** | Der Prozentsatz Ihrer primären Metrik, der entsprechend Ihrem Lizenzbetrag verwendet wird. |
+| **[!UICONTROL Predicted Usage]** | Der prognostizierte Nutzungsprozentsatz Ihrer primären Metrik. |
 
 >[!NOTE]
 >
->Der [!UICONTROL Lizenzbetrag] für Add-ons ist im Gesamtlizenzbetrag des Kernprodukts enthalten. Add-ons werden nicht separat verfolgt, sondern erweitern die Funktionen der zugehörigen Produkte. Wenn Sie beispielsweise ein Paket mit fünf Sandboxes als Add-on kaufen, wird der Betrag zu dem des Basisprodukts hinzugefügt. Die Tabelle „Add-ons[!UICONTROL &#x200B; zeigt einen für das Add]on spezifischen „Lizenzbetrag“ an, aber die tatsächliche Nutzung wird über das Basisprodukt verfolgt.
+>Die [!UICONTROL License Amount] für Add-ons ist im Gesamtbetrag der Lizenz für das Kernprodukt enthalten. Add-ons werden nicht separat verfolgt, sondern erweitern die Funktionen der zugehörigen Produkte. Wenn Sie beispielsweise ein Paket mit fünf Sandboxes als Add-on kaufen, wird der Betrag zu dem des Basisprodukts hinzugefügt. Die Tabelle mit den Add-ons zeigt eine spezifische [!UICONTROL License Amount] für das Add-on an, aber die tatsächliche Nutzung wird über das Basisprodukt verfolgt.
 
 ![Die Registerkarte „Produkte“ im Lizenznutzungs-Dashboard mit Tabellen zu Kernprodukten und Add-ons.](../images/license-usage/products-tab.png)
 
@@ -250,15 +250,15 @@ Auf **[!UICONTROL Registerkarte]** Produkte“ werden Lizenznutzungsdaten nach g
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Ablauffristen für Datensätze"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
-Proaktive Verwaltung und Optimierung Ihrer Lizenzierungsressourcen mit präzisen, aktuellen Nutzungsprognosen. Die Spalte [!UICONTROL Prognostizierte Nutzung] prognostiziert die zukünftige Lizenznutzung auf Sandbox-Ebene für alle gekauften Produkte in allen Produktions- und Entwicklungs-Sandboxes. Die Prognosen werden jetzt wöchentlich aktualisiert und bieten eine sechswöchige Prognose auf der Grundlage der neuesten Nutzungsdaten. Jede Prognose umfasst sowohl eine untere als auch eine obere Grenze, um eine informierte Planung zu unterstützen.
+Proaktive Verwaltung und Optimierung Ihrer Lizenzierungsressourcen mit präzisen, aktuellen Nutzungsprognosen. In der Spalte [!UICONTROL Predicted Usage] wird die künftige Lizenznutzung auf Sandbox-Ebene für alle Produktions- und Entwicklungs-Sandboxes für alle gekauften Produkte prognostiziert. Die Prognosen werden jetzt wöchentlich aktualisiert und bieten eine sechswöchige Prognose auf der Grundlage der neuesten Nutzungsdaten. Jede Prognose umfasst sowohl eine untere als auch eine obere Grenze, um eine informierte Planung zu unterstützen.
 
 >[!IMPORTANT]
 >
 >Die Prognosen werden wöchentlich jeden Freitag aktualisiert. Das Datum der Aktualisierung ist in einem Infosymbol enthalten (![Dieses Infosymbol.](../images/license-usage/info-icon.png)) über dem Spaltentitel.
 
-Zeigen Sie auf der Registerkarte „Produkt“ unter der Tabelle [!UICONTROL Kernprodukte] eine Zusammenfassung der Nutzung [!UICONTROL &#x200B; Produktberechtigungen &#x200B;].
+Zeigen Sie auf der Registerkarte [!UICONTROL Product] unter der Tabelle [!UICONTROL Core products] eine Zusammenfassung der Nutzung einer Produktberechtigung an.
 
-![Die Registerkarte [!UICONTROL Lizenznutzung] [!UICONTROL Produkt] mit einem hervorgehobenen Produkt und der Spalte „Prognostizierte Nutzung“.](../images/license-usage/product-predicted-usage.png)
+![Die Registerkarte &quot;[!UICONTROL License usage] [!UICONTROL Product]&quot; mit einem hervorgehobenen Produkt und der Spalte „Prognostizierte Nutzung“.](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >
@@ -276,42 +276,42 @@ Der Prozentsatz der prognostizierten Nutzung wird wie folgt bestimmt:
 
 Die Funktion „Prognostizierte Nutzung“ unterstützt die folgenden Metriken:
 
-- [!UICONTROL Adressierbare Zielgruppe]
-- [!UICONTROL Profile von Geschäftspersonen]
-- [!UICONTROL Stunden berechnen]
-- [!UICONTROL Kunden-Journey-Zielgruppe - Anzahl der Zeilen]
-- [!UICONTROL Ansprechbare Profile]
-- [!UICONTROL Gesamtdatenvolumen]
+- [!UICONTROL Addressable audience]
+- [!UICONTROL Businessperson profiles]
+- [!UICONTROL Compute hours]
+- [!UICONTROL Customer Journey Audience number of rows]
+- [!UICONTROL Engageable profiles]
+- [!UICONTROL Total Data Volume]
 
 ## Verfügbare Metriken {#available-metrics}
 
 >[!IMPORTANT]
 >
->Ab dem 20. August sahen Kundinnen und Kunden mit Berechtigungen für [!UICONTROL Durchschnittliche Profilreichhaltigkeit] und [!UICONTROL Gesamtspeicher] stattdessen &quot;[!UICONTROL Gesamtdatenvolumen]&quot; im Lizenznutzungs-Dashboard. Es gab keine Änderung bei den Kundenberechtigungen, sondern nur eine Vereinfachung der Tracking-Metriken. [!UICONTROL Gesamtdatenvolumen] stellt die Daten dar, die im Echtzeit-Kundenprofil für Interaktions- und Personalisierungs-Workflows verfügbar sind. Diese vereinfachte Metrik verbesserte die Verwaltung und Messung der Verwendung von Echtzeit-Kundenprofilen. Kunden wurden gebeten, sich an ihren Adobe-Support-Mitarbeiter zu wenden, um weitere Informationen zu dieser Änderung zu erhalten.
+>Kunden mit Berechtigungen für &quot;[!UICONTROL Average Profile Richness]&quot; und &quot;[!UICONTROL Total Storage]&quot; sahen ab dem 20. August stattdessen &quot;[!UICONTROL Total Data Volume]&quot; im Lizenznutzungs-Dashboard. Es gab keine Änderung bei den Kundenberechtigungen, sondern nur eine Vereinfachung der Tracking-Metriken. [!UICONTROL Total Data Volume] stellt die Daten dar, die im Echtzeit-Kundenprofil für Interaktions- und Personalisierungs-Workflows verfügbar sind. Diese vereinfachte Metrik verbesserte die Verwaltung und Messung der Verwendung von Echtzeit-Kundenprofilen. Kunden wurden gebeten, sich an ihren Adobe-Support-Mitarbeiter zu wenden, um weitere Informationen zu dieser Änderung zu erhalten.
 
 Das Lizenznutzungs-Dashboard enthält Berichte zu verschiedenen eindeutigen Metriken, die für mehrere Produkte in der Organisation gelten. Die verfügbaren Metriken sind:
 
 | Metrik | Beschreibung |
 |---|---|
-| [!UICONTROL Audience Activation-Größe] | Die Gesamtgröße der für ein dateibasiertes Ziel aktivierten Profile in einem Jahr. Hinweis: Dies beinhaltet keine Profile, die über Streaming-Ziele gesendet werden. |
-| [!UICONTROL Ansprechbare Zielgruppe] | Die Gruppe von Personenprofilen im Echtzeit-Kundenprofil, mit denen Ihr Unternehmen interagieren darf, einschließlich direkt identifizierbarer und pseudonymer Profile. Diese Profile können Attribute, Verhaltensweisen und Segmentzugehörigkeitsdaten enthalten. Profilvolumina werden mithilfe des standardmäßigen deterministischen Identitätsdiagramms von Adobe Experience Platform berechnet und werden als freigegebene Funktion betrachtet. |
-| [!UICONTROL Ad-hoc-Query Service-Benutzerpakete] | Ein Add-on, um die Berechtigung für autorisierte gleichzeitige Abfrage-Service-Benutzende um fünf zusätzliche gleichzeitige Abfrage-Service-Benutzende und eine zusätzliche gleichzeitig ausgeführte ungeplante Abfrage pro Paket zu erhöhen. Es können mehrere Pakete mit zusätzlichen ungeplanten Abfrage-Benutzenden lizenziert werden. |
-| [!UICONTROL Durchschnittliche Profilreichhaltigkeit] | **Veraltet** - Die Summe aller Produktionsdaten, die zu einem beliebigen Zeitpunkt im Hub-Profil-Service gespeichert sind, dividiert durch die fünffache Anzahl der Profile autorisierter Geschäftspersonen. [!UICONTROL Durchschnittliche Profilreichhaltigkeit] ist eine gemeinsam genutzte Funktion. |
-| [!UICONTROL CJA-Zeilen verfügbar] | Die täglichen durchschnittlichen Datenzeilen, die für die Analyse in Customer Journey Analytics verfügbar sind. |
-| [!UICONTROL Berechnete Attribute] | Aggregierte Profilverhaltensdaten basierend auf Erlebnisereignissen, die in ein Profilattribut konvertiert werden und in ein Personenprofil aufgenommen werden können. |
-| [!UICONTROL Privatkunden-Zielgruppe] | Die Anzahl der Personenprofile, die im Kundenauftrag als „Consumer Audience“ identifiziert wurden. |
-| [!UICONTROL Größe des Datenexports] | Die Datenmenge, die über Datensatzaktivierungen in einem Jahr gesendet wird. |
-| [!UICONTROL Datenexporte] | Die Gesamtgröße der Datensätze, die (direkt oder indirekt) in einem Jahr in eine beliebige Nicht-Adobe-Lösung exportiert werden können. |
+| [!UICONTROL Audience Activation Size] | Die Gesamtgröße der für ein dateibasiertes Ziel aktivierten Profile in einem Jahr. Hinweis: Dies beinhaltet keine Profile, die über Streaming-Ziele gesendet werden. |
+| [!UICONTROL Addressable Audience] | Die Gruppe von Personenprofilen im Echtzeit-Kundenprofil, mit denen Ihr Unternehmen interagieren darf, einschließlich direkt identifizierbarer und pseudonymer Profile. Diese Profile können Attribute, Verhaltensweisen und Segmentzugehörigkeitsdaten enthalten. Profilvolumina werden mithilfe des standardmäßigen deterministischen Identitätsdiagramms von Adobe Experience Platform berechnet und werden als freigegebene Funktion betrachtet. |
+| [!UICONTROL Adhoc Query Service Users Packs] | Ein Add-on, um die Berechtigung für autorisierte gleichzeitige Abfrage-Service-Benutzende um fünf zusätzliche gleichzeitige Abfrage-Service-Benutzende und eine zusätzliche gleichzeitig ausgeführte ungeplante Abfrage pro Paket zu erhöhen. Es können mehrere Pakete mit zusätzlichen ungeplanten Abfrage-Benutzenden lizenziert werden. |
+| [!UICONTROL Average profile richness] | **Veraltet** - Die Summe aller Produktionsdaten, die zu einem beliebigen Zeitpunkt im Hub-Profil-Service gespeichert sind, dividiert durch die fünffache Anzahl der Profile autorisierter Geschäftspersonen. [!UICONTROL Average profile richness] ist eine freigegebene Funktion. |
+| [!UICONTROL CJA Rows Available] | Die täglichen durchschnittlichen Datenzeilen, die für die Analyse in Customer Journey Analytics verfügbar sind. |
+| [!UICONTROL Computed Attributes] | Aggregierte Profilverhaltensdaten basierend auf Erlebnisereignissen, die in ein Profilattribut konvertiert werden und in ein Personenprofil aufgenommen werden können. |
+| [!UICONTROL Consumer Audience] | Die Anzahl der Personenprofile, die im Kundenauftrag als „Consumer Audience“ identifiziert wurden. |
+| [!UICONTROL Data Export Size] | Die Datenmenge, die über Datensatzaktivierungen in einem Jahr gesendet wird. |
+| [!UICONTROL Data Exports] | Die Gesamtgröße der Datensätze, die (direkt oder indirekt) in einem Jahr in eine beliebige Nicht-Adobe-Lösung exportiert werden können. |
 | [!UICONTROL Data Lake Storage] | Die vom analytischen Datenspeicher in Adobe Experience Platform verwendete Menge. |
-| [!UICONTROL Kontaktierbare Zielgruppe] | Eine Gruppe von Personenprofilen im Echtzeit-Kundenprofil, an die Sie in den letzten 12 Monaten mithilfe der Authoring-, Entscheidungs-, Bereitstellungs-, Experimentier- oder Orchestrierungsfunktionen von Journey Optimizer versucht haben zu interagieren. |
-| [!UICONTROL Lookalike-Zielgruppen] | Eine Verbraucher-Lookalike-Zielgruppe ist eine Zielgruppe, die durch die Modellierung einer vorhandenen Verbraucher-Zielgruppe generiert wird, um Personenprofile mit ähnlichen Attributen oder Verhaltensweisen zu identifizieren. |
-| [!UICONTROL Anzahl der AMM-Modelle] | Eine Zählung des Modells für maschinelles Lernen (integriert in Adobe Mix Modeler), mit dem ein bestimmtes Ergebnis auf Grundlage Ihrer Investitionen gemessen und/oder vorhergesagt wird. |
-| [!UICONTROL Anzahl der Sandboxes] | Die Anzahl logischer Abgrenzungen innerhalb Ihrer Instanz eines On-demand-Dienstes von Adobe, der auf Adobe Experience Platform zugreift und bei dem Daten und Vorgänge voneinander isoliert sind. |
-| [!UICONTROL Reichhaltigkeit des Profils - Anzahl der Packungen] | Eine Erhöhung des autorisierten Gesamtdatenvolumens um 25 KB pro Profil für jedes Paket mit zusätzlichem Profilumfang. |
+| [!UICONTROL Engageable Audience] | Eine Gruppe von Personenprofilen im Echtzeit-Kundenprofil, an die Sie in den letzten 12 Monaten mithilfe der Authoring-, Entscheidungs-, Bereitstellungs-, Experimentier- oder Orchestrierungsfunktionen von Journey Optimizer versucht haben zu interagieren. |
+| [!UICONTROL Look-alike Audiences] | Eine Verbraucher-Lookalike-Zielgruppe ist eine Zielgruppe, die durch die Modellierung einer vorhandenen Verbraucher-Zielgruppe generiert wird, um Personenprofile mit ähnlichen Attributen oder Verhaltensweisen zu identifizieren. |
+| [!UICONTROL Number of AMM Models] | Eine Zählung des Modells für maschinelles Lernen (integriert in Adobe Mix Modeler), mit dem ein bestimmtes Ergebnis auf Grundlage Ihrer Investitionen gemessen und/oder vorhergesagt wird. |
+| [!UICONTROL Number of Sandboxes] | Die Anzahl logischer Abgrenzungen innerhalb Ihrer Instanz eines On-demand-Dienstes von Adobe, der auf Adobe Experience Platform zugreift und bei dem Daten und Vorgänge voneinander isoliert sind. |
+| [!UICONTROL Profile Richness No of Packs] | Eine Erhöhung des autorisierten Gesamtdatenvolumens um 25 KB pro Profil für jedes Paket mit zusätzlichem Profilumfang. |
 | [!UICONTROL Query Service Compute Hours] | Ein Maß für die Zeit, die die Abfrage-Service-Engines benötigen, um Daten bei Ausführung einer Batch-Abfrage im Data Lake zu lesen, dort zu verarbeiten und dorthin zurückzuschreiben. |
-| [!UICONTROL Streaming-Segmentierung: Anzahl der Packs] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungs-Service gelangen. Die Segmentzugehörigkeit wird basierend auf den aktuellen Personenprofilattributen und dem Wert des aktuellen Ereignisses bewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsam genutzte Funktion. |
-| [!UICONTROL Gesamtdatenvolumen] | Die Gesamtmenge der für das Echtzeit-Kundenprofil verfügbaren Daten, die in Interaktions-Workflows verwendet werden können. Das Gesamtdatenvolumen wird anhand der folgenden Formel berechnet: **Gesamtdatenvolumen = Adressierbare Zielgruppe × Durchschnittliche Profilreichhaltigkeit**. Diese Metrik spiegelt Daten wider, die nur im Profilspeicher gespeichert sind, und schließt den Data-Lake-Speicher aus. Sie bietet eine fokussiertere Ansicht von Daten, die für die profilbasierte Interaktion relevant sind. Weitere Informationen finden [&#x200B; unter „Häufig gestellte Fragen zum &#x200B;](../../landing/license-usage-and-guardrails/total-data-volume.md) Datenvolumen insgesamt“. |
-| [!UICONTROL Gesamtvolumen des Datenausgangs] | Das kumulative Jahresvolumen der aus Adobe Experience Platform in Data Warehouses von Drittanbietern exportierten Daten. |
+| [!UICONTROL Streaming Segmentation No of Packs] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungs-Service gelangen. Die Segmentzugehörigkeit wird basierend auf den aktuellen Personenprofilattributen und dem Wert des aktuellen Ereignisses bewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsam genutzte Funktion. |
+| [!UICONTROL Total Data Volume] | Die Gesamtmenge der für das Echtzeit-Kundenprofil verfügbaren Daten, die in Interaktions-Workflows verwendet werden können. Das Gesamtdatenvolumen wird anhand der folgenden Formel berechnet: **Gesamtdatenvolumen = Adressierbare Zielgruppe × Durchschnittliche Profilreichhaltigkeit**. Diese Metrik spiegelt Daten wider, die nur im Profilspeicher gespeichert sind, und schließt den Data-Lake-Speicher aus. Sie bietet eine fokussiertere Ansicht von Daten, die für die profilbasierte Interaktion relevant sind. Weitere Informationen finden [ unter „Häufig gestellte Fragen zum ](../../landing/license-usage-and-guardrails/total-data-volume.md) Datenvolumen insgesamt“. |
+| [!UICONTROL Total Volume of Data Egress] | Das kumulative Jahresvolumen der aus Adobe Experience Platform in Data Warehouses von Drittanbietern exportierten Daten. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
@@ -323,11 +323,11 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 | Lizenz | Produktbeschreibung |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD Lite</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/de/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD Lite</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL BIS 10M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform-Aktivierung](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME - STARTER:OD</li><li>UNP AJO ULTIMATE - STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILORCHESTRIERUNG</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
@@ -338,4 +338,4 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 Nach dem Lesen dieses Dokuments können Sie das Lizenznutzungs-Dashboard finden und Nutzungsmetriken für jedes gekaufte Produkt, für alle Produktions- oder Entwicklungs-Sandboxes und für eine bestimmte Sandbox anzeigen. Weitere Informationen zu verfügbaren Metriken für Ihr Unternehmen, die auf der von Ihrem Unternehmen erworbenen Lizenz basieren, finden Sie.
 
-Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).

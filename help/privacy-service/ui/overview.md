@@ -22,7 +22,7 @@ Die Benutzeroberfläche von Privacy Service ermöglicht es Ihnen, Datenschutz- u
 
 >[!NOTE]
 >
->Informationen zur programmgesteuerten Verwaltung von Compliance-Anfragen mithilfe der Privacy Service-API finden Sie im [Privacy Service-API-Handbuch](../api/overview.md). Weitere Informationen finden Sie im Dokument [Verwalten &#x200B;](../permissions.md) Privacy Service-Berechtigungen“.
+>Informationen zur programmgesteuerten Verwaltung von Compliance-Anfragen mithilfe der Privacy Service-API finden Sie im [Privacy Service-API-Handbuch](../api/overview.md). Weitere Informationen finden Sie im Dokument [Verwalten ](../permissions.md) Privacy Service-Berechtigungen“.
 
 ## Melden Sie sich bei der [!DNL Privacy Service] Benutzeroberfläche an
 

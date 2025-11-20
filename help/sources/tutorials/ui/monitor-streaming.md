@@ -5,14 +5,14 @@ title: Überwachen von Datenflüssen für Streaming-Quellen in der Benutzeroberf
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '990'
 ht-degree: 16%
 
 ---
 
 # Überwachen von Datenflüssen für Streaming-Quellen in der Benutzeroberfläche
 
-In diesem Tutorial werden die Schritte zum Überwachen von Datenflüssen für Streaming-Quellen mithilfe des Arbeitsbereichs [!UICONTROL Quellen] beschrieben.
+In diesem Tutorial werden die Schritte zum Überwachen von Datenflüssen für Streaming-Quellen mithilfe von [!UICONTROL Sources] Workspace beschrieben.
 
 ## Erste Schritte
 
@@ -25,13 +25,13 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ## Überwachen von Datenflüssen für Streaming-Quellen
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste **[!UICONTROL Sources]** aus, um auf den [!UICONTROL Sources]-Arbeitsbereich zuzugreifen. Der Bildschirm [!UICONTROL Catalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
-Um vorhandene Datenflüsse für Streaming-Quellen anzuzeigen, wählen Sie **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile aus.
+Um vorhandene Datenflüsse für Streaming-Quellen anzuzeigen, wählen Sie **[!UICONTROL Dataflows]** in der oberen Kopfzeile aus.
 
 ![Katalog](../../images/tutorials/monitor-streaming/catalog.png)
 
-Die [!UICONTROL Datenflüsse] enthält eine Liste aller vorhandenen Datenflüsse in Ihrer Organisation, einschließlich Informationen zu ihren Quelldaten, ihrem Kontonamen und dem Ausführungsstatus des Datenflusses.
+Die Seite [!UICONTROL Dataflows] enthält eine Liste aller vorhandenen Datenflüsse in Ihrer Organisation, einschließlich Informationen zu ihren Quelldaten, ihrem Kontonamen und dem Ausführungsstatus des Datenflusses.
 
 Wählen Sie den Namen des Datenflusses aus, den Sie anzeigen möchten.
 
@@ -47,13 +47,13 @@ Die folgende Tabelle enthält weitere Informationen zum Ausführungsstatus von D
 | Fehler | Der `Error` zeigt an, dass der Aktivierungsprozess eines Datenflusses unterbrochen wurde. |
 | Keine Ausführungen | Der `No runs` gibt an, dass der Datenfluss erstellt, aber keine Datenflussausführungen gestartet wurden. |
 
-Auf [!UICONTROL &#x200B; Seite „Datenflussaktivität] werden spezifische Informationen zu Ihrem Streaming-Datenfluss angezeigt. Das obere Banner enthält die kumulative Anzahl der aufgenommenen und fehlgeschlagenen Datensätze für alle Streaming-Datenflussausführungen in Ihrem ausgewählten Datumsbereich.
+Auf der Seite [!UICONTROL Dataflow Activity] werden spezifische Informationen zu Ihrem Streaming-Datenfluss angezeigt. Das obere Banner enthält die kumulative Anzahl der aufgenommenen und fehlgeschlagenen Datensätze für alle Streaming-Datenflussausführungen in Ihrem ausgewählten Datumsbereich.
 
 ![dataflow-activity](../../images/tutorials/monitor-streaming/dataflow-activity.png)
 
-Standardmäßig enthalten die angezeigten Daten Aufnahmeraten der letzten sieben Tage. Wählen Sie **[!UICONTROL Letzte 7 Tage]**, um den Zeitrahmen der angezeigten Datensätze anzupassen.
+Standardmäßig enthalten die angezeigten Daten Aufnahmeraten der letzten sieben Tage. Wählen Sie **[!UICONTROL Last 7 days]** aus, um den Zeitrahmen der angezeigten Datensätze anzupassen.
 
-Es wird ein Kalender-Popup-Fenster angezeigt, in dem Sie Optionen für alternative Erfassungszeitrahmen finden. Sie können den Zeitrahmen der Datenflussausführung konfigurieren, um die Flussausführungen der letzten sieben Tage oder der letzten 30 Tage anzuzeigen. Alternativ können Sie den interaktiven Kalender so konfigurieren, dass er einen benutzerdefinierten Zeitrahmen Ihrer Wahl festlegt. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
+Es wird ein Kalender-Popup-Fenster angezeigt, in dem Sie Optionen für alternative Erfassungszeitrahmen finden. Sie können den Zeitrahmen der Datenflussausführung konfigurieren, um die Flussausführungen der letzten sieben Tage oder der letzten 30 Tage anzuzeigen. Alternativ können Sie den interaktiven Kalender so konfigurieren, dass er einen benutzerdefinierten Zeitrahmen Ihrer Wahl festlegt. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Apply]** aus.
 
 ![Kalender](../../images/tutorials/monitor-streaming/calendar.png)
 
@@ -89,24 +89,24 @@ Die untere Hälfte der Seite zeigt Informationen zur Anzahl der empfangenen, auf
 
 Jede einzelne Datenflussausführung zeigt die folgenden Details:
 
-* **[!UICONTROL Start der Datenflussausführung]**: Die Zeit, zu der die Datenflussausführung gestartet wurde.
-* **[!UICONTROL Verarbeitungszeit]**: Die Zeit, die für die Verarbeitung des Datenflusses benötigt wurde.
-* **[!UICONTROL Empfangene Datensätze]**: Die Gesamtzahl der Datensätze, die im Datenfluss von einem Quell-Connector empfangen wurden.
-* **[!UICONTROL Aufgenommene Datensätze]**: Die Gesamtzahl der in [!DNL Data Lake] aufgenommenen Datensätze.
-* **[!UICONTROL Datensätze mit Warnungen]**: Die Gesamtzahl der aufgenommenen Datensätze mit Warnungen. Alle Mapper-Umwandlungsfehler werden als Warnungen gemeldet, und Zeilen, die teilweise aufgenommen werden, werden als `success` mit einer Warnung gekennzeichnet. **Hinweis**: Die Aufnahme von Datensätzen mit Warnungen wird nur von Streaming-Quellen unterstützt.
-* **[!UICONTROL Fehlgeschlagene Datensätze]**: Die Anzahl der Datensätze, die aufgrund von Datenfehlern nicht in [!DNL Data Lake] aufgenommen wurden.
-* **[!UICONTROL Aufnahmerate]**: Die Erfolgsrate der in [!DNL Data Lake] aufgenommenen Datensätze. Diese Metrik gilt, wenn [!UICONTROL Partielle Aufnahme] aktiviert ist.
-* **[!UICONTROL Status]**: Gibt den Status des Datenflusses an: entweder [!UICONTROL Abgeschlossen] oder [!UICONTROL Verarbeitung]. [!UICONTROL Abgeschlossen] bedeutet, dass alle Datensätze für die entsprechende Datenflussausführung innerhalb des Zeitraums von einer Stunde verarbeitet wurden. [!UICONTROL Verarbeitung] bedeutet, dass die Ausführung des Datenflusses noch nicht abgeschlossen ist.
+* **[!UICONTROL Dataflow run start]**: Die Zeit, zu der der Datenfluss ausgeführt wurde.
+* **[!UICONTROL Processing time]**: Die Zeit, die für die Verarbeitung des Datenflusses benötigt wurde.
+* **[!UICONTROL Records Received]**: Die Gesamtzahl der Datensätze, die im Datenfluss von einem Quell-Connector empfangen wurden.
+* **[!UICONTROL Records Ingested]**: Die Gesamtzahl der in [!DNL Data Lake] aufgenommenen Datensätze.
+* **[!UICONTROL Records with Warnings]**: Die Gesamtzahl der aufgenommenen Datensätze mit Warnhinweisen. Alle Mapper-Umwandlungsfehler werden als Warnungen gemeldet, und Zeilen, die teilweise aufgenommen werden, werden als `success` mit einer Warnung gekennzeichnet. **Hinweis**: Die Aufnahme von Datensätzen mit Warnungen wird nur von Streaming-Quellen unterstützt.
+* **[!UICONTROL Records Failed]**: Die Anzahl der Datensätze, die aufgrund von Datenfehlern nicht in [!DNL Data Lake] aufgenommen wurden.
+* **[!UICONTROL Ingestion Rate]**: Die Erfolgsrate der in [!DNL Data Lake] aufgenommenen Datensätze. Diese Metrik gilt, wenn [!UICONTROL Partial Ingestion] aktiviert ist.
+* **[!UICONTROL Status]**: Gibt den Status des Datenflusses an: entweder [!UICONTROL Completed] oder [!UICONTROL Processing]. [!UICONTROL Completed] bedeutet, dass alle Datensätze für die entsprechende Datenflussausführung innerhalb des Zeitraums von einer Stunde verarbeitet wurden. [!UICONTROL Processing] bedeutet, dass die Datenflussausführung noch nicht abgeschlossen ist.
 
-Die [!UICONTROL Übersicht über die Datenflussausführung] enthält zusätzliche Informationen zu Ihrem Datenfluss, z. B. die entsprechende Datenflussausführungs-ID, den Zieldatensatz und die Organisations-ID.
+Die Seite [!UICONTROL Dataflow run overview] enthält zusätzliche Informationen zu Ihrem Datenfluss, z. B. die entsprechende Datenflussausführungs-ID, den Zieldatensatz und die Organisations-ID.
 
-Eine Flussausführung mit Fehlern enthält auch das Bedienfeld [!UICONTROL Datenflussausführungsfehler], das den jeweiligen Fehler, der zum Fehlschlagen der Ausführung geführt hat, sowie die Gesamtzahl der fehlgeschlagenen Datensätze anzeigt.
+Eine Flussausführung mit Fehlern enthält auch das Bedienfeld [!UICONTROL Dataflow run errors] , das den jeweiligen Fehler, der zum Fehlschlagen der Ausführung geführt hat, sowie die Gesamtzahl der fehlgeschlagenen Datensätze anzeigt.
 
 ![dataflow-run-overview](../../images/tutorials/monitor-streaming/dataflow-run-overview.png)
 
 ### Anzeigen von Datensätzen mit Warnungen {#warnings}
 
-[!UICONTROL Datensätze mit Warnungen] zeigt eine Liste der Mapper-Umwandlungswarnungen an, die während der Flussausführung aufgetreten sind. Zeilen, die teilweise aufgenommen werden, werden als erfolgreich betrachtet und mit Warnungen versehen, wenn Fehler bei der Mapper-Transformation gefunden werden.
+[!UICONTROL Records with warnings] zeigt eine Liste der Mapper-Umwandlungswarnungen an, die während der Flussausführung aufgetreten sind. Zeilen, die teilweise aufgenommen werden, werden als erfolgreich betrachtet und mit Warnungen versehen, wenn Fehler bei der Mapper-Transformation gefunden werden.
 
 Standardmäßig werden alle Mapper-Umwandlungsfehler als Warnungen betrachtet, es sei denn, sie sind einer der folgenden:
 
@@ -114,17 +114,17 @@ Standardmäßig werden alle Mapper-Umwandlungsfehler als Warnungen betrachtet, e
 * Verweise auf nicht vorhandene Attribute
 * Nicht übereinstimmende XDM-Datentypen
 
-Um die Fehlerdiagnose anzuzeigen, wählen Sie **[!UICONTROL Fehlerdiagnose in der Vorschau anzeigen]**.
+Um die Fehlerdiagnose anzuzeigen, wählen Sie **[!UICONTROL Preview error diagnostics]** aus.
 
 ![records-with-warning](../../images/tutorials/monitor-streaming/records-with-warnings.png)
 
-Im Fenster [!UICONTROL Fehlerdiagnose-Vorschau] können Sie bis zu 100 Fehler und/oder Warnungen zu Ihrer Datenflussausführung in der Vorschau anzeigen. Von hier aus können Sie auch das Aufnahmefehlermanifest für weitere Informationen herunterladen, indem Sie die [!DNL Data Access]-API verwenden.
+Im [!UICONTROL Error diagnostics preview] können Sie bis zu 100 Fehler und/oder Warnungen zu Ihrer Datenflussausführung in der Vorschau anzeigen. Von hier aus können Sie auch das Aufnahmefehlermanifest für weitere Informationen herunterladen, indem Sie die [!DNL Data Access]-API verwenden.
 
 ![Diagnose](../../images/tutorials/monitor-streaming/diagnostics.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich den Arbeitsbereich [!UICONTROL Quellen] verwendet, um Ihre Streaming-Datenflüsse zu überwachen und die Fehler zu identifizieren, die zu fehlgeschlagenen Datenflüssen geführt haben. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie erfolgreich den [!UICONTROL Sources]-Arbeitsbereich verwendet, um Ihre Streaming-Datenflüsse zu überwachen und die Fehler zu identifizieren, die zu fehlgeschlagenen Datenflüssen geführt haben. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Quellen – Übersicht](../../home.md)
 * [Datenflüsse – Übersicht](../../../dataflows/home.md)

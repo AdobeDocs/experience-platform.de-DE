@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierun
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1944'
 ht-degree: 6%
 
 ---
@@ -37,7 +37,7 @@ In diesem Abschnitt werden die erforderlichen Schritte beschrieben, die Sie vor 
 
 Sie müssen sicherstellen, dass der eindeutige Namespace mit der höchsten Priorität immer in jedem bekannten Profil vorhanden ist. Dadurch kann Identity Service die entsprechende Personenkennung in einem bestimmten Diagramm erkennen.
 
-+++Auswählen, um ein Beispiel für ein Diagramm ohne Namespace für eine einzelne Personenkennung anzuzeigen
++++Wählen Sie aus, um ein Beispiel für ein Diagramm ohne Namespace für eine einzelne Personenkennung anzuzeigen
 
 Ohne einen eindeutigen Namespace zur Darstellung Ihrer Personenkennungen erhalten Sie möglicherweise ein Diagramm, das mit verschiedenen Personenkennungen mit derselben ECID verknüpft ist. In diesem Beispiel sind B2BCRM und B2CCRM gleichzeitig mit derselben ECID verknüpft. Dieses Diagramm zeigt, dass Tom über sein B2C-Anmeldekonto ein Gerät mit Summer über ihr B2B-Anmeldekonto geteilt hat. Das System erkennt jedoch, dass es sich um ein Profil handelt (Diagrammausblendung).
 
@@ -45,7 +45,7 @@ Ohne einen eindeutigen Namespace zur Darstellung Ihrer Personenkennungen erhalte
 
 +++
 
-+++Wählen Sie diese Option aus, um ein Beispiel für ein Diagramm mit einem Namespace für eine einzelne Personenkennung anzuzeigen
++++Wählen Sie aus, um ein Beispiel für ein Diagramm mit einem Namespace für eine einzelne Personenkennung anzuzeigen
 
 Bei einem eindeutigen Namespace (in diesem Fall eine CRMID anstelle von zwei unterschiedlichen Namespaces) kann Identity Service die Personenkennung erkennen, die zuletzt mit der ECID verknüpft war. Da in diesem Beispiel eine eindeutige CRM-ID vorhanden ist, kann Identity Service ein Szenario mit einem „gemeinsamen Gerät“ erkennen, in dem zwei Entitäten dasselbe Gerät gemeinsam nutzen.
 
@@ -94,7 +94,7 @@ Während des Vorab-Implementierungsprozesses müssen Sie sicherstellen, dass die
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/de/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ Sie sollten **nicht** eine Payload wie die folgende senden:
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/de/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ In diesem Beispiel können Sie davon ausgehen, dass das folgende Ereignis an Exp
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/de/",
+            "URL": "https://business.adobe.com/",
             "name": "Adobe Business"
         }
     }
@@ -182,8 +182,8 @@ In diesem Beispiel können Sie davon ausgehen, dass das folgende Ereignis an Exp
 
 Der erste Schritt im Implementierungsprozess für Identity Service besteht darin sicherzustellen, dass Ihr Experience Platform-Konto zu einer Rolle hinzugefügt wird, die über die erforderlichen Berechtigungen verfügt. Ihr Administrator kann die Berechtigungen für Ihr Konto konfigurieren, indem er zur Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud navigiert. Von dort aus muss Ihr Konto zu einer Rolle mit den folgenden Berechtigungen hinzugefügt werden:
 
-* [!UICONTROL Identitätseinstellungen anzeigen]: Wenden Sie diese Berechtigung an, um eindeutige Namespaces und die Namespace-Priorität auf der Seite zum Durchsuchen von Identitäts-Namespaces anzeigen zu können.
-* [!UICONTROL Identitätseinstellungen bearbeiten]: Wenden Sie diese Berechtigung an, um Ihre Identitätseinstellungen bearbeiten und speichern zu können.
+* [!UICONTROL View Identity Settings]: Wenden Sie diese Berechtigung an, um eindeutige Namespaces und die Namespace-Priorität auf der Seite zum Durchsuchen von Identity-Namespaces anzeigen zu können.
+* [!UICONTROL Edit Identity Settings]: Wenden Sie diese Berechtigung an, um Ihre Identitätseinstellungen bearbeiten und speichern zu können.
 
 Weitere Informationen zu Berechtigungen finden Sie im [Handbuch zu Berechtigungen](../../access-control/abac/ui/permissions.md).
 
@@ -199,7 +199,7 @@ Durch das Erstellen verschiedener Konfigurationen können Sie das Tool zur Diagr
 
 ## Konfigurieren von Identitätseinstellungen {#identity-settings}
 
-Sobald Sie eine bessere Vorstellung davon haben, wie sich Ihr Diagramm verhalten soll, navigieren Sie zur [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md) im Arbeitsbereich der Benutzeroberfläche von Identity Service. Um auf die Benutzeroberfläche für Identitätseinstellungen zuzugreifen, wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Identitäten“ und dann **[!UICONTROL Einstellungen]** aus.
+Sobald Sie eine bessere Vorstellung davon haben, wie sich Ihr Diagramm verhalten soll, navigieren Sie zur [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md) im Arbeitsbereich der Benutzeroberfläche von Identity Service. Um auf die Benutzeroberfläche für Identitätseinstellungen zuzugreifen, wählen Sie im linken Navigationsbereich **[!UICONTROL Identities]** und dann **[!UICONTROL Settings]** aus.
 
 ![Die Seite zum Durchsuchen von Identitäten mit hervorgehobener Schaltfläche „Einstellungen“.](../images/implementation/settings.png "Die Seite zum Durchsuchen von Identitäten mit hervorgehobener Schaltfläche „Einstellungen“."){zoomable="yes"}
 
@@ -221,7 +221,7 @@ Anweisungen zum Erstellen eines Schemas finden Sie im Handbuch unter [Erstellen 
 
 ## Erstellen eines Datensatzes {#dataset}
 
-Erstellen Sie als Nächstes einen Datensatz, um eine Struktur für die aufzunehmenden Daten bereitzustellen. Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Datensätze arbeiten mit Schemata zusammen und um Daten in das Echtzeit-Kundenprofil aufzunehmen, muss Ihr Datensatz für die Profilaufnahme aktiviert sein. Damit Ihr Datensatz für das Profil aktiviert werden kann, muss er auf ein Schema verweisen, das für die Profilaufnahme aktiviert ist.
+Erstellen Sie als Nächstes einen Datensatz, um eine Struktur für die aufzunehmenden Daten bereitzustellen. Ein Datensatz ist ein Konstrukt zur Speicherung und Verwaltung einer Sammlung von Daten, in der Regel eine Tabelle, die ein Schema (Spalten) und Felder (Zeilen) enthält. Datensätze arbeiten mit Schemata zusammen und um Daten in das Echtzeit-Kundenprofil aufzunehmen, muss Ihr Datensatz für die Profilaufnahme aktiviert sein. Damit Ihr Datensatz für das Profil aktiviert werden kann, muss er auf ein Schema verweisen, das für die Profilaufnahme aktiviert ist.
 
 Anweisungen zum Erstellen eines Datensatzes finden Sie im [Handbuch zur Datensatz-Benutzeroberfläche](../../catalog/datasets/user-guide.md).
 
@@ -245,13 +245,13 @@ Sobald alle oben aufgeführten Elemente vorhanden sind, können Sie mit der Aufn
 >
 >Sobald Ihre Daten aufgenommen wurden, ändert sich die Payload der XDM-Rohdaten nicht mehr. Möglicherweise werden Ihre primären Identitätskonfigurationen weiterhin in der Benutzeroberfläche angezeigt. Diese Konfigurationen werden jedoch durch Identitätseinstellungen überschrieben.
 
-Verwenden Sie für Feedback die Option **[!UICONTROL Beta-Feedback]** im Arbeitsbereich der Identity Service-Benutzeroberfläche.
+Verwenden Sie für Feedback die Option **[!UICONTROL Beta feedback]** im Arbeitsbereich der Benutzeroberfläche von Identity Service.
 
 ## Validieren von Diagrammen {#validate}
 
 Verwenden Sie das Identitäts-Dashboard, um Einblicke in den Status Ihrer Identitätsdiagramme zu erhalten, z. B. die Gesamtzahl der Identitätsdiagramme und die Anzahl der Diagramme, die Anzahl der Identitäten nach Namespace und die Anzahl der Diagramme nach Größe. Sie können auch das Identitäts-Dashboard verwenden, um Trends in Diagrammen mit zwei oder mehr Identitäten anzuzeigen, sortiert nach Namespace.
 
-Klicken Sie auf die Auslassungszeichen (`...`) und dann auf **[!UICONTROL Weitere anzeigen]** um weitere Informationen anzuzeigen und zu überprüfen, ob es keine reduzierten Diagramme gibt.
+Klicken Sie auf die Auslassungszeichen (`...`) und dann auf **[!UICONTROL View more]** , um weitere Informationen zu erhalten und zu überprüfen, ob es keine reduzierten Diagramme gibt.
 
 ![Das Identity Dashboard im Arbeitsbereich der Identity Service-Benutzeroberfläche.](../images/implementation/identity_dashboard.png "Das Identitäts-Dashboard im Arbeitsbereich der Identity Service-Benutzeroberfläche."){zoomable="yes"}
 

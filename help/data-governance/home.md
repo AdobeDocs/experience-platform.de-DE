@@ -6,8 +6,8 @@ description: Mit Data Governance in Adobe Experience Platform können Sie Kunden
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1624'
-ht-degree: 64%
+source-wordcount: '1619'
+ht-degree: 63%
 
 ---
 
@@ -53,15 +53,15 @@ Marketer befinden sich am Endpunkt von Data Governance. Sie fordern Daten von de
 
 ## Data Governance-Framework {#data-governance-framework}
 
-Das Data Governance-Framework vereinfacht und optimiert die Kategorisierung von Daten und die Erstellung von Datennutzungsrichtlinien. Wenn Datenkennzeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
+Das Data Governance-Framework vereinfacht und optimiert die Kategorisierung von Daten und die Erstellung von Datennutzungsrichtlinien. Wenn Daten-Labels und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
 
 Das Data Governance-Framework beinhaltet drei Kernelemente: Kennzeichnungen, Richtlinien und Durchsetzung.
 
-1. **Bezeichnungen:** Klassifizieren Sie Daten anhand datenschutzbezogener Aspekte und vertraglicher Bestimmungen, sodass sie Vorschriften und Richtlinien der Organisation einhalten.
+1. **Labels:** Klassifizieren Sie Daten anhand datenschutzbezogener Aspekte und vertraglicher Bestimmungen, sodass sie Vorschriften und Richtlinien der Organisation einhalten.
 1. **Richtlinien:** Beschreiben Sie, welche Arten von Marketing-Aktionen für bestimmte Daten zulässig bzw. nicht zulässig sind.
 1. **Durchsetzung:** Nutzen Sie das Richtlinien-Framework, um Richtlinien über verschiedene Datenzugriffsmuster hinweg zu empfehlen und durchzusetzen.
 
-## Datennutzungskennzeichnungen {#data-usage-labels}
+## Datennutzungs-Labels {#data-usage-labels}
 
 Data Governance ermöglicht es Data Stewards, Nutzungsbezeichnungen auf der Ebene der Schemafelder anzuwenden, um Daten anhand der gültigen Richtlinien zu kategorisieren.
 
@@ -69,17 +69,17 @@ Das Data Governance-Framework beinhaltet vordefinierte Datennutzungskennzeichnun
 
 ![Die drei Kategorien von Datennutzungskennzeichnungen.](./images/overview/label-categories.png)
 
-* **Datenbezeichnungen „C“ (Contract):** Kennzeichnen und kategorisieren Sie Daten, die vertragliche Bestimmungen aufweisen oder mit den Richtlinien zur Verwaltung von Kundendaten in Zusammenhang stehen.
-* **Datenbezeichnungen „I“ (Identity):** Kennzeichnen und kategorisieren Sie Daten, die zum Identifizieren oder Kontaktieren einer bestimmten Person dienen können.
-* **Datenbezeichnungen „S“ (Sensitive):** Kennzeichnen und kategorisieren Sie Daten, die mit vertraulichen Daten (wie geografischen Daten) verbunden sind.
+* **Daten-Labels „C“ (Contract):** Kennzeichnen und kategorisieren Sie Daten, die vertragliche Bestimmungen aufweisen oder mit den Richtlinien zur Verwaltung von Kundendaten in Zusammenhang stehen.
+* **Daten-Labels „I“ (Identity):** Kennzeichnen und kategorisieren Sie Daten, die zum Identifizieren oder Kontaktieren einer bestimmten Person dienen können.
+* **Daten-Labels „S“ (Sensitive):** Kennzeichnen und kategorisieren Sie Daten, die mit vertraulichen Daten (wie geografischen Daten) verbunden sind.
 
 >[!NOTE]
 >
->Eine vollständige Liste [&#x200B; verfügbaren Bezeichnungen und Definitionen für &#x200B;](labels/reference.md) Bezeichnungstyp finden Sie im Handbuch zu „Unterstützte Datennutzungsbezeichnungen“.
+>Eine vollständige Liste [ verfügbaren Bezeichnungen und Definitionen für ](labels/reference.md) Bezeichnungstyp finden Sie im Handbuch zu „Unterstützte Datennutzungsbezeichnungen“.
 
-Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Als Best Practice empfiehlt sich eine Kennzeichnung von Daten, wenn diese in Experience Platform aufgenommen oder in [!DNL Experience Platform] verfügbar werden.
+Labels können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Als Best Practice empfiehlt sich eine Kennzeichnung von Daten, wenn diese in Experience Platform aufgenommen oder in [!DNL Experience Platform] verfügbar werden.
 
-Weitere Informationen dazu, wie [&#x200B; Datennutzungskennzeichnungen zur Durchsetzung der Data-Governance](./labels/overview.md)Compliance verwendet werden, finden Sie in der Übersicht zu Datennutzungskennzeichnungen .
+Weitere Informationen dazu, wie [ Datennutzungskennzeichnungen zur Durchsetzung der Data-Governance](./labels/overview.md)Compliance verwendet werden, finden Sie in der Übersicht zu Datennutzungskennzeichnungen .
 
 ## Datennutzungsrichtlinien {#data-usage-policies}
 
@@ -90,8 +90,8 @@ Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz
 
 Es sind zwei Richtlinientypen verfügbar:
 
-* **[!UICONTROL Data Governance-Richtlinie]**: Zum Beschränken der Datenaktivierung auf Grundlage der durchgeführten Marketing-Aktion und der Datennutzungskennzeichnungen der betreffenden Daten
-* **[!UICONTROL Einverständnisrichtlinie]**: Filtern Sie die Profile, die für [Ziele“ aktiviert werden können](../destinations/home.md) basierend auf dem Einverständnis oder den Voreinstellungen Ihrer Kunden.
+* **[!UICONTROL Data governance policy]**: Beschränken Sie die Datenaktivierung auf der Grundlage der durchgeführten Marketing-Aktion und der von den betreffenden Daten getragenen Datennutzungskennzeichnungen.
+* **[!UICONTROL Consent policy]**: Filtern Sie die Profile, die für ([) ](../destinations/home.md) aktiviert werden können, basierend auf dem Einverständnis oder den Voreinstellungen Ihrer Kunden.
 
 Sobald Datennutzungskennzeichnungen angewendet wurden, können Datenverwalter mithilfe der Richtlinien-Service-API oder der Benutzeroberfläche von Experience Platform Richtlinien erstellen. Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden Sie unter [Richtlinien – Übersicht](./policies/overview.md).
 
@@ -101,7 +101,7 @@ Sobald Datennutzungskennzeichnungen angewendet wurden, können Datenverwalter mi
 
 ## Nächste Schritte
 
-Dieses Dokument bietet eine allgemeine Einführung in die Data Governance und das Data Governance-Framework. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
+Dieses Dokument bietet eine allgemeine Einführung in die Data Governance und das Data Governance-Framework. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungs-Labels](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungs-Labels hinzufügen.
 
 ## Anhang
 
@@ -113,27 +113,27 @@ In der folgenden Tabelle sind Schlüsselbegriffe im Zusammenhang mit der Data Go
 
 | Begriff | Definition |
 |---|---|
-| **Vertragsbezeichnungen** | Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die vertragliche Bestimmungen aufweisen oder mit Data Governance-Richtlinien Ihrer Organisation in Zusammenhang stehen. |
+| **Vertragsbezeichnungen** | Vertragliche „C“-Labels dienen zur Kategorisierung von Daten, die vertragliche Bestimmungen aufweisen oder mit Data Governance-Richtlinien Ihrer Organisation in Zusammenhang stehen. |
 | **Site-übergreifende Daten** | Site-übergreifende Daten sind die Kombination von Daten aus mehreren Sites. Site-übergreifende Daten umfassen sowohl Onsite- als auch Offsite-Daten oder eine Kombination aus Daten aus verschiedenen Offsite-Quellen. |
 | **Data Governance** | Data Governance umfasst die Strategien und Technologien, mit denen sichergestellt werden soll, dass die Daten den Vorschriften und Unternehmensrichtlinien in Bezug auf die Datennutzung entsprechen. |
 | **Data Steward** | Der Data Steward ist eine Person, die für die Verwaltung, Überwachung und Durchsetzung von Daten-Assets in einer Organisation verantwortlich ist. Ein Data Steward stellt außerdem sicher, dass die Data Governance-Richtlinien geschützt und gepflegt werden, sodass sie den gesetzlichen Vorschriften und den Richtlinien der Organisation entsprechen. |
-| **Datennutzungsbezeichnungen** | Mit Datennutzungsbezeichnungen können Benutzer Daten kategorisieren, die datenschutzbezogene Aspekte und vertragliche Bedingungen beinhalten, um Vorschriften und Unternehmensrichtlinien einzuhalten. |
-| **Datensatzbezeichnungen** | Einem Schema können Kennzeichnungen hinzugefügt werden. Alle Felder in einem Datensatz übernehmen die Kennzeichnungen des Schemas. |
-| **Feldkennzeichnung** | Feldkennzeichnungen sind Data-Governance-Kennzeichnungen, die entweder von einem Schema übernommen oder direkt auf ein Feld angewendet werden. Auf ein Feld angewendete Data-Governance-Kennzeichnungen werden nicht bis auf Schemaebene übernommen. |
+| **Datennutzungs-Labels** | Mit Datennutzungs-Labels können Benutzer Daten kategorisieren, die datenschutzbezogene Aspekte und vertragliche Bedingungen beinhalten, um Vorschriften und Unternehmensrichtlinien einzuhalten. |
+| **Datensatz-Labels** | Einem Schema können Labels hinzugefügt werden. Alle Felder in einem Datensatz übernehmen die Labels des Schemas. |
+| **Feldkennzeichnung** | Feldkennzeichnungen sind Data-Governance-Labels, die entweder von einem Schema übernommen oder direkt auf ein Feld angewendet werden. Auf ein Feld angewendete Data-Governance-Labels werden nicht bis auf Schemaebene übernommen. |
 | **Geofence** | Eine „Geofence“ ist eine virtuelle geografische Grenze, die durch GPS- oder RFID-Technologie definiert wird und Software in die Lage versetzt, eine Antwort auszulösen, wenn ein Mobilgerät ein bestimmtes Gebiet erreicht oder verlässt. |
-| **Identitätsbezeichnungen** | Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt. |
+| **Identitäts-Labels** | Identitätsbezogene „I“-Labels dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt. |
 | **Interessenbasiertes Targeting** | Ein interessenbasiertes Targeting, auch Personalisierung genannt, findet statt, wenn die folgenden drei Bedingungen erfüllt sind<br>Die auf der Site erhobenen Daten sind<br><ul><li>Wird verwendet, um Rückschlüsse auf das Interesse eines Benutzers zu ziehen,</li><li>Wird in einem anderen Kontext verwendet, z. B. auf einer anderen Site oder in einer App (extern)</li><li>Wird verwendet, um auszuwählen, welche Inhalte oder Anzeigen basierend auf diesen Rückschlüssen bereitgestellt werden sollen.</li></ul> |
 | **Marketing-Aktion** | Eine Marketing-Aktion ist im Kontext des Data Governance-Frameworks eine Aktion, die ein Datennutzer von Experience Platform ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde. |
 | **Richtlinie** | Im Data Governance-Framework ist eine Richtlinie eine Regel, die beschreibt, welche Arten von Marketing-Aktionen für bestimmte Daten zulässig bzw. nicht zulässig sind. |
-| **Schemakennzeichnungen** | Verwalten Sie die Kennzeichnungen für Data Governance, Einwilligung und Zugriffssteuerung auf Schemaebene. Dadurch werden die Kennzeichnungen an jeden Datensatz weitergegeben, der dieses Schema verwendet. |
-| **Kennzeichnungen für vertrauliche Daten** | Sensible „S“-Kennzeichnungen dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als sensibel betrachten. |
+| **Schema-Labels** | Verwalten Sie die Labels für Data Governance, Einwilligung und Zugriffssteuerung auf Schemaebene. Dadurch werden die Kennzeichnungen an jeden Datensatz weitergegeben, der dieses Schema verwendet. |
+| **Labels für vertrauliche Daten** | Sensible „S“-Labels dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als sensibel betrachten. |
 
 ## Zusätzliche Ressourcen
 
 Im folgenden Video werden die Komponenten des Data Governance-Frameworks erklärt.
 
->[!VIDEO](https://video.tv.adobe.com/v/33153?quality=12&enable10seconds=on&speedcontrol=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 Im folgenden Video erfahren Sie, wie Sie Datennutzungskennzeichnungen auf Ihre Schemata oder auf einen Datensatz in Experience Platform insgesamt anwenden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422789/?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

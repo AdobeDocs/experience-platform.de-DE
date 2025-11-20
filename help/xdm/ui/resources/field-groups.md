@@ -6,8 +6,8 @@ description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Pla
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 8%
+source-wordcount: '966'
+ht-degree: 9%
 
 ---
 
@@ -26,19 +26,19 @@ Adobe Experience Platform bietet viele Standardfeldgruppen, die eine Vielzahl vo
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Eine Einführung in die Rolle [&#x200B; XDM im Experience Platform-Ökosystem &#x200B;](../../home.md) Sie in der Übersicht zu XDM und in die [Grundlagen der Schemakomposition](../../schema/composition.md) wie Feldergruppen zu XDM-Schemata beitragen.
+Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Eine Einführung in die Rolle [ XDM im Experience Platform-Ökosystem ](../../home.md) Sie in der Übersicht zu XDM und in die [Grundlagen der Schemakomposition](../../schema/composition.md) wie Feldergruppen zu XDM-Schemata beitragen.
 
-Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [&#x200B; Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
+Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [ Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
 
 ## Erstellen einer neuen Feldergruppe {#create}
 
 Um eine neue Feldergruppe zu erstellen, müssen Sie zunächst ein Schema auswählen, dem die Feldergruppe hinzugefügt werden soll. Sie können zwischen [Erstellen eines neuen Schemas](./schemas.md#create) oder [Auswählen eines vorhandenen Schemas zur Bearbeitung](./schemas.md#edit) wählen.
 
-Nachdem Sie das Schema in der [!DNL Schema Editor] geöffnet haben, wählen Sie **[!UICONTROL Hinzufügen]** neben dem Abschnitt [!UICONTROL Feldergruppen] in der linken Leiste aus.
+Nachdem Sie das Schema in der [!DNL Schema Editor] geöffnet haben, wählen Sie **[!UICONTROL Add]** neben dem Abschnitt [!UICONTROL Field groups] in der linken Leiste aus.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Wählen Sie im angezeigten Dialogfeld die Option **[!UICONTROL Neue Feldergruppe erstellen]** aus. Hier können Sie einen **[!UICONTROL Anzeigenamen]** und **[!UICONTROL Beschreibung]** für die Feldergruppe angeben. Wählen Sie abschließend **[!UICONTROL Feldergruppen hinzufügen]** aus.
+Wählen Sie im angezeigten Dialogfeld die Option **[!UICONTROL Create new field group]** aus. Hier können Sie eine **[!UICONTROL Display name]** und einen **[!UICONTROL Description]** für die Feldergruppe angeben. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Add field groups]** aus.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -48,17 +48,17 @@ Der [!DNL Schema Editor] wird erneut angezeigt, wobei die neue Feldergruppe in d
 
 ## Feldergruppen filtern {#filter}
 
-Die Liste der verfügbaren Feldergruppen wird je nach ihrer Erstellung vorab gefiltert. Die Standardeinstellung zeigt die von Adobe definierten Feldergruppen an. Sie können die Liste jedoch auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] zu wählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die von Adobe erstellt wurden, und die Option [!UICONTROL Benutzerdefiniert] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
+Die Liste der verfügbaren Feldergruppen wird je nach ihrer Erstellung vorab gefiltert. Die Standardeinstellung zeigt die von Adobe definierten Feldergruppen an. Sie können die Liste jedoch auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Custom] auszuwählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die von Adobe erstellt wurden, und die Option [!UICONTROL Custom] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
 
-![Registerkarte [!UICONTROL Feldergruppen] des Arbeitsbereichs [!UICONTROL Schemata] mit den hervorgehobenen Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert].](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![Die Registerkarte &quot;[!UICONTROL Field groups]&quot; des Arbeitsbereichs &quot;[!UICONTROL Schemas]&quot; mit hervorgehobenen [!UICONTROL Standard] und [!UICONTROL Custom].](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Bearbeiten einer vorhandenen Feldergruppe {#edit}
 
 >[!NOTE]
 >
->Nur benutzerdefinierte Feldergruppen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Kernfeldgruppen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Sie werden im Schema-Editor durch ein Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png)). Weitere Informationen finden Sie [&#x200B; Abschnitt „Bearbeiten von Anzeigenamen für &#x200B;](./schemas.md#display-names)&quot;.
+>Nur benutzerdefinierte Feldergruppen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Kernfeldgruppen können nur die Anzeigenamen für die Felder im Kontext einzelner Schemata bearbeitet werden. Sie werden im Schema-Editor durch ein Vorhängeschloss-Symbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png)). Weitere Informationen finden Sie [ Abschnitt „Bearbeiten von Anzeigenamen für ](./schemas.md#display-names)&quot;.
 >
->Nachdem eine benutzerdefinierte Feldergruppe gespeichert und in einem Schema für die Datenaufnahme verwendet wurde, können anschließend nur noch additive Änderungen an der Feldergruppe vorgenommen werden. Weitere Informationen finden [&#x200B; unter „Regeln &#x200B;](../../schema/composition.md#evolution) Schemaentwicklung“.
+>Nachdem eine benutzerdefinierte Feldergruppe gespeichert und in einem Schema für die Datenaufnahme verwendet wurde, können anschließend nur noch additive Änderungen an der Feldergruppe vorgenommen werden. Weitere Informationen finden [ unter „Regeln ](../../schema/composition.md#evolution) Schemaentwicklung“.
 
 Um eine vorhandene Feldergruppe zu bearbeiten, müssen Sie zunächst ein Schema öffnen, das die Feldergruppe innerhalb der [!DNL Schema Editor] verwendet. Sie können [ein vorhandenes Schema zur Bearbeitung auswählen](./schemas.md#edit) oder [ein neues Schema erstellen](./schemas.md#create) und die betreffende Feldergruppe hinzufügen.
 
@@ -74,17 +74,17 @@ Um Felder zu einer benutzerdefinierten Feldergruppe hinzuzufügen, wählen Sie z
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Ein Platzhalter **[!UICONTROL Nicht benanntes Feld]** wird auf der Arbeitsfläche angezeigt, und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. Spezifische Schritte zum Konfigurieren [&#x200B; verschiedenen Feldtypen finden Sie &#x200B;](../fields/overview.md#define) Handbuch unter „Definieren von Feldern in der Benutzeroberfläche“.
+Auf der Arbeitsfläche wird ein **[!UICONTROL Untitled Field]** Platzhalter angezeigt, und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. Spezifische Schritte zum Konfigurieren [ verschiedenen Feldtypen finden Sie ](../fields/overview.md#define) Handbuch unter „Definieren von Feldern in der Benutzeroberfläche“.
 
-Wählen **[!UICONTROL unter]** Zuweisen zu“ die Option **[!UICONTROL Feldergruppe]** und wählen Sie dann im Dropdown-Menü die gewünschte Feldergruppe aus der Liste aus. Sie können damit beginnen, den Namen der Feldergruppe einzugeben, um die Ergebnisse einzugrenzen.
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
-
-Wählen **[!UICONTROL unter]** Zuweisen zu“ die Option **[!UICONTROL Feldergruppe]** und wählen Sie dann im Dropdown-Menü die gewünschte Feldergruppe aus der Liste aus. Sie können damit beginnen, den Namen der Feldergruppe einzugeben, um die Ergebnisse einzugrenzen.
+Wählen Sie unter **[!UICONTROL Assign to]** die Option **[!UICONTROL Field Group]** aus und wählen Sie dann im Dropdown-Menü die gewünschte Feldergruppe aus der Liste aus. Sie können damit beginnen, den Namen der Feldergruppe einzugeben, um die Ergebnisse einzugrenzen.
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-Nachdem das Feld zum Schema hinzugefügt wurde, wird es der ausgewählten Feldergruppe zugewiesen. Fügen Sie der Feldergruppe weiterhin so viele Felder wie nötig hinzu. Wenn Sie fertig sind, wählen **[!UICONTROL Speichern]** aus, um sowohl das Schema als auch die Feldergruppe zu speichern.
+Wählen Sie unter **[!UICONTROL Assign to]** die Option **[!UICONTROL Field Group]** aus und wählen Sie dann im Dropdown-Menü die gewünschte Feldergruppe aus der Liste aus. Sie können damit beginnen, den Namen der Feldergruppe einzugeben, um die Ergebnisse einzugrenzen.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+Nachdem das Feld zum Schema hinzugefügt wurde, wird es der ausgewählten Feldergruppe zugewiesen. Fügen Sie der Feldergruppe weiterhin so viele Felder wie nötig hinzu. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save]** aus, um sowohl das Schema als auch die Feldergruppe zu speichern.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -92,6 +92,6 @@ Wenn dieselbe Feldergruppe bereits in anderen Schemata verwendet wird, werden di
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde beschrieben, wie Sie Feldergruppen mithilfe der Experience Platform-Benutzeroberfläche erstellen und bearbeiten. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemata] finden Sie unter [[!UICONTROL Schemata] Arbeitsbereich - Übersicht](../overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Feldergruppen mithilfe der Experience Platform-Benutzeroberfläche erstellen und bearbeiten. Weiterführende Informationen zu den Funktionen von [!UICONTROL Schemas] Workspace finden Sie in der Übersicht zu [[!UICONTROL Schemas] Workspace ](../overview.md).
 
 Informationen zum Verwalten von Feldergruppen mithilfe der [!DNL Schema Registry]-API finden Sie im [Handbuch zu Feldergruppen-Endpunkten](../../api/field-groups.md).

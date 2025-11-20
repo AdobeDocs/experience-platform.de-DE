@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfig
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 70%
+source-wordcount: '2363'
+ht-degree: 53%
 
 ---
 
@@ -27,7 +27,7 @@ Die folgenden Typen von geheimen Daten werden derzeit unterstützt:
 
 {style="table-layout:auto"}
 
-Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Geheimnisse für eine [!UICONTROL Edge]-Eigenschaft zur Ereignisweiterleitung in der Experience Platform- oder Datenerfassungs-Benutzeroberfläche konfiguriert werden.
+Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie geheime Daten für eine [!UICONTROL Edge]-Eigenschaft (Ereignisweiterleitung) in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche konfiguriert werden.
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ Außerdem sollten Sie über ein grundlegendes Verständnis des Veröffentlichung
 >abstract="Damit geheime Daten durch die Ereignisweiterleitung verwendet werden können, müssen sie einer vorhandenen Umgebung zugewiesen werden. Wenn Sie keine Umgebungen für Ihre Ereignisweiterleitungseigenschaft erstellt haben, müssen Sie diese konfigurieren, bevor Sie fortfahren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de" text="Umgebungen – Übersicht"
 
-Um ein Geheimnis zu erstellen, wählen Sie in der linken Navigationsleiste **[!UICONTROL Ereignisweiterleitung]**, um die Ereignisweiterleitungseigenschaft, der Sie das Geheimnis hinzufügen möchten, zu öffnen. Wählen Sie anschließend im linken Navigationsbereich zunächst **[!UICONTROL Geheime Daten]** und dann **[!UICONTROL Neue geheime Daten erstellen]** aus.
+Um geheime Daten zu erstellen, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Event Forwarding]** und öffnen Sie dann die Ereignisweiterleitungseigenschaft, der Sie die geheimen Daten hinzufügen möchten. Wählen Sie als Nächstes **[!UICONTROL Secrets]** im linken Navigationsbereich und dann **[!UICONTROL Create New Secret]** aus.
 
 ![Neue geheimen Daten erstellen](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -55,19 +55,19 @@ Im nächsten Bildschirm können Sie die Details der geheimen Daten konfigurieren
 
 >[!NOTE]
 >
->Wenn Sie die geheimen Daten dennoch erstellen und speichern möchten, bevor Sie sie einer Umgebung hinzufügen, deaktivieren Sie die Option **[!UICONTROL Geheime Daten an Umgebungen anhängen]**, bevor Sie den Rest der Informationen ausfüllen. Beachten Sie, dass Sie sie später einer Umgebung zuweisen müssen, wenn Sie die geheimen Daten verwenden möchten.
+>Wenn Sie die geheimen Daten dennoch erstellen und speichern möchten, bevor Sie sie einer Umgebung hinzufügen, deaktivieren Sie den Umschalter **[!UICONTROL Attach Secret to Environments]** , bevor Sie den Rest der Informationen ausfüllen. Beachten Sie, dass Sie sie später einer Umgebung zuweisen müssen, wenn Sie die geheimen Daten verwenden möchten.
 >
 >![Umgebung deaktivieren](../../images/ui/event-forwarding/secrets/env-disabled.png)
 
-Wählen Sie unter **[!UICONTROL Zielumgebung]** im Dropdown-Menü die Umgebung aus, der Sie die geheimen Daten zuweisen möchten. Geben Sie unter **[!UICONTROL Name der geheimen Daten]** einen Namen für die geheimen Daten im Kontext der Umgebung an. Dieser Name muss für alle geheimen Daten unter der Ereignisweiterleitungs-Eigenschaft eindeutig sein.
+Wählen Sie unter **[!UICONTROL Target Environment]** im Dropdown-Menü die Umgebung aus, der Sie die geheimen Daten zuweisen möchten. Geben Sie unter **[!UICONTROL Secret Name]** einen Namen für die geheimen Daten im Kontext der Umgebung an. Dieser Name muss für alle geheimen Daten unter der Ereignisweiterleitungs-Eigenschaft eindeutig sein.
 
 ![Umgebung und Name](../../images/ui/event-forwarding/secrets/env-and-name.png)
 
-Geheime Daten können jeweils nur einer Umgebung zugewiesen werden. Sie können jedoch bei Bedarf die gleichen Anmeldedaten mehreren geheimen Daten in verschiedenen Umgebungen zuweisen. Wählen Sie **[!UICONTROL Umgebung hinzufügen]** aus, um der Liste eine weitere Zeile hinzuzufügen.
+Geheime Daten können jeweils nur einer Umgebung zugewiesen werden. Sie können jedoch bei Bedarf die gleichen Anmeldedaten mehreren geheimen Daten in verschiedenen Umgebungen zuweisen. Wählen Sie **[!UICONTROL Add Environment]** aus, um der Liste eine weitere Zeile hinzuzufügen.
 
 ![Umgebung hinzufügen](../../images/ui/event-forwarding/secrets/add-env.png)
 
-Für jede Umgebung, die Sie hinzufügen, müssen Sie einen weiteren eindeutigen Namen für die zugehörigen geheimen Daten angeben. Wenn Sie alle verfügbaren Umgebungen ausfüllen, steht die Schaltfläche **[!UICONTROL Umgebung hinzufügen]** nicht mehr zur Verfügung.
+Für jede Umgebung, die Sie hinzufügen, müssen Sie einen weiteren eindeutigen Namen für die zugehörigen geheimen Daten angeben. Wenn Sie alle verfügbaren Umgebungen ausfüllen, steht die Schaltfläche **[!UICONTROL Add Environment]** nicht mehr zur Verfügung.
 
 ![Umgebung hinzufügen nicht verfügbar](../../images/ui/event-forwarding/secrets/add-env-greyed.png)
 
@@ -83,13 +83,13 @@ Von hier aus unterscheiden sich die Schritte zum Erstellen der geheimen Daten je
 
 ### [!UICONTROL Token] {#token}
 
-Um geheime Daten vom Typ „Token“ zu erstellen, wählen Sie in der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL Token]** aus. Geben Sie im nun erscheinenden Feld **[!UICONTROL Token]** die Anmeldedaten-Zeichenfolge an, die vom System erkannt wird, für das Sie sich authentifizieren. Wählen Sie **[!UICONTROL Geheime Daten erstellen]** aus, um die geheimen Daten zu speichern.
+Um ein Geheimnis-Token zu erstellen, wählen Sie **[!UICONTROL Token]** aus dem Dropdown-Menü **[!UICONTROL Type]** aus. Geben Sie im angezeigten **[!UICONTROL Token]** die Zeichenfolge zur Anmeldung an, die von dem System erkannt wird, für das Sie sich authentifizieren. Wählen Sie **[!UICONTROL Create Secret]** aus, um die geheimen Daten zu speichern.
 
 ![Geheime Daten vom Typ „Token“](../../images/ui/event-forwarding/secrets/token-secret.png)
 
 ### [!UICONTROL HTTP] {#http}
 
-Um geheime Daten vom Typ „HTTP“ zu erstellen, wählen Sie in der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL Einfaches HTTP]** aus. Geben Sie in den unten angezeigten Feldern einen Benutzernamen und ein Kennwort als Anmeldedaten ein, bevor Sie die Option **[!UICONTROL Geheime Daten erstellen]** auswählen, um die jeweiligen geheimen Daten zu speichern.
+Um geheime Daten vom Typ HTTP zu erstellen, wählen Sie aus dem Dropdown-Menü **[!UICONTROL Simple HTTP]** die Option **[!UICONTROL Type]** aus. Geben Sie in den unten angezeigten Feldern einen Benutzernamen und ein Kennwort zur Anmeldung ein, bevor Sie **[!UICONTROL Create Secret]** zum Speichern der geheimen Daten auswählen.
 
 >[!NOTE]
 >
@@ -99,15 +99,15 @@ Um geheime Daten vom Typ „HTTP“ zu erstellen, wählen Sie in der Dropdown-Li
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-Um geheime Daten vom Typ „OAuth 2“ zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL OAuth 2]** aus. Geben Sie in den unten angezeigten Feldern Ihre [[!UICONTROL Client-ID] und Ihr [!UICONTROL Client-Geheimnis]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/) sowie die [[!UICONTROL Token-URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration ein. Das Feld [!UICONTROL Token-URL] in der Benutzeroberfläche ist eine Verkettung zwischen dem Autorisierungs-Server-Host und dem Token-Pfad.
+Um geheime Daten vom Typ „OAuth 2“ zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL OAuth 2]** die Option **[!UICONTROL Type]** aus. Geben Sie in den unten angezeigten Feldern Ihre [[!UICONTROL Client ID] und [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/) sowie Ihre [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration ein. Das [!UICONTROL Token URL] Feld in der Benutzeroberfläche ist eine Verkettung zwischen dem Autorisierungs-Server-Host und dem Token-Pfad.
 
 ![Geheime Daten vom Typ „OAuth 2“](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
-Unter **[!UICONTROL Anmeldedaten-Optionen]** können Sie weitere Optionen für die Anmeldedaten bereitstellen, z. B. `scope` und `audience` in Form von Schlüssel-Wert-Paaren. Um weitere Schlüssel-Wert-Paare hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
+Unter **[!UICONTROL Credential Options]** können Sie weitere Optionen für die Anmeldeinformationen bereitstellen, z. B. `scope` und `audience` in Form von Schlüssel-Wert-Paaren. Um weitere Schlüssel-Wert-Paare hinzuzufügen, wählen Sie **[!UICONTROL Add another]** aus.
 
 ![Anmeldedaten-Optionen](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
 
-Schließlich können Sie den Wert **[!UICONTROL Versatz aktualisieren]** für die jeweiligen geheimen Daten konfigurieren. Dies stellt die Anzahl der Sekunden vor Ablauf des Tokens dar, nach denen das System eine automatische Aktualisierung durchführt. Die entsprechende Uhrzeit in Stunden und Minuten wird rechts neben dem Feld angezeigt und bei der Eingabe automatisch aktualisiert.
+Schließlich können Sie den **[!UICONTROL Refresh Offset]** für die geheimen Daten konfigurieren. Dies stellt die Anzahl der Sekunden vor Ablauf des Tokens dar, nach denen das System eine automatische Aktualisierung durchführt. Die entsprechende Uhrzeit in Stunden und Minuten wird rechts neben dem Feld angezeigt und bei der Eingabe automatisch aktualisiert.
 
 ![Versatz aktualisieren](../../images/ui/event-forwarding/secrets/oauth-secret-3.png)
 
@@ -119,31 +119,31 @@ Wenn beispielsweise der Zeitversatz zur Aktualisierung auf den Standardwert von 
 >
 >Wenn der Versatz beispielsweise auf `28800` (acht Stunden) eingestellt ist und der Wert `expires_in` beim Zugriffs-Token `36000` (zehn Stunden) ist, würde der Austausch scheitern, da der daraus resultierende Unterschied weniger als vier Stunden betragen würde.
 
-Wenn Sie fertig sind, wählen Sie die Option **[!UICONTROL Geheime Daten erstellen]** aus, um die geheimen Daten zu speichern.
+Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Create Secret]** , um die geheimen Daten zu speichern.
 
 ![OAuth 2-Versatz speichern](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
 ### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
 
-Um geheime Daten vom Typ „OAuth 2 JWT“ zu erstellen, wählen Sie **[!UICONTROL OAuth 2 JWT]** aus der Dropdown-Liste **[!UICONTROL Typ]** aus.
+Um geheime Daten vom Typ OAuth 2 JWT zu erstellen, wählen Sie aus dem Dropdown-Menü **[!UICONTROL OAuth 2 JWT]** die Option **[!UICONTROL Type]** aus.
 
-![Registerkarte [!UICONTROL Geheimnis erstellen] mit hervorgehobenem OAuth 2-JWT-Geheimnis in der Dropdown-Liste [!UICONTROL Typ].](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![Die Registerkarte &quot;[!UICONTROL Create Secret]&quot; mit dem hervorgehobenen JWT-Geheimnis „OAuth 2“ im Dropdown-[!UICONTROL Type].](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
->Der einzige [!UICONTROL Algorithmus] der derzeit für das Signieren des JWT unterstützt wird, ist RS256.
+>Die einzige [!UICONTROL Algorithm], die derzeit für das Signieren des JWT unterstützt wird, ist RS256.
 
-Geben Sie in den unten angezeigten Feldern Ihre [!UICONTROL Aussteller], [!UICONTROL Betreff], [!UICONTROL Zielgruppe], [!UICONTROL Benutzerdefinierte Ansprüche] [!UICONTROL TTL] ein und wählen Sie dann [!UICONTROL Algorithmus] aus der Dropdown-Liste aus. Geben Sie als Nächstes die [!UICONTROL ID des privaten Schlüssels] sowie Ihre [[!UICONTROL Token-URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration ein. Das Feld [!UICONTROL Token]URL ist kein Pflichtfeld. Wenn ein Wert angegeben ist, wird das JWT mit einem Zugriffs-Token ausgetauscht. Die geheimen Daten werden entsprechend dem Attribut `expires_in` aus der Antwort und dem Wert [!UICONTROL Versatz aktualisieren] aktualisiert. Wenn kein Wert angegeben wird, ist das an die -Edge gepushte Geheimnis der JWT. Das JWT wird entsprechend den Werten [!UICONTROL TTL] und [!UICONTROL Versatz aktualisieren] aktualisiert.
+Geben Sie in den unten angezeigten Feldern Ihre [!UICONTROL Issuer], [!UICONTROL Subject], [!UICONTROL Audience], [!UICONTROL Custom Claims] und [!UICONTROL TTL] ein und wählen Sie dann die [!UICONTROL Algorithm] aus dem Dropdown-Menü aus. Geben Sie als Nächstes die [!UICONTROL Private Key Id] sowie Ihre [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration ein. Das Feld [!UICONTROL Token URL] ist kein Pflichtfeld. Wenn ein Wert angegeben ist, wird das JWT mit einem Zugriffs-Token ausgetauscht. Die geheimen Daten werden entsprechend dem `expires_in` Attribut aus der Antwort und dem [!UICONTROL Refresh Offset] aktualisiert. Wenn kein Wert angegeben wird, ist das an die -Edge gepushte Geheimnis der JWT. Das JWT wird entsprechend den [!UICONTROL TTL]- und [!UICONTROL Refresh Offset] aktualisiert.
 
-![Die Registerkarte [!UICONTROL Geheimnis erstellen] mit einer hervorgehobenen Auswahl an Eingabefeldern.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![Die Registerkarte &quot;[!UICONTROL Create Secret]&quot; mit einer hervorgehobenen Auswahl an Eingabefeldern.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
-Unter **[!UICONTROL Berechtigungsoptionen]** können Sie weitere Optionen für die Berechtigung bereitstellen, z. B. `jwt_param` in Form von Schlüssel-Wert-Paaren. Um weitere Schlüssel-Wert-Paare hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
+Unter **[!UICONTROL Credential Options]** können Sie weitere Optionen für die Berechtigung bereitstellen, z. B. `jwt_param` in Form von Schlüssel-Wert-Paaren. Um weitere Schlüssel-Wert-Paare hinzuzufügen, wählen Sie **[!UICONTROL Add another]** aus.
 
-![Die Registerkarte [!UICONTROL Geheimnis erstellen] auf der die Felder [!UICONTROL Anmeldedaten-Optionen] hervorgehoben sind.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![Die Registerkarte &quot;[!UICONTROL Create Secret]&quot;, auf der die [!UICONTROL Credential Options] Felder hervorgehoben sind.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
-Schließlich können Sie den Wert **[!UICONTROL Versatz aktualisieren]** für die jeweiligen geheimen Daten konfigurieren. Dies stellt die Anzahl der Sekunden vor Ablauf des Tokens dar, nach denen das System eine automatische Aktualisierung durchführt. Die entsprechende Uhrzeit in Stunden und Minuten wird rechts neben dem Feld angezeigt und bei der Eingabe automatisch aktualisiert.
+Schließlich können Sie den **[!UICONTROL Refresh Offset]** für die geheimen Daten konfigurieren. Dies stellt die Anzahl der Sekunden vor Ablauf des Tokens dar, nach denen das System eine automatische Aktualisierung durchführt. Die entsprechende Uhrzeit in Stunden und Minuten wird rechts neben dem Feld angezeigt und bei der Eingabe automatisch aktualisiert.
 
-![Die Registerkarte [!UICONTROL Geheime Daten erstellen] auf der das Feld [!UICONTROL Versatz aktualisieren] hervorgehoben ist.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![Die Registerkarte &quot;[!UICONTROL Create Secret]&quot;, auf der das Feld &quot;[!UICONTROL Refresh Offset]&quot; hervorgehoben ist.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
 Wenn beispielsweise der Zeitversatz zur Aktualisierung auf den Standardwert von `1800` (30 Minuten) eingestellt ist und der `expires_in` des Zugriffstokens `3600` (eine Stunde) beträgt, aktualisiert das System die geheimen Daten automatisch in einer Stunde.
 
@@ -153,22 +153,22 @@ Wenn beispielsweise der Zeitversatz zur Aktualisierung auf den Standardwert von 
 >
 >Wenn der Versatz beispielsweise auf `1800` (30 Minuten) eingestellt ist und der `expires_in` des Zugriffs-Tokens `2700` (45 Minuten) beträgt, würde der Austausch scheitern, da der daraus resultierende Unterschied weniger als 30 Minuten betragen würde.
 
-Wenn Sie fertig sind, wählen Sie die Option **[!UICONTROL Geheime Daten erstellen]** aus, um die geheimen Daten zu speichern.
+Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Create Secret]** , um die geheimen Daten zu speichern.
 
-![Die Registerkarte [!UICONTROL Geheime Daten erstellen] mit hervorgehobener Option [!UICONTROL Geheime Daten erstellen]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![Die [!UICONTROL Create Secret] Registerkarte mit hervorgehobenen [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
-Um ein Geheimnis für Google OAuth 2 zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL Google OAuth 2]** aus. Wählen Sie unter **[!UICONTROL Bereiche]** die Google-APIs aus, für die Sie mithilfe dieses Geheimnisses Zugriff gewähren möchten. Die folgenden Produkte werden derzeit unterstützt:
+Um geheime Daten vom Typ &quot;Google OAuth 2“ zu erstellen, wählen Sie aus der Dropdown-Liste &quot;**[!UICONTROL Google OAuth 2]**&quot; die Option &quot;**[!UICONTROL Type]**&quot; aus. Wählen Sie unter **[!UICONTROL Scopes]** die Google-APIs aus, für die Sie mithilfe dieses Geheimnisses Zugriff gewähren möchten. Die folgenden Produkte werden derzeit unterstützt:
 
 * [Google Ads-API](https://developers.google.com/google-ads/api/docs/oauth/overview)
 * [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
 
-Klicken Sie abschließend auf **[!UICONTROL Geheimnis erstellen]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Create Secret]** aus.
 
 ![Google OAuth 2-Geheimnis](../../images/ui/event-forwarding/secrets/google-oauth.png)
 
-Ein Popup erscheint, das Sie darüber informiert, dass das Geheimnis manuell über Google autorisiert werden muss. Wählen Sie **[!UICONTROL Erstellen und autorisieren]** aus, um fortzufahren.
+Ein Popup erscheint, das Sie darüber informiert, dass das Geheimnis manuell über Google autorisiert werden muss. Wählen Sie **[!UICONTROL Create & Authorize]** aus, um fortzufahren.
 
 ![Popup für Google-Autorisierung](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
@@ -182,55 +182,55 @@ Es wird ein Dialogfeld angezeigt, in dem Sie die Anmeldedaten für Ihr Google-Ko
 
 ### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
-[!DNL LinkedIn] Um geheime Daten vom Typ „OAuth 2“ zu erstellen, wählen Sie **[!UICONTROL [!DNL LinkedIn]OAuth 2]** aus der Dropdown-Liste **[!UICONTROL Typ]** aus. Wählen Sie anschließend **[!UICONTROL Geheimnis erstellen]** aus.
+Um ein geheimes [!DNL LinkedIn] OAuth 2-Geheimnis zu erstellen, wählen Sie **[!UICONTROL [!DNL LinkedIn] OAuth 2]** aus der Dropdown-Liste **[!UICONTROL Type]** aus. Wählen Sie als Nächstes **[!UICONTROL Create Secret]**.
 
-![Die Registerkarte [!UICONTROL Geheimnis erstellen] mit dem hervorgehobenen Feld [!UICONTROL Typ].](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+![Die Registerkarte &quot;[!UICONTROL Create Secret]&quot; mit hervorgehobenem Feld &quot;[!UICONTROL Type]&quot;.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
 
-Ein Popup wird angezeigt, das Sie darüber informiert, dass die geheimen Daten manuell über [!DNL LinkedIn] autorisiert werden müssen. Wählen Sie **[!UICONTROL Geheimnis mit[!DNL LinkedIn]]** erstellen und autorisieren“ aus, um fortzufahren.
+Ein Popup wird angezeigt, das Sie darüber informiert, dass die geheimen Daten manuell über [!DNL LinkedIn] autorisiert werden müssen. Wählen Sie **[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]** aus, um fortzufahren.
 
-![&#x200B; Popover „LinkedIn-Autorisierung“ mit hervorgehobener Schaltfläche „Geheimnis mit LinkedIn erstellen und autorisieren“.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![ Popover „LinkedIn-Autorisierung“ mit hervorgehobener Schaltfläche „Geheimnis mit LinkedIn erstellen und autorisieren“.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL LinkedIn] aufgefordert werden. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung Zugriff auf Ihre Daten zu gewähren.
 
-Sobald der Autorisierungsprozess abgeschlossen ist, werden Sie zur Registerkarte **[!UICONTROL Geheimnisse]** zurückgeleitet, auf der Sie die neu erstellten geheimen Daten sehen können. Hier können Sie den Status der geheimen Daten und das Ablaufdatum sehen.
+Sobald der Autorisierungsprozess abgeschlossen ist, werden Sie zur Registerkarte **[!UICONTROL Secrets]** zurückgeleitet, wo Sie die neu erstellten geheimen Daten sehen können. Hier können Sie den Status der geheimen Daten und das Ablaufdatum sehen.
 
-![Die Registerkarte [!UICONTROL Geheime Daten] auf der das neu erstellte Geheimnis hervorgehoben ist.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+![Die Registerkarte &quot;[!UICONTROL Secret]&quot;, auf der das neu erstellte Geheimnis hervorgehoben ist.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Erneutes Autorisieren [!UICONTROL [!DNL LinkedIn] geheimen Daten &#x200B;] OAuth 2
+#### [!UICONTROL [!DNL LinkedIn] OAuth 2] erneut autorisieren
 
 >WICHTIG
 >
 >Sie müssen die Verwendung Ihrer [!DNL LinkedIn]-Anmeldedaten alle 365 Tage erneut autorisieren. Wenn Sie die erneute Autorisierung nicht fristgerecht durchführen, werden Ihre geheimen Daten nicht aktualisiert und die [!DNL LinkedIn] Konvertierungsanfragen schlagen fehl.
 
-Drei Monate vor den geheimen Daten, für die eine erneute Autorisierung erforderlich ist, wird ein Popup angezeigt, wenn Sie auf einer Seite der Eigenschaft navigieren. Wählen Sie **[!UICONTROL Hier klicken, um zu Ihren Geheimnissen zu gelangen]**.
+Drei Monate vor den geheimen Daten, für die eine erneute Autorisierung erforderlich ist, wird ein Popup angezeigt, wenn Sie auf einer Seite der Eigenschaft navigieren. Wählen Sie **[!UICONTROL Click here to go to your secrets]** aus.
 
-![Die Registerkarte [!UICONTROL Eigenschaftenübersicht] mit hervorgehobenem Popup-Fenster für die erneute geheime Autorisierung.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+![Die Registerkarte &quot;[!UICONTROL Property Overview]&quot;, auf der das Popup-Fenster für die erneute geheime Autorisierung hervorgehoben ist.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
 
-Sie werden zur Registerkarte [!UICONTROL Geheimnisse] weitergeleitet. Die auf dieser Seite aufgelisteten geheimen Daten werden so gefiltert, dass nur die geheimen Daten angezeigt werden, die erneut autorisiert werden müssen. Wählen Sie **[!UICONTROL Autorisierung erforderlich]** für die geheimen Daten aus, die Sie erneut autorisieren müssen.
+Sie werden zur Registerkarte [!UICONTROL Secrets] weitergeleitet. Die auf dieser Seite aufgelisteten geheimen Daten werden so gefiltert, dass nur die geheimen Daten angezeigt werden, die erneut autorisiert werden müssen. Wählen Sie **[!UICONTROL Auth Needed]** für die geheimen Daten aus, die Sie erneut autorisieren müssen.
 
-![Die Registerkarte [!UICONTROL Geheime Daten] auf der [!UICONTROL Auth erforderlich] für das [!DNL LinkedIn] Geheimnis hervorgehoben ist.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![Die hervorgehobene Registerkarte &quot;[!UICONTROL Secret][!UICONTROL Auth Needed] für das [!DNL LinkedIn] Geheimnis.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL LinkedIn]-Anmeldeinformationen aufgefordert werden. Befolgen Sie die Anweisungen, um Ihre geheimen Daten erneut zu autorisieren.
 
 ### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
 
-Um geheime Daten vom Typ „OAuth 2“ [!DNL Amazon], wählen Sie **[!UICONTROL [!DNL Amazon]Dropdown-Liste]** Typ **[!UICONTROL die Option OAuth 2]** aus. Wählen Sie anschließend **[!UICONTROL Geheimnis erstellen]** aus.
+Um geheime Daten vom Typ „OAuth 2 [!DNL Amazon]&quot; zu erstellen, wählen Sie **[!UICONTROL [!DNL Amazon] OAuth 2]** aus der Dropdown-Liste **[!UICONTROL Type]** aus. Wählen Sie als Nächstes **[!UICONTROL Create Secret]**.
 
-![Die Registerkarte [!UICONTROL Geheimnis erstellen] mit dem hervorgehobenen Feld [!UICONTROL Typ].](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+![Die Registerkarte &quot;[!UICONTROL Create Secret]&quot; mit hervorgehobenem Feld &quot;[!UICONTROL Type]&quot;.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
 
-Ein Popup wird angezeigt, das Sie darüber informiert, dass die geheimen Daten manuell über [!DNL Amazon] autorisiert werden müssen. Wählen Sie **[!UICONTROL Geheimnis mit[!DNL Amazon]]** erstellen und autorisieren“ aus, um fortzufahren.
+Ein Popup wird angezeigt, das Sie darüber informiert, dass die geheimen Daten manuell über [!DNL Amazon] autorisiert werden müssen. Wählen Sie **[!UICONTROL Create & Authorize secret with [!DNL Amazon]]** aus, um fortzufahren.
 
 ![Popup für die Amazon-Autorisierung mit hervorgehobener Schaltfläche „Geheime Daten mit Amazon erstellen und autorisieren“.](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL Amazon] aufgefordert werden. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung Zugriff auf Ihre Daten zu gewähren.
 
-Sobald der Autorisierungsprozess abgeschlossen ist, werden Sie zur Registerkarte **[!UICONTROL Geheimnisse]** zurückgeleitet, auf der Sie die neu erstellten geheimen Daten sehen können. Hier können Sie den Status der geheimen Daten und das Ablaufdatum sehen.
+Sobald der Autorisierungsprozess abgeschlossen ist, werden Sie zur Registerkarte **[!UICONTROL Secrets]** zurückgeleitet, wo Sie die neu erstellten geheimen Daten sehen können. Hier können Sie den Status der geheimen Daten und das Ablaufdatum sehen.
 
-![Die Registerkarte [!UICONTROL Geheime Daten] auf der das neu erstellte Geheimnis hervorgehoben ist.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
+![Die Registerkarte &quot;[!UICONTROL Secret]&quot;, auf der das neu erstellte Geheimnis hervorgehoben ist.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## Geheime Daten bearbeiten
 
-Nachdem Sie geheime Daten für eine Eigenschaft erstellt haben, finden Sie sie im Abschnitt **[!UICONTROL Geheime Daten]** im Arbeitsbereich. Um die Details von vorhandenen geheimen Daten zu bearbeiten, wählen Sie den Namen der jeweiligen geheimen Daten aus der Liste aus.
+Nachdem Sie geheime Daten für eine Eigenschaft erstellt haben, finden Sie sie im **[!UICONTROL Secrets]** Arbeitsbereich. Um die Details von vorhandenen geheimen Daten zu bearbeiten, wählen Sie den Namen der jeweiligen geheimen Daten aus der Liste aus.
 
 ![Geheime Daten zur Bearbeitung auswählen](../../images/ui/event-forwarding/secrets/edit-secret.png)
 
@@ -248,21 +248,21 @@ Sie können einen Austausch von geheimen Daten über den Bearbeitungsbildschirm 
 
 | Typ von geheimen Daten | Protokoll erneut versuchen |
 | --- | --- |
-| [!UICONTROL Token] | Wählen Sie die Option **[!UICONTROL Geheime Daten austauschen]** aus, um den Austausch der geheimen Daten erneut zu versuchen. Dieses Steuerelement ist nur verfügbar, wenn eine Umgebung mit den jeweiligen geheimen Daten verknüpft ist. |
-| [!UICONTROL HTTP] | Wenn keine Umgebung mit den jeweiligen geheimen Daten verknüpft ist, wählen Sie die Option **[!UICONTROL Geheime Daten austauschen]** aus, um die Anmeldedaten in base64 auszutauschen. Wenn eine Umgebung angehängt ist, wählen Sie die Option **[!UICONTROL Geheimnis austauschen und bereitstellen]** aus, um zu Base64 zu wechseln und das Geheimnis bereitzustellen. |
-| [!UICONTROL OAuth 2] | Wählen Sie **[!UICONTROL Token erstellen]** aus, um die Anmeldedaten auszutauschen und ein Zugriffs-Token vom Authentifizierungsanbieter zurückzugeben. |
+| [!UICONTROL Token] | Wählen Sie **[!UICONTROL Exchange Secret]** aus, um den Austausch der geheimen Daten erneut zu versuchen. Dieses Steuerelement ist nur verfügbar, wenn eine Umgebung mit den jeweiligen geheimen Daten verknüpft ist. |
+| [!UICONTROL HTTP] | Wenn keine Umgebung mit den jeweiligen geheimen Daten verknüpft ist, wählen Sie die Option **[!UICONTROL Exchange Secret]** aus, um die Berechtigung in base64 auszutauschen. Wenn eine Umgebung angehängt ist, wählen Sie **[!UICONTROL Exchange and Deploy Secret]** auswählen aus, um zu base64 zu wechseln und die geheimen Daten bereitzustellen. |
+| [!UICONTROL OAuth 2] | Wählen Sie **[!UICONTROL Generate Token]** aus, um die Anmeldeinformationen auszutauschen und ein Zugriffs-Token vom Authentifizierungsanbieter zurückzugeben. |
 
 ## Löschen von geheimen Daten
 
-Um vorhandene geheime Daten im Arbeitsbereich **[!UICONTROL Geheime Daten]** zu löschen, aktivieren Sie zunächst das Kontrollkästchen neben dem Namen der jeweiligen geheimen Daten und wählen Sie anschließend die Option **[!UICONTROL Löschen]** aus.
+Um vorhandene geheime Daten im Arbeitsbereich **[!UICONTROL Secrets]** zu löschen, aktivieren Sie vor dem Klicken auf **[!UICONTROL Delete]** das Kontrollkästchen neben dem Namen.
 
 ![Geheime Daten löschen](../../images/ui/event-forwarding/secrets/delete.png)
 
 ## Verwenden von geheimen Daten bei der Ereignisweiterleitung
 
-Um bei der Ereignisweiterleitung geheime Daten zu verwenden, müssen Sie zunächst ein [Datenelement](../managing-resources/data-elements.md) erstellen, das die geheimen Daten an sich referenziert. Nach dem Speichern des Datenelements können Sie dieses in die [Regeln](../managing-resources/rules.md) zur Ereignisweiterleitung einbeziehen und diese Regeln zu einer [Bibliothek](../publishing/libraries.md) hinzufügen, die wiederum als [Build](../publishing/builds.md) für die Adobe-Server bereitgestellt werden kann.
+Um bei der Ereignisweiterleitung geheime Daten zu verwenden, müssen Sie zunächst ein [Datenelement](../managing-resources/data-elements.md) erstellen, das die geheimen Daten an sich verweist. Nach dem Speichern des Datenelements können Sie dieses in die [Regeln](../managing-resources/rules.md) zur Ereignisweiterleitung einbeziehen und diese Regeln zu einer [Bibliothek](../publishing/libraries.md) hinzufügen, die wiederum als [Build](../publishing/builds.md) für die Adobe-Server bereitgestellt werden kann.
 
-Wählen Sie beim Erstellen des Datenelements die **[!UICONTROL Core]**-Erweiterung und anschließend für den Datenelementtyp die Option **[!UICONTROL Geheime Daten]** aus. Das rechte Bedienfeld aktualisiert sich und bietet Dropdown-Steuerelemente zum Zuweisen von bis zu drei geheimen Daten zum Datenelement, und zwar für [!UICONTROL Entwicklung], [!UICONTROL Staging] und [!UICONTROL Produktion].
+Wählen Sie beim Erstellen des Datenelements die **[!UICONTROL Core]** Erweiterung und anschließend **[!UICONTROL Secret]** für den Datenelementtyp aus. Das rechte Bedienfeld aktualisiert sich und bietet Dropdown-Steuerelemente zum Zuweisen von bis zu drei geheimen Daten zum Datenelement, und zwar für [!UICONTROL Development], [!UICONTROL Staging] und [!UICONTROL Production].
 
 ![Datenelement](../../images/ui/event-forwarding/secrets/data-element.png)
 

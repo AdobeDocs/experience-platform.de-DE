@@ -5,8 +5,8 @@ description: Erfahren Sie, wie Sie Adobe Experience Platform über die Experienc
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
-ht-degree: 37%
+source-wordcount: '1202'
+ht-degree: 23%
 
 ---
 
@@ -26,11 +26,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ## Adobe Campaign Managed Cloud Services mit Experience Platform verbinden
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option **[!UICONTROL Sources]** , um auf den [!UICONTROL Sources]-Arbeitsbereich zuzugreifen. Der Bildschirm [!UICONTROL Catalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Sie können auch die Suchleiste verwenden, um die angezeigten Quellen einzugrenzen.
 
-Wählen Sie unter der Kategorie **[!UICONTROL Adobe]** die Option **[!UICONTROL Adobe Campaign Managed Cloud Services]** und dann **[!UICONTROL Daten hinzufügen]** aus.
+Wählen Sie unter der Kategorie **[!UICONTROL Adobe applications]** die Option **[!UICONTROL Adobe Campaign Managed Cloud Services]** und dann **[!UICONTROL Add data]** aus.
 
 ![Der Quellkatalog, in dem die Adobe Campaign Managed Cloud Services-Karte angezeigt wird.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -54,7 +54,7 @@ Wählen Sie unter der Kategorie **[!UICONTROL Adobe]** die Option **[!UICONTROL 
 >abstract="Der Name der in der Adobe Campaign-Datenbank definierten Entität."
 >text="Learn more in documentation"
 
-Der Schritt [!UICONTROL Daten auswählen] wird angezeigt und bietet Ihnen eine Schnittstelle zum Konfigurieren Ihrer [!UICONTROL Adobe Campaign-], [!UICONTROL Zielgruppen-] und [!UICONTROL Schemaname].
+Der Schritt [!UICONTROL Select data] wird angezeigt und bietet Ihnen eine Schnittstelle zum Konfigurieren Ihrer [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping] und [!UICONTROL Schema name].
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
@@ -64,15 +64,15 @@ Der Schritt [!UICONTROL Daten auswählen] wird angezeigt und bietet Ihnen eine S
 
 ![Eine Benutzeroberfläche, auf der Sie Ihre Adobe Campaign-Instanz, das Zielgruppen-Mapping und den Schemanamen konfigurieren können.](../../../../images/tutorials/create/campaign/select-data.png)
 
-Nachdem Sie Werte für Ihre Campaign-Instanz, das Zielgruppen-Mapping und den Schemanamen angegeben haben, wird der Bildschirm aktualisiert, um eine Vorschau Ihres Schemas sowie einen Beispieldatensatz anzuzeigen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+Nachdem Sie Werte für Ihre Campaign-Instanz, das Zielgruppen-Mapping und den Schemanamen angegeben haben, wird der Bildschirm aktualisiert, um eine Vorschau Ihres Schemas sowie einen Beispieldatensatz anzuzeigen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Eine Vorschau Ihrer Schemahierarchie sowie ein Beispiel für Ihren Datensatz](../../../../images/tutorials/create/campaign/preview.png)
 
 ### Verwenden eines vorhandenen Datensatzes
 
-Auf [!UICONTROL &#x200B; Seite „Datenflussdetails] können Sie auswählen, ob Sie einen vorhandenen Datensatz verwenden oder einen neuen Datensatz für Ihren Datenfluss konfigurieren möchten.
+Auf der Seite [!UICONTROL Dataflow detail] können Sie auswählen, ob Sie einen vorhandenen Datensatz verwenden oder einen neuen Datensatz für Ihren Datenfluss konfigurieren möchten.
 
-Um einen vorhandenen Datensatz zu verwenden, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Sie können einen vorhandenen Datensatz entweder über die Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü abrufen.
+Um einen vorhandenen Datensatz zu verwenden, wählen Sie **[!UICONTROL Existing dataset]** aus. Sie können einen vorhandenen Datensatz entweder über die Option [!UICONTROL Advanced search] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü abrufen.
 
 Wenn Sie einen Datensatz ausgewählt haben, geben Sie einen Namen für Ihren Datenfluss und eine optionale Beschreibung an.
 
@@ -80,7 +80,7 @@ Wenn Sie einen Datensatz ausgewählt haben, geben Sie einen Namen für Ihren Dat
 
 ### Verwenden eines neuen Datensatzes
 
-Um einen neuen Datensatz zu verwenden, wählen **[!UICONTROL Neuer Datensatz]** und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemata im Dropdown-Menü ein Schema zum Zuordnen aus. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+Um einen neuen Datensatz zu verwenden, wählen Sie **[!UICONTROL New dataset]** aus und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Advanced search] oder durch Scrollen durch die Liste der vorhandenen Schemata im Dropdown-Menü ein Schema zum Zuordnen aus. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Eine Schnittstelle, die die neue Datensatzoption anzeigt.](../../../../images/tutorials/create/campaign/new-dataset.png)
 
@@ -88,13 +88,13 @@ Um einen neuen Datensatz zu verwenden, wählen **[!UICONTROL Neuer Datensatz]** 
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status Ihres Datenflusses zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus und erhalten Sie Benachrichtigungen zum Status Ihres Datenflusses. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Quellen über die Benutzeroberfläche](../../alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Eine Auswahl verschiedener Warnhinweistypen, die Sie für Ihren Datenfluss aktivieren können.](../../../../images/tutorials/create/campaign/alerts.png)
 
 ### Zuordnen von Datenfeldern zu einem XDM-Schema
 
-Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
+Der Schritt [!UICONTROL Mapping] wird angezeigt und bietet Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema.
 
 Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle und berechneter Felder finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
@@ -104,18 +104,18 @@ Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnet
 >
 >Für jede Zielgruppe können Sie bis zu 20 Felder hinzufügen, die Adobe Campaign zugeordnet werden sollen. Sie können diese Beschränkung ändern, indem Sie den Wert der Option `NmsCdp_Aep_Sources_Max_Columns` im Ordner Administration > Plattform > Optionen des Campaign-Explorers aktualisieren.
 
-Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, klicken Sie auf **[!UICONTROL Weiter]**.
+Nachdem Ihre Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Eine Zuordnungsstruktur mit vier Quelldatenfeldern, die den entsprechenden XDM-Schemafeldern zugeordnet sind.](../../../../images/tutorials/create/campaign/mapping.png)
 
 ### Überprüfen des Datenflusses
 
-Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neuen Datenfluss überprüfen können, bevor er hergestellt wird. Die Details lassen sich wie folgt kategorisieren:
+Der Schritt **[!UICONTROL Review]** wird angezeigt, in dem Sie Ihren neuen Datenfluss überprüfen können, bevor er erstellt wird. Die Details lassen sich wie folgt kategorisieren:
 
-* **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
-* **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt an, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
+* **[!UICONTROL Connection]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
+* **[!UICONTROL Assign dataset & map fields]**: Zeigt an, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
 
-Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
+Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Finish]** aus und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
 
 ![Eine Überprüfungsseite mit Verbindungs- und Datensatzinformationen.](../../../../images/tutorials/create/campaign/review.png)
 
@@ -123,7 +123,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 Nachdem Ihr Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden, um Informationen über die erfassten Raten sowie erfolgreiche und fehlgeschlagene Batches anzuzeigen.
 
-Um mit der Anzeige Ihrer Datensatzaktivität zu beginnen, wählen Sie **[!UICONTROL Datenflüsse]** im Quellkatalog aus.
+Um mit der Anzeige Ihrer Datensatzaktivität zu beginnen, wählen Sie **[!UICONTROL Dataflows]** im Quellkatalog aus.
 
 ![Die Seite mit dem Quellkatalog, auf der die Kopfzeile „Datenflüsse“ ausgewählt ist.](../../../../images/tutorials/create/campaign/dataflows.png)
 

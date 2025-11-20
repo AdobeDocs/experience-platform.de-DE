@@ -36,7 +36,7 @@ Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dok
 >Beim Erstellen eines Analytics-Quell-Datenflusses in einer Produktions-Sandbox werden zwei Datenflüsse erstellt:
 >
 >* Ein Datenfluss, der eine 13-monatige Aufstockung historischer Report Suite-Daten in den Data Lake durchführt. Dieser Datenfluss endet, wenn die Aufstockung abgeschlossen ist.
->* Ein Datenfluss, der Live-Daten an den Data Lake und an [!DNL Real-Time Customer Profile] sendet. Dieser Datenfluss läuft kontinuierlich.
+>* Ein Datenfluss, der Live-Daten an den Data Lake und an [!DNL Real-Time Customer Profile] sendet. Dieser Datenfluss wird kontinuierlich ausgeführt.
 
 Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option **[!UICONTROL Sources]** , um auf den [!UICONTROL Sources] Arbeitsbereich zuzugreifen. Wählen Sie in der Kategorie *[!UICONTROL Adobe applications]* die Karte Adobe Analytics und dann **[!UICONTROL Add data]** aus.
 
@@ -46,12 +46,12 @@ Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Nav
 
 >[!IMPORTANT]
 >
->* Die auf dem Bildschirm aufgelisteten Report Suites können aus verschiedenen Regionen stammen. Sie sind dafür verantwortlich, sich über die Einschränkungen und Pflichten Ihrer Daten und deren regionenübergreifende Verwendung in Adobe Experience Platform zu informieren. Bitte stellen Sie sicher, dass dies von Ihrer Firma erlaubt ist.
->* Daten aus mehreren Report Suites können nur dann für das Echtzeit-Kundenprofil aktiviert werden, wenn keine Datenkonflikte vorliegen, z. B. zwei benutzerdefinierte Eigenschaften (eVars, Listen und Props), die eine andere Bedeutung haben.
+>* Die auf dem Bildschirm aufgelisteten Report Suites können aus verschiedenen Regionen stammen. Sie sind dafür verantwortlich, sich über die Einschränkungen und Pflichten Ihrer Daten und deren regionenübergreifende Verwendung in Adobe Experience Platform zu informieren. Bitte stellen Sie sicher, dass Ihr Firma dies zulässt.
+>* Daten aus mehreren Report Suites können nur dann für das Real-Zeit Kundenprofil aktiviert werden, wenn keine Datenkonflikte vorliegen, z. B. zwei benutzerdefinierte Eigenschaften (eVars, Listen und Eigenschaften), die unterschiedliche Bedeutungen haben.
 
-Eine Report Suite ist ein Container mit Daten, die die Grundlage für das Analytics-Reporting bilden. Eine Organisation kann über viele Report Suites verfügen, die jeweils unterschiedliche Datensätze enthalten.
+Bei einer Report Suite handelt es sich um eine Container von Daten, die die Grundlage für Analytics Berichte bilden. Eine Organisation kann über viele Report Suites verfügen, die jeweils unterschiedliche Datensätze enthalten.
 
-Sie können Report Suites aus jeder Region (Vereinigte Staaten, Vereinigtes Königreich oder Singapur) aufnehmen, sofern sie derselben Organisation zugeordnet sind wie die Experience Platform-Sandbox-Instanz, in der die Quellverbindung erstellt wird. Eine Report Suite kann nur mit einem einzigen aktiven Datenfluss aufgenommen werden. Wenn eine Report Suite grau ist und nicht ausgewählt werden kann, wurde sie bereits aufgenommen, entweder in der verwendeten Sandbox oder in einer anderen Sandbox.
+Sie können Report Suites aus jedem Region (USA, Vereinigtes Königreich oder Singapur) erfassen, solange sie derselben Organisation zugeordnet sind wie die Experience Platform Sandbox-Instanz, in der die Quellverbindung erstellt wird. Ein Report Suite kann mit nur einem einzigen aktiven Datenfluss erfasst werden. Wenn eine Report Suite grau ist und nicht ausgewählt werden kann, wurde sie bereits aufgenommen, entweder in der von Ihnen verwendeten Sandbox oder in einer anderen Sandbox.
 
 Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report Suites in dieselbe Sandbox zu bringen. Wenn die Report Suites unterschiedliche Schemata für Variablen aufweisen (z. B. eVars oder Ereignisse), sollten sie bestimmten Feldern in den benutzerdefinierten Feldergruppen zugeordnet werden, um Datenkonflikte mithilfe der [Datenvorbereitung](../../../../../data-prep/ui/mapping.md) zu vermeiden. Report Suites können nur zu einer einzigen Sandbox hinzugefügt werden.
 
@@ -127,7 +127,7 @@ Mit Datenvorbereitungsfunktionen können Sie neue benutzerdefinierte Zuordnungen
 * **[!UICONTROL Add new mapping]**: Um ein neues Quellfeld und eine neue Zielfeld-Zuordnung hinzuzufügen, wählen Sie **[!UICONTROL Add new mapping]** aus.
 * **[!UICONTROL Add calculated field]**: Bei Bedarf können Sie **[!UICONTROL Add calculated field]** auswählen, um ein neues berechnetes Feld für Ihre Zuordnungen zu erstellen.
 * **[!UICONTROL Import mapping]**: Sie können die manuelle Konfigurationszeit Ihres Datenaufnahmevorgangs reduzieren und Fehler begrenzen, indem Sie die Funktion „Mapping importieren“ der Datenvorbereitung verwenden. Wählen Sie **[!UICONTROL Import mapping]** aus, um Zuordnungen aus einem vorhandenen Fluss oder aus einer exportierten Datei zu importieren. Weitere Informationen finden Sie [Handbuch zum Importieren und Exportieren von Zuordnungen](../../../../../data-prep/ui/mapping.md#import-mapping).
-* **[!UICONTROL Download template]**: Sie können auch eine CSV-Kopie Ihrer Zuordnungen herunterladen und Ihre Zuordnungen auf Ihrem lokalen Gerät konfigurieren. Wählen Sie **[!UICONTROL Download template]** aus, um eine CSV-Kopie Ihrer Zuordnungen herunterzuladen. Sie müssen sicherstellen, dass Sie nur die Felder verwenden, die in Ihrer Quelldatei und im Zielschema bereitgestellt werden.
+* **[!UICONTROL Download template]**: Sie können auch eine CSV Kopie Ihrer Mappings herunterladen und Ihre Mappings in Ihrem lokalen Device konfigurieren. Wählen Sie **[!UICONTROL Download template]** aus, um eine CSV-Kopie Ihrer Zuordnungen herunterzuladen. Sie müssen sicherstellen, dass Sie nur die Felder verwenden, die in Ihrer Quelldatei und im Zielschema bereitgestellt werden.
 
 Weitere Informationen zur Datenvorbereitung finden Sie in der folgenden Dokumentation.
 
@@ -187,10 +187,10 @@ Nachdem Sie die Zuordnungen für Ihre Analytics Report Suite-Daten abgeschlossen
 * Die Datenvorbereitung wird sowohl auf Streaming- als auch auf Batch-Aufnahmepfade angewendet. Wenn Sie eine vorhandene Datenvorbereitungskonfiguration ändern, werden diese Änderungen auf neue eingehende Daten über Streaming- und Batch-Erfassungswege hinweg angewendet.
    * Datenvorbereitungskonfigurationen gelten jedoch nicht für Daten, die bereits in Experience Platform aufgenommen wurden, unabhängig davon, ob es sich um Streaming- oder Batch-Daten handelt.
 * Standardattribute von Analytics werden immer automatisch zugeordnet. Daher können Sie keine Umwandlungen auf Standardattribute anwenden.
-   * Sie können jedoch Standardattribute herausfiltern, solange sie nicht in Identity Service oder Profil erforderlich sind.
-* Zum Filtern von erforderlichen Feldern und Identitätsfeldern kann keine Filterung auf Spaltenebene verwendet werden.
-* Sie können zwar sekundäre Identitäten herausfiltern, insbesondere AAID und AACustomID, aber keine ECID herausfiltern.
-* Wenn ein Umwandlungsfehler auftritt, führt die entsprechende Spalte zu NULL.
+   * Sie können jedoch Standardattribute herausfiltern, solange sie nicht in Identity Dienst oder im Profil benötigt werden.
+* Sie können die Filterung auf Spaltenebene nicht verwenden, um erforderliche Felder und Identitätsfelder zu filtern.
+* Sie können zwar sekundäre Identitäten, insbesondere AAID und AACustomID, herausfiltern, aber nicht ECID.
+* Wenn ein Umwandlung Fehler auftritt, ergibt das entsprechende Ergebnis in der Spalte NULL.
 
 >[!ENDSHADEBOX]
 
@@ -264,16 +264,16 @@ Der Filter gilt nur, wenn eine Identität als sekundär markiert ist. Wenn Ident
 
 Der Schritt **[!UICONTROL Dataflow detail]** wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Wählen Sie **[!UICONTROL Next]** aus, wenn Sie fertig sind.
 
-![Die Datenflussdetailschnittstelle. des Aufnahme-Workflows zurück.](../../../../images/tutorials/create/analytics/dataflow-detail.png)
+![Die Datenfluss-Detail-Schnittstelle. des Aufnahme-Workflows zurück.](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
 ### Überprüfung
 
 Der Schritt [!UICONTROL Review] wird angezeigt, in dem Sie Ihren neuen Analytics-Datenfluss überprüfen können, bevor er erstellt wird. Details der Verbindung werden nach Kategorien gruppiert, darunter:
 
 * [!UICONTROL Connection]: Zeigt die Quellplattform der Verbindung an.
-* [!UICONTROL Data type]: Zeigt die ausgewählte Report Suite und die zugehörige Report Suite-ID an.
+* [!UICONTROL Data type]: Zeigt die ausgewählte Melden Suite und die zugehörige ID der Melden Suite an.
 
-![Die Überprüfungsoberfläche des Aufnahme-Workflows.](../../../../images/tutorials/create/analytics/review.png)
+![Die Überprüfungsoberfläche der Aufnahme arbeitsablauf.](../../../../images/tutorials/create/analytics/review.png)
 
 >[!TIP]
 >
@@ -303,12 +303,12 @@ Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenz
 
 >[!NOTE]
 >
->Sie können einen Analytics-Datenfluss nicht deaktivieren. Um den Fluss der Analytics-Daten zu stoppen, müssen Sie **Datenfluss** löschen.
+>Sie können einen Analytics Datenfluss nicht deaktivieren. Um den Datenfluss Analytics zu stoppen, müssen **Sie den Datenfluss vollständig löschen** .
 
-Um Ihren Analytics-Datenfluss zu löschen, wählen Sie **[!UICONTROL Dataflows]** in der oberen Kopfzeile des Arbeitsbereichs Quellen aus. Suchen Sie auf der Seite Datenflüsse den Analytics-Datenfluss, den Sie löschen möchten, und wählen Sie dann die Auslassungspunkte (`...`) daneben aus. Verwenden Sie anschließend das Dropdown-Menü und wählen Sie **[!UICONTROL Delete]** aus.
+Um Ihren Analytics Dataflow zu löschen, wählen Sie **[!UICONTROL Dataflows]** aus der oberen Kopfzeile der Quellen Arbeitsbereich. Verwenden Sie die Seite &quot;Dataflows&quot;, um den Analytics Dataflow zu suchen, den Sie löschen möchten, und wählen Sie dann die Auslassungspunkte (`...`) daneben aus. Weiter, verwenden Sie das Dropdown-Menü und wählen Sie **[!UICONTROL Delete]** aus.
 
-* Durch das Löschen des Live Analytics-Datenflusses wird auch der zugrunde liegende Datensatz gelöscht.
-* Durch das Löschen des Analytics-Datenflusses zur Aufstockung wird nicht der zugrunde liegende Datensatz gelöscht, sondern der Aufstockungsprozess für die entsprechende Report Suite gestoppt. Wenn Sie den Aufstockungs-Datenfluss löschen, können aufgenommene Daten weiterhin über den Datensatz angezeigt werden.
+* Wenn Sie den Live-Analytics-Datenfluss löschen, wird auch der zugrunde liegende Datensatz gelöscht.
+* Durch das Löschen des Aufstockung Analytics Datenflusses wird die zugrunde liegende Datensatz nicht gelöscht, sondern der Aufstockung-Prozess für die entsprechende Report Suite gestoppt. Wenn Sie den Aufstockung Dataflow löschen, können erfasste Daten weiterhin über die Datensatz angezeigt werden.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

@@ -6,8 +6,8 @@ description: Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-A
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
-ht-degree: 95%
+source-wordcount: '1207'
+ht-degree: 92%
 
 ---
 
@@ -18,16 +18,16 @@ ht-degree: 95%
 >title="Beschränken der Datennutzung"
 >abstract="Der Datennutzungsrichtlinientyp wertet spezifische Marketing-Aktionen aus, die auf Data-Governance-Labels angewendet werden, um die Datennutzung für Marketing-Aktivitäten zu beschränken."
 
-Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
+Damit Datennutzungs-Labels die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
 
 Es sind zwei Richtlinientypen verfügbar:
 
-* **[!UICONTROL Data Governance-Richtlinie]**: Zum Beschränken der Datenaktivierung auf Grundlage der durchgeführten Marketing-Aktion und der Datennutzungskennzeichnungen der betreffenden Daten
-* **[!UICONTROL Einverständnisrichtlinie]**: Zum Filtern der Profile, die für [Ziele](../../destinations/home.md) auf Grundlage der Zustimmung oder Voreinstellungen Ihrer Kunden aktiviert werden können
+* **[!UICONTROL Data governance policy]**: Beschränken Sie die Datenaktivierung auf der Grundlage der durchgeführten Marketing-Aktion und der von den betreffenden Daten getragenen Datennutzungskennzeichnungen.
+* **[!UICONTROL Consent policy]**: Filtern Sie die Profile, die für ([) ](../../destinations/home.md) aktiviert werden können, basierend auf der Zustimmung oder den Voreinstellungen Ihrer Kunden
 
 >[!NOTE]
 >
->Datennutzungsrichtlinien sind nicht mit [Zugriffssteuerungsrichtlinien“ zu verwechseln](../../access-control/abac/end-to-end-guide.md#policy) die bestimmen, ob bestimmte Experience Platform-Benutzende in Ihrer Organisation auf bestimmte Datenfelder zugreifen können, und werden über die Registerkarte [!UICONTROL Berechtigungen] konfiguriert.
+>Datennutzungsrichtlinien sind nicht mit [Zugriffssteuerungsrichtlinien“ zu verwechseln](../../access-control/abac/end-to-end-guide.md#policy) die bestimmen, ob bestimmte Experience Platform-Benutzende in Ihrer Organisation auf bestimmte Datenfelder zugreifen können, und werden über die Registerkarte [!UICONTROL Permissions] konfiguriert.
 
 Dieses Dokument bietet eine allgemeine Übersicht über die Richtlinien zur Datennutzung und enthält Links zu weiteren Dokumentationen zum Arbeiten mit Richtlinien in der Benutzeroberfläche oder API.
 
@@ -38,7 +38,7 @@ Marketing-Aktionen (auch als Marketing-Nutzungsszenarien bezeichnet) im Rahmen d
 1. Eine bestimmte Marketing-Aktion
 2. Die Bedingungen, unter denen diese Aktion nicht durchgeführt werden darf
 
-Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. persönliche identifizierbare Informationen (PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine Kennzeichnung „I“ (Identitätsdaten) enthält, erhalten Sie eine Antwort von [!DNL Policy Service], in der Sie darauf hingewiesen werden, dass eine Datennutzungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. persönliche identifizierbare Informationen (PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der ein Label „I“ (Identitätsdaten) enthält, erhalten Sie eine Antwort von [!DNL Policy Service], in der Sie darauf hingewiesen werden, dass eine Datennutzungsrichtlinie verletzt wurde.
 
 >[!NOTE]
 >
@@ -57,12 +57,12 @@ Eine Liste der [von Adobe definierten verfügbaren Marketing-Aktionen](#core-act
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=de).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Datennutzungsrichtlinien verwalten {#manage}
 
-Sobald die Datennutzungsbeschriftungen angewendet wurden, können Datenverwalter die [!DNL Policy Service]-API oder die [!DNL Experience Platform]-Benutzeroberfläche verwenden, um Richtlinien zu verwalten und auszuwerten, die mit Marketing-Aktionen in Verbindung stehen, welche Daten mit Datennutzungsbeschriftungen betreffen. Sie können Richtlinien erstellen und aktualisieren, den Status einer Richtlinie bestimmen und mit Marketing-Aktionen arbeiten, um auszuwerten, ob eine bestimmte Aktion eine Datennutzungsrichtlinie verletzt.
+Sobald die Datennutzungs-Labels angewendet wurden, können Datenverwalter die [!DNL Policy Service]-API oder die [!DNL Experience Platform]-Benutzeroberfläche verwenden, um Richtlinien zu verwalten und auszuwerten, die mit Marketing-Aktionen in Verbindung stehen, welche Daten mit Datennutzungs-Labels betreffen. Sie können Richtlinien erstellen und aktualisieren, den Status einer Richtlinie bestimmen und mit Marketing-Aktionen arbeiten, um auszuwerten, ob eine bestimmte Aktion eine Datennutzungsrichtlinie verletzt.
 
 >[!IMPORTANT]
 >
@@ -99,5 +99,5 @@ Die folgende Tabelle beschreibt die wichtigsten Marketing-Aktionen, die von Adob
 | Exportieren an Dritte | Eine Aktion, die Daten an Prozessoren und Entitäten exportiert, die keine direkten Beziehungen zu Kunden haben. Viele Datenanbieter haben Vertragsbedingungen, die den Export von Daten von dort, wo sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von Social Media erhalten, oft durch deren Verträge eingeschränkt. |
 | Onsite-Werbung | Eine Aktion, die Daten für Anzeigen auf Websites verwendet, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder in Programmen Ihres Unternehmens, oder zur Messung des Versands und der Effektivität solcher Anzeigen dient. |
 | Onsite-Personalisierung | Eine Aktion, die Daten zur Personalisierung von Inhalten in einer Website verwendet. Bei der Onsite-Personalisierung geht es um alle Daten, die verwendet werden, um Rückschlüsse auf die Interessen der Benutzer zu ziehen, und darum, auszuwählen, welche Inhalte oder Anzeigen auf der Grundlage dieser Rückschlüsse bereitgestellt werden. |
-| Segmentübereinstimmung | Eine Aktion, bei der Daten für Adobe Experience Platform Segment Match verwendet werden, mit der zwei oder mehr Experience Platform-Benutzende Zielgruppendaten austauschen können. Durch Aktivierung von Richtlinien, die auf diese Aktion verweisen, können Sie einschränken, welche Daten für die Segmentübereinstimmung verwendet werden. Wenn beispielsweise die Kernrichtlinie „Datenfreigabe beschränken“ aktiviert ist, können keine Daten mit der Beschriftung [C11](../labels/reference.md#c11) für die Segmentübereinstimmung verwendet werden. |
+| Segmentübereinstimmung | Eine Aktion, bei der Daten für Adobe Experience Platform Segment Match verwendet werden, mit der zwei oder mehr Experience Platform-Benutzende Zielgruppendaten austauschen können. Durch Aktivierung von Richtlinien, die auf diese Aktion verweisen, können Sie einschränken, welche Daten für die Segmentübereinstimmung verwendet werden. Wenn beispielsweise die Kernrichtlinie „Datenfreigabe beschränken“ aktiviert ist, können keine Daten mit dem Label [C11](../labels/reference.md#c11) für die Segmentübereinstimmung verwendet werden. |
 | Personalisierung für eine einzelne Identität | Eine Aktion, bei der eine einzelne Identität zu Personalisierungszwecken verwendet werden muss, anstatt Identitäten aus mehreren Quellen identische Inhalte zu bieten. |

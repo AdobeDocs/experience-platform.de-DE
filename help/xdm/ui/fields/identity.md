@@ -6,7 +6,7 @@ description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Pla
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '657'
 ht-degree: 15%
 
 ---
@@ -30,19 +30,19 @@ Identitätsfelder sind eine wichtige Komponente bei der Erstellung von Kundenide
 >title="Einschränkungen der primären Identität"
 >abstract="Dieses Schema verwendet eine Feldergruppe, die zur Verwendung in einer bestimmten Quellverbindung vorgesehen ist. Für diese Verbindung muss identityMap als primäre Identität verwendet werden, weshalb sie automatisch festgelegt ist."
 
-Beim [Definieren eines neuen Felds](./overview.md#define) können Sie es in der Benutzeroberfläche als Identitätsfeld festlegen, indem Sie das Kontrollkästchen **[!UICONTROL Identität]** in der rechten Leiste auswählen.
+Beim [Definieren eines neuen Felds](./overview.md#define) können Sie es in der Benutzeroberfläche als Identitätsfeld festlegen, indem Sie das Kontrollkästchen **[!UICONTROL Identity]** in der rechten Leiste aktivieren.
 
 ![](../../images/ui/fields/special/identity.png)
 
-Zusätzliche Steuerelemente werden angezeigt, nachdem Sie das Kontrollkästchen aktiviert haben. Wenn Sie möchten, dass dieses Feld die primäre Identität für das Schema ist, aktivieren Sie das Kontrollkästchen **[!UICONTROL Primäre]**.
+Zusätzliche Steuerelemente werden angezeigt, nachdem Sie das Kontrollkästchen aktiviert haben. Wenn Sie möchten, dass dieses Feld die primäre Identität für das Schema ist, aktivieren Sie das Kontrollkästchen **[!UICONTROL Primary identity]** .
 
 >[!NOTE]
 >
 >Für ein einzelnes Schema können viele Identitätsfelder definiert sein, es kann jedoch nur eine primäre Identität vorhanden sein. Alle Identitätsfelder (primär oder anderweitig) tragen zum Identitätsdiagramm für einen einzelnen Kunden bei, aber das Echtzeit-Kundenprofil verwendet beim Zusammenführen von Datenfragmenten nur die primäre Identität als Datenquelle. Wenn Sie ein Schema für die Verwendung im Profil aktivieren möchten, muss für das Schema eine primäre Identität definiert sein.
 
-Wählen **[!UICONTROL unter]** Identity-Namespace) im Dropdown-Menü den entsprechenden Namespace für das Identitätsfeld aus. Die von Adobe bereitgestellten Standard-Namespaces werden zusammen mit den von Ihrem Unternehmen definierten benutzerdefinierten Namespaces aufgelistet.
+Wählen Sie unter **[!UICONTROL Identity namespace]** im Dropdown-Menü den entsprechenden Namespace für das Identitätsfeld aus. Die von Adobe bereitgestellten Standard-Namespaces werden zusammen mit den von Ihrem Unternehmen definierten benutzerdefinierten Namespaces aufgelistet.
 
-Wenn Sie fertig sind, wählen **[!UICONTROL Übernehmen]** aus, um die Änderung auf das Schema anzuwenden.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Apply]** aus, um die Änderung auf das Schema anzuwenden.
 
 >[!IMPORTANT]
 >
@@ -52,7 +52,7 @@ Wenn Sie fertig sind, wählen **[!UICONTROL Übernehmen]** aus, um die Änderung
 
 Die Arbeitsfläche wird aktualisiert, um die Änderungen widerzuspiegeln, wobei das ausgewählte Feld ein Fingerabdrucksymbol (![](/help/images/icons/identity-service.png)) erhält, um es als Identität zu kennzeichnen. In der linken Leiste wird das Identitätsfeld jetzt unter dem Namen der Klasse oder Schemafeldgruppe aufgeführt, die das Feld für das Schema bereitstellt.
 
-Wenn das Feld auch als primäre Identität festgelegt wurde, wird es auch unter **[!UICONTROL Erforderliche Felder]** in der linken Leiste aufgeführt. Wenn das Identitätsfeld in der Schemastruktur verschachtelt ist, werden alle übergeordneten Felder ebenfalls nach Bedarf aufgelistet.
+Wenn das Feld auch als primäre Identität festgelegt wurde, wird es ebenfalls in der linken Leiste unter **[!UICONTROL Required fields]** aufgeführt. Wenn das Identitätsfeld in der Schemastruktur verschachtelt ist, werden alle übergeordneten Felder ebenfalls nach Bedarf aufgelistet.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 

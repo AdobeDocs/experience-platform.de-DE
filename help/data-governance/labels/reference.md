@@ -74,7 +74,7 @@ Dieses Label wird verwendet, um die Verwendung von Interessentendaten zu steuern
 | --- | --- |
 | **Drittanbieter** | Drittanbieterdaten sind Daten, die Ihnen von einem Drittanbieter bereitgestellt werden. Ein Drittanbieter ist eine Entität, die mit Ihrem Unternehmen eine Vereinbarung getroffen hat, die Sie zum Zugriff auf, zur Verwendung, zur Anzeige und zur Übermittlung der Daten des Drittanbieters in Verbindung mit Experience Platform autorisiert. |
 | **Anreicherung durch Dritte** | Daten, die von einer Drittanbieterorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Kennzeichnung sollte auf Drittanbieterdaten angewendet werden, die zur Anreicherung von Erstanbieterprofilen verwendet werden. |
-| **Drittanbieter-Prospektion** | Daten, die von einer Drittanbieterorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Kennzeichnung sollte auf Drittanbieterdaten angewendet werden, die zusätzlich zum Trichter für die Kundenakquise an neue Kunden verwendet werden. |
+| **Drittanbieter-Prospektion** | Daten, die von einer Drittanbieterorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Kennzeichnung sollte auf Drittanbieterdaten angewendet werden, die für die Erschließung neuer Kunden durch funnel verwendet werden. |
 
 ## Anhang
 
@@ -150,7 +150,7 @@ Einige Data-Governance-Richtlinien beschränken die Verwendung von Daten aus zus
 
 #### C11 {#c11}
 
-Mit Adobe Experience Platform Segment Match können Sie aus Experience Platform generierte Zielgruppen mit Datenschutz- und Einverständnisvoreinstellungen abgleichen, was eine erweiterte Profilerstellung und nachgelagerte Einblicke ermöglicht. Das Label „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und das C11-Label entsprechend hinzugefügt haben, wird das Label automatisch vom Segment Match-Arbeitsablauf erzwungen.
+Mit Adobe Experience Platform Segment Match können Sie aus Experience Platform generierte Zielgruppen mit Datenschutz- und Einverständnisvoreinstellungen abgleichen, was eine erweiterte Profilerstellung und nachgelagerte Einblicke ermöglicht. Das Label „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und das C11-Label entsprechend hinzugefügt haben, wird das Label automatisch vom Segment Match-Workflow erzwungen.
 
 #### C12 {#c12}
 

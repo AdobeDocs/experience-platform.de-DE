@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie mit der Funktion „Berechnete Felder“ Umwa
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1604'
 ht-degree: 8%
 
 ---
@@ -31,7 +31,7 @@ Um verschiedene Umwandlungen an Daten durchzuführen, die in Cloud-Speicher-Ziel
 
 So verwenden Sie berechnete Felder für Datenumwandlungen:
 
-1. [Verbinden](/help/destinations/ui/connect-destination.md) mit einem gewünschten Cloud-Speicher-Ziel. Wenn Sie eine Verbindung zum gewünschten Cloud-Ziel herstellen, schalten Sie die Option **[!UICONTROL Arrays, Karten, Objekte exportieren]** [aus](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Verbinden](/help/destinations/ui/connect-destination.md) mit einem gewünschten Cloud-Speicher-Ziel. Wenn Sie eine Verbindung zum gewünschten Cloud-Ziel herstellen, schalten Sie die **[!UICONTROL Export arrays, maps, objects]** [Option aus](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Führen Sie die [Aktivierungsschritte für Cloud-Speicher](/help/destinations/ui/activate-batch-profile-destinations.md)Ziele aus und gelangen Sie zum Schritt [Zuordnung](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Arbeiten mit berechneten Feldern {#how-to-export-calculated-fields}
@@ -50,11 +50,11 @@ So verwenden Sie berechnete Felder für Datenumwandlungen:
 >
 >Wenn Sie mit berechneten Feldern arbeiten, müssen Sie zusätzlich zu den von Ihnen angewendeten Datenumwandlungsfunktionen auch die `array_to_string` verwenden, um Felder zu einer Zeichenfolge zu verketten.
 
-Wählen Sie im Zuordnungsschritt des Aktivierungs-Workflows für Cloud-Speicher-Ziele **[!UICONTROL Berechnetes Feld hinzufügen]** aus.
+Wählen Sie im Zuordnungsschritt des Aktivierungs-Workflows für Cloud-Speicher-Ziele **[!UICONTROL Add calculated field]** aus.
 
 >[!TIP]
 >
->Das **[!UICONTROL Berechnetes Feld hinzufügen]**-Steuerelement ist für Zielverbindungen deaktiviert, bei denen das **[!UICONTROL Exportieren von Arrays, Zuordnungen und]**&quot; deaktiviert wurde. [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
+>Das **[!UICONTROL Add calculated field]**-Steuerelement ist für Zielverbindungen deaktiviert, bei denen das **[!UICONTROL Export arrays, maps, and objects]**-Steuerelement deaktiviert wurde. [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
 ![Berechnetes Feld hinzufügen, das im Zuordnungsschritt des Batch-Aktivierungs-Workflows hervorgehoben ist.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
@@ -66,17 +66,17 @@ Verwenden Sie beispielsweise die Funktion `array_to_string` im Feld `organizatio
 
 ![Modales Fenster der berechneten Feldfunktionalität mit ausgewählter Array-zu-String-Funktion.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
-Wählen Sie **[!UICONTROL Speichern]** aus, um das berechnete Feld beizubehalten und zum Zuordnungsschritt zurückzukehren.
+Wählen Sie **[!UICONTROL Save]** aus, um das berechnete Feld beizubehalten und zum Zuordnungsschritt zurückzukehren.
 
 ![Modales Fenster der berechneten Feldfunktion mit ausgewählter Array-zu-String-Funktion und hervorgehobenem Steuerelement „Speichern“.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
-Füllen Sie im Zuordnungsschritt des Workflows das Feld **[!UICONTROL Zielfeld]** mit dem Wert der Spaltenüberschrift aus, die Sie für dieses Feld in den exportierten Dateien anzeigen möchten.
+Füllen Sie im Zuordnungsschritt des Workflows die **[!UICONTROL Target field]** mit dem Wert der Spaltenüberschrift aus, die Sie für dieses Feld in den exportierten Dateien angeben möchten.
 
 ![Zuordnungsschritt mit hervorgehobenem Zielfeld.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![Zielfeld 2 auswählen](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
-Wenn Sie bereit sind **[!UICONTROL wählen Sie]** Weiter) aus, um mit dem nächsten Schritt des Aktivierungs-Workflows fortzufahren.
+Wenn Sie bereit sind, wählen Sie **[!UICONTROL Next]** aus, um mit dem nächsten Schritt des Aktivierungs-Workflows fortzufahren.
 
 ![Zuordnungsschritt mit hervorgehobenem Zielfeld und ausgefülltem Zielwert.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->Im Gegensatz zu den anderen auf dieser Seite beschriebenen Funktionen *Sie zum Exportieren einzelner Elemente eines Arrays* das Steuerelement **[!UICONTROL Berechnete Felder]** in der Benutzeroberfläche verwenden.
+>Im Gegensatz zu den anderen auf dieser Seite beschriebenen Funktionen *Sie zum Exportieren einzelner Elemente eines Arrays* das **[!UICONTROL Calculated fields]**-Steuerelement in der Benutzeroberfläche verwenden (nicht).
 
 Sie können auf einen Index eines Arrays zugreifen, um ein einzelnes Element aus dem Array zu exportieren. Beispiel: Wenn Sie ähnlich wie im obigen Beispiel für die Funktion `size_of` nur beim ersten Kauf eines bestimmten Produkts auf zugreifen und es exportieren möchten, können Sie `purchaseTime[0]` verwenden, um das erste Element des Zeitstempels zu exportieren, `purchaseTime[1]` das zweite Element des Zeitstempels zu exportieren, `purchaseTime[2]` das dritte Element des Zeitstempels zu exportieren usw.
 

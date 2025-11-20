@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie in Adobe Real-Time Customer Data Platform B2B
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1771'
+source-wordcount: '1726'
 ht-degree: 14%
 
 ---
@@ -55,7 +55,7 @@ Schemabeziehungen werden durch ein dediziertes Feld innerhalb eines **Quellschem
 
 Um eine Beziehung herzustellen, muss das Referenzschema über eine definierte primäre Identität verfügen. Beachten Sie beim Festlegen einer Primäridentität für eine B2B-Entität, dass sich zeichenfolgenbasierte Entitäts-IDs überschneiden können, wenn Sie sie über verschiedene Systeme oder Standorte hinweg erfassen, was zu Datenkonflikten in Experience Platform führen könnte.
 
-Aus diesem Grund enthalten alle standardmäßigen B2B-Klassen „Schlüssel“-Felder, die dem Datentyp [[!UICONTROL B2B]Source&quot; &#x200B;](../data-types/b2b-source.md). Dieser Datentyp stellt Felder für eine Zeichenfolgenkennung für die B2B-Entität zusammen mit anderen kontextuellen Informationen über die Quelle der Kennung bereit. Eines dieser Felder verkettet `sourceKey` die Werte der anderen Felder im Datentyp, um eine völlig eindeutige Kennung für die Entität zu erzeugen. Dieses Feld sollte immer als primäre Identität für B2B-Entitätsschemata verwendet werden.
+Deshalb enthalten alle standardmäßigen B2B-Klassen „Schlüssel“-Felder, die dem [[!UICONTROL B2B Source] Datentyp entsprechen](../data-types/b2b-source.md). Dieser Datentyp stellt Felder für eine Zeichenfolgenkennung für die B2B-Entität zusammen mit anderen kontextuellen Informationen über die Quelle der Kennung bereit. Eines dieser Felder verkettet `sourceKey` die Werte der anderen Felder im Datentyp, um eine völlig eindeutige Kennung für die Entität zu erzeugen. Dieses Feld sollte immer als primäre Identität für B2B-Entitätsschemata verwendet werden.
 
 ![sourceKey-Feld](../images/tutorials/relationship-b2b/sourcekey.png)
 
@@ -67,15 +67,15 @@ Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen 
 
 ### Opportunities-Schema
 
-Das Quellschema &quot;[!DNL Opportunities]&quot; basiert auf der Klasse [!UICONTROL XDM Business Opportunity] . Eines der von der Klasse bereitgestellten Felder, `opportunityKey`, dient als Bezeichner für das Schema. Insbesondere wird das `sourceKey` unter dem `opportunityKey` als primäre Identität des Schemas unter einem benutzerdefinierten Namespace namens [!DNL B2B Opportunity] festgelegt.
+Das Quellschema &quot;[!DNL Opportunities]&quot; basiert auf der [!UICONTROL XDM Business Opportunity]. Eines der von der Klasse bereitgestellten Felder, `opportunityKey`, dient als Bezeichner für das Schema. Insbesondere wird das `sourceKey` unter dem `opportunityKey` als primäre Identität des Schemas unter einem benutzerdefinierten Namespace namens [!DNL B2B Opportunity] festgelegt.
 
-Wie unter **[!UICONTROL Feldeigenschaften]** zu sehen, wurde dieses Schema für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert.
+Wie unter **[!UICONTROL Field Properties]** zu sehen, wurde dieses Schema für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert.
 
 ![Das Opportunities-Schema im Schema-Editor mit dem hervorgehobenen OpportunityKey-Objekt und dem hervorgehobenen Umschalter „Für Profil aktivieren“.](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### Schema [!DNL Accounts]
 
-Das Referenzschema &quot;[!DNL Accounts]&quot; basiert auf der Klasse [!UICONTROL XDM-]&quot;. Das Feld `accountKey` auf der Stammebene enthält den `sourceKey`, der als primäre Identität unter einem benutzerdefinierten Namespace namens [!DNL B2B Account] fungiert. Dieses Schema wurde auch für die Verwendung im Profil aktiviert.
+Das Referenzschema &quot;[!DNL Accounts]&quot; basiert auf der [!UICONTROL XDM Account]. Das Feld `accountKey` auf der Stammebene enthält den `sourceKey`, der als primäre Identität unter einem benutzerdefinierten Namespace namens [!DNL B2B Account] fungiert. Dieses Schema wurde auch für die Verwendung im Profil aktiviert.
 
 ![Das Schema Konten im Schema-Editor mit dem hervorgehobenen Objekt „accountKey“ und dem hervorgehobenen Umschalter „Für Profil aktivieren“.](../images/tutorials/relationship-b2b/accounts.png)
 
@@ -91,21 +91,21 @@ Das Referenzschema &quot;[!DNL Accounts]&quot; basiert auf der Klasse [!UICONTRO
 >title="Beziehungsname aus Referenzschema"
 >abstract="Eine Bezeichnung, die die Beziehung des Referenzschemas zum aktuellen Schema beschreibt (z. B. „Verknüpfte Opportunities“). Diese Bezeichnung wird im Abschnitt „Profil“ und „Segmentierung“ verwendet, um Kontextinformationen über Daten aus B2B-Entitäten bereitzustellen, zwischen denen eine Beziehung besteht. Weitere Informationen zum Erstellen von B2B-Schemabeziehungen finden Sie in der Dokumentation."
 
-Um eine Beziehung zwischen zwei Schemata zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das die primäre Identität des Referenzschemas angibt. Standard-B2B-Klassen enthalten dedizierte Quellschlüsselfelder für häufig verwandte Geschäftsbereiche. Beispielsweise enthält die Klasse [!UICONTROL XDM Business Opportunity] Quellschlüsselfelder für ein verwandtes Konto (`accountKey`) und eine verwandte Kampagne (`campaignKey`). Sie können jedoch auch andere B2B[!UICONTROL Source]-Felder mithilfe von benutzerdefinierten Feldergruppen zum Schema hinzufügen, wenn Sie mehr als die Standardkomponenten benötigen.
+Um eine Beziehung zwischen zwei Schemata zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das die primäre Identität des Referenzschemas angibt. Standard-B2B-Klassen enthalten dedizierte Quellschlüsselfelder für häufig verwandte Geschäftsbereiche. Beispielsweise enthält die [!UICONTROL XDM Business Opportunity]-Klasse Quellschlüsselfelder für ein verknüpftes Konto (`accountKey`) und eine verknüpfte Kampagne (`campaignKey`). Sie können dem Schema jedoch auch andere [!UICONTROL B2B Source] hinzufügen, indem Sie benutzerdefinierte Feldergruppen verwenden, wenn Sie mehr als die Standardkomponenten benötigen.
 
 >[!NOTE]
 >
 >Derzeit können nur Viele-zu-Eins- und Eins-zu-eins-Beziehungen von einem Quellschema zu einem Referenzschema definiert werden. Für 1-zu-n-Beziehungen müssen Sie das Beziehungsfeld im Schema definieren, das für „viele“ steht.
 
-Um ein Beziehungsfeld festzulegen, wählen Sie das betreffende Feld auf der Arbeitsfläche aus, gefolgt von **[!UICONTROL Beziehung hinzufügen]** in der Seitenleiste [!UICONTROL Schemaeigenschaften]. Im Fall des [!DNL Opportunities]-Schemas ist dies das `accountKey.sourceKey` Feld, da das Ziel darin besteht, eine Viele-zu-eins-Beziehung mit einem Konto herzustellen.
+Um ein Beziehungsfeld festzulegen, wählen Sie das entsprechende Feld auf der Arbeitsfläche aus und klicken Sie dann in der **[!UICONTROL Add relationship]** Seitenleiste auf [!UICONTROL Schema properties] . Im Fall des [!DNL Opportunities]-Schemas ist dies das `accountKey.sourceKey` Feld, da das Ziel darin besteht, eine Viele-zu-eins-Beziehung mit einem Konto herzustellen.
 
 ![Der Schema-Editor mit dem hervorgehobenen Feld „sourceKey“ und „Beziehung hinzufügen“.](../images/tutorials/relationship-b2b/add-relationship.png)
 
-Das [!UICONTROL Beziehung hinzufügen] wird angezeigt. In diesem Dialogfeld können Sie Beziehungsdetails angeben. Der Beziehungstyp ist standardmäßig auf **[!UICONTROL Viele zu eins]** festgelegt.
+Das Dialogfeld [!UICONTROL Add relationship] wird angezeigt. In diesem Dialogfeld können Sie Beziehungsdetails angeben. Der Beziehungstyp ist standardmäßig auf **[!UICONTROL Many-to-one]** festgelegt.
 
 ![Das Dialogfeld „Beziehung hinzufügen“ mit hervorgehobener Viele-zu-eins-Schemabeziehung.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-Verwenden **[!UICONTROL unter &quot;]**&quot; die Suchleiste oder das Dropdown-Menü, um den Namen des Referenzschemas zu finden. Wenn Sie den Namen des Referenzschemas markieren, wird das Feld **[!UICONTROL Referenz-Identity-Namespace]** automatisch auf den Namespace der primären Identität des Referenzschemas aktualisiert.
+Verwenden Sie unter **[!UICONTROL Reference Schema]** die Suchleiste oder das Dropdown-Menü, um den Namen des Referenzschemas zu finden. Wenn Sie den Namen des Referenzschemas markieren, wird das **[!UICONTROL Reference Identity Namespace]** automatisch auf den Namespace der primären Identität des Referenzschemas aktualisiert.
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ Verwenden **[!UICONTROL unter &quot;]**&quot; die Suchleiste oder das Dropdown-M
 
 ![Das Dialogfeld „Beziehung hinzufügen“ mit den hervorgehobenen Feldern „Referenzschema“ und „Referenz-Identity-Namespace“.](../images/tutorials/relationship-b2b/reference-schema.png)
 
-Geben **[!UICONTROL unter „Beziehungsname aus aktuellem]**&quot; und **[!UICONTROL Beziehungsname aus Referenzschema]** benutzerfreundliche Namen für die Beziehung im Kontext des Quell- bzw. Referenzschemas an. Wenn Sie fertig sind, wählen **[!UICONTROL Übernehmen]** aus, um die Änderungen zu bestätigen und die Beziehung zu speichern.
+Geben Sie unter **[!UICONTROL Relationship Name From Current Schema]** und **[!UICONTROL Relationship Name From Reference Schema]** benutzerfreundliche Namen für die Beziehung im Kontext des Quell- bzw. Referenzschemas an. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Apply]** , um die Änderungen zu bestätigen und die Beziehung zu speichern.
 
 >[!NOTE]
 >
@@ -131,16 +131,16 @@ Wenn Sie die Struktur des Referenzschemas anzeigen, wird die Beziehungsmarkierun
 
 ## Bearbeiten einer B2B-Schemabeziehung {#edit-schema-relationship}
 
-Nachdem eine Schemabeziehung eingerichtet wurde, wählen Sie das Beziehungsfeld im Quellschema gefolgt von **[!UICONTROL Beziehung bearbeiten]** aus.
+Nachdem eine Schemabeziehung eingerichtet wurde, wählen Sie das Beziehungsfeld im Quellschema und anschließend **[!UICONTROL Edit relationship]** aus.
 
 >[!NOTE]
 >
->Um alle verknüpften Beziehungen anzuzeigen, wählen Sie im Referenzschema das Feld Primäre Identität und dann [!UICONTROL Beziehungen anzeigen].
+>Um alle verknüpften Beziehungen anzuzeigen, wählen Sie im Referenzschema das Feld Primäre Identität und dann [!UICONTROL View relationships] aus.
 >![Der Schema-Editor mit einem ausgewählten Beziehungsfeld und hervorgehobener Option „Beziehung anzeigen“.](../images/tutorials/relationship-b2b/view-relationships.png "Der Schema-Editor mit einem ausgewählten Beziehungsfeld und hervorgehobener Option „Beziehung anzeigen“."){width="100" zoomable="yes"}
 
 ![Der Schema-Editor mit einem Beziehungsfeld und hervorgehobener Option „Beziehung bearbeiten“](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
 
-Das [!UICONTROL Beziehung bearbeiten] wird angezeigt. In diesem Dialogfeld können Sie das Referenzschema und die Beziehungsnamen ändern oder die Beziehung löschen. Der Viele-zu-eins-Beziehungstyp kann nicht geändert werden.
+Das Dialogfeld [!UICONTROL Edit relationship] wird angezeigt. In diesem Dialogfeld können Sie das Referenzschema und die Beziehungsnamen ändern oder die Beziehung löschen. Der Viele-zu-eins-Beziehungstyp kann nicht geändert werden.
 
 ![Der Dialog Beziehung bearbeiten.](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
 
@@ -152,10 +152,10 @@ Beachten Sie beim Verwalten von Schemabeziehungen mit verknüpften Datensätzen 
 
 ## Filtern und Suchen nach Beziehungen {#filter-and-search}
 
-Sie können über die Registerkarte „Beziehungen“ des Arbeitsbereichs [!UICONTROL Schemata] nach bestimmten [!UICONTROL &#x200B; innerhalb Ihrer Schemata &#x200B;] und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [&#x200B; Dokument unter &#x200B;](../ui/explore.md#lookup) von Schemaressourcen .
+Sie können auf der Registerkarte [!UICONTROL Relationships] des Arbeitsbereichs [!UICONTROL Schemas] nach bestimmten Beziehungen innerhalb Ihrer Schemata filtern und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [ Dokument unter ](../ui/explore.md#lookup) von Schemaressourcen .
 
 ![Registerkarte „Beziehungen“ im Arbeitsbereich „Schemata“.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe der [!DNL Schema Editor] erfolgreich eine Viele-zu-eins-Beziehung zwischen zwei Schemas erstellt. Sobald Daten mit Datensätzen aufgenommen wurden, die auf diesen Schemata basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemata für Anwendungsfälle [Segmentierung mehrerer Klassen“ &#x200B;](../../rtcdp/segmentation/b2b.md).
+In diesem Tutorial haben Sie mithilfe der [!DNL Schema Editor] erfolgreich eine Viele-zu-eins-Beziehung zwischen zwei Schemas erstellt. Sobald Daten mit Datensätzen aufgenommen wurden, die auf diesen Schemata basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemata für Anwendungsfälle [Segmentierung mehrerer Klassen“ ](../../rtcdp/segmentation/b2b.md).

@@ -5,8 +5,8 @@ hide: true
 hidefromtoc: true
 source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 8%
+source-wordcount: '368'
+ht-degree: 9%
 
 ---
 
@@ -54,8 +54,8 @@ Die folgende Tabelle enthält detailliertere Informationen zu den Metriken, die 
 
 ## Verwenden des Monitoring-Dashboards für Streaming-Zielgruppen {#monitoring-dashboard}
 
-Um auf das Überwachungs-Dashboard für Streaming-Zielgruppen zuzugreifen, wechseln Sie zur Experience Platform-Benutzeroberfläche, wählen Sie **[!UICONTROL Überwachung]** im linken Navigationsbereich aus und wählen Sie dann **[!UICONTROL Streaming End-to-End]** aus.
+Um auf das Überwachungs-Dashboard für Streaming-Zielgruppen zuzugreifen, gehen Sie zur Experience Platform-Benutzeroberfläche, wählen Sie **[!UICONTROL Monitoring]** in der linken Navigationsleiste aus und klicken Sie dann auf **[!UICONTROL Streaming end-to-end]**.
 
 IMAGE
 
-Oben im Dashboard befindet sich die Metrikkarte **[!UICONTROL Zielgruppen]**. Dadurch werden Informationen zur **Auswertungsrate)** Zielgruppen angezeigt.
+Oben im Dashboard befindet sich die Karte mit der **[!UICONTROL Audiences]** Metrik. Dadurch werden Informationen zur **Auswertungsrate)** Zielgruppen angezeigt.

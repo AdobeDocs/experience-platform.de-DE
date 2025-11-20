@@ -84,7 +84,7 @@ Wenn es zu einer Fehlermeldung kommt, liegen wahrscheinlich einige Timing-Proble
 
 ## Asynchrones Laden des Tag-Einbettungs-Codes
 
-Tags sind mit einer Schaltfläche versehen, über die Sie das asynchrone Laden aktivieren können, wenn Sie bei der Konfiguration einer [Umgebung](../publishing/environments.md) einen Einbettungs-Code erstellen. Sie können das asynchrone Laden auch selbst konfigurieren:
+Tags sind mit einem Umschalter versehen, über den Sie das asynchrone Laden aktivieren können, wenn Sie bei der Konfiguration einer [Umgebung](../publishing/environments.md) einen Einbettungs-Code erstellen. Sie können das asynchrone Laden auch selbst konfigurieren:
 
 1. Fügen Sie dem `<script>`-Tag das Attribut „async“ hinzu, um das Skript asynchron zu laden.
 

@@ -6,8 +6,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
 workflow-type: tm+mt
-source-wordcount: '2852'
-ht-degree: 65%
+source-wordcount: '2752'
+ht-degree: 53%
 
 ---
 
@@ -35,7 +35,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -46,7 +46,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 | ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (wie etwa E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Zuordnung“ im [Zielaktivierungs-Workflow](../../ui/activate-segment-streaming-destinations.md#mapping) festgelegt. |
+| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (wie etwa E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Zuordnung“ im [Zielaktivierungs-Workflow](../../ui/activate-segment-streaming-destinations.md#mapping) festgelegt. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -76,7 +76,7 @@ Wenn Sie [!DNL mTLS] mit [!DNL HTTP API] Zielen verwenden möchten, müssen für
 
 Wenn Sie Zertifikatdetails wie die [!DNL Common Name] (CN) und [!DNL Subject Alternative Names] (SAN) auf zusätzliche Validierungen durch Dritte überprüfen möchten, verwenden Sie die API, um das Zertifikat abzurufen und diese Felder aus der Antwort zu extrahieren.
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
+Weitere Informationen finden [ in der ](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
@@ -113,7 +113,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Beim Herstellen einer Verbindung zu diesem Ziel müssen Sie die folgenden Informationen angeben:
 
@@ -126,48 +126,48 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 #### Authentifizierung über Bearer-Token {#bearer-token-authentication}
 
-Wenn Sie den Authentifizierungstyp **[!UICONTROL Bearer-Token]** für die Verbindung zu Ihrem HTTP-Endpunkt wählen, füllen Sie die Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**:
+Wenn Sie den Authentifizierungstyp **[!UICONTROL Bearer token]** für die Verbindung mit Ihrem HTTP-Endpunkt auswählen, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Connect to destination]**:
 
 ![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe der Bearer-Token-Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
-* **[!UICONTROL Bearer-Token]**: Fügen Sie das Bearer-Token ein, um sich bei Ihrer HTTP-Adresse zu authentifizieren.
+* **[!UICONTROL Bearer token]**: Fügen Sie das Bearer-Token ein, um sich bei Ihrer HTTP-Adresse zu authentifizieren.
 
 #### Keine Authentifizierung {#no-authentication}
 
-Wenn Sie **[!UICONTROL keinen]** Authentifizierungstyp zum Herstellen einer Verbindung mit Ihrem HTTP-Endpunkt auswählen:
+Wenn Sie den Authentifizierungstyp **[!UICONTROL None]** für die Verbindung mit Ihrem HTTP-Endpunkt auswählen:
 
 ![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie ohne Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-none.png)
 
-Wenn Sie diese offene Authentifizierung auswählen, brauchen Sie nur auf **[!UICONTROL Mit Ziel verbinden]** zu klicken, und die Verbindung zu Ihrem Endpunkt wird hergestellt.
+Wenn Sie diese offene Authentifizierung auswählen, brauchen Sie nur **[!UICONTROL Connect to destination]** auszuwählen, und die Verbindung zu Ihrem Endpunkt wird hergestellt.
 
 #### Passwort-Authentifizierung für OAuth 2 {#oauth-2-password-authentication}
 
-Wenn Sie für die Verbindung zu Ihrem HTTP-Endpunkt den Authentifizierungstyp **[!UICONTROL OAuth 2 mit Passwort]** wählen, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**:
+Wenn Sie den Authentifizierungstyp **[!UICONTROL OAuth 2 Password]** für die Verbindung mit Ihrem HTTP-Endpunkt auswählen, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Connect to destination]**:
 
 ![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe von OAuth 2 mit Passwortauthentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
-* **[!UICONTROL Zugriffstoken-URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
-* **[!UICONTROL Client-ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
-* **[!UICONTROL Client-Geheimnis]**: Das [!DNL client secret], das Ihr System Adobe Experience Platform zuweist.
-* **[!UICONTROL Benutzername]**: Der Benutzername für den Zugriff auf Ihren HTTP-Endpunkt.
-* **[!UICONTROL Passwort]**: Das Passwort für den Zugriff auf Ihren HTTP-Endpunkt.
+* **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
+* **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
+* **[!UICONTROL Client Secret]**: Die [!DNL client secret], die Ihr System Adobe Experience Platform zuweist.
+* **[!UICONTROL Username]**: Der Benutzername für den Zugriff auf Ihren HTTP-Endpunkt.
+* **[!UICONTROL Password]**: Das Kennwort für den Zugriff auf Ihren HTTP-Endpunkt.
 
 #### Authentifizierung mit Client-Anmeldedaten für OAuth 2 {#oauth-2-client-credentials-authentication}
 
-Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen für OAuth 2]** wählen, um sich mit Ihrem HTTP-Endpunkt zu verbinden, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**:
+Wenn Sie den Authentifizierungstyp **[!UICONTROL OAuth 2 Client Credentials]** für die Verbindung mit Ihrem HTTP-Endpunkt auswählen, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Connect to destination]**:
 
 ![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe von OAuth 2 mit Authentifizierung über Client-Anmeldeinformationen eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
 > 
->Bei Verwendung der [!UICONTROL OAuth 2 Client-Anmeldeinformationen] -Authentifizierung kann [!UICONTROL Zugriffstoken-URL] maximal einen Abfrageparameter aufweisen. Das Hinzufügen einer [!UICONTROL Zugriffstoken-URL] mit mehr Abfrageparametern kann zu Problemen beim Herstellen einer Verbindung zu Ihrem Endpunkt führen.
+>Bei Verwendung [!UICONTROL OAuth 2 Client Credentials] Authentifizierung kann der [!UICONTROL Access Token URL] maximal einen Abfrageparameter aufweisen. Das Hinzufügen eines [!UICONTROL Access Token URL] mit weiteren Abfrageparametern kann zu Problemen beim Herstellen einer Verbindung zu Ihrem Endpunkt führen.
 
-* **[!UICONTROL Zugriffstoken-URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
-* **[!UICONTROL Client-ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
-* **[!UICONTROL Client-Geheimwort]**: Das [!DNL client secret], das Ihr System Adobe Experience Platform zuweist.
-* **[!UICONTROL Typ der Client-Anmeldedaten]**: Wählen Sie den Typ der von Ihrem Endpunkt unterstützten Client-Anmeldedaten für OAuth2 aus:
-   * **[!UICONTROL Im Textkörper codiert]**: In diesem Fall sind [!DNL client ID] und [!DNL client secret] im *Textkörper der Anfrage* enthalten, die an Ihr Ziel gesendet wird.. Ein Beispiel finden Sie im Abschnitt [unterstützte Authentifizierungstypen](#supported-authentication-types).
-   * **[!UICONTROL Einfache Autorisierung]**: In diesem Fall werden [!DNL client ID] und [!DNL client secret], nachdem sie mit Base64 codiert wurden, *in eine `Authorization`-Kopfzeile* aufgenommen und an Ihr Ziel gesendet. Ein Beispiel finden Sie im Abschnitt [Unterstützte Authentifizierungstypen](#supported-authentication-types).
+* **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
+* **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
+* **[!UICONTROL Client Secret]**: Die [!DNL client secret], die Ihr System Adobe Experience Platform zuweist.
+* **[!UICONTROL Client Credentials Type]**: Wählen Sie den Typ der von Ihrem Endpunkt unterstützten Client-Anmeldeinformationen für OAuth2 aus:
+   * **[!UICONTROL Body Form Encoded]**: In diesem Fall sind die [!DNL client ID] und [!DNL client secret] enthalten *im Hauptteil der Anfrage* die an Ihr Ziel gesendet wird. Ein Beispiel finden Sie im Abschnitt [unterstützte Authentifizierungstypen](#supported-authentication-types).
+   * **[!UICONTROL Basic Authorization]**: In diesem Fall werden die [!DNL client ID] und [!DNL client secret] (*einer `Authorization`-Kopfzeile)*, nachdem sie mit Base64 codiert und an Ihr Ziel gesendet wurden. Ein Beispiel finden Sie im Abschnitt [Unterstützte Authentifizierungstypen](#supported-authentication-types).
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -201,31 +201,31 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 ![Abbildung des Bildschirms der Benutzeroberfläche mit ausgefüllten Feldern für die Details zum HTTP-Ziel.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, um dieses Ziel in Zukunft zu erkennen.
-* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Kopfzeilen]**: Geben Sie alle benutzerdefinierten Kopfzeilen ein, die in die Ziel-Aufrufe aufgenommen werden sollen. Verwenden Sie dazu folgendes Format: `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL HTTP-Endpunkt]**: Die URL des HTTP-Endpunkts, an den Sie die Profildaten senden möchten.
-* **[!UICONTROL Abfrageparameter]**: Optional können Sie Abfrageparameter zur HTTP-Endpunkt-URL hinzufügen. Formatieren Sie die verwendeten Abfrageparameter wie folgt: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Segmentnamen einschließen]**: Schalten Sie diese Option ein, wenn der Datenexport die Namen der zu exportierenden Zielgruppen enthalten soll. **Hinweis**: Segmentnamen sind nur für Segmente enthalten, die dem Ziel zugeordnet sind. Nicht zugeordnete Segmente, die im Export angezeigt werden, enthalten nicht das `name`. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [Exportierte Daten](#exported-data) weiter unten.
-* **[!UICONTROL Segmentzeitstempel einschließen]**: Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Zielgruppen erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Zielgruppen dem Ziel für die Aktivierung zugeordnet wurden. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [exportierte Daten](#exported-data) weiter unten.
+* **[!UICONTROL Description]**: Geben Sie eine Beschreibung ein, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Headers]**: Geben Sie alle benutzerdefinierten Kopfzeilen ein, die in die Ziel-Aufrufe aufgenommen werden sollen. Verwenden Sie dazu folgendes Format: `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL HTTP Endpoint]**: Die URL des HTTP-Endpunkts, an den Sie die Profildaten senden möchten.
+* **[!UICONTROL Query parameters]**: Optional können Sie Abfrageparameter zur HTTP-Endpunkt-URL hinzufügen. Formatieren Sie die verwendeten Abfrageparameter wie folgt: `parameter1=value&parameter2=value`.
+* **[!UICONTROL Include Segment Names]**: Schalten Sie diese Option ein, wenn der Datenexport die Namen der zu exportierenden Audiences enthalten soll. **Hinweis**: Segmentnamen sind nur für Segmente enthalten, die dem Ziel zugeordnet sind. Nicht zugeordnete Segmente, die im Export angezeigt werden, enthalten nicht das `name`. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [Exportierte Daten](#exported-data) weiter unten.
+* **[!UICONTROL Include Segment Timestamps]**: Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Zielgruppen erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Zielgruppen dem Ziel für die Aktivierung zugeordnet wurden. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [exportierte Daten](#exported-data) weiter unten.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* [Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht in Exporten an das HTTP-API-Ziel unterstützt. [Weitere Informationen](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden Sie &#x200B;](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
 
 ### Zielattribute {#attributes}
 
-Im Schritt [[!UICONTROL Attribute auswählen]](../../ui/activate-streaming-profile-destinations.md#select-attributes) empfiehlt Adobe, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten.
+Im [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) Schritt empfiehlt Adobe die Auswahl einer eindeutigen Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten.
 
 ## Profilexportverhalten {#profile-export-behavior}
 
@@ -245,7 +245,7 @@ Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es
 
 | Was einen Zielexport bestimmt | Im Zielexport enthaltene Informationen |
 |---------|----------|
-| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn sich der `segmentMembership` eines Profils in `realized` oder `exiting` ändert oder zugeordnete Attribute aktualisiert werden.</li><li>Da Identitäten derzeit nicht HTTP-API-Zielen zugeordnet werden können, bestimmen Änderungen an der Identität eines bestimmten Profils auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifikations- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. <br> **Wichtig**: Wenn die Option **[!UICONTROL Segmentnamen einschließen]** aktiviert ist, werden Segmentnamen nur für Segmente eingeschlossen, die dem Ziel zugeordnet sind. Nicht zugeordnete Segmente, die im Export angezeigt werden, enthalten nicht das `name` Feld, selbst wenn die Option aktiviert ist. </li><li>Alle Identitäten im `identityMap`-Objekt sind ebenfalls enthalten (Experience Platform unterstützt derzeit keine Identitätszuordnung im HTTP-API-Ziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
+| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn sich der `segmentMembership` eines Profils in `realized` oder `exiting` ändert oder zugeordnete Attribute aktualisiert werden.</li><li>Da Identitäten derzeit nicht HTTP-API-Zielen zugeordnet werden können, bestimmen Änderungen an der Identität eines bestimmten Profils auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifizierungs- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. <br> **Wichtig**: Wenn die Option &quot;**[!UICONTROL Include Segment Names]**&quot; aktiviert ist, werden Segmentnamen nur für Segmente eingeschlossen, die dem Ziel zugeordnet sind. Nicht zugeordnete Segmente, die im Export angezeigt werden, enthalten nicht das `name` Feld, selbst wenn die Option aktiviert ist. </li><li>Alle Identitäten im `identityMap`-Objekt sind ebenfalls enthalten (Experience Platform unterstützt derzeit keine Identitätszuordnung im HTTP-API-Ziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -318,7 +318,7 @@ Ihre exportierten [!DNL Experience Platform]-Daten landen in Ihrem [!DNL HTTP]-Z
 }
 ```
 
-Im Folgenden finden Sie weitere Beispiele für exportierte Daten, abhängig von den Benutzeroberflächeneinstellungen, die Sie im Fluss „Ziel verbinden“ für die Optionen **[!UICONTROL Segmentnamen einschließen]** und **[!UICONTROL Zeitstempel für Segmente einschließen]** auswählen.
+Im Folgenden finden Sie weitere Beispiele für exportierte Daten, abhängig von den Benutzeroberflächeneinstellungen, die Sie im Fluss „Ziel verbinden“ für die Optionen **[!UICONTROL Include Segment Names]** und **[!UICONTROL Include Segment Timestamps]** auswählen:
 
 +++ Das folgende Beispiel für den Datenexport enthält Zielgruppennamen im Abschnitt `segmentMembership` .
 
@@ -342,7 +342,7 @@ Im Folgenden finden Sie weitere Beispiele für exportierte Daten, abhängig von 
       }
 ```
 
-**Hinweis**: In diesem Beispiel wird das erste Segment (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) dem Ziel zugeordnet und enthält das `name`. Das zweite Segment (`354e086f-2e11-49a2-9e39-e5d9a76be683`) ist nicht dem Ziel zugeordnet und enthält nicht das `name` Feld, obwohl die Option **[!UICONTROL Segmentnamen einschließen]** aktiviert ist.
+**Hinweis**: In diesem Beispiel wird das erste Segment (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) dem Ziel zugeordnet und enthält das `name`. Das zweite Segment (`354e086f-2e11-49a2-9e39-e5d9a76be683`) ist nicht dem Ziel zugeordnet und enthält nicht das Feld `name` , auch wenn die Option **[!UICONTROL Include Segment Names]** aktiviert ist.
 
 +++
 

@@ -5,8 +5,8 @@ description: Dieses Dokument enthält Informationen zum Verwalten von Rollen üb
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 28%
+source-wordcount: '594'
+ht-degree: 31%
 
 ---
 
@@ -23,13 +23,13 @@ Rollen definieren den Zugriff, den Admins, Fachleute oder Endbenutzende auf Ress
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=de" text="Verwalten einer Rolle"
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Anwenden von Kennzeichnungen auf eine Rolle"
 
-Um eine neue Rolle zu erstellen, wählen Sie die Registerkarte **[!UICONTROL Rollen]** in der Seitenleiste aus und klicken Sie auf **[!UICONTROL Rolle erstellen]**.
+Um eine neue Rolle zu erstellen, wählen Sie die Registerkarte **[!UICONTROL Roles]** in der Seitenleiste aus und klicken Sie auf **[!UICONTROL Create Role]**.
 
 ![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
-Das **[!UICONTROL Neue Rolle erstellen]** wird angezeigt, in dem Sie aufgefordert werden, einen Namen und eine optionale Beschreibung einzugeben.
+Das Dialogfeld **[!UICONTROL Create a new role]** wird angezeigt, in dem Sie aufgefordert werden, einen Namen und eine optionale Beschreibung einzugeben.
 
-Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Bestätigen]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Confirm]** aus.
 
 ![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
 
@@ -45,41 +45,41 @@ Klicken und ziehen Sie die entsprechende Ressource in das Hauptbedienfeld.
 
 ![flac-additional-resources-added](../../images/flac-ui/flac-additional-resources-added.png)
 
-Wählen Sie mithilfe des Dropdown-Menüs die Ressourcenberechtigungen aus, die Sie in die Rolle aufnehmen möchten. Wiederholen Sie dies für alle Ressourcen, die Sie für die Rolle einbeziehen möchten. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Speichern und beenden]**.
+Wählen Sie mithilfe des Dropdown-Menüs die Ressourcenberechtigungen aus, die Sie in die Rolle aufnehmen möchten. Wiederholen Sie dies für alle Ressourcen, die Sie für die Rolle einbeziehen möchten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save and exit]** aus.
 
 ![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
 
-Die neue Rolle wurde erfolgreich erstellt und Sie werden zur Seite **[!UICONTROL Rollen]** weitergeleitet, wo die neu erstellte Rolle in der Liste angezeigt wird.
+Die neue Rolle wurde erfolgreich erstellt und Sie werden zur Seite **[!UICONTROL Roles]** weitergeleitet, wo die neu erstellte Rolle in der Liste angezeigt wird.
 
 ![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
-Weitere Informationen zum Verwalten [&#x200B; Rollenberechtigungen nach deren Erstellung finden &#x200B;](#manage-permissions-for-a-role) in den Abschnitten zum Verwalten von Berechtigungen für eine Rolle .
+Weitere Informationen zum Verwalten [ Rollenberechtigungen nach deren Erstellung finden ](#manage-permissions-for-a-role) in den Abschnitten zum Verwalten von Berechtigungen für eine Rolle .
 
 Im folgenden Video erfahren Sie, wie Sie eine neue Rolle erstellen und Benutzer für diese Rolle verwalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475982/?captions=ger&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Duplizieren einer Rolle
 
-Um eine vorhandene Rolle zu duplizieren, wählen Sie die Rolle auf der Registerkarte **[!UICONTROL Rollen]** aus. Alternativ können Sie die Filteroption verwenden, um die Ergebnisse zu filtern und die Rolle zu finden, die Sie duplizieren möchten.
+Um eine vorhandene Rolle zu duplizieren, wählen Sie die Rolle auf der Registerkarte **[!UICONTROL Roles]** aus. Alternativ können Sie die Filteroption verwenden, um die Ergebnisse zu filtern und die Rolle zu finden, die Sie duplizieren möchten.
 
 ![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
 
-Wählen Sie anschließend **[!UICONTROL Duplizieren]** oben rechts im Bildschirm aus.
+Wählen Sie als Nächstes oben rechts im Bildschirm **[!UICONTROL Duplicate]** aus.
 
 ![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
 
-Das Dialogfeld **[!UICONTROL Rolle duplizieren]** wird angezeigt, in dem Sie aufgefordert werden, die Duplizierung zu bestätigen.
+Das Dialogfeld **[!UICONTROL Duplicate role]** wird angezeigt, in dem Sie aufgefordert werden, die Duplizierung zu bestätigen.
 
 ![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
 Als Nächstes gelangen Sie zur Detailseite der Rolle, auf der Sie den Namen und die Berechtigungen für die Rolle ändern können. Die Details, Beschriftungen und Sandboxes werden aus der vorherigen Rolle dupliziert. Benutzer müssen über die Registerkarte Benutzer hinzugefügt werden. Sie können das Dokument [Berechtigungen für eine Rolle verwalten](permissions.md) anzeigen, um mehr über das Hinzufügen von Details, Beschriftungen, Sandboxes und Benutzern zu einer Rolle zu erfahren.
 
-Klicken Sie auf den Pfeil nach links, um zur Registerkarte **[!UICONTROL Rollen]** zurückzukehren.
+Klicken Sie auf den Pfeil nach links, um zur Registerkarte **[!UICONTROL Roles]** zurückzukehren.
 
 ![flac-return-to-roles](../../images/flac-ui/flac-return-to-roles.png)
 
-Die neue Rolle wird in der Liste auf der Seite **[!UICONTROL Rollen]** angezeigt.
+Die neue Rolle wird in der Liste auf der Seite **[!UICONTROL Roles]** angezeigt.
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
@@ -89,11 +89,11 @@ Klicken Sie auf das Auslassungszeichen (`…`) neben dem Namen einer Rolle. In e
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
-Das Dialogfeld **[!UICONTROL Benutzerrolle löschen]** wird angezeigt, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen.
+Das Dialogfeld **[!UICONTROL Delete user role]** wird angezeigt, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen.
 
 ![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
 
-Sie werden zur Registerkarte **[!UICONTROL Rollen]** zurückgeleitet.
+Sie werden zur Registerkarte **[!UICONTROL Roles]** zurückgeleitet.
 
 ## Nächste Schritte
 

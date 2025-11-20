@@ -5,7 +5,7 @@ role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1124'
 ht-degree: 6%
 
 ---
@@ -29,7 +29,7 @@ Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Batch-Segme
 
 Beachten Sie bei der Ausführung der flexiblen Zielgruppenauswertung die folgenden Bedingungen:
 
-- Sie können nur eine flexible Zielgruppenauswertung (zweimal **&#x200B;**&#x200B;pro Tag und Sandbox verwenden. Diese Beschränkung wird um Mitternacht (UTC) zurückgesetzt.
+- Sie können nur eine flexible Zielgruppenauswertung (zweimal **** pro Tag und Sandbox verwenden. Diese Beschränkung wird um Mitternacht (UTC) zurückgesetzt.
 - Sie haben **maximal** 50 flexible Zielgruppenauswertungsdurchgänge pro Jahr **Produktions-/**.
 - Sie haben **maximal** 100 flexible Zielgruppenauswertungsdurchgänge pro Jahr **Entwicklungs**-Sandbox.
 - Alle Zielgruppen **müssen** haben den Ursprung „Segmentierungs-Service“.
@@ -45,7 +45,7 @@ Beachten Sie bei der Ausführung der flexiblen Zielgruppenauswertung die folgend
 
 Um eine flexible Zielgruppenbewertung verwenden zu können, müssen Sie über die folgende Berechtigung verfügen:
 
-- **[!UICONTROL Auswerten des Segments für eine Zielgruppe]** im Abschnitt **[!DNL Profile Management]**.
+- **[!UICONTROL Evaluate Segment to an Audience]** unter dem Abschnitt **[!DNL Profile Management]** .
 
 Weitere Informationen zur rollenbasierten Zugriffssteuerung finden Sie unter [Zugriffssteuerung - Übersicht](../../access-control/home.md).
 
@@ -300,25 +300,25 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum
 
 >[!TAB Experience Platform-Benutzeroberfläche]
 
-Um in der Experience Platform-Benutzeroberfläche eine flexible Zielgruppenbewertung auszuführen, wählen Sie **[!UICONTROL Zielgruppen]** im Abschnitt **[!UICONTROL Kunden]** aus.
+Um in der Benutzeroberfläche von Experience Platform eine flexible Zielgruppenbewertung durchzuführen, wählen Sie im Abschnitt **[!UICONTROL Audiences]** die Option **[!UICONTROL Customers]** aus.
 
 ![Die Schaltfläche „Zielgruppen“ im Abschnitt „Kunden“ ist hervorgehoben. Das Zielgruppenportal für Kundenprofile wird angezeigt.](../images/methods/fae/audience-portal.png)
 
-Das Zielgruppen-Portal wird mit einer Liste aller Personen und Zielgruppen für die Organisation angezeigt. In Audience Portal können Sie die Zielgruppen auswählen, die ausgewertet werden sollen, und **[!UICONTROL Zielgruppe auswerten]**.
+Das Zielgruppen-Portal wird mit einer Liste aller Personen und Zielgruppen für die Organisation angezeigt. In Audience Portal können Sie die Zielgruppen auswählen, die ausgewertet werden sollen, und **[!UICONTROL Evaluate audience]** auswählen.
 
 ![Die Zielgruppen, für die Sie eine flexible Zielgruppenauswertung verwenden möchten, sind ausgewählt.](../images/methods/fae/evaluate-audiences.png)
 
-Das Pop **[!UICONTROL up „Zielgruppen bei]** auswerten“ wird angezeigt und zeigt die Liste der Zielgruppen an, die mit dem On-Demand-Segmentauftrag ausgewertet werden. Wenn eine Zielgruppe nicht für die On-Demand-Auswertung geeignet ist, wird sie automatisch aus dem Auswertungsauftrag entfernt. Bestätigen Sie, dass die aufgelisteten Zielgruppen diejenigen sind, die ausgewertet werden sollen.
+Das **[!UICONTROL Evaluate audiences on demand]** Pop-up wird mit der Liste der Zielgruppen angezeigt, die mit dem On-Demand-Segmentauftrag ausgewertet werden. Wenn eine Zielgruppe nicht für die On-Demand-Auswertung geeignet ist, wird sie automatisch aus dem Auswertungsauftrag entfernt. Bestätigen Sie, dass die aufgelisteten Zielgruppen diejenigen sind, die ausgewertet werden sollen.
 
 ![Es werden die Zielgruppen angezeigt, die mithilfe einer flexiblen Zielgruppenauswertung ausgewertet werden können.](../images/methods/fae/evaluate-audiences-modal.png)
 
-Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, können Sie mit der Anfrage fortfahren, und die flexible Zielgruppenbewertung wird gestartet. Sie können den Status dieser Zielgruppenauswertung in der Ansicht [Überwachung von Auswertungsaufträgen“ &#x200B;](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
+Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, können Sie mit der Anfrage fortfahren, und die flexible Zielgruppenbewertung wird gestartet. Sie können den Status dieser Zielgruppenauswertung in der Ansicht [Überwachung von Auswertungsaufträgen“ ](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >
 >Der Status des Segmentauftrags kann im Monitoring-Dashboard als „In Warteschlange“ gemeldet werden. Sie können den aktuellen Status des Segmentauftrags anzeigen, indem Sie eine GET-Anfrage an den `/segment/jobs`-Endpunkt senden und im Anfragepfad die ID des Segmentauftrags angeben. Weitere Informationen zur Verwendung dieses Endpunkts finden Sie auf der Registerkarte API .
 >
->Wenn Sie eine flexible Zielgruppenbewertung ausführen und möchten, dass die Auswertung die Zielgruppe für ein Ziel aktiviert, müssen Sie sicherstellen, dass die Häufigkeit auf „Nach **[!UICONTROL Segmentbewertung“]** ist. Bei der Ausführung einer flexiblen Zielgruppenauswertung für Zielgruppen, für die bereits eine Aktivierung festgelegt ist [nach der Segmentevaluierung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), werden Zielgruppen unabhängig von vorherigen täglichen Aktivierungsvorgängen sofort nach Abschluss des flexiblen Zielgruppenauswertungsauftrags aktiviert.
+>Wenn Sie eine flexible Zielgruppenbewertung ausführen und möchten, dass die Auswertung die Zielgruppe für ein Ziel aktiviert, müssen Sie sicherstellen, dass die Häufigkeit auf **[!UICONTROL After segment evaluation]** festgelegt ist. Bei der Ausführung einer flexiblen Zielgruppenauswertung für Zielgruppen, für die bereits eine Aktivierung festgelegt ist [nach der Segmentevaluierung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), werden Zielgruppen unabhängig von vorherigen täglichen Aktivierungsvorgängen sofort nach Abschluss des flexiblen Zielgruppenauswertungsauftrags aktiviert.
 
 >[!ENDTABS]
 
@@ -326,7 +326,7 @@ Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, k
 
 Das folgende Video zeigt, wie Sie in Experience Platform auf eine flexible Zielgruppenbewertung zugreifen und diese verwenden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453649?&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Häufig gestellte Fragen {#faq}
 

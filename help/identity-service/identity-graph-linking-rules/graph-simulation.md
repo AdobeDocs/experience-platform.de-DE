@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie die Diagrammsimulation in der Identity Servic
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1446'
-ht-degree: 3%
+source-wordcount: '1409'
+ht-degree: 4%
 
 ---
 
@@ -16,17 +16,17 @@ ht-degree: 3%
 >title="Diagrammsimulation"
 >abstract="Simulieren Sie Diagramme, um zu verstehen, wie Identitäten von Identity Service verknüpft werden und wie der Algorithmus der Identitätsoptimierung funktioniert."
 
-[!DNL Graph Simulation] ist ein Tool in der Identity Service-Benutzeroberfläche, mit dem Sie simulieren können, wie sich ein Identitätsdiagramm bei einer bestimmten Kombination von Identitäten verhält und wie Sie den [Identitätsoptimierungsalgorithmus“ &#x200B;](./identity-optimization-algorithm.md).
+[!DNL Graph Simulation] ist ein Tool in der Identity Service-Benutzeroberfläche, mit dem Sie simulieren können, wie sich ein Identitätsdiagramm bei einer bestimmten Kombination von Identitäten verhält und wie Sie den [Identitätsoptimierungsalgorithmus“ ](./identity-optimization-algorithm.md).
 
 Sehen Sie sich das folgende Video an, um zusätzliche Informationen zur Verwendung der [!DNL Graph Simulation] im Arbeitsbereich der Identity Service-Benutzeroberfläche zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444052/?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Lesen Sie dieses Dokument, um zu erfahren, wie Sie [!DNL Graph Simulation] verwenden können, um das Verhalten von Identitätsdiagrammen und die Funktionsweise des Diagrammalgorithmus besser zu verstehen.
 
 ## Kennenlernen der [!DNL Graph Simulation] {#interface}
 
-Sie können auf [!DNL Graph Simulation] über die Adobe Experience Platform-Benutzeroberfläche zugreifen. Wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Identitäten“ und dann **[!UICONTROL Diagrammsimulation]** aus der oberen Kopfzeile aus.
+Sie können auf [!DNL Graph Simulation] über die Adobe Experience Platform-Benutzeroberfläche zugreifen. Wählen Sie **[!UICONTROL Identities]** in der linken Navigation und dann **[!UICONTROL Graph Simulation]** in der oberen Kopfzeile aus.
 
 ![Die Benutzeroberfläche zur Diagrammsimulation in der Adobe Experience Platform-Benutzeroberfläche.](../images/graph-simulation/graph-simulation.png)
 
@@ -36,13 +36,13 @@ Die [!DNL Graph Simulation] kann in drei Abschnitte unterteilt werden:
 
 >[!TAB Ereignisse]
 
-Ereignisse: Verwenden Sie das Bedienfeld **[!UICONTROL Ereignisse]** um Identitäten hinzuzufügen, um ein Diagramm zu simulieren. Eine vollqualifizierte Identität muss einen Identity-Namespace und den entsprechenden Identitätswert haben. Sie müssen mindestens zwei Identitäten hinzufügen, um ein Diagramm zu simulieren. Sie können auch **[!UICONTROL Beispiel laden]** auswählen, um ein vorkonfiguriertes Ereignis und eine vorkonfigurierte Algorithmuseinrichtung einzugeben.
+Ereignisse: Verwenden Sie das Bedienfeld &quot;**[!UICONTROL Events]**&quot;, um Identitäten hinzuzufügen, um ein Diagramm zu simulieren. Eine vollqualifizierte Identität muss einen Identity-Namespace und den entsprechenden Identitätswert haben. Sie müssen mindestens zwei Identitäten hinzufügen, um ein Diagramm zu simulieren. Sie können auch **[!UICONTROL Load Example]** auswählen, um ein vorkonfiguriertes Ereignis und eine vorkonfigurierte Algorithmuseinrichtung einzugeben.
 
 ![Das Bedienfeld „Ereignisse“ des Diagrammsimulations-Tools.](../images/graph-simulation/events.png)
 
 >[!TAB Algorithmuskonfiguration]
 
-Algorithmuskonfiguration: Verwenden Sie das Bedienfeld **[!UICONTROL Algorithmuskonfiguration]**, um den Optimierungsalgorithmus für Ihre Namespaces hinzuzufügen und zu konfigurieren. Sie können einen Namespace per Drag-and-Drop verschieben, um die jeweilige Prioritätsreihenfolge zu ändern. Sie können auch &quot;**[!UICONTROL pro Diagramm“ auswählen]** um festzustellen, ob ein Namespace eindeutig ist.
+Algorithmuskonfiguration: Verwenden Sie das Bedienfeld &quot;**[!UICONTROL Algorithm configuration]**&quot;, um den Optimierungsalgorithmus für Ihre Namespaces hinzuzufügen und zu konfigurieren. Sie können einen Namespace per Drag-and-Drop verschieben, um die jeweilige Prioritätsreihenfolge zu ändern. Sie können auch **[!UICONTROL Unique Per Graph]** auswählen, um zu bestimmen, ob ein Namespace eindeutig ist.
 
 ![Die Algorithmuskonfiguration des Diagrammsimulations-Tools.](../images/graph-simulation/algorithm-configuration.png)
 
@@ -56,11 +56,11 @@ Viewer für simulierte Diagramme : Der Viewer für simulierte Diagramme zeigt da
 
 ## Ereignisse hinzufügen {#add-events}
 
-Wählen Sie zunächst **[!UICONTROL Ereignisse hinzufügen]** aus.
+Wählen Sie zunächst **[!UICONTROL Add events]** aus.
 
 ![Die Schaltfläche Ereignisse hinzufügen ist ausgewählt.](../images/graph-simulation/add-events.png)
 
-Es wird ein Popup-Fenster für [!UICONTROL Ereignis-#1] angezeigt. Geben Sie von hier aus Ihre Kombination aus Identitäts-Namespace und Identitätswert ein. Sie können das Dropdown-Menü verwenden, um einen Identity-Namespace auszuwählen. Alternativ können Sie die ersten Buchstaben eines Namespace eingeben und dann die Optionen aus dem Dropdown-Menü auswählen. Nachdem Sie Ihren Namespace ausgewählt haben, geben Sie einen Identitätswert an, der Ihrem Namespace entspricht.
+Zum [!UICONTROL Event #1] wird ein Popup-Fenster angezeigt. Geben Sie von hier aus Ihre Kombination aus Identitäts-Namespace und Identitätswert ein. Sie können das Dropdown-Menü verwenden, um einen Identity-Namespace auszuwählen. Alternativ können Sie die ersten Buchstaben eines Namespace eingeben und dann die Optionen aus dem Dropdown-Menü auswählen. Nachdem Sie Ihren Namespace ausgewählt haben, geben Sie einen Identitätswert an, der Ihrem Namespace entspricht.
 
 ![Das Fenster &quot;#1“ mit einer leeren Schnittstelle.](../images/graph-simulation/event-one.png)
 
@@ -72,11 +72,11 @@ Nachdem die erste Identität abgeschlossen ist, klicken Sie auf das Symbol zum H
 
 ![Die erste vollständig qualifizierte Identität von {email: tom@acme.com} wird im Bereich „Ereignisse“ der Diagrammsimulation eingegeben.](../images/graph-simulation/event-one-added.png)
 
-Als Nächstes wiederholen Sie dieselben Schritte und fügen eine zweite Identität hinzu. Zwei vollständig qualifizierte Identitäten sind erforderlich, um ein Identitätsdiagramm zu generieren. Im folgenden Beispiel wird eine ECID als Namespace hinzugefügt und mit dem Wert `111` bereitgestellt. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
+Als Nächstes wiederholen Sie dieselben Schritte und fügen eine zweite Identität hinzu. Zwei vollständig qualifizierte Identitäten sind erforderlich, um ein Identitätsdiagramm zu generieren. Im folgenden Beispiel wird eine ECID als Namespace hinzugefügt und mit dem Wert `111` bereitgestellt. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save]** aus.
 
 ![Eine zweite Identität von {ECID: 111} wird zum Ereignis #1 hinzugefügt.](../images/graph-simulation/first-event.png)
 
-Die Benutzeroberfläche [!UICONTROL Ereignisse] wird aktualisiert, um Ihr erstes Ereignis anzuzeigen, in diesem Fall: `{Email: tom@acme.com, ECID: 111}`.
+Die [!UICONTROL Events] wird aktualisiert, um Ihr erstes Ereignis anzuzeigen, in diesem Fall: `{Email: tom@acme.com, ECID: 111}`.
 
 ![Die aktualisierte Ereignisschnittstelle mit {email: tom@acme.com, ECID: 111}.](../images/graph-simulation/add-second-event.png)
 
@@ -86,7 +86,7 @@ Als Nächstes wiederholen Sie die gleichen Schritte, um ein zweites Ereignis hin
 
 ### Beispiel laden {#load-example}
 
-Wählen Sie **[!UICONTROL Beispiel laden]**, um ein Beispieldiagramm mit einem vordefinierten Algorithmus und einer vordefinierten Ereigniskonfiguration einzurichten.
+Wählen Sie **[!UICONTROL Load example]** aus, um ein Beispieldiagramm mit einem vordefinierten Algorithmus und einer vordefinierten Ereigniskonfiguration einzurichten.
 
 ![Die Option „Beispiel laden“ ist ausgewählt.](../images/graph-simulation/load-example.png)
 
@@ -104,13 +104,13 @@ Wählen Sie eine der Optionen aus, um [!DNL Graph Simulation] mit vorkonfigurier
 
 ![Die Ereignisse und der Algorithmus, die für ungültige Telefonnummern konfiguriert wurden.](../images/graph-simulation/example-loaded.png)
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Simulieren]** aus.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Simulate]** aus.
 
 ![Ein Beispieldiagramm, das für ein ungültiges Telefon simuliert wurde.](../images/graph-simulation/example-simulated.png)
 
 ### Textversion verwenden {#use-text-version}
 
-Sie können auch den Textmodus zum Konfigurieren von Ereignissen verwenden. Um den Textmodus zu verwenden, wählen Sie das Einstellungssymbol aus und dann **[!UICONTROL Text (Erweiterte Benutzer)]**.
+Sie können auch den Textmodus zum Konfigurieren von Ereignissen verwenden. Um den Textmodus zu verwenden, klicken Sie auf das Symbol Einstellungen und dann auf **[!UICONTROL Text (Advanced users)]**.
 
 ![Das ausgewählte Einstellungssymbol.](../images/graph-simulation/settings.png)
 
@@ -120,13 +120,13 @@ Sie können Ihre Identitäten im Textmodus manuell eingeben. Verwenden Sie einen
 
 ### Ereignis bearbeiten {#edit-event}
 
-Um ein Ereignis zu bearbeiten, klicken Sie auf die Auslassungszeichen (`...`) neben einem bestimmten Ereignis und wählen Sie dann **[!UICONTROL Bearbeiten]** aus.
+Um ein Ereignis zu bearbeiten, klicken Sie auf die Auslassungszeichen (`...`) neben einem bestimmten Ereignis und wählen Sie dann **[!UICONTROL Edit]** aus.
 
 ![Das ausgewählte Symbol „Ereignis bearbeiten“](../images/graph-simulation/edit.png)
 
 ### Ereignis löschen {#delete-event}
 
-Um ein Ereignis zu löschen, klicken Sie auf die Auslassungszeichen (`...`) neben einem bestimmten Ereignis und wählen Sie dann **[!UICONTROL Löschen]**.
+Um ein Ereignis zu löschen, klicken Sie auf die Auslassungszeichen (`...`) neben einem bestimmten Ereignis und wählen Sie dann **[!UICONTROL Delete]** aus.
 
 ![Das ausgewählte Symbol „Ereignis löschen“](../images/graph-simulation/delete.png)
 
@@ -136,11 +136,11 @@ Um ein Ereignis zu löschen, klicken Sie auf die Auslassungszeichen (`...`) nebe
 >
 >Der von Ihnen konfigurierte Algorithmus bestimmt, wie Identity Service die Namespaces behandelt, die Sie in Ihre Ereignisse eingegeben haben. Konfigurationen, die Sie im [!DNL Graph Simulation UI] zusammenstellen, werden nicht in den Identitätseinstellungen gespeichert.
 
-Nachdem Sie Ihre Ereignisse hinzugefügt haben, können Sie jetzt den Algorithmus konfigurieren, der zur Simulation Ihres Diagramms verwendet wird. Wählen Sie zunächst **[!UICONTROL Konfiguration hinzufügen]** aus.
+Nachdem Sie Ihre Ereignisse hinzugefügt haben, können Sie jetzt den Algorithmus konfigurieren, der zur Simulation Ihres Diagramms verwendet wird. Wählen Sie zunächst **[!UICONTROL Add config]** aus.
 
 ![Bedienfeld für die Algorithmuskonfiguration.](../images/graph-simulation/add-config.png)
 
-Eine leere Konfigurationszeile wird angezeigt. Geben Sie zunächst denselben Namespace ein, den Sie für Ihre Ereignisse verwendet haben. In diesem Fall geben Sie zunächst die E-Mail-Adresse ein. Nachdem Sie Ihren Namespace eingegeben haben, werden die Spalten für [!UICONTROL Identitätssymbol] und [!UICONTROL Identitätstyp] automatisch ausgefüllt.
+Eine leere Konfigurationszeile wird angezeigt. Geben Sie zunächst denselben Namespace ein, den Sie für Ihre Ereignisse verwendet haben. In diesem Fall geben Sie zunächst die E-Mail-Adresse ein. Nachdem Sie Ihren Namespace eingegeben haben, werden die Spalten für [!UICONTROL Identity Symbol] und [!UICONTROL Identity Type] automatisch ausgefüllt.
 
 ![Der erste Konfigurationseintrag.](../images/graph-simulation/add-namespace.png)
 
@@ -149,15 +149,15 @@ Wiederholen Sie anschließend dieselben Schritte und fügen Sie Ihren zweiten Na
 * **Namespace-Priorität**: Die Priorität eines Namespace bestimmt seine relative Bedeutung im Vergleich zu den anderen Namespaces in einem bestimmten Identitätsdiagramm. Wenn Ihr Identitätsdiagramm beispielsweise über vier verschiedene Namespaces verfügt: CRMID, ECID, E-Mail und Apple IDFA, können Sie Prioritäten konfigurieren, um eine Reihenfolge der Wichtigkeit für die vier Namespaces zu bestimmen.
 * **Eindeutiger Namespace**: Wenn ein Namespace als eindeutig gekennzeichnet ist, generiert Identity Service Diagramme mit dem Vorbehalt, dass nur eine Identität mit einem bestimmten eindeutigen Namespace vorhanden sein kann. Wenn beispielsweise der Namespace E-Mail als eindeutiger Namespace angegeben ist, kann ein Diagramm nur eine Identität mit E-Mail aufweisen. Wenn mehr als eine Identität mit dem E-Mail-Namespace vorhanden ist, wird der älteste Link entfernt.
 
-Um die Namespace-Priorität zu konfigurieren, wählen Sie die Namespace-Zeilen aus und ziehen Sie sie in die gewünschte Prioritätsreihenfolge, wobei die obere Zeile eine höhere Priorität darstellt und die untere Zeile eine niedrigere Priorität. Um einen Namespace als eindeutig festzulegen, aktivieren Sie das Kontrollkästchen **[!UICONTROL Eindeutig pro Diagramm]**.
+Um die Namespace-Priorität zu konfigurieren, wählen Sie die Namespace-Zeilen aus und ziehen Sie sie in die gewünschte Prioritätsreihenfolge, wobei die obere Zeile eine höhere Priorität darstellt und die untere Zeile eine niedrigere Priorität. Um einen Namespace als eindeutig festzulegen, aktivieren Sie das Kontrollkästchen **[!UICONTROL Unique Per Graph]** .
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Simulieren]** aus.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Simulate]** aus.
 
 ![Alle Namespaces konfiguriert.](../images/graph-simulation/all-namespaces.png)
 
 ## Anzeigen eines simulierten Diagramms
 
-Im Abschnitt [!UICONTROL Simuliertes Diagramm] werden die Identitätsdiagramme angezeigt, die auf der Grundlage der von Ihnen hinzugefügten Ereignisse und des von Ihnen konfigurierten Algorithmus generiert wurden.
+Im Abschnitt [!UICONTROL Simulated Graph] werden die Identitätsdiagramme angezeigt, die basierend auf den von Ihnen hinzugefügten Ereignissen und dem von Ihnen konfigurierten Algorithmus generiert wurden.
 
 | Diagrammsymbole | Beschreibung |
 | --- | --- |

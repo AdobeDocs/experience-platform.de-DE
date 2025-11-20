@@ -6,8 +6,8 @@ feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1624'
-ht-degree: 33%
+source-wordcount: '1579'
+ht-degree: 31%
 
 ---
 
@@ -32,7 +32,7 @@ Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten z
 
 In einem Auditprotokoll wird festgehalten **wer** welche **ausgeführt** und **wann**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute angeben, die für den Aktionstyp relevant sind.
 
-Wenn ein(e) Benutzende(r) eine Aktion ausführt, werden zwei Arten von Audit-Ereignissen aufgezeichnet. Ein Hauptereignis erfasst das Autorisierungsergebnis der Aktion ([!UICONTROL allow] oder [!UICONTROL deny] während ein erweitertes Ereignis das Ausführungsergebnis, [!UICONTROL success] oder [!UICONTROL failure] erfasst. Mehrere erweiterte Ereignisse können mit demselben Hauptereignis verknüpft werden. Beispiel: Beim Aktivieren eines Ziels zeichnet das Kernereignis die Autorisierung der Aktion [!UICONTROL Ziel-Update] auf, während die erweiterten Ereignisse mehrere Aktionen [!UICONTROL Segment aktivieren] aufzeichnen.
+Wenn ein(e) Benutzende(r) eine Aktion ausführt, werden zwei Arten von Audit-Ereignissen aufgezeichnet. Ein Hauptereignis erfasst das Autorisierungsergebnis der Aktion ([!UICONTROL allow] oder [!UICONTROL deny]), während ein erweitertes Ereignis das Ausführungsergebnis ([!UICONTROL success] oder [!UICONTROL failure]) erfasst. Mehrere erweiterte Ereignisse können mit demselben Hauptereignis verknüpft werden. Wenn Sie beispielsweise ein Ziel aktivieren, zeichnet das Hauptereignis die Autorisierung der [!UICONTROL Destination Update] auf, während die erweiterten Ereignisse mehrere [!UICONTROL Segment Activate] Aktionen aufzeichnen.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 Wenn die Funktion für Ihr Unternehmen aktiviert ist, werden bei Aktivitäten automatisch Auditprotokolle erfasst. Sie müssen die Datenerfassung in Audit-Protokollen nicht manuell aktivieren.
 
-Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Benutzeraktivitätsprotokoll anzeigen]** (in der Kategorie [!UICONTROL Data Governance] ). Informationen zum Verwalten individueller Berechtigungen für Experience Platform-Funktionen finden Sie in der [Dokumentation zur Zugriffssteuerung](../../../access-control/home.md).
+Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie die **[!UICONTROL View User Activity Log]** Zugriffssteuerungsberechtigung (in der Kategorie [!UICONTROL Data Governance] ). Informationen zum Verwalten individueller Berechtigungen für Experience Platform-Funktionen finden Sie in der [Dokumentation zur Zugriffssteuerung](../../../access-control/home.md).
 
 ## Verwalten von Audit-Protokollen in der Benutzeroberfläche {#managing-audit-logs-in-the-ui}
 
@@ -85,7 +85,7 @@ Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie die Zugri
 >title="Anweisungen"
 >abstract="<ul><li>Wählen Sie <b>Audits</b> in der linken Navigation aus. Der Arbeitsbereich „Audits“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.</li>   <li> HINWEIS: Audit-Protokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1.000 Einträge angezeigt. </li><li>Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen** aus.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Audit-Protokolle</a> auf Experience League.</li></ul>"
 
-Sie können Audit-Protokolle für verschiedene Experience Platform-Funktionen im Arbeitsbereich **[!UICONTROL Audits]** in der Experience Platform-Benutzeroberfläche anzeigen. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
+Sie können Audit-Protokolle für verschiedene Experience Platform-Funktionen im **[!UICONTROL Audits]** Arbeitsbereich in der Experience Platform-Benutzeroberfläche anzeigen. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
 
 ![Das Audits-Dashboard, in dem Audits im linken Menü hervorgehoben sind.](../../images/audit-logs/audits.png)
 
@@ -111,13 +111,13 @@ Die folgenden Filter sind für Audit-Ereignisse in der Benutzeroberfläche verf�
 
 | Filter | Beschreibung |
 | --- | --- |
-| [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach ([) &#x200B;](#category) filtern. |
-| [!UICONTROL Aktion] | Nach Aktion filtern. Die für jeden Service verfügbaren Aktionen finden Sie in der oben stehenden Ressourcentabelle. |
-| [!UICONTROL Benutzer] | Geben Sie die vollständige Benutzer-ID ein (z. B. `johndoe@acme.com`), um nach Benutzer zu filtern. |
-| [!UICONTROL Status] | Filtern von Audit-Ereignissen nach Ergebnis: erfolgreich, fehlgeschlagen, zulässig oder verweigert aufgrund fehlender [Zugriffskontrolle](../../../access-control/home.md)-Berechtigungen. Für eine ausgeführte Aktion zeigen die Hauptereignisse [!UICONTROL Zulassen] oder [!UICONTROL Ablehnen]. Wenn das Hauptereignis &quot;[!UICONTROL &quot; &#x200B;], wurden möglicherweise ein oder mehrere erweiterte Ereignisse mit &quot;**[!UICONTROL &quot;]** &quot;**[!UICONTROL &quot;]**. Beispielsweise wird bei einer erfolgreichen Aktion &quot;[!UICONTROL &quot; &#x200B;] Hauptereignis und &quot;[!UICONTROL &quot; &#x200B;] angehängten erweiterten Ereignis angezeigt. |
-| [!UICONTROL Datum] | Wählen Sie ein Start- und/oder Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. Daten können über einen 90-tägigen Lookback-Zeitraum exportiert werden (z. B. vom 15.12.2021 bis zum 15.03.2022). Dies kann je nach Ereignistyp unterschiedlich sein. |
+| [!UICONTROL Category] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach ([) ](#category) filtern. |
+| [!UICONTROL Action] | Nach Aktion filtern. Die für jeden Service verfügbaren Aktionen finden Sie in der oben stehenden Ressourcentabelle. |
+| [!UICONTROL User] | Geben Sie die vollständige Benutzer-ID ein (z. B. `johndoe@acme.com`), um nach Benutzer zu filtern. |
+| [!UICONTROL Status] | Filtern von Audit-Ereignissen nach Ergebnis: erfolgreich, fehlgeschlagen, zulässig oder verweigert aufgrund fehlender [Zugriffskontrolle](../../../access-control/home.md)-Berechtigungen. Für eine ausgeführte Aktion zeigen die Hauptereignisse [!UICONTROL Allow] oder [!UICONTROL Deny] an. Wenn das Hauptereignis [!UICONTROL Allow] ist, wurde möglicherweise ein oder mehrere erweiterte Ereignisse mit **[!UICONTROL Success]** oder **[!UICONTROL Failure]** angehängt. Eine erfolgreiche Aktion zeigt beispielsweise [!UICONTROL Allow] zum Hauptereignis und [!UICONTROL Success] zum angehängten erweiterten Ereignis an. |
+| [!UICONTROL Date] | Wählen Sie ein Start- und/oder Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. Daten können über einen 90-tägigen Lookback-Zeitraum exportiert werden (z. B. vom 15.12.2021 bis zum 15.03.2022). Dies kann je nach Ereignistyp unterschiedlich sein. |
 
-Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für den betreffenden Filter, oder wählen Sie **[!UICONTROL Alle löschen]** aus, um alle Filter zu entfernen.
+Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für den betreffenden Filter, oder wählen Sie **[!UICONTROL Clear all]** aus, um alle Filter zu entfernen.
 
 ![Das Audits-Dashboard mit hervorgehobenem Filter „Löschen“.](../../images/audit-logs/clear-filters.png)
 
@@ -125,27 +125,27 @@ Die zurückgegebenen Auditprotokolldaten enthalten die folgenden Informationen z
 
 | Spaltenname | Beschreibung |
 |---|---|
-| [!UICONTROL Zeitstempel] | Das genaue Datum und die genaue Uhrzeit der Aktion, die in einem `month/day/year hour:minute AM/PM` Format ausgeführt wird. |
-| [!UICONTROL Asset-Name] | Der Wert für das [!UICONTROL Asset-Name]-Feld hängt von der als Filter ausgewählten Kategorie ab. |
-| [!UICONTROL Kategorie] | Dieses Feld entspricht der im Filter-Dropdown-Menü ausgewählten Kategorie. |
-| [!UICONTROL Aktion] | Die verfügbaren Aktionen hängen von der als Filter ausgewählten Kategorie ab. |
-| [!UICONTROL Benutzer] | Dieses Feld gibt die Benutzer-ID an, die die Abfrage ausgeführt hat. |
+| [!UICONTROL Timestamp] | Das genaue Datum und die genaue Uhrzeit der Aktion, die in einem `month/day/year hour:minute AM/PM` Format ausgeführt wird. |
+| [!UICONTROL Asset Name] | Der Wert für das Feld [!UICONTROL Asset Name] hängt von der als Filter ausgewählten Kategorie ab. |
+| [!UICONTROL Category] | Dieses Feld entspricht der im Filter-Dropdown-Menü ausgewählten Kategorie. |
+| [!UICONTROL Action] | Die verfügbaren Aktionen hängen von der als Filter ausgewählten Kategorie ab. |
+| [!UICONTROL User] | Dieses Feld gibt die Benutzer-ID an, die die Abfrage ausgeführt hat. |
 
 ![Das Audits-Dashboard mit hervorgehobenem gefiltertem Aktivitätsprotokoll.](../../images/audit-logs/filtered.png)
 
 ### Auditprotokolle exportieren {#export-audit-logs}
 
-Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **[!UICONTROL Protokoll herunterladen]** aus.
+Um die aktuelle Liste der Auditprotokolle zu exportieren, wählen Sie **[!UICONTROL Download log]** aus.
 
 >[!NOTE]
 >
 >Protokolle können in Intervallen von 90 Tagen bis zu 365 Tagen in der Vergangenheit angefordert werden. Die maximale Anzahl von Protokollen, die während eines einzelnen Exports zurückgegeben werden kann, beträgt jedoch 10.000 Audit-Ereignisse (entweder Core oder Enhanced).
 
-![Das Audits-Dashboard mit hervorgehobenem [!UICONTROL Protokoll herunterladen].](../../images/audit-logs/download.png)
+![Das Audits-Dashboard mit hervorgehobener [!UICONTROL Download log].](../../images/audit-logs/download.png)
 
-Wählen Sie im angezeigten Dialogfeld Ihr bevorzugtes Format aus (entweder **[!UICONTROL CSV]** oder **[!UICONTROL JSON]**) und klicken Sie dann auf **[!UICONTROL Herunterladen]**. Der Browser lädt die generierte Datei herunter und speichert sie auf Ihrem Computer.
+Wählen Sie im angezeigten Dialogfeld Ihr bevorzugtes Format (**[!UICONTROL CSV]** oder **[!UICONTROL JSON]**) und dann **[!UICONTROL Download]** aus. Der Browser lädt die generierte Datei herunter und speichert sie auf Ihrem Computer.
 
-![Das Dialogfeld zur Auswahl des Dateiformats mit hervorgehobener Option [!UICONTROL Herunterladen].](../../images/audit-logs/select-download-format.png)
+![Das Dialogfeld zur Auswahl des Dateiformats mit hervorgehobener [!UICONTROL Download].](../../images/audit-logs/select-download-format.png)
 
 ## Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -165,11 +165,11 @@ Wählen Sie den gewünschten Warnhinweis aus der Liste, der abonniert werden sol
 
 ## Verwalten von Auditprotokollen in der API
 
-Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können auch mithilfe von API-Aufrufen ausgeführt werden. Weitere Informationen finden [&#x200B; im &#x200B;](https://www.adobe.io/experience-platform-apis/references/audit-query/)-API-Referenzdokument .
+Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können auch mithilfe von API-Aufrufen ausgeführt werden. Weitere Informationen finden [ im ](https://www.adobe.io/experience-platform-apis/references/audit-query/)-API-Referenzdokument .
 
 ## Verwalten von Auditprotokollen für Adobe Admin Console
 
-Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/de/enterprise/using/audit-logs.html).
+Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
@@ -177,4 +177,4 @@ In diesem Handbuch wurde beschrieben, wie Sie Audit-Protokolle in Experience Pla
 
 Sehen Sie sich das folgende Video an, um Audit-Protokolle in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409524?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

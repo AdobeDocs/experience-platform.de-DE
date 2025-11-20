@@ -7,8 +7,8 @@ description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Pla
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1387'
-ht-degree: 6%
+source-wordcount: '1333'
+ht-degree: 7%
 
 ---
 
@@ -33,13 +33,13 @@ In diesem Tutorial werden die Schritte zum Erstellen und Bearbeiten benutzerdefi
 
 Dieses Handbuch setzt ein Grundverständnis des XDM-Systems voraus. Unter [XDM-Übersicht](../../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und in die [Grundlagen der Schemakomposition](../../schema/composition.md) wie Datentypen zu XDM-Schemata beitragen.
 
-Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [&#x200B; Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
+Obwohl dies für dieses Handbuch nicht erforderlich ist, wird empfohlen, auch das Tutorial zum Erstellen [ Schemas in der Benutzeroberfläche zu befolgen](../../tutorials/create-schema-ui.md) um sich mit den verschiedenen Funktionen des [!DNL Schema Editor] vertraut zu machen.
 
 ## Öffnen der [!DNL Schema Editor] für einen Datentyp {#data-type}
 
-Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Schemata]** im linken Navigationsbereich aus, um den Arbeitsbereich [!UICONTROL Schemata] zu öffnen. Wählen Sie dann die Registerkarte **[!UICONTROL Datentypen]** aus. Eine Liste der verfügbaren Datentypen wird angezeigt. Die Liste der Datentypen wird automatisch nach der Art ihrer Erstellung gefiltert. Die Standardeinstellung zeigt die von Adobe definierten Datentypen an. Sie können die Liste auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden.
+Klicken Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich auf **[!UICONTROL Schemas]** , um den [!UICONTROL Schemas]-Arbeitsbereich zu öffnen, und wählen Sie dann die Registerkarte **[!UICONTROL Data types]** aus. Eine Liste der verfügbaren Datentypen wird angezeigt. Die Liste der Datentypen wird automatisch nach der Art ihrer Erstellung gefiltert. Die Standardeinstellung zeigt die von Adobe definierten Datentypen an. Sie können die Liste auch so filtern, dass die von Ihrem Unternehmen erstellten Listen angezeigt werden.
 
-![Der Arbeitsbereich [!UICONTROL Schemata] mit [!UICONTROL Schemata] im linken Navigationsbereich und [!UICONTROL Datentypen] hervorgehoben.](../../images/ui/resources/data-types/data-types-tab.png)
+![Der Arbeitsbereich &quot;[!UICONTROL Schemas]&quot; mit hervorgehobenem [!UICONTROL Schemas] in der linken Navigation und [!UICONTROL Data types].](../../images/ui/resources/data-types/data-types-tab.png)
 
 Von hier aus haben Sie die folgenden Optionen:
 
@@ -49,9 +49,9 @@ Von hier aus haben Sie die folgenden Optionen:
 
 ### Erstellen eines neuen Datentyps {#create}
 
-Wählen Sie auf der **[!UICONTROL Datentypen]** die Option **[!UICONTROL Datentyp erstellen]** aus.
+Wählen Sie auf der Registerkarte **[!UICONTROL Data types]** die Option **[!UICONTROL Create data type]** aus.
 
-![Die Registerkarte [!UICONTROL Schemata] im Arbeitsbereich [!UICONTROL Datentypen] mit [!UICONTROL Datentyp erstellen] hervorgehoben.](../../images/ui/resources/data-types/create.png)
+![Die Registerkarte &quot;[!UICONTROL Schemas] Workspace-[!UICONTROL Data types]&quot; mit hervorgehobenem [!UICONTROL Create data type].](../../images/ui/resources/data-types/create.png)
 
 Das [!DNL Schema Editor] wird angezeigt und zeigt die aktuelle Struktur des neuen Datentyps auf der Arbeitsfläche an. Auf der rechten Seite des Editors können Sie einen Anzeigenamen und eine optionale Beschreibung für den Datentyp angeben. Stellen Sie sicher, dass Sie einen eindeutigen und knappen Namen für Ihren Datentyp angeben, da er auf diese Weise identifiziert wird, wenn Sie ihn einem Schema hinzufügen.
 
@@ -59,27 +59,27 @@ In diesem Tutorial wird ein Datentyp erstellt, der eine Restauranteigenschaft be
 
 ![](../../images/ui/resources/data-types/data-type-properties.png)
 
-Von hier aus können Sie mit dem [&#x200B; Abschnitt fortfahren](#add-fields) um Felder zum neuen Datentyp hinzuzufügen.
+Von hier aus können Sie mit dem [ Abschnitt fortfahren](#add-fields) um Felder zum neuen Datentyp hinzuzufügen.
 
 ### Filtern von Datentypen {#filter}
 
-Die Liste der verfügbaren Datentypen wird je nach ihrer Erstellung vorab gefiltert. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] zu wählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die von Adobe erstellt wurden, und die Option [!UICONTROL Benutzerdefiniert] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
+Die Liste der verfügbaren Datentypen wird je nach ihrer Erstellung vorab gefiltert. Wählen Sie das Optionsfeld aus, um zwischen den Optionen [!UICONTROL Standard] und [!UICONTROL Custom] auszuwählen. Die Option [!UICONTROL Standard] zeigt Entitäten an, die von Adobe erstellt wurden, und die Option [!UICONTROL Custom] zeigt Entitäten an, die in Ihrem Unternehmen erstellt wurden.
 
-![Die Registerkarte [!UICONTROL Datentypen] des Arbeitsbereichs [!UICONTROL Schemata] mit [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] hervorgehoben.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+![Die Registerkarte &quot;[!UICONTROL Data types]&quot; des Arbeitsbereichs &quot;[!UICONTROL Schemas]&quot; mit hervorgehobenen [!UICONTROL Standard] und [!UICONTROL Custom].](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
 ### Bearbeiten eines vorhandenen Datentyps {#edit}
 
 >[!NOTE]
 >
->Sobald ein vorhandener Datentyp in einem Schema verwendet wird, das für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde, können anschließend nur noch zerstörungsfreie Änderungen an diesem Datentyp vorgenommen werden. Weitere Informationen finden [&#x200B; unter „Regeln &#x200B;](../../schema/composition.md#evolution) Schemaentwicklung“.
+>Sobald ein vorhandener Datentyp in einem Schema verwendet wird, das für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde, können anschließend nur noch zerstörungsfreie Änderungen an diesem Datentyp vorgenommen werden. Weitere Informationen finden [ unter „Regeln ](../../schema/composition.md#evolution) Schemaentwicklung“.
 
-Es können nur benutzerdefinierte Datentypen bearbeitet werden, die von Ihrer Organisation definiert wurden. Wählen Sie **[!UICONTROL Benutzerdefiniert]** aus, um nur benutzerdefinierte Datentypen anzuzeigen, die Ihrem Unternehmen gehören.
+Es können nur benutzerdefinierte Datentypen bearbeitet werden, die von Ihrer Organisation definiert wurden. Wählen Sie **[!UICONTROL Custom]** aus, um nur benutzerdefinierte Datentypen anzuzeigen, die Ihrem Unternehmen gehören.
 
 Wählen Sie in der Liste den Datentyp aus, den Sie bearbeiten möchten, um die rechte Leiste mit den Details des Datentyps zu öffnen. Im Detailbereich können Sie auch eine Beispieldatei herunterladen, die JSON-Struktur kopieren oder den Datentyp zu einem Paket hinzufügen.
 
 Wählen Sie den Namen des Datentyps in der rechten Leiste aus, um seine Struktur im [!DNL Schema Editor] zu öffnen.
 
-![Registerkarte [!UICONTROL Datentypen] des Arbeitsbereichs [!UICONTROL Schemata] mit dem hervorgehobenen Datentyp [!UICONTROL Benutzerdefiniert] und dem Datentyp [!UICONTROL Name].](../../images/ui/resources/data-types/edit.png)
+![Die Registerkarte &quot;[!UICONTROL Data types]&quot; des Arbeitsbereichs &quot;[!UICONTROL Schemas]&quot; mit einem hervorgehobenen Datentyp, [!UICONTROL Custom] und [!UICONTROL Name] Datentyp.](../../images/ui/resources/data-types/edit.png)
 
 ## Hinzufügen von Feldern zum Datentyp {#add-fields}
 
@@ -87,9 +87,9 @@ Um Felder zum Datentyp hinzuzufügen, wählen Sie auf der Arbeitsfläche das Sym
 
 ![](../../images/ui/resources/data-types/new-field.png)
 
-Verwenden Sie die Steuerelemente in der rechten Leiste, um die Details des neuen Felds zu konfigurieren. Spezifische Schritte zum Konfigurieren [&#x200B; Hinzufügen des Felds zum Datentyp finden &#x200B;](../fields/overview.md#define) im Handbuch unter „Definieren von Feldern in der“.
+Verwenden Sie die Steuerelemente in der rechten Leiste, um die Details des neuen Felds zu konfigurieren. Spezifische Schritte zum Konfigurieren [ Hinzufügen des Felds zum Datentyp finden ](../fields/overview.md#define) im Handbuch unter „Definieren von Feldern in der“.
 
-Der Datentyp Restaurant erfordert ein Zeichenfolgenfeld, das den Namen des Restaurants darstellt. Daher wird der [!UICONTROL Feldname] als „Name“ und der [!UICONTROL Typ] als &quot;[!UICONTROL String]&quot; festgelegt. Wählen Sie **[!UICONTROL Übernehmen]** aus, um die Änderungen auf das Feld anzuwenden.
+Der Datentyp Restaurant erfordert ein Zeichenfolgenfeld, das den Namen des Restaurants darstellt. Daher wird der [!UICONTROL Field name] als „Name“ und der [!UICONTROL Type] als &quot;[!UICONTROL String]&quot; festgelegt. Wählen Sie **[!UICONTROL Apply]** aus, um die Änderungen auf das Feld anzuwenden.
 
 ![](../../images/ui/resources/data-types/name-field.png)
 
@@ -97,34 +97,34 @@ Fügen Sie dem Datentyp nach Bedarf weitere Felder hinzu. Der Datentyp „Beispi
 
 ![](../../images/ui/resources/data-types/more-fields.png)
 
-Zusätzlich zu den grundlegenden Feldern können Sie auch zusätzliche Datentypen in Ihrem benutzerdefinierten Datentyp verschachteln. Der Datentyp Restaurant erfordert beispielsweise ein Feld, das die physische Adresse der Eigenschaft darstellt. In diesem Szenario können Sie ein neues Feld „Adresse“ hinzufügen, dem der Standarddatentyp &quot;[!UICONTROL Postanschrift“ &#x200B;] ist.
+Zusätzlich zu den grundlegenden Feldern können Sie auch zusätzliche Datentypen in Ihrem benutzerdefinierten Datentyp verschachteln. Der Datentyp Restaurant erfordert beispielsweise ein Feld, das die physische Adresse der Eigenschaft darstellt. In diesem Szenario können Sie ein neues Feld „Adresse“ hinzufügen, dem der Standarddatentyp &quot;[!UICONTROL Postal address]&quot; zugewiesen ist.
 
 ![](../../images/ui/resources/data-types/address-field.png)
 
 Dies zeigt, wie flexibel Datentypen in Bezug auf die Beschreibung Ihrer Daten sein können: Datentypen können Felder verwenden, die auch Datentypen sind, die selbst weitere Datentypen enthalten können usw. Auf diese Weise können Sie gängige Datenmuster in Ihren XDM-Schemata abstrahieren und wiederverwenden, was die Darstellung komplexer Datenstrukturen erleichtert.
 
-Nachdem Sie dem Datentyp Felder hinzugefügt haben, klicken Sie auf **[!UICONTROL Speichern]**, um Ihre Änderungen zu speichern und den Datentyp zum [!DNL Schema Library] hinzuzufügen.
+Nachdem Sie dem Datentyp Felder hinzugefügt haben, wählen Sie **[!UICONTROL Save]** aus, um Ihre Änderungen zu speichern und den Datentyp zum [!DNL Schema Library] hinzuzufügen.
 
 ## Hinzufügen des Datentyps zu einem Schema {#add-data-type}
 
 Nachdem Sie einen Datentyp erstellt haben, können Sie ihn in Ihren Schemata verwenden. Da XDM-Schemata aus einer Klasse und keiner oder mehreren Feldergruppen bestehen, können von einem Datentyp bereitgestellte Felder nicht direkt zu einem Schema hinzugefügt werden. Stattdessen müssen sie in eine Klasse oder Feldergruppe aufgenommen werden.
 
-Führen Sie zunächst die Schritte aus, die mit dem [Hinzufügen eines Felds zu einer &#x200B;](./classes.md#add-fields) oder [Hinzufügen eines Felds zu einer Feldergruppe“ &#x200B;](./field-groups.md#add-fields) sind. Alternativ können Sie mit dem [Hinzufügen eines Felds direkt zu einem Schema](./schemas.md#add-individual-fields) beginnen und dort die übergeordnete Klasse oder Feldergruppe auswählen. Wenn Sie den **[!UICONTROL Typ]** für das neue Feld auswählen, wählen Sie den Namen Ihres Datentyps aus dem Dropdown-Menü aus.
+Führen Sie zunächst die Schritte aus, die mit dem [Hinzufügen eines Felds zu einer ](./classes.md#add-fields) oder [Hinzufügen eines Felds zu einer Feldergruppe“ ](./field-groups.md#add-fields) sind. Alternativ können Sie mit dem [Hinzufügen eines Felds direkt zu einem Schema](./schemas.md#add-individual-fields) beginnen und dort die übergeordnete Klasse oder Feldergruppe auswählen. Wenn Sie die **[!UICONTROL Type]** für das neue Feld auswählen, wählen Sie den Namen Ihres Datentyps aus dem Dropdown-Menü aus.
 
 ## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#convert}
 
 Wenn Sie ein Feld vom Typ „Objekt“ mit mehreren Unterfeldern im [!DNL Schema Editor] erstellen, können Sie dieses Feld in einen Datentyp konvertieren, damit Sie dieselbe Feldstruktur in einer anderen Klasse oder Feldergruppe verwenden können.
 
-Um ein Feld vom Typ „Objekt“ in einen Datentyp zu konvertieren, wählen Sie das Feld auf der Arbeitsfläche aus. Stellen Sie vor dem Konvertieren des Felds sicher **[!UICONTROL dass der]** Anzeigename) für die Daten beschreibend ist, die das Objekt enthalten wird, da dies zum Namen des Datentyps wird. Wenn Sie bereit sind, das Feld zu konvertieren, wählen Sie **[!UICONTROL In neuen Datentyp konvertieren]** in der rechten Leiste aus.
+Um ein Feld vom Typ „Objekt“ in einen Datentyp zu konvertieren, wählen Sie das Feld auf der Arbeitsfläche aus. Bevor Sie das Feld konvertieren, stellen Sie sicher, dass die **[!UICONTROL Display name]** die Daten beschreibt, die das Objekt enthalten wird, da dies der Name des Datentyps wird. Wenn Sie bereit sind, das Feld zu konvertieren, wählen Sie **[!UICONTROL Convert to new data type]** in der rechten Leiste aus.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-Die Arbeitsfläche aktualisiert den Datentyp des Felds von &quot;[!UICONTROL Objekt] auf den neuen Datentyp. Diese Struktur kann jetzt in anderen Klassen und Feldergruppen wiederverwendet werden, indem dieser Datentyp beim Definieren eines neuen Felds aus **[!UICONTROL Dropdown-]** „Typ“ ausgewählt wird.
+Die Arbeitsfläche aktualisiert den Datentyp des Felds von &quot;[!UICONTROL Object]&quot; auf den neuen Datentyp. Diese Struktur kann jetzt in anderen Klassen und Feldergruppen wiederverwendet werden, indem dieser Datentyp beim Definieren eines neuen Felds aus dem Dropdown-Menü &quot;**[!UICONTROL Type]**&quot; ausgewählt wird.
 
 ![](../../images/ui/resources/data-types/converted.png)
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde beschrieben, wie Sie Datentypen mithilfe der Experience Platform-Benutzeroberfläche erstellen und bearbeiten. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemata] finden Sie unter [[!UICONTROL Schemata] Arbeitsbereich - Übersicht](../overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Datentypen mithilfe der Experience Platform-Benutzeroberfläche erstellen und bearbeiten. Weiterführende Informationen zu den Funktionen von [!UICONTROL Schemas] Workspace finden Sie in der Übersicht zu [[!UICONTROL Schemas] Workspace ](../overview.md).
 
 Informationen zum Verwalten von Datentypen mit der [!DNL Schema Registry]-API finden Sie im [Handbuch zu Datentypendpunkten](../../api/data-types.md).
