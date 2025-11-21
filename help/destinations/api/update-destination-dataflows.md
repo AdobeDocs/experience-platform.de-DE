@@ -756,7 +756,7 @@ Um ein Profilattribut zum Ziel-Datenfluss hinzuzufügen, führen Sie eine PATCH-
 >
 >Die in diesem Abschnitt beschriebene `profileSelectors`-Methode funktioniert für die meisten Streaming-Ziele. Einige Streaming-Ziele, einschließlich **Adobe Target**, erfordern jedoch stattdessen den Workflow Datenvorbereitungs-Zuordnungssatz .
 >
->**Wenn Ihre Profilattribute nach einer erfolgreichen API-Antwort (202) nicht in der Experience Platform-Benutzeroberfläche angezeigt werden** müssen Sie die Zuordnungssatzmethode verwenden, die in [Aktivieren von Zielgruppen für Batch-Ziele“ dokumentiert ](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+>**Wenn Ihre Profilattribute nach einer erfolgreichen API-Antwort (202) nicht in der Experience Platform-Benutzeroberfläche angezeigt werden** müssen Sie die Zuordnungssatzmethode verwenden, die in [Aktivieren von Zielgruppen für Batch-Ziele“ dokumentiert &#x200B;](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 **API-Format**
 
@@ -863,7 +863,7 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 
