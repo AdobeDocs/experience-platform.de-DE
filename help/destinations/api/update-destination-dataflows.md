@@ -5,10 +5,10 @@ title: Aktualisieren von Zieldatenflüssen mithilfe der Flow Service-API
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder mithilfe der Flow Service-API Zielgruppen und Attribute hinzufügen und entfernen.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
 workflow-type: tm+mt
-source-wordcount: '2410'
-ht-degree: 30%
+source-wordcount: '2471'
+ht-degree: 29%
 
 ---
 
@@ -750,6 +750,14 @@ Die exportierten Dateien enthalten den Zielnamen, die Experience Platform-Zielgr
 
 Um ein Profilattribut zum Ziel-Datenfluss hinzuzufügen, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API aus und geben Sie dabei Ihre Fluss-ID, Version und das Profilattribut an, das Sie hinzufügen möchten.
 
+>[!IMPORTANT]
+>
+>**Zielspezifische Zuordnungsanforderungen**
+>
+>Die in diesem Abschnitt beschriebene `profileSelectors`-Methode funktioniert für die meisten Streaming-Ziele. Einige Streaming-Ziele, einschließlich **Adobe Target**, erfordern jedoch stattdessen den Workflow Datenvorbereitungs-Zuordnungssatz .
+>
+>**Wenn Ihre Profilattribute nach einer erfolgreichen API-Antwort (202) nicht in der Experience Platform-Benutzeroberfläche angezeigt werden** müssen Sie die Zuordnungssatzmethode verwenden, die in [Aktivieren von Zielgruppen für Batch-Ziele“ dokumentiert ](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+
 **API-Format**
 
 ```http
@@ -855,7 +863,7 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

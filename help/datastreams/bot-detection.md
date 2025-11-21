@@ -2,9 +2,9 @@
 title: Konfigurieren der Bot-Erkennung für Datenströme
 description: Erfahren Sie, wie Sie die Bot-Erkennung für Datenströme konfigurieren, um zwischen menschlichem und nicht menschlichem Traffic zu unterscheiden.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 9a60212a9a9fa01ef8a73cfa2c16088c196788d4
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1374'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,19 @@ Diese Bot-Bewertung hilft den Lösungen, die die Anfrage erhalten, Bot-Traffic k
 >
 >Die Bot-Erkennung löscht keine Bot-Anfragen. Es wird nur das XDM-Schema mit der Bot-Bewertung aktualisiert und das Ereignis an den [Datenstrom-Service](configure.md) weitergeleitet, den Sie konfiguriert haben.
 >
->Adobe-Lösungen können die Bewertung von Bots auf unterschiedliche Weise verarbeiten. Beispielsweise verwendet Adobe Analytics einen eigenen [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=de) und verwendet nicht den von der Edge Network festgelegten Wert. Die beiden Services verwenden dieselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) sodass die Bot-Bewertung identisch ist.
+>Adobe-Lösungen können die Bewertung von Bots auf unterschiedliche Weise verarbeiten. Beispielsweise verwendet Adobe Analytics einen eigenen [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) und verwendet nicht den von der Edge Network festgelegten Wert. Die beiden Services verwenden dieselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) sodass die Bot-Bewertung identisch ist.
 
-Es kann bis zu 15 Minuten dauern, bis sich Bot-Erkennungsregeln nach ihrer Erstellung in Edge Network ausbreiten.
+## Technische Überlegungen {#technical-considerations}
+
+Bevor Sie die Bot-Erkennung in Ihren Datenströmen aktivieren, sollten Sie einige wichtige Punkte beachten, um genaue Ergebnisse und eine reibungslose Implementierung sicherzustellen:
+
+* Die Bot-Erkennung gilt nur für nicht authentifizierte Anfragen, die an `edge.adobedc.net` gesendet werden.
+* Authentifizierte Anfragen, die an `server.adobedc.net` gesendet werden, werden nicht für Bot-Traffic ausgewertet, da authentifizierter Traffic als vertrauenswürdig betrachtet wird.
+* Es kann bis zu 15 Minuten dauern, bis sich Bot-Erkennungsregeln nach ihrer Erstellung in Edge Network ausbreiten.
 
 ## Voraussetzungen {#prerequisites}
 
-Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die Feldergruppe **[!UICONTROL Bot-Erkennungsinformationen]** zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie [&#128279;](../xdm/ui/resources/schemas.md#add-field-groups) der Dokumentation zum XDM-Schema .
+Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die **[!UICONTROL Bot Detection Information]** Feldergruppe zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie [ der Dokumentation zum ](../xdm/ui/resources/schemas.md#add-field-groups)XDM-Schema .
 
 ## Konfigurieren der Bot-Erkennung für Datenströme {#configure}
 
@@ -49,17 +55,17 @@ Gehen Sie zur Liste Datenströme und wählen Sie den Datenstrom aus, dem Sie die
 
 ![Benutzeroberfläche „Datenströme“ mit der Liste der Datenströme.](assets/bot-detection/datastream-list.png)
 
-Wählen Sie auf der Seite mit den Datenstromdetails die Option **[!UICONTROL Bot-Erkennung]** in der rechten Leiste aus.
+Wählen Sie auf der Seite mit den Datenstromdetails die Option **[!UICONTROL Bot Detection]** in der rechten Leiste aus.
 
 ![Option „Bot-Erkennung“ in der Benutzeroberfläche für Datenströme hervorgehoben.](assets/bot-detection/bot-detection.png)
 
-Die Seite **[!UICONTROL Bot-]**&quot; wird angezeigt.
+Die Seite **[!UICONTROL Bot Detection Rules]** wird angezeigt.
 
 ![Einstellungen zur Bot-Erkennung auf der Seite mit den Datenstromeinstellungen.](assets/bot-detection/bot-detection-page.png)
 
 Auf der Seite Regeln für die Bot-Erkennung können Sie die Bot-Erkennung mithilfe der folgenden Funktionen konfigurieren:
 
-* Verwenden der [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Verwenden der [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Erstellen eigener Regeln zur Bot-Erkennung.
 
 ### Verwenden der IAB/ABC International Spiders and Bots List {#iab-list}
@@ -68,8 +74,8 @@ Die [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 
 So konfigurieren Sie Ihren Datenstrom für die Verwendung der IAB/ABC International Spiders and Bots List:
 
-1. Schalten Sie die **[!UICONTROL IAB/ABC International Spiders and Bots List für die Bot-Erkennung in diesem Datenstrom verwenden]** um.
-2. Wählen Sie **[!UICONTROL Speichern]** aus, um die Einstellungen für die Bot-Erkennung auf Ihren Datenstrom anzuwenden.
+1. Schalten Sie die Option **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]** ein.
+2. Wählen Sie **[!UICONTROL Save]** aus, um die Einstellungen für die Bot-Erkennung auf Ihren Datenstrom anzuwenden.
 
 ![IAB-Spiders und Bot-Liste aktiviert.](assets/bot-detection/bot-detection-list.png)
 
@@ -97,15 +103,15 @@ Wenn Sie detailliertere Regeln zur Bot-Erkennung benötigen, können Sie die IP-
 
 Gehen Sie wie folgt vor, um eine Regel zur Bot-Erkennung zu erstellen:
 
-1. Wählen Sie **[!UICONTROL Neue Regel hinzufügen]** aus.
+1. Wählen Sie **[!UICONTROL Add New Rule]** aus.
 
    ![Bildschirm mit den Einstellungen für die Bot-Erkennung mit hervorgehobener Schaltfläche „Neue Regel hinzufügen“.](assets/bot-detection/bot-detection-new-rule.png)
 
-2. Geben Sie einen Namen für die Regel im Feld **[!UICONTROL Regelname]** ein.
+2. Geben Sie einen Namen für die Regel im Feld **[!UICONTROL Rule Name]** ein.
 
    ![Bildschirm mit den Bot-Erkennungsregeln mit hervorgehobenem Regelnamen.](assets/bot-detection/rule-name.png)
 
-3. Wählen Sie **[!UICONTROL Neue IP-Bedingung hinzufügen]** aus, um eine neue IP-basierte Regel hinzuzufügen. Sie können die Regel nach IP-Adresse oder IP-Adressbereich definieren.
+3. Wählen Sie **[!UICONTROL Add new IP condition]** aus, um eine neue IP-basierte Regel hinzuzufügen. Sie können die Regel nach IP-Adresse oder IP-Adressbereich definieren.
 
    ![Bildschirm mit den Bot-Erkennungsregeln mit hervorgehobenem Feld „IP-Adresse“.](assets/bot-detection/ip-address-rule.png)
 
@@ -115,7 +121,7 @@ Gehen Sie wie folgt vor, um eine Regel zur Bot-Erkennung zu erstellen:
    >
    >Die IP-Bedingungen basieren auf einem logischen `OR`. Eine Anfrage wird als von einem Bot stammend markiert, wenn sie einer der von Ihnen definierten IP-Bedingungen entspricht.
 
-4. Wenn Sie Ihrer Regel Kopfzeilenbedingungen hinzufügen möchten, wählen Sie **[!UICONTROL Kopfzeilenbedingungsgruppe hinzufügen]** und wählen Sie dann die Kopfzeilen aus, die die Regel verwenden soll.
+4. Wenn Sie Ihrer Regel Kopfzeilenbedingungen hinzufügen möchten, wählen Sie **[!UICONTROL Add header conditions group]** und dann die Kopfzeilen aus, die die Regel verwenden soll.
 
    ![Bildschirm mit den Bot-Erkennungsregeln mit hervorgehobenen Header-Bedingungen.](assets/bot-detection/header-conditions.png)
 
@@ -123,7 +129,7 @@ Gehen Sie wie folgt vor, um eine Regel zur Bot-Erkennung zu erstellen:
 
    ![Bildschirm mit den Bot-Erkennungsregeln mit hervorgehobenen Header-Bedingungen.](assets/bot-detection/header-condition-rule.png)
 
-5. Wählen Sie nach dem Konfigurieren der gewünschten Regeln für die Bot-Erkennung **[!UICONTROL Speichern]** aus, um die Regeln auf Ihren Datenstrom anzuwenden.
+5. Wählen Sie nach dem Konfigurieren der gewünschten Regeln zur Bot-Erkennung die Option **[!UICONTROL Save]** aus, damit die Regeln auf Ihren Datenstrom angewendet werden.
 
    ![Bildschirm mit den Bot-Erkennungsregeln mit hervorgehobenen Header-Bedingungen.](assets/bot-detection/bot-detection-save.png)
 
