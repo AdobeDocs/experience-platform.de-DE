@@ -16,22 +16,22 @@ ht-degree: 85%
 # Zugangssteuerung {#access-control}
 
 * [Zugangssteuerung – Übersicht](home.md)
-* Attributbasierte {#abac}
+* Attributbasierte Zugriffssteuerung {#abac}
    * [Überblick](abac/overview.md)
    * [End-to-End-Handbuch](abac/end-to-end-guide.md)
    * [Verwenden von Zugriffsbeschriftungen zur Verwaltung des Benutzerzugriffs auf Zieldatenflüsse](/help/access-control/abac/apply-access-labels-destinations.md)
    * Berechtigungen {#permissions-ui}
       * [Durchsuchen](abac/ui/browse.md)
-      * [Beschriftungen](abac/ui/labels.md)
+      * [Labels](abac/ui/labels.md)
       * [Berechtigungen](abac/ui/permissions.md)
       * [Richtlinien](abac/ui/policies.md)
       * [Rollen](abac/ui/roles.md)
       * [Sandboxes](abac/ui/sandboxes.md)
-      * [Benutzende](abac/ui/users.md)
-   * Berechtigungs-Manager-{#permissions-manager}
+      * [Benutzer](abac/ui/users.md)
+   * Berechtigungs-Manager {#permissions-manager}
       * [Überblick](abac/permission-manager/overview.md)
       * [Berechtigungen](abac/permission-manager/permissions.md)
-   * Attributbasierte Zugriffssteuerung - API-{#abac-api}
+   * Attributbasierte Zugriffssteuerung – API {#abac-api}
       * [Übersicht](abac/api/overview.md)
       * [Erste Schritte](abac/api/getting-started.md)
       * [Rollen](abac/api/roles.md)
@@ -44,7 +44,7 @@ ht-degree: 85%
    * [Details und zusätzliche Services für ein Produktprofil verwalten](ui/details-and-services.md)
    * [Neues Produktprofil erstellen](ui/create-profile.md)
    * [Benutzer für ein Produktprofil verwalten](ui/users.md)
-* Zugangssteuerungs-API {#api}
+* Zugriffssteuerungs-API {#api}
    * [Erste Schritte](api/getting-started.md)
    * [Berechtigungsnamen und Ressourcentypen auflisten](api/permissions-and-resource-types.md)
    * [Anzeigen effektiver Richtlinien](api/effective-policies.md)

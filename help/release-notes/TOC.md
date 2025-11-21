@@ -16,8 +16,8 @@ ht-degree: 94%
 * [Aktuelle Versionshinweise zu Experience Platform](latest/latest.md)
 * [Hinweise zu Vorabversionen von Experience Platform](./pre-release-notes.md)
 * 2025 {#2025}
-   * [Oktober 2025](2025/october-2025.md)
-   * [September 2025](2025/september-2025.md)
+   * [Oktober 2025](2025/october-2025.md)
+   * [September 2025](2025/september-2025.md)
    * [August 2025](2025/august-2025.md)
    * [Juli 2025](2025/july-2025.md)
    * [Juni 2025](2025/june-2025.md)

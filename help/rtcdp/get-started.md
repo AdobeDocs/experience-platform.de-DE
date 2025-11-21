@@ -6,7 +6,7 @@ feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2321'
 ht-degree: 62%
 
 ---
@@ -156,7 +156,7 @@ Um beispielsweise die CRM-Daten von Luma aufzunehmen, filtern Sie den Katalog na
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Wählen Sie beispielsweise **[!UICONTROL Kontakte]**. Eine Vorschau der Kontaktdaten wird automatisch geladen, damit Sie überprüfen können, ob alles wie erwartet aussieht.
+   Wählen Sie beispielsweise **[!UICONTROL Contacts]** aus. Eine Vorschau der Kontaktdaten wird automatisch geladen, damit Sie überprüfen können, ob alles wie erwartet aussieht.
 
    Real-Time CDP übernimmt einen Großteil der manuellen Arbeit bei diesem Prozess, indem Standardfelder automatisch dem [!DNL Experience Data Model] (XDM)-Profilschema zugeordnet werden.
 
@@ -179,7 +179,7 @@ Luma hat viele interne Richtlinien, die die Nutzung bestimmter Arten von erfasst
 
 ![](assets/governance-labels.png)
 
-Sobald die Datennutzungsbezeichnungen angewendet wurden, kann Luma dann Data Governance verwenden, um Datennutzungsrichtlinien zu erstellen. Datennutzungsrichtlinien sind Regeln, die beschreiben, welche Arten von Aktionen Sie für Daten ausführen dürfen, die bestimmte Bezeichnungen enthalten. Beim Versuch, eine Aktion in Real-Time CDP durchzuführen, die einen Richtlinienverstoß darstellt, wird die Aktion verhindert und ein Warnhinweis ausgegeben, der angibt, welche Richtlinie verletzt wurde und warum.
+Sobald die Datennutzungs-Labels angewendet wurden, kann Luma dann Data Governance verwenden, um Datennutzungsrichtlinien zu erstellen. Datennutzungsrichtlinien sind Regeln, die beschreiben, welche Arten von Aktionen Sie für Daten ausführen dürfen, die bestimmte Labels enthalten. Beim Versuch, eine Aktion in Real-Time CDP durchzuführen, die einen Richtlinienverstoß darstellt, wird die Aktion verhindert und ein Warnhinweis ausgegeben, der angibt, welche Richtlinie verletzt wurde und warum.
 
 Darüber hinaus Real-Time CDP
 
@@ -196,7 +196,7 @@ Alle Profilinformationen, die Luma zu Sarah hat, werden angezeigt. Dazu gehören
 | Identitäten | Zeigt die Identitäten, die in [!DNL Experience Platform] aus Sarahs Interaktionen mit Luma über Kanäle und Geräte hinweg miteinander verknüpft wurden. Ihre ECID von der Website wird angezeigt. Zu ihrer Identität gehören auch die ECID aus ihrer Mobile App, ihre E-Mail-ID, eine CRM-ID aus dem kürzlich hinzugefügten [!DNL Microsoft Dynamics]-Datensatz und eine Treueprogramm-ID, die vom Luma-Treuesystem an Adobe Experience Platform übergeben wurde. |
 | Ereignisse | Zeigt alle Interaktionsdaten von Sarah mit der Marke Luma an. Dazu gehören der Artikel, den sie gerade angesehen hat, alles, was Sarah in der Vergangenheit angesehen hat, die E-Mails, die sie erhalten hat, ihre Interaktionen mit dem Callcenter sowie Daten darüber, auf welchem Kanal und welchem Gerät die einzelnen Interaktionen stattgefunden haben. |
 
-Das Real-Time CDP-Profil reduziert den Workflow des Marketing-Teams von Luma von Wochen auf Minuten und erschließt Personalisierungsmöglichkeiten, die auf dieser 360-Grad-Kundenansicht basieren. Das Profil fasst die Verhaltensdaten, die erfasst wurden, als sie die Site vor dem Anmelden durchsucht hat, mit ihrem bestehenden Kundenprofil zusammen und erlaubt so einen genauen Überblick über Sarah.
+Das Real-Time CDP-Profil reduziert den Workflow des Marketing-Teams von Luma von Wochen auf Minuten und erschließt Personalisierungsmöglichkeiten, die auf dieser 360-Grad-Kundenansicht basieren. Das Profil führt die Verhaltensdaten, die erfasst wurden, als sie die Site vor dem Anmelden durchsucht hat, mit ihrem bestehenden Kundenprofil zusammen und erlaubt so einen genauen Überblick über Sarah.
 
 Das Marketing-Team kann diese erweiterte [!DNL Real-Time Customer Profile] nutzen, um Sarahs Erfahrung besser zu personalisieren und ihre Markentreue mit Luma zu steigern.
 
@@ -235,7 +235,7 @@ Da Sarah wahrscheinlich einen Geschenkartikel in den Warenkorb gelegt und den Vo
 
 Wenn Sie die Zielgruppe „Geschenk-Warenkorbabgänger“ hinzugefügt haben, können Sie ungefähr sehen, wie viele Personen zu dieser Zielgruppe gehören. Sie können aktiv werden und es für Personalisierungszwecke kanalübergreifend bereitstellen.
 
-Wählen Sie **[!UICONTROL An Ziele senden]** aus.
+Wählen Sie **[!UICONTROL Send to destinations]** aus.
 
 In Real-Time CDP kann Luma Personalisierungen an seinen Zielgruppen nahtlos durchführen.\
 Hier sehen Sie alle Ziele, an die Luma dieses Ziel senden kann, sowohl Adobe- als auch Nicht-Adobe-Lösungen:
@@ -260,7 +260,7 @@ Sie können auch festlegen, dass der Zielgruppenexport zu einem bestimmten Zeitp
 >
 >Wenn Sie das Datumsfeld auswählen, wird optional automatisch ein 90-tägiges Timeout geplant.
 
-Wählen **[!UICONTROL Speichern]**, um zur nächsten Seite zu wechseln.
+Wählen Sie **[!UICONTROL Save]** aus, um zur nächsten Seite zu wechseln.
 
 Wenn ein Kunde in dieser Zielgruppe einen Kauf tätigt, wird seine Zugehörigkeit zu dieser Zielgruppe in Echtzeit unterdrückt. Sie qualifizieren sich nicht mehr, weil sich ihr Status geändert hat.
 
@@ -307,4 +307,4 @@ Luma-Marketing-Experten verwenden Adobe Experience Platform, um die Zielgruppe d
 
 Diese Einblicke ermöglichen es den Marketing-Experten, auf dieses Signal zu reagieren, das dadurch angeheizt wurde, dass diese Daten in CDP verfügbar waren und Kunden wie Sarah an die Zielgruppe angehängt wurden.
 
-Mithilfe dieser Daten gelingt es Luma, die Loyalität und Kundenzufriedenheit zu steigern.
+Mithilfe dieser Daten gelingt es Luma, die Treue und Kundenzufriedenheit zu steigern.

@@ -15,7 +15,7 @@ ht-degree: 93%
 # Katalog und Datensätze {#catalog}
 
 * [Katalog-Service – Übersicht](home.md)
-* Catalog Service-API {#api}
+* Catalog Service API {#api}
    * [Erste Schritte](api/getting-started.md)
    * [Catalog-Daten mithilfe von Abfrageparametern filtern](api/filter-data.md)
    * [Objekte auflisten](api/list-objects.md)
@@ -26,7 +26,7 @@ ht-degree: 93%
    * [Löschen eines Objekts](api/delete-object.md)
    * [Erstellen eines Datensatzes](api/create-dataset.md)
    * [Erstellen eines Batches](api/create-batch.md)
-   * [Datennutzungsbezeichnungen](api/labels.md)
+   * [Datennutzungs-Labels](api/labels.md)
    * [Anhang](api/appendix.md)
 * Datensätze {#datasets}
    * [Datensätze – Übersicht](datasets/overview.md)

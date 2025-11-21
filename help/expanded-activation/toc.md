@@ -15,7 +15,7 @@ ht-degree: 66%
 
 # Erweiterte Aktivierung für Audience Manager {#expanded-activation}
 
-* [Übersicht](./overview.md)
+* [Überblick](./overview.md)
 * [Kontoverwaltung](./administration.md)
 * [Zielgruppen aktivieren](./activate-audiences.md)
 * [Häufig gestellte Fragen](./faq.md)

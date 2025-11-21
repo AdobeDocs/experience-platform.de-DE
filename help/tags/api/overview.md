@@ -4,7 +4,7 @@ description: Mit der Reactor-API können Entwickler alle Ressourcen für Tags in
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1079'
 ht-degree: 97%
 
 ---
@@ -19,7 +19,7 @@ Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, konsultieren Sie d
 
 ## Firmen
 
-Ein Unternehmen stellt die Organisation eines Tags-Benutzers dar, normalerweise eine Firma. Diese Unternehmen stimmen 1:1 mit Organisations-IDs überein. API-Benutzer haben nur Einblick in die Unternehmen, auf die sie Zugriff haben.
+Ein Unternehmen stellt die Organisation eines Tags-Benutzers dar, normalerweise eine Firma. Diese Unternehmen gleichen 1:1 mit Organisations-IDs ab. API-Benutzer haben nur Einblick in die Unternehmen, auf die sie Zugriff haben.
 
 Informationen zum Anzeigen verfügbarer Unternehmen in der API finden Sie im [Handbuch zum companies-Endpunkt](./endpoints/companies.md).
 
@@ -93,7 +93,7 @@ App-Konfigurationen ermöglichen das Speichern und Abrufen von Anmeldedaten zur 
 
 ## Audit-Ereignisse
 
-Ein Prüfereignis ist ein Datensatz einer bestimmten Änderung an einer anderen Tag-Ressource, der zum Zeitpunkt der Änderung generiert wird. Dies sind Systemereignisse, die über eine Callback-Funktion abonniert werden können.
+Ein Prüfereignis ist ein Eintrag einer bestimmten Änderung an einer anderen Tag-Ressource, der zum Zeitpunkt der Änderung generiert wird. Dies sind Systemereignisse, die über eine Callback-Funktion abonniert werden können.
 
 Informationen zum Verwalten von Audit-Ereignissen in der API finden Sie im [Handbuch zum audit events-Endpunkt](./endpoints/audit-events.md).
 

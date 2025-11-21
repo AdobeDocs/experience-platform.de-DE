@@ -18,7 +18,7 @@ Mit Adobe Experience Platform können Sie personalisierte kanalübergreifende Er
 
 >[!IMPORTANT]
 >
->Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [&#x200B; entsprechenden &#x200B;](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 >
 >Alternativ können Sie den [Capacity-Service](../landing/license-usage-and-guardrails/capacity.md) verwenden, um Ihren Streaming-Durchsatz und andere Parameter in Experience Platform zu überwachen und festzulegen.
 
@@ -168,9 +168,9 @@ Zeitunabhängige Attribute, auch „Eintragsdaten “genannt, werden mithilfe vo
 
 #### Dimension-Entität
 
-Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionsentitäten, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten“ &#x200B;](../segmentation/tutorials/multi-entity-segmentation.md).
+Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionsentitäten, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten“ ](../segmentation/tutorials/multi-entity-segmentation.md).
 
-Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese Schemata, die mit anderen XDM-Klassen als der Klasse „XDM Individual Profile“ modelliert werden, werden als „Dimensionsentitäten“ (auch „Lookup-Entitäten“ genannt) bezeichnet und enthalten keine Zeitreihendaten. Schemata, die Dimensionsentitäten darstellen, werden durch die Verwendung von [Schemabeziehungen) mit Profilentitäten &#x200B;](../xdm/tutorials/relationship-ui.md).
+Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese Schemata, die mit anderen XDM-Klassen als der Klasse „XDM Individual Profile“ modelliert werden, werden als „Dimensionsentitäten“ (auch „Lookup-Entitäten“ genannt) bezeichnet und enthalten keine Zeitreihendaten. Schemata, die Dimensionsentitäten darstellen, werden durch die Verwendung von [Schemabeziehungen) mit Profilentitäten ](../xdm/tutorials/relationship-ui.md).
 
 Dimensionsentitäten stellen Suchdaten bereit, die Segmentdefinitionen mit mehreren Entitäten unterstützen und vereinfachen. Sie müssen klein genug sein, damit die Segmentierungsmaschine den gesamten Datensatz in den Speicher laden kann, um eine optimale Verarbeitung zu gewährleisten (schnelle Punktsuche).
 
@@ -193,7 +193,7 @@ Für Profil können mehrere Report Suites aktiviert werden, solange alle Datenko
 In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP-Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
-* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=de#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
 * [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

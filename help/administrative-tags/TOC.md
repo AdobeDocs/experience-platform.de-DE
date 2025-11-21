@@ -6,7 +6,7 @@ user-guide-description: Verwenden Sie einheitliche Tags, um Metadaten-Taxonomien
 source-git-commit: cc8e7074eafae11887486b0cec54154d96eb5a5c
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 82%
+ht-degree: 75%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 82%
 # Einheitliche Tags{#administrative-tags}
 
 * [Übersicht über einheitliche Tags](overview.md)
-* API- für einheitliche Tags{#api}
+* API für einheitliche Tags {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [Ordner](api/folders.md)

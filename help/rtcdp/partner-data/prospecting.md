@@ -5,8 +5,8 @@ feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 85%
+source-wordcount: '2027'
+ht-degree: 74%
 
 ---
 
@@ -22,7 +22,7 @@ Nutzen Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, um Ihre P
 
 ## Gründe für diesen Anwendungsfall {#why-this-use-case}
 
-Marken stehen gleichzeitig vor gewaltigen Herausforderungen bei der verantwortungsvollen Ausführung erstklassiger Anwendungsfälle zur Kundenakquise, ohne auf Drittanbieter-Cookies angewiesen zu sein, mit begrenzten Budgets und höherer Nachfrage nach Transparenz und Return on Ad-Spend.
+Marken stehen gleichzeitig vor gewaltigen Herausforderungen bei der verantwortungsvollen Ausführung von erstklassigen funnel-Anwendungsfällen zur Kundenakquise, ohne auf Drittanbieter-Cookies angewiesen zu sein, mit begrenzten Budgets und höherer Nachfrage nach Transparenz und Return on Ad-Spend.
 
 Adobe Real-Time Customer Data Platform kann Marken dabei helfen, ihre von der Data Management Platform (DMP) unterstützten Anwendungsfälle sicher auf Alternativen ohne Cookies umzustellen, und zwar auf eine Weise, die die volle Komplexität und Leistungsfähigkeit der Self-Service-Segmentierung, Audience Curation und Aktivierung in ein einziges System bringt. Und das alles ohne Kompromisse bei Adobes unbeirrtem Fokus auf eine verantwortungsvolle Nutzung von Daten über ein patentiertes Data Governance- und Einverständnis-Framework.
 
@@ -55,7 +55,7 @@ Bevor Sie Real-Time CDP erweitern, um neue Kundinnen und Kunden anzusprechen und
 
 Im folgenden Video-Tutorial finden Sie eine exemplarische Vorgehensweise, wie Sie potenzielle Zielgruppen erreichen und ansprechen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452867/?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## Erreichen des Anwendungsfalls: Schrittweise Anweisungen {#step-by-step-instructions}
 
@@ -67,7 +67,7 @@ Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, werden
 
 * [Identitäten](/help/identity-service/features/namespaces.md)
 * [Schemata](/help/xdm/home.md)
-* [Datennutzungskennzeichnungen](/help/data-governance/labels/overview.md)
+* [Datennutzungs-Labels](/help/data-governance/labels/overview.md)
 * [Datensätze](/help/catalog/datasets/overview.md)
 * [Quellen](/help/sources/home.md)
 * [Interessentenprofile](/help/profile/ui/prospect-profile.md)
@@ -84,29 +84,29 @@ Zur Vorbereitung darauf, Interessentenprofile von Ihrem Datenpartner zu erhalten
 
 Die Identitäts-, Daten- und Governance-Komponenten, die Sie verwenden werden, sind:
 
-* der neue Identitätstyp **[!UICONTROL Partner-ID]** für die von Partnern bereitgestellten Profile
-* die neue XDM-Klasse **[!UICONTROL XDM Individual Prospect Profile]**
+* Ein neuer **[!UICONTROL Partner ID]** Identitätstyp für die vom Partner bereitgestellten Profile
+* Eine neue **[!UICONTROL XDM Individual Prospect Profile]** XDM-Klasse
 * **(Dokumentation in Kürze verfügbar)** Feldergruppen, die auf die Partnerdatenunterstützung zugeschnitten sind
-* **(Dokumentation in Kürze verfügbar)** Drittanbieterkennzeichnungen, die Sie zu den Attributen hinzufügen, die von Partnern eingehen
+* **(Dokumentation in Kürze verfügbar)** Drittanbieter-Labels, die Sie zu den Attributen hinzufügen, die von Partnern eingehen
 
 #### Erstellen eines Identity-Namespace für die Partner-ID {#create-partner-id-namespace}
 
-Erstellen Sie zunächst einen neuen Identitätstyp für die Profile, die Sie vom Partner erhalten. Dazu müssen Sie im Abschnitt „Identität“ einen neuen Identity-Namespace des Typs **[!UICONTROL Partner-ID]** erstellen.
+Erstellen Sie zunächst einen neuen Identitätstyp für die Profile, die Sie vom Partner erhalten. Dazu müssen Sie im Abschnitt Identität einen neuen Identity-Namespace des Typs **[!UICONTROL Partner ID]** erstellen.
 
 ![Erstellen Sie einen neuen Identity-Namespace für die Partner-ID.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * Weitere Informationen zur Partner-ID finden Sie im Abschnitt [Identitätstypen](/help/identity-service/features/namespaces.md).
 * Lesen Sie die Anweisungen zum [Definieren von Identitätsfeldern](/help/xdm/ui/fields/identity.md) in der Experience Platform-Benutzeroberfläche.
 
-#### Erstellen eines neues Schemas mit der Klasse **[!UICONTROL XDM Individual Prospect Profile]**
+#### Erstellen eines neuen Schemas mit der **[!UICONTROL XDM Individual Prospect Profile]**
 
-Erstellen Sie als Nächstes in **[!UICONTROL Daten-Management]** > **[!UICONTROL Schemata]** ein neues Schema und weisen Sie ihm die Klasse **[!UICONTROL XDM Individual Prospect Profile]** zu.
+Erstellen Sie anschließend unter **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** ein neues Schema und weisen Sie ihm die **[!UICONTROL XDM Individual Prospect Profile]** Klasse zu.
 
 ![Suchen Sie im XDM-Schema-Builder nach der Klasse „XDM Individual Prospect Profile“.](/help/rtcdp/assets/partner-data/prospecting/xdm-individual-prospect-class.png)
 
 Lesen Sie, wie Sie [Schemata in der Benutzeroberfläche erstellen und bearbeiten](/help/xdm/ui/resources/schemas.md), und erhalten Sie vollständige Informationen zur Klasse „XDM Individual Prospect Profile“ (Link folgt in Kürze).
 
-Die Klasse **[!UICONTROL XDM Individual Prospect Profile]** ist mit den unten aufgeführten Feldern vorkonfiguriert. Um Ihr Schema mit von Partnern bereitgestellten Attributen für die Interessentenprofile anzureichern, können Sie entweder eine neue Feldergruppe mit den erwarteten Attributen erstellen und zum Schema hinzufügen oder eine der von Adobe bereitgestellten vorkonfigurierten Feldergruppen verwenden.
+Die **[!UICONTROL XDM Individual Prospect Profile]**-Klasse ist mit den unten gezeigten Feldern vorkonfiguriert. Um Ihr Schema mit von Partnern bereitgestellten Attributen für die Interessentenprofile anzureichern, können Sie entweder eine neue Feldergruppe mit den erwarteten Attributen erstellen und zum Schema hinzufügen oder eine der von Adobe bereitgestellten vorkonfigurierten Feldergruppen verwenden.
 
 ![Vorkonfigurierte Felder für die Klasse „XDM Individual Prospect Profile“.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
@@ -122,17 +122,17 @@ Beachten Sie, dass das Schema noch nicht für das Profil aktiviert ist. Schalten
 
 ![Aktivieren eines Schemas für ein Profil.](/help/rtcdp/assets/partner-data/prospecting/enable-schema-for-profile.png)
 
-#### Hinzufügen der Data Governance-Beschriftung „Drittanbieter“ zu allen Feldern im Schema
+#### Hinzufügen des Data-Governance-Labels „Drittanbieter“ zu allen Feldern im Schema
 
-Erwägen Sie das Hinzufügen der Data Governance-Beschriftung „Drittanbieter“ zu allen Feldern, aus denen das Schema besteht. Dies ist wichtig, um eine verantwortungsvolle Nutzung von Drittanbieterdaten zu gewährleisten und das Risiko von Datenlecks zu minimieren. Weitere Informationen zu [Data-Governance-Kennzeichnungen von Drittanbietern](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+Erwägen Sie das Hinzufügen des Data-Governance-Labels „Drittanbieter“ zu allen Feldern, aus denen das Schema besteht. Dies ist wichtig, um eine verantwortungsvolle Nutzung von Drittanbieterdaten zu gewährleisten und das Risiko von Datenlecks zu minimieren. Weitere Informationen zu [Data-Governance-Kennzeichnungen von Drittanbietern](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 Gehen Sie dazu wie folgt vor:
 
-1. Navigieren Sie zum erstellten Schema und wählen Sie die Registerkarte **[!UICONTROL Kennzeichnungen]** aus.
-2. Wählen Sie alle Felder in diesem Schema mithilfe des Kontrollkästchens oben aus und klicken Sie dann auf das Stiftsymbol rechts, um Data Governance-Kennzeichnungen auf dieses Schema anzuwenden.
-3. Wählen Sie die Kennzeichnung **[!UICONTROL Partner-Ökosystem]** aus den Kategorien auf der linken Seite aus.
-4. Wählen Sie die Kennzeichnung **[!UICONTROL Drittanbieter]** aus und klicken Sie auf **[!UICONTROL Speichern]**.
-5. Beachten Sie, dass jetzt alle Felder im Schema die im vorherigen Schritt ausgewählte Kennzeichnung tragen.
+1. Navigieren Sie zum erstellten Schema und wählen Sie die Registerkarte **[!UICONTROL Labels]** aus.
+2. Wählen Sie alle Felder in diesem Schema mithilfe des Kontrollkästchens oben aus und klicken Sie dann auf das Stiftsymbol rechts, um Data-Governance-Labels auf dieses Schema anzuwenden.
+3. Wählen Sie in den Kategorien auf der linken Seite die **[!UICONTROL Partner Ecosystem]** Beschriftung aus.
+4. Wählen Sie die Bezeichnung **[!UICONTROL Third Party]** und dann **[!UICONTROL Save]** aus.
+5. Beachten Sie, dass jetzt alle Felder im Schema das im vorherigen Schritt ausgewählte Label tragen.
 
 >[!SUCCESS]
 >
@@ -152,11 +152,11 @@ Nachdem Sie Ihr Datenmodell für die Verwaltung von Interessentenprofilen vorber
 
 Um einige Beispieldaten zu laden und Interessentenprofile zu füllen, erstellen Sie einen Datensatz und laden Sie eine Datei hoch, die Sie vom Datenpartner erhalten haben. Führen Sie folgende Schritte durch:
 
-1. Navigieren Sie zu **[!UICONTROL Daten-Management]** > **[!UICONTROL Datensätze]** und wählen Sie **[!UICONTROL Datensatz erstellen]** aus.
+1. Navigieren Sie zu **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** und wählen Sie **[!UICONTROL Create dataset]** aus.
 2. Wählen Sie „Datensatz aus Schema erstellen“ aus
 3. Wählen Sie das Schema aus, das Sie im vorherigen Schritt erstellt haben
 4. Geben Sie Ihrem Datensatz einen Namen und optional eine Beschreibung.
-5. Wählen Sie **[!UICONTROL Beenden]** aus.
+5. Wählen Sie **[!UICONTROL Finish]** aus.
 
 ![Eine Aufzeichnung der Schritte zum Erstellen eines Datensatzes für Interessentenprofile.](/help/rtcdp/assets/partner-data/prospecting/create-dataset-for-prospect-profiles.gif)
 
@@ -164,7 +164,7 @@ Beachten Sie, dass Sie ähnlich wie beim Schritt zum Erstellen eines Schemas den
 
 ![Datensatz für Profil aktivieren.](/help/rtcdp/assets/partner-data/prospecting/enable-dataset-for-profile.png)
 
-Um eine vom Partner erhaltene Datei in den Datensatz zu laden, wählen Sie den Datensatz aus, scrollen Sie in der rechten Leiste nach unten und wählen Sie **[!UICONTROL Daten hinzufügen]** aus. Sie können die Datei per Drag-and-Drop verschieben oder **[!UICONTROL Dateien auswählen]** verwenden, um zum Dateispeicherort zu navigieren und ihn auszuwählen.
+Um eine Datei, die Sie vom Partner erhalten haben, in den Datensatz zu laden, wählen Sie den Datensatz aus, blättern Sie in der rechten Leiste nach unten und wählen Sie **[!UICONTROL Add data]** aus. Sie können die Datei per Drag-and-Drop ziehen oder **[!UICONTROL Choose files]** auswählen, um zum Dateispeicherort zu navigieren und ihn auszuwählen.
 
 ![Datei zum Datensatz hinzufügen.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
 
@@ -183,13 +183,13 @@ Nachdem Sie die Liste von Profilen vom Datenpartner in die Real-Time CDP geladen
 
 #### Inspizieren der geladenen Interessentenprofile {#inspect-profiles}
 
-Um die Liste der Interessentenprofile anzuzeigen, navigieren Sie in der linken Leiste zu **[!UICONTROL Interessenten]** > **[!UICONTROL Profile]**.
+Um die Liste der Interessentenprofile anzuzeigen, navigieren Sie in der linken Leiste zu **[!UICONTROL Prospects]** > **[!UICONTROL Profiles]** .
 
-Beachten Sie, dass es bis zu zwei Stunden dauern kann, bis die Interessentenprofile, die Sie gerade in die Real-Time CDP geladen haben, in der Ansicht **[!UICONTROL Durchsuchen]** des Interessentenprofil-Bildschirms erscheinen. Wenn auf der Seite die Meldung „Es sind derzeit keine Interessentenprofile zum Durchsuchen vorhanden“ angezeigt wird, versuchen Sie es nach einiger Zeit erneut. Nach einiger Wartezeit sollten Interessentenprofile in der Ansicht **[!UICONTROL Durchsuchen]** erscheinen.
+Beachten Sie, dass es bis zu zwei Stunden dauern kann, bis die soeben in Real-Time CDP geladenen Interessentenprofile in der **[!UICONTROL Browse]** des Bildschirms des Interessentenprofils angezeigt werden. Wenn auf der Seite die Meldung „Es sind derzeit keine Interessentenprofile zum Durchsuchen vorhanden“ angezeigt wird, versuchen Sie es nach einiger Zeit erneut. Nach einiger Wartezeit sollten Interessentenprofile in der **[!UICONTROL Browse]** angezeigt werden.
 
 >[!TIP]
 >
->Beachten Sie, dass die Spalte **[!UICONTROL Identity-Namespace]** vorhanden ist. Wenn Sie mit mehreren Datenanbietern arbeiten, verwenden Sie diese Spalte, um die Herkunft von Interessentenprofilen zu ermitteln.
+>Beachten Sie das Vorhandensein der Spalte **[!UICONTROL Identity Namespace]** . Wenn Sie mit mehreren Datenanbietern arbeiten, verwenden Sie diese Spalte, um die Herkunft von Interessentenprofilen zu ermitteln.
 
 ![Anzeigen der Interessentenprofile, die in die Real-Time CDP geladen wurden.](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
 
@@ -203,7 +203,7 @@ Lesen Sie mehr über [Interessentenprofile](/help/profile/ui/prospect-profile.md
 
 Verwenden Sie die Segmentierungsfunktion in der Real-Time CDP, um Zielgruppen aus Ihren Interessentenprofilen zu erstellen. Verwenden Sie die gewünschten Segmentierungsregeln, um maßgeschneiderte Zielgruppen zu erstellen.
 
-Um zu beginnen und Zielgruppen aus Interessentenprofilen zu erstellen, navigieren Sie zu **[!UICONTROL Interessierte]** > **[!UICONTROL Zielgruppen]**.
+Um zu beginnen und Audiences zu erstellen, die aus Interessentenprofilen bestehen, navigieren Sie zu **[!UICONTROL Prospects]** > **[!UICONTROL Audiences]**.
 
 ![Ansicht von Interessentenzielgruppen.](/help/rtcdp/assets/partner-data/prospecting/prospect-audiences.png)
 
@@ -229,4 +229,4 @@ Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerd
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * [Personalisieren Sie Onsite-Erlebnisse für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder eine Vorgeschichte mit Ihrer Marke hat.
-* [Erweiterte Aktivierung von Interessentenprofilen und Zielgruppen potenzieller &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.
+* [Erweiterte Aktivierung von Interessentenprofilen und Zielgruppen potenzieller ](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.

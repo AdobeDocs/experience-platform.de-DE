@@ -6,7 +6,7 @@ role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '523'
 ht-degree: 30%
 
 ---
@@ -27,9 +27,9 @@ Inhalt dieses Dokumentationshandbuchs:
 
 >[!ENDSHADEBOX]
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
-[!UICONTROL Anwendungsfall-Playbooks] können Ihnen bei den ersten Schritten mit Real-Time CDP oder Adobe Journey Optimizer helfen, wenn Sie möglicherweise nicht genau wissen, womit Sie beginnen sollen oder wie Sie die richtigen Assets erstellen, um Ihre gewünschten Anwendungsfälle zu erreichen.
+[!UICONTROL Use Case Playbooks] können Ihnen bei den ersten Schritten mit Real-Time CDP oder Adobe Journey Optimizer helfen, das Problem zu lösen, wenn Sie möglicherweise nicht genau wissen, womit Sie beginnen sollen oder wie Sie die richtigen Assets erstellen, um Ihre gewünschten Anwendungsfälle zu erreichen.
 
 Playbooks für Anwendungsfälle können Ihnen dabei helfen, indem Sie:
 
@@ -42,7 +42,7 @@ Jedes Playbook enthält Informationen zum jeweiligen Anwendungsfall, der damit g
 
 Wenn Sie beispielsweise ein Real-Time CDP-Playbook auswählen, könnten Sie Zielgruppen generieren, die Sie dann einem Ziel zuordnen können, um eine Marketing-Kampagne auszuführen. Wenn Sie ein Adobe Journey Optimizer-Playbook auswählen, möchten Sie vielleicht eine Customer Journey innerhalb Ihres Produkts erstellen und relevante Messaging-Inhalte an Ihre Kundinnen und Kunden senden.
 
-Erstellen Sie eine Instanz eines Playbooks, um bestimmte Assets wie Schemata, Zielgruppen oder Journey zu generieren, die auf Ihren Anwendungsfall zugeschnitten und im Experience Platform wiederverwendbar sind. Diese Objekte sollen Ihnen dabei helfen, alle Ressourcen zu verstehen, die zur Implementierung Ihres spezifischen Anwendungsfalls erforderlich sind. Sie enthalten keine Daten und werden in Entwicklungs-Sandboxes erstellt. Beginnen Sie mit der Verwendung dieser Assets oder nehmen Sie Änderungen daran vor, bevor Sie sie verwenden und für Ihr Team in Real-Time CDP oder Journey Optimizer freigeben. Leiten Sie die gewünschten Assets aus der inspirierenden Sandbox in eine Entwicklungs-Sandbox und dann weiter in eine Produktions-Sandbox weiter.
+Erstellen Sie eine Instanz eines Playbooks, um bestimmte Assets wie Schemata, Zielgruppen oder Journey zu generieren, die auf Ihren Anwendungsfall zugeschnitten und in Experience Platform wiederverwendbar sind. Diese Objekte sollen Ihnen dabei helfen, alle Ressourcen zu verstehen, die zur Implementierung Ihres spezifischen Anwendungsfalls erforderlich sind. Sie enthalten keine Daten und werden in Entwicklungs-Sandboxes erstellt. Beginnen Sie mit der Verwendung dieser Assets oder nehmen Sie Änderungen daran vor, bevor Sie sie verwenden und für Ihr Team in Real-Time CDP oder Journey Optimizer freigeben. Leiten Sie die gewünschten Assets aus der inspirierenden Sandbox in eine Entwicklungs-Sandbox und dann weiter in eine Produktions-Sandbox weiter.
 
 ### Videoüberblick
 
@@ -52,7 +52,7 @@ Sehen Sie sich dieses Video an, um zu erfahren, wie Sie Instanzen eines Anwendun
 
 ## Verfügbarkeit {#availability}
 
-Einige [!UICONTROL Playbooks für Anwendungsfälle] sind auf Real-Time CDP-Anwendungsfälle zugeschnitten, während andere am besten für Kunden geeignet sind, die Journey Optimizer verwenden. Durchsuchen Sie den Katalog nach den Playbooks, die für Ihr Produkt und Ihren Anwendungsfall am besten geeignet sind. Weitere Informationen zu Real-Time CDP und Journey Optimizer finden Sie in den [Adobe-Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html).
+Einige [!UICONTROL Use Case Playbooks] sind auf Real-Time CDP-Anwendungsfälle zugeschnitten, während andere sich am besten für Kunden eignen, die Journey Optimizer verwenden. Durchsuchen Sie den Katalog nach den Playbooks, die für Ihr Produkt und Ihren Anwendungsfall am besten geeignet sind. Weitere Informationen zu Real-Time CDP und Journey Optimizer finden Sie in den [Adobe-](https://helpx.adobe.com/de/legal/product-descriptions.html).
 
 ## Handbücher zur Benutzeroberfläche {#ui-guides}
 

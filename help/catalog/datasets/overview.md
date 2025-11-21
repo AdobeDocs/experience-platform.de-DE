@@ -20,7 +20,7 @@ Dieses Dokument bietet einen umfassenden Überblick über Datensätze in [!DNL E
 
 ## Erstellen von Datensätzen und Tracking von Metadaten
 
-[!DNL Catalog Service] ist das Aufzeichnungssystem für den Speicherort und die Herkunft von Daten innerhalb von [!DNL Experience Platform] und wird zum Erstellen und Verwalten von Datensätzen verwendet. [!DNL Catalog] verfolgt die Metadaten für jeden Datensatz. Darin enthalten ist ein Verweis auf das [!DNL Experience Data Model] (XDM)-Schema, dem der Datensatz entspricht (im nächsten Abschnitt erläutert), und die Anzahl der in diesen Datensatz aufgenommenen Datensätze.
+[!DNL Catalog Service] ist das Aufzeichnungssystem für den Speicherort und die Herkunft von Daten innerhalb von [!DNL Experience Platform] und wird zum Erstellen und Verwalten von Datensätzen verwendet. [!DNL Catalog] verfolgt die Metadaten für jeden Datensatz. Darin enthalten ist ein Verweis auf das [!DNL Experience Data Model] (XDM)-Schema, dem der Datensatz entspricht (im nächsten Abschnitt erläutert), und die Anzahl der in diesen Datensatz aufgenommenen Einträge.
 
 Weitere Informationen dazu inden Sie in der [Übersicht zum Katalog-Service](../home.md).
 
@@ -44,12 +44,12 @@ Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalt
 
 >[!IMPORTANT]
 >
->Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf der Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Experience Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Kennzeichnungen](../../data-governance/e2e.md#migrate-labels).
+>Labels können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Labels auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf der Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Experience Platform-Benutzeroberfläche unterstützt. Damit Ihre Labels schemaübergreifend konsistent sind, müssen alle Labels, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Labels](../../data-governance/e2e.md#migrate-labels).
 
-Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md). Schrittweise Anweisungen zum Arbeiten mit Nutzungskennzeichnungen in [!DNL Experience Platform] finden Sie in den folgenden Handbüchern:
+Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md). Schrittweise Anweisungen zum Arbeiten mit Nutzungs-Labels in [!DNL Experience Platform] finden Sie in den folgenden Handbüchern:
 
-* [Verwalten von Kennzeichnungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md)
-* [Verwalten von Datensatzkennzeichnungen in der API](../../data-governance/labels/dataset-api.md)
+* [Verwalten von Labels in der Benutzeroberfläche](../../data-governance/labels/user-guide.md)
+* [Verwalten von Datensatz-Labels in der API](../../data-governance/labels/dataset-api.md)
 
 ## Datensätze in nachgelagerten [!DNL Experience Platform]-Services
 

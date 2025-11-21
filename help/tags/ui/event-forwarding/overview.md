@@ -5,8 +5,8 @@ feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 54%
+source-wordcount: '1181'
+ht-degree: 48%
 
 ---
 
@@ -53,7 +53,7 @@ Während Tags Ereignisdaten mithilfe der Experience Platform Web- und Mobile-SDK
 
 ### Properties {#properties}
 
-Die Ereignisweiterleitung verwaltet einen eigenen Speicher mit Properties, die von Tags getrennt sind. Diese können Sie in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche durch Auswahl von **[!UICONTROL Ereignisweiterleitung]** im linken Navigationsbereich anzeigen.
+Die Ereignisweiterleitung verwaltet einen eigenen Speicher mit Properties, die von Tags getrennt sind. Diese können Sie in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche durch Auswählen von **[!UICONTROL Event Forwarding]** im linken Navigationsbereich anzeigen.
 
 >[!TIP]
 >
@@ -65,7 +65,7 @@ Alle Properties der Ereignisweiterleitung führen **[!UICONTROL Edge]** als ihre
 
 ### Erweiterungen {#extensions}
 
-Die Ereignisweiterleitung verfügt über einen eigenen Katalog kompatibler Erweiterungen, z. B. die [Core](../../extensions/server/core/overview.md)-Erweiterung und die [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md)-Erweiterung. Sie können die verfügbaren Erweiterungen für Properties der Ereignisweiterleitung in der Benutzeroberfläche anzeigen, indem Sie im linken Navigationsbereich auf **[!UICONTROL Erweiterungen]** und dann auf **[!UICONTROL Katalog]** klicken.
+Die Ereignisweiterleitung verfügt über einen eigenen Katalog kompatibler Erweiterungen, z. B. die [Core](../../extensions/server/core/overview.md)-Erweiterung und die [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md)-Erweiterung. Sie können die verfügbaren Erweiterungen für Properties der Ereignisweiterleitung in der Benutzeroberfläche anzeigen, indem Sie im linken Navigationsbereich auf **[!UICONTROL Extensions]** und dann auf **[!UICONTROL Catalog]** klicken.
 
 Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) im rechten Bedienfeld auswählen.
 
@@ -79,9 +79,9 @@ Während Datenelemente selbst in der Ereignisweiterleitung auf die gleiche Weise
 
 #### Verweisen auf Daten aus Experience Platform Edge Network {#data-element-path}
 
-Um auf Daten aus Experience Platform Edge Network zu verweisen, müssen Sie ein Datenelement erstellen, das einen gültigen Pfad zu diesen Daten bereitstellt. Wählen Sie beim Erstellen des Datenelements in der Benutzeroberfläche die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Pfad]** für den Typ.
+Um auf Daten aus Experience Platform Edge Network zu verweisen, müssen Sie ein Datenelement erstellen, das einen gültigen Pfad zu diesen Daten bereitstellt. Wählen Sie beim Erstellen des Datenelements in der Benutzeroberfläche **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Path]** für den Typ aus.
 
-Der Wert **[!UICONTROL Pfad]** für das Datenelement muss dem Muster `arc.event.{ELEMENT}` entsprechen (z. B.: `arc.event.xdm.web.webPageDetails.URL`). Dieser Pfad muss korrekt angegeben werden, damit Daten gesendet werden können.
+Der **[!UICONTROL Path]** für das Datenelement muss dem `arc.event.{ELEMENT}` entsprechen (z. B.: `arc.event.xdm.web.webPageDetails.URL`). Dieser Pfad muss korrekt angegeben werden, damit Daten gesendet werden können.
 
 Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) im rechten Bedienfeld auswählen.
 
@@ -107,7 +107,7 @@ Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Fu
 
 #### Sequenz von Regelaktionen {#action-sequencing}
 
-Der Abschnitt [!UICONTROL Aktionen] einer Ereignisweiterleitungsregel wird immer sequentiell ausgeführt. Wenn eine Regel beispielsweise zwei Aktionen hat, beginnt die zweite Aktion erst dann mit der Ausführung, wenn die vorherige Aktion abgeschlossen ist (und in Fällen, in denen eine Antwort von einem Endpunkt erwartet wird, hat dieser Endpunkt geantwortet). Stellen Sie also beim Speichern einer Regel sicher, dass die Reihenfolge der Aktionen korrekt ist. Diese Ausführungssequenz kann im Gegensatz zu Tag-Regeln nicht asynchron ausgeführt werden.
+Der [!UICONTROL Actions] Abschnitt einer Ereignisweiterleitungsregel wird immer sequenziell ausgeführt. Wenn eine Regel beispielsweise zwei Aktionen hat, beginnt die zweite Aktion erst dann mit der Ausführung, wenn die vorherige Aktion abgeschlossen ist (und in Fällen, in denen eine Antwort von einem Endpunkt erwartet wird, hat dieser Endpunkt geantwortet). Stellen Sie also beim Speichern einer Regel sicher, dass die Reihenfolge der Aktionen korrekt ist. Diese Ausführungssequenz kann im Gegensatz zu Tag-Regeln nicht asynchron ausgeführt werden.
 
 ## Geheimnisse {#secrets}
 

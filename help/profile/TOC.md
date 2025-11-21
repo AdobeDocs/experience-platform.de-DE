@@ -29,7 +29,7 @@ ht-degree: 91%
    * [Exportaufträge ([!DNL Profile]-Export)](api/export-jobs.md)
    * [Musterstatus der Vorschau ([!DNL Profile]-Vorschau)](api/preview-sample-status.md)
    * [[!DNL Profile] Systemaufgaben (Löschanfragen)](api/profile-system-jobs.md)
-* Profil-UI {#ui}
+* Profil-Benutzeroberfläche {#ui}
    * [Handbuch für die [!DNL Profile]-Benutzeroberfläche](ui/user-guide.md)
    * [[!DNL Profile]-Detailanpassung](ui/profile-customization.md)
    * [Interessentenprofile](ui/prospect-profile.md)

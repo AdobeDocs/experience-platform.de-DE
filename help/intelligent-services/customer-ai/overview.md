@@ -44,7 +44,7 @@ Customer AI erlaubt Folgendes nicht:
 
 Das folgende Video wurde entwickelt, um Ihr Verständnis von Kunden-KI zu unterstützen.
 
->[!VIDEO](https://video.tv.adobe.com/v/36449?learn=on&quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Funktionsweise
 

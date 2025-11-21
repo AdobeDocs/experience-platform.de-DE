@@ -32,7 +32,7 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 Anfrageformate variieren je nach der verwendeten [!DNL Experience Platform]-API. Am einfachsten erfahren Sie, wie Sie API-Aufrufe strukturieren können, indem Sie sich die in der Dokumentation für einzelne [!DNL Experience Platform]-Services angegebenen Beispiele ansehen.
 
-Weitere Informationen zum Erstellen von API-Anfragen finden Sie in den Ersten Schritten für die Experience Platform-API [&#x200B; Abschnitt zum Lesen &#x200B;](./api-guide.md#sample-api) Beispiel-API-Aufrufen .
+Weitere Informationen zum Erstellen von API-Anfragen finden Sie in den Ersten Schritten für die Experience Platform-API [ Abschnitt zum Lesen ](./api-guide.md#sample-api) Beispiel-API-Aufrufen .
 
 ## Was ist meine Organisation? {#what-is-my-ims-organization}
 
@@ -96,9 +96,9 @@ Die folgenden Status-Codes können bei jeder [!DNL Experience Platform]-API auft
 |--- | --- | ---|
 | 400 | Ungültige Anfrage | Die Anfrage wurde falsch erstellt, es fehlen wichtige Informationen und/oder die Syntax ist falsch. |
 | 401 | Authentifizierung fehlgeschlagen | Die Anfrage hat eine Authentifizierungsprüfung nicht bestanden. Ihr Zugriffstoken fehlt oder ist ungültig. Weiterführende Informationen finden Sie im Abschnitt [OAuth-Token-Fehler](#oauth-token-is-missing). |
-| 403 | Verboten | Die Ressource wurde zwar gefunden, Sie verfügen jedoch über nicht die richtigen Anmeldedaten zur Anzeige. <br> Eine Ursache für diesen Fehler ist wahrscheinlich, dass Sie nicht über die erforderliche [Zugriffssteuerungsberechtigungen](/help/access-control/home.md) verfügen, um auf die Ressource zuzugreifen oder sie zu bearbeiten. Erfahren Sie[&#x200B; wie Sie die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen abrufen, &#x200B;](/help/landing/api-authentication.md#get-abac-permissions) Experience Platform-APIs zu verwenden. </p> |
+| 403 | Verboten | Die Ressource wurde zwar gefunden, Sie verfügen jedoch über nicht die richtigen Anmeldedaten zur Anzeige. <br> Eine Ursache für diesen Fehler ist wahrscheinlich, dass Sie nicht über die erforderliche [Zugriffssteuerungsberechtigungen](/help/access-control/home.md) verfügen, um auf die Ressource zuzugreifen oder sie zu bearbeiten. Erfahren Sie[ wie Sie die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen abrufen, ](/help/landing/api-authentication.md#get-abac-permissions) Experience Platform-APIs zu verwenden. </p> |
 | 404 | Nicht gefunden | Die angeforderte Ressource konnte auf dem Server nicht gefunden werden. Die Ressource wurde möglicherweise gelöscht oder der angefragte Pfad wurde falsch eingegeben. |
-| 500 | Interner Server-Fehler | Dies ist ein Server-seitiger Fehler. Wenn Sie viele simultane Aufrufe ausführen, erreichen Sie möglicherweise das API-Limit und müssen Ihre Ergebnisse filtern. (Weitere Informationen finden Sie im Entwicklerhandbuch für die [!DNL Catalog Service]-API unter [Filtern &#x200B;](../catalog/api/filter-data.md) Daten .) Warten Sie einen Moment, bevor Sie Ihre Anfrage erneut versuchen, und wenden Sie sich an Ihren Administrator, wenn das Problem weiterhin besteht. |
+| 500 | Interner Server-Fehler | Dies ist ein Server-seitiger Fehler. Wenn Sie viele simultane Aufrufe ausführen, erreichen Sie möglicherweise das API-Limit und müssen Ihre Ergebnisse filtern. (Weitere Informationen finden Sie im Entwicklerhandbuch für die [!DNL Catalog Service]-API unter [Filtern ](../catalog/api/filter-data.md) Daten .) Warten Sie einen Moment, bevor Sie Ihre Anfrage erneut versuchen, und wenden Sie sich an Ihren Administrator, wenn das Problem weiterhin besteht. |
 
 ## Fehler in der Anfragekopfzeile {#request-header-errors}
 

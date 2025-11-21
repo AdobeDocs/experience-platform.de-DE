@@ -114,7 +114,7 @@ Es gibt eine Reihe von Tools, die Ihnen helfen, Ihre Lizenznutzungsberechtigunge
 
 Identitätsdiagramme werden nicht auf Ihre gesamte adressierbare Zielgruppenberechtigung angerechnet, da sich adressierbare Zielgruppe auf Ihre Gesamtzahl an Kundenprofilen bezieht.
 
-Aufgrund der Aufteilung von Identitäten können sich jedoch Beschränkungen des Identitätsdiagramms auf Ihre adressierbare Zielgruppe auswirken. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, bleibt die ECID im Echtzeit-Kundenprofil als pseudonymes Profil bestehen. Sie können [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) festlegen, um dieses Verhalten zu umgehen. Weitere Informationen finden Sie unter [&#x200B; für Identity Service-Daten](../../identity-service/guardrails.md).
+Aufgrund der Aufteilung von Identitäten können sich jedoch Beschränkungen des Identitätsdiagramms auf Ihre adressierbare Zielgruppe auswirken. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, bleibt die ECID im Echtzeit-Kundenprofil als pseudonymes Profil bestehen. Sie können [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) festlegen, um dieses Verhalten zu umgehen. Weitere Informationen finden Sie unter [ für Identity Service-Daten](../../identity-service/guardrails.md).
 
 ### Aufnahmefilter {#ingestion-filters}
 
@@ -159,11 +159,11 @@ Verwenden Sie die Datenablauffunktion für pseudonyme Profile, um automatisch Da
 
 ### Datensatz-Benutzeroberfläche - Aufbewahrung von Erlebnisereignis-Datensätzen {#data-retention}
 
-Konfigurieren Sie die Einstellungen für die Gültigkeit und Aufbewahrung von Datensätzen, um eine feste Aufbewahrungsfrist für Ihre Daten im Data Lake und Profilspeicher zu erzwingen. Nach Ablauf der Aufbewahrungsfrist werden die Daten gelöscht. Ablauf von Erlebnisereignisdaten entfernt nur Ereignisse, keine Profilklassendaten, wodurch das [Gesamtdatenvolumen) &#x200B;](total-data-volume.md) Lizenznutzungsmetriken reduziert wird. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenspeicherungsrichtlinie](../../catalog/datasets/user-guide.md#data-retention-policy).
+Konfigurieren Sie die Einstellungen für die Gültigkeit und Aufbewahrung von Datensätzen, um eine feste Aufbewahrungsfrist für Ihre Daten im Data Lake und Profilspeicher zu erzwingen. Nach Ablauf der Aufbewahrungsfrist werden die Daten gelöscht. Ablauf von Erlebnisereignisdaten entfernt nur Ereignisse, keine Profilklassendaten, wodurch das [Gesamtdatenvolumen) ](total-data-volume.md) Lizenznutzungsmetriken reduziert wird. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenspeicherungsrichtlinie](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Gültigkeitsdauern von Profilerlebnisereignissen {#event-expirations}
 
-Konfigurieren Sie Ablaufzeiten, um Verhaltensdaten automatisch aus Ihrem profilaktivierten Datensatz zu entfernen, sobald sie für Ihre Anwendungsfälle nicht mehr nützlich sind. Weitere Informationen finden Sie in der Übersicht [&#x200B; Gültigkeitsdauern &#x200B;](../../profile/event-expirations.md) Erlebnisereignissen .
+Konfigurieren Sie Ablaufzeiten, um Verhaltensdaten automatisch aus Ihrem profilaktivierten Datensatz zu entfernen, sobald sie für Ihre Anwendungsfälle nicht mehr nützlich sind. Weitere Informationen finden Sie in der Übersicht [ Gültigkeitsdauern ](../../profile/event-expirations.md) Erlebnisereignissen .
 
 ## Zusammenfassung der Best Practices für die Lizenznutzung {#best-practices}
 

@@ -5,8 +5,8 @@ feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 77%
+source-wordcount: '1249'
+ht-degree: 72%
 
 ---
 
@@ -26,7 +26,7 @@ Die meisten Marken, auch solche mit umfangreichen First-Party-Daten, können von
 
 Adobe Real-time Customer Data Platform kann Marken dabei unterstützen, ihre First-Party-Daten verantwortungsvoll mit wertvollen Einblicken, Kennungen und Attributen von einem oder mehreren vertrauenswürdigen Partnern zu ergänzen.
 
-Adobe weiß, dass es keinen universellen Ansatz gibt, und ermöglicht eine nahtlose Interoperabilität mit Daten- und Identitätspartnern, um ein individuelles und durchdachtes Engagement in allen Phasen des Kundenlebenszyklus zu fördern. Diese Funktionen werden durch ein vertrauenswürdiges Data Governance-Framework unterstützt, das eine nuancierte Kontrolle darüber ermöglicht, wo und wie Partnerdaten verwendet werden. Beispielsweise können Sie von Partnern bereitgestellte Einblicke für die Segmentierung, aber nicht für die Personalisierung verwenden.
+Adobe weiß, dass es keinen universellen Ansatz gibt, und ermöglicht eine nahtlose Interoperabilität mit Daten- und Identitätspartnern, um eine individuelle und durchdachte Interaktion in allen Phasen des Kundenlebenszyklus zu fördern. Diese Funktionen werden durch ein vertrauenswürdiges Data Governance-Framework unterstützt, das eine nuancierte Kontrolle darüber ermöglicht, wo und wie Partnerdaten verwendet werden. Beispielsweise können Sie von Partnern bereitgestellte Einblicke für die Segmentierung, aber nicht für die Personalisierung verwenden.
 
 Führen Sie beispielsweise die in diesem Anwendungsbeispiel beschriebenen Schritte aus, wenn Sie Ihre Kundendatensätze mit demografischen und Absichtssignalen anreichern müssen.
 
@@ -41,13 +41,13 @@ Wenn Sie Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern ergä
 
 >[!WARNING]
 >
->Die zusätzlichen von Partnern bereitgestellten Attribute, die in Real-Time CDP aufgenommen werden, wirken sich auf Ihr *Gesamtdatenvolumen* aus. Weitere Informationen zum Gesamtdatenvolumen finden Sie in [&#128279;](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) Real-time Customer Data Platform-Produktbeschreibung.
+>Die zusätzlichen von Partnern bereitgestellten Attribute, die in Real-Time CDP aufgenommen werden, wirken sich auf Ihr *Gesamtdatenvolumen* aus. Weitere Informationen zum Gesamtdatenvolumen finden Sie in [ ](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html)Real-Time Customer Data Platform-Produktbeschreibung.
 
 ## Videoanleitung {#video-walkthrough}
 
 Sehen Sie sich das folgende Video-Tutorial an, um eine exemplarische Vorgehensweise dazu zu erhalten, wie Erstanbieter-Zielgruppen durch von Partnern bereitgestellte Attribute ergänzt werden:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452468/?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 
@@ -71,14 +71,14 @@ Dieser Schritt wird im Abschnitt [Voraussetzungen](#prerequisites-and-planning) 
 
 An diesem Punkt erweitern Sie Ihr Daten-Management-Framework in Real-Time CDP für von Partnern bereitgestellte Attribute.
 
-Sie haben die Möglichkeit, ein neues Schema der Klasse **[!UICONTROL XDM Individual Profile – XDM-Profil für Einzelpersonen]** zu erstellen oder ein vorhandenes Schema desselben Typs um von Partnern bereitgestellte Attribute zu erweitern. Adobe empfiehlt ausdrücklich, ein neues Schema mit neuen Feldgruppen zu erstellen, die die zusätzlichen Attribute des Datenanbieters am besten darstellen. Dadurch wird sichergestellt, dass Ihre Datenschemata einwandfrei sind und sich unabhängig voneinander entwickeln können.
+Sie haben die Möglichkeit, ein neues Schema der **[!UICONTROL XDM Individual Profile]**-Klasse zu erstellen oder ein vorhandenes Schema desselben Typs zu erweitern, um von Partnern bereitgestellte Attribute einzuschließen. Adobe empfiehlt ausdrücklich, ein neues Schema mit neuen Feldgruppen zu erstellen, die die zusätzlichen Attribute des Datenanbieters am besten darstellen. Dadurch wird sichergestellt, dass Ihre Datenschemata einwandfrei sind und sich unabhängig voneinander entwickeln können.
 
 Um von Partnern bereitgestellte Attribute in ein Schema einzuschließen, können Sie entweder eine neue Feldgruppe mit den erwarteten Attributen erstellen oder eine der von Adobe bereitgestellten vorkonfigurierten Feldgruppen verwenden.
 
 Weitere Informationen finden Sie auf den folgenden Dokumentationsseiten:
 
 * [Grundlagen der Schemakomposition](/help/xdm/schema/composition.md)
-* [Klasse [!UICONTROL XDM Individual Profile – XDM-Profil für Einzelpersonen] – Übersicht](/help/xdm/classes/individual-profile.md)
+* [Übersicht über die [!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md)
 * [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](/help/xdm/ui/resources/schemas.md)
 * [Erstellen und Bearbeiten von Schemafeldgruppen in der Benutzeroberfläche](/help/xdm/ui/resources/field-groups.md)
 
@@ -99,7 +99,7 @@ Commenting out links for now
 
 >[!TIP]
 >
->Wenn Sie Ihre Kundenprofile mit einer personenbasierten Kennung des Datenanbieters ergänzen möchten, können Sie einen neuen Identitätstyp vom Typ **[[!UICONTROL Partner-ID]](/help/identity-service/features/namespaces.md)** erstellen.
+>Wenn Sie Ihre Kundenprofile mit einer personenbasierten Kennung vom Datenanbieter ergänzen, können Sie einen neuen Identitätstyp des Typs **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)** erstellen.
 >
 >Weitere Informationen zur Partner-ID finden Sie im Abschnitt [Identitätstypen](/help/identity-service/features/namespaces.md).
 >Lesen Sie die Anweisungen zum [Definieren von Identitätsfeldern](/help/xdm/ui/fields/identity.md) in der Experience Platform-Benutzeroberfläche.
@@ -138,4 +138,4 @@ Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerd
 
 * Verwenden Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, damit Sie [Ihre Profilbasis mit potenziellen Profilen von Datenpartnern erweitern und mit ihnen interagieren können, um neue Kundinnen und Kunden zu gewinnen oder zu erreichen](/help/rtcdp/partner-data/prospecting.md).
 * [Personalisieren Sie Onsite-Erlebnisse für unbekannte Besucher mithilfe der partnergestützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder eine Vorgeschichte mit Ihrer Marke hat.
-* [Erweiterte Aktivierung von Interessentenprofilen und Zielgruppen potenzieller &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.
+* [Erweiterte Aktivierung von Interessentenprofilen und Zielgruppen potenzieller ](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.

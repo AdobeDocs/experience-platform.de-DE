@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: 0209c873438a3bda1b0df6434f49735c2d3e150b
 workflow-type: tm+mt
 source-wordcount: '67'
-ht-degree: 59%
+ht-degree: 64%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 59%
 
 - [Übersicht über Assurance](./home.md)
 - [Benutzerzugriff](./user-access.md)
-- Ansichten {#view}
+- Ansichten  {#view}
    - [Ereignistransaktionen](./views/event-transactions.md)
    - [Erweiterungsversionen](./views/extension-versions.md)
    - [Edge Delivery](./views/edge-delivery.md)
-   - [In-App-Messaging](./views/in-app-messaging.md)
+   - [In-App-Nachrichten](./views/in-app-messaging.md)
    - [In Geräteansichten](./views/on-device-views.md)
    - [Places Service](./views/places-service.md)
    - [Debug-Ansicht per Push übertragen](./views/push-debug-view.md)

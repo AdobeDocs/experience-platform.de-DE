@@ -4,7 +4,7 @@ description: Machen Sie sich mit der Tag-Erweiterung „Adobe Audience Manager�
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '440'
 ht-degree: 100%
 
 ---
@@ -25,9 +25,9 @@ Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim
 
 ## Konfigurieren der Adobe Audience Manager-Erweiterung
 
-Wenn die Adobe Audience Manager-Erweiterung noch nicht installiert ist, öffnen Sie Ihre Eigenschaft, klicken Sie auf **[!UICONTROL Erweiterungen > Katalog]**, bewegen Sie den Mauszeiger über die Adobe Audience Manager-Erweiterung und klicken Sie auf **[!UICONTROL Installieren]**.
+Wenn die Adobe Audience Manager-Erweiterung noch nicht installiert ist, öffnen Sie Ihre Eigenschaft, klicken Sie auf **[!UICONTROL Extensions > Catalog]**, bewegen Sie den Mauszeiger über die Adobe Audience Manager-Erweiterung und klicken Sie auf **[!UICONTROL Install]**.
 
-Öffnen Sie zum Konfigurieren der Erweiterung die Registerkarte [!UICONTROL Erweiterungen], bewegen Sie den Mauszeiger über die Erweiterung und wählen Sie dann **[!UICONTROL Konfigurieren]** aus.
+Öffnen Sie zum Konfigurieren der Erweiterung die Registerkarte [!UICONTROL Extensions], bewegen Sie den Mauszeiger über die Erweiterung und klicken Sie auf **[!UICONTROL Configure]**.
 
 ### DIL-Einstellungen
 
@@ -45,7 +45,7 @@ Diese Einstellung kann nicht geändert werden.
 
 Wenn die URL mit einem der ausgeschlossenen Pfade übereinstimmt, wird die Erweiterung nicht geladen.
 
-Klicken Sie auf **[!UICONTROL Pfad hinzufügen]**, um eine ausgeschlossene URL anzugeben.
+Klicken Sie auf **[!UICONTROL Add Path]**, um eine ausgeschlossene URL anzugeben.
 
 Aktivieren Sie reguläre Ausdrücke, wenn die URL ein regulärer Ausdruck ist.
 
@@ -65,11 +65,11 @@ Aktivieren Sie das [Google Analytics-Modul](https://experiencecloud.adobe.com/re
 
 Fügen Sie die von [DIL.create](https://experiencecloud.adobe.com/resources/help/de_DE/aam/r_dil_create.html) verwendeten Initialisierungseigenschaften und die Namespace-Untereigenschaft für das [visitorService-Objekt](https://experiencecloud.adobe.com/resources/help/de_DE/aam/r_dil_visitor_service.html) hinzu. Die Code-Kommentare des Code-Editors enthalten zwei Beispielanwendungsfälle.
 
-Wählen Sie **[!UICONTROL Element auswählen]**, um weitere Eigenschaften hinzuzufügen.
+Klicken Sie auf **[!UICONTROL Choose an Item]**, um weitere Eigenschaften hinzuzufügen.
 
 Bewegen Sie den Mauszeiger über die „i“-Symbole, um zu erfahren, welche Funktion die einzelnen Eigenschaften haben. Weitere Informationen zu den Eigenschaften finden Sie in der [Audience Manager-DIL-Dokumentation](https://experiencecloud.adobe.com/resources/help/de_DE/aam/r_dil_create.html).
 
-Klicken Sie auf **[!UICONTROL Speichern]**, wenn Sie mit der Konfiguration der Erweiterung fertig sind.
+Klicken Sie auf **[!UICONTROL Save]**, wenn Sie mit der Konfiguration der Erweiterung fertig sind.
 
 ## Aktionstypen der Adobe Audience Manager-Erweiterung
 

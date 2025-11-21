@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;Echtzeit-Kunden
 title: Übersicht über Real-Time CDP B2B Edition
 description: Übersicht über das Konto in der B2B-Edition von Real-time Customer Data Platform
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -36,11 +36,11 @@ Diese XDM-Erweiterungen ermöglichen eine bessere Aufnahme und Aktivierung von D
 
 ## Identitätsauflösung
 
-Nach der Definition von Schemata und der Aufnahme von Daten, die diesen Schemata entsprechen, identifiziert Real-Time CDP B2B Edition mithilfe eines leistungsstarken Echtzeit-Identitätsauflösungssystems Quelldatensätze, die reale Personen und Unternehmen repräsentieren.
+Nach der Definition von Schemata und der Aufnahme von Daten, die diesen Schemata entsprechen, identifiziert Real-Time CDP B2B Edition mithilfe eines leistungsstarken Echtzeit-Identitätsauflösungssystems Quelleinträge, die reale Personen und Unternehmen repräsentieren.
 
 Das Identitätsauflösungssystem bietet die folgenden Funktionen:
 
-* Kombinierte B2B- und B2C-Personendatensätze
+* Kombinierte B2B- und B2C-Personeneinträge
 * Eine mehrstufige Account-Hierarchie
 * Viele-zu-Viele-, Personen-zu-Account-Verbindungen
 * Personen- und Account-Identitäten werden in Echtzeit aufgelöst
@@ -49,7 +49,7 @@ Das System zur Identitätsauflösung wurde erweitert, um eine vielseitigere Clas
 
 Account-Datensätze, die vom Quell-CRM synchronisiert und über mehrere Pfade innerhalb des Systems verbunden sind, werden von Experience Platform zusammengeführt. Das System fasst die Personen, die mit Opportunities in Verbindung stehen, und die als Kunden erfassten Personen zusammen, ist aber auch in der Lage, die Unterscheidung zwischen ihnen als Attribut zu erhalten, wenn sie identifizierbar sind.
 
-Es werden übereinstimmende Identifikatoren verwendet, um Account-Datensätze aus verschiedenen Systemen miteinander zu verknüpfen und zusammenzuführen. Account-Hierarchien bleiben bei diesem Vorgang erhalten. Mithilfe von Unterscheidungsmerkmalen wird geprüft, ob eine Person mit einem Account verbunden ist oder nicht, und es besteht die Möglichkeit, sie bei Bedarf vom Account zu trennen.
+Es werden übereinstimmende Identifikatoren verwendet, um Account-Einträge aus verschiedenen Systemen miteinander zu verknüpfen und zusammenzuführen. Account-Hierarchien bleiben bei diesem Vorgang erhalten. Mithilfe von Unterscheidungsmerkmalen wird geprüft, ob eine Person mit einem Account verbunden ist oder nicht, und es besteht die Möglichkeit, sie bei Bedarf vom Account zu trennen.
 
 ## Profile und Segmentierung
 
@@ -65,7 +65,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und 
 >
 >Die [!DNL Marketo]-Quelle ist **nicht** erforderlich, um Real-Time CDP B2B Edition zu verwenden.
 
-Weitere Informationen zu [&#x200B; und der Einbindung von B2B-Daten in Experience Platform finden Sie in der &#x200B;](./sources/b2b.md) zu „Quellen in Real-Time CDP B2B edition Marketo&quot;.
+Weitere Informationen zu [ und der Einbindung von B2B-Daten in Experience Platform finden Sie in der ](./sources/b2b.md) zu „Quellen in Real-Time CDP B2B edition Marketo&quot;.
 
 ## B2B-Ziele
 

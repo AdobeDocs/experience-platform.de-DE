@@ -17,7 +17,7 @@ ht-degree: 74%
 
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)
-- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de#segmentation-guardrails)
+- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentation-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
@@ -46,7 +46,7 @@ ht-degree: 74%
 - Segmentierungsmethoden {#methods}
    - [Überblick](methods/overview.md)
    - [Batch-Segmentierung](methods/batch-segmentation.md)
-   - [Streaming-Segmentierung &#x200B;](methods/streaming-segmentation.md)
+   - [Streaming-Segmentierung ](methods/streaming-segmentation.md)
    - [Edge-Segmentierung](methods/edge-segmentation.md)
    - [Flexible Zielgruppenauswertung](methods/flexible-audience-evaluation.md)
 - Zielgruppentypen {#types}
