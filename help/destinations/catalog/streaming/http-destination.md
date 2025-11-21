@@ -4,10 +4,10 @@ title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 6d1b73c1557124f283558e1daeb3ddeaaec8e8a4
 workflow-type: tm+mt
-source-wordcount: '2752'
-ht-degree: 53%
+source-wordcount: '3079'
+ht-degree: 47%
 
 ---
 
@@ -35,7 +35,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -59,6 +59,7 @@ Um Daten aus Experience Platform mithilfe des HTTP-API-Ziels zu exportieren, mü
 * Ihr HTTP-Endpunkt muss das Profilschema von Experience Platform unterstützen. Im HTTP-API-Ziel wird keine Umwandlung in ein Payload-Schema von Drittanbietern unterstützt. Im Abschnitt [exportierte Daten](#exported-data) finden Sie ein Beispiel für das Ausgabeschema von Experience Platform.
 * Ihr HTTP-Endpunkt muss Kopfzeilen unterstützen.
 * Ihr HTTP-Endpunkt muss innerhalb von 2 Sekunden antworten, um eine ordnungsgemäße Datenverarbeitung sicherzustellen und Zeitüberschreitungsfehler zu vermeiden.
+* Wenn Sie planen, mTLS zu verwenden: Für Ihren Datenempfangsendpunkt muss TLS deaktiviert und nur mTLS aktiviert sein. Wenn Sie auch die OAuth 2-Authentifizierung verwenden, müssen Sie einen separaten standardmäßigen HTTPS-Endpunkt für den Token-Abruf verwalten. Weitere Informationen finden Sie [ Abschnitt ](#mtls-considerations)mTLS-Überlegungen“.
 
 >[!TIP]
 >
@@ -68,15 +69,33 @@ Um Daten aus Experience Platform mithilfe des HTTP-API-Ziels zu exportieren, mü
 
 Sie können [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) verwenden, um erweiterte Sicherheit bei ausgehenden Verbindungen zu Ihren HTTP-API-Zielverbindungen zu gewährleisten.
 
-[!DNL mTLS] ist eine End-to-End-Sicherheitsmethode für die gegenseitige Authentifizierung, die sicherstellt, dass beide Parteien, die Informationen austauschen, vor der Datenfreigabe diejenigen sind, für die sie sich ausgeben. [!DNL mTLS] umfasst einen zusätzlichen Schritt im Vergleich zu [!DNL TLS], bei dem der Server auch nach dem Zertifikat des Clients fragt und es an seinem Ende überprüft.
+[!DNL mTLS] ist ein gegenseitiges Authentifizierungsprotokoll, das sicherstellt, dass beide Parteien, die Informationen austauschen, vor der Weitergabe ihrer Daten diejenigen sind, die sie zu sein behaupten. [!DNL mTLS] umfasst einen zusätzlichen Schritt im Vergleich zu [!DNL TLS], bei dem der Server auch das Zertifikat des Clients anfordert und überprüft, während der Client das Zertifikat des Servers überprüft.
 
-Wenn Sie [!DNL mTLS] mit [!DNL HTTP API] Zielen verwenden möchten, müssen für die Server-Adresse, die Sie auf der Seite [Zieldetails](#destination-details) eingeben, [!DNL TLS] Protokolle deaktiviert und nur aktiviert [!DNL mTLS]. Wenn das Protokoll [!DNL TLS] 1.2 noch auf dem Endpunkt aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Das bedeutet, dass Ihr Empfangs-Server-Endpunkt ein [!DNL mTLS]-fähiger Verbindungsendpunkt sein muss, um [!DNL HTTP API] mit Ihrem [!DNL mTLS]-Ziel verwenden zu können.
+### Überlegungen zu mTLS {#mtls-considerations}
+
+Die mTLS-Unterstützung für HTTP-API **Ziele gilt nur für den Datenempfangsendpunkt** an den Profilexporte gesendet werden (das **[!UICONTROL HTTP Endpoint]** Feld in [Zieldetails](#destination-details)).
+
+**mTLS wird für OAuth 2-Authentifizierungsendpunkte nicht unterstützt:**
+
+* Die in den OAuth 2 Client-Anmeldeinformationen oder der OAuth 2-Kennwortauthentifizierung verwendeten **[!UICONTROL Access Token URL]** unterstützen kein mTLS
+* Token-Abruf- und Aktualisierungsanfragen werden über Standard-HTTPS ohne Client-Zertifikatauthentifizierung gesendet.
+
+**Erforderliche Architektur:** Wenn Sie mTLS für Ihren Datenempfangsendpunkt benötigen und die OAuth 2-Authentifizierung verwenden, müssen Sie zwei separate Endpunkte verwalten:
+
+* **Authentifizierungsendpunkt:** Standard-HTTPS (ohne mTLS) für die Token-Verwaltung
+* **Datenempfangsendpunkt:** HTTPS mit aktiviertem mTLS-only für Profilexporte
+
+Diese Architektur stellt eine aktuelle Plattformbegrenzung dar. Die Unterstützung für mTLS auf Authentifizierungsendpunkten wird für zukünftige Versionen ausgewertet.
+
+### Konfigurieren von TLS für den Datenexport {#configuring-mtls}
+
+Um [!DNL mTLS] mit [!DNL HTTP API] Zielen verwenden zu können, müssen für den **[!UICONTROL HTTP Endpoint]** (Datenempfangsendpunkt), den Sie auf der Seite [Zieldetails](#destination-details) konfigurieren, [!DNL TLS] Protokolle deaktiviert und nur [!DNL mTLS] aktiviert sein. Wenn das Protokoll [!DNL TLS] 1.2 noch auf dem Endpunkt aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Das bedeutet, dass Ihr Datenempfangsserver-Endpunkt ein [!DNL mTLS]-fähiger Verbindungsendpunkt sein muss, um [!DNL HTTP API] mit Ihrem [!DNL mTLS]-Ziel verwenden zu können.
 
 ### Abrufen und Überprüfen von Zertifikatdetails {#certificate}
 
 Wenn Sie Zertifikatdetails wie die [!DNL Common Name] (CN) und [!DNL Subject Alternative Names] (SAN) auf zusätzliche Validierungen durch Dritte überprüfen möchten, verwenden Sie die API, um das Zertifikat abzurufen und diese Felder aus der Antwort zu extrahieren.
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
+Weitere Informationen finden [ in der ](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
@@ -113,7 +132,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Beim Herstellen einer Verbindung zu diesem Ziel müssen Sie die folgenden Informationen angeben:
 
@@ -146,7 +165,11 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL OAuth 2 Password]** für die Ve
 
 ![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe von OAuth 2 mit Passwortauthentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
-* **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
+>[!NOTE]
+>
+>**mTLS-Einschränkung:** Die [!UICONTROL Access Token URL] unterstützt kein mTLS. Wenn Sie planen, mTLS für Ihren Datenempfangsendpunkt zu verwenden, muss Ihr Authentifizierungsendpunkt standardmäßiges HTTPS verwenden. Weitere Informationen zur erforderlichen Architektur finden Sie [ Abschnitt ](#mtls-considerations)mTLS-Überlegungen .
+
+* **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert. Dieser Endpunkt muss standardmäßiges HTTPS verwenden und unterstützt kein mTLS.
 * **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
 * **[!UICONTROL Client Secret]**: Die [!DNL client secret], die Ihr System Adobe Experience Platform zuweist.
 * **[!UICONTROL Username]**: Der Benutzername für den Zugriff auf Ihren HTTP-Endpunkt.
@@ -162,7 +185,11 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL OAuth 2 Client Credentials]** f
 > 
 >Bei Verwendung [!UICONTROL OAuth 2 Client Credentials] Authentifizierung kann der [!UICONTROL Access Token URL] maximal einen Abfrageparameter aufweisen. Das Hinzufügen eines [!UICONTROL Access Token URL] mit weiteren Abfrageparametern kann zu Problemen beim Herstellen einer Verbindung zu Ihrem Endpunkt führen.
 
-* **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
+>[!NOTE]
+>
+>**mTLS-Einschränkung:** Die [!UICONTROL Access Token URL] unterstützt kein mTLS. Wenn Sie planen, mTLS für Ihren Datenempfangsendpunkt zu verwenden, muss Ihr Authentifizierungsendpunkt standardmäßiges HTTPS verwenden. Weitere Informationen zur erforderlichen Architektur finden Sie [ Abschnitt ](#mtls-considerations)mTLS-Überlegungen .
+
+* **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert. Dieser Endpunkt muss standardmäßiges HTTPS verwenden und unterstützt kein mTLS.
 * **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
 * **[!UICONTROL Client Secret]**: Die [!DNL client secret], die Ihr System Adobe Experience Platform zuweist.
 * **[!UICONTROL Client Credentials Type]**: Wählen Sie den Typ der von Ihrem Endpunkt unterstützten Client-Anmeldeinformationen für OAuth2 aus:
@@ -179,7 +206,7 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL OAuth 2 Client Credentials]** f
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="HTTP-Endpunkt"
->abstract="Die URL des HTTP-Endpunkts, an den Sie die Profildaten senden möchten."
+>abstract="Die URL des HTTP-Endpunkts, an den Sie die Profildaten senden möchten. Dies ist Ihr Datenempfangsendpunkt und unterstützt mTLS, falls konfiguriert. Dies ist getrennt von der OAuth 2-Zugriffstoken-URL, die kein mTLS unterstützt."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -203,7 +230,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, um dieses Ziel in Zukunft zu erkennen.
 * **[!UICONTROL Description]**: Geben Sie eine Beschreibung ein, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL Headers]**: Geben Sie alle benutzerdefinierten Kopfzeilen ein, die in die Ziel-Aufrufe aufgenommen werden sollen. Verwenden Sie dazu folgendes Format: `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL HTTP Endpoint]**: Die URL des HTTP-Endpunkts, an den Sie die Profildaten senden möchten.
+* **[!UICONTROL HTTP Endpoint]**: Die URL des HTTP-Endpunkts, an den Sie die Profildaten senden möchten. Dies ist der Endpunkt für den Datenempfang. Bei Verwendung von mTLS muss für diesen Endpunkt TLS deaktiviert und nur mTLS aktiviert sein. Beachten Sie, dass sich dies von der während der Authentifizierung konfigurierten OAuth 2-Zugriffstoken-URL unterscheidet.
 * **[!UICONTROL Query parameters]**: Optional können Sie Abfrageparameter zur HTTP-Endpunkt-URL hinzufügen. Formatieren Sie die verwendeten Abfrageparameter wie folgt: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Include Segment Names]**: Schalten Sie diese Option ein, wenn der Datenexport die Namen der zu exportierenden Audiences enthalten soll. **Hinweis**: Segmentnamen sind nur für Segmente enthalten, die dem Ziel zugeordnet sind. Nicht zugeordnete Segmente, die im Export angezeigt werden, enthalten nicht das `name`. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [Exportierte Daten](#exported-data) weiter unten.
 * **[!UICONTROL Include Segment Timestamps]**: Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Zielgruppen erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Zielgruppen dem Ziel für die Aktivierung zugeordnet wurden. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [exportierte Daten](#exported-data) weiter unten.
@@ -221,7 +248,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* [Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht in Exporten an das HTTP-API-Ziel unterstützt. [Weitere Informationen](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden Sie &#x200B;](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
 
 ### Zielattribute {#attributes}
 
