@@ -3,10 +3,10 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet externen Personalisierungs-, Content-Management-Systemen, Anzeigen-Servern und anderen Anwendungen, die auf Ihrer Site ausgeführt werden, eine Möglichkeit, Zielgruppeninformationen von Adobe Experience Platform abzurufen. Dieses Ziel bietet Echtzeit-Personalisierung basierend auf der Zugehörigkeit zu einer Zielgruppe im Benutzerprofil.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
 workflow-type: tm+mt
-source-wordcount: '923'
-ht-degree: 49%
+source-wordcount: '992'
+ht-degree: 45%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 49%
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, müssen Sie beim Konfigurieren des [-Ziels für &#x200B;](https://developer.adobe.com/data-collection-apis/docs/) Attribut-basierte Personalisierung die **[!UICONTROL Custom Personalization]** Edge Network-API verwenden. Alle Edge Network-API-Aufrufe müssen in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) erfolgen.
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, müssen Sie beim Konfigurieren des [-Ziels für ](https://developer.adobe.com/data-collection-apis/docs/) Attribut-basierte Personalisierung die **[!UICONTROL Custom Personalization]** Edge Network-API verwenden. Alle Edge Network-API-Aufrufe müssen in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) erfolgen.
 >
 ><br>Sie können Profilattribute über die [Edge Network-API abrufen](https://developer.adobe.com/data-collection-apis/docs/) indem Sie eine serverseitige Integration hinzufügen, die denselben Datenstrom verwendet, den Sie bereits für Ihre Web- oder Mobile-SDK-Implementierung verwenden.
 >
@@ -43,7 +43,13 @@ Dieses Ziel erfordert je nach Implementierung eine der folgenden Datenerfassungs
 
 >[!IMPORTANT]
 >
->Bevor Sie eine benutzerdefinierte Personalisierungsverbindung erstellen, lesen Sie das Handbuch zum Aktivieren [&#x200B; Zielgruppendaten für Edge-Personalisierungsziele &#x200B;](../../ui/activate-edge-personalization-destinations.md). In dieser Anleitung werden die erforderlichen Konfigurationsschritte für die Anwendungsfälle der Personalisierung derselben Seite und der nächsten Seite für mehrere Experience Platform-Komponenten erläutert.
+>**Attributbasierte Personalisierungsanforderungen:** Wenn Sie eine Personalisierung anhand von Profilattributen (nicht nur der Zielgruppenzugehörigkeit) vornehmen möchten, **** Sie die [Edge Network-API](https://developer.adobe.com/data-collection-apis/docs/) mit authentifizierter serverseitiger Integration verwenden, unabhängig davon, ob Sie auch Web SDK oder Mobile SDK für die Datenerfassung verwenden.
+>
+>Web SDK und Mobile SDK allein unterstützen nur Personalisierung basierend auf der Zielgruppenzugehörigkeit. Die Edge Network-API ist **erforderlich** um Profilattribute für die Personalisierung sicher abzurufen.
+
+>[!IMPORTANT]
+>
+>Bevor Sie eine benutzerdefinierte Personalisierungsverbindung erstellen, lesen Sie das Handbuch zum Aktivieren [ Zielgruppendaten für Edge-Personalisierungsziele ](../../ui/activate-edge-personalization-destinations.md). In dieser Anleitung werden die erforderlichen Konfigurationsschritte für die Anwendungsfälle der Personalisierung derselben Seite und der nächsten Seite für mehrere Experience Platform-Komponenten erläutert.
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -51,7 +57,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -73,7 +79,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
@@ -98,7 +104,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 > 
 >Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden Sie unter &#x200B;](../../ui/activate-edge-personalization-destinations.md)Aktivieren von Profilen und Zielgruppen für Edge-Personalisierungsziele“.
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie unter ](../../ui/activate-edge-personalization-destinations.md)Aktivieren von Profilen und Zielgruppen für Edge-Personalisierungsziele“.
 
 ## Exportierte Daten {#exported-data}
 
@@ -124,7 +130,7 @@ Hier finden Sie einen Beispielwert für die `event.destinations`-Variable:
 ]
 ```
 
-Wenn Sie „Tags[&#x200B; nicht zum Bereitstellen &#x200B;](/help/tags/home.md) Experience Platform Web SDK verwenden, verwenden Sie [Befehlsantworten](/help/web-sdk/commands/command-responses.md) um die exportierten Daten anzuzeigen.
+Wenn Sie „Tags[ nicht zum Bereitstellen ](/help/tags/home.md) Experience Platform Web SDK verwenden, verwenden Sie [Befehlsantworten](/help/web-sdk/commands/command-responses.md) um die exportierten Daten anzuzeigen.
 
 Die JSON-Antwort von Adobe Experience Platform kann analysiert werden, um den entsprechenden Integrationsalias des Programms zu finden, das Sie mit Adobe Experience Platform integrieren. Die Zielgruppen-IDs können als Zielgruppenbestimmungsparameter in den Code des Programms übergeben werden. Nachfolgend finden Sie ein Beispiel dafür, wie dies spezifisch für die Zielantwort aussehen würde.
 
