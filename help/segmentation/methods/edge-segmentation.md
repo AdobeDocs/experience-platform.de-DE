@@ -11,7 +11,7 @@ ht-degree: 19%
 
 # Handbuch zur Edge-Segmentierung
 
-Bei der Segmentierung in Edge werden Segmentdefinitionen in Adobe Experience Platform sofort ([ Edge) ausgewertet](../../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+Bei der Segmentierung in Edge werden Segmentdefinitionen in Adobe Experience Platform sofort ([&#x200B; Edge) ausgewertet](../../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ Eine Segmentdefinition ist **nicht** für die Edge-Segmentierung im folgenden Sz
 
 Sie können eine Zielgruppe erstellen, die mithilfe der Edge-Segmentierung entweder mithilfe der Segmentierungs-Service-API oder über das Zielgruppenportal in der Benutzeroberfläche ausgewertet wird.
 
-Eine Segmentdefinition kann Edge-aktiviert werden, wenn sie mit einem der ([ Abfragetypen) ](#eligible-query-types).
+Eine Segmentdefinition kann Edge-aktiviert werden, wenn sie mit einem der ([&#x200B; Abfragetypen) &#x200B;](#eligible-query-types).
 
 >[!BEGINTABS]
 
@@ -161,7 +161,7 @@ Ein Popup wird angezeigt. Wählen Sie **[!UICONTROL Build rules]** aus, um Segme
 
 ![Die Schaltfläche „Regeln erstellen“ ist im Pop-up „Zielgruppe erstellen“ hervorgehoben.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([ Abfragetypen) ](#eligible-query-types). Wenn die Segmentdefinition für die Edge-Segmentierung geeignet ist, können Sie **[!UICONTROL Edge]** als **[!UICONTROL Evaluation method]** auswählen.
+Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([&#x200B; Abfragetypen) &#x200B;](#eligible-query-types). Wenn die Segmentdefinition für die Edge-Segmentierung geeignet ist, können Sie **[!UICONTROL Edge]** als **[!UICONTROL Evaluation method]** auswählen.
 
 ![Die Segmentdefinition wird angezeigt. Der Auswertungstyp ist hervorgehoben und zeigt an, dass die Segmentdefinition mithilfe der Edge-Segmentierung ausgewertet werden kann.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
@@ -333,5 +333,5 @@ In diesem Handbuch wird erläutert, was eine Edge-Segmentierung ist und wie Sie 
 
 Weitere Informationen zur Verwendung der Benutzeroberfläche von Experience Platform finden Sie im [Segmentierungs-Benutzerhandbuch](./overview.md).
 
-Häufig gestellte Fragen zur Edge-Segmentierung finden Sie [ Abschnitt „Edge-Segmentierung“ der häufig gestellten Fragen](../faq.md#edge-segmentation).
+Häufig gestellte Fragen zur Edge-Segmentierung finden Sie [&#x200B; Abschnitt „Edge-Segmentierung“ der häufig gestellten Fragen](../faq.md#edge-segmentation).
 
