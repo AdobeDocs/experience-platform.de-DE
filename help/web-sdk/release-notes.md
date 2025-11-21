@@ -51,7 +51,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 - Fehlerkorrektur - Im [Media Analytics-Tracker](commands/getmediaanalyticstracker.md) akzeptiert die `length`-Eigenschaft des Medienobjekts jetzt korrekt ungültige Datentypen.
 - Verbesserte [Identitätsverwaltung](identity/overview.md) Fehlerbehandlung, um die Versprechensablehnung ordnungsgemäß zu verarbeiten, wenn die Identitätssuche fehlschlägt.
-- Es wurde ein Problem behoben[ bei dem ](personalization/rendering-personalization-content.md)Personalisierungsinhalt) mit HTML-Inhaltselementen nicht gerendert werden konnten und ein Fehler im Zusammenhang mit einer fehlenden `renderStatusHandler` auftrat.
+- Es wurde ein Problem behoben[&#x200B; bei dem &#x200B;](personalization/rendering-personalization-content.md)Personalisierungsinhalt) mit HTML-Inhaltselementen nicht gerendert werden konnten und ein Fehler im Zusammenhang mit einer fehlenden `renderStatusHandler` auftrat.
 - Activity Map (URL[Sammlung) wurde korrigiert](commands/configure/clickcollectionenabled.md) um Nicht-HTTP-URLs ordnungsgemäß zu verarbeiten.
 
 **Bekannte Probleme**
@@ -71,7 +71,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [ Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket ](install/create-custom-build.md).
+- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket &#x200B;](install/create-custom-build.md).
 - Der [`getIdentity`](commands/getidentity.md)-Befehl liest jetzt automatisch die ECID direkt aus dem `kndctr`-Identitäts-Cookie. Wenn Sie `getIdentity` mit dem Namespace `ECID` aufrufen und bereits ein Identitäts-Cookie vorhanden ist, sendet Web SDK keine Anfrage mehr an die Edge Network, um die Identität abzurufen. Jetzt liest es die Identität aus dem Cookie.
 
 **Fehlerbehebungen und Verbesserungen**
@@ -338,7 +338,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.4.0 – März 2021 
 
-- SDK kann jetzt als NPM[Paket installiert ](/help/web-sdk/install/npm.md).
+- SDK kann jetzt als NPM[Paket installiert &#x200B;](/help/web-sdk/install/npm.md).
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Der [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md)-Callback kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
 - Jetzt wird eine XDM-Schemafeldgruppe anstelle von `meta.personalization` verwendet, wenn Ereignisse über gerenderte oder angeklickte personalisierte Inhalte gesendet werden.
