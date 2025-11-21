@@ -3,9 +3,9 @@ keywords: Werbung; The Trade Desk; Advertising Trade Desk
 title: Verbindung mit The Trade Desk
 description: The Trade Desk ist eine Self-Service-Plattform für Anzeigenkäufer, um Retargeting und zielgruppenorientierte digitale Kampagnen für Display-, Video- und mobile Inventarquellen auszuführen.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 940128bf73f856d8459bee23905213651b44916e
+source-git-commit: 4472548fc5b5181cdf8ef8b1666d6e1fafbce588
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1084'
 ht-degree: 23%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 23%
 >[!IMPORTANT]
 >
 > Nach dem [internen Upgrade](../../../release-notes/2025/july-2025.md#destinations) auf den Ziel-Service vom Juli 2025 werden Sie möglicherweise einen **Rückgang der Anzahl der aktivierten Profile** in Ihren Datenflüssen zu [!DNL The Trade Desk] feststellen.
-> Dieser Rückgang wird durch eine verbesserte Sichtbarkeit der Überwachung verursacht. Profile ohne ECID werden jetzt in der Aktivierungsmetrik korrekt als abgelegt gezählt. Detaillierte Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#mandatory-mappings)Obligatorische Zuordnung“ auf dieser Seite.
+> Dieser Rückgang wird durch eine verbesserte Sichtbarkeit der Überwachung verursacht. Profile ohne ECID werden jetzt in der Aktivierungsmetrik korrekt als abgelegt gezählt. Detaillierte Informationen finden Sie [ Abschnitt ](#mandatory-mappings)Obligatorische Zuordnung“ auf dieser Seite.
 >
 >**Änderungen:**
 >
@@ -50,10 +50,10 @@ Alle Identitäten in der folgenden Tabelle sind obligatorische Zuordnungen.
 
 | Zielidentität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
-| IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| ECID | Experience Cloud ID | Diese Identität ist erforderlich, damit die Integration ordnungsgemäß funktioniert, wird aber nicht zur Zielgruppenaktivierung verwendet. |
-| Die Trade Desk-ID | Advertiser-ID in der [!DNL The Trade Desk] | Verwenden Sie diese Identität, wenn Sie Zielgruppen aktivieren, die auf der proprietären ID von The Trade Desk basieren. |
+| [!DNL GAID] | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
+| [!DNL IDFA] | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
+| [!DNL ECID] | Experience Cloud ID | Diese Identität ist erforderlich, damit die Integration ordnungsgemäß funktioniert, wird aber nicht zur Zielgruppenaktivierung verwendet. |
+| [!DNL Tradedesk] | [!DNL TDID] in der [!DNL The Trade Desk] | Verwenden Sie diese Identität, wenn Sie Zielgruppen aktivieren, die auf der proprietären ID von The Trade Desk basieren. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -83,13 +83,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Wenn Sie Ihr erstes Ziel mit [!DNL The Trade Desk] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/de/docs/id-service/using/id-service-api/methods/idsync) im Experience Cloud ID-Service noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Programmen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL The Trade Desk] Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Experience Platform übertragen.
+>Wenn Sie Ihr erstes Ziel mit [!DNL The Trade Desk] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) im Experience Cloud ID-Service noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Programmen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL The Trade Desk] Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Experience Platform übertragen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
@@ -120,7 +120,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
