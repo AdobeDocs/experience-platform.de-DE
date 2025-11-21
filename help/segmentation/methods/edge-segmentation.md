@@ -2,22 +2,24 @@
 title: Edge-Segmentierungshandbuch
 description: Erfahren Sie, wie Sie mit der Edge-Segmentierung Zielgruppen in Experience Platform sofort am Edge auswerten können, um Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite zu ermöglichen.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
+source-git-commit: d93bf7a3b7447a71fa3ead96e5c35ec9cd2dd99a
 workflow-type: tm+mt
-source-wordcount: '1148'
-ht-degree: 22%
+source-wordcount: '1191'
+ht-degree: 19%
 
 ---
 
 # Handbuch zur Edge-Segmentierung
 
-Bei der Segmentierung in Edge werden Segmentdefinitionen in Adobe Experience Platform sofort ([&#x200B; Edge) ausgewertet](../../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+Bei der Segmentierung in Edge werden Segmentdefinitionen in Adobe Experience Platform sofort ([ Edge) ausgewertet](../../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 >[!IMPORTANT]
 >
 > Die Edge-Daten werden an einem Edge-Server-Speicherort gespeichert, der am nächsten zu dem Ort liegt, an dem sie erfasst wurden. Diese Daten können auch an einem anderen als dem als Hub (oder Prinzipal) für das Adobe Experience Platform-Rechenzentrum festgelegten Speicherort gespeichert werden.
 >
-> Außerdem wird die Edge-Segmentierungs-Engine nur Edge-Anfragen berücksichtigen, wenn **eine** primär markierte Identität vorhanden ist, was im Einklang mit nicht-Edge-basierten primären Identitäten steht.
+> Die Edge-Segmentierungs-Engine wird nur Edge-Anfragen berücksichtigen, wenn **eine** primär markierte Identität vorhanden ist, was im Einklang mit nicht-Edge-basierten primären Identitäten steht.
+>
+> Da die Edge-Segmentierung für die Verarbeitung von Anfragen im benötigten Umfang entwickelt wurde, laden Edge-Server außerdem die erforderlichen Metadaten dynamisch. Daher kann es bei den ersten Aufrufen unabhängig vom Sandbox-Typ zu einer „Kaltstart“-Latenz kommen. Während dieses Fensters können die ersten Auswertungsaufrufe zu einer Zeitüberschreitung führen. Ein kurzer, vor dem Aufwärmen auftretender Burst oder eine realistische Belastung tragen dazu bei, falsch-positive Testfehler zu vermeiden.
 
 ## Abfragetypen für Edge-Segmentierungen {#query-types}
 
@@ -48,7 +50,7 @@ Eine Segmentdefinition ist **nicht** für die Edge-Segmentierung im folgenden Sz
 
 Sie können eine Zielgruppe erstellen, die mithilfe der Edge-Segmentierung entweder mithilfe der Segmentierungs-Service-API oder über das Zielgruppenportal in der Benutzeroberfläche ausgewertet wird.
 
-Eine Segmentdefinition kann Edge-aktiviert werden, wenn sie mit einem der ([&#x200B; Abfragetypen) &#x200B;](#eligible-query-types).
+Eine Segmentdefinition kann Edge-aktiviert werden, wenn sie mit einem der ([ Abfragetypen) ](#eligible-query-types).
 
 >[!BEGINTABS]
 
@@ -151,15 +153,15 @@ Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Handbuch zu
 
 >[!TAB Zielgruppenportal]
 
-Wählen Sie in Audience Portal **[!UICONTROL Zielgruppe erstellen]** aus.
+Wählen Sie in Audience Portal **[!UICONTROL Create audience]** aus.
 
 ![Die Schaltfläche „Zielgruppe erstellen“ ist im Zielgruppenportal hervorgehoben.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
-Ein Popup wird angezeigt. Wählen Sie **[!UICONTROL Regeln erstellen]**, um in Segment Builder zu gelangen.
+Ein Popup wird angezeigt. Wählen Sie **[!UICONTROL Build rules]** aus, um Segment Builder aufzurufen.
 
 ![Die Schaltfläche „Regeln erstellen“ ist im Pop-up „Zielgruppe erstellen“ hervorgehoben.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([&#x200B; Abfragetypen) &#x200B;](#eligible-query-types). Wenn die Segmentdefinition für die Edge-Segmentierung geeignet ist, können Sie **[!UICONTROL Edge]** als **[!UICONTROL Auswertungsmethode]** auswählen.
+Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([ Abfragetypen) ](#eligible-query-types). Wenn die Segmentdefinition für die Edge-Segmentierung geeignet ist, können Sie **[!UICONTROL Edge]** als **[!UICONTROL Evaluation method]** auswählen.
 
 ![Die Segmentdefinition wird angezeigt. Der Auswertungstyp ist hervorgehoben und zeigt an, dass die Segmentdefinition mithilfe der Edge-Segmentierung ausgewertet werden kann.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
@@ -315,11 +317,11 @@ Nach Auswahl einer Zielgruppe in Audience Portal wird die Seite mit den Zielgrup
 
 ![Die Seite mit den Zielgruppendetails wird für eine Zielgruppe angezeigt, die mithilfe der Edge-Segmentierung ausgewertet wird.](../images/methods/edge/audience-details.png)
 
-Bei Edge-aktivierten Zielgruppen wird die Karte **[!UICONTROL Profile im Zeitverlauf]** angezeigt, die die insgesamt qualifizierten und die neuen aktualisierten Metriken der Zielgruppe anzeigt.
+Bei Edge-aktivierten Zielgruppen wird die Karte &quot;**[!UICONTROL Profiles over time]**&quot; angezeigt, die die insgesamt qualifizierten und die aktualisierten Metriken der neuen Zielgruppe enthält.
 
-Die **[!UICONTROL Gesamtzahl der Qualifizierten]** stellt die Gesamtzahl der qualifizierten Zielgruppen dar, die auf Edge-Auswertungen für diese Zielgruppe basieren.
+Die **[!UICONTROL Total qualified]** Metrik stellt die Gesamtzahl der qualifizierten Zielgruppen dar, die auf Edge-Auswertungen für diese Zielgruppe basieren.
 
-Die Metrik **[!UICONTROL Neue Zielgruppe aktualisiert]** wird durch ein Liniendiagramm dargestellt, das die Änderung der Zielgruppengröße durch die Edge-Segmentierung anzeigt. Sie können das Dropdown-Menü so anpassen, dass die letzten 24 Stunden, die letzte Woche oder die letzten 30 Tage angezeigt werden.
+Die **[!UICONTROL New audience updated]** wird durch ein Liniendiagramm dargestellt, das die Änderung der Zielgruppengröße durch die Edge-Segmentierung anzeigt. Sie können das Dropdown-Menü so anpassen, dass die letzten 24 Stunden, die letzte Woche oder die letzten 30 Tage angezeigt werden.
 
 ![Die Karte „Profile im Zeitverlauf“ ist hervorgehoben.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
@@ -331,5 +333,5 @@ In diesem Handbuch wird erläutert, was eine Edge-Segmentierung ist und wie Sie 
 
 Weitere Informationen zur Verwendung der Benutzeroberfläche von Experience Platform finden Sie im [Segmentierungs-Benutzerhandbuch](./overview.md).
 
-Häufig gestellte Fragen zur Edge-Segmentierung finden Sie [&#x200B; Abschnitt „Edge-Segmentierung“ der häufig gestellten Fragen](../faq.md#edge-segmentation).
+Häufig gestellte Fragen zur Edge-Segmentierung finden Sie [ Abschnitt „Edge-Segmentierung“ der häufig gestellten Fragen](../faq.md#edge-segmentation).
 
