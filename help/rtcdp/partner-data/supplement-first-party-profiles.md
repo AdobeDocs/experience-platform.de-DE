@@ -47,7 +47,7 @@ Wenn Sie Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern ergä
 
 Sehen Sie sich das folgende Video-Tutorial an, um eine exemplarische Vorgehensweise dazu zu erhalten, wie Erstanbieter-Zielgruppen durch von Partnern bereitgestellte Attribute ergänzt werden:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452468/?captions=ger&learn=on)
 
 ## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 
