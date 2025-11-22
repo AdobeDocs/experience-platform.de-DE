@@ -14,7 +14,7 @@ ht-degree: 54%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Status von Datenlebenszyklus-Anfragen"
->abstract="Dieses Widget zeigt die Gesamtzahl der erstellten, fehlgeschlagenen und abgeschlossenen Löschvorgänge für Datenlebenszyklus-Einträge. Weitere Informationen zu Ihren Datenlebenszyklus-Prozessen finden Sie unter **Datenlebenszyklus** in der linken Navigation."
+>abstract="Dieses Widget zeigt die Gesamtzahl der erstellten, fehlgeschlagenen und abgeschlossenen Löschaufträge für Datenlebenszyklus-Einträge. Weitere Informationen zu Ihren Datenlebenszyklus-Prozessen finden Sie unter **Datenlebenszyklus** in der linken Navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
