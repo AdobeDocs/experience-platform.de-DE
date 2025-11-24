@@ -1,14 +1,14 @@
 ---
 title: Demandbase-Verbindung
 description: Verwenden Sie dieses Ziel, um Ihre Konto-Zielgruppen für Account-Based Marketing-Anwendungsfälle (ABM) zu aktivieren. Werben Sie über die B2B-Demand Side Platform (DSP) von DemandBase für relevante Personas und Rollen in Ihren Zielkonten. Zielkonten können auch mit Demandbase-Drittanbieterdaten für andere nachgelagerte Anwendungsfälle in Marketing und Vertrieb angereichert werden.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
-badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 20%
+source-wordcount: '785'
+ht-degree: 19%
 
 ---
 
@@ -34,7 +34,7 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -61,7 +61,7 @@ Um Konto-Zielgruppen in die Demandbase zu exportieren, benötigen Sie Folgendes:
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[. &#x200B;](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[. ](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -90,9 +90,9 @@ Jetzt können Sie Ihre Zielgruppen in Demandbase aktivieren.
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen [&#x200B; Aktivieren von Konto-Zielgruppen für &#x200B;](/help/destinations/ui/activate-account-audiences.md) Ziel finden Sie unter „Aktivieren von Konto-Zielgruppen“.
+Anweisungen [ Aktivieren von Konto-Zielgruppen für ](/help/destinations/ui/activate-account-audiences.md) Ziel finden Sie unter „Aktivieren von Konto-Zielgruppen“.
 
 ### Obligatorische Zuordnungen {#mandatory-mappings}
 
@@ -110,5 +110,7 @@ Diese Zuordnungen sind erforderlich, damit das Ziel ordnungsgemäß funktioniert
 
 ## Zusätzliche Hinweise und wichtige Hinweise {#additional-notes}
 
-* Wenn eine Konto-Zielgruppe mit demselben Namen zuvor für Demandbase aktiviert wurde, können Sie sie nicht über einen anderen Datenfluss zum Demandbase-Ziel erneut aktivieren.
-* Wenn Sie Zielgruppen in die Demandbase exportiert haben und die Exporte in Experience Platform erfolgreich sind, aber nicht alle Daten die Demandbase erreichen, kann es zu API-Einschränkungen auf der Demandbase gekommen sein. Wenden Sie sich zur Klärung an sie.
+* **Zielgruppenname**: Wenn eine Konto-Zielgruppe mit demselben Namen zuvor für Demandbase aktiviert wurde, können Sie sie nicht über einen anderen Datenfluss zum Demandbase-Ziel erneut aktivieren.
+* **Leitplanken für die Demandbase**: Wenn Sie Zielgruppen in Demandbase exportiert haben und die Exporte in Experience Platform erfolgreich sind, aber nicht alle Daten die Demandbase erreichen, haben Sie möglicherweise auf der Demandbase-Seite auf API-Einschränkungen gestoßen. Wenden Sie sich zur Klärung an sie.
+* **Löschen von Listen**: Kontolisten sind eindeutig, sodass Sie keine neue Liste mit einem bereits verwendeten Namen neu erstellen können. Wenn Sie Konten aus einer Liste entfernen, sind diese nicht mehr verfügbar, aber sie werden nicht gelöscht.
+* **Aktivierungszeit**: Das Laden von Daten in Demandbase unterliegt der Nachtverarbeitung.
