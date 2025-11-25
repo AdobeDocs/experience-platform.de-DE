@@ -3,9 +3,9 @@ title: Löschen von Arbeitsaufträgen
 description: Erfahren Sie, wie Sie den Endpunkt /workorder in der Datenhygiene-API verwenden, um in Adobe Experience Platform Arbeitsaufträge zum Löschen von Datensätzen zu verwalten. In diesem Handbuch werden Kontingente, Verarbeitungszeitpläne und die API-Nutzung behandelt.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4f4b668c2b29228499dc28b2c6c54656e98aaeab
+source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2440'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ Verwenden Sie den `/workorder`-Endpunkt in der Datenhygiene-API, um Arbeitsauftr
 
 >[!IMPORTANT]
 >
->Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
+>Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
 
 ## Erste Schritte
 
@@ -300,6 +300,110 @@ In der folgenden Tabelle werden die Eigenschaften in der Antwort beschrieben.
 >[!NOTE]
 >
 >Die Aktionseigenschaft für Löscharbeitsaufträge für Datensätze wird derzeit in API-Antworten `identity-delete`. Wenn die API einen anderen Wert verwendet (z. B. `delete_identity`), wird diese Dokumentation entsprechend aktualisiert.
+
+## ID-Listen für Anfragen zum Löschen von Datensätzen in JSON konvertieren
+
+Um einen Datensatz für das Löschen von Arbeitsaufträgen aus CSV-, TSV- oder TXT-Dateien zu erstellen, die Kennungen enthalten, können Sie Konversionsskripte verwenden, um die erforderlichen JSON-Payloads für den `/workorder`-Endpunkt zu erstellen. Dieser Ansatz ist besonders bei der Arbeit mit vorhandenen Datendateien hilfreich. Gebrauchsfertige Skripte und umfassende Anweisungen finden Sie im GitHub-Repository [csv-to-data-hygiene](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+### JSON-Payloads generieren
+
+Die folgenden Bash-Skript-Beispiele zeigen, wie die Konvertierungsskripte in Python oder Ruby ausgeführt werden:
+
+>[!BEGINTABS]
+
+>[!TAB Beispiel für die Ausführung des Python-Skripts]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB Beispiel für die Ausführung des Ruby-Skripts]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+In der folgenden Tabelle werden die Parameter der Bash-Skripte beschrieben.
+
+| Parameter | Beschreibung |
+| ---           | ---     |
+| `verbose` | Ausführliche Ausgabe aktivieren. |
+| `column` | Der Index (1-basiert) oder Kopfzeilenname der Spalte, die die zu löschenden Identitätswerte enthält. Standardmäßig wird die erste Spalte verwendet, wenn sie nicht angegeben wurde. |
+| `namespace` | Ein Objekt mit einer `code` Eigenschaft, die den Identity-Namespace angibt (z. B. „E-Mail„). |
+| `dataset-id` | Die eindeutige Kennung für den Datensatz, der mit dem Arbeitsauftrag verknüpft ist. Wenn die Anfrage für alle Datensätze gilt, wird dieses Feld auf `ALL` gesetzt. |
+| `description` | Eine Beschreibung des Arbeitsauftrags zum Löschen des Datensatzes. |
+| `output-dir` | Das Verzeichnis, in das die JSON-Payload der Ausgabe geschrieben wird. |
+
+{style="table-layout:auto"}
+
+Das folgende Beispiel zeigt eine erfolgreiche JSON-Payload, die aus einer CSV-, TSV- oder TXT-Datei konvertiert wurde. Sie enthält Datensätze, die mit dem angegebenen Namespace verknüpft sind, und wird zum Löschen von Datensätzen verwendet, die durch E-Mail-Adressen identifiziert werden.
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+In der folgenden Tabelle werden die Eigenschaften in der JSON-Payload beschrieben.
+
+| Eigenschaft | Beschreibung |
+| ---          | ---     |
+| `action` | Die Aktion, die für den Löscharbeitsauftrag für den Datensatz angefordert wurde. Wird vom Konvertierungsskript automatisch auf `delete_identity` festgelegt. |
+| `datasetId` | Die eindeutige Kennung für den Datensatz. |
+| `displayName` | Eine menschenlesbare Beschriftung für diesen Datensatz, um einen Arbeitsauftrag zu löschen. |
+| `description` | Eine Beschreibung des Arbeitsauftrags zum Löschen des Datensatzes. |
+| `identities` | Ein Array von Objekten, die jeweils Folgendes enthalten:<br><ul><li> `namespace`: Ein Objekt mit einer `code` Eigenschaft, die den Identity-Namespace angibt (z. B. „E-Mail„).</li><li> `id`: Der für diesen Namespace zu löschende Identitätswert.</li></ul> |
+
+{style="table-layout:auto"}
+
+### Senden der generierten JSON-Daten an den `/workorder`-Endpunkt
+
+Um eine Anfrage zu senden, befolgen Sie die Anweisungen im Abschnitt [Erstellen eines Datensatzlöscharbeitsauftrags](#create). Stellen Sie sicher, dass Sie die konvertierte JSON-Payload als Anfragetext (`-d`) verwenden, wenn Sie Ihre `curl` POST-Anfrage an den `/workorder`-API-Endpunkt senden.
 
 ## Abrufen von Details für einen bestimmten Datensatz zum Löschen von Arbeitsaufträgen {#lookup}
 
