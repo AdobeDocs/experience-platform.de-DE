@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Anfrage**
 
-Diese Anfrage aktualisiert das Schema Mitglieder des Treueprogramms (Loyalty-Mitglieder), um die Felder in der [[!UICONTROL Demographic Details] Feldergruppe ](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+Diese Anfrage aktualisiert das Schema Mitglieder des Treueprogramms (Loyalty-Mitglieder), um die Felder in der [[!UICONTROL Demographic Details] Feldergruppe &#x200B;](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
 Durch Hinzufügen der Feldergruppe `profile-person-details` erfasst das Schema Mitglieder des Treueprogramms jetzt demografische Informationen für Mitglieder des Treueprogramms wie Vorname, Nachname und Geburtstag.
 
@@ -1128,7 +1128,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anfrage definiert einen Identitätsdeskriptor im Feld &quot;`personalEmail.address`&quot; für das Schema „Mitglieder des Treueprogramms“. Dadurch wird [!DNL Experience Platform] angewiesen, die E-Mail-Adresse des Mitglieds des Treueprogramms als Kennung zu verwenden, um Informationen über den Kontakt zusammenzufügen. Dieser Aufruf legt dieses Feld auch als primäre Identität für das Schema fest, indem `xdm:isPrimary` auf `true` festgelegt wird. Dies ist eine Voraussetzung für [ Aktivierung des Schemas zur Verwendung im Echtzeit-Kundenprofil](#profile).
+Die folgende Anfrage definiert einen Identitätsdeskriptor im Feld &quot;`personalEmail.address`&quot; für das Schema „Mitglieder des Treueprogramms“. Dadurch wird [!DNL Experience Platform] angewiesen, die E-Mail-Adresse des Mitglieds des Treueprogramms als Kennung zu verwenden, um Informationen über den Kontakt zusammenzufügen. Dieser Aufruf legt dieses Feld auch als primäre Identität für das Schema fest, indem `xdm:isPrimary` auf `true` festgelegt wird. Dies ist eine Voraussetzung für [&#x200B; Aktivierung des Schemas zur Verwendung im Echtzeit-Kundenprofil](#profile).
 
 ```SHELL
 curl -X POST \
