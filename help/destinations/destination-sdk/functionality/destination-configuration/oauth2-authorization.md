@@ -2,17 +2,17 @@
 description: Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 title: OAuth 2-Autorisierung
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
 workflow-type: tm+mt
-source-wordcount: '2181'
-ht-degree: 78%
+source-wordcount: '2182'
+ht-degree: 77%
 
 ---
 
 
 # OAuth 2-Autorisierung
 
-Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu &#x200B;](https://tools.ietf.org/html/rfc6749).
+Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu ](https://tools.ietf.org/html/rfc6749).
 
 Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 
@@ -56,7 +56,7 @@ Am Ende dieses Schritts sollten Sie über Folgendes verfügen:
 
 ### Was Sie in Destination SDK tun müssen {#to-do-in-destination-sdk}
 
-Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details unter dem [-Parameter zur &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md)Zielkonfiguration`customerAuthenticationConfigurations` hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach Gewährungstyp der OAuth 2-Autorisierung zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
+Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details unter dem [-Parameter zur ](../../authoring-api/destination-configuration/create-destination-configuration.md)Zielkonfiguration`customerAuthenticationConfigurations` hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach Gewährungstyp der OAuth 2-Autorisierung zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
 
 ## Unterstützte OAuth 2-Gewährungstypen {#oauth2-grant-types}
 
@@ -82,7 +82,7 @@ Die Ausgabe enthält in allen Fällen ein Zugriffstoken, das von Experience Plat
 Das System, das Adobe für die OAuth 2-Autorisierung entwickelt hat:
 
 * Unterstützt alle drei OAuth 2-Gewährungstypen und berücksichtigt dabei alle Variationen in ihnen, z. B. zusätzliche Datenfelder, nicht standardmäßige API-Aufrufe und mehr.
-* Unterstützt Zugriffstoken mit variierenden Lebenszeitwerten (90 Tage, 30 Minuten oder ein beliebiger anderer von Ihnen angegebener Lebenszeitwert).
+* Unterstützt Zugriffstoken mit unterschiedlichen Lebenszeitwerten. Adobe empfiehlt, den Wert für die Token-Lebensdauer auf mindestens 24 Stunden festzulegen.
 * Unterstützt OAuth 2-Autorisierungsflüsse mit oder ohne Aktualisierungs-Token.
 
 ## OAuth 2 mit Autorisierungs-Code {#authorization-code}
