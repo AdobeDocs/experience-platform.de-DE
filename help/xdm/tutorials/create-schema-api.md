@@ -5,10 +5,10 @@ title: Erstellen eines Schemas mithilfe der Schema Registry-API
 type: Tutorial
 description: In diesem Tutorial wird die Schema Registry-API verwendet, um Sie durch die Schritte zum Erstellen eines Schemas mithilfe einer Standardklasse zu führen.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cc1c2edc8980c562e323357376c2594fd8ea482a
 workflow-type: tm+mt
-source-wordcount: '2584'
-ht-degree: 34%
+source-wordcount: '2853'
+ht-degree: 31%
 
 ---
 
@@ -41,7 +41,7 @@ Ein Schema kann als Blueprint für die Daten betrachtet werden, die Sie in [!DNL
 
 ### Zuweisen einer Klasse
 
-Der erste Schritt für die Erstellung eines Schemas besteht in der Auswahl einer Klasse. Die Klasse definiert zentrale Aspekte bezüglich des Verhaltens der Daten (Datensatzdaten gegenüber Zeitreihendaten) sowie die zur Beschreibung der aufzunehmenden Daten mindestens erforderlichen Felder.
+Der erste Schritt für die Erstellung eines Schemas besteht in der Auswahl einer Klasse. Die Klasse definiert zentrale Aspekte bezüglich des Verhaltens der Daten (Eintrags- gegenüber Zeitreihendaten) sowie die zur Beschreibung der aufzunehmenden Daten mindestens erforderlichen Felder.
 
 Das Schema, das Sie in diesem Tutorial erstellen, verwendet die [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] ist eine von Adobe bereitgestellte Standardklasse zum Definieren des Datensatzverhaltens. Weitere Informationen zum Verhalten finden Sie unter [Grundlagen zum Aufbau von Schemas](../schema/composition.md).
 
@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Anfrage**
 
-Diese Anfrage aktualisiert das Schema Mitglieder des Treueprogramms (Loyalty-Mitglieder), um die Felder in der Feldergruppe [[!UICONTROL Demografische Details] einzuschließen](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+Diese Anfrage aktualisiert das Schema Mitglieder des Treueprogramms (Loyalty-Mitglieder), um die Felder in der [[!UICONTROL Demographic Details] Feldergruppe ](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
 Durch Hinzufügen der Feldergruppe `profile-person-details` erfasst das Schema Mitglieder des Treueprogramms jetzt demografische Informationen für Mitglieder des Treueprogramms wie Vorname, Nachname und Geburtstag.
 
@@ -304,7 +304,7 @@ Für die Schemata des Mitglieds des Treueprogramms sind zwei weitere Standardfel
 
 >[!TIP]
 >
->Es lohnt sich, alle verfügbaren Feldergruppen zu überprüfen, um sich mit den in den einzelnen Feldern enthaltenen Feldern vertraut zu machen. Sie können (GET) alle Feldergruppen auflisten, die für eine bestimmte Klasse verfügbar sind, indem Sie eine -Anfrage für jeden der Container „global“ und „tenant“ ausführen und nur die Feldergruppen zurückgeben, bei denen das Feld „meta:intendedToExtend“ mit der verwendeten Klasse übereinstimmt. In diesem Fall ist es die [!DNL XDM Individual Profile]-Klasse, daher wird die [!DNL XDM Individual Profile]-`$id` verwendet:
+>Es lohnt sich, alle verfügbaren Feldergruppen zu überprüfen, um sich mit den in den einzelnen Feldern enthaltenen Feldern vertraut zu machen. Sie können (GET) alle Feldergruppen auflisten, die für eine bestimmte Klasse verfügbar sind, indem Sie eine -Anfrage für jeden der Container „global“ und „tenant“ ausführen und nur die Feldergruppen zurückgeben, bei denen das Feld „meta:intendedToExtend&quot; mit der verwendeten Klasse übereinstimmt. In diesem Fall ist es die [!DNL XDM Individual Profile]-Klasse, daher wird die [!DNL XDM Individual Profile]-`$id` verwendet:
 >
 >```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -325,8 +325,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 Diese Anfrage aktualisiert das Schema Mitglieder des Treueprogramms (Loyalty Members), um die Felder in den folgenden Standardfeldgruppen einzuschließen:
 
-* [[!UICONTROL Persönliche Kontaktdaten]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): Fügt Kontaktinformationen wie Privatadresse, E-Mail-Adresse und Telefonnummer hinzu.
-* [[!UICONTROL Treuedetails]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): Fügt Kontaktinformationen wie Privatadresse, E-Mail-Adresse und Telefonnummer hinzu.
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): Fügt Kontaktinformationen wie Privatadresse, E-Mail-Adresse und Telefonnummer hinzu.
+* [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): Fügt Kontaktinformationen wie Privatadresse, E-Mail-Adresse und Telefonnummer hinzu.
 
 ```SHELL
 curl -X PATCH \
@@ -420,7 +420,7 @@ Das Schema Mitglieder des Treueprogramms sollte jetzt wie unten dargestellt vier
 
 ### Definieren einer neuen Feldergruppe
 
-Während die Standardfeldgruppe [!UICONTROL Treuedetails] nützliche Felder für das Schema bereitstellt, gibt es zusätzliche Treuefelder, die in keiner Standardfeldgruppe enthalten sind.
+Während die Standardfeldgruppe [!UICONTROL Loyalty Details] nützliche Felder zum Treueprogramm für das Schema bereitstellt, gibt es zusätzliche Treuefelder, die in keiner Standardfeldgruppe enthalten sind.
 
 Um diese Felder hinzuzufügen, können Sie Ihre eigenen benutzerdefinierten Feldergruppen im `tenant`-Container definieren. Diese Feldergruppen sind für Ihre Organisation eindeutig und können von niemandem außerhalb Ihrer Organisation angezeigt oder bearbeitet werden.
 
@@ -1128,7 +1128,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anfrage definiert einen Identitätsdeskriptor im Feld &quot;`personalEmail.address`&quot; für das Schema „Mitglieder des Treueprogramms“. Dadurch wird [!DNL Experience Platform] angewiesen, die E-Mail-Adresse des Mitglieds des Treueprogramms als Kennung zu verwenden, um Informationen über den Kontakt zusammenzufügen. Dieser Aufruf legt dieses Feld auch als primäre Identität für das Schema fest, indem `xdm:isPrimary` auf `true` festgelegt wird. Dies ist eine Voraussetzung für [&#x200B; Aktivierung des Schemas zur Verwendung im Echtzeit-Kundenprofil](#profile).
+Die folgende Anfrage definiert einen Identitätsdeskriptor im Feld &quot;`personalEmail.address`&quot; für das Schema „Mitglieder des Treueprogramms“. Dadurch wird [!DNL Experience Platform] angewiesen, die E-Mail-Adresse des Mitglieds des Treueprogramms als Kennung zu verwenden, um Informationen über den Kontakt zusammenzufügen. Dieser Aufruf legt dieses Feld auch als primäre Identität für das Schema fest, indem `xdm:isPrimary` auf `true` festgelegt wird. Dies ist eine Voraussetzung für [ Aktivierung des Schemas zur Verwendung im Echtzeit-Kundenprofil](#profile).
 
 ```SHELL
 curl -X POST \
@@ -1151,7 +1151,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Sie können verfügbare „xdm:namespace“-Werte auflisten oder neue erstellen, indem Sie die [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) verwenden. Je nachdem, welcher „xdm:namespace“ verwendet wird, kann der Wert für „xdm:property“ entweder „xdm:code“ oder „xdm:id“ lauten.
+>Sie können verfügbare „XDM“-:namespace auflisten oder neue erstellen, indem Sie die [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) verwenden. Der Wert für „xdm:property&quot; kann entweder „xdm:code&quot; oder „xdm:id&quot; sein, je nach verwendetem „xdm:namespace&quot;.
 
 **Antwort**
 
@@ -1177,7 +1177,7 @@ Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 
 ## Aktivieren eines Schemas zur Verwendung in [!DNL Real-Time Customer Profile] {#profile}
 
-Sobald auf das Schema ein primärer Identitätsdeskriptor angewendet wurde, können Sie das Schema Mitglieder des Treueprogramms zur Verwendung aktivieren, indem Sie dem `meta:immutableTags`-Attribut ein `union`-Tag hinzufügen[!DNL Real-Time Customer Profile]
+Sobald auf das Schema ein primärer Identitätsdeskriptor angewendet wurde, können Sie das Schema Mitglieder des Treueprogramms zur Verwendung aktivieren, indem Sie dem [!DNL Real-Time Customer Profile]-Attribut ein `union`-Tag hinzufügen`meta:immutableTags`
 
 >[!NOTE]
 >
@@ -1368,9 +1368,55 @@ Die Antwort liefert eine gefilterte Liste all jener Schemata, die beide Bedingun
 }
 ```
 
+## Validieren des Schemas mithilfe der Benutzeroberfläche {#validate-in-ui}
+
+Verwenden Sie die Experience Platform-Benutzeroberfläche, um zu überprüfen, ob das Schema, das Sie über die [!DNL Schema Registry]-API erstellt haben, die richtige Struktur, die richtigen Eigenschaften und die richtige Identitätskonfiguration aufweist. Führen Sie folgende Schritte aus:
+
+### Suchen des Schemas
+
+Navigieren Sie zunächst zu **[!UICONTROL Schemas]** > **[!UICONTROL Browse]**. Verwenden Sie das Texteingabefeld, um nach dem Schemanamen zu suchen (z. B. `Campaign Member`), und wählen Sie den Schemanamen aus der Tabelle aus.
+
+![Ansicht zum Durchsuchen von Schemata mit hervorgehobenem Texteingabefeld, um nach Ihrem Schema zu suchen und es auszuwählen.](../images/tutorials/create-schema/schemas-browse.png)
+
+### Bestätigen der Schemastruktur
+
+Die Arbeitsfläche des Schemas zeigt die vollständige Struktur Ihres Schemas an. Überprüfen Sie, ob:
+
+* Alle hinzugefügten Standardfeldgruppen werden auf der Arbeitsfläche angezeigt.
+* Ihre benutzerdefinierte Feldergruppe wird in der Struktur angezeigt und erweitert, um ihre Felder anzuzeigen.
+
+![Die Arbeitsfläche des Schemas mit der vollständigen Schemastruktur mit erweiterten standardmäßigen und benutzerdefinierten Feldergruppen.](../images/tutorials/create-schema/schema-canvas.png)
+
+### Prüfen der Schemaeigenschaften
+
+Wählen Sie als Nächstes den Schemastammknoten aus, um den **[!UICONTROL Schema properties]** zu öffnen, und bestätigen Sie die Schlüsselmetadaten:
+
+* Schema `$id`
+* Anzeigename
+* Aktivierungsstatus des Profils
+
+Der `$id` sollte mit dem -Wert übereinstimmen, der in Ihrer API-Antwort zurückgegeben wird.
+
+>[!NOTE]
+>
+>Die zugewiesene Klasse (in diesem Beispiel **[!UICONTROL XDM Business Campaign Members]**) wird im linken **[!UICONTROL Composition]** angezeigt.
+
+![Die Ansicht Schema-Editor mit ausgewähltem Schemastamm und geöffnetem Bedienfeld mit den Schemaeigenschaften zur Überprüfung wichtiger Metadaten.](../images/tutorials/create-schema/review-schema-properties.png)
+
+### Identitätsfelder validieren
+
+Jedes zum Schema hinzugefügte Identitätsfeld wird im Abschnitt **[!UICONTROL Identities]** des Bedienfelds **[!UICONTROL Composition]** aufgeführt. Wählen Sie ein Identitätsfeld aus, um seine Eigenschaften im rechten Bedienfeld anzuzeigen. Bestätigen Sie für jedes Identitätsfeld:
+
+* Der Identity-Namespace ist korrekt.
+* Das Feld wird ggf. als primäre Identität markiert.
+
+![Abschnitt „Identitäten des Kompositionsbereichs“, in dem ein Identitätsfeld ausgewählt und dessen Identitätseigenschaften im rechten Bedienfeld angezeigt werden.](../images/tutorials/create-schema/identitiy-confirmation.png)
+
+Wenn Struktur, Eigenschaften und Identitätskonfiguration Ihrer API-Konfiguration entsprechen, haben Sie das Schema erfolgreich über die [!DNL Schema Registry]-API erstellt und konfiguriert.
+
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich ein Schema erstellt, das sowohl Standardfeldgruppen als auch eine von Ihnen definierte Feldgruppe verwendet. Dieses Schema können Sie verwenden, um einen Datensatz zu erstellen und Datensatzdaten in Adobe Experience Platform aufzunehmen.
+In diesem Tutorial haben Sie erfolgreich ein Schema erstellt, das sowohl Standardfeldgruppen als auch eine von Ihnen definierte Feldgruppe verwendet. Dieses Schema können Sie verwenden, um einen Datensatz zu erstellen und Eintragsdaten in Adobe Experience Platform aufzunehmen.
 
 Das im Rahmen dieses Tutorials erstellte „Loyalty Members“-Schema steht in seiner vollständigen Form im nachfolgenden Anhang zur Verfügung. Wenn Sie sich das Schema ansehen, können Sie sehen, wie die Feldergruppen zur Gesamtstruktur beitragen und welche Felder für die Datenaufnahme verfügbar sind.
 
@@ -1384,7 +1430,7 @@ Die nachfolgenden Informationen dienen als Ergänzung zum API-Tutorial.
 
 Im Rahmen dieses Tutorials wird ein Schema zur Beschreibung der Mitglieder eines Treueprogramms im Einzelhandel erstellt.
 
-Das Schema implementiert die [!DNL XDM Individual Profile]-Klasse und kombiniert mehrere Feldergruppen. Es erfasst Informationen über die Mitglieder des Treueprogramms mithilfe der Standardfeldgruppen [!DNL Demographic Details], [!UICONTROL Persönliche Kontaktdaten] und [!UICONTROL Treuedetails] sowie über eine benutzerdefinierte Feldergruppe auf Treuestufe, die während des Tutorials definiert wird.
+Das Schema implementiert die [!DNL XDM Individual Profile]-Klasse und kombiniert mehrere Feldergruppen. Es erfasst Informationen über die Mitglieder des Treueprogramms mithilfe der standardmäßigen [!DNL Demographic Details]-, [!UICONTROL Personal Contact Details]- und [!UICONTROL Loyalty Details]-Feldergruppen sowie über eine benutzerdefinierte Feldergruppe für die Treuestufe, die während des Tutorials definiert wird.
 
 Nachfolgend ist das „Loyalty Members“-Schema in seiner abschließenden Form im JSON-Format dargestellt:
 
