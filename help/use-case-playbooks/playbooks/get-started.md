@@ -89,13 +89,13 @@ Nachdem Sie [neue Rolle erstellt haben](/help/access-control/abac/ui/permissions
 
 ## Konfigurieren von Sandbox- und Kanaloberflächen in Journey Optimizer {#configure-channel-surfaces}
 
-Wenn Ihr Unternehmen für [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/ajo-home) lizenziert ist und Sie die für Journey Optimizer entwickelten Playbooks verwenden möchten, konfigurieren Sie die Kanaloberflächen in Ihrer Sandbox. Kanaloberflächen definieren alle technischen Parameter, die für Ihre Nachrichten erforderlich sind, z. B. den E-Mail-Typ, die Absender-E-Mail und den Namen, Mobile Apps, die SMS-Konfiguration und mehr. [Erfahren Sie, wie Sie in Adobe Journey Optimizer Kanaloberflächen einrichten.](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
+Wenn Ihr Unternehmen für [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/ajo-home) lizenziert ist und Sie die für Journey Optimizer entwickelten Playbooks verwenden möchten, konfigurieren Sie die Kanaloberflächen in Ihrer Sandbox. Kanaloberflächen definieren alle technischen Parameter, die für Ihre Nachrichten erforderlich sind, z. B. den E-Mail-Typ, die Absender-E-Mail und den Namen, Mobile Apps, die SMS-Konfiguration und mehr. [Erfahren Sie, wie Sie in Adobe Journey Optimizer Kanaloberflächen einrichten.](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Um Instanzen von Playbooks in Journey Optimizer zu erstellen, müssen Sie Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen konfigurieren.
 
 ### E-Mail-Kanaloberfläche
 
-Navigieren Sie zu `Channels` in der Benutzeroberfläche von Journey Optimizer. Konfigurieren Sie separate Subdomains und IP-Pools für Marketing-E-Mails und Transaktionsnachrichten, falls noch nicht konfiguriert. Dies sind Best Practices, um sicherzustellen, dass Transaktionsnachrichten, wie z. B. E-Mails zur Bestellbestätigung, an Ihre Kunden gesendet werden. Geben Sie Namen, E-Mail-Adressen und zusätzliche Einstellungen ein. Wählen **oben rechts** der Seite „Senden“ aus, um die Marketing-Kanal-Oberfläche zu erstellen. Lesen Sie die Dokumentation [Einrichten von Oberflächen für E-Mail-Kanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Navigieren Sie zu `Channels` in der Benutzeroberfläche von Journey Optimizer. Konfigurieren Sie separate Subdomains und IP-Pools für Marketing-E-Mails und Transaktionsnachrichten, falls noch nicht konfiguriert. Dies sind Best Practices, um sicherzustellen, dass Transaktionsnachrichten, wie z. B. E-Mails zur Bestellbestätigung, an Ihre Kunden gesendet werden. Geben Sie Namen, E-Mail-Adressen und zusätzliche Einstellungen ein. Wählen **oben rechts** der Seite „Senden“ aus, um die Marketing-Kanal-Oberfläche zu erstellen. Lesen Sie die Dokumentation [Einrichten von Oberflächen für E-Mail-Kanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=de).
 
 ### SMS-Kanaloberfläche
 
@@ -111,7 +111,7 @@ Vergewissern Sie sich, dass die Kanalkonfigurationen entweder über die Experien
 
 Wählen Sie als Nächstes den Kanal, die Plattformen und Apps aus, die Sie in den Kanalkonfigurationen betrachtet haben. Wählen Sie **Senden** aus, um die Oberfläche des Push-Kanals zu erstellen.
 
-Lesen Sie die Dokumentation [Einrichten von Oberflächen für Push-Kanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
+Lesen Sie die Dokumentation [Einrichten von Oberflächen für Push-Kanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=de).
 
 ## Nächste Schritte {#next-steps}
 
