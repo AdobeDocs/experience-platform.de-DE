@@ -71,4 +71,4 @@ alloy("configure", {
 
 ## Konfigurieren eines -Ereignisses vor dem Senden eines Callbacks mithilfe der Tag-Erweiterung „Web SDK&quot;
 
-Diese Einstellungen können in der Tag-Erweiterung „Web SDK&quot; mithilfe der [Konfigurationseinstellungen für die Datenerfassung“ konfiguriert ](/help/tags/extensions/client/web-sdk/configure/data-collection.md#on-before-event-send-callback).
+Diese Einstellungen können in der Tag-Erweiterung „Web SDK&quot; mithilfe der [Konfigurationseinstellungen für die Datenerfassung“ konfiguriert &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md#on-before-event-send-callback).

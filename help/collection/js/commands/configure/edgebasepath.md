@@ -25,4 +25,4 @@ alloy("configure", {
 
 ## Edge-Basispfad mit der Tag-Erweiterung „Web SDK&quot;
 
-Die Web SDK-Tag-Erweiterung, die diesem Feld entspricht, befindet sich bei [ Konfiguration der Tag](/help/tags/extensions/client/web-sdk/configure/advanced-settings.md)Erweiterung unter Erweiterte Konfigurationseinstellungen .
+Die Web SDK-Tag-Erweiterung, die diesem Feld entspricht, befindet sich bei [&#x200B; Konfiguration der Tag](/help/tags/extensions/client/web-sdk/configure/advanced-settings.md)Erweiterung unter Erweiterte Konfigurationseinstellungen .

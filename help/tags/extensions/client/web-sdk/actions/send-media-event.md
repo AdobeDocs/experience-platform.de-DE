@@ -115,7 +115,7 @@ Ermöglicht die Konfiguration von Details zur Mediensitzung.
 * **[!UICONTROL Stream format]**: Das Format des Streams, z. B. HD oder SD.
 * **[!UICONTROL Station]**: Name oder ID des Radiosenders.
 
-Dieser Ereignistyp unterstützt auch die Möglichkeit, benutzerdefinierte Metadaten als Teil der Medienereignis-Payload bereitzustellen. Es ermöglicht auch Überschreibungen der Datenstromkonfiguration, sodass Sie steuern können, welche Apps und Services diese Daten erhalten. Wenn Sie eine Überschreibung der Datenstromkonfiguration sowohl in einem einzelnen Befehl als auch in den Konfigurationseinstellungen der Tag-Erweiterung festlegen, hat der einzelne Befehl Vorrang. Weitere [ finden Sie unter ](../configure/configuration-overrides.md) der Datenstromkonfiguration .
+Dieser Ereignistyp unterstützt auch die Möglichkeit, benutzerdefinierte Metadaten als Teil der Medienereignis-Payload bereitzustellen. Es ermöglicht auch Überschreibungen der Datenstromkonfiguration, sodass Sie steuern können, welche Apps und Services diese Daten erhalten. Wenn Sie eine Überschreibung der Datenstromkonfiguration sowohl in einem einzelnen Befehl als auch in den Konfigurationseinstellungen der Tag-Erweiterung festlegen, hat der einzelne Befehl Vorrang. Weitere [&#x200B; finden Sie unter &#x200B;](../configure/configuration-overrides.md) der Datenstromkonfiguration .
 
 ## [!UICONTROL States update]
 

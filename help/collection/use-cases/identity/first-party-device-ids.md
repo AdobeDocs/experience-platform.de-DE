@@ -115,7 +115,7 @@ Zur Veranschaulichung dieses Prozesses sollten Sie sich ein Szenario ansehen, in
 
 | Besuch | Beschreibung |
 | --- | --- |
-| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des [!DNL FPID]-Cookies begonnen. Die im [!DNL ECID]AMCV-Cookie[ enthaltene ](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) ist die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
+| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des [!DNL FPID]-Cookies begonnen. Die im [!DNL ECID]AMCV-Cookie[&#x200B; enthaltene &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) ist die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
 | Zweiter Besuch | Der Rollout der [!DNL FPID] Lösung hat begonnen. Die vorhandene [!DNL ECID] ist noch vorhanden und bleibt die primäre Kennung zur Besucheridentifizierung. |
 | Dritter Besuch | Zwischen dem zweiten und dem dritten Besuch ist ausreichend Zeit verstrichen, um die [!DNL ECID] aufgrund der Browser-Richtlinie zu löschen. Da die [!DNL FPID] jedoch mit einem [!DNL DNS] [!DNL A]-Eintrag festgelegt wurde, bleibt die [!DNL FPID] bestehen. Die [!DNL FPID] wird jetzt als primäre ID betrachtet und zum Testen der [!DNL ECID] verwendet, die auf das Endbenutzergerät geschrieben wird. Der Benutzer wird jetzt als neuer Besucher in den Lösungen Adobe Experience Platform und Experience Cloud betrachtet. |
 | Vierter Besuch | Zwischen dem dritten und vierten Besuch ist ausreichend Zeit verstrichen, um die [!DNL ECID] aufgrund der Browser-Richtlinie zu löschen. Wie beim vorherigen Besuch bleibt die [!DNL FPID] aufgrund der Art und Weise, wie sie festgelegt wurde, bestehen. Diesmal wird derselbe [!DNL ECID] wie beim vorherigen Besuch generiert. Der Benutzer wird in allen Experience Platform- und Experience Cloud-Lösungen als derselbe Benutzer angezeigt wie der vorherige Besuch. |
@@ -131,7 +131,7 @@ Erstanbieter-Geräte-IDs ([!DNL FPIDs]) verfolgen Besucher mithilfe von Erstanbi
 >
 >[!DNL A]- oder [!DNL AAAA] werden nur für das Setzen und Tracking von Cookies unterstützt. Die primäre Methode zur Datenerfassung ist die über eine [!DNL DNS CNAME]. [!DNL FPIDs] werden mit einem [!DNL A]- oder [!DNL AAAA]-Datensatz festgelegt und mit einem [!DNL CNAME] an Adobe gesendet.
 >
->Das Adobe-Managed Certificate Program[ von ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) wird auch für die Erstanbieter-Datenerfassung unterstützt.
+>Das Adobe-Managed Certificate Program[&#x200B; von &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) wird auch für die Erstanbieter-Datenerfassung unterstützt.
 
 Sobald ein [!DNL FPID] Cookie gesetzt wurde, kann sein Wert abgerufen und bei der Erfassung von Ereignisdaten an Adobe gesendet werden. Die erfassten [!DNL FPIDs] werden zur Generierung von [!DNL ECIDs] verwendet, bei denen es sich um die primären Kennungen in Adobe Experience Cloud-Programmen handelt.
 
@@ -162,15 +162,15 @@ Um diese Funktion verwenden zu können, müssen Sie das [!DNL FPID]-Cookie auf d
 
 >[!IMPORTANT]
 >
->Für diese Funktion muss [ Erstanbieter-Datenerfassung aktiviert ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en).
+>Für diese Funktion muss [&#x200B; Erstanbieter-Datenerfassung aktiviert &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en).
 
-**Schritt 2. Aktivieren **[!UICONTROL First Party ID Cookie]**Funktionalität für Ihren Datenstrom**
+**Schritt 2. Aktivieren &#x200B;** [!UICONTROL First Party ID Cookie]&#x200B;**Funktionalität für Ihren Datenstrom**
 
 Nachdem Sie Ihren CNAME konfiguriert haben, müssen Sie **[!UICONTROL First Party ID Cookie]** Option für Ihren Datenstrom aktivieren. Diese Einstellung weist Edge Network an, bei der Suche nach einer First-Party-Geräte-ID ein bestimmtes Cookie zu verwenden, anstatt nach diesem Wert in der [Identitätszuordnung](#identityMap) zu suchen.
 
-Weitere Informationen zum Einrichten [ Datenstroms finden ](/help/datastreams/configure.md#advanced-options) in der Dokumentation zur Datenstromkonfiguration .
+Weitere Informationen zum Einrichten [&#x200B; Datenstroms finden &#x200B;](/help/datastreams/configure.md#advanced-options) in der Dokumentation zur Datenstromkonfiguration .
 
-Weitere Informationen zur Funktionsweise [ Erstanbieter-Cookies finden ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) in der Dokumentation zu Adobe Experience Cloud .
+Weitere Informationen zur Funktionsweise [&#x200B; Erstanbieter-Cookies finden &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) in der Dokumentation zu Adobe Experience Cloud .
 
 ![Platform-UI-Bild mit der Datenstromkonfiguration, in der die First-Party-ID-Cookie-Einstellung hervorgehoben ist](/help/collection/js/assets/first-party-id-datastreams.png)
 

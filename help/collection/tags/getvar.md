@@ -10,7 +10,7 @@ ht-degree: 2%
 
 # `getVar()`
 
-Die `_satellite.getVar()` Methode gibt den aktuellen Wert eines [Datenelements“ ](/help/tags/ui/managing-resources/data-elements.md) einen Wert zurück, der mithilfe von [`_satellite.setVar()`](setvar.md) festgelegt wurde. Wenn ein Datenelement und ein `setVar()` denselben Namen haben, hat das Datenelement Vorrang. Wenn Sie eine Zeichenfolgenkennung aufrufen, die noch nicht vorhanden ist, gibt die Methode `undefined` zurück. Die Auswertung erfolgt synchron.
+Die `_satellite.getVar()` Methode gibt den aktuellen Wert eines [Datenelements“ &#x200B;](/help/tags/ui/managing-resources/data-elements.md) einen Wert zurück, der mithilfe von [`_satellite.setVar()`](setvar.md) festgelegt wurde. Wenn ein Datenelement und ein `setVar()` denselben Namen haben, hat das Datenelement Vorrang. Wenn Sie eine Zeichenfolgenkennung aufrufen, die noch nicht vorhanden ist, gibt die Methode `undefined` zurück. Die Auswertung erfolgt synchron.
 
 ```js
 _satellite.getVar(name: string, event?: unknown) => unknown

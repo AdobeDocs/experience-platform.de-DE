@@ -168,7 +168,7 @@ readonly _satellite._container.property: {
 
 | Name der Einstellung | Typ | Beschreibung |
 |---|---|---|
-| **`domains`** | `string[]` | Die konfigurierten Domains für die Eigenschaft, wie sie beim [Konfigurieren einer Tag-Eigenschaft“ festgelegt ](/help/tags/ui/administration/companies-and-properties.md). |
+| **`domains`** | `string[]` | Die konfigurierten Domains für die Eigenschaft, wie sie beim [Konfigurieren einer Tag-Eigenschaft“ festgelegt &#x200B;](/help/tags/ui/administration/companies-and-properties.md). |
 | **`ruleComponentSequencingEnabled`** | `boolean` | Bestimmt, ob das Kontrollkästchen **[!UICONTROL Run rule components in sequence]** beim Konfigurieren der Tag-Eigenschaft aktiviert ist. |
 | **`undefinedVarsReturnEmpty`** | `boolean` | Bestimmt, ob das Kontrollkästchen **[!UICONTROL Return an empty string for undefined data elements]** beim Konfigurieren der Tag-Eigenschaft aktiviert ist. |
 

@@ -24,7 +24,7 @@ _satellite.getVisitorId(): Visitor | null
 
 ## Verfügbare Felder und Methoden
 
-Weitere Informationen zu den für Sie verfügbaren Feldern [ Methoden finden ](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/get-set) im Experience Cloud ID-Dienst Methoden) in der Dokumentation zum Experience Cloud-Besucher-ID-Dienst .
+Weitere Informationen zu den für Sie verfügbaren Feldern [&#x200B; Methoden finden &#x200B;](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/get-set) im Experience Cloud ID-Dienst Methoden) in der Dokumentation zum Experience Cloud-Besucher-ID-Dienst .
 
 ```js
 // Retrieve a visitor's ECID

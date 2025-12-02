@@ -54,4 +54,4 @@ Adobe Experience Platform Debugger ist ein leistungsstarkes Tool, das Ihre Web-S
 
 ![Debugger aktivieren](../js/assets/enable-debugging.png)
 
-Weitere Informationen finden Sie unter Übersicht über [ ](/help/debugger/home.md)Adobe Experience Platform Debugger .
+Weitere Informationen finden Sie unter Übersicht über [&#x200B; &#x200B;](/help/debugger/home.md)Adobe Experience Platform Debugger .

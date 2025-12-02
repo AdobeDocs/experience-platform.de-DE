@@ -14,7 +14,7 @@ Mit dem `edgeConfigOverrides`-Objekt können Sie Konfigurationseinstellungen fü
 
 Der Überschreibungsprozess der Datenstromkonfiguration besteht aus zwei Hauptschritten:
 
-1. Zunächst müssen Sie in der Datenstrom-Benutzeroberfläche [ Überschreiben der Datenstromkonfiguration definieren](/help/datastreams/configure.md) wenn Sie einen Datenstrom konfigurieren. Anweisungen [ Konfigurieren von Überschreibungen finden Sie ](/help/datastreams/overrides.md)Überschreibungen der Datenstromkonfiguration“ in der Dokumentation zu Datenströmen.
+1. Zunächst müssen Sie in der Datenstrom-Benutzeroberfläche [&#x200B; Überschreiben der Datenstromkonfiguration definieren](/help/datastreams/configure.md) wenn Sie einen Datenstrom konfigurieren. Anweisungen [&#x200B; Konfigurieren von Überschreibungen finden Sie &#x200B;](/help/datastreams/overrides.md)Überschreibungen der Datenstromkonfiguration“ in der Dokumentation zu Datenströmen.
 1. Nachdem Sie die Datenstrom-Überschreibung in der Datenstrom-Benutzeroberfläche konfiguriert haben, können Sie das `edgeConfigOverrides`-Objekt konfigurieren.
 
 Wenn Sie das `edgeConfigOverrides` -Objekt im `configure` festlegen, gilt dies für alle Daten, die an Adobe gesendet werden. Die folgenden Befehle _auch_ unterstützen das `edgeConfigOverrides`:

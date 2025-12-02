@@ -30,7 +30,7 @@ In diesem Abschnitt werden die im `commerce`-Objekt verfügbaren Felder beschrie
 
 >[!TIP]
 >
->Eine Maßnahme umfasst zwei Bereiche: `id` und `value`. Meistens verwenden Sie nur das Feld `value` (z. B. `'value':1`). Mit dem Feld `id` können Sie eine eindeutige Kennung für das Tracking festlegen, wann die Kennzahl gesendet wurde. Weitere Informationen finden Sie in der XDM[Dokumentation ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md)Measure).
+>Eine Maßnahme umfasst zwei Bereiche: `id` und `value`. Meistens verwenden Sie nur das Feld `value` (z. B. `'value':1`). Mit dem Feld `id` können Sie eine eindeutige Kennung für das Tracking festlegen, wann die Kennzahl gesendet wurde. Weitere Informationen finden Sie in der XDM[Dokumentation &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md)Measure).
 
 | Maßnahme | Empfehlung | Beschreibung |
 |---|---|---|

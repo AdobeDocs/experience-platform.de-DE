@@ -28,8 +28,8 @@ Nachdem das Cookie, das die [!DNL ECID] enthält, gesetzt wurde, enthält jede n
 
 Bei der Verwendung von Cookies zur Geräte-Identifizierung haben Sie zwei Möglichkeiten, mit der Edge Network zu interagieren:
 
-1. Erstellen Sie einen CNAME in Ihrer eigenen Domain, der auf `adobedc.net` verweist. Diese Methode wird als [Erstanbieter-Datenerfassung“ ](#first-party).
-1. Senden Sie Daten direkt an die Edge Network-Domain `adobedc.net`. Diese Methode wird als [Datenerfassung von Drittanbietern“ ](#third-party).
+1. Erstellen Sie einen CNAME in Ihrer eigenen Domain, der auf `adobedc.net` verweist. Diese Methode wird als [Erstanbieter-Datenerfassung“ &#x200B;](#first-party).
+1. Senden Sie Daten direkt an die Edge Network-Domain `adobedc.net`. Diese Methode wird als [Datenerfassung von Drittanbietern“ &#x200B;](#third-party).
 
 Wie in den folgenden Abschnitten erläutert, hat die von Ihnen gewählte Datenerfassungsmethode direkte Auswirkungen auf die Cookie-Lebensdauer in allen Browsern.
 
@@ -69,7 +69,7 @@ Um die Auswirkungen der Cookie-Lebensdauern wie oben beschrieben zu berücksicht
 
 Je nach Anwendungsfall gibt es zwei Möglichkeiten, auf die [!DNL ECID] zuzugreifen:
 
-* [Abrufen der  [!DNL ECID]  durch die Datenvorbereitung für ](#retrieve-ecid-data-prep): Dies ist die empfohlene Methode.
+* [Abrufen der  [!DNL ECID]  durch die Datenvorbereitung für &#x200B;](#retrieve-ecid-data-prep): Dies ist die empfohlene Methode.
 * [Abrufen der  [!DNL ECID]  über den `getIdentity()`-Befehl](#retrieve-ecid-getidentity): Verwenden Sie diese Methode nur, wenn Sie die [!DNL ECID] Informationen Client-seitig benötigen.
 
 ### Abrufen der [!DNL ECID] durch die Datenvorbereitung für die Datenerfassung {#retrieve-ecid-data-prep}
@@ -124,7 +124,7 @@ alloy("getIdentity",{
 
 ## Verwenden `identityMap` {#using-identitymap}
 
-Mithilfe eines XDM-[`identityMap` können ](/help/xdm/schema/composition.md#identityMap) ein Gerät/einen Benutzer mithilfe mehrerer Identitäten identifizieren, seinen Authentifizierungsstatus festlegen und entscheiden, welche Kennung als die primäre Kennung betrachtet wird. Wenn keine Kennung als `primary` festgelegt wurde, ist standardmäßig die `ECID` die primäre Kennung.
+Mithilfe eines XDM-[`identityMap` können &#x200B;](/help/xdm/schema/composition.md#identityMap) ein Gerät/einen Benutzer mithilfe mehrerer Identitäten identifizieren, seinen Authentifizierungsstatus festlegen und entscheiden, welche Kennung als die primäre Kennung betrachtet wird. Wenn keine Kennung als `primary` festgelegt wurde, ist standardmäßig die `ECID` die primäre Kennung.
 
 `identityMap` Felder werden mithilfe des Befehls `sentEvent` aktualisiert.
 
@@ -148,7 +148,7 @@ alloy("sendEvent", {
 >
 >Adobe empfiehlt, Namespaces zu senden, die eine Person darstellen, z. B. `CRMID`, als primäre Identität.
 
-Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identity-Namespace) ](/help/identity-service/features/namespaces.md). Der Eigenschaftsname sollte das Identity-Namespace-Symbol sein, das in der Benutzeroberfläche von Adobe Experience Platform unter &quot;[!UICONTROL Identities]&quot; aufgeführt ist. Der Eigenschaftswert sollte ein Array von Identitäten sein, die zu diesem Identity-Namespace gehören.
+Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identity-Namespace) &#x200B;](/help/identity-service/features/namespaces.md). Der Eigenschaftsname sollte das Identity-Namespace-Symbol sein, das in der Benutzeroberfläche von Adobe Experience Platform unter &quot;[!UICONTROL Identities]&quot; aufgeführt ist. Der Eigenschaftswert sollte ein Array von Identitäten sein, die zu diesem Identity-Namespace gehören.
 
 >[!IMPORTANT]
 >

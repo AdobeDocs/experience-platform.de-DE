@@ -29,4 +29,4 @@ alloy("configure", {
 
 ## Vorab-Ausblenden des Stils mit der Tag-Erweiterung „Web SDK&quot;
 
-Diese Einstellungen können in der Tag-Erweiterung „Web SDK&quot; mithilfe der [Personalization-Konfigurationseinstellungen konfiguriert ](/help/tags/extensions/client/web-sdk/configure/personalization.md).
+Diese Einstellungen können in der Tag-Erweiterung „Web SDK&quot; mithilfe der [Personalization-Konfigurationseinstellungen konfiguriert &#x200B;](/help/tags/extensions/client/web-sdk/configure/personalization.md).

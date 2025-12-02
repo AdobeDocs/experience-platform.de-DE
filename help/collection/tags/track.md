@@ -10,7 +10,7 @@ ht-degree: 2%
 
 # `track()`
 
-Mit der `_satellite.track()` Methode können Sie einen Trigger für eine [Direktaufrufregel“ ](/help/tags/extensions/client/core/overview.md#direct-call-event).
+Mit der `_satellite.track()` Methode können Sie einen Trigger für eine [Direktaufrufregel“ &#x200B;](/help/tags/extensions/client/core/overview.md#direct-call-event).
 
 >[!IMPORTANT]
 >

@@ -15,7 +15,7 @@ ht-degree: 2%
 >[!IMPORTANT]
 > 
 >* Auf dieser Seite wird eine Beispielimplementierung von Real-Time CDP und Adobe Journey Optimizer für den beschriebenen Anwendungsfall vorgestellt. Verwenden Sie die Zahlen, Qualifizierungskriterien und andere Felder auf der Seite als Leitfaden und nicht als verbindliche Zahlen.
->* Um diesen Anwendungsfall abzuschließen, benötigen Sie eine Lizenz für Real-Time CDP und Adobe Journey Optimizer. Weitere Informationen finden Sie [ Abschnitt „Voraussetzungen und Planung](#prerequisites-and-planning) weiter unten.
+>* Um diesen Anwendungsfall abzuschließen, benötigen Sie eine Lizenz für Real-Time CDP und Adobe Journey Optimizer. Weitere Informationen finden Sie [&#x200B; Abschnitt „Voraussetzungen und Planung](#prerequisites-and-planning) weiter unten.
 
 Implementieren Sie den Anwendungsfall Einmaliger Kundenwert in lebenslanger Wertschöpfung , um die Markeninteraktion und die Markentreue zu fördern. Erstellen Sie ein vernetztes Kundenerlebnis auf mehreren Kanälen oder Journey. Nutzen Sie dazu die Leistungsfähigkeit von Experience Platform, erweitert um [Real-Time CDP](/help/rtcdp/home.md) und [Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/ajo-home).
 
@@ -46,7 +46,7 @@ Hierfür sind die beiden Experience Platform-Apps [Real-Time CDP](https://experi
    * [Zielgruppen](/help/segmentation/home.md)
    * [Ziele](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): Entwerfen Sie Journey, richten Sie Trigger ein und erstellen Sie die richtigen Nachrichten für Ihre Besucher.
-   * [Ereignis- oder Zielgruppen-Trigger ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [Ereignis- oder Zielgruppen-Trigger &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Zielgruppen und Ereignisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=de)
    * [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
@@ -66,7 +66,7 @@ Sie beginnen, indem Sie Ihrer Audience von Kunden mit hohem und niedrigem Freque
 
 >[!IMPORTANT]
 >
->Wie weiter unten auf dieser Seite beschrieben, werden durch eine [dedizierte Einverständnis-Feldergruppe in Ihrem ](#customer-attributes-schema) und durch [Implementieren von Einverständnisrichtlinien](#privacy-consent) alle Aktionen und Workflows auf eine Datenschutz- und Einverständnis-First-Weise implementiert.
+>Wie weiter unten auf dieser Seite beschrieben, werden durch eine [dedizierte Einverständnis-Feldergruppe in Ihrem &#x200B;](#customer-attributes-schema) und durch [Implementieren von Einverständnisrichtlinien](#privacy-consent) alle Aktionen und Workflows auf eine Datenschutz- und Einverständnis-First-Weise implementiert.
 
 >[!BEGINSHADEBOX]
 
@@ -137,7 +137,7 @@ Das Kundenattribut-Schema wird durch eine [!UICONTROL XDM Individual Profile]-Kl
 
 #### Schema für digitale Transaktionen des Kunden {#customer-digital-transactions-schema}
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht, die auf Ihrer Website oder auf anderen zugehörigen digitalen Plattformen auftritt. Diese Daten werden in der Regel über [!DNL Adobe Experience Platform]Web SDK[ in ](/help/collection/js/js-overview.md) aufgenommen und sind erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey-Ereignissen, einer detaillierten Online-Kundenanalyse und erweiterten Segmentierungsfunktionen verwendet werden.
+Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht, die auf Ihrer Website oder auf anderen zugehörigen digitalen Plattformen auftritt. Diese Daten werden in der Regel über [!DNL Adobe Experience Platform]Web SDK[&#x200B; in &#x200B;](/help/collection/js/js-overview.md) aufgenommen und sind erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey-Ereignissen, einer detaillierten Online-Kundenanalyse und erweiterten Segmentierungsfunktionen verwendet werden.
 
 ![Schema für digitale Kundentransaktionen mit hervorgehobenen Feldergruppen](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
@@ -286,7 +286,7 @@ Erwägen Sie das Hinzufügen und Erzwingen der folgenden [Data Governance-Kennze
 
 #### Marketing-Richtlinien
 
-Für die Journey[ die Sie im Rahmen ](/help/data-governance/policies/overview.md) Anwendungsfalls erstellen, sind keine „Marketing-Richtlinien“ erforderlich. Sie können jedoch die folgenden Richtlinien bei Bedarf berücksichtigen:
+Für die Journey[&#x200B; die Sie im Rahmen &#x200B;](/help/data-governance/policies/overview.md) Anwendungsfalls erstellen, sind keine „Marketing-Richtlinien“ erforderlich. Sie können jedoch die folgenden Richtlinien bei Bedarf berücksichtigen:
 
 * Einschränken sensibler Daten
 * Onsite-Advertising einschränken
@@ -342,7 +342,7 @@ Diese Zielgruppe wird erstellt, um Profile einzuschließen, die in den letzten 3
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden im [!UICONTROL destinations]Arbeitsbereich[ erstellt](/help/destinations/ui/destinations-workspace.md).
+>[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden im [!UICONTROL destinations]Arbeitsbereich[&#x200B; erstellt](/help/destinations/ui/destinations-workspace.md).
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) können Sie Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bieten. Die Kunden-Journey umfasst den gesamten Prozess der Kundeninteraktion mit der Marke. Für jede Anwendungsfall-Journey sind spezifische Informationen erforderlich.
 
@@ -453,4 +453,4 @@ Informationen zum Aktivieren von Daten für Ziele (z. B. [The Trade Desk](/help/
 
 Indem Sie Ihre niederfrequenten und hochwertigen Anwender auf eine Journey setzen und einer Untergruppe von ihnen Paid-Media-Anzeigen anzeigen, haben Sie hoffentlich einige von ihnen von Kunden mit einmaligem Wert zu Kunden mit lebenslangem Wert gemacht und so Ihre Markentreue und Kundeninteraktionsmetriken verbessert.
 
-Als Nächstes können Sie sich mit anderen von Real-Time CDP unterstützten Anwendungsfällen beschäftigen, z. B. [Kunden intelligent wieder mit ](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) zu interagieren oder [nicht authentifizierten Benutzern personalisierte Inhalte ](/help/rtcdp/partner-data/onsite-personalization.md) Ihren Web-Eigenschaften anzuzeigen.
+Als Nächstes können Sie sich mit anderen von Real-Time CDP unterstützten Anwendungsfällen beschäftigen, z. B. [Kunden intelligent wieder mit &#x200B;](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) zu interagieren oder [nicht authentifizierten Benutzern personalisierte Inhalte &#x200B;](/help/rtcdp/partner-data/onsite-personalization.md) Ihren Web-Eigenschaften anzuzeigen.

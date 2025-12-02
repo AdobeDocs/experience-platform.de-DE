@@ -33,13 +33,13 @@ Im obigen Beispiel sollte `EDGE-DOMAIN` durch die Erstanbieter-Domain ersetzt we
 
 ### Verwenden Sie NONCE, um Inline-Skript- und Stilelemente zuzulassen.
 
-[!DNL Experience Platform Web SDK] können Seiteninhalte ändern und müssen genehmigt werden, um Inline-Skript- und Stil-Tags zu erstellen. Zu diesem Zweck empfiehlt Adobe die Verwendung einer Nonce für die CSP[Direktive ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)default-src. Eine Nonce ist ein vom Server generiertes kryptografisch starkes Zufallstoken, das einmal pro eindeutiger Seitenansicht generiert wird.
+[!DNL Experience Platform Web SDK] können Seiteninhalte ändern und müssen genehmigt werden, um Inline-Skript- und Stil-Tags zu erstellen. Zu diesem Zweck empfiehlt Adobe die Verwendung einer Nonce für die CSP[Direktive &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)default-src. Eine Nonce ist ein vom Server generiertes kryptografisch starkes Zufallstoken, das einmal pro eindeutiger Seitenansicht generiert wird.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Darüber hinaus muss die CSP-Nonce dem Skript-Tag [!DNL Experience Platform Web SDK]Basis[ als ](../js/install/library.md) hinzugefügt werden. [!DNL Experience Platform Web SDK] verwenden diese Nonce dann, wenn Inline-Skript- oder Stil-Tags zur Seite hinzugefügt werden:
+Darüber hinaus muss die CSP-Nonce dem Skript-Tag [!DNL Experience Platform Web SDK]Basis[&#x200B; als &#x200B;](../js/install/library.md) hinzugefügt werden. [!DNL Experience Platform Web SDK] verwenden diese Nonce dann, wenn Inline-Skript- oder Stil-Tags zur Seite hinzugefügt werden:
 
 ```html
 <script nonce="SERVER-GENERATED-NONCE">

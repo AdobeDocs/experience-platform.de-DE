@@ -253,7 +253,7 @@ In der Aktion für benutzerspezifischen Code, die in der Regel für die Verarbei
 var propositions = event.propositions;
 ```
 
-Wenn `event.propositions` vorhanden ist, handelt es sich um ein Array mit Personalisierungsvorschlagsobjekten. Weitere Informationen [ Inhalt von ](#manually-render-personalized-content) finden Sie `result.propositions`Manuelles Rendern personalisierter Inhalte“.
+Wenn `event.propositions` vorhanden ist, handelt es sich um ein Array mit Personalisierungsvorschlagsobjekten. Weitere Informationen [&#x200B; Inhalt von &#x200B;](#manually-render-personalized-content) finden Sie `result.propositions`Manuelles Rendern personalisierter Inhalte“.
 
 Angenommen, Sie möchten alle Aktivitätsnamen aus allen Vorschlägen erfassen, die automatisch von Web SDK gerendert wurden, und sie in ein einziges Array pushen. Sie können dann das einzelne Array an einen Drittanbieter senden. Schreiben Sie in diesem Fall benutzerdefinierten Code innerhalb der [!UICONTROL Custom code]-Aktion, um:
 

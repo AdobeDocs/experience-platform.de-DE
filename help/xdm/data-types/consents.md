@@ -44,7 +44,7 @@ Der folgende Screenshot zeigt, wie die Struktur des Datentyps in der Experience 
 
 >[!TIP]
 >
->Anweisungen zum Suchen einer XDM[Ressource und Überprüfen ihrer Struktur in der Benutzeroberfläche von Experience Platform finden Sie im Handbuch ](../ui/explore.md)Erkunden von XDM-Ressourcen“ zu .
+>Anweisungen zum Suchen einer XDM[Ressource und Überprüfen ihrer Struktur in der Benutzeroberfläche von Experience Platform finden Sie im Handbuch &#x200B;](../ui/explore.md)Erkunden von XDM-Ressourcen“ zu .
 
 Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der [!UICONTROL Consents and Preferences]-Datentyp verarbeiten kann. Informationen zur spezifischen Verwendung der einzelnen Felder finden Sie in den folgenden Abschnitten.
 
@@ -257,7 +257,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der [!UICONTRO
 
 Um den Datentyp [!UICONTROL Consents and Preferences] zum Aufnehmen von Einverständnisdaten von Ihren Kunden zu verwenden, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
 
-Anweisungen zum Zuweisen von Datentypen zu Feldern [ Sie im Tutorial ](https://www.adobe.com/go/xdm-schema-editor-tutorial-en)Erstellen eines Schemas in der Benutzeroberfläche“. Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!UICONTROL Consents and Preferences] enthält, lesen Sie den Abschnitt [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zu Datensätzen, indem Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema befolgen.
+Anweisungen zum Zuweisen von Datentypen zu Feldern [&#x200B; Sie im Tutorial &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en)Erstellen eines Schemas in der Benutzeroberfläche“. Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!UICONTROL Consents and Preferences] enthält, lesen Sie den Abschnitt [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zu Datensätzen, indem Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema befolgen.
 
 >[!IMPORTANT]
 >

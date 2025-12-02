@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Adobe Experience Platform Web SDK enthält Überwachungs-Hooks, mit denen Sie verschiedene Systemereignisse überwachen können. Diese Tools sind nützlich, um eigene Debugging-Tools zu entwickeln und Web SDK-Protokolle zu erfassen.
 
-Die Web SDK-Trigger übernehmen die Überwachungsfunktionen unabhängig davon, ob Sie „Debugging[ aktiviert ](commands/configure/debugenabled.md).
+Die Web SDK-Trigger übernehmen die Überwachungsfunktionen unabhängig davon, ob Sie „Debugging[&#x200B; aktiviert &#x200B;](commands/configure/debugenabled.md).
 
 ## `onInstanceCreated` {#onInstanceCreated}
 

@@ -49,4 +49,4 @@ alloy("sendEvent",{
 
 ## Verwenden des `xdm`-Objekts mithilfe der Tag-Erweiterung „Web SDK&quot;
 
-Das `xdm`-Objekt ist bei Verwendung [ Tag-Erweiterung „Web SDK](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) entweder als [Variablendatenelement“ oder ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object)XDM-Objektdatenelement“ verfügbar. Adobe empfiehlt in den meisten Fällen die Verwendung eines variablen Datenelements.
+Das `xdm`-Objekt ist bei Verwendung [&#x200B; Tag-Erweiterung „Web SDK](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) entweder als [Variablendatenelement“ oder &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object)XDM-Objektdatenelement“ verfügbar. Adobe empfiehlt in den meisten Fällen die Verwendung eines variablen Datenelements.

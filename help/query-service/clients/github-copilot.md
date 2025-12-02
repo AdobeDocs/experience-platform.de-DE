@@ -23,7 +23,7 @@ In diesem Dokument werden die Schritte beschrieben, die zum Verbinden von [!DNL 
 
 Für dieses Handbuch müssen Sie bereits Zugriff auf ein GitHub-Konto haben und sich für [!DNL GitHub Copilot] angemeldet haben. Sie können [sich über die GitHub-Website anmelden](https://github.com/github-copilot/signup). Sie benötigen auch [!DNL VS Code]. Sie können [Download [!DNL VS Code]  von ihrer offiziellen Website](https://code.visualstudio.com/download).
 
-Nachdem Sie [!DNL VS Code] installiert und Ihr [!DNL Copilot]-Abonnement aktiviert haben, rufen Sie Ihre Verbindungsberechtigungen für Experience Platform ab. Diese Anmeldeinformationen befinden sich auf der Registerkarte [!UICONTROL Credentials] des Arbeitsbereichs [!UICONTROL Queries] in der Benutzeroberfläche von Experience Platform. Lesen Sie das Handbuch zu Anmeldeinformationen, um zu erfahren[ wie Sie diese Werte in der Experience Platform-Benutzeroberfläche finden](../ui/credentials.md). Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den [!UICONTROL Queries]-Arbeitsbereich haben.
+Nachdem Sie [!DNL VS Code] installiert und Ihr [!DNL Copilot]-Abonnement aktiviert haben, rufen Sie Ihre Verbindungsberechtigungen für Experience Platform ab. Diese Anmeldeinformationen befinden sich auf der Registerkarte [!UICONTROL Credentials] des Arbeitsbereichs [!UICONTROL Queries] in der Benutzeroberfläche von Experience Platform. Lesen Sie das Handbuch zu Anmeldeinformationen, um zu erfahren[&#x200B; wie Sie diese Werte in der Experience Platform-Benutzeroberfläche finden](../ui/credentials.md). Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den [!UICONTROL Queries]-Arbeitsbereich haben.
 
 ### Erforderliche [!DNL Visual Studio Code] {#required-extensions}
 
@@ -119,7 +119,7 @@ Wenn [!DNL GitHub Copilot] Code-Vervollständigungen vorschlägt, können Sie en
 
 >[!TIP]
 >  
->Wenn Sie keine Vorschläge erhalten, stellen Sie sicher[[!DNL Copilot]  dass in der Sprache Ihrer Datei aktiviert ](#get-started-with-copilot).
+>Wenn Sie keine Vorschläge erhalten, stellen Sie sicher[[!DNL Copilot]  dass in der Sprache Ihrer Datei aktiviert &#x200B;](#get-started-with-copilot).
 
 ![Der [!DNL VS Code]-Editor zeigt einen schwach grauen Textvorschlag von [!DNL GitHub Copilot] als Ghost-Text neben teilweise eingegebenem Code an.](../images/clients/github-copilot/accept-partial-suggestions.png)
 

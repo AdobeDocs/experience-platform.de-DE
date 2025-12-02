@@ -164,7 +164,7 @@ Sie können die Option zum Hochladen des Objekts als Datei auswählen oder statt
 
 Der **[!UICONTROL Mapping]** Schritt wird angezeigt, sodass Sie die Felder in Ihren Quelldaten dem Zielereignisschema in Experience Platform zuordnen können. Sie haben die Möglichkeit, die Zuordnung auf zwei Arten zu konfigurieren:
 
-* [Erstellen Sie ](#create-mapping) für diesen Datenstrom durch einen manuellen Prozess.
+* [Erstellen Sie &#x200B;](#create-mapping) für diesen Datenstrom durch einen manuellen Prozess.
 * [Importieren Sie Zuordnungsregeln](#import-mapping) aus einem vorhandenen Datenstrom.
 
 >[!IMPORTANT]

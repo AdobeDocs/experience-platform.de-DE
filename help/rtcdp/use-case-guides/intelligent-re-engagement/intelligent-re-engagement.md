@@ -45,7 +45,7 @@ Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen
    * [Ziele](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=de) - Hilft Ihnen, Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bereitzustellen.
-   * [Ereignis- oder Zielgruppen-Trigger ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [Ereignis- oder Zielgruppen-Trigger &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Zielgruppen/ Ereignisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=de)
    * [Journey-Aktionen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
@@ -147,7 +147,7 @@ Mit dieser Feldergruppe können Sie Ihren Journey vor der Veröffentlichung mith
 
 #### Schema für digitale Transaktionen des Kunden
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität auf Ihrer Website oder auf zugehörigen digitalen Plattformen besteht. Diese Daten werden in der Regel über [!DNL Adobe Experience Platform]Web SDK[ in ](/help/collection/js/js-overview.md) aufgenommen und sind erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey, zur detaillierten Online-Kundenanalyse, zu erweiterten Zielgruppenfunktionen und zum personalisierten Messaging verwendet werden.
+Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität auf Ihrer Website oder auf zugehörigen digitalen Plattformen besteht. Diese Daten werden in der Regel über [!DNL Adobe Experience Platform]Web SDK[&#x200B; in &#x200B;](/help/collection/js/js-overview.md) aufgenommen und sind erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey, zur detaillierten Online-Kundenanalyse, zu erweiterten Zielgruppenfunktionen und zum personalisierten Messaging verwendet werden.
 
 Das Schema für digitale Transaktionen des Kunden wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)-Klasse dargestellt.
 
@@ -334,7 +334,7 @@ Erwägen Sie beim Erstellen eines Rückgewinnungspfads das Hinzufügen der folge
 
 #### Datennutzungsrichtlinien
 
-Für [ Szenario mit abgebrochener Produktsuche sind keine ](/help/data-governance/policies/overview.md)Datennutzungsrichtlinien“ erforderlich. Beachten Sie jedoch Folgendes:
+Für [&#x200B; Szenario mit abgebrochener Produktsuche sind keine &#x200B;](/help/data-governance/policies/overview.md)Datennutzungsrichtlinien“ erforderlich. Beachten Sie jedoch Folgendes:
 
 * Einschränken sensibler Daten
 * Onsite-Advertising einschränken
@@ -775,7 +775,7 @@ Sie können Zielgruppen für abgebrochene Produkte aktivieren und Zielgruppen f�
    * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Bezahlte Medien und Social Media](/help/destinations/catalog/social/overview.md)
    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Streaming-Ziel](/help/destinations/catalog/streaming/http-destination.md)
-   * [Benutzerdefiniertes Ziel, erstellt mithilfe von Destination SDK.](/help/destinations/destination-sdk/overview.md). Wenn Sie Real-Time CDP Ultimate-Kunde sind, können Sie auch ein privates (benutzerdefiniertes[ Ziel mit Destination SDK erstellen](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+   * [Benutzerdefiniertes Ziel, erstellt mithilfe von Destination SDK.](/help/destinations/destination-sdk/overview.md). Wenn Sie Real-Time CDP Ultimate-Kunde sind, können Sie auch ein privates (benutzerdefiniertes[&#x200B; Ziel mit Destination SDK erstellen](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
 
 ## Nächste Schritte {#next-steps}
 

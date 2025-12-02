@@ -12,7 +12,7 @@ ht-degree: 1%
 
 Mit dem Aktionstyp **[!UICONTROL Apply propositions]** können Sie Vorschläge in Single-Page Applications rendern, ohne die Metriken zu inkrementieren. Dieser Aktionstyp ist nützlich bei der Arbeit mit Einzelseitenanwendungen, bei denen Teile der Seite erneut gerendert werden, wodurch möglicherweise bereits auf die Seite angewendete Personalisierungen überschrieben werden.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Rules]** und wählen Sie dann die gewünschte Regel aus.

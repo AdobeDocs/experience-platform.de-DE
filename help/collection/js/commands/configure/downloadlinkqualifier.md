@@ -32,4 +32,4 @@ alloy("configure", {
 
 ## Herunterladen des Link-Qualifizierers mithilfe der Tag-Erweiterung „Web SDK&quot;
 
-Die Web SDK-Tag-Erweiterung, die diesem Feld entspricht, befindet sich bei [ Konfiguration der Tag](/help/tags/extensions/client/web-sdk/configure/data-collection.md#download-link-qualifier)Erweiterung unter „Konfigurationseinstellungen für die Datenerfassung“.
+Die Web SDK-Tag-Erweiterung, die diesem Feld entspricht, befindet sich bei [&#x200B; Konfiguration der Tag](/help/tags/extensions/client/web-sdk/configure/data-collection.md#download-link-qualifier)Erweiterung unter „Konfigurationseinstellungen für die Datenerfassung“.

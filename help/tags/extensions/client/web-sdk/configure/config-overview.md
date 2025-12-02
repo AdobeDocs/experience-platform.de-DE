@@ -12,14 +12,14 @@ ht-degree: 1%
 
 Die Tag-Erweiterung &quot;Adobe Experience Platform Web SDK&quot; bietet mehrere Optionen, die Sie anpassen können. Diese Konfigurationseinstellungen entsprechen der Verwendung des Befehls [`configure`](/help/collection/js/commands/configure/overview.md) in der JavaScript-Bibliothek.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.
 
 ## Benutzerdefinierte Build-Komponenten
 
-Wenn die Optimierung der Build-Größe für Ihr Unternehmen eine Priorität darstellt, können Sie bestimmte Funktionen deaktivieren, die Sie nicht verwenden, um die Build-Größe der Erweiterung zu verringern. Weitere Informationen [ Sie unter ](custom-build-components.md)Benutzerdefinierte Build-Komponenten“.
+Wenn die Optimierung der Build-Größe für Ihr Unternehmen eine Priorität darstellt, können Sie bestimmte Funktionen deaktivieren, die Sie nicht verwenden, um die Build-Größe der Erweiterung zu verringern. Weitere Informationen [&#x200B; Sie unter &#x200B;](custom-build-components.md)Benutzerdefinierte Build-Komponenten“.
 
 ## SDK-Instanzen
 

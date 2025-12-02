@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # BrightScript-Übersicht
 
-Mit **Adobe Experience Platform Roku SDK** können Sie Daten von einem Roku[Gerät mithilfe von BrightScript an einen ](/help/datastreams/overview.md)Datenstrom“ senden.
+Mit **Adobe Experience Platform Roku SDK** können Sie Daten von einem Roku[Gerät mithilfe von BrightScript an einen &#x200B;](/help/datastreams/overview.md)Datenstrom“ senden.
 
 Die SDK und die Dokumentation für diese Bibliothek werden auf GitHub gehostet:
 

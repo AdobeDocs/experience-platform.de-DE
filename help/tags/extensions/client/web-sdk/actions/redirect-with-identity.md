@@ -12,7 +12,7 @@ ht-degree: 1%
 
 Mit dem Aktionstyp &quot;**[!UICONTROL Redirect with identity]**&quot; können Sie eine Besucher-ID von der aktuellen Seite für eine andere Domain freigeben, der Ihr Unternehmen gehört. Es wurde für die Verwendung mit einem Klickereignis und einer Wertvergleichsbedingung entwickelt. Sie ähnelt funktionell dem Befehl [`appendIdentityToUrl`](/help/collection/js/commands/appendidentitytourl.md) in der JavaScript-Bibliothek.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Rules]** und wählen Sie dann die gewünschte Regel aus.
@@ -27,7 +27,7 @@ Mit dem Aktionstyp &quot;**[!UICONTROL Redirect with identity]**&quot; können S
 ## Verfügbare Felder
 
 * **[!UICONTROL Instance]**: Die SDK-Instanz, für die die Aktion gilt. Dieses Dropdown-Menü ist deaktiviert, wenn Ihre Implementierung eine einzige SDK-Instanz verwendet.
-* **[!UICONTROL Datastream configuration overrides]**: Dieser Befehl unterstützt Überschreibungen der Datenstromkonfiguration, sodass Sie steuern können, welche Apps und Services diese Daten erhalten. Wenn Sie eine Überschreibung der Datenstromkonfiguration sowohl in einem einzelnen Befehl als auch in den Konfigurationseinstellungen der Tag-Erweiterung festlegen, hat der einzelne Befehl Vorrang. Weitere [ finden Sie unter ](../configure/configuration-overrides.md) der Datenstromkonfiguration .
+* **[!UICONTROL Datastream configuration overrides]**: Dieser Befehl unterstützt Überschreibungen der Datenstromkonfiguration, sodass Sie steuern können, welche Apps und Services diese Daten erhalten. Wenn Sie eine Überschreibung der Datenstromkonfiguration sowohl in einem einzelnen Befehl als auch in den Konfigurationseinstellungen der Tag-Erweiterung festlegen, hat der einzelne Befehl Vorrang. Weitere [&#x200B; finden Sie unter &#x200B;](../configure/configuration-overrides.md) der Datenstromkonfiguration .
 
 ## Beispielregel
 

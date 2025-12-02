@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `setDebug`
 
-Mit dem Befehl `setDebug` können Sie in der Web-SDK in den Debugging-Modus wechseln oder ihn beenden. Dies ist eine von mehreren Optionen, die für das [Debugging“ verfügbar ](../../use-cases/debugging.md). Adobe empfiehlt, den Debugging-Modus in Entwicklungsumgebungen oder nur auf dem lokalen Computer in Produktionsumgebungen zu aktivieren.
+Mit dem Befehl `setDebug` können Sie in der Web-SDK in den Debugging-Modus wechseln oder ihn beenden. Dies ist eine von mehreren Optionen, die für das [Debugging“ verfügbar &#x200B;](../../use-cases/debugging.md). Adobe empfiehlt, den Debugging-Modus in Entwicklungsumgebungen oder nur auf dem lokalen Computer in Produktionsumgebungen zu aktivieren.
 
 Führen Sie den `setDebug` Befehl aus, wenn Sie Ihre konfigurierte Instanz der Web-SDK aufrufen. Die einzige Option im Konfigurationsobjekt ist `enabled`. Dies ist ein boolescher Wert, der bestimmt, ob der Debugging-Modus aktiviert ist.
 

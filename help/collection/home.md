@@ -29,7 +29,7 @@ Wenn keines der oben genannten SDKs den Anforderungen Ihres Projekts entspricht,
 
 ## Datenerfassungsprozess
 
-Anstatt für jedes Adobe-Produkt separate Bibliotheken zu installieren und zu implementieren, können Sie eines der oben genannten SDKs oder Tag-Erweiterungen implementieren, um alle gewünschten Daten in einer einzigen Payload zu aggregieren. Diese Payload wird an einen [Datenstrom) ](/help/datastreams/overview.md) Adobe Experience Platform Edge Network gesendet.
+Anstatt für jedes Adobe-Produkt separate Bibliotheken zu installieren und zu implementieren, können Sie eines der oben genannten SDKs oder Tag-Erweiterungen implementieren, um alle gewünschten Daten in einer einzigen Payload zu aggregieren. Diese Payload wird an einen [Datenstrom) &#x200B;](/help/datastreams/overview.md) Adobe Experience Platform Edge Network gesendet.
 
 ![Datenerfassungsdiagramm](assets/tags-sdks.png)
 

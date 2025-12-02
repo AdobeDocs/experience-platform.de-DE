@@ -12,7 +12,7 @@ ht-degree: 1%
 
 In diesem Konfigurationsabschnitt können Sie festlegen, wie Sie bestimmte Teile der Seite ausblenden möchten, während personalisierte Inhalte geladen werden. Wenn diese Einstellungen richtig konfiguriert sind, stellen Sie sicher, dass Ihre Besucher die richtigen personalisierten Inhalte sehen.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.

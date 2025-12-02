@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Installieren von Web SDK mithilfe des NPM-Pakets
 
-Adobe Experience Platform Web SDK ist als NPM[Paket ](https://www.npmjs.com). Durch die Installation des NPM-Pakets können Sie den Build-Prozess für die Adobe Experience Platform Web SDK JavaScript-Bibliothek steuern. Das NPM-Paket stellt EcmaScript-Module der Version 5 oder EcmaScript-Module der Version 2015 (ES6) bereit, die im Browser ausgeführt werden sollen.
+Adobe Experience Platform Web SDK ist als NPM[Paket &#x200B;](https://www.npmjs.com). Durch die Installation des NPM-Pakets können Sie den Build-Prozess für die Adobe Experience Platform Web SDK JavaScript-Bibliothek steuern. Das NPM-Paket stellt EcmaScript-Module der Version 5 oder EcmaScript-Module der Version 2015 (ES6) bereit, die im Browser ausgeführt werden sollen.
 
 ```bash
 npm install @adobe/alloy

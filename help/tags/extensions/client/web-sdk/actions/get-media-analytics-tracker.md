@@ -12,7 +12,7 @@ ht-degree: 2%
 
 Die **[!UICONTROL Get Media Analytics tracker]** Aktion wird verwendet, um die veraltete Media Analytics-API abzurufen. Wenn Sie die Aktion konfigurieren und einen Objektnamen angeben, wird die veraltete Media Analytics-API in dieses Fensterobjekt exportiert. Diese Aktion ist nützlich, um von veralteten Media Analytics zu Streaming Media Analytics zu wechseln.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Rules]** und wählen Sie dann die gewünschte Regel aus.

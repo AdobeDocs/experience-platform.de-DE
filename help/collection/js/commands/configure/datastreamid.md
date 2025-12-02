@@ -11,11 +11,11 @@ ht-degree: 1%
 
 # `datastreamId`
 
-Die `datastreamId`-Eigenschaft ist eine Zeichenfolge, die bestimmt[ an welchen ](/help/datastreams/overview.md)Datenstrom) in Adobe Experience Platform Sie Daten senden möchten. Diese Eigenschaft ist erforderlich, wenn Daten an Adobe gesendet werden. Web SDK-Versionen 2.20.0 oder früher verwenden stattdessen `edgeConfigId`.
+Die `datastreamId`-Eigenschaft ist eine Zeichenfolge, die bestimmt[&#x200B; an welchen &#x200B;](/help/datastreams/overview.md)Datenstrom) in Adobe Experience Platform Sie Daten senden möchten. Diese Eigenschaft ist erforderlich, wenn Daten an Adobe gesendet werden. Web SDK-Versionen 2.20.0 oder früher verwenden stattdessen `edgeConfigId`.
 
 So suchen Sie eine Datenstrom-ID:
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
 1. Verwenden Sie das Suchfeld, um den gewünschten Datenstrom zu finden, und wählen Sie dann **[!UICONTROL Copy]** ![Kopieren](../../assets/copy.png) neben der Datenstrom-ID aus.
 

@@ -15,7 +15,7 @@ Die `orgId`-Eigenschaft ist eine Zeichenfolge, die Adobe mitteilt, an welches Un
 
 So suchen Sie Ihr `orgID`:
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Drücken Sie an einer beliebigen Stelle in der Adobe Experience Cloud **`[Ctrl]`** + **`[I]`**. Ein [!UICONTROL User Data Debugger] wird geöffnet.
 1. Klicken Sie auf **[!UICONTROL Copy]** ![Kopieren](../../assets/copy.png) neben der [!UICONTROL Current Org ID] oder auf die Registerkarte **[!UICONTROL Assigned Orgs]** , um andere Organisations-IDs anzuzeigen, auf die Sie zugreifen können.
 1. Wenn Sie die gewünschten Informationen gefunden haben, klicken Sie auf **[!UICONTROL Close]**.
@@ -33,4 +33,4 @@ alloy("configure", {
 
 ## Festlegen der Organisations-ID mithilfe der Tag-Erweiterung „Web SDK&quot;
 
-Diese Einstellung kann in der Tag-Erweiterung „Web SDK&quot; mithilfe der Konfigurationseinstellungen der [SDK-Instanz konfiguriert ](/help/tags/extensions/client/web-sdk/configure/general.md). Das Feld wird automatisch basierend auf der Organisation ausgefüllt, unter der die Tag-Eigenschaft erstellt wurde.
+Diese Einstellung kann in der Tag-Erweiterung „Web SDK&quot; mithilfe der Konfigurationseinstellungen der [SDK-Instanz konfiguriert &#x200B;](/help/tags/extensions/client/web-sdk/configure/general.md). Das Feld wird automatisch basierend auf der Organisation ausgefüllt, unter der die Tag-Eigenschaft erstellt wurde.

@@ -13,7 +13,7 @@ ht-degree: 5%
 
 Verwenden Sie die **Tags** von Adobe Experience Platform (früher Launch), um Ereignisdaten von Ihrer Website an Edge Network und nachgelagerte Adobe-Lösungen zu senden.
 
-Bevor Sie diese Schritte ausführen, stellen Sie sicher, dass Sie auf die folgenden [Eigenschaftsrechte“ zugreifen ](/help/tags/ui/administration/user-permissions.md):
+Bevor Sie diese Schritte ausführen, stellen Sie sicher, dass Sie auf die folgenden [Eigenschaftsrechte“ zugreifen &#x200B;](/help/tags/ui/administration/user-permissions.md):
 
 * [!UICONTROL Develop]
 * [!UICONTROL Manage extensions]
@@ -27,7 +27,7 @@ Stellen Sie außerdem sicher, dass Sie alle [Berechtigungen](/help/access-contro
 
 Das [Experience-Datenmodell (XDM](/help/xdm/home.md) ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen für Daten in Form von Schemas bereitstellt. Beim Senden von Daten an die Edge Network wird dringend empfohlen, ein Schema zu konfigurieren.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Schemas]**.
 1. Wählen Sie **[!UICONTROL Create schema]** aus.
 1. Wählen Sie **[!UICONTROL Experience Event]** und dann **[!UICONTROL Next]** aus.
@@ -36,8 +36,9 @@ Das [Experience-Datenmodell (XDM](/help/xdm/home.md) ist eine Open-Source-Spezif
 
 ![Arbeitsfläche des Schemas](assets/getting-started/schema-structure.png)
 
->[!NOTE]\
->Nach dem Speichern lassen Schemata nur *additive* Änderungen zu. Weitere Informationen finden [ unter ](/help/xdm/schema/composition.md#evolution)Schemaentwicklung“.
+>[!NOTE]
+>\
+>Nach dem Speichern lassen Schemata nur *additive* Änderungen zu. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/xdm/schema/composition.md#evolution)Schemaentwicklung“.
 
 ## Erstellen eines Datenspeichers {#datastream}
 
@@ -73,7 +74,7 @@ Die Web SDK-Tag-Erweiterung wird in einer bestimmten Tag-Eigenschaft installiert
 
 Wenn Sie die Tag-Erweiterung „Web SDK&quot; installieren, werden Sie automatisch zur Seite [Konfiguration](configure/config-overview.md) weitergeleitet.
 
-1. Wählen [ im Abschnitt ](configure/datastreams.md) den gewünschten Datenstrom für jede Umgebung aus.
+1. Wählen [&#x200B; im Abschnitt &#x200B;](configure/datastreams.md) den gewünschten Datenstrom für jede Umgebung aus.
 
 Alle anderen Konfigurationseinstellungen sind entweder für Sie ausgefüllt oder optional. Legen Sie die gewünschten Konfigurationseinstellungen fest und klicken Sie dann auf **[!UICONTROL Save]**.
 

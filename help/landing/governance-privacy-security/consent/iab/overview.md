@@ -31,7 +31,7 @@ Dieses Dokument bietet einen Überblick darüber, wie Sie Ihre Datenvorgänge un
 
 ## Voraussetzungen
 
-Um diesem Handbuch zu folgen, müssen Sie eine CMP verwenden, entweder kommerziell oder Ihre eigene, die integriert und mit dem IAB TCF konform ist. Weitere Informationen finden Sie [Liste der konformen ](https://iabeurope.eu/cmp-list/)).
+Um diesem Handbuch zu folgen, müssen Sie eine CMP verwenden, entweder kommerziell oder Ihre eigene, die integriert und mit dem IAB TCF konform ist. Weitere Informationen finden Sie [Liste der konformen &#x200B;](https://iabeurope.eu/cmp-list/)).
 
 >[!IMPORTANT]
 >
@@ -112,7 +112,7 @@ Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie u
 >
 >Die Verwendung der Experience Platform Web SDK ist erforderlich, um Einverständnisdaten direkt in Adobe Experience Platform zu verarbeiten. [!DNL Experience Cloud Identity Service] wird nicht unterstützt.
 >
->[!DNL Experience Cloud Identity Service] wird jedoch weiterhin für die Einverständnisverarbeitung in Adobe Audience Manager unterstützt, und die Einhaltung von TCF 2.0 erfordert nur, dass die Bibliothek auf Version 5[0 aktualisiert ](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>[!DNL Experience Cloud Identity Service] wird jedoch weiterhin für die Einverständnisverarbeitung in Adobe Audience Manager unterstützt, und die Einhaltung von TCF 2.0 erfordert nur, dass die Bibliothek auf Version 5[0 aktualisiert &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Nachdem Sie Ihre CMP so konfiguriert haben, dass Einverständniszeichenfolgen generiert werden, müssen Sie die Experience Platform Web SDK integrieren, um diese Zeichenfolgen zu erfassen und an Experience Platform zu senden. Experience Platform SDK bietet zwei Befehle, mit denen TCF-Einverständnisdaten an Experience Platform gesendet werden können (siehe die folgenden Unterabschnitte). Diese Befehle sollten verwendet werden, wenn ein Kunde zum ersten Mal Einverständnisinformationen bereitstellt, und zwar immer dann, wenn sich das Einverständnis danach ändert.
 
@@ -128,8 +128,8 @@ Nachdem Sie einen eindeutigen Namen für den Datenstrom angegeben haben, klicken
 | --- | --- |
 | [!UICONTROL Sandbox] | Der Name der Experience Platform [Sandbox](/help/sandboxes/home.md) die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datenstroms enthält. |
 | [!UICONTROL Streaming Inlet] | Eine gültige Streaming-Verbindung für Experience Platform. Lesen Sie das Tutorial zum [Erstellen einer Streaming](/help/ingestion/tutorials/create-streaming-connection-ui.md)Verbindung, wenn noch kein Streaming-Inlet vorhanden ist. |
-| [!UICONTROL Event Dataset] | Wählen Sie den im [!DNL XDM ExperienceEvent] Schritt erstellten [ aus](#datasets). Wenn Sie die Feldergruppe [[!UICONTROL IAB TCF 2.0 Consent] in ](/help/xdm/field-groups/event/iab.md) Schema dieses Datensatzes eingeschlossen haben, können Sie mit dem Befehl [`sendEvent`](#sendEvent) Einverständnisänderungsereignisse im Zeitverlauf verfolgen und diese Daten in diesem Datensatz speichern. Beachten Sie, dass die in diesem Datensatz gespeicherten Einverständniswerte in Workflows zur automatischen Durchsetzung **nicht** verwendet werden. |
-| [!UICONTROL Profile Dataset] | Wählen Sie den im [!DNL XDM Individual Profile] Schritt erstellten [ aus](#datasets). Bei der Antwort auf CMP-Einverständnisänderungs-Hooks mit dem [`setConsent`](#setConsent)-Befehl werden erfasste Daten in diesem Datensatz gespeichert. Da dieser Datensatz profilaktiviert ist, werden die in diesem Datensatz gespeicherten Einverständniswerte bei automatischen Erzwingungs-Workflows berücksichtigt. |
+| [!UICONTROL Event Dataset] | Wählen Sie den im [!DNL XDM ExperienceEvent] Schritt erstellten [&#x200B; aus](#datasets). Wenn Sie die Feldergruppe [[!UICONTROL IAB TCF 2.0 Consent] in &#x200B;](/help/xdm/field-groups/event/iab.md) Schema dieses Datensatzes eingeschlossen haben, können Sie mit dem Befehl [`sendEvent`](#sendEvent) Einverständnisänderungsereignisse im Zeitverlauf verfolgen und diese Daten in diesem Datensatz speichern. Beachten Sie, dass die in diesem Datensatz gespeicherten Einverständniswerte in Workflows zur automatischen Durchsetzung **nicht** verwendet werden. |
+| [!UICONTROL Profile Dataset] | Wählen Sie den im [!DNL XDM Individual Profile] Schritt erstellten [&#x200B; aus](#datasets). Bei der Antwort auf CMP-Einverständnisänderungs-Hooks mit dem [`setConsent`](#setConsent)-Befehl werden erfasste Daten in diesem Datensatz gespeichert. Da dieser Datensatz profilaktiviert ist, werden die in diesem Datensatz gespeicherten Einverständniswerte bei automatischen Erzwingungs-Workflows berücksichtigt. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -197,7 +197,7 @@ Mit dem Befehl `sendEvent` können Sie auch TCF 2.0-Einverständnisdaten zu jede
 
 >[!NOTE]
 >
->Um diese Methode verwenden zu können, müssen Sie die Feldergruppe Datenschutz für Erlebnisereignisse zu Ihrem [!DNL Profile] aktivierten [!DNL XDM ExperienceEvent] hinzugefügt haben. Anweisungen zur Konfiguration finden [ im Abschnitt zum Aktualisieren ](./dataset.md#event-schema) ExperienceEvent-Schemas im Handbuch zur Datensatzvorbereitung.
+>Um diese Methode verwenden zu können, müssen Sie die Feldergruppe Datenschutz für Erlebnisereignisse zu Ihrem [!DNL Profile] aktivierten [!DNL XDM ExperienceEvent] hinzugefügt haben. Anweisungen zur Konfiguration finden [&#x200B; im Abschnitt zum Aktualisieren &#x200B;](./dataset.md#event-schema) ExperienceEvent-Schemas im Handbuch zur Datensatzvorbereitung.
 
 Der `sendEvent`-Befehl sollte als Callback in entsprechenden Ereignis-Listenern auf Ihrer Website verwendet werden. Der Befehl erwartet zwei Argumente: (1) eine Zeichenfolge, die den Befehlstyp angibt (in diesem Fall `sendEvent`), und (2) eine Payload, die ein `xdm`-Objekt enthält, das die erforderlichen Einverständnisfelder als JSON bereitstellt:
 
@@ -224,13 +224,13 @@ alloy("sendEvent", {
 
 ### Umgang mit SDK-Antworten
 
-Viele Web-SDK-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. um Bestätigungsnachrichten an den Kunden anzuzeigen. Weitere Informationen finden [ unter ](/help/collection/js/commands/command-responses.md).
+Viele Web-SDK-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. um Bestätigungsnachrichten an den Kunden anzuzeigen. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/collection/js/commands/command-responses.md).
 
 ## Segmente exportieren {#export}
 
 >[!NOTE]
 >
->Bevor Sie mit dem Export von Segmenten beginnen, müssen Sie sicherstellen, dass Ihre Segmente alle erforderlichen Einverständnisfelder enthalten. Weitere Informationen finden Sie [ Abschnitt „Konfigurieren von ](#merge-policies)&quot;.
+>Bevor Sie mit dem Export von Segmenten beginnen, müssen Sie sicherstellen, dass Ihre Segmente alle erforderlichen Einverständnisfelder enthalten. Weitere Informationen finden Sie [&#x200B; Abschnitt „Konfigurieren von &#x200B;](#merge-policies)&quot;.
 
 Nachdem Sie Kundeneinverständnisdaten erfasst und Zielgruppensegmente erstellt haben, die die erforderlichen Einverständnisattribute enthalten, können Sie die TCF 2.0-Konformität durchsetzen, wenn Sie diese Segmente an nachgelagerte Ziele exportieren.
 
@@ -257,4 +257,4 @@ Nachdem Sie Ihre TCF 2.0-Implementierung konfiguriert und Segmente an Ziele expo
 
 ## Nächste Schritte
 
-In diesem Dokument wurde der Prozess der Konfiguration Ihrer Experience Platform-Datenvorgänge beschrieben, um Ihre geschäftlichen Verpflichtungen gemäß TCF 2.0 zu erfüllen. Experience Platform Weitere Informationen zu den datenschutzbezogenen Funktionen von [ finden Sie in ](../../overview.md) Übersicht zu „Governance Datenschutz und Sicherheit“.
+In diesem Dokument wurde der Prozess der Konfiguration Ihrer Experience Platform-Datenvorgänge beschrieben, um Ihre geschäftlichen Verpflichtungen gemäß TCF 2.0 zu erfüllen. Experience Platform Weitere Informationen zu den datenschutzbezogenen Funktionen von [&#x200B; finden Sie in &#x200B;](../../overview.md) Übersicht zu „Governance Datenschutz und Sicherheit“.

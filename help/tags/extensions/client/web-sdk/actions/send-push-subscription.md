@@ -16,7 +16,7 @@ ht-degree: 7%
 
 Die **[!UICONTROL Send push subscription]**-Aktion registriert Push-Benachrichtigungs-Abonnements bei Adobe Experience Platform. Es übernimmt das Abrufen von Push-Abonnementdetails aus dem Browser und sendet sie an Ihren konfigurierten Datenstrom. Sie ist in den Web SDK-Erweiterungsversionen 2.32.0 oder höher verfügbar.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Rules]** und wählen Sie dann die gewünschte Regel aus.
@@ -25,7 +25,7 @@ Die **[!UICONTROL Send push subscription]**-Aktion registriert Push-Benachrichti
 
 Die Aktion verfügt über keine Konfigurationseinstellungen außer der Auswahl einer SDK-Instanz.
 
-Stellen Sie sicher, dass Sie beim Konfigurieren [ Erweiterung einen gültigen ](../configure/push-notifications.md)VAPID Public Key) festlegen, bevor Sie diesen Befehl verwenden.
+Stellen Sie sicher, dass Sie beim Konfigurieren [&#x200B; Erweiterung einen gültigen &#x200B;](../configure/push-notifications.md)VAPID Public Key) festlegen, bevor Sie diesen Befehl verwenden.
 
 Diese Aktion ist die Tag-Erweiterung, die dem [`sendPushSubscription`](/help/collection/js/commands/sendpushsubscription.md)-Befehl entspricht. Informationen zu den Voraussetzungen, der empfohlenen Ausführungsfrequenz, der Funktionsweise des Befehls und der Fehlerbehandlung finden Sie auf der verknüpften Seite .
 

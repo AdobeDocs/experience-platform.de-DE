@@ -25,14 +25,14 @@ Die [!DNL Customer Attributes] erstellt automatisch den Datensatz, in den die Da
 
 ## Identitäten
 
-Die primäre Identität eines Datensatzes ist in der ersten Spalte der CSV-Datei der Quelldaten enthalten. Die [!DNL Customer Attributes]-Quelle geht davon aus, dass die Identität immer dem [`CORE`-Namespace zugeordnet ](../../../identity-service/features/namespaces.md), einem systemgenerierten Namespace, der von [[!DNL Identity Service]](../../../identity-service/home.md) unterstützt wird.
+Die primäre Identität eines Datensatzes ist in der ersten Spalte der CSV-Datei der Quelldaten enthalten. Die [!DNL Customer Attributes]-Quelle geht davon aus, dass die Identität immer dem [`CORE`-Namespace zugeordnet &#x200B;](../../../identity-service/features/namespaces.md), einem systemgenerierten Namespace, der von [[!DNL Identity Service]](../../../identity-service/home.md) unterstützt wird.
 
 Bei Verwendung [!DNL Customer Attributes] Quelle können Sie keinen vorhandenen Namespace für die Identität auswählen, da [!DNL Customer Attributes] davon ausgeht, dass sich die primäre Identität für das Schema immer in der Identitätszuordnung befindet. [!DNL Customer Attributes] erstellt dann automatisch die Zuordnung der Quell-ID zur Identitätszuordnungs-UUID.
 
 Damit [!DNL Customer Attributes] Daten mit anderen [!DNL Profile]-Datensätzen verknüpft werden können, müssen ihre Daten und Identitäten mit einer Experience Cloud ID abgeglichen werden können.
 
-Sie können den `CORE`-Namespace einrichten, indem Sie die Experience Cloud-ID für den Besucher mithilfe der [Web SDK](/help/collection/use-cases/identity/id-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) oder der [Experience Cloud ID Service-API ](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de).
+Sie können den `CORE`-Namespace einrichten, indem Sie die Experience Cloud-ID für den Besucher mithilfe der [Web SDK](/help/collection/use-cases/identity/id-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) oder der [Experience Cloud ID Service-API &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de).
 
 Die [!DNL Customer Attributes]-Datei füllt keine anderen Identitätsbeziehungen weiter. Wenn beispielsweise ein [!DNL Customer Attributes] Quelldatensatz ein **E-Mail**- und ein **Treueprogramm-ID**-Feld enthält, müssen diese Felder als Identitätsfelder im Schema gekennzeichnet werden, damit sie in [!DNL Identity Service] verarbeitet werden können.
 
-Weitere Informationen finden Sie im Tutorial [Erstellen  [!DNL Customer Attributes]  Quellverbindung in ](../../tutorials/ui/create/adobe-applications/customer-attributes.md) Benutzeroberfläche“.
+Weitere Informationen finden Sie im Tutorial [Erstellen  [!DNL Customer Attributes]  Quellverbindung in &#x200B;](../../tutorials/ui/create/adobe-applications/customer-attributes.md) Benutzeroberfläche“.

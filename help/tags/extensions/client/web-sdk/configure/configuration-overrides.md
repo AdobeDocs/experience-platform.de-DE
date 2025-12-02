@@ -12,7 +12,7 @@ ht-degree: 3%
 
 Mit Datenstrom-Überschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenströme definieren, die über die Web-SDK an die Edge Network übergeben werden. Mit dieser Funktion können Sie bedingt verschiedene Verhaltensweisen von Datenströmen Trigger werden, ohne einen neuen Datenstrom zu erstellen oder Ihre bestehenden Einstellungen zu ändern.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.
@@ -20,7 +20,7 @@ Mit Datenstrom-Überschreibungen können Sie zusätzliche Konfigurationen für I
 
 Das Überschreiben der Datenstromkonfiguration besteht aus zwei Schritten:
 
-1. Zunächst müssen Sie in der Datenstrom-Benutzeroberfläche [ Überschreiben der Datenstromkonfiguration definieren](/help/datastreams/configure.md) wenn Sie einen Datenstrom konfigurieren. Anweisungen [ Konfigurieren von Überschreibungen finden Sie ](/help/datastreams/overrides.md)Überschreibungen der Datenstromkonfiguration“ in der Dokumentation zu Datenströmen.
+1. Zunächst müssen Sie in der Datenstrom-Benutzeroberfläche [&#x200B; Überschreiben der Datenstromkonfiguration definieren](/help/datastreams/configure.md) wenn Sie einen Datenstrom konfigurieren. Anweisungen [&#x200B; Konfigurieren von Überschreibungen finden Sie &#x200B;](/help/datastreams/overrides.md)Überschreibungen der Datenstromkonfiguration“ in der Dokumentation zu Datenströmen.
 1. Nachdem Sie die Datenstrom-Überschreibung in der Datenstrom-Benutzeroberfläche konfiguriert haben, können Sie die Tag-Erweiterung konfigurieren.
 
 Datenstrom-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwicklungs-, Staging- und Produktionsumgebungen haben jeweils separate Überschreibungen. Sie können die Überschreibungseinstellungen in eine beliebige Umgebung kopieren:

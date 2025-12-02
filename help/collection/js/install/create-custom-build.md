@@ -27,7 +27,7 @@ Wenn Sie nur Benutzermetriken erfassen müssen und nicht planen, Adobe Target od
 
 ## Voraussetzungen {#prerequisites}
 
-Zum Erstellen eines benutzerdefinierten Web-SDK-Builds benötigen Sie das NPM-Paket für Web-SDK . Stellen Sie sicher, dass [Node.js](https://nodejs.org/en/download/package-manager/all) auf Ihrem Computer installiert ist. Weitere Informationen finden Sie in der Dokumentation [ Installieren von Web SDK mithilfe ](npm.md) NPM-Pakets .
+Zum Erstellen eines benutzerdefinierten Web-SDK-Builds benötigen Sie das NPM-Paket für Web-SDK . Stellen Sie sicher, dass [Node.js](https://nodejs.org/en/download/package-manager/all) auf Ihrem Computer installiert ist. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Installieren von Web SDK mithilfe &#x200B;](npm.md) NPM-Pakets .
 
 ## Komponenten und Abhängigkeiten {#components-dependencies}
 

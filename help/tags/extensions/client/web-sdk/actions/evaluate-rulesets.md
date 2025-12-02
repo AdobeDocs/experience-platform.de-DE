@@ -12,7 +12,7 @@ ht-degree: 2%
 
 Mit dem Aktionstyp **[!UICONTROL Evaluate rulesets]** können Sie Trigger für Regelsatzauswertungen manuell durchführen. Regelsätze werden von Adobe Journey Optimizer zurückgegeben, um Funktionen wie In-Browser-Nachrichten zu unterstützen.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Rules]** und wählen Sie dann die gewünschte Regel aus.

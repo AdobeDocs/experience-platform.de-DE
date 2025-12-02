@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # Variable aktualisieren
 
-Mit der **[!UICONTROL Update variable]** Aktion können Sie partielle oder inkrementelle Änderungen an einem [variablen Datenelement“ ](../data-element-types.md#variable). Mit dieser Aktion können Sie ein Objekt erstellen, auf das später in einer [[!UICONTROL Send event]](send-event.md)-Aktion verwiesen werden kann. Das Füllen von Datenelementen und das Zuweisen zu Eigenschaften in einem XDM-Objekt ist für die meisten Anwendungsfälle geeignet. Diese Aktion bietet mehr Flexibilität, damit Sie auf der Grundlage von Regelbedingungen Eigenschaften bedingt auf verschiedene Datenelemente festlegen können.
+Mit der **[!UICONTROL Update variable]** Aktion können Sie partielle oder inkrementelle Änderungen an einem [variablen Datenelement“ &#x200B;](../data-element-types.md#variable). Mit dieser Aktion können Sie ein Objekt erstellen, auf das später in einer [[!UICONTROL Send event]](send-event.md)-Aktion verwiesen werden kann. Das Füllen von Datenelementen und das Zuweisen zu Eigenschaften in einem XDM-Objekt ist für die meisten Anwendungsfälle geeignet. Diese Aktion bietet mehr Flexibilität, damit Sie auf der Grundlage von Regelbedingungen Eigenschaften bedingt auf verschiedene Datenelemente festlegen können.
 
 Bevor Sie diese Aktion verwenden, muss bereits ein variables Datenelement erstellt worden sein. Nachdem Sie ein variables Datenelement zum Ändern ausgewählt haben, wird ein Editor angezeigt, in dem Sie alle gewünschten Felder für diese Aktion festlegen können.
 

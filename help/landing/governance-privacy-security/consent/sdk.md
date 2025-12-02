@@ -48,7 +48,7 @@ Nachdem Sie einen neuen Datenstrom erstellt oder einen vorhandenen ausgewählt h
 | --- | --- |
 | [!UICONTROL Sandbox] | Der Name der Experience Platform [Sandbox](/help/sandboxes/home.md) die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datenstroms enthält. |
 | [!UICONTROL Event Dataset] | Ein [!DNL XDM ExperienceEvent] Datensatz, an den Sie Ereignisdaten mithilfe der SDK senden möchten. Sie müssen zwar einen Ereignisdatensatz bereitstellen, um einen Experience Platform-Datenstrom zu erstellen, aber beachten Sie, dass Einverständnisdaten, die über Ereignisse gesendet werden, in nachgelagerten Erzwingungs-Workflows nicht berücksichtigt werden. |
-| [!UICONTROL Profile Dataset] | Der [!DNL Profile] Datensatz mit Feldern für das Kundeneinverständnis, die Sie [früher“ ](#prerequisites). |
+| [!UICONTROL Profile Dataset] | Der [!DNL Profile] Datensatz mit Feldern für das Kundeneinverständnis, die Sie [früher“ &#x200B;](#prerequisites). |
 
 Wenn Sie fertig sind, wählen Sie unten im Bildschirm **[!UICONTROL Save]** aus und befolgen Sie weitere Anweisungen, um die Konfiguration abzuschließen.
 
@@ -92,7 +92,7 @@ Nachdem das Datenelement erstellt wurde, navigieren Sie zurück zur Konfiguratio
 
 ### Bereitstellen der Erweiterung auf Ihrer Website
 
-Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in Ihre Website integriert werden. Ausführliche Informationen zur Bereitstellung [ aktualisierten Bibliotheks-Builds finden Sie ](/help/tags/ui/publishing/overview.md) „Veröffentlichungshandbuch“ in der Tags-Dokumentation.
+Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in Ihre Website integriert werden. Ausführliche Informationen zur Bereitstellung [&#x200B; aktualisierten Bibliotheks-Builds finden Sie &#x200B;](/help/tags/ui/publishing/overview.md) „Veröffentlichungshandbuch“ in der Tags-Dokumentation.
 
 ## Erstellen von Befehlen zur Einverständnisänderung {#commands}
 
@@ -195,9 +195,9 @@ var setConsent = function () {
 
 ## Umgang mit SDK-Antworten
 
-Alle [!DNL Experience Platform SDK]-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. um Bestätigungsnachrichten an den Kunden anzuzeigen. Weitere Informationen finden [ unter ](/help/collection/js/commands/command-responses.md).
+Alle [!DNL Experience Platform SDK]-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. um Bestätigungsnachrichten an den Kunden anzuzeigen. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/collection/js/commands/command-responses.md).
 
-Nachdem Sie `setConsent` Aufrufe mit der SDK erfolgreich durchgeführt haben, können Sie mit dem Profil-Viewer in der Experience Platform-Benutzeroberfläche überprüfen, ob Daten im Profilspeicher landen. Weitere Informationen finden Sie im Abschnitt [Durchsuchen von Profilen nach ](/help/profile/ui/user-guide.md#browse-identity)).
+Nachdem Sie `setConsent` Aufrufe mit der SDK erfolgreich durchgeführt haben, können Sie mit dem Profil-Viewer in der Experience Platform-Benutzeroberfläche überprüfen, ob Daten im Profilspeicher landen. Weitere Informationen finden Sie im Abschnitt [Durchsuchen von Profilen nach &#x200B;](/help/profile/ui/user-guide.md#browse-identity)).
 
 ## Nächste Schritte
 

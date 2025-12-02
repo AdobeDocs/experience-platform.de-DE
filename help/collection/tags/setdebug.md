@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # `setDebug()`
 
-Mit der `_satellite.setDebug()` Methode können Sie das [ (Debugging](../use-cases/debugging.md) auf Ihrer Site aktivieren oder deaktivieren. Diese Methode soll lokal in Ihrer Browser-Konsole ausgeführt werden. Adobe rät davon ab, diese Methode innerhalb von Tag-Regeln aufzurufen.
+Mit der `_satellite.setDebug()` Methode können Sie das [&#x200B; (Debugging](../use-cases/debugging.md) auf Ihrer Site aktivieren oder deaktivieren. Diese Methode soll lokal in Ihrer Browser-Konsole ausgeführt werden. Adobe rät davon ab, diese Methode innerhalb von Tag-Regeln aufzurufen.
 
 ```ts
 _satellite.setDebug(enabled: boolean): void

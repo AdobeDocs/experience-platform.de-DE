@@ -72,4 +72,4 @@ alloy("configure", {
 
 ## Konfigurieren der Klick-Sammlung für die Tag-Erweiterung „Web SDK&quot;
 
-Diese Einstellungen können in der Tag-Erweiterung „Web SDK&quot; mithilfe der [Konfigurationseinstellungen für die Datenerfassung“ konfiguriert ](/help/tags/extensions/client/web-sdk/configure/data-collection.md).
+Diese Einstellungen können in der Tag-Erweiterung „Web SDK&quot; mithilfe der [Konfigurationseinstellungen für die Datenerfassung“ konfiguriert &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md).

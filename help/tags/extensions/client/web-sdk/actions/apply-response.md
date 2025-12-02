@@ -12,7 +12,7 @@ ht-degree: 1%
 
 Mit dem Aktionstyp **[!UICONTROL Apply response]** können basierend auf einer Antwort von Edge Network verschiedene Aktionen ausgeführt werden. Dieser Aktionstyp wird normalerweise in Hybridbereitstellungen verwendet, bei denen der Server einen ersten Aufruf an die Edge Network sendet. Dieser Aktionstyp nimmt die Antwort aus diesem Aufruf entgegen und initialisiert die Web-SDK im Browser. Durch die Verwendung dieses Aktionstyps können die Client-Ladezeiten für Anwendungsfälle der hybriden Personalisierung reduziert werden.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Rules]** und wählen Sie dann die gewünschte Regel aus.

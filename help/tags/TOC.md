@@ -116,7 +116,7 @@ ht-degree: 80%
             * [Personalisierung](extensions/client/web-sdk/configure/personalization.md)
             * [Datenerfassung](extensions/client/web-sdk/configure/data-collection.md)
             * [Streaming-Medien](extensions/client/web-sdk/configure/streaming-media.md)
-            * [Push-Benachrichtigungen ](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Push-Benachrichtigungen &#x200B;](extensions/client/web-sdk/configure/push-notifications.md)
             * [Werbung](extensions/client/web-sdk/configure/advertising.md)
             * [Überschreibungen der Konfiguration](extensions/client/web-sdk/configure/configuration-overrides.md)
             * [Erweiterte Einstellungen](extensions/client/web-sdk/configure/advanced-settings.md)

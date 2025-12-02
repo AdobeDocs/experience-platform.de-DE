@@ -81,7 +81,7 @@ Das `implementationDetails`-Schlüsselwort erfasst Informationen über die SDK-V
 
 Das `"highEntropyUserAgentHints"`-Schlüsselwort erfasst detaillierte Informationen über das Gerät des Benutzers. Diese Daten sind im HTTP-Header der an Adobe gesendeten Anfrage enthalten. Nachdem die Daten an das Edge-Netzwerk gesendet wurden, füllt das XDM-Objekt den entsprechenden XDM-Pfad. Wenn Sie den entsprechenden XDM-Pfad in Ihrem `sendEvent`-Aufruf festlegen, hat dieser Vorrang vor dem HTTP-Header-Wert.
 
-Wenn Sie bei der [ Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/configure.md) können Daten zugunsten von Gerätesuchwerten gelöscht werden. Einige Client-Hinweisfelder und Gerätesuchfelder können nicht im selben Treffer vorhanden sein.
+Wenn Sie bei der [&#x200B; Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/configure.md) können Daten zugunsten von Gerätesuchwerten gelöscht werden. Einige Client-Hinweisfelder und Gerätesuchfelder können nicht im selben Treffer vorhanden sein.
 
 | Eigenschaft | Beschreibung | HTTP-Kopfzeile | XDM-Pfad | Beispiel |
 | --- | --- | --- | --- | --- |
@@ -93,7 +93,7 @@ Wenn Sie bei der [ Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/
 | Browser-Name | Der verwendete Browser. Der Hinweis `Sec-CH-UA` niedrige Entropie erfasst auch dieses Element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Browser-Version | Die Hauptversion des Browsers. Der Hinweis `Sec-CH-UA` niedrige Entropie erfasst auch dieses Element. Die genaue Browser-Version wird nicht automatisch erfasst. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-Weitere Informationen finden [ unter ](/help/collection/use-cases/client-hints.md)-Client-Hinweise für Benutzeragenten .
+Weitere Informationen finden [&#x200B; unter &#x200B;](/help/collection/use-cases/client-hints.md)-Client-Hinweise für Benutzeragenten .
 
 Legen Sie das `context` Array von Zeichenfolgen beim Ausführen des `configure`-Befehls fest. Wenn Sie diese Eigenschaft beim Konfigurieren der SDK weglassen, werden standardmäßig alle Kontextinformationen mit Ausnahme von `"highEntropyUserAgentHints"` erfasst. Legen Sie diese Eigenschaft fest, wenn Sie Client-Hinweise mit hoher Entropie erfassen möchten oder wenn Sie andere Kontextinformationen bei der Datenerfassung weglassen möchten. Zeichenfolgen können in beliebiger Reihenfolge eingefügt werden.
 

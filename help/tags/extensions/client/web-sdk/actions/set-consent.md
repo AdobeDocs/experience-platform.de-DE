@@ -10,9 +10,9 @@ ht-degree: 0%
 
 # Einverständnis festlegen
 
-Die **[!UICONTROL Set consent]** Aktion bestimmt, ob die Tag-Erweiterung Daten senden (Opt-in), Daten verwerfen (Opt-out) oder [ (Standardeinverständnis](../configure/consent.md) verwenden soll (Einverständnis unbekannt). Wenn ein Benutzer das Einverständnis für Ihre Site zulässt oder verweigert, können Sie diese Aktion verwenden, um seine Voreinstellungen mit der Tag-Erweiterung zu synchronisieren. Die JavaScript-Bibliotheksäquivalenz dieser Aktion ist der [`setConsent`](/help/collection/js/commands/setconsent.md).
+Die **[!UICONTROL Set consent]** Aktion bestimmt, ob die Tag-Erweiterung Daten senden (Opt-in), Daten verwerfen (Opt-out) oder [&#x200B; (Standardeinverständnis](../configure/consent.md) verwenden soll (Einverständnis unbekannt). Wenn ein Benutzer das Einverständnis für Ihre Site zulässt oder verweigert, können Sie diese Aktion verwenden, um seine Voreinstellungen mit der Tag-Erweiterung zu synchronisieren. Die JavaScript-Bibliotheksäquivalenz dieser Aktion ist der [`setConsent`](/help/collection/js/commands/setconsent.md).
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Rules]** und wählen Sie dann die gewünschte Regel aus.
@@ -37,7 +37,7 @@ Dieser Aktionstyp unterstützt die folgenden Konfigurationsoptionen:
 * **[!UICONTROL Consent information]**: Legt fest, ob ein Formular ausgefüllt oder ein Datenelement mit Einverständnisinformationen bereitgestellt werden soll.
 * **[!UICONTROL Standard]**: Der Einverständnisstandard, den Sie verwenden möchten. Zu den verfügbaren Optionen gehören &quot;[!UICONTROL Adobe]&quot; und &quot;[!UICONTROL IAB TCF]&quot;.
 * **[!UICONTROL Version]**: Die Version des Einverständnisstandards, den Sie verwenden möchten.
-* **[!UICONTROL Datastream configuration overrides]**: Dieser Befehl unterstützt Überschreibungen der Datenstromkonfiguration, sodass Sie steuern können, welche Apps und Services diese Daten erhalten. Wenn Sie eine Überschreibung der Datenstromkonfiguration sowohl in einem einzelnen Befehl als auch in den Konfigurationseinstellungen der Tag-Erweiterung festlegen, hat der einzelne Befehl Vorrang. Weitere [ finden Sie unter ](../configure/configuration-overrides.md) der Datenstromkonfiguration .
+* **[!UICONTROL Datastream configuration overrides]**: Dieser Befehl unterstützt Überschreibungen der Datenstromkonfiguration, sodass Sie steuern können, welche Apps und Services diese Daten erhalten. Wenn Sie eine Überschreibung der Datenstromkonfiguration sowohl in einem einzelnen Befehl als auch in den Konfigurationseinstellungen der Tag-Erweiterung festlegen, hat der einzelne Befehl Vorrang. Weitere [&#x200B; finden Sie unter &#x200B;](../configure/configuration-overrides.md) der Datenstromkonfiguration .
 
 ## Erstellen einer Regel, die die Einverständnisinformationen aktualisiert
 

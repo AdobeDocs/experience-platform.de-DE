@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Die Erweiterung ist für die Verwendung mit der Adobe Experience Platform Web SDK-Erweiterung vorgesehen. Informationen zur Version, die mit AppMeasurement verwendet werden soll, finden Sie in der Übersicht über die [Common Analytics Plugins-Erweiterung](../plugins/overview.md).
 
-In diesem Dokument wird beschrieben, wie Sie die Tag-Erweiterung „Web SDK Plugins“ konfigurieren und zur Erweiterung der [Adobe Experience Platform Web SDK-Erweiterung“ ](../web-sdk/overview.md).
+In diesem Dokument wird beschrieben, wie Sie die Tag-Erweiterung „Web SDK Plugins“ konfigurieren und zur Erweiterung der [Adobe Experience Platform Web SDK-Erweiterung“ &#x200B;](../web-sdk/overview.md).
 
 ## Konfigurieren der Common Web SDK Plugins-Erweiterung
 

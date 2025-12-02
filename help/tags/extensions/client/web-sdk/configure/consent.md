@@ -12,7 +12,7 @@ ht-degree: 1%
 
 Im **[!UICONTROL Consent]** Abschnitt können Sie die Standardebene für das Einverständnis auswählen, von der ausgegangen wird, wenn keine andere explizite Einverständnisvoreinstellung angegeben wird. Die standardmäßige Einverständnisebene wird nicht in Benutzerprofilen gespeichert.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.

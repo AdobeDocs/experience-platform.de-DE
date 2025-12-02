@@ -19,7 +19,7 @@ Der Wert, den Sie für die `edgeDomain` verwenden, hängt von Ihrer Teilnahme am
 
 **Wenn Sie nicht am Zertifikatprogramm teilnehmen** setzen Sie den Wert auf eine Subdomain von `data.adobedc.net`. Adobe empfiehlt, aus Konsistenzgründen die Unternehmens-ID Ihres Unternehmens zu verwenden. Beispiel: `example.data.adobedc.net`. Gehen Sie wie folgt vor, um Ihre Unternehmens-ID zu ermitteln:
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
 1. Drücken Sie an einer beliebigen Stelle in der Experience Cloud-Benutzeroberfläche `[Cmd]` + `[I]` (iOS) oder `[Ctrl]` + `[I]` (Windows).
 1. Ein **[!UICONTROL User data debugger]** wird angezeigt. Wählen Sie die Registerkarte **[!UICONTROL Assigned orgs]** aus.
 1. Erweitern Sie die gewünschte IMS-Organisation.

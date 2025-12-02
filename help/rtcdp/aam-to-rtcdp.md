@@ -41,7 +41,7 @@ Segmente mit Regeln, die in Real-Time CDP unterstützt werden können, aber Akti
 
 ## &#x200B;4. Welche Ziele haben Sie derzeit in Audience Manager eingerichtet, die Sie nach Real-Time CDP umziehen lassen können?
 
-Adobe empfiehlt dringend, Segmente, die in Audience Manager für [personenbasierte Ziele“ aktiviert ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de), über die [!UICONTROL Audience Manager Source Connector] an Real-Time CDP zu pushen, um sie dann über Real-Time CDP zu aktivieren.
+Adobe empfiehlt dringend, Segmente, die in Audience Manager für [personenbasierte Ziele“ aktiviert &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de), über die [!UICONTROL Audience Manager Source Connector] an Real-Time CDP zu pushen, um sie dann über Real-Time CDP zu aktivieren.
 
 Alle in Audience Manager verfügbaren personenbasierten Ziele - [Facebook](/help/destinations/catalog/social/facebook.md), [[!UICONTROL Google Customer Match]](/help/destinations/catalog/advertising/google-customer-match.md), [LinkedIn](/help/destinations/catalog/social/linkedin.md) - sind auch in Real-Time CDP verfügbar.
 

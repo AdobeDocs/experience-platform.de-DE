@@ -15,7 +15,7 @@ Mit dem `edgeConfigOverrides`-Objekt können Sie Konfigurationseinstellungen nur
 
 Der übergeordnete Prozess zur Außerkraftsetzung der Datenstromkonfiguration besteht aus zwei Hauptschritten:
 
-1. Zunächst müssen Sie in der Datenstrom-Benutzeroberfläche [ Überschreiben der Datenstromkonfiguration definieren](/help/datastreams/configure.md) wenn Sie einen Datenstrom konfigurieren. Anweisungen [ Konfigurieren von Überschreibungen finden Sie ](/help/datastreams/overrides.md)Überschreibungen der Datenstromkonfiguration“ in der Dokumentation zu Datenströmen.
+1. Zunächst müssen Sie in der Datenstrom-Benutzeroberfläche [&#x200B; Überschreiben der Datenstromkonfiguration definieren](/help/datastreams/configure.md) wenn Sie einen Datenstrom konfigurieren. Anweisungen [&#x200B; Konfigurieren von Überschreibungen finden Sie &#x200B;](/help/datastreams/overrides.md)Überschreibungen der Datenstromkonfiguration“ in der Dokumentation zu Datenströmen.
 1. Nachdem Sie die Datenstrom-Überschreibung in der Datenstrom-Benutzeroberfläche konfiguriert haben, können Sie das `edgeConfigOverrides`-Objekt konfigurieren.
 
 Beachten Sie, dass der `configure`-Befehl auch ein `edgeConfigOverrides`-Objekt unterstützt; siehe [`edgeConfigOverrides`](../configure/edgeconfigoverrides.md) unter dem `configure`-Befehl. Das `edgeConfigOverrides` Objekt im `sendEvent`-Befehl hat Vorrang vor dem `edgeConfigOverrides` Objekt im `configure`-Befehl, wenn beide festgelegt sind.
