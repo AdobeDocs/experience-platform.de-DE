@@ -2,30 +2,30 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
 workflow-type: tm+mt
-source-wordcount: '2970'
-ht-degree: 61%
+source-wordcount: '2949'
+ht-degree: 59%
 
 ---
 
 
 # Versionshinweise zur Web SDK-Erweiterung
 
-In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/collection/js/release-notes.md).
 
 ## Version 2.33.0 – Donnerstag, 24. September 2025
 
 **Neue Funktionen**
 
-- Unterstützung für das Anzeigen von Push-Benachrichtigungen hinzugefügt
-- Enthält [Version 2.30.0](../../../../web-sdk/release-notes.md#2-30-0) des Adobe Experience Platform Web SDK.
+- Die Anzeige von Push-Benachrichtigungen wird nun unterstützt.
+- Enthält [Version 2.30.0](/help/collection/js/release-notes.md#2-30-0) des Adobe Experience Platform Web SDK.
 
 ## Version 2.32.0 – Freitag, 4. September 2025
 
 **Neue Funktionen**
 
-- Enthält [Version 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) des Adobe Experience Platform Web SDK.
+- Enthält [Version 2.29.0](/help/collection/js/release-notes.md#2-29-0) des Adobe Experience Platform Web SDK.
 - Es wurde Unterstützung für Adobe Advertising als neue benutzerdefinierte Build-Komponente hinzugefügt. Konfigurieren Sie in der Erweiterungskonfiguration und in Ereignisaufrufen senden .
 - Unterstützung für die Aufzeichnung von Push-Abonnementdetails im Profil hinzugefügt. Dies erfolgt über die neue Aktion „Abonnementdetails per Push übertragen“
 
@@ -36,13 +36,13 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 ## Version 2.31.1 – Freitag, 31. Juli 2025
 
 - Es wurde ein Problem behoben, das die Ausführung benutzerdefinierter Builds verhinderte.
-- Enthält [Version 2.28.1](../../../../web-sdk/release-notes.md#2-28-1) des Adobe Experience Platform Web SDK.
+- Enthält [Version 2.28.1](/help/collection/js/release-notes.md#2-28-1) des Adobe Experience Platform Web SDK.
 
 ## Version 2.31.0 – Freitag, 24. Juli 2025
 
 **Neue Funktionen**
 
-- Enthält [Version 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) des Adobe Experience Platform Web SDK.
+- Enthält [Version 2.28.0](/help/collection/js/release-notes.md#2-28-0) des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -52,7 +52,7 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 
 **Bekannte Probleme**
 
-- Nach der Veröffentlichung der Version 2.31.0 wurde ein Problem mit dem Build-Prozess [Benutzerdefinierte Komponenten](/help/web-sdk/install/create-custom-build.md) festgestellt. Während benutzerdefinierte Builds weiterhin funktionieren, sind alle Komponenten derzeit im Build enthalten, was unabhängig von der Komponentenauswahl zu einem Paket in voller Größe führt. Eine Lösung für dieses Problem wird derzeit entwickelt. Wenn Sie sich zur Minimierung der Build-Größe auf die Auswahl benutzerdefinierter Komponenten verlassen, wird empfohlen, auf eine zukünftige Version zu warten.
+- Nach der Veröffentlichung der Version 2.31.0 wurde ein Problem mit dem Build-Prozess [Benutzerdefinierte Komponenten](/help/collection/js/install/create-custom-build.md) festgestellt. Während benutzerdefinierte Builds weiterhin funktionieren, sind alle Komponenten derzeit im Build enthalten, was unabhängig von der Komponentenauswahl zu einem Paket in voller Größe führt. Eine Lösung für dieses Problem wird derzeit entwickelt. Wenn Sie sich zur Minimierung der Build-Größe auf die Auswahl benutzerdefinierter Komponenten verlassen, wird empfohlen, auf eine zukünftige Version zu warten.
 
 ## Version 2.30.1 – Mittwoch, 27. Mai 2025
 
@@ -66,7 +66,7 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 
 - Sie können jetzt ein Datenelement angeben, wenn Sie Drittanbieter-Cookies aktivieren.
 - Es wurden Clear-Schaltflächen zu Code-Feldern hinzugefügt.
-- Enthält [Version 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) des Adobe Experience Platform Web SDK.
+- Enthält [Version 2.27.0](/help/collection/js/release-notes.md) des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -82,13 +82,13 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 
 **Neue Funktionen**
 
-- Sie können jetzt benutzerdefinierte Web-SDK-Builds erstellen und die benötigten Komponenten über die Benutzeroberfläche der Tag-Erweiterung auswählen. Dies kann zu kleineren Builds führen, indem nicht verwendete Komponenten ausgeschlossen werden. Weitere Informationen finden Sie in der Dokumentation [Erstellen eines benutzerdefinierten Web-SDK-Builds](web-sdk-extension-configuration.md#custom-build).
-- Enthält [Version 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) des Adobe Experience Platform Web SDK.
+- Sie können jetzt benutzerdefinierte Web-SDK-Builds erstellen und die benötigten Komponenten über die Benutzeroberfläche der Tag-Erweiterung auswählen. Dies kann zu kleineren Builds führen, indem nicht verwendete Komponenten ausgeschlossen werden. Siehe [Benutzerdefinierte Build-Komponenten](configure/custom-build-components.md).
+- Enthält [Version 2.26.0](/help/collection/js/release-notes.md) des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Eine elegante Handhabung fehlender Datenelemente in Aktionen vom Typ [Variable aktualisieren](action-types.md#update-variable) wurde hinzugefügt. Zuvor wurde beim Bearbeiten einer Aktion „Variable aktualisieren“ mit einem fehlenden Datenelement eine Fehlermeldung angezeigt. Jetzt können Sie ein anderes Datenelement auswählen und alle Einstellungen für die Aktion „Variable aktualisieren“ werden weiterhin angewendet. Datenelemente können fehlen, wenn sie gelöscht oder eine Tags-Eigenschaft dupliziert wird.
-- Das Öffnen einer neuen Registerkarte mit der Aktion [Umleiten mit Identität](action-types.md#redirect-with-identity) wird nun unterstützt. Bei Verwendung der Aktion wird jetzt das `target` des Anker-Tags verwendet, wenn der Browser umgeleitet wird.
+- Eine elegante Handhabung fehlender Datenelemente in Aktionen vom Typ [Variable aktualisieren](actions/update-variable.md) wurde hinzugefügt. Zuvor wurde beim Bearbeiten einer Aktion „Variable aktualisieren“ mit einem fehlenden Datenelement eine Fehlermeldung angezeigt. Jetzt können Sie ein anderes Datenelement auswählen und alle Einstellungen für die Aktion „Variable aktualisieren“ werden weiterhin angewendet. Datenelemente können fehlen, wenn sie gelöscht oder eine Tags-Eigenschaft dupliziert wird.
+- Das Öffnen einer neuen Registerkarte mit der Aktion [Umleiten mit Identität](actions/redirect-with-identity.md) wird nun unterstützt. Bei Verwendung der Aktion wird jetzt das `target` des Anker-Tags verwendet, wenn der Browser umgeleitet wird.
 - Es wurde ein Problem behoben, bei dem Adobe Audience Manager in Konfigurationsüberschreibungen nicht deaktiviert werden konnte.
 
 ## Version 2.28.0 – Freitag, 23. Januar 2025
@@ -102,14 +102,14 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 **Neue Funktionen**
 
 - Es wurde eine neue Funktion hinzugefügt, mit der Sie zwischen technischen Namen und Anzeigenamen im XDM-Objekt wechseln können.
-- Enthält [Version 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) des Adobe Experience Platform Web SDK.
+- Enthält [Version 2.25.0](/help/collection/js/release-notes.md) des Adobe Experience Platform Web SDK.
 
 ## Version 2.27.0 – Freitag, 31. Oktober 2024
 
 **Neue Funktionen**
 
-- [Datenstromüberschreibungen](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) enthalten jetzt Einstellungen zum Deaktivieren von Experience Cloud-Lösungen und Adobe Experience Platform-Services.
-- Sie können jetzt [Datenstrom-Überschreibungen](../web-sdk/web-sdk-extension-configuration.md) für Mediensitzungen erstellen.
+- [Konfigurationsüberschreibungen](configure/configuration-overrides.md) enthalten jetzt Einstellungen zum Deaktivieren von Experience Cloud-Lösungen und Adobe Experience Platform-Services.
+- Sie können jetzt Konfigurationsüberschreibungen für Mediensitzungen erstellen.
 
 Enthält Version 2.24.0 des Adobe Experience Platform Web SDK.
 
@@ -126,12 +126,12 @@ Enthält Version 2.23.0 des Adobe Experience Platform Web SDK.
 **Neue Funktionen**
 
 - Überwachungs-Hook `triggered` Ereignis hinzugefügt.
-- [Geführte Ereignisse](action-types.md#instance), [Standardpersonalisierung anfordern](action-types.md#personalization), [Regelsatzelemente abonnieren](event-types.md#subscribe-ruleset-items) und [Regelsätze auswerten](action-types.md#evaluate-rulesets) sind jetzt allgemein verfügbar.
+- [Geführte Ereignisse](actions/actions-overview.md), [Standardpersonalisierung anfordern](configure/personalization.md), [Regelsatzelemente abonnieren](event-types.md#subscribe-ruleset-items) und [Regelsätze auswerten](actions/evaluate-rulesets.md) sind jetzt allgemein verfügbar.
 
 **Fehlerbehebungen und Verbesserungen**
 
 - Es wurde ein Problem behoben, bei dem duplizierte Variablendatenelemente einander überschreiben konnten.
-- Bei Verwendung des [Standardpersonalisierung anfordern](action-types.md#personalization) geführten Ereignisses sind visuelle Personalisierungsentscheidungen jetzt automatisch aktiviert.
+- Bei Verwendung des [Standardpersonalisierung anfordern](configure/personalization.md) geführten Ereignisses sind visuelle Personalisierungsentscheidungen jetzt automatisch aktiviert.
 
 Enthält Version 2.22.0 des Adobe Experience Platform Web SDK.
 
@@ -159,16 +159,16 @@ Enthält Version 2.20.0 des Adobe Experience Platform Web SDK.
 
 **Neue Funktionen**
 
-- Es wurde Unterstützung für die [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) in der Erweiterungskonfiguration hinzugefügt.
-- Die [`Send Media Event`](action-types.md#send-media-event) Aktion für die [!DNL Streaming Media Collection] wurde hinzugefügt.
+- Es wurde Unterstützung für die [`Streaming Media Collection`](configure/streaming-media.md) in der Erweiterungskonfiguration hinzugefügt.
+- Die [`Send Media Event`](actions/send-media-event.md) Aktion für die [!DNL Streaming Media Collection] wurde hinzugefügt.
 - Das [`Media: Quality of Experience`](data-element-types.md#quality-experience) Datenelement für die [!DNL Streaming Media Collection] wurde hinzugefügt.
 
 Enthält Version 2.20.0 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Fehlerkorrektur - Bei der Suche nach Datenelementen in der Aktion [Variable aktualisieren](action-types.md#update-variable) tritt jetzt kein Fehler mehr auf.
-- Ereignistypen [!UICONTROL Media] aus den Ereignistypen entfernt, die zur Verwendung in der `sendEvent`-Aktion vorgeschlagen wurden.
+- Fehlerkorrektur - Bei der Suche nach Datenelementen in der Aktion [Variable aktualisieren](actions/update-variable.md) tritt jetzt kein Fehler mehr auf.
+- [!UICONTROL Media] Ereignistypen wurden aus den Ereignistypen entfernt, die zur Verwendung in der `sendEvent`-Aktion vorgeschlagen wurden.
 
 ## Version 2.22.0 – Samstag, 3. Mai 2024
 
@@ -235,7 +235,7 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
 ## Version 2.19.0 – 21. Juni 2023
 
-- Das Datenelement **[!UICONTROL Variable]** und die Aktionen **[!UICONTROL Variable aktualisieren]** sind jetzt allgemein verfügbar.
+- Das **[!UICONTROL Variable]** Datenelement und **[!UICONTROL Update Variable]** Aktionen sind jetzt allgemein verfügbar.
 
 ## Version 2.18.0 – 18. Mai 2023
 
@@ -261,12 +261,12 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
 **Neue Funktionen**
 
-- (Beta) Aktion **[!UICONTROL Variable aktualisieren]** und Datenelement **[!UICONTROL Variable]** hinzugefügt.
-- Konfiguration hinzugefügt für Callback-Funktion [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md).
+- (Beta) **[!UICONTROL Update variable]** Aktion und **[!UICONTROL Variable]** Datenelement hinzugefügt.
+- Konfiguration hinzugefügt für Callback-Funktion [`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md).
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, das dazu führte, dass das Klicken auf Elemente in einem Anker-Tag nicht funktionierte, wenn die Aktion **[!UICONTROL Umleiten mit Identität]** verwendet wurde.
+- Es wurde ein Problem behoben, das dazu führte, dass das Klicken auf Elemente in einem Anker-Tag nicht funktionierte, wenn die **[!UICONTROL Redirect with identity]** Aktion verwendet wurde.
 - Es wurde ein Problem behoben, bei dem XDM-Objektdatenelemente nicht funktionierten, wenn nur ein Schema vorhanden war.
 - Enthält Version 2.15.0 des Adobe Experience Platform Web SDK.
 
@@ -300,7 +300,7 @@ Enthält Version 2.12.0 der Adobe Experience Platform Web SDK-Bibliothek.
 ## Version 2.12.0 – 13. Juni 2022
 
 - Das Datenelement `identityMap` wurde so aktualisiert, dass die Namespace-Optionen basierend auf den in den Erweiterungseinstellungen definierten Sandboxes aufgefüllt werden.
-- Die Aktion **[!UICONTROL Umleiten mit Identität]** wurde hinzugefügt, um eine Domain-übergreifende Identitätsfreigabe zu ermöglichen.
+- Es wurde **[!UICONTROL Redirect with identity]** Aktion hinzugefügt, um eine Domain-übergreifende Identitätsfreigabe zu ermöglichen.
 - Es wurden Dokumentations-Links zur Aktion `sendEvent` hinzugefügt.
 - Die Bibliothek der React Spectrum-Benutzeroberfläche wurde aktualisiert.
 - Es wurden verschiedene Verbesserungen an der Benutzeroberfläche vorgenommen.
@@ -385,10 +385,10 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Ein Kontrollkästchen [&#x200B; „Dokument wird &#x200B;](/help/web-sdk/commands/sendevent/documentunloading.md)&quot; wurde der Benutzeroberfläche für die Aktion „Ereignis senden“ hinzugefügt.
-- Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
+- Der Aktion „Ereignis senden“ wurde [ Kontrollkästchen „Dokument ](actions/send-event.md)&quot; hinzugefügt.
+- Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](configure/consent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
-- Es wurde Unterstützung für den Adobe Consent 2.0-Standard bei Verwendung des [`setConsent`](/help/web-sdk/commands/setconsent.md)-Befehls hinzugefügt.
+- Es wurde Unterstützung für den Adobe Consent 2.0-Standard bei Verwendung der [`Set consent`](actions/set-consent.md) hinzugefügt.
 - In der Benutzeroberfläche für das XDM-Objekt-Datenelement wird jetzt eine passendere Fehlermeldung angezeigt, wenn das Zugriffstoken der Benutzenden ungültig ist oder nicht ordnungsgemäß bereitgestellt wurde.
 - Es wurde ein ursprungsübergreifender Fehler behoben (was sich nicht auf die Nutzung der Erweiterung auswirkt), der beim Anzeigen eines XDM-Objekt-Datenelements in der Developer Console für den Browser eingeblendet wurde.
 
@@ -413,7 +413,7 @@ Enthält Version 2.3.0 der Adobe Experience Platform Web SDK-Bibliothek.
 ## Version 2.1.0 – 5. August 2020
 
 - Grundlegende Änderung: Die Aktion `syncIdentity` wurde entfernt; die Übergabe dieser IDs erfolgt jetzt über die Aktion `sendEvent`. Deaktivieren Sie ggf. bestehende Regeln, die diese Aktion verwenden, bevor Sie ein Upgrade der Erweiterung vornehmen.
-- Aktualisierung auf Alloy Version 2.1.0 ([Versionshinweise](/help/web-sdk/release-notes.md))
+- Auf Alloy-Version 2.1.0 aktualisiert.
 - Unterstützung für den IAB 2.0-Standard für Einwilligungen in der Aktion `setConsent`.
 - Unterstützung für das Überschreiben der Datensatz-ID in der Aktion `sendEvent`.
 - Neues Datenelement vom Typ `IdentityMap`. Über dieses kann der Eintrag `identityMap` im nun aktivierten XDM-Objektdatenelement sowie in der Aktion `setConsent` ausgefüllt werden.

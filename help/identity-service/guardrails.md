@@ -3,9 +3,9 @@ keywords: Experience Platform;Identität;Identity Service;Fehlerbehebung;Leitpla
 title: Leitplanken für Identity Service
 description: Dieses Dokument enthält Informationen zur Verwendung und zu den Ratenbeschränkungen für Identity Service-Daten, damit Sie die Verwendung des Identitätsdiagramms optimieren können.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1576'
 ht-degree: 39%
 
 ---
@@ -16,7 +16,7 @@ Dieses Dokument enthält Informationen über die Verwendung und die Ratenbeschr�
 
 >[!IMPORTANT]
 >
->Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [&#x200B; entsprechenden &#x200B;](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
 ## Erste Schritte
 
@@ -109,7 +109,7 @@ Daten werden nur im Identity Service gelöscht, nicht jedoch im Echtzeit-Kundenp
 Wenn Sie Ihre authentifizierten Ereignisse gegen die CRMID beibehalten möchten, wird empfohlen, Ihre primären IDs von ECID zu CRMID zu ändern. Anweisungen zum Implementieren dieser Änderung finden Sie in den folgenden Dokumenten:
 
 * [Konfigurieren der Identitätszuordnung für Experience Platform-Tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identitätsdaten in der Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
+* [Identitätsdaten in der Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
 
 ### Beispielszenarien
 
@@ -149,7 +149,7 @@ Daher löscht Identity Service die älteste Identität basierend auf Zeitstempel
 
 >[!TAB Diagrammausgabe]
 
-Durch das Löschen von ECID:35577 werden auch die Edges gelöscht, die CRMID:60013 und CRMID:25212 mit der jetzt gelöschten ECID:35577 verknüpft haben. Dieser Löschvorgang führt dazu, dass das Diagramm in zwei kleinere Diagramme aufgeteilt wird.
+Durch das Löschen von ECID:35577 werden auch die Edges gelöscht, die CRMID:60013 und CRMID:25212 mit der jetzt gelöschten :35577 verknüpft haben. Dieser Löschvorgang führt dazu, dass das Diagramm in zwei kleinere Diagramme aufgeteilt wird.
 
 ![](./images/guardrails/after-split.png)
 
@@ -168,7 +168,7 @@ Durch das Löschen von ECID:35577 werden auch die Edges gelöscht, die CRMID:600
 
 Aufgrund der Löschlogik können auch einige „Hub“-Identitäten gelöscht werden. Diese Hub-Identitäten beziehen sich auf Knoten, die mit mehreren individuellen Identitäten verknüpft sind, deren Verknüpfung andernfalls aufgehoben würde.
 
-Im folgenden Beispiel wird ECID:21011 aufgenommen und mit dem Diagramm unter `timestamp=51` verknüpft, wodurch die Beschränkung von 50 Identitäten überschritten wird.
+Im folgenden Beispiel wird ECID:21011 aufgenommen und mit dem Diagramm bei `timestamp=51` verknüpft, wodurch die Beschränkung von 50 Identitäten überschritten wird.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
@@ -199,7 +199,7 @@ Weitere Informationen über [!DNL Identity Service] finden Sie in der folgenden 
 In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP-Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
-* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=de#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
 * [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

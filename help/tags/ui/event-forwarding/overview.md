@@ -3,7 +3,7 @@ title: Übersicht über die Ereignisweiterleitung
 description: Erfahren Sie mehr über die Ereignisweiterleitung in Adobe Experience Platform, durch die Sie mit dem Experience Platform Edge Network Aufgaben ausführen können, ohne die Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 48%
@@ -24,13 +24,13 @@ Mit der Ereignisweiterleitung in Adobe Experience Platform können Sie erfasste 
 
 Dieses Dokument bietet einen allgemeinen Überblick über die Ereignisweiterleitung in Experience Platform.
 
-![Ereignisweiterleitung im Datenerfassungs-Ökosystem.](../../../collection/images/home/event-forwarding.png)
+![Ereignisweiterleitung im Datenerfassungs-Ökosystem.](/help/collection/assets/event-forwarding.png)
 
 >[!NOTE]
 >
->Informationen dazu, wie die Ereignisweiterleitung in Experience Platform in das Datenerfassungs-Ökosystem passt, finden Sie unter [Datenerfassung - Übersicht](../../../collection/home.md).
+>Informationen dazu, wie die Ereignisweiterleitung in Experience Platform in das Datenerfassungs-Ökosystem passt, finden Sie unter [Datenerfassung - Übersicht](/help/collection/home.md).
 
-Die Ereignisweiterleitung in Kombination mit dem [Web SDK](/help/web-sdk/home.md) und dem [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=de) von Adobe Experience Platform bietet die folgenden Vorteile:
+Die Ereignisweiterleitung in Kombination mit dem [Web SDK](/help/collection/js/js-overview.md) und dem [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=de) von Adobe Experience Platform bietet die folgenden Vorteile:
 
 **Performance**:
 
@@ -89,7 +89,7 @@ Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Fu
 
 ### Regeln {#rules}
 
-Das Erstellen von Regeln in den Properties der Ereignisweiterleitung funktioniert ähnlich wie Tags, wobei der wesentliche Unterschied darin besteht, dass Sie Ereignisse nicht als Regelkomponenten auswählen können. Stattdessen verarbeitet eine Ereignisweiterleitungsregel alle Ereignisse, die sie vom [Datenstrom](../../../datastreams/overview.md) erhält, und leitet diese Ereignisse an Ziele weiter, wenn bestimmte Bedingungen erfüllt sind.
+Das Erstellen von Regeln in den Properties der Ereignisweiterleitung funktioniert ähnlich wie Tags, wobei der wesentliche Unterschied darin besteht, dass Sie Ereignisse nicht als Regelkomponenten auswählen können. Stattdessen verarbeitet eine Ereignisweiterleitungsregel alle Ereignisse, die sie vom [Datenstrom](/help/datastreams/overview.md) erhält, und leitet diese Ereignisse an Ziele weiter, wenn bestimmte Bedingungen erfüllt sind.
 
 Darüber hinaus gibt es eine maximale Wartezeit von 30 Sekunden, die für ein einzelnes Ereignis gilt, da es über alle Regeln (und somit alle Aktionen) hinweg in einer Ereignisweiterleitungs-Eigenschaft verarbeitet wird. Das bedeutet, dass alle Regeln und Aktionen für ein einzelnes Ereignis innerhalb dieses Zeitraums abgeschlossen sein müssen.
 

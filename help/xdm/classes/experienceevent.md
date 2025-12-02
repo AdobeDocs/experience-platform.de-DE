@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM ExperienceEvent-Klasse
 description: Erfahren Sie mehr über die XDM ExperienceEvent-Klasse und die Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
+source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
 workflow-type: tm+mt
-source-wordcount: '2783'
-ht-degree: 36%
+source-wordcount: '2728'
+ht-degree: 35%
 
 ---
 
@@ -23,8 +23,8 @@ Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene F
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `_id`<br>**(erforderlich)** | Das Feld Erlebnisereignisklasse `_id` identifiziert einzelne Ereignisse, die in Adobe Experience Platform aufgenommen werden, eindeutig. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Ereignisses nachzuverfolgen, Doppelungen von Daten zu verhindern und dieses Ereignis bei nachgelagerten Services nachzuschlagen.<br><br>Wenn doppelte Ereignisse erkannt werden, können Experience Platform-Programme und -Services die Duplizierung anders handhaben. Beispielsweise werden doppelte Ereignisse im Profil-Service gelöscht, wenn das Ereignis mit demselben `_id` bereits im Profilspeicher vorhanden ist. Diese Ereignisse werden jedoch weiterhin im Data Lake aufgezeichnet.<br><br>In einigen Fällen kann `_id` ein [Universally Unique Identifier (UUID) &#x200B;](https://datatracker.ietf.org/doc/html/rfc4122) ein [Globally Unique Identifier (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) sein.<br><br>Wenn Sie Daten aus einer Quellverbindung streamen oder direkt aus einer Parquet-Datei erfassen, sollten Sie diesen Wert generieren, indem Sie eine bestimmte Kombination von Feldern verketten, die das Ereignis eindeutig machen. Beispiele für verkettete Ereignisse sind primäre ID, Zeitstempel, Ereignistyp usw. Der verkettete Wert muss eine formatierte Zeichenfolge des Typs `uri-reference` sein, was bedeutet, dass alle Doppelpunkt-Zeichen entfernt werden müssen. Danach sollte der verkettete Wert mit SHA-256 oder einem anderen Algorithmus Ihrer Wahl gehasht werden.<br><br>Es ist wichtig zu erkennen, dass **dieses Feld keine Identität repräsentiert, die mit einer Person in Verbindung steht**, sondern den Dateneintrag an sich. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen auf [Identitätsfelder](../schema/composition.md#identity) relegiert werden, die von kompatiblen Feldergruppen bereitgestellt werden. |
-| `eventMergeId` | Wenn Sie [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) verwenden, um Daten aufzunehmen, stellt dies die ID des erfassten Batches dar, der zur Erstellung des Eintrags geführt hat. Dieses Feld wird bei der Datenaufnahme automatisch vom System ausgefüllt. Die Verwendung dieses Felds außerhalb des Kontexts einer Web SDK-Implementierung wird nicht unterstützt. |
+| `_id`<br>**(erforderlich)** | Das Feld Erlebnisereignisklasse `_id` identifiziert einzelne Ereignisse, die in Adobe Experience Platform aufgenommen werden, eindeutig. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Ereignisses nachzuverfolgen, Doppelungen von Daten zu verhindern und dieses Ereignis bei nachgelagerten Services nachzuschlagen.<br><br>Wenn doppelte Ereignisse erkannt werden, können Experience Platform-Programme und -Services die Duplizierung anders handhaben. Beispielsweise werden doppelte Ereignisse im Profil-Service gelöscht, wenn das Ereignis mit demselben `_id` bereits im Profilspeicher vorhanden ist. Diese Ereignisse werden jedoch weiterhin im Data Lake aufgezeichnet.<br><br>In einigen Fällen kann `_id` ein [Universally Unique Identifier (UUID) ](https://datatracker.ietf.org/doc/html/rfc4122) ein [Globally Unique Identifier (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) sein.<br><br>Wenn Sie Daten aus einer Quellverbindung streamen oder direkt aus einer Parquet-Datei erfassen, sollten Sie diesen Wert generieren, indem Sie eine bestimmte Kombination von Feldern verketten, die das Ereignis eindeutig machen. Beispiele für verkettete Ereignisse sind primäre ID, Zeitstempel, Ereignistyp usw. Der verkettete Wert muss eine formatierte Zeichenfolge des Typs `uri-reference` sein, was bedeutet, dass alle Doppelpunkt-Zeichen entfernt werden müssen. Danach sollte der verkettete Wert mit SHA-256 oder einem anderen Algorithmus Ihrer Wahl gehasht werden.<br><br>Es ist wichtig zu erkennen, dass **dieses Feld keine Identität repräsentiert, die mit einer Person in Verbindung steht**, sondern den Dateneintrag an sich. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen auf [Identitätsfelder](../schema/composition.md#identity) relegiert werden, die von kompatiblen Feldergruppen bereitgestellt werden. |
+| `eventMergeId` | Wenn Sie [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) verwenden, um Daten aufzunehmen, stellt dies die ID des erfassten Batches dar, der zur Erstellung des Eintrags geführt hat. Dieses Feld wird bei der Datenaufnahme automatisch vom System ausgefüllt. Die Verwendung dieses Felds außerhalb des Kontexts einer Web SDK-Implementierung wird nicht unterstützt. |
 | `eventType` | Eine Zeichenfolge, die den Typ oder die Kategorie des Ereignisses angibt. Dieses Feld kann verwendet werden, wenn Sie innerhalb desselben Schemas und Datensatzes eine Unterscheidung zwischen verschiedenen Ereignistypen treffen möchten, z. B. eine Unterscheidung zwischen einem Produktansichtsereignis und einem Zum-Einkaufskorb-Hinzufügen-Ereignis bei einem Einzelhandelsunternehmen.<br><br>Standardwerte für diese Eigenschaft sind im [Anhang](#eventType) zusammen mit Beschreibungen des vorgesehenen Anwendungsfalls angegeben. Dieses Feld ist eine erweiterbare Aufzählung, d. h. Sie können auch eigene Ereignistyp-Zeichenfolgen verwenden, um die Ereignisse, die Sie nachverfolgen, zu kategorisieren.<br><br>`eventType` beschränkt Sie auf die Verwendung nur eines einzigen Ereignisses pro Treffer in Ihrem Programm. Daher müssen Sie berechnete Felder verwenden, um dem System mitzuteilen, welches Ereignis am wichtigsten ist. Weitere Informationen finden Sie im Abschnitt zu [Best Practices für berechnete Felder](#calculated). |
 | `producedBy` | Ein Zeichenfolge-Wert, der den Verursacher oder Ursprung des Ereignisses beschreibt. Dieses Feld kann verwendet werden, um bestimmte Ereignisverursacher bei Bedarf für Segmentierungszwecke herauszufiltern.<br><br>Einige empfohlene Werte für diese Eigenschaft sind im [Anhang](#producedBy) angegeben. Dieses Feld ist eine erweiterbare Aufzählung, d. h. Sie können auch eigene Zeichenfolgen verwenden, um verschiedene Ereignisverursacher darzustellen. |
 | `identityMap` | Ein Verknüpfungsfeld, das einen Satz von Identitäten mit Namespace für die Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. Um dieses Feld ordnungsgemäß für das [Echtzeit-Kundenprofil](../../profile/home.md) zu verwenden, dürfen Sie nicht versuchen, bei Ihren Datenvorgängen den Inhalt des Felds manuell zu aktualisieren.<br /><br />Siehe Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |
@@ -64,29 +64,29 @@ Wenn Sie Daten mithilfe einer Quellverbindung an Experience Platform streamen, k
 
 Adobe bietet mehrere Standardfeldgruppen zur Verwendung mit der [!DNL XDM ExperienceEvent]-Klasse. Im Folgenden finden Sie eine Liste einiger häufig verwendeter Feldergruppen für die Klasse:
 
-* [[!UICONTROL Vollständige Erweiterung für Adobe Analytics ExperienceEvent]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md)
 * [[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension]](../field-groups/event/advertising-full-extension.md)
-* [[!UICONTROL Saldoübertragungen]](../field-groups/event/balance-transfers.md)
-* [[!UICONTROL Kampagnen-Marketing-Details]](../field-groups/event/campaign-marketing-details.md)
-* [[!UICONTROL Kartenaktionen]](../field-groups/event/card-actions.md)
-* [[!UICONTROL Kanaldetails]](../field-groups/event/channel-details.md)
-* [[!UICONTROL Handelsdetails]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL Einzahlungsdetails]](../field-groups/event/deposit-details.md)
-* [[!UICONTROL Details zum Gerätehandel]](../field-groups/event/device-trade-in-details.md)
-* [[!UICONTROL Restaurantreservierung]](../field-groups/event/dining-reservation.md)
-* [[!UICONTROL Details zur Endbenutzer-ID]](../field-groups/event/enduserids.md)
-* [[!UICONTROL Umgebungsdetails]](../field-groups/event/environment-details.md)
-* [[!UICONTROL Flugreservierung]](../field-groups/event/flight-reservation.md)
-* [[!UICONTROL IAB TCF 2.0-Einverständnis]](../field-groups/event/iab.md)
-* [[!UICONTROL Unterkunftsreservierung]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL MediaAnalytics Interaction-Details]](../field-groups/event/mediaanalytics-interaction.md)
-* [[!UICONTROL Details zur Angebotsanfrage]](../field-groups/event/quote-request-details.md)
-* [[!UICONTROL Reservierungsdetails]](../field-groups/event/reservation-details.md)
-* [[!UICONTROL Web-Details]](../field-groups/event/web-details.md)
+* [[!UICONTROL Balance Transfers]](../field-groups/event/balance-transfers.md)
+* [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Card Actions]](../field-groups/event/card-actions.md)
+* [[!UICONTROL Channel Details]](../field-groups/event/channel-details.md)
+* [[!UICONTROL Commerce Details]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Deposit Details]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL Device Trade-In Details]](../field-groups/event/device-trade-in-details.md)
+* [[!UICONTROL Dining Reservation]](../field-groups/event/dining-reservation.md)
+* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Flight Reservation]](../field-groups/event/flight-reservation.md)
+* [[!UICONTROL IAB TCF 2.0 Consent]](../field-groups/event/iab.md)
+* [[!UICONTROL Lodging Reservation]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL MediaAnalytics Interaction Details]](../field-groups/event/mediaanalytics-interaction.md)
+* [[!UICONTROL Quote Request Details]](../field-groups/event/quote-request-details.md)
+* [[!UICONTROL Reservation Details]](../field-groups/event/reservation-details.md)
+* [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie weitere Informationen zur [!UICONTROL XDM ExperienceEvent]-Klasse.
+Der folgende Abschnitt enthält zusätzliche Informationen zur [!UICONTROL XDM ExperienceEvent].
 
 ### Akzeptierte Werte für `eventType` {#eventType}
 
@@ -126,7 +126,7 @@ In der folgenden Tabelle sind die akzeptierten Werte für `eventType` zusammen m
 | `decisioning.propositionFetch` | Wird verwendet, um anzugeben, dass ein Ereignis in erster Linie zum Abrufen der Entscheidung verwendet wird. Adobe Analytics löscht dieses Ereignis automatisch. |
 | `decisioning.propositionInteract` | Dieser Ereignistyp wird verwendet, um Interaktionen wie Klicks auf personalisierte Inhalte zu verfolgen. |
 | `decisioning.propositionSend` | Diese Veranstaltung verfolgt, wann beschlossen wurde, einem potenziellen Kunden eine Empfehlung oder ein Angebot zur Prüfung zu senden. |
-| `decisioning.propositionTrigger` | Ereignisse dieses Typs werden von der [Web-SDK&quot; im lokalen Speicher gespeichert](../../web-sdk/home.md) jedoch nicht an Experience Edge gesendet. Jedes Mal, wenn ein Regelsatz erfüllt wird, wird ein Ereignis generiert und im lokalen Speicher gespeichert (sofern diese Einstellung aktiviert ist). |
+| `decisioning.propositionTrigger` | Ereignisse dieses Typs werden von der Web-SDK im lokalen Speicher gespeichert, jedoch nicht an die Edge Network gesendet. Jedes Mal, wenn ein Regelsatz erfüllt wird, wird ein Ereignis generiert und im lokalen Speicher gespeichert (sofern diese Einstellung aktiviert ist). |
 | `delivery.feedback` | Dieses Ereignis verfolgt Feedback-Ereignisse für einen Versand, z. B. einen E-Mail-Versand. |
 | `directMarketing.emailBounced` | Dieses Ereignis verfolgt, wann eine E-Mail an eine Person gebounct hat. |
 | `directMarketing.emailBouncedSoft` | Dieses Ereignis verfolgt, wann eine E-Mail an eine Person Softbounce erzeugt. |

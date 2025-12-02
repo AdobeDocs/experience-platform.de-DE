@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen aus Adobe Experience Platform für Personalisierungs-Anwendungsfälle der gleichen Seite und der nächsten Seite für Edge-Ziele aktivieren.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1883'
 ht-degree: 8%
 
 ---
@@ -27,7 +27,7 @@ Beispiele für Edge-Ziele sind die [Adobe Target](../../destinations/catalog/per
 > 
 >* Um Daten zu aktivieren und den [Zuordnungsschritt](#mapping) des Workflows zu aktivieren, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 >* Um Daten zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 > 
 > Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
@@ -39,11 +39,11 @@ Einen kurzen Überblick über die Konfiguration der Adobe Target-Verbindung für
 >
 >Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie in den Konfigurationsschritten, die in den folgenden Abschnitten beschrieben werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449802/?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Einen kurzen Überblick darüber, wie Sie Audiences und Profilattribute für Adobe Target und benutzerdefinierte Personalisierungsziele freigeben können, erhalten Sie im folgenden Video.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447364/?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Anwendungsfälle {#use-cases}
 
@@ -81,7 +81,7 @@ Stellen Sie beim Konfigurieren des Datenstroms unter **[!UICONTROL Adobe Experie
 
 >[!TIP]
 >
->Ab der Version April 2024 müssen Sie beim Konfigurieren der Verbindung zu Adobe Target das Kontrollkästchen [Edge-Segmentierung“ nicht &#x200B;](/help/destinations/catalog/personalization/adobe-target-connection.md). In diesem Fall ist [Personalisierung der nächsten Sitzung](#next-session) der einzige verfügbare Anwendungsfall für die Personalisierung.
+>Ab der Version April 2024 müssen Sie beim Konfigurieren der Verbindung zu Adobe Target das Kontrollkästchen [Edge-Segmentierung“ nicht ](/help/destinations/catalog/personalization/adobe-target-connection.md). In diesem Fall ist [Personalisierung der nächsten Sitzung](#next-session) der einzige verfügbare Anwendungsfall für die Personalisierung.
 
 ![Datenstromkonfiguration mit hervorgehobener Edge-Segmentierung und hervorgehobenen Personalization-Zielen!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -101,7 +101,7 @@ Befolgen Sie die Anweisungen unter [Erstellen einer Zusammenführungsrichtlinie]
 
 Nachdem Sie die [!DNL Active-On-Edge] Zusammenführungsrichtlinie erstellt haben, müssen Sie eine neue Zielgruppe in Experience Platform erstellen.
 
-Befolgen Sie die [Audience Builder](../../segmentation/ui/segment-builder.md)-Anleitung zum Erstellen Ihrer neuen Zielgruppe und stellen Sie sicher, [&#x200B; Sie &#x200B;](../../segmentation/ui/segment-builder.md#merge-policies) im vorherigen Schritt erstellte [!DNL Active-On-Edge]-Zusammenführungsrichtlinie „zuweisen“.
+Befolgen Sie die [Audience Builder](../../segmentation/ui/segment-builder.md)-Anleitung zum Erstellen Ihrer neuen Zielgruppe und stellen Sie sicher, [ Sie ](../../segmentation/ui/segment-builder.md#merge-policies) im vorherigen Schritt erstellte [!DNL Active-On-Edge]-Zusammenführungsrichtlinie „zuweisen“.
 
 ### Erstellen einer Zielverbindung {#connect-destination}
 
@@ -150,7 +150,7 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert das **[!UICONTROL Custom Personalization]**-Ziel, dass Sie beim Konfigurieren des Ziels für [&#x200B; Attribut-basierte Personalisierung die &#x200B;](https://developer.adobe.com/data-collection-apis/docs/)Edge Network-API verwenden. Alle Edge Network-API-Aufrufe müssen in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) erfolgen.
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert das **[!UICONTROL Custom Personalization]**-Ziel, dass Sie beim Konfigurieren des Ziels für [ Attribut-basierte Personalisierung die ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network-API verwenden. Alle Edge Network-API-Aufrufe müssen in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) erfolgen.
 >
 ><br>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Edge Network-API abrufen, indem Sie eine serverseitige Integration hinzufügen.
 >
@@ -200,7 +200,7 @@ Auf der Seite **[!UICONTROL Review]** können Sie eine Zusammenfassung Ihrer Aus
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
 ### Prüfung der Datennutzungsrichtlinien {#data-usage-policy-checks}
 

@@ -2,7 +2,7 @@
 title: Berechtigungsverwaltung zur Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht über die Verwaltung von Berechtigungen und die Steuerung des Zugriffs auf Datenerfassungsfunktionen in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
 workflow-type: tm+mt
 source-wordcount: '1335'
 ht-degree: 28%
@@ -16,7 +16,7 @@ ht-degree: 28%
 >title="Berechtigungen"
 >abstract="Machen Sie sich mit den wichtigsten Berechtigungen vertraut, die für die Arbeit mit Datenströmen, Schemata, Identitäten und Sandboxes in Adobe Experience Platform erforderlich sind."
 
-[Datenerfassung in Adobe Experience Platform](./home.md) besteht aus mehreren verschiedenen Technologien, die zusammenarbeiten, um Ihre Daten zu erfassen und zu übertragen. Der Zugriff auf diese Technologien wird über granulare rollenbasierte Berechtigungen in Adobe Admin Console gesteuert.
+[Datenerfassung in Adobe Experience Platform](home.md) besteht aus mehreren verschiedenen Technologien, die zusammenarbeiten, um Ihre Daten zu erfassen und zu übertragen. Der Zugriff auf diese Technologien wird über granulare rollenbasierte Berechtigungen in Adobe Admin Console gesteuert.
 
 In diesem Handbuch erfahren Sie, wie Sie Berechtigungen für Datenerfassungsfunktionen verwalten.
 
@@ -48,7 +48,7 @@ Zu den Berechtigungen unter Adobe Experience Platform gehört der Zugriff auf Da
 
 ### Berechtigungen zur Datenerfassung in Adobe Experience Platform
 
-Berechtigungen unter Adobe Experience Platform-Datenerfassung steuern den Zugriff auf Tags und Ereignisweiterleitungsfunktionen, einschließlich Eigenschaften, Erweiterungen und Umgebungen. Anweisungen zum Konfigurieren der Datenerfassungsberechtigungen für Adobe Experience Platform finden Sie [&#x200B; Abschnitt unten](#manage).
+Berechtigungen unter Adobe Experience Platform-Datenerfassung steuern den Zugriff auf Tags und Ereignisweiterleitungsfunktionen, einschließlich Eigenschaften, Erweiterungen und Umgebungen. Anweisungen zum Konfigurieren der Datenerfassungsberechtigungen für Adobe Experience Platform finden Sie [ Abschnitt unten](#manage).
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
@@ -91,13 +91,13 @@ Im **[!UICONTROL Permissions]** von Experience Cloud können Sie Benutzerrollen 
 
 Über [!UICONTROL Permissions] können Sie Rollen erstellen und verwalten sowie die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen.
 
-![Adobe Experience Cloud mit hervorgehobenen Berechtigungen.](./images/permissions/permissions-product.png)
+![Adobe Experience Cloud mit hervorgehobenen Berechtigungen.](assets/permissions/permissions-product.png)
 
 Um auf Datenerfassungsfunktionen zugreifen zu können, müssen Sie alle Berechtigungen in den Kategorien **[!UICONTROL Sandboxes]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]** und **[!UICONTROL Data Collection]** aktivieren.
 
-![Bild, das die Datenerfassungs-Produktkarte in Admin Console zeigt](./images/permissions/platform-permission-card.png)
+![Bild, das die Datenerfassungs-Produktkarte in Admin Console zeigt](assets/permissions/platform-permission-card.png)
 
-Detaillierte Anweisungen [&#x200B; Verwalten von Experience Platform-Berechtigungen finden &#x200B;](../access-control/ui/overview.md) im Handbuch zur Benutzeroberfläche der Zugriffssteuerung .
+Detaillierte Anweisungen [ Verwalten von Experience Platform-Berechtigungen finden ](../access-control/ui/overview.md) im Handbuch zur Benutzeroberfläche der Zugriffssteuerung .
 
 >[!NOTE]
 >
@@ -107,41 +107,41 @@ Detaillierte Anweisungen [&#x200B; Verwalten von Experience Platform-Berechtigun
 
 Um diese Berechtigungen zu verwalten, melden Sie sich bei Admin Console an und wählen Sie in der oberen Navigationsleiste **[!UICONTROL Products]** und dann **[!UICONTROL Adobe Experience Platform Data Collection]** aus.
 
-![Bild, das die Datenerfassungs-Produktkarte in Admin Console zeigt](./images/permissions/data-collection-card.png)
+![Bild, das die Datenerfassungs-Produktkarte in Admin Console zeigt](assets/permissions/data-collection-card.png)
 
 #### Auswählen oder Erstellen eines Produktprofils
 
 Der nächste Bildschirm zeigt eine Liste der verfügbaren Produktprofile für die Datenerfassung unter Ihrer Organisation, wobei das Standardprofil **[!DNL Default Data Collection All Access]** wird. Sie können das Standardproduktprofil bei Bedarf bearbeiten oder **[!UICONTROL New Profile]** auswählen, um eines zu erstellen. Wenn Sie in Ihrer Organisation mehrere Rollen oder Benutzergruppen haben, die unterschiedliche Zugriffsrechte benötigen, sollten Sie für jede dieser Gruppen ein eigenes Produktprofil erstellen.
 
-![Bild mit den Produktprofilen für die Datenerfassung in Admin Console](./images/permissions/new-profile.png)
+![Bild mit den Produktprofilen für die Datenerfassung in Admin Console](assets/permissions/new-profile.png)
 
 Nachdem Sie ein Produktprofil ausgewählt oder erstellt haben, können Sie mit den **[!UICONTROL Edit]**-Symbolen mit der [Bearbeitung von Berechtigungen](#edit-permissions) für das Profil beginnen oder auf die Registerkarte **[!UICONTROL Users]** klicken, um mit der [Zuweisung von Benutzern](#assign-users) für das Profil zu beginnen.
 
-![Abbildung der Registerkarte „Berechtigungen“ für ein Produktprofil in Admin Console](./images/permissions/edit-permission-categories.png)
+![Abbildung der Registerkarte „Berechtigungen“ für ein Produktprofil in Admin Console](assets/permissions/edit-permission-categories.png)
 
 #### Bearbeiten der Berechtigungen für das Produktprofil {#edit-permissions}
 
 Wenn Sie die Berechtigungen für ein Profil bearbeiten, werden die verfügbaren Berechtigungen in der linken Spalte aufgelistet, während diejenigen, die im Profil enthalten sind, in der rechten Spalte aufgeführt werden. Wählen Sie die aufgelisteten Berechtigungen aus, um sie zwischen den beiden Spalten zu verschieben.
 
-![Bild mit den Berechtigungen, die unter der eingeschlossenen Spalte hinzugefügt wurden](./images/permissions/added-permissions.png)
+![Bild mit den Berechtigungen, die unter der eingeschlossenen Spalte hinzugefügt wurden](assets/permissions/added-permissions.png)
 
 Berechtigungen sind in Kategorien unterteilt. Um zwischen Kategorien zu wechseln, wählen Sie die gewünschte Kategorie in der linken Navigationsleiste.
 
-![Bild, das den Abschnitt „Unternehmensrechte“ unter „Berechtigungen“ zeigt](./images/permissions/switch-category.png)
+![Bild, das den Abschnitt „Unternehmensrechte“ unter „Berechtigungen“ zeigt](assets/permissions/switch-category.png)
 
 Wählen Sie **[!UICONTROL Save]** aus, nachdem Sie die Konfiguration der Berechtigungen abgeschlossen haben.
 
-![Bild, das die für das Produktprofil zu speichernde Berechtigungskonfiguration anzeigt](./images/permissions/save-permissions.png)
+![Bild, das die für das Produktprofil zu speichernde Berechtigungskonfiguration anzeigt](assets/permissions/save-permissions.png)
 
 Die Ansicht des Produktprofils wird mit den hinzugefügten Berechtigungen wieder angezeigt.
 
-![Bild mit den hinzugefügten Berechtigungen für das Produktprofil](./images/permissions/permissions-added.png)
+![Bild mit den hinzugefügten Berechtigungen für das Produktprofil](assets/permissions/permissions-added.png)
 
 #### Zuweisen von Benutzern zum Produktprofil {#assign-users}
 
 Um dem Produktprofil Benutzer zuzuweisen (und ihnen die konfigurierten Berechtigungen des Profils zu gewähren), wählen Sie die Registerkarte **[!UICONTROL Users]** und dann **[!UICONTROL Add user]** aus.
 
-![Bild mit der Registerkarte „Benutzer“ für ein Produktprofil in Admin Console](./images/permissions/manage-users.png)
+![Bild mit der Registerkarte „Benutzer“ für ein Produktprofil in Admin Console](assets/permissions/manage-users.png)
 
 Weitere Informationen zur Verwaltung von Benutzern für ein Produktprofil finden Sie in der [Dokumentation zu Admin Console](https://helpx.adobe.com/de/enterprise/using/manage-product-profiles.html).
 

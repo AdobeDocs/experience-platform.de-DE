@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die unterstützten Zielidentitäten für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Identity-Namespaces
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 60%
+source-wordcount: '918'
+ht-degree: 56%
 
 ---
 
@@ -61,9 +61,9 @@ Bei der Definition der Zielidentitäten, die Ihr Ziel unterstützt, können Sie 
 |---------|----------|---|------|
 | `acceptsAttributes` | Boolesch | Optional | Gibt an, ob Kundinnen und Kunden der Identität, die Sie konfigurieren, standardmäßige Profilattribute zuordnen können. |
 | `acceptsCustomNamespaces` | Boolesch | Optional | Gibt an, ob Kundinnen und Kunden dem Identity-Namespace, den Sie konfigurieren, benutzerdefinierte Identity-Namespaces zuordnen können. |
-| `acceptedGlobalNamespaces` | – | Optional | Gibt an, welche [Standard-Identity-Namespaces](../../../../identity-service/features/namespaces.md#standard) (z. B. [!UICONTROL IDFA]) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. |
-| `transformation` | Zeichenfolge | Optional | Zeigt das Kontrollkästchen [[!UICONTROL Umwandlung anwenden]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) in der Experience Platform-Benutzeroberfläche an, wenn das Quellfeld entweder ein XDM-Attribut oder ein benutzerdefinierter Identity-Namespace ist. Verwenden Sie diese Option, um Benutzerinnen und Benutzern die Möglichkeit zu geben, Quellattribute beim Export zu hashen. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
-| `requiredTransformation` | Zeichenfolge | Optional | Wenn Kundinnen und Kunden diesen Quell-Identity-Namespace auswählen, wird das Kontrollkästchen [[!UICONTROL Umwandlung anwenden]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) automatisch auf die Zuordnung angewendet, und Kundinnen und Kunden können sie nicht deaktivieren. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
+| `acceptedGlobalNamespaces` | – | Optional | Gibt an[ welche (standardmäßigen Identity](../../../../identity-service/features/namespaces.md#standard)Namespaces) (z. B. [!UICONTROL IDFA]) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. |
+| `transformation` | Zeichenfolge | Optional | Zeigt das Kontrollkästchen [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) in der Experience Platform-Benutzeroberfläche an, wenn das Quellfeld entweder ein XDM-Attribut oder ein benutzerdefinierter Identity-Namespace ist. Verwenden Sie diese Option, um Benutzerinnen und Benutzern die Möglichkeit zu geben, Quellattribute beim Export zu hashen. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
+| `requiredTransformation` | Zeichenfolge | Optional | Wenn Kundinnen und Kunden diesen Quell-Identity-Namespace auswählen, wird das Kontrollkästchen [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) automatisch auf die Zuordnung angewendet, und Kundinnen und Kunden können sie nicht deaktivieren. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
 
 {style="table-layout:auto"}
 
@@ -161,4 +161,4 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](aggregation-policy.md)
 * [Batch-Konfiguration](batch-configuration.md)
-* [Historische Profilqualifikationen](historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](historical-profile-qualifications.md)

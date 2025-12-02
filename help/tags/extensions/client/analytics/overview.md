@@ -2,10 +2,10 @@
 title: Adobe Analytics-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform vertraut.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 83%
+source-wordcount: '2308'
+ht-degree: 82%
 
 ---
 
@@ -21,9 +21,9 @@ Verwenden Sie diese Referenz, um Informationen zum Konfigurieren der Adobe Analy
 
 Dieser Abschnitt enthält eine Referenz zu den verfügbaren Optionen beim Konfigurieren der Adobe Analytics-Erweiterung.
 
-Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Eigenschaft, wählen Sie dann **[!UICONTROL Erweiterungen > Katalog]**, bewegen Sie den Mauszeiger über die Adobe Analytics-Erweiterung und wählen Sie **[!UICONTROL Installieren]** aus.
+Wenn die Adobe Analytics-Erweiterung noch nicht installiert ist, öffnen Sie ihre Eigenschaft, klicken Sie auf **[!UICONTROL Extensions > Catalog]**, bewegen Sie den Mauszeiger über die Adobe Analytics-Erweiterung und wählen Sie **[!UICONTROL Install]** aus.
 
-Öffnen Sie zum Konfigurieren der Erweiterung die Registerkarte „Erweiterungen“, bewegen Sie den Mauszeiger über die Erweiterung und wählen Sie dann **[!UICONTROL Konfigurieren]** aus.
+Öffnen Sie zum Konfigurieren der Erweiterung die Registerkarte „Erweiterungen“, bewegen Sie den Mauszeiger über die Erweiterung und klicken Sie dann auf **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-analytics-config.png)
 
@@ -310,7 +310,7 @@ Legen Sie eine oder mehrere [eVars](https://experienceleague.adobe.com/docs/anal
 1. Geben Sie an, ob Sie die eVar als Wert festlegen (Festlegen als) oder eine andere eVar kopieren (Formular duplizieren) möchten.
 1. Stellen Sie einen Wert für „Festlegen als“ bereit oder wählen Sie die zu duplizierende eVar aus.
 1. (Optional) Klicken Sie auf „Add eVar“ (eVar hinzufügen) aus, um weitere eVars festzulegen.
-1. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus.
+1. Wählen Sie **[!UICONTROL Keep Changes]** aus.
 
 #### Props
 
@@ -319,8 +319,8 @@ Legen Sie eine oder mehrere [Eigenschaften](https://experienceleague.adobe.com/d
 1. Wählen Sie im Dropdown-Menü eine Eigenschaft aus.
 1. Geben Sie an, ob Sie die Eigenschaft als Wert festlegen (Festlegen als) oder eine andere eVar kopieren (Formular duplizieren) möchten.
 1. Stellen Sie einen Wert für „Festlegen als“ bereit oder wählen Sie die eVar aus, aus der Sie die Eigenschaft duplizieren möchten.
-1. (Optional) Klicken Sie auf **[!UICONTROL Eigenschaft hinzufügen]**, um weitere Eigenschaften festzulegen.
-1. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus.
+1. (Optional) Klicken Sie auf **[!UICONTROL Add prop]**, um weitere Props festzulegen.
+1. Wählen Sie **[!UICONTROL Keep Changes]** aus.
 
 #### Ereignisse
 
@@ -328,8 +328,8 @@ Legen Sie ein oder mehrere [Ereignisse](https://experienceleague.adobe.com/docs/
 
 1. Wählen Sie im Dropdown-Menü ein Ereignis aus.
 1. (Optional) Wählen Sie ein Datenelement für die [Ereignis-Serialisierung](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=de) aus oder geben Sie ein Datenelement an.
-1. (Optional) Klicken Sie auf **[!UICONTROL Ereignis hinzufügen]**, um weitere Ereignisse festzulegen.
-1. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus.
+1. (Optional) Klicken Sie auf **[!UICONTROL Add event]**, um weitere Ereignisse festzulegen.
+1. Wählen Sie **[!UICONTROL Keep Changes]** aus.
 
 >[!TAB JSON-Ansicht]
 
@@ -360,11 +360,11 @@ Konfigurieren Sie bei Bedarf weitere Hierarchien.
 
 #### Seitenname
 
-Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht der [`pageName` Variable &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=de) Analytics.
+Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht der [`pageName` Variable ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) Analytics.
 
 >[!IMPORTANT]
 >
->In Adobe Experience Manager-Implementierungen gibt diese Variable AEM an, wo der abgerufene Analytics-Bericht gespeichert werden soll. Um sicherzustellen, dass Berichte ordnungsgemäß persistiert werden, muss die Seitennamenzeichenfolge als Doppelpunkt-getrennter Pfad zur Website formatiert sein.
+>In Adobe Experience Manager-Implementierungen teilt diese Variable AEM mit, wo der abgerufene Analytics-Bericht gespeichert werden soll. Um sicherzustellen, dass Berichte ordnungsgemäß persistiert werden, muss die Seitennamenzeichenfolge als Doppelpunkt-getrennter Pfad zur Website formatiert sein.
 >
 >Beispielsweise sollte eine Web-Seite unter `content/we-retail/language-masters/en/men.html` den Seitennamenwert `content:we-retail:language-masters:en:men` haben.
 
@@ -397,9 +397,9 @@ Passen Sie mithilfe des Editors den benutzerdefinierten Seiten-Code an.
 
 **Einstellungen**
 
-1. Wählen Sie **[!UICONTROL Editor öffnen]**.
+1. Wählen Sie **[!UICONTROL Open Editor]** aus.
 1. Geben Sie den benutzerspezifischen Code ein.
-1. Wählen Sie **[!UICONTROL Speichern]** aus.
+1. Wählen Sie **[!UICONTROL Save]** aus.
 
 ### Signal senden {#send-beacon}
 
@@ -425,7 +425,7 @@ Wählen Sie aus, ob Sie keine Seitenansicht inkrementieren möchten.
    * Benutzerspezifischer Link: Geben Sie den Linknamen an.
    * Download-Link: Geben Sie einen Dateinamen an.
    * Exitlink: Geben Sie die Ziel-URL an.
-1. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus.
+1. Wählen Sie **[!UICONTROL Keep Changes]** aus.
 
 ### Variablen löschen {#clear-variables}
 

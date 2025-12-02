@@ -2,9 +2,9 @@
 title: Verbinden von GitHub-Copilot und Visual Studio Code mit dem Abfrage-Service
 description: Erfahren Sie, wie Sie GitHub Copilot und Visual Studio Code mit dem Abfrage-Service von Adobe Experience Platform verbinden.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1370'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ In diesem Dokument werden die Schritte beschrieben, die zum Verbinden von [!DNL 
 
 Für dieses Handbuch müssen Sie bereits Zugriff auf ein GitHub-Konto haben und sich für [!DNL GitHub Copilot] angemeldet haben. Sie können [sich über die GitHub-Website anmelden](https://github.com/github-copilot/signup). Sie benötigen auch [!DNL VS Code]. Sie können [Download [!DNL VS Code]  von ihrer offiziellen Website](https://code.visualstudio.com/download).
 
-Nachdem Sie [!DNL VS Code] installiert und Ihr [!DNL Copilot]-Abonnement aktiviert haben, rufen Sie Ihre Verbindungsberechtigungen für Experience Platform ab. Diese Anmeldeinformationen befinden sich auf der Registerkarte [!UICONTROL Anmeldeinformationen] des Arbeitsbereichs [!UICONTROL Abfragen] in der Experience Platform-Benutzeroberfläche. Lesen Sie das Handbuch zu Anmeldeinformationen, um zu erfahren[&#x200B; wie Sie diese Werte in der Experience Platform-Benutzeroberfläche finden](../ui/credentials.md). Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich [!UICONTROL Abfragen] haben.
+Nachdem Sie [!DNL VS Code] installiert und Ihr [!DNL Copilot]-Abonnement aktiviert haben, rufen Sie Ihre Verbindungsberechtigungen für Experience Platform ab. Diese Anmeldeinformationen befinden sich auf der Registerkarte [!UICONTROL Credentials] des Arbeitsbereichs [!UICONTROL Queries] in der Benutzeroberfläche von Experience Platform. Lesen Sie das Handbuch zu Anmeldeinformationen, um zu erfahren[ wie Sie diese Werte in der Experience Platform-Benutzeroberfläche finden](../ui/credentials.md). Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den [!UICONTROL Queries]-Arbeitsbereich haben.
 
 ### Erforderliche [!DNL Visual Studio Code] {#required-extensions}
 
@@ -37,7 +37,7 @@ Die nächsten Erweiterungen ermöglichen [!DNL GitHub Copilot] und seine Chat-Fu
 - [[!DNL GitHub Copilot]](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot): Bietet Vorschläge für die Inline-Codierung während der Eingabe.
 - [[!DNL GitHub Copilot] Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat): Eine begleitende Erweiterung, die Unterstützung durch konversationelle KI bietet.
 
-## Verbindung erstellen {#create-connection}
+## Erstellen einer Verbindung {#create-connection}
 
 Wählen Sie das Zylindersymbol (![Das Zylindersymbol.](../images/clients/github-copilot/cylinder-icon.png)) in der linken Navigation von [!DNL VS Code], gefolgt von **[!DNL Add New Connection]** oder dem Zylinder-Plus-Symbol (![Der Zylinder-Plus-Symbol.](../images/clients/github-copilot/cylinder-plus-icon.png)).
 
@@ -55,11 +55,11 @@ Die [!DNL Connection Settings] wird angezeigt. Geben Sie Ihre Experience Platfor
 | --- |--- |
 | [!DNL Connection name] | Geben Sie eine &quot;[!DNL Connection name]&quot; wie `Prod_MySQL_Server` an, die beschreibend ist und ihren Zweck klar angibt (z. B. eine Produktionsumgebung für einen MySQL-Server). Zu den Best Practices gehören:<br><ul><li>Befolgen Sie die Namenskonventionen Ihrer Organisation, um sicherzustellen, dass sie innerhalb des Systems eindeutig sind.</li><li>Halten Sie sie kurz, um Klarheit zu schaffen und Verwechslungen mit anderen Verbindungen zu vermeiden.</li><li>Fügen Sie relevante Details zur Funktion oder Umgebung der Verbindung in den Namen ein.</li></ul> |
 | [!DNL Connect using] | Verwenden Sie die Option **[!DNL Server and Port]** , um die Serveradresse (Host-Name) und die Portnummer anzugeben, um eine Direktverbindung zu Experience Platform herzustellen |
-| [!DNL Server address] | Geben Sie den **[!UICONTROL Host]**-Wert ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist, z. B. `acmeprod.platform-query.adobe.io`. |
+| [!DNL Server address] | Geben Sie den **[!UICONTROL Host]** ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist, z. B. `acmeprod.platform-query.adobe.io`. |
 | [!DNL Port] | Dieser Wert wird normalerweise für Experience Platform-Services `80`. |
-| [!DNL Database] | Geben Sie den **[!UICONTROL Datenbank]**-Wert ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist, z. B. `prod:all`. |
-| [!DNL Username] | Diese Eigenschaft verweist auf Ihre Organisations-ID. Geben Sie den **[!UICONTROL Benutzernamen]** ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist. |
-| [!DNL Password] | Diese Eigenschaft ist Ihr Zugriffstoken. Geben Sie den **[!UICONTROL Passwort]**-Wert ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist. |
+| [!DNL Database] | Geben Sie den **[!UICONTROL Database]** ein, der in Ihren Experience Platform Postgres-Anmeldeinformationen angegeben ist, z. B. `prod:all`. |
+| [!DNL Username] | Diese Eigenschaft verweist auf Ihre Organisations-ID. Geben Sie den **[!UICONTROL Username]** Wert ein, der in Ihren Experience Platform Postgres-Anmeldedaten angegeben ist. |
+| [!DNL Password] | Diese Eigenschaft ist Ihr Zugriffstoken. Geben Sie den **[!UICONTROL Password]** Wert ein, der in Ihren Experience Platform Postgres-Anmeldedaten angegeben ist. |
 
 ![Der Arbeitsbereich des Verbindungsassistenten mit mehreren hervorgehobenen Einstellungen.](../images/clients/github-copilot/connection-settings.png)
 
@@ -101,7 +101,7 @@ Stellen Sie zunächst sicher, dass Sie die neueste Version von [!DNL VS Code] in
 
 Scrollen Sie in den Optionen nach unten und stellen Sie sicher, dass das Kontrollkästchen für die [!DNL Enable Auto Completions] aktiviert ist.
 
-![Das Einstellungsbedienfeld für [!DNL GitHub Copilot] mit dem Kontrollkästchen Automatische Vervollständigung aktivieren ist ausgewählt und hervorgehoben.](../images/clients/github-copilot/enable-auto-completions.png)
+![Das Einstellungsbedienfeld für [!DNL GitHub Copilot] mit dem Kontrollkästchen „Automatische Vervollständigung aktivieren“ wurde ausgewählt und hervorgehoben.](../images/clients/github-copilot/enable-auto-completions.png)
 
 ## Code-Vervollständigungen {#code-completions}
 
@@ -119,7 +119,7 @@ Wenn [!DNL GitHub Copilot] Code-Vervollständigungen vorschlägt, können Sie en
 
 >[!TIP]
 >  
->Wenn Sie keine Vorschläge erhalten, stellen Sie sicher[[!DNL Copilot]  dass in der Sprache Ihrer Datei aktiviert &#x200B;](#get-started-with-copilot).
+>Wenn Sie keine Vorschläge erhalten, stellen Sie sicher[[!DNL Copilot]  dass in der Sprache Ihrer Datei aktiviert ](#get-started-with-copilot).
 
 ![Der [!DNL VS Code]-Editor zeigt einen schwach grauen Textvorschlag von [!DNL GitHub Copilot] als Ghost-Text neben teilweise eingegebenem Code an.](../images/clients/github-copilot/accept-partial-suggestions.png)
 

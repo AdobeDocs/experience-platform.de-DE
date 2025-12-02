@@ -2,9 +2,9 @@
 title: Edge-Profile
 description: Erfahren Sie mehr über Edge-Profile sowie die zugehörige Terminologie, verfügbare Regionen für Edge-Profile sowie verfügbare Services für Edge-Profile.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Der Express-Profildienst (XPS) ruft die Profile an den verschiedenen Kanten ab. 
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs sollten Sie über ein grundlegendes Verständnis von Edge-Profilen verfügen, einschließlich Informationen zu den verfügbaren Regionen und Services für Edge-Profile. Weitere Informationen zum Adobe von Experience Edge finden Sie in der [Edge Network-Übersicht](../web-sdk/home.md#edge-network).
+Nach dem Lesen dieses Handbuchs sollten Sie über ein grundlegendes Verständnis von Edge-Profilen verfügen, einschließlich Informationen zu den verfügbaren Regionen und Services für Edge-Profile. Weitere Informationen zu Adobe Experience Edge finden Sie unter [Datenerfassung - Übersicht](/help/collection/home.md).
 
 ## Anhang
 

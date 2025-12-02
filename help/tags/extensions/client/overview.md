@@ -2,7 +2,7 @@
 title: Tag-Erweiterungen - Referenz
 description: Hier finden Sie die Dokumentation zu Tag-Erweiterungen in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 27%
@@ -19,10 +19,10 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Client-seitige Tag-Erw
 
 >[!NOTE]
 >
->Jeder Erweiterungsname, gefolgt von einem Sternchen (*), verweist auf den Listeneintrag der Erweiterung auf der Adobe Exchange, der Installations- und Verwendungsanweisungen enthält. Alle anderen Links verweisen auf die Dokumentation der Erweiterung zu Adobe Experience League.
+>Jeder Erweiterungsname, gefolgt von einem Sternchen (*), verweist auf den Listeneintrag der Erweiterung in Adobe Exchange, der Installations- und Nutzungsanweisungen enthält. Alle anderen Links verweisen auf die Dokumentation der Erweiterung auf Adobe Experience League.
 
 * [Barrierefreie Metriken zur Site-Geschwindigkeit](https://exchange.adobe.com/apps/ec/103053)*
-* [Activity Map-Customizer](https://exchange.adobe.com/apps/ec/101531)*
+* [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)*
 * [Aktualisieren der Aktionsseite](https://exchange.adobe.com/apps/ec/102848)*
 * [Adform-Website-Tracking](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
@@ -42,9 +42,9 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Client-seitige Tag-Erw
 * [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
-* [Adobe Medien Analytics für Audio und Video](./media-analytics/overview.md)
-* [Adobe Mediums Analytics (3.x SDK)](./media-analytics-3x/overview.md)
-* [Adobe-Datenschutz](./privacy/overview.md)
+* [Adobe Media Analytics für Audio und Video](./media-analytics/overview.md)
+* [Adobe Media Analytics (3.x SDK)](./media-analytics-3x/overview.md)
+* [Adobe - Datenschutz](./privacy/overview.md)
 * [Adobe Report Suite-Auswahl](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
@@ -65,7 +65,7 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Client-seitige Tag-Erw
 * [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)*
 * [klicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Common Analytics Plugins](./plugins/overview.md)
-* [Allgemeine Plug-ins für Web SDK](./web-sdk/web-sdk-plugins.md)
+* [Allgemeine Plug-ins für Web SDK](web-sdk-plugins/web-sdk-plugins.md)
 * [CONCAT](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Cookie-Einverständnisverwaltung durch Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)*

@@ -2,7 +2,7 @@
 title: Verknüpfungslogik zum Identity Service
 description: Erfahren Sie, wie Identity Service unterschiedliche Identitäten verknüpft, um eine umfassende Ansicht eines Kunden zu erstellen.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
+source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -102,7 +102,7 @@ Sie haben außerdem WebSDK implementiert und einen WebSDK-Datensatz (Erlebnisere
 | `t=3` | ECID:44675 | Startseite anzeigen |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | Kaufverlauf anzeigen |
 
-Die primäre Identität für jedes Ereignis wird anhand der Konfiguration [&#x200B; Datenelementtypen &#x200B;](../../tags/extensions/client/web-sdk/data-element-types.md).
+Die primäre Identität für jedes Ereignis wird anhand der Konfiguration [ Datenelementtypen ](/help/tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >

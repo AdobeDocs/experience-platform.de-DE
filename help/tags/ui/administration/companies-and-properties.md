@@ -2,10 +2,10 @@
 title: Eigenschaften
 description: Erfahren Sie, wie Erweiterungen, Umgebung und Bibliotheken für Ihr Unternehmen in Adobe Experience Platform organisiert und gruppiert werden.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 94%
+source-wordcount: '1153'
+ht-degree: 90%
 
 ---
 
@@ -75,7 +75,7 @@ Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Er
 
 Es kann sich bei einer Eigenschaft um eine beliebige Gruppierung einer oder mehrerer Domains bzw. Subdomains handeln. Sie können diese Assets auf ähnliche Weise verwalten und verfolgen. Angenommen, Sie haben mehrere Websites, die auf einer Vorlage basieren, und Sie möchten auf all diesen Websites dieselben Assets verfolgen. Sie können eine Eigenschaft auf mehrere Domains anwenden.
 
-Auf der linken Seite des Bildschirms werden die Unternehmen Ihrer Organisation angezeigt. Dies ist besonders hilfreich, wenn Sie mehrere Konten verwalten. Wählen Sie ein Unternehmen aus, um die Eigenschaften und Audit-Protokolle für dieses Unternehmen anzuzeigen.
+Auf der linken Seite des Bildschirms werden die Unternehmen Ihrer Organisation angezeigt. Dies ist besonders hilfreich, wenn Sie mehrere Konten verwalten. Wählen Sie ein Unternehmen aus, um die Eigenschaften und Auditprotokolle für dieses Unternehmen anzuzeigen.
 
 Jede Eigenschaft wird in der Liste „Eigenschaften“ angezeigt.
 
@@ -97,7 +97,7 @@ Dieser Abschnitt enthält Anleitungen zum Erstellen oder Konfigurieren einer Tag
 
 Bevor Sie beginnen, lesen Sie zunächst den Abschnitt [Best Practices für die Planung von Eigenschaften](companies-and-properties.md#best-practices-for-planning-properties).
 
-Navigieren Sie zu Ihrer Firmenseite und klicken Sie auf **[!UICONTROL Eigenschaft hinzufügen]**, oder wählen Sie eine vorhandene Eigenschaft aus der Liste aus und klicken Sie auf **[!UICONTROL Konfigurieren]**.
+Navigieren Sie zu Ihrer Firmenseite und klicken Sie auf **[!UICONTROL Add Property]** oder wählen Sie eine vorhandene Eigenschaft aus der Liste aus und klicken Sie auf **[!UICONTROL Configure]**.
 
 ![](../../images/property-settings.png)
 
@@ -109,12 +109,12 @@ Befolgen Sie die Anweisungen zum Erstellen einer Web-Eigenschaft.
 
    **Name:** Der Name Ihrer Eigenschaft.
 
-   **Domains:** Die Basis-URL aller Sites, für die Sie diese Eigenschaft bereitstellen möchten.
+   **Domänen:** Die Basis-URL aller Sites, für die Sie diese Eigenschaft bereitstellen möchten.
 
-1. (Erweitert) **[!UICONTROL Regelkomponenten nacheinander ausführen]**: Aktivieren Sie dieses Kontrollkästchen, damit Bedingungen und Aktionen vor der Ausführung auf den Abschluss der vorherigen Aktion warten.
-1. (Erweitert) **[!UICONTROL Geben Sie eine leere Zeichenfolge für fehlende Datenelemente zurück:]** Wenn Sie auf ein Datenelement verweisen, das nicht in einer Bibliothek vorhanden ist, wird normalerweise `undefined` zurückgegeben. Aktivieren Sie dieses Kontrollkästchen, wenn bei diesem Szenario stattdessen eine leere Zeichenfolge zurückgegeben werden soll.
-1. (Erweitert) **[!UICONTROL Für die Entwicklung von Erweiterungen konfigurieren:]** Aktivieren Sie dieses Kontrollkästchen, wenn Sie Entwicklungserweiterungen installieren möchten, die aktiv von Ihrem Unternehmen entwickelt werden.
-1. Wählen Sie **[!UICONTROL Speichern]** aus.
+1. (Erweitert) **[!UICONTROL Run rule components in sequence]**: Aktivieren Sie dieses Kontrollkästchen, damit Bedingungen und Aktionen vor der Ausführung auf den Abschluss der vorherigen Aktion warten.
+1. (Erweitert) **[!UICONTROL Return an empty string for missing data elements:]** Wenn Sie auf ein Datenelement verweisen, das nicht in einer Bibliothek vorhanden ist, wird normalerweise `undefined` zurückgegeben. Aktivieren Sie dieses Kontrollkästchen, wenn bei diesem Szenario stattdessen eine leere Zeichenfolge zurückgegeben werden soll.
+1. (Erweitert) **[!UICONTROL Configure for extension development:]** Aktivieren Sie dieses Kontrollkästchen, wenn Sie Entwicklungserweiterungen installieren möchten, die aktiv von Ihrem Unternehmen entwickelt werden
+1. Wählen Sie **[!UICONTROL Save]** aus.
 
 ### Bei mobilen Properties
 
@@ -131,7 +131,7 @@ Befolgen Sie die Anweisungen zum Erstellen einer Mobile-Eigenschaft.
 
    * **HTTPS verwenden:** Wählen Sie aus, ob die gesamte Datenkommunikation über HTTP oder HTTPS gesendet werden soll.
 
-1. Wählen Sie **[!UICONTROL Speichern]** aus.
+1. Wählen Sie **[!UICONTROL Save]** aus.
 
 Nachdem Sie die Eigenschaft erstellt haben, fügt Experience Platform automatisch einen Standard-Host, eine Reihe von Umgebungen (Entwicklung, Staging und Produktion) und die Standarderweiterungen hinzu.
 
@@ -147,4 +147,4 @@ Gehen Sie wie folgt vor, um eine Tag-Eigenschaft zu löschen.
 
    Sie können mehrere Eigenschaften zum Löschen auswählen.
 
-1. Klicken Sie auf **[!UICONTROL Löschen]** und bestätigen Sie, dass Sie die Eigenschaft löschen möchten.
+1. Klicken Sie auf **[!UICONTROL Delete]** und bestätigen Sie, dass Sie die Eigenschaft löschen möchten.

@@ -3,9 +3,9 @@ keywords: Ziele; Fragen; häufig gestellte Fragen; FAQ; Ziele FAQ
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1670'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ Bei der Streaming-Segmentierung wird die Profilanzahl für Streaming-Zielgruppen
 
 Wenn sich der Zeitplan für den Zielgruppenexport vom Segmentierungsplan unterscheidet, unterscheiden sich die Profilzahlen zwischen der Benutzeroberfläche und der exportierten [!DNL CSV], insbesondere bei Streaming-Zielgruppen.
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../segmentation/home.md) zum Segmentierungs-Service .
+Weitere Informationen finden [ in der ](../segmentation/home.md) zum Segmentierungs-Service .
 +++
 
 ### Warum werden niedrige Übereinstimmungsraten beim Deaktivieren und erneuten Aktivieren einer aktualisierten Zielgruppe für dasselbe Ziel angezeigt?
@@ -93,7 +93,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die folgenden Anforderungen erfüllen:
 
 * Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Adobe Experience Cloud Das Geschäftskonto **&#x200B;**&#x200B;muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [&#x200B; in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
+* Adobe Experience Cloud Das Geschäftskonto **** muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
 
   >[!IMPORTANT]
   >
@@ -103,8 +103,8 @@ Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die fo
 
 ### Muss ich meinem [!DNL Facebook] Advertiser-Konto irgendwelche Apps oder Pixel hinzufügen?
 
-+++Antwort 
-Nr. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen Sie keine Pixel zu Ihrem Advertiser-Konto hinzufügen.
++++Antwort
+Nein. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen Sie keine Pixel zu Ihrem Advertiser-Konto hinzufügen.
 +++
 
 ### Wie lange braucht Facebook, um Informationen aus Adobe Experience Platform zu verarbeiten?
@@ -150,7 +150,7 @@ Ausführliche Erläuterungen zu den Anforderungen für den ID-Abgleich finden Si
 ### Kann ich in der Experience Platform-Benutzeroberfläche mehrere Facebook-Ziele für separate Facebook-Konten erstellen?
 
 +++Antwort
-Ja. Ein Facebook-Ziel in Experience Platform ist 1:1 für ein Werbekonto in Facebook. Sie können für jedes Facebook-Werbekonto in Ihrem Unternehmen ein eigenes Facebook-Ziel erstellen. Befolgen Sie die [Tutorial zur Zielverbindung](/help/destinations/ui/connect-destination.md) und stellen Sie in der Experience Platform-Benutzeroberfläche eine Verbindung zu einem separaten Facebook-Konto für jedes neue Facebook-Ziel her. Die Anzahl der Facebook-Werbekonten, mit denen Sie eine Verbindung herstellen können, ist unbegrenzt.
+Ja. Ein Facebook-Ziel in Experience Platform ist 1:1 zu einem Werbekonto in Facebook. Sie können für jedes Facebook-Werbekonto in Ihrem Unternehmen ein eigenes Facebook-Ziel erstellen. Befolgen Sie die [Tutorial zur Zielverbindung](/help/destinations/ui/connect-destination.md) und stellen Sie in der Experience Platform-Benutzeroberfläche eine Verbindung zu einem separaten Facebook-Konto für jedes neue Facebook-Ziel her. Die Anzahl der Facebook-Werbekonten, mit denen Sie eine Verbindung herstellen können, ist unbegrenzt.
 +++
 
 ## Google Customer Match {#google-customer-match}
@@ -165,14 +165,14 @@ Google erfordert, dass Zielgruppennamen eindeutig sind. Die angezeigten Zahlen s
 
 ### Muss ich meinem [!DNL LinkedIn] Advertiser-Konto irgendwelche Apps oder Pixel hinzufügen?
 
-+++Antwort 
-Nr. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen Sie keine Pixel zu Ihrem Advertiser-Konto hinzufügen.
++++Antwort
+Nein. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen Sie keine Pixel zu Ihrem Advertiser-Konto hinzufügen.
 +++
 
 ### Was muss ich tun, bevor ich Zielgruppen in [!DNL LinkedIn Matched Audiences] aktivieren kann?
 
 +++Antwort
-Bevor Sie das Ziel [!UICONTROL LinkedIn Matched Audience] verwenden können, stellen Sie sicher, dass Ihr [!DNL LinkedIn Campaign Manager]-Konto über die [!DNL Creative Manager] Berechtigungsstufe oder höher verfügt.
+Bevor Sie das [!UICONTROL LinkedIn Matched Audience]-Ziel verwenden können, stellen Sie sicher, dass Ihr [!DNL LinkedIn Campaign Manager]-Konto die [!DNL Creative Manager] Berechtigungsstufe oder höher hat.
 
 Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager]-Benutzerberechtigungen finden Sie unter [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Advertising-Konten](https://www.linkedin.com/help/lms/answer/5753) in der LinkedIn-Dokumentation.
 +++
@@ -197,11 +197,11 @@ Ausführliche Erläuterungen zu den Anforderungen für den ID-Abgleich finden Si
 ### Muss ich die Experience Platform Web SDK verwenden, um Zielgruppen und Attribute an Adobe Target zu senden?
 
 +++Antwort
-Nein, [Web SDK](../web-sdk/home.md) ist nicht erforderlich, um Zielgruppen für [Adobe Target](catalog/personalization/adobe-target-connection.md) zu aktivieren.
+Nein, die Web-SDK ist nicht erforderlich, um Zielgruppen für [Adobe Target zu aktivieren](catalog/personalization/adobe-target-connection.md).
 
-Wenn jedoch [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=de) anstelle von Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
+Wenn jedoch [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) anstelle von Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
 
-Bei [Personalisierung der gleichen Seite und &#x200B;](ui/activate-edge-personalization-destinations.md) nächsten Seite“ müssen Sie entweder [Web SDK](../web-sdk/home.md) oder die [Edge Network API verwenden](https://developer.adobe.com/data-collection-apis/docs/api/). Weitere Informationen finden Sie in [&#x200B; Dokumentation unter Aktivieren von Zielgruppen für Edge](ui/activate-edge-personalization-destinations.md)Ziele .
+Bei [Personalisierung der gleichen Seite und der nächsten Seite](ui/activate-edge-personalization-destinations.md) müssen Sie entweder Web SDK oder die [Edge Network-API verwenden](https://developer.adobe.com/data-collection-apis/docs/api/). Weitere Informationen finden Sie in [ Dokumentation unter Aktivieren von Zielgruppen für Edge](ui/activate-edge-personalization-destinations.md)Ziele .
 +++
 
 ### Gibt es eine Begrenzung für die Anzahl der Attribute, die ich von Real-time Customer Data Platform an Adobe Target oder ein benutzerdefiniertes Personalization-Ziel senden kann?
@@ -223,13 +223,13 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Wie lange dauert es nach der Erstellung einer Zielgruppe in Experience Platform, bis diese Zielgruppe für Anwendungsfälle der Edge-Segmentierung verfügbar ist?
 
 +++Antwort
-Zielgruppendefinitionen werden in bis zu einer Stunde an [&#128279;](../web-sdk/home.md) Edge Network übertragen. Wenn jedoch innerhalb dieser ersten Stunde eine Zielgruppe aktiviert wird, könnten einige Besucher fehlen, die sich für die Zielgruppe qualifiziert hätten.
+Zielgruppendefinitionen werden in bis zu einer Stunde an die Edge Network weitergegeben. Wenn jedoch innerhalb dieser ersten Stunde eine Zielgruppe aktiviert wird, könnten einige Besucher fehlen, die sich für die Zielgruppe qualifiziert hätten.
 +++
 
 ### Wo kann ich die aktivierten Attribute in Adobe Target sehen?
 
 +++Antwort
-Attribute stehen zur Verwendung in Target in {[} JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=de) und [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=de) Angeboten zur Verfügung.
+Attribute stehen zur Verwendung in Target in {[} JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) und [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) Angeboten zur Verfügung.
 +++
 
 ### Kann ich ein Ziel ohne Datenstrom erstellen und dann zu einem späteren Zeitpunkt einen Datenstrom zum selben Ziel hinzufügen?
@@ -252,8 +252,8 @@ Ja, die Edge Network-API funktioniert mit dem benutzerdefinierten Personalizatio
 
 ### Ich kann nur eine einzige Zusammenführungsrichtlinie haben, die im Randbereich aktiv ist. Kann ich Zielgruppen erstellen, die eine andere Zusammenführungsrichtlinie verwenden, und sie dennoch als Streaming-Zielgruppen an Adobe Target senden?
 
-+++Antwort 
-Nr. Alle Zielgruppen, die Sie für Adobe Target aktivieren möchten, müssen eine Active-On-Edge-[&#x200B; (Zusammenführungsrichtlinie) &#x200B;](../profile/merge-policies/ui-guide.md).
++++Antwort
+Nein. Alle Zielgruppen, die Sie für Adobe Target aktivieren möchten, müssen eine Active-On-Edge-[ (Zusammenführungsrichtlinie) ](../profile/merge-policies/ui-guide.md).
 +++
 
 ### Werden Datennutzungskennzeichnungen und -durchsetzung (Data Usage Labeling and Enforcement, DULE) und Einverständnisrichtlinien durchgesetzt?
@@ -265,7 +265,7 @@ Ja. Die [Data Governance- und Einverständnisrichtlinien](../data-governance/hom
 ### Sind die [!DNL Adobe Target]- und [!DNL Custom Personalization]-Ziele [!DNL HIPAA]?
 
 +++Antwort
-[!DNL Adobe Target] ist nicht [!DNL HIPPA] konform mit [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/de/solutions/industries/healthcare.html). Kunden sollten sich bei ihren eigenen Rechtsabteilungen erkundigen, ob [!DNL HIPPA] für benutzerdefinierte Optimierungskanäle bereit sind, bevor sie die Edge-Personalisierung über [!DNL Adobe Target] oder die [!DNL Custom Personalization] Ziele verwenden.
+[!DNL Adobe Target] ist nicht [!DNL HIPPA] konform mit [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Kunden sollten sich bei ihren eigenen Rechtsabteilungen erkundigen, ob [!DNL HIPPA] für benutzerdefinierte Optimierungskanäle bereit sind, bevor sie die Edge-Personalisierung über [!DNL Adobe Target] oder die [!DNL Custom Personalization] Ziele verwenden.
 
 Für Anwendungsfälle, bei denen die Verwaltung von Einverständnisrichtlinien skaliert werden muss, müssen Kunden [!DNL Adobe Privacy & Security Shield] kaufen. [!DNL Adobe Privacy & Security Shield] Funktionen werden als erweiterte Funktionssuite angeboten und können nicht separat erworben werden.
 

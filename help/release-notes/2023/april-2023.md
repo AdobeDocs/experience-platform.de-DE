@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '2010'
-ht-degree: 96%
+source-wordcount: '1983'
+ht-degree: 94%
 
 ---
 
@@ -66,8 +66,8 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Verschleierung von IP-Adressen für Datenströme | Sie können jetzt in der [Benutzeroberfläche für die Datenstromkonfiguration](../../datastreams/configure.md) Optionen für die partielle oder vollständige IP-Verschleierung auf der Ebene eines Datenstroms festlegen. <br><br>Die Einstellung für die IP-Verschleierung auf Datenstromebene hat Vorrang vor jeder in Adobe Target und Audience Manager konfigurierten IP-Verschleierung. <br><br>An Adobe Analytics gesendete Daten sind von der Einstellung für [!UICONTROL IP-Verschleierung] auf Datenstromebene nicht betroffen. Adobe Analytics empfängt derzeit nicht-verschleierte IP-Adressen. Damit Analytics verschleierte IP-Adressen empfangen kann, müssen Sie die IP-Verschleierung separat in Adobe Analytics konfigurieren. Dieses Verhalten wird in zukünftigen Versionen aktualisiert.<br><br> Weitere Informationen zur IP-Verschleierung und Anweisungen zur Konfiguration finden Sie in der [Dokumentation zur Datenstromkonfiguration](../../datastreams/configure.md#advanced-options). |
-| [Überschreibungen der Datenstromkonfiguration](../../datastreams/overrides.md) | Sie können jetzt zusätzliche Konfigurationsoptionen für Datenströme festlegen, mit denen Sie bestimmte Einstellungen wie Ereignis-Datensätze, Target-Eigenschafts-Token, ID-Synchronisierungs-Container und Analytics-Report Suites überschreiben können. <br><br>Das Überschreiben von Datenstromkonfigurationen ist ein zweistufiger Prozess: <ol><li>Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](../../datastreams/configure.md) definieren.</li><li>Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der [Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) des Web SDK an das Edge-Netzwerk senden.</li></ol> |
+| Verschleierung von IP-Adressen für Datenströme | Sie können jetzt in der [Benutzeroberfläche für die Datenstromkonfiguration](../../datastreams/configure.md) Optionen für die partielle oder vollständige IP-Verschleierung auf der Ebene eines Datenstroms festlegen. <br><br>Die Einstellung für die IP-Verschleierung auf Datenstromebene hat Vorrang vor jeder in Adobe Target und Audience Manager konfigurierten IP-Verschleierung. <br><br>Daten, die an Adobe Analytics gesendet werden, sind von der [!UICONTROL IP Obfuscation] auf Datenstromebene nicht betroffen. Adobe Analytics empfängt derzeit nicht-verschleierte IP-Adressen. Damit Analytics verschleierte IP-Adressen empfangen kann, müssen Sie die IP-Verschleierung separat in Adobe Analytics konfigurieren. Dieses Verhalten wird in zukünftigen Versionen aktualisiert.<br><br> Weitere Informationen zur IP-Verschleierung und Anweisungen zur Konfiguration finden Sie in der [Dokumentation zur Datenstromkonfiguration](../../datastreams/configure.md#advanced-options). |
+| [Überschreibungen der Datenstromkonfiguration](../../datastreams/overrides.md) | Sie können jetzt zusätzliche Konfigurationsoptionen für Datenströme festlegen, mit denen Sie bestimmte Einstellungen wie Ereignis-Datensätze, Target-Eigenschafts-Token, ID-Synchronisierungs-Container und Analytics-Report Suites überschreiben können. <br><br>Das Überschreiben von Datenstromkonfigurationen ist ein zweistufiger Prozess: <ol><li>Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](../../datastreams/configure.md) definieren.</li><li>Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der [Tag-Erweiterung](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) des Web SDK an das Edge-Netzwerk senden.</li></ol> |
 | OAuth JWT-Geheimnis | Das [OAuth JWT-Geheimnis](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets?lang=de) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und Google-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung. |
 | [!DNL Pinterest Conversions API]-Erweiterung  | Mit der Ereignisweiterleitungserweiterung [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Pinterest Conversions API] an [!DNL Pinterest] gesendet werden. |
 
@@ -90,7 +90,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
 | Monitoring von Datenflüssen für [!DNL Custom Personalization]- und [!DNL Adobe Commerce]-Ziele | <p> Sie können nun Aktivierungsmetriken für die Verbindungen [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Benutzerdefinierte Personalisierung](../../destinations/catalog/personalization/custom-personalization.md) und [Benutzerdefinierte Personalisierung mit Attributen](../../destinations/catalog/personalization/custom-personalization.md) sehen. </p> <p>![Adobe Commerce-Bild](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce-Metriken"){width="100" zoomable="yes"}</p>  Weitere Informationen sind verfügbar unter [Überwachen von Datenflüssen im Arbeitsbereich „Ziele“](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace). |
-| Neues Feld **[!UICONTROL Segment-ID an Segmentname anhängen]** für [!DNL Google Ad Manager]- und [!DNL Google Ad Manager 360]-Ziele | <p>Sie können jetzt in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) und [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) den Segmentnamen die Segment-ID aus Experience Platform einschließen lassen, wie hier zu sehen: `Segment Name (Segment ID)`.</p><p>![Bild zu „Segment-ID anhängen“](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Neues Feld „Segment-ID an Segmentnamen anhängen“"){width="100" zoomable="yes"}</p> |
+| Neues **[!UICONTROL Append segment ID to segment name]** für die [!DNL Google Ad Manager]- und [!DNL Google Ad Manager 360] | <p>Sie können jetzt in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) und [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) den Segmentnamen die Segment-ID aus Experience Platform einschließen lassen, wie hier zu sehen: `Segment Name (Segment ID)`.</p><p>![Bild zu „Segment-ID anhängen“](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Neues Feld „Segment-ID an Segmentnamen anhängen“"){width="100" zoomable="yes"}</p> |
 | Geplante Zielgruppen-Auffüllungen | <p>Für das [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics)-Ziel, wird die Aktivierung von Zielgruppen-Auffüllungen zum Ziel 24–48 Stunden nach der erstmaligen Zuordnung eines Segments zu einer Zielverbindung geplant. Dieses Update ist eine Antwort auf die Google-Richtlinie, 24 Stunden bis zur Aufnahme von Daten zu warten, und verbessert die Übereinstimmungsraten zwischen Real-Time CDP und [!DNL Google Display & Video 360].</p> <p>Beachten Sie, dass es sich hierbei um eine Backend-Konfiguration handelt, die nur für dieses Ziel gilt und nicht mit kundenkonfigurierbaren Planungsoptionen in der Benutzeroberfläche in Zusammenhang steht.</p> |
 
 {style="table-layout:auto"}
@@ -123,7 +123,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Schema | [[!UICONTROL Adobe Target-Klassifizierungsfelder]](https://github.com/adobe/xdm/pull/1719/files) | Ein neues XDM-Schema für Target-Klassifizierungsdatensätze, das eine Reihe von Metadatenfeldern enthält, um Target-Aktivitäten und -Erlebnisse zu klassifizieren. |
+| Schema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1719/files) | Ein neues XDM-Schema für Target-Klassifizierungsdatensätze, das eine Reihe von Metadatenfeldern enthält, um Target-Aktivitäten und -Erlebnisse zu klassifizieren. |
 
 {style="table-layout:auto"}
 
@@ -131,11 +131,11 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldgruppe | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1696/files) | Es wurde eine Feldergruppe zur Kontoerweiterung für das Echtzeit-Kundenprofil hinzugefügt, mit der Benutzerinnen und Benutzer eine Segmentmitgliedschaft zur Kontovereinigung hinzufügen können. |
-| Schema | [[!UICONTROL Systemschema für berechnete Attribute]](https://github.com/adobe/xdm/pull/1696/files) | Die Feldergruppe „Berechnete Attribute“, die vom Echtzeit-Kundenprofil verwendet wird, wurde zu einem schreibgeschützten globalen Schema des Systems aktualisiert. |
-| Feldgruppe | Mehrfach | Es wurden mehrere Ereignisse als Felder für das [[!UICONTROL Zeitreihenschema] hinzugefügt](https://github.com/adobe/xdm/pull/1718/files). |
+| Feldgruppe | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1696/files) | Es wurde eine Feldergruppe zur Kontoerweiterung für das Echtzeit-Kundenprofil hinzugefügt, mit der Benutzerinnen und Benutzer eine Segmentzugehörigkeit zur Kontovereinigung hinzufügen können. |
+| Schema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1696/files) | Die Feldergruppe „Berechnete Attribute“, die vom Echtzeit-Kundenprofil verwendet wird, wurde zu einem schreibgeschützten globalen Schema des Systems aktualisiert. |
+| Feldgruppe | Mehrfach | Es wurden mehrere Ereignisse als Felder für [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/pull/1718/files) hinzugefügt. |
 | Feldgruppe | Details zur Profiltreue | [Titel korrigiert](https://github.com/adobe/xdm/pull/1717/files) für `xdm:upgradeDate` von „Programmname“ zu „Upgrade-Datum“. |
-| Feldgruppe | Mehrfach | Mehrere Felder aus [[!UICONTROL Entscheidungselement]](https://github.com/adobe/xdm/pull/1714/files) wurden aktualisiert, um die doppelte verschachtelte Hierarchie zu entfernen. |
+| Feldgruppe | Mehrfach | Mehrere Felder aus [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1714/files) wurden aktualisiert, um die doppelte verschachtelte Hierarchie zu entfernen. |
 
 {style="table-layout:auto"}
 
@@ -168,7 +168,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 ## Segmentierungs-Service {#segmentation}
 
-[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+[!DNL Segmentation Service] definiert eine bestimmte Teilmenge von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Eintragsdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
 **Neue oder aktualisierte Funktionen**
 

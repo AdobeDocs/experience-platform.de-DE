@@ -2,9 +2,9 @@
 title: Core-Erweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
 workflow-type: tm+mt
-source-wordcount: '5447'
+source-wordcount: '5425'
 ht-degree: 95%
 
 ---
@@ -178,8 +178,8 @@ Für die einzelnen Formularereignistypen werden die folgenden Einstellungen verw
 
 #### Specific Elements \| Any Element
 
-* Wenn Sie **[!UICONTROL Bestimmte Elemente]** auswählen, werden die Optionen zum Auswählen der Elemente und Eigenschaftswerte angezeigt.
-* Wenn Sie **[!UICONTROL Beliebiges Element]** auswählen, sind keine weiteren Optionen erforderlich, um die Elemente einzugrenzen.
+* Wenn Sie **[!UICONTROL Specific Elements]** auswählen, werden die Optionen zum Auswählen der Elemente und Eigenschaftswerte angezeigt.
+* Wenn Sie **[!UICONTROL Any Element]** auswählen, sind zum Einschränken der Elemente keine weiteren Optionen erforderlich.
 
 #### Elements matching the CSS selector
 
@@ -231,9 +231,9 @@ Geben Sie einen benutzerspezifischen Code an, der als Bedingung des Ereignisses 
 
 Verwenden Sie für die Eingabe des benutzerspezifischen Codes den integrierten Code-Editor:
 
-1. Wählen Sie **[!UICONTROL Editor öffnen]**.
+1. Wählen Sie **[!UICONTROL Open Editor]** aus.
 1. Geben Sie den benutzerspezifischen Code ein.
-1. Wählen Sie **[!UICONTROL Speichern]** aus.
+1. Wählen Sie **[!UICONTROL Save]** aus.
 
 Automatisch wird eine Variable mit der Bezeichnung `event` verfügbar, die Sie in Ihrem benutzerdefinierten Code referenzieren können. Das `event`-Objekt enthält nützliche Informationen zum Ereignis, das die Regel ausgelöst hat. Die einfachste Methode zur Bestimmung der verfügbaren Ereignisdaten besteht darin, `event` mit dem console.log-Befehl in Ihrem benutzerspezifischen Code auf der Konsole auszugeben:
 
@@ -557,8 +557,8 @@ Geben Sie den Code an, der ausgeführt wird, nachdem das Ereignis ausgelöst wur
    * JavaScript
    * HTML
 1. Wählen Sie aus, ob der Aktionscode global ausgeführt wird.
-1. Wählen Sie **[!UICONTROL Editor öffnen]**.
-1. Bearbeiten Sie den Code und klicken Sie dann auf **[!UICONTROL Speichern]**.
+1. Wählen Sie **[!UICONTROL Open Editor]** aus.
+1. Bearbeiten Sie den Code und klicken Sie dann auf **[!UICONTROL Save]**.
 
 Wenn JavaScript als Sprache ausgewählt ist, wird automatisch eine Variable mit der Bezeichnung `event` verfügbar, die Sie in Ihrem benutzerdefinierten Code referenzieren können. Das `event`-Objekt enthält nützliche Informationen zum Ereignis, das die Regel ausgelöst hat. Die einfachste Methode zur Bestimmung der verfügbaren Ereignisdaten besteht darin, `event` mit dem console.log-Befehl in Ihrem benutzerspezifischen Code auf der Konsole auszugeben:
 
@@ -636,7 +636,7 @@ Diese Aktion löst alle Regeln aus, die ein bestimmtes [Direktaufrufereignis](#d
 
 ![Screenshot einer Trigger-Direktaufruf-Aktion in der Datenerfassungs-Benutzeroberfläche](../../../images/extensions/client/core/direct-call-action.png)
 
-Die Aktion wird direkt mit der [`track`-Methode](../../../ui/client-side/satellite-object.md#track) im `satellite`-Objekt verknüpft, auf das Client-seitiger Code zugreifen kann.
+Diese Aktion wird direkt [`_satellite.track()`](/help/collection/tags/track.md) zugeordnet.
 
 ## Datenelementtypen der Haupterweiterung
 

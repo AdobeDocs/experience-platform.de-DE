@@ -3,9 +3,9 @@ title: Weiterentwicklung des einmaligen Kundenwerts zum Lebenszeitwert
 description: Erfahren Sie, wie Sie personalisierte Kampagnen erstellen, um die besten komplementären Produkte oder Services basierend auf den Attributen, dem Verhalten und früheren Käufen eines bestimmten Kunden anzubieten.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3156'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 >[!IMPORTANT]
 > 
 >* Auf dieser Seite wird eine Beispielimplementierung von Real-Time CDP und Adobe Journey Optimizer für den beschriebenen Anwendungsfall vorgestellt. Verwenden Sie die Zahlen, Qualifizierungskriterien und andere Felder auf der Seite als Leitfaden und nicht als verbindliche Zahlen.
->* Um diesen Anwendungsfall abzuschließen, benötigen Sie eine Lizenz für Real-Time CDP und Adobe Journey Optimizer. Weitere Informationen finden Sie [&#x200B; Abschnitt „Voraussetzungen und Planung](#prerequisites-and-planning) weiter unten.
+>* Um diesen Anwendungsfall abzuschließen, benötigen Sie eine Lizenz für Real-Time CDP und Adobe Journey Optimizer. Weitere Informationen finden Sie [ Abschnitt „Voraussetzungen und Planung](#prerequisites-and-planning) weiter unten.
 
 Implementieren Sie den Anwendungsfall Einmaliger Kundenwert in lebenslanger Wertschöpfung , um die Markeninteraktion und die Markentreue zu fördern. Erstellen Sie ein vernetztes Kundenerlebnis auf mehreren Kanälen oder Journey. Nutzen Sie dazu die Leistungsfähigkeit von Experience Platform, erweitert um [Real-Time CDP](/help/rtcdp/home.md) und [Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/ajo-home).
 
 Die Personas, an die Sie sich richten, sind die seltenen Besucher Ihrer Eigenschaften, die in den letzten drei Monaten einige Käufe getätigt haben.
 
-Betrachten Sie diese Kunden, die Ihre Immobilien besuchen und sporadisch die Produkte oder Dienstleistungen kaufen, die Sie anbieten. Vielleicht möchten Sie personalisierte Kampagnen erstellen, die diese Kundinnen und Kunden ansprechen, damit Ihre Marke ihnen einen längerfristigen Wert statt eines einmaligen Werts bieten kann. Erfahren Sie mehr über:
+Betrachten Sie diese Kunden, die Ihre Immobilien besuchen und sporadisch die Produkte oder Dienstleistungen kaufen, die Sie anbieten. Vielleicht möchten Sie personalisierte Kampagnen erstellen, die diese Kundinnen und Kunden ansprechen, damit Ihre Marke ihnen einen längerfristigen Wert statt eines einmaligen Werts bieten kann. Sie lernen Folgendes:
 
 * Erfassen und Verwalten von Daten
 * Erstellen von Zielgruppen
@@ -39,16 +39,16 @@ Hierfür sind die beiden Experience Platform-Apps [Real-Time CDP](https://experi
 >
 >Vergewissern Sie sich, dass Sie die notwendigen [Attribut-basierten Zugriffsrechte](/help/access-control/abac/end-to-end-guide.md) für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=de): Integrieren Sie Daten in Datenquellen, um die Kampagne zu unterstützen. Diese Daten werden dann verwendet, um die Kampagnen-Audiences zu erstellen und die in der E-Mail und den Web-Promo-Kacheln verwendeten personalisierten Datenelemente (z. B. Name oder kontobezogene Informationen) aufzudecken. Schließlich wird Real-Time CDP auch verwendet, um Zielgruppen für Paid-Media-Ziele zu aktivieren.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html): Integrieren Sie Daten in Datenquellen, um die Kampagne zu unterstützen. Diese Daten werden dann verwendet, um die Kampagnen-Audiences zu erstellen und die in der E-Mail und den Web-Promo-Kacheln verwendeten personalisierten Datenelemente (z. B. Name oder kontobezogene Informationen) aufzudecken. Schließlich wird Real-Time CDP auch verwendet, um Zielgruppen für Paid-Media-Ziele zu aktivieren.
    * [Schemata](/help/xdm/home.md)
    * [Profile](/help/profile/home.md)
    * [Datensätze](/help/catalog/datasets/overview.md)
    * [Zielgruppen](/help/segmentation/home.md)
    * [Ziele](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de): Entwerfen Sie Journey, richten Sie Trigger ein und erstellen Sie die richtigen Nachrichten für Ihre Besucher.
-   * [Ereignis- oder Zielgruppen-Trigger &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=de)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): Entwerfen Sie Journey, richten Sie Trigger ein und erstellen Sie die richtigen Nachrichten für Ihre Besucher.
+   * [Ereignis- oder Zielgruppen-Trigger ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Zielgruppen und Ereignisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=de)
-   * [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de)
+   * [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Architektur von Real-Time CDP und Journey Optimizer
 
@@ -66,13 +66,13 @@ Sie beginnen, indem Sie Ihrer Audience von Kunden mit hohem und niedrigem Freque
 
 >[!IMPORTANT]
 >
->Wie weiter unten auf dieser Seite beschrieben, werden durch eine [dedizierte Einverständnis-Feldergruppe in Ihrem &#x200B;](#customer-attributes-schema) und durch [Implementieren von Einverständnisrichtlinien](#privacy-consent) alle Aktionen und Workflows auf eine Datenschutz- und Einverständnis-First-Weise implementiert.
+>Wie weiter unten auf dieser Seite beschrieben, werden durch eine [dedizierte Einverständnis-Feldergruppe in Ihrem ](#customer-attributes-schema) und durch [Implementieren von Einverständnisrichtlinien](#privacy-consent) alle Aktionen und Workflows auf eine Datenschutz- und Einverständnis-First-Weise implementiert.
 
 >[!BEGINSHADEBOX]
 
 ![Schritt für Schritt Entwicklung eines einmaligen Werts zu einem Lebenszeitwert Allgemeine visuelle Übersicht.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
-1. Sie erstellen Schemata und Datensätze und markieren sie dann für [!UICONTROL Profil].
+1. Sie erstellen Schemata und Datensätze und markieren diese dann zur [!UICONTROL Profile].
 2. Daten werden erfasst und über Web SDK, Mobile Edge SDK oder API in Experience Platform integriert. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu Journey-Latenz führen.
 3. Sie laden Profile in Real-Time CDP und erstellen Governance-Richtlinien, um eine verantwortungsvolle Nutzung zu gewährleisten.
 4. Sie erstellen zielgerichtete Zielgruppen aus der Liste der Profile, um nach Kundinnen und Kunden mit hohem und niedrigem Frequenzwert zu suchen.
@@ -91,7 +91,7 @@ Wenn Sie die Schritte zur Implementierung des Anwendungsfalls abgeschlossen habe
 
 ### Erstellen eines Schemaentwurfs und Festlegen von Feldergruppen {#schema-design}
 
-Experience-Datenmodell (XDM)-Ressourcen werden im Arbeitsbereich [!UICONTROL Schemata] in [!DNL Adobe Experience Platform] verwaltet. Sie können die von [!DNL Adobe] bereitgestellten Kernressourcen (z. B. [!UICONTROL Feldergruppen] anzeigen und untersuchen sowie benutzerdefinierte Ressourcen und Schemata für Ihr Unternehmen erstellen.
+Experience-Datenmodell (XDM)-Ressourcen werden im [!UICONTROL Schemas] Workspace in [!DNL Adobe Experience Platform] verwaltet. Sie können die von [!DNL Adobe] bereitgestellten Kernressourcen (z. B. [!UICONTROL field groups]) anzeigen und untersuchen sowie benutzerdefinierte Ressourcen und Schemata für Ihr Unternehmen erstellen.
 
 Weitere Informationen zum Erstellen von [Schemata](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de) finden Sie im Tutorial [Erstellen von Schemata“](/help/xdm/tutorials/create-schema-ui.md)
 
@@ -109,7 +109,7 @@ Verwenden Sie dieses Schema, um die Profildaten, aus denen Ihre Kundeninformatio
 
 ![Kundenattribut-Schema mit hervorgehobenen Feldergruppen](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
 
-Das Kundenattribut-Schema wird durch eine Klasse [!UICONTROL XDM Individual Profile] dargestellt, die die folgenden Feldergruppen enthält:
+Das Kundenattribut-Schema wird durch eine [!UICONTROL XDM Individual Profile]-Klasse dargestellt, die die folgenden Feldergruppen enthält:
 
 +++Demografische Details (Feldergruppe)
 
@@ -129,7 +129,7 @@ Das Kundenattribut-Schema wird durch eine Klasse [!UICONTROL XDM Individual Prof
 
 +++
 
-+++Feldergruppen für Einverständnis und Voreinstellungen (Feldergruppe)
++++Einverständnis- und Voreinstellungsfeldgruppen (Feldgruppe)
 
 [Die Feldergruppe „Einverständnis und Voreinstellungen](/help/xdm/field-groups/profile/consents.md) bietet ein einzelnes Feld vom Typ „Einverständnis“, um Einverständnis- und Voreinstellungsinformationen zu erfassen.
 
@@ -137,7 +137,7 @@ Das Kundenattribut-Schema wird durch eine Klasse [!UICONTROL XDM Individual Prof
 
 #### Schema für digitale Transaktionen des Kunden {#customer-digital-transactions-schema}
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht, die auf Ihrer Website oder auf anderen zugehörigen digitalen Plattformen auftritt. Diese Daten werden in der Regel über [Web SDK](/help/web-sdk/home.md) in [!DNL Adobe Experience Platform] aufgenommen und sind erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey-Ereignissen, einer detaillierten Online-Kundenanalyse und erweiterten Segmentierungsfunktionen verwendet werden.
+Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht, die auf Ihrer Website oder auf anderen zugehörigen digitalen Plattformen auftritt. Diese Daten werden in der Regel über [!DNL Adobe Experience Platform]Web SDK[ in ](/help/collection/js/js-overview.md) aufgenommen und sind erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey-Ereignissen, einer detaillierten Online-Kundenanalyse und erweiterten Segmentierungsfunktionen verwendet werden.
 
 ![Schema für digitale Kundentransaktionen mit hervorgehobenen Feldergruppen](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
@@ -158,7 +158,7 @@ Das Schema für digitale Transaktionen des Kunden wird durch eine [!UICONTROL XD
 
 +++
 
-+++Customer Experience-Ereignis (Feldergruppe)
++++Consumer Experience-Ereignis (Feldergruppe)
 
 Diese Feldergruppe enthält verschiedene Informationen zu Aktionen, z. B. Kauf- oder Browser-Ereignisse, die von Benutzern in Ihrer Web-Eigenschaft durchgeführt werden.
 
@@ -224,11 +224,11 @@ Das Offline-Transaktionsschema des Kunden wird durch eine [!UICONTROL XDM Experi
 
 +++Persönliche Kontaktdaten (Feldergruppe)
 
-[[!UICONTROL Persönliche Kontaktdaten]](/help/xdm/field-groups/profile/personal-contact-details.md) ist eine Standardschemafeldgruppe für die [!DNL XDM Individual Profile], die die Kontaktinformationen für eine einzelne Person beschreibt.
+[[!UICONTROL Personal Contact Details]](/help/xdm/field-groups/profile/personal-contact-details.md) ist eine Standardschemafeldgruppe für die Klasse [!DNL XDM Individual Profile] , die die Kontaktinformationen für eine einzelne Person beschreibt.
 
 +++
 
-+++Audit-Details des externen Source-Systems (Feldergruppe)
++++Audit-Details des externen Source-Systems (Feldergruppe) 
 
 External Source System Audit Attributes ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Audit-Details über ein externes Quellsystem erfasst.
 
@@ -268,9 +268,9 @@ Weitere Informationen zum Erstellen eines [Datensatzes](/help/catalog/datasets/o
 
 >[!IMPORTANT]
 >
->Es ist gesetzlich vorgeschrieben, den Kunden die Möglichkeit zu geben, den Erhalt von Mitteilungen einer Marke zu stornieren, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie unter [Übersicht über Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=de).
+>Es ist gesetzlich vorgeschrieben, den Kunden die Möglichkeit zu geben, den Erhalt von Mitteilungen einer Marke zu stornieren, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie unter [Übersicht über Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Erwägen Sie die Implementierung der [Einverständnisrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=de) und bitten Sie Ihre Besucher um Zustimmung, bevor Sie sich an sie wenden:
+Erwägen Sie die Implementierung der [Einverständnisrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) und bitten Sie Ihre Besucher um Zustimmung, bevor Sie sich an sie wenden:
 
 * Wenn `consents.marketing.email.val = "Y"` dann eine E-Mail senden können
 * Wenn `consents.marketing.sms.val = "Y"` dann kann SMS
@@ -286,7 +286,7 @@ Erwägen Sie das Hinzufügen und Erzwingen der folgenden [Data Governance-Kennze
 
 #### Marketing-Richtlinien
 
-Für die Journey[&#x200B; die Sie im Rahmen &#x200B;](/help/data-governance/policies/overview.md) Anwendungsfalls erstellen, sind keine „Marketing-Richtlinien“ erforderlich. Sie können jedoch die folgenden Richtlinien bei Bedarf berücksichtigen:
+Für die Journey[ die Sie im Rahmen ](/help/data-governance/policies/overview.md) Anwendungsfalls erstellen, sind keine „Marketing-Richtlinien“ erforderlich. Sie können jedoch die folgenden Richtlinien bei Bedarf berücksichtigen:
 
 * Einschränken sensibler Daten
 * Onsite-Advertising einschränken
@@ -298,7 +298,7 @@ Für die Journey[&#x200B; die Sie im Rahmen &#x200B;](/help/data-governance/poli
 
 In diesem Anwendungsfall müssen Sie zwei Zielgruppen erstellen, um bestimmte Attribute oder Verhaltensweisen zu definieren, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher geteilt werden, um eine vermarktbare Personengruppe zu unterscheiden. Zielgruppen können in Adobe Experience Platform auf verschiedene Weise erstellt werden:
 
-* Informationen zum Erstellen einer Zielgruppe finden Sie im [Handbuch zur Benutzeroberfläche des Zielgruppen-Services](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=de#create-audience).
+* Informationen zum Erstellen einer Zielgruppe finden Sie im [Handbuch zur Benutzeroberfläche des Zielgruppen-Services](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * Informationen zum Erstellen von [Zielgruppen](/help/segmentation/home.md) finden Sie im [Handbuch zur Benutzeroberfläche für die Zielgruppenkomposition](/help/segmentation/ui/audience-composition.md).
 * Informationen zum Erstellen von Zielgruppen mithilfe von aus Experience Platform abgeleiteten Segmentdefinitionen finden Sie im [Handbuch zur Audience Builder-Benutzeroberfläche](/help/segmentation/ui/segment-builder.md).
 
@@ -342,9 +342,9 @@ Diese Zielgruppe wird erstellt, um Profile einzuschließen, die in den letzten 3
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden im [!UICONTROL Ziele] [Arbeitsbereich](/help/destinations/ui/destinations-workspace.md) erstellt.
+>[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden im [!UICONTROL destinations]Arbeitsbereich[ erstellt](/help/destinations/ui/destinations-workspace.md).
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de) können Sie Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bieten. Die Kunden-Journey umfasst den gesamten Prozess der Kundeninteraktion mit der Marke. Für jede Anwendungsfall-Journey sind spezifische Informationen erforderlich.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) können Sie Ihren Kunden vernetzte, kontextbezogene und personalisierte Erlebnisse bieten. Die Kunden-Journey umfasst den gesamten Prozess der Kundeninteraktion mit der Marke. Für jede Anwendungsfall-Journey sind spezifische Informationen erforderlich.
 
 Für diesen Anwendungsfall müssen Sie zwei separate Journey erstellen:
 
@@ -367,15 +367,15 @@ Die Lifetime Journey richtet sich an Kunden mit hohem und niedrigem Frequenzwert
 
 Die oben dargestellte Journey folgt der folgenden Logik.
 
-1. Zielgruppe lesen: Verwenden Sie eine [Aktivität „Zielgruppe lesen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=de) für die erste Zielgruppe, die im Abschnitt „Zielgruppen“ oben erstellt wurde.
+1. Zielgruppe lesen: Verwenden Sie eine [Aktivität „Zielgruppe lesen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) für die erste Zielgruppe, die im Abschnitt „Zielgruppen“ oben erstellt wurde.
 
-2. Bedingung - Bevorzugter Kanal: Verwenden Sie eine [Bedingungsaktivität](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=de) um zu bestimmen, wie Sie Kunden erreichen können, ob über E-Mail, SMS oder Push-Benachrichtigungen. Verwenden Sie drei Aktionsaktivitäten, um die drei Verzweigungen zu erstellen.
+2. Bedingung - Bevorzugter Kanal: Verwenden Sie eine [Bedingungsaktivität](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) um zu bestimmen, wie Sie Kunden erreichen können, ob über E-Mail, SMS oder Push-Benachrichtigungen. Verwenden Sie drei Aktionsaktivitäten, um die drei Verzweigungen zu erstellen.
 
-3. Warten: Verwenden Sie eine [Warteaktivität](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=de) um zu warten, bis Sie auf Käufe warten.
+3. Warten: Verwenden Sie eine [Warteaktivität](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) um zu warten, bis Sie auf Käufe warten.
 
 4. Bedingung - Abonnement in den letzten 7 Tagen erworben?: Verwenden Sie eine Aktivität vom Typ Bedingung , um auf Produktkäufe in den letzten sieben Tagen zu warten.
 
-5. JourneyStepEventTracker - Abonnement nicht erworben: Verwenden Sie eine [benutzerdefinierte Aktion](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=de) für die Besucher, die Ihr Abonnement noch nicht erworben haben, obwohl sie Ihre Nachricht erhalten haben. Erstellen Sie als Teil der benutzerdefinierten Bedingung am Ende des Journey ein `journey.feedback` und fügen Sie es einem Datensatz hinzu, der auf dem Schema [!UICONTROL Journey-] basiert. Mit diesem Ereignis segmentieren Sie die Zielgruppe, die das Abonnement nicht erworben hat und die Sie über Paid-Media-Anzeigen ansprechen können.
+5. JourneyStepEventTracker - Abonnement nicht erworben: Verwenden Sie eine [benutzerdefinierte Aktion](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) für die Besucher, die Ihr Abonnement noch nicht erworben haben, obwohl sie Ihre Nachricht erhalten haben. Erstellen Sie als Teil der benutzerdefinierten Bedingung am Ende des Journey ein `journey.feedback` und fügen Sie es basierend auf dem [!UICONTROL Journey Step Event] Schema zu einem Datensatz hinzu. Mit diesem Ereignis segmentieren Sie die Zielgruppe, die das Abonnement nicht erworben hat und die Sie über Paid-Media-Anzeigen ansprechen können.
 
 +++
 
@@ -385,7 +385,7 @@ Die Journey zur Bestellbestätigung konzentriert sich darauf, ob ein Kauf über 
 
 ![Kundenauftragsbestätigungs-Journey Allgemeine visuelle Übersicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Kundenauftragsbestätigungs-Journey Allgemeine visuelle Übersicht."){zoomable="yes"}
 
-+++Journey Logik
++++Journey Logic
 
 Verwenden Sie die unten vorgeschlagenen Ereignisse, Felder und Aktionen auf Ihrer Bestätigungs-Journey:
 
@@ -436,7 +436,7 @@ Verwenden Sie die unten vorgeschlagenen Ereignisse, Felder und Aktionen auf Ihre
 
 >[!ENDTABS]
 
-Weitere Informationen zum Erstellen von Journey in [!DNL Adobe Journey Optimizer] finden Sie im Handbuch [Erste Schritte mit Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de).
+Weitere Informationen zum Erstellen von Journey in [!DNL Adobe Journey Optimizer] finden Sie im Handbuch [Erste Schritte mit Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Einrichten eines Ziels für die Anzeige von Paid Media-Anzeigen {#paid-media-ads}
 
@@ -453,4 +453,4 @@ Informationen zum Aktivieren von Daten für Ziele (z. B. [The Trade Desk](/help/
 
 Indem Sie Ihre niederfrequenten und hochwertigen Anwender auf eine Journey setzen und einer Untergruppe von ihnen Paid-Media-Anzeigen anzeigen, haben Sie hoffentlich einige von ihnen von Kunden mit einmaligem Wert zu Kunden mit lebenslangem Wert gemacht und so Ihre Markentreue und Kundeninteraktionsmetriken verbessert.
 
-Als Nächstes können Sie sich mit anderen von Real-Time CDP unterstützten Anwendungsfällen beschäftigen, z. B. [Kunden intelligent wieder mit &#x200B;](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) zu interagieren oder [nicht authentifizierten Benutzern personalisierte Inhalte &#x200B;](/help/rtcdp/partner-data/onsite-personalization.md) Ihren Web-Eigenschaften anzuzeigen.
+Als Nächstes können Sie sich mit anderen von Real-Time CDP unterstützten Anwendungsfällen beschäftigen, z. B. [Kunden intelligent wieder mit ](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) zu interagieren oder [nicht authentifizierten Benutzern personalisierte Inhalte ](/help/rtcdp/partner-data/onsite-personalization.md) Ihren Web-Eigenschaften anzuzeigen.

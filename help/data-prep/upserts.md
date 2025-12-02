@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;Daten
 title: Senden von partiellen Zeilenaktualisierungen an das Echtzeit-Kundenprofil mithilfe der Datenvorbereitung
 description: Erfahren Sie, wie Sie mithilfe der Datenvorbereitung partielle Zeilenaktualisierungen an das Echtzeit-Kundenprofil senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1363'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >* Die Aufnahme von Meldungen zur Aktualisierung der Experience-Datenmodell (XDM)-Entität (mit JSON-PATCH-Vorgängen) für Profilaktualisierungen über den DCS-Eingang ist veraltet. Führen Sie alternativ dazu die in diesem Handbuch beschriebenen Schritte aus.
 >
->* Sie können auch die HTTP-API-Quelle verwenden[&#x200B; um Rohdaten in den DCS-Eingang aufzunehmen &#x200B;](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) die erforderlichen Datenzuordnungen anzugeben, um Ihre Daten in XDM-konforme Nachrichten für Profilaktualisierungen umzuwandeln.
+>* Sie können auch die HTTP-API-Quelle verwenden[ um Rohdaten in den DCS-Eingang aufzunehmen ](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) die erforderlichen Datenzuordnungen anzugeben, um Ihre Daten in XDM-konforme Nachrichten für Profilaktualisierungen umzuwandeln.
 >
 >* Bei der Verwendung von Arrays beim Streaming von Upserts müssen Sie explizit `upsert_array_append` oder `upsert_array_replace` verwenden, um einen klaren Zweck des Vorgangs zu definieren. Möglicherweise werden Fehler angezeigt, wenn diese Funktionen fehlen.
 
@@ -24,11 +24,11 @@ Verwenden Sie das Streaming von Upserts in [!DNL Data Prep], um partielle Zeilen
 
 Durch das Streamen von Upserts können Sie das Format Ihrer Daten beibehalten, während Sie diese Daten während der Aufnahme in [!DNL Real-Time Customer Profile] PATCH-Anfragen übersetzen. Basierend auf den von Ihnen bereitgestellten Eingaben können Sie mit [!DNL Data Prep] eine einzige API-Payload senden und die Daten sowohl an [!DNL Real-Time Customer Profile] PATCH- als auch [!DNL Identity Service] CREATE-Anfragen übersetzen.
 
-[!DNL Data Prep] verwendet Header-Parameter, um zwischen Einfügungen und Upserts zu unterscheiden. Alle Zeilen, die Upserts verwenden, müssen eine Kopfzeile haben. Sie können Upserts mit oder ohne Identitätsdeskriptoren verwenden. Wenn Sie Upserts mit Identitäten verwenden, müssen Sie die Konfigurationsschritte ausführen, die im Abschnitt „Konfigurieren [&#x200B; Identitätsdatensatzes“ beschrieben &#x200B;](#configure-the-identity-dataset). Wenn Sie Upserts ohne Identitäten verwenden, müssen Sie in Ihrer Anfrage keine Identitätskonfigurationen angeben. Weitere Informationen finden Sie im Abschnitt [Streamen von Upserts ohne &#x200B;](#payload-without-identity-configuration)&quot;.
+[!DNL Data Prep] verwendet Header-Parameter, um zwischen Einfügungen und Upserts zu unterscheiden. Alle Zeilen, die Upserts verwenden, müssen eine Kopfzeile haben. Sie können Upserts mit oder ohne Identitätsdeskriptoren verwenden. Wenn Sie Upserts mit Identitäten verwenden, müssen Sie die Konfigurationsschritte ausführen, die im Abschnitt „Konfigurieren [ Identitätsdatensatzes“ beschrieben ](#configure-the-identity-dataset). Wenn Sie Upserts ohne Identitäten verwenden, müssen Sie in Ihrer Anfrage keine Identitätskonfigurationen angeben. Weitere Informationen finden Sie im Abschnitt [Streamen von Upserts ohne ](#payload-without-identity-configuration)&quot;.
 
 >[!NOTE]
 >
->Um die Upsert-Funktion zu nutzen, wird empfohlen, XDM-kompatible Konfigurationen während der Datenaufnahme zu deaktivieren und die eingehende Payload mit [Data Prep Mapper) neu &#x200B;](./ui/mapping.md).
+>Um die Upsert-Funktion zu nutzen, wird empfohlen, XDM-kompatible Konfigurationen während der Datenaufnahme zu deaktivieren und die eingehende Payload mit [Data Prep Mapper) neu ](./ui/mapping.md).
 
 Dieses Dokument enthält Informationen zum Streamen von Upserts in [!DNL Data Prep].
 
@@ -64,7 +64,7 @@ Wenn neue Identitäten verknüpft werden müssen, müssen Sie einen zusätzliche
 
 * Der Identitätsdatensatz muss sein verknüpftes Schema als [!DNL Profile] Datensatz haben. Inkonsistente Schemata können zu inkonsistentem Systemverhalten führen.
 * Sie müssen jedoch sicherstellen, dass sich der Identitätsdatensatz vom [!DNL Profile] unterscheidet. Wenn die Datensätze identisch sind, werden die Daten überschrieben anstatt aktualisiert.
-* Während der ursprüngliche Datensatz für [!DNL Profile] aktiviert werden muss, **der Identitätsdatensatz für [!DNL Profile] nicht** werden. Andernfalls werden auch Daten überschrieben, anstatt aktualisiert zu werden. Der Identitätsdatensatz (sollte **aktiviert sein** für [!DNL Identity Service].
+* Während der ursprüngliche Datensatz für [!DNL Profile] aktiviert werden muss, **der Identitätsdatensatz für** nicht [!DNL Profile] werden. Andernfalls werden auch Daten überschrieben, anstatt aktualisiert zu werden. Der Identitätsdatensatz (sollte **aktiviert sein** für [!DNL Identity Service].
 
 #### Erforderliche Felder in den mit dem Identitätsdatensatz verknüpften Schemata {#identity-dataset-required-fileds}
 
@@ -271,7 +271,7 @@ Im Folgenden finden Sie eine Liste bekannter Einschränkungen, die beim Streamin
 
 * Die Streaming-Upserts-Methode sollte nur verwendet werden, wenn partielle Zeilenaktualisierungen an [!DNL Real-Time Customer Profile] gesendet werden. Teilweise Zeilenaktualisierungen werden **nicht** vom Data Lake genutzt.
 * Die Streaming-Methode upserts unterstützt nicht das Aktualisieren, Ersetzen und Entfernen von Identitäten. Neue Identitäten werden erstellt, wenn sie nicht vorhanden sind. Daher muss für den `identity`-Vorgang immer „Erstellen“ festgelegt sein. Wenn bereits eine Identität vorhanden ist, ist der Vorgang ein No-op-Vorgang.
-* Die Streaming-Upsert-Methode unterstützt derzeit nicht [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) und [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* Die Streaming-Upsert-Methode unterstützt derzeit nicht die [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) oder die [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Nächste Schritte
 

@@ -2,7 +2,7 @@
 title: Konfigurieren der Bot-Erkennung für Datenströme
 description: Erfahren Sie, wie Sie die Bot-Erkennung für Datenströme konfigurieren, um zwischen menschlichem und nicht menschlichem Traffic zu unterscheiden.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 9a60212a9a9fa01ef8a73cfa2c16088c196788d4
+source-git-commit: 5f599b8572c4cebcdfb9ab85027211da4d8a020c
 workflow-type: tm+mt
 source-wordcount: '1374'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Nicht-menschlicher Traffic von automatisierten Programmen, Web-Scraptern, Spinnen und Scannern mit Skripten kann es schwierig machen, Ereignisse von menschlichen Besuchern zu identifizieren. Dieser Traffic kann sich negativ auf wichtige Geschäftsmetriken auswirken und zu falschen Traffic-Berichten führen.
 
-Mit der Bot-Erkennung können Sie Ereignisse identifizieren, die von [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) von bekannten Spiders und Bots generiert wurden.
+Mit der Bot-Erkennung können Sie Ereignisse identifizieren, die von [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) von bekannten Spiders und Bots generiert wurden.
 
 Durch das Konfigurieren der Bot-Erkennung für Ihre Datenströme können Sie bestimmte IP-Adressen, IP-Bereiche und Anfrage-Header identifizieren, die als Bot-Ereignisse klassifiziert werden sollen. Auf diese Weise lassen sich Benutzeraktivitäten auf Ihrer Site oder in Mobile Apps genauer messen.
 
@@ -33,7 +33,7 @@ Diese Bot-Bewertung hilft den Lösungen, die die Anfrage erhalten, Bot-Traffic k
 >
 >Die Bot-Erkennung löscht keine Bot-Anfragen. Es wird nur das XDM-Schema mit der Bot-Bewertung aktualisiert und das Ereignis an den [Datenstrom-Service](configure.md) weitergeleitet, den Sie konfiguriert haben.
 >
->Adobe-Lösungen können die Bewertung von Bots auf unterschiedliche Weise verarbeiten. Beispielsweise verwendet Adobe Analytics einen eigenen [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=de) und verwendet nicht den von der Edge Network festgelegten Wert. Die beiden Services verwenden dieselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) sodass die Bot-Bewertung identisch ist.
+>Adobe-Lösungen können die Bewertung von Bots auf unterschiedliche Weise verarbeiten. Beispielsweise verwendet Adobe Analytics einen eigenen [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) und verwendet nicht den von der Edge Network festgelegten Wert. Die beiden Services verwenden dieselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) sodass die Bot-Bewertung identisch ist.
 
 ## Technische Überlegungen {#technical-considerations}
 
@@ -45,7 +45,7 @@ Bevor Sie die Bot-Erkennung in Ihren Datenströmen aktivieren, sollten Sie einig
 
 ## Voraussetzungen {#prerequisites}
 
-Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die **[!UICONTROL Bot Detection Information]** Feldergruppe zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie [&#x200B; der Dokumentation zum &#x200B;](../xdm/ui/resources/schemas.md#add-field-groups)XDM-Schema .
+Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die **[!UICONTROL Bot Detection Information]** Feldergruppe zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie [ der Dokumentation zum ](../xdm/ui/resources/schemas.md#add-field-groups)XDM-Schema .
 
 ## Konfigurieren der Bot-Erkennung für Datenströme {#configure}
 
@@ -65,7 +65,7 @@ Die Seite **[!UICONTROL Bot Detection Rules]** wird angezeigt.
 
 Auf der Seite Regeln für die Bot-Erkennung können Sie die Bot-Erkennung mithilfe der folgenden Funktionen konfigurieren:
 
-* Verwenden der [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Verwenden der [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Erstellen eigener Regeln zur Bot-Erkennung.
 
 ### Verwenden der IAB/ABC International Spiders and Bots List {#iab-list}

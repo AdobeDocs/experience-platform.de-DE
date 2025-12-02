@@ -3,16 +3,16 @@ title: Nachschlagen von Edge-Profilattributen in Echtzeit
 description: Erfahren Sie, wie Sie Edge-Profilattribute mithilfe des benutzerdefinierten Personalization-Ziels und der Edge Network-API in Echtzeit suchen
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1838'
 ht-degree: 3%
 
 ---
 
 # Profilattribute am Edge in Echtzeit nachschlagen
 
-Adobe Experience Platform verwendet das [Echtzeit-Kundenprofil](../../profile/home.md) als zentrale Datenquelle für alle Profildaten. Für den schnellen Datenabruf in Echtzeit werden [Edge-Profile](../../profile/edge-profiles.md) verwendet, bei denen es sich um einfache Profile handelt, die über die gesamte [Edge Network verteilt &#x200B;](../../collection/home.md#edge). Dies ermöglicht Anwendungsfälle für die schnelle Personalisierung in Echtzeit.
+Adobe Experience Platform verwendet das [Echtzeit-Kundenprofil](../../profile/home.md) als zentrale Datenquelle für alle Profildaten. Für den schnellen Datenabruf in Echtzeit werden [Edge-Profile](../../profile/edge-profiles.md) verwendet, bei denen es sich um einfache Profile handelt, die über die gesamte [Edge Network verteilt ](../../collection/home.md#edge). Dies ermöglicht Anwendungsfälle für die schnelle Personalisierung in Echtzeit.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -61,7 +61,7 @@ Führen Sie die Schritte in der Dokumentation [Datenstromkonfiguration](../../da
 
 Für das Nachschlagen von Profilattributen am Edge müssen Ihre Zielgruppen für die Edge-Evaluierung konfiguriert werden.
 
-Stellen Sie sicher, dass für die Zielgruppen, die Sie aktivieren möchten, die [Zusammenführungsrichtlinie „Active-On-Edge](../../segmentation/ui/segment-builder.md#merge-policies) als Standard festgelegt ist. Die [!DNL Active-On-Edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [on the Edge) ausgewertet &#x200B;](../../segmentation/methods/edge-segmentation.md) für Anwendungsfälle der Echtzeit-Personalisierung verfügbar sind.
+Stellen Sie sicher, dass für die Zielgruppen, die Sie aktivieren möchten, die [Zusammenführungsrichtlinie „Active-On-Edge](../../segmentation/ui/segment-builder.md#merge-policies) als Standard festgelegt ist. Die [!DNL Active-On-Edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [on the Edge) ausgewertet ](../../segmentation/methods/edge-segmentation.md) für Anwendungsfälle der Echtzeit-Personalisierung verfügbar sind.
 
 Befolgen Sie die Anweisungen unter [Erstellen einer Zusammenführungsrichtlinie](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie den Umschalter **[!UICONTROL Active-On-Edge Merge Policy]** aktivieren.
 
@@ -135,7 +135,7 @@ Auf der Seite **[!UICONTROL Review]** können Sie eine Zusammenfassung Ihrer Aus
 
 +++Auswertung der Einverständnisrichtlinie
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
 **Prüfungen der Datennutzungsrichtlinien**
 
@@ -168,7 +168,7 @@ Der nächste Schritt besteht darin, Ihre Personalisierungslösung so zu konfigur
 >
 >Wenn Sie die oben genannten Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Zielgruppenzugehörigkeit, und Ihnen stehen keine Profilattribute zur Verfügung.
 
-Der in [Schritt 1) konfigurierte Datenstrom &#x200B;](#create-datastream) jetzt eingehende Ereignisdaten akzeptieren und mit Edge-Profilinformationen antworten.
+Der in [Schritt 1) konfigurierte Datenstrom ](#create-datastream) jetzt eingehende Ereignisdaten akzeptieren und mit Edge-Profilinformationen antworten.
 
 Konfigurieren Sie Ihre Integration, um Edge-Profilinformationen abzurufen, wie in den Beispielen unten gezeigt.
 
@@ -202,7 +202,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Ja. | Die Datenstrom-ID des Datenstroms, den Sie in ([&#x200B; 1) erstellt &#x200B;](#create-datastream). |
+| `dataStreamId` | `String` | Ja. | Die Datenstrom-ID des Datenstroms, den Sie in ([ 1) erstellt ](#create-datastream). |
 
 ### Antwort {#response}
 
@@ -276,10 +276,10 @@ Das `handle`-Objekt stellt die in der folgenden Tabelle beschriebenen Informatio
 |---------|----------|
 | `payload` | Das `payload`, das die Edge-Lookup-Informationen enthält. Die Antwort kann mehrere zusätzliche `payload`-Objekte enthalten, die nicht mit der Edge-Suche zusammenhängen. |
 | `type` | Payloads werden in der Antwort nach ihrem Typ gruppiert. Der Payload-Typ für die Edge-Profilsuche ist immer auf `profileLookup` festgelegt. |
-| `destinationId` | Die ID der **[!UICONTROL Custom Personalization]** Verbindungsinstanz, die Sie in ([&#x200B; 3) erstellt &#x200B;](#configure-custom-personalization-connection). |
+| `destinationId` | Die ID der **[!UICONTROL Custom Personalization]** Verbindungsinstanz, die Sie in ([ 3) erstellt ](#configure-custom-personalization-connection). |
 | `alias` | Der Alias der Zielverbindung, der von den Benutzenden beim Erstellen der Zielverbindung [Benutzerdefinierte Personalization](../catalog/personalization/custom-personalization.md) konfiguriert wird. |
-| `attributes` | Dieses Array enthält die Edge-Profilattribute der Zielgruppen, die Sie in ([&#x200B; 3) aktiviert &#x200B;](#configure-custom-personalization-connection). |
-| `segments` | Dieses Array enthält die Zielgruppen, die Sie in ([&#x200B; 3) aktiviert &#x200B;](#configure-custom-personalization-connection). |
+| `attributes` | Dieses Array enthält die Edge-Profilattribute der Zielgruppen, die Sie in ([ 3) aktiviert ](#configure-custom-personalization-connection). |
+| `segments` | Dieses Array enthält die Zielgruppen, die Sie in ([ 3) aktiviert ](#configure-custom-personalization-connection). |
 | `type` | `handle` Objekte werden nach Typ gruppiert. Bei Anwendungsfällen für die Kantenprofilsuche wird der Typ des `handle` immer `activation:pull`. |
 | `eventIndex` | Die Edge Network empfängt Ereignisse vom Client in Form von Arrays. Die Reihenfolge der Ereignisse im Array wird während ihrer Verarbeitung beibehalten und von diesem Index übernommen. Die Ereignisindizierung beginnt mit `0`. |
 

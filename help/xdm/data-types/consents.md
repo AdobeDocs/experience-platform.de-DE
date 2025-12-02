@@ -3,18 +3,18 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Datentyp „Einverständnis und Voreinstellungen“
 description: Der Datentyp Einverständnis für Datenschutz, Personalization und Marketing-Voreinstellungen unterstützt die Erfassung von Kundenberechtigungen und -einstellungen, die von Einverständnisverwaltungsplattformen (CMPs) und anderen Quellen aus Ihren Datenvorgängen generiert wurden.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '2334'
+source-wordcount: '2305'
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL Einverständnis und Voreinstellungen] Datentyp
+# [!UICONTROL Consents and Preferences] Datentyp
 
-Der Datentyp [!UICONTROL Einverständnis für Datenschutz, Personalization- und Marketing] (im Folgenden als „Datentyp [!UICONTROL Einverständnis und Voreinstellungen]&quot; bezeichnet) ist ein [!DNL Experience Data Model] (XDM)-Datentyp, der die Erfassung von Kundenberechtigungen und -präferenzen unterstützt, die von Einverständnisverwaltungsplattformen (CMPs) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
+Der [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]-Datentyp (im Folgenden als &quot;[!UICONTROL Consents and Preferences]-Datentyp“ bezeichnet) ist ein [!DNL Experience Data Model] (XDM)-Datentyp, der die Erfassung von Kundenberechtigungen und -präferenzen unterstützt, die von Einverständnisverwaltungsplattformen (CMPs) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 
-In diesem Dokument werden die Struktur und der Verwendungszweck der Felder behandelt, die vom Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] bereitgestellt werden.
+In diesem Dokument werden die Struktur und der Verwendungszweck der Felder beschrieben, die vom Datentyp [!UICONTROL Consents and Preferences] bereitgestellt werden.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -27,9 +27,9 @@ Dieses Dokument setzt ein Verständnis von XDM und der Verwendung der Schemata i
 
 >[!IMPORTANT]
 >
->Der [!UICONTROL Einverständnis und Voreinstellungen]-Datentyp wurde entwickelt, um eine Reihe von Anwendungsfällen für die Einverständnis- und Präferenzverwaltung abzudecken. Daher beschreibt dieses Dokument die Verwendung der Felder des Datentyps allgemein und macht nur Vorschläge, wie Sie die Verwendung dieser Felder interpretieren sollten. Wenden Sie sich an Ihre Rechtsabteilung, um die Struktur des Datentyps an die Interpretation anzupassen und Ihren Kunden diese Einverständnis- und Präferenzentscheidungen zu präsentieren.
+>Der [!UICONTROL Consents and Preferences] Datentyp wurde entwickelt, um eine Reihe von Anwendungsfällen für die Einverständnis- und Präferenzverwaltung abzudecken. Daher beschreibt dieses Dokument die Verwendung der Felder des Datentyps allgemein und macht nur Vorschläge, wie Sie die Verwendung dieser Felder interpretieren sollten. Wenden Sie sich an Ihre Rechtsabteilung, um die Struktur des Datentyps an die Interpretation anzupassen und Ihren Kunden diese Einverständnis- und Präferenzentscheidungen zu präsentieren.
 
-Der [!UICONTROL Einverständnis und Voreinstellungen] stellt mehrere Felder bereit, die zum Erfassen von **Einverständnis** und **Voreinstellungen** verwendet werden.
+Der Datentyp [!UICONTROL Consents and Preferences] enthält mehrere Felder, mit denen **(Einverständnis** und **Voreinstellungen** erfasst werden.
 
 Eine Einwilligung ist eine Option, mit der ein Kunde angeben kann, wie seine Daten verwendet werden dürfen. Die meisten Einverständnisse haben einen rechtlichen Aspekt, da einige Gerichtsbarkeiten die Einholung einer Genehmigung verlangen, bevor Daten auf eine bestimmte Weise verwendet werden können, oder verlangen, dass der Kunde die Möglichkeit hat, diese Verwendung zu stoppen (Opt-out), wenn keine bejahende Zustimmung erforderlich ist.
 
@@ -44,9 +44,9 @@ Der folgende Screenshot zeigt, wie die Struktur des Datentyps in der Experience 
 
 >[!TIP]
 >
->Anweisungen zum Suchen einer XDM[Ressource und Überprüfen ihrer Struktur in der Benutzeroberfläche von Experience Platform finden Sie im Handbuch &#x200B;](../ui/explore.md)Erkunden von XDM-Ressourcen“ zu .
+>Anweisungen zum Suchen einer XDM[Ressource und Überprüfen ihrer Struktur in der Benutzeroberfläche von Experience Platform finden Sie im Handbuch ](../ui/explore.md)Erkunden von XDM-Ressourcen“ zu .
 
-Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der [!UICONTROL Einverständnis und Voreinstellungen]-Datentyp verarbeiten kann. Informationen zur spezifischen Verwendung der einzelnen Felder finden Sie in den folgenden Abschnitten.
+Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der [!UICONTROL Consents and Preferences]-Datentyp verarbeiten kann. Informationen zur spezifischen Verwendung der einzelnen Felder finden Sie in den folgenden Abschnitten.
 
 ```json
 {
@@ -255,23 +255,23 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der [!UICONTRO
 
 ## Aufnehmen von Daten mit dem Datentyp {#ingest}
 
-Um den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] zum Aufnehmen von Einverständnisdaten von Ihren Kunden zu verwenden, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
+Um den Datentyp [!UICONTROL Consents and Preferences] zum Aufnehmen von Einverständnisdaten von Ihren Kunden zu verwenden, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
 
-Anweisungen zum Zuweisen von Datentypen zu Feldern [&#x200B; Sie im Tutorial &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_de)Erstellen eines Schemas in der Benutzeroberfläche“. Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!UICONTROL Einverständnis und Voreinstellungen] enthält, lesen Sie den Abschnitt zum [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zu Datensätzen, indem Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema befolgen.
+Anweisungen zum Zuweisen von Datentypen zu Feldern [ Sie im Tutorial ](https://www.adobe.com/go/xdm-schema-editor-tutorial-en)Erstellen eines Schemas in der Benutzeroberfläche“. Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!UICONTROL Consents and Preferences] enthält, lesen Sie den Abschnitt [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zu Datensätzen, indem Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema befolgen.
 
 >[!IMPORTANT]
 >
->Wenn Sie Einverständnisdaten an [!DNL Real-Time Customer Profile] senden möchten, ist es erforderlich, dass Sie ein [!DNL Profile]-aktiviertes Schema auf Grundlage der [!DNL XDM Individual Profile]-Klasse erstellen, die den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] enthält. Der Datensatz, den Sie basierend auf diesem Schema erstellen, muss auch für die [!DNL Profile] aktiviert sein. Die einzelnen Schritte im Zusammenhang mit den [!DNL Real-Time Customer Profile] für Schemata und Datensätze finden Sie in den oben verlinkten Tutorials.
+>Wenn Sie Einverständnisdaten an [!DNL Real-Time Customer Profile] senden möchten, müssen Sie ein [!DNL Profile]-aktiviertes Schema erstellen, das auf der [!DNL XDM Individual Profile]-Klasse basiert, die den [!UICONTROL Consents and Preferences] Datentyp enthält. Der Datensatz, den Sie basierend auf diesem Schema erstellen, muss auch für die [!DNL Profile] aktiviert sein. Die einzelnen Schritte im Zusammenhang mit den [!DNL Real-Time Customer Profile] für Schemata und Datensätze finden Sie in den oben verlinkten Tutorials.
 >
 >Darüber hinaus müssen Sie auch sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass die Datensätze, die die neuesten Einverständnis- und Präferenzdaten enthalten, priorisiert werden, damit Kundenprofile korrekt aktualisiert werden. Weitere Informationen finden Sie in der Übersicht [Zusammenführungsrichtlinien](../../rtcdp/profile/merge-policies.md) .
 
 ## Umgang mit Einverständnis- und Voreinstellungsänderungen
 
-Wenn ein Kunde sein Einverständnis oder seine Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen erfasst und sofort mithilfe der [Adobe Experience Platform Web SDK durchgesetzt &#x200B;](../../web-sdk/commands/setconsent.md). Wenn ein Kunde die Datenerfassung ablehnt, muss diese sofort eingestellt werden. Wenn ein Kunde die Personalisierung ablehnt, sollte auf der nächsten Seite, die er besucht, keine Personalisierung vorhanden sein.
+Wenn ein Kunde sein Einverständnis oder seine Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen erfasst und sofort durchgesetzt werden, indem das Einverständnis in der verwendeten Datenerfassungsbibliothek festgelegt wird. Wenn ein Kunde die Datenerfassung ablehnt, muss diese sofort eingestellt werden. Wenn ein Kunde die Personalisierung ablehnt, sollte auf der nächsten Seite, die er besucht, keine Personalisierung vorhanden sein. Siehe [`setConsent`](/help/collection/js/commands/setconsent.md) mit der JavaScript-Bibliothek oder die [[!UICONTROL Set consent]](/help/tags/extensions/client/web-sdk/actions/set-consent.md) Aktion mit der Tag-Erweiterung.
 
 ## Anhang {#appendix}
 
-Die folgenden Abschnitte enthalten zusätzliche Referenzinformationen zum Datentyp [!UICONTROL Einverständnis und Voreinstellungen].
+Die folgenden Abschnitte enthalten zusätzliche Referenzinformationen zum [!UICONTROL Consents and Preferences] Datentyp.
 
 ### Akzeptierte Werte für `val` {#choice-values}
 
@@ -315,6 +315,6 @@ In der folgenden Tabelle sind die akzeptierten Werte für `preferred` aufgeführ
 
 {style="table-layout:auto"}
 
-### Vollständiges [!UICONTROL Einverständnis und Voreinstellungen]-Schema {#full-schema}
+### Vollständiges [!UICONTROL Consents and Preferences] {#full-schema}
 
-Das vollständige Schema für den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).
+Das vollständige Schema für den [!UICONTROL Consents and Preferences] Datentyp finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).

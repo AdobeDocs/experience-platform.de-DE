@@ -1,21 +1,21 @@
 ---
 title: Übersicht über Datenströme
-description: Erfahren Sie, wie Datenströme Ihnen dabei helfen, Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Drittanbieterzielen zu verbinden.
+description: Erfahren Sie, wie Sie mithilfe von Datenströmen Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Zielen von Drittanbietern verbinden können.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 70%
+source-wordcount: '709'
+ht-degree: 60%
 
 ---
 
 # Übersicht über Datenströme
 
-Ein Datenstrom stellt die Server-seitige Konfiguration für die Adobe Experience Platform Web- und Mobile-SDKs dar. Während Client-seitige Einstellungen (z. B. die `edgeDomain`) mit dem [`configure`](/help/web-sdk/commands/configure/overview.md)-Befehl in der SDK verarbeitet werden, verwalten Datenströme alle anderen Konfigurationen.
+Ein Datenstrom stellt die Server-seitige Konfiguration für die Adobe Experience Platform Web- und Mobile-SDKs dar. Während Client-seitige Einstellungen (z. B. die [`configure`](/help/collection/js/commands/configure/overview.md)) mit dem `edgeDomain`-Befehl in der SDK verarbeitet werden, verwalten Datenströme alle anderen Konfigurationen.
 
-Wenn Sie eine Anfrage an das Edge Network senden, verweist die `datastreamId` auf den Datenstrom, an den die Daten gesendet werden. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne den Code Ihrer Website zu ändern.
+Wenn Sie eine Anfrage an die Edge Network senden, verweist die `datastreamId` auf den Datenstrom, an den die Daten gesendet werden. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne den Code Ihrer Website zu ändern.
 
-Sie können Datenströme erstellen und verwalten, indem Sie **[!UICONTROL Datenströme]** in der linken Navigation innerhalb der Adobe Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche auswählen.
+Sie können Datenströme erstellen und verwalten, indem Sie im linken Navigationsbereich der Adobe Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche **[!UICONTROL Datastreams]** auswählen.
 
 ![Registerkarte „Datenströme“ in der Benutzeroberfläche](assets/overview/datastreams-tab.png)
 
@@ -33,7 +33,7 @@ Datenströme bieten drei Methoden, mit denen Sie Ihre sensiblen Daten sicher ver
 
 * [Verbesserte Verschlüsselung](#encryption)
 * [Data Governance](#governance)
-* [Audit-Protokolle](#audit-logs)
+* [Auditprotokolle](#audit-logs)
 
 ### Verbesserte Verschlüsselung {#encryption}
 
@@ -47,21 +47,21 @@ Das folgende Video bietet einen kurzen Überblick darüber, wie Datennutzungsbes
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
-In Experience Platform können Sie [sensible Datennutzungskennzeichnungen](../data-governance/labels/reference.md#sensitive) auf Schemata und Felder anwenden, die Daten enthalten, welche Ihr Unternehmen als sensibel einstuft. So wird beispielsweise die Kennzeichnung `RHD` für geschützte Gesundheitsinformationen (PHI) verwendet, und die Kennzeichnung `S1` steht für Geolokalisierungsdaten.
+In Experience Platform können Sie [sensible Datennutzungs-Labels](../data-governance/labels/reference.md#sensitive) auf Schemata und Felder anwenden, die Daten enthalten, welche Ihr Unternehmen als sensibel einstuft. So wird beispielsweise das Label `RHD` für geschützte Gesundheitsinformationen (PHI) verwendet, und das Label `S1` steht für Geolokalisierungsdaten.
 
 >[!NOTE]
 >
->Details zum Anwenden von Datennutzungskennzeichnungen auf der Registerkarte [!UICONTROL Schemata] in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche finden Sie im [Tutorial zur Schemakennzeichnung](../xdm/tutorials/labels.md).
+>Weitere Informationen zum Anwenden von Datennutzungskennzeichnungen auf der Registerkarte &quot;[!UICONTROL Schemas]&quot; in der Experience Platform-Benutzeroberfläche oder Datenerfassungs-Benutzeroberfläche finden Sie im [Tutorial zu Schemakennzeichnungen](../xdm/tutorials/labels.md).
 
-Wenn Sie beim Erstellen eines Datenstroms das ausgewählte Schema vertrauliche Datennutzungskennzeichnungen enthält, können Sie den Datenstrom nur so konfigurieren, dass diese Daten an HIPAA-fähige Ziele gesendet werden. Derzeit ist Adobe Experience Platform das einzige HIPAA-fähige Ziel, das von Datenströmen unterstützt wird. Andere Zieldienste wie Adobe Target, Adobe Analytics, Adobe Audience Manager, Ereignisweiterleitung und Edge-Ziele sind für Datenströme mit sensiblen Datennutzungskennzeichnungen deaktiviert.
+Wenn Sie beim Erstellen eines Datenstroms das ausgewählte Schema vertrauliche Datennutzungskennzeichnungen enthält, können Sie den Datenstrom nur so konfigurieren, dass diese Daten an HIPAA-fähige Ziele gesendet werden. Derzeit ist Adobe Experience Platform das einzige HIPAA-fähige Ziel, das von Datenströmen unterstützt wird. Andere Zieldienste wie Adobe Target, Adobe Analytics, Adobe Audience Manager, Ereignisweiterleitung und Edge-Ziele sind für Datenströme mit sensiblen Datennutzungs-Labels deaktiviert.
 
-Wenn ein Schema in einem vorhandenen Datenstrom mit nicht HIPAA-fähigen Diensten verwendet wird, führt der Versuch, dem Schema eine sensible Datennutzungskennzeichnung hinzuzufügen, zu einer Richtlinienverletzungsmeldung und die Aktion wird verhindert. Die Meldung gibt an, welcher Datenstrom die Verletzung ausgelöst hat, und schlägt vor, alle nicht HIPAA-fähigen Services aus dem Datenstrom zu entfernen, um das Problem zu beheben.
+Wenn ein Schema in einem vorhandenen Datenstrom mit nicht HIPAA-fähigen Diensten verwendet wird, führt der Versuch, dem Schema ein sensibles Datennutzungs-Label hinzuzufügen, zu einer Richtlinienverletzungsmeldung und die Aktion wird verhindert. Die Meldung gibt an, welcher Datenstrom die Verletzung ausgelöst hat, und schlägt vor, alle nicht HIPAA-fähigen Services aus dem Datenstrom zu entfernen, um das Problem zu beheben.
 
-### Audit-Protokolle
+### Auditprotokolle
 
 In Experience Platform können Datenstrom-Aktivitäten in Form von Administratorprotokollen überwacht werden. Audit-Protokolle geben an **wer** welche **ausgeführt** und **wann** sowie andere kontextuelle Daten, mit denen Sie Probleme im Zusammenhang mit Datenströmen beheben können, damit Ihr Unternehmen die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen erfüllen kann.
 
-Jedes Mal, wenn eine Benutzerin oder ein Benutzer einen Datenstrom erstellt, aktualisiert oder löscht, wird ein Administratorprotokoll erstellt, um die Aktion aufzuzeichnen. Dasselbe erfolgt, wenn jemand über die [Datenvorbereitung für die Datenerfassung](./data-prep.md) eine Zuordnung erstellt, aktualisiert oder löscht. Unabhängig davon, ob es sich um einen Datenstrom oder eine Zuordnung handelt, die aktualisiert wurde, wird das resultierende Administratorprotokoll unter dem Ressourcentyp [!UICONTROL Datenströme] kategorisiert.
+Jedes Mal, wenn eine Benutzerin oder ein Benutzer einen Datenstrom erstellt, aktualisiert oder löscht, wird ein Administratorprotokoll erstellt, um die Aktion aufzuzeichnen. Dasselbe erfolgt, wenn jemand über die [Datenvorbereitung für die Datenerfassung](./data-prep.md) eine Zuordnung erstellt, aktualisiert oder löscht. Unabhängig davon, ob es sich um einen Datenstrom oder eine Zuordnung handelte, die aktualisiert wurde, wird das resultierende Auditprotokoll unter dem [!UICONTROL Datastreams] Ressourcentyp kategorisiert.
 
 Weitere Informationen zur Interpretation von Protokollen aus Datenströmen und anderen unterstützten Diensten finden Sie in der Dokumentation zu [Administratorprotokollen](../landing/governance-privacy-security/audit-logs/overview.md).
 

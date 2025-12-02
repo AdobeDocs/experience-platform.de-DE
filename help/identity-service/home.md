@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service – Übersicht
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1580'
 ht-degree: 8%
 
 ---
@@ -105,15 +105,15 @@ Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen versc
 
 Das folgende Video soll Ihnen Identitäten und Identitätsdiagramme näherbringen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422772?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Grundlegendes zur Rolle von Identity Service in der Experience Platform-Infrastruktur
 
 Identity Service spielt eine wichtige Rolle in Experience Platform. Zu diesen wichtigen Integrationen gehören die folgenden:
 
 * [Schemata](../xdm/home.md): Innerhalb eines bestimmten Schemas ermöglichen die als Identität markierten Schemafelder die Erstellung von Identitätsdiagrammen.
-* [Datensätze](../catalog/datasets/overview.md): Wenn ein Datensatz für die Aufnahme in das Echtzeit-Kundenprofil aktiviert ist, werden Identitätsdiagramme aus dem Datensatz generiert, da der Datensatz mindestens zwei Felder enthält, die als Identität markiert sind.
-* [Web SDK](../web-sdk/home.md): Web SDK sendet Erlebnisereignisse an Adobe Experience Platform, und Identity Service generiert ein Diagramm, wenn zwei oder mehr Identitäten im Ereignis vorhanden sind.
+* [Datensätze](../catalog/datasets/overview.md): Wenn ein Datensatz für die Aufnahme in das Echtzeit-Kundenprofil aktiviert ist, werden Identitätsdiagramme aus dem Datensatz generiert, da der Datensatz mindestens zwei als Identität markierte Felder enthält.
+* [Datenerfassung](/help/collection/home.md): Datenerfassungsbibliotheken (z. B. die Web-SDK) senden Erlebnisereignisse an Adobe Experience Platform. Der Identity Service generiert ein Diagramm, wenn im Ereignis zwei oder mehr Identitäten vorhanden sind.
 * [Echtzeit-Kundenprofil](../profile/home.md): Bevor Attribute und Ereignisse für ein bestimmtes Profil zusammengeführt werden, kann das Echtzeit-Kundenprofil auf das Identitätsdiagramm verweisen. Weitere Informationen finden Sie im Handbuch unter [Grundlagen der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](./identity-and-profile.md).
 * [Ziele](../destinations/home.md): Ziele können Profilinformationen basierend auf einem Identity-Namespace an andere Systeme senden, z. B. an Hash-E-Mails.
 * [Segmentübereinstimmung](../segmentation/ui/segment-match/overview.md): Die Segmentübereinstimmung stimmt mit zwei Profilen in zwei verschiedenen Sandboxes überein, die denselben Identity-Namespace und denselben Identitätswert haben.

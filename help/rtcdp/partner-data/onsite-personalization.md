@@ -3,7 +3,7 @@ title: Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe 
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
 source-wordcount: '2568'
 ht-degree: 72%
@@ -47,7 +47,7 @@ Wenn Sie planen, von Partnern bereitgestellte Attribute zu verwenden, um Ihren a
 Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Real-time Customer Data Platform und anderen Experience Cloud-Lösungen verwenden. Vergewissern Sie sich, dass Sie die notwendigen [Attribut-basierten Zugriffsrechte](/help/access-control/abac/overview.md) für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
 
 * Datenerfassung
-   * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)
+   * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)
    * [Tags](/help/tags/home.md)
    * [Datenströme](/help/datastreams/overview.md)
 * Datenverwaltung in Real-Time CDP
@@ -64,7 +64,7 @@ Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere 
 
 Sehen Sie sich das folgende Video-Tutorial an, um eine exemplarische Vorgehensweise zur Personalisierung von Onsite-Erlebnissen für unbekannte Besucher zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3449261/?captions=ger&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 
@@ -141,7 +141,7 @@ Wählen Sie beim Erstellen des Datenstroms im Feld **[!UICONTROL Event schema]**
 
 ![Die Ereignisschema-Auswahl beim Konfigurieren eines neuen Datenstroms ist hervorgehoben.](/help/rtcdp/assets/partner-data/onsite-personalization/event-schema-selector-datastream.png)
 
-[Wählen Sie den zuvor erstellten &#x200B;](/help/datastreams/configure.md#aep) aus der Dropdown-Liste aus, aktivieren Sie die Kontrollkästchen neben **[!UICONTROL Edge Segmentation]** und **[!UICONTROL Personalization Destinations]** und wählen Sie **[!UICONTROL Save]** aus.
+[Wählen Sie den zuvor erstellten ](/help/datastreams/configure.md#aep) aus der Dropdown-Liste aus, aktivieren Sie die Kontrollkästchen neben **[!UICONTROL Edge Segmentation]** und **[!UICONTROL Personalization Destinations]** und wählen Sie **[!UICONTROL Save]** aus.
 
 Beachten Sie, dass Sie in diesem Szenario keinen Profildatensatz auswählen müssen, da Sie ereignisbasierte Zeitreihendaten einbringen.
 
@@ -287,4 +287,4 @@ Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerd
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Verwenden Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, damit Sie [Ihre Profilbasis mit potenziellen Profilen von Datenpartnern erweitern und mit ihnen interagieren können, um neue Kundinnen und Kunden zu gewinnen oder zu erreichen](/help/rtcdp/partner-data/prospecting.md).
-* [Erweiterte Aktivierung von Interessentenprofilen und Zielgruppen potenzieller &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.
+* [Erweiterte Aktivierung von Interessentenprofilen und Zielgruppen potenzieller ](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.

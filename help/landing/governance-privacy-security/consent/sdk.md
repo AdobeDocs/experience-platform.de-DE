@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK integrieren
 role: Developer
 feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1293'
 ht-degree: 2%
 
 ---
@@ -27,8 +27,8 @@ In diesem Tutorial wird davon ausgegangen, dass Sie bereits bestimmt haben, wie 
 Dieses Handbuch folgt dem Workflow zum Einrichten der SDK mithilfe der Tag-Erweiterung in der Benutzeroberfläche. Wenn Sie die -Erweiterung nicht verwenden möchten und es vorziehen würden, die eigenständige Version der SDK direkt auf Ihrer Site einzubetten, lesen Sie bitte die folgenden Dokumente anstelle dieses Handbuchs:
 
 * [Konfigurieren eines Datenstroms](/help/datastreams/overview.md)
-* [Installieren des SDK](/help/web-sdk/install/overview.md)
-* [Konfigurieren von SDK für Einverständnisbefehle](/help/web-sdk/commands/configure/defaultconsent.md)
+* [Installieren des SDK](/help/collection/js/install/overview.md)
+* [Konfigurieren von SDK für Einverständnisbefehle](/help/collection/js/commands/configure/defaultconsent.md)
 
 Die Installationsschritte in diesem Handbuch erfordern ein grundlegendes Verständnis von Tag-Erweiterungen und ihrer Installation in Web-Anwendungen. Weiterführende Informationen finden Sie in der folgenden Dokumentation:
 
@@ -38,7 +38,7 @@ Die Installationsschritte in diesem Handbuch erfordern ein grundlegendes Verstä
 
 ## Einrichten eines Datenstroms
 
-Damit SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datenstrom konfigurieren. Wählen Sie in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform **[!UICONTROL Benutzeroberfläche im linken Navigationsbereich]** Datenströme“ aus.
+Damit SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datenstrom konfigurieren. Wählen Sie in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Datastreams]** aus.
 
 Nachdem Sie einen neuen Datenstrom erstellt oder einen vorhandenen ausgewählt haben, um ihn zu bearbeiten, klicken Sie auf die Umschaltfläche neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie als Nächstes die unten aufgeführten Werte, um das Formular auszufüllen.
 
@@ -46,23 +46,23 @@ Nachdem Sie einen neuen Datenstrom erstellt oder einen vorhandenen ausgewählt h
 
 | Datenstromfeld | Wert |
 | --- | --- |
-| [!UICONTROL Sandbox] | Der Name der Experience Platform [Sandbox](../../../sandboxes/home.md) die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datenstroms enthält. |
-| [!UICONTROL Ereignis-Datensatz] | Ein [!DNL XDM ExperienceEvent] Datensatz, an den Sie Ereignisdaten mithilfe der SDK senden möchten. Sie müssen zwar einen Ereignisdatensatz bereitstellen, um einen Experience Platform-Datenstrom zu erstellen, aber beachten Sie, dass Einverständnisdaten, die über Ereignisse gesendet werden, in nachgelagerten Erzwingungs-Workflows nicht berücksichtigt werden. |
-| [!UICONTROL Profildatensatz] | Der [!DNL Profile] Datensatz mit Feldern für das Kundeneinverständnis, die Sie [früher“ &#x200B;](#prerequisites). |
+| [!UICONTROL Sandbox] | Der Name der Experience Platform [Sandbox](/help/sandboxes/home.md) die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datenstroms enthält. |
+| [!UICONTROL Event Dataset] | Ein [!DNL XDM ExperienceEvent] Datensatz, an den Sie Ereignisdaten mithilfe der SDK senden möchten. Sie müssen zwar einen Ereignisdatensatz bereitstellen, um einen Experience Platform-Datenstrom zu erstellen, aber beachten Sie, dass Einverständnisdaten, die über Ereignisse gesendet werden, in nachgelagerten Erzwingungs-Workflows nicht berücksichtigt werden. |
+| [!UICONTROL Profile Dataset] | Der [!DNL Profile] Datensatz mit Feldern für das Kundeneinverständnis, die Sie [früher“ ](#prerequisites). |
 
-Wenn Sie fertig sind **[!UICONTROL wählen Sie unten]** Bildschirm „Speichern“ aus und folgen Sie weiteren Eingabeaufforderungen, um die Konfiguration abzuschließen.
+Wenn Sie fertig sind, wählen Sie unten im Bildschirm **[!UICONTROL Save]** aus und befolgen Sie weitere Anweisungen, um die Konfiguration abzuschließen.
 
 ## Installieren und Konfigurieren der Experience Platform Web SDK
 
-Nachdem Sie einen Datenstrom wie im vorherigen Abschnitt beschrieben erstellt haben, müssen Sie dann die Experience Platform Web SDK-Erweiterung konfigurieren, die Sie schließlich auf Ihrer Site bereitstellen. Wenn Sie die SDK-Erweiterung nicht in Ihrer Tag-Eigenschaft installiert haben, wählen Sie **[!UICONTROL Erweiterungen]** im linken Navigationsbereich und dann die Registerkarte **[!UICONTROL Katalog]** aus. Wählen Sie dann **[!UICONTROL Installieren]** unter der Experience Platform SDK-Erweiterung in der Liste der verfügbaren Erweiterungen aus.
+Nachdem Sie einen Datenstrom wie im vorherigen Abschnitt beschrieben erstellt haben, müssen Sie dann die Experience Platform Web SDK-Erweiterung konfigurieren, die Sie schließlich auf Ihrer Site bereitstellen. Wenn Sie die SDK-Erweiterung nicht in Ihrer Tag-Eigenschaft installiert haben, wählen Sie im linken Navigationsbereich **[!UICONTROL Extensions]** und dann die Registerkarte **[!UICONTROL Catalog]** aus. Wählen Sie dann in der Liste der verfügbaren Erweiterungen **[!UICONTROL Install]** unter der Experience Platform SDK-Erweiterung aus.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-Wählen Sie beim Konfigurieren von SDK unter **[!UICONTROL Edge]** Konfigurationen den Datenstrom aus, den Sie im vorherigen Schritt erstellt haben.
+Wählen Sie beim Konfigurieren von SDK unter **[!UICONTROL Edge Configurations]** den Datenstrom aus, den Sie im vorherigen Schritt erstellt haben.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
-Wählen **[!UICONTROL Speichern]**, um die Erweiterung zu installieren.
+Wählen Sie **[!UICONTROL Save]** aus, um die Erweiterung zu installieren.
 
 ### Erstellen eines Datenelements zum Festlegen des Standardeinverständnisses
 
@@ -80,19 +80,19 @@ Wenn die Region des Benutzers durch eine CMP bestimmt wird, können Sie stattdes
 1. Legen Sie im Ereignishandler eine `adobeDefaultConsent` Variable basierend auf der Region des Benutzers fest und laden Sie dann das Tag-Bibliotheksskript mit JavaScript.
 1. Richten Sie ein Datenelement ein, das die `adobeDefaultConsent` JavaScript-Variable verwendet, und verwenden Sie dieses Datenelement als standardmäßigen Einverständniswert für den Benutzer.
 
-Um ein Datenelement in der Benutzeroberfläche zu erstellen, wählen Sie **[!UICONTROL Datenelemente]** in der linken Navigationsleiste aus und klicken Sie dann auf **[!UICONTROL Datenelement hinzufügen]**, um zum Dialogfeld für die Erstellung von Datenelementen zu navigieren.
+Um ein Datenelement in der Benutzeroberfläche zu erstellen, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Data Elements]** und wählen Sie dann **[!UICONTROL Add Data Element]** aus, um zum Dialogfeld für die Erstellung von Datenelementen zu navigieren.
 
-Von hier aus müssen Sie ein Datenelement [!UICONTROL JavaScript-Variable] basierend auf `adobeDefaultConsent` erstellen. Wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
+Von hier aus müssen Sie ein [!UICONTROL JavaScript Variable] Datenelement basierend auf `adobeDefaultConsent` erstellen. Wählen Sie **[!UICONTROL Save]** aus, wenn Sie fertig sind.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Nachdem das Datenelement erstellt wurde, navigieren Sie zurück zur Konfigurationsseite der Web-SDK-Erweiterung. Wählen Sie im [!UICONTROL Datenschutz] die Option **[!UICONTROL Von Datenelement bereitgestellt]** und verwenden Sie das bereitgestellte Dialogfeld, um das zuvor erstellte standardmäßige Datenelement zum Einverständnis auszuwählen.
+Nachdem das Datenelement erstellt wurde, navigieren Sie zurück zur Konfigurationsseite der Web-SDK-Erweiterung. Wählen Sie im Abschnitt [!UICONTROL Privacy] die Option **[!UICONTROL Provided by data element]** aus und verwenden Sie das bereitgestellte Dialogfeld, um das zuvor erstellte Datenelement für das Standardeinverständnis auszuwählen.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
 ### Bereitstellen der Erweiterung auf Ihrer Website
 
-Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in Ihre Website integriert werden. Ausführliche Informationen zur Bereitstellung [&#x200B; aktualisierten Bibliotheks-Builds finden Sie &#x200B;](../../../tags/ui/publishing/overview.md) „Veröffentlichungshandbuch“ in der Tags-Dokumentation.
+Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in Ihre Website integriert werden. Ausführliche Informationen zur Bereitstellung [ aktualisierten Bibliotheks-Builds finden Sie ](/help/tags/ui/publishing/overview.md) „Veröffentlichungshandbuch“ in der Tags-Dokumentation.
 
 ## Erstellen von Befehlen zur Einverständnisänderung {#commands}
 
@@ -101,7 +101,7 @@ Nachdem Sie die SDK-Erweiterung in Ihre Website integriert haben, können Sie mi
 Der Befehl `setConsent` führt zwei Aktionen aus:
 
 1. Aktualisiert die Profilattribute des Benutzers direkt im Profilspeicher. Dadurch werden keine Daten an den Data Lake gesendet.
-1. Erstellt ein [Erlebnisereignis](../../../xdm/classes/experienceevent.md) das ein mit einem Zeitstempel versehenes Konto des Einverständnisänderungsereignisses aufzeichnet. Diese Daten werden direkt an den Data Lake gesendet und können verwendet werden, um Änderungen der Einverständnispräferenzen im Laufe der Zeit zu verfolgen.
+1. Erstellt ein [Erlebnisereignis](/help/xdm/classes/experienceevent.md) das ein mit einem Zeitstempel versehenes Konto des Einverständnisänderungsereignisses aufzeichnet. Diese Daten werden direkt an den Data Lake gesendet und können verwendet werden, um Änderungen der Einverständnispräferenzen im Laufe der Zeit zu verfolgen.
 
 ### Wann `setConsent` aufgerufen werden soll
 
@@ -112,7 +112,7 @@ Es gibt zwei Szenarien, in denen `setConsent` auf Ihrer Site aufgerufen werden s
 
 ### `setConsent`
 
-Der [`setConsent`](/help/web-sdk/commands/setconsent.md)-Befehl erwartet ein Payload-Objekt, das eine einzige Eigenschaft vom Typ Array enthält: `consent`. Das `consent`-Array muss mindestens ein Objekt enthalten, das die erforderlichen Einverständnisfelder für den Adobe-Standard bereitstellt.
+Der [`setConsent`](/help/collection/js/commands/setconsent.md)-Befehl erwartet ein Payload-Objekt, das eine einzige Eigenschaft vom Typ Array enthält: `consent`. Das `consent`-Array muss mindestens ein Objekt enthalten, das die erforderlichen Einverständnisfelder für den Adobe-Standard bereitstellt.
 
 Die erforderlichen Einverständnisfelder für den Adobe-Standard werden im folgenden Beispiel `setConsent` -Aufruf gezeigt:
 
@@ -195,9 +195,9 @@ var setConsent = function () {
 
 ## Umgang mit SDK-Antworten
 
-Alle [!DNL Experience Platform SDK]-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. um Bestätigungsnachrichten an den Kunden anzuzeigen. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/web-sdk/commands/command-responses.md).
+Alle [!DNL Experience Platform SDK]-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. um Bestätigungsnachrichten an den Kunden anzuzeigen. Weitere Informationen finden [ unter ](/help/collection/js/commands/command-responses.md).
 
-Nachdem Sie `setConsent` Aufrufe mit der SDK erfolgreich durchgeführt haben, können Sie mit dem Profil-Viewer in der Experience Platform-Benutzeroberfläche überprüfen, ob Daten im Profilspeicher landen. Weitere Informationen finden Sie im Abschnitt [Durchsuchen von Profilen nach &#x200B;](../../../profile/ui/user-guide.md#browse-identity)).
+Nachdem Sie `setConsent` Aufrufe mit der SDK erfolgreich durchgeführt haben, können Sie mit dem Profil-Viewer in der Experience Platform-Benutzeroberfläche überprüfen, ob Daten im Profilspeicher landen. Weitere Informationen finden Sie im Abschnitt [Durchsuchen von Profilen nach ](/help/profile/ui/user-guide.md#browse-identity)).
 
 ## Nächste Schritte
 
