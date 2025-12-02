@@ -20,7 +20,7 @@ Erfahren Sie, wie Sie Ihr -Konto für Anwendungsfall-Playbooks einrichten, die f
 * Konfigurieren von Benutzerberechtigungen
 * Konfigurieren von Journey Optimizer-Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen (wenn Sie Journey Optimizer-Playbooks verwenden möchten)
 
-Um in der Benutzeroberfläche von Experience Platform auf eine umfangreiche Sammlung von Playbooks für Anwendungsfälle zuzugreifen, wählen Sie **[!UICONTROL Playbooks]** in der linken Navigationsleiste aus. Lesen Sie die Dokumentation zum Navigieren [ Playbooks für Anwendungsfälle ](../playbooks/navigate.md) und beginnen Sie mit einer [inspirierenden Sandbox](../playbooks/navigate.md).
+Um in der Benutzeroberfläche von Experience Platform auf eine umfangreiche Sammlung von Playbooks für Anwendungsfälle zuzugreifen, wählen Sie **[!UICONTROL Playbooks]** in der linken Navigationsleiste aus. Lesen Sie die Dokumentation zum Navigieren [&#x200B; Playbooks für Anwendungsfälle &#x200B;](../playbooks/navigate.md) und beginnen Sie mit einer [inspirierenden Sandbox](../playbooks/navigate.md).
 
 ## Konfigurieren von Playbooks für Anwendungsfälle - Videoeinführung {#video}
 
@@ -30,7 +30,7 @@ In diesem Video erfahren Sie, wie Sie Ihre Sandbox erstellen, Berechtigungen kon
 
 ## Erstellen einer Entwicklungs-Sandbox {#create-development-sandbox}
 
-Anwendungsfall Playbooks verwendet einen speziellen Typ von Entwicklungs-Sandbox. Um zu beginnen und Zugriff auf die [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md)-Funktionen zu erhalten, [ Sie eine neue Entwicklungs-Sandbox ](/help/sandboxes/ui/user-guide.md#create) (stellen Sie sicher, dass Sie keine Produktions-Sandbox auswählen), deren Name (nicht deren Titel) entweder `-ucp` oder `-UCP` im Suffix enthält, wie unten dargestellt.
+Anwendungsfall Playbooks verwendet einen speziellen Typ von Entwicklungs-Sandbox. Um zu beginnen und Zugriff auf die [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md)-Funktionen zu erhalten, [&#x200B; Sie eine neue Entwicklungs-Sandbox &#x200B;](/help/sandboxes/ui/user-guide.md#create) (stellen Sie sicher, dass Sie keine Produktions-Sandbox auswählen), deren Name (nicht deren Titel) entweder `-ucp` oder `-UCP` im Suffix enthält, wie unten dargestellt.
 
 >[!IMPORTANT]
 >
@@ -57,7 +57,7 @@ Um die erforderlichen Berechtigungen hinzuzufügen, fügen Sie in der Benutzerob
 
 **Richten Sie eine Rolle für Playbooks ein:**
 
-Alternativ können Sie auch erwägen, neue Rollen mit [den erforderlichen Berechtigungen) ](/help/access-control/home.md#sandboxes-and-permissions).
+Alternativ können Sie auch erwägen, neue Rollen mit [den erforderlichen Berechtigungen) &#x200B;](/help/access-control/home.md#sandboxes-and-permissions).
 
 [Richten Sie eine neue Rolle ein](/help/access-control/abac/ui/permissions.md) mit den erforderlichen Berechtigungen für wesentliche Playbook-Aufgaben. Erstellen Sie eine Rolle und fügen Sie ihr die neue Sandbox hinzu, wie unten dargestellt.
 
@@ -115,4 +115,4 @@ Lesen Sie die Dokumentation [Einrichten von Oberflächen für Push-Kanäle](http
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie alle Schritte in diesem Dokument ausgeführt haben, sollten Sie eine Entwicklungs-Sandbox mit Playbooks für Anwendungsfälle in der linken Navigation erstellt haben. Jetzt wissen Sie auch, wie Sie Ihren Team-Mitgliedern die erforderlichen Berechtigungen zum Anzeigen und Verwalten von Playbooks und zum Generieren von Assets gewähren. Lesen Sie als nächsten Schritt, wie [ das richtige Playbook ](/help/use-case-playbooks/playbooks/choose.md) und dann [Instanzen daraus erstellen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Nachdem Sie alle Schritte in diesem Dokument ausgeführt haben, sollten Sie eine Entwicklungs-Sandbox mit Playbooks für Anwendungsfälle in der linken Navigation erstellt haben. Jetzt wissen Sie auch, wie Sie Ihren Team-Mitgliedern die erforderlichen Berechtigungen zum Anzeigen und Verwalten von Playbooks und zum Generieren von Assets gewähren. Lesen Sie als nächsten Schritt, wie [&#x200B; das richtige Playbook &#x200B;](/help/use-case-playbooks/playbooks/choose.md) und dann [Instanzen daraus erstellen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
