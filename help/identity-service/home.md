@@ -105,7 +105,7 @@ Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen versc
 
 Das folgende Video soll Ihnen Identitäten und Identitätsdiagramme näherbringen.
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422772?captions=ger&quality=12&learn=on)
 
 ## Grundlegendes zur Rolle von Identity Service in der Experience Platform-Infrastruktur
 
