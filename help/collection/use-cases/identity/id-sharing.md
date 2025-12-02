@@ -53,7 +53,7 @@ Der Abfragezeichenfolgenparameter enthält:
 
 Die Freigabe der Mobile-zu-Web-IDs verwendet den `adobe_mc`. Wenn der `adobe_mc` vorhanden und gültig ist, wird der `ECID` aus der Abfragezeichenfolge bei der ersten Anfrage an die Edge Network automatisch zur Identitätszuordnung hinzugefügt. Alle nachfolgenden Edge Network-Interaktionen verwenden diese `ECID`.
 
-Weitere Informationen zum Übergeben von Besucher-IDs von einer Mobile App an eine WebView finden Sie in der Dokumentation unter [&#x200B; von WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Weitere Informationen zum Übergeben von Besucher-IDs von einer Mobile App an eine WebView finden Sie in der Dokumentation unter [&#x200B; von WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=de#implementation).
 
 ## Domain-übergreifende ID-Freigabe implementieren {#cross-domain-sharing}
 

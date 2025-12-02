@@ -229,7 +229,7 @@ Zielgruppendefinitionen werden in bis zu einer Stunde an die Edge Network weiter
 ### Wo kann ich die aktivierten Attribute in Adobe Target sehen?
 
 +++Antwort
-Attribute stehen zur Verwendung in Target in {[} JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) und [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) Angeboten zur Verfügung.
+Attribute stehen zur Verwendung in Target in {[} JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=de) und [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=de) Angeboten zur Verfügung.
 +++
 
 ### Kann ich ein Ziel ohne Datenstrom erstellen und dann zu einem späteren Zeitpunkt einen Datenstrom zum selben Ziel hinzufügen?
@@ -265,7 +265,7 @@ Ja. Die [Data Governance- und Einverständnisrichtlinien](../data-governance/hom
 ### Sind die [!DNL Adobe Target]- und [!DNL Custom Personalization]-Ziele [!DNL HIPAA]?
 
 +++Antwort
-[!DNL Adobe Target] ist nicht [!DNL HIPPA] konform mit [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Kunden sollten sich bei ihren eigenen Rechtsabteilungen erkundigen, ob [!DNL HIPPA] für benutzerdefinierte Optimierungskanäle bereit sind, bevor sie die Edge-Personalisierung über [!DNL Adobe Target] oder die [!DNL Custom Personalization] Ziele verwenden.
+[!DNL Adobe Target] ist nicht [!DNL HIPPA] konform mit [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/de/solutions/industries/healthcare.html). Kunden sollten sich bei ihren eigenen Rechtsabteilungen erkundigen, ob [!DNL HIPPA] für benutzerdefinierte Optimierungskanäle bereit sind, bevor sie die Edge-Personalisierung über [!DNL Adobe Target] oder die [!DNL Custom Personalization] Ziele verwenden.
 
 Für Anwendungsfälle, bei denen die Verwaltung von Einverständnisrichtlinien skaliert werden muss, müssen Kunden [!DNL Adobe Privacy & Security Shield] kaufen. [!DNL Adobe Privacy & Security Shield] Funktionen werden als erweiterte Funktionssuite angeboten und können nicht separat erworben werden.
 

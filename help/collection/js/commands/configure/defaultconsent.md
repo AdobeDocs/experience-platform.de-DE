@@ -61,7 +61,7 @@ In der folgenden Tabelle erfahren Sie, wann eine Datenerfassung erfolgt und wann
 | `out` | `out` | Nein | Ja |
 | `out` | Nicht festgelegt | Nein | Nein |
 
-Unter [Adobe Experience Platform Web SDK-Cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) finden Sie eine Liste der Cookies, die von der Bibliothek gesetzt werden.
+Unter [Adobe Experience Platform Web SDK-Cookies](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/cookies/web-sdk) finden Sie eine Liste der Cookies, die von der Bibliothek gesetzt werden.
 
 >[!NOTE]
 >

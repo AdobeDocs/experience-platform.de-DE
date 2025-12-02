@@ -25,8 +25,8 @@ Weitere Informationen zum Einrichten technischer Konten und zum Zuweisen der erf
 
 Weitere Anleitungen zum Erstellen und Konfigurieren eines technischen Kontos finden Sie unter:
 
-- [Developer Console-Setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Schrittweise Anweisungen zum Konfigurieren der Adobe Developer Console und zum Abrufen von OAuth-Anmeldeinformationen.
-- [Einrichtung eines technischen Endkontos](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup) Eine umfassende Anleitung zum Erstellen und Konfigurieren eines technischen Kontos in Adobe Experience Platform.
+- [Developer Console-Setup](https://experienceleague.adobe.com/de/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Schrittweise Anweisungen zum Konfigurieren der Adobe Developer Console und zum Abrufen von OAuth-Anmeldeinformationen.
+- [Einrichtung eines technischen Endkontos](https://experienceleague.adobe.com/de/docs/platform-learn/tutorial-comprehensive-technical/setup) Eine umfassende Anleitung zum Erstellen und Konfigurieren eines technischen Kontos in Adobe Experience Platform.
 
 Wenn Sie nur die Benutzeroberfläche des Abfrage-Service verwenden, stellen Sie sicher, dass Sie über die erforderlichen Berechtigungen verfügen, oder stimmen Sie sich mit einem Administrator ab, der technische Konten verwaltet. Alle geplanten Abfragen werden der Liste auf der Registerkarte [!UICONTROL Scheduled queries] hinzugefügt, wo Sie den Status, Zeitplandetails und Fehlermeldungen für alle geplanten Abfrageaufträge überwachen sowie Warnhinweise abonnieren können. Weitere Informationen zur Überwachung und Verwaltung Ihrer Abfragen finden Sie im Dokument [Überwachen geplanter Abfragen](./monitor-queries.md).
 

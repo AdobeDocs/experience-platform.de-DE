@@ -50,7 +50,7 @@ Außer mithilfe der folgenden nativen Datenelemente, die von der Common Web SDK 
 >
 >Dieses Datenelement setzt Cookies und ermöglicht die Speicherung benutzergenerierter Werte in Cookies. Weitere Informationen finden Sie in der Plug-in-spezifischen Dokumentation .
 
-Ermöglicht die Einrichtung und Konfiguration des [`getAndPersistValue` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html). Das `getAndPersistValue` Datenelement speichert einen Wert in einem Cookie, der später während eines Besuchs abgerufen werden kann.
+Ermöglicht die Einrichtung und Konfiguration des [`getAndPersistValue` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html?lang=de). Das `getAndPersistValue` Datenelement speichert einen Wert in einem Cookie, der später während eines Besuchs abgerufen werden kann.
 
 Das `getAndPersistValue` Datenelement stellt die folgenden Argumente bereit:
 
@@ -66,7 +66,7 @@ Wenn die Variable im `vtp` festgelegt ist, legt das Datenelement das Cookie fest
 >
 >Dieses Plug-in erfordert Standortzugriff auf dem Client, löst jedoch keine Ausnahme aus, wenn es dies nicht bekommt.
 
-Ermöglicht die Einrichtung und Konfiguration des [`getGeoCoordinates` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html). Das `getGeoCoordinates` Datenelement erfasst den Breiten- und Längengrad der Geräte von Besuchern.
+Ermöglicht die Einrichtung und Konfiguration des [`getGeoCoordinates` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html?lang=de). Das `getGeoCoordinates` Datenelement erfasst den Breiten- und Längengrad der Geräte von Besuchern.
 
 Das `getGeoCoordinates` Datenelement verwendet keine Argumente. Gibt einen der folgenden Werte zurück:
 
@@ -80,7 +80,7 @@ Das `getGeoCoordinates` Datenelement verwendet keine Argumente. Gibt einen der f
 >
 >Dieses Datenelement setzt Cookies. Weitere Informationen finden Sie in der Plug-in-spezifischen Dokumentation .
 
-Ermöglicht die Einrichtung und Konfiguration des [`getNewRepeat` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html). Das `getNewRepeat` Datenelement bestimmt, ob ein Besucher der Website ein neuer Besucher oder ein wiederholter Besucher innerhalb einer gewünschten Anzahl von Tagen ist.
+Ermöglicht die Einrichtung und Konfiguration des [`getNewRepeat` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html?lang=de). Das `getNewRepeat` Datenelement bestimmt, ob ein Besucher der Website ein neuer Besucher oder ein wiederholter Besucher innerhalb einer gewünschten Anzahl von Tagen ist.
 
 Das `getNewRepeat` Datenelement verwendet die folgenden Argumente:
 
@@ -90,7 +90,7 @@ Dieses Datenelement gibt den Wert von `"New"` zurück, wenn das vom Datenelement
 
 ### `getPageName`
 
-Ermöglicht die Einrichtung und Konfiguration des [`getPageName` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html). Das `getPageName` Datenelement erstellt eine leicht lesbare, benutzerfreundlich formatierte Version der aktuellen URL.
+Ermöglicht die Einrichtung und Konfiguration des [`getPageName` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html?lang=de). Das `getPageName` Datenelement erstellt eine leicht lesbare, benutzerfreundlich formatierte Version der aktuellen URL.
 
 Das `getPageName` Datenelement verwendet die folgenden Argumente:
 
@@ -107,7 +107,7 @@ Das Datenelement gibt eine Zeichenfolge zurück, die eine benutzerfreundlich for
 >
 >Dieses Datenelement setzt Cookies und ermöglicht die Speicherung benutzergenerierter Werte in Cookies. Weitere Informationen finden Sie in der Plug-in-spezifischen Dokumentation .
 
-Ermöglicht die Einrichtung und Konfiguration des [`getPreviousValue` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html). Das `getPreviousValue` Datenelement legt eine Variable auf einen Wert fest, der bei einem vorherigen Treffer festgelegt wurde.
+Ermöglicht die Einrichtung und Konfiguration des [`getPreviousValue` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html?lang=de). Das `getPreviousValue` Datenelement legt eine Variable auf einen Wert fest, der bei einem vorherigen Treffer festgelegt wurde.
 
 Das `getPreviousValue` Datenelement verwendet die folgenden Argumente:
 
@@ -118,7 +118,7 @@ Beim Aufruf dieses Datenelements wird der im Cookie enthaltene Zeichenfolgenwert
 
 ### `getQueryParam`
 
-Ermöglicht die Einrichtung und Konfiguration des [`getQueryParam` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html). Das `getQueryParam` Datenelement extrahiert den Wert jedes Abfragezeichenfolgenparameters, der in einer URL enthalten ist. Dies ist nützlich, um Kampagnen-Codes sowohl intern als auch extern aus Landingpage-URLs zu extrahieren. Dies ist auch nützlich, wenn Suchbegriffe oder andere Abfragezeichenfolgen-Parameter extrahiert werden. Dieses Datenelement bietet robuste Funktionen beim Analysieren komplexer URLs, einschließlich Hashes und URLs mit mehreren Abfragezeichenfolgen-Parametern.
+Ermöglicht die Einrichtung und Konfiguration des [`getQueryParam` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html?lang=de). Das `getQueryParam` Datenelement extrahiert den Wert jedes Abfragezeichenfolgenparameters, der in einer URL enthalten ist. Dies ist nützlich, um Kampagnen-Codes sowohl intern als auch extern aus Landingpage-URLs zu extrahieren. Dies ist auch nützlich, wenn Suchbegriffe oder andere Abfragezeichenfolgen-Parameter extrahiert werden. Dieses Datenelement bietet robuste Funktionen beim Analysieren komplexer URLs, einschließlich Hashes und URLs mit mehreren Abfragezeichenfolgen-Parametern.
 
 Das `getQueryParam` Datenelement verwendet die folgenden Argumente:
 
@@ -135,7 +135,7 @@ Der Aufruf dieses Datenelements gibt einen Wert zurück, der von den oben genann
 
 ### `getTimeParting`
 
-Ermöglicht die Einrichtung und Konfiguration des [`getTimeParting` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html). Das `getTimeParting` Datenelement erfasst die Details des Zeitpunkts, zu dem eine messbare Aktivität auf Ihrer Site stattfindet. Dieses Datenelement ist nützlich, wenn Sie Metriken nach einer wiederholbaren Zeitteilung über einen bestimmten Datumsbereich aufschlüsseln möchten. Sie können beispielsweise die Konversionsraten zwischen zwei verschiedenen Wochentagen vergleichen, z. B. alle Sonntage und alle Donnerstage. Sie können auch Zeiträume des Tages vergleichen, z. B. alle Vormittage und alle Abende.
+Ermöglicht die Einrichtung und Konfiguration des [`getTimeParting` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html?lang=de). Das `getTimeParting` Datenelement erfasst die Details des Zeitpunkts, zu dem eine messbare Aktivität auf Ihrer Site stattfindet. Dieses Datenelement ist nützlich, wenn Sie Metriken nach einer wiederholbaren Zeitteilung über einen bestimmten Datumsbereich aufschlüsseln möchten. Sie können beispielsweise die Konversionsraten zwischen zwei verschiedenen Wochentagen vergleichen, z. B. alle Sonntage und alle Donnerstage. Sie können auch Zeiträume des Tages vergleichen, z. B. alle Vormittage und alle Abende.
 
 Das `getTimeParting` Datenelement verwendet das folgende Argument:
 
@@ -162,7 +162,7 @@ Der Aufruf dieses Datenelements gibt eine Zeichenfolge zurück, die die folgende
 >
 >Dieses Datenelement setzt Cookies. Weitere Informationen finden Sie in der Plug-in-spezifischen Dokumentation .
 
-Ermöglicht die Einrichtung und Konfiguration des [`getTimeSinceLastVisit` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html). Das `getTimeSinceLastVisit` Datenelement verfolgt, wie lange ein Besucher nach seinem letzten Besuch gebraucht hat, um zu Ihrer Site zurückzukehren.
+Ermöglicht die Einrichtung und Konfiguration des [`getTimeSinceLastVisit` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html?lang=de). Das `getTimeSinceLastVisit` Datenelement verfolgt, wie lange ein Besucher nach seinem letzten Besuch gebraucht hat, um zu Ihrer Site zurückzukehren.
 
 Das `getTimeSinceLastVisit` Datenelement verwendet keine Argumente. Gibt die Zeit zurück, die seit der letzte Besuch der Website verstrichen ist, und wird im folgenden Format in Buckets zusammengefasst:
 
@@ -177,7 +177,7 @@ Das `getTimeSinceLastVisit` Datenelement verwendet keine Argumente. Gibt die Zei
 >
 >Dieses Datenelement setzt Cookies und ermöglicht die Speicherung benutzergenerierter Werte in Cookies. Weitere Informationen finden Sie in der Plug-in-spezifischen Dokumentation .
 
-Ermöglicht die Einrichtung und Konfiguration des [`getValOnce` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html). Das `getValOnce`-Datenelement verhindert, dass eine Variable mehrmals auf denselben Wert gesetzt wird.
+Ermöglicht die Einrichtung und Konfiguration des [`getValOnce` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html?lang=de). Das `getValOnce`-Datenelement verhindert, dass eine Variable mehrmals auf denselben Wert gesetzt wird.
 
 Das `getValOnce` Datenelement verwendet die folgenden Argumente:
 
@@ -194,7 +194,7 @@ Wenn das `vtc` Argument und der Cookie-Wert übereinstimmen, gibt diese Methode 
 >
 >Dieses Datenelement setzt Cookies. Weitere Informationen finden Sie in der Plug-in-spezifischen Dokumentation .
 
-Ermöglicht die Einrichtung und Konfiguration des [`getVisitDuration` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html). Das `getVisitDuration` Datenelement verfolgt die Zeit in Minuten, die der Besucher bis zu diesem Zeitpunkt auf der Website war.
+Ermöglicht die Einrichtung und Konfiguration des [`getVisitDuration` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html?lang=de). Das `getVisitDuration` Datenelement verfolgt die Zeit in Minuten, die der Besucher bis zu diesem Zeitpunkt auf der Website war.
 
 Das `getVisitDuration` Datenelement verwendet keine Argumente. Gibt einen der folgenden Werte zurück:
 
@@ -209,7 +209,7 @@ Das `getVisitDuration` Datenelement verwendet keine Argumente. Gibt einen der fo
 >
 >Dieses Datenelement setzt Cookies. Weitere Informationen finden Sie in der Plug-in-spezifischen Dokumentation .
 
-Ermöglicht die Einrichtung und Konfiguration des [`getVisitNum` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html). Das `getVisitNum` Datenelement gibt die Besuchsnummer für alle Besucher zurück, die innerhalb der gewünschten Anzahl von Tagen auf die Website kommen.
+Ermöglicht die Einrichtung und Konfiguration des [`getVisitNum` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html?lang=de). Das `getVisitNum` Datenelement gibt die Besuchsnummer für alle Besucher zurück, die innerhalb der gewünschten Anzahl von Tagen auf die Website kommen.
 
 Das `getVisitNum` Datenelement verwendet die folgenden Argumente:
 
@@ -223,7 +223,7 @@ Die Besuchsnummer erhöht sich immer dann, wenn der Besucher nach 30 Minuten Ina
 
 ### `p_fo` (nur Seite zuerst)
 
-Ermöglicht die Einrichtung und Konfiguration des [`p_fo` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html). Das `p_fo` Datenelement ist ein Dienstprogramm, das überprüft, ob ein bestimmtes JavaScript-Objekt vorhanden ist. Wenn das Objekt nicht vorhanden ist, erstellt das Plug-in das Objekt und gibt `true` zurück. Wenn das JavaScript-Objekt bereits auf der Seite vorhanden ist, wird `false` zurückgegeben. Dieses Datenelement ist nützlich, um Code genau einmal auf einer Seite auszuführen.
+Ermöglicht die Einrichtung und Konfiguration des [`p_fo` Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html?lang=de). Das `p_fo` Datenelement ist ein Dienstprogramm, das überprüft, ob ein bestimmtes JavaScript-Objekt vorhanden ist. Wenn das Objekt nicht vorhanden ist, erstellt das Plug-in das Objekt und gibt `true` zurück. Wenn das JavaScript-Objekt bereits auf der Seite vorhanden ist, wird `false` zurückgegeben. Dieses Datenelement ist nützlich, um Code genau einmal auf einer Seite auszuführen.
 
 Das `p_fo` Datenelement verwendet die folgenden Argumente:
 

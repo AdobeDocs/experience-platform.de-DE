@@ -175,7 +175,7 @@ Das `adID` Einverständnis stellt das Einverständnis des Kunden dar, ob eine Ad
 
 Damit Sie die [!UICONTROL Consents and Preferences] Feldergruppe verwenden können, um Einverständnisdaten von Ihren Kunden aufzunehmen, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diese Feldergruppe enthält.
 
-Anweisungen zum Zuweisen von Feldergruppen zu Feldern [&#x200B; Sie im Tutorial &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en)Erstellen eines Schemas in der Benutzeroberfläche“. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Consents and Preferences] Feldergruppe enthält, lesen Sie den Abschnitt [Erstellen eines &#x200B;](/help/catalog/datasets/user-guide.md#create)) im Benutzerhandbuch zu Datensätzen, indem Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema befolgen.
+Anweisungen zum Zuweisen von Feldergruppen zu Feldern [&#x200B; Sie im Tutorial &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_de)Erstellen eines Schemas in der Benutzeroberfläche“. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Consents and Preferences] Feldergruppe enthält, lesen Sie den Abschnitt [Erstellen eines &#x200B;](/help/catalog/datasets/user-guide.md#create)) im Benutzerhandbuch zu Datensätzen, indem Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema befolgen.
 
 >[!IMPORTANT]
 >

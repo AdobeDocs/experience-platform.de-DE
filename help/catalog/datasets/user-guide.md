@@ -58,13 +58,13 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Orchestrierte Kampagnen"
 >abstract="Aktivieren Sie diesen Umschalter, damit der ausgewählte Datensatz in von Adobe Journey Optimizer orchestrierten Kampagnen verwendet werden kann. Der Datensatz muss ein relationales Schema verwenden und pro Schema kann nur ein Datensatz erstellt werden."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Aktivieren eines Datensatzes für orchestrierte Kampagnen"
+>additional-url="https://experienceleague.adobe.com/de/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Aktivieren eines Datensatzes für orchestrierte Kampagnen"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="Für Lookup aktivieren"
 >abstract="Aktivieren Sie diesen Datensatz für die Suche, um seine Daten in Journey Optimizer für Personalisierung, Entscheidungsfindung und Journey-Orchestrierung zu verwenden."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Verwenden von Adobe Experience Platform-Daten in Journey Optimizer"
+>additional-url="https://experienceleague.adobe.com/de/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Verwenden von Adobe Experience Platform-Daten in Journey Optimizer"
 
 Wählen Sie in der [!DNL Experience Platform]-Benutzeroberfläche im linken Navigationsbereich die Option **[!UICONTROL Datasets]** aus, um das **[!UICONTROL Datasets]**-Dashboard zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Details werden für jeden aufgelisteten Datensatz angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Aufnahmedurchgangs.
 
