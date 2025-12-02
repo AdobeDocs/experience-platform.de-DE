@@ -4,33 +4,33 @@ title: Erste Schritte mit Playbooks für Anwendungsfälle
 description: Erfahren Sie, wie Sie die ersten Schritte mit der Funktion „Playbooks für Anwendungsfälle“ ausführen.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: d6b62b9539a04be2d2adc7aa66436a294e08303a
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 14%
+source-wordcount: '942'
+ht-degree: 8%
 
 ---
 
 
 # Erste Schritte
 
-Erfahren Sie, wie Sie Ihr -Konto für Anwendungsfall-Playbooks einrichten, die für Real-time Customer Data Platform und Adobe Journey Optimizer entwickelt wurden, wenn es nicht automatisch eingerichtet wird. Die drei Hauptkonfigurationsschritte sind:
+Erfahren Sie, wie Sie Ihr -Konto für Anwendungsfall-Playbooks einrichten, die für Real-Time Customer Data Platform und Adobe Journey Optimizer entwickelt wurden, wenn es nicht automatisch eingerichtet wird. Die drei Hauptkonfigurationsschritte sind:
 
 * Erstellen einer Sandbox
 * Konfigurieren von Benutzerberechtigungen
 * Konfigurieren von Journey Optimizer-Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen (wenn Sie Journey Optimizer-Playbooks verwenden möchten)
 
-Um auf eine umfangreiche Sammlung von Anwendungsfall-Playbooks in der Experience Platform-Benutzeroberfläche zuzugreifen, wählen Sie **[!UICONTROL Playbooks]** in der linken Navigationsleiste aus. Lesen Sie die Dokumentation zum Navigieren [&#x200B; Playbooks für Anwendungsfälle &#x200B;](../playbooks/navigate.md) und beginnen Sie mit einer [inspirierenden Sandbox](../playbooks/navigate.md).
+Um in der Benutzeroberfläche von Experience Platform auf eine umfangreiche Sammlung von Playbooks für Anwendungsfälle zuzugreifen, wählen Sie **[!UICONTROL Playbooks]** in der linken Navigationsleiste aus. Lesen Sie die Dokumentation zum Navigieren [ Playbooks für Anwendungsfälle ](../playbooks/navigate.md) und beginnen Sie mit einer [inspirierenden Sandbox](../playbooks/navigate.md).
 
 ## Konfigurieren von Playbooks für Anwendungsfälle - Videoeinführung {#video}
 
 In diesem Video erfahren Sie, wie Sie Ihre Sandbox erstellen, Berechtigungen konfigurieren und Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen in Journey Optimizer konfigurieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449835?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
 
 ## Erstellen einer Entwicklungs-Sandbox {#create-development-sandbox}
 
-Anwendungsfall Playbooks verwendet einen speziellen Typ von Entwicklungs-Sandbox. Zum Ausführen der ersten Schritte und Zugreifen auf die Funktion [[!UICONTROL Playbooks für Anwendungsfälle]](/help/use-case-playbooks/playbooks/overview.md) [erstellen Sie eine neue Entwicklungs-Sandbox](/help/sandboxes/ui/user-guide.md#create) (keine Produktions-Sandbox auswählen!), deren Namen (nicht deren Titel) entweder `-ucp` oder `-UCP` im Suffix enthält, wie unten dargestellt.
+Anwendungsfall Playbooks verwendet einen speziellen Typ von Entwicklungs-Sandbox. Um zu beginnen und Zugriff auf die [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md)-Funktionen zu erhalten, [ Sie eine neue Entwicklungs-Sandbox ](/help/sandboxes/ui/user-guide.md#create) (stellen Sie sicher, dass Sie keine Produktions-Sandbox auswählen), deren Name (nicht deren Titel) entweder `-ucp` oder `-UCP` im Suffix enthält, wie unten dargestellt.
 
 >[!IMPORTANT]
 >
@@ -39,15 +39,15 @@ Anwendungsfall Playbooks verwendet einen speziellen Typ von Entwicklungs-Sandbox
 
 ![Erstellen einer Entwicklungs-Sandbox für Playbooks für Anwendungsfälle](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-In der linken Leiste unter [!UICONTROL Anwendungsfall-Playbooks] sollte nun „Playbooks[!UICONTROL &#x200B; angezeigt &#x200B;].
+Jetzt sollte [!UICONTROL Playbooks] in der linken Leiste unter [!UICONTROL Use Case Playbooks] angezeigt werden.
 
 ![Verwenden der Option „Playbooks für Anwendungsfälle“ in der Benutzeroberfläche nach dem Erstellen einer Sandbox.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
-Wenn [!UICONTROL Playbooks] nicht wie oben gezeigt in der linken Leiste zu sehen ist, verwenden Sie diesen Link `https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates`, um direkt dorthin zu navigieren. Im Link ist `<YOUR_ORG>` der Name Ihres Unternehmens und `<YOUR_SANDBOX_NAME>` der Name der von Ihnen erstellten Entwicklungs-Sandbox.
+Wenn [!UICONTROL Playbooks] in der linken Leiste nicht angezeigt wird, wie oben gezeigt, verwenden Sie diesen Link-`https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates`, um direkt dorthin zu navigieren. Im Link ist `<YOUR_ORG>` der Name Ihres Unternehmens und `<YOUR_SANDBOX_NAME>` der Name der von Ihnen erstellten Entwicklungs-Sandbox.
 
 ## Erteilen der erforderlichen Zugriffsberechtigungen für Ihr Team {#grant-access-permissions}
 
-Um mit Playbooks für [!UICONTROL Anwendungsfälle] zu beginnen, benötigen Mitglieder Ihres Marketing-Teams die richtigen Berechtigungen, damit sie die Liste der erstellten Playbooks anzeigen oder selbst Playbooks erstellen können.
+Für die ersten Schritte mit [!UICONTROL Use Case Playbooks] benötigen die Mitglieder Ihres Marketing-Teams die richtigen Berechtigungen, damit sie die Liste der erstellten Playbooks anzeigen oder selbst Playbooks erstellen können.
 
 **Erforderliche Berechtigungen**
 
@@ -57,7 +57,7 @@ Um die erforderlichen Berechtigungen hinzuzufügen, fügen Sie in der Benutzerob
 
 **Richten Sie eine Rolle für Playbooks ein:**
 
-Alternativ können Sie auch erwägen, neue Rollen mit [den erforderlichen Berechtigungen) &#x200B;](/help/access-control/home.md#sandboxes-and-permissions).
+Alternativ können Sie auch erwägen, neue Rollen mit [den erforderlichen Berechtigungen) ](/help/access-control/home.md#sandboxes-and-permissions).
 
 [Richten Sie eine neue Rolle ein](/help/access-control/abac/ui/permissions.md) mit den erforderlichen Berechtigungen für wesentliche Playbook-Aufgaben. Erstellen Sie eine Rolle und fügen Sie ihr die neue Sandbox hinzu, wie unten dargestellt.
 
@@ -69,15 +69,15 @@ Im Rahmen von Anwendungsfall-Playbooks erstellen Sie verschiedene Assets wie Sch
 
 **Berechtigungen für Schemata**
 
-Verwenden Sie zum Erstellen und Verwalten von Schemata die Berechtigungen für die Datenmodellierung: **[!UICONTROL Schemata verwalten]**, **[!UICONTROL Schemata anzeigen]**, **[!UICONTROL Beziehungen verwalten]** **[!UICONTROL Identitätsmetadaten verwalten]**
+Verwenden Sie zum Erstellen und Verwalten von Schemata die Datenmodellierungsberechtigungen **[!UICONTROL Manage Schemas]**, **[!UICONTROL View Schemas]**, **[!UICONTROL Manage Relationships]** **[!UICONTROL Manage Identity Metadata]**
 
 **Berechtigungen für Ziele**
 
-Um Ziele zu erstellen und zu verwalten, verwenden Sie die Berechtigungen Ziele **[!UICONTROL Verwalten]**, **[!UICONTROL Ziele]**, **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL Datensatzziel verwalten und aktivieren]**, **[!UICONTROL Zielerstellung]**.
+Um Ziele zu erstellen und zu verwalten, verwenden Sie die Berechtigungen Ziele **[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, **[!UICONTROL Destination Authoring]**.
 
 **Berechtigungen für Journey**
 
-Verwenden Sie zum Erstellen und Verwalten von Journey die Berechtigungen der Journey: **[!UICONTROL Journey verwalten]**, **[!UICONTROL Journey anzeigen]**, **[!UICONTROL Journey-Bericht anzeigen]**, **[!UICONTROL Journey verwalten]**, **[!UICONTROL Events]**, **[!UICONTROL Datenquellen und Aktionen]**, **[!UICONTROL Journey anzeigen]**, **[!UICONTROL Events]**, **[!UICONTROL Datenquellen und Aktionen, Publish Journey]**.
+Verwenden Sie zum Erstellen und Verwalten von Journey die Berechtigungen der Journey: **[!UICONTROL Manage Journeys]**, **[!UICONTROL View Journeys]**, **[!UICONTROL View Journeys Report]**, **[!UICONTROL Manage Journeys]**, **[!UICONTROL Events]**, **[!UICONTROL Data Sources and Actions]**, **[!UICONTROL View Journeys]**, **[!UICONTROL Events]**, **[!UICONTROL Data Sources and Actions, Publish Journeys]**.
 
 Die folgende Abbildung zeigt eine Momentaufnahme der empfohlenen Berechtigungen für Benutzer zum Anzeigen, Erstellen und Verwalten von Playbooks und der von Playbooks generierten Assets.
 
@@ -89,13 +89,13 @@ Nachdem Sie [neue Rolle erstellt haben](/help/access-control/abac/ui/permissions
 
 ## Konfigurieren von Sandbox- und Kanaloberflächen in Journey Optimizer {#configure-channel-surfaces}
 
-Wenn Ihr Unternehmen für [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de) lizenziert ist und Sie die für Journey Optimizer entwickelten Playbooks verwenden möchten, müssen Sie die Kanalvorgaben in Ihrer Sandbox konfigurieren, die die für Ihre Nachrichten erforderlichen technischen Parameter definieren. [Erfahren Sie, wie Sie in Adobe Journey Optimizer Kanaloberflächen einrichten.](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/channel-surfaces).
+Wenn Ihr Unternehmen für [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/ajo-home) lizenziert ist und Sie die für Journey Optimizer entwickelten Playbooks verwenden möchten, konfigurieren Sie die Kanaloberflächen in Ihrer Sandbox. Kanaloberflächen definieren alle technischen Parameter, die für Ihre Nachrichten erforderlich sind, z. B. den E-Mail-Typ, die Absender-E-Mail und den Namen, Mobile Apps, die SMS-Konfiguration und mehr. [Erfahren Sie, wie Sie in Adobe Journey Optimizer Kanaloberflächen einrichten.](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Um Instanzen von Playbooks in Journey Optimizer zu erstellen, müssen Sie Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen konfigurieren.
 
 ### E-Mail-Kanaloberfläche
 
-Navigieren Sie zu `Channels` in der Benutzeroberfläche von Journey Optimizer. Konfigurieren Sie separate Subdomains und IP-Pools für Marketing-E-Mails und Transaktionsnachrichten, falls noch nicht konfiguriert. Dies sind Best Practices, um sicherzustellen, dass Transaktionsnachrichten, wie z. B. E-Mails zur Bestellbestätigung, an Ihre Kunden gesendet werden. Geben Sie Namen, E-Mail-Adressen und zusätzliche Einstellungen ein. Wählen **oben rechts** der Seite „Senden“ aus, um die Marketing-Kanal-Oberfläche zu erstellen. Lesen Sie die Dokumentation [Einrichten von Oberflächen für E-Mail-Kanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=de).
+Navigieren Sie zu `Channels` in der Benutzeroberfläche von Journey Optimizer. Konfigurieren Sie separate Subdomains und IP-Pools für Marketing-E-Mails und Transaktionsnachrichten, falls noch nicht konfiguriert. Dies sind Best Practices, um sicherzustellen, dass Transaktionsnachrichten, wie z. B. E-Mails zur Bestellbestätigung, an Ihre Kunden gesendet werden. Geben Sie Namen, E-Mail-Adressen und zusätzliche Einstellungen ein. Wählen **oben rechts** der Seite „Senden“ aus, um die Marketing-Kanal-Oberfläche zu erstellen. Lesen Sie die Dokumentation [Einrichten von Oberflächen für E-Mail-Kanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
 ### SMS-Kanaloberfläche
 
@@ -111,8 +111,8 @@ Vergewissern Sie sich, dass die Kanalkonfigurationen entweder über die Experien
 
 Wählen Sie als Nächstes den Kanal, die Plattformen und Apps aus, die Sie in den Kanalkonfigurationen betrachtet haben. Wählen Sie **Senden** aus, um die Oberfläche des Push-Kanals zu erstellen.
 
-Lesen Sie die Dokumentation [Einrichten von Oberflächen für Push-Kanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=de).
+Lesen Sie die Dokumentation [Einrichten von Oberflächen für Push-Kanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie alle Schritte in diesem Dokument ausgeführt haben, sollten Sie eine Entwicklungs-Sandbox mit Playbooks für Anwendungsfälle in der linken Navigation erstellt haben. Jetzt wissen Sie auch, wie Sie Ihren Team-Mitgliedern die erforderlichen Berechtigungen zum Anzeigen und Verwalten von Playbooks und zum Generieren von Assets gewähren. Lesen Sie als nächsten Schritt, wie [&#x200B; das richtige Playbook &#x200B;](/help/use-case-playbooks/playbooks/choose.md) und dann [Instanzen daraus erstellen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Nachdem Sie alle Schritte in diesem Dokument ausgeführt haben, sollten Sie eine Entwicklungs-Sandbox mit Playbooks für Anwendungsfälle in der linken Navigation erstellt haben. Jetzt wissen Sie auch, wie Sie Ihren Team-Mitgliedern die erforderlichen Berechtigungen zum Anzeigen und Verwalten von Playbooks und zum Generieren von Assets gewähren. Lesen Sie als nächsten Schritt, wie [ das richtige Playbook ](/help/use-case-playbooks/playbooks/choose.md) und dann [Instanzen daraus erstellen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
