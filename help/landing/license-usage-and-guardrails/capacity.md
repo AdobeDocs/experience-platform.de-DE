@@ -175,7 +175,7 @@ Darüber hinaus können Sie Ihre Datenflüsse betrachten und feststellen, ob Sie
 
 Das folgende Video bietet einen Überblick über die Kapazität.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475282/?captions=ger&learn=on&enablevpops)
 
 ## Häufig gestellte Fragen {#faq}
 
