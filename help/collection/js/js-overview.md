@@ -37,7 +37,7 @@ Auf der Serverseite vereinfachen ein einheitliches Edge-Gateway und ein gemeinsa
 
 Mit einem konsolidierten Edge-System können Sie Werbe-, Marketing- und Personalisierungskampagnen auf allen Kanälen verwalten. Dies reduziert die Gesamtbetriebskosten und unterstützt verschiedene Datentypen, sodass Sie Ihr Datenmodell für die Verwendung mit mehreren Experience Cloud-Produkten zuordnen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37260?captions=ger&quality=12&learn=on)
 
 ## Durch Web SDK ersetzte Bibliotheken {#sdks}
 
