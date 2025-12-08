@@ -2,13 +2,13 @@
 title: Demandbase Intent
 description: Erfahren Sie mehr über die Demandbase Intent-Quelle in Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
-badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: e223ea754a250956e65c3f526119a3ebd7bb067c
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 12%
+source-wordcount: '1504'
+ht-degree: 11%
 
 ---
 
@@ -26,11 +26,11 @@ Lesen Sie die folgenden Abschnitte für erforderliche Schritte, bevor Sie [!DNL 
 
 ### Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [&#x200B; Seite &#x200B;](../../ip-address-allow-list.md)IP-Adresse“.
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie [ Seite ](../../ip-address-allow-list.md)IP-Adresse“.
 
 ### Konfigurieren von Berechtigungen für Experience Platform
 
-Sie müssen sowohl **[!UICONTROL Quellen anzeigen]** als auch **[!UICONTROL Quellen verwalten]** für Ihr Konto aktiviert haben, um Ihr [!DNL Demandbase]-Konto mit Experience Platform zu verbinden. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/abac/ui/permissions.md).
+Für Ihr Konto müssen sowohl **[!UICONTROL View Sources]**- als auch **[!UICONTROL Manage Sources]** aktiviert sein, um Ihr [!DNL Demandbase] mit Experience Platform verbinden zu können. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche der Zugriffssteuerung](../../../access-control/abac/ui/permissions.md).
 
 ### Namensbeschränkungen für Dateien und Verzeichnisse
 
@@ -57,6 +57,10 @@ Beachten Sie die folgenden Einschränkungen beim Benennen Ihrer Cloud-Speicherda
 Weitere Informationen zu diesen Anmeldeinformationen finden Sie im [[!DNL Google Cloud Storage] Handbuch zu HMAC-Schlüsseln](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Anweisungen zum Generieren Ihres eigenen Zugriffsschlüssels finden Sie im [Handbuch zu Voraussetzungen in der  [!DNL Google Cloud Storage] -Übersicht](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 
 ## Schema [!DNL Demandbase]
+
+>[!IMPORTANT]
+>
+>Stellen Sie beim Erstellen eines Absichtsschemas für ein B2B-Demandbase-Konto in der Experience Platform-Benutzeroberfläche sicher, dass Sie die Profilaufnahme für das Schema aktivieren. Weitere Informationen finden sich im Handbuch unter [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](../../../xdm/ui/resources/schemas.md).
 
 In diesem Abschnitt finden Sie Informationen zum [!DNL Demandbase] und zur Datenstruktur.
 
@@ -194,6 +198,6 @@ Der Domain-Abgleich in Experience Platform basiert auf einer exakten Übereinsti
 
 +++Antwort
 
-Absichtsdaten können in &quot;[-Zielgruppen“ verwendet werden, &#x200B;](../../../segmentation/types/account-audiences.md) Targeting, Segmentierung und Personalisierung zu verbessern. Durch die Nutzung von Absichtssignalen können Unternehmen Konten identifizieren und mit ihnen interagieren, die ein hohes Interesse an bestimmten Themen zeigen, und so Marketing- und Verkaufsaktivitäten optimieren
+Absichtsdaten können in &quot;[-Zielgruppen“ verwendet werden, ](../../../segmentation/types/account-audiences.md) Targeting, Segmentierung und Personalisierung zu verbessern. Durch die Nutzung von Absichtssignalen können Unternehmen Konten identifizieren und mit ihnen interagieren, die ein hohes Interesse an bestimmten Themen zeigen, und so Marketing- und Verkaufsaktivitäten optimieren
 
 +++
