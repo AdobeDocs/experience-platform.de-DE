@@ -2,7 +2,7 @@
 title: Häufig gestellte Fragen zu Adobe Experience Platform Web SDK
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zur Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 2%
@@ -67,9 +67,9 @@ Adobe Experience Platform Web SDK kann auch Daten direkt an Adobe Experience Pla
 
 **Time-to-Value:** Adobe hat hart daran gearbeitet (und wird es auch weiterhin tun), die Bereitstellung des Web-SDK über Tags und die Zuordnung Client-seitiger Daten zu XDM so einfach wie möglich zu gestalten. Danach können alle anderen Adobe-Lösungen und Adobe Experience Platform-Services Server-seitig aktiviert oder deaktiviert werden. Wenn Sie dies beispielsweise für Adobe Analytics verwenden und Target oder Experience Platform aktivieren möchten, können Sie einfach einen Umschalter in der Datenstromkonfiguration umschalten und diese Anwendungsfälle aufleuchten lassen.
 
-## Was ist [!DNL alloy.js]?
+## Was ist `alloy.js`?
 
-[!DNL alloy.js] ist der Name der Web SDK JavaScript-Bibliothek. Es wird innerhalb des Quell-Codes und Dateinamens von SDK referenziert.
+`alloy.js` ist der Name der Web SDK JavaScript-Bibliothek. Es wird innerhalb des Quell-Codes und Dateinamens von SDK referenziert.
 
 ## Müssen Kunden Adobe Experience Platform kaufen, um die [!DNL Web SDK] nutzen zu können?
 
@@ -78,7 +78,7 @@ Nein. Jeder Kunde von Adobe Digital Experience kann die Adobe Experience Platfor
 * Kunden, die *nicht* Zugriff auf Experience Platform oder Real-Time CDP haben und die [!DNL Web SDK] verwenden möchten, müssen die richtigen Berechtigungen konfigurieren, um Schemas und Datenströme in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche zu erstellen.
 * Kunden, die Zugriff auf Experience Platform oder Real-Time CDP haben und die [!DNL Web SDK] verwenden möchten, müssen die richtigen Berechtigungen konfigurieren, um Schemas, Datensätze, Identitäts-Namespaces und Datenströme in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche zu erstellen.
 
-Weitere Informationen zum Konfigurieren dieser Berechtigungen finden Sie in der Dokumentation unter [Verwaltung von Datenerfassungsberechtigungen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=de).
+Weitere Informationen zum Konfigurieren dieser Berechtigungen finden Sie in der Dokumentation unter [Verwaltung von Datenerfassungsberechtigungen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Wer sollte die Web-SDK verwenden?
 
@@ -116,7 +116,7 @@ Anders ausgedrückt: Wenn Sie sich entscheiden, Adobe Experience Platform Web SD
 
 ## Kann ich die ECIDs migrieren, wenn ich mit der Verwendung von Web SDK beginne, damit meine Website-Besucher nicht als neue Besucher angezeigt werden?
 
-Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der Dokumentation zu Experience Platform Web SDK Identity [&#x200B; der Anleitung zur ID-Migration.](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid)
+Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der Dokumentation zu Experience Platform Web SDK Identity [ der Anleitung zur ID-Migration.](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid)
 
 ## Worin unterscheidet sich Web SDK von Tags?
 
@@ -156,7 +156,7 @@ Ja, derzeit verwendet Web SDK je nach Implementierung zwischen ein und sieben Co
 | **kndctr_orgid_consent_check** | 7200 | 2 Stunden | Dieses sitzungsbasierte Cookie weist den Server an, die Einverständnisvoreinstellungen Server-seitig zu suchen. |
 | **kndctr_orgid_consent** | 15552000 | 180 Tage | Dieses Cookie speichert die Einverständnisvoreinstellungen des Benutzers für die Website. |
 | **kndctr_orgid_cluster** | 1800 | 30 Minuten | Dieses Cookie speichert die Edge Network-Region, die die Anfragen des aktuellen Benutzers verarbeitet. Die Region wird im URL-Pfad verwendet, damit der Edge Network die Anfrage an die richtige Region weiterleiten kann. Dieses Cookie hat eine Lebensdauer von 30 Minuten, sodass, wenn ein Benutzer eine Verbindung mit einer anderen IP-Adresse herstellt, die Anfrage an die nächstgelegene Region weitergeleitet werden kann. |
-| **mbox** | 63072000 | 2 Jahre | Dieses Cookie wird angezeigt, wenn die Einstellung für die Target-Migration auf „true“ gesetzt ist. Dadurch kann das Target[mbox-Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) von der Web-SDK festgelegt werden. |
+| **Mbox** | 63072000 | 2 Jahre | Dieses Cookie wird angezeigt, wenn die Einstellung für die Target-Migration auf „true“ gesetzt ist. Dadurch kann das Target[mbox-Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) von der Web-SDK festgelegt werden. |
 | **mboxEdgeCluster** | 1800 | 30 Minuten | Dieses Cookie wird angezeigt, wenn die Einstellung für die Target-Migration auf „true“ gesetzt ist. Dieses Cookie ermöglicht es der Web SDK, at.js den richtigen Edge-Cluster zu übermitteln, damit die Zielprofile synchron bleiben, während Benutzende auf einer Site navigieren. |
 | **AMCV_##@AdobeOrg** | 34128000 | 395 Tage | Dieses Cookie wird nur angezeigt, wenn die ID-Migration auf der Adobe Experience Platform Web SDK aktiviert ist. Dieses Cookie hilft bei der Umstellung auf Web SDK, während einige Teile der Website noch visitor.js verwenden. Weitere Informationen finden Sie unter [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) . |
 

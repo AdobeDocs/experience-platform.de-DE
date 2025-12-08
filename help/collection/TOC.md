@@ -6,10 +6,10 @@ breadcrumb-title: Datenerfassung
 user-guide-description: Erfahren Sie, wie Sie Daten an Adobe Experience Platform senden.
 feature: Data Collection
 role: Developer
-source-git-commit: 3abe25a9c538bf4d1b439d48f624d8cad109a99e
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 39%
+source-wordcount: '139'
+ht-degree: 38%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 39%
 + BrightScript {#brightscript}
    + [BrightScript-Übersicht](brightscript/brs-overview.md)
 + JavaScript {#js}
-   + [Übersicht über JavaScript](js/js-overview.md)
+   + [Übersicht über Web SDK JavaScript](js/js-overview.md)
    + [Versionshinweise](js/release-notes.md)
    + Installation {#install}
       + [Installationsübersicht](js/install/overview.md)
@@ -75,7 +75,7 @@ ht-degree: 39%
       + [Befehlsantworten](js/commands/command-responses.md)
    + [Überwachungshaken](js/monitoring-hooks.md)
    + [Häufig gestellte Fragen](js/faq.md)
-+ Tags {#tags}
++ Client-seitige JavaScript für Tags {#tags}
    + [Überblick](tags/overview.md)
    + [buildInfo](tags/buildinfo.md)
    + [Gesellschaft](tags/company.md)
@@ -91,7 +91,7 @@ ht-degree: 39%
    + [track](tags/track.md)
 + Anwendungsfälle {#use-cases}
    + [Überblick](use-cases/overview.md)
-   + [Client-Hinweise](use-cases/client-hints.md)
+   + [Client hints](use-cases/client-hints.md)
    + [Client-Status](use-cases/client-state.md)
    + [Erfassen von Commerce-Daten](use-cases/collect-commerce-data.md)
    + [Konfigurieren eines CSP](use-cases/configuring-a-csp.md)

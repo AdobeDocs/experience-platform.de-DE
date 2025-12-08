@@ -1,15 +1,15 @@
 ---
-title: Satellitenobjektreferenz
+title: Übersicht über Client-seitige JavaScript für Tags (_satellite)
 description: Hier erfahren Sie mehr über das Client-seitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in Tags ausführen können.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 10%
+source-wordcount: '212'
+ht-degree: 8%
 
 ---
 
-# `_satellite` Objektverweis
+# Übersicht über Client-seitige JavaScript für Tags (`_satellite`)
 
 _Auf diesen Seiten wird die Verwendung des `_satellite`-Objekts beschrieben, mit dem Sie Ihre Tag-Logik mithilfe von JavaScript verwalten und anpassen können. Siehe [Tag-Erweiterung für Adobe Experience Platform Web SDK](/help/tags/extensions/client/web-sdk/overview.md) für Details zum Einrichten Ihrer Implementierung in der Datenerfassungs-Benutzeroberfläche._
 

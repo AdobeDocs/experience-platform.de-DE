@@ -3,9 +3,9 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '2585'
+source-wordcount: '2584'
 ht-degree: 57%
 
 ---
@@ -71,7 +71,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket &#x200B;](install/create-custom-build.md).
+- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [ Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket ](install/create-custom-build.md).
 - Der [`getIdentity`](commands/getidentity.md)-Befehl liest jetzt automatisch die ECID direkt aus dem `kndctr`-Identitäts-Cookie. Wenn Sie `getIdentity` mit dem Namespace `ECID` aufrufen und bereits ein Identitäts-Cookie vorhanden ist, sendet Web SDK keine Anfrage mehr an die Edge Network, um die Identität abzurufen. Jetzt liest es die Identität aus dem Cookie.
 
 **Fehlerbehebungen und Verbesserungen**
@@ -152,7 +152,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 **Neue Funktionen**
 
 - Unterstützung für die automatische Interaktionsverfolgung von Vorschlägen wurde hinzugefügt.
-- Es wurde ein benutzerdefiniertes Build-Skript hinzugefügt, das eine alloy.js-Datei bereitstellt.
+- Es wurde ein benutzerdefiniertes Build-Skript hinzugefügt, das eine `alloy.js` bereitstellt.
 - Verbesserte Klick-Sammlung mit ActivityMap- und Ereignisgruppierungsunterstützung.
 
 ## Version 2.20.0 – Mittwoch, 21. Mai 2024
@@ -338,7 +338,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.4.0 – März 2021 
 
-- SDK kann jetzt als NPM[Paket installiert &#x200B;](install/npm.md).
+- SDK kann jetzt als NPM[Paket installiert ](install/npm.md).
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Der [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md)-Callback kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
 - Jetzt wird eine XDM-Schemafeldgruppe anstelle von `meta.personalization` verwendet, wenn Ereignisse über gerenderte oder angeklickte personalisierte Inhalte gesendet werden.

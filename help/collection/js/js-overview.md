@@ -1,26 +1,19 @@
 ---
-title: Übersicht über JavaScript
+title: Übersicht über die Web SDK JavaScript-Bibliothek
 description: Senden von Daten an Adobe Experience Platform Edge Network mithilfe von JavaScript.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '440'
 ht-degree: 3%
 
 ---
 
-# Übersicht über JavaScript
+# Übersicht über die Web SDK JavaScript-Bibliothek
 
-Die **Adobe Experience Platform Web SDK** ist eine Client-seitige JavaScript-Bibliothek, mit der Sie Daten an die Adobe Experience Platform Edge Network senden können.
+Die **Adobe Experience Platform Web SDK** ist eine Client-seitige JavaScript-Bibliothek, mit der Sie Daten an die Adobe Experience Platform Edge Network senden können. In diesem Handbuch wird der Implementierungspfad der Web SDK JavaScript Library (`alloy.js`) dokumentiert, einschließlich der grundlegenden Konzepte, Installation, Konfiguration und Befehle. Informationen zur Web SDK-Tag-Erweiterung in der Datenerfassungs-Benutzeroberfläche finden Sie unter [Web SDK-Tag-Erweiterung](/help/tags/extensions/client/web-sdk/overview.md).
 
 Web SDK sendet Daten lösungsunabhängig (XDM) an Experience Platform Edge Network, das die Daten dann lösungsspezifischen Formaten und Zielen zuordnet und in Echtzeit sendet.
-
-Sie können Web SDK auf zwei Arten implementieren:
-
-* Manuelle Implementierung mithilfe der [JavaScript-Bibliothek](install/library.md) (diese Dokumentation)
-* Die [Web SDK-Tag-Erweiterung](/help/tags/extensions/client/web-sdk/overview.md)
-
-Dieses Handbuch enthält Anweisungen für die Interaktion mit Experience Cloud-Lösungen mithilfe der Web SDK JavaScript-Bibliothek.
 
 ## Experience Platform Edge Network {#edge-network}
 
@@ -37,7 +30,7 @@ Auf der Serverseite vereinfachen ein einheitliches Edge-Gateway und ein gemeinsa
 
 Mit einem konsolidierten Edge-System können Sie Werbe-, Marketing- und Personalisierungskampagnen auf allen Kanälen verwalten. Dies reduziert die Gesamtbetriebskosten und unterstützt verschiedene Datentypen, sodass Sie Ihr Datenmodell für die Verwendung mit mehreren Experience Cloud-Produkten zuordnen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/37260?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
 ## Durch Web SDK ersetzte Bibliotheken {#sdks}
 
