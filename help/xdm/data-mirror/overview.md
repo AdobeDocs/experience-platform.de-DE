@@ -5,9 +5,9 @@ title: Übersicht über Data Mirror
 description: Erfahren Sie, wie Data Mirror die Aufnahme von Änderungen auf Zeilenebene von externen Datenbanken in Adobe Experience Platform mithilfe von relationalen Schemata ermöglicht, die Eindeutigkeit, Beziehungen und Versionierung erzwingen.
 badge: Eingeschränkte Verfügbarkeit
 exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1334'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,6 @@ ht-degree: 1%
 >[!AVAILABILITY]
 >
 >Data Mirror und relationale Schemata stehen Adobe Journey Optimizer-Lizenzinhabern **Orchestrierte Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
-
->[!NOTE]
->
->Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-Dokumentation zuvor als modellbasierte Schemata bezeichnet. Die Funktionalität bleibt gleich.
 
 Data Mirror ist eine Adobe Experience Platform-Funktion, die die Aufnahme von Änderungen auf Zeilenebene aus externen Datenbanken in den Data Lake mithilfe relationaler Schemata ermöglicht. Sie behält Datenbeziehungen bei, erzwingt Eindeutigkeit und unterstützt die Versionierung, ohne dass vorgelagerte ETL-Prozesse (Extract, Transform, Load) erforderlich sind.
 
@@ -126,7 +122,7 @@ Verwenden Sie die Änderungsdatenerfassung, um präzise Löschungen auf Datensat
 
 ### Datenlöschung und Hygieneanforderungen
 
-Alle Programme, die relationale Schemata und Data Mirror verwenden, müssen mit den Auswirkungen des Löschens von Daten vertraut sein. Relationale Schemata ermöglichen präzise Löschvorgänge auf Datensatzebene, die sich auf verknüpfte Daten in verbundenen Datensätzen auswirken können. Diese Löschfunktionen wirken sich unabhängig von Ihrem spezifischen Anwendungsfall auf die Datenintegrität, die Compliance und das nachgelagerte Anwendungsverhalten aus. Überprüfen Sie [Datenhygiene-Anforderungen für Datensätze, die auf relationalen Schemata &#x200B;](../../hygiene/ui/record-delete.md#relational-record-delete), und planen Sie Löschszenarien vor der Implementierung.
+Alle Programme, die relationale Schemata und Data Mirror verwenden, müssen mit den Auswirkungen des Löschens von Daten vertraut sein. Relationale Schemata ermöglichen präzise Löschvorgänge auf Datensatzebene, die sich auf verknüpfte Daten in verbundenen Datensätzen auswirken können. Diese Löschfunktionen wirken sich unabhängig von Ihrem spezifischen Anwendungsfall auf die Datenintegrität, die Compliance und das nachgelagerte Anwendungsverhalten aus. Überprüfen Sie [Datenhygiene-Anforderungen für Datensätze, die auf relationalen Schemata ](../../hygiene/ui/record-delete.md#relational-record-delete), und planen Sie Löschszenarien vor der Implementierung.
 
 ### Auswahl des Schemaverhaltens
 

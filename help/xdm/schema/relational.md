@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;relationales Schema;relationale Schemata;Schema;Schema;XDM;Experience-Datenmodell;
 solution: Experience Platform
 title: Relationale Schemata
-description: Erfahren Sie mehr über relationale Schemata (früher als modellbasierte Schemata bezeichnet) in Adobe Experience Platform, einschließlich Funktionen, Pflichtfelder, Beziehungen und Einschränkungen.
+description: Erfahren Sie mehr über relationale Schemata in Adobe Experience Platform, einschließlich Funktionen, Pflichtfelder, Beziehungen und Einschränkungen.
 badge: Eingeschränkte Verfügbarkeit
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
-source-git-commit: 605c169c9de7a978e6d2f0bdc809371c82cd3280
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ Relationale Schemata bieten ein flexibles, gesteuertes Modellierungsmuster zur D
 >
 >Überlegungen zum Löschen von Daten gelten für alle relationalen Schemaimplementierungen. Anwendungen, die diese Schemata verwenden, müssen verstehen, wie sich Löschungen auf zugehörige Datensätze, Compliance-Anforderungen und nachgelagerte Prozesse auswirken. Planen Sie Löschszenarien und überprüfen Sie [Datenhygiene-](../../hygiene/ui/record-delete.md#relational-record-delete)) vor der Implementierung.
 
->[!NOTE]
->
->Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-Dokumentation zuvor als modellbasierte Schemata bezeichnet.
-
 Verwenden Sie relationale Schemata, um:
 
 * Datenintegrität mit erzwungenen Primärschlüsseln mit einem Feld oder mit zusammengesetzten Schlüsseln sicherstellen.
@@ -38,9 +34,9 @@ Verwenden Sie relationale Schemata, um:
 
 ## Unterschiede zwischen relationalen Schemata und Standard-XDM-Schemata
 
-Standard-XDM-Schemata in Experience Platform folgen einem von drei Datenverhalten: Datensatz, Zeitreihen oder Ad-hoc. Definitionen und Details finden Sie unter [XDM-Datenverhalten](https://experienceleague.adobe.com/de/docs/experience-platform/xdm/home#data-behaviors).
+Standard-XDM-Schemata in Experience Platform folgen einem von drei Datenverhalten: Datensatz, Zeitreihen oder Ad-hoc. Definitionen und Details finden Sie unter [XDM-Datenverhalten](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
-Im traditionellen Modell sind Datensatz- und Zeitreihenschemas Teil von [Vereinigungsschemata](../api/unions.md) (siehe auch das [Handbuch zur Vereinigungsschema-Benutzeroberfläche](../../profile/ui/union-schema.md)). Diese Schemata entwickeln sich automatisch weiter[&#x200B; wenn freigegebene (](./composition.md#field-group)) aktualisiert werden und benutzerdefinierte Felder unter einem Mandanten-Namespace verschachtelt werden müssen. Dieses Modell ist zwar leistungsstark, kann aber das Onboarding verlangsamen, übermäßig komplexe Schemata mit nicht verwendeten Feldern produzieren und zusätzliche Datenzuordnungen oder Umwandlungen erfordern. Diese Faktoren erhöhen die Lernkurve und den laufenden Wartungsaufwand.
+Im traditionellen Modell sind Datensatz- und Zeitreihenschemas Teil von [Vereinigungsschemata](../api/unions.md) (siehe auch das [Handbuch zur Vereinigungsschema-Benutzeroberfläche](../../profile/ui/union-schema.md)). Diese Schemata entwickeln sich automatisch weiter[ wenn freigegebene (](./composition.md#field-group)) aktualisiert werden und benutzerdefinierte Felder unter einem Mandanten-Namespace verschachtelt werden müssen. Dieses Modell ist zwar leistungsstark, kann aber das Onboarding verlangsamen, übermäßig komplexe Schemata mit nicht verwendeten Feldern produzieren und zusätzliche Datenzuordnungen oder Umwandlungen erfordern. Diese Faktoren erhöhen die Lernkurve und den laufenden Wartungsaufwand.
 
 Relationale Schemata entfernen Vereinigungsschemaabhängigkeiten, wodurch automatische Aktualisierungen aus freigegebenen Feldergruppen vermieden werden und direkte Felddefinitionen ohne Einschränkungen für Mandanten-Namespaces möglich sind. Sie erhalten explizite Kontrolle über Primärschlüssel, Beziehungen und den anfänglichen Schemaentwurf, was die Modellierung der Daten zur Erstellungszeit vereinfacht.
 

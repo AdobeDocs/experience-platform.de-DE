@@ -2,9 +2,9 @@
 title: Anfragen zum Löschen von Datensätzen (UI-Workflow)
 description: Erfahren Sie, wie Sie Datensätze in der Adobe Experience Platform-Benutzeroberfläche löschen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2358'
 ht-degree: 13%
 
 ---
@@ -39,7 +39,7 @@ Der Workflow zur Anfrageerstellung wird angezeigt. Standardmäßig ist die Optio
 
 >[!IMPORTANT]
 > 
->Um die Effizienz zu verbessern und den Datensatzbetrieb kostengünstiger zu gestalten, können Unternehmen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als „delta-migriert“ bezeichnet. Benutzer von Organisationen, die in den Delta-Bereich migriert wurden, können Datensätze aus einem oder allen Datensätzen löschen. Benutzer von Organisationen, die keine Delta-Migration durchgeführt haben, können keine Datensätze selektiv aus einem einzelnen Datensatz oder allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem Abschnitt [Bereitstellen von &#x200B;](#provide-identities)&quot; des Handbuchs fort.
+>Um die Effizienz zu verbessern und den Datensatzbetrieb kostengünstiger zu gestalten, können Unternehmen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als „delta-migriert“ bezeichnet. Benutzer von Organisationen, die in den Delta-Bereich migriert wurden, können Datensätze aus einem oder allen Datensätzen löschen. Benutzer von Organisationen, die keine Delta-Migration durchgeführt haben, können keine Datensätze selektiv aus einem einzelnen Datensatz oder allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem Abschnitt [Bereitstellen von ](#provide-identities)&quot; des Handbuchs fort.
 
 ![Der Workflow für die Anfrageerstellung mit ausgewählter und hervorgehobener Option &quot;[!UICONTROL Delete record]&quot;.](../images/ui/record-delete/delete-record.png)
 
@@ -133,7 +133,7 @@ Es werden Steuerelemente angezeigt, mit denen Sie Identitäten einzeln eingeben 
 
 ![Der Workflow zur Anfrageerstellung mit einem Identitätsfeld wurde manuell hinzugefügt.](../images/ui/record-delete/identity-added.png)
 
-Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![&#x200B; Pluszeichen ) aus.](/help/images/icons/tree-expand-all.png)) neben einer der Zeilen oder wählen Sie **[!UICONTROL Add identity]** aus.
+Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![ Pluszeichen ) aus.](/help/images/icons/tree-expand-all.png)) neben einer der Zeilen oder wählen Sie **[!UICONTROL Add identity]** aus.
 
 ![Der Workflow für die Anfrageerstellung mit dem Pluszeichen und dem hervorgehobenen Symbol „Identität hinzufügen“.](../images/ui/record-delete/more-identities.png)
 
@@ -209,10 +209,6 @@ Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt und auf der
 
 Wenn der Datensatz, aus dem Sie löschen möchten, auf einem relationalen Schema basiert, sollten Sie die folgenden Überlegungen überprüfen, um sicherzustellen, dass Datensätze korrekt entfernt und aufgrund von Diskrepanzen zwischen Experience Platform und Ihrem Quellsystem nicht erneut aufgenommen werden.
 
->[!NOTE]
->
->Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-Dokumentation zuvor als modellbasierte Schemata bezeichnet. Die Funktionalität und das Löschverhalten bleiben unverändert.
-
 ### Verhalten beim Löschen von Datensätzen
 
 In der folgenden Tabelle wird beschrieben, wie sich das Löschen von Datensätzen je nach Aufnahmemethode und geänderter Datenerfassungskonfiguration über Experience Platform- und Quellsysteme hinweg verhält.
@@ -269,7 +265,7 @@ Befolgen Sie die folgenden Best Practices, um eine unbeabsichtigte erneute Aufna
 * **Ändern von Datenerfassungsflüssen**: Nachdem Sie Datensätze in Platform gelöscht haben, überwachen Sie Datenflüsse und bestätigen Sie, dass das Quellsystem dieselben Datensätze entfernt oder in `_change_request_type = 'd'` einbezieht.
 * **Quelle bereinigen**: Löschen Sie bei Quellen, die eine vollständige Aktualisierungsaufnahme verwenden, oder Quellen, die Löschvorgänge über die Änderungsdatenerfassung nicht unterstützen, Datensätze direkt aus dem Quellsystem, um eine erneute Aufnahme zu vermeiden.
 
-Weitere Informationen zu Schemaanforderungen finden Sie unter [Anforderungen an relationale &#x200B;](../../xdm/schema/relational.md#relational-schemas).
+Weitere Informationen zu Schemaanforderungen finden Sie unter [Anforderungen an relationale ](../../xdm/schema/relational.md#relational-schemas).
 
 Informationen zur Funktionsweise der Änderungsdatenerfassung mit Quellen finden Sie unter [Aktivieren der Änderungsdatenerfassung in Quellen](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
 

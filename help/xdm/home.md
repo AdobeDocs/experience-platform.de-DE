@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM-System – Übersicht
 description: Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemata für das Customer Experience Management.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2440'
-ht-degree: 56%
+source-wordcount: '2411'
+ht-degree: 57%
 
 ---
 
@@ -77,7 +77,7 @@ Weniger identifizierte Profile bestehen möglicherweise nur aus anonymen Verhalt
 
 Je mehr Daten zu einem Profil gesammelt werden, desto zuverlässiger wird der Bestand an personenbezogenen Daten, Identifizierungsinformationen, Kontaktdaten und Kommunikationsvorlieben einer Person.
 
-Weitere Informationen zur Struktur und [[!UICONTROL XDM Individual Profile] Anwendungsfall der Felder einer Klasse finden Sie im &#x200B;](./classes/individual-profile.md)-Referenzhandbuch .
+Weitere Informationen zur Struktur und [[!UICONTROL XDM Individual Profile] Anwendungsfall der Felder einer Klasse finden Sie im ](./classes/individual-profile.md)-Referenzhandbuch .
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -89,7 +89,7 @@ Es ist zwar nicht einfach, alle Ereignisse in allen Datenquellen zu kategorisier
 
 ![Eine Infografik der Kunden-Journey, die mit Erlebnisereignissen im Laufe der Zeit visualisiert wurde.](images/overview/experience-event-journey.png)
 
-Weitere Informationen zur Struktur und [[!UICONTROL XDM ExperienceEvent] Anwendungsfall der Felder einer Klasse finden Sie im &#x200B;](./classes/experienceevent.md)-Referenzhandbuch .
+Weitere Informationen zur Struktur und [[!UICONTROL XDM ExperienceEvent] Anwendungsfall der Felder einer Klasse finden Sie im ](./classes/experienceevent.md)-Referenzhandbuch .
 
 ## XDM-Schemata und Experience Platform-Services {#schemas-and-platform-services}
 
@@ -103,17 +103,13 @@ Katalogdaten werden im Data Lake gespeichert, einem hochgradig granularen Datens
 
 Um mit der Aufnahme von Daten in Experience Platform zu beginnen, können Sie mithilfe von Catalog Service einen Datensatz erstellen. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der aufzunehmenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, leitet Experience Platform ein „festgestelltes Schema“ ab, indem Typ und Inhalt der erfassten Datenfelder überprüft werden. Datensätze werden dann im Katalog-Service verfolgt und im Data Lake zusammen mit den Schemas und festgestellten Schemas, auf denen sie basieren, gespeichert.
 
-Weitere Informationen finden Sie [&#x200B; „Übersicht &#x200B;](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [&#x200B; finden &#x200B;](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
+Weitere Informationen finden Sie [ „Übersicht ](../catalog/home.md) Katalog-Service“. Weitere Informationen zur Datenaufnahme in [ finden ](../ingestion/home.md) in der Übersicht zur Datenaufnahme in Adobe Experience Platform .
 
 ### Data Mirror und relationale Schemata {#relational-schemas}
 
 >[!AVAILABILITY]
 >
 >Data Mirror und relationale Schemata stehen Adobe Journey Optimizer-Lizenzinhabern **Orchestrierte Kampagnen** zur Verfügung. Sie sind auch als **eingeschränkte Version** für Customer Journey Analytics-Benutzer verfügbar, je nach Ihrer Lizenz und der Aktivierung von Funktionen. Wenden Sie sich an den Adobe-Support, um Zugang zu erhalten.
-
->[!NOTE]
->
->Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-Dokumentation zuvor als modellbasierte Schemata bezeichnet. Die Funktionalität bleibt gleich, nur die Terminologie wurde aus Gründen der Übersichtlichkeit geändert.
 
 Data Mirror ist eine Adobe Experience Platform-Funktion, die eine erweiterte Datenbanksynchronisierung mithilfe von relationalen Schemata ermöglicht. Einen vollständigen Überblick über die Funktionen und Anwendungsfälle von Data Mirror finden Sie in der Übersicht zu [Data Mirror](./data-mirror/overview.md).
 
@@ -149,7 +145,7 @@ Sie können Standard-SQL zur Abfrage von Experience Platform-Daten verwenden, um
 
 Nachdem ein Schema erstellt und ein Datensatz erstellt wurde, der auf dieses Schema verweist, werden die Daten aufgenommen und im Data Lake gespeichert. Anschließend können Sie den Abfrage-Service verwenden, um beliebige Datensätze im Data Lake zu verbinden und die Abfrageergebnisse als neuen Datensatz zu erfassen, der bei Reporting, maschinellem Lernen oder der Aufnahme in das Echtzeit-Kundenprofil verwendet werden kann.
 
-Weitere Informationen zu diesem Service finden Sie unter [Query Service – Übersicht](../query-service/home.md).
+Weitere Informationen zu diesem Service finden Sie unter [Abfrage-Service – Überblick](../query-service/home.md).
 
 ### Echtzeit-Kundenprofil {#real-time-customer-profile}
 
@@ -185,4 +181,4 @@ Um mehr über die Prinzipien und Best Practices beim Erstellen von Schemata zu e
 
 Sehen Sie sich das folgende Video an, um [!DNL XDM System] in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/38505?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

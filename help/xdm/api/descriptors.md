@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-Endpunkt für Deskriptoren
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2882'
 ht-degree: 25%
 
 ---
@@ -36,13 +36,9 @@ Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] 
 
 Zusätzlich zu Standarddeskriptoren unterstützt der [!DNL Schema Registry] Deskriptortypen für relationale Schemata, wie **Primärschlüssel**, **Version** und **Zeitstempel**. Diese erzwingen Eindeutigkeit, steuern die Versionierung und definieren Zeitreihenfelder auf Schemaebene. Wenn Sie nicht mit relationalen Schemata vertraut sind, lesen Sie die [Übersicht über Data Mirror](../data-mirror/overview.md) und die [Technische Referenz zu relationalen Schemata](../schema/relational.md), bevor Sie fortfahren.
 
->[!NOTE]
->
->Relationale Schemata wurden in früheren Versionen der Adobe Experience Platform-Dokumentation zuvor als modellbasierte Schemata bezeichnet. Die Deskriptorfunktionalität und die API-Endpunkte bleiben unverändert. Nur die Terminologie wurde aus Gründen der Übersichtlichkeit aktualisiert.
-
 >[!IMPORTANT]
 >
->Einzelheiten zu allen Deskriptortypen finden [&#x200B; im &#x200B;](#defining-descriptors)Anhang).
+>Einzelheiten zu allen Deskriptortypen finden [ im ](#defining-descriptors)Anhang).
 
 ## Abrufen einer Liste von Deskriptoren {#list}
 
@@ -162,7 +158,7 @@ Sie können einen neuen Deskriptor erstellen, indem Sie eine POST-Anfrage an den
 
 >[!IMPORTANT]
 >
->Mit dem [!DNL Schema Registry] können Sie mehrere verschiedene Deskriptortypen definieren. Jeder Deskriptortyp erfordert, dass seine eigenen spezifischen Felder im Anfragetext gesendet werden. Eine vollständige Liste der Deskriptoren [&#x200B; die Felder, die &#x200B;](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
+>Mit dem [!DNL Schema Registry] können Sie mehrere verschiedene Deskriptortypen definieren. Jeder Deskriptortyp erfordert, dass seine eigenen spezifischen Felder im Anfragetext gesendet werden. Eine vollständige Liste der Deskriptoren [ die Felder, die ](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
 
 **API-Format**
 
@@ -230,11 +226,11 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Anfrage**
 
-Diese Anfrage schreibt den Deskriptor im Wesentlichen neu. Daher muss der Anfragetext alle Felder enthalten, die zum Definieren eines Deskriptors dieses Typs erforderlich sind. Mit anderen Worten, die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors ist identisch mit der Payload zum [&#x200B; (POST) eines Deskriptors](#create) desselben Typs.
+Diese Anfrage schreibt den Deskriptor im Wesentlichen neu. Daher muss der Anfragetext alle Felder enthalten, die zum Definieren eines Deskriptors dieses Typs erforderlich sind. Mit anderen Worten, die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors ist identisch mit der Payload zum [ (POST) eines Deskriptors](#create) desselben Typs.
 
 >[!IMPORTANT]
 >
->Wie beim Erstellen von Deskriptoren mithilfe von POST-Anfragen ist es erforderlich, dass für jeden Deskriptortyp eigene spezifische Felder in den Payloads von PUT-Anfragen gesendet werden. Eine vollständige Liste der Deskriptoren [&#x200B; die Felder, die &#x200B;](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
+>Wie beim Erstellen von Deskriptoren mithilfe von POST-Anfragen ist es erforderlich, dass für jeden Deskriptortyp eigene spezifische Felder in den Payloads von PUT-Anfragen gesendet werden. Eine vollständige Liste der Deskriptoren [ die Felder, die ](#defining-descriptors) Definieren der Deskriptoren erforderlich sind, finden Sie im Anhang .
 
 Im folgenden Beispiel wird ein Identitätsdeskriptor aktualisiert, um auf einen anderen `xdm:sourceProperty` (`mobile phone`) zu verweisen und die `xdm:namespace` in `Phone` zu ändern.
 
@@ -267,7 +263,7 @@ Bei einer erfolgreichen Antwort werden der HTTP-Status 201 (Erstellt) und die `@
 }
 ```
 
-Wenn Sie eine [Suchanfrage (GET) &#x200B;](#lookup), um den Deskriptor anzuzeigen, werden die Felder jetzt aktualisiert, damit die in der PUT-Anfrage gesendeten Änderungen widergespiegelt werden.
+Wenn Sie eine [Suchanfrage (GET) ](#lookup), um den Deskriptor anzuzeigen, werden die Felder jetzt aktualisiert, damit die in der PUT-Anfrage gesendeten Änderungen widergespiegelt werden.
 
 ## Löschen eines Deskriptors {#delete}
 
@@ -571,7 +567,7 @@ Der Zeitstempeldeskriptor (`xdm:descriptorTimestamp`) bezeichnet ein Datums-/Uhr
 
 ##### B2B-Beziehungsdeskriptor {#B2B-relationship-descriptor}
 
-Real-Time CDP B2B edition führt eine alternative Methode zur Definition von Beziehungen zwischen Schemata ein, die Viele-zu-Eins-Beziehungen ermöglicht. Diese neue Beziehung muss den `@type: xdm:descriptorRelationship` aufweisen, und die Payload muss mehr Felder als die `@type: xdm:descriptorOneToOne` enthalten. Weitere Informationen finden Sie im Tutorial [Definieren einer Schemabeziehung für &#x200B;](../tutorials/relationship-b2b.md)B2B edition&quot;.
+Real-Time CDP B2B edition führt eine alternative Methode zur Definition von Beziehungen zwischen Schemata ein, die Viele-zu-Eins-Beziehungen ermöglicht. Diese neue Beziehung muss den `@type: xdm:descriptorRelationship` aufweisen, und die Payload muss mehr Felder als die `@type: xdm:descriptorOneToOne` enthalten. Weitere Informationen finden Sie im Tutorial [Definieren einer Schemabeziehung für ](../tutorials/relationship-b2b.md)B2B edition&quot;.
 
 ```json
 {
@@ -591,7 +587,7 @@ Real-Time CDP B2B edition führt eine alternative Methode zur Definition von Bez
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu definierenden Deskriptors. Für uns mit den folgenden Feldern muss der Wert auf `xdm:descriptorRelationship` gesetzt werden. Weitere Informationen zu zusätzlichen Typen finden Sie [&#x200B; Abschnitt &#x200B;](#relationship-descriptor)Beziehungsdeskriptoren“. |
+| `@type` | Der Typ des zu definierenden Deskriptors. Für uns mit den folgenden Feldern muss der Wert auf `xdm:descriptorRelationship` gesetzt werden. Weitere Informationen zu zusätzlichen Typen finden Sie [ Abschnitt ](#relationship-descriptor)Beziehungsdeskriptoren“. |
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zum Feld im Quellschema, in dem die Beziehung definiert wird. Sollte mit &quot;/&quot; beginnen und nicht mit &quot;/&quot; enden. Schließen Sie „properties“ nicht in den Pfad ein (z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
