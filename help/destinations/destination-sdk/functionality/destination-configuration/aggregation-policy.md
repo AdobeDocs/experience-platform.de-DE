@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie eine Aggregationsrichtlinie einrichten, um zu bestimmen, wie HTTP-Anfragen an Ihr Ziel gruppiert und in Batches eingesetzt werden sollen.
 title: Aggregationsrichtlinie
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 94%
@@ -109,7 +109,7 @@ Die folgende Beispielkonfiguration zeigt eine konfigurierbare Aggregationskonfig
 |---------|----------|------|
 | `aggregationType` | Zeichenfolge | Gibt den Typ der Aggregationsrichtlinie an, die Ihr Ziel verwenden soll. Unterstützte Aggregationstypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | Boolesch | Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true`, wenn Ihr Server für einen gegebenen Namespace nur eine Identität pro Aufruf akzeptiert. |
-| `configurableAggregation.maxBatchAgeInSecs` | Ganzzahl | Zusammen mit `maxNumEventsInBatch` bestimmt dieser Parameter, wie lange Experience Platform warten soll, bis ein API-Aufruf an Ihren Endpunkt gesendet wird. <ul><li>Mindestwert (Sekunden): 1.800</li><li>Höchstwert (Sekunden): 3.600</li></ul> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet Experience Platform entweder 3.600 Sekunden ODER, bis 10000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was früher eintritt). |
+| `configurableAggregation.maxBatchAgeInSecs` | Ganzzahl | Zusammen mit `maxNumEventsInBatch` bestimmt dieser Parameter, wie lange Experience Platform warten soll, bis ein API-Aufruf an Ihren Endpunkt gesendet wird. <ul><li>Mindestwert (Sekunden): 301</li><li>Höchstwert (Sekunden): 3.600</li></ul> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet Experience Platform entweder 3.600 Sekunden ODER, bis 10000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was früher eintritt). |
 | `configurableAggregation.maxNumEventsInBatch` | Ganzzahl | Zusammen mit `maxBatchAgeInSecs` bestimmt dieser Parameter, wie viele qualifizierte Profile in einem API-Aufruf aggregiert werden sollen. <ul><li>Mindestwert: 1.000</li><li>Höchstwert: 10.000</li></ul> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet Experience Platform entweder 3.600 Sekunden ODER, bis 10.000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was früher eintritt). |
 | `configurableAggregation.aggregationKey` | – | Ermöglicht die Aggregation der dem Ziel zugeordneten exportierten Profile anhand der folgenden Parameter. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID in Ihr Ziel exportiert wurden. |
@@ -136,4 +136,4 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Zielbereitstellung](destination-delivery.md)
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
 * [Batch-Konfiguration](batch-configuration.md)
-* [Historische Profilqualifikationen](historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](historical-profile-qualifications.md)
