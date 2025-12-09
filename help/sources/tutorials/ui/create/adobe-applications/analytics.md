@@ -26,7 +26,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dokument verwendet werden:
 
 * **Standardattribut**: Standardattribute sind alle Attribute, die von Adobe vordefiniert wurden. Sie haben dieselbe Bedeutung für alle Kunden und sind in den Analytics-Quelldaten und Analytics-Schemafeldergruppen verfügbar.
-* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in Analytics. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Ihre Verwendung kann sich von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. Weitere Informationen zu eVars finden [&#x200B; in der folgenden &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)Analytics-Dokumentation zu Konversionsvariablen).
+* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in Analytics. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Ihre Verwendung kann sich von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. Weitere Informationen zu eVars finden [&#x200B; in der folgenden &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=de)Analytics-Dokumentation zu Konversionsvariablen).
 * **Attribute in benutzerdefinierten Feldgruppen**: Attribute, die aus von Kunden erstellten Feldgruppen stammen, sind alle benutzerdefiniert und gelten weder als Standard- noch als benutzerdefinierte Attribute.
 
 ## Navigieren im Quellkatalog
@@ -117,7 +117,7 @@ Experience Platform erkennt Ihre Zuordnung automatisch für Namenskonflikte. Wen
 >id="platform_analytics_import_mapping"
 >title="Vorlage herunterladen"
 >abstract="CSV-Vorlage herunterladen, um die Zuordnung offline durchzuführen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Zuordnung importieren"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Zuordnung importieren"
 
 Mit Datenvorbereitungsfunktionen können Sie neue benutzerdefinierte Zuordnungen oder berechnete Felder für benutzerdefinierte Attribute hinzufügen. Um benutzerdefinierte Zuordnungen hinzuzufügen, wählen Sie **[!UICONTROL Custom]** aus.
 
