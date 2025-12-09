@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie über die Benutzeroberfläche einen Adobe Analytics-Quell-Connector erstellen, um Klassifizierungsdaten in Adobe Experience Platform zu importieren.
 title: Erstellen einer Adobe Analytics Source-Verbindung für Klassifizierungsdaten in der Benutzeroberfläche
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 15%
+source-wordcount: '508'
+ht-degree: 16%
 
 ---
 
@@ -29,31 +29,31 @@ Vor der Verwendung des Analytics Classifications Source Connectors müssen Ihre 
 
 ## Klassifizierungen auswählen
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option **[!UICONTROL Sources]** , um auf den [!UICONTROL Sources]-Arbeitsbereich zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie *Adobe* Programme&rbrace; **[!UICONTROL Adobe Analytics]** und dann **[!UICONTROL Einrichten]** aus.
+Wählen Sie unter der Kategorie ** Adobe-Programme **[!UICONTROL Adobe Analytics]** und dann **[!UICONTROL Set up]** aus.
 
 >[!TIP]
 >
->Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn kein authentifiziertes Konto vorhanden ist. Nach der Authentifizierung eines Kontos ändert sich die Option in **[!UICONTROL Daten hinzufügen]**.
+>Quellen im Quellkatalog zeigen die **[!UICONTROL Set up]** an, wenn kein authentifiziertes Konto vorhanden ist. Nach der Authentifizierung eines Kontos ändert sich die Option in **[!UICONTROL Add data]**.
 
 ![Der Quellkatalog in der Experience Platform-Benutzeroberfläche mit ausgewählter Adobe Analytics-Quelle.](../../../../images/tutorials/create/classifications/catalog.png)
 
-Wählen Sie als Nächstes [!UICONTROL Klassifizierungen] und wählen Sie dann die Klassifizierungsdatensätze aus, die Sie in Experience Platform aufnehmen möchten.
+Wählen Sie als Nächstes [!UICONTROL Classifications] und dann die Klassifizierungsdatensätze aus, die Sie in Experience Platform aufnehmen möchten. Alternativ können Sie die Suche verwenden, um nach bestimmten Klassifizierungen zu filtern und auszuwählen.
 
-Sie können bis zu 30 verschiedene Klassifizierungsdatensätze auswählen, die in Experience Platform importiert werden sollen. Alle von Ihnen ausgewählten Datensätze werden in der rechten Leiste angezeigt. Wenn Sie fertig sind, klicken Sie auf [!UICONTROL Weiter] um fortzufahren.
+Sie können bis zu 30 verschiedene Klassifizierungsdatensätze auswählen, die in Experience Platform importiert werden sollen. Alle von Ihnen ausgewählten Datensätze werden in der rechten Leiste angezeigt. Wenn Sie fertig sind, wählen Sie [!UICONTROL Next] aus, um fortzufahren.
 
 ![Die Seite „Klassifizierungen“ mit mehreren ausgewählten Klassifizierungsdatensätzen.](../../../../images/tutorials/create/classifications/select.png)
 
 ## Überprüfen der Klassifizierungen
 
-Der Schritt **[!UICONTROL Überprüfen]** wird angezeigt, sodass Sie Ihre ausgewählten Klassifizierungsdatensätze überprüfen können, bevor sie erstellt werden. Die Details lassen sich wie folgt kategorisieren:
+Der Schritt **[!UICONTROL Review]** wird angezeigt, in dem Sie die ausgewählten Klassifizierungsdatensätze überprüfen können, bevor sie erstellt werden. Die Details lassen sich wie folgt kategorisieren:
 
-* **[!UICONTROL Verbindung]**: Zeigt die Quellplattform und den Status der Verbindung an.
-* **[!UICONTROL Datentyp]**: Zeigt die Anzahl der ausgewählten Klassifizierungen an.
-* **[!UICONTROL Planung]**: Zeigt die Häufigkeit der Synchronisierung für Klassifizierungsdaten an. **Hinweis**: Klassifizierungsdaten werden wöchentlich aktualisiert.
+* **[!UICONTROL Connection]**: Zeigt die Quellplattform und den Status der Verbindung an.
+* **[!UICONTROL Data type]**: Zeigt die Anzahl der ausgewählten Klassifizierungen an.
+* **[!UICONTROL Scheduling]**: Zeigt die Häufigkeit der Synchronisierung für Klassifizierungsdaten an. **Hinweis**: Klassifizierungsdaten werden wöchentlich aktualisiert.
 
-Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
+Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Finish]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
 
 ![Die Überprüfungsseite für Adobe Analytics-Klassifizierungsdaten.](../../../../images/tutorials/create/classifications/review.png)
 
@@ -63,4 +63,4 @@ In diesem Tutorial haben Sie einen Analytics Classifications Data-Connector erst
 
 * [Übersicht über den Adobe Analytics-Quell-Connector](../../../../connectors/adobe-applications/analytics.md)
 * [Erstellen einer Analytics-Quellverbindung für Report Suite-Daten in der Benutzeroberfläche](./analytics.md)
-* [Über Klassifizierungen](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=de)
+* [Über Klassifizierungen](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
