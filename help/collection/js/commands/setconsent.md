@@ -22,7 +22,7 @@ Web SDK unterstützt die folgenden Standards:
    1. Das Erlebnisereignis-Schema enthält die [IAB TCF 2.0-Einverständnis-Feldergruppe](/help/xdm/field-groups/event/iab.md).
    1. Sie schließen die IAB-Einverständnisinformationen in das Ereignis (XDM[Objekt) &#x200B;](sendevent/xdm.md). Web SDK enthält die Einverständnisinformationen beim Senden von Ereignisdaten nicht automatisch.
 
-Bei Verwendung dieses Befehls schreibt die Web-SDK die Benutzereinstellungen in das [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)-Cookie. Dieses Cookie wird unabhängig von den Einverständnisvoreinstellungen des Besuchers gesetzt, da es die Einverständnisvoreinstellungen dieses Besuchers speichert. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft die SDK diese persistierten Voreinstellungen ab, um zu ermitteln, ob Ereignisse an Adobe gesendet werden können.
+Bei Verwendung dieses Befehls schreibt die Web-SDK die Benutzereinstellungen in das [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/cookies/web-sdk)-Cookie. Dieses Cookie wird unabhängig von den Einverständnisvoreinstellungen des Besuchers gesetzt, da es die Einverständnisvoreinstellungen dieses Besuchers speichert. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft die SDK diese persistierten Voreinstellungen ab, um zu ermitteln, ob Ereignisse an Adobe gesendet werden können.
 
 Adobe empfiehlt, alle Voreinstellungen für das Einverständnisdialogfeld getrennt vom Einverständnis für Web SDK zu speichern. Web SDK bietet keine Möglichkeit, Einverständnis abzurufen. Um sicherzustellen, dass die Benutzereinstellungen mit der SDK synchron bleiben, können Sie bei jedem Laden der Seite den Befehl `setConsent` aufrufen. Web SDK führt nur dann einen Server-Aufruf durch, wenn sich das Einverständnis ändert.
 
@@ -51,7 +51,7 @@ Wenn diese Einstellungen zusammen verwendet werden, können sie je nach den konf
 | `out` | `out` | Nein | Ja |
 | `out` | Nicht festgelegt | Nein | Nein |
 
-Eine vollständige Liste der Cookies, [&#x200B; gesetzt werden können, finden Sie im Handbuch zu Core Services unter &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)Cookies in Adobe Experience Platform Web SDK.
+Eine vollständige Liste der Cookies, [&#x200B; gesetzt werden können, finden Sie im Handbuch zu Core Services unter &#x200B;](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/cookies/web-sdk)Cookies in Adobe Experience Platform Web SDK.
 
 ## Verwenden des `setConsent` Befehls
 
