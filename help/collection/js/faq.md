@@ -116,7 +116,7 @@ Anders ausgedrückt: Wenn Sie sich entscheiden, Adobe Experience Platform Web SD
 
 ## Kann ich die ECIDs migrieren, wenn ich mit der Verwendung von Web SDK beginne, damit meine Website-Besucher nicht als neue Besucher angezeigt werden?
 
-Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der Dokumentation zu Experience Platform Web SDK Identity [ der Anleitung zur ID-Migration.](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid)
+Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der Dokumentation zu Experience Platform Web SDK Identity [&#x200B; der Anleitung zur ID-Migration.](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid)
 
 ## Worin unterscheidet sich Web SDK von Tags?
 
@@ -144,7 +144,7 @@ Wenn Sie unsere SDKs verwenden und XDM an die Edge Network senden, können Sie m
 
 ## Was ist eine CNAME- oder Erstanbieter-Domain und warum ist sie wichtig?
 
-Weitere Informationen finden Sie im Handbuch zu [ Services im ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)Adobe-Managed Certificate Program.
+Weitere Informationen finden Sie im Handbuch zu [&#x200B; Services im &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)Adobe-Managed Certificate Program.
 
 ## Verwendet Adobe Experience Platform Web SDK Cookies? Wenn ja, welche Cookies werden verwendet?
 
