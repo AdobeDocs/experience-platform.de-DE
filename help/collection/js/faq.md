@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Adobe Experience Platform Web SDK
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zur Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 2%
+source-wordcount: '1665'
+ht-degree: 1%
 
 ---
 
@@ -78,7 +78,7 @@ Nein. Jeder Kunde von Adobe Digital Experience kann die Adobe Experience Platfor
 * Kunden, die *nicht* Zugriff auf Experience Platform oder Real-Time CDP haben und die [!DNL Web SDK] verwenden möchten, müssen die richtigen Berechtigungen konfigurieren, um Schemas und Datenströme in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche zu erstellen.
 * Kunden, die Zugriff auf Experience Platform oder Real-Time CDP haben und die [!DNL Web SDK] verwenden möchten, müssen die richtigen Berechtigungen konfigurieren, um Schemas, Datensätze, Identitäts-Namespaces und Datenströme in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche zu erstellen.
 
-Weitere Informationen zum Konfigurieren dieser Berechtigungen finden Sie in der Dokumentation unter [Verwaltung von Datenerfassungsberechtigungen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=de).
+Weitere Informationen zum Konfigurieren dieser Berechtigungen finden Sie in der Dokumentation unter [Verwaltung von Datenerfassungsberechtigungen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Wer sollte die Web-SDK verwenden?
 
@@ -116,7 +116,7 @@ Anders ausgedrückt: Wenn Sie sich entscheiden, Adobe Experience Platform Web SD
 
 ## Kann ich die ECIDs migrieren, wenn ich mit der Verwendung von Web SDK beginne, damit meine Website-Besucher nicht als neue Besucher angezeigt werden?
 
-Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der Dokumentation zu Experience Platform Web SDK Identity [&#x200B; der Anleitung zur ID-Migration.](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid)
+Ja, Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmigration. Weitere Informationen finden Sie in der Dokumentation zu Experience Platform Web SDK Identity [ der Anleitung zur ID-Migration.](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid)
 
 ## Worin unterscheidet sich Web SDK von Tags?
 
@@ -144,25 +144,11 @@ Wenn Sie unsere SDKs verwenden und XDM an die Edge Network senden, können Sie m
 
 ## Was ist eine CNAME- oder Erstanbieter-Domain und warum ist sie wichtig?
 
-Weitere Informationen zu einem CNAME finden Sie in der Dokumentation zu [Adobe](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=de)
+Weitere Informationen finden Sie im Handbuch zu [ Services im ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)Adobe-Managed Certificate Program.
 
 ## Verwendet Adobe Experience Platform Web SDK Cookies? Wenn ja, welche Cookies werden verwendet?
 
-Ja, derzeit verwendet Web SDK je nach Implementierung zwischen ein und sieben Cookies. Nachstehend finden Sie eine Liste der Cookies, die Sie möglicherweise mit dem Web SDK sehen, und die Art und Weise, wie sie verwendet werden:
-
-| **Name** | **maxAge** | **Freundliches Alter** | **Beschreibung** |
-|---|---|---|---|
-| **kndct_orgid_identity** | 34128000 | 395 Tage | Im Identitäts-Cookie werden die ECID sowie andere Informationen im Zusammenhang mit der ECID gespeichert. |
-| **kndctr_orgid_consent_check** | 7200 | 2 Stunden | Dieses sitzungsbasierte Cookie weist den Server an, die Einverständnisvoreinstellungen Server-seitig zu suchen. |
-| **kndctr_orgid_consent** | 15552000 | 180 Tage | Dieses Cookie speichert die Einverständnisvoreinstellungen des Benutzers für die Website. |
-| **kndctr_orgid_cluster** | 1800 | 30 Minuten | Dieses Cookie speichert die Edge Network-Region, die die Anfragen des aktuellen Benutzers verarbeitet. Die Region wird im URL-Pfad verwendet, damit der Edge Network die Anfrage an die richtige Region weiterleiten kann. Dieses Cookie hat eine Lebensdauer von 30 Minuten, sodass, wenn ein Benutzer eine Verbindung mit einer anderen IP-Adresse herstellt, die Anfrage an die nächstgelegene Region weitergeleitet werden kann. |
-| **Mbox** | 63072000 | 2 Jahre | Dieses Cookie wird angezeigt, wenn die Einstellung für die Target-Migration auf „true“ gesetzt ist. Dadurch kann das Target[mbox-Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) von der Web-SDK festgelegt werden. |
-| **mboxEdgeCluster** | 1800 | 30 Minuten | Dieses Cookie wird angezeigt, wenn die Einstellung für die Target-Migration auf „true“ gesetzt ist. Dieses Cookie ermöglicht es der Web SDK, at.js den richtigen Edge-Cluster zu übermitteln, damit die Zielprofile synchron bleiben, während Benutzende auf einer Site navigieren. |
-| **AMCV_##@AdobeOrg** | 34128000 | 395 Tage | Dieses Cookie wird nur angezeigt, wenn die ID-Migration auf der Adobe Experience Platform Web SDK aktiviert ist. Dieses Cookie hilft bei der Umstellung auf Web SDK, während einige Teile der Website noch visitor.js verwenden. Weitere Informationen finden Sie unter [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) . |
-
-Bei Verwendung der Web-SDK setzt die Edge Network eines oder mehrere der oben genannten Cookies. Edge Network setzt alle Cookies mit den Attributen `secure` und `sameSite="none"` .
-
-Wenn Sie derzeit sowohl sichere als auch nicht sichere Abschnitte auf Ihrer Website haben, kann dies die Benutzeridentifizierung beeinträchtigen. Wenn ein(e) Benutzende(r) von einem sicheren Abschnitt der Site zu einem nicht sicheren Abschnitt navigiert, generiert Edge Network mit der Anfrage einen neuen `ECID`.
+Siehe [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)Cookies im Core Services-Handbuch.
 
 ## Welche Browser unterstützt Adobe Experience Platform Web SDK?
 

@@ -2,9 +2,9 @@
 title: Identitätsdaten in der Web-SDK
 description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit der Adobe Experience Platform Web SDK abrufen und verwalten.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1559'
 ht-degree: 1%
 
 ---
@@ -22,20 +22,20 @@ Web SDK weist [!DNL ECIDs] mithilfe von Cookies zu und verfolgt diese. Dabei ste
 Wenn ein neuer Benutzer auf Ihre Website gelangt, versucht der [Adobe Experience Cloud Identity Service](/help/identity-service/home.md), ein Gerätekennungs-Cookie für diesen Benutzer zu setzen.
 
 * Für Erstbesucher wird eine [!DNL ECID] generiert und in der ersten Antwort von Experience Platform Edge Network zurückgegeben.
-* Bei zurückkehrenden Besuchern wird der [!DNL ECID] aus dem `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity`-Cookie abgerufen und von der Edge Network zur Anfrage-Payload hinzugefügt.
+* Bei zurückkehrenden Besuchern wird der [!DNL ECID] aus dem [`kndctr_<orgId>_identity`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)-Cookie abgerufen und von der Edge Network zur Anfrage-Payload hinzugefügt.
 
-Nachdem das Cookie, das die [!DNL ECID] enthält, gesetzt wurde, enthält jede nachfolgende, von der Web-SDK generierte Anfrage eine codierte [!DNL ECID] im `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity`-Cookie.
+Nachdem das Cookie, das die [!DNL ECID] enthält, gesetzt wurde, enthält jede nachfolgende, von der Web-SDK generierte Anfrage eine codierte [!DNL ECID] im `kndctr_<orgId>_identity`-Cookie.
 
 Bei der Verwendung von Cookies zur Geräte-Identifizierung haben Sie zwei Möglichkeiten, mit der Edge Network zu interagieren:
 
-1. Erstellen Sie einen CNAME in Ihrer eigenen Domain, der auf `adobedc.net` verweist. Diese Methode wird als [Erstanbieter-Datenerfassung“ &#x200B;](#first-party).
-1. Senden Sie Daten direkt an die Edge Network-Domain `adobedc.net`. Diese Methode wird als [Datenerfassung von Drittanbietern“ &#x200B;](#third-party).
+1. Erstellen Sie einen CNAME in Ihrer eigenen Domain, der auf `adobedc.net` verweist. Diese Methode wird als [Erstanbieter-Datenerfassung“ ](#first-party).
+1. Senden Sie Daten direkt an die Edge Network-Domain `adobedc.net`. Diese Methode wird als [Datenerfassung von Drittanbietern“ ](#third-party).
 
 Wie in den folgenden Abschnitten erläutert, hat die von Ihnen gewählte Datenerfassungsmethode direkte Auswirkungen auf die Cookie-Lebensdauer in allen Browsern.
 
 ## Tracking von CORE-IDs mit Web SDK {#tracking-coreid-web-sdk}
 
-Wenn Sie Google Chrome mit aktivierten Drittanbieter-Cookies verwenden und kein `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity`-Cookie gesetzt ist, wird die erste Edge Network-Anfrage über eine `demdex.net`-Domain gesendet, die ein demdex-Cookie setzt. Dieses Cookie enthält eine [!DNL CORE ID]. Dies ist eine eindeutige Benutzer-ID, die sich von der [!DNL ECID] unterscheidet.
+Wenn Sie Google Chrome mit aktivierten Drittanbieter-Cookies verwenden und kein `kndctr_<orgId>_identity`-Cookie gesetzt ist, wird die erste Edge Network-Anfrage über eine `demdex.net`-Domain gesendet, die ein demdex-Cookie setzt. Dieses Cookie enthält eine [!DNL CORE ID]. Dies ist eine eindeutige Benutzer-ID, die sich von der [!DNL ECID] unterscheidet.
 
 Abhängig von Ihrer -Implementierung möchten Sie möglicherweise auf [zugreifen [!DNL CORE ID]](#retrieve-coreid).
 
@@ -55,7 +55,7 @@ Bei der Verwendung der Datenerfassung von Drittanbietern beschränken einige Anz
 
 ### Auswirkungen der Cookie-Lebensdauer auf Adobe Experience Cloud-Anwendungen {#lifespans}
 
-Unabhängig davon, ob Sie die Datenerfassung von Erstanbietern oder Drittanbietern auswählen, wirkt sich die Dauer, während der ein Cookie bestehen kann, direkt auf die Besucherzahlen in [Adobe Analytics](https://experienceleague.adobe.com/de/docs/analytics) und [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/customer-journey-analytics) aus. Außerdem kann es bei Endbenutzern zu inkonsistenten Personalisierungserlebnissen kommen, wenn [Adobe Target](https://experienceleague.adobe.com/de/docs/target) oder [Offer Decisioning](https://experienceleague.adobe.com/de/docs/target/using/integrate/ajo/offer-decision) auf der Website verwendet werden.
+Unabhängig davon, ob Sie die Datenerfassung von Erstanbietern oder Drittanbietern auswählen, wirkt sich die Dauer, während der ein Cookie bestehen kann, direkt auf die Besucherzahlen in [Adobe Analytics](https://experienceleague.adobe.com/de/docs/analytics) und [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/customer-journey-analytics) aus. Außerdem kann es bei Endbenutzern zu inkonsistenten Personalisierungserlebnissen kommen, wenn [Adobe Target](https://experienceleague.adobe.com/en/docs/target) oder [Offer Decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) auf der Website verwendet werden.
 
 Stellen Sie sich beispielsweise eine Situation vor, in der Sie ein Personalisierungserlebnis erstellt haben, das jedes Element auf die Startseite höher stuft, wenn ein Benutzer es in den letzten sieben Tagen dreimal angesehen hat.
 
@@ -69,7 +69,7 @@ Um die Auswirkungen der Cookie-Lebensdauern wie oben beschrieben zu berücksicht
 
 Je nach Anwendungsfall gibt es zwei Möglichkeiten, auf die [!DNL ECID] zuzugreifen:
 
-* [Abrufen der  [!DNL ECID]  durch die Datenvorbereitung für &#x200B;](#retrieve-ecid-data-prep): Dies ist die empfohlene Methode.
+* [Abrufen der  [!DNL ECID]  durch die Datenvorbereitung für ](#retrieve-ecid-data-prep): Dies ist die empfohlene Methode.
 * [Abrufen der  [!DNL ECID]  über den `getIdentity()`-Befehl](#retrieve-ecid-getidentity): Verwenden Sie diese Methode nur, wenn Sie die [!DNL ECID] Informationen Client-seitig benötigen.
 
 ### Abrufen der [!DNL ECID] durch die Datenvorbereitung für die Datenerfassung {#retrieve-ecid-data-prep}
@@ -124,7 +124,7 @@ alloy("getIdentity",{
 
 ## Verwenden `identityMap` {#using-identitymap}
 
-Mithilfe eines XDM-[`identityMap` können &#x200B;](/help/xdm/schema/composition.md#identityMap) ein Gerät/einen Benutzer mithilfe mehrerer Identitäten identifizieren, seinen Authentifizierungsstatus festlegen und entscheiden, welche Kennung als die primäre Kennung betrachtet wird. Wenn keine Kennung als `primary` festgelegt wurde, ist standardmäßig die `ECID` die primäre Kennung.
+Mithilfe eines XDM-[`identityMap` können ](/help/xdm/schema/composition.md#identityMap) ein Gerät/einen Benutzer mithilfe mehrerer Identitäten identifizieren, seinen Authentifizierungsstatus festlegen und entscheiden, welche Kennung als die primäre Kennung betrachtet wird. Wenn keine Kennung als `primary` festgelegt wurde, ist standardmäßig die `ECID` die primäre Kennung.
 
 `identityMap` Felder werden mithilfe des Befehls `sentEvent` aktualisiert.
 
@@ -148,7 +148,7 @@ alloy("sendEvent", {
 >
 >Adobe empfiehlt, Namespaces zu senden, die eine Person darstellen, z. B. `CRMID`, als primäre Identität.
 
-Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identity-Namespace) &#x200B;](/help/identity-service/features/namespaces.md). Der Eigenschaftsname sollte das Identity-Namespace-Symbol sein, das in der Benutzeroberfläche von Adobe Experience Platform unter &quot;[!UICONTROL Identities]&quot; aufgeführt ist. Der Eigenschaftswert sollte ein Array von Identitäten sein, die zu diesem Identity-Namespace gehören.
+Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identity-Namespace) ](/help/identity-service/features/namespaces.md). Der Eigenschaftsname sollte das Identity-Namespace-Symbol sein, das in der Benutzeroberfläche von Adobe Experience Platform unter &quot;[!UICONTROL Identities]&quot; aufgeführt ist. Der Eigenschaftswert sollte ein Array von Identitäten sein, die zu diesem Identity-Namespace gehören.
 
 >[!IMPORTANT]
 >
@@ -162,7 +162,7 @@ Jedes Identitätsobjekt im Identitäts-Array enthält die folgenden Eigenschafte
 | `authenticatedState` | String | **(Erforderlich)** Der Authentifizierungsstatus der ID. Zu den möglichen Werten gehören `ambiguous`, `authenticated` und `loggedOut`. |
 | `primary` | Boolesch | Legt fest, ob diese Identität als primäres Fragment im Profil verwendet werden soll. Standardmäßig wird die ECID als primäre Kennung für den Benutzer festgelegt. Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 
-Die Verwendung des Felds `identityMap` zur Identifizierung von Geräten oder Benutzern führt zum gleichen Ergebnis wie die Verwendung der [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=de) Methode aus der [!DNL ID Service API]. Weitere Informationen finden Sie in der [ID-Service](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=de)API-Dokumentation .
+Die Verwendung des Felds `identityMap` zur Identifizierung von Geräten oder Benutzern führt zum gleichen Ergebnis wie die Verwendung der [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) Methode aus der [!DNL ID Service API]. Weitere Informationen finden Sie in der [ID-Service](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)API-Dokumentation .
 
 ## Migration von der Besucher-API zu ECID {#migrating-visitor-api-ecid}
 
@@ -174,7 +174,7 @@ Bei der Migration von mit der Besucher-API können Sie auch vorhandene AMCV-Cook
 
 ### Aktualisieren von Eigenschaften für die Migration
 
-Wenn XDM-formatierte Daten an Audience Manager gesendet werden, müssen diese Daten bei der Migration in Signale umgewandelt werden. Ihre Eigenschaften müssen aktualisiert werden, um die neuen Schlüssel widerzuspiegeln, die XDM bereitstellt. Dieser Prozess wird durch die Verwendung des [BAAAM-Tools](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=de#getting-started-with-bulk-management) das Audience Manager erstellt hat, erleichtert.
+Wenn XDM-formatierte Daten an Audience Manager gesendet werden, müssen diese Daten bei der Migration in Signale umgewandelt werden. Ihre Eigenschaften müssen aktualisiert werden, um die neuen Schlüssel widerzuspiegeln, die XDM bereitstellt. Dieser Prozess wird durch die Verwendung des [BAAAM-Tools](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) das Audience Manager erstellt hat, erleichtert.
 
 ## Verwendung bei der Ereignisweiterleitung
 
