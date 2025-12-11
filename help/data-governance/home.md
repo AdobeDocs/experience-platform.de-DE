@@ -75,11 +75,11 @@ Das Data Governance-Framework beinhaltet vordefinierte Datennutzungskennzeichnun
 
 >[!NOTE]
 >
->Eine vollständige Liste [ verfügbaren Bezeichnungen und Definitionen für ](labels/reference.md) Bezeichnungstyp finden Sie im Handbuch zu „Unterstützte Datennutzungsbezeichnungen“.
+>Eine vollständige Liste [&#x200B; verfügbaren Bezeichnungen und Definitionen für &#x200B;](labels/reference.md) Bezeichnungstyp finden Sie im Handbuch zu „Unterstützte Datennutzungsbezeichnungen“.
 
 Labels können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Als Best Practice empfiehlt sich eine Kennzeichnung von Daten, wenn diese in Experience Platform aufgenommen oder in [!DNL Experience Platform] verfügbar werden.
 
-Weitere Informationen dazu, wie [ Datennutzungskennzeichnungen zur Durchsetzung der Data-Governance](./labels/overview.md)Compliance verwendet werden, finden Sie in der Übersicht zu Datennutzungskennzeichnungen .
+Weitere Informationen dazu, wie [&#x200B; Datennutzungskennzeichnungen zur Durchsetzung der Data-Governance](./labels/overview.md)Compliance verwendet werden, finden Sie in der Übersicht zu Datennutzungskennzeichnungen .
 
 ## Datennutzungsrichtlinien {#data-usage-policies}
 
@@ -91,7 +91,7 @@ Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz
 Es sind zwei Richtlinientypen verfügbar:
 
 * **[!UICONTROL Data governance policy]**: Beschränken Sie die Datenaktivierung auf der Grundlage der durchgeführten Marketing-Aktion und der von den betreffenden Daten getragenen Datennutzungskennzeichnungen.
-* **[!UICONTROL Consent policy]**: Filtern Sie die Profile, die für ([) ](../destinations/home.md) aktiviert werden können, basierend auf dem Einverständnis oder den Voreinstellungen Ihrer Kunden.
+* **[!UICONTROL Consent policy]**: Filtern Sie die Profile, die für ([) &#x200B;](../destinations/home.md) aktiviert werden können, basierend auf dem Einverständnis oder den Voreinstellungen Ihrer Kunden.
 
 Sobald Datennutzungskennzeichnungen angewendet wurden, können Datenverwalter mithilfe der Richtlinien-Service-API oder der Benutzeroberfläche von Experience Platform Richtlinien erstellen. Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden Sie unter [Richtlinien – Übersicht](./policies/overview.md).
 
