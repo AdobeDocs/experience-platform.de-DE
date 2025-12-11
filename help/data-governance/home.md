@@ -136,8 +136,8 @@ Im folgenden Video werden die Komponenten des Data Governance-Frameworks erklär
 >
 >Das Video verweist auf das Anwenden von Kennzeichnungen auf einzelne Datensatzfelder. Dieser Workflow wird nicht mehr unterstützt. [Kennzeichnungen müssen jetzt auf Schemafeldebene angewendet werden](./e2e.md#labels). Die Konzepte im Video bleiben korrekt, aber der Workflow für die Beschriftung wurde geändert.
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33153?captions=ger&quality=12&enable10seconds=on&speedcontrol=on)
 
 Im folgenden Video erfahren Sie, wie Sie Datennutzungskennzeichnungen auf Ihre Schemata oder auf einen Datensatz in Experience Platform insgesamt anwenden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422789/?captions=ger&learn=on)
