@@ -2,18 +2,14 @@
 title: Gemeinsam genutzte Module in Web-Erweiterungen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform gemeinsame Bibliotheksmodule für Web-Erweiterungen definieren können.
 exl-id: ec013a39-966c-43f3-bc36-31198990a17e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '218'
 ht-degree: 100%
 
 ---
 
 # Gemeinsam genutzte Module in Web-Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Ein gemeinsames Modul ist ein Mechanismus, der Ihnen ermöglicht, mit anderen Erweiterungen zu kommunizieren. Beispielsweise kann Erweiterung A ein Datenelement asynchron laden und es über ein [Versprechen](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) für Erweiterung B verfügbar machen.
 

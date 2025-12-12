@@ -2,18 +2,14 @@
 title: Kontext in Edge-Erweiterungsmodulen
 description: Erfahren Sie mehr über das Kontextobjekt und die Rolle, die es bei der Interaktion mit Bibliotheksmodulen in Tag-Erweiterungen von Edge-Eigenschaften spielt.
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '681'
 ht-degree: 100%
 
 ---
 
 # Kontext in Edge-Erweiterungsmodulen
-
->[!NOTE]
->
-> Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Für alle Bibliotheksmodule in Edge-Erweiterungen wird beim Ausführen ein `context`-Objekt bereitgestellt. Dieses Dokument behandelt die Eigenschaften des `context`-Objekts und die Rolle, die sie in Bibliotheksmodulen spielen.
 

@@ -2,18 +2,14 @@
 title: Bedingungstypen für Edge-Erweiterungen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform ein Bibliotheksmodul des Typs „condition-type“ für eine Edge-Erweiterung definieren.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 83%
+source-wordcount: '358'
+ht-degree: 81%
 
 ---
 
 # Bedingungstypen für Edge-Erweiterungen
-
->[!NOTE]
->
-> Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 In einer Tag-Regel wird eine Bedingung ausgewertet, nachdem ein Ereignis aufgetreten ist. Alle Bedingungen müssen „true“ zurückgeben, damit die Regel weiter verarbeitet wird. Bedingungstypen werden von Erweiterungen bereitgestellt und prüfen, ob etwas wahr oder falsch ist, wobei ein boolescher Wert zurückgegeben wird.
 

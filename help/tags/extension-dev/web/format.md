@@ -2,18 +2,14 @@
 title: Bibliotheksmodule in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Bibliotheksmodule für Web-Erweiterungen in Adobe Experience Platform formatieren.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '327'
 ht-degree: 100%
 
 ---
 
 # Bibliotheksmodule in Web-Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 >[!IMPORTANT]
 >

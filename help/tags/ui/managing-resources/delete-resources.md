@@ -2,18 +2,14 @@
 title: Löschen von Ressourcen
 description: Hier erfahren Sie, wie Sie Tag-Ressourcen in Adobe Experience Platform löschen können.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '512'
 ht-degree: 93%
 
 ---
 
 # Löschen von Ressourcen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Das Löschen einer Ressource entfernt diese Ressource dauerhaft aus Adobe Experience Platform. Wenn Sie eine Ressource aus einer bestimmten Tag-Bibliothek entfernen möchten, diese Ressource jedoch für die Verwendung in anderen Bibliotheken verfügbar sein soll, finden Sie weitere Informationen im Handbuch unter [Entfernen von Ressourcen aus einer Bibliothek](remove-resources-from-library.md).
 
@@ -78,4 +74,4 @@ Bevor Sie eine Ressource löschen können, müssen Sie sie zunächst aus allen B
 
 ## Löschen von Ressourcen
 
-Wählen Sie in der entsprechenden Listenansicht die Ressource aus, die Sie löschen möchten, und klicken Sie auf **[!UICONTROL Löschen]**.
+Wählen Sie in der entsprechenden Listenansicht die Ressource aus, die Sie löschen möchten, und klicken Sie auf **[!UICONTROL Delete]**.

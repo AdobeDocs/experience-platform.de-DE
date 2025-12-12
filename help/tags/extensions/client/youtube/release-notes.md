@@ -2,20 +2,16 @@
 title: YouTube Video Tracking-Erweiterung – Versionshinweise
 description: Aktuelle Versionshinweise zur Tag-Erweiterung „YouTube Video Tracking“ in Adobe Experience Platform.
 exl-id: 5c680b1d-3970-42ed-9956-e78ead7b3662
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '93'
 ht-degree: 100%
 
 ---
 
 # YouTube Video Tracking-Erweiterung – Versionshinweise
 
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
-
-## 4. Juni 2021
+## &#x200B;4. Juni 2021
 
 ### YouTube Video Tracking-Erweiterung 2.0.1
 
@@ -24,7 +20,7 @@ ht-degree: 100%
 * Fehlerbehebungen für Seiten mit mehreren iFrames
 * Namensänderung für Branding
 
-## 23. April 2021
+## &#x200B;23. April 2021
 
 ### YouTube Video Tracking-Erweiterung 2.0.0
 

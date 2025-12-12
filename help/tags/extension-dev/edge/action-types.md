@@ -2,18 +2,14 @@
 title: Aktionstypen für Edge-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „action-type“ für eine Tag-Erweiterung in einer Edge-Eigenschaft definieren.
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 94%
+source-wordcount: '332'
+ht-degree: 93%
 
 ---
 
 # Aktionstypen für Edge-Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Eine Regelaktion ist eine Aktion, die ausgeführt wird, nachdem die Auswertung der Regelbedingungen erfolgreich war. Aktionstypen werden von Erweiterungen bereitgestellt und ihre Auswirkungen werden vollständig vom Autor der Erweiterung definiert.
 

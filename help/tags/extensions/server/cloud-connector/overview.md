@@ -2,18 +2,14 @@
 title: Cloud Connector-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Cloud Connector-Ereignisweiterleitungserweiterung in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1636'
 ht-degree: 75%
 
 ---
 
 # Cloud Connector-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Mit der Cloud Connector-Ereignisweiterleitungserweiterung können Sie benutzerdefinierte HTTP-Anfragen erstellen, um Daten an ein Ziel zu senden oder Daten von einem Ziel abzurufen. Die Cloud Connector-Erweiterung ist wie Postman für das Adobe Experience Platform Edge Network und kann verwendet werden, um Daten an einen Endpunkt zu senden, der noch keine dedizierte Erweiterung hat.
 
@@ -132,7 +128,7 @@ Das [!DNL mTLS]-Zertifikat ist eine digitale Berechtigung, die die Identität ei
 
 ### Installieren der Adobe Cloud Connector-Erweiterung {#install}
 
-Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
 Wählen Sie **[!UICONTROL Extensions]** im linken Bedienfeld aus. Klicken Sie auf der Registerkarte **[!UICONTROL Catalog]** auf die Karte **[!UICONTROL Adobe Cloud Connector]** und klicken Sie dann auf **[!UICONTROL Install]**.
 
@@ -146,7 +142,7 @@ Wählen Sie **[!UICONTROL Extensions]** im linken Bedienfeld aus. Klicken Sie au
 
 Nach der Installation der Erweiterung können Sie eine Ereignisweiterleitungsregel erstellen, die [!DNL mTLS] verwendet, und sie zu Ihrer Bibliothek hinzufügen.
 
-Erstellen Sie eine neue [&#x200B; (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Geben Sie einen Namen für Ihre Regel an und fügen Sie dann unter **[!UICONTROL Actions]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Adobe Cloud Connector]** fest. Wählen Sie als Nächstes **[!UICONTROL Make Fetch Call]** für die **[!UICONTROL Action Type]** aus.
+Erstellen Sie eine neue [ (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Geben Sie einen Namen für Ihre Regel an und fügen Sie dann unter **[!UICONTROL Actions]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Adobe Cloud Connector]** fest. Wählen Sie als Nächstes **[!UICONTROL Make Fetch Call]** für die **[!UICONTROL Action Type]** aus.
 
 ![Die Ansicht mit den Eigenschaftsregeln für die Ereignisweiterleitung mit den Feldern, die zum Hinzufügen einer Regelkonfiguration für die Ereignisweiterleitung erforderlich sind, ist hervorgehoben.](../../../images/extensions/server/cloud-connector/event-action.png)
 

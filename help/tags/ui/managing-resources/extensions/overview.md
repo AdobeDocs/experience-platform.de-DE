@@ -2,18 +2,14 @@
 title: Erweiterungen
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '471'
 ht-degree: 94%
 
 ---
 
 # Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Eine Erweiterung ist ein gepackter Code-Satz, der die von Tags oder der Ereignisweiterleitung bereitgestellten Funktionen erweitert.
 
@@ -27,13 +23,13 @@ Erweiterungen bestimmen die Elemente, die beim Erstellen von Eigenschaften, Rege
 
 Verwenden Sie die Links oben in der Liste „Erweiterungen“, um installierte Erweiterungen, den Katalog oder Updates anzuzeigen.
 
-Wählen Sie eine Erweiterung aus und klicken Sie auf [!UICONTROL Konfigurieren], um die Einstellungen der Erweiterung anzuzeigen und zu ändern. Weitere Informationen zu Erweiterungsoptionen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](#add-a-new-extension).
+Wählen Sie eine Erweiterung aus und klicken Sie auf [!UICONTROL Configure], um die Einstellungen der Erweiterung anzuzeigen und zu ändern. Weitere Informationen zu Erweiterungsoptionen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](#add-a-new-extension).
 
 >[!IMPORTANT]
 >
 >Änderungen werden erst wirksam, nachdem sie [veröffentlicht](../../publishing/overview.md) wurden.
 
-Standardmäßig stellt Adobe Erweiterungen bereit, die gängige Integrationen unterstützen. Erweiterungen können mit benutzerdefinierten Konfigurationen angepasst werden. Konfigurationen werden über die Erweiterungen bereitgestellt. Klicken Sie zum Erstellen einer Konfiguration auf die Erweiterungskarte und dann auf **[!UICONTROL Neue Konfiguration hinzufügen]**.
+Standardmäßig stellt Adobe Erweiterungen bereit, die gängige Integrationen unterstützen. Erweiterungen können mit benutzerdefinierten Konfigurationen angepasst werden. Konfigurationen werden über die Erweiterungen bereitgestellt. Klicken Sie zum Erstellen einer Konfiguration auf die Erweiterungskarte und dann auf **[!UICONTROL Add New Configuration]**.
 
 ## Erweiterungskatalog
 
@@ -51,7 +47,7 @@ Die Seite „Erweiterungen“ bietet drei Ansichten:
 
   Zeigt Updates für installierte Erweiterungen an.
 
-Klicken Sie auf **[!UICONTROL Erweiterungen]**, um alle installierten Erweiterungen anzuzeigen. Sie können den Katalog auch verwenden, um eine Liste aller verfügbaren Erweiterungen anzuzeigen und zu ermitteln, welche Erweiterungen verfügbar sind.
+Klicken Sie auf **[!UICONTROL Extensions]**, um alle installierten Erweiterungen anzuzeigen. Sie können den Katalog auch verwenden, um eine Liste aller verfügbaren Erweiterungen anzuzeigen und zu ermitteln, welche Erweiterungen verfügbar sind.
 
 Ausführliche Informationen zu Adobe-eigenen Erweiterungen finden Sie in der [Erweiterungsreferenz](../../../extensions/client/overview.md).
 
@@ -63,7 +59,7 @@ Tags sind extrem erweiterbar. Erweiterungen fügen Tags Kernfunktionen hinzu. Er
 >
 >Verwenden Sie die produktinterne Hilfe im rechten Bedienfeld, um mehr über Erweiterungen zu erfahren und zusätzliche verfügbare Ressourcen anzuzeigen.
 
-1. Öffnen Sie auf der Übersichtsseite einer Eigenschaft die Registerkarte **[!UICONTROL Erweiterungen]**.
+1. Öffnen Sie auf der Übersichtsseite einer Property die Registerkarte **[!UICONTROL Extensions]**.
 1. Wählen Sie eine Erweiterung aus.
 
    ![Registerkarte „Katalog“ mit Core-Erweiterungen auf der Registerkarte „Erweiterungen“.](../../../images/extensions.png)
@@ -84,7 +80,7 @@ Beim Erstellen oder Bearbeiten von Elementen können Sie in Ihrer [aktiven Bibli
 
 ## Konfigurieren einer Erweiterung
 
-Bewegen Sie den Mauszeiger über eine installierte Erweiterung und klicken Sie auf **[!UICONTROL Konfigurieren]**.
+Bewegen Sie den Mauszeiger über eine installierte Erweiterung und klicken Sie auf **[!UICONTROL Configure]**.
 
 >[!NOTE]
 >

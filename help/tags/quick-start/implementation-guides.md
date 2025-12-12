@@ -2,18 +2,14 @@
 title: Implementierungshandbücher für Tags und Ereignisweiterleitung
 description: Hier erfahren Sie, wie Sie mit Tags und Ereignisweiterleitung Adobe Experience Cloud-Produkte in Ihre Websites und Mobile Apps implementieren können.
 exl-id: fe39cff2-2b0a-405b-aa89-0a3330f40ca1
-source-git-commit: 885a8d4fb0bcc82d23b040cf5c44d0ecd4887686
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '115'
 ht-degree: 100%
 
 ---
 
 # Implementierungshandbücher für Tags und Ereignisweiterleitung
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Im Folgenden finden Sie eine Liste von End-to-End-Implementierungshandbüchern für Tags und Ereignisweiterleitung. Diese Handbücher richten sich an Front-End-Entwickler und technische Vermarkter, die lernen möchten, wie sie Adobe Experience Cloud-Produkte in ihre Websites und Mobile Apps integrieren können.
 

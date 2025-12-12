@@ -2,26 +2,22 @@
 title: Versionshinweise zur Adobe Media Analytics (3.x SDK) for Audio and Video-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Media Analytics (3.x SDK) for Audio and Video“ in Adobe Experience Platform.
 exl-id: 1ed0504d-d13c-4e7b-8eb1-78c54e62a523
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '130'
 ht-degree: 100%
 
 ---
 
 # Adobe Media Analytics (3.x SDK) for Audio and Video – Versionshinweise
 
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
-
-## 5. April 2021
+## &#x200B;5. April 2021
 
 ### Adobe Media Analytics (3.x SDK) for Audio and Video – Erweiterung 3.0.2
 
 * Korrigieren Sie den HTTP-Header „Content-Type“ in den Anfragen der Media Collection API.
 
-## 10. Mai 2020
+## &#x200B;10. Mai 2020
 
 ### Adobe Media Analytics (3.x SDK) for Audio and Video – Erweiterung 3.0.0
 

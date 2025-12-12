@@ -2,18 +2,14 @@
 title: Entfernen von Ressourcen aus einer Bibliothek
 description: Erfahren Sie, wie Sie Ressourcen aus einer Tag-Bibliothek entfernen können.
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '268'
 ht-degree: 100%
 
 ---
 
 # Entfernen von Ressourcen aus einer Bibliothek
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Wenn eine Ressource keine Auswirkungen mehr innerhalb eines Builds haben soll, müssen Sie sie aus der Bibliothek entfernen, die diese Ressource enthält, und einen neuen Build erstellen.
 
@@ -47,7 +43,7 @@ Stattdessen müssen Sie die Ressource deaktivieren. Die Deaktivierung ist eine �
 
 1. Deaktivieren Sie die Ressource.
    1. Wählen Sie die Ressource aus der Listenansicht aus.
-   1. Wählen Sie **[!UICONTROL Deaktivieren]**.
+   1. Wählen Sie **[!UICONTROL Disable]** aus.
 1. Erstellen Sie eine neue Entwicklungsbibliothek.
 1. Fügen Sie die Version „`latest`“ der deaktivierten Ressource hinzu.
 1. Speichern Sie die Eingaben und erstellen Sie den Build.

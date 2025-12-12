@@ -2,18 +2,14 @@
 title: Common Analytics-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Common Analytics“ in Adobe Experience Platform vertraut.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 86%
+source-wordcount: '354'
+ht-degree: 85%
 
 ---
 
 # Common Analytics Plugins-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diesen Abschnitt, um Informationen zum Konfigurieren der allgemeinen Analytics-Plug-in-Erweiterung und zu den Optionen zu beziehen, die verfügbar werden, wenn diese Erweiterung zusätzlich zur [!DNL Adobe Analytics]-Erweiterung verwendet wird.
 

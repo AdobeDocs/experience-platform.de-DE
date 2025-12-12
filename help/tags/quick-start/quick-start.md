@@ -2,18 +2,14 @@
 title: Schnellstartanleitung
 description: Erfahren Sie, wie Sie mit Tags in Adobe Experience Platform schnell startklar werden.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1473'
 ht-degree: 89%
 
 ---
 
 # Schnellstartanleitung
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Tags sind die nächste Generation der Tag-Management-Technologie von Adobe Experience Platform. Sie wurde von Grund auf neu erstellt, um ein offenes und nachhaltiges Ökosystem zu unterstützen, in dem jeder seine eigenen Integrationen erstellen kann, die von Adobe-Kunden auf ihren Sites bereitgestellt werden können. Es handelt sich um eine API-First-Anwendung, sodass alle möglichen Aktionen auf der Benutzeroberfläche auch programmgesteuert über eine API erfolgen können.
 
@@ -27,7 +23,7 @@ Der grundlegende Tag-Workflow:
 6. Testen in Ihrer Entwicklungsumgebung.
 7. Weiterleiten an Produktion.
 
-## 1. Einrichten von Gruppen und Benutzern
+## &#x200B;1. Einrichten von Gruppen und Benutzern
 
 Tags sind vollständig mit Ihrer Adobe ID integriert. Benutzerberechtigungen werden über die Admin Console mit anderen Adobe-Produkten und -Lösungen aus [!DNL Creative Cloud], [!DNL Document Cloud] und Experience Cloud verwaltet.
 
@@ -35,21 +31,21 @@ Tags verfügen über ein berechtigungsbasiertes Benutzerverwaltungssystem. Das b
 
 Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern für Tags finden Sie im [Handbuch zu Datenerfassungsberechtigungen](../../collection/permissions.md).
 
-## 2. Anmelden
+## &#x200B;2. Anmelden
 
-Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Anmeldebildschirm von [Experience Cloud &#x200B;](https://experience.adobe.com/) wählen Sie entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]**.
+Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Anmeldebildschirm von [Experience Cloud ](https://experience.adobe.com/) wählen Sie entweder **[!UICONTROL Data Collection]** oder **[!UICONTROL Experience Platform]** aus.
 
 >[!NOTE]
 >
 >Wenn Sie über ein einzelnes Konto mit Berechtigungen für mehrere Organisationen verfügen, kann die Organisation geändert werden, indem Sie den Organisationsnamen in der Symbolleiste am oberen Bildschirmrand auswählen und in der Dropdown-Liste eine andere Organisation auswählen.
 
-## 3. Erstellen einer Eigenschaft
+## &#x200B;3. Erstellen einer Eigenschaft
 
 Nachdem Sie sich bei der Benutzeroberfläche angemeldet haben, erstellen Sie zunächst eine Eigenschaft. Eine Eigenschaft ist im Wesentlichen ein Container, den Sie bei der Bereitstellung von Tags auf Ihrer Site mit Erweiterungen, Regeln, Datenelementen und Bibliotheken füllen. Viele Personen erstellen für jede Website (oder Gruppe eng miteinander verbundener Sites) eine Eigenschaft, in der sie denselben Tag-Satz bereitstellen möchten.
 
 Weitere Informationen zum Erstellen von Eigenschaften finden Sie unter [Erstellen einer Eigenschaft](../ui/administration/companies-and-properties.md).
 
-## 4. Installieren von Erweiterungen
+## &#x200B;4. Installieren von Erweiterungen
 
 Eine Erweiterung ist eine Integration, die von Adobe oder einem Adobe-Partner erstellt wurde und neue und endlose Optionen für die Tags hinzufügt, die Sie auf Ihren Sites bereitstellen können. Stellt man sich Tag als Betriebssystem vor, dann sind Erweiterungen die von Ihnen installierten Programme, die Sie zur Ausführung bestimmter zu erledigender Aufgaben installieren.
 
@@ -57,7 +53,7 @@ Für alle neuen Eigenschaften ist die [Haupterweiterung](../extensions/client/co
 
 Was Tags in Experience Platform wirklich einzigartig macht, ist, dass diese Erweiterungen von jedem erstellt werden können. Sie müssen ein Facebook-Remarketing-Pixel auf Ihrer Site ablegen? Sehen Sie sich die von Facebook erstellte Erweiterung an. Hätten Sie gerne dasselbe für Twitter oder Linked In? Verwenden Sie diese Erweiterungen. Sie müssen eine Umfrage ausführen? Sehen Sie sich Question Pro oder Foresee an. Müssen Sie die Privatsphäre und die Zustimmung Ihrer Endbenutzer im Zusammenhang mit der [!DNL GDPR] verwalten? Sehen Sie sich Evidon und Trust Arc genau an. Möchten Sie granulare Einblicke in das Verhalten einzelner Benutzer auf Ihrer Site erhalten? Sehen Sie sich doch einmal Clicktale an. Weitere Informationen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
-## 5. Erstellen von Datenelementen und Regeln
+## &#x200B;5. Erstellen von Datenelementen und Regeln
 
 **Datenelemente** zeigen auf die Informationen, die Sie erfassen und an verschiedene Stellen auf Ihrer Seite senden möchten:
 
@@ -71,7 +67,7 @@ Nachdem das Datenelement definiert wurde, können Sie es an einer beliebigen Ste
 
 **Regeln** befinden sich im logischen Kern Ihrer Implementierung und legen das Was, Wann, Wo und Wie und wo für alle Tags auf Ihrer Site fest. Definieren Sie ein Ereignis, legen Sie Bedingungen und Ausnahmen fest und definieren Sie dann die Aktionen und die Reihenfolge. Schlussendlich veröffentlichen Sie Ihre Änderungen, um die Ergebnisse zu sehen. Weitere Informationen finden Sie unter [Regeln](../ui/managing-resources/rules.md).
 
-## 6. Testen in Ihrer Entwicklungsumgebung
+## &#x200B;6. Testen in Ihrer Entwicklungsumgebung
 
 ### Bibliotheken und Builds
 
@@ -104,7 +100,7 @@ Jede Bibliothek wird in einer Umgebung erstellt. Mit einer Umgebung wird definie
 * **Host:** Jede Umgebung benötigt einen Host, der den Endpunkt bestimmt, an den alle in dieser Umgebung erstellten Builds weitergeleitet werden.
 * **Archivieren:** Die Standardeinstellung ist, Ihren Build als minimierte JS-Datei bereitzustellen. Wenn Sie benutzerdefinierten Code verwenden, können mehrere Dateien vorhanden sein, die sich gegenseitig referenzieren. Diese können in einer einzigen ZIP-Datei kombiniert und verschlüsselt werden.
 
-Nachdem Sie Ihre Umgebung gespeichert haben, generiert sie den eingebetteten Code, den Sie kopieren und in Ihre Website einfügen können. Beachten Sie, dass der Einbettungs-Code erst funktioniert, nachdem Sie eine Bibliothek und einen Build erstellt haben. Weitere Informationen finden Sie unter [Umgebungen](../ui/publishing/environments.md).
+Nachdem Sie Ihre Umgebung gespeichert haben, generiert sie den Einbettungs-Code, den Sie kopieren und in Ihre Website einfügen können. Beachten Sie, dass der Einbettungs-Code erst funktioniert, nachdem Sie eine Bibliothek und einen Build erstellt haben. Weitere Informationen finden Sie unter [Umgebungen](../ui/publishing/environments.md).
 
 ### Veröffentlichen eines Builds in der Entwicklung
 
@@ -112,11 +108,11 @@ Der Veröffentlichungsprozess wird in den folgenden Schritten beschrieben.
 
 1. Erstellen Sie einen Host.
 1. Erstellen Sie eine Entwicklungsumgebung mit dem von Ihnen erstellten Host.
-1. Stellen Sie den eingebetteten Code aus Ihrer Entwicklungsumgebung auf Ihrer Entwicklungstest-Site bereit.
+1. Stellen Sie den Einbettungs-Code aus Ihrer Entwicklungsumgebung auf Ihrer Entwicklungstest-Site bereit.
 1. Erstellen Sie eine Bibliothek und weisen Sie sie der von Ihnen erstellten Entwicklungsumgebung zu.
 1. Erstellen Sie Ihre Bibliothek.
 
-## 7. Weiterleiten an Produktion
+## &#x200B;7. Weiterleiten an Produktion
 
 Nachdem Sie Ihren Build in Ihrer Entwicklungsumgebung getestet haben, erstellen Sie Ihre Staging- und Produktionsumgebung und platzieren Sie die eingebetteten Codes an den erforderlichen Stellen. Sie können zu diesem Zweck vorhandene Hosts wiederverwenden.
 
@@ -134,6 +130,6 @@ Weitere Informationen zu den verschiedenen Status und Optionen, die während des
 
 Weitere Informationen zu Tags finden Sie in den folgenden Ressourcen:
 
-* **[Datensammlungs-Community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=de)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer ab. Melden Sie sich mit Ihrer Adobe ID an.
+* **[Datensammlungs-Community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer ab. Melden Sie sich mit Ihrer Adobe ID an.
 * **[Entwicklerdokumente](../api/overview.md)**: Beteiligen Sie sich an der Tag-Entwickler-Community, um Erweiterungen zu erstellen oder die Tag-APIs zu verwenden
 * **[Tutorials - Überblick](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=de)**: Diese Dokumente enthalten eine Einführung in Tag-Konzepte, einschließlich Ereignisweiterleitung und Mobile SDK in Android-Mobile-Apps.

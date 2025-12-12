@@ -2,18 +2,14 @@
 title: Adobe Target-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Tag-Erweiterung „Adobe Target“ in Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 95%
+source-wordcount: '1126'
+ht-degree: 93%
 
 ---
 
 # Adobe Target-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -23,9 +19,9 @@ Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim
 >
 > Für die Adobe Target-Erweiterung ist at.js erforderlich. „mbox.js“ wird nicht unterstützt.
 
-Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Eigenschaft, wählen Sie dann **[!UICONTROL Mixin > Katalog]**, bewegen Sie den Mauszeiger über die Target-Erweiterung und wählen Sie **[!UICONTROL Installieren]** aus.
+Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Eigenschaft, klicken Sie dann auf **[!UICONTROL Extensions > Catalog]**, bewegen Sie den Mauszeiger über die Target-Erweiterung und klicken Sie auf **[!UICONTROL Install]**.
 
-Öffnen Sie zum Konfigurieren der Erweiterung die Registerkarte [!UICONTROL Erweiterungen], bewegen Sie den Mauszeiger über die Erweiterung und wählen Sie dann **[!UICONTROL Konfigurieren]** aus.
+Öffnen Sie zum Konfigurieren der Erweiterung den Tab [!UICONTROL Extensions], bewegen Sie den Mauszeiger über die Erweiterung und klicken Sie auf **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-target-config.png)
 
@@ -72,11 +68,11 @@ Weitere Informationen zur Funktionsweise der Zeitüberschreitungseinstellung fin
 
 #### Weitere auf der Target-Benutzeroberfläche verfügbare at.js-Einstellungen
 
-Verschiedene Einstellungen, die auf der Seite [!UICONTROL at.js-Einstellungen bearbeiten] der Target-Benutzeroberfläche verfügbar sind, sind nicht Teil der Target-Erweiterung. Die Vorschläge für die Problemumgehung lauten wie folgt:
+Verschiedene Einstellungen, die auf der Seite [!UICONTROL Edit at.js settings] der Target-Benutzeroberfläche verfügbar sind, sind nicht Teil der Target-Erweiterung. Die Vorschläge für die Problemumgehung lauten wie folgt:
 
 * Globale Mbox automatisch erstellen – Diese Einstellung wird durch die Aktion „Globale Mbox auslösen“ in der Target-Erweiterung ersetzt.
 * Bibliotheks-Header – Diese Einstellung ist nicht Teil der Target-Erweiterung. Fügen Sie vor der Verwendung der Aktion „Target laden“ Code, der vor at.js geladen werden muss, in eine Aktion vom Typ „Haupterweiterung>Benutzerdefinierter Code“ ein.
-* Bibliotheksfußfzeile – Diese Einstellung ist nicht Teil der Target-Erweiterung. Fügen Sie nach Verwendung der Aktion „Target laden“ Code, der nach at.js geladen werden muss, in eine Aktion vom Typ „Haupterweiterung>Benutzerdefinierter Code“ ein.
+* Bibliotheksfußzeile – Diese Einstellung ist nicht Teil der Target-Erweiterung. Fügen Sie nach Verwendung der Aktion „Target laden“ Code, der nach at.js geladen werden muss, in eine Aktion vom Typ „Haupterweiterung>Benutzerdefinierter Code“ ein.
 
 ## Aktionstypen für die Target-Erweiterung
 

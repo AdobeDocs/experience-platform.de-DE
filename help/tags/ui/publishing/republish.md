@@ -2,18 +2,14 @@
 title: Bibliothek erneut veröffentlichen
 description: Erfahren Sie, wie Sie eine frühere Tag-Bibliothek in Adobe Experience Platform erneut veröffentlichen.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 81%
+source-wordcount: '604'
+ht-degree: 80%
 
 ---
 
 # Bibliothek erneut veröffentlichen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Die fünf zuletzt in Ihrer Produktionsumgebung auf einer Web-Eigenschaft veröffentlichten Bibliotheken können zu einem späteren Zeitpunkt abgerufen werden. Diese Funktion ist hilfreich, wenn Sie einen Fehler in Ihrer Produktionsbibliothek finden und unmittelbar einen funktionierenden Zustand wiederherstellen müssen.
 
@@ -57,7 +53,7 @@ Im Bildschirm „Veröffentlichen“:
 
 1. Suchen Sie in der Spalte „Veröffentlicht“ die Bibliothek, die Sie erneut veröffentlichen möchten.
 1. Wählen Sie die Auslassungspunkte (`...`) in der oberen rechten Ecke der Bibliothekskarte aus.
-1. Wählen Sie **[!UICONTROL Neu veröffentlichen]** aus.
+1. Wählen Sie **[!UICONTROL Republish]** aus.
 
 ## Download
 
@@ -71,4 +67,4 @@ Im Bildschirm „Veröffentlichen“:
 
 1. Suchen Sie in der Spalte „Veröffentlicht“ die Bibliothek, die Sie herunterladen möchten.
 1. Wählen Sie die Auslassungspunkte (`...`) in der oberen rechten Ecke der Bibliothekskarte aus.
-1. Wählen Sie **[!UICONTROL Herunterladen]** aus.
+1. Wählen Sie **[!UICONTROL Download]** aus.

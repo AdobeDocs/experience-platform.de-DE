@@ -2,18 +2,14 @@
 title: Informationen zu Transport Layer Security (TLS)
 description: Informationen darüber, welche TLS-Versionen und Chiffren verwendet werden
 exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
-source-git-commit: 236c5a11f40490fc7ee536358fb146027fe64545
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 25%
+source-wordcount: '156'
+ht-degree: 13%
 
 ---
 
 # Informationen zu Transport Layer Security (TLS)
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine Übersicht der terminologischen Änderungen finden Sie im Dokument [Terminologieaktualisierungen](../../term-updates.md).
 
 Transport Layer Security (TLS) ist ein kryptografisches Protokoll, das End-to-End-Sicherheit für Daten bietet, die zwischen Anwendungen über das Internet gesendet werden. Weitere Informationen zu TLS finden Sie in der Dokumentation [TLS-Grundlagen](https://www.internetsociety.org/deploy360/tls/basics/) .
 

@@ -2,9 +2,9 @@
 title: Asynchrone Bereitstellung
 description: Erfahren Sie, wie Sie Tag-Bibliotheken von Adobe Experience Platform asynchron auf Ihrer Website bereitstellen.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1001'
 ht-degree: 98%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 98%
 >id="platform_tags_asynchronous_deployment"
 >title="Asynchrone Bereitstellung"
 >abstract="Wenn diese Option aktiviert ist, beginnt der Browser beim Parsen dieses Skript-Tags mit dem Laden der JavaScript-Datei, aber anstatt darauf zu warten, dass die Bibliothek geladen und ausgeführt wird, fährt er mit dem Parsen und Rendern des restlichen Dokuments fort. Dies kann die Performance der Web-Seite verbessern, hat jedoch wichtige Auswirkungen auf die Ausführung bestimmter Regeln. Einzelheiten finden Sie in der Dokumentation."
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Performance und blockierungsfreie Bereitstellung der von unseren Produkten benötigten JavaScript-Bibliotheken sind für Adobe Experience Cloud-Benutzende zunehmend wichtig. Tools wie [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) empfehlen, dass die Benutzer die Art und Weise der Bereitstellung der Adobe Bibliotheken auf ihrer Site ändern. Dieser Artikel erklärt, wie Sie die Adobe-JavaScript-Bibliotheken asynchron verwenden können.
 

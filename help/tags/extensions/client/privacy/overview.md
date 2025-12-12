@@ -2,18 +2,14 @@
 title: Adobe-Datenschutzerweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Privacy“ in Adobe Experience Platform vertraut.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 89%
+source-wordcount: '823'
+ht-degree: 78%
 
 ---
 
 # Adobe-Datenschutzerweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Mit der Adobe Privacy-Tag-Erweiterung können Sie Benutzer-IDs erfassen und entfernen, die Endbenutzern durch Adobe-Lösungen auf Client-seitigen Geräten zugewiesen wurden. Die erfassten IDs können dann an [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) gesendet werden, um in unterstützten Adobe Experience Cloud-Anwendungen auf die personenbezogenen Daten der betreffenden Person zuzugreifen oder sie zu löschen.
 
@@ -25,7 +21,7 @@ In diesem Handbuch wird beschrieben, wie Sie die Adobe-Datenschutzerweiterung in
 
 ## Installieren und Konfigurieren der Erweiterung
 
-Wählen **[!UICONTROL Erweiterungen]** im linken Navigationsbereich aus, gefolgt von der Registerkarte **[!UICONTROL Katalog]**. Verwenden Sie die Suchleiste, um die Liste der verfügbaren Erweiterungen einzuschränken, bis Sie „Adobe Privacy“ finden. Wählen Sie **[!UICONTROL Installieren]** aus, um fortzufahren.
+Wählen Sie **[!UICONTROL Extensions]** in der linken Navigation und anschließend die Registerkarte **[!UICONTROL Catalog]** aus. Verwenden Sie die Suchleiste, um die Liste der verfügbaren Erweiterungen einzuschränken, bis Sie „Adobe Privacy“ finden. Wählen Sie **[!UICONTROL Install]** aus, um fortzufahren.
 
 ![Installieren der Erweiterung](../../../images/extensions/client/privacy/install.png)
 
@@ -37,7 +33,7 @@ Im nächsten Bildschirm können Sie konfigurieren, aus welchen Quellen und Lösu
 * Adobe Experience Cloud Identity Service (Besucher oder ECID)
 * Adobe Advertising Cloud (AdCloud)
 
-Wählen Sie mindestens eine Lösung und anschließend **[!UICONTROL Aktualisieren]** aus.
+Wählen Sie mindestens eine Lösung und anschließend **[!UICONTROL Update]** aus.
 
 ![Lösungen auswählen](../../../images/extensions/client/privacy/select-solutions.png)
 
@@ -53,7 +49,7 @@ Der Bildschirm wird aktualisiert und zeigt die Eingaben für die erforderlichen 
 >
 >Im Abschnitt zu [Konfigurationsparameter](../../../../privacy-service/js-library.md#config-params) in der Übersicht zur Privacy-JavaScript-Bibliothek finden Sie Details zu den akzeptierten Konfigurationswerten für die einzelnen unterstützten Lösungen.
 
-Nachdem Sie die Parameter für Ihre ausgewählten Lösungen hinzugefügt haben, wählen Sie **[!UICONTROL Speichern]** aus, um die Konfiguration zu speichern.
+Nachdem Sie die Parameter für Ihre ausgewählten Lösungen hinzugefügt haben, wählen Sie **[!UICONTROL Save]** aus, um die Konfiguration zu speichern.
 
 ![Optionale Eigenschaften](../../../images/extensions/client/privacy/save-config.png)
 
@@ -61,9 +57,9 @@ Nachdem Sie die Parameter für Ihre ausgewählten Lösungen hinzugefügt haben, 
 
 Die Adobe Privacy-Erweiterung bietet drei Aktionstypen, die in einer [Regel](../../../ui/managing-resources/rules.md) verwendet werden können, wenn ein bestimmtes Ereignis eintritt und Bedingungen erfüllt sind:
 
-* **[!UICONTROL Abrufen von Identitäten]**: Die gespeicherten Identitätsdaten des Benutzers werden abgerufen.
-* **[!UICONTROL Entfernen von Identitäten]**: Die gespeicherten Identitätsdaten des Benutzers werden entfernt.
-* **[!UICONTROL Abrufen und anschließendes Entfernen von Identitäten]**: Die gespeicherten Identitätsdaten des Benutzers werden abgerufen und dann entfernt.
+* **[!UICONTROL Retrieve Identities]**: Die gespeicherten Identitätsdaten des Benutzers werden abgerufen.
+* **[!UICONTROL Remove Identities]**: Die gespeicherten Identitätsdaten des Benutzers werden entfernt.
+* **[!UICONTROL Retrieve Then Remove Identities]**: Die gespeicherten Identitätsdaten des Benutzers werden abgerufen und dann entfernt.
 
 Für jede der oben genannten Aktionen müssen Sie eine Callback-JavaScript-Funktion bereitstellen, die die abgerufenen Identitätsdaten als Objektparameter akzeptiert und verarbeitet. Ausgehend von diesem Punkt können Sie diese Identitäten je nach Bedarf speichern, anzeigen oder an die [Privacy Service-API](../../../../privacy-service/api/overview.md) senden.
 
@@ -71,7 +67,7 @@ Bei Verwendung der Adobe Privacy-Tag-Erweiterung müssen Sie die erforderliche C
 
 ### Definieren eines Datenelements zur Verarbeitung von Identitäten
 
-Starten Sie den Prozess der Erstellung eines neuen Datenelements, indem Sie **[!UICONTROL Datenelemente]** im linken Navigationsbereich und anschließend **[!UICONTROL Datenelement hinzufügen]** auswählen. Wählen Sie im Konfigurationsbildschirm die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Benutzerspezifischer Code]** für den Datenelementtyp. Wählen Sie danach im rechten Panel **[!UICONTROL Editor öffnen]**.
+Starten Sie den Prozess der Erstellung eines neuen Datenelements, indem Sie im linken Navigationsbereich auf **[!UICONTROL Data Elements]** und dann auf **[!UICONTROL Add Data Element]** klicken. Wählen Sie im Konfigurationsbildschirm **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Custom Code]** für den Datenelementtyp aus. Wählen Sie von hier aus **[!UICONTROL Open Editor]** im rechten Bedienfeld aus.
 
 ![Auswählen des Datenelementtyps](../../../images/extensions/client/privacy/data-element-type.png)
 
@@ -81,7 +77,7 @@ Definieren Sie im angezeigten Dialogfeld eine JavaScript-Funktion, die die abger
 >
 >Weitere Informationen zur Struktur des `ids`-Objekts, das die Callback-Funktion verarbeiten soll, finden Sie in den [Code-Beispielen](../../../../privacy-service/js-library.md#samples) in der Übersicht zur Privacy-JavaScript-Bibliothek.
 
-Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save]** aus.
 
 ![Definieren der Callback-Funktion](../../../images/extensions/client/privacy/define-custom-code.png)
 
@@ -91,15 +87,15 @@ Sie können mit der Erstellung anderer Datenelemente mit benutzerdefiniertem Cod
 
 Nachdem Sie ein Callback-Datenelement zur Verarbeitung der abgerufenen IDs konfiguriert haben, können Sie eine Regel erstellen, die die Adobe Privacy-Erweiterung aufruft, sobald auf Ihrer Site ein bestimmtes Ereignis eintritt und alle anderen von Ihnen geforderten Bedingungen erfüllt sind.
 
-Wählen Sie beim Konfigurieren der Aktion für die Regel **[!UICONTROL Adobe Privacy]** für die Erweiterung. Wählen Sie für den Aktionstyp eine der [drei Funktionen](#using) aus, die von der Erweiterung bereitgestellt werden.
+Wählen Sie beim Konfigurieren der Aktion für die Regel **[!UICONTROL Adobe Privacy]** für die Erweiterung aus. Wählen Sie für den Aktionstyp eine der [drei Funktionen](#using) aus, die von der Erweiterung bereitgestellt werden.
 
 ![Auswählen eines Aktionstyps](../../../images/extensions/client/privacy/action-type.png)
 
-Im rechten Panel werden Sie aufgefordert, ein Datenelement auszuwählen, das als Callback der Aktion dient. Wählen Sie das Datenbanksymbol (![Datenbanksymbol](/help/images/icons/database.png)) und danach das Datenelement aus der Liste aus, das Sie zuvor erstellt haben. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus, um fortzufahren.
+Im rechten Panel werden Sie aufgefordert, ein Datenelement auszuwählen, das als Callback der Aktion dient. Wählen Sie das Datenbanksymbol (![Datenbanksymbol](/help/images/icons/database.png)) und danach das Datenelement aus der Liste aus, das Sie zuvor erstellt haben. Wählen Sie **[!UICONTROL Keep Changes]** aus, um fortzufahren.
 
 ![Auswählen von Datenelementen](../../../images/extensions/client/privacy/add-data-element.png)
 
-Danach können Sie mit der Regelkonfiguration fortfahren, sodass die Adobe Privacy-Aktion bei den von Ihnen angegebenen Ereignissen und Bedingungen ausgelöst wird. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** aus.
+Danach können Sie mit der Regelkonfiguration fortfahren, sodass die Adobe Privacy-Aktion bei den von Ihnen angegebenen Ereignissen und Bedingungen ausgelöst wird. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save]** aus.
 
 ![Speichern der Regel](../../../images/extensions/client/privacy/save-rule.png)
 
@@ -107,8 +103,8 @@ Sie können die Regel jetzt einer Bibliothek hinzufügen, um sie zum Testen als 
 
 ## Deaktivieren oder Deinstallieren der Erweiterung
 
-Nach dem Installieren der Erweiterung können Sie sie deaktivieren oder löschen. Klicken Sie in der Adobe-Datenschutzkarte in Ihren installierten Erweiterungen auf **[!UICONTROL Konfigurieren]** und wählen Sie **[!UICONTROL Deaktivieren]** oder **[!UICONTROL Deinstallieren]** aus.
+Nach dem Installieren der Erweiterung können Sie sie deaktivieren oder löschen. Klicken Sie in der Adobe-Datenschutzkarte in Ihren installierten Erweiterungen auf **[!UICONTROL Configure]** und wählen Sie **[!UICONTROL Disable]** oder **[!UICONTROL Uninstall]** aus.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung der Tag-Erweiterung &quot;Adobe Privacy“ in der Benutzeroberfläche behandelt. Weitere Informationen zu den von der Erweiterung bereitgestellten Funktionen, einschließlich Beispielen für die Verwendung mit Rohcode, finden Sie in der [Übersicht über die Privacy-JavaScript-Bibliothek](../../../../privacy-service/js-library.md) in der Privacy Service-Dokumentation.
+In diesem Handbuch wurde die Verwendung der Adobe Privacy-Tag-Erweiterung in der Benutzeroberfläche behandelt. Weitere Informationen zu den von der Erweiterung bereitgestellten Funktionen, einschließlich Beispielen für die Verwendung mit Rohcode, finden Sie in der [Übersicht über die Privacy-JavaScript-Bibliothek](../../../../privacy-service/js-library.md) in der Privacy Service-Dokumentation.

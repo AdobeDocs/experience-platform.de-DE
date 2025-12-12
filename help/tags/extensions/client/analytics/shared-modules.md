@@ -2,18 +2,14 @@
 title: Gemeinsam genutzte Module für die Adobe Analytics-Erweiterung
 description: Machen Sie sich mit den von der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform bereitgestellten Modulen für die gemeinsame Bibliothek vertraut.
 exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '380'
 ht-degree: 100%
 
 ---
 
 # Gemeinsam genutzte Module für die Adobe Analytics-Erweiterung
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die [Adobe Analytics-Erweiterung](./overview.md) stellt zwei [gemeinsam genutzte Module](../../../extension-dev/web/shared.md) für die Integration in Ihre Erlebnisanwendung zur Auswahl. Diese Module werden im Folgenden erläutert.
 

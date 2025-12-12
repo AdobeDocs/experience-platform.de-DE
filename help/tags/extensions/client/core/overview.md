@@ -2,18 +2,14 @@
 title: Core-Erweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '5425'
+source-wordcount: '5380'
 ht-degree: 95%
 
 ---
 
 # Core-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die Haupt-Tag-Erweiterung ist die mit Adobe Experience Platform veröffentlichte Standarderweiterung.
 

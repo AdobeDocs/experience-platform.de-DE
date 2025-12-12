@@ -7,18 +7,14 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 6%
+source-wordcount: '1205'
+ht-degree: 3%
 
 ---
 
 # Übersicht über die Mailchimp-Ereignisweiterleitungserweiterung
-
->[!NOTE]
->  
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=de).
 
 Die Mailchimp-Erweiterung [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) sendet Ereignisse an die Mailchimp Marketing-API, die E-Mails für Mailchimp-Marketingkampagnen, Journey-Trigger oder Transaktionen bereitstellen kann.
 
@@ -75,11 +71,11 @@ Je nach Mailchimp-Plan und ob Sie Transaktions-E-Mails, Kunden-Journey oder ande
 
 ## Installation und Konfiguration
 
-In diesem Abschnitt werden die Schritte zur Installation und Konfiguration der Erweiterung aufgeführt. Um den Mailchimp-API-Schlüssel sicher zu speichern, müssen Sie die Ereignisweiterleitung ([) &#x200B;](../../../ui/event-forwarding/secrets.md).
+In diesem Abschnitt werden die Schritte zur Installation und Konfiguration der Erweiterung aufgeführt. Um den Mailchimp-API-Schlüssel sicher zu speichern, müssen Sie die Ereignisweiterleitung ([) ](../../../ui/event-forwarding/secrets.md).
 
 ### Erstellen von geheimen Daten und Datenelementen
 
-Erstellen Sie in einer Ereignisweiterleitungs-Eigenschaft [einen geheimen [!UICONTROL Token], &#x200B;](../../../ui/event-forwarding/secrets.md#token). B. `Mailchimp API Key`.
+Erstellen Sie in einer Ereignisweiterleitungs-Eigenschaft [einen geheimen [!UICONTROL Token], ](../../../ui/event-forwarding/secrets.md#token). B. `Mailchimp API Key`.
 
 Erstellen Sie [ein Datenelement](../../../ui/managing-resources/data-elements.md#create-a-data-element) mithilfe der [!UICONTROL Core]-Erweiterung und eines [!UICONTROL Secret] Datenelementtyps, um auf die soeben erstellten `Mailchimp API Key` zu verweisen. Geben Sie `Mailchimp Token` als Namen des Datenelements ein.
 

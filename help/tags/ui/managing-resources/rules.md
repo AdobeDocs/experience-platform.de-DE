@@ -2,18 +2,14 @@
 title: Regeln
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '1962'
 ht-degree: 93%
 
 ---
 
 # Regeln
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Tags in Adobe Experience Platform folgen einem regelbasierten System. Sie suchen nach Benutzerinteraktionen und zugehörigen Daten. Wenn die in Ihren Regeln formulierten Kriterien erfüllt sind, löst die Regel die jeweils definierte Erweiterung, das Skript oder den Client-seitigen Code aus.
 
@@ -55,12 +51,12 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 >
 >Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) im rechten Bedienfeld auswählen.
 
-1. Öffnen Sie die Registerkarte [!UICONTROL Regeln] und wählen Sie **[!UICONTROL Neue Regel erstellen]** aus.
+1. Öffnen Sie die Registerkarte [!UICONTROL Rules] und klicken Sie auf **[!UICONTROL Create New Rule]**.
 
    ![Registerkarte „Regeln“ mit hervorgehobenem Namensfeld.](../../images/launch-rule-builder.png)
 
 1. Geben Sie einen Namen für die Regel ein.
-1. Klicken Sie unter „Ereignisse“ auf das Symbol **[!UICONTROL Hinzufügen]**.
+1. Klicken Sie unter „Ereignisse“ auf das **[!UICONTROL Add]**-Symbol.
 1. Wählen Sie Ihre Erweiterung und einen der für diese Erweiterung verfügbaren Ereignistypen aus und konfigurieren Sie dann die Einstellungen für das Ereignis.
 
    ![Seite für die Konfiguration von Regelereignissen.](../../images/rule-event-config.png)
@@ -81,7 +77,7 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
    >
    >Wenn dieser Pfad falsch angegeben wird, werden keine Daten erfasst.
 
-1. Legen Sie den Parameter „Reihenfolge“ fest und klicken Sie auf **[!UICONTROL Änderungen beibehalten]**.
+1. Legen Sie den Parameter „Reihenfolge“ fest und klicken Sie auf **[!UICONTROL Keep Changes]**.
 
    Die Standardpriorität aller Regelkomponenten lautet 50. Wenn sie früher ausgeführt werden sollen, geben Sie eine Zahl unter 50 an.
 
@@ -91,7 +87,7 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 
      Wenn sie später ausgeführt werden soll, geben Sie eine Zahl über 50 an. Weitere Informationen zur Reihenfolge finden Sie unter [Regelreihenfolge](rules.md#rule-ordering).
 
-1. Klicken Sie auf das Symbol **[!UICONTROL Hinzufügen]** für Bedingungen, wählen Sie dann einen Logiktyp, eine Erweiterung sowie einen Bedingungstyp aus und konfigurieren Sie die Einstellungen für Ihre Bedingung. Wählen Sie als Nächstes **[!UICONTROL Änderungen beibehalten]** aus.
+1. Klicken Sie auf das Symbol Bedingungen **[!UICONTROL Add]** , wählen Sie dann einen Logiktyp, eine Erweiterung sowie einen Bedingungstyp aus und konfigurieren Sie die Einstellungen für Ihre Bedingung. Wählen Sie als Nächstes **[!UICONTROL Keep Changes]**.
 
    ![Seite zur Konfiguration von Regelbedingungen.](../../images/condition-settings.png)
 
@@ -106,18 +102,18 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 
    Sie können beliebig viele Bedingungen hinzufügen. Mehrere Bedingungen innerhalb derselben Regel werden durch AND verknüpft.
 
-1. Wählen Sie das Symbol Aktionen **[!UICONTROL Hinzufügen]**, wählen Sie dann Ihre Erweiterung und einen für diese Erweiterung verfügbaren Aktionstyp aus, konfigurieren Sie die Einstellungen für die Aktion und klicken Sie auf **[!UICONTROL Änderungen beibehalten]**.
+1. Klicken Sie auf das Symbol Aktionen **[!UICONTROL Add]** , wählen Sie dann Ihre Erweiterung und einen für diese Erweiterung verfügbaren Aktionstyp aus, konfigurieren Sie die Einstellungen für die Aktion und klicken Sie auf **[!UICONTROL Keep Changes]**.
 
    ![Seite für die Konfiguration von Regeln.](../../images/action-settings.png)
 
    Die verfügbaren Aktionstypen hängen von der ausgewählten Erweiterung ab. Die Aktionseinstellungen unterscheiden sich je nach Aktionstyp.
 
-   (Erweitert) Mit Ausführung der nächsten Aktion warten: Diese Option ist verfügbar, wenn die Sequenzierung von Regelkomponenten für Ihre Eigenschaft aktiviert ist. Wenn diese Option aktiviert ist, rufen Tags die nächste Aktion erst nach Abschluss dieser Aktion auf. Wenn diese Option deaktiviert ist, wird die nächste Aktion sofort ausgeführt. Standardmäßig ist die Option **[!UICONTROL aktiviert]**.
+   (Erweitert) Mit Ausführung der nächsten Aktion warten: Diese Option ist verfügbar, wenn die Sequenzierung von Regelkomponenten für Ihre Eigenschaft aktiviert ist. Wenn diese Option aktiviert ist, rufen Tags die nächste Aktion erst nach Abschluss dieser Aktion auf. Wenn diese Option deaktiviert ist, wird die nächste Aktion sofort ausgeführt. Die Standardeinstellung lautet **[!UICONTROL Checked]**.
 
    (Erweitert) Zeitüberschreitung: Diese Option ist verfügbar, wenn die Sequenzierung von Regelkomponenten für Ihre Eigenschaft aktiviert ist. Sie definiert die maximale Zeitspanne, die für die Ausführung der Aktion zulässig ist. Wenn die Zeitüberschreitung erreicht wird, schlägt die Aktion fehl und alle nachfolgenden Aktionen für diese Regel werden aus der Verarbeitungswarteschlange entfernt. Der Standardwert beträgt 2000 ms.
 
 
-1. Überprüfen Sie Ihre Regel und wählen Sie **[!UICONTROL Regel speichern]** aus.
+1. Nachdem Sie Ihre Regel überprüft haben, klicken Sie auf **[!UICONTROL Save Rule]**.
 
    Wenn Sie die Regel später [veröffentlichen](../publishing/overview.md), fügen Sie sie einer Bibliothek hinzu und stellen sie bereit.
 
@@ -167,7 +163,7 @@ Adobe kann nicht garantieren, dass andere Regeln tatsächlich ausgelöst werden 
 
 ## Sequenzierung von Regelkomponenten {#sequencing}
 
-Das Verhalten der Laufzeitumgebung hängt davon ab, ob die Option **[!UICONTROL Regelkomponenten nacheinander ausführen]** für Ihre Eigenschaft aktiviert oder deaktiviert ist. Diese Einstellung bestimmt, ob die Komponenten einer Regel parallel (asynchron) ausgewertet werden können oder ob sie nacheinander ausgewertet werden müssen.
+Das Verhalten der Laufzeitumgebung hängt davon ab, ob **[!UICONTROL Run rule components in sequence]** für Ihre Eigenschaft aktiviert oder deaktiviert ist. Diese Einstellung bestimmt, ob die Komponenten einer Regel parallel (asynchron) ausgewertet werden können oder ob sie nacheinander ausgewertet werden müssen.
 
 >[!IMPORTANT]
 >

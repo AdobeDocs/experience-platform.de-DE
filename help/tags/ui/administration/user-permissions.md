@@ -2,18 +2,14 @@
 title: Benutzerberechtigungen für Tags
 description: Hier erfahren Sie mehr über die verschiedenen Arten von Berechtigungen, die für Tags verfügbar sind, und über einige grundlegende Implementierungsstrategien für verschiedene geschäftliche Anwendungsfälle.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1260'
 ht-degree: 91%
 
 ---
 
 # Benutzerberechtigungen für Tags
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Benutzerberechtigungen für Tags in Adobe Experience Platform werden Benutzern über Adobe Admin Console zugewiesen. Anstatt einzelnen Benutzern zugewiesen zu werden, werden unterschiedliche Berechtigungssätze separat als Produktprofile konfiguriert. Benutzer werden dann diesen Produktprofilen zugewiesen, um die Berechtigungen zu erhalten, für die sie konfiguriert wurden.
 

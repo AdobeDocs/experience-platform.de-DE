@@ -2,18 +2,14 @@
 title: Kopieren von Ressourcen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine neue Tag-Ressource mit den Einstellungen einer schon vorhandenen Tag-Ressource erstellen.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 319496975bcdbfd0a670cf8d36fb7e562b2ef2de
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '785'
 ht-degree: 87%
 
 ---
 
 # Kopieren von Ressourcen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Manchmal ist es praktisch, eine neue Ressource mithilfe der Einstellungen einer vorhandenen Ressource zu erstellen. In diesen Fällen können Sie eine Kopie erstellen.
 
@@ -23,11 +19,11 @@ Das Kopieren einer Ressource erstellt ein Duplikat dieser Ressource im angegeben
 
 ## Kopieren einer Erweiterung
 
-Sie können eine Erweiterung kopieren, indem Sie Ihre installierten Erweiterungen anzeigen, auf den Dropdown-Pfeil auf der Schaltfläche **[!UICONTROL Konfigurieren]** klicken und **[!UICONTROL Kopieren]** auswählen.
+Sie können eine Erweiterung kopieren, indem Sie Ihre installierten Erweiterungen anzeigen, auf den Dropdown-Pfeil auf dem Button **[!UICONTROL Configure]** klicken und **[!UICONTROL Copy]** auswählen.
 
 ![Kopieren der Analytics-Erweiterung](../../images/copy-initiate-extension.png)
 
-Wählen Sie für Eigenschaften, Regeln und Datenelemente einfach die zu kopierende Ressource aus und klicken Sie dann im Menü „Aktionen“ auf **[!UICONTROL Kopieren]**.
+Wählen Sie für Eigenschaften, Regeln und Datenelemente einfach die zu kopierende Ressource aus und klicken Sie dann im Menü „Aktionen“ auf **[!UICONTROL Copy]**.
 
 ![Kopieren der Analytics-Regel](../../images/copy-initiate-rule.png)
 
@@ -37,7 +33,7 @@ Wenn Sie eine Regel oder ein Datenelement kopieren, können Sie im Dialogfeld �
 >
 >Es ist nicht möglich, Ressourcen in eine andere Eigenschaft zu kopieren, wenn eine Eigenschaft für die Erweiterungsentwicklung konfiguriert ist und die andere Eigenschaft nicht.
 
-Nachdem Sie das gewünschte Verhalten konfiguriert haben, klicken Sie auf **[!UICONTROL Kopieren]**.
+Nachdem Sie das gewünschte Verhalten konfiguriert haben, klicken Sie auf **[!UICONTROL Copy]**.
 
 ## Kopieren von Eigenschaften
 

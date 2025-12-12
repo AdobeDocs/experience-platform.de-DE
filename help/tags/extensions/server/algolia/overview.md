@@ -2,68 +2,64 @@
 title: Algolia-Erweiterung für die Ereignisweiterleitung - Übersicht
 description: Erfahren Sie, wie Sie die Ereignisweiterleitungserweiterung Algolia in Adobe Experience Platform einrichten und verwenden. Weiterleiten von Benutzerverhaltensdaten über die Insights-API, Konfigurieren von Regeln, Zuordnen von XDM-Feldern und Überprüfen der Ereignisbereitstellung.
 last-substantial-update: 2025-05-09T00:00:00Z
-source-git-commit: d1b641ed0b48357a2f4b78d6829ccab52e4889ca
+exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '970'
 ht-degree: 1%
 
 ---
 
-
 # [!DNL Algolia]-Erweiterung für die Ereignisweiterleitung - Übersicht {#overview}
-
->[!NOTE]
->
->Adobe Experience Platform Launch ist jetzt Teil der Datenerfassungstechnologien von Adobe Experience Platform. Infolgedessen wurden in der gesamten Produktdokumentation terminologische Aktualisierungen vorgenommen. Eine umfassende Liste dieser Änderungen finden Sie im [Handbuch zu Terminologieaktualisierungen](../../../../tags/term-updates.md).
 
 Verwenden Sie [!DNL Algolia], um schnelle, relevante und personalisierte Sucherlebnisse zu bieten. Mit der KI-gestützten Optimierung können Sie Suchergebnisse und Empfehlungen verbessern, damit Benutzer die benötigten Produkte, Inhalte oder Informationen schnell finden können.
 
-Verwenden Sie die Erweiterung für die [!DNL Algolia] Ereignisweiterleitung , um Benutzerverhaltensereignisse über die [!DNL Insights API] an [!DNL Algolia] zu senden. Diese Verhaltensdaten ermöglichen KI-gestützte Empfehlungen, personalisierte Erlebnisse und intelligente Suchfunktionen.
+Verwenden Sie die Erweiterung für die [!DNL Algolia] Ereignisweiterleitung , um Benutzerverhaltensereignisse über die [!DNL Algolia] an [!DNL Insights API] zu senden. Diese Verhaltensdaten ermöglichen KI-gestützte Empfehlungen, personalisierte Erlebnisse und intelligente Suchfunktionen.
 
 ## Voraussetzungen {#prerequisites}
 
-Stellen Sie vor der Installation der Erweiterung sicher, dass Sie über ein [!DNL Algolia]-Konto mit Zugriff auf die [!DNL Insights API] verfügen. Wenn Sie kein Konto haben, [&#x200B; Sie sich an &#x200B;](https://dashboard.algolia.com/users/sign_up) aktivieren Sie den Zugriff auf die API.
+Stellen Sie vor der Installation der Erweiterung sicher, dass Sie über ein [!DNL Algolia]-Konto mit Zugriff auf die [!DNL Insights API] verfügen. Wenn Sie kein Konto haben, [ Sie sich an ](https://dashboard.algolia.com/users/sign_up) aktivieren Sie den Zugriff auf die API.
 
 Vergewissern Sie sich auch, dass Sie wissen, wie Sie die [!DNL Algolia] [!DNL Insights API] verwenden. Einen Überblick über das Senden von Ereignissen finden Sie unter [Senden von Ereignissen mit der Insights-API](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
 Erfassen Sie die folgenden Werte in Ihrem [!DNL Algolia]-Konto-Dashboard:
-- **[!UICONTROL Anwendungs-ID]**
-- **[!UICONTROL API-Schlüssel suchen]**
-- **[!UICONTROL Indexname]**
+- **[!UICONTROL Application ID]**
+- **[!UICONTROL Search API Key]**
+- **[!UICONTROL Index Name]**
 
 ## Installieren der Erweiterung {#install}
 
 Gehen Sie wie folgt vor, um die [!DNL Algolia]-Erweiterung zu installieren:
 
-Navigieren Sie zu **[!UICONTROL Datenerfassung]** in [!DNL Adobe Experience Platform]. Wählen Sie die **[!UICONTROL Erweiterungen]** aus.
+Navigieren Sie zu **[!UICONTROL Data Collection]** in [!DNL Adobe Experience Platform]. Wählen Sie die Registerkarte **[!UICONTROL Extensions]** aus.
 
-Öffnen Sie **[!UICONTROL Katalog]** suchen Sie die Erweiterung **[!UICONTROL Algolia-Ereignisweiterleitung]** und wählen Sie dann **[!UICONTROL Installieren]** aus.
+Öffnen Sie die **[!UICONTROL Catalog]**, suchen Sie die **[!UICONTROL Algolia Event Forwarding]** und klicken Sie auf **[!UICONTROL Install]**.
 
 ![Der Installationsprozess für die Algolia-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform](../../../images/extensions/server/algolia/install-extension.png)
 
 ### Konfigurieren der Erweiterung {#configure-extension}
 
-Um die [!DNL Algolia] Ereignisweiterleitungserweiterung zu konfigurieren, navigieren Sie zur Registerkarte **[!UICONTROL Erweiterungen]** , wählen Sie die Erweiterung **[!UICONTROL Algolia]** aus und klicken Sie dann auf **[!UICONTROL Konfigurieren]**.
+Um die Erweiterung für die [!DNL Algolia]-Ereignisweiterleitung zu konfigurieren, navigieren Sie zur Registerkarte **[!UICONTROL Extensions]** , wählen Sie die Erweiterung **[!UICONTROL Algolia]** aus und klicken Sie dann auf **[!UICONTROL Configure]**.
 
 ![Konfigurationsbildschirm für die Algolia-Ereignisweiterleitungserweiterung in Adobe Experience Platform](../../../images/extensions/server/algolia/configure.png)
 
 | Eigenschaft | Beschreibung |
 |----------|-------------|
-| **[!UICONTROL Anwendungs-ID]** | Geben Sie die [!UICONTROL Anwendungs-ID] im Algolia-Dashboard unter dem Abschnitt [API-Schlüssel](https://www.algolia.com/account/api-keys/all) ein. |
-| **[!UICONTROL API-Schlüssel suchen]** | Geben Sie den [!UICONTROL API-Schlüssel suchen] im Dashboard Algolia im Abschnitt [API-Schlüssel](https://www.algolia.com/account/api-keys/all) ein. |
-| **[!UICONTROL Indexname]** | Geben Sie den [!UICONTROL Indexnamen“ ein] der Ihre Produkte oder Inhalte enthält. Dieser Index wird als Standardwert verwendet. |
+| **[!UICONTROL Application ID]** | Geben Sie die [!UICONTROL Application ID] im Algolia-Dashboard unter dem Abschnitt [API-Schlüssel](https://www.algolia.com/account/api-keys/all) ein. |
+| **[!UICONTROL Search API Key]** | Geben Sie die [!UICONTROL Search API Key] im Algolia-Dashboard unter dem Abschnitt [API-Schlüssel](https://www.algolia.com/account/api-keys/all) ein. |
+| **[!UICONTROL Index Name]** | Geben Sie die [!UICONTROL Index Name] ein, die Ihre Produkte oder Inhalte enthält. Dieser Index wird als Standardwert verwendet. |
 
 {style="table-layout:auto"}
 
 ## Aktionstypen der Erweiterung für die [!DNL Algolia]-Ereignisweiterleitung {#action-types}
 
-Die Erweiterung für die [!DNL Algolia]-Ereignisweiterleitung bietet einen einzelnen Aktionstyp, der im **[!UICONTROL Dann]**-Abschnitt einer Regel verwendet werden kann:
+Die Erweiterung für die [!DNL Algolia]-Ereignisweiterleitung bietet einen einzelnen Aktionstyp, der im **[!UICONTROL Then]** einer Regel verwendet werden kann:
 
 ### Ereignis senden {#send-event}
 
-Konfigurieren Sie die Aktion **[!UICONTROL Ereignis senden]**, um Ereignisse an [!DNL Algolia] weiterzuleiten:
+Konfigurieren der **[!UICONTROL Send event]**-Aktion für die Weiterleitung von Ereignissen an [!DNL Algolia]:
 
-Wählen Sie **[!UICONTROL Regeln]** > **[!UICONTROL Regel hinzufügen]** oder wählen Sie eine vorhandene Regel aus. Fügen Sie im **[!UICONTROL Dann]**-Teil der Regel eine Aktion hinzu und wählen Sie **[!UICONTROL Erweiterung]**: [!DNL Algolia] Ereignisweiterleitung > **[!UICONTROL Aktionstyp]**: **[!UICONTROL Ereignisse senden]**.
+Wählen Sie **[!UICONTROL Rules]** > **[!UICONTROL Add Rule]** oder eine vorhandene Regel aus. Fügen Sie im **[!UICONTROL Then]** Teil der Regel eine Aktion hinzu und wählen Sie **[!UICONTROL Extension]**: [!DNL Algolia] Ereignisweiterleitung > **[!UICONTROL Action Type]**: **[!UICONTROL Send Events]**.
 
 ![Konfiguration der Aktion „Ereignis senden“ in der Erweiterung der Algolia-Ereignisweiterleitung.](../../../images/extensions/server/algolia/send-event.png)
 
@@ -77,15 +73,15 @@ Stellen Sie sicher, dass Sie die Feldergruppe &quot;[!DNL Algolia]&quot; zu Ihre
 
 So fügen Sie die Feldergruppe [!DNL Algolia] ein:
 
-Navigieren Sie zu **[!UICONTROL Schemata]** und wählen Sie **[!UICONTROL Durchsuchen]** aus.
+Navigieren Sie zu **[!UICONTROL Schemas]** und wählen Sie **[!UICONTROL Browse]** aus.
 
-Fügen Sie ein neues Schema hinzu oder aktualisieren Sie ein vorhandenes Schema, das Sie zum Senden von Web-Ereignissen verwenden, und bewegen Sie den Mauszeiger über das Symbol **[!UICONTROL Hinzufügen]**. Geben Sie *[!DNL Algolia]* in das Suchfeld ein, um die Ergebnisse einzugrenzen.
+Fügen Sie ein neues Schema hinzu oder aktualisieren Sie ein vorhandenes Schema, das Sie zum Senden von Web-Ereignissen verwenden, und bewegen Sie den Mauszeiger über das **[!UICONTROL Add]**. Geben Sie *[!DNL Algolia]* in das Suchfeld ein, um die Ergebnisse einzugrenzen.
 
-Wählen Sie die Schaltfläche **[!DNL Algolia]Ereignisdetails** Feldergruppe > **[!UICONTROL Feldergruppe hinzufügen]** > **[!UICONTROL Speichern]**.
+Wählen Sie die **[!DNL Algolia]Ereignisdetails** Feldergruppe > **[!UICONTROL Add field group]** Schaltfläche > **[!UICONTROL Save]** aus.
 
 ![Algolia-Profilfeldgruppenkonfiguration in Experience Platform](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
-### Zuordnen und Senden von Daten mit dem Tag [!UICONTROL Datenerfassung]
+### Zuordnen und Senden von Daten mit dem [!UICONTROL Data Collection]-Tag
 
 Die [!DNL Algolia]-Erweiterung für die Ereignisweiterleitung kann zusammen mit dem -**[!DNL Adobe Experience Platform Web SDK]** verwendet werden, um Daten von Ihrer Website an [!DNL Algolia] zu senden. Dazu erstellen Sie eine Tag-Eigenschaft, ordnen Daten dem [!DNL XDM]-Objekt zu und konfigurieren Regeln, um Ereignisse zu senden.
 
@@ -99,8 +95,8 @@ Die [!DNL Algolia]-Erweiterung für die Ereignisweiterleitung kann zusammen mit 
 
 #### Schritt 2: Datenelement für [!DNL XDM] Zuordnung erstellen
 
-1. Erstellen Sie ein [!UICONTROL Datenelement] mithilfe der **[!DNL Adobe Experience Platform Web SDK]**.
-2. Wählen Sie **[!UICONTROL XDM]** Objekt als Datenelementtyp aus.
+1. Erstellen Sie eine [!UICONTROL Data Element] mit dem **[!DNL Adobe Experience Platform Web SDK]** .
+2. Wählen Sie **[!UICONTROL XDM object]** als Datenelementtyp aus.
 3. Ordnen Sie Ihre Daten den entsprechenden [!DNL XDM] zu, um sicherzustellen, dass [!DNL Algolia] Felder ausgefüllt werden.
 
 ![](../../../images/extensions/server/algolia/xdm-mapping.png)
@@ -110,7 +106,7 @@ Die [!DNL Algolia]-Erweiterung für die Ereignisweiterleitung kann zusammen mit 
 1. Erstellen Sie eine neue Regel in Ihrer Tag-Eigenschaft.
 2. Fügen Sie die erforderlichen Ereignis-Trigger wie Seitenladeereignisse oder Klickereignisse hinzu.
 3. Fügen Sie eine Aktion mithilfe von **[!DNL Adobe Experience Platform Web SDK]** hinzu.
-4. Wählen Sie **[!UICONTROL Aktionstyp]** Ereignis senden“ aus.
+4. Wählen Sie **[!UICONTROL Send event]** als Aktionstyp aus.
 5. Konfigurieren Sie die Aktion für die Verwendung Ihres [!DNL XDM] Datenelements.
 
 ![Beispiel für das Konfigurieren einer Regelaktion in der Algolia-Ereignisweiterleitungserweiterung](../../../images/extensions/server/algolia/rule-action.png)
@@ -126,7 +122,7 @@ Die [!DNL Algolia]-Erweiterung für die Ereignisweiterleitung kann zusammen mit 
 
 Nachdem Sie die Erweiterung für die [!DNL Algolia]-Ereignisweiterleitung konfiguriert haben, können Sie überprüfen, ob Ereignisse ordnungsgemäß gesendet und empfangen werden, indem Sie die folgenden Schritte ausführen:
 
-Navigieren Sie zu Ihrem [!DNL Algolia]-Dashboard und gehen Sie zu **[!UICONTROL Datenquellen > Ereignisse > Debugger]**.
+Navigieren Sie zu Ihrem [!DNL Algolia]-Dashboard und gehen Sie zu **[!UICONTROL Data Sources > Events > Debugger]**.
 
 Wählen Sie das Ereignis aus, das mit dem von der Ereignisweiterleitungserweiterung von [!DNL Algolia] gesendeten Ereignis übereinstimmt, und überprüfen Sie, ob die erwarteten Daten im Ereignis vorhanden sind.
 
@@ -152,7 +148,7 @@ Wenn beim Implementieren der [!DNL Algolia]-Erweiterung für die Ereignisweiterl
 
 Wenn Ereignisse nicht in [!DNL Algolia] angezeigt werden, überprüfen Sie Folgendes:
 
-- **API-Anmeldeinformationen überprüfen**: Stellen Sie sicher, dass **[!UICONTROL Anwendungs-ID]** und **[!UICONTROL API-Schlüssel]** mit den Werten in Ihrem [!DNL Algolia]-Dashboard übereinstimmen.
+- **API-Anmeldeinformationen überprüfen**: Stellen Sie sicher, dass **[!UICONTROL Application ID]** und **[!UICONTROL API Key]** mit den Werten in Ihrem [!DNL Algolia]-Dashboard übereinstimmen.
 - **Ereignisdebugger überprüfen**: Verwenden Sie den [!DNL Algolia] Ereignisdebugger, um zu bestätigen, ob Ereignisse empfangen werden. Andernfalls überprüfen Sie die Konfiguration der Ereignisweiterleitungsregel.
 - **XDM-Zuordnung überprüfen**: Stellen Sie sicher, dass alle erforderlichen Felder im [!DNL Algolia]-Schema im [!DNL XDM] korrekt zugeordnet sind.
 
@@ -163,13 +159,13 @@ Wenn Ereignisse nicht in [!DNL Algolia] angezeigt werden, überprüfen Sie Folge
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der [!DNL Algolia Event Forwarding Extension] an [!DNL Algolia] senden. Weitere Informationen zu den Ereignisweiterleitungsfunktionen in [!DNL Adobe Experience Platform] finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der [!DNL Algolia] an [!DNL Algolia Event Forwarding Extension] senden. Weitere Informationen zu den Ereignisweiterleitungsfunktionen in [!DNL Adobe Experience Platform] finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
 
 Weitere Informationen zum Debuggen Ihrer Implementierung mit dem Experience Platform-Debugger und dem Überwachungs-Tool für die Ereignisweiterleitung finden Sie unter [Adobe Experience Platform Debugger-Übersicht](../../../../debugger/home.md) und [Überwachen von Aktivitäten in der Ereignisweiterleitung](../../../ui/event-forwarding/monitoring.md).
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 - [[!DNL Algolia] Insights-API-Dokumentation](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Ereignisdokumentation](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] Dokumentation zur Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=de)
+- [[!DNL Adobe Experience Platform] Dokumentation zur Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
 - [[!DNL Algolia] Übersicht über KI-Funktionen](https://www.algolia.com/products/ai-search/)

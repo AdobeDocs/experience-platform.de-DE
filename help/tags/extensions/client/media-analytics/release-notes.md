@@ -2,18 +2,14 @@
 title: Versionshinweise für die Erweiterung von Adobe Media Analytics für Audio und Video
 description: Die neuesten Versionshinweise für die Tag-Erweiterung „Adobe Media Analytics for Audio and Video“ in Adobe Experience Platform.
 exl-id: 79d92f42-795f-4685-926f-ebe6f4125539
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '165'
 ht-degree: 100%
 
 ---
 
 # Versionshinweise zu Adobe Media Analytics für Audio und Video
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 25. Oktober 2019
 
@@ -21,7 +17,7 @@ ht-degree: 100%
 
 * Aktualisieren Sie die MediaSDK-Bibliothek auf Version 2.2.1, die die Opt-in-Funktion unterstützt.
 
-## 25. Februar 2019
+## &#x200B;25. Februar 2019
 
 ### Adobe Media Analytics für Audio und Video – Erweiterung 1.2
 
@@ -29,14 +25,14 @@ ht-degree: 100%
 * Unterstützung für das Audioinhalts-Tracking.
 * Aktualisierung der MediaSDK-Bibliothek auf Version 2.2.0
 
-## 15. Juni 2018
+## &#x200B;15. Juni 2018
 
 ### Adobe Analytics für Video – Erweiterung 1.1
 
 * Lassen Sie das Tracking direkt von der Webseite aus zu, indem Sie MediaHeartbeat-APIs in die globale Variable exportieren.
 * Aktualisierung der VideoHeartbeat-Bibliothek auf Version 2.1.0
 
-## 20. März 2018
+## &#x200B;20. März 2018
 
 ### Adobe Analytics für Video – Erweiterung 1.0
 

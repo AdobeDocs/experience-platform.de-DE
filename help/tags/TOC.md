@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: c7bedcdb04d5c5483d0239a9fb99388d5e1e1fe5
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '824'
 ht-degree: 80%
 
 ---
@@ -116,7 +116,7 @@ ht-degree: 80%
             * [Personalisierung](extensions/client/web-sdk/configure/personalization.md)
             * [Datenerfassung](extensions/client/web-sdk/configure/data-collection.md)
             * [Streaming-Medien](extensions/client/web-sdk/configure/streaming-media.md)
-            * [Push-Benachrichtigungen &#x200B;](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Push-Benachrichtigungen ](extensions/client/web-sdk/configure/push-notifications.md)
             * [Werbung](extensions/client/web-sdk/configure/advertising.md)
             * [Überschreibungen der Konfiguration](extensions/client/web-sdk/configure/configuration-overrides.md)
             * [Erweiterte Einstellungen](extensions/client/web-sdk/configure/advanced-settings.md)
@@ -365,8 +365,6 @@ ht-degree: 80%
       * [Beziehungen](./api/guides/relationships.md)
       * [Suchen nach Ressourcen](./api/guides/search.md)
       * [Geheimnisse](./api/guides/secrets.md)
-* [FAQs](./faq.md)
-* [Aktualisierungen der Terminologie](./term-updates.md)
-* [Auslaufende Unterstützung für Internet Explorer 10 und 11](./ie-deprecation.md)
+* [Häufig gestellte Fragen](./faq.md)
 * [Versionshinweise zu Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
 

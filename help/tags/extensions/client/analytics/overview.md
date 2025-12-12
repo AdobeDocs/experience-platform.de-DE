@@ -2,18 +2,14 @@
 title: Adobe Analytics-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform vertraut.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2308'
+source-wordcount: '2263'
 ht-degree: 82%
 
 ---
 
 # Adobe Analytics-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zum Konfigurieren der Adobe Analytics-Erweiterung und den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -360,7 +356,7 @@ Konfigurieren Sie bei Bedarf weitere Hierarchien.
 
 #### Seitenname
 
-Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht der [`pageName` Variable &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=de) Analytics.
+Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht der [`pageName` Variable ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) Analytics.
 
 >[!IMPORTANT]
 >

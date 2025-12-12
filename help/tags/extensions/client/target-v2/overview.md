@@ -2,18 +2,14 @@
 title: Adobe Target v2-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform vertraut.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 88%
+source-wordcount: '1298'
+ht-degree: 87%
 
 ---
 
 # Adobe Target v2-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -23,9 +19,9 @@ Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim
 >
 >Für die Adobe Target-Erweiterung ist at.js 2.x erforderlich.
 
-Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Eigenschaft, wählen Sie dann **[!UICONTROL Mixin > Katalog]**, bewegen Sie den Mauszeiger über die Target-Erweiterung und wählen Sie **[!UICONTROL Installieren]** aus.
+Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Eigenschaft, klicken Sie dann auf **[!UICONTROL Extensions > Catalog]**, bewegen Sie den Mauszeiger über die Target-Erweiterung und klicken Sie auf **[!UICONTROL Install]**.
 
-Öffnen Sie zum Konfigurieren der Erweiterung die Registerkarte „Erweiterungen“, bewegen Sie den Mauszeiger über die Erweiterung und wählen Sie dann **[!UICONTROL Konfigurieren]** aus.
+Öffnen Sie zum Konfigurieren der Erweiterung die Registerkarte „Erweiterungen“, bewegen Sie den Mauszeiger über die Erweiterung und klicken Sie dann auf **[!UICONTROL Configure]**.
 
 ![](../../../images/targetv2config.png)
 
@@ -71,7 +67,7 @@ Es ist keine Konfiguration erforderlich.
 
 ### Laden von Target mit On-Device Decisioning
 
-Fügen Sie diese Aktion Ihrer Tag-Regel hinzu, wenn es im Kontext Ihrer Regel sinnvoll ist, Target mit [Entscheidungsfindung auf dem Gerät](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=de) zu laden. Dadurch wird die at.js-Bibliothek mit aktiviertem On-Device Decisioning in die Seite geladen. Bei den meisten Implementierungen sollte Target auf jeder Seite Ihrer Site geladen werden. Adobe empfiehlt, die Aktion „Target mit On-Device Decisioning laden“ nur zu verwenden, wenn ihr ein Target-Aufruf vorangestellt ist. Andernfalls könnten Fehler auftreten, wie z. B. die Verzögerung des Analytics-Aufrufs.
+Fügen Sie diese Aktion Ihrer Tag-Regel hinzu, wenn es im Kontext Ihrer Regel sinnvoll ist, Target mit [On-Device Decisioning](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=de) zu laden. Dadurch wird die at.js-Bibliothek mit aktiviertem On-Device Decisioning in die Seite geladen. Bei den meisten Implementierungen sollte Target auf jeder Seite Ihrer Site geladen werden. Adobe empfiehlt, die Aktion „Target mit On-Device Decisioning laden“ nur zu verwenden, wenn ihr ein Target-Aufruf vorangestellt ist. Andernfalls könnten Fehler auftreten, wie z. B. die Verzögerung des Analytics-Aufrufs.
 
 >[!IMPORTANT]
 >
@@ -98,7 +94,7 @@ Mit diesem Aktionstyp kann Target eine Anfrage auslösen, wenn Ihre Seite gelade
 Geben Sie an, ob Sie die Ausblendung des Textkörpers aktivieren möchten, um Flimmern zu verhindern. Geben Sie außerdem den Stil an, der beim Ausblenden des Textkörperelements verwendet wird. Die folgenden Optionen sind verfügbar:
 
 * **Ausblendung des Textkörpers:** Sie können diese Einstellung aktivieren oder deaktivieren. Der Standardwert lautet „Aktiviert“, was bedeutet, dass der HTML-TEXTKÖRPER ausgeblendet wird.
-* **Ausgeblendeter Textkörperstil:** Der Standardwert lautet „body{opacity:0}“. Dieser Wert kann abgeändert werden, beispielsweise zu body{display:none}.
+* **Stil für ausgeblendeten Text:** Der Standardwert ist body{opacity:0}. Dieser Wert kann in etwas Anderes geändert werden, z. B. body{display:none}.
 
 Weitere Informationen finden Sie in der [Onlinehilfe zu Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=de).
 

@@ -2,10 +2,10 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 88%
+source-wordcount: '770'
+ht-degree: 87%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!IMPORTANT]
 >
->Die Versionshinweise für Tags und Ereignisweiterleitung werden künftig nicht mehr auf dieser Seite bereitgestellt. Die neuesten ausführlichen Informationen zu Tags und zur Ereignisweiterleitung finden Sie in den aktuellen [Versionshinweisen zu Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest#data-collection?lang=de).
+>Die Versionshinweise für Tags und Ereignisweiterleitung werden künftig nicht mehr auf dieser Seite bereitgestellt. Die neuesten ausführlichen Informationen zu Tags und zur Ereignisweiterleitung finden Sie in den aktuellen [Versionshinweisen zu Adobe Experience Platform](/help/release-notes/latest/latest.md).
 
 ## &#x200B;26. April 2023
 
@@ -36,7 +36,7 @@ Es wurden neue Erweiterungen veröffentlicht:
 
 * **[!DNL Braze]-Erweiterung zur Ereignisweiterleitung**: Mit der Ereignisweiterleitungserweiterung [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und in Form von Server-seitigen Ereignissen mithilfe der APIs von [!DNL Braze] für die Benutzernachverfolgung an [!DNL Braze] senden.
 * Ereignisweiterleitungserweiterung mit der **[Epsilon-Ereignisse-API]**: Mit der Erweiterung [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) zur Ereignisweiterleitung können Sie Ereignisinformationen im Adobe Experience Platform Edge Network erfassen und über die Ereignis-API von [!DNL Epsilon] an [!DNL Epsilon] senden.
-* **[!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung**: Mit der [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) [!DNL Mixpanel]-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an zu senden.
+* **[!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung**: Mit der [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de)[!DNL Mixpanel]-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an zu senden.
 
 ## &#x200B;25. Januar 2023
 
@@ -68,7 +68,7 @@ Es wurden neue Erweiterungen veröffentlicht:
 ## &#x200B;27. Juli 2022
 
 * Der Zugriff auf Tags und Ereignisweiterleitungsfunktionen wird jetzt über die Adobe Admin Console unter der Karte für Adobe Experience Platform Datenerfassung verwaltet. Weitere Informationen finden Sie im Handbuch zu [Datenerfassungsberechtigungen](../../collection/permissions.md).
-* Die Unterstützung für Internet Explorer 10 und 11 wurde [eingestellt](../ie-deprecation.md).
+* Die Unterstützung für Internet Explorer 10 und 11 wird nicht mehr unterstützt.
 
 ## &#x200B;22. Juni 2022
 

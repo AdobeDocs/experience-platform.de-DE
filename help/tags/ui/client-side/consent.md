@@ -2,18 +2,14 @@
 title: Bereitstellung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden
 description: Erfahren Sie, wie Sie die Opt-in- und Opt-out-Signale von Kunden für verschiedene Adobe-Lösungen in Adobe Experience Platform verwalten.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '565'
 ht-degree: 94%
 
 ---
 
 # Bereitstellung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Rechtliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) erfordern, dass Unternehmen in der Lage sind, die Einwilligung ihrer Benutzer zu verwalten. Adobe-Kunden können von Besuchern verlangen, dass sie sich anmelden, bevor Adobe-Lösungen für den jeweiligen Besucher ausgeführt werden können. Besucher sollten die Möglichkeit erhalten, ihre Opt-in- und Opt-out-Status selbst zu verwalten.
 

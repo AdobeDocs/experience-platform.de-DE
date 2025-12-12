@@ -2,18 +2,14 @@
 title: YouTube Video Tracking-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „YouTube Video Tracking“ in Adobe Experience Platform vertraut.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 78%
+source-wordcount: '852'
+ht-degree: 77%
 
 ---
 
 # YouTube Video Tracking-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 **Voraussetzungen**
 
@@ -98,9 +94,9 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
 
 >[!TIP]
 > 
->Bei Implementierungen, bei denen nicht mehrere eVars oder Props für jedes Videoelement verwendet werden können, können die Werte der Datenelemente innerhalb von Experience Platform verkettet und mit dem Tool Classification Rule Builder in Klassifizierungsberichte geparst werden, wie in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de) erläutert, und dann als ein Segment in Analysis Workspace angewendet werden.
+>Bei Implementierungen, bei denen nicht mehrere eVars oder Props für jedes Videoelement verwendet werden können, können die Werte der Datenelemente innerhalb von Experience Platform verkettet und mit dem Tool Classification Rule Builder in Klassifizierungsberichte geparst werden, wie in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de) erläutert, und dann als ein Segment in Analysis Workspace angewendet werden.
 
-Erstellen Sie zum Verketten von Videoinformationswerten ein neues Datenelement mit dem Namen „Videometadaten“ und programmieren Sie es so, dass alle oben aufgeführten Videodatenelemente abgerufen und zusammengestellt werden. z. B.:
+Erstellen Sie zum Verketten von Videoinformationswerten ein neues Datenelement mit dem Namen &quot;Meta-Videodaten“ und programmieren Sie es so, dass alle oben aufgeführten Videodatenelemente abgerufen und zusammengestellt werden. Beispiel:
 
 ```javascript
 var r = [];

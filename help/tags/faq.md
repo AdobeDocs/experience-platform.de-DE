@@ -2,18 +2,14 @@
 title: Handbuch zur Fehlerbehebung bei Tags
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zu Tags in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '987'
 ht-degree: 89%
 
 ---
 
 # Handbuch zur Fehlerbehebung bei Tags
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](./term-updates.md).
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Tags in Adobe Experience Platform.
 
@@ -45,7 +41,7 @@ Das virtuelle Self-Service-Portal von Tags ermöglicht es Entwicklern von Erweit
 
 Wir haben viele Kunden, die sich auch dafür entscheiden, ihre eigenen privaten Erweiterungen zu erstellen, die nur innerhalb ihres eigenen Unternehmens verwendet werden und die die gleichen Methoden zur Entwicklung von Erweiterungen verwenden.
 
-Informationen zum Entwickeln einer Erweiterung finden Sie auf der Seite [Übersicht über die Entwicklung &#x200B;](./extension-dev/overview.md) Erweiterungen“.
+Informationen zum Entwickeln einer Erweiterung finden Sie auf der Seite [Übersicht über die Entwicklung ](./extension-dev/overview.md) Erweiterungen“.
 
 ## Erfüllen Tags die Sicherheitsstandards meines Unternehmens?
 
@@ -53,7 +49,7 @@ Tags sind mit SOC-2 und dem Gramm-Leach-Bliley Act kompatibel. Tags bieten auch 
 
 ## Wann kann ich zu Tags wechseln?
 
-Jetzt ist die beste Zeit, um zu Tags zu wechseln. Der Migrationsprozess macht es einfach, Ihre DTM-Eigenschaften in Tags zu kopieren. Wir empfehlen umfangreiche Tests, haben jedoch so viel wie möglich automatisiert (keine Änderungen am eingebetteten Code auf der Seite und automatisierte Migration von Regeln und Datenelementen).
+Jetzt ist die beste Zeit, um zu Tags zu wechseln. Der Migrationsprozess macht es einfach, Ihre DTM-Eigenschaften in Tags zu kopieren. Wir empfehlen umfangreiche Tests, haben jedoch so viel wie möglich automatisiert (keine Änderungen am Einbettungs-Code auf der Seite und automatisierte Migration von Regeln und Datenelementen).
 
 ## Unterstützen Tags Single Page Applications und mein bevorzugtes Framework?
 
@@ -83,7 +79,7 @@ Ja! Tags unterstützen jetzt mobile Eigenschaften und Konfiguration für die neu
 
 ## Warum gibt die Benutzeroberfläche an, dass beim Laden meines Kontos ein Fehler aufgetreten ist?
 
-Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console[&#x200B; um Zugriff auf Datenerfassungsfunktionen in der Benutzeroberfläche zu gewähren](../collection/permissions.md) finden Sie im Handbuch zum Verwalten von Berechtigungen .
+Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console[ um Zugriff auf Datenerfassungsfunktionen in der Benutzeroberfläche zu gewähren](../collection/permissions.md) finden Sie im Handbuch zum Verwalten von Berechtigungen .
 
 ## Warum kann ich in der Benutzeroberfläche keine Eigenschaften hinzufügen?
 
@@ -93,4 +89,4 @@ Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um 
 
 ## Was ist, wenn ich weitere Fragen habe?
 
-Wenn Sie weitere Fragen haben, können Sie diese auf der [Adobe Experience Platform-Datenerfassungs-Community](https://adobe.com/go/launchme)Seite auf Experience League stellen oder dem [Community-Slack-](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)&quot; für Entwickler und technische Implementierungsthemen beitreten.
+Wenn Sie weitere Fragen haben, können Sie diese auf der [Adobe Experience Platform-Datenerfassungs-Community](https://adobe.com/go/launchme)Seite in Experience League stellen oder dem [Community Slack Workspace](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) für Entwickler und technische Implementierungsthemen beitreten.

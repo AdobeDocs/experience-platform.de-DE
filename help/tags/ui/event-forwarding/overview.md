@@ -3,10 +3,10 @@ title: Übersicht über die Ereignisweiterleitung
 description: Erfahren Sie mehr über die Ereignisweiterleitung in Adobe Experience Platform, durch die Sie mit dem Experience Platform Edge Network Aufgaben ausführen können, ohne die Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 48%
+source-wordcount: '1144'
+ht-degree: 44%
 
 ---
 
@@ -16,11 +16,7 @@ ht-degree: 48%
 >
 >Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die im Rahmen von Adobe Real-time Customer Data Platform Connections, Prime und Ultimate angeboten wird.
 
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
-
-Mit der Ereignisweiterleitung in Adobe Experience Platform können Sie erfasste Ereignisdaten zur Server-seitigen Verarbeitung an ein Ziel senden. Die Ereignisweiterleitung reduziert den Umfang von Web-Seiten und Mobile Apps. Dabei wird das Adobe Experience Platform Edge-Netzwerk verwendet, um Aufgaben auszuführen, die normalerweise auf dem Client laufen. Ereignisweiterleitungsregeln werden auf ähnliche Weise wie Tags implementiert und können Daten transformieren und an neue Ziele senden. Anstatt diese Daten jedoch von einer Client-Anwendung wie einem Webbrowser zu senden, werden sie von den Servern von Adobe gesendet.
+Mit der Ereignisweiterleitung in Adobe Experience Platform (früher als Server-seitig von Adobe Experience Platform Launch bezeichnet) können Sie erfasste Ereignisdaten zur Server-seitigen Verarbeitung an ein Ziel senden. Die Ereignisweiterleitung reduziert den Umfang von Web-Seiten und Mobile Apps. Dabei wird das Adobe Experience Platform Edge-Netzwerk verwendet, um Aufgaben auszuführen, die normalerweise auf dem Client laufen. Ereignisweiterleitungsregeln werden auf ähnliche Weise wie Tags implementiert und können Daten transformieren und an neue Ziele senden. Anstatt diese Daten jedoch von einer Client-Anwendung wie einem Webbrowser zu senden, werden sie von den Servern von Adobe gesendet.
 
 Dieses Dokument bietet einen allgemeinen Überblick über die Ereignisweiterleitung in Experience Platform.
 

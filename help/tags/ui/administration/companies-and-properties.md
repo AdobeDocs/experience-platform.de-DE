@@ -2,18 +2,14 @@
 title: Eigenschaften
 description: Erfahren Sie, wie Erweiterungen, Umgebung und Bibliotheken für Ihr Unternehmen in Adobe Experience Platform organisiert und gruppiert werden.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1108'
 ht-degree: 90%
 
 ---
 
 # Eigenschaften
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 ## Web-Eigenschaften
 

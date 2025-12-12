@@ -2,18 +2,14 @@
 title: Bibliotheksmodule in Edge-Erweiterungen
 description: Formatieren Sie Bibliotheksmodule für Tag-Erweiterungen in einer Edge-Eigenschaft.
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '256'
 ht-degree: 100%
 
 ---
 
 # Bibliotheksmodule in Edge-Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 >[!IMPORTANT]
 >

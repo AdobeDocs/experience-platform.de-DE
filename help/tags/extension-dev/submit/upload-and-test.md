@@ -2,18 +2,14 @@
 title: Hochladen und Implementieren von End-to-End-Tests für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform validieren, hochladen und testen können.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2344'
+source-wordcount: '2299'
 ht-degree: 84%
 
 ---
 
 # Hochladen und Implementieren von End-to-End-Tests
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Verwenden Sie zum Testen von Tag-Erweiterungen in Adobe Experience Platform die Tags-API und/oder die Befehlszeilen-Tools, um Ihre Erweiterungspakete hochzuladen. Verwenden Sie anschließend die Experience Platform-Benutzeroberfläche oder die Datenerfassungs-Benutzeroberfläche, um Ihr Erweiterungspaket in einer Eigenschaft zu installieren und seine Funktionen in einer Tag-Bibliothek und einem Build zu nutzen.
 
@@ -63,8 +59,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > Standardmäßig erwartet der Uploader Adobe I/O-Anmeldeinformationen für einen OAuth-Fluss von Server zu Server. Die alten `jwt-auth` Anmeldedaten
-> &#x200B;> kann verwendet werden, indem `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
-> &#x200B;> Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> kann verwendet werden, indem `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
+> Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
 Der Uploader verlangt, dass Sie nur wenige Informationen eingeben. `clientId` und `clientSecret` können über die Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die richtige Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL View]**.
 

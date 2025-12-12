@@ -2,38 +2,34 @@
 title: Vergleichen von Ressourcenrevisionen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform den Revisionsverlauf für eine Ressource anzeigen.
 exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '859'
 ht-degree: 100%
 
 ---
 
 # Vergleichen von Ressourcenrevisionen
 
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
-
-Vergleichen Sie Ressourcenversionen, um den Verlauf einzelner Ressource anzuzeigen. Sie können den aktuellen Status der Ressource mit älteren Versionen oder die derzeit veröffentlichte Version einer Ressource mit den neuesten gespeicherten Änderungen vergleichen.
+Vergleichen Sie Ressourcenversionen, um den Verlauf einzelner Ressource anzuzeigen.  Sie können den aktuellen Status der Ressource mit älteren Versionen oder die derzeit veröffentlichte Version einer Ressource mit den neuesten gespeicherten Änderungen vergleichen.
 
 ## Starten eines Vergleichs
 
-Das Starten eines Vergleichs ist bei allen Ressourcentypen gleich. Öffnen Sie die Bearbeitungsansicht für eine Ressource und suchen Sie dann das Drei-Punkte-Symbol neben der Schaltfläche **[!UICONTROL Speichern]**, um die verfügbaren Aktionen für diese Ressource anzuzeigen. Wählen Sie **[!UICONTROL Revisionen vergleichen]** aus der Liste aus.
+Das Starten eines Vergleichs ist bei allen Ressourcentypen gleich. Öffnen Sie die Bearbeitungsansicht für eine Ressource und suchen Sie dann das Drei-Punkte-Symbol neben der Schaltfläche **[!UICONTROL Save]**, um die verfügbaren Aktionen für diese Ressource anzuzeigen.  Wählen Sie **[!UICONTROL Compare Revisions]** aus der Liste aus.
 
 ![Starten eines Vergleichs für eine Erweiterung](../../images/compare-initiate-extension.png)
 
-Sie können bei Erweiterungen auf die Detailansicht zugreifen, indem Sie auf die Schaltfläche **[!UICONTROL Konfigurieren]** klicken, wenn die Liste der installierten Erweiterungen angezeigt wird. Wählen Sie bei Datenelementen und Regeln ein Element aus der Liste aus.
+Sie greifen bei Erweiterungen auf die Detailansicht zu, indem Sie auf den Button **[!UICONTROL Configure]** klicken, wenn Sie die Liste der installierten Erweiterungen anzeigen.  Wählen Sie bei Datenelementen und Regeln ein Element aus der Liste aus.
 
 ## Verwenden der Vergleichsansicht
 
-Wenn Sie einen Vergleich starten, zeigt die Standardansicht die neueste Version auf der rechten Seite an. Diese Version enthält alle nicht gespeicherten Änderungen, die Sie in der Bearbeitungsansicht an der Ressource vorgenommen haben. (Beachten Sie den Hinweis „Nicht gespeicherte Änderungen“ rechts im unten aufgeführten Bild.)
+Wenn Sie einen Vergleich starten, zeigt die Standardansicht die neueste Version auf der rechten Seite an. Diese Version enthält alle nicht gespeicherten Änderungen, die Sie in der Bearbeitungsansicht an der Ressource vorgenommen haben. (Beachten Sie das Label „Nicht gespeicherte Änderungen“ rechts im unten aufgeführten Bild.)
 
 Auf der linken Seite können Sie aus vorhandenen Versionen wählen, um diese mit der aktuellen Version zu vergleichen.
 
 ![Vergleichen von Versionen der Analytics-Erweiterung](../../images/compare-interpret-extension.png)
 
-Klicken Sie auf **[!UICONTROL Diese Änderungen verwenden]**, um die Einstellungen aus der ausgewählten Version (links) in die aktuelle Version (rechts) zu kopieren. Dadurch werden die Einstellungen der alten Version in die neuesten nicht gespeicherten Änderungen kopiert. Wenn diese Änderungen beibehalten werden sollen, klicken Sie auf **[!UICONTROL Speichern]**, bevor Sie die Vergleichsansicht verlassen.
+Klicken Sie auf **[!UICONTROL Use These Changes]**, um die Einstellungen aus der ausgewählten Version (links) in die aktuelle Version (rechts) zu kopieren.  Dadurch werden die Einstellungen der alten Version in die neuesten nicht gespeicherten Änderungen kopiert.  Wenn diese Änderungen beibehalten werden sollen, klicken Sie auf **[!UICONTROL Save]**, bevor Sie die Vergleichsansicht verlassen.
 
 >[!TIP]
 >Einzelne Ressourcen können sowohl Attribute als auch Einstellungen aufweisen. Diese Einstellungen werden als JSON-Block gespeichert. Dies ist eine strukturierte Methode zur Speicherung von Daten, die jedoch flexibel genug ist, dass Erweiterungsentwickler beliebige Elemente speichern können, damit ihre Erweiterungen die gewünschten Aktionen vornehmen können.

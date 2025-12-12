@@ -2,18 +2,14 @@
 title: Builds
 description: Machen Sie sich mit dem Konzept und der Funktionsweise von Builds in Adobe Experience Platform vertraut.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '746'
 ht-degree: 86%
 
 ---
 
 # Builds
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Bei einem Build handelt es sich um eine Gruppe von Dateien, die sämtlichen Code enthalten, der auf dem Clientgerät ausgeführt wird.
 
@@ -27,7 +23,7 @@ Eine Bibliothek definiert einen speziellen Satz von Tag-Ressourcen (Erweiterunge
 
 Ein Build enthält den gesamten Modul-Code (von den Entwicklern der Erweiterung bereitgestellt) und die Konfiguration (von Ihnen eingegeben), die benötigt werden, um die in der Bibliothek enthaltenen Ressourcen zu generieren. Wenn eine Erweiterung beispielsweise Aktionen bereitstellt, die in Ihren Regeln nicht verwendet werden, ist der Code für die Durchführung dieser Aktionen nicht im Build enthalten.
 
-Builds sind in die Hauptbibliotheksdatei und möglicherweise in viele kleinere Dateien unterteilt. Auf die Hauptbibliotheksdatei wird in Ihrem Einbettungscode verwiesen, und sie wird zur Laufzeit auf der Seite geladen. Sie enthält Folgendes:
+Builds sind in die Hauptbibliotheksdatei und möglicherweise in viele kleinere Dateien unterteilt. Auf die Hauptbibliotheksdatei wird in Ihrem Einbettungs-Code verwiesen, und sie wird zur Laufzeit auf der Seite geladen. Sie enthält Folgendes:
 
 * Regel-Engine
 * Gesamte Erweiterungskonfiguration

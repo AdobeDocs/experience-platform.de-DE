@@ -2,18 +2,14 @@
 title: Ereignistypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „event-type“ für eine Web-Erweiterung in Adobe Experience Platform definieren.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1007'
 ht-degree: 97%
 
 ---
 
 # Ereignistypen für Web-Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 In einer Tag-Regel ist ein Ereignis eine Aktivität, die auftreten muss, damit eine Regel ausgelöst wird. Beispielsweise könnte eine Erweiterung einen Ereignistyp „Geste“ bereitstellen, der überwacht, ob eine bestimmte Maus- oder Touch-Geste auftritt. Sobald die Geste auftritt, löst die Logik dieses Ereignisses die Regel aus.
 

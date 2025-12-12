@@ -2,18 +2,14 @@
 title: Edge-Erweiterungsfluss
 description: Erfahren Sie, wie die Komponenten einer Edge-Erweiterung in Adobe Experience Platform zur Laufzeit miteinander interagieren.
 exl-id: 99058e22-3e14-4ec6-858e-bb1c1fafdb7c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 85%
+source-wordcount: '235'
+ht-degree: 78%
 
 ---
 
 # Edge-Erweiterungsfluss
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 In Edge-Erweiterungen verfügt jede Bedingung, jede Aktion und jeder Datenelementtyp über eine Ansicht, die den Benutzern das Ändern von Einstellungen ermöglicht, und über ein Bibliotheksmodul, in dem diese benutzerdefinierten Einstellungen verwendet werden.
 

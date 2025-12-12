@@ -2,18 +2,14 @@
 title: Übersicht über von Adobe verwaltete Hosts
 description: Erfahren Sie mehr über die Standard-Hosting-Option für die Bereitstellung von Tag-Bibliotheks-Builds in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1129'
 ht-degree: 82%
 
 ---
 
 # Übersicht über von Adobe verwaltete Hosts
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Von Adobe verwaltete Hosts sind die Standard-Host-Einstellung für die Bereitstellung Ihrer Tag-Bibliotheks-Builds in Adobe Experience Platform. Wenn Sie eine neue Eigenschaft über die Datenerfassungs-Benutzeroberfläche erstellen, wird ein von Adobe verwalteter Standard-Host für Sie erstellt.
 
@@ -96,8 +92,8 @@ Wenn Sie zum ersten Mal eine Eigenschaft in der Experience Platform-Benutzerober
 >
 >Wenn die Zuweisung des von Adobe verwalteten Standard-Hosts zu allen Umgebung aufgehoben wird, kann der Host gelöscht werden. Wenn Sie nach diesem Vorgang zu einem von Adobe verwalteten Host zurückkehren möchten, können Sie einen neuen Host wie folgt erstellen:
 >
->1. Wählen Sie die Registerkarte **[!UICONTROL Hosts]** in Ihrer Eigenschaft aus und wählen Sie dann **[!UICONTROL Host hinzufügen]** aus.
->1. Geben Sie einen Namen für den Host ein, wählen Sie als Host-Typ **[!UICONTROL Verwaltet von Adobe]** aus und wählen Sie dann **[!UICONTROL Speichern]**.
+>1. Wählen Sie die **[!UICONTROL Hosts]** Registerkarte Ihrer Eigenschaft und dann **[!UICONTROL Add Host]**.
+>1. Geben Sie einen Namen für den Host ein, wählen Sie **[!UICONTROL Managed by Adobe]** als Host-Typ aus und wählen Sie dann **[!UICONTROL Save]**.
 >
 >Anschließend können Sie Ihre Umgebung nach Bedarf dem von Adobe verwalteten Host erneut zuweisen.
 

@@ -2,18 +2,14 @@
 title: Anmerkungen
 description: Erfahren Sie, wie Sie Tag-Ressourcen in Adobe Experience Platform mit Textanmerkungen versehen können.
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '262'
 ht-degree: 99%
 
 ---
 
 # Anmerkungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Anmerkungen sind Kommentare in Textform, die Sie bestimmten Tag-Ressourcen in Adobe Experience Platform hinzufügen können. Die folgenden Ressourcen können mit Anmerkungen versehen werden:
 
@@ -39,7 +35,7 @@ Anmerkungen sind Kommentare, die sich nicht auf das Verhalten der Ressourcen aus
 
 Ressourcen, in denen Anweisungen erstellt werden können, weisen eine schmale Leiste auf der rechten Bildschirmseite auf. Diese Leiste enthält ein Symbol für Anmerkungen. Auf diesem Symbol ist die aktuelle Anzahl der Anmerkungen zu sehen, die mit der Ressource verknüpft sind.
 
-Wählen Sie **[!UICONTROL Anmerkungen]** aus, um die rechte Leiste zu erweitern und die Anmerkungen anzuzeigen, wobei die neuesten Anmerkungen oben stehen. Um eine neue Anmerkung hinzuzufügen, geben Sie deren Text in das Feld oben ein und klicken Sie auf **[!UICONTROL Anmerkung hinzufügen]**.
+Wählen Sie **[!UICONTROL Notes]** aus, um die rechte Leiste mit den Anmerkungen einzublenden. (Die neuesten Anmerkungen sind darin als erste aufgeführt.)  Um eine neue Anmerkung hinzuzufügen, geben Sie deren Text in das Feld oben ein und klicken Sie auf **[!UICONTROL Add Note]**.
 
 ## Sonstiges
 

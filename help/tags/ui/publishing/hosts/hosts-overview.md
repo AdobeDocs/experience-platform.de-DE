@@ -2,18 +2,14 @@
 title: Hosts – Übersicht
 description: Erfahren Sie mehr über die verschiedenen Hosting-Optionen in Adobe Experience Platform.
 exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
-source-git-commit: 02af02644968346dbcf41d13c2c6e52d3a3ec7ed
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 86%
+source-wordcount: '121'
+ht-degree: 81%
 
 ---
 
 # Hosts – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Erweiterungen, Regeln und Datenelemente sind Bausteine. Wenn die Anwendung eine Aktion ausführen soll, werden diese Bausteine den Bibliotheken hinzugefügt. Anschließend wird in einem Build eine Bibliothek „erstellt“. Diese Builds werden an einem gehosteten Speicherort bereitgestellt.
 
@@ -26,4 +22,4 @@ Ausführliche Informationen zu den einzelnen Host-Typen finden Sie unter den obi
 
 Derselbe Host kann für mehrere Umgebungen innerhalb einer Eigenschaft verwendet werden.
 
-Weitere Informationen, die Ihnen bei der Entscheidung zwischen Self-Hosting und der Verwaltung des Hosting-Services durch Adobe helfen, finden Sie im [Handbuch zum Self-Hosting](./self-hosting-libraries.md).
+Weiterführende Informationen, die Ihnen bei der Entscheidung zwischen Self-Hosting und der Verwaltung des Hosting durch Adobe helfen, finden Sie im [Handbuch zum Self-Hosting](./self-hosting-libraries.md).

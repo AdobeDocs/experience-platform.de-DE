@@ -2,18 +2,14 @@
 title: Adobe Analytics Product String-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics Product String“ in Adobe Experience Platform vertraut.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '470'
 ht-degree: 100%
 
 ---
 
 # Adobe Analytics Product String-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die Variable `products` dient zur Verfolgung der Interaktionen von Besuchern mit Produkten auf einer Site. So kann zum Beispiel in der Variablen `products` verfolgt werden, wie oft ein Produkt angezeigt, in den Warenkorb gelegt, ausgecheckt und gekauft wird. Außerdem können Sie mit der Variablen auch die relative Effizienz von Merchandising-Kategorien auf Ihrer Site verfolgen.
 
@@ -81,7 +77,7 @@ Der Parameter `price` in der [!DNL Adobe Analytics]-Produktzeichenfolge muss dem
 
 Wenn Sie bei Ihrer Implementierung benutzerdefinierte Ereignisse oder Merchandising-eVars verwenden, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie auf die entsprechende Schaltfläche **[!UICONTROL Hinzufügen]**.
+1. Klicken Sie auf die entsprechende Schaltfläche **[!UICONTROL Add]**.
 1. Wählen Sie das Ereignis oder die eVar aus der Dropdown-Liste aus, das bzw. die Sie definieren müssen.
 1. Geben Sie den Pfad zur entsprechenden Datenschichtvariablen mit der oben beschriebenen Syntax ein.
 

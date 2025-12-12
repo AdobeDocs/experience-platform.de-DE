@@ -1,26 +1,22 @@
 ---
-title: Versionshinweise zur Meta-Pixel-Erweiterung
-description: Aktuelle Versionshinweise zur Meta-Pixel-Erweiterung in Adobe Experience Platform.
-source-git-commit: 8e447324e324c9770dcfa348df92c429454b06d6
+title: Versionshinweise für die Meta Pixel-Erweiterung
+description: Aktuelle Versionshinweise für die Meta Pixel-Erweiterung in Adobe Experience Platform.
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 37%
+source-wordcount: '76'
+ht-degree: 0%
 
 ---
 
-# Versionshinweise zur Meta-Pixel-Erweiterung
+# Versionshinweise zur Meta-Pixelerweiterung
 
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
-
-## 13. Februar 2023
+## &#x200B;13. Februar 2023
 
 v1.3.1
 
 * Behebung eines JSON-Schemafehlers, der verhinderte, dass das Feld Content-Typ korrekt gespeichert wurde.
 
-## 10. Februar 2023
+## &#x200B;10. Februar 2023
 
 v1.3.0
 

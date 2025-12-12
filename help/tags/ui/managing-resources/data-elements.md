@@ -2,18 +2,14 @@
 title: Datenelemente
 description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 89%
+source-wordcount: '1549'
+ht-degree: 88%
 
 ---
 
 # Datenelemente
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 
@@ -56,7 +52,7 @@ Mithilfe der `_satellite`-Objektsyntax können Sie Datenelemente in benutzerdefi
 
 Datenelemente stellen die Bausteine zum Erstellen von Regeln dar. Dank Datenelementen sind Sie dazu in der Lage, für beliebige Objekte auf Ihrer Site ein Datenwörterbuch (oder eine Datenkarte) der häufig verwendeten Elemente einer Seite zu erstellen, unabhängig davon, wo deren Ursprung liegt (Abfragezeichenfolgen, URLs oder Cookie-Werte).
 
-1. Öffnen Sie auf einer Eigenschaftsseite die Registerkarte [!UICONTROL Datenelemente] und wählen Sie **[!UICONTROL Neues Datenelement erstellen]** aus.
+1. Öffnen Sie auf einer Eigenschaftsseite die Registerkarte [!UICONTROL Data Elements] und klicken Sie dann auf **[!UICONTROL Create New Data Element]**.
 1. Benennen Sie das Datenelement.
 1. Wählen Sie eine Erweiterung und einen Typ aus.
 
@@ -85,9 +81,9 @@ Datenelemente stellen die Bausteine zum Erstellen von Regeln dar. Dank Datenelem
    * Visitor
       * Der Wert wird unbegrenzt im lokalen Speicher des Browsers gespeichert.
 
-1. Wählen Sie **[!UICONTROL Speichern]** aus.
+1. Wählen Sie **[!UICONTROL Save]** aus.
 
-Beim Erstellen oder Bearbeiten von Elementen können Sie in Ihrer [aktiven Bibliothek](../publishing/libraries.md#active-library) speichern und Erstellungen vornehmen. Dadurch werden Ihre Änderungen direkt in Ihrer Bibliothek gespeichert, und ein Build wird ausgeführt. Der Build-Status wird angezeigt. Sie können auch eine neue Bibliothek über das Dropdown-Feld [!UICONTROL Aktive Bibliothek] erstellen.
+Beim Erstellen oder Bearbeiten von Elementen können Sie in Ihrer [aktiven Bibliothek](../publishing/libraries.md#active-library) speichern und Erstellungen vornehmen. Dadurch werden Ihre Änderungen direkt in Ihrer Bibliothek gespeichert, und ein Build wird ausgeführt. Der Build-Status wird angezeigt. Sie können auch über das Dropdown-Menü [!UICONTROL Active Library] eine neue Bibliothek erstellen.
 
 ## Datenelement-Typen {#types-of-data-elements}
 
@@ -107,7 +103,7 @@ Jedes verfügbare Domain-Cookie kann im Feld Cookie-Name referenziert werden.
 
 ### Benutzerspezifischer Code
 
-Benutzerdefiniertes JavaScript kann auf der Benutzeroberfläche eingegeben werden, indem Sie auf [!UICONTROL Editor öffnen] klicken und den Code in das Editor-Fenster einfügen.
+Benutzerdefiniertes JavaScript kann auf der Benutzeroberfläche eingegeben werden, indem Sie auf [!UICONTROL Open Editor] klicken und den Code in das Editor-Fenster einfügen.
 
 Eine Rückkehranweisung ist im Editor erforderlich, damit festgelegt ist, welcher Wert als Datenelementwert festgelegt wird. Wenn keine Rückgabeanweisung enthalten ist, wird das Datenelement aufgelöst zu `undefined`. Dadurch wird der Fallback ausgelöst, um nach einem gespeicherten Wert zu suchen, und dann ein Standardwert verwendet, wenn kein gespeicherter Wert vorhanden ist.
 
@@ -184,7 +180,7 @@ Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwen
 
 ### Lokaler Speicher
 
-Geben Sie den Namen Ihres lokalen Speicherelements im Feld [!UICONTROL Name des lokalen Speicherelements] an.
+Geben Sie den Namen Ihres lokalen Speicherelements im Feld [!UICONTROL Local Storage Item Name] an.
 
 Der lokale Speicher bietet Browsern die Möglichkeit, Informationen seitenweise zu speichern ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Die Funktion des lokalen Speichers ähnelt der von Cookies sehr stark. Er ist jedoch deutlich größer und bietet mehr Flexibilität.
 
@@ -205,7 +201,7 @@ Sie können eines der folgenden Seitenattribute auswählen, um es in Ihrem Daten
 
 ### Query String Parameter
 
-Geben Sie im Feld [!UICONTROL URL-Parameter] einen einzelnen URL-Parameter an.
+Geben Sie im Feld [!UICONTROL URL Parameter] einen einzelnen URL-Parameter an.
 
 Nur der Abschnitt „Name“ ist erforderlich und spezielle Bezeichner wie „?“ oder „=“ sollten weggelassen werden.
 
@@ -232,7 +228,7 @@ Maximum: 1000000000
 
 ### Sitzungsspeicher
 
-Geben Sie den Namen Ihres Sitzungsspeicherelements im Feld [!UICONTROL Name des Sitzungsspeicherelements] an.
+Geben Sie den Namen Ihres lokalen Sitzungsspeicherelements im Feld [!UICONTROL Session Storage Item Name] an.
 
 Der Sitzungsspeicher ähnelt dem lokalen Speicher. Der Unterschied besteht darin, dass die Daten nach Ende der Sitzung verworfen werden. Beim lokalen Speicher oder einem Cookie bleiben die Daten hingegen möglicherweise gespeichert.
 

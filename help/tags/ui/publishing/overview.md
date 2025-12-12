@@ -2,18 +2,14 @@
 title: Veröffentlichungsübersicht
 description: Erfahren Sie mehr über die Veröffentlichung von Änderungen an Ihren Tag-Management-Code-Bibliotheken in Adobe Experience Platform.
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '565'
 ht-degree: 95%
 
 ---
 
 # Veröffentlichungsübersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Mit Adobe Experience Platform können Sie Änderungen am Tag Management Code in einzelnen Bibliotheken kapseln. Da nun mehrere Bibliotheken parallel von verschiedenen Teams entwickelt werden können, müssen diese Bibliotheken einem spezifischen genehmigten Prozess zur Zusammenführung von Änderungen folgen, bevor sie in die Produktionsumgebung übertragen werden.
 

@@ -2,18 +2,14 @@
 title: Adobe Experience Platform Demo-Erweiterung – Übersicht
 description: Machen Sie sich mit der Erweiterung „Adobe Experience Platform Demo“ in Adobe Experience Platform vertraut.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 99%
+source-wordcount: '1009'
+ht-degree: 97%
 
 ---
 
 # Adobe Experience Platform Demo-Erweiterung
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ Die Funktionen dieser Erweiterung werden auf die neue Erweiterung portiert. Nach
 
 Dieser Abschnitt enthält eine Referenz zu den verfügbaren Optionen beim Konfigurieren der Adobe Experience Platform-Erweiterung.
 
-Wenn die Adobe Experience Platform-Erweiterung noch nicht installiert ist, öffnen Sie die Eigenschaft, wählen Sie **[!UICONTROL Erweiterungen > Katalog]** aus, bewegen Sie den Mauszeiger über die Adobe Experience Platform-Erweiterung und klicken Sie auf **[!UICONTROL Installieren]**.
+Wenn die Adobe Experience Platform-Erweiterung noch nicht installiert ist, öffnen Sie die Eigenschaften, wählen Sie **[!UICONTROL Extensions > Catalog]** aus, bewegen Sie den Mauszeiger über die Adobe Experience Platform-Erweiterung und klicken Sie auf **[!UICONTROL Install]**.
 
-Öffnen Sie zum Konfigurieren der Erweiterung die Registerkarte [!UICONTROL Erweiterungen], bewegen Sie den Mauszeiger über die Erweiterung und wählen Sie dann **[!UICONTROL Konfigurieren]** aus.
+Öffnen Sie zum Konfigurieren der Erweiterung die Registerkarte [!UICONTROL Extensions], bewegen Sie den Mauszeiger über die Erweiterung und klicken Sie auf **[!UICONTROL Configure]**.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### Streaming-Verbindung
 
-Die Auswahl einer Streaming-Verbindung ist der erste Schritt beim Streamen von Daten an die Adobe Experience Platform. Sie können eine aus dem Kombinationsfeld für Streaming-Verbindungen wählen. „Streaming-Verbindung“ ist ein erforderliches Feld. Sofern noch nicht erfolgt, können Sie eine Streaming-Verbindung über die Schaltfläche **[!UICONTROL Streaming-Verbindung erstellen]** erstellen.
+Die Auswahl einer Streaming-Verbindung ist der erste Schritt beim Streamen von Daten an die Adobe Experience Platform. Sie können eine aus dem Kombinationsfeld für Streaming-Verbindungen wählen. „Streaming-Verbindung“ ist ein erforderliches Feld. Sofern noch nicht erfolgt, können Sie eine Streaming-Verbindung über den Button **[!UICONTROL Create a streaming connection]** erstellen.
 
-Wenn Sie **[!UICONTROL Streaming-Verbindung erstellen]** auswählen, wird ein modales Fenster angezeigt.
+Wenn Sie **[!UICONTROL Create a streaming connection]** auswählen, wird ein modales Fenster angezeigt.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-Die darin enthaltenen Felder sind bereits ausgefüllt, Sie können sie jedoch Ihren Anforderungen entsprechend ändern. Wenn Sie mehr als eine Streaming-Verbindung erstellen möchten, sollten Sie beachten, dass das Feld **[!UICONTROL Datenquelle]** eindeutig sein muss. Wenn Sie versuchen, eine Streaming-Verbindung mit einer bereits für eine andere Verbindung verwendeten **[!UICONTROL Datenquelle]** zu erstellen, schlägt dies fehl.
+Die darin enthaltenen Felder sind bereits ausgefüllt, Sie können sie jedoch Ihren Anforderungen entsprechend ändern. Wenn Sie mehr als eine Streaming-Verbindung erstellen möchten, sollten Sie beachten, dass das Feld **[!UICONTROL Data Source]** eindeutig sein muss. Wenn Sie versuchen, eine Streaming-Verbindung mit einer bereits verwendeten **[!UICONTROL Data Source]** zu erstellen, schlägt dies fehl.
 
 Nachdem Sie einen Streaming-Endpunkt ausgewählt haben, geben Sie die Streaming-Endpunkt-URL und die Quelle an.
 
@@ -91,11 +87,11 @@ Die Erweiterung bietet außerdem die Möglichkeit, ein Zielschemafeld mithilfe e
 
 ### Identitätsfelder in Adobe Experience Platform
 
-Datensatz-Datenschemata und Zeitserien-Datenschemata können ein oder mehrere Identitätsfelder enthalten. Identitätsfelder werden zusammengeführt, um eine einzelne Identitätsdarstellung eines Subjekts zu bilden und Informationen wie CRM-Kennung, Experience Cloud ID (ECID), Browser-Cookie, AdvertisingId oder andere IDs in unterschiedlichen Domains einzuschließen.
+Eintragsdaten-Schemata und Zeitseriendaten-Schemata können ein oder mehrere Identitätsfelder enthalten. Identitätsfelder werden zusammengeführt, um eine einzelne Identitätsdarstellung eines Subjekts zu bilden und Informationen wie CRM-Kennung, Experience Cloud ID (ECID), Browser-Cookie, AdvertisingId oder andere IDs in unterschiedlichen Domains einzuschließen.
 
 Identitätsfelder können innerhalb des Schemas auf zwei Arten definiert werden:
 
-1. Aufzeichnungs- und Zeitreihen-Schemata enthalten jeweils ein spezielles Feld namens `xdm:identityMap`, das eine Zuordnung von Identitäten enthalten kann.
+1. Eintrags- und Zeitreihen-Schemata enthalten jeweils ein spezielles Feld namens `xdm:identityMap`, das eine Zuordnung von Identitäten enthalten kann.
 1. Schlüsselfelder können als „Identitäts“-Felder innerhalb des Schemas markiert werden.
 
 ### Identitätsfelder in der Adobe Experience Platform-Erweiterung

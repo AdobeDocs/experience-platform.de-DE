@@ -2,18 +2,14 @@
 title: Unterstützung von Subresource Integrity (SRI)
 description: Erfahren Sie, wie die Subresource-Integrität (SRI) in Adobe Experience Platform unterstützt wird.
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '549'
 ht-degree: 100%
 
 ---
 
 # Unterstützung von Subresource Integrity (SRI)
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Dieses Dokument beschreibt, wie die Subresource-Integrität (SRI) in Adobe Experience Platform unterstützt wird.
 
@@ -42,7 +38,7 @@ Die nächstbeste Sicherheitsoption für Tags ist die Implementierung einer Conte
 
 ## Integration von SRI in die Build-Bereitstellung
 
-Wenn Sie weiterhin SRI für Ihre Bibliotheks-Builds verwenden möchten, müssen Sie Self-Hosting nutzen. Wenn Sie Adobe-verwaltetes Hosting nutzen, ist es nicht möglich, SRI zu verwenden, da ansonsten der Inhalt des neuen Builds über einen gewissen Zeitraum nicht mit dem `integrity`-Attribut des Einbettungscodes übereinstimmt.
+Wenn Sie weiterhin SRI für Ihre Bibliotheks-Builds verwenden möchten, müssen Sie Self-Hosting nutzen. Wenn Sie Adobe-verwaltetes Hosting nutzen, ist es nicht möglich, SRI zu verwenden, da ansonsten der Inhalt des neuen Builds über einen gewissen Zeitraum nicht mit dem `integrity`-Attribut des Einbettungs-Codes übereinstimmt.
 
 Die Automatisierung des Aktualisierungsprozesses Ihres Einbettungs-Codes hängt von der Struktur Ihrer Website ab. Die allgemeinen Schritte können jedoch wie folgt zusammengefasst werden:
 

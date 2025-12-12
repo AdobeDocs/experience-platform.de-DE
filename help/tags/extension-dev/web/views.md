@@ -2,18 +2,14 @@
 title: Ansichten in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Ansichten für Bibliotheksmodule in Ihren Adobe Experience Platform Web-Erweiterungen definieren.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2148'
+source-wordcount: '2103'
 ht-degree: 92%
 
 ---
 
 # Ansichten in Web-Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Jedes Ereignis, jede Bedingung, jede Aktion und jeder Datenelementtyp kann eine Ansicht bieten, die es dem Benutzer ermöglicht, Einstellungen bereitzustellen. Die Erweiterung kann auch über eine übergeordnete [Erweiterungskonfigurationsansicht](../configuration.md) verfügen, in der Benutzer globale Einstellungen für die gesamte Erweiterung angeben können. Der Vorgang zum Erstellen einer Ansicht ist bei allen Arten von Ansichten identisch.
 
@@ -76,7 +72,7 @@ Die Methode `init` wird von Tags aufgerufen, sobald die Ansicht in den iframe ge
 | `company` | Ein Objekt, das die `orgId` (Ihre 24-stellige Adobe Experience Cloud-ID), `id` (die eindeutige Kennung Ihres Unternehmens innerhalb der Reactor-API) und `tenantId` (die eindeutige Kennung für ein Unternehmen innerhalb des Identity Management-Systems von Adobe) enthält. |
 | `schema` | Ein Objekt im [JSON-Schema](https://json-schema.org/)-Format. Dieses Objekt stammt aus dem [Erweiterungsmanifest](../manifest.md) und kann bei der Validierung Ihres Formulars hilfreich sein. |
 | `apiEndpoints` | Ein Objekt, das `reactor` enthält, das einen Verweis auf die Web-Adresse der Reactor-API enthält. |
-| `userConsentPermissions` | Ein Objekt, das Einverständniskennzeichnungen aus den [Produktnutzungsdaten](https://experienceleague.adobe.com/de/docs/core-services/interface/features/account-preferences#product-usage-data) von Adobe enthält. Verwenden Sie das in `globalDataCollectionAndUsage` Flag gespeicherte , um zu verstehen, ob Ihre Erweiterung (beliebige *Kundendaten* darf. |
+| `userConsentPermissions` | Ein Objekt, das Einverständniskennzeichnungen aus den [Produktnutzungsdaten](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) von Adobe enthält. Verwenden Sie das in `globalDataCollectionAndUsage` Flag gespeicherte , um zu verstehen, ob Ihre Erweiterung (beliebige *Kundendaten* darf. |
 | `preferredLanguages` | Ein Array von Sprachzeichenfolgen. |
 
 Ihre Ansicht sollte diese Informationen zum Rendern und Verwalten des Formulars verwenden. Wahrscheinlich müssen Sie sich nur mit `info.settings` befassen, die anderen Informationen werden jedoch für den Fall bereitgestellt, dass sie erforderlich sind.

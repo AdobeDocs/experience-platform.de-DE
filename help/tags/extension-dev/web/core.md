@@ -2,18 +2,14 @@
 title: Die wichtigsten Bibliotheksmodule für Web-Erweiterungen
 description: Hier erfahren Sie mehr über die wichtigsten Bibliotheksmodule, die Sie in Ihren Web-Erweiterungen verwenden können.
 exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '250'
 ht-degree: 100%
 
 ---
 
 # Die wichtigsten Bibliotheksmodule für Web-Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Dieses Dokument enthält eine Liste der wichtigsten Module, die Sie in Ihren Web-Erweiterungen verwenden können. Sie können mit `require('@adobe/{MODULE}')` auf diese Module zugreifen, wobei `{MODULE}` für den Namen des zu verwendenden Hauptmoduls steht.
 

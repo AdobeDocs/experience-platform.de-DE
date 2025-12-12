@@ -2,18 +2,14 @@
 title: Versionshinweise zur Marketo Munchkin-Erweiterung
 description: Aktuelle Versionshinweise zur Tag-Erweiterung „Marketo Munchkin“ in Adobe Experience Platform.
 exl-id: 709265fc-f227-4995-8976-6170da60c89e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '101'
 ht-degree: 100%
 
 ---
 
 # Marketo Munchkin-Erweiterung – Versionshinweise
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 2. Dezember 2020
 

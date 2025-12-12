@@ -2,18 +2,14 @@
 title: Unterstützung einer Content Security Policy (CSP)
 description: Erfahren Sie, wie Sie mit den Einschränkungen der Content Security Policy (CSP) umgehen, wenn Sie Ihre Website mit Tags in Adobe Experience Platform integrieren.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 97%
+source-wordcount: '1031'
+ht-degree: 96%
 
 ---
 
 # Unterstützung einer Content Security Policy (CSP)
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Eine Content Security Policy (CSP) ist eine Sicherheitsfunktion, die Cross-Site-Scripting-Angriffe (XSS) verhindert. Bei Cross-Site Scripting wird der Browser dazu gebracht, schädliche Inhalte auszuführen, die scheinbar aus vertrauenswürdigen Quellen stammen, die aber in Wahrheit von woanders her stammen. Mit CSPs kann der Browser (im Namen des Benutzers) überprüfen, ob das Skript tatsächlich von einer vertrauenswürdigen Quelle stammt.
 
@@ -82,7 +78,7 @@ CSP deaktiviert Inline-Skripte standardmäßig und muss daher manuell konfigurie
 
 >[!NOTE]
 >
->Die CSP-Spezifikation enthält Details zu einer dritten Option mit Hashes, aber dieser Ansatz ist nicht möglich, wenn Tag-Management-Systeme wie Tags verwendet werden. Weitere Informationen zu den Einschränkungen bei der Verwendung von Hashes in mit Tags in Experience Platform finden Sie [&#x200B; Handbuch zu Subresource Integrity (SRI)](./sri.md).
+>Die CSP-Spezifikation enthält Details zu einer dritten Option mit Hashes, aber dieser Ansatz ist nicht möglich, wenn Tag-Management-Systeme wie Tags verwendet werden. Weitere Informationen zu den Einschränkungen bei der Verwendung von Hashes in mit Tags in Experience Platform finden Sie [ Handbuch zu Subresource Integrity (SRI)](./sri.md).
 
 ### Mit Nonce zulassen {#nonce}
 

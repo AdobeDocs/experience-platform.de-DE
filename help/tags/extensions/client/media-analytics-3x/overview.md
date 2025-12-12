@@ -2,18 +2,14 @@
 title: Adobe Media Analytics (3.x SDK) for Audio and Video-Erweiterung - Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Media Analytics (3.x SDK) for Audio and Video“ in Adobe Experience Platform vertraut.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '648'
 ht-degree: 93%
 
 ---
 
 # Adobe Media Analytics (3.x SDK) for Audio and Video-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 In dieser Dokumentation finden Sie Informationen zum Installieren, Konfigurieren und Implementieren der „Adobe Media Analytics (3.x SDK) for Audio and Video“-Erweiterung (Media Analytics-Erweiterung). Darin enthalten sind neben Beispielen und Links zu Mustern die verfügbaren Optionen bei Verwendung dieser Erweiterung zum Erstellen einer Regel.
 
@@ -33,9 +29,9 @@ Nachdem Sie alle drei der zuvor erwähnten Erweiterungen in Ihr Projekt mit Tag-
 
 ## Installieren und Konfigurieren der MA-Erweiterung
 
-* **Installieren:** Um die MA-Erweiterung zu installieren, öffnen Sie die Erweiterungseigenschaft, wählen Sie **[!UICONTROL Erweiterungen > Katalog]** aus, bewegen Sie den Mauszeiger über die Erweiterung **[!UICONTROL Adobe Medien Analytics (3.x SDK) für Audio und Video]** und wählen Sie **[!UICONTROL Installieren]** aus.
+* **Installieren:** Um die MA-Erweiterung zu installieren, öffnen Sie Ihre Erweiterungseigenschaft, klicken Sie auf **[!UICONTROL Extensions > Catalog]**, bewegen Sie den Mauszeiger über die Erweiterung **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** und klicken Sie auf **[!UICONTROL Install]**.
 
-* **Konfigurieren:** Um die MA-Erweiterung zu konfigurieren, öffnen Sie die Registerkarte [!UICONTROL Erweiterungen], bewegen Sie den Mauszeiger über die Erweiterung und klicken Sie dann auf **[!UICONTROL Konfigurieren]**:
+* **Konfigurieren:** Um die MA-Erweiterung zu konfigurieren, öffnen Sie die Registerkarte [!UICONTROL Extensions], bewegen Sie den Mauszeiger über die Erweiterung und klicken Sie dann auf **[!UICONTROL Configure]**:
 
 ![Konfigurieren der MA-Erweiterung](../../../images/ext-ma-config.png)
 
@@ -58,7 +54,7 @@ Nachdem Sie alle drei der zuvor erwähnten Erweiterungen in Ihr Projekt mit Tag-
 
 ### Verwendung auf einer Webseite/JS-App
 
-Die MA-Erweiterung exportiert die Media-APIs im globalen Fensterobjekt, indem sie die Einstellung „Export APIs to Window Object“ auf der Seite [!UICONTROL Konfiguration] aktiviert. Die APIs werden unter dem konfigurierten Variablennamen exportiert. Wenn der Variablenname beispielsweise als `ADB` konfiguriert ist, ist der Media-API-Zugriff über `window.ADB.Media` möglich.
+Die MA-Erweiterung exportiert die Media-APIs im globalen Fensterobjekt, indem sie die Einstellung „Export APIs to Window Object“ auf der Seite [!UICONTROL Configuration] aktiviert. Die APIs werden unter dem konfigurierten Variablennamen exportiert. Wenn der Variablenname beispielsweise als `ADB` konfiguriert ist, ist der Media-API-Zugriff über `window.ADB.Media` möglich.
 
 >[!IMPORTANT]
 >

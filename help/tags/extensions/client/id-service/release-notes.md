@@ -2,28 +2,24 @@
 title: Versionshinweise zur Adobe Experience Cloud Identity Service-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Experience Cloud Identity Service“ in Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 78%
+source-wordcount: '643'
+ht-degree: 76%
 
 ---
 
 # Adobe Experience Cloud Identity Service-Erweiterung – Versionshinweise
 
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung &quot;Adobe Experience Cloud Identity Service“ behandelt. Versionshinweise zu Experience Cloud Identity Service selbst finden Sie in der [Identity Service-Dokumentation](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de).
 
-In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung &quot;Adobe Experience Cloud Identity Service“ behandelt. Versionshinweise zum Experience Cloud von Identity Service selbst finden Sie in der [Identity Service-Dokumentation](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de).
-
-## 17. Oktober 2022
+## &#x200B;17. Oktober 2022
 
 ### Experience Cloud ID-Erweiterung 5.5.0
 
-* Die Erweiterung unterstützt jetzt Version 5.5.0 des [Visitor JS Client](https://github.com/Adobe-Marketing-Cloud/id-service). Spezifische Aktualisierungen finden Sie [&#x200B; den &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0)Besucherhinweisen“.
+* Die Erweiterung unterstützt jetzt Version 5.5.0 des [Visitor JS Client](https://github.com/Adobe-Marketing-Cloud/id-service). Spezifische Aktualisierungen finden Sie [ den ](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0)Besucherhinweisen“.
 
-## 9. März 2022
+## &#x200B;9. März 2022
 
 ### Experience Cloud ID-Erweiterung 5.4.0
 
@@ -32,7 +28,7 @@ In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung &quot;Ad
    * Möglichkeit, die Lebensdauer des `s_ecid` Cookies mithilfe der cookieLifetime-Konfiguration zu konfigurieren
    * Aktualisierung für ein Problem mit dem Firefox-Browser, das auftritt, wenn eine Seite in einen untergeordneten iFrame geladen wird
 
-## 10. Oktober 2021
+## &#x200B;10. Oktober 2021
 
 ### Experience Cloud ID-Erweiterung 5.3.1
 
@@ -68,7 +64,7 @@ Diese Konfiguration unterstützt die folgenden Werte für das `SameSite`-Attribu
 Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/samesite-cookies-explained/) und [chromium](https://www.chromium.org/updates/same-site)
 
 
-## 13. August 2020
+## &#x200B;13. August 2020
 
 ### Experience Cloud ID-Erweiterung 5.0.1
 
@@ -123,7 +119,7 @@ Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/same
 
   ![](../../../images/ecid-setCustomerIDs-hash.png)
 
-## 13. Mai 2019
+## &#x200B;13. Mai 2019
 
 ### Experience Cloud ID-Erweiterung 4.3.1
 
@@ -132,7 +128,7 @@ Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/same
 
   ![](../../../images/ecid-data-element.png)
 
-## 9. April 2019
+## &#x200B;9. April 2019
 
 ### Experience Cloud ID-Erweiterung 4.2.0
 
@@ -144,7 +140,7 @@ Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/same
 
 * Die Datei visitor.js wurde auf Version 4.1 aktualisiert, mit der die Datei „publishDestinations“ entsprechend der neuen API-Änderung aktualisiert wurde. Mit dieser Aktualisierung können die Referrer-Informationen der Seite während der ID-Synchronisierung offengelegt werden, wenn gewünscht.
 
-## 15. Februar 2019
+## &#x200B;15. Februar 2019
 
 ### Experience Cloud ID-Erweiterung 4.0.0
 
@@ -153,7 +149,7 @@ Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/same
 
   ![](../../../images/ext-mcid-opt-in.png)
 
-## 20. März 2018
+## &#x200B;20. März 2018
 
 ### Experience Cloud ID-Erweiterung 3.1.0
 

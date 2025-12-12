@@ -2,18 +2,14 @@
 title: Implementieren von Bibliotheken von Drittanbietern
 description: Machen Sie sich mit den verschiedenen Methoden zum Hosten von Drittanbieterbibliotheken in Ihren Adobe Experience Platform-Tag-Erweiterungen vertraut.
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1270'
 ht-degree: 100%
 
 ---
 
 # Implementieren von Bibliotheken von Drittanbietern
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Eines der Hauptziele von Tag-Erweiterungen in Adobe Experience Platform ist es, Ihnen die einfache Implementierung vorhandener Marketing-Technologien (Bibliotheken) in Ihre Website zu ermöglichen. Durch die Verwendung von Erweiterungen können Sie Bibliotheken implementieren, die von Inhaltsversandnetzwerken (Content Delivery Network, CDN) von Drittanbietern bereitgestellt werden, ohne die HTML-Daten Ihrer Website manuell bearbeiten zu müssen.
 
@@ -98,7 +94,7 @@ Die folgenden Methoden werden behandelt:
    - [Ladevorgang für Basis-Code](#base-code-loading-process)
       - [Beispiel für Basis-Code](#base-code-example)
    - [Implementierungsoptionen für Tags](#tags-implementation-options)
-      - [Laden zur Laufzeit vom Anbieter-Host {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
+      - [Laden zur Laufzeit vom Anbieter-Host](#load-at-runtime-from-the-vendor-host-vendor-host)
       - [Laden zur Laufzeit vom Host der Tag-Bibliothek](#load-at-runtime-from-the-tag-library-host)
       - [Bibliothek direkt einbetten](#embed-the-library-directly)
    - [Nächste Schritte](#next-steps)

@@ -2,18 +2,14 @@
 title: Datenelementtypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „data-element“ für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 77%
+source-wordcount: '555'
+ht-degree: 75%
 
 ---
 
 # Datenelementtypen für Web-Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 In Datenerfassungs-Tags sind Datenelemente im Wesentlichen Aliase zu Datensegmenten auf einer Seite. Diese Daten finden Sie in Abfragezeichenfolgenparametern, Cookies, DOM-Elementen oder anderen Speicherorten. Ein Datenelement kann durch Regeln referenziert werden und dient als Abstraktion für den Zugriff auf diese Datenelemente.
 
@@ -29,7 +25,7 @@ In diesem Dokument wird beschrieben, wie Sie Datenelementtypen für eine Web-Erw
 
 Datenelementtypen bestehen in der Regel aus Folgendem:
 
-1. Eine [Ansicht](./views.md) die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Datenelement zu ändern.
+1. Eine [Ansicht](./views.md) die in der Benutzeroberfläche von Experience Platform und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Datenelement zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und Datensegmente abzurufen.
 
 Stellen Sie sich eine Situation vor, in der Sie den Benutzern erlauben möchten, ein Datenelement aus einem lokalen Speicherelement namens `productName` abzurufen. Ihr Modul könnte wie folgt aussehen:

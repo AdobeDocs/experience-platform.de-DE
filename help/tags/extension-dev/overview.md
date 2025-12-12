@@ -2,18 +2,14 @@
 title: Überblick zum Entwickeln von Erweiterungen
 description: Lernen Sie die Hauptkomponenten verschiedener Tag-Erweiterungstypen und den Prozess der Erweiterungsentwicklung in Adobe Experience Platform kennen.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 91%
+source-wordcount: '893'
+ht-degree: 90%
 
 ---
 
 # Überblick zum Entwickeln von Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Eines der Hauptziele von Tags in Adobe Experience Platform besteht darin, ein offenes Ökosystem zu schaffen, in dem Ingenieure außerhalb von Adobe zusätzliche Funktionen auf ihren Websites und mobilen Anwendungen verfügbar machen können. Dies wird durch Tag-Erweiterungen erreicht. Sobald eine Erweiterung auf einer Tag-Eigenschaft installiert wurde, werden die Funktionen dieser Erweiterung für alle Benutzer der Eigenschaft verfügbar.
 
@@ -37,7 +33,7 @@ Sie können Bibliotheksmoduldateien an einer beliebigen Stelle im Erweiterungsor
 
 ### Ansichten 
 
-Eine Ansicht ist eine HTML-Datei, die in ein [`iframe`-Element innerhalb &#x200B;](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) Tags-Programms geladen werden kann, insbesondere über die Experience Platform-Benutzeroberfläche und die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
+Eine Ansicht ist eine HTML-Datei, die in ein [`iframe`-Element innerhalb ](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) Tags-Programms geladen werden kann, insbesondere über die Experience Platform-Benutzeroberfläche und die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
 
 Die wichtigste Ansichtsdatei für eine Erweiterung ist ihre Konfiguration. Weitere Informationen finden Sie im Abschnitt [Erweiterungskonfigurationen](#configuration).
 

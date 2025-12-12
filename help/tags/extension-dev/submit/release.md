@@ -2,18 +2,14 @@
 title: Freigeben einer Erweiterung
 description: Erfahren Sie, wie Sie eine Tag-Erweiterung in Adobe Experience Platform privat oder öffentlich freigeben.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 64%
+source-wordcount: '433'
+ht-degree: 60%
 
 ---
 
 # Freigeben einer Erweiterung
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Sobald Testing und Dokumentation abgeschlossen sind, kann die Erweiterung freigegeben werden. Es gibt derzeit zwei Arten von Freigaben, die Sie ausführen können:
 
@@ -38,8 +34,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > Standardmäßig erwartet der Release-Benutzer Adobe I/O-Anmeldeinformationen für einen OAuth-Fluss von Server zu Server. Die alten `jwt-auth` Anmeldedaten
-> &#x200B;> kann verwendet werden, indem `npx @adobe/reactor-releaser@v3.1.3` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
-> &#x200B;> Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> kann verwendet werden, indem `npx @adobe/reactor-releaser@v3.1.3` bis zur Einstellung am 1. Januar 2025 ausgeführt wird. Die erforderlichen Parameter
+> Um die `jwt-auth` Version auszuführen, finden Sie [hier](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
 Für den -Releaser müssen Sie nur wenige Informationen eingeben. `clientId` und `clientSecret` können über die Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die richtige Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL View]**.
 

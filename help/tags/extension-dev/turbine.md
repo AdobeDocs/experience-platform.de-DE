@@ -2,18 +2,14 @@
 title: Freie turbine-Variable
 description: Machen Sie sich mit dem turbine-Objekt vertraut, einer freien Variablen, die Informationen und Dienstprogramme speziell für die Tag-Laufzeit in Adobe Experience Platform bereitstellt.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '561'
 ht-degree: 97%
 
 ---
 
 # Freie turbine-Variable
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Das `turbine`-Objekt ist eine „freie Variable“ im Gültigkeitsbereich der Bibliotheksmodule Ihrer Erweiterung. Es stellt Informationen und Dienstprogramme bereit, die für die Tag-Laufzeit von Adobe Experience Platform spezifisch sind, und ist ohne Verwendung von `require()` für Bibliotheksmodule immer verfügbar.
 
@@ -112,7 +108,7 @@ Ruft ein Modul ab, das von einer anderen Erweiterung freigegeben wurde. Wenn kei
 turbine.logger.error('Error!');
 ```
 
-Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debuggens besteht in der Verwendung des [Adobe Experience Platform Debuggers &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Alternativ kann der Benutzer den Befehl `_satellite.setDebug(true)` in der Browser-Entwicklungskonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
+Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debuggens besteht in der Verwendung der [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Alternativ kann der Benutzer den Befehl `_satellite.setDebug(true)` in der Browser-Entwicklungskonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
 
 * `logger.log(message: string)`: Protokolliert eine Meldung auf der Browser-Konsole.
 * `logger.info(message: string)`: Protokolliert eine Informationsmeldung auf der Konsole.

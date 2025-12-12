@@ -2,18 +2,14 @@
 title: Client-seitige Informationen
 description: Erfahren Sie, wie Sie Tag-Operationen auf der Client-Seite Ihrer Web- oder Mobilanwendung verwalten können.
 exl-id: 54c66066-93f7-4311-a255-0825055d0dec
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '131'
 ht-degree: 100%
 
 ---
 
 # Client-seitige Informationen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Dieser Abschnitt enthält Informationen, die bei der Verwaltung Client-seitiger Tag-Vorgänge in Adobe Experience Platform nützlich sind.
 

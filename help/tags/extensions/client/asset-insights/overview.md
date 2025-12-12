@@ -2,18 +2,14 @@
 title: AEM Asset Insights-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „AEM Asset Insights“ in Adobe Experience Platform vertraut.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1001'
 ht-degree: 98%
 
 ---
 
 # AEM Asset Insights-Erweiterung – Übersicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Diese Erweiterung sollte zusammen mit [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de) verwendet werden. Genauer gesagt ersetzt es den „pageTracker“-Prozess und den Einbettungs-Code. Wenn diese Erweiterung konfiguriert ist, sendet sie Metriken bezüglich *Impressions* und *Klicks* auf Kreativelemente an Adobe Analytics. Danach werden diese in AEM Asset Insights-Berichte importiert. Die Asset-Metriken können dann entweder über AEM Asset Insights oder Adobe Analytics Project Workspaces in Berichten dargestellt werden.
 

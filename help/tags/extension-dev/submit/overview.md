@@ -2,18 +2,14 @@
 title: Übersicht über den Prozess zur Übermittlung von Erweiterungen
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform übermitteln – alle Schritte von der Entwicklung bis zur Veröffentlichung.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '186'
 ht-degree: 97%
 
 ---
 
 # Übersicht über den Prozess zur Übermittlung von Erweiterungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Die Übermittlung einer Erweiterung an den Datenerfassungskatalog in Adobe Experience Platform kann eine gewaltige Aufgabe sein. Dieses Dokument enthält eine schrittweise Anleitung zum Senden Ihrer Erweiterung mithilfe von einzelnen sequenziellen Handbüchern. Zum Übermitteln Ihrer Erweiterung müssen Sie die folgenden Schritte ausführen:
 

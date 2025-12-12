@@ -3,18 +3,14 @@ title: Übersicht über die Hauptereignisweiterleitungserweiterung
 description: Machen Sie sich mit der Hauptereignisweiterleitungserweiterung in Adobe Experience Platform vertraut.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 99%
+source-wordcount: '1662'
+ht-degree: 97%
 
 ---
 
 # Übersicht über die Hauptereignisweiterleitungserweiterung
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die Hauptereignisweiterleitungserweiterung stellt die Standardereignisse, Bedingungen und Datentypen für die Ereignisweiterleitung in Adobe Experience Platform bereit.
 
@@ -28,11 +24,11 @@ In diesem Abschnitt werden die in der Haupterweiterung verfügbaren Bedingungsty
 
 Geben Sie einen benutzerspezifischen Code an, der als Bedingung des Ereignisses vorhanden sein muss. Verwenden Sie für die Eingabe des benutzerspezifischen Codes den integrierten Code-Editor. Die Ereignisweiterleitung in Adobe Experience Platform unterstützt ES13.
 
-1. Wählen Sie **[!UICONTROL Editor öffnen]**.
+1. Wählen Sie **[!UICONTROL Open Editor]** aus.
 1. Geben Sie den benutzerspezifischen Code ein.
-1. Wählen Sie **[!UICONTROL Speichern]** aus.
+1. Wählen Sie **[!UICONTROL Save]** aus.
 
-Der Zugriff auf den Wert eines Datenelements in benutzerdefiniertem Code erfolgt über die Methode `getDataElementValue`. Um beispielsweise den Wert eines Datenelements mit dem Namen `productName` abzurufen, geben Sie Folgendes ein: 
+Um auf den Wert eines Datenelements im benutzerdefinierten Code zuzugreifen, verwenden Sie die Methode `getDataElementValue`. Um beispielsweise den Wert eines Datenelements mit dem Namen `productName` abzurufen, geben Sie Folgendes ein: 
 
 ```javascript
 getDataElementValue('productName') 
@@ -158,8 +154,8 @@ In diesem Abschnitt werden die in der Haupterweiterung verfügbaren Aktionstypen
 Geben Sie den Code an, der ausgeführt wird, nachdem das Ereignis ausgelöst wurde und die Bedingungen ausgewertet wurden. Die Ereignisweiterleitung in Adobe Experience Platform unterstützt ES13.
 
 1. Benennen Sie den Aktionscode.
-1. Wählen Sie **[!UICONTROL Editor öffnen]**.
-1. Bearbeiten Sie den Code und klicken Sie dann auf **[!UICONTROL Speichern]**.
+1. Wählen Sie **[!UICONTROL Open Editor]** aus.
+1. Bearbeiten Sie den Code und klicken Sie auf **[!UICONTROL Save]**.
 
 Der Zugriff auf den Wert eines Datenelements in benutzerdefiniertem Code erfolgt über die Methode `getDataElementValue`. Um beispielsweise den Wert eines Datenelements mit dem Namen `productName` abzurufen, geben Sie Folgendes ein: 
 
@@ -181,11 +177,11 @@ Datenelementtypen werden durch die Erweiterung bestimmt. Die erstellbaren Typen 
 
 In den folgenden Abschnitten werden die in der Haupterweiterung verfügbaren Datenelementtypen beschrieben. In anderen Erweiterungen werden andere Datenelementtypen verwendet.
 
-### Benutzerspezifischer Code
+### Custom Code
 
-Benutzerdefiniertes JavaScript kann auf der Benutzeroberfläche eingegeben werden, indem Sie auf **[!UICONTROL Editor öffnen]** klicken und den Code in das Editor-Fenster einfügen.
+Sie können benutzerdefiniertes JavaScript in der Benutzeroberfläche eingeben, indem Sie auf **[!UICONTROL Open Editor]** und im entsprechenden Fenster den Code einfügen.
 
-Im Editor-Fenster muss über eine return-Anweisung der für das Datenelement zu verwendende Wert angegeben werden. Wird keine return-Anweisung angegeben oder der Wert `null` oder `undefined` zurückgegeben, lautet der Standardwert des Datenelements `null` oder `undefined`.
+Im Editor-Fenster muss über eine return-Anweisung der für das Datenelement zu verwendende Wert angegeben werden. Wenn keine Rückgabeanweisung enthalten ist oder der Wert `null` oder `undefined` zurückgegeben wird, spiegelt der Standardwert des Datenelements `null` oder `undefined` wider.
 
 Der Zugriff auf den Wert eines Datenelements in benutzerdefiniertem Code erfolgt über die Methode `getDataElementValue`. Um beispielsweise den Wert eines Datenelements mit dem Namen `productName` abzurufen, geben Sie Folgendes ein: 
 

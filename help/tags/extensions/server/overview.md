@@ -2,18 +2,14 @@
 title: Erweiterungen für die Ereignisweiterleitung - Referenz
 description: Hier finden Sie die Dokumentation zu Erweiterungen für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 32%
+source-wordcount: '119'
+ht-degree: 7%
 
 ---
 
 # Erweiterungen für die Ereignisweiterleitung - Referenz
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -26,7 +22,7 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Erweiterungen für die
 
 >[!NOTE]
 >
->Jeder Erweiterungsname, gefolgt von einem Sternchen (*), verweist auf den Listeneintrag der Erweiterung auf der Adobe Exchange, der Installations- und Verwendungsanweisungen enthält. Alle anderen Links verweisen auf die Dokumentation der Erweiterung zu Adobe Experience League.
+>Jeder Erweiterungsname, gefolgt von einem Sternchen (*), verweist auf den Listeneintrag der Erweiterung in Adobe Exchange, der Installations- und Nutzungsanweisungen enthält. Alle anderen Links verweisen auf die Dokumentation der Erweiterung auf Adobe Experience League.
 
 * [Adobe Experience Platform Cloud Connector](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)

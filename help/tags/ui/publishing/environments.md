@@ -2,18 +2,14 @@
 title: Umgebungen
 description: Hier erfahren Sie mehr über das Konzept von Tag-Umgebungen und wie sie in Adobe Experience Platform funktionieren.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1405'
 ht-degree: 98%
 
 ---
 
 # Umgebungen
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Tag-Umgebungen definieren mehrere Hauptaspekte der Bibliotheks-Builds, die Sie auf Ihrer Website oder in Ihrer App bereitstellen:
 
@@ -53,7 +49,7 @@ Jede Umgebung verfügt über eine Reihe von Anweisungen, mit deren Hilfe sie mit
 >
 >Beispielsweise unterstützt der Produktions-Einbettungs-Code für eine Web-Eigenschaft die Zwischenspeicherung im Browser, während dies die Entwicklungs- und Staging-Einbettungs-Codes nicht unterstützen. Daher sollten Sie keine Entwicklungs- oder Staging-Einbettungs-Codes in Kontexten mit hohem Traffic oder Produktionsumgebungen verwenden.
 
-Um auf die Installationsanweisungen für eine Umgebung zuzugreifen, navigieren Sie zur Registerkarte **[!UICONTROL Umgebungen]** für Ihre Eigenschaft und wählen dann das Symbol **[!UICONTROL Installieren]** für diese Umgebung aus.
+Um auf die Installationsanweisungen für eine Umgebung zuzugreifen, navigieren Sie zur Registerkarte **[!UICONTROL Environments]** für Ihre Eigenschaft und wählen dann das **[!UICONTROL Install]**-Symbol für diese Umgebung aus.
 
 ![](./images/environments/install-buttons.png)
 
@@ -81,7 +77,7 @@ Die Einstellungen aus der zugewiesenen Umgebung bestimmen Folgendes für Web-Eig
 * **Archiveinstellung**: Gibt an, ob das System bereitstellbare Dateien ausgeben oder in einem Archivformat komprimieren soll.
 * **Einbettungs-Code**: Der `<script>` Code, der in den HTML-Code Ihrer Web-Seiten eingebettet werden soll, mit dem der Bibliotheks-Build zur Laufzeit bereitgestellt wird.
 
-Wählen Sie auf der Registerkarte [!UICONTROL Umgebungen] eine aufgelistete Umgebung aus, um deren Konfigurationssteuerelemente anzuzeigen.
+Wählen Sie auf der Registerkarte [!UICONTROL Environments] eine aufgelistete Umgebung aus, um deren Konfigurationssteuerelemente anzuzeigen.
 
 ![](./images/environments/environment-config.png)
 
@@ -97,7 +93,7 @@ Wenn ein Build erstellt wird, wird dieser Build an dem Speicherort bereitgestell
 
 Die meisten Builds bestehen aus mehreren Dateien. Aus mehreren Dateien bestehende Builds enthalten eine Hauptbibliotheksdatei (verknüpft im Einbettungs-Code), die interne Verweise auf die anderen Dateien aufweist, die nach Bedarf aufgerufen werden.
 
-Mit der Schaltfläche **[!UICONTROL Archiv erstellen]** können Sie die Archivierungseinstellung der Umgebung umschalten. Standardmäßig ist die Archivierungsoption deaktiviert und der Build wird in einem Format bereitgestellt, das wie vorgesehen ausgeführt wird (JavaScript für Web-Eigenschaften und JSON für Mobile-Eigenschaften).
+Mit der Schaltfläche **[!UICONTROL Create archive]** können Sie die Archivierungseinstellung der Umgebung umschalten. Standardmäßig ist die Archivierungsoption deaktiviert und der Build wird in einem Format bereitgestellt, das wie vorgesehen ausgeführt wird (JavaScript für Web-Eigenschaften und JSON für mobile Eigenschaften).
 
 Wenn Sie die Archivierungseinstellung aktivieren, werden in der Benutzeroberfläche zusätzliche Konfigurationseinstellungen angezeigt, mit denen Sie optional die Archivdatei verschlüsseln und einen Pfad zur Bibliothek definieren können, wenn Sie Self-Hosting verwenden.
 
@@ -149,19 +145,19 @@ Da Einbettungs-Codes basierend auf Ihren Umgebungskonfigurationen generiert werd
 
 Bei der ersten Erstellung einer Eigenschaft werden dieser Eigenschaft automatisch drei Umgebungen zugewiesen: Entwicklung, Staging und Produktion. Dies reicht aus, um den Veröffentlichungs-Workflow auszuführen. Sie können jedoch bei Bedarf zusätzliche Entwicklungs-Umgebungen hinzufügen, da dies für größere Teams nützlich sein kann, bei denen mehrere Entwickler gleichzeitig an verschiedenen Projekten arbeiten.
 
-Wählen Sie auf der Registerkarte [!UICONTROL Umgebungen] für Ihre Eigenschaft **[!UICONTROL Umgebung hinzufügen]** aus.
+Wählen Sie auf der Registerkarte [!UICONTROL Environments] für Ihre Eigenschaft die Option **[!UICONTROL Add Environment]**.
 
 ![](./images/environments/create-new.png)
 
-Wählen Sie im nächsten Bildschirm die Option **[!UICONTROL Entwicklung]** aus.
+Wählen Sie im nächsten Bildschirm die Option **[!UICONTROL Development]** aus.
 
 ![](./images/environments/create-development.png)
 
-Im nächsten Bildschirm können Sie die neue Umgebung benennen, einen Host auswählen und eine Archivierungseinstellung auswählen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]**, um die Umgebung zu erstellen.
+Im nächsten Bildschirm können Sie die neue Umgebung benennen, einen Host auswählen und eine Archivierungseinstellung auswählen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Save]**, um die Umgebung zu erstellen.
 
 ![](./images/environments/create-config.png)
 
-Die Registerkarte [!UICONTROL Umgebungen] wird erneut mit den Installationsanweisungen für die neue Umgebung angezeigt.
+Die Registerkarte [!UICONTROL Environments] wird erneut mit den Installationsanweisungen für die neue Umgebung angezeigt.
 
 ![](./images/environments/create-install.png)
 
