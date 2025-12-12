@@ -167,5 +167,5 @@ Weitere Informationen zum Debuggen Ihrer Implementierung mit dem Experience Plat
 
 - [[!DNL Algolia] Insights-API-Dokumentation](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Ereignisdokumentation](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] Dokumentation zur Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
+- [[!DNL Adobe Experience Platform] Dokumentation zur Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=de)
 - [[!DNL Algolia] Übersicht über KI-Funktionen](https://www.algolia.com/products/ai-search/)

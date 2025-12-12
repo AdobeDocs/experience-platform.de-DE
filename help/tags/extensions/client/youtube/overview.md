@@ -94,7 +94,7 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
 
 >[!TIP]
 > 
->Bei Implementierungen, bei denen nicht mehrere eVars oder Props für jedes Videoelement verwendet werden können, können die Werte der Datenelemente innerhalb von Experience Platform verkettet und mit dem Tool Classification Rule Builder in Klassifizierungsberichte geparst werden, wie in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de) erläutert, und dann als ein Segment in Analysis Workspace angewendet werden.
+>Bei Implementierungen, bei denen nicht mehrere eVars oder Props für jedes Videoelement verwendet werden können, können die Werte der Datenelemente innerhalb von Experience Platform verkettet und mit dem Tool Classification Rule Builder in Klassifizierungsberichte geparst werden, wie in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de) erläutert, und dann als ein Segment in Analysis Workspace angewendet werden.
 
 Erstellen Sie zum Verketten von Videoinformationswerten ein neues Datenelement mit dem Namen &quot;Meta-Videodaten“ und programmieren Sie es so, dass alle oben aufgeführten Videodatenelemente abgerufen und zusammengestellt werden. Beispiel:
 

@@ -356,7 +356,7 @@ Konfigurieren Sie bei Bedarf weitere Hierarchien.
 
 #### Seitenname
 
-Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht der [`pageName` Variable &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) Analytics.
+Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht der [`pageName` Variable &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=de) Analytics.
 
 >[!IMPORTANT]
 >

@@ -130,6 +130,6 @@ Weitere Informationen zu den verschiedenen Status und Optionen, die während des
 
 Weitere Informationen zu Tags finden Sie in den folgenden Ressourcen:
 
-* **[Datensammlungs-Community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer ab. Melden Sie sich mit Ihrer Adobe ID an.
+* **[Datensammlungs-Community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=de)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer ab. Melden Sie sich mit Ihrer Adobe ID an.
 * **[Entwicklerdokumente](../api/overview.md)**: Beteiligen Sie sich an der Tag-Entwickler-Community, um Erweiterungen zu erstellen oder die Tag-APIs zu verwenden
 * **[Tutorials - Überblick](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=de)**: Diese Dokumente enthalten eine Einführung in Tag-Konzepte, einschließlich Ereignisweiterleitung und Mobile SDK in Android-Mobile-Apps.
