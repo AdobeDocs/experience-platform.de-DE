@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # `targetMigrationEnabled`
 
-Die `targetMigrationEnabled`-Eigenschaft ist ein boolescher Wert, der es dem Web-SDK ermöglicht, die [`mbox` und `mboxEdgeCluster` Cookies zu lesen und zu schreiben](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) die von den Adobe Target 1.x- und 2.x-Bibliotheken verwendet werden. Mit dieser Option können Sie das Besucherprofil zwischen Seiten beibehalten, die frühere Adobe Target-Implementierungen verwendet haben, und Seiten, die Web SDK verwenden.
+Die `targetMigrationEnabled`-Eigenschaft ist ein boolescher Wert, der es dem Web-SDK ermöglicht, die [`mbox` und `mboxEdgeCluster` Cookies zu lesen und zu schreiben](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/cookies/web-sdk) die von den Adobe Target 1.x- und 2.x-Bibliotheken verwendet werden. Mit dieser Option können Sie das Besucherprofil zwischen Seiten beibehalten, die frühere Adobe Target-Implementierungen verwendet haben, und Seiten, die Web SDK verwenden.
 
 Legen Sie beim Ausführen des `targetMigrationEnabled`-Befehls den booleschen Wert `configure` fest. Wenn Sie diese Eigenschaft beim Konfigurieren der Web-SDK auslassen, wird sie standardmäßig auf `false` gesetzt. Legen Sie diesen Wert auf `true` fest, wenn einige Seiten weiterhin die Adobe Target 1.x- oder 2.x-Bibliotheken verwenden.
 
-Wenn Sie diese Eigenschaft verwenden, stellen Sie sicher, dass Sie auch [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` in Ihrer Adobe Target-Implementierung aktivieren.
+Wenn Sie diese Eigenschaft verwenden, stellen Sie sicher, dass Sie auch [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/de/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` in Ihrer Adobe Target-Implementierung aktivieren.
 
 ```js
 alloy("configure", {
