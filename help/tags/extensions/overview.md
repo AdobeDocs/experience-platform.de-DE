@@ -11,7 +11,7 @@ ht-degree: 21%
 
 # Erweiterungen für Tag und Ereignisweiterleitung
 
-Eine Erweiterung ist ein gepackter Code-Satz, der die von Tags oder der Ereignisweiterleitung bereitgestellten Funktionen erweitert. Wenn Sie eine Erweiterung in einer Bibliothek installieren, fügt die Erweiterung eine Reihe eindeutiger Ereignisse, Bedingungen und/oder Aktionen hinzu, die in den ([) dieser Bibliothek verwendet ](../ui/managing-resources/rules.md) können.
+Eine Erweiterung ist ein gepackter Code-Satz, der die von Tags oder der Ereignisweiterleitung bereitgestellten Funktionen erweitert. Wenn Sie eine Erweiterung in einer Bibliothek installieren, fügt die Erweiterung eine Reihe eindeutiger Ereignisse, Bedingungen und/oder Aktionen hinzu, die in den ([) dieser Bibliothek verwendet &#x200B;](../ui/managing-resources/rules.md) können.
 
 Weitere Informationen zur Funktionsweise von Erweiterungen innerhalb der Frameworks für Tags und Ereignisweiterleitung finden Sie unter [Erweiterungen - Übersicht](../ui/managing-resources/extensions/overview.md).
 

@@ -11,4 +11,4 @@ ht-degree: 1%
 
 # Erstellen einer ZIP-Datei für Erweiterungspakete
 
-Informationen zum Vorbereiten eines Erweiterungspakets für das Hochladen in Adobe Experience Platform finden Sie in den API-Dokumenten für das Befehlszeilen@adobe/reactor-packagerTool {[}. ](https://www.npmjs.com/package/@adobe/reactor-packager) Es gibt eine vorbereitete ZIP-Datei im erwarteten Format aus ([ einer Erweiterung](./upload-and-test.md).
+Informationen zum Vorbereiten eines Erweiterungspakets für das Hochladen in Adobe Experience Platform finden Sie in den API-Dokumenten für das Befehlszeilen@adobe/reactor-packagerTool {[}. &#x200B;](https://www.npmjs.com/package/@adobe/reactor-packager) Es gibt eine vorbereitete ZIP-Datei im erwarteten Format aus ([&#x200B; einer Erweiterung](./upload-and-test.md).

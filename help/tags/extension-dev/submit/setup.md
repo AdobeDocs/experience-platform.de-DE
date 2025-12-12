@@ -27,7 +27,7 @@ Sie müssen Abonnent dieses Programms sein, um öffentlich aufgelistete Tag-Erwe
 
 ## Lösungspartner-Programm (Solution Partner Program, SPP)
 
-Dieses Programm richtet sich an Beratungsfirmen, die Adobe-Kunden dabei unterstützen, ihre Investitionen optimal zu nutzen, und an Partner, die Adobe-Lösungen weiterverkaufen. Eine schrittweise Anleitung zum Beitritt zum Lösungspartner-Programm finden Sie auf der [Adobe Spark-Website](https://spark.adobe.com/page/7PKZzIJJjkcDd/) oder auf der Website des ](https://solutionpartners.adobe.com/home.html)Lösungspartner-Programms[.
+Dieses Programm richtet sich an Beratungsfirmen, die Adobe-Kunden dabei unterstützen, ihre Investitionen optimal zu nutzen, und an Partner, die Adobe-Lösungen weiterverkaufen. Eine schrittweise Anleitung zum Beitritt zum Lösungspartner-Programm finden Sie auf der [Adobe Spark-Website](https://spark.adobe.com/page/7PKZzIJJjkcDd/) oder auf der Website des [&#128279;](https://solutionpartners.adobe.com/home.html)Lösungspartner-Programms.
 
 >[!NOTE]
 >

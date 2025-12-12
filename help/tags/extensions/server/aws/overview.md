@@ -44,7 +44,7 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 
 ![Der [!UICONTROL Send Data to Kinesis Data Stream] Aktionstyp, der für eine Regel in der Datenerfassungs-Benutzeroberfläche ausgewählt wird.](../../../images/extensions/server/aws/select-action-type.png)
 
-Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen dazu an, wie die Daten gesendet werden sollen. Insbesondere müssen Sie den verschiedenen Eigenschaften[ die Ihre ](../../../ui/managing-resources/data-elements.md)-Konfiguration repräsentieren[!DNL Event Hub] „Datenelemente“ zuweisen.
+Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen dazu an, wie die Daten gesendet werden sollen. Insbesondere müssen Sie den verschiedenen Eigenschaften[&#x200B; die Ihre &#x200B;](../../../ui/managing-resources/data-elements.md)-Konfiguration repräsentieren[!DNL Event Hub] „Datenelemente“ zuweisen.
 
 ![Die Konfigurationsoptionen für den [!UICONTROL Send Data to Kinesis Data Stream] Aktionstyp werden in der Benutzeroberfläche angezeigt.](../../../images/extensions/server/aws/data-stream-details.png)
 
@@ -62,7 +62,7 @@ Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen dazu an
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Payload] | Dieses Feld enthält die Daten, die an den [!DNL Kinesis] Datenstrom weitergeleitet werden, im JSON-Format.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen oder Sie können das Datenelementsymbol (![Datensatzsymbol) ](/help/images/icons/database.png), um aus einer Liste vorhandener Datenelemente zur Darstellung der Payload auszuwählen.<br><br>Sie können die Option **[!UICONTROL JSON Key-Value Pairs Editor]** auch verwenden, um jedes Schlüssel-Wert-Paar manuell über einen Benutzeroberflächen-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
+| [!UICONTROL Payload] | Dieses Feld enthält die Daten, die an den [!DNL Kinesis] Datenstrom weitergeleitet werden, im JSON-Format.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen oder Sie können das Datenelementsymbol (![Datensatzsymbol) &#x200B;](/help/images/icons/database.png), um aus einer Liste vorhandener Datenelemente zur Darstellung der Payload auszuwählen.<br><br>Sie können die Option **[!UICONTROL JSON Key-Value Pairs Editor]** auch verwenden, um jedes Schlüssel-Wert-Paar manuell über einen Benutzeroberflächen-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
 
 {style="table-layout:auto"}
 

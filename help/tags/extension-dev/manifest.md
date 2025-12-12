@@ -71,20 +71,20 @@ Das Konfigurationsobjekt sollte wie folgt strukturiert sein:
       <td><code>schema</code></td>
       <td>Ein Objekt vom Typ <a href="https://json-schema.org/">JSON-Schema</a>, das das Format eines gültigen Objekts beschreibt, das in der Erweiterungskonfigurationsansicht gespeichert wird. Da Sie der Entwickler der Konfigurationsansicht sind, müssen Sie sicherstellen, dass alle gespeicherten Einstellungsobjekte diesem Schema entsprechen. Dieses Schema wird auch für die Validierung verwendet, wenn Benutzende versuchen, Daten mithilfe von Experience Platform-Services zu speichern.<br><br>Beispiel für ein schema-Objekt:
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Es wird empfohlen, zum manuellen Testen Ihres Schemas ein Tool wie <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> zu verwenden.</td>
     </tr>
@@ -131,20 +131,20 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
       <td><code>schema</code></td>
       <td>Ein Objekt vom Typ <a href="https://json-schema.org/">JSON-Schema</a>, das das Format eines gültigen Einstellungsobjekts beschreibt, das vom Benutzer gespeichert werden kann. Die Einstellungen werden normalerweise von einem Benutzer über die Datenerfassungs-Benutzeroberfläche konfiguriert und gespeichert. In diesen Fällen kann die Ansicht der Erweiterung die erforderlichen Schritte zur Überprüfung der vom Benutzer bereitgestellten Einstellungen durchführen. Auf der anderen Seite entscheiden sich einige Benutzer dafür, Tag-APIs direkt ohne die Hilfe einer Benutzeroberfläche zu verwenden. Mit diesem Schema wird Experience Platform in die Lage versetzt, genau zu überprüfen, ob die von den Benutzenden gespeicherten Einstellungsobjekte unabhängig davon, ob eine Benutzeroberfläche verwendet wird, in einem Format vorliegen, das mit dem Bibliotheksmodul kompatibel ist, das zur Laufzeit das Einstellungsobjekt verarbeitet.<br><br>Ein Beispiel für ein schema-Objekt:<br>
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Es wird empfohlen, zum manuellen Testen Ihres Schemas ein Tool wie <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> zu verwenden.</td>
     </tr>

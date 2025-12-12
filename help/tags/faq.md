@@ -41,7 +41,7 @@ Das virtuelle Self-Service-Portal von Tags ermöglicht es Entwicklern von Erweit
 
 Wir haben viele Kunden, die sich auch dafür entscheiden, ihre eigenen privaten Erweiterungen zu erstellen, die nur innerhalb ihres eigenen Unternehmens verwendet werden und die die gleichen Methoden zur Entwicklung von Erweiterungen verwenden.
 
-Informationen zum Entwickeln einer Erweiterung finden Sie auf der Seite [Übersicht über die Entwicklung ](./extension-dev/overview.md) Erweiterungen“.
+Informationen zum Entwickeln einer Erweiterung finden Sie auf der Seite [Übersicht über die Entwicklung &#x200B;](./extension-dev/overview.md) Erweiterungen“.
 
 ## Erfüllen Tags die Sicherheitsstandards meines Unternehmens?
 
@@ -79,7 +79,7 @@ Ja! Tags unterstützen jetzt mobile Eigenschaften und Konfiguration für die neu
 
 ## Warum gibt die Benutzeroberfläche an, dass beim Laden meines Kontos ein Fehler aufgetreten ist?
 
-Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console[ um Zugriff auf Datenerfassungsfunktionen in der Benutzeroberfläche zu gewähren](../collection/permissions.md) finden Sie im Handbuch zum Verwalten von Berechtigungen .
+Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console[&#x200B; um Zugriff auf Datenerfassungsfunktionen in der Benutzeroberfläche zu gewähren](../collection/permissions.md) finden Sie im Handbuch zum Verwalten von Berechtigungen .
 
 ## Warum kann ich in der Benutzeroberfläche keine Eigenschaften hinzufügen?
 

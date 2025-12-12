@@ -36,7 +36,7 @@ Beginnen Sie mit der Erstellung einer neuen Ereignisweiterleitungsregel und konf
 
 ![Der [!UICONTROL Send Data to Event Hubs] Aktionstyp, der für eine Regel in der Datenerfassungs-Benutzeroberfläche ausgewählt wird.](../../../images/extensions/server/azure/select-action-type.png)
 
-Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen dazu an, wie die Daten gesendet werden sollen. Insbesondere müssen Sie den verschiedenen Eigenschaften[ die Ihre ](../../../ui/managing-resources/data-elements.md)-Konfiguration repräsentieren[!DNL Event Hub] „Datenelemente“ zuweisen.
+Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen dazu an, wie die Daten gesendet werden sollen. Insbesondere müssen Sie den verschiedenen Eigenschaften[&#x200B; die Ihre &#x200B;](../../../ui/managing-resources/data-elements.md)-Konfiguration repräsentieren[!DNL Event Hub] „Datenelemente“ zuweisen.
 
 ![Die Konfigurationsoptionen für den [!UICONTROL Send Data to Event Hubs] Aktionstyp werden in der Benutzeroberfläche angezeigt.](../../../images/extensions/server/azure/event-hub-details.png)
 
@@ -44,10 +44,10 @@ Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen dazu an
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Namespace] | Der Name des [!DNL Event Hubs]-Namespace, den Sie beim Einrichten [ Ereignis-Hub erstellt ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace). |
+| [!UICONTROL Namespace] | Der Name des [!DNL Event Hubs]-Namespace, den Sie beim Einrichten [&#x200B; Ereignis-Hub erstellt &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace). |
 | [!UICONTROL Name] | Der Name des Ereignis-Hub. |
-| [!UICONTROL SAS Authorization Rule Name] | Der Name der freigegebenen Zugriffsautorisierungsregel für den gesamten [!DNL Event Hubs]-Namespace oder die spezifische Ereignis-Hub-Instanz, an die Sie Daten senden möchten. Weitere Informationen finden Sie im Anhang zum [ von SAS](#sas)Autorisierungswerten . |
-| [!UICONTROL SAS Access Key] | Der Primärschlüssel der freigegebenen Zugriffsautorisierungsregel für den gesamten [!DNL Event Hubs]-Namespace oder die spezifische Event-Hub-Instanz, an die Daten gesendet werden sollen. Weitere Informationen finden Sie im Anhang zum [ von SAS](#sas)Autorisierungswerten . |
+| [!UICONTROL SAS Authorization Rule Name] | Der Name der freigegebenen Zugriffsautorisierungsregel für den gesamten [!DNL Event Hubs]-Namespace oder die spezifische Ereignis-Hub-Instanz, an die Sie Daten senden möchten. Weitere Informationen finden Sie im Anhang zum [&#x200B; von SAS](#sas)Autorisierungswerten . |
+| [!UICONTROL SAS Access Key] | Der Primärschlüssel der freigegebenen Zugriffsautorisierungsregel für den gesamten [!DNL Event Hubs]-Namespace oder die spezifische Event-Hub-Instanz, an die Daten gesendet werden sollen. Weitere Informationen finden Sie im Anhang zum [&#x200B; von SAS](#sas)Autorisierungswerten . |
 | [!UICONTROL Partition ID] | [!DNL Event Hubs] können Sie [Ereignisse direkt an bestimmte Partitionen senden](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka). Um diese Funktion zu nutzen, geben Sie die ID der Partition an, die Sie die Ereignisse empfangen möchten. |
 
 {style="table-layout:auto"}
@@ -70,7 +70,7 @@ In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der Erweiterung fü
 
 ## Anhang: SAS-Autorisierungswerte abrufen {#sas}
 
-Externen Anwendungen wird der Zugriff auf [!DNL Event Hubs] über [Shared Access Signatures (SAS)) ](https://learn.microsoft.com/en-us/azure/event-hubs/authorize-access-shared-access-signature). Für jede [!DNL Event Hubs]-Namespace- und Ereignis-Hub-Instanz wird bei der Erstellung automatisch eine standardmäßige SAS-Autorisierungsregel zugewiesen. Sie können jedoch bei Bedarf auch zusätzliche Richtlinien für jede Ressource erstellen.
+Externen Anwendungen wird der Zugriff auf [!DNL Event Hubs] über [Shared Access Signatures (SAS)) &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/authorize-access-shared-access-signature). Für jede [!DNL Event Hubs]-Namespace- und Ereignis-Hub-Instanz wird bei der Erstellung automatisch eine standardmäßige SAS-Autorisierungsregel zugewiesen. Sie können jedoch bei Bedarf auch zusätzliche Richtlinien für jede Ressource erstellen.
 
 Beim [Konfigurieren einer Ereignisweiterleitungsregel](#rule) mithilfe der [!DNL Azure]-Erweiterung müssen Sie den Namen und den Primärschlüssel für die Autorisierungsregel angeben, die den Namespace oder den spezifischen Ereignis-Hub steuert, an den Sie Daten senden möchten. Weitere Informationen zum Abrufen dieser Werte aus dem [!DNL Azure]-Portal finden Sie in den folgenden Abschnitten in der [!DNL Azure]-Dokumentation:
 
@@ -79,4 +79,4 @@ Beim [Konfigurieren einer Ereignisweiterleitungsregel](#rule) mithilfe der [!DNL
 
 Sobald Sie über die erforderlichen Werte verfügen, kann der Name der Autorisierungsregel direkt als Zeichenfolge in der Konfigurationseingabe bereitgestellt werden oder Sie können ein Datenelement vom Typ Zeichenfolge erstellen, um stattdessen darauf zu verweisen. Der Primärschlüssel muss jedoch zunächst in einem Geheimnis für die Ereignisweiterleitung enthalten sein, bevor er in der Regelkonfiguration bereitgestellt werden kann, um die Datensicherheit zu gewährleisten.
 
-Wählen Sie in der Benutzeroberfläche [ Ereignisweiterleitung die Option „Neue geheimen Daten erstellen](../../../ui/event-forwarding/secrets.md) und als Typ der geheimen Daten **[!UICONTROL Token]** aus. Geben Sie für den Token-Wert selbst den Primärschlüssel an, den Sie zuvor kopiert haben. Erstellen Sie nach dem Erstellen der geheimen Daten ein Datenelement vom Typ **[!UICONTROL Secret]** und wählen Sie das [!DNL Event Hubs] Geheimnis aus der Liste aus. Nachdem das Geheime-Daten-Datenelement eingerichtet wurde, können Sie auf dieses Datenelement im **[!UICONTROL SAS Access Key]** verweisen.
+Wählen Sie in der Benutzeroberfläche [&#x200B; Ereignisweiterleitung die Option „Neue geheimen Daten erstellen](../../../ui/event-forwarding/secrets.md) und als Typ der geheimen Daten **[!UICONTROL Token]** aus. Geben Sie für den Token-Wert selbst den Primärschlüssel an, den Sie zuvor kopiert haben. Erstellen Sie nach dem Erstellen der geheimen Daten ein Datenelement vom Typ **[!UICONTROL Secret]** und wählen Sie das [!DNL Event Hubs] Geheimnis aus der Liste aus. Nachdem das Geheime-Daten-Datenelement eingerichtet wurde, können Sie auf dieses Datenelement im **[!UICONTROL SAS Access Key]** verweisen.

@@ -100,7 +100,7 @@ Notieren Sie sich nach der Konfiguration die Umgebungs-IDs für die neue Eigensc
 
 Erstellen Sie Ihre Eigenschaft im **[!UICONTROL Tags]** Workspace, navigieren Sie dann zu **[!UICONTROL Extensions]** und wählen Sie die Experience Platform Web SDK-Erweiterung aus dem Katalog aus, um sie zu konfigurieren und zu installieren.
 
-Weitere Informationen [ Konfigurationsoptionen finden Sie in der ](../../extensions/client/web-sdk/overview.md) zur Web SDK-Erweiterung .
+Weitere Informationen [&#x200B; Konfigurationsoptionen finden Sie in der &#x200B;](../../extensions/client/web-sdk/overview.md) zur Web SDK-Erweiterung .
 
 ## Erstellen einer Tag-Regel zum Senden von Daten an Experience Platform Web SDK
 

@@ -33,7 +33,7 @@ Sie können Bibliotheksmoduldateien an einer beliebigen Stelle im Erweiterungsor
 
 ### Ansichten 
 
-Eine Ansicht ist eine HTML-Datei, die in ein [`iframe`-Element innerhalb ](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) Tags-Programms geladen werden kann, insbesondere über die Experience Platform-Benutzeroberfläche und die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
+Eine Ansicht ist eine HTML-Datei, die in ein [`iframe`-Element innerhalb &#x200B;](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) Tags-Programms geladen werden kann, insbesondere über die Experience Platform-Benutzeroberfläche und die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
 
 Die wichtigste Ansichtsdatei für eine Erweiterung ist ihre Konfiguration. Weitere Informationen finden Sie im Abschnitt [Erweiterungskonfigurationen](#configuration).
 

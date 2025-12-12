@@ -65,4 +65,4 @@ Dies kann beispielsweise dann zurückgegeben werden, wenn der Benutzerbrowser Ch
 
 ## Nächste Schritte
 
-* Befolgen Sie die [Übersicht über den Einreichungsprozess](./submit/overview.md) und bereiten Sie [ (](./submit/upload-and-test.md#validate)) und [Upload](./submit/upload-and-test.md#integration) Erweiterung vor, um sie im Tag-Ökosystem zu testen.
+* Befolgen Sie die [Übersicht über den Einreichungsprozess](./submit/overview.md) und bereiten Sie [&#x200B; (](./submit/upload-and-test.md#validate)) und [Upload](./submit/upload-and-test.md#integration) Erweiterung vor, um sie im Tag-Ökosystem zu testen.

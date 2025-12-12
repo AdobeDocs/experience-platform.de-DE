@@ -78,7 +78,7 @@ CSP deaktiviert Inline-Skripte standardmäßig und muss daher manuell konfigurie
 
 >[!NOTE]
 >
->Die CSP-Spezifikation enthält Details zu einer dritten Option mit Hashes, aber dieser Ansatz ist nicht möglich, wenn Tag-Management-Systeme wie Tags verwendet werden. Weitere Informationen zu den Einschränkungen bei der Verwendung von Hashes in mit Tags in Experience Platform finden Sie [ Handbuch zu Subresource Integrity (SRI)](./sri.md).
+>Die CSP-Spezifikation enthält Details zu einer dritten Option mit Hashes, aber dieser Ansatz ist nicht möglich, wenn Tag-Management-Systeme wie Tags verwendet werden. Weitere Informationen zu den Einschränkungen bei der Verwendung von Hashes in mit Tags in Experience Platform finden Sie [&#x200B; Handbuch zu Subresource Integrity (SRI)](./sri.md).
 
 ### Mit Nonce zulassen {#nonce}
 

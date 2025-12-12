@@ -17,7 +17,7 @@ Adobe Experience Platform verfügt über einen zentralen Katalog, in dem Anwende
 1. **Private Erweiterungen**: Hierbei handelt es sich um fertige Erweiterungen, die für die Produktion entwickelt wurden, aber von anderen Anwendern in Ihrer Firma entwickelt wurden und nur für Benutzer in Ihrer Firma verfügbar sind.
 1. **Entwicklungserweiterungen**: Diese Erweiterungen befinden sich in der aktiven Entwicklung und sind nur in Ihrer Firma und nur für eine Eigenschaft verfügbar, die speziell als Entwicklungseigenschaft gekennzeichnet ist.
 
-Neben den Erweiterungen im Produktkatalog sind im [Experience Cloud Exchange App Marketplace auch öffentliche Erweiterungen ](https://exchange.adobe.com/apps/browse/ec).
+Neben den Erweiterungen im Produktkatalog sind im [Experience Cloud Exchange App Marketplace auch öffentliche Erweiterungen &#x200B;](https://exchange.adobe.com/apps/browse/ec).
 
 Diese Einträge ermöglichen es Entwicklern von Erweiterungen, Beschreibungen über Funktionen zu posten, Links zu zusätzlichem Support- und Dokumentationsmaterial bereitzustellen sowie Ihre Erweiterungen für potenzielle Anwender zu vermarkten, welche Ihre Firma oder die Funktionen Ihrer Erweiterung möglicherweise noch nicht kennen. Auf diesem Marketplace verfügt Ihre Erweiterung über eine öffentliche Liste, die angezeigt werden kann, ohne dass sich der Benutzer bei Experience Platform authentifizieren muss. Für öffentliche Erweiterungen ist die Erstellung dieses Exchange-Listeneintrags ein erforderlicher Schritt.
 

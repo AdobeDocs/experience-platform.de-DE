@@ -18,7 +18,7 @@ Verwenden Sie die Erweiterung für die [!DNL Algolia] Ereignisweiterleitung , um
 
 ## Voraussetzungen {#prerequisites}
 
-Stellen Sie vor der Installation der Erweiterung sicher, dass Sie über ein [!DNL Algolia]-Konto mit Zugriff auf die [!DNL Insights API] verfügen. Wenn Sie kein Konto haben, [ Sie sich an ](https://dashboard.algolia.com/users/sign_up) aktivieren Sie den Zugriff auf die API.
+Stellen Sie vor der Installation der Erweiterung sicher, dass Sie über ein [!DNL Algolia]-Konto mit Zugriff auf die [!DNL Insights API] verfügen. Wenn Sie kein Konto haben, [&#x200B; Sie sich an &#x200B;](https://dashboard.algolia.com/users/sign_up) aktivieren Sie den Zugriff auf die API.
 
 Vergewissern Sie sich auch, dass Sie wissen, wie Sie die [!DNL Algolia] [!DNL Insights API] verwenden. Einen Überblick über das Senden von Ereignissen finden Sie unter [Senden von Ereignissen mit der Insights-API](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
