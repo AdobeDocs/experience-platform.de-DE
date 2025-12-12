@@ -27,4 +27,4 @@ alloy("configure", {
 
 ## Aktivieren der Target-Migration mithilfe der Tag-Erweiterung „Web SDK&quot;
 
-Diese Einstellung kann in der Tag-Erweiterung „Web SDK&quot; mithilfe der Konfigurationseinstellungen von [Personalization konfiguriert ](/help/tags/extensions/client/web-sdk/configure/personalization.md#migrate-target-from-atjs-to-the-web-sdk).
+Diese Einstellung kann in der Tag-Erweiterung „Web SDK&quot; mithilfe der Konfigurationseinstellungen von [Personalization konfiguriert &#x200B;](/help/tags/extensions/client/web-sdk/configure/personalization.md#migrate-target-from-atjs-to-the-web-sdk).
