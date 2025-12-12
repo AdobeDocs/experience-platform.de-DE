@@ -3,10 +3,10 @@ keywords: Experience Platform;Abfrage-Service;Abfrage-Service;verschachtelte Dat
 title: Reduzieren verschachtelter Datenstrukturen für die Verwendung mit BI-Tools
 description: In diesem Dokument wird erläutert, wie Sie XDM-Schemata für alle Tabellen und Ansichten während einer Sitzung reduzieren, wenn Sie BI-Tools von Drittanbieterfirmen mit dem Abfrage-Service verwenden.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fc98b111aa15cdeb64eacdc05cac33a00ee98d80
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 97%
+source-wordcount: '854'
+ht-degree: 93%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 97%
 
 Der Abfrage-Service von Adobe Experience Platform unterstützt die `FLATTEN`-Einstellung für die Verbindung zu einer Datenbank über BI-Tools von Drittanbieterfirmen. Verschachtelte Datenstrukturen in BI-Tools von Drittanbieterfirmen können durch diese Funktion reduziert werden, um ihre Benutzungsfreundlichkeit zu verbessern und den erforderlichen Arbeitsaufwand für das Abrufen, Analysieren, Transformieren und Berichten von Daten zu reduzieren.
 
-Viele BI-Tools wie [!DNL Tableau] und [!DNL Power BI] unterstützen standardmäßig keine verschachtelten Datenstrukturen. Durch die `FLATTEN`-Einstellung entfällt die Notwendigkeit, SQL-Ansichten über Ihren Daten zu erstellen, um eine reduzierte Version bereitzustellen, oder Abfrage-Service-`CTAS` oder `INSERT INTO`-Vorgänge zum Duplizieren Ihrer Datensätze in reduzierte Versionen bei Verwendung von Ad-hoc-Schemata einzusetzen.
+Viele BI-Tools wie [!DNL Tableau] und [!DNL Power BI] unterstützen standardmäßig keine verschachtelten Datenstrukturen. Durch die `FLATTEN`-Einstellung entfällt die Notwendigkeit, SQL-Ansichten über Ihren Daten zu erstellen, um eine reduzierte Version bereitzustellen, oder Abfrage-Service-`CTAS` oder `INSERT INTO`-Aufträge zum Duplizieren Ihrer Datensätze in reduzierte Versionen bei Verwendung von Ad-hoc-Schemata einzusetzen.
 
 Die `FLATTEN`-Einstellung zieht die Struktur der einzelnen Blattfelder in den Stamm der Tabelle und benennt das Feld nach dem ursprünglichen Namespace. Auf diese Weise können Sie Punktnotation verwenden, um ein Feld mit dem Experience-Datenmodell(XDM)-Pfad abzugleichen, während der Kontext des Felds beibehalten wird.
 
@@ -42,19 +42,19 @@ Wenn Sie eine Verbindung zum Abfrage-Service mit Ihrem ausgewählten Drittanbiet
 
 Die Eingabe sollte das folgende Format aufweisen:
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 Eine Beispielverbindungszeichenfolge könnte wie folgt aussehen:
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
 ## Beispiel {#example}
 
-Das in diesem Handbuch verwendete Beispielschema verwendet die Standardfeldergruppe [!UICONTROL Commerce-Details], das die `commerce`-Objektstruktur und das `productListItems`-Array nutzt. Siehe XDM-Dokumentation für [weitere Informationen zur [!UICONTROL Commerce-Details]-Feldergruppe](../../xdm/field-groups/event/commerce-details.md). Eine Darstellung der Schemastruktur finden Sie in der Abbildung unten.
+Das in diesem Handbuch verwendete Beispielschema verwendet die Standardfeldgruppen-[!UICONTROL Commerce Details], das die `commerce`-Objektstruktur und das `productListItems`-Array nutzt. Siehe XDM-Dokumentation für [weitere Informationen zur [!UICONTROL Commerce Details] Feldergruppe](../../xdm/field-groups/event/commerce-details.md). Eine Darstellung der Schemastruktur finden Sie in der Abbildung unten.
 
 ![Ein Schemadiagramm für die Commerce-Details-Feldergruppe, einschließlich der Strukturen `commerce` und `productListItems`.](../images/key-concepts/commerce-details.png)
 
@@ -62,13 +62,13 @@ Wenn Ihr BI-Tool verschachtelte Datenstrukturen nicht unterstützt, kann es schw
 
 Die folgenden Werte stellen Folgendes dar: `commerce.order.priceTotal` (3018.0), `commerce.order.purchaseID` (c9b5aff9-25de-450b-98f4-4484a2170180) und `commerce.purchases.value`(1.0) in schlecht formatierten verschachtelten Feldern.
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 Durch Verwendung der `FLATTEN`-Einstellung können Sie mithilfe der Punktnotation und des ursprünglichen Pfadnamens auf separate Felder innerhalb Ihres Schemas oder ganze Abschnitte der verschachtelten Datenstruktur zugreifen. Ein Beispiel für dieses Format mit der `commerce`-Feldergruppe finden Sie unten.
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value
