@@ -3,14 +3,20 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppenkomposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
+source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
 workflow-type: tm+mt
-source-wordcount: '2258'
-ht-degree: 56%
+source-wordcount: '2293'
+ht-degree: 55%
 
 ---
 
 # Handbuch zur Benutzeroberfläche der Zielgruppenkomposition
+
+>[!BEGINSHADEBOX]
+
+Wenn Sie Adobe Journey Optimizer-Kunde sind, lesen Sie bitte das [Erste Schritte mit dem Handbuch zur Zielgruppenkomposition](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) in der Adobe Journey Optimizer-Dokumentation , um weitere Informationen zum Arbeiten mit der Zielgruppenkomposition in diesem Kontext zu erhalten.
+
+>[!ENDSHADEBOX]
 
 >[!AVAILABILITY]
 >
