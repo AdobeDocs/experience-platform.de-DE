@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung beim XDM-System
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich schrittweiser Anweisungen zur Behebung gängiger API-Fehler.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
+source-git-commit: 8ba80a1cc4529f9d4693e3f7cbd7584193915410
 workflow-type: tm+mt
-source-wordcount: '2378'
-ht-degree: 81%
+source-wordcount: '2368'
+ht-degree: 77%
 
 ---
 
@@ -71,7 +71,7 @@ XDM setzt die folgenden Einschränkungen für die Verwendung dieses Datentyps:
 - In benutzerdefinierten XDM-Objekten definierte Zuordnungen sind auf eine einzelne Ebene beschränkt. Verschachtelte Zuordnungen können nicht erstellt werden. Diese Einschränkung gilt nicht für Zuordnungen, die in standardmäßigen XDM-Objekten definiert sind.
 - Arrays von Zuordnungen werden nicht unterstützt.
 
-Weitere Einzelheiten finden [&#x200B; unter „Nutzungsbeschränkungen für &#x200B;](./ui/fields/map.md#restrictions)&quot;.
+Weitere Einzelheiten finden [ unter „Nutzungsbeschränkungen für ](./ui/fields/map.md#restrictions)&quot;.
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ Weitere Details zum Erstellen von Identitätsdeskriptoren in der API finden Sie 
 
 ### Definieren von Identitäten in der Benutzeroberfläche
 
-Wenn Ihr Schema im Schema-Editor geöffnet ist, wählen Sie das Feld im Abschnitt **[!UICONTROL Struktur]** des Editors aus, das Sie als Identität markieren möchten. Wählen Sie rechts unter **[!UICONTROL Feldeigenschaften]** die Option **[!UICONTROL Identität]** aus.
+Wenn Ihr Schema im Schema-Editor geöffnet ist, wählen Sie das Feld im **[!UICONTROL Structure]** des Editors aus, das Sie als Identität markieren möchten. Aktivieren Sie unter **[!UICONTROL Field Properties]** auf der rechten Seite das Kontrollkästchen **[!UICONTROL Identity]** .
 
 Weitere Details zum Verwalten von Identitäten in der Benutzeroberfläche finden Sie im Abschnitt zum [Definieren von Identitätsfeldern](./tutorials/create-schema-ui.md#identity-field) im Tutorial für den Schema-Editor.
 
@@ -132,17 +132,17 @@ Weiterführende Informationen zur Verwendung der API zum Aktivieren eines Schema
 
 ### Aktivieren eines vorhandenen Schemas für das [!DNL Profile] über die Benutzeroberfläche
 
-Wählen Sie in [!DNL Experience Platform] im linken Navigationsbereich die Option **[!UICONTROL Schemata]** und dann den Namen des Schemas aus der Liste der Schemata aus, das Sie aktivieren möchten. Aktivieren Sie anschließend rechts im Editor unter **[!UICONTROL Schemaeigenschaften]** die Option **[!UICONTROL Profil]**.
+Wählen Sie in [!DNL Experience Platform] im linken Navigationsbereich die Option **[!UICONTROL Schemas]** und dann den Namen des Schemas aus der Liste der Schemas aus, das Sie aktivieren möchten. Wählen Sie dann auf der rechten Seite des Editors unter **[!UICONTROL Schema Properties]** die Option **[!UICONTROL Profile]** aus, um den Editor zu aktivieren.
 
-Weiterführende Informationen finden Sie im Abschnitt zur [Verwendung im Echtzeit-Kundenprofil](./tutorials/create-schema-ui.md#profile) im Tutorial [!UICONTROL Schema-Editor].
+Weitere Informationen finden Sie im Abschnitt [Verwendung im Echtzeit-Kundenprofil](./tutorials/create-schema-ui.md#profile) im [!UICONTROL Schema Editor] Tutorial.
 
 ### Ist das automatisch erstellte Schema für das Profil aktiviert, wenn Adobe Analytics-Daten als Quelle importiert werden?
 
-Das Schema wird nicht automatisch für das Echtzeit-Kundenprofil aktiviert. Sie müssen den Datensatz explizit für das Profil aktivieren, je nachdem, welches Schema für das Profil aktiviert ist. In der Dokumentation erfahren Sie mehr über [Schritte und Anforderungen, die erforderlich sind, um einen Datensatz für die Verwendung im Echtzeit-Kundenprofil zu &#x200B;](../catalog/datasets/user-guide.md#enable-profile).
+Das Schema wird nicht automatisch für das Echtzeit-Kundenprofil aktiviert. Sie müssen den Datensatz explizit für das Profil aktivieren, je nachdem, welches Schema für das Profil aktiviert ist. In der Dokumentation erfahren Sie mehr über [Schritte und Anforderungen, die erforderlich sind, um einen Datensatz für die Verwendung im Echtzeit-Kundenprofil zu ](../catalog/datasets/user-guide.md#enable-profile).
 
-### Kann ich profilaktivierte Schemata löschen?
+### Kann ich profilaktivierte Schemata löschen? {#delete-profile-enabled}
 
-Ein Schema kann nicht gelöscht werden, nachdem es für das Echtzeit-Kundenprofil aktiviert wurde. Nachdem ein Schema für das Profil aktiviert wurde, kann es nicht mehr deaktiviert oder gelöscht werden und es können keine Felder aus dem Schema entfernt werden. Daher ist es wichtig, die Schemakonfiguration sorgfältig zu planen und zu überprüfen, bevor sie für das Profil aktiviert wird. Sie können jedoch einen profilaktivierten Datensatz löschen. Informationen finden Sie hier: <https://experienceleague.adobe.com/de/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Ein Schema kann nicht gelöscht werden, nachdem es für das Echtzeit-Kundenprofil aktiviert wurde. Nachdem ein Schema für das Profil aktiviert wurde, kann es nicht mehr deaktiviert oder gelöscht werden und es können keine Felder aus dem Schema entfernt werden. Daher ist es wichtig, die Schemakonfiguration sorgfältig zu planen und zu überprüfen, bevor sie für das Profil aktiviert wird. Sie können jedoch einen profilaktivierten Datensatz löschen. Informationen finden Sie hier: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Wenn Sie die Verwendung eines profilaktivierten Schemas nicht mehr wünschen, wird empfohlen, das Schema umzubenennen und **Nicht verwenden** oder **Inaktiv** einzuschließen.
 

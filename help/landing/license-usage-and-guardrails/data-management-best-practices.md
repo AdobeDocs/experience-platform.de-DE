@@ -2,10 +2,10 @@
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
+source-git-commit: 163ff97da651ac3a68b5e37e8745b10440519e6f
 workflow-type: tm+mt
-source-wordcount: '2957'
-ht-degree: 43%
+source-wordcount: '3390'
+ht-degree: 37%
 
 ---
 
@@ -101,6 +101,38 @@ Daten können in Experience Platform in ein oder mehrere Systeme aufgenommen wer
 >
 >Ihr Zugriff auf den [!DNL data lake] kann von der von Ihnen erworbenen Produkt-SKU abhängen. Weitere Informationen zu Produkt-SKUs erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
 
+Sie müssen auch entscheiden, ob Sie Such-Datensätze für das Echtzeit-Kundenprofil aktivieren möchten, und sie nicht nur für allgemeine Suchzwecke verwenden. Befolgen Sie die unten stehenden Anweisungen, um eine Überschreitung Ihrer Lizenzbeschränkungen zu vermeiden.
+
+#### Profilaktivierung für Lookup-Datensätze {#profile-enablement-lookup-datasets}
+
+Ein Lookup-Datensatz ist ein Datensatz, den Sie in Experience Platform aktivieren, damit Anwendungen zur Laufzeit darauf verweisen können. Verwenden Sie Lookup-Datensätze, um relativ statische, schlüsselbezogene Informationen wie Produktdetails, Store-Metadaten oder Angebotskonfigurationen zu speichern, und nicht Datensätze, deren Hauptzweck darin besteht, Profilattribute (z. B. Name, E-Mail oder Treuestufe) oder Erlebnisereignisse (z. B. Seitenansichten oder Käufe) beizutragen.
+
+Experience Platform-Programme wie [!DNL Journey Optimizer] und andere Decisioning-Programme verwenden diese Datensätze, um zusätzliche Felder basierend auf einem Schlüssel abzurufen (z. B. Produkt-ID oder Store-ID) und um Personalisierungs-, Entscheidungs- und Orchestrierungs-Workflows zu ergänzen. Die Aktivierung von Lookup-Datensätzen für das Echtzeit-Kundenprofil wirkt sich auf Ihr Profildatenvolumen aus. Verwenden Sie daher die folgende Anleitung, um innerhalb Ihrer Lizenzberechtigungen zu bleiben.
+
+Beachten Sie beim Konfigurieren von Datensätzen für Suchzwecke die beiden Rollen, die ein Datensatz in Experience Platform spielen kann:
+
+* **Lookup-Datensätze**: Zulassen, dass Anwendungen Referenzdaten für Services wie Personalisierung und Entscheidungsfindung in [!DNL Journey Optimizer] abrufen können.
+* **Profil-aktivierte Datensätze**: Tragen Sie Attribute und Ereignisse zu vereinheitlichten Kundenprofilen im Echtzeit-Kundenprofil bei. Diese Datensätze stellen ihre Felder für Anwendungsfälle der Segmentierung und Aktivierung zur Verfügung.
+
+>[!IMPORTANT]
+>
+>Aktivieren Sie nur dann einen Lookup-Datensatz für das Echtzeit-Kundenprofil, wenn Sie Felder aus diesem Datensatz im Echtzeit-Kundenprofil verwenden müssen (z. B. für Zielgruppendefinitionen, Aktivierung oder Segmentierung mehrerer Entitäten). Die Aktivierung eines Lookup-Datensatzes für das Echtzeit-Kundenprofil erhöht das Volumen Ihrer Profildaten. Weitere Informationen finden Sie im Tutorial [Segmentierung mehrerer Entitäten](../../segmentation/tutorials/multi-entity-segmentation.md).
+
+**Wann Datensätze für das Echtzeit-Kundenprofil aktiviert werden:**
+
+Aktivieren Sie in den folgenden Fällen einen Datensatz für das Echtzeit-Kundenprofil:
+
+* Der Datensatz enthält Kundenattribute, die Sie in Kundenprofilen zusammenführen müssen (z. B. Treuestufe, Voreinstellungen, Kontoinformationen).
+* Der Datensatz enthält Erlebnisereignisse, die zur Analyse des Kundenverhaltens und zur Segmentierung beitragen.
+* Der Datensatz enthält Referenz- oder Anreicherungsattribute (z. B. Produkt-, Store- oder Kontoattribute), die Sie in Zielgruppendefinitionen, einschließlich Segmentierung mit mehreren Entitäten, oder in der nachgelagerten Aktivierung verwenden müssen.
+
+**Wann Datensätze für das Echtzeit-Kundenprofil NICHT aktiviert werden sollten:**
+
+Vermeiden Sie in den folgenden Fällen die Aktivierung eines Datensatzes für das Echtzeit-Kundenprofil:
+
+* Der Datensatz enthält Referenzdaten wie Produktkataloge, SKU-Details, Speicherorte oder andere Nicht-Kundendaten, und Sie benötigen diese Attribute nicht im Echtzeit-Kundenprofil für die Segmentierung oder Aktivierung, einschließlich der Segmentierung mehrerer Entitäten.
+* Der Datensatz enthält Anreicherungsdaten, die nur zur Laufzeit in Suchvorgängen verwendet werden und nicht als Teil der Kundenidentität oder in Zielgruppendefinitionen erforderlich sind.
+
 ### Welche Daten behalten Sie?
 
 Sie können sowohl Datenaufnahme-Filter als auch Ablaufregeln anwenden, um Daten zu entfernen, die für Ihre Anwendungsfälle veraltet sind. In der Regel verbrauchen Verhaltensdaten (z. B. Analytics-Daten) wesentlich mehr Speicher als Eintragsdaten (z. B. CRM-Daten). Viele Experience Platform-Benutzer weisen beispielsweise bis zu 90 % Profile auf, die ausschließlich Verhaltensdaten enthalten, verglichen mit Datensatzdaten. Daher ist die Verwaltung Ihrer Verhaltensdaten von entscheidender Bedeutung, um die Einhaltung Ihrer Lizenzberechtigungen sicherzustellen.
@@ -114,7 +146,7 @@ Es gibt eine Reihe von Tools, die Ihnen helfen, Ihre Lizenznutzungsberechtigunge
 
 Identitätsdiagramme werden nicht auf Ihre gesamte adressierbare Zielgruppenberechtigung angerechnet, da sich adressierbare Zielgruppe auf Ihre Gesamtzahl an Kundenprofilen bezieht.
 
-Aufgrund der Aufteilung von Identitäten können sich jedoch Beschränkungen des Identitätsdiagramms auf Ihre adressierbare Zielgruppe auswirken. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, bleibt die ECID im Echtzeit-Kundenprofil als pseudonymes Profil bestehen. Sie können [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) festlegen, um dieses Verhalten zu umgehen. Weitere Informationen finden Sie unter [&#x200B; für Identity Service-Daten](../../identity-service/guardrails.md).
+Aufgrund der Aufteilung von Identitäten können sich jedoch Beschränkungen des Identitätsdiagramms auf Ihre adressierbare Zielgruppe auswirken. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, bleibt die ECID im Echtzeit-Kundenprofil als pseudonymes Profil bestehen. Sie können [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) festlegen, um dieses Verhalten zu umgehen. Weitere Informationen finden Sie unter [ für Identity Service-Daten](../../identity-service/guardrails.md).
 
 ### Aufnahmefilter {#ingestion-filters}
 
@@ -159,11 +191,11 @@ Verwenden Sie die Datenablauffunktion für pseudonyme Profile, um automatisch Da
 
 ### Datensatz-Benutzeroberfläche - Aufbewahrung von Erlebnisereignis-Datensätzen {#data-retention}
 
-Konfigurieren Sie die Einstellungen für die Gültigkeit und Aufbewahrung von Datensätzen, um eine feste Aufbewahrungsfrist für Ihre Daten im Data Lake und Profilspeicher zu erzwingen. Nach Ablauf der Aufbewahrungsfrist werden die Daten gelöscht. Ablauf von Erlebnisereignisdaten entfernt nur Ereignisse, keine Profilklassendaten, wodurch das [Gesamtdatenvolumen) &#x200B;](total-data-volume.md) Lizenznutzungsmetriken reduziert wird. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenspeicherungsrichtlinie](../../catalog/datasets/user-guide.md#data-retention-policy).
+Konfigurieren Sie die Einstellungen für die Gültigkeit und Aufbewahrung von Datensätzen, um eine feste Aufbewahrungsfrist für Ihre Daten im Data Lake und Profilspeicher zu erzwingen. Nach Ablauf der Aufbewahrungsfrist werden die Daten gelöscht. Ablauf von Erlebnisereignisdaten entfernt nur Ereignisse, keine Profilklassendaten, wodurch das [Gesamtdatenvolumen) ](total-data-volume.md) Lizenznutzungsmetriken reduziert wird. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenspeicherungsrichtlinie](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Gültigkeitsdauern von Profilerlebnisereignissen {#event-expirations}
 
-Konfigurieren Sie Ablaufzeiten, um Verhaltensdaten automatisch aus Ihrem profilaktivierten Datensatz zu entfernen, sobald sie für Ihre Anwendungsfälle nicht mehr nützlich sind. Weitere Informationen finden Sie in der Übersicht [&#x200B; Gültigkeitsdauern &#x200B;](../../profile/event-expirations.md) Erlebnisereignissen .
+Konfigurieren Sie Ablaufzeiten, um Verhaltensdaten automatisch aus Ihrem profilaktivierten Datensatz zu entfernen, sobald sie für Ihre Anwendungsfälle nicht mehr nützlich sind. Weitere Informationen finden Sie in der Übersicht [ Gültigkeitsdauern ](../../profile/event-expirations.md) Erlebnisereignissen .
 
 ## Zusammenfassung der Best Practices für die Lizenznutzung {#best-practices}
 
