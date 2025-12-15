@@ -71,7 +71,7 @@ XDM setzt die folgenden Einschränkungen für die Verwendung dieses Datentyps:
 - In benutzerdefinierten XDM-Objekten definierte Zuordnungen sind auf eine einzelne Ebene beschränkt. Verschachtelte Zuordnungen können nicht erstellt werden. Diese Einschränkung gilt nicht für Zuordnungen, die in standardmäßigen XDM-Objekten definiert sind.
 - Arrays von Zuordnungen werden nicht unterstützt.
 
-Weitere Einzelheiten finden [ unter „Nutzungsbeschränkungen für ](./ui/fields/map.md#restrictions)&quot;.
+Weitere Einzelheiten finden [&#x200B; unter „Nutzungsbeschränkungen für &#x200B;](./ui/fields/map.md#restrictions)&quot;.
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ Weitere Informationen finden Sie im Abschnitt [Verwendung im Echtzeit-Kundenprof
 
 ### Ist das automatisch erstellte Schema für das Profil aktiviert, wenn Adobe Analytics-Daten als Quelle importiert werden?
 
-Das Schema wird nicht automatisch für das Echtzeit-Kundenprofil aktiviert. Sie müssen den Datensatz explizit für das Profil aktivieren, je nachdem, welches Schema für das Profil aktiviert ist. In der Dokumentation erfahren Sie mehr über [Schritte und Anforderungen, die erforderlich sind, um einen Datensatz für die Verwendung im Echtzeit-Kundenprofil zu ](../catalog/datasets/user-guide.md#enable-profile).
+Das Schema wird nicht automatisch für das Echtzeit-Kundenprofil aktiviert. Sie müssen den Datensatz explizit für das Profil aktivieren, je nachdem, welches Schema für das Profil aktiviert ist. In der Dokumentation erfahren Sie mehr über [Schritte und Anforderungen, die erforderlich sind, um einen Datensatz für die Verwendung im Echtzeit-Kundenprofil zu &#x200B;](../catalog/datasets/user-guide.md#enable-profile).
 
 ### Kann ich profilaktivierte Schemata löschen? {#delete-profile-enabled}
 
