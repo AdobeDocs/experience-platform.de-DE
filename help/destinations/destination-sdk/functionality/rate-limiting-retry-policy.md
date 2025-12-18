@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Experience Platform mit verschiedenen Fehlertypen umgeht, die von Streaming-Zielen zurückgegeben werden, und wie es erneut versucht, Daten an die Zielplattform zu senden.
 title: Ratenbegrenzungs- und Wiederholungsrichtlinie für Streaming-Ziele, die mit Destination SDK erstellt wurden
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 75bee8fde648101335df7a66eae1907b267b4eb6
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 100%
+source-wordcount: '477'
+ht-degree: 81%
 
 ---
 
@@ -17,7 +17,14 @@ Bei der Konfiguration eines Ziels mithilfe von Destination SDK können Sie zwisc
 
 ## Aggregation nach bestem Bemühen (Best-Effort-Aggregation) {#best-effort-aggregation}
 
-Bei allen HTTP-Aufrufen an Ihr Ziel, die fehlschlagen, versucht Experience Platform, den Aufruf unmittelbar nach dem ersten Aufruf einmal erneut durchzuführen. Wenn der Aufruf beim zweiten Versuch immer noch fehlschlägt, löscht Experience Platform den Aufruf und versucht ihn nicht ein drittes Mal.
+Experience Platform versucht Aufrufe erneut, die die folgenden HTTP-Antwort-Codes zurückgeben: **403, 408, 409, 429, 500, 502, 503, 504**. In den folgenden Intervallen werden zwei weitere Zustellversuche durchgeführt:
+
+* Erster Wiederholungsversuch: nach 15 Sekunden
+* Zweiter Wiederholungsversuch: nach 30 Sekunden
+
+Experience Platform versucht *nicht* Aufrufe erneut auszuführen, die andere HTTP-Antwort-Codes zurückgeben, z. B. 400 (Bad Request). Wenn der Aufruf nach beiden Wiederholungsversuchen immer noch fehlschlägt, löscht Experience Platform die Aktivierung und versucht sie nicht erneut.
+
+Sie können eine andere Wiederholungsrichtlinie für bestimmte Datenflüsse anfordern, indem Sie sich an den Kunden-Support wenden.
 
 ## Konfigurierbare Aggregation {#configurable-aggregation}
 

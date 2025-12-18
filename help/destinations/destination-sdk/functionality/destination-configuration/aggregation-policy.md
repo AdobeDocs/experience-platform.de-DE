@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie eine Aggregationsrichtlinie einrichten, um zu bestimmen, wie HTTP-Anfragen an Ihr Ziel gruppiert und in Batches eingesetzt werden sollen.
 title: Aggregationsrichtlinie
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
+source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 94%
+source-wordcount: '1235'
+ht-degree: 83%
 
 ---
 
@@ -52,7 +52,26 @@ Die folgende Beispielkonfiguration zeigt eine Konfiguration einer Aggregation na
    "aggregationType":"BEST_EFFORT",
    "bestEffortAggregation":{
       "maxUsersPerRequest":10,
-      "splitUserById":false
+      "splitUserById":false,
+      "aggregationKey":{
+         "includeSegmentId":true,
+         "includeSegmentStatus":true,
+         "includeIdentity":true,
+         "oneIdentityPerGroup":true,
+         "groups":[
+            {
+               "namespaces":[
+                  "IDFA",
+                  "GAID"
+               ]
+            },
+            {
+               "namespaces":[
+                  "EMAIL"
+               ]
+            }
+         ]
+      }
    }
 }
 ```
@@ -62,6 +81,12 @@ Die folgende Beispielkonfiguration zeigt eine Konfiguration einer Aggregation na
 | `aggregationType` | Zeichenfolge | Gibt den Typ der Aggregationsrichtlinie an, die Ihr Ziel verwenden soll. Unterstützte Aggregationstypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | Ganzzahl | Experience Platform kann mehrere exportierte Profile in einem einzigen HTTP-Aufruf aggregieren. <br><br>Geben Sie hier die maximale Anzahl von Profilen an, die Ihr Endpunkt in einem einzelnen HTTP-Aufruf erhalten soll. Beachten Sie, dass dies eine bestmögliche Aggregation ist. Wenn Sie beispielsweise den Wert 100 angeben, kann Experience Platform bei einem Aufruf eine beliebige Anzahl von Profilen senden, die kleiner als 100 ist. <br><br> Wenn Ihr Server nicht mehrere Benutzerinnen oder Benutzer pro Anfrage akzeptiert, setzen Sie diesen Wert auf `1`. |
 | `bestEffortAggregation.splitUserById` | Boolesch | Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true`, wenn Ihr Server für einen gegebenen Namespace nur eine Identität pro Aufruf akzeptiert. |
+| `bestEffortAggregation.aggregationKey` | Objekt | *Optional*. Ermöglicht die Aggregation der dem Ziel zugeordneten exportierten Profile anhand der unten beschriebenen Parameter. Dieser Parameter kann weggelassen oder auf `null` gesetzt werden, wenn keine Aggregation erforderlich ist. Sofern angegeben, funktioniert er genauso wie der Aggregationsschlüssel in der konfigurierbaren Aggregation. |
+| `bestEffortAggregation.aggregationKey.includeSegmentId` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID in Ihr Ziel exportiert wurden. |
+| `bestEffortAggregation.aggregationKey.includeSegmentStatus` | Boolesch | Sie müssen sowohl diesen Parameter als auch den Parameter `includeSegmentId` auf `true` festlegen, wenn Sie die an Ihr Ziel exportierten Profile nach Zielgruppen-ID und Zielgruppenstatus gruppieren möchten. |
+| `bestEffortAggregation.aggregationKey.includeIdentity` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Identity-Namespace zu Ihrem Ziel exportiert wurden. |
+| `bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn die exportierten Profile in Gruppen einer einzigen Identität zusammengefasst werden sollen (GAID, IDFA, Telefonnummern, E-Mail usw.). Legen Sie dies auf `false` fest, wenn Sie den `groups`-Parameter zum Definieren benutzerdefinierter Identitäts-Namespace-Gruppierungen verwenden möchten. |
+| `bestEffortAggregation.aggregationKey.groups` | Array | Verwenden Sie diesen Parameter, wenn `oneIdentityPerGroup` auf `false` gesetzt ist. Erstellen Sie Listen mit Identitätsgruppen, wenn Sie Profile gruppieren möchten, die nach Gruppen von Identity-Namespaces in Ihr Ziel exportiert wurden. Beispielsweise können Sie Profile, die die Kennungen IDFA und GAID für Mobilgeräte enthalten, mithilfe der im obigen Beispiel beschriebenen Konfiguration zu einem Aufruf an Ihr Ziel und E-Mails an ein anderes kombinieren. |
 
 {style="table-layout:auto"}
 
@@ -115,8 +140,8 @@ Die folgende Beispielkonfiguration zeigt eine konfigurierbare Aggregationskonfig
 | `configurableAggregation.aggregationKey.includeSegmentId` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID in Ihr Ziel exportiert wurden. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolesch | Sie müssen sowohl diesen Parameter als auch den Parameter `includeSegmentId` auf `true` festlegen, wenn Sie die an Ihr Ziel exportierten Profile nach Zielgruppen-ID und Zielgruppenstatus gruppieren möchten. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Identity-Namespace zu Ihrem Ziel exportiert wurden. |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolesch | Legen Sie diesen Parameter auf `true` fest, um anzugeben, ob die exportierten Profile in Gruppen einer einzigen Identität zusammengefasst werden sollen (GAID, IDFA, Telefonnummern, E-Mail usw.). |
-| `configurableAggregation.aggregationKey.groups` | Array | Erstellen Sie Listen mit Identitätsgruppen, wenn Sie Profile gruppieren möchten, die nach Gruppen von Identity-Namespaces in Ihr Ziel exportiert wurden. Beispielsweise können Sie Profile, die die Kennungen IDFA und GAID für Mobilgeräte enthalten, mithilfe der im obigen Beispiel beschriebenen Konfiguration zu einem Aufruf an Ihr Ziel und E-Mails an ein anderes kombinieren. |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn die exportierten Profile in Gruppen einer einzigen Identität zusammengefasst werden sollen (GAID, IDFA, Telefonnummern, E-Mail usw.). Legen Sie dies auf `false` fest, wenn Sie den `groups`-Parameter zum Definieren benutzerdefinierter Identitäts-Namespace-Gruppierungen verwenden möchten. |
+| `configurableAggregation.aggregationKey.groups` | Array | Verwenden Sie diesen Parameter, wenn `oneIdentityPerGroup` auf `false` gesetzt ist. Erstellen Sie Listen mit Identitätsgruppen, wenn Sie Profile gruppieren möchten, die nach Gruppen von Identity-Namespaces in Ihr Ziel exportiert wurden. Beispielsweise können Sie Profile, die die Kennungen IDFA und GAID für Mobilgeräte enthalten, mithilfe der im obigen Beispiel beschriebenen Konfiguration zu einem Aufruf an Ihr Ziel und E-Mails an ein anderes kombinieren. |
 
 {style="table-layout:auto"}
 
