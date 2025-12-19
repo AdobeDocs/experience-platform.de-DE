@@ -2,9 +2,9 @@
 title: Sandbox-Tools
 description: Nahtloser Export und Import von Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: ee8c270c63cd9e61c28ea990914a96988524bc03
+source-git-commit: fad8cc977ec6928420abab4fd3dafca7475c33c4
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3448'
 ht-degree: 6%
 
 ---
@@ -53,12 +53,12 @@ Die folgenden Objekte werden importiert, haben jedoch den Status „Entwurf“ o
 | --- | --- | --- |
 | Importstatus | Source-Datenfluss | Entwurf |
 | Importstatus | Journey | Entwurf |
-| Einheitliches Profil | Datensatz | Einheitliches Profil deaktiviert |
+| Unified Profile | Datensatz | Einheitliches Profil deaktiviert |
 | Richtlinien | Data Governance-Richtlinien | Deaktiviert |
 
 ### Adobe Journey Optimizer-Objekte {#abobe-journey-optimizer-objects}
 
-In der folgenden Tabelle sind [!DNL Adobe Journey Optimizer] Objekte aufgeführt, die derzeit für Sandbox-Tools und Einschränkungen unterstützt werden:
+In der folgenden Tabelle sind [!DNL Adobe Journey Optimizer] Objekte aufgeführt, die derzeit für Sandbox-Tools und Einschränkungen unterstützt werden. Eine vollständige Liste der Best Practices finden Sie im Handbuch [Allgemeine Best Practices zu Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
 
 | Plattform | Objekt | Unterstützte abhängige Objekte | Details |
 | --- | --- | --- | --- |
@@ -70,8 +70,8 @@ In der folgenden Tabelle sind [!DNL Adobe Journey Optimizer] Objekte aufgeführt
 | [!DNL Adobe Journey Optimizer] | Benutzerdefinierte Aktionen |  | Benutzerdefinierte Aktionen können einem Paket unabhängig hinzugefügt werden. Nachdem eine benutzerdefinierte Aktion einer Journey zugewiesen wurde, kann sie nicht mehr bearbeitet werden. Um Aktualisierungen an benutzerdefinierten Aktionen vorzunehmen, sollten Sie: <ul><li>Verschieben benutzerdefinierter Aktionen vor dem Migrieren einer Journey</li><li>Aktualisieren Sie Konfigurationen (z. B. Anfragekopfzeilen, Abfrageparameter und Authentifizierung) für benutzerdefinierte Aktionen nach der Migration</li><li>Migrieren von Journey-Objekten mit den benutzerdefinierten Aktionen, die Sie im ersten Schritt hinzugefügt haben</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Inhaltsvorlage | | Eine Inhaltsvorlage kann als abhängiges Objekt des Journey-Objekts kopiert werden. Eigenständige Vorlagen ermöglichen die einfache Wiederverwendung benutzerdefinierter Inhalte in Journey Optimizer-Kampagnen und -Journey. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Alle verschachtelten Fragmente. | Ein Fragment kann als abhängiges Objekt des Journey-Objekts kopiert werden. Fragmente sind wiederverwendbare Komponenten, die in einer oder mehreren Journey Optimizer-Kampagnen und -Journey-Umgebungen referenziert werden können. |
-| [!DNL Adobe Journey Optimizer] | Kampagnen | Die folgenden in der Kampagne verwendeten Objekte werden als abhängige Objekte kopiert: <ul><li>Kampagnen</li><li>Zielgruppen</li><li>Schemata</li><li>Inhaltsvorlagen</li><li>Fragmente</li><li>Nachricht/Inhalt</li><li>Kanalkonfiguration</li><li>Einheitliche Entscheidungsobjekte</li><li>Experimenteinstellungen/-varianten</li></ul> | <ul><li>Kampagnen können zusammen mit allen Elementen kopiert werden, die sich auf das Profil, die Zielgruppe, das Schema, Inline-Nachrichten und abhängige Objekte beziehen. Einige Elemente werden nicht kopiert, z. B. Datennutzungsbeschriftungen und Spracheinstellungen. Eine vollständige Liste der Objekte, die nicht kopiert werden können, finden Sie im Handbuch [Exportieren von Objekten in eine andere Sandbox](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) .</li><li>Das System erkennt automatisch ein vorhandenes Kanalkonfigurationsobjekt in der Ziel-Sandbox und verwendet es erneut, wenn eine identische Konfiguration vorhanden ist. Wenn keine übereinstimmende Konfiguration gefunden wird, wird die Kanalkonfiguration beim Import übersprungen und Benutzende müssen die Kanaleinstellungen in der Ziel-Sandbox für diese Journey manuell aktualisieren.</li><li>Benutzer können vorhandene Experimente und Zielgruppen in der Ziel-Sandbox als abhängige Objekte ausgewählter Kampagnen wiederverwenden.</li></ul> |
-| [!DNL Adobe Journey Optimizer] | Entscheidungsfindung | Vor dem Kopieren von Decisioning-Objekten müssen die folgenden Objekte in der Ziel-Sandbox vorhanden sein: <ul><li>In allen Decisioning-Objekten verwendete Profilattribute</li><li>Die Feldergruppe der benutzerdefinierten Angebotsattribute</li><li>die Schemata von Datenströmen, die für Kontextattribute in Regeln, Rangfolgen oder Begrenzungen verwendet werden.</li></ul> | <ul><li>Das Kopieren von Rangfolgeformeln, die KI-Modelle verwenden, wird derzeit nicht unterstützt.</li><li>Entscheidungselemente (Angebotselemente) werden nicht automatisch einbezogen. Um sicherzustellen, dass sie übertragen werden, fügen Sie sie manuell mit der Option **Zum Paket hinzufügen** hinzu.</li><li>Richtlinien, die eine Auswahlstrategie verwenden, erfordern, dass die zugehörigen Entscheidungselemente während des Kopiervorgangs manuell hinzugefügt werden. Bei Richtlinien, die manuelle oder Fallback-Entscheidungselemente verwenden, werden diese Elemente automatisch als direkte Abhängigkeiten einbezogen.</li><li>Entscheidungselemente müssen zuerst und vor allen anderen zugehörigen Objekten kopiert werden.</li><li>Eine vollständige Liste der unterstützten Objekte finden Sie im Handbuch [Exportieren von Objekten in eine andere Sandbox](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Kampagnen | Die folgenden in der Kampagne verwendeten Objekte werden als abhängige Objekte kopiert: <ul><li>Kampagnen</li><li>Zielgruppen</li><li>Schemata</li><li>Inhaltsvorlagen</li><li>Fragmente</li><li>Nachricht/Inhalt</li><li>Kanalkonfiguration</li><li>Einheitliche Entscheidungsobjekte</li><li>Experimenteinstellungen/-varianten</li></ul> | <ul><li>Kampagnen können zusammen mit allen Elementen kopiert werden, die sich auf das Profil, die Zielgruppe, das Schema, Inline-Nachrichten und abhängige Objekte beziehen. Einige Elemente werden nicht kopiert, z. B. Datennutzungsbeschriftungen und Spracheinstellungen. Eine vollständige Liste der Objekte, die nicht kopiert werden können, finden Sie im Handbuch [Exportieren von Objekten in eine andere Sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) .</li><li>Das System erkennt automatisch ein vorhandenes Kanalkonfigurationsobjekt in der Ziel-Sandbox und verwendet es erneut, wenn eine identische Konfiguration vorhanden ist. Wenn keine übereinstimmende Konfiguration gefunden wird, wird die Kanalkonfiguration beim Import übersprungen und Benutzende müssen die Kanaleinstellungen in der Ziel-Sandbox für diese Journey manuell aktualisieren.</li><li>Benutzer können vorhandene Experimente und Zielgruppen in der Ziel-Sandbox als abhängige Objekte ausgewählter Kampagnen wiederverwenden.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Entscheidungsfindung | Vor dem Kopieren von Decisioning-Objekten müssen die folgenden Objekte in der Ziel-Sandbox vorhanden sein: <ul><li>In allen Decisioning-Objekten verwendete Profilattribute</li><li>Die Feldergruppe der benutzerdefinierten Angebotsattribute</li><li>die Schemata von Datenströmen, die für Kontextattribute in Regeln, Rangfolgen oder Begrenzungen verwendet werden.</li></ul> | <ul><li>Das Kopieren von Rangfolgeformeln, die KI-Modelle verwenden, wird derzeit nicht unterstützt.</li><li>Entscheidungselemente (Angebotselemente) werden nicht automatisch einbezogen. Um sicherzustellen, dass sie übertragen werden, fügen Sie sie manuell mit der Option **Zum Paket hinzufügen** hinzu.</li><li>Richtlinien, die eine Auswahlstrategie verwenden, erfordern, dass die zugehörigen Entscheidungselemente während des Kopiervorgangs manuell hinzugefügt werden. Bei Richtlinien, die manuelle oder Fallback-Entscheidungselemente verwenden, werden diese Elemente automatisch als direkte Abhängigkeiten einbezogen.</li><li>Entscheidungselemente müssen zuerst und vor allen anderen zugehörigen Objekten kopiert werden.</li><li>Eine vollständige Liste der unterstützten Objekte finden Sie im Handbuch [Exportieren von Objekten in eine andere Sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li></ul> |
 
 ## Exportieren von Objekten in ein Paket {#export-objects}
 
@@ -353,7 +353,7 @@ Nachdem Sie die Zielobjekte identifiziert haben, die Sie aktualisieren möchten,
 
 Das folgende Video soll Ihnen dabei helfen, die Sandbox-Tools besser zu verstehen, und beschreibt, wie Sie ein neues Paket erstellen, ein Paket veröffentlichen und ein Paket importieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446097/?captions=ger&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Nächste Schritte
 
