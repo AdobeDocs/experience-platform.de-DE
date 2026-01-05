@@ -1,7 +1,7 @@
 ---
 audience: user
-user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
-breadcrumb-title: Handbuch zum Abfragedienst
+user-guide-title: Hilfe zum Abfrage-Service von Adobe Experience Platform
+breadcrumb-title: Anleitung zum Abfrage-Service
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
@@ -13,9 +13,9 @@ ht-degree: 69%
 ---
 
 
-# Query Service von Adobe Experience Platform {#query}
+# Abfrage-Service von Adobe Experience Platform  {#query}
 
-- [Query Service – Übersicht](home.md)
+- [Abfrage-Service – Überblick](home.md)
 - [Packaging des Abfrage-Services](packaging.md)
 - [Leitplanken des Abfrage-Services](guardrails.md)
 - Erste Schritte {#get-started}
@@ -73,7 +73,7 @@ ht-degree: 69%
    - [Prognostizieren der Kundenabwanderung mithilfe von SQL](use-cases/predict-customer-churn-stub.md)
    - [Tendenz-Bewertung](use-cases/propensity-score.md)
    - [Abrufen ähnlicher Datensätze mit Funktionen höherer Ordnung](use-cases/retrieve-similar-records.md)
-   - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten &#x200B;](use-cases/merchandising-variables.md)
+   - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten ](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Anzeigen des Roll-up-Berichts für Besuchende](use-cases/roll-up-report-of-a-visitor.md)
    - [Web- und Mobile-Analyse-Einblicke](use-cases/analytics-insights.md)
@@ -88,7 +88,7 @@ ht-degree: 69%
    - [Berechnung der Datensatzstatistiken](key-concepts/dataset-statistics.md)
 - Data Distiller Hypercubes {#hypercubes}
    - [Effiziente Big-Data-Analyse mit Hypercubes](hypercubes/overview.md)
-- Clients mit Query Service verbinden {#clients}
+- Clients mit dem Abfrage-Service verbinden {#clients}
    - [Kundenverbindungen – Überblick](clients/overview.md)
    - [SSL-Modi](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
@@ -108,7 +108,7 @@ ht-degree: 69%
    - [Parametrierte Abfragen](ui/parameterized-queries.md)
    - [Abfragepläne](ui/query-schedules.md)
    - [Abfrageprotokolle](ui/query-logs.md)
-   - [Überwachen von geplanten Abfragen &#x200B;](ui/monitor-queries.md)
+   - [Überwachen von geplanten Abfragen ](ui/monitor-queries.md)
    - [Handbuch zu Anmeldedaten](ui/credentials.md)
    - [Migrieren von JWT zu OAuth-Anmeldeinformationen](ui/migrate-jwt-to-oauth.md)
    - [Generieren von Ausgabedatensätzen aus Abfrageergebnissen](ui/create-datasets.md)
