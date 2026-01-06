@@ -21,7 +21,7 @@ In diesem Dokument wird beschrieben, wie Sie mit der GitHub-Web-Oberfläche eine
 
 ## Einrichten der GitHub-Umgebung
 
-Der erste Schritt beim Einrichten Ihrer GitHub-Umgebung besteht darin, zum [Adobe Experience Platform GitHub-Repository zu ](https://github.com/AdobeDocs/experience-platform.en).
+Der erste Schritt beim Einrichten Ihrer GitHub-Umgebung besteht darin, zum [Adobe Experience Platform GitHub-Repository zu &#x200B;](https://github.com/AdobeDocs/experience-platform.en).
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -51,7 +51,7 @@ Benennen Sie Ihre Quelldatei `YOURSOURCE.md` wobei IHRE QUELLE der Name Ihrer Qu
 
 ## Erstellen der Dokumentationsseite für Ihre Quelle
 
-Um mit der Dokumentation Ihrer neuen Quelle zu beginnen, fügen Sie den Inhalt der [Quelldokumentationsvorlage](./template.md) in den GitHub-Web-Editor ein. Sie können auch die Vorlage ([) ](../assets/api-template.zip).
+Um mit der Dokumentation Ihrer neuen Quelle zu beginnen, fügen Sie den Inhalt der [Quelldokumentationsvorlage](./template.md) in den GitHub-Web-Editor ein. Sie können auch die Vorlage ([) &#x200B;](../assets/api-template.zip).
 
 Nachdem die Vorlage in die GitHub-Web-Editor-Oberfläche kopiert wurde, folgen Sie den Anweisungen in der Vorlage und bearbeiten Sie die Werte mit relevanten Informationen für Ihre Quelle.
 
