@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 321cb9b2b9add2460cbde2dfe571ad41a9be163b
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '825'
 ht-degree: 80%
 
 ---
@@ -116,7 +116,7 @@ ht-degree: 80%
             * [Personalisierung](extensions/client/web-sdk/configure/personalization.md)
             * [Datenerfassung](extensions/client/web-sdk/configure/data-collection.md)
             * [Streaming-Medien](extensions/client/web-sdk/configure/streaming-media.md)
-            * [Push-Benachrichtigungen &#x200B;](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Push-Benachrichtigungen ](extensions/client/web-sdk/configure/push-notifications.md)
             * [Werbung](extensions/client/web-sdk/configure/advertising.md)
             * [Überschreibungen der Konfiguration](extensions/client/web-sdk/configure/configuration-overrides.md)
             * [Erweiterte Einstellungen](extensions/client/web-sdk/configure/advanced-settings.md)
@@ -276,6 +276,8 @@ ht-degree: 80%
          * [Übersicht](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [Übersicht](./extensions/server/mixpanel/overview.md)
+      * [!DNL Nextdoor] {#nextdoor}
+         * [Übersicht](./extensions/server/nextdoor/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [Übersicht](./extensions/server/pinterest/overview.md)
