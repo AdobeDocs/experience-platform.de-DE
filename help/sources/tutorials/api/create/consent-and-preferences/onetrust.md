@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Datenflusses für eine OneTrust-Integrationsquelle mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit OneTrust Integration verbinden.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f9ca6b7683c64c36772d02c1a88c3ef18f961b92
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 55%
@@ -139,7 +139,7 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei zurück.
 >
 >Die unten stehende JSON-Antwort-Payload ist zur Vereinfachung ausgeblendet. Klicken Sie auf Mich , um die Antwort-Payload anzuzeigen.
 
-+++Hier klicken
++++Mich anklicken
 
 ```json
 {
@@ -757,8 +757,13 @@ curl -X POST \
               "sourceType": "ATTRIBUTE",
               "source": "content.Purposes",
               "destination": "_exchangesandboxbravo.Purposes"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.LinkToken",
+              "destination": "_exchangesandboxbravo.LinkToken",
+              "description": "Link Token"
           }
-
       ]
   }'
 ```
