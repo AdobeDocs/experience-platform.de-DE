@@ -3,10 +3,10 @@ title: Löschen von Arbeitsaufträgen
 description: Erfahren Sie, wie Sie den Endpunkt /workorder in der Datenhygiene-API verwenden, um in Adobe Experience Platform Arbeitsaufträge zum Löschen von Datensätzen zu verwalten. In diesem Handbuch werden Kontingente, Verarbeitungszeitpläne und die API-Nutzung behandelt.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
+source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
 workflow-type: tm+mt
-source-wordcount: '2440'
-ht-degree: 3%
+source-wordcount: '2541'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ Verwenden Sie den `/workorder`-Endpunkt in der Datenhygiene-API, um Arbeitsauftr
 
 >[!IMPORTANT]
 >
->Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
+>Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
 
 ## Erste Schritte
 
@@ -202,6 +202,14 @@ POST /workorder
 >[!NOTE]
 >
 >Sie können nur Datensätze aus Datensätzen löschen, deren verknüpftes XDM-Schema eine primäre Identität oder Identitätszuordnung definiert.
+
+>[!IMPORTANT]
+>
+>Arbeitsaufträge zum Löschen von Datensätzen beziehen sich ausschließlich auf das Feld **primäre Identität**. Die folgenden Einschränkungen gelten:
+>
+>- **Sekundäre Identitäten werden nicht überprüft.** Wenn ein Datensatz mehrere Identitätsfelder enthält, wird nur die primäre Identität für die Zuordnung verwendet. Datensätze können nicht basierend auf nicht primären Identitäten ausgewählt oder gelöscht werden.
+>- **Datensätze ohne ausgefüllte primäre Identität werden übersprungen.** Wenn für einen Datensatz keine primären Identitätsmetadaten ausgefüllt sind, kann er nicht gelöscht werden.
+>- **Daten, die vor der Identitätskonfiguration aufgenommen wurden, sind nicht zulässig.** Wenn das primäre Identitätsfeld einem Schema nach der Datenaufnahme hinzugefügt wurde, können zuvor aufgenommene Datensätze nicht über Arbeitsaufträge zum Löschen von Datensätzen gelöscht werden.
 
 >[!NOTE]
 >

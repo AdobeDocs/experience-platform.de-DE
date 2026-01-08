@@ -2,10 +2,10 @@
 title: Anfragen zum Löschen von Datensätzen (UI-Workflow)
 description: Erfahren Sie, wie Sie Datensätze in der Adobe Experience Platform-Benutzeroberfläche löschen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
-source-wordcount: '2358'
-ht-degree: 13%
+source-wordcount: '2520'
+ht-degree: 10%
 
 ---
 
@@ -19,7 +19,7 @@ Verwenden Sie den [[!UICONTROL Data Lifecycle] Arbeitsbereich](./overview.md) um
 
 ## Voraussetzungen {#prerequisites}
 
-Das Löschen von Datensätzen setzt ein Verständnis der Funktionsweise von Identitätsfeldern in Experience Platform voraus. Insbesondere müssen Sie die Identity-Namespace-Werte der Entitäten kennen, deren Datensätze Sie löschen möchten, je nach Datensatz (oder Datensätzen), aus dem Sie sie löschen möchten.
+Das Löschen von Datensätzen setzt ein Verständnis der Funktionsweise von Identitätsfeldern in Experience Platform voraus. Insbesondere müssen Sie den primären Identity-Namespace und die Werte für die Entitäten kennen, deren Datensätze Sie löschen möchten. Diese Werte hängen vom Datensatz (oder den Datensätzen) ab, aus dem/denen Sie sie löschen möchten.
 
 Weitere Informationen zu Identitäten in Experience Platform finden Sie in der folgenden Dokumentation:
 
@@ -28,6 +28,14 @@ Weitere Informationen zu Identitäten in Experience Platform finden Sie in der f
 * [Echtzeit-Kundenprofil](../../profile/home.md): Verwendet Identitätsdiagramme, um vereinheitlichte Verbraucherprofile auf der Grundlage aggregierter Daten aus mehreren Quellen bereitzustellen, die nahezu in Echtzeit aktualisiert werden.
 * [Experience-Datenmodell (XDM)](../../xdm/home.md): Stellt Standarddefinitionen und -strukturen für Experience Platform-Daten durch die Verwendung von Schemata bereit. Alle Experience Platform-Datensätze entsprechen einem bestimmten XDM-Schema und das Schema definiert, welche Felder Identitäten sind.
 * [Identitätsfelder](../../xdm/ui/fields/identity.md): Erfahren Sie, wie ein Identitätsfeld in einem XDM-Schema definiert wird.
+
+>[!IMPORTANT]
+>
+>Löschvorgänge von Datensätzen beziehen sich ausschließlich auf **Feld &quot;** Identität“, das im Schema des Datensatzes definiert ist. Die folgenden Einschränkungen gelten:
+>
+>* **Sekundäre Identitäten werden nicht überprüft.** Wenn ein Datensatz mehrere Identitätsfelder enthält, wird nur die primäre Identität für die Zuordnung verwendet. Datensätze können nicht basierend auf nicht primären Identitäten ausgewählt oder gelöscht werden.
+>* **Datensätze ohne ausgefüllte primäre Identität werden übersprungen.** Wenn für einen Datensatz keine primären Identitätsmetadaten ausgefüllt sind, kann er nicht gelöscht werden.
+>* **Daten, die vor der Identitätskonfiguration aufgenommen wurden, sind nicht zulässig.** Wenn das primäre Identitätsfeld einem Schema nach der Datenaufnahme hinzugefügt wurde, können zuvor aufgenommene Datensätze über diesen Workflow nicht gelöscht werden.
 
 ## Erstellen einer Anfrage {#create-request}
 
@@ -39,7 +47,7 @@ Der Workflow zur Anfrageerstellung wird angezeigt. Standardmäßig ist die Optio
 
 >[!IMPORTANT]
 > 
->Um die Effizienz zu verbessern und den Datensatzbetrieb kostengünstiger zu gestalten, können Unternehmen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als „delta-migriert“ bezeichnet. Benutzer von Organisationen, die in den Delta-Bereich migriert wurden, können Datensätze aus einem oder allen Datensätzen löschen. Benutzer von Organisationen, die keine Delta-Migration durchgeführt haben, können keine Datensätze selektiv aus einem einzelnen Datensatz oder allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem Abschnitt [Bereitstellen von &#x200B;](#provide-identities)&quot; des Handbuchs fort.
+>Um die Effizienz zu verbessern und den Datensatzbetrieb kostengünstiger zu gestalten, können Unternehmen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als „delta-migriert“ bezeichnet. Benutzer von Organisationen, die in den Delta-Bereich migriert wurden, können Datensätze aus einem oder allen Datensätzen löschen. Benutzer von Organisationen, die keine Delta-Migration durchgeführt haben, können keine Datensätze selektiv aus einem einzelnen Datensatz oder allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem Abschnitt [Bereitstellen von ](#provide-identities)&quot; des Handbuchs fort.
 
 ![Der Workflow für die Anfrageerstellung mit ausgewählter und hervorgehobener Option &quot;[!UICONTROL Delete record]&quot;.](../images/ui/record-delete/delete-record.png)
 
@@ -53,13 +61,13 @@ Um aus einem bestimmten Datensatz zu löschen, klicken Sie auf **[!UICONTROL Sel
 
 ![Das Dialogfeld &quot;[!UICONTROL Select dataset]&quot; mit ausgewähltem Datensatz und hervorgehobener [!UICONTROL Done].](../images/ui/record-delete/select-dataset.png)
 
-Um aus allen Datensätzen zu löschen, wählen Sie **[!UICONTROL All datasets]** aus. Diese Option vergrößert den Umfang des Vorgangs und erfordert die Angabe aller relevanten Identitätstypen.
+Um aus allen Datensätzen zu löschen, wählen Sie **[!UICONTROL All datasets]** aus. Diese Option vergrößert den Umfang des Vorgangs und erfordert, dass Sie für jeden Datensatz, den Sie ansprechen möchten, den primären Identitätstyp angeben.
 
 ![Das Dialogfeld &quot;[!UICONTROL Select dataset]&quot; mit ausgewählter Option &quot;[!UICONTROL All datasets]&quot;.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->Durch die Auswahl von **[!UICONTROL All datasets]** wird der Vorgang auf alle Datensätze in Ihrer Organisation erweitert. Jeder Datensatz kann einen anderen primären Identitätstyp verwenden. Sie müssen (**erforderlichen Identitätstypen) angeben** um eine genaue Übereinstimmung sicherzustellen.
+>Durch die Auswahl von **[!UICONTROL All datasets]** wird der Vorgang auf alle Datensätze in Ihrer Organisation erweitert. Jeder Datensatz kann einen anderen primären Identitätstyp verwenden. Sie müssen **den primären Identitätstyp für jeden Datensatz) angeben** um eine genaue Übereinstimmung sicherzustellen.
 >
 >Wenn ein Identitätstyp fehlt, werden beim Löschen möglicherweise einige Datensätze übersprungen. Dies kann die Verarbeitung verlangsamen und zu (**Ergebnissen)**.
 
@@ -72,17 +80,21 @@ Jeder Datensatz in Experience Platform unterstützt nur einen primären Identit�
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Identity-Namespace"
->abstract="Ein Identity-Namespace ist ein Attribut, das einen Eintrag mit dem Profil einer Verbraucherin bzw. eines Verbrauchers in Experience Platform verknüpft. Das Feld für den Identity-Namespace für einen Eintrag wird durch das Schema definiert, auf dem der Eintrag basiert. In dieser Spalte müssen Sie den Typ (oder Namespace) des Identity-Namespace des Eintrags angeben, z. B. `email` für E-Mail-Adressen und `ecid` für Experience Cloud IDs. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
+>title="Primärer Identity-Namespace"
+>abstract="Der primäre Identity-Namespace ist das Attribut, das einen Datensatz eindeutig mit dem Profil eines Verbrauchers in Experience Platform verknüpft. Das Feld für die primäre Identität für einen Datensatz wird durch das Schema definiert, auf dem der Datensatz basiert. In dieser Spalte müssen Sie den primären Identity-Namespace (z. B. `email` für E-Mail-Adressen oder `ecid` für Experience Cloud-IDs) angeben, der dem Schema des Datensatzes entspricht. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Primärer Identitätswert"
 >abstract="In dieser Spalte müssen Sie den Wert für den Identity-Namespace des Eintrags angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der Typ des Identity-Namespace `email` ist, sollte der Wert die E-Mail-Adresse des Eintrags sein. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
 
-Beim Löschen von Datensätzen müssen Sie Identitätsinformationen angeben, damit das System bestimmen kann, welche Datensätze gelöscht werden sollen. Für jeden Datensatz in Experience Platform werden Datensätze basierend auf dem Feld **Identity-Namespace** gelöscht, das durch das Schema des Datensatzes definiert wird.
+Beim Löschen von Datensätzen müssen Sie Identitätsinformationen angeben, damit das System bestimmen kann, welche Datensätze gelöscht werden sollen. Für jeden Datensatz in Experience Platform werden Datensätze basierend auf dem Feld **primäre Identität** gelöscht, das durch das Schema des Datensatzes definiert wird.
 
-Wie alle Identitätsfelder in Experience Platform besteht ein Identity-Namespace aus zwei Elementen: einem **type** (manchmal auch als Identity-Namespace bezeichnet) und einem **value**. Der Identitätstyp liefert den Kontext dazu, wie das Feld einen Datensatz identifiziert (z. B. über eine E-Mail-Adresse). Der Wert stellt die spezifische Identität eines Datensatzes für diesen Typ dar (z. B. `jdoe@example.com` für den `email` Identitätstyp). Felder, die häufig als Identitäten verwendet werden, sind Kontoinformationen, Geräte-IDs und Cookie-IDs.
+>[!NOTE]
+>
+>Obwohl Sie in der Benutzeroberfläche einen Identity-Namespace auswählen können, wird zur Ausführungszeit nur **im Schema** Datensatzes konfigurierte (primäre Identität) verwendet. Stellen Sie sicher, dass die von Ihnen angegebenen Identitätswerte mit dem primären Identitätsfeld des Datensatzes übereinstimmen.
+
+Wie alle Identitätsfelder in Experience Platform besteht eine primäre Identität aus zwei Elementen: einem **type** (dem Identity-Namespace) und einem **value**. Der Identitätstyp liefert den Kontext dazu, wie das Feld einen Datensatz identifiziert (z. B. über eine E-Mail-Adresse). Der Wert stellt die spezifische Identität eines Datensatzes für diesen Typ dar (z. B. `jdoe@example.com` für den `email` Identitätstyp). Zu den gebräuchlichen Feldern, die als primäre Identitäten verwendet werden, gehören Kontoinformationen, Geräte-IDs und Cookie-IDs.
 
 >[!TIP]
 >
@@ -101,7 +113,7 @@ Um eine JSON-Datei hochzuladen, können Sie die Datei per Drag-and-Drop in den e
 
 ![Der Workflow für die Anfrageerstellung mit der hervorgehobenen Option „Dateien auswählen“ und der hervorgehobenen Drag-and-Drop-Oberfläche für das Hochladen von JSON-Dateien.](../images/ui/record-delete/upload-json.png)
 
-Die JSON-Datei muss als Array von Objekten formatiert sein, wobei jedes Objekt eine Identität darstellt.
+Die JSON-Datei muss als Array von Objekten formatiert sein, wobei jedes Objekt einen primären Identitätswert für den Zieldatensatz darstellt.
 
 ```json
 [
@@ -118,7 +130,7 @@ Die JSON-Datei muss als Array von Objekten formatiert sein, wobei jedes Objekt e
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `namespaceCode` | Der Identitätstyp. |
+| `namespaceCode` | Der primäre Identity-Namespace für den Zieldatensatz. |
 | `value` | Der primäre Identitätswert, wie durch den Typ gekennzeichnet. |
 
 Nach dem Hochladen der Datei können Sie mit dem [Senden der Anfrage](#submit) fortfahren.
@@ -133,7 +145,7 @@ Es werden Steuerelemente angezeigt, mit denen Sie Identitäten einzeln eingeben 
 
 ![Der Workflow zur Anfrageerstellung mit einem Identitätsfeld wurde manuell hinzugefügt.](../images/ui/record-delete/identity-added.png)
 
-Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![&#x200B; Pluszeichen ) aus.](/help/images/icons/tree-expand-all.png)) neben einer der Zeilen oder wählen Sie **[!UICONTROL Add identity]** aus.
+Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![ Pluszeichen ) aus.](/help/images/icons/tree-expand-all.png)) neben einer der Zeilen oder wählen Sie **[!UICONTROL Add identity]** aus.
 
 ![Der Workflow für die Anfrageerstellung mit dem Pluszeichen und dem hervorgehobenen Symbol „Identität hinzufügen“.](../images/ui/record-delete/more-identities.png)
 
@@ -265,7 +277,7 @@ Befolgen Sie die folgenden Best Practices, um eine unbeabsichtigte erneute Aufna
 * **Ändern von Datenerfassungsflüssen**: Nachdem Sie Datensätze in Platform gelöscht haben, überwachen Sie Datenflüsse und bestätigen Sie, dass das Quellsystem dieselben Datensätze entfernt oder in `_change_request_type = 'd'` einbezieht.
 * **Quelle bereinigen**: Löschen Sie bei Quellen, die eine vollständige Aktualisierungsaufnahme verwenden, oder Quellen, die Löschvorgänge über die Änderungsdatenerfassung nicht unterstützen, Datensätze direkt aus dem Quellsystem, um eine erneute Aufnahme zu vermeiden.
 
-Weitere Informationen zu Schemaanforderungen finden Sie unter [Anforderungen an relationale &#x200B;](../../xdm/schema/relational.md#relational-schemas).
+Weitere Informationen zu Schemaanforderungen finden Sie unter [Anforderungen an relationale ](../../xdm/schema/relational.md#relational-schemas).
 
 Informationen zur Funktionsweise der Änderungsdatenerfassung mit Quellen finden Sie unter [Aktivieren der Änderungsdatenerfassung in Quellen](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
 
