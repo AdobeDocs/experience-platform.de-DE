@@ -46,7 +46,7 @@ Im Abschnitt **[!UICONTROL Expiring credentials]** finden Sie die folgenden Info
 >
 >![Die Registerkarte &quot;Admin Console-Einstellungen“ mit hervorgehobenen Optionen „Datenschutz und Sicherheit“, „Authentifizierungseinstellungen“ und „Maximale Sitzungsdauer“.](../images/ui/credentials/max-session-life.png)
 >
->Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
+>Weitere Informationen zu den von der Admin Console angebotenen [Erweiterten Einstellungen](https://helpx.adobe.com/de/enterprise/using/authentication-settings.html#advanced-settings) finden Sie in der Adobe-Hilfedokumentation.
 
 ### Verbinden mit Customer Journey Analytics-Daten in Abfragesitzungen {#connect-to-customer-journey-analytics}
 
@@ -68,7 +68,7 @@ Um entweder in Power BI oder Tableau auf Ihre Customer Journey Analytics-Daten z
 
 Sie können auf Ihre Customer Journey Analytics-Daten auch direkt über den Abfrage-Editor oder die Postgres-CLI zugreifen. Verweisen Sie dazu beim Schreiben Ihrer Abfrage auf die `cja`-Datenbank. Weitere Informationen zum Schreiben[&#x200B; Ausführen und Speichern von Abfragen finden &#x200B;](./user-guide.md#query-authoring) im Abfrage-Editor (Handbuch zur Abfrageerstellung).
 
-Umfassende Anweisungen für den Zugriff auf [&#x200B; Datenansichten mit SQL finden &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
+Umfassende Anweisungen für den Zugriff auf [&#x200B; Datenansichten mit SQL finden &#x200B;](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-dataviews/bi-extension) im Handbuch zur Customer Journey Analytics-Erweiterung .
 
 ## Unbefristete Anmeldedaten {#non-expiring-credentials}
 
