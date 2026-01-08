@@ -16,7 +16,7 @@ Verwenden Sie den `/workorder`-Endpunkt in der Datenhygiene-API, um Arbeitsauftr
 
 >[!IMPORTANT]
 >
->Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
+>Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
 
 ## Erste Schritte
 
