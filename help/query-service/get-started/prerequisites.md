@@ -21,7 +21,7 @@ Bevor Sie mit der Datenabfrage beginnen können, stellen Sie Folgendes sicher:
 - **Erforderliche Berechtigungen**: Ihr Benutzerkonto hat Zugriff auf den Abfrage-Service in Experience Platform. Wenn der Service nicht in der Benutzeroberfläche verfügbar ist, lesen Sie die [Dokumentation zu Berechtigungen](../../access-control/home.md#permissions) und wenden Sie sich an Ihren Systemadministrator.
 - **Datenaufnahme**: Sie haben Daten in Experience Platform aufgenommen.
 
-Wenn Sie Daten aufnehmen müssen, finden Sie im [Tutorial zur Datenaufnahme](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) einen Überblick über die Erstellung von Datensätzen, die Schemazuordnung, die Aufnahme und die Validierung. Lesen Sie [ Dokumentation „Aufnahme - Übersicht](../../ingestion/home.md), um weitere Informationen und Links zu anderen Lernressourcen zu erhalten.
+Wenn Sie Daten aufnehmen müssen, finden Sie im [Tutorial zur Datenaufnahme](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) einen Überblick über die Erstellung von Datensätzen, die Schemazuordnung, die Aufnahme und die Validierung. Lesen Sie [&#x200B; Dokumentation „Aufnahme - Übersicht](../../ingestion/home.md), um weitere Informationen und Links zu anderen Lernressourcen zu erhalten.
 
 ## Schnellstartpfade
 
@@ -33,7 +33,7 @@ Verwenden Sie die [!DNL Query Editor] für Analysen, Datenexploration und die En
 
 ### Abfrage-Service-API
 
-Verwenden Sie die Abfrage-Service-API für automatisierte Workflows, die Verwaltung von Abfragevorlagen und programmgesteuerte Integrationen. Ausführliche Anweisungen zur Verwendung [ Abfrage-Service-API finden ](../api/getting-started.md) im Query Service-Entwicklerhandbuch .
+Verwenden Sie die Abfrage-Service-API für automatisierte Workflows, die Verwaltung von Abfragevorlagen und programmgesteuerte Integrationen. Ausführliche Anweisungen zur Verwendung [&#x200B; Abfrage-Service-API finden &#x200B;](../api/getting-started.md) im Query Service-Entwicklerhandbuch .
 
 ## Nächste Schritte
 
