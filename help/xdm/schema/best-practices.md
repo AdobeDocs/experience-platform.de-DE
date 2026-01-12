@@ -217,7 +217,7 @@ Experience Platform bietet mehrere vordefinierte XDM-Schemafeldgruppen zur Erfas
 * Adobe Campaign
 * Adobe Target
 
-Beispielsweise können Sie die [[!UICONTROL Adobe Analytics ExperienceEvent Template] Feldergruppe verwenden, ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) Ihren XDM-Schemata [!DNL Analytics] Felder zuzuordnen. Je nach den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese von Adobe bereitgestellten Feldergruppen in Ihren Schemata verwenden.
+Beispielsweise können Sie die [[!UICONTROL Adobe Analytics ExperienceEvent Template] Feldergruppe verwenden, &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) Ihren XDM-Schemata [!DNL Analytics] Felder zuzuordnen. Je nach den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese von Adobe bereitgestellten Feldergruppen in Ihren Schemata verwenden.
 
 ![Ein Schemadiagramm für die [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
 
@@ -237,7 +237,7 @@ Wenn Sie Daten in den Data Lake aufnehmen, wird die Datenvalidierung nur für ei
 >
 >Die Validierung gilt nicht für verschachtelte Spalten. Wenn sich das Feldformat in einer Array-Spalte befindet, werden die Daten nicht validiert.
 
-Um Einschränkungen für ein Feld festzulegen, wählen Sie das Feld im Schema-Editor aus, um die **[!UICONTROL Field properties]** Seitenleiste zu öffnen. Genaue Beschreibungen der [ Felder finden Sie in der Dokumentation ](../ui/fields/overview.md#type-specific-properties)Typspezifische Feldeigenschaften“.
+Um Einschränkungen für ein Feld festzulegen, wählen Sie das Feld im Schema-Editor aus, um die **[!UICONTROL Field properties]** Seitenleiste zu öffnen. Genaue Beschreibungen der [&#x200B; Felder finden Sie in der Dokumentation &#x200B;](../ui/fields/overview.md#type-specific-properties)Typspezifische Feldeigenschaften“.
 
 ![Der Schema-Editor mit den Einschränkungsfeldern, die in der [!UICONTROL Field properties] Seitenleiste hervorgehoben sind.](../images/best-practices/data-validation-fields.png)
 
@@ -271,7 +271,7 @@ Verwenden Sie die folgenden Best Practices, um die versehentliche Wiederverwendu
 
 >[!TIP]
 >
->Weitere Anleitungen zu profilaktivierten Schemas [ Einschränkungen finden ](../troubleshooting-guide.md#delete-profile-enabled) im Handbuch zur XDM-.
+>Weitere Anleitungen zu profilaktivierten Schemas [&#x200B; Einschränkungen finden &#x200B;](../troubleshooting-guide.md#delete-profile-enabled) im Handbuch zur XDM-.
 
 ## Nächste Schritte
 
