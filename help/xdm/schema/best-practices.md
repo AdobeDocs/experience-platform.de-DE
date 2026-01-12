@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 7a763a978443c0a074e6368448320056759f72bb
 workflow-type: tm+mt
-source-wordcount: '3236'
-ht-degree: 56%
+source-wordcount: '3429'
+ht-degree: 49%
 
 ---
 
@@ -83,10 +83,10 @@ Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Enti
 
 | Kunden-ID | Typ | Produkt-ID | Menge | Zeitstempel |
 | --- | --- | --- | --- | --- |
-| 1234567 | Hinzufügen | 275098 | 2 | 1. Oktober, 10:32 Uhr |
-| 1234567 | Entfernen | 275098 | 1 | 1. Oktober, 10:33 Uhr |
-| 1234567 | Hinzufügen | 486502 | 1 | 1. Oktober, 10:41 Uhr |
-| 1234567 | Hinzufügen | 910482 | 5 | 3. Oktober, 14:15 Uhr |
+| 1234567 | Hinzufügen | 275098 | 2 | &#x200B;1. Oktober:32 10 Uhr |
+| 1234567 | Entfernen | 275098 | 1 | &#x200B;1. Oktober:33 10 Uhr |
+| 1234567 | Hinzufügen | 486502 | 1 | &#x200B;1. Oktober:41 10 Uhr |
+| 1234567 | Hinzufügen | 910482 | 5 | &#x200B;3. Oktober, 14:1500 Uhr |
 
 {style="table-layout:auto"}
 
@@ -217,9 +217,9 @@ Experience Platform bietet mehrere vordefinierte XDM-Schemafeldgruppen zur Erfas
 * Adobe Campaign
 * Adobe Target
 
-Beispielsweise können Sie die [[!UICONTROL Adobe Analytics ExperienceEvent-Vorlage] Feldergruppe](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) verwenden, um [!DNL Analytics] Felder Ihren XDM-Schemata zuzuordnen. Je nach den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese von Adobe bereitgestellten Feldergruppen in Ihren Schemata verwenden.
+Beispielsweise können Sie die [[!UICONTROL Adobe Analytics ExperienceEvent Template] Feldergruppe verwenden, ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) Ihren XDM-Schemata [!DNL Analytics] Felder zuzuordnen. Je nach den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese von Adobe bereitgestellten Feldergruppen in Ihren Schemata verwenden.
 
-![Schemadiagramm der [!UICONTROL Adobe Analytics ExperienceEvent-Vorlage].](../images/best-practices/analytics-field-group.png)
+![Ein Schemadiagramm für die [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
 
 Feldergruppen der Adobe-Anwendungen weisen automatisch eine standardmäßige primäre Identität über das Feld `identityMap` zu, ein systemgeneriertes, schreibgeschütztes Objekt, das standardmäßige Identitätswerte für einzelne Kundinnen und Kunden zuordnet.
 
@@ -231,35 +231,55 @@ Bei Adobe Analytics ist ECID die standardmäßige primäre Identität. Wenn ein 
 
 ## Datenvalidierungsfelder {#data-validation-fields}
 
-Wenn Sie Daten in den Data Lake aufnehmen, wird die Datenvalidierung nur für eingeschränkte Felder erzwungen. Um ein bestimmtes Feld während einer Batch-Aufnahme zu überprüfen, müssen Sie das Feld im XDM-Schema als eingeschränkt markieren. Um zu verhindern, dass fehlerhafte Daten in Experience Platform aufgenommen werden, wird empfohlen, beim Erstellen der Schemata die Kriterien für die Validierung auf Feldebene zu definieren.
+Wenn Sie Daten in den Data Lake aufnehmen, wird die Datenvalidierung nur für eingeschränkte Felder erzwungen. Um ein bestimmtes Feld während der Batch-Aufnahme zu überprüfen, müssen Sie das Feld im XDM-Schema als eingeschränkt markieren. Um zu verhindern, dass fehlerhafte Daten in Experience Platform aufgenommen werden, definieren Sie beim Erstellen Ihrer Schemata Ihre Validierungsanforderungen.
 
 >[!IMPORTANT]
 >
 >Die Validierung gilt nicht für verschachtelte Spalten. Wenn sich das Feldformat in einer Array-Spalte befindet, werden die Daten nicht validiert.
 
-Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld aus dem Schema-Editor aus, um die Seitenleiste **[!UICONTROL Feldeigenschaften]** zu öffnen. Genaue Beschreibungen der [&#x200B; Felder finden Sie in der Dokumentation &#x200B;](../ui/fields/overview.md#type-specific-properties)Typspezifische Feldeigenschaften“.
+Um Einschränkungen für ein Feld festzulegen, wählen Sie das Feld im Schema-Editor aus, um die **[!UICONTROL Field properties]** Seitenleiste zu öffnen. Genaue Beschreibungen der [ Felder finden Sie in der Dokumentation ](../ui/fields/overview.md#type-specific-properties)Typspezifische Feldeigenschaften“.
 
-![Der Schema-Editor mit den Einschränkungsfeldern, die in der Seitenleiste [!UICONTROL Feldeigenschaften] hervorgehoben sind.](../images/best-practices/data-validation-fields.png)
+![Der Schema-Editor mit den Einschränkungsfeldern, die in der [!UICONTROL Field properties] Seitenleiste hervorgehoben sind.](../images/best-practices/data-validation-fields.png)
 
 ### Tipps zur Wahrung der Datenintegrität {#data-integrity-tips}
 
-Im Folgenden finden Sie eine Sammlung von Vorschlägen zur Wahrung der Datenintegrität beim Erstellen eines Schemas.
+Die folgenden Vorschläge helfen Ihnen, die Datenintegrität beim Erstellen eines Schemas aufrechtzuerhalten.
 
 * **Primäre Identitäten berücksichtigen**: Bei Adobe-Produkten wie Web SDK, Mobile SDK, Adobe Analytics und Adobe Journey Optimizer dient das Feld `identityMap` häufig als primäre Identität. Vermeiden Sie es, zusätzliche Felder als primäre Identitäten für dieses Schema festzulegen.
-* **Stellen Sie sicher, dass `_id` nicht als Identität verwendet wird**: Das Feld &quot;`_id`&quot; in Erlebnisereignis-Schemata kann nicht als Identität verwendet werden, da es für die Eindeutigkeit von Datensätzen vorgesehen ist.
+* **Stellen Sie sicher, dass `_id` nicht als Identität verwendet wird**: Das Feld &quot;`_id`&quot; in Erlebnisereignisschemata kann nicht als Identität verwendet werden, da es für die Eindeutigkeit von Datensätzen vorgesehen ist.
 * **Längenbeschränkungen festlegen**: Es empfiehlt sich, Mindest- und Höchstlängen für Felder festzulegen, die als Identitäten markiert sind. Eine Warnung Trigger, wenn Sie versuchen, einem Identitätsfeld einen benutzerdefinierten Namespace zuzuweisen, ohne die Begrenzungen der minimalen und maximalen Länge zu erfüllen. Diese Einschränkungen helfen bei der Aufrechterhaltung der Konsistenz und der Datenqualität.
-* **Muster auf konsistente Werte anwenden**: Wenn Ihre Identitätswerte einem bestimmten Muster folgen, sollten Sie die Einstellung **[!UICONTROL Muster]** verwenden, um diese Einschränkung zu erzwingen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.
+* **Muster auf konsistente Werte anwenden**: Wenn Ihre Identitätswerte einem bestimmten Muster folgen, verwenden Sie die **[!UICONTROL Pattern]**, um Einschränkungen durchzusetzen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.
 * **eVars in Analytics-Schemata begrenzen**: Normalerweise sollte ein Analytics-Schema nur über eine eVar verfügen, die als Identität gekennzeichnet ist. Wenn Sie mehr als einen eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.
 * **Eindeutigkeit eines ausgewählten Felds sicherstellen**: Das ausgewählte Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie sie nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identity-Namespaces wie Telefonnummern. Das Markieren eines nicht eindeutigen Felds als Identität könnte zu einem unerwünschten Profilausfall führen.
 * **Mindestlänge der Zeichenfolge überprüfen**: Alle Zeichenfolgenfelder sollten mindestens ein Zeichen lang sein, da Zeichenfolgenwerte niemals leer sein sollten. Null-Werte für nicht erforderliche Felder sind jedoch zulässig. Neue Zeichenfolgenfelder haben standardmäßig eine Mindestlänge von einem Zeichen.
 
+## Verwalten von profilaktivierten Schemata {#managing-profile-enabled-schemas}
+
+In diesem Abschnitt wird erläutert, wie Sie Schemata verwalten, die bereits für das Echtzeit-Kundenprofil aktiviert sind. Nachdem ein Schema aktiviert wurde, können Sie es nicht mehr deaktivieren oder löschen. Sie müssen ermitteln, wie eine weitere Verwendung verhindert und Datensätze verwaltet werden können, die Sie nicht löschen können.
+
+Sobald ein Schema für das Profil aktiviert wurde, kann die Konfiguration nicht mehr rückgängig gemacht werden. Wenn ein Schema nicht mehr verwendet werden soll, benennen Sie es um, um seinen Status zu verdeutlichen und ein Ersatzschema mit der richtigen Struktur und Identitätskonfiguration zu erstellen. Dadurch wird verhindert, dass das veraltete Schema versehentlich wiederverwendet wird, wenn Benutzende neue Datensätze erstellen oder Aufnahme-Workflows konfigurieren.
+
+Systemdatensätze werden manchmal zusammen mit Schemata angezeigt, die für das Echtzeit-Kundenprofil aktiviert sind. Sie können keine Systemdatensätze löschen, auch nicht, wenn das zugehörige Schema veraltet ist. Um eine unbeabsichtigte Verwendung zu verhindern, benennen Sie das veraltete profilaktivierte Schema um und bestätigen Sie, dass keine Aufnahme-Workflows auf den Systemdatensatz verweisen, der an Ort und Stelle verbleibt.
+
+Verwenden Sie die folgenden Best Practices, um die versehentliche Wiederverwendung veralteter profilaktivierter Schemata zu verhindern:
+
+* Verwenden Sie eine eindeutige Namenskonvention, wenn Sie ein Schema verwerfen. Beinhalten Beschriftungen wie „Veraltet“, „Nicht verwenden“ oder ein Versions-Tag.
+* Beenden Sie die Aufnahme von Daten in einen Datensatz basierend auf dem Schema, das Sie einstellen möchten.
+* Erstellen Sie ein neues Schema mit der richtigen Struktur, Identitätskonfiguration und dem richtigen Benennungsmuster.
+* Überprüfen Sie Systemdatensätze, die nicht gelöscht werden können, und stellen Sie sicher, dass keine Aufnahme-Workflows darauf verweisen.
+* Dokumentieren Sie die Änderung intern, damit andere Benutzer verstehen, warum das Schema veraltet ist.
+
+>[!TIP]
+>
+>Weitere Anleitungen zu profilaktivierten Schemas [ Einschränkungen finden ](../troubleshooting-guide.md#delete-profile-enabled) im Handbuch zur XDM-.
+
 ## Nächste Schritte
 
-In diesem Dokument wurden die allgemeinen Richtlinien und Best Practices zum Entwerfen Ihres Datenmodells für Experience Platform behandelt. Zur Zusammenfassung:
+Dieses Dokument enthält allgemeine Richtlinien und Best Practices zum Entwerfen Ihres Datenmodells für Experience Platform. Zur Zusammenfassung:
 
-* Verwenden Sie einen Oben-nach-unten-Ansatz, indem Sie Ihre Datentabellen nach Profil-, Lookup- und Ereigniskategorien sortieren, bevor Sie Ihre Schemata erstellen.
-* Es gibt oft mehrere Ansätze und Optionen beim Entwerfen von Schemata für unterschiedliche Zwecke.
-* Ihr Datenmodell sollte Ihre geschäftlichen Anwendungsfälle wie Segmentierung oder Analyse der Customer Journey unterstützen.
-* Machen Sie Ihre Schemata so einfach wie möglich und fügen Sie nur dann neue Felder hinzu, wenn dies unbedingt erforderlich ist.
+* Sortieren Sie Ihre Datentabellen nach Profil-, Lookup- und Ereigniskategorien, bevor Sie Ihre Schemata erstellen.
+* Auswerten mehrerer Ansätze beim Entwerfen von Schemas für verschiedene Anwendungsfälle.
+* Stellen Sie sicher, dass Ihr Datenmodell Ihre Segmentierungs- oder Kunden-Journey unterstützt.
+* Halten Sie Schemata so einfach wie möglich. Fügen Sie neue Felder nur bei Bedarf hinzu.
 
-Wenn Sie fertig sind, finden Sie im Tutorial zum [Erstellen eines Schemas in der Benutzeroberfläche](../tutorials/create-schema-ui.md) schrittweise Anweisungen zum Erstellen eines Schemas, Zuweisen der entsprechenden Klasse für die Entität und Hinzufügen von Feldern, um diesen Daten zuzuordnen.
+Wenn Sie fertig sind, finden Sie im Tutorial [Erstellen eines Schemas in der Benutzeroberfläche](../tutorials/create-schema-ui.md) schrittweise Anweisungen zur Schemaerstellung, Klassenzuweisung und Feldzuordnung.
