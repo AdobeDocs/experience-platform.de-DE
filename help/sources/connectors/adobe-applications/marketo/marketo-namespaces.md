@@ -2,9 +2,9 @@
 title: B2B-Namespaces und -Schemata
 description: Dieses Dokument bietet einen Überblick über die benutzerdefinierten Namespaces, die beim Erstellen eines B2B-Quell-Connectors erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 5eeb0397ddc96a224919a776f94058ae3a539b69
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1538'
 ht-degree: 12%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 12%
 
 >[!AVAILABILITY]
 >
->Sie müssen Zugriff auf [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) haben, damit Ihre B2B-Schemata im [Echtzeit-Kundenprofil) &#x200B;](../../../../profile/home.md) werden können.
+>- Sie müssen Zugriff auf [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) haben, damit Ihre B2B-Schemata im [Echtzeit-Kundenprofil) ](../../../../profile/home.md) werden können.
+>
+>- Ab Januar 2026 unterstützt Real-Time CDP B2B edition keine (**)** zwischen B2B-Entitäten mehr. Daher werden Sie empfohlen, Ihre B2B-Entitäten zu aktualisieren, um die Standardbeziehungen zu verwenden, die im Handbuch B2B[Namespaces und -Schemata beschrieben ](../../../../rtcdp/schemas/b2b.md).
 
 >[!NOTE]
 >
@@ -29,10 +31,10 @@ In diesem Dokument finden Sie Informationen zum zugrunde liegenden Setup für di
 
 In der folgenden Dokumentation finden Sie vorausgesetzte Informationen zum Einrichten Ihrer [!DNL Postman]-Umgebung zur Unterstützung des B2B-Namespace und des Dienstprogramms zur automatischen Schemaerstellung.
 
-- Sie können den Namespace und die Dienstprogrammsammlung zur automatischen Schemaerstellung sowie die Umgebung aus diesem GitHub[Repository &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
+- Sie können den Namespace und die Dienstprogrammsammlung zur automatischen Schemaerstellung sowie die Umgebung aus diesem GitHub[Repository ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
 - Informationen zur Verwendung von Experience Platform-APIs, einschließlich Details zum Erfassen von Werten für erforderliche Kopfzeilen und zum Lesen von Beispiel-API-Aufrufen, finden Sie im Handbuch [Erste Schritte mit Experience Platform-APIs](../../../../landing/api-guide.md).
 - Informationen zum Generieren Ihrer Anmeldeinformationen für Experience Platform-APIs finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../../landing/api-authentication.md).
-- Informationen zum Einrichten von [!DNL Postman] für Experience Platform-APIs finden Sie im Tutorial zum [&#x200B; von Entwicklerkonsole und  [!DNL Postman]](../../../../landing/postman.md).
+- Informationen zum Einrichten von [!DNL Postman] für Experience Platform-APIs finden Sie im Tutorial zum [ von Entwicklerkonsole und  [!DNL Postman]](../../../../landing/postman.md).
 
 Wenn eine Experience Platform-Entwicklerkonsole und [!DNL Postman] eingerichtet sind, können Sie jetzt damit beginnen, die entsprechenden Umgebungswerte auf Ihre [!DNL Postman] anzuwenden.
 
@@ -40,14 +42,14 @@ Die folgende Tabelle enthält Beispielwerte sowie zusätzliche Informationen zum
 
 | Variable | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Eine eindeutige Kennung, die zum Generieren Ihres `{ACCESS_TOKEN}` verwendet wird. Informationen zum Abrufen Ihrer [&#x200B; finden &#x200B;](../../../../landing/api-authentication.md) im Tutorial zum `{CLIENT_SECRET}` und Zugreifen auf Experience Platform-APIs . | `{CLIENT_SECRET}` |
-| `API_KEY` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Informationen zum Abrufen Ihrer [&#x200B; finden &#x200B;](../../../../landing/api-authentication.md) im Tutorial zum `{API_KEY}` und Zugreifen auf Experience Platform-APIs . | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Das Autorisierungs-Token, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Informationen zum Abrufen Ihrer [&#x200B; finden &#x200B;](../../../../landing/api-authentication.md) im Tutorial zum `{ACCESS_TOKEN}` und Zugreifen auf Experience Platform-APIs . | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Eine eindeutige Kennung, die zum Generieren Ihres `{ACCESS_TOKEN}` verwendet wird. Informationen zum Abrufen Ihrer [ finden ](../../../../landing/api-authentication.md) im Tutorial zum `{CLIENT_SECRET}` und Zugreifen auf Experience Platform-APIs . | `{CLIENT_SECRET}` |
+| `API_KEY` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Informationen zum Abrufen Ihrer [ finden ](../../../../landing/api-authentication.md) im Tutorial zum `{API_KEY}` und Zugreifen auf Experience Platform-APIs . | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Das Autorisierungs-Token, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Informationen zum Abrufen Ihrer [ finden ](../../../../landing/api-authentication.md) im Tutorial zum `{ACCESS_TOKEN}` und Zugreifen auf Experience Platform-APIs . | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | In Bezug auf [!DNL Marketo] ist dieser Wert fest und wird immer auf `ent_dataservices_sdk` festgelegt. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | Der `global`-Container enthält alle standardmäßigen von Adobe und Experience Platform bereitgestellten Partnerklassen, Schemafeldgruppen, Datentypen und Schemata. In Bezug auf [!DNL Marketo] ist dieser Wert fest und wird immer auf `global` festgelegt. | `global` |
 | `TECHNICAL_ACCOUNT_ID` | Eine Berechtigung, die zur Integration mit Adobe I/O verwendet wird. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Das Identity Management-System (IMS) stellt das Framework für die Authentifizierung für Adobe-Services bereit. In Bezug auf [!DNL Marketo] ist dieser Wert fest und wird immer auf `ims-na1.adobelogin.com` festgelegt. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | Eine Unternehmenseinheit, die Produkte und Dienstleistungen besitzen oder lizenzieren und ihren Mitgliedern Zugang gewähren kann. Anweisungen zum Abrufen Ihrer [&#x200B; finden  [!DNL Postman]](../../../../landing/postman.md) im Tutorial zum Einrichten `{ORG_ID}` Entwicklerkonsole und . | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | Eine Unternehmenseinheit, die Produkte und Dienstleistungen besitzen oder lizenzieren und ihren Mitgliedern Zugang gewähren kann. Anweisungen zum Abrufen Ihrer [ finden  [!DNL Postman]](../../../../landing/postman.md) im Tutorial zum Einrichten `{ORG_ID}` Entwicklerkonsole und . | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Der Name der virtuellen Sandbox-Partition, die Sie verwenden. | `prod` |
 | `TENANT_ID` | Eine ID, mit der sichergestellt wird, dass die von Ihnen erstellten Ressourcen über den richtigen Namespace verfügen und in Ihrer Organisation enthalten sind. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Der URL-Endpunkt, an den Sie API-Aufrufe durchführen. Dieser Wert ist fest und immer auf `http://platform.adobe.io/` festgelegt. | `http://platform.adobe.io/` |
@@ -70,7 +72,7 @@ Bei einer erfolgreichen Anfrage werden die für B2B erforderlichen Namespaces un
 
 ## B2B-Namespaces
 
-Identity-Namespaces sind eine Komponente von [[!DNL Identity Service]](../../../../identity-service/home.md), die dazu dienen, den Kontext einer Identität zu unterscheiden. Eine vollqualifizierte Identität enthält einen Identitätswert und einen Namespace. Weitere Informationen finden [&#x200B; in der &#x200B;](../../../../identity-service/features/namespaces.md) zu Namespaces .
+Identity-Namespaces sind eine Komponente von [[!DNL Identity Service]](../../../../identity-service/home.md), die dazu dienen, den Kontext einer Identität zu unterscheiden. Eine vollqualifizierte Identität enthält einen Identitätswert und einen Namespace. Weitere Informationen finden [ in der ](../../../../identity-service/features/namespaces.md) zu Namespaces .
 
 B2B-Namespaces werden in der primären Identität der Entität verwendet.
 
@@ -124,7 +126,7 @@ Die folgende Tabelle enthält Informationen zur zugrunde liegenden Einrichtung v
 
 ## Nächste Schritte
 
-Informationen zum Verbinden Ihrer [!DNL Marketo] mit Experience Platform finden Sie im Tutorial zum [&#x200B; eines Marketo-Quell-Connectors in der Benutzeroberfläche](../../../tutorials/ui/create/adobe-applications/marketo.md).
+Informationen zum Verbinden Ihrer [!DNL Marketo] mit Experience Platform finden Sie im Tutorial zum [ eines Marketo-Quell-Connectors in der Benutzeroberfläche](../../../tutorials/ui/create/adobe-applications/marketo.md).
 
 <!--
 
