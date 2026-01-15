@@ -22,12 +22,12 @@ Dieser Connector ist im Zielkatalog für Kundinnen und Kunden verfügbar, die Re
 Um diese Zielverbindung zu verwenden, stellen Sie sicher, dass Sie Zugriff haben auf:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Mit Zugriff auf die Entwicklerkonsole können Sie Informationen zu Service-Konten und Anmeldedaten anzeigen, die zum [&#x200B; (Abschließen der Konfiguration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) der Erweiterung in Adobe Commerce erforderlich sind.
-- [Adobe Commerce-Version 2.4.4 oder höher](https://business.adobe.com/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Mit Zugriff auf die Entwicklerkonsole können Sie Informationen zu Service-Konten und Anmeldedaten anzeigen, die zum [&#x200B; (Abschließen der Konfiguration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=de#configure-the-extension) der Erweiterung in Adobe Commerce erforderlich sind.
+- [Adobe Commerce-Version 2.4.4 oder höher](https://business.adobe.com/de/products/commerce.html)
 
 Erstellen Sie in Experience Platform Folgendes:
 
-- [Schema](../../../xdm/schema/composition.md). Das Schema, das Sie erstellen, repräsentiert die Daten, die Sie aus Adobe Commerce aufnehmen möchten. [Erfahren Sie mehr](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) darüber, wie man ein Schema erstellt, das Commerce-spezifische Feldergruppen enthält.
+- [Schema](../../../xdm/schema/composition.md). Das Schema, das Sie erstellen, repräsentiert die Daten, die Sie aus Adobe Commerce aufnehmen möchten. [Erfahren Sie mehr](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=de) darüber, wie man ein Schema erstellt, das Commerce-spezifische Feldergruppen enthält.
 - [Datensatz](../../../catalog/datasets/user-guide.md#create). Ein Datensatz ist ein Speicher- und Verwaltungskonstrukt für eine Sammlung von Daten. Sie erstellen diesen Datensatz aus dem Schema, das Sie oben erstellt haben.
 - [Datenstrom](../../../datastreams/overview.md#create). ID, die den Datenfluss von Adobe Experience Platform zu anderen Adobe-DX-Produkten ermöglicht. Diese ID muss mit einer bestimmten Website in Ihrer jeweiligen Adobe Commerce-Instanz verknüpft sein. Wenn Sie diesen Datenstrom erstellen, geben Sie das von Ihnen oben erstellte XDM-Schema an.
 
@@ -71,7 +71,7 @@ Anweisungen [&#x200B; Aktivieren von Zielgruppen für das &#x200B;](../../ui/act
 
 ## Nächste Schritte in [!DNL Adobe Commerce]
 
-Nachdem Sie das [!DNL Commerce] Ziel in Experience Platform konfiguriert haben, müssen Sie die [!DNL Audience Activation] in [!DNL Commerce] installieren und den [!DNL Commerce Admin] konfigurieren, um die von Ihnen erstellten Real-Time CDP-Zielgruppen zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html).
+Nachdem Sie das [!DNL Commerce] Ziel in Experience Platform konfiguriert haben, müssen Sie die [!DNL Audience Activation] in [!DNL Commerce] installieren und den [!DNL Commerce Admin] konfigurieren, um die von Ihnen erstellten Real-Time CDP-Zielgruppen zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=de).
 
 ## Validieren von Zielgruppen-Aktivierung in Commerce {#exported-data}
 
