@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Grundlagen der Schemakomposition
 description: Erfahren Sie mehr über Experience-Datenmodell-Schemas (XDM) und die Bausteine, Prinzipien und Best Practices zum Erstellen von Schemas in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
+source-git-commit: 5b59d491834854829a89a240ccd612367cf558d4
 workflow-type: tm+mt
-source-wordcount: '4308'
-ht-degree: 25%
+source-wordcount: '4291'
+ht-degree: 24%
 
 ---
 
 # Grundlagen der Schema-Komposition
 
-Erfahren Sie mehr über Experience-Datenmodell-Schemas (XDM) und die Bausteine, Prinzipien und Best Practices zum Erstellen von Schemas in Adobe Experience Platform. Allgemeine Informationen zu XDM und seiner Verwendung in [!DNL Experience Platform] finden Sie in der [XDM-Systemübersicht](../home.md).
+Erfahren Sie mehr über Experience-Datenmodell-Schemas (XDM) und die Bausteine, Prinzipien und Best Practices zum Erstellen von Schemas in Adobe Experience Platform. Allgemeine Informationen zu XDM und dessen Verwendung in Experience Platform finden Sie in der [XDM-System - Übersicht](../home.md).
 
 ## Verstehen von Schemata {#understanding-schemas}
 
@@ -23,7 +23,7 @@ Zusätzlich zur Beschreibung der Datenstruktur wenden Schemata Einschränkungen 
 
 Experience Platform erhält diese semantische Normalisierung mithilfe von Schemata aufrecht. Schemata sind die Standardmethode zur Beschreibung von Daten in Experience Platform. Dadurch können alle Daten, die mit Schemata konform sind, innerhalb einer Organisation ohne Konflikte wiederverwendet oder sogar von mehreren Organisationen gemeinsam genutzt werden.
 
-XDM-Schemata eignen sich ideal zum Speichern großer Mengen komplexer Daten in einem eigenständigen Format. Weitere Informationen dazu, wie XDM dies [, finden Sie in den Abschnitten &#x200B;](#embedded)Eingebettete Objekte[&#x200B; und Big Data](#big-data) im Anhang zu diesem Dokument.
+XDM-Schemata eignen sich ideal zum Speichern großer Mengen komplexer Daten in einem eigenständigen Format. Weitere Informationen dazu, wie XDM dies [, finden Sie in den Abschnitten ](#embedded)Eingebettete Objekte[ und Big Data](#big-data) im Anhang zu diesem Dokument.
 
 ### Schema-basierte Workflows in Experience Platform {#schema-based-workflows}
 
@@ -44,7 +44,7 @@ Daten, die in Experience Platform verwendet werden sollen, sind in zwei Verhalte
 * **Aufzeichnen von Daten**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt könnte eine Organisation oder eine Einzelperson sein.
 * **Zeitreihendaten**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
 
-Alle XDM-Schemata beschreiben Daten, die als Eintrag oder Zeitreihe kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen werden nachstehend in diesem Dokument detailliert beschrieben.
+Alle XDM-Schemata beschreiben Daten, die als Eintrag oder Zeitreihe kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei seiner ersten Erstellung zugewiesen wird.
 
 Sowohl Schemata der Einträge als auch der Zeitreihen enthalten eine Zuordnung der Identitäten (`xdm:identityMap`). Dieses Feld enthält die Identitätsdarstellung eines Subjekts, die aus den als „Identität“ markierten Feldern gezogen wird, wie im nächsten Abschnitt beschrieben.
 
@@ -61,7 +61,7 @@ Um diesen Prozess zu unterstützen, können Schlüsselfelder in Ihren Schemata a
 
 Zu den Feldern, die häufig als &quot;[!UICONTROL Identity]&quot; gekennzeichnet sind, gehören: E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID oder andere eindeutige ID-Felder. Erwägen Sie alle eindeutigen Kennungen, die für Ihr Unternehmen spezifisch sind, da sie auch gute &quot;[!UICONTROL Identity]&quot; Felder sein können.
 
-Weitere Informationen dazu, wie Sie Ihren Kunden mit Identitätsinformationen digitale Erlebnisse bereitstellen können, finden Sie unter [Identity Service - Übersicht](../../identity-service/home.md). Tipps zur Verwendung von Identitäten beim Erstellen [&#x200B; Schemas finden Sie im Dokument Best Practices für die Datenmodellierung &#x200B;](./best-practices.md#data-validation-fields).
+Weitere Informationen dazu, wie Sie Ihren Kunden mit Identitätsinformationen digitale Erlebnisse bereitstellen können, finden Sie unter [Identity Service - Übersicht](../../identity-service/home.md). Tipps zur Verwendung von Identitäten beim Erstellen [ Schemas finden Sie im Dokument Best Practices für die Datenmodellierung ](./best-practices.md#data-validation-fields).
 
 Es gibt zwei Möglichkeiten, Identitätsdaten an Experience Platform zu senden:
 
@@ -76,9 +76,9 @@ Der Hauptnachteil der Verwendung von `identityMap` besteht darin, dass Identitä
 
 >[!NOTE]
 >
->Ein Schema, das `identityMap` verwendet, kann in einer Beziehung als Quellschema, aber nicht als Referenzschema verwendet werden. Dies liegt daran, dass alle Referenzschemata eine sichtbare Identität aufweisen müssen, die in einem Referenzfeld innerhalb des Quellschemas zugeordnet werden kann. Weitere Informationen zu den Anforderungen von Quell[&#x200B; und Referenzschemas finden &#x200B;](../tutorials/relationship-ui.md) im Handbuch zur Benutzeroberfläche unter Beziehungen .
+>Ein Schema, das `identityMap` verwendet, kann in einer Beziehung als Quellschema, aber nicht als Referenzschema verwendet werden. Dies liegt daran, dass alle Referenzschemata eine sichtbare Identität aufweisen müssen, die in einem Referenzfeld innerhalb des Quellschemas zugeordnet werden kann. Weitere Informationen zu den Anforderungen von Quell[ und Referenzschemas finden ](../tutorials/relationship-ui.md) im Handbuch zur Benutzeroberfläche unter Beziehungen .
 
-Identitätszuordnungen können jedoch nützlich sein, wenn es eine variable Anzahl von Identitäten für ein Schema gibt oder Sie Daten aus Quellen einbringen, die Identitäten speichern (z. B. [!DNL Airship] oder Adobe Audience Manager). Darüber hinaus sind Identitätszuordnungen erforderlich, wenn Sie die [Adobe Experience Platform Mobile SDK verwenden](https://developer.adobe.com/client-sdks/home/).
+Identitätszuordnungen können jedoch nützlich sein, wenn es eine variable Anzahl von Identitäten für ein Schema gibt oder Sie Daten aus Quellen einbringen, die Identitäten speichern (z. B. [!DNL Airship] oder Adobe Audience Manager). Darüber hinaus sind Identitätszuordnungen erforderlich, wenn Sie die [Experience Platform Mobile SDK verwenden](https://developer.adobe.com/client-sdks/home/).
 
 Ein Beispiel für eine einfache Identitätszuordnung würde wie folgt aussehen:
 
@@ -113,7 +113,7 @@ Wie im obigen Beispiel gezeigt, stellt jeder Schlüssel im `identityMap`-Objekt 
 
 >[!NOTE]
 >
->Für jeden Identitätswert kann auch ein boolescher Wert angegeben werden, der angibt, ob der Wert eine primäre Identität (`primary`) ist. Sie müssen nur primäre Identitäten für Schemata festlegen, die in [!DNL Real-Time Customer Profile] verwendet werden sollen. Weitere Informationen finden Sie im Abschnitt [Vereinigungsschemata](#union) .
+>Für jeden Identitätswert kann auch ein boolescher Wert angegeben werden, der angibt, ob der Wert eine primäre Identität (`primary`) ist. Sie müssen nur primäre Identitäten für Schemata festlegen, die in [!DNL Real-Time Customer Profile] verwendet werden sollen.
 
 ### Prinzipien der Schemaentwicklung {#evolution}
 
@@ -123,7 +123,7 @@ Da die Beibehaltung der Abwärtskompatibilität für die Schemaentwicklung von e
 
 >[!NOTE]
 >
->Sie können eine grundlegende Änderung an einem Schema nur vornehmen, wenn es noch nicht zur Aufnahme von Daten in Experience Platform verwendet wurde und noch nicht für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde. Sobald das Schema jedoch in [!DNL Experience Platform] verwendet wurde, muss es der additiven Versionierungsrichtlinie entsprechen.
+>Sie können eine grundlegende Änderung an einem Schema nur vornehmen, wenn es noch nicht zur Aufnahme von Daten in Experience Platform verwendet wurde und noch nicht für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde. Sobald das Schema jedoch in Experience Platform verwendet wurde, muss es der Richtlinie für die additive Versionierung entsprechen.
 
 In der folgenden Tabelle ist aufgeführt, welche Änderungen beim Bearbeiten von Schemata, Feldergruppen und Datentypen unterstützt werden:
 
@@ -148,22 +148,22 @@ Wenn ein Feld zur Aufnahme von Daten verwendet wurde und ursprünglich nicht wie
 Beachten Sie beim Festlegen eines zuvor optionalen Felds nach Bedarf Folgendes:
 
 1. Wenn Sie historische Daten abfragen und die Ergebnisse in einen neuen Datensatz schreiben, schlagen einige Zeilen fehl, da sie Nullwerte für das erforderliche Feld enthalten.
-1. Wenn das Feld am [Echtzeit-Kundenprofil](../../profile/home.md) beteiligt ist und Sie Daten exportieren, bevor Sie sie nach Bedarf festlegen, kann es für einige Profile null sein.
-1. Sie können die Schema Registry-API verwenden, um ein Änderungsprotokoll mit Zeitstempel für alle XDM-Ressourcen in Experience Platform anzuzeigen, einschließlich neuer erforderlicher Felder. Weitere Informationen finden Sie im Handbuch zum [Endpunkt &#x200B;](../api/audit-log.md)Administratorprotokoll“.
+1. Wenn das Feld am Echtzeit-Kundenprofil teilnimmt und Sie Daten exportieren, bevor Sie sie nach Bedarf festlegen, kann es für einige Profile null sein.
+1. Sie können die Schema Registry-API verwenden, um ein Änderungsprotokoll mit Zeitstempel für alle XDM-Ressourcen in Experience Platform anzuzeigen, einschließlich neuer erforderlicher Felder. Weitere Informationen finden Sie im Handbuch zum [Endpunkt ](../api/audit-log.md)Administratorprotokoll“.
 
 ### Schemata und Datenerfassung
 
-Um Daten in die Experience Platform aufnehmen zu können, muss zunächst ein Datensatz erstellt werden. Datensätze sind die Bausteine für die Datenumwandlung und das Tracking für [[!DNL Catalog Service]](../../catalog/home.md) und stellen im Allgemeinen Tabellen oder Dateien dar, die aufgenommene Daten enthalten. Alle Datensätze basieren auf vorhandenen XDM-Schemata, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen hierzu finden Sie in der Übersicht über die [Datenerfassung in Adobe Experience Platform](../../ingestion/home.md).
+Um Daten in die Experience Platform aufnehmen zu können, muss zunächst ein Datensatz erstellt werden. Datensätze sind die Bausteine für die Datenumwandlung und das Tracking für [[!DNL Catalog Service]](../../catalog/home.md) und stellen im Allgemeinen Tabellen oder Dateien dar, die aufgenommene Daten enthalten. Alle Datensätze basieren auf vorhandenen XDM-Schemata, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen finden Sie in der Übersicht zur Datenaufnahme [ ](../../ingestion/home.md)Experience Platform .
 
 ## Bausteine eines Schemas {#schema-building-blocks}
 
-Die Experience Platform verwendet einen Kompositionsansatz, bei dem Standardbausteine kombiniert werden, um Schemata zu erstellen. Dieser Ansatz fördert die Wiederverwendbarkeit vorhandener Komponenten und treibt die Standardisierung in der gesamten Branche voran, um Anbieterschemas und Komponenten in [!DNL Experience Platform] zu unterstützen.
+Die Experience Platform verwendet einen Kompositionsansatz, bei dem Standardbausteine kombiniert werden, um Schemata zu erstellen. Dieser Ansatz fördert die Wiederverwendbarkeit bestehender Komponenten und treibt die Standardisierung in der gesamten Branche voran, um Anbieterschemata und -komponenten in Experience Platform zu unterstützen.
 
 Schemata werden nach folgender Formel zusammengestellt:
 
-**Klasse + Schemafeldgruppe&ast; = XDM-Schema**
+**Klasse + Schemafeldgruppe&amp;ast; = XDM-Schema**
 
-&map;ast;Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Dies bedeutet, dass Sie ein Datensatzschema erstellen können, ohne Feldergruppen zu verwenden.
+&amp;map;ast;Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Dies bedeutet, dass Sie ein Datensatzschema erstellen können, ohne Feldergruppen zu verwenden.
 
 ### Klasse {#class}
 
@@ -179,7 +179,7 @@ Schemata werden nach folgender Formel zusammengestellt:
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemata, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
-Die Klasse eines Schemas bestimmt, welche Feldergruppen für die Verwendung in diesem Schema geeignet sind. Weitere Informationen hierzu finden Sie im [&#x200B; Abschnitt &#x200B;](#field-group).
+Die Klasse eines Schemas bestimmt, welche Feldergruppen für die Verwendung in diesem Schema geeignet sind.
 
 Adobe bietet mehrere standardmäßige XDM-Klassen („Kern„). Zwei dieser Klassen, [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent], sind für fast alle nachgelagerten Experience Platform-Prozesse erforderlich. Zusätzlich zu diesen Kernklassen können Sie auch eigene benutzerdefinierte Klassen erstellen, um spezifischere Anwendungsfälle für Ihre Organisation zu beschreiben. Benutzerdefinierte Klassen werden von einem Unternehmen definiert, wenn keine von Adobe definierten Kernklassen verfügbar sind, um einen eindeutigen Anwendungsfall zu beschreiben.
 
@@ -211,9 +211,9 @@ Um beispielsweise Details wie &quot;[!UICONTROL First Name]&quot; und &quot;[!UI
 
 >[!NOTE]
 >
->Es wird dringend empfohlen, in Ihren Schemata nach Möglichkeit Standardfeldgruppen zu verwenden, da diese Felder von Experience Platform-Services implizit verstanden werden und eine größere Konsistenz bei der Verwendung über [!DNL Experience Platform] hinweg gewährleisten.
+>Es wird dringend empfohlen, in Ihren Schemata nach Möglichkeit Standardfeldgruppen zu verwenden, da diese Felder von Experience Platform-Services implizit verstanden werden und eine größere Konsistenz bei der Verwendung über Experience Platform-Komponenten hinweg gewährleisten.
 >
->Felder, die von Standardkomponenten bereitgestellt werden (z. B. „Vorname“ und „E-Mail-Adresse„), enthalten über grundlegende skalare Feldtypen hinaus hinzugefügte Konnotationen. Sie weisen [!DNL Experience Platform] darauf hin, dass sich alle Felder mit demselben Datentyp gleich verhalten. Dieses Verhalten ist konsistent, unabhängig davon, woher die Daten kommen oder in welchem [!DNL Experience Platform]-Service die Daten verwendet werden.
+>Felder, die von Standardkomponenten bereitgestellt werden (z. B. „Vorname“ und „E-Mail-Adresse„), enthalten über grundlegende skalare Feldtypen hinaus hinzugefügte Konnotationen. Sie teilen Experience Platform mit, dass sich alle Felder mit demselben Datentyp gleich verhalten. Dieses Verhalten ist konsistent, unabhängig davon, woher die Daten kommen oder in welchem Experience Platform-Service die Daten verwendet werden.
 
 Denken Sie daran, dass Schemata aus „null oder mehr“ Feldergruppen bestehen. Dies bedeutet, dass Sie ein gültiges Schema erstellen können, ohne überhaupt Feldergruppen zu verwenden.
 
@@ -225,7 +225,7 @@ Die aktuellste Liste der verfügbaren Standard-XDM-Feldergruppen finden Sie im [
 
 >[!NOTE]
 >
-> Standard-XDM-Feldergruppen entwickeln sich immer weiter, und einige Feldergruppen werden nicht mehr unterstützt. Die aktuellste Liste veralteter Feldergruppen finden Sie im Abschnitt [veraltete Feldergruppen“ &#x200B;](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) offiziellen XDM-Repository.
+> Standard-XDM-Feldergruppen entwickeln sich immer weiter, und einige Feldergruppen werden nicht mehr unterstützt. Die am häufigsten aktualisierte Liste verworfener Feldergruppen finden Sie im Abschnitt [verworfene Feldergruppen](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) im offiziellen XDM-Repository.
 
 ### Datentyp {#data-type}
 
@@ -245,13 +245,13 @@ Die aktuellste Liste der verfügbaren Standard-XDM-Datentypen finden Sie im [off
 
 >[!NOTE]
 >
-> Standard-XDM-Datentypen entwickeln sich immer weiter, und einige Datentypen werden nicht mehr unterstützt. Die aktuellste Liste veralteter Datentypen finden Sie im Abschnitt [veraltete Datentypen](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) im offiziellen XDM-Repository.
+> Standard-XDM-Datentypen entwickeln sich immer weiter, und einige Datentypen werden nicht mehr unterstützt. Die am häufigsten aktualisierte Liste veralteter Datentypen finden Sie im Abschnitt [Veraltete Datentypen](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) im offiziellen XDM-Repository.
 
 ### Feld {#field}
 
-Ein Feld ist der grundlegendste Baustein eines Schemas. Felder bieten Einschränkungen hinsichtlich des Datentyps, den sie enthalten können, indem sie einen bestimmten Datentyp definieren. Diese grundlegenden Datentypen definieren ein einzelnes Feld, während die [Datentypen](#data-type) zuvor erwähnten es Ihnen ermöglichen, mehrere Unterfelder zu definieren und dieselbe Struktur mit mehreren Feldern in verschiedenen Schemata wiederzuverwenden. Zusätzlich zur Definition des „Datentyps“ eines Feldes als einen der in der Registrierung definierten Datentypen unterstützt die Experience Platform also grundlegende Skalartypen wie:
+Ein Feld ist der grundlegendste Baustein eines Schemas. Felder bieten Einschränkungen hinsichtlich des Datentyps, den sie enthalten können, indem sie einen bestimmten Datentyp definieren. Diese grundlegenden Datentypen definieren ein einzelnes Feld, während die zuvor erwähnten Datentypen es Ihnen ermöglichen, mehrere Unterfelder zu definieren und dieselbe Struktur mit mehreren Feldern in verschiedenen Schemata wiederzuverwenden. Zusätzlich zur Definition des „Datentyps“ eines Feldes als einen der in der Registrierung definierten Datentypen unterstützt die Experience Platform also grundlegende Skalartypen wie:
 
-* Zeichenfolge
+* String
 * Ganzzahl
 * Double
 * Boolesch
@@ -274,11 +274,11 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 
 >[!NOTE]
 >
->Der Feldtyp „Zuordnung“ ermöglicht Schlüssel-Wert-Paardaten, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Zuordnungen finden Sie in standardmäßigen XDM-Klassen und -Feldergruppen. Sie können aber auch benutzerdefinierte Zuordnungen definieren. Weitere Informationen finden Sie im API[Tutorial zum Definieren benutzerdefinierter &#x200B;](../tutorials/custom-fields-api.md#custom-maps) oder im Handbuch [Definieren von Zuordnungsfeldern in &#x200B;](../ui/fields/map.md) Benutzeroberfläche“.
+>Der Feldtyp „Zuordnung“ ermöglicht Schlüssel-Wert-Paardaten, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Zuordnungen finden Sie in standardmäßigen XDM-Klassen und -Feldergruppen. Sie können aber auch benutzerdefinierte Zuordnungen definieren. Weitere Informationen finden Sie im API[Tutorial zum Definieren benutzerdefinierter ](../tutorials/custom-fields-api.md#custom-maps) oder im Handbuch [Definieren von Zuordnungsfeldern in ](../ui/fields/map.md) Benutzeroberfläche“.
 
 ## Kompositionsbeispiel {#composition-example}
 
-Schemata werden mithilfe eines Kompositionsmodells erstellt und stellen das Format und die Struktur von Daten dar, die in [!DNL Experience Platform] aufgenommen werden sollen. Wie bereits erwähnt, bestehen diese Schemata aus einer Klasse und keiner oder mehreren Feldergruppen, die mit dieser Klasse kompatibel sind.
+Schemata werden mithilfe eines Kompositionsmodells erstellt und stellen das Format und die Struktur von Daten dar, die in Experience Platform aufgenommen werden sollen. Wie bereits erwähnt, bestehen diese Schemata aus einer Klasse und keiner oder mehreren Feldergruppen, die mit dieser Klasse kompatibel sind.
 
 Ein Schema, das Käufe in einem Einzelhandelsgeschäft beschreibt, könnte beispielsweise &quot;[!UICONTROL Store Transactions]&quot; heißen. Das Schema implementiert die [!DNL XDM ExperienceEvent]-Klasse in Kombination mit der standardmäßigen [!UICONTROL Commerce]-Feldergruppe und einer benutzerdefinierten [!UICONTROL Product Info]-Feldergruppe.
 
@@ -294,7 +294,7 @@ Während Experience Platform es Ihnen ermöglicht, Schemata für bestimmte Anwen
 
 ![Ein Vereinigungsschema-Flussdiagramm, das die Felder darstellt, aus denen sie bestehen.](../images/schema-composition/union.png)
 
-Wenn Sie ein Schema für die Verwendung mit [!DNL Real-Time Customer Profile] aktivieren, wird es in die Vereinigung für diesen Klassentyp aufgenommen. [!DNL Profile] bietet zuverlässige, zentralisierte Profile von Kundenattributen und eine Darstellung jedes Ereignisses mit Zeitstempel, das ein Kunde über eines der in [!DNL Experience Platform] integrierten Systeme hatte. [!DNL Profile] verwendet die Vereinigungsansicht, um diese Daten darzustellen und eine ganzheitliche Ansicht jedes einzelnen Kunden bereitzustellen.
+Wenn Sie ein Schema für die Verwendung mit [!DNL Real-Time Customer Profile] aktivieren, wird es in die Vereinigung für diesen Klassentyp aufgenommen. [!DNL Profile] bietet zuverlässige, zentralisierte Profile von Kundenattributen und eine Darstellung jedes Ereignisses mit Zeitstempel, das ein Kunde in einem mit Experience Platform integrierten System hatte. [!DNL Profile] verwendet die Vereinigungsansicht, um diese Daten darzustellen und eine ganzheitliche Ansicht jedes einzelnen Kunden bereitzustellen.
 
 Weitere Informationen zum Arbeiten mit [!DNL Profile] finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
@@ -318,7 +318,7 @@ Die Struktur der beiden XDM-Kernklassen und ihrer häufig verwendeten kompatible
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-Die [!DNL Schema Registry] wird verwendet, um auf die [!DNL Schema Library] in Adobe Experience Platform zuzugreifen, und bietet eine Benutzeroberfläche und eine RESTful-API, über die alle verfügbaren Bibliotheksressourcen verfügbar sind. Die [!DNL Schema Library] enthält von Adobe definierte Branchenressourcen, von Experience Platform-Partnern definierte Anbieterressourcen sowie Klassen, Feldergruppen, Datentypen und Schemata, die von Mitgliedern Ihres Unternehmens erstellt wurden.
+Die [!DNL Schema Registry] wird verwendet, um auf die [!DNL Schema Library] in Experience Platform zuzugreifen, und bietet eine Benutzeroberfläche und eine RESTful-API, über die alle verfügbaren Bibliotheksressourcen verfügbar sind. Die [!DNL Schema Library] enthält von Adobe definierte Branchenressourcen, von Experience Platform-Partnern definierte Anbieterressourcen sowie Klassen, Feldergruppen, Datentypen und Schemata, die von Mitgliedern Ihres Unternehmens erstellt wurden.
 
 Um mit dem Erstellen von Schemas über die Benutzeroberfläche zu beginnen, folgen Sie dem [Schema-Editor-Tutorial](../tutorials/create-schema-ui.md), um das Schema „Loyalty Members“ zu erstellen, das in diesem Dokument erwähnt wird.
 
@@ -364,7 +364,7 @@ Die Vor- und Nachteile der Verwendung von -Objekten über Freiformfeldern sind u
 **Nachteile**:
 
 * Die Felder werden verschachtelter.
-* Bei Verwendung von [Adobe Experience Platform Query Service](../../query-service/home.md) müssen für die Abfragefelder, die in -Objekten verschachtelt sind, längere Referenzzeichenfolgen bereitgestellt werden.
+* Bei Verwendung von [Experience Platform Query Service](../../query-service/home.md) müssen für die Abfragefelder, die in -Objekten verschachtelt sind, längere Referenzzeichenfolgen bereitgestellt werden.
 
 #### Freiformfelder
 
