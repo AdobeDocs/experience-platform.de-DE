@@ -4,9 +4,9 @@ title: Warnhinweise – Übersicht
 description: Erfahren Sie mehr über Warnhinweise in Adobe Experience Platform, einschließlich der Struktur der Definition von Warnhinweisregeln.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '791'
 ht-degree: 59%
 
 ---
@@ -31,7 +31,7 @@ Experience Platform-Warnhinweise können einmal gesendet werden oder in einem vo
 | --- | --- |
 | Zeigt nicht unbedingt ein Problem an. | Gibt einen potenziell unerwünschten Status an. |
 | Wiederholt sich nicht. | Kann sich wiederholen, wenn die anormale Bedingung bestehen bleibt. |
-| Zu den Beispielen gehören:<ul><li>Die Datenaufnahme wurde erfolgreich abgeschlossen.</li><li>Die Ausführung einer Abfrage wurde abgeschlossen.</li><li>Die Daten wurden gelöscht.</li></ul> | Zu den Beispielen gehören:<ul><li>Die Aufnahmedauer überschreitet den übersteigt das vereinbarte Service-Niveau (SLA).</li><li>Die tägliche Aufnahme erfolgte in den letzten 24 Stunden nicht.</li><li>Die Fehlerrate des Stream-Prozessors liegt über dem konfigurierten Schwellenwert.</li><li>Die Gesamtzahl der Profile übersteigt die zulässige Anzahl.</li></ul> |
+| Zu den Beispielen gehören:<ul><li>Die Datenaufnahme wurde erfolgreich abgeschlossen.</li><li>Die Ausführung einer Abfrage wurde abgeschlossen.</li><li>Die Daten wurden gelöscht.</li></ul> | Zu den Beispielen gehören:<ul><li>Die Aufnahmedauer überschreitet den übersteigt das vereinbarte Service-Niveau (SLA).</li><li>Die tägliche Aufnahme erfolgte in den letzten 24 Stunden nicht.</li><li>Die Fehlerrate des Stream-Prozessors liegt über dem konfigurierten Schwellenwert.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -41,7 +41,7 @@ Ein Warnhinweis kann in die folgenden Komponenten unterteilt werden:
 
 | Komponente | Beschreibung |
 | --- | --- |
-| **Metrik** | Eine Beobachtbarkeits-[Metrik](../api/metrics.md#available-metrics), deren Wert den Warnhinweis auslöst, z. B. die Anzahl fehlgeschlagener Batch-Erfassungsereignisse (`timeseries.ingestion.dataset.batchfailed.count`). |
+| **Metrik** | Eine Beobachtbarkeits-[Metrik](../api/metrics.md#available-metrics), deren Wert den Warnhinweis auslöst, z. B. die Anzahl fehlgeschlagener Batch-Aufnahmeereignisse (`timeseries.ingestion.dataset.batchfailed.count`). |
 | **Bedingung** | Eine Bedingung für die Metrik, die den Warnhinweis auslöst, wenn sie „true“ angibt, z. B. eine Zählmetrik, die eine bestimmte Anzahl überschreitet. Diese Bedingung kann mit einem vordefinierten Zeitfenster verknüpft werden. |
 | **Fenster** | (Optional) Die Bedingung für einen Warnhinweis kann auf ein vordefiniertes Zeitfenster beschränkt sein. Beispielsweise kann ein Warnhinweis abhängig von der Anzahl fehlgeschlagener Batches in den letzten fünf Minuten ausgelöst werden. |
 | **Aktion** | Wenn ein Warnhinweis ausgelöst wird, wird eine Aktion ausgeführt. Insbesondere werden Nachrichten über einen Versandkanal an die entsprechenden Empfänger gesendet, z. B. einen vorkonfigurierten Webhook oder die Experience Platform-Benutzeroberfläche. |
