@@ -1,12 +1,12 @@
 ---
 title: Konto-Zielgruppen
 description: Erfahren Sie, wie Sie Konto-Zielgruppen erstellen und verwenden, um Account-Profile in nachgelagerten Zielen auszuwählen.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 6cb5afb78502c34e0eba99af29d7a67119b7e05a
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1461'
 ht-degree: 23%
 
 ---
@@ -60,10 +60,6 @@ Um eine Konto-Zielgruppe zu erstellen, wählen Sie auf der Seite **[!UICONTROL C
 Der Segment Builder wird angezeigt. Die Kontoattribute und Zielgruppen werden in der linken Navigationsleiste angezeigt. Auf der Registerkarte [!UICONTROL Attributes] können Sie sowohl von Experience Platform erstellte als auch benutzerdefinierte Attribute hinzufügen.
 
 ![Der Segment Builder wird angezeigt. Beachten Sie, dass nur die Attribute und Zielgruppen angezeigt werden.](../images/types/account/segment-builder.png)
-
-Beachten Sie beim Erstellen von Account-Zielgruppen, dass Ereignisse unter **[!UICONTROL People]** aufgeführt werden und nicht als eigene Registerkarte fungieren, da diese Attribute mit Personen verknüpft sind.
-
-![Der Ort, an dem Ereignisse gefunden werden sollen, der sich im Ordner &quot;[!UICONTROL People]&quot; befindet, ist hervorgehoben.](../images/types/account/attributes.png)
 
 Auf der Registerkarte [!UICONTROL Audiences] können Sie zuvor erstellte personenbasierte Zielgruppen hinzufügen, auf die Sie bei der Erstellung Ihrer eigenen Konto-Zielgruppe aufbauen können.
 
@@ -208,8 +204,8 @@ Bei Verwendung von Konto-Zielgruppen muss **Zielgruppe** folgenden Einschränkun
    - Eine übergreifende Entität ist der Fall, wenn Sie zwischen verschiedenen Entitäten in Ihrer Zielgruppe wechseln. So können Sie beispielsweise von einem Konto zu einer Person zu einer Marketingliste wechseln.
 - Die maximale Anzahl von Werten, die für ein einzelnes Feld überprüft werden können, beträgt **50**.
    - Wenn Sie beispielsweise das Feld „Stadtname“ haben, können Sie diesen Wert mit 50 Stadtnamen vergleichen.
-- Konto-Zielgruppen **können** sequenzielle Ereignisse verwenden.
 - Konto-Zielgruppen **können** Zuordnungen verwenden.
+- Konto-Zielgruppen **können** Ereignisse verwenden.
 - Die maximale Tiefe von verschachtelten Arrays beträgt **5**.
 - Die maximale Anzahl verschachtelter Objekte beträgt **10**.
 
