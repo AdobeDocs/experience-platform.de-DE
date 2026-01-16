@@ -2,17 +2,17 @@
 description: Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 title: OAuth 2-Autorisierung
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
+source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 77%
+source-wordcount: '2273'
+ht-degree: 74%
 
 ---
 
 
 # OAuth 2-Autorisierung
 
-Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu &#x200B;](https://tools.ietf.org/html/rfc6749).
+Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu ](https://tools.ietf.org/html/rfc6749).
 
 Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 
@@ -56,7 +56,7 @@ Am Ende dieses Schritts sollten Sie über Folgendes verfügen:
 
 ### Was Sie in Destination SDK tun müssen {#to-do-in-destination-sdk}
 
-Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details unter dem [-Parameter zur &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md)Zielkonfiguration`customerAuthenticationConfigurations` hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach Gewährungstyp der OAuth 2-Autorisierung zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
+Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details unter dem [-Parameter zur ](../../authoring-api/destination-configuration/create-destination-configuration.md)Zielkonfiguration`customerAuthenticationConfigurations` hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach Gewährungstyp der OAuth 2-Autorisierung zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
 
 ## Unterstützte OAuth 2-Gewährungstypen {#oauth2-grant-types}
 
@@ -109,7 +109,10 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
       "refreshTokenUrl": "https://api.moviestar.com/OAuth/refresh_token",
       "clientId": "Experience-Platform-client-id",
       "clientSecret": "Experience-Platform-client-secret",
-      "scope": ["read", "write"]
+      "scope": ["read", "write"],
+      "options": {
+          "useBasicAuth": true 
+      }
     }
   ]
 //...
@@ -118,14 +121,15 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `authType` | Zeichenfolge | Verwenden Sie „OAUTH2“. |
-| `grant` | Zeichenfolge | Verwenden Sie „OAUTH2_AUTHORIZATION_CODE“. |
-| `accessTokenUrl` | Zeichenfolge | Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und optional Token aktualisiert. |
-| `authorizationUrl` | Zeichenfolge | Die URL Ihres Autorisierungs-Servers, über die Sie die Benutzerin bzw. den Benutzer zur Anmeldung bei Ihrer Anwendung umleiten. |
-| `refreshTokenUrl` | Zeichenfolge | *Optional.* Die URL auf Ihrer Seite, die Aktualisierungs-Token ausgibt. Häufig ist die `refreshTokenUrl` identisch mit der `accessTokenUrl`. |
-| `clientId` | Zeichenfolge | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
-| `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
+| `authType` | String | Verwenden Sie „OAUTH2“. |
+| `grant` | String | Verwenden Sie „OAUTH2_AUTHORIZATION_CODE“. |
+| `accessTokenUrl` | String | Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und optional Token aktualisiert. |
+| `authorizationUrl` | String | Die URL Ihres Autorisierungs-Servers, über die Sie die Benutzerin bzw. den Benutzer zur Anmeldung bei Ihrer Anwendung umleiten. |
+| `refreshTokenUrl` | String | *Optional.* Die URL auf Ihrer Seite, die Aktualisierungs-Token ausgibt. Häufig ist die `refreshTokenUrl` identisch mit der `accessTokenUrl`. |
+| `clientId` | String | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
+| `clientSecret` | String | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
 | `scope` | Liste von Zeichenfolgen | *Optional*. Legen Sie den Umfang der Aktionen fest, die das Zugriffstoken Experience Platform für Ihre Ressourcen ermöglicht. Beispiel: „lesen, schreiben“. |
+| `options.useBasicAuth` | Boolesch | *Optional*. Ein boolescher Wert, der steuert, wie die Client-Anmeldeinformationen (Client-ID und Client-Geheimnis) an den Token-Endpunkt des OAuth-Anbieters gesendet werden, wenn ein Autorisierungs-Code gegen ein Zugriffstoken ausgetauscht wird. <ul><li>Wenn als `false` oder nicht definiert festgelegt, werden die Anmeldeinformationen als `client_id`- und `client_secret` im POST-Anfrageinhalt gesendet (Standardverhalten).</li><li>Wenn dieser Parameter auf `true` gesetzt ist, werden die Anmeldeinformationen im HTTP-`Authorization`-Header im Standard-Authentifizierungsformat gesendet: `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Legen Sie `useBasicAuth` auf `true` fest, wenn Ihr OAuth-Anbieter erfordert, dass Client-Anmeldeinformationen im `Authorization`-Header und nicht im Anfragetext gesendet werden. |
 
 {style="table-layout:auto"}
 
@@ -163,11 +167,11 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `authType` | Zeichenfolge | Verwenden Sie „OAUTH2“. |
-| `grant` | Zeichenfolge | Verwenden Sie „OAUTH2_PASSWORD“. |
-| `accessTokenUrl` | Zeichenfolge | Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und optional Token aktualisiert. |
-| `clientId` | Zeichenfolge | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
-| `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
+| `authType` | String | Verwenden Sie „OAUTH2“. |
+| `grant` | String | Verwenden Sie „OAUTH2_PASSWORD“. |
+| `accessTokenUrl` | String | Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und optional Token aktualisiert. |
+| `clientId` | String | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
+| `clientSecret` | String | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
 | `scope` | Liste von Zeichenfolgen | *Optional*. Legen Sie den Umfang der Aktionen fest, die das Zugriffstoken Experience Platform für Ihre Ressourcen ermöglicht. Beispiel: „lesen, schreiben“. |
 
 {style="table-layout:auto"}
@@ -204,12 +208,12 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `authType` | Zeichenfolge | Verwenden Sie „OAUTH2“. |
-| `grant` | Zeichenfolge | Verwenden Sie „OAUTH2_CLIENT_CREDENTIALS“. |
-| `accessTokenUrl` | Zeichenfolge | Die URL Ihres Autorisierungs-Servers, die ein Zugriffstoken und ein optionales Aktualisierungstoken ausgibt. |
-| `refreshTokenUrl` | Zeichenfolge | *Optional.* Die URL auf Ihrer Seite, die Aktualisierungs-Token ausgibt. Häufig ist die `refreshTokenUrl` identisch mit der `accessTokenUrl`. |
-| `clientId` | Zeichenfolge | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
-| `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
+| `authType` | String | Verwenden Sie „OAUTH2“. |
+| `grant` | String | Verwenden Sie „OAUTH2_CLIENT_CREDENTIALS“. |
+| `accessTokenUrl` | String | Die URL Ihres Autorisierungs-Servers, die ein Zugriffstoken und ein optionales Aktualisierungstoken ausgibt. |
+| `refreshTokenUrl` | String | *Optional.* Die URL auf Ihrer Seite, die Aktualisierungs-Token ausgibt. Häufig ist die `refreshTokenUrl` identisch mit der `accessTokenUrl`. |
+| `clientId` | String | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
+| `clientSecret` | String | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
 | `scope` | Liste von Zeichenfolgen | *Optional*. Legen Sie den Umfang der Aktionen fest, die das Zugriffstoken Experience Platform für Ihre Ressourcen ermöglicht. Beispiel: „lesen, schreiben“. |
 
 {style="table-layout:auto"}
@@ -362,15 +366,15 @@ Sie können die folgenden Parameter in `authenticationDataFields` zum Anpassen I
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `authenticationDataFields.name` | Zeichenfolge | Der Name des benutzerdefinierten Felds. |
-| `authenticationDataFields.title` | Zeichenfolge | Ein Titel, den Sie für das benutzerdefinierte Feld angeben können. |
-| `authenticationDataFields.description` | Zeichenfolge | Eine Beschreibung des von Ihnen eingerichteten benutzerdefinierten Datenfelds. |
-| `authenticationDataFields.type` | Zeichenfolge | Definiert den Typ des benutzerdefinierten Datenfelds. <br> Akzeptierte Werte: `string`, `boolean`, `integer` |
+| `authenticationDataFields.name` | String | Der Name des benutzerdefinierten Felds. |
+| `authenticationDataFields.title` | String | Ein Titel, den Sie für das benutzerdefinierte Feld angeben können. |
+| `authenticationDataFields.description` | String | Eine Beschreibung des von Ihnen eingerichteten benutzerdefinierten Datenfelds. |
+| `authenticationDataFields.type` | String | Definiert den Typ des benutzerdefinierten Datenfelds. <br> Akzeptierte Werte: `string`, `boolean`, `integer` |
 | `authenticationDataFields.isRequired` | Boolesch | Gibt an, ob das benutzerdefinierte Datenfeld im Autorisierungsfluss erforderlich ist. |
 | `authenticationDataFields.format` | String | Wenn Sie `"format":"password"` auswählen, verschlüsselt Adobe den Wert des Autorisierungsdatenfelds. Bei Verwendung mit `"fieldType": "CUSTOMER"` ist außerdem die Eingabe in der Benutzeroberfläche unsichtbar, wenn Benutzende etwas in das Feld eingeben. |
-| `authenticationDataFields.fieldType` | Zeichenfolge | Gibt an, ob die Eingabe vom Partner (d. h. Ihnen) oder von den Benutzenden stammt, wenn sie Ihr Ziel in Experience Platform einrichten. |
+| `authenticationDataFields.fieldType` | String | Gibt an, ob die Eingabe vom Partner (d. h. Ihnen) oder von den Benutzenden stammt, wenn sie Ihr Ziel in Experience Platform einrichten. |
 | `authenticationDataFields.value` | Zeichenfolge. Boolesch. Ganzzahl | Der Wert des benutzerdefinierten Datenfelds. Der Wert entspricht dem ausgewählten Typ aus `authenticationDataFields.type`. |
-| `authenticationDataFields.authenticationResponsePath` | Zeichenfolge | Gibt an, auf welches Feld aus dem API-Antwortpfad verwiesen wird. |
+| `authenticationDataFields.authenticationResponsePath` | String | Gibt an, auf welches Feld aus dem API-Antwortpfad verwiesen wird. |
 
 {style="table-layout:auto"}
 
@@ -452,21 +456,21 @@ Sie können die folgenden Parameter in `accessTokenRequest` verwenden, um Ihren 
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `accessTokenRequest.destinationServerType` | Zeichenfolge | Verwenden Sie `URL_BASED`. |
-| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | Zeichenfolge | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für den Wert in `accessTokenRequest.urlBasedDestination.url.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.urlBasedDestination.url.value` eine Konstante ist. </li></li> |
-| `accessTokenRequest.urlBasedDestination.url.value` | Zeichenfolge | Die URL, an die Experience Platform das Zugriffstoken anfordert. |
-| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | Zeichenfolge | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für die Werte in `accessTokenRequest.httpTemplate.requestBody.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.httpTemplate.requestBody.value` eine Konstante ist. </li></li> |
-| `accessTokenRequest.httpTemplate.requestBody.value` | Zeichenfolge | Verwenden Sie die Vorlagensprache, um Felder in der HTTP-Anfrage an den Zugriffstoken-Endpunkt anzupassen. Informationen darüber, wie Sie Felder mithilfe von Vorlagen anpassen können, finden Sie im Abschnitt [Vorlagenkonventionen](#templating-conventions). |
-| `accessTokenRequest.httpTemplate.httpMethod` | Zeichenfolge | Gibt die HTTP-Methode an, die zum Aufrufen Ihres Zugriffstoken-Endpunkts verwendet wird. In den meisten Fällen ist dieser Wert `POST`. |
-| `accessTokenRequest.httpTemplate.contentType` | Zeichenfolge | Gibt den Inhaltstyp des HTTP-Aufrufs für Ihren Zugriffstoken-Endpunkt an. <br> Beispielsweise `application/x-www-form-urlencoded` oder `application/json`. |
-| `accessTokenRequest.httpTemplate.headers` | Zeichenfolge | Gibt an, ob dem HTTP-Aufruf an Ihren Zugriffstoken-Endpunkt Kopfzeilen hinzugefügt werden sollen. |
-| `accessTokenRequest.responseFields.templatingStrategy` | Zeichenfolge | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für die Werte in `accessTokenRequest.responseFields.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.responseFields.value` eine Konstante ist. </li></li> |
-| `accessTokenRequest.responseFields.value` | Zeichenfolge | Verwenden Sie die Vorlagensprache, um über Ihren Zugriffstoken-Endpunkt auf Felder in der HTTP-Antwort zuzugreifen. Informationen darüber, wie Sie Felder mithilfe von Vorlagen anpassen können, finden Sie im Abschnitt [Vorlagenkonventionen](#templating-conventions). |
-| `accessTokenRequest.validations.name` | Zeichenfolge | Gibt den Namen an, den Sie für diese Validierung angegeben haben. |
-| `accessTokenRequest.validations.actualValue.templatingStrategy` | Zeichenfolge | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für die Werte in `accessTokenRequest.validations.actualValue.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.validations.actualValue.value` eine Konstante ist. </li></li> |
-| `accessTokenRequest.validations.actualValue.value` | Zeichenfolge | Verwenden Sie die Vorlagensprache für den Zugriff auf Felder in der HTTP-Antwort. Informationen darüber, wie Sie Felder mithilfe von Vorlagen anpassen können, finden Sie im Abschnitt [Vorlagenkonventionen](#templating-conventions). |
-| `accessTokenRequest.validations.expectedValue.templatingStrategy` | Zeichenfolge | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für die Werte in `accessTokenRequest.validations.expectedValue.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.validations.expectedValue.value` eine Konstante ist. </li></li> |
-| `accessTokenRequest.validations.expectedValue.value` | Zeichenfolge | Verwenden Sie die Vorlagensprache für den Zugriff auf Felder in der HTTP-Antwort. Informationen darüber, wie Sie Felder mithilfe von Vorlagen anpassen können, finden Sie im Abschnitt [Vorlagenkonventionen](#templating-conventions). |
+| `accessTokenRequest.destinationServerType` | String | Verwenden Sie `URL_BASED`. |
+| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | String | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für den Wert in `accessTokenRequest.urlBasedDestination.url.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.urlBasedDestination.url.value` eine Konstante ist. </li></li> |
+| `accessTokenRequest.urlBasedDestination.url.value` | String | Die URL, an die Experience Platform das Zugriffstoken anfordert. |
+| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | String | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für die Werte in `accessTokenRequest.httpTemplate.requestBody.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.httpTemplate.requestBody.value` eine Konstante ist. </li></li> |
+| `accessTokenRequest.httpTemplate.requestBody.value` | String | Verwenden Sie die Vorlagensprache, um Felder in der HTTP-Anfrage an den Zugriffstoken-Endpunkt anzupassen. Informationen darüber, wie Sie Felder mithilfe von Vorlagen anpassen können, finden Sie im Abschnitt [Vorlagenkonventionen](#templating-conventions). |
+| `accessTokenRequest.httpTemplate.httpMethod` | String | Gibt die HTTP-Methode an, die zum Aufrufen Ihres Zugriffstoken-Endpunkts verwendet wird. In den meisten Fällen ist dieser Wert `POST`. |
+| `accessTokenRequest.httpTemplate.contentType` | String | Gibt den Inhaltstyp des HTTP-Aufrufs für Ihren Zugriffstoken-Endpunkt an. <br> Beispielsweise `application/x-www-form-urlencoded` oder `application/json`. |
+| `accessTokenRequest.httpTemplate.headers` | String | Gibt an, ob dem HTTP-Aufruf an Ihren Zugriffstoken-Endpunkt Kopfzeilen hinzugefügt werden sollen. |
+| `accessTokenRequest.responseFields.templatingStrategy` | String | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für die Werte in `accessTokenRequest.responseFields.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.responseFields.value` eine Konstante ist. </li></li> |
+| `accessTokenRequest.responseFields.value` | String | Verwenden Sie die Vorlagensprache, um über Ihren Zugriffstoken-Endpunkt auf Felder in der HTTP-Antwort zuzugreifen. Informationen darüber, wie Sie Felder mithilfe von Vorlagen anpassen können, finden Sie im Abschnitt [Vorlagenkonventionen](#templating-conventions). |
+| `accessTokenRequest.validations.name` | String | Gibt den Namen an, den Sie für diese Validierung angegeben haben. |
+| `accessTokenRequest.validations.actualValue.templatingStrategy` | String | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für die Werte in `accessTokenRequest.validations.actualValue.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.validations.actualValue.value` eine Konstante ist. </li></li> |
+| `accessTokenRequest.validations.actualValue.value` | String | Verwenden Sie die Vorlagensprache für den Zugriff auf Felder in der HTTP-Antwort. Informationen darüber, wie Sie Felder mithilfe von Vorlagen anpassen können, finden Sie im Abschnitt [Vorlagenkonventionen](#templating-conventions). |
+| `accessTokenRequest.validations.expectedValue.templatingStrategy` | String | <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie Vorlagen für die Werte in `accessTokenRequest.validations.expectedValue.value` verwenden.</li><li> Verwenden Sie `NONE`, wenn der Wert im Feld `accessTokenRequest.validations.expectedValue.value` eine Konstante ist. </li></li> |
+| `accessTokenRequest.validations.expectedValue.value` | String | Verwenden Sie die Vorlagensprache für den Zugriff auf Felder in der HTTP-Antwort. Informationen darüber, wie Sie Felder mithilfe von Vorlagen anpassen können, finden Sie im Abschnitt [Vorlagenkonventionen](#templating-conventions). |
 
 {style="table-layout:auto"}
 
