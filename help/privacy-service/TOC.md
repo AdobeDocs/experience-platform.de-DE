@@ -5,9 +5,9 @@ breadcrumb-title: Privacy Service-Anleitung
 user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen Datenschutzbestimmungen wie DSGVO und CCPA einzuhalten.
 feature: Privacy
 role: User,Admin
-source-git-commit: 306f7fcd09f395895fde241b668c41a2479a8d2d
+source-git-commit: bc180437c42ab2eea946e1a4d6d9dbd77e0896c8
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '94'
 ht-degree: 93%
 
 ---
@@ -26,14 +26,15 @@ ht-degree: 93%
    * [Datenschutzaufträge](./api/privacy-jobs.md)
    * [Einverständnis](./api/consent.md)
    * [Inhalt](./api/content.md)
+   * [Fehler-Codes](./api/error-codes.md)
    * [Anhang](./api/appendix.md)
 * Privacy Service-Benutzeroberfläche {#ui}
    * [Übersicht](./ui/overview.md)
    * [Datenschutzaufträge verwalten](./ui/user-guide.md)
 * [Datenschutzereignisse abonnieren](./privacy-events.md)
 * Datenschutzbestimmungen {#regulations}
-   * [Überblick](./regulations/overview.md)
-   * [FAQs](./regulations/faq.md)
+   * [Übersicht](./regulations/overview.md)
+   * [Häufig gestellte Fragen](./regulations/faq.md)
    * [Terminologie](./regulations/terminology.md)
 * [Best Practices](./best-practices.md)
 * [Handbuch zur Fehlerbehebung](./troubleshooting-guide.md)
