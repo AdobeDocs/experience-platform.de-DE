@@ -2,10 +2,10 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: acb8303673c3271794dcda87b149b473328a7a21
+source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 18%
+source-wordcount: '1395'
+ht-degree: 15%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 18%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Januar 2026**
 
@@ -56,9 +56,22 @@ Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](ht
 
 **Neue oder aktualisierte Funktionen**
 
+| Ziel | Beschreibung |
+| --- | --- |
+| Level Destination Connector jetzt verfügbar | [[!DNL Kevel]](https://www.kevel.com/) bietet die KI-fähige Technologie und fachkundige Anleitung, die innovativen Commerce-Führungskräften dabei helfen, in Einzelhandelsmedien zu starten, zu skalieren und erfolgreich zu sein. Die Retail Media Cloud von [!DNL Kevel] ermöglicht zielgerichtete, zuordenbare, anpassbare Anzeigenformate für Onsite- und Offsite-Werbung. |
+| Index Exchange-Ziel-Connector jetzt verfügbar | [!DNL Index] ist eine globale Plattform für Werbeangebote, mit der Medieninhaber den Wert ihrer Inhalte auf jedem Bildschirm maximieren können. Mit über 20 Jahren Branchenführerschaft verbindet [!DNL Index] die weltweit größten Marken mit erstklassigen Experience Makers, um hochwertige Kundenerlebnisse zu schaffen. |
+| Unterstützung regionaler Endpunkte für Braze-Verbindungen | Alle [regionsspezifischen Endpunkte](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die von [!DNL Braze] unterstützt werden, sind jetzt während des Zielkonfigurationsflusses zur Auswahl verfügbar. Fragen Sie Ihren [!DNL Braze], welche Endpunktinstanz Sie verwenden sollten. |
+| Wöchentliche und monatliche Planungsunterstützung für das Liveramp-Onboarding | Sie können jetzt wöchentliche und monatliche Exportpläne für das Liveramp-Onboarding-Ziel konfigurieren. |
+| AES256-Verschlüsselungsunterstützung für Amazon S3-Ziele | Sie können jetzt die AES256-Verschlüsselung für Ihre Amazon S3-Exporte konfigurieren. |
+| Verbessertes Aktivierungserlebnis für The Trade Desk- und Microsoft Bing-Ziele | Die Trade Desk- und Microsoft Bing-Ziele enthalten jetzt vordefinierte obligatorische Zuordnungen für ein optimiertes Aktivierungserlebnis. |
+
+**Neue oder aktualisierte Funktionen**
+
 | Funktion | Beschreibung |
 | --- | --- |
-| Die Limits für Leitplanken für das Adobe Target-Ziel wurden aktualisiert | Die maximale Anzahl von Zielgruppen, die einem einzelnen Adobe Target-Ziel zugeordnet werden können, wurde von 50 auf 250 erhöht. Dadurch wird Adobe Target an das standardmäßige Zielgruppenlimit für andere Ziele angepasst, was eine größere Flexibilität für Zielgruppenaktivierungs-Workflows bietet. Kunden können jetzt mehr Zielgruppen für Adobe Target-Ziele aktivieren, ohne mehrere Datenflüsse erstellen zu müssen. |
+| Die Limits für Leitplanken für das Adobe Target-Ziel wurden aktualisiert | Die maximale Anzahl von Zielgruppen, die einem einzelnen Adobe Target-Ziel zugeordnet werden können, wurde von 50 auf 250 erhöht. Dadurch wird Adobe Target an das standardmäßige Zielgruppenlimit für andere Ziele angepasst, was eine größere Flexibilität für Zielgruppenaktivierungs-Workflows bietet. Sie können jetzt mehr Zielgruppen für Adobe Target-Ziele aktivieren, ohne mehrere Datenflüsse erstellen zu müssen. |
+| [Ziele bearbeiten](/help/destinations/ui/edit-destination.md) und [Marketing-Aktionen bearbeiten](/help/destinations/ui/edit-activation.md#edit-marketing-actions) allgemeine Verfügbarkeit | Die Option zum Bearbeiten von Zielen und Marketing-Aktionen steht jetzt allen Benutzenden zur Verfügung. |
+| Umschalten zwischen Anzeigenamen von Feldern im Zuordnungsschritt | Beim Zuordnen von Schemafeldern zu einem Ziel können Sie jetzt zwischen der Anzeige des vollständigen XDM-Feldnamens und der Anzeige nur des Anzeigenamens umschalten. |
 
 {style="table-layout:auto"}
 
