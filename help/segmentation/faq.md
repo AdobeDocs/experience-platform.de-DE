@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie Antworten auf häufig gestellte Fragen zu Zielgruppen und andere segmentierungsbezogene Konzepte.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
+source-git-commit: a55272e3124c3fceedcadc33883445132bfec6bd
 workflow-type: tm+mt
-source-wordcount: '4849'
-ht-degree: 27%
+source-wordcount: '4853'
+ht-degree: 25%
 
 ---
 
@@ -87,7 +87,7 @@ Eine extern generierte Zielgruppe kann jedem Ziel zugeordnet und in Adobe Journe
 
 ### Kann ich eine extern generierte Zielgruppe löschen?
 
-Ja! Extern generierte Zielgruppen können in Audience Portal gelöscht werden.
+Ja. Extern generierte Zielgruppen können in Audience Portal gelöscht werden.
 
 ### Was sollte ich tun, wenn ich versehentlich eine extern generierte Zielgruppe hochgeladen habe?
 
@@ -170,7 +170,7 @@ Wenn eine Zielgruppe, die mithilfe der Batch-Segmentierung ausgewertet wird, ern
 
 Die Methode, um eine Zielgruppe in den Entwurfsstatus zu versetzen, hängt von der Herkunft der Zielgruppe ab.
 
-Bei Zielgruppen, die mit Segment Builder erstellt wurden, können Sie die Zielgruppe in den Entwurfsstatus versetzen, indem Sie in Segment Builder [!UICONTROL Als Entwurf speichern] auswählen.
+Bei Zielgruppen, die mit Segment Builder erstellt wurden, können Sie die Zielgruppe in den Entwurfsstatus versetzen, indem Sie in Segment Builder &quot;[!UICONTROL Save as draft]&quot; auswählen.
 
 Für Zielgruppen, die in der Zielgruppenkomposition erstellt wurden, werden Zielgruppen bis zur Veröffentlichung automatisch als Entwurf gespeichert.
 
@@ -180,13 +180,13 @@ Sobald sich eine Zielgruppe im Status „Veröffentlicht“ befindet **können S
 
 ### Wie setze ich eine Zielgruppe in den Status „Veröffentlicht“?
 
-Bei Zielgruppen, die mit Segment Builder oder Zielgruppenkomposition erstellt wurden, können Sie die Zielgruppe in den Status „Veröffentlicht“ versetzen, indem Sie [!UICONTROL Veröffentlichen] in den entsprechenden Benutzeroberflächen auswählen.
+Bei Zielgruppen, die mit Segment Builder oder Zielgruppenkomposition erstellt wurden, können Sie die Zielgruppe in den Status „Veröffentlicht“ versetzen, indem Sie in den jeweiligen Benutzeroberflächen &quot;[!UICONTROL Publish]&quot; auswählen.
 
 Audiences, die extern erstellt werden, werden automatisch auf „Veröffentlicht“ gesetzt.
 
 ### Wie versetze ich eine Zielgruppe in den inaktiven Status?
 
-Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und auf &quot;[!UICONTROL &quot; &#x200B;].
+Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und auf &quot;[!UICONTROL Deactivate]&quot; klicken.
 
 ### Wie veröffentliche ich eine Zielgruppe erneut?
 
@@ -194,7 +194,7 @@ Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, 
 >
 >Der Status „erneut veröffentlicht“ entspricht dem Veröffentlichungsstatus für das Zielgruppenverhalten.
 
-Sie können eine Zielgruppe erneut veröffentlichen, indem Sie eine Zielgruppe im inaktiven Status auswählen, das Schnellaktionsmenü im Zielgruppen-Portal öffnen und [!UICONTROL Veröffentlichen] auswählen.
+Sie können eine Zielgruppe erneut veröffentlichen, indem Sie eine Zielgruppe im inaktiven Status auswählen, das Schnellaktionsmenü im Zielgruppen-Portal öffnen und [!UICONTROL Publish] auswählen.
 
 ### Wie versetze ich eine Zielgruppe in den Status „Gelöscht“?
 
@@ -202,7 +202,7 @@ Sie können eine Zielgruppe erneut veröffentlichen, indem Sie eine Zielgruppe i
 >
 >Sie können nur Zielgruppen löschen, **in nachgelagerten Aktivierungen** verwendet werden. Darüber hinaus können Sie keine Zielgruppe löschen, auf die in einer anderen Zielgruppe verwiesen wird. Wenn Sie Ihre Zielgruppe nicht löschen können, stellen Sie sicher **dass Sie sie** in nachgelagerten Services oder als Baustein einer anderen Zielgruppe verwenden.
 
-Sie können eine Zielgruppe in den Löschstatus versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und [!UICONTROL Löschen] auswählen.
+Sie können eine Zielgruppe in den Löschstatus versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und [!UICONTROL Delete] auswählen.
 
 ### Gibt es Einschränkungen für Lebenszyklusstatusübergänge?
 
@@ -226,13 +226,13 @@ Wenn Sie eine Zielgruppe kopieren, befindet sich die neue Zielgruppe im Entwurfs
 
 Ja, die Verwendung einer Zielgruppe als untergeordnete Zielgruppe hat Auswirkungen darauf, welche Lebenszykluszustandsübergänge die untergeordnete und die übergeordnete Zielgruppe durchführen kann.
 
-Damit eine untergeordnete Zielgruppe in den Veröffentlichungsstatus verschoben werden kann, muss sich ihre gesamte übergeordnete Zielgruppe **&#x200B;**) im Veröffentlichungsstatus befinden. Die übergeordneten Zielgruppen können entweder vor der Veröffentlichung der untergeordneten Zielgruppe veröffentlicht werden oder, falls der Benutzer dies bestätigt, bei der Veröffentlichung der untergeordneten Zielgruppe automatisch veröffentlicht werden.
+Damit eine untergeordnete Zielgruppe in den Veröffentlichungsstatus verschoben werden kann, muss sich ihre gesamte übergeordnete Zielgruppe ****) im Veröffentlichungsstatus befinden. Die übergeordneten Zielgruppen können entweder vor der Veröffentlichung der untergeordneten Zielgruppe veröffentlicht werden oder, falls der Benutzer dies bestätigt, bei der Veröffentlichung der untergeordneten Zielgruppe automatisch veröffentlicht werden.
 
-Damit die übergeordnete Zielgruppe in den inaktiven oder gelöschten Status verschoben werden kann, müssen alle ihre untergeordneten Zielgruppen **&#x200B;**&#x200B;deaktiviert oder gelöscht werden.
+Damit die übergeordnete Zielgruppe in den inaktiven oder gelöschten Status verschoben werden kann, müssen alle ihre untergeordneten Zielgruppen **** deaktiviert oder gelöscht werden.
 
 ### Kann ich auf eine Zielgruppe verweisen, die sich in einem anderen Lebenszyklusstatus befindet?
 
-Ja! Wenn sich Ihre Zielgruppe derzeit im Entwurfsstatus befindet, können Sie entweder im Entwurfsstatus oder im Veröffentlichungsstatus auf Zielgruppen verweisen. Um diese Zielgruppe zu veröffentlichen, müssen **jedoch** anderen übergeordneten Zielgruppen veröffentlichen.
+Ja. Wenn sich Ihre Zielgruppe derzeit im Entwurfsstatus befindet, können Sie entweder im Entwurfsstatus oder im Veröffentlichungsstatus auf Zielgruppen verweisen. Um diese Zielgruppe zu veröffentlichen, müssen **jedoch** anderen übergeordneten Zielgruppen veröffentlichen.
 
 ## Zielgruppen-Inventar
 
@@ -244,7 +244,7 @@ Nein, das tun Sie nicht. Sofern Sie Bearbeitungsberechtigungen für Zielgruppen 
 
 ### Gibt es eine Begrenzung für die Anzahl der Ordner, die ich erstellen kann?
 
-Nein, es gibt keine Begrenzung für die Anzahl der Ordner, die Sie erstellen können. Weitere Informationen zu Ordnern finden Sie im Abschnitt [Zielgruppeninventar“ &#x200B;](./ui/audience-portal.md#folders) Übersicht über die Segmentierungs-Service-Benutzeroberfläche.
+Nein, es gibt keine Begrenzung für die Anzahl der Ordner, die Sie erstellen können. Weitere Informationen zu Ordnern finden Sie im Abschnitt [Zielgruppeninventar“ ](./ui/audience-portal.md#folders) Übersicht über die Segmentierungs-Service-Benutzeroberfläche.
 
 ### Gibt es eine Begrenzung für die Anzahl der Tags, die einer Zielgruppe hinzugefügt werden können?
 
@@ -290,7 +290,7 @@ Zu diesem Zeitpunkt nicht. Diese Funktion sollte jedoch demnächst verfügbar se
 
 ### Kann ich Zielgruppen von der Zielgruppenkomposition an alle nachgelagerten Ziele und Kanäle senden?
 
-Ja! Sie können Zielgruppen aus der Zielgruppenkomposition in Adobe Journey Optimizer-Kampagnen, Real-Time CDP-Zielen und Adobe Journey Optimizer-Journey verwenden.
+Ja. Sie können Zielgruppen aus der Zielgruppenkomposition in Adobe Journey Optimizer-Kampagnen, Real-Time CDP-Zielen und Adobe Journey Optimizer-Journey verwenden.
 
 ### Gibt es Leitlinien in Bezug auf die Anzahl der Kompositionen?
 
@@ -304,11 +304,11 @@ Zu diesem Zeitpunkt können Sie nur **10** veröffentlichte Kompositionen pro Sa
 
 Die Platzierung der Kompositionskomponente folgt einer starren Struktur wie folgt:
 
-1. Begonnen wird **immer** mit dem Block [!UICONTROL Zielgruppe], um die Startaktivität auszuwählen. Es kann maximal **ein** Block [!UICONTROL Zielgruppe] ausgewählt werden.
-2. Es kann optional ein Block [!UICONTROL Ausschließen], der auf den Block [!UICONTROL Zielgruppe] folgt, hinzugefügt werden.
-3. Sie können optional einen Block [!UICONTROL Anreichern] hinzufügen, der auf den Block [!UICONTROL Ausschließen] folgt. Pro Komposition kann nur **Block**&#x200B;[!UICONTROL Anreichern] verwendet werden.
-4. Es kann optional ein Block für den [!UICONTROL Rang] oder die [!UICONTROL Aufspaltung] hinzugefügt werden. Es kann **nur** einer dieser Blöcke pro Komposition ausgewählt werden.
-5. Es sollte **immer** mit einem Block zum [!UICONTROL Speichern] abgeschlossen werden, um die Zielgruppe zu speichern.
+1. Sie **(immer** mit dem [!UICONTROL Audience] beginnen, um Ihre Startaktivität auszuwählen. Sie können maximal **1** [!UICONTROL Audience] Block haben.
+2. Sie können optional einen [!UICONTROL Exclude] hinzufügen, der auf den [!UICONTROL Audience] folgt.
+3. Sie können optional einen [!UICONTROL Enrich] hinzufügen, der auf den [!UICONTROL Exclude] folgt. Pro Komposition kann nur **ein** [!UICONTROL Enrich] verwendet werden.
+4. Sie können optional einen [!UICONTROL Rank] oder einen [!UICONTROL Split] hinzufügen. Es kann **nur** einer dieser Blöcke pro Komposition ausgewählt werden.
+5. Sie **(**) mit einem [!UICONTROL Save] Block zum Speichern Ihrer Zielgruppe enden.
 
 Darüber hinaus gelten die folgenden Einschränkungen bei der Verwendung dieser Blöcke:
 
@@ -354,13 +354,13 @@ Weiterführende Informationen zum Block „Aufspaltung“ finden Sie im [Handbuc
 
 Ja, alle Segmenttypen ([Batch-Segmentierung, Streaming-Segmentierung und Edge-Segmentierung](./home.md#evaluate-segments)) werden im Workflow „Zielgruppenkomposition“ unterstützt. Da Kompositionen jedoch derzeit nur einmal pro Tag ausgeführt werden, basiert das Ergebnis auf der Zielgruppenzugehörigkeit zum Zeitpunkt der Komposition, selbst wenn Streaming- oder Edge-bewertete Zielgruppen enthalten sind.
 
-## Zielgruppenmitgliedschaft
+## Zielgruppenzugehörigkeit
 
 Im folgenden Abschnitt finden Sie Fragen zur Zielgruppenzugehörigkeit.
 
-### Wie kann ich die Mitgliedschaft eines Profils in einer Zielgruppe bestätigen?
+### Wie kann ich die Zugehörigkeit eines Profils zu einer Zielgruppe bestätigen?
 
-Um die Zielgruppenmitgliedschaft eines Profils zu bestätigen, besuchen Sie die Seite mit den Profildetails des Profils, das Sie bestätigen möchten. Wählen Sie **[!UICONTROL Attribute]** gefolgt von **[!UICONTROL JSON anzeigen]** aus, und Sie können bestätigen, dass das `segmentMembership`-Objekt die ID der Zielgruppe enthält.
+Um die Zielgruppenzugehörigkeit eines Profils zu bestätigen, besuchen Sie die Seite mit den Profildetails des Profils, das Sie bestätigen möchten. Wählen Sie **[!UICONTROL Attributes]** und dann **[!UICONTROL View JSON]** aus, um zu bestätigen, dass das `segmentMembership`-Objekt die ID der Zielgruppe enthält.
 
 ### Kann die Zielgruppenzugehörigkeit zwischen idealer und tatsächlicher Zugehörigkeit variieren?
 
@@ -408,11 +408,11 @@ Im folgenden Abschnitt finden Sie Fragen zur Streaming-Segmentierung.
 
 ### Tritt die „Nicht-Qualifizierung“ der Streaming-Segmentierung auch in Echtzeit auf?
 
-In den meisten Fällen geschieht die Aufhebung der Qualifizierung von Streaming-Segmentierungen in Echtzeit. Für Streaming-Segmente, die Segmente von Segmenten verwenden, wird die Qualifizierung jedoch **nicht** in Echtzeit aufgehoben, sondern erst nach 24 Stunden.
+Die Disqualifizierung der Streaming-Segmentierung erfolgt je nach Komposition der Zielgruppe. Bei ereignisbasierten Zielgruppen erfolgt die Disqualifizierung in Echtzeit, wenn das Lookback-Fenster abläuft. Bei profilbasierten Zielgruppen oder Zielgruppen, die Profilattribute verwenden, erfolgt eine Disqualifizierung, wenn Profilattributwerte über eine Streaming-Quelle oder während des täglichen Batch-Auswertungsauftrags geändert werden.
 
 ### Mit welchen Daten arbeitet die Streaming-Segmentierung?
 
-Die Streaming-Segmentierung funktioniert bei allen Daten, die über eine Streaming-Quelle aufgenommen wurden. Daten, die über eine Batch-basierte Quelle aufgenommen werden, werden jede Nacht ausgewertet, selbst wenn sie für die Streaming-Segmentierung geeignet sind. In das System gestreamte Ereignisse mit einem Zeitstempel, der älter als 24 Stunden ist, werden im nachfolgenden Batch-Vorgang verarbeitet.
+Die Streaming-Segmentierung funktioniert bei allen Daten, die über eine Streaming-Quelle aufgenommen wurden. Daten, die über eine Batch-basierte Quelle aufgenommen werden, werden jede Nacht ausgewertet, selbst wenn sie für die Streaming-Segmentierung geeignet sind. In das System gestreamte Ereignisse mit einem Zeitstempel, der älter als 24 Stunden ist, werden im nachfolgenden Batch-Auftrag verarbeitet.
 
 ### Wie werden Segmente als Batch- oder Streaming-Segmentierung definiert?
 

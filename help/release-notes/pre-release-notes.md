@@ -2,9 +2,9 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
+source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1389'
 ht-degree: 15%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 15%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Januar 2026**
 
@@ -86,7 +86,7 @@ Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen K
 | Funktion | Beschreibung |
 | --- | --- |
 | Durchsetzung der Streaming-Kapazität | Experience Platform erzwingt jetzt Streaming-Durchsatzkapazitäten für das Echtzeit-Kundenprofil und Identity Service. Wenn Kunden ihre vertraglich vereinbarte Streaming-Kapazität überschreiten, werden Daten in eine Warteschlange gestellt und in einer First-in-First-out-Weise verarbeitet. Dies stellt eine vorhersehbare Systemleistung sicher und verhindert, dass Kapazitätsverletzungen die Datenaufnahmequalität beeinträchtigen. Wichtige Hinweise: Streaming-Upserts sind im Data Lake nicht verfügbar, wenn die Kapazität überschritten wird. Diese Durchsetzung gilt nicht für Kunden mit Adobe Journey Optimizer-Lizenzen und Daten in der Warteschlange werden sequenziell verarbeitet, sobald die Kapazität verfügbar ist. |
-| Einstellung des API-Zugriffs für Real-Time CDP Prime | Der API-Zugriff für Erlebnisereignisse wird jetzt für alle Kunden von Real-Time CDP Prime nicht mehr unterstützt. Diese Änderung wirkt sich auf die Möglichkeit aus, Erlebnisereignisse direkt über die API abzufragen. Kunden von Real-Time CDP Ultimate können über einen formalen Ausnahmeprozess eine Ausnahme anfordern, um den API-Zugriff auf Erlebnisereignisse zu aktivieren, falls dies für ihre Anwendungsfälle erforderlich ist. Diese Einstellung trägt zur Optimierung der Systemleistung bei und entspricht den Best Practices für Datenzugriffsmuster. |
+| Einstellung des API-Zugriffs für Real-Time CDP Prime | Der API-Zugriff für Erlebnisereignisse wird jetzt für alle Kunden von Real-Time CDP Prime nicht mehr unterstützt. Diese Änderung wirkt sich auf die Möglichkeit aus, Erlebnisereignisse direkt über die API abzufragen. Kunden von Real-Time CDP Ultimate können über einen formalen Ausnahmeprozess eine Ausnahme anfordern, um den API-Zugriff auf Erlebnisereignisse zu aktivieren, falls dies für ihre Anwendungsfälle erforderlich ist. Diese Einstellung hilft bei der Anpassung von Real-Time CDP an die Lizenzierungsfunktion. |
 | Überwachen der Datenflussausführung | Sie können jetzt den Fortschritt und die Bereitschaft der Datenflussausführungen im Profil überwachen. |
 
 {style="table-layout:auto"}
