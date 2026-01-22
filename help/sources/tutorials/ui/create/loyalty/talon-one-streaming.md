@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie Daten von Talon.One mithilfe der Benutzerober
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 15%
+source-wordcount: '961'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre Daten mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von [!DNL Talon.One] mit Adobe Experience Platform verbinden und streamen.
 
@@ -34,19 +34,19 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ## Navigieren im Quellkatalog
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich *[!UICONTROL Quellen]* zuzugreifen. Wählen Sie die entsprechende Kategorie im *[!UICONTROL Kategorien]* aus. Verwenden Sie alternativ die Suchleiste, um zu der spezifischen Quelle zu navigieren, die Sie verwenden möchten.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option **[!UICONTROL Sources]** , um auf den *[!UICONTROL Sources]*-Arbeitsbereich zuzugreifen. Wählen Sie die entsprechende Kategorie im *[!UICONTROL Categories]* aus. Verwenden Sie alternativ die Suchleiste, um zu der spezifischen Quelle zu navigieren, die Sie verwenden möchten.
 
-Um Daten aus [!DNL Talon.One] zu streamen, wählen Sie die Quellkarte **[!UICONTROL Talon.One Streaming Events]** unter *[!UICONTROL Loyalty]* und dann **[!UICONTROL Daten hinzufügen]**.
+Um Daten aus [!DNL Talon.One] zu streamen, wählen Sie die Karte **[!UICONTROL Talon.One Streaming Events]** unter *[!UICONTROL Loyalty]* und dann **[!UICONTROL Add data]** aus.
 
 >[!TIP]
 >
->Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Nachdem ein authentifiziertes Konto erstellt wurde, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
+>Quellen im Quellkatalog zeigen die **[!UICONTROL Set up]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Nachdem ein authentifiziertes Konto erstellt wurde, ändert sich diese Option in **[!UICONTROL Add data]**.
 
 ![Der Quellkatalog in der Benutzeroberfläche mit der ausgewählten Karte „Talon.One Streaming Events“.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
 
 ## Daten auswählen
 
-Verwenden Sie als Nächstes die *[!UICONTROL Daten auswählen]*-Schnittstelle, um eine JSON-Beispieldatei hochzuladen und Ihr Quellschema zu definieren. In diesem Schritt können Sie die Vorschau-Oberfläche verwenden, um die Dateistruktur der Payload anzuzeigen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+Verwenden Sie als Nächstes die *[!UICONTROL Select data]*, um eine JSON-Beispieldatei hochzuladen und Ihr Quellschema zu definieren. In diesem Schritt können Sie die Vorschau-Oberfläche verwenden, um die Dateistruktur der Payload anzuzeigen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Der Schritt „Daten auswählen“ des Quell-Workflows](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
 
@@ -54,7 +54,7 @@ Verwenden Sie als Nächstes die *[!UICONTROL Daten auswählen]*-Schnittstelle, u
 
 Als Nächstes müssen Sie Informationen zu Ihrem Datensatz und Ihrem Datenfluss angeben.
 
-### Datensatz-Details
+### Datensatzdetails
 
 Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten/Felder) und Datensätze (Zeilen) enthält. Daten, die erfolgreich in Experience Platform aufgenommen werden, bleiben als Datensätze im Data Lake erhalten.
 
@@ -66,10 +66,10 @@ In diesem Schritt können Sie entweder einen vorhandenen Datensatz verwenden ode
 
 +++Wählen Sie aus, um die Profilaufnahme, Fehlerdiagnose und partielle Aufnahme zu aktivieren.
 
-Wenn Ihr Datensatz für das Echtzeit-Kundenprofil aktiviert ist, können Sie in diesem Schritt **[!UICONTROL Profildatensatz]** umschalten, um Ihre Daten für die Profilaufnahme zu aktivieren. Sie können diesen Schritt auch verwenden, um **[!UICONTROL Fehlerdiagnose]** und **[!UICONTROL Partielle Aufnahme]** zu aktivieren.
+Wenn Ihr Datensatz für das Echtzeit-Kundenprofil aktiviert ist, können Sie in diesem Schritt **[!UICONTROL Profile dataset]** umschalten, um Ihre Daten für die Profilaufnahme zu aktivieren. Sie können diesen Schritt auch verwenden, um **[!UICONTROL Error diagnostics]** und **[!UICONTROL Partial ingestion]** zu aktivieren.
 
-* **[!UICONTROL Fehlerdiagnose]**: Wählen Sie **[!UICONTROL Fehlerdiagnose]** aus, um die Quelle anzuweisen, Fehlerdiagnosen zu erstellen, auf die Sie später bei der Überwachung Ihrer Datensatzaktivität und des Datenflussstatus verweisen können.
-* **[!UICONTROL Partielle Aufnahme]** Bei der partiellen Batch-Aufnahme werden Daten mit Fehlern bis zu einem bestimmten konfigurierbaren Schwellenwert aufgenommen. Mit dieser Funktion können Sie alle Ihre korrekten Daten erfolgreich in Experience Platform aufnehmen, während alle Ihre falschen Daten separat mit Informationen darüber, warum sie ungültig sind, in Batches erfasst werden.
+* **[!UICONTROL Error diagnostics]**: Wählen Sie **[!UICONTROL Error diagnostics]** aus, um die Quelle anzuweisen, eine Fehlerdiagnose zu erstellen, auf die Sie später bei der Überwachung Ihrer Datensatzaktivität und des Datenflussstatus verweisen können.
+* **[!UICONTROL Partial ingestion]**: Die partielle Batch-Aufnahme bietet die Möglichkeit, Daten mit Fehlern bis zu einem bestimmten konfigurierbaren Schwellenwert aufzunehmen. Mit dieser Funktion können Sie alle Ihre korrekten Daten erfolgreich in Experience Platform aufnehmen, während alle Ihre falschen Daten separat mit Informationen darüber, warum sie ungültig sind, in Batches erfasst werden.
 
 +++
 
@@ -101,12 +101,12 @@ Verwenden Sie die Zuordnungsschnittstelle, um Ihre Quelldaten den entsprechenden
 
 ## Überprüfung
 
-Der Schritt *[!UICONTROL Überprüfen]* wird angezeigt, in dem Sie die Details Ihres Datenflusses überprüfen können, bevor er erstellt wird. Die Details lassen sich wie folgt kategorisieren:
+Der Schritt *[!UICONTROL Review]* wird angezeigt, in dem Sie die Details Ihres Datenflusses überprüfen können, bevor er erstellt wird. Die Details lassen sich wie folgt kategorisieren:
 
-* **[!UICONTROL Verbindung]**: Zeigt den Kontonamen, die Quellplattform und den Quellnamen an.
-* **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt den Zieldatensatz und das Schema an, zu dem der Datensatz gehört.
+* **[!UICONTROL Connection]**: Zeigt den Kontonamen, die Quellplattform und den Quellnamen an.
+* **[!UICONTROL Assign dataset and map fields]**: Zeigt den Zieldatensatz und das Schema an, zu dem der Datensatz gehört.
 
-Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UICONTROL Beenden]**.
+Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UICONTROL Finish]** aus.
 
 ![Der Überprüfungsschritt im Quell-Workflow.](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
@@ -118,4 +118,8 @@ Bei der Erstellung der Verbindung wird die Seite mit den Quelldetails angezeigt.
 
 ## Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss hergestellt worden ist, können Sie Daten, die dadurch aufgenommen werden, überwachen, um Informationen zu Aufnahmegeschwindigkeiten, Erfolg und Fehlern zu erhalten. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial [Überwachen von Konten und Datenflüssen in der Benutzeroberfläche](../../monitor-streaming.md)
+Nachdem Ihr Datenfluss hergestellt worden ist, können Sie Daten, die dadurch aufgenommen werden, überwachen, um Informationen zu Aufnahmegeschwindigkeiten, Erfolg und Fehlern zu erhalten. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial [Überwachen von Konten und Datenflüssen in der Benutzeroberfläche](../../monitor-streaming.md).
+
+## Bekannte Einschränkungen
+
+Um eine genaue Datenaufnahme zu gewährleisten, sollten Sie Daten von geänderten Treuepunkten des [!DNL Talon.One], von Stufenaktualisierungen und von Stufenherunterstufungsbenachrichtigungen an den Connector senden. Da die Benachrichtigung über geänderte Treuepunkte keine Stufeninformationen enthält, müssen Sie diese Benachrichtigungen an einen separaten Profildatensatz senden. Wenn Sie Punkte mit geänderten Daten mit Upgrade- oder Downgrade-Benachrichtigungen der Stufe im selben Datensatz kombinieren, gehen Stufeninformationen verloren oder werden mit Nullwerten überschrieben. Benachrichtigungen über Stufen-Upgrades und -Downgrades können denselben Datensatz verwenden, da beide Stufendetails enthalten. Nach der Aufnahme aktualisieren die Profilzusammenführungsregeln automatisch das zusammengeführte Profil, um die neuesten Punkte und Stufeninformationen widerzuspiegeln.
