@@ -15,7 +15,7 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche Batch-Daten aus Ihrem [!DNL Talon.One]-Konto in Adobe Experience Platform aufnehmen.
 
