@@ -53,7 +53,7 @@ In der Widget-Bibliothek können Sie die standardmäßigen und benutzerdefiniert
 
 ### SQL anzeigen {#view-sql}
 
-Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im [!UICONTROL Overview] Arbeitsbereich anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Experience Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche &#x200B;](../view-sql.md).
+Sie können den SQL-Code, der die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im [!UICONTROL Overview] Arbeitsbereich anzeigen. Sie können sich von der SQL Ihrer bestehenden Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die basierend auf Ihren Geschäftsanforderungen eindeutige Einblicke aus Experience Platform-Daten ableiten. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur SQL-Benutzeroberfläche ](../view-sql.md).
 
 ## Audience auswählen {#select-audience}
 
@@ -93,7 +93,7 @@ Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßig
 
 ## Kunden-KI-Widgets {#customer-ai-audiences-widgets}
 
-Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Kunden-KI analysiert dazu vorhandene Kundenerlebnisereignisdaten, um Abwanderungs- **Konversionsneigungswerte vorherzusagen**. Diese hochpräzisen Modelle für die Kundentendenz ermöglichen eine genauere Segmentierung und Zielgruppenbestimmung. Die Insights [Verteilung der &#x200B;](#customer-ai-distribution-of-scores) und [Scoring-](#customer-ai-scoring-summary)) veranschaulichen die Teilung in Ihrer Audience. Sie zeigen an, welche Profile die hohe/niedrige/mittlere Neigung sind und wie sie über die Anzahl Ihrer Profile verteilt sind.
+Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Kunden-KI analysiert dazu vorhandene Kundenerlebnisereignisdaten, um Abwanderungs- **Konversionsneigungswerte vorherzusagen**. Diese hochpräzisen Modelle für die Kundentendenz ermöglichen eine genauere Segmentierung und Zielgruppenbestimmung. Die Insights [Verteilung der ](#customer-ai-distribution-of-scores) und [Scoring-](#customer-ai-scoring-summary)) veranschaulichen die Teilung in Ihrer Audience. Sie zeigen an, welche Profile die hohe/niedrige/mittlere Neigung sind und wie sie über die Anzahl Ihrer Profile verteilt sind.
 
 * [[!UICONTROL Customer AI scoring summary]](#customer-ai-scoring-summary)
 * [[!UICONTROL Customer AI distribution of scores]](#customer-ai-distribution-of-scores)
@@ -111,11 +111,11 @@ Das [!UICONTROL Customer AI distribution of scores]-Widget kategorisiert die Ges
 >
 >Wenn es sich bei der Visualisierung um einen Konversionsneigungs-Score handelt, werden die Highscores in grün und die Low Scores in rot angezeigt. Wenn Sie eine Abwanderungsneigung vorhersagen, wird diese umgekehrt. Die Highscores sind rot und die Low Scores grün. Der mittlere Bucket bleibt unabhängig vom ausgewählten Neigungstyp gelb.
 
-Das KI-Modell, das die Neigungs-Scores bestimmt, wird aus der Dropdown-Auswahl unter dem Widget-Titel ausgewählt. Die Dropdown-Liste enthält eine Liste aller konfigurierten Kunden-KI-Modelle. Wählen Sie das für Ihre Analyse geeignete KI-Modell aus der Liste der verfügbaren Modelle aus. Wenn kein Kunden-KI-Modell verfügbar ist, werden Sie in einer Meldung innerhalb des Widgets aufgefordert, mindestens ein Kunden-KI-Modell zu konfigurieren, und es wird ein Hyperlink zur Seite für die Konfiguration des Kunden-KI-Modells bereitgestellt. In der Dokumentation finden Sie Anweisungen [&#x200B; Konfigurieren einer Kunden-KI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md).
+Das KI-Modell, das die Neigungs-Scores bestimmt, wird aus der Dropdown-Auswahl unter dem Widget-Titel ausgewählt. Die Dropdown-Liste enthält eine Liste aller konfigurierten Kunden-KI-Modelle. Wählen Sie das für Ihre Analyse geeignete KI-Modell aus der Liste der verfügbaren Modelle aus. Wenn kein Kunden-KI-Modell verfügbar ist, werden Sie in einer Meldung innerhalb des Widgets aufgefordert, mindestens ein Kunden-KI-Modell zu konfigurieren, und es wird ein Hyperlink zur Seite für die Konfiguration des Kunden-KI-Modells bereitgestellt. In der Dokumentation finden Sie Anweisungen [ Konfigurieren einer Kunden-KI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md).
 
 >[!NOTE]
 >
->Wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus, um die Zusammenführungsrichtlinie zu ändern, die bestimmt, welche Profile in die Analyse eingeschlossen werden. Eine kurze Beschreibung finden Sie [&#x200B; Abschnitt &#x200B;](#merge-policies) Zusammenführungsrichtlinien oder [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md) für weitere Details.
+>Wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus, um die Zusammenführungsrichtlinie zu ändern, die bestimmt, welche Profile in die Analyse eingeschlossen werden. Eine kurze Beschreibung finden Sie [ Abschnitt ](#merge-policies) Zusammenführungsrichtlinien oder [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md) für weitere Details.
 
 Um zur detaillierten Insights-Seite für das ausgewählte Kunden-KI-Modell zu navigieren, wählen Sie **[!UICONTROL View model details]** aus.
 
@@ -132,7 +132,7 @@ Weitere Informationen zur Kunden-KI finden Sie im Handbuch [Benutzeroberfläche 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_scoringSummary"
 >title="Bewertungszusammenfassung"
->abstract="Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in hohe, mittlere und niedrige Tendenz. Das Ringdiagramm zeigt die proportionale Zusammensetzung der Gesamtprofile über eine hohe, mittlere und niedrige Tendenz hinweg."
+>abstract="Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in hohe, mittlere und niedrige Tendenz. Das Ringdiagramm zeigt die proportionale Komposition der Gesamtprofile über eine hohe, mittlere und niedrige Tendenz hinweg."
 
 Dieses Widget zeigt die Gesamtzahl der bewerteten Profile an und kategorisiert sie in Buckets mit hoher, mittlerer und geringer Neigung als grün, gelb bzw. rot. Ein Ringdiagramm wird verwendet, um die proportionale Zusammensetzung der Gesamtprofile mit hoher, mittlerer und niedriger Neigung als grün, gelb bzw. rot zu veranschaulichen. Ein Profil eignet sich für eine hohe Neigung bei über 75, eine mittlere Neigung zwischen 25 und 74 und eine niedrige Neigung bei unter 24 Jahren. Eine Legende gibt den Farbcode und die Schwellenwerte für Tendenzen an. Die Anzahl der Profile für hohe, mittlere und niedrige Tendenzen wird in einem Dialogfeld angezeigt, wenn der Cursor über den entsprechenden Abschnitt des Ringdiagramms bewegt wird.
 
@@ -140,11 +140,11 @@ Dieses Widget zeigt die Gesamtzahl der bewerteten Profile an und kategorisiert s
 >
 >Wenn es sich bei der Visualisierung um einen Konversionsneigungs-Score handelt, werden die Highscores in grün und die Low Scores in rot angezeigt. Wenn Sie eine Abwanderungsneigung vorhersagen, wird diese umgekehrt. Die Highscores sind rot und die Low Scores grün. Der mittlere Bucket bleibt unabhängig vom ausgewählten Neigungstyp gelb.
 
-Das Dropdown-Menü unter dem Widget-Titel enthält eine Liste aller konfigurierten Kunden-KI-Modelle. Wählen Sie das für Ihre Analyse geeignete KI-Modell aus der Liste der verfügbaren Modelle aus. Wenn kein Kunden-KI-Modell verfügbar ist, werden Sie in einer Meldung innerhalb des Widgets aufgefordert, mindestens ein Kunden-KI-Modell zu konfigurieren, und es wird ein Hyperlink zur Seite für die Konfiguration des Kunden-KI-Modells bereitgestellt. Detaillierte Anweisungen finden Sie in [&#x200B; Dokumentation unter „Konfigurieren einer Kunden](../../intelligent-services/customer-ai/user-guide/configure.md)KI-Instanz“.
+Das Dropdown-Menü unter dem Widget-Titel enthält eine Liste aller konfigurierten Kunden-KI-Modelle. Wählen Sie das für Ihre Analyse geeignete KI-Modell aus der Liste der verfügbaren Modelle aus. Wenn kein Kunden-KI-Modell verfügbar ist, werden Sie in einer Meldung innerhalb des Widgets aufgefordert, mindestens ein Kunden-KI-Modell zu konfigurieren, und es wird ein Hyperlink zur Seite für die Konfiguration des Kunden-KI-Modells bereitgestellt. Detaillierte Anweisungen finden Sie in [ Dokumentation unter „Konfigurieren einer Kunden](../../intelligent-services/customer-ai/user-guide/configure.md)KI-Instanz“.
 
 >[!NOTE]
 >
->Die Gesamtzahl der berechneten Profile hängt von der ausgewählten Zusammenführungsrichtlinie ab. Um die verwendete Zusammenführungsrichtlinie zu ändern, wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus. Eine kurze Beschreibung finden Sie [&#x200B; Abschnitt &#x200B;](#merge-policies) Zusammenführungsrichtlinien oder [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md) für weitere Details.
+>Die Gesamtzahl der berechneten Profile hängt von der ausgewählten Zusammenführungsrichtlinie ab. Um die verwendete Zusammenführungsrichtlinie zu ändern, wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus. Eine kurze Beschreibung finden Sie [ Abschnitt ](#merge-policies) Zusammenführungsrichtlinien oder [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md) für weitere Details.
 
 ![Das Experience Platform-Zielgruppen-Dashboard mit hervorgehobenem Widget „Zusammenfassung der Kunden-KI-Bewertung“.](../images/segments/customer-ai-scoring-summary.png)
 
