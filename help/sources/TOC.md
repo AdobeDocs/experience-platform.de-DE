@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: ded7a095f95bd43a34e694fb0a6fd4b468b4e246
+source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1083'
 ht-degree: 89%
 
 ---
@@ -110,9 +110,10 @@ ht-degree: 89%
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
-      - [HubSpot-Connector](connectors/marketing-automation/hubspot.md)
-      - [Mailchimp-Connector](connectors/marketing-automation/mailchimp.md)
-      - [Oracle Eloqua-Connector](connectors/marketing-automation/oracle-eloqua.md)
+      - [HubSpot](connectors/marketing-automation/hubspot.md)
+      - [Mailchimp](connectors/marketing-automation/mailchimp.md)
+      - [Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
+      - [Oracle Eloqua (v2)](connectors/marketing-automation/eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -327,6 +328,7 @@ ht-degree: 89%
          - [Mailchimp-Kampagnen](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp-Mitglieder](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle Eloqua (v2)](tutorials/ui/create/marketing-automation/eloqua.md)
          - [Oracle NetSuite-Aktivitäten](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite-Entitäten](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
