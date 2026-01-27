@@ -17,7 +17,7 @@ ht-degree: 47%
 
 >[!IMPORTANT]
 >
->Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [&#x200B; entsprechenden &#x200B;](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
 Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen in Bezug auf das Aktivierungsverhalten. Bei der Betrachtung der folgenden Leitplanken wird angenommen, dass Sie eine ordnungsgemäße [Verbindung zu Zielen hergestellt haben](/help/destinations/ui/connect-destination.md).
 
@@ -53,7 +53,7 @@ Die folgenden Leitplanken gelten generell für die Aktivierung durch [alle Zielt
 | Maximale Anzahl von Attributen, die einem Ziel zugeordnet sind | 50 | Leistungs-Schutzmaßnahme | Bei mehreren Zielen und Zieltypen können Sie Profilattribute und Identitäten auswählen, die dem Export zugeordnet werden sollen. Für eine optimale Performance sollten maximal 50 Attribute in einem Datenfluss einem Ziel zugeordnet werden. |
 | Maximale Anzahl von Zielen | 100 | Vom System erzwungene Leitplanken | Sie können maximal 100 Ziele erstellen, mit denen Sie (pro Sandbox) Daten verbinden *aktivieren*. [Edge-Personalisierungsziele (benutzerdefinierte Personalisierung)](#edge-destinations-activation) können maximal 10 der 100 empfohlenen Ziele ausmachen. |
 | Art der für Ziele aktivierten Daten | Profildaten, einschließlich Identitäten und Identitätszuordnung | Vom System erzwungene Leitplanken | Derzeit ist es nur möglich, *Profileintragsattribute* zu Zielen zu exportieren. XDM-Attribute, die Ereignisdaten beschreiben, werden derzeit nicht für den Export unterstützt. |
-| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Vom System erzwungene Leitplanken | Sie können Array-Attribute in [dateibasierte Ziele“ ](/help/destinations/destination-types.md#file-based). [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md) über die Funktion. |
+| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Vom System erzwungene Leitplanken | Sie können Array-Attribute in [dateibasierte Ziele“ &#x200B;](/help/destinations/destination-types.md#file-based). [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md) über die Funktion. |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Die folgenden Leitplanken gelten für die Aktivierung durch [Edge-Personalisieru
 
 ### Datensatzexporte {#dataset-exports}
 
-Datensatzexporte werden derzeit in einem **[!UICONTROL First Full and then Incremental]** ([) ](/help/destinations/ui/export-datasets.md#scheduling). Die in diesem Abschnitt beschriebenen Leitplanken *gelten für den ersten vollständigen Export* der nach der Einrichtung eines Datensatzexport-Workflows erfolgt.
+Datensatzexporte werden derzeit in einem **[!UICONTROL First Full and then Incremental]** ([) &#x200B;](/help/destinations/ui/export-datasets.md#scheduling). Die in diesem Abschnitt beschriebenen Leitplanken *gelten für den ersten vollständigen Export* der nach der Einrichtung eines Datensatzexport-Workflows erfolgt.
 
 <!--
 
