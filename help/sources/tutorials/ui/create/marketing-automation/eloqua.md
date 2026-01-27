@@ -29,7 +29,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Sammeln erforderlicher Anmeldedaten {#credentials}
 
-Informationen zur Authentifizierung [[!DNL Eloqua]  Sie in ](../../../../connectors/marketing-automation/eloqua.md)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Eloqua]  Sie in &#x200B;](../../../../connectors/marketing-automation/eloqua.md)Übersicht“.
 
 ## Navigieren im Quellkatalog {#catalog}
 
@@ -51,7 +51,7 @@ Um ein vorhandenes Konto zu verwenden, klicken Sie auf **[!UICONTROL Existing ac
 
 ## Neues Konto erstellen {#new}
 
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie einen Namen und eine Beschreibung unter Ihrem [!UICONTROL Source connection details] an. Geben Sie als Nächstes unter [!UICONTROL Account authentication] Werte für Ihre **Client-ID**, **Client-Geheimnis**, **Benutzername**, **Kennwort** und **Basisendpunkt** an. Weitere Informationen zu diesen Anmeldeinformationen finden [ im ](../../../../connectors/marketing-automation/eloqua.md) zur Authentifizierung . Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie einige Sekunden, bis Ihre Verbindung hergestellt ist.
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie einen Namen und eine Beschreibung unter Ihrem [!UICONTROL Source connection details] an. Geben Sie als Nächstes unter [!UICONTROL Account authentication] Werte für Ihre **Client-ID**, **Client-Geheimnis**, **Benutzername**, **Kennwort** und **Basisendpunkt** an. Weitere Informationen zu diesen Anmeldeinformationen finden [&#x200B; im &#x200B;](../../../../connectors/marketing-automation/eloqua.md) zur Authentifizierung . Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie einige Sekunden, bis Ihre Verbindung hergestellt ist.
 
 ![Die neue Kontoschnittstelle mit Feldern für Details zur Quellverbindung und Authentifizierungsberechtigungen.](../../../../images/tutorials/create/eloqua/new.png)
 

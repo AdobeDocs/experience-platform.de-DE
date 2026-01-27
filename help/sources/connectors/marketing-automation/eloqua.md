@@ -78,7 +78,7 @@ Um Kampagnendaten aufzunehmen, navigieren Sie zur Benutzeroberfläche **Benutzer
 
 ![Die Sicherheitsgruppe mit hinzugefügten geführten Kampagnen.](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
 
-Optional können Sie einen zusätzlichen Benutzer erstellen und diesen Benutzer zu einer Sicherheitsgruppe hinzufügen. Ausführliche Anweisungen finden Sie in der [!DNL Eloqua] Dokumentation unter [Erstellen eines ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) und [Zuweisen eines Benutzers zu einer Sicherheitsgruppe](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
+Optional können Sie einen zusätzlichen Benutzer erstellen und diesen Benutzer zu einer Sicherheitsgruppe hinzufügen. Ausführliche Anweisungen finden Sie in der [!DNL Eloqua] Dokumentation unter [Erstellen eines &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) und [Zuweisen eines Benutzers zu einer Sicherheitsgruppe](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
 
 ### Sammeln erforderlicher Anmeldedaten
 
