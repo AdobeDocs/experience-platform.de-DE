@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 66f117ee5818618794a20561484eae21dd420899
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1328'
 ht-degree: 73%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -99,6 +99,7 @@ ht-degree: 73%
       * [(Eingeschränkte Verfügbarkeit) Google Customer Match + DV360-Verbindung](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360-Verbindung](./catalog/advertising/google-dv360.md)
       * [Google gtag-Erweiterung](./catalog/advertising/gtag-advertising.md)
+      * [Index Exchange-Verbindung](./catalog/advertising/index-exchange.md)
       * [LinkedIn Insight Tag-Erweiterung](./catalog/advertising/linkedin.md)
       * [LiveRamp – Onboarding-Verbindung](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Verteilungsverbindung](./catalog/advertising/liveramp-distribution.md)
