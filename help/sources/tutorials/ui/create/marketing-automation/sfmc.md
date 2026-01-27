@@ -23,7 +23,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Salesforce Marketing Cloud]  Sie in ](../../../../connectors/marketing-automation/sfmc.md#prerequisites)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Salesforce Marketing Cloud]  Sie in &#x200B;](../../../../connectors/marketing-automation/sfmc.md#prerequisites)Übersicht“.
 
 ## Navigieren im Quellkatalog
 
@@ -45,7 +45,7 @@ Um ein vorhandenes Konto zu verwenden, klicken Sie auf **[!UICONTROL Existing ac
 
 ## Neues Konto erstellen {#new}
 
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie einen Namen und eine Beschreibung unter Ihrem [!UICONTROL Source connection details] an. Geben Sie als Nächstes unter [!UICONTROL Account authentication] Werte für Ihren **Client-ID**, **Client-Geheimnis** und **Basis-Endpunkt** an. Weitere Informationen zu diesen Anmeldeinformationen finden [ im ](../../../../connectors/marketing-automation/sfmc.md#gather-required-credentials) zur Authentifizierung . Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie einige Sekunden, bis Ihre Verbindung hergestellt ist.
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie einen Namen und eine Beschreibung unter Ihrem [!UICONTROL Source connection details] an. Geben Sie als Nächstes unter [!UICONTROL Account authentication] Werte für Ihren **Client-ID**, **Client-Geheimnis** und **Basis-Endpunkt** an. Weitere Informationen zu diesen Anmeldeinformationen finden [&#x200B; im &#x200B;](../../../../connectors/marketing-automation/sfmc.md#gather-required-credentials) zur Authentifizierung . Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie einige Sekunden, bis Ihre Verbindung hergestellt ist.
 
 ![Die neue Kontoschnittstelle des Quell-Workflows.](../../../../images/tutorials/create/sfmc/new.png)
 
