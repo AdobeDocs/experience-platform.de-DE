@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+source-git-commit: ded7a095f95bd43a34e694fb0a6fd4b468b4e246
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 90%
+source-wordcount: '1080'
+ht-degree: 89%
 
 ---
 
@@ -116,6 +116,7 @@ ht-degree: 90%
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
+      - [Salesforce Marketing Cloud (v2)](connectors/marketing-automation/sfmc.md)
    - Zahlungen {#payments}
       - [Square-Connector](connectors/payments/square.md)
       - [Stripe-Connector](connectors/payments/stripe.md)
@@ -331,6 +332,7 @@ ht-degree: 90%
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Relaisstecker](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud (v2)](tutorials/ui/create/marketing-automation/sfmc.md)
       - Zahlungen {#payments}
          - [Square](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
@@ -366,7 +368,7 @@ ht-degree: 90%
    - [Anwenden von Zugriffskennzeichnungen auf einen Datenfluss](tutorials/ui/labels.md)
    - [Erstellen eines privaten Endpunkts](tutorials/ui/private-link.md)
 - Selbstbedienungsquellen (Batch-SDK) {#sdk}
-   - [Überblick](sources-sdk/overview.md)
+   - [Übersicht](sources-sdk/overview.md)
    - Konfigurieren der Verbindungsspezifikation {#config}
       - [Konfigurationsoptionen](sources-sdk/config/config.md)
       - [Konfigurieren der Authentifizierungsspezifikation](sources-sdk/config/authspec.md)
