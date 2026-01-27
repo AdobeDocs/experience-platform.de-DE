@@ -5,14 +5,22 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Echtzeit-Kundenprofildaten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen können, die häufiger als „Profile“ bezeichnet werden.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
+source-git-commit: 17bd3494c2d9b2a05ca86903297ebec85c9350f2
 workflow-type: tm+mt
-source-wordcount: '2211'
-ht-degree: 29%
+source-wordcount: '2290'
+ht-degree: 28%
 
 ---
 
 # Entitäten-Endpunkt (Profilzugriff)
+
+>[!IMPORTANT]
+>
+>Sie **diese** nur verwenden, wenn Sie über Real-Time CDP Ultimate verfügen.
+>
+>Wenn Sie über Real-Time CDP Prime verfügen, können Sie weiterhin Erlebnisereignisse für Personalisierungsanwendungsfälle sowie Ansichtsereignisse in der Experience Platform-Benutzeroberfläche erfassen und verwenden. Sie können jedoch **nicht** Erlebnisereignisse mithilfe der API programmgesteuert nachschlagen.
+>
+>Wenn Sie Real-Time CDP Ultimate haben und **nicht** derzeit Ereignisse programmgesteuert suchen, wenden Sie sich an die Adobe-Kundenunterstützung, um diese Funktion zu aktivieren.
 
 Adobe Experience Platform ermöglicht den Zugriff auf [!DNL Real-Time Customer Profile] mithilfe von RESTful-APIs oder der Benutzeroberfläche. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten, meist als „Profile“ bezeichnet, zugreifen können. Weiterführende Informationen zum Zugriff auf Profile über die [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Benutzerhandbuch für Profile](../ui/user-guide.md).
 
@@ -440,7 +448,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 
 | Eigenschaft | Typ | Beschreibung |
 | -------- |----- | ----------- |
-| `schema.name` | Zeichenfolge | **(Erforderlich)** Der Name des XDM-Schemas, zu dem die Entität gehört. |
+| `schema.name` | String | **(Erforderlich)** Der Name des XDM-Schemas, zu dem die Entität gehört. |
 | `fields` | Array | Die XDM-Felder, die zurückgegeben werden sollen, als Array von Zeichenfolgen. Standardmäßig werden alle Felder zurückgegeben. |
 | `identities` | Array | **(Erforderlich)** Ein Array mit einer Liste von Identitäten für die Entitäten, auf die Sie zugreifen möchten. |
 | `identities.entityId` | String | Die Kennung einer Entität, auf die Sie zugreifen möchten. |
@@ -647,7 +655,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 
 | Eigenschaft | Typ | Beschreibung |
 | -------- |----- | ----------- |
-| `schema.name` | Zeichenfolge | **(Erforderlich)** Der Name des XDM-Schemas, zu dem die Entität gehört. |
+| `schema.name` | String | **(Erforderlich)** Der Name des XDM-Schemas, zu dem die Entität gehört. |
 | `identities` | Array | **(Erforderlich)** Ein Array mit einer Liste von Identitäten für die Entitäten, auf die Sie zugreifen möchten. |
 | `identities.entityId` | String | Die Kennung einer Entität, auf die Sie zugreifen möchten. |
 | `identities.entityIdNS.code` | String | Der Namespace einer Entitätskennung, auf die Sie zugreifen möchten. |
@@ -878,7 +886,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 
 | Eigenschaft | Typ | Beschreibung |
 | -------- |----- | ----------- |
-| `schema.name` | Zeichenfolge | **(Erforderlich)** Der Name des XDM-Schemas, zu dem die Entität gehört. |
+| `schema.name` | String | **(Erforderlich)** Der Name des XDM-Schemas, zu dem die Entität gehört. |
 | `identities` | Array | **(Erforderlich)** Ein Array mit einer Liste von Identitäten für die Entitäten, auf die Sie zugreifen möchten. |
 | `identities.entityId` | String | Die Kennung einer Entität, auf die Sie zugreifen möchten. |
 | `identities.entityIdNS.code` | String | Der Namespace einer Entitätskennung, auf die Sie zugreifen möchten. |
@@ -1249,7 +1257,7 @@ Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten 
 
 Um eine Entität zu löschen **müssen** die folgenden Abfrageparameter angeben:
 
-- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **&#x200B;**&#x200B;nur`schema.name=_xdm.context.profile` verwenden.
+- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **** nur`schema.name=_xdm.context.profile` verwenden.
 - `entityId`: Die ID der Entität, die Sie abrufen möchten.
 - `entityIdNS`: Der Namespace der Entität, die Sie abrufen möchten. Dieser Wert muss angegeben werden, wenn die `entityId` **keine** XID ist.
 - `mergePolicyId`: Die Zusammenführungsrichtlinien-ID der Entität. Die Zusammenführungsrichtlinie enthält Informationen zur Identitätszuordnung und zum Zusammenführen von Schlüssel-Wert-XDM-Objekten. Wenn dieser Wert nicht angegeben wird, wird die standardmäßige Zusammenführungsrichtlinie verwendet.
@@ -1293,7 +1301,7 @@ Die folgenden Parameter werden im Pfad für GET-Anfragen an den `/access/entitie
 | `entityId` | **(Erforderlich)** Die ID der Entität. Wenn der Wert dieses Parameters keine XID ist, muss auch ein Identity-Namespace-Parameter (`entityIdNS`) angegeben werden. | `entityId=janedoe@example.com` |
 | `entityIdNS` | Wenn `entityId` nicht als XID angegeben wird, muss **Feld** Identity-Namespace angeben. | `entityIdNS=email` |
 | `relatedEntityId` | Wenn `schema.name` `_xdm.context.experienceevent` ist, muss **Wert** ID der zugehörigen Profilentität angeben. Dieser Wert folgt denselben Regeln wie `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
-| `relatedEntityIdNS` | Wenn `schema.name` den Wert „_xdm.context.experienceevent“ hat, muss dieser Wert den Identitäts-Namespace für die in `relatedEntityId` festgelegte Entität angeben. | `relatedEntityIdNS=CRMID` |
+| `relatedEntityIdNS` | Wenn `schema.name` den Wert „_xdm.context.experienceevent“ hat, muss dieser Wert den Identity-Namespace für die in `relatedEntityId` festgelegte Entität angeben. | `relatedEntityIdNS=CRMID` |
 | `fields` | Filtert die in der Antwort zurückgegebenen Daten. Geben Sie hier an, welche Schemafeldwerte in abgerufene Daten einbezogen werden sollen. Trennen Sie Werte bei mehreren Feldern durch ein Komma ohne Leerzeichen dazwischen. | `fields=personalEmail,person.name,person.gender` |
 | `mergePolicyId` | *Empfohlen* Gibt die Zusammenführungsrichtlinie an, mit der die zurückgegebenen Daten gesteuert werden sollen. Wenn im Aufruf keine Zusammenführungsrichtlinie angegeben ist, wird die Standardeinstellung Ihrer Organisation für dieses Schema verwendet. Wenn für das von Ihnen angeforderte Schema keine standardmäßige Zusammenführungsrichtlinie definiert wurde, gibt die API einen HTTP-422-Fehlerstatus-Code zurück. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | Die Sortierreihenfolge der abgerufenen Entitäten nach Zeitstempel. Dies wird als `(+/-)timestamp` geschrieben, wobei der Standard `+timestamp` wird. | `orderby=-timestamp` |

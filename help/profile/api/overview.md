@@ -4,10 +4,10 @@ title: Handbuch zur Echtzeit-Kundenprofil-API
 description: Mit der Echtzeit-Kundenprofil-API können Entwickler Profildaten untersuchen und mit ihnen arbeiten, einschließlich Profilen anzeigen, Zusammenführungsrichtlinien erstellen und aktualisieren, Profildaten exportieren oder als Beispiel verwenden und Profildaten löschen, die nicht mehr erforderlich sind oder irrtümlich hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82a9b405a1d36155c84cd27a005c7ec469164ef3
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 19%
+source-wordcount: '874'
+ht-degree: 18%
 
 ---
 
@@ -31,17 +31,21 @@ Sie können berechnete Attribute mithilfe des `ca/attributes/`-Endpunkts erstell
 
 ## Entitäten ([!DNL Profile]-Zugriff) {#entities}
 
-Über Adobe Experience Platform können Sie mithilfe von RESTful-APIs oder der Benutzeroberfläche auf [!DNL Real-Time Customer Profile] Daten zugreifen. Um mithilfe der API auf Entitäten zuzugreifen, die gemeinhin als „Profile“ bezeichnet werden, führen Sie die Schritte aus, die im [Handbuch für Entitäten-Endpunkte“ beschrieben &#x200B;](entities.md). Informationen zum Zugriff auf Profile über die [!DNL Experience Platform] Benutzeroberfläche finden Sie im [Benutzerhandbuch für Profile](../ui/user-guide.md).
+>[!NOTE]
+>
+>Sie können diese Endpunkte nur verwenden, wenn Sie über Real-Time CDP Ultimate verfügen.
+
+Über Adobe Experience Platform können Sie mithilfe von RESTful-APIs oder der Benutzeroberfläche auf [!DNL Real-Time Customer Profile] Daten zugreifen. Um mithilfe der API auf Entitäten zuzugreifen, die gemeinhin als „Profile“ bezeichnet werden, führen Sie die Schritte aus, die im [Handbuch für Entitäten-Endpunkte“ beschrieben ](entities.md). Informationen zum Zugriff auf Profile über die [!DNL Experience Platform] Benutzeroberfläche finden Sie im [Benutzerhandbuch für Profile](../ui/user-guide.md).
 
 ## Exportaufträge ([!DNL Profile]-Export) {#profile-export}
 
-[!DNL Real-Time Customer Profile] Daten können zur weiteren Verarbeitung in einen Datensatz exportiert werden, z. B. zum Exportieren von Zielgruppen zur Aktivierung oder Profilattributen für das Reporting. Exportvorgänge für Zielgruppen sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-API. Weitere Informationen finden Sie [&#x200B; Handbuch &#x200B;](../../profile/api/export-jobs.md) Segmentierungsexportvorgänge . Schrittweise Anweisungen zum Erstellen und Verwalten von Exportvorgängen für Profilattribute finden Sie im [Handbuch zu Exportvorgängen](export-jobs.md).
+[!DNL Real-Time Customer Profile] Daten können zur weiteren Verarbeitung in einen Datensatz exportiert werden, z. B. zum Exportieren von Zielgruppen zur Aktivierung oder Profilattributen für das Reporting. Exportvorgänge für Zielgruppen sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-API. Weitere Informationen finden Sie [ Handbuch ](../../profile/api/export-jobs.md) Segmentierungsexportvorgänge . Schrittweise Anweisungen zum Erstellen und Verwalten von Exportvorgängen für Profilattribute finden Sie im [Handbuch zu Exportvorgängen](export-jobs.md).
 
 ## Zusammenführungsrichtlinien {#merge-policies}
 
 Beim Zusammenführen von Daten aus mehreren Quellen in [!DNL Experience Platform] dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Experience Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um individuelle Kundenprofile zu erstellen. Mit der [!DNL Real-Time Customer Profile]-API können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festlegen. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API finden Sie im [Handbuch zu Endpunkten von Zusammenführungsrichtlinien](merge-policies.md).
 
-Um mehr über Zusammenführungsrichtlinien und ihre Rolle in Experience Platform zu erfahren, lesen Sie zunächst die Übersicht über [&#x200B; Zusammenführungsrichtlinien &#x200B;](../merge-policies/overview.md).
+Um mehr über Zusammenführungsrichtlinien und ihre Rolle in Experience Platform zu erfahren, lesen Sie zunächst die Übersicht über [ Zusammenführungsrichtlinien ](../merge-policies/overview.md).
 
 ## Musterstatus der Vorschau ([!DNL Profile]-Vorschau) {#profile-preview}
 
@@ -53,8 +57,8 @@ Profilaktivierte Daten, die in [!DNL Experience Platform] aufgenommen werden, we
 
 ## Aktualisieren von Profilattributen {#update-profile}
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../../catalog/datasets/enable-upsert.md).
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Einträge korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../../catalog/datasets/enable-upsert.md).
 
 ## Nächste Schritte {#next-steps}
 
-Um mit Aufrufen mit der [!DNL Real-Time Customer Profile]-API zu beginnen, lesen Sie [Erste Schritte](getting-started.md) und wählen Sie dann eines der Endpunkthandbücher aus, um zu erfahren, wie Sie bestimmte [!DNL Profile] Endpunkte verwenden. Informationen zum Arbeiten mit [!DNL Profile] Daten über die [!DNL Experience Platform]-Benutzeroberfläche finden [&#x200B; im Benutzerhandbuch zum Echtzeit-Kundenprofil](../ui/user-guide.md).
+Um mit Aufrufen mit der [!DNL Real-Time Customer Profile]-API zu beginnen, lesen Sie [Erste Schritte](getting-started.md) und wählen Sie dann eines der Endpunkthandbücher aus, um zu erfahren, wie Sie bestimmte [!DNL Profile] Endpunkte verwenden. Informationen zum Arbeiten mit [!DNL Profile] Daten über die [!DNL Experience Platform]-Benutzeroberfläche finden [ im Benutzerhandbuch zum Echtzeit-Kundenprofil](../ui/user-guide.md).
