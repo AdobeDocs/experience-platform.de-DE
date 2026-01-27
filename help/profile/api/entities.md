@@ -1257,7 +1257,7 @@ Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten 
 
 Um eine Entität zu löschen **müssen** die folgenden Abfrageparameter angeben:
 
-- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **** nur`schema.name=_xdm.context.profile` verwenden.
+- `schema.name`: Der Name des XDM-Schemas der Entität. In diesem Anwendungsfall können Sie **&#x200B;**&#x200B;nur`schema.name=_xdm.context.profile` verwenden.
 - `entityId`: Die ID der Entität, die Sie abrufen möchten.
 - `entityIdNS`: Der Namespace der Entität, die Sie abrufen möchten. Dieser Wert muss angegeben werden, wenn die `entityId` **keine** XID ist.
 - `mergePolicyId`: Die Zusammenführungsrichtlinien-ID der Entität. Die Zusammenführungsrichtlinie enthält Informationen zur Identitätszuordnung und zum Zusammenführen von Schlüssel-Wert-XDM-Objekten. Wenn dieser Wert nicht angegeben wird, wird die standardmäßige Zusammenführungsrichtlinie verwendet.
