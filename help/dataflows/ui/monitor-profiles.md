@@ -4,10 +4,10 @@ description: Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jede
 title: Überwachen von Datenflüssen für Profile in der Benutzeroberfläche
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1d60afdf486642398a2d31302db339eb9cb45130
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 13%
+source-wordcount: '1240'
+ht-degree: 11%
 
 ---
 
@@ -65,8 +65,6 @@ Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 
 Sie können das Filtersymbol ![Filtersymbol](/help/images/icons/filter.png) neben dem Quellnamen auswählen, um Profilinformationen zur Verarbeitung für die Datenflüsse dieser ausgewählten Quelle anzuzeigen.
 
-![Das Filtersymbol ist hervorgehoben. Durch Auswahl dieses Symbols können Sie die Datenflüsse der ausgewählten Quelle anzeigen.](../assets/ui/monitor-profiles/sources-filter.png)
-
 Alternativ können Sie auf **[!UICONTROL Dataflows]** im Umschalter klicken, um Details zur Profilverarbeitung für die Datenflüsse Ihres Unternehmens in den letzten 24 Stunden anzuzeigen.
 
 ![Das Profile-Dashboard. Es werden Informationen zur Anzahl der pro Datenfluss empfangenen Profildatensätze angezeigt.](../assets/ui/monitor-profiles/dataflows.png)
@@ -78,6 +76,7 @@ Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 | **[!UICONTROL Dataflow]** | Der Name des Datenflusses. |
 | **[!UICONTROL Dataset]** | Der Name des Datensatzes, in den der Datenfluss eingefügt wird. |
 | **[!UICONTROL Source name]** | Der Name der Quelle, zu der der Datenfluss gehört |
+| **[!UICONTROL Data type]** | Der Typ der Daten, die vom Datensatz empfangen werden. |
 | **[!UICONTROL Records received**] | Die Anzahl der vom Data Lake empfangenen Datensätze. |
 | **[!UICONTROL Records failed]** | Die Anzahl der Datensätze, die aufgrund von Fehlern aufgenommen, aber nicht in [!DNL Profile] wurden. |
 | **[!UICONTROL Profile fragments created]** | Die Anzahl der hinzugefügten neuen [!DNL Profile]. |
@@ -88,7 +87,31 @@ Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 
 Wählen Sie das Filtersymbol ![filter](/help/images/icons/filter.png) neben der Startzeit des Datenflusses aus, um weitere Informationen zur Ausführung des [!DNL Profile] Datenflusses anzuzeigen.
 
-![Das Filtersymbol ist hervorgehoben. Durch Auswahl dieses Symbols können Sie Details zum ausgewählten Datenfluss anzeigen.](../assets/ui/monitor-profiles/dataflows-filter.png)
+Ein Dashboard mit allen Datenflussausführungen wird angezeigt. Dieses Dashboard enthält Metriken zu den Datenflussausführungen sowie Diagramme, die die Erfolgsrate, die erstellten Profilfragmente und die aktualisierten Profilfragmente zeigen.
+
+![Das Dashboard für Datenflussausführungen. Es werden Informationen zu den Datenflussausführungen angezeigt.](../assets/ui/monitor-profiles/dataflow-run.png)
+
+Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
+
+>[!NOTE]
+>
+>Wenn sich die Datenflussausführung im **[!UICONTROL Processing]** befindet, können Sie Informationen zur Bereitschaft anzeigen, indem Sie die Checkpoint-Status im Aufnahmeprozess sehen.
+>
+>![Die Sprechblase „Bereitschaft für die Profilaufnahme“ wird angezeigt.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+
+| Metrik | Beschreibung |
+| ------ | ----------- |
+| **[!UICONTROL Dataflow run start]** | Die Zeit, zu der die Datenflussausführung in UTC gestartet wurde. |
+| **[!UICONTROL Data type]** | Der Typ der vom Datenfluss empfangenen Daten. |
+| **[!UICONTROL Records received]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
+| **[!UICONTROL Records failed]** | Die Anzahl der Datensätze, die aufgrund von Fehlern aufgenommen, aber nicht in [!DNL Profile] wurden. |
+| **[!UICONTROL Profile fragments created]** | Die Anzahl der hinzugefügten neuen [!DNL Profile]. |
+| **[!UICONTROL Profile fragments updated]** | Die Anzahl der aktualisierten vorhandenen [!DNL Profile]. |
+| **[!UICONTROL Total profile fragments]** | Die Gesamtzahl der in [!DNL Profile] geschriebenen Datensätze, einschließlich aller vorhandenen aktualisierten [!DNL Profile] und neu erstellten [!DNL Profile]. |
+| **[!UICONTROL Processing time]** | Die Zeit, die für die Verarbeitung der Datenflussausführung benötigt wurde. |
+| **[!UICONTROL Status]** | Der Status der Datenflussausführung. Zu den möglichen Werten gehören [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued] und [!UICONTROL Processing]. |
+| **[!UICONTROL Ready for customer segmentation]** | Ein Status, der anzeigt, ob die aufgenommenen Datensätze für die Verwendung in der Kundensegmentierung bereit sind. Zu den möglichen Werten gehören [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] und [!UICONTROL Processing]. Selbst wenn der **Status** des Datenflusses verarbeitet wird, können Sie die Profile in der Kundensegmentierung verwenden, wenn der Wert dieses Felds „Ja“ lautet. |
+| **[!UICONTROL Ready for lookup]** | Ein Status, der anzeigt, ob die aufgenommenen Datensätze für die Verwendung bei der Adobe Journey Optimizer-Suche bereit sind.  Zu den möglichen Werten gehören [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] und [!UICONTROL Processing]. Selbst wenn der **Status** des Datenflusses verarbeitet wird, können Sie bei einem Wert dieses Felds von „Ja“ die Profile in der Journey Optimizer-Suche verwenden. |
 
 Auf der Seite [!UICONTROL Dataflow run details] werden weitere Informationen zur Ausführung des [!DNL Profile]-Datenflusses angezeigt, einschließlich der Organisations-ID und der Datenflussausführungs-ID. Auf dieser Seite werden auch der entsprechende Fehlercode und die Fehlermeldung angezeigt, die von [!DNL Profile] bereitgestellt werden, falls während des Aufnahmevorgangs Fehler auftreten.
 
