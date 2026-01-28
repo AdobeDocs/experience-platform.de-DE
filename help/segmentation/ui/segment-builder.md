@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 27071d79f52fa47e27da84b970729eb52fbbb7d3
+source-git-commit: 054b34875a0eb2676bcb4a8a8a555b4465410d66
 workflow-type: tm+mt
-source-wordcount: '5175'
-ht-degree: 55%
+source-wordcount: '5355'
+ht-degree: 53%
 
 ---
 
@@ -21,31 +21,6 @@ ht-degree: 55%
 ![Die Segment Builder-Benutzeroberfläche wird angezeigt.](../images/ui/segment-builder/segment-builder.png)
 
 ## Bausteine einer Segmentdefinition {#building-blocks}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="logische Komplexität"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="Ereignissequenzlimit"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="Warnhinweis zur Abfrageeffizienz"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Warnung zum Zählungsfilter"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="Warnung zu verschachtelten Daten"
->abstract=""
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
@@ -213,6 +188,45 @@ Alternativ können Sie manuell durch Kommas getrennte Werte hinzufügen.
 Beachten Sie, dass maximal 250 Werte zulässig sind. Wenn Sie diese Grenze überschreiten, müssen Sie einige Werte entfernen, bevor Sie weitere hinzufügen.
 
 ![Es erscheint eine Warnung, die anzeigt, dass Sie die maximale Anzahl von Werten erreicht haben.](../images/ui/segment-builder/maximum-values.png)
+
+### Validierung der Abfrage {#query-validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="logische Komplexität"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="Ereignissequenzlimit"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="Warnhinweis zur Abfrageeffizienz"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="Warnung zum Zählungsfilter"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="Warnung zu verschachtelten Daten"
+>abstract=""
+
+Segment Builder analysiert und validiert automatisch Ihre Zielgruppenabfragen, um sicherzustellen, dass Sie die Best Practices für die Zielgruppendefinition einhalten. Diese Best Practices können in zwei Kategorien unterteilt werden: kritische Validierung und Leistungsoptimierung.
+
+Wenn eine Zielgruppendefinition gegen eine wichtige Best Practice für die Validierung verstößt **können** Ihre Änderungen speichern, um Ihre Sandbox stabil zu halten. Wenn eine Zielgruppendefinition gegen eine Best Practice zur Leistungsoptimierung verstößt, können Sie Ihre Änderungen speichern, es wird jedoch *empfohlen,* Zielgruppendefinition zu aktualisieren, um Leistungsprobleme zu vermeiden.
+
+| Validierung | Typ | Schwellenwert |
+| ---------------- | ---- | --------- |
+| Logische Komplexität | Kritische Validierung | Die Definition der Zielgruppe ist zu kompliziert. |
+| Sequenzielle Ereignisse | Kritische Validierung | Es gibt mehr als 6 sequenzielle Ereignisse innerhalb einer Zielgruppendefinition. |
+| Aggregierte Anzahl | Leistungsoptimierung | Es gibt mehr als drei Aggregationsfunktionen innerhalb einer Zielgruppendefinition. |
+| Verschachtelte Daten | Leistungsoptimierung | Es gibt mehr als 2 Ebenen verschachtelter Daten (Datentypen „Array“ oder „Zuordnung„) in einer Zielgruppendefinition. |
+| Zielgruppengröße | Leistungsoptimierung | Die Größe der Zielgruppenqualifizierung ist größer als 30 % der Gesamtzahl der Profile in der Sandbox. |
 
 ### Hinzufügen von Zielgruppen
 
