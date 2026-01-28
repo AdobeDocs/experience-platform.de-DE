@@ -4,10 +4,10 @@ type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppendaten in Adobe Experience Platform aktivieren, indem Sie Zielgruppen an Ziele senden, die auf Streaming-Profilen basieren.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 13%
+source-wordcount: '762'
+ht-degree: 12%
 
 ---
 
@@ -57,7 +57,7 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 
 Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
-* **[!UICONTROL Segmentation Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden [&#x200B; in der &#x200B;](../../segmentation/ui/audience-portal.md) zum Audience Portal .
+* **[!UICONTROL Segmentation Service]**: Zielgruppen, die in Experience Platform vom Segmentierungs-Service generiert werden. Weitere Informationen finden [ in der ](../../segmentation/ui/audience-portal.md) zum Audience Portal .
 * **[!UICONTROL Custom upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Experience Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Importieren einer Zielgruppe](../../segmentation/ui/audience-portal.md#import-audience).
 * Andere Arten von Zielgruppen, die aus anderen Adobe-Lösungen wie [!DNL Audience Manager] stammen.
 
@@ -75,9 +75,15 @@ Wählen Sie im **[!UICONTROL Mapping]** Schritt die Profilattribute aus, die Sie
 
    ![Abbildung mit hervorgehobenen Informationen zur Auswahl eines Quellfelds im Zuordnungsschritt.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. Wählen Sie auf der Seite **[!UICONTROL Select field]** die XDM-Attribute aus, die Sie an das Ziel senden möchten, und wählen Sie dann **[!UICONTROL Select]** aus.
+1. Wählen Sie auf der Seite **[!UICONTROL Select source field]** die XDM-Attribute aus, die Sie an das Ziel senden möchten, und wählen Sie dann **[!UICONTROL Save]** aus.
 
-   ![Bild mit einer Auswahl von XDM-Feldern, die Sie als Quellfelder auswählen können.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Bild mit einer Auswahl von XDM-Feldern, die Sie als Quellfelder auswählen können.](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+
+   Verwenden Sie den Umschalter **[!UICONTROL Show only fields with data]** , um nur Schemafelder anzuzeigen, die mit Werten ausgefüllt sind. Standardmäßig werden nur ausgefüllte Schemafelder angezeigt.
+
+   Verwenden Sie den Umschalter **[!UICONTROL Show display names for fields]** , um die Anzeigenamen für Felder anstelle der Schemafeldnamen anzuzeigen.
+
+   ![Quellfeldseite auswählen, die den Umschalter für Anzeigenamen anzeigt.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
 
 1. Um weitere Felder hinzuzufügen, wiederholen Sie die Schritte 1 bis 3 und wählen Sie dann **[!UICONTROL Next]** aus.
 
