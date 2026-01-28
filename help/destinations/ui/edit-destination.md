@@ -2,12 +2,11 @@
 title: Ziele bearbeiten
 type: Tutorial
 description: Erfahren Sie, wie Sie vorhandene Zielkonten in der Adobe Experience Platform-Benutzeroberfläche bearbeiten und aktualisieren
-badgeBeta: label="Beta" type="Informative"
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: 990fe9162c5b2970f269a5b0668916b7b6e61f44
+source-git-commit: f91551c460c7d6fd4f98111210f29cf16ec5b565
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '370'
+ht-degree: 5%
 
 ---
 
@@ -15,20 +14,22 @@ ht-degree: 0%
 
 Erfahren Sie, wie Sie verschiedene Komponenten einer vorhandenen Zielverbindung bearbeiten, einschließlich der Aktualisierung der Authentifizierungsdaten, des Exportspeicherorts und mehr mithilfe der Experience Platform-Benutzeroberfläche.
 
->[!IMPORTANT]
->
->Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff anzufordern.
-
 >[!NOTE]
 >
-> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch über API-Vorgänge unterstützt. Weitere Informationen finden Sie im Tutorial [&#x200B; Bearbeiten von Zielen in &#x200B;](/help/destinations/api/edit-destination.md) API .
+> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch über API-Vorgänge unterstützt. Weitere Informationen finden Sie im Tutorial [ Bearbeiten von Zielen in ](/help/destinations/api/edit-destination.md) API .
+
+## Voraussetzungen {#prerequisites}
+
+Zum Bearbeiten von Zielverbindungen benötigen Sie die **[!UICONTROL Manage Destinations]** [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+
+## Bearbeiten von Zielverbindungen {#edit}
 
 So bearbeiten Sie verschiedene Komponenten einer vorhandenen Zielverbindung:
 
-1. Navigieren Sie **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]**.
+1. Navigieren Sie zu **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Wählen Sie das gewünschte Ziel aus, das Sie bearbeiten möchten.
-3. Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Zielsteuerung bearbeiten](/help/images/icons/edit.png)**[!UICONTROL Ziel bearbeiten &#x200B;]**, um vorhandene Zielverbindungen zu bearbeiten.
-4. Bearbeiten Sie im modalen Fenster die gewünschten Einstellungen. Klicken Sie **[!UICONTROL Speichern]** wenn Sie fertig sind.
+3. Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Ziel bearbeiten ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**zum Bearbeiten vorhandener Zielverbindungen.
+4. Bearbeiten Sie im modalen Fenster die gewünschten Einstellungen. Wählen Sie abschließend **[!UICONTROL Save]** aus.
 
 Im Fenster Ziel bearbeiten können Sie alle Einstellungen aktualisieren, die Sie beim erstmaligen Herstellen einer Verbindung mit dem Ziel konfiguriert haben. Diese Einstellungen unterscheiden sich je nach Zielplattform, die Sie aktualisieren.
 
@@ -60,6 +61,6 @@ Mithilfe der Experience Platform-Benutzeroberfläche oder der Flow Service-API k
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich den Arbeitsbereich **[!UICONTROL Ziele]** verwendet, um vorhandene Zielverbindungen zu aktualisieren.
+In diesem Tutorial haben Sie den **[!UICONTROL destinations]** Workspace erfolgreich verwendet, um vorhandene Zielverbindungen zu aktualisieren.
 
 Weitere Informationen zu Zielen finden Sie unter [Ziele - Übersicht](../catalog/overview.md).
