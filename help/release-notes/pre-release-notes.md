@@ -2,10 +2,10 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
+source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 15%
+source-wordcount: '1316'
+ht-degree: 16%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 15%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Januar 2026**
 
@@ -113,7 +113,6 @@ Weitere Informationen finden Sie in der [[!DNL Schemas] Übersicht](../xdm/home.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Überwachung der Streaming-Segmentierung | Die Echtzeitüberwachung für Streaming-Segmentierung bietet Transparenz in Bezug auf Metriken zur Bewertungsrate, Latenz und Datenqualität auf Sandbox-, Datensatz- und Zielgruppenebene. Dies unterstützt proaktive Warnhinweise und umsetzbare Einblicke, um Dateningenieuren dabei zu helfen, Kapazitätsverletzungen und Aufnahmeprobleme zu identifizieren. Zu den Überwachungsmetriken gehören Auswertungsrate, P95-Aufnahmelatenz sowie empfangene, ausgewertete, fehlgeschlagene und übersprungene Datensätze. Die Funktionen für Datensatz- und Zielgruppenansicht bieten umfassende Einblicke in neue qualifizierte und disqualifizierte Profile. |
 | Aktualisierung der TTL für externe Zielgruppen | Externe Zielgruppen (z. B. CSV-Uploads) unterstützen jetzt eine erzwungene Aktualisierungsfunktion für TTL-Einstellungen (Time-to-Live). Mit dieser Funktion können Benutzer die TTL-Gültigkeit für externe Zielgruppen manuell aktualisieren, was eine bessere Kontrolle über die Verwaltung des Zielgruppen-Lebenszyklus ermöglicht. Dies ist besonders nützlich für Zielgruppen, die über ihre ursprüngliche TTL-Periode hinaus bestehen bleiben müssen oder eine Reaktivierung erfordern, ohne die Daten erneut hochzuladen. |
 
 Weitere Informationen finden Sie in der [[!DNL Segmentation Service] Übersicht](../segmentation/home.md).
