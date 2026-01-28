@@ -2,14 +2,18 @@
 title: Aktivieren der Änderungsdatenerfassung für Quellverbindungen in der API
 description: Erfahren Sie, wie Sie die Änderungsdatenerfassung für Quellverbindungen in der API aktivieren
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: bd28d5be932823b8bf9c98280f97694ff221d76d
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
 
 # Aktivieren der Änderungsdatenerfassung für Quellverbindungen in der API
+
+>[!AVAILABILITY]
+>
+>Sie können jetzt die Änderungsdatenerfassung für die [!DNL Amazon S3]- und [!DNL Data Landing Zone] verwenden, wenn Sie Adobe Experience Platform auf Amazon Web Services (AWS) ausführen, während Sie mit einem VA6-Rechenzentrum verbunden sind. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
 
 Verwenden Sie die Änderungsdatenerfassung in Adobe Experience Platform-Quellen, um Ihre Quell- und Zielsysteme nahezu in Echtzeit synchronisiert zu halten.
 
@@ -38,7 +42,7 @@ Data Mirror verwendet relationale Schemata, um die Änderungsdatenerfassung zu e
 
 Relationale Schemata erweitern Experience Platform, um die Eindeutigkeit von Primärschlüsseln zu erzwingen, Änderungen auf Zeilenebene zu verfolgen und Beziehungen auf Schemaebene zu definieren. Bei der Datenerfassung für Änderungen wenden sie Einfügungen, Aktualisierungen und Löschungen direkt im Data Lake an, wodurch die Notwendigkeit von Extract, Transform, Load (ETL) oder manueller Abstimmung reduziert wird.
 
-Weitere [&#x200B; finden Sie unter &#x200B;](../../../xdm/schema/relational.md) zu relationalen Schemata .
+Weitere [ finden Sie unter ](../../../xdm/schema/relational.md) zu relationalen Schemata .
 
 ### Anforderungen an relationale Schemata zur Änderungsdatenerfassung
 
@@ -82,7 +86,7 @@ So aktivieren Sie die Änderungsdatenerfassung mit einem relationalen Schema:
 
 >[!IMPORTANT]
 >
->Die dateibasierte Änderungsdatenerfassung erfordert Data Mirror mit relationalen Schemata. Bevor Sie die folgenden Dateiformatierungsschritte ausführen, stellen Sie sicher, dass Sie den Data Mirror-Setup-Workflow [&#128279;](#workflow) abgeschlossen haben, der zuvor in diesem Dokument beschrieben wurde. In den folgenden Schritten wird beschrieben, wie Sie Ihre Datendateien formatieren, um Änderungsnachverfolgungsinformationen einzuschließen, die von Data Mirror verarbeitet werden.
+>Die dateibasierte Änderungsdatenerfassung erfordert Data Mirror mit relationalen Schemata. Bevor Sie die folgenden Dateiformatierungsschritte ausführen, stellen Sie sicher, dass Sie den Data Mirror-Setup-Workflow [](#workflow) abgeschlossen haben, der zuvor in diesem Dokument beschrieben wurde. In den folgenden Schritten wird beschrieben, wie Sie Ihre Datendateien formatieren, um Änderungsnachverfolgungsinformationen einzuschließen, die von Data Mirror verarbeitet werden.
 
 Fügen Sie bei dateibasierten Quellen ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] und [!DNL SFTP]) eine `_change_request_type` Spalte in Ihre Dateien ein.
 
