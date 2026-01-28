@@ -119,7 +119,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >id="platform_destinations_required_mappings_bing"
 >title="Vorkonfigurierte Zuordnungssätze"
 >abstract="Wir haben diese beiden Zuordnungssätze für Sie vorkonfiguriert. Wenn Sie Daten für Microsoft Bing aktivieren, müssen die für die aktivierten Zielgruppen qualifizierten Profile mindestens über eine ECID-Identität verfügen, die mit ihrem Profil verknüpft ist, damit sie erfolgreich in das Ziel exportiert werden können."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
 
 >[!IMPORTANT]
 > 
