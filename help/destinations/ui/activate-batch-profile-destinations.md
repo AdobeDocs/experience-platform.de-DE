@@ -17,7 +17,7 @@ ht-degree: 39%
 > 
 >* Zum Aktivieren von Zielgruppen und Aktivieren des [Zuordnungsschritts](#mapping) des Workflows sind die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) erforderlich.
 >* Um Zielgruppen zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 > 
 > Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
@@ -39,7 +39,7 @@ Beim Exportieren von Audiences werden die folgenden Dateiformate unterstützt:
 
 Beachten Sie, dass der Export von CSV-Dateien Ihnen mehr Flexibilität bei der Strukturierung Ihrer exportierten Dateien bietet. Lesen Sie mehr über [Dateiformatierungskonfiguration für CSV-Dateien](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
 
-Wählen Sie das gewünschte Dateiformat für den Export aus[ wenn Sie eine Verbindung mit dem dateibasierten Ziel ](/help/destinations/ui/connect-destination.md).
+Wählen Sie das gewünschte Dateiformat für den Export aus[&#x200B; wenn Sie eine Verbindung mit dem dateibasierten Ziel &#x200B;](/help/destinations/ui/connect-destination.md).
 
 ## Auswählen des Ziels {#select-destination}
 
@@ -75,7 +75,7 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 >[!TIP]
 >
->Um Zielgruppen aus vorhandenen Aktivierungsflüssen zu entfernen, verwenden Sie die Seite **[!UICONTROL Activation data]** . Weitere Informationen finden Sie im Abschnitt [Entfernen mehrerer Zielgruppen aus ](../ui/destination-details-page.md#bulk-remove)-Flüssen“.
+>Um Zielgruppen aus vorhandenen Aktivierungsflüssen zu entfernen, verwenden Sie die Seite **[!UICONTROL Activation data]** . Weitere Informationen finden Sie im Abschnitt [Entfernen mehrerer Zielgruppen aus &#x200B;](../ui/destination-details-page.md#bulk-remove)-Flüssen“.
 
 ## Planen eines Zielgruppenexports {#scheduling}
 
@@ -106,7 +106,7 @@ Um mehrere Zeitpläne gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen
 
 >[!TIP]
 >
->Sie können Zielgruppen-Aktivierungspläne für vorhandene Aktivierungsflüsse über die Seite **[!UICONTROL Activation data]** bearbeiten. Weitere Informationen finden Sie in [ Dokumentation unter ](../ui/destination-details-page.md#bulk-edit-schedule) für die Massenbearbeitung .
+>Sie können Zielgruppen-Aktivierungspläne für vorhandene Aktivierungsflüsse über die Seite **[!UICONTROL Activation data]** bearbeiten. Weitere Informationen finden Sie in [&#x200B; Dokumentation unter &#x200B;](../ui/destination-details-page.md#bulk-edit-schedule) für die Massenbearbeitung .
 
 >[!IMPORTANT]
 >
@@ -590,7 +590,7 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg
 
 >[!IMPORTANT]
 >
->Dieser Schritt wird nur angezeigt, wenn Sie **[!UICONTROL Custom upload]** Zielgruppen während des Schritts [Zielgruppenauswahl“ ](#select-audiences).
+>Dieser Schritt wird nur angezeigt, wenn Sie **[!UICONTROL Custom upload]** Zielgruppen während des Schritts [Zielgruppenauswahl“ &#x200B;](#select-audiences).
 
 Anreicherungsattribute entsprechen benutzerdefinierten hochgeladenen Zielgruppen, die in Experience Platform als **[!UICONTROL Custom uploads]** aufgenommen werden. In diesem Schritt können Sie für jede ausgewählte externe Zielgruppe auswählen, welche Attribute Sie in Ihr Ziel exportieren möchten.
 
@@ -635,7 +635,7 @@ Auf der Seite **[!UICONTROL Review]** können Sie eine Zusammenfassung Ihrer Aus
 >title="Aktuelle Einverständnisrichtlinien anzeigen"
 >abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
 ### Prüfung der Datennutzungsrichtlinien {#data-usage-policy-checks}
 
