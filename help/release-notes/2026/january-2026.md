@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Januar 2026
 description: Versionshinweise Januar 2026 für Adobe Experience Platform.
-source-git-commit: 54be4d5c309f60e6c3e2a96ab1fea700cc79a608
+source-git-commit: 436e65f22b8866fb9922afcf51811f537c05fc9f
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1272'
 ht-degree: 15%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 15%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 27. Januar 2026**
 
@@ -45,7 +45,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## Ziele {#destinations}
 
@@ -60,7 +60,8 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | Unterstützung regionaler Endpunkte für Braze-Verbindungen | Alle [regionsspezifischen Endpunkte](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die von [!DNL Braze] unterstützt werden, sind jetzt während des Zielkonfigurationsflusses zur Auswahl verfügbar. Fragen Sie Ihren [!DNL Braze], welche Endpunktinstanz Sie verwenden sollten. |
 | Wöchentliche und monatliche Planungsunterstützung für [Liveramp Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | Sie können jetzt wöchentliche und monatliche Exportpläne für das Liveramp-Onboarding-Ziel konfigurieren. <br> Diese Version wird schrittweise eingeführt und wird am 30. Januar abgeschlossen sein. |
 | Verbessertes Aktivierungserlebnis für [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md)- und [Microsoft Bing](../../destinations/catalog/advertising/bing.md)-Ziele | Die Trade Desk- und Microsoft Bing-Ziele enthalten jetzt vordefinierte obligatorische Zuordnungen für ein optimiertes Aktivierungserlebnis.  <br> Diese Version wird schrittweise eingeführt und wird am 30. Januar abgeschlossen sein. |
-| AES256-Verschlüsselungsunterstützung für [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details)-Ziele | Sie können jetzt die AES256-Verschlüsselung für Ihre Amazon S3-Exporte konfigurieren. Dazu sind zwei Optionen verfügbar: <ul><li>**[!UICONTROL Default]**: Wenn auf Ihre Buckets keine benutzerdefinierten Richtlinien angewendet wurden, werden die Daten im Ruhezustand verschlüsselt, wenn sie mit dem AES256-Algorithmus in S3 landen. Wenn Sie jedoch benutzerdefinierte Richtlinien angewendet haben, berücksichtigt Experience Platform diese Richtlinien und Amazon S3 wendet weiterhin die von Ihnen konfigurierten benutzerdefinierten Verschlüsselungsrichtlinien an.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform fügt den `s3:x-amz-server-side-encryption": "AES256`-Header in den Export ein und die Daten werden im Ruhezustand verschlüsselt, wenn sie in S3 mit dem AES256-Algorithmus landen.</li></ul>  <br> Diese Version wird schrittweise eingeführt und wird am 30. Januar abgeschlossen sein. |
+| AES256-Verschlüsselungsunterstützung für [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details)-Ziele | Sie können jetzt die AES256-Verschlüsselung für Ihre Amazon S3-Exporte konfigurieren. Dazu sind zwei Optionen verfügbar: <ul><li>**[!UICONTROL Default]**: Die Daten werden im Ruhezustand mit dem standardmäßigen Verschlüsselungsalgorithmus verschlüsselt, der auf Ihrem Bucket festgelegt ist.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform fügt den `s3:x-amz-server-side-encryption": "AES256`-Header in den Export ein und die Daten werden im Ruhezustand mit dem AES256-Algorithmus verschlüsselt, wenn sie in S3 landen. **Diese Option hat Vorrang vor allen standardmäßigen Verschlüsselungsalgorithmen, die auf Ihrem S3-Bucket konfiguriert sind**.</li></ul> Diese Version wird schrittweise eingeführt und wird am 30. Januar abgeschlossen sein. |
+| Unterstützung der Telefonnummernaktivierung für [The Trade Desk - CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing)-Verbindung | Das Ziel Trade Desk - CRM unterstützt jetzt die Aktivierung von Telefonnummern zusätzlich zu E-Mail-Adressen. Sie können sowohl ungehashte Telefonnummern im E.164-Format als auch gehashte Telefonnummern (SHA256_E.164-Format) für Ihr Trade Desk-Konto aktivieren, um Zielgruppen-Targeting und -Unterdrückung basierend auf CRM-Daten zu ermöglichen. Telefonnummern müssen vor der Aktivierung auf das E.164-Format normalisiert werden. |
 
 
 **Neue oder aktualisierte Funktionen**
@@ -111,8 +112,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Quelle | Beschreibung |
 | --- | --- |
-| [[!DNL Oracle Eloqua]](/help/sources/connectors/marketing-automation/eloqua.md) V2-Quelle | Ein neuer [!DNL Oracle Eloqua]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ &#x200B;](/help/sources/connectors/marketing-automation/oracle-eloqua.md). Dieser aktualisierte Connector bietet erweiterte Funktionen und eine höhere Zuverlässigkeit für die Aufnahme von Daten aus [!DNL Oracle Eloqua] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung migrieren, da bestehende Verbindungen nicht mehr funktionieren. Der neue Connector unterstützt alle Einrichtungs- und Konfigurationsschritte, die für die Verbindung mit [!DNL Oracle Eloqua] und die Aufnahme von Daten zur Marketing-Automatisierung erforderlich sind. |
-| [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2-Quelle | Ein neuer [!DNL Salesforce Marketing Cloud]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ &#x200B;](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Dieser aktualisierte Connector bietet eine verbesserte Leistung und zusätzliche Funktionen für die Aufnahme von Daten aus [!DNL Salesforce Marketing Cloud] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung wechseln. Der neue Connector enthält umfassende Einrichtungsanweisungen für die Verbindung mit [!DNL Salesforce Marketing Cloud] und die Aufnahme von Daten zur Marketing-Automatisierung. |
+| [[!DNL Oracle Eloqua]](/help/sources/connectors/marketing-automation/eloqua.md) V2-Quelle | Ein neuer [!DNL Oracle Eloqua]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ ](/help/sources/connectors/marketing-automation/oracle-eloqua.md). Dieser aktualisierte Connector bietet erweiterte Funktionen und eine höhere Zuverlässigkeit für die Aufnahme von Daten aus [!DNL Oracle Eloqua] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung migrieren, da bestehende Verbindungen nicht mehr funktionieren. Der neue Connector unterstützt alle Einrichtungs- und Konfigurationsschritte, die für die Verbindung mit [!DNL Oracle Eloqua] und die Aufnahme von Daten zur Marketing-Automatisierung erforderlich sind. |
+| [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2-Quelle | Ein neuer [!DNL Salesforce Marketing Cloud]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ ](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Dieser aktualisierte Connector bietet eine verbesserte Leistung und zusätzliche Funktionen für die Aufnahme von Daten aus [!DNL Salesforce Marketing Cloud] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung wechseln. Der neue Connector enthält umfassende Einrichtungsanweisungen für die Verbindung mit [!DNL Salesforce Marketing Cloud] und die Aufnahme von Daten zur Marketing-Automatisierung. |
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).
 
