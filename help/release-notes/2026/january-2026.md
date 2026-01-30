@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Januar 2026
 description: Versionshinweise Januar 2026 für Adobe Experience Platform.
-source-git-commit: cbe9dd4babb31061405dee3ebe4bd40acad82e90
+source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
 workflow-type: tm+mt
-source-wordcount: '1454'
-ht-degree: 13%
+source-wordcount: '1529'
+ht-degree: 12%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 13%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 27. Januar 2026**
 
@@ -40,7 +40,7 @@ Mit Agent Orchestrator können Sie KI-gestützte Agenten erstellen und bereitste
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Benutzergebundene Testversion für Adobe Experience Platform-Agenten | **Ausgewählte Kunden erhalten jetzt kostenlosen Testzugriff auf Adobe Experience Platform-Agenten**. Sie können die Testversion verwenden, um Agenten über die Benutzeroberfläche des KI-Assistenten mit Adobe Experience Platform Agent Orchestrator zu durchsuchen und mit ihnen zu interagieren. Die Testversion bietet praktische Erfahrung mit KI-Agenten, die im Kontext der bestehenden Experience Cloud-Produkte und -Umgebungen von Kunden arbeiten, sodass Teams den Wert bewerten können, bevor sie sich zu einem vollständigen Kauf verpflichten. Adobe Experience Platform-Agenten orientieren sich an der Benutzereingabe und -aufsicht und berücksichtigen die bestehenden Zugriffskontrollen auf Produktebene, um sicherzustellen, dass Benutzende nur Aktionen ausführen oder Daten anzeigen können, für die sie in den zugrunde liegenden Experience Cloud-Programmen autorisiert sind. Informationen zu den ersten Schritten finden Sie in der [&#x200B; der nutzungsgebundenen Testversion für &#x200B;](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)Experience Platform-Agenten Übersicht. |
+| Benutzergebundene Testversion für Adobe Experience Platform-Agenten | **Ausgewählte Kunden erhalten jetzt kostenlosen Testzugriff auf Adobe Experience Platform-Agenten**. Sie können die Testversion verwenden, um Agenten über die Benutzeroberfläche des KI-Assistenten mit Adobe Experience Platform Agent Orchestrator zu durchsuchen und mit ihnen zu interagieren. Die Testversion bietet praktische Erfahrung mit KI-Agenten, die im Kontext der bestehenden Experience Cloud-Produkte und -Umgebungen von Kunden arbeiten, sodass Teams den Wert bewerten können, bevor sie sich zu einem vollständigen Kauf verpflichten. Adobe Experience Platform-Agenten orientieren sich an der Benutzereingabe und -aufsicht und berücksichtigen die bestehenden Zugriffskontrollen auf Produktebene, um sicherzustellen, dass Benutzende nur Aktionen ausführen oder Daten anzeigen können, für die sie in den zugrunde liegenden Experience Cloud-Programmen autorisiert sind. Informationen zu den ersten Schritten finden Sie in der [ der nutzungsgebundenen Testversion für ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)Experience Platform-Agenten Übersicht. |
 
 {style="table-layout:auto"}
 
@@ -61,6 +61,7 @@ Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](ht
 | Verbessertes Aktivierungserlebnis für [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md)- und [Microsoft Bing](../../destinations/catalog/advertising/bing.md)-Ziele | Die Trade Desk- und Microsoft Bing-Ziele enthalten jetzt vordefinierte obligatorische Zuordnungen für ein optimiertes Aktivierungserlebnis.  <br> Diese Version wird schrittweise eingeführt und wird am 30. Januar abgeschlossen sein. ![Bild mit vordefinierten Zuordnungen für The Trade Desk](assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Bild mit vordefinierten Zuordnungen für Microsoft Bing](assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | AES256-Verschlüsselungsunterstützung für [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details)-Ziele | Sie können jetzt die AES256-Verschlüsselung für Ihre Amazon S3-Exporte konfigurieren. Dazu sind zwei Optionen verfügbar: <ul><li>**[!UICONTROL Default]**: Die Daten werden im Ruhezustand mit dem standardmäßigen Verschlüsselungsalgorithmus verschlüsselt, der auf Ihrem Bucket festgelegt ist.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform fügt den `s3:x-amz-server-side-encryption": "AES256`-Header in den Export ein und die Daten werden im Ruhezustand mit dem AES256-Algorithmus verschlüsselt, wenn sie in S3 landen. **Diese Option hat Vorrang vor allen standardmäßigen Verschlüsselungsalgorithmen, die auf Ihrem S3-Bucket konfiguriert sind**.</li></ul> Diese Version wird schrittweise eingeführt und wird am 30. Januar abgeschlossen sein. |
 | Unterstützung der Telefonnummernaktivierung für [The Trade Desk - CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing)-Verbindung | Das Ziel Trade Desk - CRM unterstützt jetzt die Aktivierung von Telefonnummern zusätzlich zu E-Mail-Adressen. Sie können sowohl ungehashte Telefonnummern im E.164-Format als auch gehashte Telefonnummern (SHA256_E.164-Format) für Ihr Trade Desk-Konto aktivieren, um Zielgruppen-Targeting und -Unterdrückung basierend auf CRM-Daten zu ermöglichen. Telefonnummern müssen vor der Aktivierung auf das E.164-Format normalisiert werden. |
+| [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) Zielaktualisierungen | Das Snowflake-Batch-Ziel umfasst jetzt während der Zielkonfiguration eine Funktion zur Regionsauswahl. Sie können jetzt die spezifische Snowflake-Region auswählen, in der Ihre Instanz bereitgestellt wird, um eine optimale Datenübertragung und die Einhaltung regionaler Anforderungen sicherzustellen. Darüber hinaus wurde die standardmäßige Einschränkung für Zusammenführungsrichtlinien entfernt, sodass Sie Zielgruppen exportieren können, die einer beliebigen Zusammenführungsrichtlinie zugeordnet sind. <br> Das [!DNL Snowflake] Batch-Ziel ist derzeit nur für Real-Time CDP-Kundinnen und -Kunden verfügbar, die in der Experience Platform VA7-Region bereitgestellt sind. |
 
 
 **Neue oder aktualisierte Funktionen**
@@ -111,8 +112,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Quelle | Beschreibung |
 | --- | --- |
-| [[!DNL Oracle Eloqua]](/help/sources/connectors/marketing-automation/eloqua.md) V2-Quelle | Ein neuer [!DNL Oracle Eloqua]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ &#x200B;](/help/sources/connectors/marketing-automation/oracle-eloqua.md). Dieser aktualisierte Connector bietet erweiterte Funktionen und eine höhere Zuverlässigkeit für die Aufnahme von Daten aus [!DNL Oracle Eloqua] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung migrieren, da bestehende Verbindungen nicht mehr funktionieren. Der neue Connector unterstützt alle Einrichtungs- und Konfigurationsschritte, die für die Verbindung mit [!DNL Oracle Eloqua] und die Aufnahme von Daten zur Marketing-Automatisierung erforderlich sind. |
-| [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2-Quelle | Ein neuer [!DNL Salesforce Marketing Cloud]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ &#x200B;](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Dieser aktualisierte Connector bietet eine verbesserte Leistung und zusätzliche Funktionen für die Aufnahme von Daten aus [!DNL Salesforce Marketing Cloud] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung wechseln. Der neue Connector enthält umfassende Einrichtungsanweisungen für die Verbindung mit [!DNL Salesforce Marketing Cloud] und die Aufnahme von Daten zur Marketing-Automatisierung. |
+| [[!DNL Oracle Eloqua]](/help/sources/connectors/marketing-automation/eloqua.md) V2-Quelle | Ein neuer [!DNL Oracle Eloqua]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ ](/help/sources/connectors/marketing-automation/oracle-eloqua.md). Dieser aktualisierte Connector bietet erweiterte Funktionen und eine höhere Zuverlässigkeit für die Aufnahme von Daten aus [!DNL Oracle Eloqua] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung migrieren, da bestehende Verbindungen nicht mehr funktionieren. Der neue Connector unterstützt alle Einrichtungs- und Konfigurationsschritte, die für die Verbindung mit [!DNL Oracle Eloqua] und die Aufnahme von Daten zur Marketing-Automatisierung erforderlich sind. |
+| [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2-Quelle | Ein neuer [!DNL Salesforce Marketing Cloud]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ ](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Dieser aktualisierte Connector bietet eine verbesserte Leistung und zusätzliche Funktionen für die Aufnahme von Daten aus [!DNL Salesforce Marketing Cloud] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung wechseln. Der neue Connector enthält umfassende Einrichtungsanweisungen für die Verbindung mit [!DNL Salesforce Marketing Cloud] und die Aufnahme von Daten zur Marketing-Automatisierung. |
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).
 

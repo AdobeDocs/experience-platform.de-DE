@@ -4,9 +4,9 @@ description: Erstellen Sie eine Live-Snowflake-Datenfreigabe, um tägliche Zielg
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1662'
 ht-degree: 18%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 18%
 
 >[!AVAILABILITY]
 >
->Dieser Ziel-Connector ist nur eingeschränkt verfügbar und nur für Real-Time CDP Ultimate-Kunden verfügbar, die in der [VA7-Region bereitgestellt &#x200B;](/help/landing/multi-cloud.md#azure-regions).
+>Dieser Ziel-Connector ist nur eingeschränkt verfügbar und nur für Real-Time CDP Ultimate-Kunden verfügbar, die in der [VA7-Region bereitgestellt ](/help/landing/multi-cloud.md#azure-regions).
 
-## Überblick {#overview}
+## Übersicht {#overview}
 
 Verwenden Sie dieses Ziel, um Zielgruppendaten an dynamische Tabellen in Ihrem Snowflake-Konto zu senden. Dynamische Tabellen ermöglichen den Zugriff auf Ihre Daten, ohne dass physische Datenkopien erforderlich sind.
 
@@ -84,7 +84,7 @@ Bevor Sie Ihre Snowflake-Verbindung konfigurieren, stellen Sie sicher, dass Sie 
 * Sie haben Zugriff auf ein [!DNL Snowflake].
 * Ihr Snowflake-Konto hat private Listeneinträge abonniert. Sie oder eine andere Person in Ihrem Unternehmen, die über Administratorrechte für das Konto auf Snowflake verfügt, können dies konfigurieren.
 
-Weitere Informationen zu den [[!DNL Snowflake]  Berechtigungen finden &#x200B;](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) in der Dokumentation .
+Weitere Informationen zu den [[!DNL Snowflake]  Berechtigungen finden ](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) in der Dokumentation .
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -92,7 +92,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | ✓ | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -123,7 +123,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -149,7 +149,8 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Snowflake Account ID]**: Ihre Snowflake-Konto-ID. Verwenden Sie das folgende Konto-ID-Format, je nachdem, ob Ihr Konto mit einer Organisation verknüpft ist:
    * Wenn Ihr Konto mit einer Organisation verknüpft ist: `OrganizationName.AccountName`.
    * Wenn Ihr Konto nicht mit einer Organisation verknüpft ist: `AccountName`.
-* **[!UICONTROL Account acknowledgment]**: Schalten Sie die Snowflake-Konto-ID-Bestätigung um, um zu bestätigen, dass Ihre Konto-ID korrekt ist und zu Ihnen gehört.
+* **[!UICONTROL Select Snowflake Region]**: Wählen Sie die Region aus, in der Ihre Snowflake-Instanz bereitgestellt wird. Siehe die Snowflake [Dokumentation](https://docs.snowflake.com/en/user-guide/intro-regions) für detaillierte Informationen zu unterstützten Cloud-Regionen.
+* **[!UICONTROL Account acknowledgment]**: Nachdem Sie Ihre **[!UICONTROL Snowflake Account ID]** eingegeben haben, wählen Sie **[!UICONTROL Yes]** in diesem Dropdown-Menü aus, um zu bestätigen, dass Ihre **[!UICONTROL Snowflake Account ID]** korrekt ist und zu Ihnen gehört.
 
 >[!IMPORTANT]
 >
@@ -166,7 +167,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -195,10 +196,6 @@ Die dynamische Tabelle enthält die folgenden Spalten:
 ![Screenshot der Snowflake-Benutzeroberfläche mit dynamischen Tabellendaten](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
 
 ## Bekannte Einschränkungen {#known-limitations}
-
-### Standardmäßige Einschränkung für Zusammenführungsrichtlinien {#default-merge-policy-restriction}
-
-Derzeit können nur Zielgruppen exportiert werden, die der standardmäßigen Zusammenführungsrichtlinie zugeordnet sind.
 
 ### Regionale Verfügbarkeit {#regional-availability}
 
