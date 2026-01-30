@@ -17,9 +17,9 @@ ht-degree: 12%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 27. Januar 2026**
 
@@ -40,7 +40,7 @@ Mit Agent Orchestrator können Sie KI-gestützte Agenten erstellen und bereitste
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Benutzergebundene Testversion für Adobe Experience Platform-Agenten | **Ausgewählte Kunden erhalten jetzt kostenlosen Testzugriff auf Adobe Experience Platform-Agenten**. Sie können die Testversion verwenden, um Agenten über die Benutzeroberfläche des KI-Assistenten mit Adobe Experience Platform Agent Orchestrator zu durchsuchen und mit ihnen zu interagieren. Die Testversion bietet praktische Erfahrung mit KI-Agenten, die im Kontext der bestehenden Experience Cloud-Produkte und -Umgebungen von Kunden arbeiten, sodass Teams den Wert bewerten können, bevor sie sich zu einem vollständigen Kauf verpflichten. Adobe Experience Platform-Agenten orientieren sich an der Benutzereingabe und -aufsicht und berücksichtigen die bestehenden Zugriffskontrollen auf Produktebene, um sicherzustellen, dass Benutzende nur Aktionen ausführen oder Daten anzeigen können, für die sie in den zugrunde liegenden Experience Cloud-Programmen autorisiert sind. Informationen zu den ersten Schritten finden Sie in der [&#x200B; der nutzungsgebundenen Testversion für &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)Experience Platform-Agenten Übersicht. |
+| Benutzergebundene Testversion für Adobe Experience Platform-Agenten | **Ausgewählte Kunden erhalten jetzt kostenlosen Testzugriff auf Adobe Experience Platform-Agenten**. Sie können die Testversion verwenden, um Agenten über die Benutzeroberfläche des KI-Assistenten mit Adobe Experience Platform Agent Orchestrator zu durchsuchen und mit ihnen zu interagieren. Die Testversion bietet praktische Erfahrung mit KI-Agenten, die im Kontext der bestehenden Experience Cloud-Produkte und -Umgebungen von Kunden arbeiten, sodass Teams den Wert bewerten können, bevor sie sich zu einem vollständigen Kauf verpflichten. Adobe Experience Platform-Agenten orientieren sich an der Benutzereingabe und -aufsicht und berücksichtigen die bestehenden Zugriffskontrollen auf Produktebene, um sicherzustellen, dass Benutzende nur Aktionen ausführen oder Daten anzeigen können, für die sie in den zugrunde liegenden Experience Cloud-Programmen autorisiert sind. Informationen zu den ersten Schritten finden Sie in der [&#x200B; der nutzungsgebundenen Testversion für &#x200B;](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)Experience Platform-Agenten Übersicht. |
 
 {style="table-layout:auto"}
 
