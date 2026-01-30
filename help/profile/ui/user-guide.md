@@ -3,9 +3,9 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht auf Ihre einzelnen Kunden und führt Daten aus verschiedenen Kanälen (Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Anleitung für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: 5db5d0763b1d1456ba184bd24e7ef4c3047e25d1
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1924'
 ht-degree: 5%
 
 ---
@@ -42,7 +42,7 @@ Weitere Informationen finden Sie im [Handbuch zum Profil-Dashboard](../../dashbo
 
 Auf der Registerkarte **[!UICONTROL Browse]** können Sie Ihre Profile entweder in einer **-,**- oder **-** anzeigen, indem Sie den Umschalter auswählen.
 
-![Der Umschalter für die Karten- und Diagrammansicht ist hervorgehoben.](../images/user-guide/card-graph-view.png)
+![Der Umschalter für die Karten- und Diagrammansicht ist hervorgehoben.](../images/user-guide/change-browse-view.png)
 
 Darüber hinaus können Sie Ihre Profile mithilfe einer Zusammenführungsrichtlinie durchsuchen oder mithilfe eines Identity-Namespace und -Werts nach bestimmten Profilen suchen.
 
@@ -127,7 +127,9 @@ Im Abschnitt **[!UICONTROL Customer profile insights]** wird eine kurze Einführ
 
 #### Widgets für KI-Erkenntnisse {#ai-insight-widgets}
 
-[!BADGE Alpha]{type=Informative} Diese Funktion befindet sich derzeit in Alpha.
+>[!IMPORTANT]
+>
+>Wenn Sie Healthcare Shield-Kunde sind, können **nicht** KI-insight-Widgets verwenden.
 
 Im Abschnitt **[!UICONTROL AI insight widgets]** werden Widgets angezeigt, die von KI generiert werden. Diese Widgets bieten schnelle Einblicke in das Profil, basierend auf den Profildaten, einschließlich Demografie (wie Alter, Geschlecht oder Standort), Benutzerverhalten (wie Kaufverlauf, Website-Aktivität oder Social-Media-Interaktion) sowie Psychografie (wie Interessen, Vorlieben oder Lifestyle-Entscheidungen). Alle KI-Widgets verwenden Daten, **bereits** Profil vorhanden sind.
 
@@ -147,11 +149,9 @@ Sie können auch zwischen der Anzeige der Attributnamen als Anzeigenamen und der
 
 #### Automatisch klassifizierte Widgets {#auto-classified-widgets}
 
-[!BADGE Alpha]{type=Informative} Diese Funktion befindet sich derzeit in Alpha.
-
 Im Abschnitt **[!UICONTROL Auto-classified widgets]** werden Widgets angezeigt, die das Vereinigungsschema nutzen, um die Quellfeldgruppen zu bestimmen, zu denen ein Attribut gehört, und einen klareren Kontext bereitstellen, woher die Daten stammen. Sie können die Suchleiste verwenden, um in Ihren Widgets leichter nach Keywords zu suchen.
 
-Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ &#x200B;](#customizable-widgets) strukturieren.
+Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ ](#customizable-widgets) strukturieren.
 
 >[!NOTE]
 >
