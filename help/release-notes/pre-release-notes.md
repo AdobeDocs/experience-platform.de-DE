@@ -2,10 +2,10 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
+source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 16%
+source-wordcount: '1110'
+ht-degree: 15%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 16%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Januar 2026**
 
@@ -32,7 +32,6 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 - [Agent Orchestrator](#agent-orchestrator)
 - [Ziele](#destinations)
 - [Echtzeit-Kundenprofil](#real-time-customer-profile)
-- [Schemata](#schemas)
 - [Segmentierungs-Service](#segmentation-service)
 - [Quellen](#sources)
 
@@ -92,18 +91,6 @@ Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen K
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie in der [[!DNL Real-Time Customer Profile] Übersicht](../profile/home.md).
-
-## Schemata {#schemas}
-
-Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, deren Bedeutung beizubehalten und somit Wert aus Daten zu ziehen. Schemata bestehen aus einer Basisklasse und keiner oder mehreren Schemafeldgruppen.
-
-**Neue oder aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Modernisierung des Schema-Inventars mit Suche, Filter, Tags und Ordnern | Die Seite zum Durchsuchen von Schemata wurde modernisiert, um erweiterte Organisations- und Erkennungsfunktionen bereitzustellen. Zu den neuen Funktionen gehören erweiterte Such- und Filteroptionen, Unterstützung für benutzergenerierte Tags und Ordner zum Organisieren von Schemata sowie Inline-Aktionen zur Optimierung von Workflows. Zu den wichtigsten Verbesserungen gehören: aktualisierte Spalten (Name, Klasse, Datensätze, Identitäten, Beziehungen, Für Profil aktivieren, Verhalten, Schematyp, Tags, Erstellungsdatum, Datum der letzten Änderung), erweiterte Filter (Profile anzeigen, Schematyp, Klasse, Hat ein beliebiges Tag, Erstellungsdatum, Änderungsdatum, Hat primäre Identität, Hat Beziehung, Primären Identity-Namespace), Inline-Aktionen (Bearbeiten, Löschen, Anwenden von Kennzeichnungen, Datensatz für nicht-relationale Schemata erstellen, Tags verwalten, In Ordner verschieben, Zum Paket hinzufügen, JSON-Struktur kopieren, Beispieldatei herunterladen) und die Möglichkeit, Schemata mithilfe von Tags und Ordnern zu organisieren. Diese Verbesserungen bieten einen umfassenden Einblick in Schema-Ressourcen und ermöglichen ein effizienteres Schema-Management auf Sandbox-Ebene. |
-
-Weitere Informationen finden Sie in der [[!DNL Schemas] Übersicht](../xdm/home.md).
 
 ## Segmentierungs-Service {#segmentation-service}
 
