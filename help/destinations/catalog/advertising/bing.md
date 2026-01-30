@@ -3,9 +3,9 @@ keywords: Werbung; Bing;
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie Retargeting- und zielgruppenorientierte digitale Kampagnen für das gesamte Microsoft Advertising-Netzwerk ausführen, einschließlich Display-Werbung, Suche und nativer Kampagnen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: e75a5562820490bc56adaa1d21e4066fc649cc44
+source-git-commit: ec31c1d967be4764b22f735429e2f9437f31ed20
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '918'
 ht-degree: 30%
 
 ---
@@ -14,26 +14,9 @@ ht-degree: 30%
 
 ## Übersicht {#overview}
 
-
->[!IMPORTANT]
->
->Nach einem internen Upgrade des Ziel-Service vom August 2025 kann es **zu einem „Rückgang der Anzahl der aktivierten Profile** in Ihren Datenflüssen zu [!DNL Microsoft Bing] kommen.
->
-> Dieser Rückgang wird durch die Einführung der **ECID-Zuordnungsanforderung** für alle Aktivierungen auf dieser Zielplattform verursacht. Detaillierte Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#mandatory-mappings)Obligatorische Zuordnung“ auf dieser Seite.
->
->**Änderungen:**
->
->* Die ECID-Zuordnung (Experience Cloud ID) ist jetzt **obligatorisch** für alle Profilaktivierungen.
->* Profile ohne ECID-Zuordnung **aus** Aktivierungsdatenflüssen gelöscht.
->
->**Was Sie tun müssen:**
->
->* Überprüfen Sie Ihre Zielgruppendaten, um sicherzustellen, dass Profile gültige ECID-Werte haben.
->* Überwachen Sie Ihre Aktivierungsmetriken, um die erwartete Profilanzahl zu überprüfen.
-
 Verwenden Sie das [!DNL Microsoft Bing] Ziel, um Profildaten an die gesamte [!DNL Microsoft Advertising Network] zu senden, einschließlich [!DNL Display Advertising], [!DNL Search] und [!DNL Native].
 
-Das [!DNL Microsoft Bing]-Ziel erstellt *[!DNL Custom Audiences]* in Microsoft. Diese sind sowohl in der [!DNL Microsoft Search Network] als auch in der [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) verfügbar, wie in der [Dokumentation zu Microsoft Advertising &#x200B;](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+Das [!DNL Microsoft Bing]-Ziel erstellt *[!DNL Custom Audiences]* in Microsoft. Diese sind sowohl in der [!DNL Microsoft Search Network] als auch in der [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) verfügbar, wie in der [Dokumentation zu Microsoft Advertising ](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 Um Profildaten an [!DNL Microsoft Bing] zu senden, müssen Sie zunächst eine Verbindung mit dem Ziel herstellen.
 
@@ -45,10 +28,12 @@ Als Marketing-Experte möchte ich in der Lage sein, Zielgruppen aus [!DNL Micros
 
 [!DNL Microsoft Bing] unterstützt die Aktivierung von Zielgruppen basierend auf den in der folgenden Tabelle aufgeführten Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
-| Identität | Beschreibung |
-|---|---|
-| MAID | MICROSOFT ADVERTISING ID |
-| ECID | Experience Cloud-ID. Diese Identität ist erforderlich, damit die Integration ordnungsgemäß funktioniert, wird aber nicht zur Zielgruppenaktivierung verwendet. |
+Alle Identitäten in der folgenden Tabelle sind vorkonfiguriert und werden während der Aktivierung automatisch zugeordnet. Sie müssen diese Zuordnungen nicht manuell konfigurieren.
+
+| Identität | Beschreibung | Zu beachten |
+|---|---|---|
+| MAID | MICROSOFT ADVERTISING ID | Wird aktiviert, wenn eine Microsoft Advertising ID im Profil vorhanden ist. |
+| ECID | Experience Cloud ID | **Erforderlich.** Alle Profile müssen über eine ECID mit einer entsprechenden Microsoft Advertising-ID-Zuordnung verfügen, um exportiert werden zu können. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +43,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -78,9 +63,12 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Voraussetzungen {#prerequisites}
 
->[!IMPORTANT]
->
->Wenn Sie Ihr erstes Ziel mit [!DNL Microsoft Bing] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) im Experience Cloud ID-Service noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Programmen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL Microsoft Bing] Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Experience Platform übertragen.
+Das [!DNL Microsoft Bing]-Ziel erfordert die folgende Einrichtung, um ordnungsgemäß zu funktionieren:
+
+1. **ID-Synchronisierungsfunktion aktivieren**: Wenn Sie [!DNL Microsoft Bing] Aktivierung zum ersten Mal einrichten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) im Experience Cloud ID-Service noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren.
+   * Wenn Sie zuvor [!DNL Microsoft Bing] Integrationen in Audience Manager eingerichtet haben, werden Ihre bestehenden ID-Synchronisierungen automatisch auf Experience Platform übertragen.
+
+2. **ECID für Profile sicherstellen**: Für den erfolgreichen Export muss für alle Profile eine ECID vorhanden sein. ECID **für** Ziel (obligatorisch).
 
 Beim Konfigurieren des -Ziels müssen Sie die folgenden Informationen angeben:
 
@@ -90,7 +78,7 @@ Beim Konfigurieren des -Ziels müssen Sie die folgenden Informationen angeben:
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
@@ -119,7 +107,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >id="platform_destinations_required_mappings_bing"
 >title="Vorkonfigurierte Zuordnungssätze"
 >abstract="Wir haben diese beiden Zuordnungssätze für Sie vorkonfiguriert. Wenn Sie Daten für Microsoft Bing aktivieren, müssen die für die aktivierten Zielgruppen qualifizierten Profile mindestens über eine ECID-Identität verfügen, die mit ihrem Profil verknüpft ist, damit sie erfolgreich in das Ziel exportiert werden können."
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
 
 >[!IMPORTANT]
 > 
@@ -131,14 +119,24 @@ Im Schritt [Zielgruppen-Zeitplan](../../ui/activate-segment-streaming-destinatio
 
 ![UI-Bild, das den Bildschirm für den Zielgruppen-Zeitplan mit einem Beispiel für die Zuordnung des Zielgruppennamen zur Bing-Zuordnungs-ID zeigt.](../../assets/catalog/advertising/bing/mapping-id.png)
 
-### Obligatorische Zuordnungen {#mandatory-mappings}
+### Vorkonfigurierte Zuordnungen {#preconfigured-mappings}
 
-Alle im Abschnitt [Unterstützte Identitäten](#supported-identities) beschriebenen Zielidentitäten sind obligatorisch und müssen während des Zielgruppenaktivierungsprozesses zugeordnet werden. Dazu gehören:
+Die folgenden Identitätszuordnungen sind **vorkonfiguriert und werden** Workflow für die Zielgruppenaktivierung automatisch ausgefüllt:
 
 * **MAID** (Microsoft Advertising ID)
 * **ECID** (Experience Cloud ID)
 
-Wenn nicht alle erforderlichen Identitäten zugeordnet werden können, können Sie den Aktivierungs-Workflow nicht abschließen. Jede Identität erfüllt einen bestimmten Zweck in der Integration, und alle sind erforderlich, damit das Ziel ordnungsgemäß funktioniert.
+Diese Zuordnungen sind ausgegraut und schreibgeschützt. In diesem Schritt ist keine Konfiguration erforderlich. Wählen Sie **[!UICONTROL Next]** aus, um fortzufahren.
+
+>[!IMPORTANT]
+>
+>**ECID ist erforderlich, damit der Export erfolgreich ist.** Profile ohne ECID oder ohne ID-Sync-Zuordnung zwischen ECID und Microsoft Advertising ID werden nicht exportiert.
+
+### Beispiele für Aktivierungen
+
+* **Profil mit ECID- und Microsoft Advertising-ID-Zuordnung:** Profil wurde erfolgreich exportiert und aktiviert
+* **Nur Profil mit ECID (keine Microsoft Advertising ID-Zuordnung):** Profil wird **exportiert**. Die ID-Synchronisierungszuordnung zwischen ECID und MAID ist erforderlich.
+* **Profil ohne ECID:** Profil wird **exportiert**. ECID ist für dieses Ziel obligatorisch.
 
 ## Exportierte Daten {#exported-data}
 
