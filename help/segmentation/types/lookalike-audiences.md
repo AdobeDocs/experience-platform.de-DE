@@ -98,7 +98,7 @@ Die Seite mit den Details zur Zielgruppe wird angezeigt. Wählen Sie **[!UICONTR
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Ähnlichkeit und Reichweite"
->abstract="Das Ähnlichkeits- und Reichweitendiagramm zeichnet die erwartete Reichweite einer Look-alike-Zielgruppe aus Profilen über einem bestimmten Ähnlichkeitswert auf. Sie können den Mauszeiger über einen bestimmten Punkt im Diagramm bewegen, um den Prozentsatz der Ähnlichkeit und die erwartete Profilanzahl für den aktuell hervorgehobenen Punkt anzuzeigen."
+>abstract="Das Ähnlichkeits- und Reichweitendiagramm zeichnet die erwartete Reichweite einer Lookalike-Zielgruppe aus Profilen über einem bestimmten Ähnlichkeitswert auf. Sie können den Mauszeiger über einen bestimmten Punkt im Diagramm bewegen, um den Prozentsatz der Ähnlichkeit und die erwartete Profilanzahl für den aktuell hervorgehobenen Punkt anzuzeigen."
 
 Im Abschnitt Ähnlichkeit und Reichweite wird ein Diagramm angezeigt, das die erwartete Reichweite einer Lookalike-Zielgruppe darstellt, die aus Profilen oberhalb eines bestimmten Ähnlichkeitswerts besteht. Der Ähnlichkeitswert stellt die **Entfernung** der Ähnlichkeit zwischen dem Profil der Basis-Zielgruppe und dem Profil der Lookalike-insight dar.
 
