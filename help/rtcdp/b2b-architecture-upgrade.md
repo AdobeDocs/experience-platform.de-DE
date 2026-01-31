@@ -1,11 +1,11 @@
 ---
 title: Architekturaktualisierungen auf Real-Time CDP B2B edition
 description: Lesen Sie dieses Dokument, um mehr über die umfassenden Architekturupgrades auf Real-Time CDP B2B edition zu erfahren.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
+source-git-commit: da288d1a917df85b3c003bc6592fda7a6f1eafe7
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Mit diesem Upgrade haben Sie jetzt folgende Möglichkeiten:
 
 Weitere Informationen finden Sie in der Dokumentation [Konto](../segmentation/types/account-audiences.md)Zielgruppen“.
 
-### Anzahl der Zielgruppen für Zielgruppen, die B2B-Entitäten enthalten
+### Zielgruppengröße für Zielgruppen, die B2B-Entitäten enthalten
 
 Schätzungen der Zielgruppengröße für Zielgruppen mit B2B-Entitäten werden jetzt mit exakter Genauigkeit berechnet. Diese Schätzungen stehen während der Vorschau zur Verfügung und bieten genauere und zuverlässigere Einblicke für Zielgruppen, bei denen komplexe B2B-Beziehungen eine Rolle spielen.
 
@@ -59,14 +59,14 @@ Die folgenden Funktionen wurden im Rahmen der B2B-Architekturupgrades aktualisie
 
 Im Rahmen des neuen Architekturupgrades können Erlebnisereignisfilter nicht mehr in einer einzelnen Zielgruppe mit mehreren Entitäten verwendet werden, die B2B-Attribute enthält.
 
-Um dieselbe Zielgruppenlogik zu erreichen, können Sie Segment Builder verwenden, um Zielgruppen [&#x200B; und zu referenzieren](../segmentation/ui/segment-builder.md#adding-audiences)
+Um dieselbe Zielgruppenlogik zu erreichen, können Sie Segment Builder verwenden, um Zielgruppen [ und zu referenzieren](../segmentation/ui/segment-builder.md#adding-audiences)
 
 Beispiel:
 
 * Erstellen einer Zielgruppe für Erlebnisereignisse
    * Definieren Sie die Verhaltensbedingung separat. Beispiel: „Personen, die die Seite „Preise“ in den letzten drei Tagen besucht haben.“
 * Erstellen Sie eine Zielgruppe mit mehreren Entitäten mit B2B-Attributen.
-   * Von hier aus können Sie die Zielgruppe des Erlebnisereignisses als Teil der Kriterien dieser Zielgruppe referenzieren. Beispiel: „Personen, die **Entscheidungsträger sind** erhalten jede Möglichkeit, bei der das Konto in der Finanzbranche der **&#x200B;**&#x200B;ist, und Mitglieder der Zielgruppe, die die Preisseite in den letzten drei Tagen besucht hat.
+   * Von hier aus können Sie die Zielgruppe des Erlebnisereignisses als Teil der Kriterien dieser Zielgruppe referenzieren. Beispiel: „Personen, die **Entscheidungsträger sind** erhalten jede Möglichkeit, bei der das Konto in der Finanzbranche der **** ist, und Mitglieder der Zielgruppe, die die Preisseite in den letzten drei Tagen besucht hat.
 
 Nach Abschluss des Upgrades müssen alle neuen Zielgruppen mit mehreren Entitäten mit B2B-Attributen und Erlebnisereignissen mithilfe des [Segment-of-Segment](../segmentation/methods/edge-segmentation.md#edge-segmentation-query-types)-Ansatzes erstellt werden.
 
@@ -92,13 +92,13 @@ Mit diesem Upgrade haben Sie jetzt folgende Möglichkeiten:
 * Verwenden Sie die [!DNL Profile Access]-APIs, um die neuesten Zusammenführungsprofile anzuzeigen, sobald die täglichen Entitätsauflösungsaufträge abgeschlossen sind.
 * Nutzen Sie die verbesserte Genauigkeit und Konsistenz Ihrer Konto- und Opportunity-Daten für die Segmentierung, Aktivierung und Analyse.
 
-Weitere Informationen finden [[!DNL Profile Access]  in &#x200B;](../profile/api/entities.md)API“.
+Weitere Informationen finden [[!DNL Profile Access]  in ](../profile/api/entities.md)API“.
 
 ### Unterstützung von Zusammenführungsrichtlinien in B2B-Zielgruppen mit mehreren Entitäten
 
 Zielgruppen mit mehreren Entitäten mit B2B-Attributen unterstützen jetzt eine einzige Zusammenführungsrichtlinie - die standardmäßige Zusammenführungsrichtlinie, die Sie konfigurieren - anstelle mehrerer Zusammenführungsrichtlinien.
 
-Weitere Informationen finden [&#x200B; im Benutzerhandbuch für Segmentierungsanwendungsfälle &#x200B;](./segmentation/b2b.md) Real-Time CDP B2B edition.
+Weitere Informationen finden [ im Benutzerhandbuch für Segmentierungsanwendungsfälle ](./segmentation/b2b.md) Real-Time CDP B2B edition.
 
 ### Einstellung der B2B-Entitätssuche und -löschung in der [!DNL Profile Access]-API
 
@@ -122,7 +122,11 @@ Löschanfragen für die folgenden B2B-Entitäten, die die [!DNL Profile Access]-
 * Marketing-Liste
 * Mitglieder der Marketing-Liste
 
-Weitere Informationen finden [[!DNL Profile Access]  in &#x200B;](../profile/api/entities.md)API“.
+Weitere Informationen finden [[!DNL Profile Access]  in ](../profile/api/entities.md)API“.
+
+### Einstellung der Segmentauftrags-API
+
+In der neuen Architektur werden der Endpunkt „Erstellen eines Segmentauftrags“ und die flexible Zielgruppenbewertung *nicht unterstützt.
 
 ### Konto- und Opportunity-Profilsuche
 
@@ -149,4 +153,4 @@ Mit den Architekturupgrades können Sie keine Zielgruppen mit mehreren Entitäte
 
 Entwicklungs-Sandboxes werden auf die neue Architektur aktualisiert. Zielgruppen, die automatisch aktualisiert werden können, werden aktualisiert. Zielgruppen, die nicht automatisch aktualisiert werden können, werden deaktiviert. Deaktivierte Zielgruppen müssen nach dem Upgrade neu erstellt werden.
 
-Weitere Informationen finden [&#x200B; im Sandbox](../sandboxes/ui/sandbox-tooling.md)Toolinghandbuch .
+Weitere Informationen finden [ im Sandbox](../sandboxes/ui/sandbox-tooling.md)Toolinghandbuch .
