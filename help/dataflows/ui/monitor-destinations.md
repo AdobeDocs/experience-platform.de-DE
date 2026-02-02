@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
+source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3542'
 ht-degree: 11%
 
 ---
@@ -128,7 +128,7 @@ Auf der Detailseite wird auch eine Liste der fehlgeschlagenen Identitäten und d
 
 Sie können für jede Zielgruppe, die Teil des Datenflusses ist, Informationen zu den aktivierten, ausgeschlossenen oder fehlgeschlagenen Identitäten anzeigen, die auf Zielgruppenebene aufgeschlüsselt sind.
 
-Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist nur für bestimmte Ziele verfügbar. Eine Liste [&#x200B; unterstützten Ziele finden Sie &#x200B;](#audience-level-view) Abschnitt „Zielgruppenansicht .
+Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist nur für bestimmte Ziele verfügbar. Eine Liste [ unterstützten Ziele finden Sie ](#audience-level-view) Abschnitt „Zielgruppenansicht .
 
 ![Überwachung auf Zielgruppenebene für Streaming-Ziele.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -351,7 +351,7 @@ Verwenden Sie die Filterschaltfläche ![filter](/help/images/icons/filter-add.pn
 
 Auf der Seite mit den Datenflussausführungen werden Informationen zu den Datenflussausführungen angezeigt, einschließlich der Startzeit des Datenflusses, der Verarbeitungszeit, der empfangenen Datensätze, der aktivierten, der ausgeschlossenen Datensätze, der fehlgeschlagenen Datensätze, der Aktivierungsrate und des Status.
 
-Wenn Sie in der Ansicht auf Zielgruppenebene einen Drilldown zur Seite [&#x200B; Datenflussausführungen durchführen](#segment-level-view) haben Sie die Möglichkeit, die Datenflussausführungen anhand der folgenden Optionen zu filtern:
+Wenn Sie in der Ansicht auf Zielgruppenebene einen Drilldown zur Seite [ Datenflussausführungen durchführen](#segment-level-view) haben Sie die Möglichkeit, die Datenflussausführungen anhand der folgenden Optionen zu filtern:
 
 - **[!UICONTROL Dataflow runs with failed records]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenflussausführungen auf, die bei der Aktivierung fehlgeschlagen sind. Informationen dazu, warum Datensätze in einer bestimmten Datenflussausführung fehlgeschlagen sind, finden Sie auf der [Datenflussausführungs-Detailseite](#dataflow-run-details-page) für diese Datenflussausführung.
 - **[!UICONTROL Dataflow runs with excluded records]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenflussausführungen auf, bei denen einige Datensätze nicht vollständig aktiviert waren und einige Profile übersprungen wurden. Informationen dazu, warum Datensätze in einer bestimmten Datenflussausführung übersprungen wurden, finden Sie auf der [Datenflussausführungs-Detailseite](#dataflow-run-details-page) für diese Datenflussausführung.
@@ -371,7 +371,7 @@ Die Seite mit den Datenflussausführungs-Details zeigt zusätzlich zu den Detail
 - **[!UICONTROL IMS org ID]**: Die Organisation, zu der der Datenfluss gehört.
 - **[!UICONTROL Last updated]**: Die Zeit, zu der der Datenfluss zuletzt aktualisiert wurde.
 
-Auf der Detailseite gibt es auch einen Umschalter zum Wechseln zwischen Datenflussausführungsfehlern und Audiences. Diese Option ist nur für Datenflussausführungen in Batch-Zielen und für das Streaming-Ziel [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) verfügbar.
+Auf der Detailseite gibt es auch einen Umschalter zum Wechseln zwischen Datenflussausführungsfehlern und Audiences. Diese Option ist für die Ziele verfügbar, die im Abschnitt [Ansicht auf Zielgruppenebene](#segment-level-view) aufgeführt sind.
 
 Die Ansicht Datenflussausführungsfehler zeigt eine Liste von fehlgeschlagenen Datensätzen und übersprungenen Datensätzen an. Es werden Informationen zu den fehlgeschlagenen und übersprungenen Datensätzen angezeigt, einschließlich Fehlercode, Identitätsanzahl und Beschreibung. Standardmäßig werden in der Liste die fehlgeschlagenen Datensätze angezeigt. Um übersprungene Datensätze anzuzeigen, wählen Sie den Umschalter **[!UICONTROL Records skipped]** aus.
 
