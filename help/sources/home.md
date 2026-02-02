@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1667'
 ht-degree: 48%
 
 ---
@@ -30,7 +30,7 @@ Mit Experience Platform können Sie Daten aus unterschiedlichen Quellen an zentr
 
 ## Von Adobe und Partnern erstellte Quellen {#adobe-and-partner-built-sources}
 
-Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Sources SDK&quot; erstellt und &#x200B;](/help/sources/sources-sdk/overview.md) werden. Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector gibt an, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispielsweise wird der [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) von Adobe erstellt, während der [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) vom RainFocus-Team erstellt und gepflegt wird.
+Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Sources SDK&quot; erstellt und ](/help/sources/sources-sdk/overview.md) werden. Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector gibt an, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispielsweise wird der [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) von Adobe erstellt, während der [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) vom RainFocus-Team erstellt und gepflegt wird.
 
 Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (die Kontaktmethode ist jeweils im Hinweis auf der Dokumentationsseite angegeben). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an den Support oder den Kundendienst von Adobe.
 
@@ -240,11 +240,11 @@ Sie können die folgenden Quellen verwenden, um Daten zur Marketing-Automatisier
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Streaming | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Batch | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Batch | Azure |
-| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
+| [[!DNL Oracle Eloqua] (v2)](connectors/marketing-automation/eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
-| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
+| [[!DNL Salesforce Marketing Cloud] (v2)](connectors/marketing-automation/sfmc.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 

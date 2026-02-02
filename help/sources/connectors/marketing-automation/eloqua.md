@@ -1,7 +1,8 @@
 ---
 title: Übersicht über Oracle Eloqua (v2) Source
 description: Erfahren Sie, wie Sie Oracle Eloqua mit Adobe Experience Platform verbinden.
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+last-substantial-update: 2025-02-02T00:00:00Z
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
 source-wordcount: '1824'
 ht-degree: 2%
@@ -78,7 +79,7 @@ Um Kampagnendaten aufzunehmen, navigieren Sie zur Benutzeroberfläche **Benutzer
 
 ![Die Sicherheitsgruppe mit hinzugefügten geführten Kampagnen.](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
 
-Optional können Sie einen zusätzlichen Benutzer erstellen und diesen Benutzer zu einer Sicherheitsgruppe hinzufügen. Ausführliche Anweisungen finden Sie in der [!DNL Eloqua] Dokumentation unter [Erstellen eines &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) und [Zuweisen eines Benutzers zu einer Sicherheitsgruppe](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
+Optional können Sie einen zusätzlichen Benutzer erstellen und diesen Benutzer zu einer Sicherheitsgruppe hinzufügen. Ausführliche Anweisungen finden Sie in der [!DNL Eloqua] Dokumentation unter [Erstellen eines ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) und [Zuweisen eines Benutzers zu einer Sicherheitsgruppe](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
 
 ### Sammeln erforderlicher Anmeldedaten
 

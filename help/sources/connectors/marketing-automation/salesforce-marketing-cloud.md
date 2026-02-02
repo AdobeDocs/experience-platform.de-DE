@@ -3,9 +3,9 @@ title: Übersicht über Salesforce Marketing Cloud Source
 description: Erfahren Sie, wie Sie Salesforce Marketing Cloud mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '639'
 ht-degree: 8%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 >[!WARNING]
 >
->Die [!DNL Salesforce Marketing Cloud] wird im Januar 2026 eingestellt. Eine neue Quelle wird noch in diesem Jahr als Alternative veröffentlicht. Nach der Veröffentlichung der neuen Quelle müssen Sie die Migration zur neuen Quelle planen, indem Sie neue Kontoverbindungen und Datenflüsse vor Ende Januar 2026 erstellen.
+>Die [!DNL Oracle Salesforce Marketing Cloud] wird jetzt nicht mehr unterstützt und ist nicht mehr verfügbar. Verwenden Sie die neue [[!DNL Salesforce Marketing Cloud]  (V2](sfmc.md)Quelle) als neuen Connector für Ihre [!DNL Salesforce Marketing Cloud].
 
 [!DNL Salesforce Marketing Cloud] ermöglicht Ihnen die Verwaltung und Automatisierung der Kundeninteraktion über E-Mail, Mobilgeräte, soziale Medien und Werbung hinweg - und das alles auf einer Plattform. Mit Tools wie Email Studio, Journey Builder und Audience Builder können Sie personalisierte Kampagnen und Kunden-Journey erstellen, die auf Ihre Audience zugeschnitten sind.
 
@@ -27,7 +27,7 @@ Bevor Sie Ihre [!DNL Salesforce Marketing Cloud] mit Experience Platform verbind
 * `campaign_read`
 * `list_and_subscribers_read`
 
-Sie können Bereiche anfordern, indem Sie die `v2/userinfo` Ressource der [!DNL Salesforce Marketing Cloud]-API aufrufen. Anleitungen zum Anfordern und Vergleichen von Bereichen finden [[!DNL Salesforce Marketing Cloud]  im Dokument &#x200B;](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>)API-Integrationsberechtigungsumfänge“.
+Sie können Bereiche anfordern, indem Sie die `v2/userinfo` Ressource der [!DNL Salesforce Marketing Cloud]-API aufrufen. Anleitungen zum Anfordern und Vergleichen von Bereichen finden [[!DNL Salesforce Marketing Cloud]  im Dokument ](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>)API-Integrationsberechtigungsumfänge“.
 
 Weitere Informationen zu Bereichen, einschließlich einer Liste der zugehörigen Berechtigungen und Verhaltensweisen, finden Sie in diesem [[!DNL Salesforce Marketing Cloud] REST-API-Dokument](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
 
