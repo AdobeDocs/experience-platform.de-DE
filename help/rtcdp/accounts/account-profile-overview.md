@@ -2,13 +2,13 @@
 keywords: RTCDP B2B;B2B;Account;Account-Profil;Account-Profile RTCDP;Real-Time Customer Data Platform;
 title: Account-Profile in Real-Time CDP B2B edition
 description: Erfahren Sie, wie Sie mit der B2B-Edition von Adobe Real-time Customer Data Platform Kontoinformationen aus verschiedenen Quellen mithilfe von Kontoprofilen vereinheitlichen können.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 769d83155ae70516a296b71baec37d797dd81f34
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 47%
+source-wordcount: '339'
+ht-degree: 42%
 
 ---
 
@@ -25,6 +25,10 @@ Durch die Zusammenführung von Account-Daten aus verschiedenen Quellen können S
 ## Account-Profil-Viewer
 
 Mit Real-Time CDP, B2B edition können Sie die Experience Platform-Benutzeroberfläche verwenden, um Account-Profile anzuzeigen und mithilfe einer Account-ID aus einer verbundenen Unternehmensquelle oder durch die Eingabe von Quelldetails nach bestimmten Accounts zu suchen. Weitere Informationen zum Anzeigen von Account-Profilen in der Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche des Account-Profils](account-profile-ui-guide.md).
+
+>[!IMPORTANT]
+>
+>Für Kontoprofile muss die tägliche Batch-Segmentierungsprüfung aktiviert sein, um Daten anzuzeigen. Stellen Sie sicher, dass die Batch-Segmentierung konfiguriert und geplant ist, um genaue Kontoprofilinformationen zu erhalten. Weitere Informationen finden Sie [ Handbuch zur ](../../segmentation/methods/batch-segmentation.md) .
 
 ## Kontozielgruppen erstellen und aktivieren
 
