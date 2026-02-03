@@ -3,9 +3,9 @@ title: Übersicht über Salesforce Marketing Cloud Source
 description: Erfahren Sie, wie Sie Salesforce Marketing Cloud mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+source-git-commit: 7481a4c85f14847c13d20372dc7bd26c92a5c3d4
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '638'
 ht-degree: 8%
 
 ---
@@ -27,7 +27,7 @@ Bevor Sie Ihre [!DNL Salesforce Marketing Cloud] mit Experience Platform verbind
 * `campaign_read`
 * `list_and_subscribers_read`
 
-Sie können Bereiche anfordern, indem Sie die `v2/userinfo` Ressource der [!DNL Salesforce Marketing Cloud]-API aufrufen. Anleitungen zum Anfordern und Vergleichen von Bereichen finden [[!DNL Salesforce Marketing Cloud]  im Dokument &#x200B;](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>)API-Integrationsberechtigungsumfänge“.
+Sie können Bereiche anfordern, indem Sie die `v2/userinfo` Ressource der [!DNL Salesforce Marketing Cloud]-API aufrufen. Anleitungen zum Anfordern und Vergleichen von Bereichen finden [[!DNL Salesforce Marketing Cloud]  im Dokument ](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>)API-Integrationsberechtigungsumfänge“.
 
 Weitere Informationen zu Bereichen, einschließlich einer Liste der zugehörigen Berechtigungen und Verhaltensweisen, finden Sie in diesem [[!DNL Salesforce Marketing Cloud] REST-API-Dokument](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
 
