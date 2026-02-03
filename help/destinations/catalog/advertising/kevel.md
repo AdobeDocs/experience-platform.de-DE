@@ -1,7 +1,8 @@
 ---
 title: Verbindung abgleichen
 description: Verwenden Sie das Level-Streaming-Ziel, um Zielgruppen direkt in die UserDB- und Segment-Management-APIs von Level zu aktivieren und das Targeting in Echtzeit zur Entscheidungszeit zu unterstützen.
-source-git-commit: d820485fd81efd08d8626f8476338558c4585c20
+last-substantial-update: 2026-01-27T00:00:00Z
+source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 9%
@@ -53,7 +54,7 @@ Das [!DNL Kevel]-Ziel unterstützt die Aktivierung für jede Identität, die Ihr
 
 Das [!DNL Kevel]-Ziel **akzeptiert auch benutzerdefinierte Namespaces** wie in Ihrer Experience Platform-Implementierung definiert.
 
-Dies bedeutet:
+Das bedeutet:
 
 - Sie können **kundenspezifische Identity-Namespaces** zuordnen (z. B.: `loyalty_id`, `gigya_id` oder eine beliebige benutzerdefinierte Identität, die Sie in Identity Service definiert haben).
 - Diese Namespaces können `kevel_user_key1`, `kevel_user_key2` oder `kevel_user_key3` wie globale Namespaces zugewiesen werden.
