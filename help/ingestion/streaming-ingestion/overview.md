@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überblick über den Import von Streamingdaten
 description: Die Streaming-Aufnahme für Adobe Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
+source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '433'
 ht-degree: 15%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform ermöglicht es Ihnen, koordinierte, konsistente und re
 
 Das folgende Video soll Ihnen dabei helfen, die Streaming-Aufnahme zu verstehen, und umreißt die oben genannten Konzepte.
 
->[!VIDEO](https://video.tv.adobe.com/v/31577?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Streamen von Profildatensätzen und [!DNL ExperienceEvents]
 
@@ -43,7 +43,7 @@ Weitere Informationen zum Aktivieren eines Datensatzes für [!DNL Profile] und [
 
 | Ziel | Erwartete Latenz |
 | --------- | ---------------- |
-| Echtzeit-Kundenprofil | &lt; 15 Minuten beim 95. Perzentil |
+| Echtzeit-Kundenprofil | <ul><li>&lt; 15 Minuten beim 95. Perzentil für die B2C-Datenaufnahme.</li><li>&lt; 30 Minuten beim 95. Perzentil für die B2B-Datenaufnahme.</li></ul> |
 | Data Lake | &lt; 60 Minuten |
 
 ## Anleitung pro Sekunde (RPS) für die Streaming-Aufnahme
