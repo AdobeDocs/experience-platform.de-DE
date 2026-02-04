@@ -47,7 +47,7 @@ ht-degree: 73%
 - Segmentierungsmethoden {#methods}
    - [Überblick](methods/overview.md)
    - [Batch-Segmentierung](methods/batch-segmentation.md)
-   - [Streaming-Segmentierung ](methods/streaming-segmentation.md)
+   - [Streaming-Segmentierung &#x200B;](methods/streaming-segmentation.md)
    - [Edge-Segmentierung](methods/edge-segmentation.md)
    - [Flexible Zielgruppenauswertung](methods/flexible-audience-evaluation.md)
 - Zielgruppentypen {#types}
