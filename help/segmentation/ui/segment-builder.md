@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 054b34875a0eb2676bcb4a8a8a555b4465410d66
+source-git-commit: 1b836a86a6b55a4e80a7fd3a52160f3974e4c9a4
 workflow-type: tm+mt
-source-wordcount: '5355'
+source-wordcount: '5354'
 ht-degree: 53%
 
 ---
@@ -189,34 +189,9 @@ Beachten Sie, dass maximal 250 Werte zulässig sind. Wenn Sie diese Grenze über
 
 ![Es erscheint eine Warnung, die anzeigt, dass Sie die maximale Anzahl von Werten erreicht haben.](../images/ui/segment-builder/maximum-values.png)
 
-### Validierung der Abfrage {#query-validation}
+### Zielgruppen-Validierung {#audience-validation}
 
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="logische Komplexität"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="Ereignissequenzlimit"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="Warnhinweis zur Abfrageeffizienz"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Warnung zum Zählungsfilter"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="Warnung zu verschachtelten Daten"
->abstract=""
-
-Segment Builder analysiert und validiert automatisch Ihre Zielgruppenabfragen, um sicherzustellen, dass Sie die Best Practices für die Zielgruppendefinition einhalten. Diese Best Practices können in zwei Kategorien unterteilt werden: kritische Validierung und Leistungsoptimierung.
+Segment Builder analysiert und validiert automatisch Ihre Zielgruppendefinition, um sicherzustellen, dass Sie die Best Practices für die Zielgruppendefinition einhalten. Diese Best Practices können in zwei Kategorien unterteilt werden: kritische Validierung und Leistungsoptimierung.
 
 Wenn eine Zielgruppendefinition gegen eine wichtige Best Practice für die Validierung verstößt **können** Ihre Änderungen speichern, um Ihre Sandbox stabil zu halten. Wenn eine Zielgruppendefinition gegen eine Best Practice zur Leistungsoptimierung verstößt, können Sie Ihre Änderungen speichern, es wird jedoch *empfohlen,* Zielgruppendefinition zu aktualisieren, um Leistungsprobleme zu vermeiden.
 
@@ -227,6 +202,8 @@ Wenn eine Zielgruppendefinition gegen eine wichtige Best Practice für die Valid
 | Aggregierte Anzahl | Leistungsoptimierung | Es gibt mehr als drei Aggregationsfunktionen innerhalb einer Zielgruppendefinition. |
 | Verschachtelte Daten | Leistungsoptimierung | Es gibt mehr als 2 Ebenen verschachtelter Daten (Datentypen „Array“ oder „Zuordnung„) in einer Zielgruppendefinition. |
 | Zielgruppengröße | Leistungsoptimierung | Die Größe der Zielgruppenqualifizierung ist größer als 30 % der Gesamtzahl der Profile in der Sandbox. |
+
+Weitere Informationen zur Funktionsweise der Zielgruppenvalidierung finden Sie im [Handbuch zur Zielgruppenvalidierung](/help/segmentation/validation.md).
 
 ### Hinzufügen von Zielgruppen
 

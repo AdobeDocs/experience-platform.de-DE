@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Januar 2026
 description: Versionshinweise Januar 2026 für Adobe Experience Platform.
-source-git-commit: a8eefb3330d0de21fbb8648593eb912c063529d7
+source-git-commit: 1761acbcab12acf1596daf5461476d5b91bb0e9b
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1570'
 ht-degree: 12%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 12%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 27. Januar 2026**
 
@@ -39,7 +39,7 @@ Mit Agent Orchestrator können Sie KI-gestützte Agenten erstellen und bereitste
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Benutzergebundene Testversion für Adobe Experience Platform-Agenten | **Ausgewählte Kunden erhalten jetzt kostenlosen Testzugriff auf Adobe Experience Platform-Agenten**. Sie können die Testversion verwenden, um Agenten über die Benutzeroberfläche des KI-Assistenten mit Adobe Experience Platform Agent Orchestrator zu durchsuchen und mit ihnen zu interagieren. Die Testversion bietet praktische Erfahrung mit KI-Agenten, die im Kontext der bestehenden Experience Cloud-Produkte und -Umgebungen von Kunden arbeiten, sodass Teams den Wert bewerten können, bevor sie sich zu einem vollständigen Kauf verpflichten. Adobe Experience Platform-Agenten orientieren sich an der Benutzereingabe und -aufsicht und berücksichtigen die bestehenden Zugriffskontrollen auf Produktebene, um sicherzustellen, dass Benutzende nur Aktionen ausführen oder Daten anzeigen können, für die sie in den zugrunde liegenden Experience Cloud-Programmen autorisiert sind. Informationen zu den ersten Schritten finden Sie in der [&#x200B; der nutzungsgebundenen Testversion für &#x200B;](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)Experience Platform-Agenten Übersicht. |
+| Benutzergebundene Testversion für Adobe Experience Platform-Agenten | **Ausgewählte Kunden erhalten jetzt kostenlosen Testzugriff auf Adobe Experience Platform-Agenten**. Sie können die Testversion verwenden, um Agenten über die Benutzeroberfläche des KI-Assistenten mit Adobe Experience Platform Agent Orchestrator zu durchsuchen und mit ihnen zu interagieren. Die Testversion bietet praktische Erfahrung mit KI-Agenten, die im Kontext der bestehenden Experience Cloud-Produkte und -Umgebungen von Kunden arbeiten, sodass Teams den Wert bewerten können, bevor sie sich zu einem vollständigen Kauf verpflichten. Adobe Experience Platform-Agenten orientieren sich an der Benutzereingabe und -aufsicht und berücksichtigen die bestehenden Zugriffskontrollen auf Produktebene, um sicherzustellen, dass Benutzende nur Aktionen ausführen oder Daten anzeigen können, für die sie in den zugrunde liegenden Experience Cloud-Programmen autorisiert sind. Informationen zu den ersten Schritten finden Sie in der [ der nutzungsgebundenen Testversion für ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)Experience Platform-Agenten Übersicht. |
 
 {style="table-layout:auto"}
 
@@ -101,6 +101,7 @@ Weitere Informationen finden Sie in der [[!DNL Real-Time Customer Profile] Über
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Aktualisierung der Gültigkeit externer Zielgruppendaten | Externe Zielgruppen (z. B. CSV-Uploads) unterstützen jetzt eine Funktion zum Erzwingen einer Aktualisierung der Datenablaufeinstellungen. Mit dieser Funktion können Benutzer den Ablauf von Daten für externe Zielgruppen manuell aktualisieren, was eine bessere Kontrolle über die Verwaltung des Zielgruppen-Lebenszyklus ermöglicht. Dies ist besonders nützlich für Zielgruppen, die über den ursprünglichen Datenablaufzeitraum hinaus bestehen bleiben müssen oder eine Reaktivierung benötigen, ohne die Daten erneut hochzuladen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Zielgruppenportal - Übersicht](../../segmentation/ui/audience-portal.md#audience-summary). |
+| Zielgruppen-Validierung | Experience Platform bietet jetzt integrierte Validierungen, um sicherzustellen, dass Ihre Zielgruppen präzise, stabil und skalierbar sind. Diese Prüfungen werden automatisch in Echtzeit ausgeführt, während Sie Ihre Zielgruppendefinitionen erstellen. Weitere Informationen finden Sie im Abschnitt [Übersicht über die Zielgruppenvalidierung](/help/segmentation/validation.md). |
 
 Weitere Informationen finden Sie in der [[!DNL Segmentation Service] Übersicht](../../segmentation/home.md).
 
@@ -112,8 +113,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Quelle | Beschreibung |
 | --- | --- |
-| [[!DNL Oracle Eloqua]](/help/sources/connectors/marketing-automation/eloqua.md) V2-Quelle | Ein neuer [!DNL Oracle Eloqua]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ &#x200B;](/help/sources/connectors/marketing-automation/oracle-eloqua.md). Dieser aktualisierte Connector bietet erweiterte Funktionen und eine höhere Zuverlässigkeit für die Aufnahme von Daten aus [!DNL Oracle Eloqua] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung migrieren, da bestehende Verbindungen nicht mehr funktionieren. Der neue Connector unterstützt alle Einrichtungs- und Konfigurationsschritte, die für die Verbindung mit [!DNL Oracle Eloqua] und die Aufnahme von Daten zur Marketing-Automatisierung erforderlich sind. |
-| [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2-Quelle | Ein neuer [!DNL Salesforce Marketing Cloud]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ &#x200B;](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Dieser aktualisierte Connector bietet eine verbesserte Leistung und zusätzliche Funktionen für die Aufnahme von Daten aus [!DNL Salesforce Marketing Cloud] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung wechseln. Der neue Connector enthält umfassende Einrichtungsanweisungen für die Verbindung mit [!DNL Salesforce Marketing Cloud] und die Aufnahme von Daten zur Marketing-Automatisierung. |
+| [[!DNL Oracle Eloqua]](/help/sources/connectors/marketing-automation/eloqua.md) V2-Quelle | Ein neuer [!DNL Oracle Eloqua]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ ](/help/sources/connectors/marketing-automation/oracle-eloqua.md). Dieser aktualisierte Connector bietet erweiterte Funktionen und eine höhere Zuverlässigkeit für die Aufnahme von Daten aus [!DNL Oracle Eloqua] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung migrieren, da bestehende Verbindungen nicht mehr funktionieren. Der neue Connector unterstützt alle Einrichtungs- und Konfigurationsschritte, die für die Verbindung mit [!DNL Oracle Eloqua] und die Aufnahme von Daten zur Marketing-Automatisierung erforderlich sind. |
+| [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2-Quelle | Ein neuer [!DNL Salesforce Marketing Cloud]-Quell-Connector ist jetzt verfügbar, der den [veralteten Connector“ ](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Dieser aktualisierte Connector bietet eine verbesserte Leistung und zusätzliche Funktionen für die Aufnahme von Daten aus [!DNL Salesforce Marketing Cloud] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung wechseln. Der neue Connector enthält umfassende Einrichtungsanweisungen für die Verbindung mit [!DNL Salesforce Marketing Cloud] und die Aufnahme von Daten zur Marketing-Automatisierung. |
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).
 

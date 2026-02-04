@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von in Adobe Experience Platform generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
 role: User
-source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
+source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 74%
+source-wordcount: '212'
+ht-degree: 73%
 
 ---
 
@@ -17,9 +17,10 @@ ht-degree: 74%
 
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)
-- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de#segmentation-guardrails)
+- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Zielgruppen-Validierung](./validation.md)
 - Segmentation-API {#api}
-   - [Übersicht](api/overview.md)
+   - [Überblick](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
    - [Erstellen von Zielgruppen-Metadaten](api/create-audience.md)
    - [Zielgruppen](api/audiences.md)
@@ -46,7 +47,7 @@ ht-degree: 74%
 - Segmentierungsmethoden {#methods}
    - [Überblick](methods/overview.md)
    - [Batch-Segmentierung](methods/batch-segmentation.md)
-   - [Streaming-Segmentierung &#x200B;](methods/streaming-segmentation.md)
+   - [Streaming-Segmentierung ](methods/streaming-segmentation.md)
    - [Edge-Segmentierung](methods/edge-segmentation.md)
    - [Flexible Zielgruppenauswertung](methods/flexible-audience-evaluation.md)
 - Zielgruppentypen {#types}
@@ -67,7 +68,7 @@ ht-degree: 74%
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Erzwingen der Datennutzungskonformität für Zielgruppen](tutorials/governance.md)
 - Profile Query Language {#pql}
-   - [Übersicht](pql/overview.md)
+   - [Überblick](pql/overview.md)
    - [Boolesche Funktionen](pql/boolean-functions.md)
    - [Vergleichsfunktionen](pql/comparison-functions.md)
    - [Funktionen für Arrays, Listen und Sets](pql/array-functions.md)
