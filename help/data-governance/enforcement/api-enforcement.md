@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;Automatisierte Durchsetzung;API-basierte Durchsetzung;Datenverwaltung;Tests
+keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;Automatisierte Durchsetzung;API-basierte Durchsetzung;Data Governance;Tests
 solution: Experience Platform
 title: Durchsetzen von Datennutzungsrichtlinien mithilfe der Policy Service-API
 type: Tutorial
-description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API auswerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
+description: Nachdem Sie Datennutzungs-Labels für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Labels erstellt haben, können Sie mit der Policy Service-API auswerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Labels durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 98%
+source-wordcount: '1021'
+ht-degree: 95%
 
 ---
 
 # Durchsetzen von Datennutzungsrichtlinien mit der [!DNL Policy Service]-API
 
-Nachdem Sie Datennutzungskennzeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Kennzeichnungen erstellt haben, können Sie mit der [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) auswerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Kennzeichnungen ausgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
+Nachdem Sie Datennutzungs-Labels für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Labels erstellt haben, können Sie mit der [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) auswerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Labels ausgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 
 >[!NOTE]
 >
@@ -27,15 +27,15 @@ In diesem Dokument wird beschrieben, wie Sie mit der [!DNL Policy Service]-API i
 Dieses Tutorial setzt ein Verständnis der folgenden Schlüsselkonzepte voraus, die beim Durchsetzen von Datennutzungsrichtlinien eine Rolle spielen:
 
 * [Data Governance](../home.md): Das Framework, mit dem [!DNL Experience Platform] die Einhaltung der Datennutzungsrichtlinien durchsetzt.
-   * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf Datensätze (und/oder einzelne Felder in diesen Datensätzen) angewendet und geben Einschränkungen für die Verwendungsmöglichkeiten dieser Daten an.
-   * [Datennutzungsrichtlinien](../policies/overview.md): Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die für bestimmte Sätze von Datennutzungskennzeichnungen zulässig bzw. eingeschränkt sind.
+   * [Datennutzungs-Labels](../labels/overview.md): Datennutzungs-Labels werden auf Datensätze (und/oder einzelne Felder in diesen Datensätzen) angewendet und geben Einschränkungen für die Verwendungsmöglichkeiten dieser Daten an.
+   * [Datennutzungsrichtlinien](../policies/overview.md): Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die für bestimmte Sätze von Datennutzungs-Labels zulässig bzw. eingeschränkt sind.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Bevor Sie mit diesem Tutorial beginnen, lesen Sie das [Entwicklerhandbuch](../api/getting-started.md), um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die [!DNL Policy Service]-API benötigen, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 
-## Auswerten mit Kennzeichnungen und einer Marketing-Aktion
+## Auswerten mit Labels und einer Marketing-Aktion
 
-Sie können eine Richtlinie auswerten, indem Sie eine Marketing-Aktion mit einem Satz von Datennutzungskennzeichnungen testen, die hypothetisch in einem Datensatz vorhanden sein würden. Dies geschieht mithilfe des Abfrageparameters `duleLabels`, bei dem Kennzeichnungen als kommagetrennte Liste von Werten bereitgestellt werden, wie im folgenden Beispiel gezeigt.
+Sie können eine Richtlinie auswerten, indem Sie eine Marketing-Aktion mit einem Satz von Datennutzungs-Labels testen, die hypothetisch in einem Datensatz vorhanden sein würden. Dies geschieht mithilfe des Abfrageparameters `duleLabels`, bei dem Labels als kommagetrennte Liste von Werten bereitgestellt werden, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -47,15 +47,15 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 | Parameter | Beschreibung |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die mit der von Ihnen auszuwertenden Datennutzungsrichtlinie verknüpft ist. |
-| `{LABEL_1}` | Eine Datennutzungsbezeichnung zum Testen der Marketing-Aktion. Es muss mindestens eine Bezeichnung angegeben werden. Bei der Bereitstellung mehrerer Bezeichnungen müssen diese durch Kommas getrennt werden. |
+| `{LABEL_1}` | Eine Datennutzungs-Label zum Testen der Marketing-Aktion. Es muss mindestens ein Label angegeben werden. Bei der Bereitstellung mehrerer Labels müssen diese durch Kommas getrennt werden. |
 
 **Anfrage**
 
-Die folgende Anfrage testet die Marketing-Aktion `exportToThirdParty` hinsichtlich der Bezeichnungen `C1` und `C3`. Da die zuvor in dieser Anleitung erstellte Datennutzungsrichtlinie die `C1`-Bezeichnung als eine der `deny`-Bedingungen in ihrem Richtlinienausdruck definiert, sollte die Marketing-Aktion eine Richtlinienverletzung auslösen.
+Die folgende Anfrage testet die Marketing-Aktion `exportToThirdParty` hinsichtlich der Labels `C1` und `C3`. Da die zuvor in dieser Anleitung erstellte Datennutzungsrichtlinie das `C1`-Label als eine der `deny`-Bedingungen in ihrem Richtlinienausdruck definiert, sollte die Marketing-Aktion eine Richtlinienverletzung auslösen.
 
 >[!NOTE]
 >
->Bei Datennutzungsbezeichnungen wird zwischen Groß- und Kleinschreibung unterschieden. Richtlinienverletzungen treten nur dann auf, wenn die in ihren Richtlinienausdrücken definierten Bezeichnungen exakt übereinstimmen. In diesem Beispiel würde eine `C1`-Bezeichnung eine Verletzung auslösen, eine `c1`-Bezeichnung hingegen nicht.
+>Bei Datennutzungs-Labels wird zwischen Groß- und Kleinschreibung unterschieden. Richtlinienverletzungen treten nur dann auf, wenn die in ihren Richtlinienausdrücken definierten Labels exakt übereinstimmen. In diesem Beispiel würde ein `C1`-Label eine Verletzung auslösen, ein `c1`-Label hingegen nicht.
 
 ```shell
 curl -X GET \
@@ -68,7 +68,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die Datennutzungskennzeichnungen, anhand der sie getestet wurde, und eine Liste aller Richtlinien zurückgegeben, die beim Testen der Aktion hinsichtlich dieser Kennzeichnungen verletzt wurden. In diesem Beispiel wird die Richtlinie „Daten an Dritte exportieren“ im `violatedPolicies`-Array angezeigt; dadurch wird angegeben, dass die Marketing-Aktion die erwartete Richtlinienverletzung ausgelöst hat.
+Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die Datennutzungs-Labels, anhand der sie getestet wurde, und eine Liste aller Richtlinien zurückgegeben, die beim Testen der Aktion hinsichtlich dieser Labels verletzt wurden. In diesem Beispiel wird die Richtlinie „Daten an Dritte exportieren“ im `violatedPolicies`-Array angezeigt; dadurch wird angegeben, dass die Marketing-Aktion die erwartete Richtlinienverletzung ausgelöst hat.
 
 ```json
 {
@@ -132,7 +132,11 @@ Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die Da
 
 ## Mit Datensätzen auswerten
 
-Sie können eine Datennutzungsrichtlinie auswerten, indem Sie eine Marketing-Aktion mit einem oder mehreren Datensätzen testen, aus denen Kennzeichnungen gesammelt werden können. Dies geschieht durch eine POST-Anfrage an `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` und Angabe von Datensatz-IDs im Anfragetext, wie im folgenden Beispiel gezeigt.
+>[!WARNING]
+>
+>Der `/constraints`-Endpunkt für die datensatzbasierte Auswertung ist veraltet. Um einen Richtlinienverstoß auszuwerten oder mehrere Auswertungsaufträge auszuführen, verwenden Sie stattdessen die [Bulk Evaluation API (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk).
+
+Sie können eine Datennutzungsrichtlinie auswerten, indem Sie eine Marketing-Aktion mit einem oder mehreren Datensätzen testen, aus denen Labels gesammelt werden können. Dies geschieht durch eine POST-Anfrage an `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` und Angabe von Datensatz-IDs im Anfragetext, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -187,7 +191,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die Datennutzungskennzeichnungen, die aus den bereitgestellten Datensätzen gesammelt wurden, und eine Liste all der Richtlinien zurückgegeben, die beim Testen der Aktion hinsichtlich dieser Kennzeichnungen verletzt wurden. In diesem Beispiel wird die Richtlinie „Daten an Dritte exportieren“ im `violatedPolicies`-Array angezeigt; dadurch wird angegeben, dass die Marketing-Aktion die erwartete Richtlinienverletzung ausgelöst hat.
+Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die Datennutzungs-Labels, die aus den bereitgestellten Datensätzen gesammelt wurden, und eine Liste all der Richtlinien zurückgegeben, die beim Testen der Aktion hinsichtlich dieser Labels verletzt wurden. In diesem Beispiel wird die Richtlinie „Daten an Dritte exportieren“ im `violatedPolicies`-Array angezeigt; dadurch wird angegeben, dass die Marketing-Aktion die erwartete Richtlinienverletzung ausgelöst hat.
 
 ```json
 {
@@ -368,12 +372,12 @@ Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die Da
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `duleLabels` | Eine Liste von Datennutzungskennzeichnungen, die aus den in der Payload der Anfrage angegebenen Datensätzen extrahiert wurden. |
-| `discoveredLabels` | Eine Liste der Datensätze, die in der Payload der Anfrage angegeben wurden; angezeigt werden die in den einzelnen Datensätzen gefundenen Kennzeichnungen auf Datensatzebene und Feldebene. |
+| `duleLabels` | Eine Liste von Datennutzungs-Labels, die aus den in der Payload der Anfrage angegebenen Datensätzen extrahiert wurden. |
+| `discoveredLabels` | Eine Liste der Datensätze, die in der Payload der Anfrage angegeben wurden; angezeigt werden die in den einzelnen Datensätzen gefundenen Labels auf Datensatzebene und Feldebene. |
 | `violatedPolicies` | Ein Array, das alle Richtlinien auflistet, die durch Testen der Marketing-Aktion (angegeben in `marketingActionRef`) hinsichtlich der angegebenen `duleLabels` verletzt wurden. |
 
 ## Nächste Schritte
 
-Indem Sie dieses Dokuments lesen, haben Sie bei der Ausführung einer Marketing-Aktion für einen Datensatz oder eine Reihe von Datennutzungskennzeichnungen erfolgreich geprüft, ob Richtlinien verletzt wurden. Mithilfe der in den API-Antworten zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverletzungen bei ihrem Auftreten angemessen durchzusetzen.
+Indem Sie dieses Dokuments lesen, haben Sie bei der Ausführung einer Marketing-Aktion für einen Datensatz oder eine Reihe von Datennutzungs-Labels erfolgreich geprüft, ob Richtlinien verletzt wurden. Mithilfe der in den API-Antworten zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverletzungen bei ihrem Auftreten angemessen durchzusetzen.
 
 Informationen dazu, wie Experience Platform automatisch die Richtliniendurchsetzung für aktivierte Segmente bereitstellt, finden Sie im Handbuch [Automatische Durchsetzung](./auto-enforcement.md).

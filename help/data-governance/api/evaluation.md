@@ -2,25 +2,25 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;Automatische Durchsetzung;API-basierte Durchsetzung;Data Governance
 solution: Experience Platform
 title: API-Endpunkte für die Richtlinienauswertung
-description: Nachdem Marketing-Aktionen erstellt und Richtlinien definiert wurden, können Sie mit der Policy Service-API auswerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
+description: Nachdem Marketing-Aktionen erstellt und Richtlinien definiert wurden, können Sie mit der Policy Service-API auswerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungs-Labels ausgeführt wird.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 100%
+source-wordcount: '1560'
+ht-degree: 98%
 
 ---
 
 # Endpunkte für die Richtlinienauswertung
 
-Sobald Marketing-Aktionen erstellt und Richtlinien für die Datennutzung definiert wurden, können Sie die [!DNL Policy Service]-API verwenden, um auszuwerten, ob bestimmte Aktionen gegen Richtlinien verstoßen. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
+Sobald Marketing-Aktionen erstellt und Richtlinien für die Datennutzung definiert wurden, können Sie die [!DNL Policy Service]-API verwenden, um auszuwerten, ob bestimmte Aktionen gegen Richtlinien verstoßen. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungs-Labels ausgeführt wird.
 
 Standardmäßig werden nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, in die Auswertung einbezogen. Sie können jedoch den Abfrageparameter `?includeDraft=true` verwenden, um auch `DRAFT`-Richtlinien in die Auswertung einzubeziehen.
 
 Auswertungsanfragen können auf drei Arten gestellt werden:
 
-1. Verstößt die Aktion angesichts einer vorgegebenen Marketing-Aktion und einer Reihe von Datennutzungskennzeichnungen gegen Richtlinien?
+1. Verstößt die Aktion angesichts einer vorgegebenen Marketing-Aktion und einer Reihe von Datennutzungs-Labels gegen Richtlinien?
 1. Verstößt die Aktion angesichts einer vorgegebenen Marketing-Aktion und eines oder mehrerer Datensätze gegen eine Richtlinie?
 1. Verstößt die Aktion angesichts einer vorgegebenen Marketing-Aktion, eines oder mehrerer Datensätze und einer Teilmenge eines oder mehrerer Felder in jedem dieser Datensätze gegen Richtlinien?
 
@@ -28,9 +28,9 @@ Auswertungsanfragen können auf drei Arten gestellt werden:
 
 Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [[!DNL Policy Service] -API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Bevor Sie fortfahren, werfen Sie im Handbuch [Erste Schritte](./getting-started.md) einen Blick auf die Informationen zu Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
-## Auswerten auf Richtlinienverletzungen mithilfe von Datennutzungskennzeichnungen {#labels}
+## Auswerten auf Richtlinienverletzungen mithilfe von Datennutzungs-Labels {#labels}
 
-Sie können basierend auf dem Vorhandensein eines bestimmten Satzes von Datennutzungskennzeichnungen auf Richtlinienverletzungen auswerten, indem Sie den Abfrageparameter `duleLabels` in einer GET-Anfrage verwenden.
+Sie können basierend auf dem Vorhandensein eines bestimmten Satzes von Datennutzungs-Labels auf Richtlinienverletzungen auswerten, indem Sie den Abfrageparameter `duleLabels` in einer GET-Anfrage verwenden.
 
 **API-Format**
 
@@ -41,16 +41,16 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die hinsichtlich einer Reihe von Datennutzungskennzeichnungen getestet werden soll. Sie können eine Liste der verfügbaren Marketing-Aktionen abrufen, indem Sie eine [GET-Anfrage an den Endpunkt der Marketing-Aktionen](./marketing-actions.md#list) stellen. |
-| `{LABELS_LIST}` | Eine kommagetrennte Liste von Datennutzungskennzeichnungen, hinsichtlich derer die Marketing-Aktion getestet wird. Beispiel: `duleLabels=C1,C2,C3`<br><br>Beachten Sie, dass bei Namen der Kennzeichnungen die Groß-/Kleinschreibung eine Rolle spielt. Stellen Sie sicher, dass Sie die richtige Groß-/Kleinschreibung verwenden, wenn Sie sie im Parameter `duleLabels` auflisten. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die hinsichtlich einer Reihe von Datennutzungs-Labels getestet werden soll. Sie können eine Liste der verfügbaren Marketing-Aktionen abrufen, indem Sie eine [GET-Anfrage an den Endpunkt der Marketing-Aktionen](./marketing-actions.md#list) stellen. |
+| `{LABELS_LIST}` | Eine kommagetrennte Liste von Datennutzungs-Labels, hinsichtlich derer die Marketing-Aktion getestet wird. Beispiel: `duleLabels=C1,C2,C3`<br><br>Beachten Sie, dass bei Namen der Labels die Groß-/Kleinschreibung eine Rolle spielt. Stellen Sie sicher, dass Sie die richtige Groß-/Kleinschreibung verwenden, wenn Sie sie im Parameter `duleLabels` auflisten. |
 
 **Anfrage**
 
-Die folgende Beispielanfrage wertet eine Marketing-Aktion mit den Bezeichnungen C1 und C3 aus.
+Die folgende Beispielanfrage wertet eine Marketing-Aktion mit den Labels C1 und C3 aus.
 
 >[!IMPORTANT]
 >
->Achten Sie auf `AND`- und `OR`-Operatoren in Ihren Richtlinienausdrücken. In diesem Beispiel hätte die Marketing-Aktion nicht gegen diese Richtlinie verstoßen, wenn eine der Kennzeichnungen (`C1` bzw. `C3`) allein in der Anfrage erschienen wäre. Beide Kennzeichnungen (`C1` und `C3`) sind erforderlich, damit eine Verletzung der Richtlinie gemeldet wird. Vergewissern Sie sich, dass Sie die Richtlinien sorgfältig auswerten und die Richtlinienausdrücke mit gleicher Sorgfalt definieren.
+>Achten Sie auf `AND`- und `OR`-Operatoren in Ihren Richtlinienausdrücken. In diesem Beispiel hätte die Marketing-Aktion nicht gegen diese Richtlinie verstoßen, wenn eine der Labels (`C1` bzw. `C3`) allein in der Anfrage erschienen wäre. Beide Labels (`C1` und `C3`) sind erforderlich, damit eine Verletzung der Richtlinie gemeldet wird. Vergewissern Sie sich, dass Sie die Richtlinien sorgfältig auswerten und die Richtlinienausdrücke mit gleicher Sorgfalt definieren.
 
 ```shell
 curl -X GET \
@@ -63,7 +63,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält ein `violatedPolicies`-Array mit den Details der Richtlinien, die bei der Durchführung der Marketing-Aktion hinsichtlich der angegebenen Kennzeichnungen verletzt wurden. Wenn keine Richtlinien verletzt werden, ist das `violatedPolicies`-Array leer.
+Eine erfolgreiche Antwort enthält ein `violatedPolicies`-Array mit den Details der Richtlinien, die bei der Durchführung der Marketing-Aktion hinsichtlich der angegebenen Labels verletzt wurden. Wenn keine Richtlinien verletzt werden, ist das `violatedPolicies`-Array leer.
 
 ```JSON
 {
@@ -123,7 +123,11 @@ Eine erfolgreiche Antwort enthält ein `violatedPolicies`-Array mit den Details 
 
 ## Auf Richtlinienverletzungen mithilfe von Datensätzen auswerten {#datasets}
 
-Sie können auch auf Richtlinienverstöße auswerten, indem Sie die ID eines oder mehrerer Datensätze angeben, aus denen Datennutzungskennzeichnungen erfasst werden können. Dies geschieht, indem für eine bestimmte Marketing-Aktion eine POST-Anfrage an den `/constraints`-Endpunkt gestellt und eine Liste der Datensatz-IDs im Anfragetext bereitgestellt wird.
+>[!WARNING]
+>
+>Der `/constraints`-Endpunkt für die datensatzbasierte Auswertung ist veraltet. Um einen Richtlinienverstoß auszuwerten oder mehrere Auswertungsaufträge auszuführen, verwenden Sie stattdessen die [Bulk Evaluation API (`/bulk-eval`)](#evaluate-policies-in-bulk).
+
+Sie können auch auf Richtlinienverstöße auswerten, indem Sie die ID eines oder mehrerer Datensätze angeben, aus denen Datennutzungs-Labels erfasst werden können. Dies geschieht, indem für eine bestimmte Marketing-Aktion eine POST-Anfrage an den `/constraints`-Endpunkt gestellt und eine Liste der Datensatz-IDs im Anfragetext bereitgestellt wird.
 
 **API-Format**
 
@@ -344,17 +348,17 @@ Eine erfolgreiche Antwort enthält ein `violatedPolicies`-Array mit den Details 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `duleLabels` | Das Antwortobjekt enthält ein `duleLabels`-Array, das eine konsolidierte Liste aller in den angegebenen Datensätzen gefundenen Bezeichnungen enthält. Diese Liste enthält Bezeichnungen auf Datensatz- und Feldebene für alle Felder im Datensatz. |
-| `discoveredLabels` | Die Antwort enthält außerdem ein `discoveredLabels`-Array mit Objekten für jeden Datensatz, in dem die `datasetLabels` in Bezeichnungen auf Datensatz- und Feldebene unterteilt sind. Jede Bezeichnung auf Feldebene zeigt den Pfad zum jeweiligen Feld mit dieser Bezeichnung. |
+| `duleLabels` | Das Antwortobjekt enthält ein `duleLabels`-Array, das eine konsolidierte Liste aller in den angegebenen Datensätzen gefundenen Labels enthält. Diese Liste enthält Labels auf Datensatz- und Feldebene für alle Felder im Datensatz. |
+| `discoveredLabels` | Die Antwort enthält außerdem ein `discoveredLabels`-Array mit Objekten für jeden Datensatz, in dem die `datasetLabels` in Labels auf Datensatz- und Feldebene unterteilt sind. Jedes Label auf Feldebene zeigt den Pfad zum jeweiligen Feld mit diesem Label. |
 
 ## Auswerten auf Richtlinienverletzungen mithilfe bestimmter Datensatzfelder {#fields}
 
-Sie können Richtlinienverletzungen anhand einer Teilmenge von Feldern aus einem oder mehreren Datensätzen auswerten, sodass nur die auf diese Felder angewendeten Datennutzungskennzeichnungen ausgewertet werden.
+Sie können Richtlinienverletzungen anhand einer Teilmenge von Feldern aus einem oder mehreren Datensätzen auswerten, sodass nur die auf diese Felder angewendeten Datennutzungs-Labels ausgewertet werden.
 
 Beachten Sie bei der Auswertung von Richtlinien mithilfe von Datensatzfeldern Folgendes:
 
 * **Bei den Feldnamen wird zwischen Groß- und Kleinschreibung unterschieden**: Bei der Bereitstellung von Feldern müssen sie genau so geschrieben werden, wie sie im Datensatz erscheinen (z. B. `firstName` vs. `firstname`).
-* **Vererbung von Datensatzkennzeichnungen**: Einzelne Felder in einem Datensatz übernehmen alle Kennzeichnungen, die auf Datensatzebene angewendet wurden. Wenn Ihre Richtlinienauswertungen nicht die erwarteten Ergebnisse zurückgeben, stellen Sie sicher, dass Sie zusätzlich zu den auf Feldebene angewendeten Kennzeichnungen auch alle Kennzeichnungen überprüfen, die möglicherweise von der Datensatzebene in die Felder übernommen wurden.
+* **Vererbung von Datensatz-Labels**: Einzelne Felder in einem Datensatz übernehmen alle Labels, die auf Datensatzebene angewendet wurden. Wenn Ihre Richtlinienauswertungen nicht die erwarteten Ergebnisse zurückgeben, stellen Sie sicher, dass Sie zusätzlich zu den auf Feldebene angewendeten Labels auch alle Labels überprüfen, die möglicherweise von der Datensatzebene in die Felder übernommen wurden.
 
 **API-Format**
 
@@ -369,7 +373,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 **Anfrage**
 
-Die folgende Anfrage testet die Marketing-Aktion `crossSiteTargeting` für einen bestimmten Satz von Feldern, die zu drei Datensätzen gehören. Die Payload ähnelt einer [Auswertungsanfrage, bei der nur Datensätze einbezogen werden](#datasets), wobei für jeden Datensatz spezifische Felder hinzugefügt werden, aus denen Kennzeichnungen gesammelt werden sollen.
+Die folgende Anfrage testet die Marketing-Aktion `crossSiteTargeting` für einen bestimmten Satz von Feldern, die zu drei Datensätzen gehören. Die Payload ähnelt einer [Auswertungsanfrage, bei der nur Datensätze einbezogen werden](#datasets), wobei für jeden Datensatz spezifische Felder hinzugefügt werden, aus denen Labels gesammelt werden sollen.
 
 ```shell
 curl -X POST \
@@ -422,7 +426,7 @@ curl -X POST \
 
 Eine erfolgreiche Antwort enthält ein `violatedPolicies`-Array mit den Details der Richtlinien, die bei der Durchführung der Marketing-Aktion hinsichtlich der bereitgestellten Datensatzfelder verletzt wurden. Wenn keine Richtlinien verletzt werden, ist das `violatedPolicies`-Array leer.
 
-Beim Vergleich der untenstehenden Beispielantwort mit der [Antwort, wenn nur Datensätze einbezogen werden](#datasets), beachten Sie, dass die Liste der gesammelten Kennzeichnungen kürzer ist. Die Werte für `discoveredLabels` für jeden Datensatz haben sich ebenfalls verringert, da sie nur die im Anfragetext angegebenen Felder enthalten. Darüber hinaus erfordert die zuvor verletzte Richtlinie `Targeting Ads or Content`, dass beide `C4 AND C6`-Kennzeichnungen vorhanden sind, und wird daher nicht mehr verletzt, wie das leere `violatedPolicies`-Array zeigt.
+Beim Vergleich der untenstehenden Beispielantwort mit der [Antwort, wenn nur Datensätze einbezogen werden](#datasets), beachten Sie, dass die Liste der gesammelten Labels kürzer ist. Die Werte für `discoveredLabels` für jeden Datensatz haben sich ebenfalls verringert, da sie nur die im Anfragetext angegebenen Felder enthalten. Darüber hinaus erfordert die zuvor verletzte Richtlinie `Targeting Ads or Content`, dass beide `C4 AND C6`-Labels vorhanden sind, und wird daher nicht mehr verletzt, wie das leere `violatedPolicies`-Array zeigt.
 
 ```JSON
 {
@@ -534,11 +538,11 @@ POST /bulk-eval
 
 **Anfrage**
 
-Die Payload einer Massenauswertungsanfrage sollte ein Array von Objekten sein, mit je einem für jeden auszuführenden Auswertungsauftrag. Für Aufträge, die basierend auf Datensätzen und Feldern ausgewertet werden, muss ein `entityList`-Array bereitgestellt werden. Für Aufträge, die anhand von Datennutzungskennzeichnungen ausgewertet werden, muss ein `labels`-Array bereitgestellt werden.
+Die Payload einer Massenauswertungsanfrage sollte ein Array von Objekten sein, mit je einem für jeden auszuführenden Auswertungsauftrag. Für Aufträge, die basierend auf Datensätzen und Feldern ausgewertet werden, muss ein `entityList`-Array bereitgestellt werden. Für Aufträge, die anhand von Datennutzungs-Labels ausgewertet werden, muss ein `labels`-Array bereitgestellt werden.
 
 >[!WARNING]
 >
->Wenn ein aufgelisteter Auswertungsauftrag sowohl ein `entityList`- als auch ein `labels`-Array enthält, wird ein Fehler ausgegeben. Wenn Sie dieselbe Marketing-Aktion auf Grundlage von sowohl Datensätzen als auch Kennzeichnungen auswerten möchten, müssen Sie für diese Marketing-Aktion separate Auswertungsaufträge einbeziehen.
+>Wenn ein aufgelisteter Auswertungsauftrag sowohl ein `entityList`- als auch ein `labels`-Array enthält, wird ein Fehler ausgegeben. Wenn Sie dieselbe Marketing-Aktion auf Grundlage von sowohl Datensätzen als auch Labels auswerten möchten, müssen Sie für diese Marketing-Aktion separate Auswertungsaufträge einbeziehen.
 
 ```shell
 curl -X POST \
@@ -578,10 +582,10 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `evalRef` | Der URI der Marketing-Aktion zum Testen von Kennzeichnungen oder Datensätzen auf Richtlinienverletzungen. |
+| `evalRef` | Der URI der Marketing-Aktion zum Testen von Labels oder Datensätzen auf Richtlinienverletzungen. |
 | `includeDraft` | Standardmäßig werden nur aktivierte Richtlinien in die Auswertung einbezogen. Wenn `includeDraft` auf `true` eingestellt ist, werden auch Richtlinien mit dem Status `DRAFT` einbezogen. |
-| `labels` | Ein Array von Datennutzungskennzeichnungen zum Testen der Marketing-Aktion.<br><br>**WICHTIG**: Bei Verwendung dieser Eigenschaft darf KEINE `entityList`-Eigenschaft im selben Objekt enthalten sein. Um dieselbe Marketing-Aktion mit Datensätzen und/oder Feldern auszuwerten, müssen Sie ein separates Objekt in die Payload der Anfrage einbeziehen, das ein `entityList`-Array enthält. |
-| `entityList` | Ein Array von Datensätzen und (optional) spezifischen Feldern in diesen Datensätzen, um die Marketing-Aktion zu testen.<br><br>**WICHTIG**: Bei Verwendung dieser Eigenschaft darf KEINE `labels`-Eigenschaft im selben Objekt enthalten sein. Um dieselbe Marketing-Aktion mit bestimmten Datennutzungskennzeichnungen auszuwerten, müssen Sie ein separates Objekt in die Payload der Anfrage einbeziehen, das ein `labels`-Array enthält. |
+| `labels` | Ein Array von Datennutzungs-Labels zum Testen der Marketing-Aktion.<br><br>**WICHTIG**: Bei Verwendung dieser Eigenschaft darf KEINE `entityList`-Eigenschaft im selben Objekt enthalten sein. Um dieselbe Marketing-Aktion mit Datensätzen und/oder Feldern auszuwerten, müssen Sie ein separates Objekt in die Payload der Anfrage einbeziehen, das ein `entityList`-Array enthält. |
+| `entityList` | Ein Array von Datensätzen und (optional) spezifischen Feldern in diesen Datensätzen, um die Marketing-Aktion zu testen.<br><br>**WICHTIG**: Bei Verwendung dieser Eigenschaft darf KEINE `labels`-Eigenschaft im selben Objekt enthalten sein. Um dieselbe Marketing-Aktion mit bestimmten Datennutzungs-Labels auszuwerten, müssen Sie ein separates Objekt in die Payload der Anfrage einbeziehen, das ein `labels`-Array enthält. |
 | `entityType` | Der Typ der Entität, gegen die die Marketing-Aktion getestet werden soll. Derzeit wird nur `dataSet` unterstützt. |
 | `entityId` | Die ID eines Datensatzes, mit dem die Marketing-Aktion getestet wird. |
 | `entityMeta.fields` | (Optional) Eine Liste bestimmter Felder im Datensatz, um die Marketing-Aktion zu testen. |
