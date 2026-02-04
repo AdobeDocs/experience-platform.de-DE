@@ -3,10 +3,10 @@ title: Verbindung mit Acxiom-Zielgruppe
 description: Verwenden Sie  [!DNL Acxiom Audience Connection]  Ziel, um Zielgruppen mit  [!DNL Acxiom's Real ID]  Technologie anzureichern und Zielgruppen für mehrere Plattformen zu aktivieren, z. B [!DNL Altice],  [!DNL Ampersand],  [!DNL Comcast] und mehr.
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
+source-git-commit: 582b8b681163a0e40908cf36ba317954a32f73d0
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 14%
+source-wordcount: '872'
+ht-degree: 15%
 
 ---
 
@@ -32,7 +32,7 @@ So ist beispielsweise die Marketing Operations-Abteilung einer globalen Finanzdi
 
 ## Voraussetzungen {#prerequisites}
 
-* **Nutzungsbedingungen bestätigen:** Bevor Sie ein neues [!DNL Acxiom Audience Connection] konfigurieren können, müssen Sie [!DNL Acxiom's] Nutzungsbedingungen lesen und unterzeichnen. Sie erhalten den Link zur Vereinbarung, sobald Ihr ausgeführter Auftrag abgeschlossen ist. Solange Sie die Vereinbarung nicht unterzeichnet haben, wird die [!DNL Acxiom Audience Connection] Zielkarte im Experience Platform-Zielkatalog nicht angezeigt. Nachdem Sie den Vertrag akzeptiert und unterzeichnet haben, schließen [!DNL Adobe] Ihren Onboarding-Prozess ab und Sie sehen die [!DNL Acxiom Audience Connection] Zielkarte.
+* **Nutzungsbedingungen bestätigen:** Bevor Sie ein neues [!DNL Acxiom Audience Connection] konfigurieren können, müssen Sie [!DNL Acxiom's] Nutzungsbedingungen lesen und unterzeichnen. Sie erhalten den Link zur Vereinbarung, sobald Ihr ausgeführter Auftrag abgeschlossen ist.
 * **Kennen Sie Ihre Adobe-Organisations-ID**: Zum Ausfüllen Ihrer Nutzungsbedingungen ist Ihre [!DNL Adobe] Organisations-ID erforderlich. Weitere Informationen zum Anzeigen [!DNL Adobe's] Organisations *ID finden Sie unter* Organisationen in [Experience Cloud](https://experienceleague.adobe.com/de/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 ## Unterstützte Ziele {#supported-destinations}
@@ -67,8 +67,8 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die folgenden Felder aus.
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -96,10 +96,10 @@ Damit das [!DNL Acxiom Audience Connection] Ziel die Zielgruppendaten korrekt er
 | E-Mail | Primäre E-Mail Standardmäßig wird dieses Feld als Deduplizierungsschlüssel verwendet, um die Datensätze eindeutig zu machen | Nein | 10 | 255 |
 | Telefon | Telefonnummer des Kontakts (Vorwahl + Nummer)<br> Standardmäßig wird dieses Feld als Deduplizierungsschlüssel verwendet, um die Datensätze eindeutig zu machen. | Nein | 11 | 10 |
 
-Geben Sie in der Spalte **[!UICONTROL Source]** den Namen jedes Quellattributs ein, das Sie dem entsprechenden Zielfeld zuordnen möchten, oder wählen Sie das Pfeilsymbol aus, um den Bildschirm **[!UICONTROL Quellfeld auswählen]** öffnen.<br>
+Geben Sie in der Spalte **[!UICONTROL Source Field]** den Namen der einzelnen Quellattribute ein, die Sie dem entsprechenden Zielfeld zuordnen möchten, oder wählen Sie das Pfeilsymbol aus, um den **[!UICONTROL  Select source field]** zu öffnen.<br>
 ![Zuordnungsbildschirm](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
-Nachdem Sie alle Felder zugeordnet haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Nachdem Sie alle Felder zugeordnet haben, wählen Sie **[!UICONTROL Next]** aus.
 
 Wenn Sie [!DNL Adobe's] Standardschema nicht verwenden, finden Sie in der Dokumentation [Handbuch zur Query Service](../../../query-service/ui/overview.md) Informationen dazu, wie Sie den Abfrage-Service verwenden, um das [!DNL Adobe] Standardschema mit Ihren Feldnamen aufzufüllen.
 
@@ -107,7 +107,7 @@ Wenn Sie [!DNL Adobe's] Standardschema nicht verwenden, finden Sie in der Dokume
 
 Nachdem Sie alle oben genannten Schritte ausgeführt haben, können Sie den Status Ihrer Zielverbindung und die Details Ihrer Zielgruppe überprüfen, bevor Sie sie aktivieren (verteilen). Die ausgewählten Zielgruppen werden in einer Liste unten angezeigt. Jede Zielgruppe ist ein separater Aufruf der [!DNL Acxiom Audience Connection]-API.
 
-Wenn Sie mit den Ergebnissen zufrieden sind, klicken Sie auf **[!UICONTROL Beenden]**, um Ihr Ziel zu aktivieren.
+Wenn Sie mit den Ergebnissen zufrieden sind, wählen Sie **[!UICONTROL Finish]** aus, um Ihr Ziel zu aktivieren.
 
 ![Zielgruppe überprüfen](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png)
 
@@ -128,4 +128,4 @@ In diesem Tutorial haben Sie erfolgreich eine Zielgruppe für die ausgewählte Z
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](https://experienceleague.adobe.com/de/docs/experience-platform/data-governance/home).
+Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
