@@ -17,7 +17,7 @@ ht-degree: 73%
 
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)
-- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Segmentierungsleitplanken](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de#segmentation-guardrails)
 - [Zielgruppen-Validierung](./validation.md)
 - Segmentation-API {#api}
    - [Überblick](api/overview.md)
