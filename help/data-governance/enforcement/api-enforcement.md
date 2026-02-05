@@ -5,7 +5,7 @@ title: Durchsetzen von Datennutzungsrichtlinien mithilfe der Policy Service-API
 type: Tutorial
 description: Nachdem Sie Datennutzungs-Labels für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Labels erstellt haben, können Sie mit der Policy Service-API auswerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Labels durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 95%
@@ -134,7 +134,7 @@ Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die Da
 
 >[!WARNING]
 >
->Der `/constraints`-Endpunkt für die datensatzbasierte Auswertung ist veraltet. Um einen Richtlinienverstoß auszuwerten oder mehrere Auswertungsaufträge auszuführen, verwenden Sie stattdessen die [Bulk Evaluation API (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk).
+>Der `/constraints`-Endpunkt für die datensatzbasierte Auswertung ist veraltet. Um einen Richtlinienverstoß auszuwerten oder mehrere Auswertungsaufträge auszuführen, verwenden Sie stattdessen die [Bulk Evaluation API (`/bulk-eval`)](../api/evaluation.md#bulk).
 
 Sie können eine Datennutzungsrichtlinie auswerten, indem Sie eine Marketing-Aktion mit einem oder mehreren Datensätzen testen, aus denen Labels gesammelt werden können. Dies geschieht durch eine POST-Anfrage an `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` und Angabe von Datensatz-IDs im Anfragetext, wie im folgenden Beispiel gezeigt.
 

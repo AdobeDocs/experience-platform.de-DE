@@ -5,7 +5,7 @@ title: API-Endpunkte für die Richtlinienauswertung
 description: Nachdem Marketing-Aktionen erstellt und Richtlinien definiert wurden, können Sie mit der Policy Service-API auswerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungs-Labels ausgeführt wird.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 98%
@@ -125,7 +125,7 @@ Eine erfolgreiche Antwort enthält ein `violatedPolicies`-Array mit den Details 
 
 >[!WARNING]
 >
->Der `/constraints`-Endpunkt für die datensatzbasierte Auswertung ist veraltet. Um einen Richtlinienverstoß auszuwerten oder mehrere Auswertungsaufträge auszuführen, verwenden Sie stattdessen die [Bulk Evaluation API (`/bulk-eval`)](#evaluate-policies-in-bulk).
+>Der `/constraints`-Endpunkt für die datensatzbasierte Auswertung ist veraltet. Um einen Richtlinienverstoß auszuwerten oder mehrere Auswertungsaufträge auszuführen, verwenden Sie stattdessen die [Bulk Evaluation API (`/bulk-eval`)](#bulk).
 
 Sie können auch auf Richtlinienverstöße auswerten, indem Sie die ID eines oder mehrerer Datensätze angeben, aus denen Datennutzungs-Labels erfasst werden können. Dies geschieht, indem für eine bestimmte Marketing-Aktion eine POST-Anfrage an den `/constraints`-Endpunkt gestellt und eine Liste der Datensatz-IDs im Anfragetext bereitgestellt wird.
 
