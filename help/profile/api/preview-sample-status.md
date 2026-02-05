@@ -4,9 +4,9 @@ title: API-Endpunkt für Musterstatus der Vorschau (Profilvorschau)
 description: Der Endpunkt für den Vorschaubeispielstatus der Echtzeit-Kundenprofil-API ermöglicht Ihnen die Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten, die Auflistung der Profilverteilung nach Datensatz und Identität und die Erstellung von Berichten mit Datensatzüberschneidungen, Identitätsüberschneidungen und nicht zugeordneten Profilen.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: bb2cfb479031f9e204006ba489281b389e6c6c04
+source-git-commit: 399b76f260732015f691fd199c977d6f7e772b01
 workflow-type: tm+mt
-source-wordcount: '2306'
+source-wordcount: '2119'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ Die Ergebnisse dieses Beispielauftrags können mit dem `/previewsamplestatus`-En
 
 >[!NOTE]
 >
->Als Teil der Segmentierungs-Service-API von Adobe Experience Platform stehen Schätzungs- und Vorschau-Endpunkte zur Verfügung, mit denen Sie Informationen auf Zusammenfassungsebene zu Segmentdefinitionen anzeigen können, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Ausführliche Schritte zum Arbeiten mit Vorschau- und Schätzendpunkten finden Sie im [Handbuch zu Vorschauen und &#x200B;](../../segmentation/api/previews-and-estimates.md)-Endpunkten, das Teil des [!DNL Segmentation]-API-Entwicklerhandbuchs ist.
+>Als Teil der Segmentierungs-Service-API von Adobe Experience Platform stehen Schätzungs- und Vorschau-Endpunkte zur Verfügung, mit denen Sie Informationen auf Zusammenfassungsebene zu Segmentdefinitionen anzeigen können, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Ausführliche Schritte zum Arbeiten mit Vorschau- und Schätzendpunkten finden Sie im [Handbuch zu Vorschauen und ](../../segmentation/api/previews-and-estimates.md)-Endpunkten, das Teil des [!DNL Segmentation]-API-Entwicklerhandbuchs ist.
 
 ## Erste Schritte
 
@@ -214,7 +214,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 zurück und enthält ein
 | `sampleCount` | Die Gesamtzahl der stichprobenweise erfassten zusammengeführten Profile mit dieser Datensatz-ID. |
 | `samplePercentage` | Der `sampleCount` als Prozentsatz der Gesamtzahl der abgefragten zusammengeführten Profile (der `numRowsToRead` Wert, wie er im [letzten Beispielstatus) zurückgegeben wurde](#view-last-sample-status) ausgedrückt im Dezimalformat. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profile mit dieser Datensatz-ID. |
-| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der Gesamtzahl der zusammengeführten Profile (der `totalRows`, wie im [letzten Beispielstatus) &#x200B;](#view-last-sample-status) Dezimalformat zurückgegeben. |
+| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der Gesamtzahl der zusammengeführten Profile (der `totalRows`, wie im [letzten Beispielstatus) ](#view-last-sample-status) Dezimalformat zurückgegeben. |
 | `name` | Der Name des Datensatzes, wie er bei der Erstellung des Datensatzes angegeben wurde. |
 | `description` | Die Beschreibung des Datensatzes, die bei der Erstellung des Datensatzes angegeben wurde. |
 | `value` | Die ID des Datensatzes. |
@@ -318,12 +318,12 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück und enthält ein `dat
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `sampleCount` | Die Gesamtzahl der abgefragten zusammengeführten Profile im Namespace. |
-| `samplePercentage` | Der `sampleCount` als Prozentsatz der abgefragten zusammengeführten Profile (der im `numRowsToRead`letzten Beispielstatus) zurückgegebene [-Wert &#x200B;](#view-last-sample-status) Dezimalformat. |
+| `samplePercentage` | Der `sampleCount` als Prozentsatz der abgefragten zusammengeführten Profile (der im `numRowsToRead`letzten Beispielstatus) zurückgegebene [-Wert ](#view-last-sample-status) Dezimalformat. |
 | `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anfrage ein `date` angegeben wurde, wird der Bericht für das angegebene Datum zurückgegeben. Wenn kein `date` angegeben wird, wird der neueste Bericht zurückgegeben. |
 | `fullIDsFragmentCount` | Die Gesamtzahl der Profilfragmente im Namespace. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profile im Namespace. |
-| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der gesamten zusammengeführten Profile (der `totalRows` wie im [letzten Beispielstatus) &#x200B;](#view-last-sample-status) Dezimalformat angegeben. |
-| `code` | Die `code` für den Namespace. Dies ist beim Arbeiten mit Namespaces mithilfe der [Adobe Experience Platform Identity Service-API &#x200B;](../../identity-service/api/list-namespaces.md) und wird in der Experience Platform-Benutzeroberfläche auch als [!UICONTROL Identity symbol] bezeichnet. Weitere Informationen finden Sie unter [Übersicht über Identity-Namespaces](../../identity-service/features/namespaces.md). |
+| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der gesamten zusammengeführten Profile (der `totalRows` wie im [letzten Beispielstatus) ](#view-last-sample-status) Dezimalformat angegeben. |
+| `code` | Die `code` für den Namespace. Dies ist beim Arbeiten mit Namespaces mithilfe der [Adobe Experience Platform Identity Service-API ](../../identity-service/api/list-namespaces.md) und wird in der Experience Platform-Benutzeroberfläche auch als [!UICONTROL Identity symbol] bezeichnet. Weitere Informationen finden Sie unter [Übersicht über Identity-Namespaces](../../identity-service/features/namespaces.md). |
 | `value` | Der `id` für den Namespace. Dies können Sie beim Arbeiten mit Namespaces mithilfe der [Identity Service-API](../../identity-service/api/list-namespaces.md) feststellen. |
 
 +++
@@ -434,110 +434,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Informationen zu den
 | `profileFragments` | Die Gesamtzahl der Profilfragmente, die im Datensatz vorhanden sind. |
 | `records` | Die Gesamtzahl der in den Datensatz aufgenommenen Profildatensätze. |
 | `totalProfiles` | Die Gesamtzahl der in den Datensatz aufgenommenen Profile. |
-
-+++
-
-## Abrufen der Datensatzgröße {#character-count}
-
-Mit diesem Endpunkt können Sie die Größe des Datensatzes in Byte wöchentlich abrufen.
-
-**API-Format**
-
-```http
-GET /previewsamplestatus/report/character_count
-```
-
-**Anfrage**
-
-+++Eine Beispielanfrage zum Generieren des Berichts zur Zeichenanzahl.
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-```
-
-+++
-
-**Antwort**
-
-Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Informationen zur Größe des Datensatzes im Laufe der Wochen zurückgegeben.
-
-+++ Eine Beispielantwort, die Informationen zur Größe des Datensatzes nach Ablauf der Daten enthält.
-
->[!NOTE]
->
->Die folgende Antwort wurde gekürzt, um drei Datensätze anzuzeigen.
-
-```json
-{
-    "data": [
-        {
-            "datasetIds": [
-                {
-                    "datasetId": "67aba91a453f7d298cd2a643",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 107773533894,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "67aa6c867c3110298b017f0e",
-                    "recordType": "timeseries",
-                    "weeks": [
-                        {
-                            "size": 242902062440,
-                            "week": "2025-10-26"
-                        },
-                        {
-                            "size": 837539413062,
-                            "week": "2025-10-19"
-                        },
-                        {
-                            "size": 479253986484,
-                            "week": "2025-10-12"
-                        },
-                        {
-                            "size": 358911988990,
-                            "week": "2025-10-05"
-                        },
-                        {
-                            "size": 349701073042,
-                            "week": "2025-09-28"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "680c043667c0d7298c9ea275",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 18392459832,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                }
-            ],
-            "modelName": "_xdm.context.profile",
-            "reportTimestamp": "2025-10-30T00:28:30.069Z"
-        }
-    ],
-    "reportTimestamp": "2025-10-30T00:28:30.069Z"
-}
-```
-
-| Eigenschaft | Beschreibung |
-| -------- | ----------- |
-| `datasetId` | Die ID des Datensatzes. |
-| `recordType` | Der Datentyp im Datensatz. Der Datensatztyp wirkt sich auf den Wert der `weeks` aus. Zu den unterstützten Werten gehören `keyvalue` und `timeseries`. |
-| `weeks` | Ein Array, das die Größeninformationen zum Datensatz enthält. Bei Datensätzen des Datensatztyps `keyvalue` enthält dies die neueste Woche sowie die Gesamtgröße des Datensatzes in Byte. Bei Datensätzen des Datensatztyps `timeseries` enthält dies jede Woche von der Aufnahme des Datensatzes bis zur letzten Woche und die Gesamtgröße des Datensatzes in Byte für jede dieser Wochen. |
-| `modelName` | Der Name des Modells für den Datensatz. Mögliche Werte sind `_xdm.context.profile` und `_xdm.context.experienceevent`. |
-| `reportTimestamp` | Datum und Uhrzeit der Berichterstellung. |
 
 +++
 
