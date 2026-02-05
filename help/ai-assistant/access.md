@@ -2,7 +2,7 @@
 title: Zugriff auf AI Assistant in Experience Platform
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Cloud auf den KI-Assistenten zugreifen können.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: 74e695e0fabc76716305d201d4c42021aa782517
+source-git-commit: 659e873f9bccdbc0e52a1943a924dc70d3170e96
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -42,17 +42,17 @@ Wenn Ihr Unternehmen rechtlich berechtigt ist, den KI-Assistenten zu verwenden, 
 
 >[!ENDTABS]
 
-## Zugriff auf den KI-Assistenten
+## Zugriff auf den KI-Assistenten {#get-access-to-ai-assistant}
 
 Der Zugriff auf den KI-Assistenten wird durch die folgenden Parameter geregelt:
 
-* **Zugriff auf die Anwendung:** Sie können auf den KI-Assistenten in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer und [Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/de/docs/analytics-platform/using/ai-assistant).
+* **Zugriff auf die Anwendung:** Sie können auf den KI-Assistenten in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer und [Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
 * **Berechtigungen:** Verwenden Sie die [Benutzeroberfläche „Berechtigungen](../access-control/abac/ui/permissions.md), um den Zugriff auf den KI-Assistenten in Ihrer Organisation zu gewähren oder zu widerrufen. Um den KI-Assistenten verwenden zu können, muss eine bestimmte Person zu einer Rolle gehören, die mit den Berechtigungen **KI-Assistenten aktivieren** und **operative Insights anzeigen** ausgestattet ist.
    * Als Administrator können Sie einer bestimmten Rolle den **KI-Assistenten aktivieren** hinzufügen und dieser Rolle einen Benutzer hinzufügen, um ihm den Zugriff auf den KI-Assistenten in Ihrer Organisation zu ermöglichen. **Hinweis**: Diese Berechtigung ermöglicht dem genannten Benutzer den Zugriff auf den KI-Assistenten. Es werden ihm jedoch keine Verwaltungskapazitäten gewährt, um anderen Zugriff auf den KI-Assistenten zu gewähren.
    * Als Administrator können Sie einer bestimmten Rolle die **Operative Insights anzeigen** hinzufügen und dieser Rolle einen Benutzer hinzufügen, damit er die operativen Insights-Funktionen des KI-Assistenten nutzen kann.
 
-Verwenden Sie die [Benutzeroberfläche für Berechtigungen](../access-control/abac/ui/roles.md) um Berechtigungen zur Verwendung des KI-Assistenten in Experience Platform und Journey Optimizer zu gewähren. Informationen zum Zugriff auf den KI-Assistenten in Customer Journey Analytics. Lesen Sie die Dokumentation in [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/ai-assistant).
+Verwenden Sie die [Benutzeroberfläche für Berechtigungen](../access-control/abac/ui/roles.md) um Berechtigungen zur Verwendung des KI-Assistenten in Experience Platform und Journey Optimizer zu gewähren. Informationen zum Zugriff auf den KI-Assistenten in Customer Journey Analytics. Lesen Sie die Dokumentation in [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 
 ![Die Seite mit der Benutzeroberfläche „Berechtigungen“ mit dem Assistenten „KI aktivieren“ und den Berechtigungen „Betriebserkenntnisse anzeigen“, die in einer bestimmten Rolle enthalten sind.](./images/access/access-permissions.png)
 
@@ -62,7 +62,7 @@ Sobald Sie über die erforderlichen Berechtigungen verfügen, können Sie auf de
 
 Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie den Zugriff auf den KI-Assistenten für Ihre Organisationen und Benutzer konfigurieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475928/?captions=ger&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 ## Nächste Schritte
 

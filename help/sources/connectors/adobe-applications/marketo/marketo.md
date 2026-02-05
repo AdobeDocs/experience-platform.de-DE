@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marketo Engage-Connector
 description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen über seine Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 659e873f9bccdbc0e52a1943a924dc70d3170e96
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 7%
+source-wordcount: '740'
+ht-degree: 11%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 7%
 >
 >Sie können jetzt die [!DNL Marketo Engage]-Quelle verwenden, wenn Sie Adobe Experience Platform auf Amazon Web Services (AWS) ausführen. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](../../../../landing/multi-cloud.md).
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Experience Platform-Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) ist eine Komplettlösung für das Lead-Management. B2B-Marketer können damit Kundenerlebnisse transformieren, indem sie in allen Phasen komplexer Journey Interaktionen ermöglichen.
 
@@ -25,13 +25,13 @@ Mit dem [!DNL Marketo Engage]-Quell-Connector können Sie B2B-Daten aus [!DNL Ma
 
 >[!IMPORTANT]
 >
->Sie müssen Zugriff auf [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) haben, um alle Marketo-Datensätze für die Segmentierung mit dem [Echtzeit-Kundenprofil“ &#x200B;](../../../../profile/home.md). Ohne Real-Time CDP B2B edition können Sie weiterhin die Marketo-Quelle verwenden, um Daten aus den Personen- und Aktivitätsdatensätzen zur Segmentierung in das Echtzeit-Kundenprofil zu übertragen.
+>Sie müssen Zugriff auf [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) haben, um alle Marketo-Datensätze für die Segmentierung mit dem [Echtzeit-Kundenprofil“ ](../../../../profile/home.md). Ohne Real-Time CDP B2B edition können Sie weiterhin die Marketo-Quelle verwenden, um Daten aus den Personen- und Aktivitätsdatensätzen zur Segmentierung in das Echtzeit-Kundenprofil zu übertragen.
 
 Dieses Dokument bietet einen Überblick über den [!DNL Marketo Engage]-Quell-Connector, einschließlich Informationen zur Authentifizierung des Connectors, zur Zuordnung [!DNL Marketo Engage] Felder zum Experience-Datenmodell (XDM) und zur Datenlatenz des Connectors.
 
 ## Einrichten der Adobe-Organisationszuordnung
 
-Bevor Sie Zuordnungssätze für [!DNL Marketo Engage] einrichten können, müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen dazu finden Sie im Handbuch zum Einrichten der Organisationszuordnung [&#x200B; Adobe für  [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=de).
+Bevor Sie Zuordnungssätze für [!DNL Marketo Engage] einrichten können, müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen dazu finden Sie im Handbuch zum Einrichten der Organisationszuordnung [ Adobe für  [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
 ## [!DNL Marketo Engage]-Connector authentifizieren
 
@@ -62,7 +62,7 @@ Ausführliche Informationen zu den Regeln für die Feldzuordnung zwischen [!DNL 
 * [Programmmitgliedschaften](../mapping/marketo.md#program-memberships)
 * [Firmen](../mapping/marketo.md#companies)
 * [Statische Listen](../mapping/marketo.md#static-lists)
-* [Mitgliedschaften in statischen Listen](../mapping/marketo.md#static-list-memberships)
+* [Zugehörigkeiten zu statischen Listen](../mapping/marketo.md#static-list-memberships)
 * [Benannte Konten](../mapping/marketo.md#named-accounts)
 * [Opportunities](../mapping/marketo.md#opportunities)
 * [Rollen von Kontakten bei Opportunities](../mapping/marketo.md#opportunity-contact-roles)
@@ -74,12 +74,12 @@ In der folgenden Tabelle ist die erwartete Latenz für das Einbringen [!DNL Mark
 
 | Ziel | Erwartete Latenz |
 | ----------- | ---------------- |
-| [!DNL Real-Time Customer Profile] | &lt; 10 Minuten |
+| [!DNL Real-Time Customer Profile] | &lt; 20 Minuten |
 | Data Lake | &lt; 60 Minuten |
 
 >[!NOTE]
 >
->Die oben genannten Latenzzahlen stellen Erwartungen auf einem Konfidenzniveau von 95 % dar. Die tatsächlichen Latenzen variieren und können in seltenen Fällen um 50 % über diese Zahlen hinausgehen.
+>Die oben genannten Latenzzahlen stellen Erwartungen auf einem Konfidenzniveau von 95 % dar. Die tatsächlichen Latenzen variieren und gehen in einigen Fällen über diese Zahlen hinaus.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
