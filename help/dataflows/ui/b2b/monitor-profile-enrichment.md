@@ -59,7 +59,7 @@ Die folgenden Metriken sind für Vorgänge zur Lead-Konto-Zuordnung von Profilan
 
 ## Anreicherung des prädiktiven Lead- und Konto-Scoring-Profils {#predictive-lead-to-account-scoring}
 
-Im Dashboard [!UICONTROL Predictive lead and account scoring] werden die grundlegenden Metriken und der tägliche Auftragsausführungsstatus angezeigt, die für die Profilanreicherung [Prädiktiver Lead- und ](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)) spezifisch sind.
+Im Dashboard [!UICONTROL Predictive lead and account scoring] werden die grundlegenden Metriken und der tägliche Auftragsausführungsstatus angezeigt, die für die Profilanreicherung [Prädiktiver Lead- und &#x200B;](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)) spezifisch sind.
 
 ![Prädiktive Lead- und Konto-Scoring-Profilanreicherung](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
 

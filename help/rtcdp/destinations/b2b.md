@@ -26,5 +26,5 @@ Mit Adobe Real-Time Customer Data Platform B2B edition können Sie Ihre B2B-Date
 Die folgenden Dokumente enthalten weitere Informationen zur Verwendung des Marketo Engage-Ziels zum Exportieren von Daten:
 
 - Informationen zu allen für Real-Time Customer Data Platform B2B edition verfügbaren Zielen finden Sie im [Zielkatalog](../../destinations/catalog/overview.md).
-- Informationen zu den Identitäten, die nach Marketo Engage exportiert werden können, finden Sie in der Dokumentation zum Marketo Engage-Ziel [](../../destinations/catalog/adobe/marketo-engage.md).
+- Informationen zu den Identitäten, die nach Marketo Engage exportiert werden können, finden Sie in der Dokumentation zum Marketo Engage-Ziel [&#128279;](../../destinations/catalog/adobe/marketo-engage.md).
 - Informationen zum Verbinden mit dem Marketo Engage-Ziel in der Experience Platform-Benutzeroberfläche und zum Exportieren von Daten finden Sie unter [Pushen eines Adobe Experience Platform-Segments in eine statische Marketo-Liste“](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).

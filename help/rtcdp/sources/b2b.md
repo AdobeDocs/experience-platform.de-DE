@@ -21,11 +21,11 @@ Mit Adobe Real-Time Customer Data Platform B2B edition können Sie Ihre B2B-Date
 
 Informationen dazu, wie Quellen in Ihren B2B-Workflow passen, finden Sie im [End-to-End-Tutorial](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
-Adobe Experience Platform Weitere Informationen zu den in [ verfügbaren Quelltypen finden ](../../sources/home.md) in der Übersicht zu Quell-Connectoren .
+Adobe Experience Platform Weitere Informationen zu den in [&#x200B; verfügbaren Quelltypen finden &#x200B;](../../sources/home.md) in der Übersicht zu Quell-Connectoren .
 
 >[!IMPORTANT]
 >
->Sie müssen Zugriff auf [Real-Time Customer Data Platform B2B edition](../../rctcdp/../rtcdp/b2b-overview.md) haben, damit B2B-Schemata am [Echtzeit-Kundenprofil) ](../proile/../../profile/home.md) können.
+>Sie müssen Zugriff auf [Real-Time Customer Data Platform B2B edition](../../rctcdp/../rtcdp/b2b-overview.md) haben, damit B2B-Schemata am [Echtzeit-Kundenprofil) &#x200B;](../proile/../../profile/home.md) können.
 
 In den folgenden Dokumenten finden Sie weitere Informationen zur Verwendung von [!DNL Marketo] zum Übertragen von B2B-Daten nach Experience Platform:
 

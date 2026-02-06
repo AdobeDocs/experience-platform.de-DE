@@ -65,7 +65,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und 
 >
 >Die [!DNL Marketo]-Quelle ist **nicht** erforderlich, um Real-Time CDP B2B Edition zu verwenden.
 
-Weitere Informationen zu [ und der Einbindung von B2B-Daten in Experience Platform finden Sie in der ](./sources/b2b.md) zu „Quellen in Real-Time CDP B2B edition Marketo&quot;.
+Weitere Informationen zu [&#x200B; und der Einbindung von B2B-Daten in Experience Platform finden Sie in der &#x200B;](./sources/b2b.md) zu „Quellen in Real-Time CDP B2B edition Marketo&quot;.
 
 ## B2B-Ziele
 

@@ -18,7 +18,7 @@ Mit dem Zugriff auf die SQL, die Ihre Einblicke ermöglicht, können Sie Ihre B2
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Die folgenden Einblicke stehen Ihnen als Teil des Dashboards [Kontoprofile“ oder ](../guides/account-profiles.md)benutzerdefinierten Dashboards[ zur ](../standard-dashboards.md). Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/overview.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [ ](../customize/custom-widgets.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
+Die folgenden Einblicke stehen Ihnen als Teil des Dashboards [Kontoprofile“ oder &#x200B;](../guides/account-profiles.md)benutzerdefinierten Dashboards[&#x200B; zur &#x200B;](../standard-dashboards.md). Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/overview.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [&#x200B; &#x200B;](../customize/custom-widgets.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
 
 ## Hinzugefügte Kontoprofile {#account-profiles-added}
 

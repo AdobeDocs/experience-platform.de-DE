@@ -28,7 +28,7 @@ Mit Real-Time CDP, B2B edition können Sie die Experience Platform-Benutzeroberf
 
 >[!IMPORTANT]
 >
->Für Kontoprofile muss die tägliche Batch-Segmentierungsprüfung aktiviert sein, um Daten anzuzeigen. Stellen Sie sicher, dass die Batch-Segmentierung konfiguriert und geplant ist, um genaue Kontoprofilinformationen zu erhalten. Weitere Informationen finden Sie [ Handbuch zur ](../../segmentation/methods/batch-segmentation.md) .
+>Für Kontoprofile muss die tägliche Batch-Segmentierungsprüfung aktiviert sein, um Daten anzuzeigen. Stellen Sie sicher, dass die Batch-Segmentierung konfiguriert und geplant ist, um genaue Kontoprofilinformationen zu erhalten. Weitere Informationen finden Sie [&#x200B; Handbuch zur &#x200B;](../../segmentation/methods/batch-segmentation.md) .
 
 ## Kontozielgruppen erstellen und aktivieren
 

@@ -51,7 +51,7 @@ Das folgende Diagramm zeigt die relevanten Datenfelder in jedem Datensatz, ihren
 
 #### Die neuen Konten nach Branchen-Anwendungsfall {#accounts-by-industry}
 
-Die für die [!UICONTROL New accounts by industry] insight verwendete Logik gibt die fünf wichtigsten Branchen entsprechend ihrer Anzahl an Account-Profilen und ihrer relativen Größe zueinander zurück. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL New accounts By Industry] Widgets ](../guides/account-profiles.md#accounts-by-industry) .
+Die für die [!UICONTROL New accounts by industry] insight verwendete Logik gibt die fünf wichtigsten Branchen entsprechend ihrer Anzahl an Account-Profilen und ihrer relativen Größe zueinander zurück. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL New accounts By Industry] Widgets &#x200B;](../guides/account-profiles.md#accounts-by-industry) .
 
 >[!TIP]
 >
@@ -96,7 +96,7 @@ LIMIT 5000;
 
 #### Die neuen Konten nach Typ - Anwendungsfall {#accounts-by-type}
 
-Die für die [!UICONTROL New accounts by type] insight verwendete Logik gibt die numerische Aufschlüsselung der Konten nach ihrem Typ zurück. Diese insight kann bei der Ausrichtung von Geschäftsstrategien und -vorgängen helfen, einschließlich Ressourcenzuordnungs- oder Marketing-Strategien. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL New accounts by type] Widgets ](../guides/account-profiles.md#accounts-by-type) .
+Die für die [!UICONTROL New accounts by type] insight verwendete Logik gibt die numerische Aufschlüsselung der Konten nach ihrem Typ zurück. Diese insight kann bei der Ausrichtung von Geschäftsstrategien und -vorgängen helfen, einschließlich Ressourcenzuordnungs- oder Marketing-Strategien. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL New accounts by type] Widgets &#x200B;](../guides/account-profiles.md#accounts-by-type) .
 
 Der SQL-Code, der die [!UICONTROL New accounts by type] insight generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 

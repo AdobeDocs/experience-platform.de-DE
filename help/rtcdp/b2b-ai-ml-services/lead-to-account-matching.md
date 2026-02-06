@@ -56,7 +56,7 @@ Das workEmail-Attribut befindet sich als Feldergruppe auf oberster Ebene im B2B-
 
 Profile werden nur dann am besten abgeglichen, wenn der Übereinstimmungswert über einem internen Konfidenzschwellenwert liegt. Die Ergebnisse werden in einem neuen Systemdatensatz der vorhandenen Konto-Personen-Beziehung XDM gespeichert.
 
-Der Service Lead-Konto-Zuordnung wird ausgeführt, wenn ein neuer Schnappschuss des Personenprofils verfügbar wird, der einmal alle 24 Stunden angezeigt wird. Weitere Informationen zur Konfiguration [ Lead-Konto-Zuordnung finden Sie in der ](/help/rtcdp/accounts/account-profile-ui-guide.md).
+Der Service Lead-Konto-Zuordnung wird ausgeführt, wenn ein neuer Schnappschuss des Personenprofils verfügbar wird, der einmal alle 24 Stunden angezeigt wird. Weitere Informationen zur Konfiguration [&#x200B; Lead-Konto-Zuordnung finden Sie in der &#x200B;](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Anzeigen der Lead-Konto-Zuordnungsausgabe {#how-to-view}
 
