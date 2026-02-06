@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # Real-Time CDP Insights-Datenmodell B2B edition
 
-Das Real-Time CDP Insights-Datenmodell für B2B edition stellt die Datenmodelle und SQL zur Verfügung, die die Insights für [Account-Profile](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) unterstützen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Anwendungsfälle des B2B-Marketings und des Key Performance Indicators (KPI) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre Dashboards verwendet werden.
+Das Real-Time CDP Insights-Datenmodell für B2B edition stellt die Datenmodelle und SQL zur Verfügung, die die Insights für [Account-Profile](https://experienceleague.adobe.com/de/docs/experience-platform/rtcdp/account/account-profile-overview) unterstützen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Anwendungsfälle des B2B-Marketings und des Key Performance Indicators (KPI) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre Dashboards verwendet werden.
 
 >[!AVAILABILITY]
 >
