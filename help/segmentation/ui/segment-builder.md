@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1b836a86a6b55a4e80a7fd3a52160f3974e4c9a4
+source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
 workflow-type: tm+mt
-source-wordcount: '5354'
-ht-degree: 53%
+source-wordcount: '6311'
+ht-degree: 46%
 
 ---
 
@@ -61,6 +61,97 @@ Sie können diese Bausteine im Abschnitt **[!UICONTROL Fields]** auf der linken 
 Auf der Registerkarte **[!UICONTROL Attributes]** können Sie [!DNL Profile] Attribute durchsuchen, die zur [!DNL XDM Individual Profile]-Klasse gehören. Jeder Ordner lässt sich erweitern, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs in die Arbeitsfläche des Regel-Builders gezogen werden kann. Die [Arbeitsfläche des Regel-Builders](#rule-builder-canvas) wird weiter unten in diesem Handbuch erläutert.
 
 ![Der Abschnitt „Attribute“ der Segment Builder-Felder ist hervorgehoben.](../images/ui/segment-builder/attributes.png)
+
+Die von Ihnen hinzugefügten Attribute können einen der folgenden Datentypen sein:
+
+| Datentyp | Häufige Anwendungsfälle |
+| --------- | ---------------- |
+| Zeichenfolge | Namen, E-Mail-Adressen, Produktkategorien |
+| Numerisch | Alter, Umsatz, Produktmengen, Treueprogramm-Scores |
+| Boolesch | Voreinstellungen, Statusanzeigen, Benutzer-Flags |
+| Aufzählung | Vordefinierte Listen wie Geschlecht oder Status |
+| Datum/Uhrzeit | Kaufdaten, Besuchszeiten, Geburtstag |
+
+Sie können die folgenden Operatoren für die jeweiligen Datentypen verwenden:
+
++++ Zeichenfolgen-Operatoren
+
+| Operator | Beschreibung | Beispiel |
+| -------- | ----------- | ------- |
+| Gleich | Findet eine exakte Übereinstimmung mit dem angegebenen Wert | E **Mail &quot;**&quot; &quot;sample@example.com&quot; |
+| Ungleich | Schließt den angegebenen Wert aus | Status **ist nicht gleich** „Abgebrochen“ |
+| Enthält | Der Text enthält den angegebenen Wert | Produktname **enthält** &quot;iPhone&quot; |
+| Enthält nicht | Der Text enthält nicht den angegebenen Wert | Beschreibung **enthält nicht** „eingestellt“ |
+| Beginnt mit | Der Text beginnt mit dem angegebenen Wert | Kunden-ID **beginnt mit** „PREM“ |
+| Endet mit | Der Text endet mit dem angegebenen Wert | E **Mail endet mit** &quot;@company.com“ |
+| Existiert | Der Wert ist vorhanden | Zweiter Vorname **vorhanden** |
+| existiert nicht | Der Wert ist nicht vorhanden | Treuestatus (**nicht vorhanden** |
+
++++
+
++++ Numerische Operatoren
+
+| Operator | Beschreibung | Beispiel |
+| -------- | ----------- | ------- |
+| Gleich | Findet eine exakte Übereinstimmung mit dem angegebenen Wert | Alter **gleich** 25 |
+| Ungleich | Schließt den angegebenen Wert aus | Bestellanzahl (**nicht gleich** 0 |
+| Größer als | Die Zahl ist **größer** als der angegebene Wert. Dieser Wert **(ausschließlich** der angegebenen Zahl. | Jährlicher Umsatz **größer als** 50000 |
+| Größer als oder gleich | Die Zahl ist **größer** als der angegebene Wert. Dieser Wert **(einschließlich** der angegebenen Zahl. | Alter **größer oder gleich** 21 |
+| Kleiner als | Die Zahl ist **kleiner** als der angegebene Wert. Dieser Wert **(ausschließlich** der angegebenen Zahl. | Tage seit Kauf **weniger als** 30 |
+| Kleiner oder gleich | Die Zahl ist **kleiner** als der angegebene Wert. Dieser Wert **(einschließlich** der angegebenen Zahl. | Warenkorbwert **kleiner oder gleich** 100 |
+| Zwischen | Die Zahl **(zwischen** den angegebenen Werten. Diese Werte sind **einschließlich** der angegebenen Zahlen. | Alter **zwischen** 25 und 45 |
+| Existiert | Der Wert ist vorhanden | Kreditwürdigkeit **vorhanden** |
+| existiert nicht | Der Wert ist nicht vorhanden | Kreditwürdigkeit **nicht vorhanden** |
+
++++
+
++++ Boolesche Operatoren
+
+| Operator | Beschreibung | Beispiel |
+| -------- | ----------- | ------- |
+| Gleich | Der boolesche Wert wird auf den angegebenen Wert (True oder False) festgelegt | E-Mail-Opt-in **ist gleich „true“** |
+| Ungleich | Der boolesche Wert ist **nicht** auf den angegebenen Wert (True oder False) festgelegt | Installierte Mobile App **entspricht nicht True** |
+
++++
+
++++ Aufzählungsoperatoren
+
+| Operator | Beschreibung | Beispiel |
+| -------- | ----------- | ------- |
+| Gleich | Der Wert entspricht den angegebenen Enum-Werten | Geschlecht **gleich** Weiblich |
+| Ungleich | Der Wert entspricht nicht dem angegebenen Enum-Wert | Bestellstatus **nicht gleich** Storniert |
+| Existiert | Der Aufzählungswert wurde festgelegt | Bevorzugte Sprache **vorhanden** |
+| existiert nicht | Der Aufzählungswert wurde nicht festgelegt | Bevorzugte Sprache **existiert nicht** |
+
++++
+
++++ Datum/Uhrzeit-Operatoren
+
+| Operator | Beschreibung | Beispiel |
+| -------- | ----------- | ------- |
+| Heute | Der Wert trat heute ein. Sie können das Kontrollkästchen **Jahr ignorieren** aktivieren, damit der Vergleich das Jahr ignoriert. | Geburtsdatum **ist** Heute |
+| Gestern | Der Wert ist gestern aufgetreten. | Warenkorbkauf **ist** Gestern |
+| Dieser Monat | Der Wert trat in diesem Kalendermonat auf. | Geburtsmonat **ist** Dieser Monat |
+| Dieses Jahr | Der Wert trat in diesem Kalenderjahr auf. | Anmeldedatum (**)** Jahr |
+| Benutzerdefiniertes Datum | Der Wert trat am angegebenen Datum auf. | Kaufdatum **ist am** Benutzerdefiniertes Datum |
+| Letzte | Der Wert trat innerhalb des zuletzt ausgewählten Zeitraums auf. Geburtstag **ist** Im letzten Monat |
+| Von (bis) | Der Wert trat innerhalb der beiden ausgewählten Kalenderdaten auf. Dieser Zeitraum umfasst **einschließlich** der beiden Datumsangaben. | Datum der Kontoerstellung **ist** vom 20. April bis zum 13. Juli |
+| Während | Der Wert trat innerhalb des ausgewählten Monats oder Jahres auf. | Verkauf **ist** im März |
+| Innerhalb (+/-) | Der Wert trat innerhalb von Tagen, Wochen, Monaten oder Jahren nach dem ausgewählten Datum auf. Dieser Zeitraum umfasst **einschließlich** der beiden Datumsangaben. | Warenkorbabbruch ist **innerhalb** 3 Tage |
+| Vorher | Der Wert trat vor dem ausgewählten Datum auf. | Das Beitrittsdatum der Mitgliedschaft ist **vor** 3. Januar 2025 |
+| Nachher | Der Wert trat nach dem ausgewählten Datum auf. | Das Kaufdatum ist **nach** 14. März 2024 |
+| Rollbereich | Der Wert trat zwischen den beiden relativen Datumsangaben auf. | Das letzte Kaufdatum liegt im rollierenden Bereich von vor sieben bis drei Tagen. |
+| Nächste | Der Wert trat innerhalb des nächsten ausgewählten Zeitraums auf. | Warenkorbabbruch in den nächsten 2 Tagen |
+
+Ausführlichere Informationen zu den Uhrzeit- und Datumsfunktionen finden Sie im [Abschnitt zu Zeitbeschränkungen](#time-constraints).
+
++++
+
+#### Berechnete Attribute {#computed-attributes}
+
+Berechnete Attribute sind Felder, die aus anderen Attributen mithilfe von Aggregationen oder Formeln berechnet werden. Berechnete Attribute können verwendet werden, wenn aggregierte Daten wie Summen, Zahlen oder Durchschnittswerte über mehrere Ereignisse hinweg benötigt werden oder wenn Sie häufig verwendete Zielgruppen erstellen, für die komplexe Berechnungen erforderlich sind.
+
+Weitere Informationen zu berechneten Attributen, einschließlich ihrer Erstellung, welche Funktionen Sie in ihnen verwenden können und wie sie verwaltet werden, finden Sie unter [Berechnete Attribute - Übersicht](/help/profile/computed-attributes/overview.md).
 
 ### Ereignisse
 
@@ -356,7 +447,7 @@ Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet
 
 ## Container {#containers}
 
-Segmentregeln werden in der Reihenfolge ausgewertet, in der sie aufgelistet sind. Container ermöglichen eine Steuerung der Ausführungsreihenfolge durch Verwendung verschachtelter Abfragen.
+Zielgruppen werden in der Reihenfolge ausgewertet, in der sie aufgelistet sind. Container ermöglichen eine Steuerung der Ausführungsreihenfolge durch Verwendung verschachtelter Abfragen.
 
 Nachdem Sie der Arbeitsfläche des Regel-Builders mindestens eine Kachel hinzugefügt haben, können Sie beginnen, Container hinzuzufügen. Um einen neuen Container zu erstellen, wählen Sie oben rechts auf der Kachel das Auslassungszeichen (…) und dann **[!UICONTROL Add container]** aus.
 
@@ -375,6 +466,36 @@ Wenn Sie **[!UICONTROL Unwrap container]** auswählen, wird der untergeordnete C
 >Achten Sie beim Entpacken von Containern darauf, dass die Logik weiterhin der gewünschten Segmentdefinition entspricht.
 
 ![Der Container wird angezeigt, nachdem er entpackt wurde.](../images/ui/segment-builder/unwrapped-container.png)
+
+### Beispiele {#container-examples}
+
+Sie können Ihre Container in Segment Builder auf drei verschiedene Arten verwenden: um Ihre Regeln mit boolescher Logik zu gruppieren, um zu steuern, ob Profile, die den Kriterien des Containers entsprechen, ein- oder ausgeschlossen werden sollen, und um Ereignissequenzen mit Zeitbeschränkungen zu definieren.
+
++++ Gemischte boolesche Logik
+
+Im folgenden Beispiel werden **sowohl** AND- als auch OR-Logik in einem einzigen Ausdruck gemischt. Ohne die Verwendung von Containern können Sie nicht beide UND mit ODER-Logik in einer Ebene mischen.
+
+![Ein Bild, das zeigt, wie Container verwendet werden, um boolesche Logik zu mischen und Einschluss-/Ausschlusslogik zu verwenden.](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
+
++++
+
++++ Ereignissequenz
+
+Im folgenden Beispiel werden Container verwendet, um die Sequenz von Ereignissen zu erstellen.
+
+![Ein Bild, das zeigt, wie Ereignisse mithilfe von Containern sequenziert werden.](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
+
++++
+
+### Best Practices {#container-best-practices}
+
+Beachten Sie beim Hinzufügen von Containern zu Ihrer Audience die folgenden Richtlinien:
+
+- Erstellen Sie Ihre Container schrittweise und testen Sie die Logik mit jedem Schritt, den Sie hinzufügen
+   - Dies ist besonders wichtig, wenn Sie die Logik „Ausschließen“ verwenden, da dies Ihre Ergebnisse erheblich ändern kann
+- Benennen Sie Ihre Container, um zu verstehen, was sie tun sollen
+- Vermeiden Sie zu viele verschachtelte Ebenen von Containern, da dies die Leistung beeinträchtigt.
+- Stellen Sie sicher, dass Ihre Container-Reihenfolge korrekt ist, da die Ereignisreihenfolge die Sequenz-Container stark beeinflusst
 
 ## Zusammenführungsrichtlinien
 
@@ -461,7 +582,7 @@ Weitere Informationen zu den verschiedenen Auswertungsmethoden für Segmentdefin
 Segment Builder bietet einen umfangreichen Workflow, der es Ihnen ermöglicht, vermarktbare Zielgruppen aus [!DNL Real-Time Customer Profile]-Daten zu isolieren. Nach dem Lesen dieses Handbuchs sollten Sie jetzt Folgendes können:
 
 - Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Zielgruppen als Bausteinen erstellen.
-- Die Arbeitsfläche des Regel-Builders und Container verwenden, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.
+- Verwenden Sie die Arbeitsfläche und Container des Regel-Builders, um die Reihenfolge zu steuern, in der Zielgruppenregeln ausgeführt werden.
 - Schätzungen der voraussichtlichen Zielgruppe anzeigen, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
 - Alle Segmentdefinitionen für geplante Segmentierung aktivieren.
 - Spezifische Segmentdefinitionen für Streaming-Segmentierung aktivieren.
