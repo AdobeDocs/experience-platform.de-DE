@@ -1,19 +1,18 @@
 ---
-title: Real-time Customer Data Platform Insights-Datenmodell B2B edition
-description: Erfahren Sie, wie Sie SQL-Abfragen mit den Real-time Customer Data Platform Insights-Datenmodellen (B2B edition) verwenden, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+title: Real-Time Customer Data Platform Insights-Datenmodell B2B edition
+description: Erfahren Sie, wie Sie SQL-Abfragen mit den Real-Time Customer Data Platform Insights-Datenmodellen (B2B edition) verwenden, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
+badgeB2B: null
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 3%
+source-wordcount: '438'
+ht-degree: 4%
 
 ---
 
 # Real-Time CDP Insights-Datenmodell B2B edition
 
-Das Real-Time CDP Insights-Datenmodell für B2B edition stellt die Datenmodelle und SQL zur Verfügung, die die Insights für [Account-Profile](https://experienceleague.adobe.com/de/docs/experience-platform/rtcdp/account/account-profile-overview) unterstützen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Anwendungsfälle des B2B-Marketings und des Key Performance Indicators (KPI) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre Dashboards verwendet werden.
+Das Real-Time CDP Insights-Datenmodell für B2B edition stellt die Datenmodelle und SQL zur Verfügung, die die Insights für [Account-Profile](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) unterstützen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Anwendungsfälle des B2B-Marketings und des Key Performance Indicators (KPI) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre Dashboards verwendet werden.
 
 >[!AVAILABILITY]
 >
@@ -27,7 +26,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 Dieses Handbuch setzt ein Verständnis der benutzerdefinierten Dashboards voraus. Lesen Sie die Dokumentation unter [Erstellen eines benutzerdefinierten Dashboards](../standard-dashboards.md) bevor Sie mit diesem Handbuch fortfahren.
 
-## Real-Time CDP B2B-Insight-Berichte und -Anwendungsfälle {#B2B-insight-reports-and-use-cases}
+## Real-Time CDP B2B insight-Berichte und -Anwendungsfälle {#B2B-insight-reports-and-use-cases}
 
 Die B2B-Berichterstellung von Real-Time CDP bietet Einblicke in die Daten Ihrer Account-Profile und die Beziehung zwischen Accounts und Opportunities. Die folgenden Star-Schemamodelle wurden entwickelt, um eine Vielzahl gängiger Marketing-Anwendungsfälle zu beantworten, und jedes Datenmodell kann mehrere Anwendungsfälle unterstützen.
 
@@ -52,13 +51,13 @@ Das folgende Diagramm zeigt die relevanten Datenfelder in jedem Datensatz, ihren
 
 #### Die neuen Konten nach Branchen-Anwendungsfall {#accounts-by-industry}
 
-Die Logik, die für die Einblicke [!UICONTROL Neue Konten nach Branche] verwendet wird, gibt die fünf wichtigsten Branchen entsprechend ihrer Anzahl an Account-Profilen und ihrer relativen Größe zueinander zurück. Weitere Informationen finden Sie in der [[!UICONTROL Dokumentation &#x200B;]Neue Konten nach Branche](../guides/account-profiles.md#accounts-by-industry) .
+Die für die [!UICONTROL New accounts by industry] insight verwendete Logik gibt die fünf wichtigsten Branchen entsprechend ihrer Anzahl an Account-Profilen und ihrer relativen Größe zueinander zurück. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL New accounts By Industry] Widgets ](../guides/account-profiles.md#accounts-by-industry) .
 
 >[!TIP]
 >
 >Sie können diese SQL-Abfrage so anpassen, dass mehr oder weniger als die fünf wichtigsten Branchen zurückgegeben werden.
 
-Der SQL-Code, der die Erkenntnisse [!UICONTROL Neue Konten nach Branche] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
+Der SQL-Code, der die [!UICONTROL New accounts by industry] insight generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
 +++SQL-Abfrage
 
@@ -97,9 +96,9 @@ LIMIT 5000;
 
 #### Die neuen Konten nach Typ - Anwendungsfall {#accounts-by-type}
 
-Die für die Insight-Funktion [!UICONTROL Neue Konten nach Typ] verwendete Logik gibt die numerische Aufschlüsselung von Konten nach ihrem Typ zurück. Diese Einblicke können als Leitfaden für Geschäftsstrategien und -vorgänge dienen, einschließlich Ressourcenzuordnungs- oder Marketing-Strategien. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Neue Konten &#x200B;] Typ](../guides/account-profiles.md#accounts-by-type) Widget .
+Die für die [!UICONTROL New accounts by type] insight verwendete Logik gibt die numerische Aufschlüsselung der Konten nach ihrem Typ zurück. Diese insight kann bei der Ausrichtung von Geschäftsstrategien und -vorgängen helfen, einschließlich Ressourcenzuordnungs- oder Marketing-Strategien. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL New accounts by type] Widgets ](../guides/account-profiles.md#accounts-by-type) .
 
-Der SQL-Code, der die Einblicke [!UICONTROL Neue Konten nach Typ] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
+Der SQL-Code, der die [!UICONTROL New accounts by type] insight generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
 +++SQL-Abfrage
 

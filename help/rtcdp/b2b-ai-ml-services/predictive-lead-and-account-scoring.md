@@ -3,18 +3,18 @@ title: Prädiktives Lead- und Konto-Scoring in Real-Time CDP B2B
 type: Documentation
 description: Einen Überblick und weitere Informationen zur Funktion der prädiktiven Lead- und Konto-Bewertung in Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '853'
 ht-degree: 11%
 
 ---
 
 # Prädiktives Lead- und Konto-Scoring in Real-Time CDP B2B
 
-B2B-Marketing-Experten stehen im Marketing-Trichter vor mehreren Herausforderungen. Um effektiv zu sein, benötigen B2B-Marketer eine automatisierte Möglichkeit, die große Anzahl von Personen zu qualifizieren, damit sie sich auf die hochwertigen Ziele konzentrieren können. Die Qualifizierung sollte auf das endgültige Verkaufsergebnis abgestimmt sein, nicht nur auf die Marketing-Konversion.
+B2B-Marketer stehen an der Spitze der Marketing-funnel vor mehreren Herausforderungen. Um effektiv zu sein, benötigen B2B-Marketer eine automatisierte Möglichkeit, die große Anzahl von Personen zu qualifizieren, damit sie sich auf die hochwertigen Ziele konzentrieren können. Die Qualifizierung sollte auf das endgültige Verkaufsergebnis abgestimmt sein, nicht nur auf die Marketing-Konversion.
 
 Konten sind die letztendlichen Entitäten, die B2B-Produkte und -Services erwerben. Um effektiv zu vermarkten und zu verkaufen, müssen B2B-Marketer nicht nur die Kaufwahrscheinlichkeit einer Person kennen, sondern auch die Kaufwahrscheinlichkeit des Kontos.
 
@@ -102,13 +102,13 @@ Nach dem Auftragsdurchgang werden die Ergebnisse für jedes Modell in einem neue
 
 ### Anzeigen der Bewertungen von Kundenprofilen
 
-Um die prädiktiven Bewertungen für ein Personenprofil anzuzeigen, wählen Sie **[!UICONTROL Profile]** im Abschnitt Kunde im linken Bereich aus und geben Sie dann den Identity-Namespace und den Identitätswert ein. Klicken Sie abschließend auf **[!UICONTROL Anzeigen]**.
+Um die prädiktiven Bewertungen für ein Personenprofil anzuzeigen, wählen Sie im linken Bereich im Abschnitt Kunde die Option **[!UICONTROL Profiles]** aus und geben Sie dann den Identity-Namespace und den Identitätswert ein. Klicken Sie abschließend auf **[!UICONTROL View]**.
 
 Wählen Sie anschließend das Profil aus der Liste aus.
 
 ![Kundenprofil](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-Die **[!UICONTROL Detail]**-Seite enthält jetzt die Prognosewerte. Klicken Sie auf das Diagrammsymbol neben dem Prognosewert.
+Die **[!UICONTROL Detail]** enthält jetzt die Prognosewerte. Klicken Sie auf das Diagrammsymbol neben dem Prognosewert.
 
 ![Prognosewert des Kundenprofils](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 

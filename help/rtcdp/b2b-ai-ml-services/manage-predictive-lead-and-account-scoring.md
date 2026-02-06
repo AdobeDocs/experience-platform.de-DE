@@ -3,16 +3,16 @@ title: Verwalten von prädiktivem Lead- und Konto-Scoring in Real-Time CDP B2B
 type: Documentation
 description: Dieses Dokument enthält Informationen zum Verwalten der Funktion zum prädiktiven Lead- und Konto-Scoring in Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '982'
 ht-degree: 4%
 
 ---
 
-# Verwalten von prädiktivem Lead- und Konto-Scoring in Adobe Real-time Customer Data Platform, B2B edition
+# Verwalten von prädiktivem Lead- und Konto-Scoring in Adobe Real-Time Customer Data Platform, B2B edition
 
 >[!NOTE]
 >
@@ -22,27 +22,27 @@ Dieses Tutorial führt Sie durch die Schritte zum Verwalten der Score-Ziele des 
 
 ## Neuen Score erstellen
 
-Um einen neuen Score zu erstellen, wählen Sie in der Seitenleiste **[!UICONTROL Dienste]** aus und klicken Sie auf **[!UICONTROL Score erstellen]**.
+Um einen neuen Score zu erstellen, wählen Sie den **[!UICONTROL Services]** in der Seitenleiste aus und klicken Sie auf **[!UICONTROL Create score]**.
 
 ![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
-Der Bildschirm **[!UICONTROL Grundlegende Informationen]** wird angezeigt, in dem Sie aufgefordert werden, einen Profiltyp auszuwählen, einen Namen und eine optionale Beschreibung einzugeben. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+Der Bildschirm **[!UICONTROL Basic information]** wird angezeigt, in dem Sie aufgefordert werden, einen Profiltyp auszuwählen, einen Namen und eine optionale Beschreibung einzugeben. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-Der **[!UICONTROL „Ziel definieren]** wird angezeigt. Wählen Sie den Dropdown-Pfeil und dann im angezeigten Dropdown-Fenster einen Zieltyp aus.
+Der Bildschirm **[!UICONTROL Define your goal]** wird angezeigt. Wählen Sie den Dropdown-Pfeil und dann im angezeigten Dropdown-Fenster einen Zieltyp aus.
 
 ![plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
-Das **[!UICONTROL Zieldetails]** wird geöffnet. Wählen Sie den Dropdown-Pfeil und dann aus dem angezeigten Dropdown-Fenster den Namen des Zielfelds aus.
+Das Dialogfeld **[!UICONTROL Goal specifics]** wird geöffnet. Wählen Sie den Dropdown-Pfeil und dann aus dem angezeigten Dropdown-Fenster den Namen des Zielfelds aus.
 
 ![plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-Die **[!UICONTROL Zielbedingungen]** wird angezeigt. Wählen Sie den Dropdown-Pfeil und dann im angezeigten Dropdown-Fenster Bedingung aus.
+Die **[!UICONTROL Goal conditions]** wird angezeigt. Wählen Sie den Dropdown-Pfeil und dann im angezeigten Dropdown-Fenster Bedingung aus.
 
 ![plas-goal-specific-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-Das Feld **[!UICONTROL Zielwert]** wird angezeigt. Konfigurieren Sie anschließend Ihre [!UICONTROL Zieldetails]. Wählen Sie das Bedienfeld [!UICONTROL Feldwert eingeben] und geben Sie Ihren Zielwert ein.
+Das Feld **[!UICONTROL Goal value]** wird angezeigt. Konfigurieren Sie anschließend Ihre [!UICONTROL Goal specifics]. Wählen Sie das Bedienfeld [!UICONTROL Enter Field Value] aus und geben Sie Ihren Zielwert ein.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ Das Feld **[!UICONTROL Zielwert]** wird angezeigt. Konfigurieren Sie anschließe
 
 ![plas-goal-specific-field-value](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
-Um zusätzliche Felder hinzuzufügen, wählen Sie **[!UICONTROL Feld hinzufügen]** aus.
+Um zusätzliche Felder hinzuzufügen, wählen Sie **[!UICONTROL Add field]** aus.
 
 ![plas-goal-specific-add-event](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
@@ -58,9 +58,9 @@ Um den Prognosezeitrahmen zu konfigurieren, klicken Sie auf den Dropdown-Pfeil u
 
 ![plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
-Die ausgewählte Zusammenführungsrichtlinie bestimmt, wie die Feldwerte eines Personenprofils ausgewählt werden. Wählen Sie mithilfe des Dropdown-Pfeils Ihre gewünschte Zusammenführungsrichtlinie aus und klicken Sie dann auf **[!UICONTROL Beenden]**.
+Die ausgewählte Zusammenführungsrichtlinie bestimmt, wie die Feldwerte eines Personenprofils ausgewählt werden. Wählen Sie mithilfe des Dropdown-Pfeils Ihre gewünschte Zusammenführungsrichtlinie aus und klicken Sie dann auf **[!UICONTROL Finish]**.
 
-Das **[!UICONTROL Scoring-Einrichtung ist abgeschlossen]** erscheint und bestätigt, dass der neue Score erstellt wurde. Klicken Sie **[!UICONTROL OK]**.
+Das Dialogfeld **[!UICONTROL Scoring setup is complete]** wird angezeigt und bestätigt, dass der neue Score erstellt wurde. Wählen Sie **[!UICONTROL OK]** aus.
 
 ![plas-score-complete](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 
@@ -80,11 +80,11 @@ Weitere Informationen zu den Fehler-Codes, die unter den Details des letzten Dur
 
 ## Punktzahl bearbeiten
 
-Um einen Score zu bearbeiten, wählen Sie einen Score auf der Registerkarte **[!UICONTROL Services]** und wählen Sie **[!UICONTROL Bearbeiten]** im Bedienfeld „Zusätzliche Details“ auf der rechten Seite des Bildschirms aus.
+Um einen Score zu bearbeiten, wählen Sie einen Score auf der Registerkarte **[!UICONTROL Services]** und wählen Sie **[!UICONTROL Edit]** aus dem Bedienfeld Zusätzliche Details auf der rechten Seite des Bildschirms.
 
 ![plas-edit-score](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png)
 
-Das **[!UICONTROL Instanz bearbeiten]** wird angezeigt, in dem Sie die Beschreibung für den Score bearbeiten können. Nehmen Sie die gewünschten Änderungen vor und klicken Sie auf **[!UICONTROL Speichern]**.
+Das Dialogfeld **[!UICONTROL Edit instance]** wird angezeigt, in dem Sie die Beschreibung für den Score bearbeiten können. Nehmen Sie Ihre Änderungen vor und wählen Sie **[!UICONTROL Save]** aus.
 
 ![plas-edit-save](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
 
@@ -96,29 +96,29 @@ Sie kehren zur Registerkarte **[!UICONTROL Services]** zurück. Wählen Sie die 
 
 ## Punktzahl klonen
 
-Um einen Score zu klonen, wählen Sie einen Score auf der Registerkarte **[!UICONTROL Services]** und wählen Sie **[!UICONTROL Klonen]** im Bedienfeld „Zusätzliche Details“ auf der rechten Seite des Bildschirms.
+Um einen Score zu klonen, wählen Sie einen Score auf der Registerkarte **[!UICONTROL Services]** und wählen Sie **[!UICONTROL Clone]** aus dem Bedienfeld Zusätzliche Details auf der rechten Seite des Bildschirms.
 
 ![plas-clone-score](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
-Der Bildschirm **[!UICONTROL Grundlegende Informationen]** wird angezeigt. Der Profiltyp, der Name und die Beschreibung werden aus der ursprünglichen Bewertung geklont. Ändern Sie diese Details und wählen Sie **[!UICONTROL Weiter]** aus.
+Der Bildschirm **[!UICONTROL Basic information]** wird angezeigt. Der Profiltyp, der Name und die Beschreibung werden aus der ursprünglichen Bewertung geklont. Ändern Sie diese Details und wählen Sie **[!UICONTROL Next]** aus.
 
 ![plas-clone-basic-info](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
 
-Der **[!UICONTROL „Ziel definieren]** wird angezeigt. Füllen Sie den Abschnitt Ziele wie bei der Erstellung eines neuen Punktwerts aus und klicken Sie auf **[!UICONTROL Beenden]**.
+Der Bildschirm **[!UICONTROL Define your goal]** wird angezeigt. Füllen Sie den Abschnitt Ziele wie bei der Erstellung eines neuen Punktwerts aus und wählen Sie **[!UICONTROL Finish]** aus.
 
 Sie kehren zur Registerkarte **[!UICONTROL Services]** zurück, auf der Sie den neu geklonten Score in der Liste sehen können.
 
 >[!NOTE]
 >
->Der **[!UICONTROL Definieren des Ziels]** wird nicht aus der ursprünglichen Bewertung geklont.
+>Der **[!UICONTROL Define your goal]** Abschnitt wird nicht aus der ursprünglichen Bewertung geklont.
 
 ## Punktzahl löschen
 
-Um einen Score zu löschen, wählen Sie einen Score auf der Registerkarte **[!UICONTROL Services]** und wählen Sie **[!UICONTROL Löschen]** im Bedienfeld „Zusätzliche Details“ auf der rechten Seite des Bildschirms aus.
+Um eine Bewertung zu löschen, wählen Sie eine Bewertung auf der Registerkarte **[!UICONTROL Services]** und wählen Sie **[!UICONTROL Delete]** im Bedienfeld „Zusätzliche Details“ auf der rechten Seite des Bildschirms aus.
 
 ![plas-delete-score](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
-Das **[!UICONTROL Dokumentation löschen]** Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!UICONTROL Löschen]** aus.
+Das **[!UICONTROL Delete documentation]** Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!UICONTROL Delete]** aus.
 
 ![plas-delete-score-confirmation](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 

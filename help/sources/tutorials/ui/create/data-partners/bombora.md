@@ -1,13 +1,11 @@
 ---
 title: Verbinden des Bombora Intent mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie Bombora Intent mit Experience Platform verbinden
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
-badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 9%
+source-wordcount: '933'
+ht-degree: 7%
 
 ---
 
@@ -25,17 +23,17 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Voraussetzungen
 
-Informationen [[!DNL Bombora Intent]  Abrufen Ihrer Authentifizierungsdaten finden Sie &#x200B;](../../../../connectors/data-partners/bombora.md) „Übersicht“.
+Informationen [[!DNL Bombora Intent]  Abrufen Ihrer Authentifizierungsdaten finden Sie ](../../../../connectors/data-partners/bombora.md) „Übersicht“.
 
 ## Navigieren im Quellkatalog
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich *[!UICONTROL Quellen]* zuzugreifen. Sie können die entsprechende Kategorie im Bedienfeld *[!UICONTROL Kategorien]* auswählen. Alternativ können Sie über die Suchleiste zu der spezifischen Quelle navigieren, die Sie verwenden möchten.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option **[!UICONTROL Sources]** , um auf den *[!UICONTROL Sources]*-Arbeitsbereich zuzugreifen. Sie können die entsprechende Kategorie im *[!UICONTROL Categories]* auswählen. Alternativ können Sie über die Suchleiste zu der spezifischen Quelle navigieren, die Sie verwenden möchten.
 
-Um [!DNL Bombora] zu verwenden, wählen Sie die Quellkarte **[!UICONTROL Bombora Intent]** unter *[!UICONTROL Daten- und Identitätspartner]* und dann **[!UICONTROL Daten hinzufügen]**.
+Um [!DNL Bombora] zu verwenden, wählen Sie die **[!UICONTROL Bombora Intent]** unter *[!UICONTROL Data & Identity Partners]* und dann **[!UICONTROL Add data]** aus.
 
 >[!TIP]
 >
->Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto vorhanden ist, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
+>Quellen im Quellkatalog zeigen die **[!UICONTROL Set up]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto vorhanden ist, ändert sich diese Option in **[!UICONTROL Add data]**.
 
 ![Der Quellkatalog mit der ausgewählten Karte „Bombora Intent“](../../../../images/tutorials/create/bombora/catalog.png)
 
@@ -43,9 +41,9 @@ Um [!DNL Bombora] zu verwenden, wählen Sie die Quellkarte **[!UICONTROL Bombora
 
 ### Vorhandenes Konto verwenden {#existing}
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und dann das Konto, das Sie verwenden möchten, aus der Liste der Konten in der Benutzeroberfläche aus.
+Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Existing account]** und dann das Konto, das Sie verwenden möchten, aus der Liste der Konten in der Benutzeroberfläche aus.
 
-Nachdem Sie Ihr Konto ausgewählt haben, klicken Sie auf **[!UICONTROL Weiter]**, um mit dem nächsten Schritt fortzufahren.
+Nachdem Sie Ihr Konto ausgewählt haben, wählen Sie **[!UICONTROL Next]** aus, um mit dem nächsten Schritt fortzufahren.
 
 ![Die vorhandene Kontoschnittstelle im Quell-Workflow.](../../../../images/tutorials/create/bombora/existing.png)
 
@@ -53,7 +51,7 @@ Nachdem Sie Ihr Konto ausgewählt haben, klicken Sie auf **[!UICONTROL Weiter]**
 
 Wenn Sie noch kein -Konto haben, müssen Sie ein neues Konto erstellen, indem Sie die Authentifizierungsdaten angeben, die Ihrer Quelle entsprechen.
 
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Kontonamen und optional eine Beschreibung für Ihre Kontodetails an. Geben Sie als Nächstes die entsprechenden Authentifizierungswerte an, um Ihre Quelle für Experience Platform zu authentifizieren. Um Ihr [!DNL Bombora]-Konto zu verbinden, benötigen Sie die folgenden Anmeldeinformationen:
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie dann einen Kontonamen und optional eine Beschreibung für Ihre Kontodetails an. Geben Sie als Nächstes die entsprechenden Authentifizierungswerte an, um Ihre Quelle für Experience Platform zu authentifizieren. Um Ihr [!DNL Bombora]-Konto zu verbinden, benötigen Sie die folgenden Anmeldeinformationen:
 
 * **Zugriffsschlüssel-ID**: Ihre [!DNL Bombora] Zugriffsschlüssel-ID. Dies ist eine 61-stellige alphanumerische Zeichenfolge, die zur Authentifizierung Ihres -Kontos bei Experience Platform erforderlich ist.
 * **Geheimer Zugriffsschlüssel**: Ihr geheimer [!DNL Bombora]. Dies ist eine mit Base-64 verschlüsselte Zeichenfolge mit 40 Zeichen, die zum Authentifizieren Ihres -Kontos bei Experience Platform erforderlich ist.
@@ -77,20 +75,20 @@ Verwenden Sie als Nächstes die Zeitplanungs-Schnittstelle, um einen Aufnahmezei
 
 * **Häufigkeit**: Konfigurieren Sie die Häufigkeit, um anzugeben, wie oft der Datenfluss ausgeführt werden soll. Sie können Ihren [!DNL Bombora] Datenfluss so planen, dass Daten mit einer wöchentlichen Rate aufgenommen werden.
 * **Intervall**: Das Intervall gibt die Zeitspanne zwischen den einzelnen Aufnahmezyklen an. Das einzige unterstützte Intervall für einen [!DNL Bombora] Datenfluss ist 1. Das bedeutet, dass Ihr Datenfluss Daten einmal wöchentlich aufnimmt, jede Woche.
-* **Startzeit**: Die Startzeit gibt an, wann die erste Iteration des Datenflusses ausgeführt wird. [!DNL Bombora] sendet Daten einmal wöchentlich montags um 12:00 Uhr UTC an Adobe. Daher müssen Sie Ihre Aufnahmestartzeit nach 12:00 Uhr UTC festlegen. Darüber hinaus müssen Sie die Aufnahmezeit mit [!DNL Bombora] bestätigen, da diese ihren Zeitplan ändern können, wenn sie Dateien in Adobe ablegen.
+* **Startzeit**: Die Startzeit gibt an, wann die erste Iteration des Datenflusses ausgeführt wird. [!DNL Bombora] sendet Daten einmal wöchentlich, montags, um 12:00 :00 UTC an Adobe. Daher müssen Sie Ihre Startzeit für die Aufnahme auf 12:00 :00 UTC festlegen. Darüber hinaus müssen Sie die Aufnahmezeit mit [!DNL Bombora] bestätigen, da diese ihren Zeitplan ändern können, wenn sie Dateien in Adobe ablegen.
 
-Nachdem Sie den Aufnahmezeitplan Ihres Datenflusses konfiguriert haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Nachdem Sie den Aufnahmezeitplan Ihres Datenflusses konfiguriert haben, wählen Sie **[!UICONTROL Next]** aus.
 
 ![Die Planungsschnittstelle des Quell-Workflows.](../../../../images/tutorials/create/bombora/scheduling.png)
 
 ## Datenfluss überprüfen {#review-dataflow}
 
-Der letzte Schritt im Prozess zur Erstellung eines Datenflusses besteht darin, Ihren Datenfluss zu überprüfen, bevor er ausgeführt wird. Verwenden Sie den *[!UICONTROL Überprüfen]* Schritt, um die Details Ihres neuen Datenflusses zu überprüfen, bevor er ausgeführt wird. Die Details sind in die folgenden Kategorien unterteilt:
+Der letzte Schritt im Prozess zur Erstellung eines Datenflusses besteht darin, Ihren Datenfluss zu überprüfen, bevor er ausgeführt wird. Verwenden Sie den *[!UICONTROL Review]* Schritt, um die Details Ihres neuen Datenflusses zu überprüfen, bevor er ausgeführt wird. Die Details sind in die folgenden Kategorien unterteilt:
 
 * **Verbindung**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
 * **Planung**: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmezeitplans an.
 
-Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]**.
+Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Finish]** aus.
 
 ![Die Überprüfungsschnittstelle des Quell-Workflows.](../../../../images/tutorials/create/bombora/review.png)
 
@@ -108,4 +106,4 @@ Um Konfigurationen für die Planung, Zuordnung und allgemeine Informationen Ihre
 
 ### Löschen des Datenflusses
 
-Datenflüsse, die nicht mehr erforderlich sind oder nicht korrekt erstellt wurden, können Sie löschen, indem Sie dazu die Funktion **[!UICONTROL Löschen]** im Arbeitsbereich **[!UICONTROL Datenflüsse]** verwenden. Weitere Informationen zum Löschen von Datenflüssen finden Sie im Tutorial [Löschen von Datenflüssen in der Benutzeroberfläche](../../delete.md).
+Datenflüsse, die nicht mehr erforderlich sind oder nicht korrekt erstellt wurden, können Sie löschen, indem Sie dazu die Funktion **[!UICONTROL Delete]** im Arbeitsbereich **[!UICONTROL Dataflows]** verwenden. Weitere Informationen zum Löschen von Datenflüssen finden Sie im Tutorial [Löschen von Datenflüssen in der Benutzeroberfläche](../../delete.md).

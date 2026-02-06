@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Erste Schritte mit Real-Time Customer Data Platform B2B edition
 description: Verwenden Sie dieses Szenario als Beispiel, wenn Sie Ihre Implementierung von Adobe Real-Time Customer Data Platform B2B edition einrichten.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: ed655be7ad274c06deea1e50001c28c58f68796e
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1158'
 ht-degree: 43%
 
 ---
@@ -66,7 +66,7 @@ Als Nächstes verwendet der Bodea-Marketing-Experte einen [Quell-Connector](../s
 
 Um eine Verbindung zwischen einem Quellkonto und Experience Platform herzustellen, müssen Sie Authentifizierungsdaten anfordern. Detaillierte Anweisungen zum Erlangen der Authentifizierungsdaten für jeden Quelltyp finden Sie im Abschnitt [Quellen - Übersicht](../sources/home.md).
 
-Nachdem der Bodea-Marketing-Experte Anmeldeinformationen zur Authentifizierung erhalten hat, erstellt er eine Verbindung zwischen dem Quellkonto und seiner Experience Platform-Organisation. Weitere Informationen [&#x200B; Einrichten einer Quellverbindung finden &#x200B;](../sources/home.md) in der Quelldokumentation .
+Nachdem der Bodea-Marketing-Experte Anmeldeinformationen zur Authentifizierung erhalten hat, erstellt er eine Verbindung zwischen dem Quellkonto und seiner Experience Platform-Organisation. Weitere Informationen [ Einrichten einer Quellverbindung finden ](../sources/home.md) in der Quelldokumentation .
 
 Der Quell-Connector bietet eine Funktion zur automatischen Zuordnung, mit der Sie all Ihre Datenfelder denen der neu erstellten Schemata zuordnen können.
 
@@ -100,9 +100,9 @@ Im [!UICONTROL Segments] Arbeitsbereich der Experience Platform-Benutzeroberflä
 
 >[!NOTE]
 > 
->Eine ausführliche Anleitung dazu finden [&#x200B; im Tutorial zum Aktivieren einer Zielgruppe für &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) Ziel .
+>Eine ausführliche Anleitung dazu finden [ im Tutorial zum Aktivieren einer Zielgruppe für ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) Ziel .
 
-Der Bodea-Marketing-Experte aktiviert die Zielgruppe für ein Ziel, mit dem sie Zielgruppendaten von Experience Platform an ihre Marketing-Automatisierungsplattform pushen kann. Weitere Informationen [&#x200B; verfügbaren Ziele finden &#x200B;](../destinations/catalog/overview.md) im Zielkatalog .
+Der Bodea-Marketing-Experte aktiviert die Zielgruppe für ein Ziel, mit dem sie Zielgruppendaten von Experience Platform an ihre Marketing-Automatisierungsplattform pushen kann. Weitere Informationen [ verfügbaren Ziele finden ](../destinations/catalog/overview.md) im Zielkatalog .
 
 ## Nächste Schritte
 

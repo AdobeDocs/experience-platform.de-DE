@@ -3,18 +3,18 @@ title: Verwandte Konten in Real-Time CDP B2B Edition
 type: Documentation
 description: Eine Übersicht und weitere Informationen zur Funktion „Verknüpfte Konten“ in Experience Platform Real-Time CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '427'
 ht-degree: 14%
 
 ---
 
 # Verwandte Konten in Real-Time CDP B2B Edition
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gespeichert, von denen jedes nur teilweise oder sogar widersprüchliche Daten für dieselbe reale Geschäftseinheit enthält. Dies stellt eine enorme Herausforderung dar, eine präzise Ansicht der Kunden zu erhalten und mindert so die Effizienz und Effektivität der B2B-Marketing- und Verkaufsaktivitäten.
 
@@ -36,11 +36,11 @@ Verwenden Sie diese Funktion, um verwandte Account-Profile für ein Account-Prof
 
 ## Aktivieren des zugehörigen Kontodienstes {#enable}
 
-Um den Dienst zu aktivieren, wählen **[!UICONTROL Profile]** in der Seitenleiste aus, gefolgt von **[!UICONTROL Einstellungen]**.
+Um den Service zu aktivieren, wählen Sie in der Seitenleiste **[!UICONTROL Profiles]** und dann **[!UICONTROL Settings]** aus.
 
 ![Experience Platform-Benutzeroberfläche mit Hervorhebung von Profilen und Einstellungen.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-Wählen Sie den Umschalter neben [!UICONTROL Verknüpfte Konten aktivieren] aus, um den Service zu aktivieren, und klicken Sie dann auf **[!UICONTROL Speichern]**.
+Wählen Sie den Umschalter neben [!UICONTROL Enable related accounts] aus, um den Dienst zu aktivieren, und wählen Sie dann **[!UICONTROL Save]** aus.
 
 ![Bildschirm mit den Kontoeinstellungen, in dem der Umschalter hervorgehoben und gespeichert wird.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
@@ -58,7 +58,7 @@ Weitere Informationen zu den Vorgängen [Profilanreicherung für Konten](/help/d
 
 ## Anzeigen verwandter Konten {#how-to-view}
 
-Sie können verwandte Konten für ein Konto, das Sie durchsuchen, in der Experience Platform-Benutzeroberfläche anzeigen.
+Sie können verwandte Konten für ein Konto, das Sie durchsuchen, in der Benutzeroberfläche von Experience Platform anzeigen.
 
 Weitere Informationen finden Sie in der Dokumentation über [So finden Sie verwandte Konten in der Benutzeroberfläche](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
 

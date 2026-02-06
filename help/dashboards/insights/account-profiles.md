@@ -1,12 +1,11 @@
 ---
 title: Account Profile Insights
 description: Entdecken Sie die SQL-Daten, die Ihren Account-Profil-Einblicken zugrunde liegen, und verwenden Sie diese Abfragen, um benutzerdefinierte Einblicke zu generieren, die Ihre Kunden und deren Kundenerlebnisse weiter untersuchen.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: null
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -19,15 +18,15 @@ Mit dem Zugriff auf die SQL, die Ihre Einblicke ermöglicht, können Sie Ihre B2
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Die folgenden Einblicke stehen Ihnen als Teil des Dashboards [Kontoprofile“ oder &#x200B;](../guides/account-profiles.md)benutzerdefinierten Dashboards[&#x200B; zur &#x200B;](../standard-dashboards.md). Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [&#128279;](../customize/overview.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
+Die folgenden Einblicke stehen Ihnen als Teil des Dashboards [Kontoprofile“ oder ](../guides/account-profiles.md)benutzerdefinierten Dashboards[ zur ](../standard-dashboards.md). Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/overview.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [ ](../customize/custom-widgets.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
 
 ## Hinzugefügte Kontoprofile {#account-profiles-added}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Account-Profile wurden in einem bestimmten Zeitraum hinzugefügt?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH accounts_by_mm_dd AS
@@ -49,11 +48,11 @@ ORDER BY date_key limit 5000;
 
 ## Neue Konten nach Branche {#accounts-by-industry}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Zu welchen fünf Branchen gehören die Account-Profile?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH rankedindustries AS
@@ -85,11 +84,11 @@ ORDER BY total_accounts DESC limit 5000;
 
 ## Neue Konten nach Typ {#accounts-by-type}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Konten werden nach ihrem Typ gezählt?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT t.account_type,
@@ -108,11 +107,11 @@ LIMIT  5000;
 
 ## Hinzugefügte Opportunities {#opportunities-added}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Opportunitys wurden in einem bestimmten Zeitraum hinzugefügt?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT d.date_key,
@@ -131,11 +130,11 @@ LIMIT  5000;
 
 ## Neue Opportunitys nach Personenrolle {#opportunities-by-person-role}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie groß und wie hoch sind die verschiedenen Rollen in einer Opportunity?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT p.person_role,
@@ -153,11 +152,11 @@ LIMIT  5000;
 
 ## Neue Chancen nach Umsatz {#opportunities-by-revenue}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welches sind die 20 Top-Vertriebschancen, die nach ihrem Umsatz (in USD) gereiht werden?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH ranked_opportunities AS
@@ -193,12 +192,12 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 ## Neue Opportunities nach Status und Phase {#opportunities-by-status-and-stage}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
-- Welche offenen Möglichkeiten gibt es und in welcher Phase des Verkaufs- oder Marketingtrichters sind sie?
-- Welche geschlossenen Möglichkeiten gibt es und in welcher Phase des Verkaufs- oder Marketingtrichters befinden sie sich?
+- Welche offenen Möglichkeiten gibt es und in welcher Phase des Vertriebs oder der Vermarktung von funnel sind sie?
+- Welche geschlossenen Vertriebschancen gibt es und in welcher Phase des Vertriebs oder der Vermarktung von funnel sind sie?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH opportunities_by_isclosed AS
@@ -226,11 +225,11 @@ FROM   opportunities_by_isclosed limit 5000;
 
 ## Neue gewonnene Gelegenheiten {#opportunities-won}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Opportunitys wurden erfolgreich abgeschlossen oder abgeschlossen?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH opportunities_by_iswon AS
@@ -255,11 +254,11 @@ FROM   opportunities_by_iswon limit 5000;
 
 <!-- Q) Can we change this name? -->
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Opportunities wurden in einem bestimmten Zeitraum erfolgreich geschlossen oder abgeschlossen (gewonnen)?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH opportunities_won_counts AS
@@ -285,13 +284,13 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->Das Diagramm [!UICONTROL Kunden pro Konto - Übersicht] enthält drei Drill-Through-Einblicke: [!UICONTROL Kunden pro Kontodetails], [!UICONTROL Vertriebschancen pro Konto - Übersicht] und [!UICONTROL Vertriebschancen pro Kontodetail]. Diese Drill-Throughs bieten detailliertere Einblicke, indem sie die Kunden- und Opportunity-Anzahl nach Kategorien (z. B. direkte und indirekte Kunden) und Bereiche (z. B. Kunden- und Opportunity-Anzahl) aufschlüsseln. Diese Diagramme sind von globalen Datumsfiltern, die Sie möglicherweise festgelegt haben, nicht betroffen.
+>Das [!UICONTROL Customers per Account Overview] Diagramm enthält drei Drill-Through-Einblicke: [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] und [!UICONTROL Opportunities per Account Detail]. Diese Drill-Throughs bieten detailliertere Einblicke, indem sie die Kunden- und Opportunity-Anzahl nach Kategorien (z. B. direkte und indirekte Kunden) und Bereiche (z. B. Kunden- und Opportunity-Anzahl) aufschlüsseln. Diese Diagramme sind von globalen Datumsfiltern, die Sie möglicherweise festgelegt haben, nicht betroffen.
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie verteilen sich Konten, je nachdem, ob sie direkte oder indirekte Kunden haben?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
@@ -329,13 +328,13 @@ ORDER BY ac.Account_Category;
 
 >[!NOTE]
 >
->Diese Einsicht wird von globalen Datumsfiltern nicht beeinflusst.
+>Diese insight ist von globalen Datumsfiltern nicht betroffen.
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Accounts haben verschiedene Bereiche von direkten oder indirekten Kunden?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH customer_ranges AS (
@@ -403,13 +402,13 @@ ORDER BY cr.customer_type,
 
 >[!NOTE]
 >
->Diese Einsicht wird von globalen Datumsfiltern nicht beeinflusst.
+>Diese insight ist von globalen Datumsfiltern nicht betroffen.
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie ist die Kontenverteilung, je nachdem, ob es verknüpfte Opportunitys gibt?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH LatestDate AS (
@@ -453,13 +452,13 @@ ORDER BY ac.Opportunity_Category;
 
 >[!NOTE]
 >
->Diese Einsicht wird von globalen Datumsfiltern nicht beeinflusst.
+>Diese insight ist von globalen Datumsfiltern nicht betroffen.
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Accounts sind mit unterschiedlichen Opportunities verbunden?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 WITH opportunity_ranges AS (

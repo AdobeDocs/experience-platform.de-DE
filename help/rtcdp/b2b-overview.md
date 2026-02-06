@@ -3,11 +3,11 @@ keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;Echtzeit-Kunden
 title: Übersicht über Real-Time CDP B2B Edition
 description: Übersicht über das Konto in der B2B-Edition von Real-time Customer Data Platform
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1056'
 ht-degree: 85%
 
 ---
@@ -65,7 +65,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und 
 >
 >Die [!DNL Marketo]-Quelle ist **nicht** erforderlich, um Real-Time CDP B2B Edition zu verwenden.
 
-Weitere Informationen zu [&#x200B; und der Einbindung von B2B-Daten in Experience Platform finden Sie in der &#x200B;](./sources/b2b.md) zu „Quellen in Real-Time CDP B2B edition Marketo&quot;.
+Weitere Informationen zu [ und der Einbindung von B2B-Daten in Experience Platform finden Sie in der ](./sources/b2b.md) zu „Quellen in Real-Time CDP B2B edition Marketo&quot;.
 
 ## B2B-Ziele
 

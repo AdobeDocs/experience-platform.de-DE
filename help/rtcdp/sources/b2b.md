@@ -2,11 +2,11 @@
 title: Quellen in Real-Time Customer Data Platform B2B edition
 description: Eine Übersicht über die Rolle von Quellen in Adobe Real-Time Customer Data Platform B2B edition.
 feature: Sources, Data Ingestion, Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Mit Adobe Real-Time Customer Data Platform B2B edition können Sie Ihre B2B-Date
 
 Informationen dazu, wie Quellen in Ihren B2B-Workflow passen, finden Sie im [End-to-End-Tutorial](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
-Adobe Experience Platform Weitere Informationen zu den in [&#x200B; verfügbaren Quelltypen finden &#x200B;](../../sources/home.md) in der Übersicht zu Quell-Connectoren .
+Adobe Experience Platform Weitere Informationen zu den in [ verfügbaren Quelltypen finden ](../../sources/home.md) in der Übersicht zu Quell-Connectoren .
 
 >[!IMPORTANT]
 >
->Sie müssen Zugriff auf [Real-Time Customer Data Platform B2B edition](../../rctcdp/../rtcdp/b2b-overview.md) haben, damit B2B-Schemata am [Echtzeit-Kundenprofil) &#x200B;](../proile/../../profile/home.md) können.
+>Sie müssen Zugriff auf [Real-Time Customer Data Platform B2B edition](../../rctcdp/../rtcdp/b2b-overview.md) haben, damit B2B-Schemata am [Echtzeit-Kundenprofil) ](../proile/../../profile/home.md) können.
 
 In den folgenden Dokumenten finden Sie weitere Informationen zur Verwendung von [!DNL Marketo] zum Übertragen von B2B-Daten nach Experience Platform:
 

@@ -2,12 +2,10 @@
 title: Kontozielgruppen für Ziele aktivieren
 type: Tutorial
 description: Erfahren Sie, wie Sie Konto-Zielgruppen für Ziele aktivieren
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
-badgeB2P: label="B2P-Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '778'
 ht-degree: 6%
 
 ---
@@ -39,7 +37,7 @@ Sehen Sie sich das folgende Video an, um einen Überblick über das Erstellen un
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Aktivieren von Konto-Zielgruppen benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Activate Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+Zum Aktivieren von Konto-Zielgruppen benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Activate Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Aktivieren von Konto-Zielgruppen verfügen, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über ein **[!UICONTROL Activate]** verfügt, verfügen Sie über die entsprechenden Berechtigungen.
 
@@ -55,7 +53,7 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 >[!TIP]
 >
->Die Ziele, die Account-Zielgruppen exportieren können, werden mit einem Symbol in der oberen rechten Ecke der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die Account-Zielgruppen exportieren können, [weiter oben auf der Seite &#x200B;](#supported-destinations).
+>Die Ziele, die Account-Zielgruppen exportieren können, werden mit einem Symbol in der oberen rechten Ecke der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die Account-Zielgruppen exportieren können, [weiter oben auf der Seite ](#supported-destinations).
 
 ![Demandbase-Zielseite, auf der Profil-Zielgruppen exportiert werden können, hervorgehoben.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
@@ -67,7 +65,7 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 ![Zielaktivierungs-Workflow mit hervorgehobenem Steuerelement „Konten“.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
 
-1. Fahren Sie mit dem nächsten Abschnitt fort[&#x200B; um Ihre Konto](#select-profile-audiences)Zielgruppen auszuwählen.
+1. Fahren Sie mit dem nächsten Abschnitt fort[ um Ihre Konto](#select-profile-audiences)Zielgruppen auszuwählen.
 
 ## Konto-Zielgruppen auswählen {#select-account-audiences}
 
@@ -104,4 +102,4 @@ Das Einverständnis wird auf Personen- oder Profilebene für (Kunden- *Interesse
 
 ![Überprüfungsschritt des Workflows Konto-Zielgruppen aktivieren mit ausgegrautem Steuerelement zur Einverständnisdurchsetzung.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-Andere Data-Governance-Mechanismen in Real-Time CDP [&#x200B; z. B](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)Datenverwendungsrichtlinien-Prüfungen und [attributbasierte &#x200B;](/help/destinations/home.md#attribute-based-access)) werden unterstützt.
+Andere Data-Governance-Mechanismen in Real-Time CDP [ z. B](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)Datenverwendungsrichtlinien-Prüfungen und [attributbasierte ](/help/destinations/home.md#attribute-based-access)) werden unterstützt.
