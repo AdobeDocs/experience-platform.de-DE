@@ -16,7 +16,7 @@ ht-degree: 11%
 >
 >Diese Feldergruppe steht nur Organisationen zur Verfügung, die Zugriff auf Real-Time CDP B2B edition haben.
 
-[!UICONTROL XDM Business Person Details] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md), die Informationen über eine einzelne Person im Kontext eines B2B-Unternehmens (Business-to-Business) erfasst.
+[!UICONTROL XDM Business Person Details] ist eine Standardschemafeldgruppe für die Klasse [[!DNL XDM Individual Profile] &#x200B;](../../classes/individual-profile.md), die Informationen über eine einzelne Person im Kontext eines B2B-Unternehmens (Business-to-Business) erfasst.
 
 ![](../../images/field-groups/business-person-details.png)
 
