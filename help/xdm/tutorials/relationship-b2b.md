@@ -1,7 +1,7 @@
 ---
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-Time Customer Data Platform B2B edition
 description: Erfahren Sie, wie Sie in Adobe Real-Time Customer Data Platform B2B edition eine n:1-Beziehung zwischen zwei Schemas definieren.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: cb036262ff81d245fe436fc337b3911170c61425
 workflow-type: tm+mt
