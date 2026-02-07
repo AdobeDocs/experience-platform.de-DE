@@ -1,15 +1,20 @@
 ---
 title: Schemafeldgruppe „XDM-Geschäftspersonenkomponenten“
 description: Erfahren Sie mehr über die Schemafeldgruppe „XDM-Geschäftspersonenkomponenten“.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 4%
 
 ---
 
-# Schemafeldgruppe [!UICONTROL XDM-Geschäftspersonenkomponenten]
+# Schemafeldgruppe [!UICONTROL XDM Business Person Components]
+
+>[!AVAILABILITY]
+>
+>Diese Feldergruppe steht nur Organisationen zur Verfügung, die Zugriff auf Real-Time CDP B2B edition haben.
 
 [!UICONTROL XDM Business Person Components] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md) die mehrere Quelldatensätze für eine Person und andere Attribute erfasst, die für die Personensegmentierung erforderlich sind.
 
@@ -19,31 +24,31 @@ Die Feldergruppe stellt ein `personComponents`-Feld auf Stammebene bereit, das e
 
 >[!IMPORTANT]
 >
->Sie müssen die Aufnahmemuster befolgen, wie in der [Quellendokumentation“ &#x200B;](../../../rtcdp/sources/b2b.md). Andere Feldzuordnungsmethoden funktionieren nicht immer.
+>Sie müssen die Aufnahmemuster befolgen, wie in der [Quellendokumentation“ ](../../../rtcdp/sources/b2b.md). Andere Feldzuordnungsmethoden funktionieren nicht immer.
 >
 >Beispielsweise wird jedes Objekt des `personComponents`-Arrays während standardmäßiger Aufnahmemuster einzeln übermittelt und dann von Experience Platform zum Array hinzugefügt. Wenn Sie der Geschäftspersonenkomponente manuell ein Array von Objekten hinzufügen, wird ein Fehler zurückgegeben.
->Sie sollten das Dienstprogramm zur automatischen Generierung verwenden, wenn Sie Schemas für Ihre B2B-Daten erstellen. Anweisungen zur Verwendung des B2B-Namespace und [&#x200B; Dienstprogramms zur automatischen Schemaerstellung finden Sie in der Dokumentation &#x200B;](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden und Ihr Datenmodell manuell zuordnen möchten, lesen Sie unbedingt die Dokumentation zu den [Adobe Real-Time Customer Data Platform B2B edition XDM-Klassen](../../../rtcdp/schemas/b2b.md) bevor Sie Ihre Daten zuordnen.
+>Sie sollten das Dienstprogramm zur automatischen Generierung verwenden, wenn Sie Schemas für Ihre B2B-Daten erstellen. Anweisungen zur Verwendung des B2B-Namespace und [ Dienstprogramms zur automatischen Schemaerstellung finden Sie in der Dokumentation ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden und Ihr Datenmodell manuell zuordnen möchten, lesen Sie unbedingt die Dokumentation zu den [Adobe Real-Time Customer Data Platform B2B edition XDM-Klassen](../../../rtcdp/schemas/b2b.md) bevor Sie Ihre Daten zuordnen.
 >
->Informationen [&#x200B; empfohlenen Workflows für B2B-Daten &#x200B;](../../../rtcdp/b2b-tutorial.md) Sie im End-to-End-Tutorial .
+>Informationen [ empfohlenen Workflows für B2B-Daten ](../../../rtcdp/b2b-tutorial.md) Sie im End-to-End-Tutorial .
 
 ![](../../images/field-groups/business-person-components.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `sourceAccountKey` | [[!UICONTROL B2B-Source]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für das mit der Person verknüpfte Konto. |
-| `sourceConvertedContactKey` | [[!UICONTROL B2B-Source]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für den zugehörigen Kontakt, wenn dieser Lead konvertiert wurde. |
-| `sourceExternalKey` | [[!UICONTROL B2B-Source]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für das Quellsystem, aus dem die Daten der Person stammen. |
-| `sourcePersonKey` | [[!UICONTROL B2B-Source]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für die Person. |
-| `workEmail` | [[!UICONTROL E-Mail-Adresse]](../../data-types/b2b-source.md) | Die geschäftliche E-Mail-ID der Person. |
-| `personGroupID` | String | Eine Gruppenkennung für die Person. |
-| `personScore` | String | Ein von einem CRM-System für die Person generierter Score. |
-| `personSource` | String | Eine eindeutige, auf Zeichenfolgen basierende Kennung für das Quellsystem, aus dem die Daten der Person stammen. |
-| `personStatus` | String | Der aktuelle Marketing- oder Verkaufsstatus der Person. |
-| `personType` | String | Der Typ der Person in einem B2B-Kontext. |
-| `sourceAccountID` | String | Eine eindeutige, auf Zeichenfolgen basierende Kennung für das Konto im Quellsystem, das mit der Person verknüpft ist. Dieses Feld wird vom System als Fremdschlüssel zum Suchen der verschiedenen Unternehmen verwendet, für die diese Person arbeitet. |
-| `sourceConvertedContactID` | String | Eine eindeutige, auf Zeichenfolgen basierende Kennung für den zugehörigen Kontakt, wenn dieser Lead konvertiert wurde. |
-| `sourceExternalID` | String | Eine eindeutige, auf Zeichenfolgen basierende Kennung für das Quellsystem, aus dem die Daten der Person stammen. |
-| `sourcePersonID` | String | Eine eindeutige, zeichenfolgenbasierte Kennung für die Person. |
+| `sourceAccountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für das mit der Person verknüpfte Konto. |
+| `sourceConvertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für den zugehörigen Kontakt, wenn dieser Lead konvertiert wurde. |
+| `sourceExternalKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für das Quellsystem, aus dem die Daten der Person stammen. |
+| `sourcePersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für die Person. |
+| `workEmail` | [[!UICONTROL Email address]](../../data-types/b2b-source.md) | Die geschäftliche E-Mail-ID der Person. |
+| `personGroupID` | Zeichenfolge | Eine Gruppenkennung für die Person. |
+| `personScore` | Zeichenfolge | Ein von einem CRM-System für die Person generierter Score. |
+| `personSource` | Zeichenfolge | Eine eindeutige, auf Zeichenfolgen basierende Kennung für das Quellsystem, aus dem die Daten der Person stammen. |
+| `personStatus` | Zeichenfolge | Der aktuelle Marketing- oder Verkaufsstatus der Person. |
+| `personType` | Zeichenfolge | Der Typ der Person in einem B2B-Kontext. |
+| `sourceAccountID` | Zeichenfolge | Eine eindeutige, auf Zeichenfolgen basierende Kennung für das Konto im Quellsystem, das mit der Person verknüpft ist. Dieses Feld wird vom System als Fremdschlüssel zum Suchen der verschiedenen Unternehmen verwendet, für die diese Person arbeitet. |
+| `sourceConvertedContactID` | Zeichenfolge | Eine eindeutige, auf Zeichenfolgen basierende Kennung für den zugehörigen Kontakt, wenn dieser Lead konvertiert wurde. |
+| `sourceExternalID` | Zeichenfolge | Eine eindeutige, auf Zeichenfolgen basierende Kennung für das Quellsystem, aus dem die Daten der Person stammen. |
+| `sourcePersonID` | Zeichenfolge | Eine eindeutige, zeichenfolgenbasierte Kennung für die Person. |
 
 {style="table-layout:auto"}
 

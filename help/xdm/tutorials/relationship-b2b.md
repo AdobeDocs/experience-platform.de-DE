@@ -1,10 +1,11 @@
 ---
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-Time Customer Data Platform B2B edition
 description: Erfahren Sie, wie Sie in Adobe Real-Time Customer Data Platform B2B edition eine n:1-Beziehung zwischen zwei Schemas definieren.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cb036262ff81d245fe436fc337b3911170c61425
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1729'
 ht-degree: 14%
 
 ---
@@ -152,10 +153,10 @@ Beachten Sie beim Verwalten von Schemabeziehungen mit verknüpften Datensätzen 
 
 ## Filtern und Suchen nach Beziehungen {#filter-and-search}
 
-Sie können auf der Registerkarte [!UICONTROL Relationships] des Arbeitsbereichs [!UICONTROL Schemas] nach bestimmten Beziehungen innerhalb Ihrer Schemata filtern und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [&#x200B; Dokument unter &#x200B;](../ui/explore.md#lookup) von Schemaressourcen .
+Sie können auf der Registerkarte [!UICONTROL Relationships] des Arbeitsbereichs [!UICONTROL Schemas] nach bestimmten Beziehungen innerhalb Ihrer Schemata filtern und suchen. Mithilfe dieser Ansicht können Sie Ihre Beziehungen schnell finden und verwalten. Ausführliche Anweisungen zu den Filteroptionen finden Sie [ Dokument unter ](../ui/explore.md#lookup) von Schemaressourcen .
 
 ![Registerkarte „Beziehungen“ im Arbeitsbereich „Schemata“.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe der [!DNL Schema Editor] erfolgreich eine Viele-zu-eins-Beziehung zwischen zwei Schemas erstellt. Sobald Daten mit Datensätzen aufgenommen wurden, die auf diesen Schemata basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemata für Anwendungsfälle [Segmentierung mehrerer Klassen“ &#x200B;](../../rtcdp/segmentation/b2b.md).
+In diesem Tutorial haben Sie mithilfe der [!DNL Schema Editor] erfolgreich eine Viele-zu-eins-Beziehung zwischen zwei Schemas erstellt. Sobald Daten mit Datensätzen aufgenommen wurden, die auf diesen Schemata basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemata für Anwendungsfälle [Segmentierung mehrerer Klassen“ ](../../rtcdp/segmentation/b2b.md).
