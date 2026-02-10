@@ -1,11 +1,11 @@
 ---
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
-exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
+exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
+source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 15%
+source-wordcount: '1052'
+ht-degree: 23%
 
 ---
 
@@ -21,18 +21,20 @@ ht-degree: 15%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/pre-release-notes)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Veröffentlichungsdatum: Januar 2026**
+**Veröffentlichungsdatum: Februar 2026**
 
 Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Agent Orchestrator](#agent-orchestrator)
+- [Warnhinweise](#alerts)
+- [Datenerfassung](#data-collection)
 - [Ziele](#destinations)
-- [Echtzeit-Kundenprofil](#real-time-customer-profile)
-- [Segmentierungs-Service](#segmentation-service)
+- [Experience-Datenmodell (XDM)](#xdm)
+- [Abfrage-Service](#query-service)
 - [Quellen](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -43,11 +45,41 @@ Mit Agent Orchestrator können Sie KI-gestützte Agenten erstellen und bereitste
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Probeantrag für Agent Orchestrator | Agent Orchestrator bietet jetzt einen Testantrag an, mit dem Kunden den Service erkunden und testen können, bevor sie sich zu einem vollständigen Kauf verpflichten. Diese Try-before-you-buy-Option ermöglicht es Unternehmen, die Funktionen von Agent Orchestrator, einschließlich Fähigkeiten und Orchestrierungsfunktionen, in ihrer eigenen Umgebung zu bewerten. Die Testversion liefert praktische Erfahrungen beim Erstellen von KI-gestützten Agenten und zeigt, wie diese in bestehende Workflows integriert werden können. |
+| Data Onboarding Agent | Verwenden Sie den Data Onboarding Agent, um Quellverbindungen zu konfigurieren, die Datenqualität zu validieren, eine semantische Anreicherung anzuwenden, Schemas zu überprüfen und zu validieren und die Datenaufnahme durchzuführen. Folgen Sie den Schritt-für-Schritt-Workflows für B2C- und B2B-Flüsse, überprüfen Sie erwartete Ausgaben und beheben Sie häufige Probleme. |
+| Data Distiller Agent | Verwenden Sie den Data Distiller-Agenten, um SQL-Aufträge aus natürlicher Sprache zu erstellen, die SQL-Leistung zu optimieren, SQL-Fehler zu beheben, SQL-Aufträge zu planen und zu verwalten und den Auftragsstatus zu überwachen. Lesen Sie Leitplanken, erforderliche Berechtigungen und Anleitungen zur Fehlerbehebung, um loszulegen. |
+| Datenerfassungsagent | Verwenden Sie den Datenerfassungsagenten, um kontextbezogene Anleitungen für komplexe Datenerfassungskonfigurationen zu erhalten und Herkunft, Abhängigkeiten und Beziehungen in Ihren Datenerfassungsobjekten durch Konversationseinblicke zu untersuchen. |
 
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Warnhinweise {#alerts}
+
+Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschiedene Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Alerts] in der Benutzeroberfläche von Experience Platform abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| [!DNL Slack] Integration für Warnhinweise für Kunden | Sie können jetzt kundenorientierte Warnhinweise an [!DNL Slack] senden. Folgen Sie der schrittweisen Anleitung, um die [!DNL Slack]-Integration einzurichten und Warnhinweise direkt in Ihrem [!DNL Slack] Workspace zu erhalten. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen finden Sie in der [[!DNL Observability Insights] Übersicht](../observability/home.md).
+
+## Datenerfassung {#data-collection}
+
+Die Adobe Experience Platform-Datenerfassung bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an die Adobe Experience Platform Edge Network und andere Ziele senden können.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Verwaltung der Adobe Platform Tags-Erweiterung | Verwenden Sie die neue Funktion „Erweiterungsverwaltung“, um die Erweiterungen Ihres Unternehmens hochzuladen, zu verpacken und für die Entwicklung, die private und die öffentliche Verteilung freizugeben. Suchen Sie in der Ansicht des Unternehmens der obersten Ebene nach freigegebenen privaten Erweiterungen neben Ihren eigenen Erweiterungen. Diese Funktion unterstützt Erweiterungen für Web, Edge und Mobilgeräte. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen finden Sie in der [Dokumentation zur Datenerfassung](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Ziele {#destinations}
 
@@ -57,52 +89,40 @@ Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](ht
 
 | Ziel | Beschreibung |
 | --- | --- |
-| Level Destination Connector jetzt verfügbar | [[!DNL Kevel]](https://www.kevel.com/) bietet die KI-fähige Technologie und fachkundige Anleitung, die innovativen Commerce-Führungskräften dabei helfen, in Einzelhandelsmedien zu starten, zu skalieren und erfolgreich zu sein. Die Retail Media Cloud von [!DNL Kevel] ermöglicht zielgerichtete, zuordenbare, anpassbare Anzeigenformate für Onsite- und Offsite-Werbung. |
-| Index Exchange-Ziel-Connector jetzt verfügbar | [!DNL Index] ist eine globale Plattform für Werbeangebote, mit der Medieninhaber den Wert ihrer Inhalte auf jedem Bildschirm maximieren können. Mit über 20 Jahren Branchenführerschaft verbindet [!DNL Index] die weltweit größten Marken mit erstklassigen Experience Makers, um hochwertige Kundenerlebnisse zu schaffen. |
-| Unterstützung regionaler Endpunkte für Braze-Verbindungen | Alle [regionsspezifischen Endpunkte](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die von [!DNL Braze] unterstützt werden, sind jetzt während des Zielkonfigurationsflusses zur Auswahl verfügbar. Fragen Sie Ihren [!DNL Braze], welche Endpunktinstanz Sie verwenden sollten. |
-| Wöchentliche und monatliche Planungsunterstützung für das Liveramp-Onboarding | Sie können jetzt wöchentliche und monatliche Exportpläne für das Liveramp-Onboarding-Ziel konfigurieren. |
-| AES256-Verschlüsselungsunterstützung für Amazon S3-Ziele | Sie können jetzt die AES256-Verschlüsselung für Ihre Amazon S3-Exporte konfigurieren. |
-| Verbessertes Aktivierungserlebnis für The Trade Desk- und Microsoft Bing-Ziele | Die Trade Desk- und Microsoft Bing-Ziele enthalten jetzt vordefinierte obligatorische Zuordnungen für ein optimiertes Aktivierungserlebnis. |
-
-**Neue oder aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Die Limits für Leitplanken für das Adobe Target-Ziel wurden aktualisiert | Die maximale Anzahl von Zielgruppen, die einem einzelnen Adobe Target-Ziel zugeordnet werden können, wurde von 50 auf 250 erhöht. Dadurch wird Adobe Target an das standardmäßige Zielgruppenlimit für andere Ziele angepasst, was eine größere Flexibilität für Zielgruppenaktivierungs-Workflows bietet. Sie können jetzt mehr Zielgruppen für Adobe Target-Ziele aktivieren, ohne mehrere Datenflüsse erstellen zu müssen. |
-| [Ziele bearbeiten](/help/destinations/ui/edit-destination.md) und [Marketing-Aktionen bearbeiten](/help/destinations/ui/edit-activation.md#edit-marketing-actions) allgemeine Verfügbarkeit | Die Option zum Bearbeiten von Zielen und Marketing-Aktionen steht jetzt allen Benutzenden zur Verfügung. |
-| Umschalten zwischen Anzeigenamen von Feldern im Zuordnungsschritt | Beim Zuordnen von Schemafeldern zu einem Ziel können Sie jetzt zwischen der Anzeige des vollständigen XDM-Feldnamens und der Anzeige nur des Anzeigenamens umschalten. |
+| Ziel des [!DNL ZoomInfo] Kontos | B2B-CDP-Benutzer können jetzt Daten auf Kontoebene aktivieren, um über den neuen Ziel-Connector für das [!DNL ZoomInfo]-Konto zu [!DNL ZoomInfo]. Richten Sie den Connector ein, um mit dem Senden Ihrer Konto-Zielgruppen an [!DNL ZoomInfo] zu beginnen. |
+| [!DNL Snowflake] Batch allgemein verfügbar | Das [!DNL Snowflake] Batch-Ziel wurde auf „Allgemeine Verfügbarkeit“ verschoben. Sie können jetzt die Spalte mit der Zusammenführungsrichtlinien-ID in Ihren exportierten Daten neben vorhandenen Spalten wie Zeitstempel, Zuordnungsattribute und Zielgruppenzugehörigkeit anzeigen. |
+| AES256-Verschlüsselungsunterstützung für [Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details)-Ziele | Sie können jetzt die AES256-Verschlüsselung für Ihre Amazon S3-Exporte konfigurieren. Wählen Sie aus zwei Optionen: <ul><li>**[!UICONTROL Default]**: Experience Platform verschlüsselt Daten im Ruhezustand mit dem standardmäßigen Verschlüsselungsalgorithmus, der auf Ihrem Bucket festgelegt ist.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform fügt den `s3:x-amz-server-side-encryption": "AES256`-Header zum Export hinzu und verschlüsselt Daten im Ruhezustand mit dem AES256-Algorithmus, wenn sie in S3 landen. **Diese Option hat Vorrang vor allen Standard-Verschlüsselungsalgorithmen, die Sie auf Ihrem S3-Bucket konfigurieren**.</li></ul> |
 
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie unter [Ziele - Übersicht](../destinations/home.md).
 
-## Echtzeit-Kundenprofil {#real-time-customer-profile}
+## Experience-Datenmodell (XDM) {#xdm}
 
-Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen sowie anderen Kanälen miteinander kombiniert. Mit dem Profil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
-
-**Neue oder aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Durchsetzung der Streaming-Kapazität | Experience Platform erzwingt jetzt Streaming-Durchsatzkapazitäten für das Echtzeit-Kundenprofil und Identity Service. Wenn Kunden ihre vertraglich vereinbarte Streaming-Kapazität überschreiten, werden Daten in eine Warteschlange gestellt und in einer First-in-First-out-Weise verarbeitet. Dies stellt eine vorhersehbare Systemleistung sicher und verhindert, dass Kapazitätsverletzungen die Datenaufnahmequalität beeinträchtigen. Wichtige Hinweise: Streaming-Upserts sind im Data Lake nicht verfügbar, wenn die Kapazität überschritten wird. Diese Durchsetzung gilt nicht für Kunden mit Adobe Journey Optimizer-Lizenzen und Daten in der Warteschlange werden sequenziell verarbeitet, sobald die Kapazität verfügbar ist. |
-| Einstellung des API-Zugriffs für Real-Time CDP Prime | Der API-Zugriff für Erlebnisereignisse wird jetzt für alle Kunden von Real-Time CDP Prime nicht mehr unterstützt. Diese Änderung wirkt sich auf die Möglichkeit aus, Erlebnisereignisse direkt über die API abzufragen. Kunden von Real-Time CDP Ultimate können über einen formalen Ausnahmeprozess eine Ausnahme anfordern, um den API-Zugriff auf Erlebnisereignisse zu aktivieren, falls dies für ihre Anwendungsfälle erforderlich ist. Diese Einstellung hilft bei der Anpassung von Real-Time CDP an die Lizenzierungsfunktion. |
-| Überwachen der Datenflussausführung | Sie können jetzt den Fortschritt und die Bereitschaft der Datenflussausführungen im Profil überwachen. |
-
-{style="table-layout:auto"}
-
-Weitere Informationen finden Sie in der [[!DNL Real-Time Customer Profile] Übersicht](../profile/home.md).
-
-## Segmentierungs-Service {#segmentation-service}
-
-[!DNL Segmentation Service] definiert eine bestimmte Teilmenge von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Zielgruppen können auf Datensatzdaten (z. B. demografische Informationen) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemata) für Daten bereitstellt, die in Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Aktualisierung der TTL für externe Zielgruppen | Externe Zielgruppen (z. B. CSV-Uploads) unterstützen jetzt eine erzwungene Aktualisierungsfunktion für TTL-Einstellungen (Time-to-Live). Mit dieser Funktion können Benutzer die TTL-Gültigkeit für externe Zielgruppen manuell aktualisieren, was eine bessere Kontrolle über die Verwaltung des Zielgruppen-Lebenszyklus ermöglicht. Dies ist besonders nützlich für Zielgruppen, die über ihre ursprüngliche TTL-Periode hinaus bestehen bleiben müssen oder eine Reaktivierung erfordern, ohne die Daten erneut hochzuladen. |
+| Schema-Inventarorganisation und -Suche | Die Seite zum Durchsuchen von Schemata enthält jetzt erweiterte Such- und Filterfunktionen, Inline-Aktionen und Unterstützung für benutzerdefinierte Tags und Ordner. Diese Aktualisierungen erleichtern das Auffinden, Organisieren und Verwalten von Schemata in Sandboxes und reduzieren gleichzeitig den manuellen Navigations- und Wartungsaufwand. |
 
-Weitere Informationen finden Sie in der [[!DNL Segmentation Service] Übersicht](../segmentation/home.md).
+Weitere Informationen finden Sie in der [Übersicht über die [!DNL Schemas]] (../xdm/home.md).
+
+## Abfrage-Service {#query-service}
+
+Der Abfrage-Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem [!DNL Data Lake] verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Data Distiller Annual Compute Reset Date Alignment (Eingeschränkte Veröffentlichung) | Die Jahresberechnungszeiten für Data Distiller werden jetzt am Jahrestag Ihres Data Distiller-Vertrags zurückgesetzt, je nachdem, wann die Lizenz erworben oder erneuert wurde. Dadurch wird die Berichterstattung zur Lizenznutzung an Ihren Vertragsbedingungen ausgerichtet und kann zu einer einmaligen Anpassung der aktuellen Nutzungswerte führen. |
+| Daten-Distiller-Sitzungsverwaltung (eingeschränkte Version) | Als autorisierter Administrator können Sie aktive Sitzungen für Query Service und Data Distiller in Ihrem Unternehmen und Ihrer Sandbox über die Benutzeroberfläche anzeigen und verwalten. Verwenden Sie das Sitzungsmanagement, um inaktive Sitzungen zu identifizieren und zu beenden und so Kapazitäten freizugeben. Integrierte Sicherheitsfunktionen verhindern, dass Sie Sitzungen mit aktiven Abfragen beenden können. Die Funktion protokolliert alle Räumungsaktionen für die Prüfung und benachrichtigt die betroffenen Benutzer. Sie benötigen die Berechtigung **Abfragesessions verwalten**, um auf diese Funktion zugreifen zu können. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen finden Sie unter [Query Service - Übersicht](../query-service/home.md).
 
 ## Quellen {#sources}
 
@@ -112,8 +132,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Quelle | Beschreibung |
 | --- | --- |
-| [!DNL Oracle Eloqua] V2-Quelle | Ein neuer [!DNL Oracle Eloqua]-Quell-Connector ist jetzt verfügbar, der den veralteten Connector ersetzt. Dieser aktualisierte Connector bietet erweiterte Funktionen und eine höhere Zuverlässigkeit für die Aufnahme von Daten aus [!DNL Oracle Eloqua] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung migrieren, da bestehende Verbindungen nicht mehr funktionieren. Der neue Connector unterstützt alle Einrichtungs- und Konfigurationsschritte, die für die Verbindung mit [!DNL Oracle Eloqua] und die Aufnahme von Daten zur Marketing-Automatisierung erforderlich sind. |
-| [!DNL Salesforce Marketing Cloud] V2-Quelle | Ein neuer [!DNL Salesforce Marketing Cloud]-Quell-Connector ist jetzt verfügbar, der den veralteten Connector ersetzt. Dieser aktualisierte Connector bietet eine verbesserte Leistung und zusätzliche Funktionen für die Aufnahme von Daten aus [!DNL Salesforce Marketing Cloud] in Experience Platform. Kunden, die den vorhandenen Connector verwenden, sollten zur neuen Implementierung wechseln. Der neue Connector enthält umfassende Einrichtungsanweisungen für die Verbindung mit [!DNL Salesforce Marketing Cloud] und die Aufnahme von Daten zur Marketing-Automatisierung. |
+| Unterstützung des Unity-Katalogs [!DNL Databricks] Quell-Connector | Der [!DNL Databricks]-Quell-Connector unterstützt jetzt den Unity-Katalog. Lesen Sie die aktualisierte [[!DNL Databricks]](../sources/connectors/databases/databricks.md)-Dokumentation , um zu erfahren, wie Sie beim Konfigurieren Ihrer Quellverbindung den Unity-Katalog verwenden. |
+
+{style="table-layout:auto"}
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../sources/home.md).
-
