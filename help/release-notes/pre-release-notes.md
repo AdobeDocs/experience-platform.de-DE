@@ -2,9 +2,9 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
+source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1022'
 ht-degree: 24%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 24%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Februar 2026**
 
@@ -79,7 +79,7 @@ Die Adobe Experience Platform-Datenerfassung bietet eine Reihe von Technologien,
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der [Dokumentation zur Datenerfassung](https://experienceleague.adobe.com/de/docs/experience-platform/collection/home).
+Weitere Informationen finden Sie in der [Dokumentation zur Datenerfassung](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Ziele {#destinations}
 
@@ -89,7 +89,6 @@ Weitere Informationen finden Sie in der [Dokumentation zur Datenerfassung](https
 
 | Ziel | Beschreibung |
 | --- | --- |
-| Ziel des [!DNL ZoomInfo] Kontos | B2B-CDP-Benutzer können jetzt Daten auf Kontoebene aktivieren, um über den neuen Ziel-Connector für das [!DNL ZoomInfo]-Konto zu [!DNL ZoomInfo]. Richten Sie den Connector ein, um mit dem Senden Ihrer Konto-Zielgruppen an [!DNL ZoomInfo] zu beginnen. |
 | [!DNL Snowflake] Batch allgemein verfügbar | Das [!DNL Snowflake] Batch-Ziel wurde auf „Allgemeine Verfügbarkeit“ verschoben. Sie können jetzt die Spalte mit der Zusammenführungsrichtlinien-ID in Ihren exportierten Daten neben vorhandenen Spalten wie Zeitstempel, Zuordnungsattribute und Zielgruppenzugehörigkeit anzeigen. |
 | AES256-Verschlüsselungsunterstützung für [Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details)-Ziele | Sie können jetzt die AES256-Verschlüsselung für Ihre Amazon S3-Exporte konfigurieren. Wählen Sie aus zwei Optionen: <ul><li>**[!UICONTROL Default]**: Experience Platform verschlüsselt Daten im Ruhezustand mit dem standardmäßigen Verschlüsselungsalgorithmus, der auf Ihrem Bucket festgelegt ist.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform fügt den `s3:x-amz-server-side-encryption": "AES256`-Header zum Export hinzu und verschlüsselt Daten im Ruhezustand mit dem AES256-Algorithmus, wenn sie in S3 landen. **Diese Option hat Vorrang vor allen Standard-Verschlüsselungsalgorithmen, die Sie auf Ihrem S3-Bucket konfigurieren**.</li></ul> |
 
