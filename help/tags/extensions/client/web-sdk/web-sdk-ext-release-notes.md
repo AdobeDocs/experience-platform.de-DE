@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '2949'
-ht-degree: 59%
+source-wordcount: '3118'
+ht-degree: 56%
 
 ---
 
@@ -13,6 +13,29 @@ ht-degree: 59%
 # Versionshinweise zur Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Version 2.34.0 – Dienstag, 9. Februar 2026
+
+**Neue Funktionen**
+
+- Enthält [Version 2.31.0](/help/collection/js/release-notes.md#2-31-0) des Adobe Experience Platform Web SDK.
+- Die Tag[Erweiterung wurde um &quot;](/help/collection/js/install/base-code.md)-Code-Unterstützung“ erweitert.
+- **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [Kontext](configure/data-collection.md#context-settings) zu den Erweiterungseinstellungen hinzugefügt.
+- Brand Concierge-Komponente hinzugefügt.
+- Es wurde eine Option hinzugefügt, mit der die Verwendung einer selbst gehosteten Legierungsinstanz mit Tags ermöglicht wird.
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Die [Standard-Edge-Domain](configure/general.md#edge-domain) wurde aktualisiert, um die Unternehmens-ID als Subdomain einzuschließen.
+- Es wurde eine **[!UICONTROL No overrides]** Option zu [Überschreibungen der Datenstromkonfiguration](configure/configuration-overrides.md) hinzugefügt.
+- Aktualisierungsschaltfläche zum erneuten Ausfüllen von Elementen in einigen Eingabefeldern hinzugefügt.
+- Jetzt werden bei jeder Erstellung einer Instanz automatisch eindeutige Instanznamen generiert.
+- Es wurde ein Fehler behoben, bei dem `combinedValidator` einen Fehler ausgab, wenn der Wert `undefined` oder `null` war.
+- Fehlerkorrektur - Beim Löschen einer Instanz tritt jetzt kein Fehler mehr auf.
+- Es wurde ein Problem behoben, bei dem ein Fehler beim Abrufen von Schemata dazu führte, dass das XDM-Objektdatenelement nicht verwendbar war.
+- Das Speichern von Einstellungen in der Aktion [Medienereignis senden](actions/send-media-event.md) wurde korrigiert.
+- Es wurde ein Problem behoben, bei dem Streaming-Medienfelder in der Konfigurationsansicht nicht korrekt wiederhergestellt wurden.
+- Fehlerkorrektur - Warnhinweise zur automatischen Population für verschachtelte Werte im XDM-Objekt-Editor wurden behoben.
 
 ## Version 2.33.0 – Donnerstag, 24. September 2025
 
@@ -385,7 +408,7 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Der Aktion „Ereignis senden“ wurde [&#x200B; Kontrollkästchen „Dokument &#x200B;](actions/send-event.md)&quot; hinzugefügt.
+- Der Aktion „Ereignis senden“ wurde [ Kontrollkästchen „Dokument ](actions/send-event.md)&quot; hinzugefügt.
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](configure/consent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
 - Es wurde Unterstützung für den Adobe Consent 2.0-Standard bei Verwendung der [`Set consent`](actions/set-consent.md) hinzugefügt.
@@ -435,7 +458,7 @@ Enthält Version 2.3.0 der Adobe Experience Platform Web SDK-Bibliothek.
 Diese Entscheidungen werden nur dann vom `sendEvent`-Befehl zurückgegeben, wenn `renderDecisions` auf „false“ gesetzt ist.
    - Es wurde ein `Decisions Received`-Ereignis hinzugefügt, das ausgelöst wird, wenn Entscheidungen verfügbar werden.
 - Mehrere Personalisierungsbenachrichtigungen wurden unter einem einzigen Server-Aufruf kombiniert.
-- Es wurde ein Problem mit der Ereignis-Merge-ID behoben, das jedes Mal zurückgesetzt wurde, wenn das Datenelement referenziert wurde.
+- Es wurde ein Problem mit der Ereigniszusammenführungs-ID behoben, das jedes Mal zurückgesetzt wurde, wenn das Datenelement referenziert wurde.
 - Die Aktion `setCustomerIds` wurde in `syncIdentity` umbenannt.
 - Es wurde ein `getIdentity`-Befehl hinzugefügt. Dieser kann derzeit nur über benutzerdefinierten Code genutzt werden.
 - Durch Aktivierung der Debugging-Funktion mit `_satellite` wird jetzt das Debugging im Adobe Experience Platform Web SDK aktiviert.
@@ -464,7 +487,7 @@ Diese Entscheidungen werden nur dann vom `sendEvent`-Befehl zurückgegeben, wenn
 
 ## Version 0.0.3 – 25. November 2019
 
-- Neue Felder „Merge-ID“ und „Typ“ bei der Aktion „Ereignis senden“. Die Merge-ID wird im XDM-Schema mit `xdm.eventMergeID` gemappt und der Typ wird im XDM-Schema mit `xdm.eventType` gemappt.
+- Neue Felder „Zusammenführungs-ID“ und „Typ“ bei der Aktion „Ereignis senden“. Die Zusammenführungs-ID wird im XDM-Schema mit `xdm.eventMergeID` gemappt und der Typ wird im XDM-Schema mit `xdm.eventType` gemappt.
 
 ## Version 0.0.2 – 18. November 2019
 

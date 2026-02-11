@@ -3,38 +3,44 @@ title: Verwenden mehrerer SDK-Web-Instanzen
 description: Erfahren Sie, wie Sie mit mehreren Experience Platform Web SDK-Eigenschaften interagieren.
 keywords: Multiple Properties
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
-source-git-commit: 2c60ebdebd706ed7b5beb2438ae83665b6b6e47a
+source-git-commit: 192739967e6b050bb04893ee7bab5119dd7f870c
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 64%
+source-wordcount: '223'
+ht-degree: 23%
 
 ---
 
 # Verwenden mehrerer SDK-Web-Instanzen
 
-Es gibt bestimmte Fälle, in denen Sie mit zwei verschiedenen Eigenschaften auf derselben Seite interagieren möchten. Zu diesen Fällen gehören:
+Es gibt bestimmte Fälle, in denen Sie mit zwei verschiedenen Eigenschaften auf derselben Seite interagieren möchten. Mögliche Szenarien sind:
 
 * Firmen, die übernommen wurden und an der Integration ihrer Websites arbeiten
 * Datenaustausch-Beziehungen zwischen mehreren Firmen
-* Kunden, die neue Adobe-Lösungen testen und ihre vorhandene Implementierung nicht stören möchten
+* Kunden, die neue Adobe-Lösungen testen und ihre bestehende Implementierung nicht stören möchten
 
-Mit dem SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, indem Sie dem Array im Basis-Code einen weiteren Namen hinzufügen. Das folgende Beispiel stellt zwei Namen bereit: `titanium` und `copper`.
+Mit SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, indem Sie dem Array im [Basis-Code) einen anderen Namen ](../js/install/base-code.md). Das folgende Beispiel stellt zwei Namen bereit: `titanium` und `copper`.
 
 ```html
+<!-- Base code -->
 <script>
   !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
   []).push(o),n[o]=function(){var u=arguments;return new Promise(
-  function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+  function(i,l){n.setTimeout(function(){n[o].q.push([i,l,u])})})},n[o].q=[])})}
   (window,["titanium", "copper"]);
 </script>
-<script src="alloy.js" async></script>
+
+<!-- Load the Web SDK (JavaScript library loader or Tags embed code) -->
+<!-- <script src=".../alloy.min.js" async></script> -->
+<!-- <script src=".../launch-<ENV>.min.js" async></script> -->
 ```
 
-Daher erstellt das Skript zwei Instanzen des SDK. Die globale Funktion für die Interaktion mit der ersten Instanz heißt `titanium` und die globale Funktion für die Interaktion mit der zweiten Instanz heißt `copper`.
+Daher erstellt das Skript zwei globale Funktionen (`titanium` und `copper` im obigen Beispiel), die bei der Initialisierung der Bibliothek zu zwei SDK-Instanzen werden. Jede Instanz behält ihre eigene Konfiguration und ihren eigenen Status bei. Jeder Befehl, der `titanium` verwendet, wird von `copper` isoliert.
 
-Durch Erstellen von zwei separaten Instanzen kann jede für eine andere Eigenschaft konfiguriert werden. Jegliche Kommunikation oder Datenpersistenz, die aufgrund der Interaktion mit `titanium` auftritt, wird von `copper` isoliert.
+>[!TIP]
+>
+>Wenn Sie den Basis-Code mit Tags verwenden, stellen Sie sicher, dass alle von Ihnen festgelegten Instanznamen mit allen [SDK](/help/tags/extensions/client/web-sdk/configure/general.md)Instanznamen übereinstimmen, wenn Sie die Tag-Erweiterung konfigurieren.
 
-Im folgenden Beispiel können Sie Befehle mit jeder Instanz ausführen:
+Nach dem Benennungsmuster von `titanium` und `copper` as Web SDK-Instanzen können Sie Befehle unabhängig voneinander ausführen:
 
 ```javascript
 titanium("configure", {
@@ -60,7 +66,7 @@ copper("sendEvent", {
 });
 ```
 
-Achten Sie darauf, den `configure`-Befehl für jede Instanz auszuführen, bevor Sie andere Befehle auf derselben Instanz ausführen.
+Achten Sie darauf, den [`configure`](../js/commands/configure/overview.md)-Befehl für jede Instanz auszuführen, bevor Sie andere Befehle auf derselben Instanz ausführen.
 
 >[!IMPORTANT]
 >

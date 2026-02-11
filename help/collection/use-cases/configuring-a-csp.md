@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie eine CSP für die Experience Platform Web SDK
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: Konfigurieren;Konfiguration;SDK;Edge;Web SDK;Konfigurieren;Kontext;Web;Gerät;Umgebung;Web SDK-Einstellungen;Inhaltssicherheitsrichtlinie;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 010192e91185c11d5454d4153913c06b90fe2122
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,13 @@ Im obigen Beispiel sollte `EDGE-DOMAIN` durch die Erstanbieter-Domain ersetzt we
 
 ### Verwenden Sie NONCE, um Inline-Skript- und Stilelemente zuzulassen.
 
-[!DNL Experience Platform Web SDK] können Seiteninhalte ändern und müssen genehmigt werden, um Inline-Skript- und Stil-Tags zu erstellen. Zu diesem Zweck empfiehlt Adobe die Verwendung einer Nonce für die CSP[Direktive &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)default-src. Eine Nonce ist ein vom Server generiertes kryptografisch starkes Zufallstoken, das einmal pro eindeutiger Seitenansicht generiert wird.
+[!DNL Experience Platform Web SDK] können Seiteninhalte ändern und müssen genehmigt werden, um Inline-Skript- und Stil-Tags zu erstellen. Zu diesem Zweck empfiehlt Adobe die Verwendung einer Nonce für die CSP[Direktive ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)default-src. Eine Nonce ist ein vom Server generiertes kryptografisch starkes Zufallstoken, das einmal pro eindeutiger Seitenansicht generiert wird.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Darüber hinaus muss die CSP-Nonce dem Skript-Tag [!DNL Experience Platform Web SDK]Basis[&#x200B; als &#x200B;](../js/install/library.md) hinzugefügt werden. [!DNL Experience Platform Web SDK] verwenden diese Nonce dann, wenn Inline-Skript- oder Stil-Tags zur Seite hinzugefügt werden:
+Darüber hinaus muss die CSP-Nonce dem Web SDK ([) als Attribut ](../js/install/base-code.md) werden. Die Web-SDK verwendet diese Nonce dann, wenn Inline-Skript- oder Stil-Tags zur Seite hinzugefügt werden:
 
 ```html
 <script nonce="SERVER-GENERATED-NONCE">

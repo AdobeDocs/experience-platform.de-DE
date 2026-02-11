@@ -6,9 +6,9 @@ breadcrumb-title: Datenerfassung
 user-guide-description: Erfahren Sie, wie Sie Daten an Adobe Experience Platform senden.
 feature: Data Collection
 role: Developer
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '142'
 ht-degree: 38%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 38%
    + [Versionshinweise](js/release-notes.md)
    + Installation {#install}
       + [Installationsübersicht](js/install/overview.md)
+      + [Basiscode](js/install/base-code.md)
       + [Bibliothek](js/install/library.md)
       + [NPM](js/install/npm.md)
       + [Benutzerdefinierter Build](js/install/create-custom-build.md)
@@ -38,6 +39,7 @@ ht-degree: 38%
          + [clickCollection](js/commands/configure/clickcollection.md)
          + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
          + [Kontext](js/commands/configure/context.md)
+         + [Konversation](js/commands/configure/conversation.md)
          + [datastreamId](js/commands/configure/datastreamid.md)
          + [debugEnabled](js/commands/configure/debugenabled.md)
          + [defaultConsent](js/commands/configure/defaultconsent.md)
@@ -88,7 +90,7 @@ ht-degree: 38%
    + [_monitore](tags/monitors.md)
    + [setDebug](tags/setdebug.md)
    + [setVar](tags/setvar.md)
-   + [track](tags/track.md)
+   + [Nachverfolgen](tags/track.md)
 + Anwendungsfälle {#use-cases}
    + [Überblick](use-cases/overview.md)
    + [Client hints](use-cases/client-hints.md)

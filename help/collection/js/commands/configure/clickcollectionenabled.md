@@ -2,9 +2,9 @@
 title: clickCollectionEnabled
 description: Erfahren Sie, wie Sie Web SDK so konfigurieren, dass festgestellt wird, ob Link-Klickdaten automatisch erfasst werden.
 exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 4d251ff7323e83ac5c47b5817f81e8fde64cb7d9
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,21 @@ Web SDK verfolgt alle Klicks auf `<a>` und `<area>` HTML-Elemente, wenn es kein 
 1. Wenn sich die Ziel-Domain des Links vom aktuellen `window.location.hostname` unterscheidet, wird `xdm.web.webInteraction.type` auf `"exit"` gesetzt (wenn `clickCollection.exitLinkEnabled` aktiviert ist).
 1. Wenn der Link weder für `"download"` noch für `"exit"` qualifiziert ist, wird `xdm.web.webInteraction.type` auf `"other"` gesetzt.
 
-In allen Fällen ist `xdm.web.webInteraction.name` auf die Link-Textbeschriftung und `xdm.web.webInteraction.URL` auf die Link-Ziel-URL festgelegt. Wenn Sie den Link-Namen auch für die URL festlegen möchten, können Sie dieses XDM-Feld mit dem `filterClickDetails`-Callback im `clickCollection`-Objekt überschreiben.
+In allen Fällen prüft `xdm.web.webInteraction.name` das angeklickte Element und dessen untergeordnete Elemente auf den ersten nicht leeren Wert in der folgenden Reihenfolge:
+
+1. `innerText` (fällt auf `textContent` zurück)
+1. Verkettete `nodeValue` von unterstützten untergeordneten Textknoten
+1. Attribut `alt`
+1. Attribut `title`
+1. Attribut `<input value="...">`
+1. Attribut `<img src="...">`
+1. Attribut `aria-label`
+1. Attribut `name`
+1. Leere Zeichenfolge
+
+Das Feld `xdm.web.webInteraction.URL` ist auf die Link-Ziel-URL festgelegt. Wenn Sie den Link-Namen auch für die URL festlegen möchten, können Sie dieses XDM-Feld mit dem `filterClickDetails`-Callback im `clickCollection`-Objekt überschreiben.
+
+## Implementierung
 
 Legen Sie beim Ausführen des `clickCollectionEnabled`-Befehls den booleschen Wert `configure` fest. Wenn Sie diese Eigenschaft beim Konfigurieren der Web-SDK auslassen, wird sie standardmäßig auf `true` gesetzt. Legen Sie diesen Wert auf `false` fest, wenn Sie `xdm.web.webInteraction.type` und `xdm.web.webInteraction.value` manuell festlegen möchten.
 
@@ -45,7 +59,7 @@ alloy(configure, {
 
 Web SDK unterstützt das automatische Klick-Tracking für Links in **Open Shadow-DOM**-Elementen.
 
-Viele moderne Websites verwenden [Web-Komponenten](https://developer.mozilla.org/en-US/docs/Web/Web_Components) um wiederverwendbare und verkapselte Benutzeroberflächenelemente zu erstellen. Diese Komponenten verwenden häufig eine Technologie namens [**Shadow-DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM), um ihre interne Struktur und ihre Stile vom Rest der Seite getrennt zu halten.
+Viele moderne Websites verwenden [Web-Komponenten](https://developer.mozilla.org/de/docs/Web/Web_Components) um wiederverwendbare und verkapselte Benutzeroberflächenelemente zu erstellen. Diese Komponenten verwenden häufig eine Technologie namens [**Shadow-DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM), um ihre interne Struktur und ihre Stile vom Rest der Seite getrennt zu halten.
 
 Es gibt zwei Arten von Shadow-DOM:
 
