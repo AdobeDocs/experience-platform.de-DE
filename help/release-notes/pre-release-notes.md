@@ -1,11 +1,11 @@
 ---
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
-exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
-source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
+source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 23%
+source-wordcount: '1050'
+ht-degree: 24%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 23%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Februar 2026**
 
@@ -79,7 +79,7 @@ Die Adobe Experience Platform-Datenerfassung bietet eine Reihe von Technologien,
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der [Dokumentation zur Datenerfassung](https://experienceleague.adobe.com/de/docs/experience-platform/collection/home).
+Weitere Informationen finden Sie in der [Dokumentation zur Datenerfassung](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Ziele {#destinations}
 
@@ -107,7 +107,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | ------- | ----------- |
 | Schema-Inventarorganisation und -Suche | Die Seite zum Durchsuchen von Schemata enthält jetzt erweiterte Such- und Filterfunktionen, Inline-Aktionen und Unterstützung für benutzerdefinierte Tags und Ordner. Diese Aktualisierungen erleichtern das Auffinden, Organisieren und Verwalten von Schemata in Sandboxes und reduzieren gleichzeitig den manuellen Navigations- und Wartungsaufwand. |
 
-Weitere Informationen finden Sie in der [Übersicht über die [!DNL Schemas]] (../xdm/home.md).
+Weitere Informationen finden Sie in der [[!DNL XDM] Übersicht](../xdm/home.md).
 
 ## Abfrage-Service {#query-service}
 
