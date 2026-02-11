@@ -100,4 +100,4 @@ ingot("configure", {
 
 ## Mehrere SDK-Instanzen
 
-Optional können Sie den Basis-Code verwenden, um mehr als eine SDK-Instanz auf einer Seite zu konfigurieren. Weitere [ finden Sie unter „Verwenden mehrerer Web](../../use-cases/multiple-instances.md)SDK-Instanzen“.
+Optional können Sie den Basis-Code verwenden, um mehr als eine SDK-Instanz auf einer Seite zu konfigurieren. Weitere [&#x200B; finden Sie unter „Verwenden mehrerer Web](../../use-cases/multiple-instances.md)SDK-Instanzen“.

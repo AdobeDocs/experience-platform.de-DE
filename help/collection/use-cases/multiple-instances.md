@@ -18,7 +18,7 @@ Es gibt bestimmte Fälle, in denen Sie mit zwei verschiedenen Eigenschaften auf 
 * Datenaustausch-Beziehungen zwischen mehreren Firmen
 * Kunden, die neue Adobe-Lösungen testen und ihre bestehende Implementierung nicht stören möchten
 
-Mit SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, indem Sie dem Array im [Basis-Code) einen anderen Namen ](../js/install/base-code.md). Das folgende Beispiel stellt zwei Namen bereit: `titanium` und `copper`.
+Mit SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, indem Sie dem Array im [Basis-Code) einen anderen Namen &#x200B;](../js/install/base-code.md). Das folgende Beispiel stellt zwei Namen bereit: `titanium` und `copper`.
 
 ```html
 <!-- Base code -->

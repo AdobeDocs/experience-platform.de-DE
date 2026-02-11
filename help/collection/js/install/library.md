@@ -24,7 +24,7 @@ In den [Versionshinweisen zu Web SDK](../release-notes.md) finden Sie die neuest
 
 Der hinzuzufügende Code besteht aus zwei Abschnitten:
 
-* **Basis-Code**: Ermöglicht das Bootstrapping durch Einreihen von Befehlen in die Warteschlange, während der Web SDK asynchron geladen wird. Weitere Informationen finden [ unter ](base-code.md)-Code . Adobe empfiehlt die Verwendung des Basis-Codes beim asynchronen Laden der Bibliothek, um Wettlaufsituationen beim Aufrufen von Web-SDK-Befehlen beim Laden der Seite zu vermeiden.
+* **Basis-Code**: Ermöglicht das Bootstrapping durch Einreihen von Befehlen in die Warteschlange, während der Web SDK asynchron geladen wird. Weitere Informationen finden [&#x200B; unter &#x200B;](base-code.md)-Code . Adobe empfiehlt die Verwendung des Basis-Codes beim asynchronen Laden der Bibliothek, um Wettlaufsituationen beim Aufrufen von Web-SDK-Befehlen beim Laden der Seite zu vermeiden.
 * **Library Loader**: Lädt die vollständige JavaScript-Bibliothek.
 
 Fügen Sie den folgenden Codeblock so hoch wie möglich im `<head>`-Tag vor Skripten hinzu, die möglicherweise die Web-SDK aufrufen:
