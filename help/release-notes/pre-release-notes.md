@@ -2,10 +2,10 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
+source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 24%
+source-wordcount: '1086'
+ht-degree: 23%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 24%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Februar 2026**
 
@@ -79,7 +79,7 @@ Die Adobe Experience Platform-Datenerfassung bietet eine Reihe von Technologien,
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der [Dokumentation zur Datenerfassung](https://experienceleague.adobe.com/de/docs/experience-platform/collection/home).
+Weitere Informationen finden Sie in der [Dokumentation zur Datenerfassung](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Ziele {#destinations}
 
@@ -105,6 +105,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Schema-Inventarorganisation und -Suche | Die Seite zum Durchsuchen von Schemata enthält jetzt erweiterte Such- und Filterfunktionen, Inline-Aktionen und Unterstützung für benutzerdefinierte Tags und Ordner. Diese Aktualisierungen erleichtern das Auffinden, Organisieren und Verwalten von Schemata in Sandboxes und reduzieren gleichzeitig den manuellen Navigations- und Wartungsaufwand. |
+| Eingeschränkte Bearbeitung für Schemata mit Datensätzen | Bearbeitungsvorgänge, die zu grundlegenden Änderungen führen, sind jetzt eingeschränkt, sobald ein Datensatz für ein Schema vorhanden ist. Wenn ein Datensatz zugeordnet ist, können Sie Felder nicht mehr umbenennen oder löschen, Felddatentypen oder -formate ändern, Identitätsdeskriptoren ändern, verwandte Felder zum Entfernen vorhandener Felder verwalten oder die zugewiesene Klasse ändern. Additive Änderungen und das Verwerfen von Feldern werden weiterhin unterstützt. |
 
 Weitere Informationen finden Sie in der [[!DNL XDM] Übersicht](../xdm/home.md).
 

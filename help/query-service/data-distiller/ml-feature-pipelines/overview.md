@@ -2,9 +2,9 @@
 title: KI/ML-Funktions-Pipelines
 description: Erfahren Sie, wie Sie mit Data Distiller Ihre Pipelines für maschinelles Lernen mit Funktionen anreichern, die aus Adobe Experience Platform-Daten abgeleitet wurden. Wandeln Sie Rohdaten in Funktionen um und stellen Sie die Funktionsdaten bereit, um ein Modell zu trainieren oder zu bewerten, das Ihre Marketing-Anwendungsfälle unterstützt.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '465'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ Mit Data Distiller können Datenwissenschaftler und Ingenieure ihre Pipelines f�
 
 >[!IMPORTANT]
 >
->Dieser Workflow erfordert Data Distiller und eine Adobe Experience Platform Intelligence-Lizenz. Wenn Sie keines dieser Produkte haben, wenden Sie sich an Ihren Adobe-Support-Mitarbeiter.
+>Dieser Workflow erfordert eine Lizenz für Data Distiller. Wenn Sie dieses Produkt nicht haben, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter.
 
 ![Eine Infografik mit Details zur KI-ML-Feature-Pipeline.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
@@ -31,9 +31,9 @@ Mit Data Distiller können Datenwissenschaftler und Ingenieure ihre Pipelines f�
 
 Dieser Workflow setzt ein grundlegendes Verständnis der verschiedenen Aspekte von Adobe Experience Platform voraus. Bevor Sie mit diesem Tutorial beginnen, lesen Sie die Dokumentation für die folgenden Konzepte:
 
-- Erfahren Sie[&#x200B; wie Sie Experience Platform-APIs authentifizieren und &#x200B;](../../../landing/api-authentication.md).
+- Erfahren Sie[ wie Sie Experience Platform-APIs authentifizieren und ](../../../landing/api-authentication.md).
 - Sandboxes: [Attributbasierte Zugriffssteuerungsberechtigungen](../../../access-control/abac/overview.md) und wie Rollen erstellt und verwaltet werden sowie die gewünschten Ressourcenberechtigungen für diese Rollen zugewiesen werden.
-- Data Governance: So [&#x200B; Sie Datennutzungskennzeichnungen auf Datensätze und Felder anwenden und diese &#x200B;](../../../data-governance/labels/overview.md) entsprechend den zugehörigen Data Governance-Richtlinien und Zugriffssteuerungsrichtlinien kategorisieren.
+- Data Governance: So [ Sie Datennutzungskennzeichnungen auf Datensätze und Felder anwenden und diese ](../../../data-governance/labels/overview.md) entsprechend den zugehörigen Data Governance-Richtlinien und Zugriffssteuerungsrichtlinien kategorisieren.
 
 ## Nächste Schritte
 
@@ -49,7 +49,7 @@ Die unten verlinkte Dokumentation entspricht den Schritten, die auf der obigen I
 - **Schritt 2**: [Engineer-Funktionen für maschinelles Lernen](./feature-engineering.md)
 - **Schritt 3**: [Exportieren von Funktionsdatensätzen](./export-data.md)
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 - [aepp](https://github.com/adobe/aepp): Eine von Adobe verwaltete Open-Source-[!DNL Python]-Bibliothek für Anfragen an Data Distiller und andere Experience Platform-Services aus [!DNL Python] Code.
 
