@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie Databricks über die Benutzeroberfläche mit 
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 8%
+source-wordcount: '461'
+ht-degree: 9%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 8%
 >
 >* Die [!DNL Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
 >
->* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Databricks]-Konto mithilfe des Quellarbeitsbereichs in der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
@@ -43,34 +43,35 @@ Weitere Informationen finden Sie in der [[!DNL Databricks] Übersicht](../../../
 
 ## Navigieren im Quellkatalog
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich *[!UICONTROL Quellen]* zuzugreifen. Wählen Sie eine Kategorie aus oder verwenden Sie die Suchleiste, um Ihre Quelle zu finden.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option **[!UICONTROL Sources]** , um auf den *[!UICONTROL Sources]*-Arbeitsbereich zuzugreifen. Wählen Sie eine Kategorie aus oder verwenden Sie die Suchleiste, um Ihre Quelle zu finden.
 
-Um eine Verbindung zu [!DNL Databricks] herzustellen, gehen Sie zur Kategorie *[!UICONTROL Datenbanken]*, wählen Sie die Quellkarte **[!UICONTROL Azure]** Datenblöcke) aus und klicken Sie dann auf **[!UICONTROL Einrichten]**.
+Um eine Verbindung zu [!DNL Databricks] herzustellen, navigieren Sie zur Kategorie *[!UICONTROL Databases]*, wählen Sie die Karte **[!UICONTROL Azure Databricks]** und dann **[!UICONTROL Set up]** aus.
 
 >[!TIP]
 >
->Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Nachdem ein authentifiziertes Konto erstellt wurde, ändert sich diese Option in **[!UICONTROL Daten hinzufügen]**.
+>Quellen im Quellkatalog zeigen die **[!UICONTROL Set up]** an, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Nachdem ein authentifiziertes Konto erstellt wurde, ändert sich diese Option in **[!UICONTROL Add data]**.
 
 ![Der Quellkatalog mit der ausgewählten Azure Databricks-Quellkarte.](../../../../images/tutorials/create/databricks/catalog.png)
 
 ### Vorhandenes Konto verwenden
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und dann das [!DNL Azure Databricks] Konto aus, das Sie verwenden möchten.
+Um ein vorhandenes Konto zu verwenden, klicken Sie auf **[!UICONTROL Existing account]** und wählen Sie dann das [!DNL Azure Databricks] Konto aus, das Sie verwenden möchten.
 
 ![Die Schnittstelle „Vorhandene Konten“ im Quell-Workflow mit ausgewähltem „Vorhandenes Konto“.](../../../../images/tutorials/create/databricks/existing.png)
 
 ### Neues Konto erstellen
 
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie einen Namen ein und fügen Sie optional eine Beschreibung für Ihr Konto hinzu. Geben Sie als Nächstes Werte für die folgenden Authentifizierungsberechtigungen an:
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus, geben Sie einen Namen an und fügen Sie optional eine Beschreibung für Ihr Konto hinzu. Geben Sie als Nächstes Werte für die folgenden Authentifizierungsberechtigungen an:
 
 * Domain
 * Cluster-ID
 * Zugriffs-Token
 * Datenbank
+* Katalog
 
 ![Die neue Kontoschnittstelle im Quell-Workflow mit einem Kontonamen und einer optionalen Beschreibung.](../../../../images/tutorials/create/databricks/new.png)
 
-Darüber hinaus müssen Sie Ihre [!UICONTROL Staging SAS URI]-Anmeldeinformationen kopieren und in Ihre [!DNL Azure Databricks]-Umgebung einfügen. Wenn Sie fertig sind, wählen **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung hergestellt ist.
+Darüber hinaus müssen Sie Ihre [!UICONTROL Staging SAS URI]-Anmeldeinformationen kopieren und in Ihre [!DNL Azure Databricks]-Umgebung einfügen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie einige Augenblicke, bis die Verbindung hergestellt ist.
 
 ![Die SAS-URI-Staging-Anmeldedaten.](../../../../images/tutorials/create/databricks/sas-uri.png)
 

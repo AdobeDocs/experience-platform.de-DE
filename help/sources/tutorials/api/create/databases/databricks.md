@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie Databricks mithilfe von APIs mit Experience P
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 17%
+source-wordcount: '553'
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 17%
 >
 >* Die [!DNL Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
 >
->* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Databricks]-Konto mithilfe der [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) mit Adobe Experience Platform verbinden.
 
@@ -46,6 +46,7 @@ Geben Sie Werte für die folgenden Anmeldeinformationen an, um [!DNL Databricks]
 | `clusterId` | Die ID Ihres Clusters in [!DNL Databricks]. Dieser Cluster muss bereits ein vorhandener Cluster sein und sollte ein interaktiver Cluster sein. |
 | `accessToken` | Das Zugriffstoken, das Ihr [!DNL Databricks]-Konto authentifiziert. Sie können Ihr Zugriffs-Token mit dem [!DNL Databricks] Workspace generieren. |
 | `database` | Der Name Ihrer Datenbank im Delta Lake. |
+| `catalog` | Der Name Ihres Katalogs im Delta Lake. Sie müssen keinen Wert für einen Standardkatalog angeben. |
 | `connectionSpec.Id` | Die Verbindungsspezifikations-ID gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Databricks] ist `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
 
 Weitere Informationen finden Sie in der [[!DNL Databricks] Übersicht](../../../../connectors/databases/databricks.md).
