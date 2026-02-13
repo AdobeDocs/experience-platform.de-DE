@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: b1666521d135ac953dbde5b4ff64138a187e4b9e
+source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '826'
 ht-degree: 80%
 
 ---
@@ -108,7 +108,7 @@ ht-degree: 80%
          * [Erste Schritte](extensions/client/web-sdk/getting-started.md)
          * Konfigurieren {#configure}
             * [Überblick](extensions/client/web-sdk/configure/config-overview.md)
-            * [Benutzerdefinierte Build-Komponenten](extensions/client/web-sdk/configure/custom-build-components.md)
+            * [Build-Optionen](extensions/client/web-sdk/configure/custom-build-components.md)
             * [SDK-Instanz](extensions/client/web-sdk/configure/general.md)
             * [Datenströme](extensions/client/web-sdk/configure/datastreams.md)
             * [Einverständnis](extensions/client/web-sdk/configure/consent.md)
@@ -116,7 +116,7 @@ ht-degree: 80%
             * [Personalisierung](extensions/client/web-sdk/configure/personalization.md)
             * [Datenerfassung](extensions/client/web-sdk/configure/data-collection.md)
             * [Streaming-Medien](extensions/client/web-sdk/configure/streaming-media.md)
-            * [Push-Benachrichtigungen &#x200B;](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Push-Benachrichtigungen ](extensions/client/web-sdk/configure/push-notifications.md)
             * [Brand Concierge](extensions/client/web-sdk/configure/brand-concierge.md)
             * [Werbung](extensions/client/web-sdk/configure/advertising.md)
             * [Überschreibungen der Konfiguration](extensions/client/web-sdk/configure/configuration-overrides.md)

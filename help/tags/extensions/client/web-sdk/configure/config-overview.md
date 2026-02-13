@@ -1,25 +1,26 @@
 ---
 title: Übersicht über Konfigurationseinstellungen
 description: Erfahren Sie mehr über die verfügbaren Optionen beim Konfigurieren der Tag-Erweiterung „Web SDK".
-source-git-commit: 5f0203cfff3cb5c8b892142ff9b1c121925c3c46
+exl-id: 03f7bc0a-05c9-48ae-ae57-478db6d18f52
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 1%
 
 ---
 
-# Übersicht über Konfigurationseinstellungen
+# Übersicht über Konfigurationseinstellungen {#config-overview}
 
 Die Tag-Erweiterung &quot;Adobe Experience Platform Web SDK&quot; bietet mehrere Optionen, die Sie anpassen können. Diese Konfigurationseinstellungen entsprechen der Verwendung des Befehls [`configure`](/help/collection/js/commands/configure/overview.md) in der JavaScript-Bibliothek.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.
 
 ## Benutzerdefinierte Build-Komponenten
 
-Wenn die Optimierung der Build-Größe für Ihr Unternehmen eine Priorität darstellt, können Sie bestimmte Funktionen deaktivieren, die Sie nicht verwenden, um die Build-Größe der Erweiterung zu verringern. Weitere Informationen [&#x200B; Sie unter &#x200B;](custom-build-components.md)Benutzerdefinierte Build-Komponenten“.
+Wenn die Optimierung der Build-Größe für Ihr Unternehmen eine Priorität darstellt, können Sie bestimmte Funktionen deaktivieren, die Sie nicht verwenden, um die Build-Größe der Erweiterung zu verringern. Weitere Informationen [ Sie unter ](custom-build-components.md)Benutzerdefinierte Build-Komponenten“.
 
 ## SDK-Instanzen
 

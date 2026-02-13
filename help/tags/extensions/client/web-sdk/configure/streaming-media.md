@@ -1,18 +1,24 @@
 ---
 title: Konfigurationseinstellungen für Streaming-Medien
 description: Passen Sie an, wie die Tag-Erweiterung „Web SDK" Streaming-Mediendaten erfasst.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '310'
 ht-degree: 4%
 
 ---
 
-# Konfigurationseinstellungen für Streaming-Medien
+# Konfigurationseinstellungen für Streaming-Medien {#streaming-media}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_streamingmedia"
+>title="Streaming-Medien"
+>abstract="Legt fest, wie Streaming-Mediendaten während Medienwiedergabesitzungen erfasst werden."
 
 Mit der Mediensammlungsfunktion können Sie Daten im Zusammenhang mit Mediensitzungen erfassen, z. B. Medienwiedergaben, Pausen, Beendigungen und andere verwandte Ereignisse. Nach der Erfassung können Sie diese Daten an Adobe Experience Platform oder Adobe Analytics senden, um Berichte zu generieren. Diese Funktion bietet eine umfassende Lösung zum Tracking und zum Verständnis des Medienkonsumverhaltens auf Ihrer Website.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.

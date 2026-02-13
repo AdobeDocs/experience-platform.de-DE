@@ -1,18 +1,24 @@
 ---
 title: Personalization-Konfigurationseinstellungen
 description: Konfigurieren Sie Personalisierungseinstellungen in der Tag-Erweiterung „Web SDK".
-source-git-commit: 9a617b6e97aec22a6726266f2628bd2c2a05da19
+exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
 
-# Personalization-Konfigurationseinstellungen
+# Personalization-Konfigurationseinstellungen {#personalization}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_personalization"
+>title="Personalisierung"
+>abstract="Bestimmt, wie die Tag-Erweiterung personalisierte Inhalte verarbeitet."
 
 In diesem Konfigurationsabschnitt können Sie festlegen, wie Sie bestimmte Teile der Seite ausblenden möchten, während personalisierte Inhalte geladen werden. Wenn diese Einstellungen richtig konfiguriert sind, stellen Sie sicher, dass Ihre Besucher die richtigen personalisierten Inhalte sehen.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.
@@ -26,7 +32,7 @@ Die folgenden Optionen sind verfügbar:
 
 Verwenden Sie diese Option, damit der Web-SDK die veralteten `mbox` und `mboxEdgeCluster` Cookies lesen und schreiben kann, die von den Bibliotheken `at.js` 1.x oder 2.x verwendet werden. Mit dieser Einstellung bleiben Besucherprofile intakt, wenn Sie zwischen Seiten wechseln, die die Web-SDK oder `at.js` auf derselben Website verwenden. Wenn Sie `at.js` nirgendwo auf Ihrer Site implementiert haben, müssen Sie dieses Kontrollkästchen nicht aktivieren. Die JavaScript-Bibliothek, die diesem Kontrollkästchen entspricht, ist [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md).
 
-Wenn Sie diese Option aktivieren, stellen Sie sicher, dass Sie auch [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/de/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` aktivieren.
+Wenn Sie diese Option aktivieren, stellen Sie sicher, dass Sie auch [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` aktivieren.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 

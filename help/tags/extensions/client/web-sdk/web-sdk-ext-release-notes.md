@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
 workflow-type: tm+mt
-source-wordcount: '3118'
-ht-degree: 56%
+source-wordcount: '3165'
+ht-degree: 55%
 
 ---
 
@@ -14,11 +14,17 @@ ht-degree: 56%
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/collection/js/release-notes.md).
 
+## Version 2.34.1 – Donnerstag, 11. Februar 2026
+
+- Enthält [Version 2.31.1](/help/collection/js/release-notes.md) des Adobe Experience Platform Web SDK.
+- Es wurde ein Problem behoben, bei dem [Adobe Advertising](configure/advertising.md)Konfigurationseinstellungen in Aktionen vom Typ [Ereignis senden](actions/send-event.md) nicht bearbeitet werden konnten.
+- Es wurde ein Fallback zu `edge.adobedc.net` für die Konfigurationseinstellung [Edge-Domain](configure/general.md) hinzugefügt, wenn kein `tenant-id` verfügbar ist.
+
 ## Version 2.34.0 – Dienstag, 9. Februar 2026
 
 **Neue Funktionen**
 
-- Enthält [Version 2.31.0](/help/collection/js/release-notes.md#2-31-0) des Adobe Experience Platform Web SDK.
+- Enthält [Version 2.31.0](/help/collection/js/release-notes.md) des Adobe Experience Platform Web SDK.
 - Die Tag[Erweiterung wurde um &quot;](/help/collection/js/install/base-code.md)-Code-Unterstützung“ erweitert.
 - **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [Kontext](configure/data-collection.md#context-settings) zu den Erweiterungseinstellungen hinzugefügt.
 - Brand Concierge-Komponente hinzugefügt.
@@ -408,7 +414,7 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Der Aktion „Ereignis senden“ wurde [&#x200B; Kontrollkästchen „Dokument &#x200B;](actions/send-event.md)&quot; hinzugefügt.
+- Der Aktion „Ereignis senden“ wurde [ Kontrollkästchen „Dokument ](actions/send-event.md)&quot; hinzugefügt.
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](configure/consent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
 - Es wurde Unterstützung für den Adobe Consent 2.0-Standard bei Verwendung der [`Set consent`](actions/set-consent.md) hinzugefügt.

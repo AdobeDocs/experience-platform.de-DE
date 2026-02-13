@@ -1,18 +1,24 @@
 ---
 title: Einstellungen der Identitätskonfiguration
 description: Definieren, wie die Tag-Erweiterung Besucher identifiziert.
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 2%
+source-wordcount: '298'
+ht-degree: 3%
 
 ---
 
-# Einstellungen der Identitätskonfiguration
+# Einstellungen der Identitätskonfiguration {#identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_identity"
+>title="Identität"
+>abstract="Definieren, wie die Tag-Erweiterung Besucher identifiziert."
 
 In diesem Konfigurationsabschnitt können Sie das Verhalten der Web-SDK bei der Handhabung der Benutzeridentifizierung definieren.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.

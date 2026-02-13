@@ -1,21 +1,26 @@
 ---
-title: Benutzerdefinierte Build-Komponenten
+title: Build-Optionen
 description: Erstellen Sie einen benutzerdefinierten Web-SDK-Build, der Funktionen zur Verringerung der Build-Größe deaktiviert.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '277'
 ht-degree: 1%
 
 ---
 
-# Benutzerdefinierte Build-Komponenten
+# Build-Optionen {#build-options}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_buildoptions"
+>title="Build-Optionen"
+>abstract="Sie können Module selektiv aus der JavaScript-Bibliothek einbeziehen oder ausschließen, wodurch die Bibliotheksgröße verringert und die Leistung verbessert wird."
 
 Die Web SDK-Bibliothek enthält mehrere Module für verschiedene Funktionen wie Personalisierung, Identitätsnachverfolgung, Linktracking und mehr. Je nach Anwendungsfällen benötigen Sie möglicherweise nur bestimmte Funktionen anstelle der gesamten Bibliothek. Durch das Deaktivieren von Build-Komponenten können Sie nur die benötigten Module verwenden, die Bibliotheksgröße reduzieren und die Leistung verbessern.
 
 Wenn Sie eine Komponente deaktivieren, können Sie die Einstellungen dieser Komponente nicht mehr bearbeiten. Wenn Sie mehrere Web SDK-Instanzen verwenden, werden die ausgewählten Build-Komponenten auf alle Instanzen angewendet.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.

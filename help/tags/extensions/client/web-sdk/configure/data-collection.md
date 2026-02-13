@@ -2,18 +2,23 @@
 title: Konfigurationseinstellungen der Datenerfassung
 description: Konfigurieren Sie Datenerfassungseinstellungen in der Tag-Erweiterung „Web SDK".
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '719'
 ht-degree: 1%
 
 ---
 
-# Konfigurationseinstellungen der Datenerfassung
+# Konfigurationseinstellungen der Datenerfassung {#data-collection}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datacollection"
+>title="Datenerfassung"
+>abstract="Legen Sie fest, welche Daten erfasst werden sollen und wie diese Daten über die Tag-Erweiterung hinweg erfasst werden."
 
 In diesem Konfigurationsabschnitt können Sie festlegen, wie Daten in der gesamten Erweiterung erfasst werden.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.
