@@ -2,38 +2,38 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenaufnahme;aufgenommene Daten;Streaming;Übersicht;Streaming-Aufnahme;Latenz;Streaming-Latenz
 solution: Experience Platform
 title: Überblick über den Import von Streamingdaten
-description: Die Streaming-Aufnahme für Adobe Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
+description: Erfahren Sie mehr über die Streaming-Aufnahme in Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
+source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '431'
 ht-degree: 15%
 
 ---
 
 # Streaming-Aufnahme – Übersicht
 
-Die Streaming-Aufnahme für Adobe Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an [!DNL Experience Platform] zu senden.
+Die Streaming-Aufnahme für Adobe Experience Platform bietet Benutzenden eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
 
 ## Was können Sie mit Streaming-Aufnahme tun?
 
-Adobe Experience Platform ermöglicht es Ihnen, koordinierte, konsistente und relevante Erlebnisse zu erzielen, indem es für jede einzelne Kundin und jeden einzelnen Kunden einen [!DNL Real-Time Customer Profile] generiert. Die Streaming-Aufnahme spielt eine wichtige Rolle bei der Erstellung dieser Profile, da Sie [!DNL Profile] Daten mit möglichst geringer Latenz an die [!DNL Data Lake] senden können.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse, indem für jeden einzelnen Ihrer Kunden ein Echtzeit-Kundenprofil erstellt wird. Die Streaming-Aufnahme spielt eine wichtige Rolle beim Erstellen dieser Profile, da Sie Profildaten mit möglichst geringer Latenz in den Data Lake senden können.
 
 Das folgende Video soll Ihnen dabei helfen, die Streaming-Aufnahme zu verstehen, und umreißt die oben genannten Konzepte.
 
->[!VIDEO](https://video.tv.adobe.com/v/31577?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Streamen von Profildatensätzen und [!DNL ExperienceEvents]
 
-Mit der Streaming-Aufnahme können Benutzer Profildatensätze streamen und in Sekunden in [!DNL ExperienceEvents] [!DNL Experience Platform], um die Echtzeit-Personalisierung zu fördern. Alle Daten, die an Streaming-Aufnahme-APIs gesendet werden, bleiben automatisch im [!DNL Data Lake] erhalten.
+Mit der Streaming-Aufnahme können Benutzende Profildatensätze streamen und in Sekundenschnelle an Experience Platform [!DNL ExperienceEvents], um die Echtzeit-Personalisierung zu fördern. Alle Daten, die an Streaming-Aufnahme-APIs gesendet werden, werden automatisch im Data Lake beibehalten.
 
 Weiterführende Informationen finden Sie in der [Anleitung zum Erstellen einer Streaming-Verbindung](../tutorials/create-streaming-connection.md).
 
 ### An Datensätze streamen
 
-Sobald Sie sicher sind, dass Ihre Daten sauber sind, können Sie Ihre Datensätze für [!DNL Real-Time Customer Profile] und [!DNL Identity Service] aktivieren.
+Sobald Sie sicher sind, dass Ihre Daten sauber sind, können Sie Ihre Datensätze für das Echtzeit-Kundenprofil und [!DNL Identity Service] aktivieren.
 
-Weitere Informationen zum Aktivieren eines Datensatzes für [!DNL Profile] und [!DNL Identity Service] finden Sie im [Handbuch zum Konfigurieren eines Datensatzes](/help/profile/tutorials/dataset-configuration.md).
+Weitere Informationen zum Aktivieren eines Datensatzes für Profil und [!DNL Identity Service] finden Sie im [Handbuch zum Konfigurieren eines Datensatzes](/help/profile/tutorials/dataset-configuration.md).
 
 ## Wie hoch ist die erwartete Latenz für die Streaming-Aufnahme in Experience Platform?
 
