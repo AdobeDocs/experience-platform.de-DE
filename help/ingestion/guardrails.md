@@ -20,7 +20,7 @@ Leitplanken sind Schwellenwerte, die Anhaltspunkte für die Daten- und Systemnut
 
 >[!IMPORTANT]
 >
->Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [&#x200B; entsprechenden &#x200B;](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
 Dieses Dokument enthält Anleitungen zu Schutzmaßnahmen bei der Datenaufnahme in Adobe Experience Platform.
 
@@ -34,14 +34,14 @@ In der folgenden Tabelle sind Schutzmaßnahmen aufgeführt, die bei der Verwendu
 | Data-Lake-Aufnahme mithilfe von Batch-Quellen | <ul><li>Sie können mit Batch-Aufnahme-Quellen wie [!DNL Azure Blob], [!DNL Amazon S3] und [!DNL SFTP] bis zu 200 GB Daten pro Stunde in den Data Lake aufnehmen.</li><li>Eine Batch-Größe sollte zwischen 256 MB und 100 GB liegen. Dies gilt sowohl für unkomprimierte als auch für komprimierte Daten. Wenn komprimierte Daten im Data Lake unkomprimiert werden, gelten diese Einschränkungen.</li><li>Die maximale Anzahl von Dateien pro Batch beträgt 1.500.</li><li>Die Mindestgröße einer Datei oder eines Ordners beträgt 1 Byte. Dateien oder Ordner mit einer Größe von 0 Byte können nicht aufgenommen werden.</li></ul> | Lesen Sie [Quellen - Übersicht](../sources/home.md) für einen Katalog der Quellen, die Sie für die Datenaufnahme verwenden können. |
 | Batch-Aufnahme in Profil | <ul><li>Die maximale Größe einer Datensatzklasse beträgt 100 KB (Hard).</li><li>Die maximale Größe einer ExperienceEvent-Klasse ist 10 KB (Hard).</li></ul> | |
 | Anzahl der täglich aufgenommenen Profil- oder ExperienceEvent-Batches | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag aufgenommen werden, beträgt 90 pro Sandbox.** Das bedeutet, dass die Gesamtanzahl der pro Tag aufgenommenen Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Das Aufnehmen zusätzlicher Batches beeinträchtigt die System-Performance. | Dies ist ein weiches Limit. Es ist möglich, über ein weiches Limit hinauszugehen, jedoch bieten weiche Limits eine empfohlene Richtlinie für die Systemleistung. Darüber hinaus gilt diese Leitplanke für **Sandbox** und nicht für jede Organisation. |
-| Verschlüsselte Datenaufnahme | Die maximal unterstützte Größe einer einzelnen verschlüsselten Datei beträgt 1 GB. Während Sie beispielsweise Daten im Wert von 2 oder mehr GB in einer einzelnen Datenflussausführung aufnehmen können, darf keine einzelne Datei in der Datenflussausführung größer als 1 GB sein. | Der Prozess der Aufnahme verschlüsselter Daten kann länger dauern als der einer regulären Datenaufnahme. Weitere Informationen finden [ im Handbuch ](../sources/tutorials/api/encrypt-data.md) verschlüsselte Datenaufnahme-API . |
+| Verschlüsselte Datenaufnahme | Die maximal unterstützte Größe einer einzelnen verschlüsselten Datei beträgt 1 GB. Während Sie beispielsweise Daten im Wert von 2 oder mehr GB in einer einzelnen Datenflussausführung aufnehmen können, darf keine einzelne Datei in der Datenflussausführung größer als 1 GB sein. | Der Prozess der Aufnahme verschlüsselter Daten kann länger dauern als der einer regulären Datenaufnahme. Weitere Informationen finden [&#x200B; im Handbuch &#x200B;](../sources/tutorials/api/encrypt-data.md) verschlüsselte Datenaufnahme-API . |
 | Upsert-Batch-Aufnahme | Die Aufnahme von Upsert-Batches kann bis zu 10-mal langsamer sein als normale Batches. Daher sollten Sie **Ihre Upsert-Batches unter zwei Millionen Datensätzen aufbewahren** um eine effiziente Laufzeit zu gewährleisten und zu vermeiden, dass andere Batches in der Sandbox verarbeitet werden. | Sie können zwar zweifellos Batches aufnehmen, die zwei Millionen Datensätze überschreiten, die Zeit der Aufnahme wird jedoch aufgrund der Einschränkungen kleiner Sandboxes erheblich länger sein. |
 
 {style="table-layout:auto"}
 
 ## Schutzmaßnahmen bei der Streaming-Aufnahme
 
-Weitere Informationen zu Leitplanken für [ Streaming-Aufnahme finden ](./streaming-ingestion/overview.md) in der Übersicht zur Streaming-Aufnahme .
+Weitere Informationen zu Leitplanken für [&#x200B; Streaming-Aufnahme finden &#x200B;](./streaming-ingestion/overview.md) in der Übersicht zur Streaming-Aufnahme .
 
 ## Leitplanken für Streaming-Quellen
 
