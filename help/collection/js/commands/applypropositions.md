@@ -2,9 +2,9 @@
 title: applyPropositions
 description: Vorschläge erneut rendern, die bereits mit sendEvent gerendert wurden.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Dieser Befehl unterstützt die folgenden Felder:
    * Anwendungsbereich
    * Selektor
    * Aktionstyp
+
+>[!NOTE]
+>
+>Der Befehl `applyPropositions` sendet nicht automatisch Anzeigeereignisse. Sollte eine Aufzeichnung angezeigt werden, verwenden Sie den Befehl `sendEvent` wie in [Anzeigeereignisse verwalten](/help/collection/use-cases/personalization/display-events.md) beschrieben.
 
 Führen Sie den `applyPropositions` Befehl aus, wenn Sie Ihre konfigurierte Instanz der Web-SDK aufrufen. Das -Objekt, das Konfigurationsoptionen enthält, unterstützt die folgenden Felder:
 

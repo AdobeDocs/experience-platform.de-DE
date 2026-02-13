@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
 workflow-type: tm+mt
-source-wordcount: '2725'
-ht-degree: 55%
+source-wordcount: '2718'
+ht-degree: 54%
 
 ---
 
@@ -93,7 +93,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket &#x200B;](install/create-custom-build.md).
+- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [ Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket ](install/create-custom-build.md).
 - Der [`getIdentity`](commands/getidentity.md)-Befehl liest jetzt automatisch die ECID direkt aus dem `kndctr`-Identitäts-Cookie. Wenn Sie `getIdentity` mit dem Namespace `ECID` aufrufen und bereits ein Identitäts-Cookie vorhanden ist, sendet Web SDK keine Anfrage mehr an die Edge Network, um die Identität abzurufen. Jetzt liest es die Identität aus dem Cookie.
 
 **Fehlerbehebungen und Verbesserungen**
@@ -293,7 +293,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 **Neue Funktionen**
 
 - Sie können jetzt personalisierte Erlebnisse präziser bereitstellen, indem Sie Besucher-IDs zwischen mobilen Apps und mobilen Webinhalten sowie domänenübergreifend freigeben. Weitere Informationen finden Sie in der [spezifischen Dokumentation](../use-cases/identity/id-sharing.md).
-- Sie können jetzt ein Vorschläge-Array von [!DNL Adobe Target] in Einzelseitenanwendungen rendern oder ausführen, ohne die Analysemetriken zu inkrementieren. Dadurch werden Berichtsfehler reduziert und die Analysegenauigkeit erhöht. Weitere Informationen finden Sie in der [spezifischen Dokumentation](../use-cases/personalization/rendering-personalization-content.md).
+- Sie können jetzt ein Vorschläge-Array von [!DNL Adobe Target] in Einzelseitenanwendungen rendern oder ausführen, ohne die Analysemetriken zu inkrementieren. Dadurch werden Berichtsfehler reduziert und die Analysegenauigkeit erhöht.
 - Zusätzliche Informationen zum `getLibraryInfo`-Befehl, einschließlich verfügbarer Befehle und der endgültigen Konfiguration für die Instanz, wurden hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
@@ -360,7 +360,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.4.0 – März 2021 
 
-- SDK kann jetzt als NPM[Paket installiert &#x200B;](install/npm.md).
+- SDK kann jetzt als NPM[Paket installiert ](install/npm.md).
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Der [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md)-Callback kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
 - Jetzt wird eine XDM-Schemafeldgruppe anstelle von `meta.personalization` verwendet, wenn Ereignisse über gerenderte oder angeklickte personalisierte Inhalte gesendet werden.

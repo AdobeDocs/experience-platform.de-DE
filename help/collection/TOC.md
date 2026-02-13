@@ -6,10 +6,10 @@ breadcrumb-title: Datenerfassung
 user-guide-description: Erfahren Sie, wie Sie Daten an Adobe Experience Platform senden.
 feature: Data Collection
 role: Developer
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 38%
+source-wordcount: '149'
+ht-degree: 34%
 
 ---
 
@@ -106,7 +106,9 @@ ht-degree: 38%
    + [Mehrere SDK-Instanzen](use-cases/multiple-instances.md)
    + Personalisierung {#personalization}
       + [Überblick](use-cases/personalization/pers-overview.md)
-      + [Ereignisse anzeigen](use-cases/personalization/display-events.md)
+      + [DOM-Aktionen automatisch rendern](use-cases/personalization/render-auto-pers-content.md)
+      + [HTML-Angebote rendern](use-cases/personalization/render-html-offers.md)
+      + [Vorschläge manuell rendern](use-cases/personalization/render-manual-propositions.md)
       + [Verwalten von Flackern](use-cases/personalization/manage-flicker.md)
-      + [Rendern von personalisiertem Inhalt](use-cases/personalization/rendering-personalization-content.md)
+      + [Ereignisse anzeigen](use-cases/personalization/display-events.md)
       + [Ereignisse der oberen und unteren Seite](use-cases/personalization/top-bottom-page-events.md)

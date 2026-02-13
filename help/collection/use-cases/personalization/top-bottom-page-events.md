@@ -2,9 +2,9 @@
 title: Konfigurieren der Seitenansichten oben und unten in Web SDK
 description: In diesem Artikel wird erläutert, wie in Web SDK Seitenereignisse am Anfang und Ende verwendet werden.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '790'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | Parameter | Erforderlich/Optional | Beschreibung |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen die `ID`, `scope` und `scopeDetails` der Vorschläge einbeziehen. Weitere Informationen zum Aufzeichnen von Anzeigeereignissen für manuell [&#x200B; Inhalte finden Sie in &#x200B;](../personalization/rendering-personalization-content.md#manually) Dokumentation zum manuellen Rendern der Personalisierung . Manuell gerenderte Personalisierungsinhalte müssen am unteren Rand des Seitenaufrufs eingefügt werden. |
+| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen die `ID`, `scope` und `scopeDetails` der Vorschläge einbeziehen. Weitere Informationen [ Sie unter ](display-events.md) von Anzeigeereignissen . Manuell gerenderte Personalisierungsinhalte müssen am unteren Rand des Seitenaufrufs eingefügt werden. |
 | `xdm._experience.decisioning.propositionEventType` | Erforderlich | Legen Sie diesen Parameter auf `display: 1` fest. |
 | `xdm` | Optional | Verwenden Sie diesen Abschnitt, um alle Daten einzuschließen, die Sie für das Ereignis „Seitenende“ benötigen. |
 
