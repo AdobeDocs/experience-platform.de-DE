@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 ## Senden von Anzeigeereignissen in nachfolgenden `sendEvent`
 
-Die Einbeziehung von Anzeigeereignissen in einen späteren `sendEvent` ist nützlich, wenn Sie zusätzliche Seitenladedaten anhängen möchten, die bei der Anforderung von Personalisierung nicht verfügbar sind. Er wird häufig bei der Implementierung von [Top- und Bottom-Page-Ereignissen](/help/collection/use-cases/personalization/top-bottom-page-events.md) verwendet. Wenn Sie Anzeigeereignisse auf diese Weise korrekt implementieren, vermeiden Sie Probleme mit [Absprungrate](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate) in Adobe Analytics.
+Die Einbeziehung von Anzeigeereignissen in einen späteren `sendEvent` ist nützlich, wenn Sie zusätzliche Seitenladedaten anhängen möchten, die bei der Anforderung von Personalisierung nicht verfügbar sind. Er wird häufig bei der Implementierung von [Top- und Bottom-Page-Ereignissen](/help/collection/use-cases/personalization/top-bottom-page-events.md) verwendet. Wenn Sie Anzeigeereignisse auf diese Weise korrekt implementieren, vermeiden Sie Probleme mit [Absprungrate](https://experienceleague.adobe.com/de/docs/analytics/components/metrics/bounce-rate) in Adobe Analytics.
 
 1. Fordern Sie beim ersten `sendEvent`-Aufruf (häufig oben auf der Seite) Inhalte an und rendern Sie sie, unterdrücken Sie jedoch automatische Anzeigeereignisse, indem Sie `renderDecisions` auf `true` und `personalization.sendDisplayEvent` auf `false` setzen:
 
