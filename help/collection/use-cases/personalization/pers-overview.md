@@ -34,7 +34,7 @@ Die meisten Personalisierungsimplementierungen umfassen die folgenden gängigen 
 
 * **Flackern verhindern** (optional): Container während der Personalisierung aus- und einblenden. Siehe [Verwalten von Flackern](manage-flicker.md).
 * **Verfolgen Sie, was angezeigt wurde**: Zeichnen Sie Anzeigeereignisse für gerenderte Inhalte auf. Siehe [Verwalten von Anzeigeereignissen](display-events.md).
-* **Seitenanfang/Seitenende-Metriken**: Entscheidungen frühzeitig anfordern, Messung später einbeziehen. Siehe [Konfigurieren der Ereignisse auf der Seite oben und ](top-bottom-page-events.md).
+* **Seitenanfang/Seitenende-Metriken**: Entscheidungen frühzeitig anfordern, Messung später einbeziehen. Siehe [Konfigurieren der Ereignisse auf der Seite oben und &#x200B;](top-bottom-page-events.md).
 
 ## Beispiele für Web SDK
 

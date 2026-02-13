@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | Parameter | Erforderlich/Optional | Beschreibung |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen die `ID`, `scope` und `scopeDetails` der Vorschläge einbeziehen. Weitere Informationen [ Sie unter ](display-events.md) von Anzeigeereignissen . Manuell gerenderte Personalisierungsinhalte müssen am unteren Rand des Seitenaufrufs eingefügt werden. |
+| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen die `ID`, `scope` und `scopeDetails` der Vorschläge einbeziehen. Weitere Informationen [&#x200B; Sie unter &#x200B;](display-events.md) von Anzeigeereignissen . Manuell gerenderte Personalisierungsinhalte müssen am unteren Rand des Seitenaufrufs eingefügt werden. |
 | `xdm._experience.decisioning.propositionEventType` | Erforderlich | Legen Sie diesen Parameter auf `display: 1` fest. |
 | `xdm` | Optional | Verwenden Sie diesen Abschnitt, um alle Daten einzuschließen, die Sie für das Ereignis „Seitenende“ benötigen. |
 

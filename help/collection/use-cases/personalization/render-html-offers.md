@@ -15,7 +15,7 @@ Verwenden Sie dieses Muster, wenn Ihre Vorschläge HTML-Inhalte enthalten, Sie j
 
 ## &#x200B;1. Verwalten von Flackern (optional)
 
-Wenn Sie Inhalte beim Rendern ausblenden, sind Sie dafür verantwortlich, sie nach Abschluss des Renderings anzuzeigen. Weitere Informationen finden [ unter ](manage-flicker.md) verwalten.
+Wenn Sie Inhalte beim Rendern ausblenden, sind Sie dafür verantwortlich, sie nach Abschluss des Renderings anzuzeigen. Weitere Informationen finden [&#x200B; unter &#x200B;](manage-flicker.md) verwalten.
 
 ## &#x200B;2. Anfordern von Vorschlägen für die Bereiche, die Sie rendern möchten
 
@@ -99,7 +99,7 @@ alloy("sendEvent", {
 });
 ```
 
-Weitere Informationen [ Sie unter ](display-events.md) von Anzeigeereignissen .
+Weitere Informationen [&#x200B; Sie unter &#x200B;](display-events.md) von Anzeigeereignissen .
 
 >[!TIP]
 >

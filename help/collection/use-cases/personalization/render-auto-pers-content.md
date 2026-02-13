@@ -19,7 +19,7 @@ Diese Elemente enthalten in der Regel einen Selektor und einen Aktionstyp (z. B.
 
 ## &#x200B;1. Verwalten von Flackern (optional)
 
-Wenn Sie ein Flackern verhindern müssen, während personalisierte Inhalte angewendet werden, verwenden Sie den empfohlenen Flimmerverwaltungsansatz für Ihre Implementierung. Verfügbare Optionen [ Sie unter ](manage-flicker.md)Verwalten von Flackern“.
+Wenn Sie ein Flackern verhindern müssen, während personalisierte Inhalte angewendet werden, verwenden Sie den empfohlenen Flimmerverwaltungsansatz für Ihre Implementierung. Verfügbare Optionen [&#x200B; Sie unter &#x200B;](manage-flicker.md)Verwalten von Flackern“.
 
 ## &#x200B;2. Anfordern und Rendern von Entscheidungen, die für das automatische Rendern notiert sind
 

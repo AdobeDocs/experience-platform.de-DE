@@ -91,7 +91,7 @@ alloy("sendEvent", {
 });
 ```
 
-Weitere Informationen [ Sie unter ](display-events.md) von Anzeigeereignissen .
+Weitere Informationen [&#x200B; Sie unter &#x200B;](display-events.md) von Anzeigeereignissen .
 
 ## &#x200B;4. Rendern
 
