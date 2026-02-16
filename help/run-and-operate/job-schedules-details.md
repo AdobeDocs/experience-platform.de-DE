@@ -4,10 +4,9 @@ solution: Experience Platform
 title: Details zur Auftragsplanung anzeigen
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 1%
 
 ---
@@ -38,7 +37,7 @@ Verwenden Sie diese Detailansicht für Folgendes:
 
 Bevor Sie Auftragsdetails anzeigen, sollten Sie Folgendes tun:
 
-* Zugriff auf [!UICONTROL Job Schedules] mit den **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]**&#x200B;[&#x200B; Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+* Zugriff auf [!UICONTROL Job Schedules] mit den **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]**[ Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 * Machen Sie sich mit der [Benutzeroberfläche für Auftragspläne](job-schedules.md#understanding-interface) und der Zeitleistenansicht vertraut.
 * Machen Sie sich mit den verschiedenen [Vorgangstypen](job-schedules.md#job-schedules-details) (Seeaufnahme, Profilaufnahme, Segmentierung, Aktivierung) vertraut.
 
@@ -67,6 +66,8 @@ Die Zeitleisten -Ansicht verwendet ein horizontales und vertikales Layout, das I
 Mit diesem Layout können Sie schnell Timing-Beziehungen zwischen Ihren Datenpipeline-Aufträgen und der nachgelagerten Verarbeitung identifizieren. Idealerweise sollten Upstream-Aufträge (wie Data Lake und Profilaufnahme) links neben diesen vertikalen Markern abgeschlossen werden, um sicherzustellen, dass die Daten bereit sind, bevor die Segmentierung und Aktivierung beginnt. Aufträge, die über diese Marker hinausgehen, weisen auf potenzielle Zeitplanprobleme hin, bei denen nachgelagerte Prozesse beginnen können, bevor die Daten vollständig vorbereitet sind.
 
 ### Welche Ansicht sollte ich verwenden? {#which-view}
+
+Verwenden Sie die nachstehende Tabelle, um die richtige Ansicht für Ihre Aufgabe auszuwählen. Stimmen Sie mit der empfohlenen Ansicht überein, was Sie tun müssen, um effizient zu navigieren.
 
 | Ich muss… | Diese Ansicht verwenden |
 |--------------|---------------|

@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Prüfen von Vorgangszeitplänen
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -30,7 +29,7 @@ Verwenden Sie Vorgangszeitpläne, um Fehler zu untersuchen, den Vorgangszeitpunk
 
 ## Voraussetzungen {#prerequisites}
 
-Für den Zugriff auf [!UICONTROL Job Schedules] benötigen Sie die **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions)
+Für den Zugriff auf [!UICONTROL Job Schedules] benötigen Sie die **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions)
 
 Wenden Sie sich an Ihren Systemadministrator, um sicherzustellen, dass Sie über die entsprechenden Berechtigungen verfügen.
 
@@ -45,7 +44,7 @@ Vor der Verwendung von [!UICONTROL Job Schedules] sollten Sie mit den folgenden 
 
 Wenn Sie diese Komponenten verstehen, können Sie Auftragsausführungsmuster interpretieren und Probleme diagnostizieren, wenn sie auftreten.
 
-## Grundlagen zur Benutzeroberfläche von Vorgangszeitplänen {#understanding-interface}
+## Grundlagen zur Benutzeroberfläche für Aufgabenplanungen {#understanding-interface}
 
 So greifen Sie auf [!UICONTROL Job Schedules] zu:
 
@@ -79,7 +78,7 @@ Verwenden Sie die Zeitraumauswahl, um festzulegen, wie weit die geplanten Auftr�
 * **Gestern**: Zeigt Aufträge an, die gestern ausgeführt wurden.
 * **Letzte 7 Tage**: Zeigt Aufträge der letzten Woche an.
 
-### Details zu Batch-Auftragszeitplänen {#job-schedules-details}
+### Details zu Batch-Vorgangszeitplänen {#job-schedules-details}
 
 Die Hauptansicht zeigt an, wann die Ausführung Ihrer Batch-Vorgänge für den gesamten Tag geplant ist. Sie haben folgende Möglichkeiten:
 
