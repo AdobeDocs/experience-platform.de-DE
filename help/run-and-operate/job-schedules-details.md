@@ -38,7 +38,7 @@ Verwenden Sie diese Detailansicht für Folgendes:
 
 Bevor Sie Auftragsdetails anzeigen, sollten Sie Folgendes tun:
 
-* Zugriff auf [!UICONTROL Job Schedules] mit den **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]**[ Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+* Zugriff auf [!UICONTROL Job Schedules] mit den **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]**&#x200B;[&#x200B; Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 * Machen Sie sich mit der [Benutzeroberfläche für Auftragspläne](job-schedules.md#understanding-interface) und der Zeitleistenansicht vertraut.
 * Machen Sie sich mit den verschiedenen [Vorgangstypen](job-schedules.md#job-schedules-details) (Seeaufnahme, Profilaufnahme, Segmentierung, Aktivierung) vertraut.
 
