@@ -47,7 +47,7 @@ So greifen Sie über die Experience Platform-Benutzeroberfläche auf die Tools A
 
    >[!NOTE]
    >
-   >Derzeit ist nur die Funktion &quot;[&quot; ](job-schedules.md).
+   >Derzeit ist nur die Funktion &quot;[&quot; &#x200B;](job-schedules.md).
 
 ![Experience Platform-Benutzeroberfläche mit der Option „Ausführen“ und „Linke Bedienung“.](assets/overview/run-and-operate.png)
 
@@ -83,7 +83,7 @@ Sie können auch die Abhängigkeiten zwischen den einzelnen Datenverarbeitungsst
 Nachdem Sie nun den Zweck und die Funktionen [!UICONTROL Run and Operate] Tools kennen, erkunden Sie die folgenden Ressourcen, um Ihr Wissen zu vertiefen:
 
 * Erfahren Sie mehr über [Batch-Aufnahme](../ingestion/batch-ingestion/overview.md) um zu verstehen, wie Daten in Experience Platform aufgenommen werden
-* Erfahren Sie, wie [ Auftragspläne für ](job-schedules.md) Batch-Aufnahme und -Aktivierungen prüfen
+* Erfahren Sie, wie [&#x200B; Auftragspläne für &#x200B;](job-schedules.md) Batch-Aufnahme und -Aktivierungen prüfen
 * Erfahren Sie, wie [geplante Aktivierungen](../destinations/ui/activate-batch-profile-destinations.md) für Batch-Ziele konfigurieren
 * Erkunden Sie [Datenflussüberwachung](../dataflows/ui/monitor-destinations.md) für Ziele
 
