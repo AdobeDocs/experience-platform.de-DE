@@ -1,21 +1,17 @@
 ---
 title: Snowflake Batch-Verbindung
 description: Erstellen Sie eine Live-Snowflake-Datenfreigabe, um tägliche Zielgruppenaktualisierungen direkt als freigegebene Tabellen in Ihrem Konto zu erhalten.
-last-substantial-update: 2025-10-23T00:00:00Z
+last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 271700625e8cc1d2b5e737e89435c543caa86264
+source-git-commit: 89968d4e4c552b7c6b339a39f7a7224133446116
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 18%
+source-wordcount: '1708'
+ht-degree: 17%
 
 ---
 
 # Snowflake Batch-Verbindung {#snowflake-destination}
-
->[!AVAILABILITY]
->
->Dieser Ziel-Connector ist nur eingeschränkt verfügbar und nur für Real-Time CDP Ultimate-Kunden verfügbar, die in der [VA7-Region bereitgestellt &#x200B;](/help/landing/multi-cloud.md#azure-regions).
 
 ## Überblick {#overview}
 
@@ -51,7 +47,7 @@ Wenn ein Datenfluss zum ersten Mal für eine Zielgruppe ausgeführt wird, wird e
 
 Experience Platform bietet zwei Typen von Snowflake-Zielen: [Snowflake-Streaming](snowflake.md) und [Snowflake-Batch](snowflake-batch.md).
 
-Zwar ermöglichen Ihnen beide Ziele den kopiefreien Zugriff auf Ihre Daten in Snowflake, doch es gibt auch einige empfohlene Best Practices in Bezug auf Anwendungsfälle für jeden Connector.
+Zwar ermöglichen Ihnen beide Ziele den Zugriff auf Ihre Daten in Snowflake, ohne sie physisch in Ihr Konto zu kopieren, doch gibt es für jeden Connector einige empfohlene Best Practices in Bezug auf Anwendungsfälle.
 
 Die nachstehende Tabelle hilft Ihnen bei der Entscheidung über den zu verwendenden Connector, indem sie die Szenarien skizziert, in denen jede Methode der Datenfreigabe am besten geeignet ist.
 
@@ -83,8 +79,13 @@ Bevor Sie Ihre Snowflake-Verbindung konfigurieren, stellen Sie sicher, dass Sie 
 
 * Sie haben Zugriff auf ein [!DNL Snowflake].
 * Ihr Snowflake-Konto hat private Listeneinträge abonniert. Sie oder eine andere Person in Ihrem Unternehmen, die über Administratorrechte für das Konto auf Snowflake verfügt, können dies konfigurieren.
+* Sie kennen den Cloud-Anbieter und die Region Ihres Snowflake-Kontos. Sie müssen beide eingeben, wenn Sie eine Verbindung zum Ziel herstellen.
 
-Weitere Informationen zu den [[!DNL Snowflake]  Berechtigungen finden &#x200B;](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) in der Dokumentation .
+Weitere Informationen zu den [[!DNL Snowflake]  Berechtigungen finden ](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) in der Dokumentation .
+
+>[!IMPORTANT]
+>
+>Dieses Ziel unterstützt keine Snowflake-Konten, die sich hinter einer Firewall befinden oder [[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure) verwenden.
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -92,7 +93,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | ✓ | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -123,7 +124,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -137,7 +138,7 @@ Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Connect to dest
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_accountid"
->title="Geben Sie Ihre Snowflake-Konto-ID ein"
+>title="Snowflake-Kontokennung für Datenfreigabe eingeben"
 >abstract="Wenn Ihr Konto mit einer Organisation verknüpft ist, verwenden Sie dieses Format: `OrganizationName.AccountName`<br><br>. Wenn Ihr Konto nicht mit einer Organisation verknüpft ist, verwenden Sie dieses Format:`AccountName`."
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
@@ -146,10 +147,10 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Snowflake Account ID]**: Ihre Snowflake-Konto-ID. Verwenden Sie das folgende Konto-ID-Format, je nachdem, ob Ihr Konto mit einer Organisation verknüpft ist:
-   * Wenn Ihr Konto mit einer Organisation verknüpft ist: `OrganizationName.AccountName`.
-   * Wenn Ihr Konto nicht mit einer Organisation verknüpft ist: `AccountName`.
-* **[!UICONTROL Select Snowflake Region]**: Wählen Sie die Region aus, in der Ihre Snowflake-Instanz bereitgestellt wird. Siehe die Snowflake [Dokumentation](https://docs.snowflake.com/en/user-guide/intro-regions) für detaillierte Informationen zu unterstützten Cloud-Regionen.
+* **[!UICONTROL Snowflake Account ID]**: Ihre [Snowflake-Kontokennung für die Datenfreigabe](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Verwenden Sie das folgende Format, je nachdem, ob Ihr Konto mit einer Organisation verknüpft ist:
+   * Wenn Ihr Konto mit einer Organisation verknüpft ist: Geben Sie den Organisations- und Kontonamen ein, getrennt durch **Zeitraum** (`.`). Wenn Ihr Organisationsname beispielsweise ACME und Ihr Kontoname AsiaRegion lautet, geben Sie `ACME.AsiaRegion` ein.
+   * Wenn Ihr Konto keiner Organisation zugeordnet ist: `AccountName`.
+* **[!UICONTROL Snowflake Region]**: Wählen Sie die Region aus, in der Ihre Snowflake-Instanz bereitgestellt wird. Siehe die Snowflake [Dokumentation](https://docs.snowflake.com/en/user-guide/intro-regions) für detaillierte Informationen zu unterstützten Cloud-Regionen.
 * **[!UICONTROL Account acknowledgment]**: Nachdem Sie Ihre **[!UICONTROL Snowflake Account ID]** eingegeben haben, wählen Sie **[!UICONTROL Yes]** in diesem Dropdown-Menü aus, um zu bestätigen, dass Ihre **[!UICONTROL Snowflake Account ID]** korrekt ist und zu Ihnen gehört.
 
 >[!IMPORTANT]
@@ -167,7 +168,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -189,17 +190,12 @@ Die Daten werden über eine dynamische Tabelle in Ihrem Snowflake-Konto bereitge
 
 Die dynamische Tabelle enthält die folgenden Spalten:
 
-* **TS**: Eine Zeitstempelspalte, die angibt, wann jede Zeile zuletzt aktualisiert wurde
+* **TS**: Eine Zeitstempelspalte, die angibt, wann jede Zeile aus der freigegebenen Tabelle zuletzt aktualisiert wurde
+* **Zusammenführungsrichtlinien-ID**: Die ID der [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md), zu der die aktivierte Zielgruppe gehört
 * **Zuordnungsattribute**: Jedes Zuordnungsattribut, das Sie während des Aktivierungs-Workflows auswählen, wird in Snowflake als Spaltenüberschrift dargestellt
 * **Zielgruppenzugehörigkeit**: Die Zugehörigkeit zu einer dem Datenfluss zugeordneten Zielgruppe wird über einen `active` Eintrag in der entsprechenden Zelle angezeigt
 
-![Screenshot der Snowflake-Benutzeroberfläche mit dynamischen Tabellendaten](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
-
-## Bekannte Einschränkungen {#known-limitations}
-
-### Regionale Verfügbarkeit {#regional-availability}
-
-Das [!DNL Snowflake] Batch-Ziel ist derzeit nur für Real-Time CDP-Kundinnen und -Kunden verfügbar, die in der Experience Platform VA7-Region bereitgestellt sind.
+![Screenshot der Snowflake-Benutzeroberfläche mit dynamischen Tabellendaten](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
