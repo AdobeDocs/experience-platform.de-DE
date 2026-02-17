@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens aufrufen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
+source-git-commit: a4381d034463571d2f69e9a2b04b7fbec1828cb9
 workflow-type: tm+mt
-source-wordcount: '3275'
-ht-degree: 41%
+source-wordcount: '3421'
+ht-degree: 39%
 
 ---
 
@@ -132,19 +132,21 @@ ht-degree: 41%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=de" text="Gültigkeitsdauern von Erlebnisereignissen"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Ablauf von Daten pseudonymer Profile"
 
-Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens über das Adobe Experience Platform-[!UICONTROL License usage]-Dashboard anzeigen. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Experience Platform-Instanz erfasst.
+Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens über das **[!UICONTROL License usage]**-Dashboard anzeigen. Das Dashboard steht berechtigten Experience Cloud-Organisationen zur Verfügung, einschließlich Organisationen, die Adobe Experience Platform lizenzieren oder nicht. Die angezeigten Informationen werden während eines täglichen Schnappschusses der Umgebung Ihres Unternehmens erfasst und nicht in Echtzeit aktualisiert.
 
-Lizenznutzungsberichte bieten ein hohes Maß an Granularität. Die meisten Metriken werden über mehrere Produkte hinweg gemeinsam genutzt und spiegeln die aggregierte Nutzung über alle Produkte hinweg wider, die sie verwenden, nicht über die Gesamtwerte pro Produkt. Das Dashboard bietet eine konsolidierte Verwendung dieser Metriken in allen Produktions- oder Entwicklungs-Sandboxes sowie die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Programme können mit Nutzungsmetriken verfolgt werden: Real-Time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
+Lizenznutzungsberichte bieten ein hohes Maß an Granularität. Die meisten Metriken werden über mehrere Produkte hinweg gemeinsam genutzt und spiegeln die aggregierte Nutzung über alle Produkte hinweg wider, die sie verwenden, nicht über die Gesamtwerte pro Produkt.
 
 In diesem Handbuch wird beschrieben, wie Sie das Lizenznutzungs-Dashboard in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).
 
 ## Dashboard-Daten [!UICONTROL License usage]
 
 Das [!UICONTROL License usage]-Dashboard zeigt eine Liste aller von Ihnen erworbenen Experience Platform-Produkte und aller Add-ons für diese Produkte an. In diesem Dashboard finden Sie einen Schnappschuss der lizenzbezogenen Daten Ihres Unternehmens für Experience Platform in jeder zugehörigen Sandbox.
 
 Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zum Zeitpunkt der Momentaufnahme aufgetreten sind. Es handelt sich nicht um eine Annäherung oder Stichprobe, aber das Dashboard wird nicht in Echtzeit aktualisiert.
+
+Für Organisationen ohne Adobe Experience Platform-Anwendung (z. B. Real-time Customer Data Platform, Adobe Journey Optimizer, Customer Journey Analytics usw.) zeigt das Dashboard nur Metriken zur KI-Guthabennutzung an.
 
 >[!NOTE]
 >
@@ -156,7 +158,11 @@ Um in der Experience Platform-Benutzeroberfläche zum Lizenznutzungs-Dashboard z
 
 >[!NOTE]
 >
->Das Lizenznutzungs-Dashboard ist standardmäßig nicht aktiviert. Benutzern muss die Berechtigung „Anzeigen des Lizenznutzungs-Dashboards“ gewährt werden, um das Dashboard anzeigen zu können. Anweisungen zum Gewähren von Zugriffsberechtigungen finden Sie im [Handbuch zu Dashboard-Berechtigungen](../permissions.md).
+>Das Lizenznutzungs-Dashboard ist standardmäßig nicht aktiviert. Um darauf zugreifen zu können, muss Ihnen die **&quot;[!UICONTROL View License Usage Dashboard]&quot;** gewährt werden.
+>
+>Wenn Ihr Unternehmen Adobe Experience Platform-Programme lizenziert, gewähren Sie diese Berechtigung im entsprechenden Produktprofil und in der entsprechenden Sandbox.
+>
+>Für Organisationen ohne Adobe Experience Platform-Anwendung (z. B. Nur-AEM- oder Nur-Workflow-Organisationen) ist diese Berechtigung in der Adobe Admin Console unter der Adobe Experience Platform-Produktkarte verfügbar (sofern für Ihr Unternehmen bereitgestellt). Ein Administrator muss die Berechtigung einem Produktprofil hinzufügen, damit Benutzer das Dashboard anzeigen können.
 
 ## Registerkarte [!UICONTROL Metrics] {#metrics-tab}
 
@@ -289,10 +295,11 @@ Die Funktion „Prognostizierte Nutzung“ unterstützt die folgenden Metriken:
 >
 >Kunden mit Berechtigungen für &quot;[!UICONTROL Average Profile Richness]&quot; und &quot;[!UICONTROL Total Storage]&quot; sahen ab dem 20. August stattdessen &quot;[!UICONTROL Total Data Volume]&quot; im Lizenznutzungs-Dashboard. Es gab keine Änderung bei den Kundenberechtigungen, sondern nur eine Vereinfachung der Tracking-Metriken. [!UICONTROL Total Data Volume] stellt die Daten dar, die im Echtzeit-Kundenprofil für Interaktions- und Personalisierungs-Workflows verfügbar sind. Diese vereinfachte Metrik verbesserte die Verwaltung und Messung der Verwendung von Echtzeit-Kundenprofilen. Kunden wurden gebeten, sich an ihren Adobe-Support-Mitarbeiter zu wenden, um weitere Informationen zu dieser Änderung zu erhalten.
 
-Das Lizenznutzungs-Dashboard enthält Berichte zu verschiedenen eindeutigen Metriken, die für mehrere Produkte in der Organisation gelten. Die verfügbaren Metriken sind:
+Die Metriken, die in Ihrem Dashboard angezeigt werden, hängen von den Produkten und Berechtigungen ab, die mit Ihrer Organisation verbunden sind. Wenn Ihr Unternehmen am nutzungsgebundenen Test für [Adobe Experience Platform-Agenten teilnimmt ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) Adobe Experience Platform-Agenten lizenziert, enthält das Dashboard die [!UICONTROL AI credits]. Wenn Ihr Unternehmen Adobe Experience Platform nicht lizenziert, wird die Verwendung von KI-Guthaben als primäre Metrik angezeigt.
 
 | Metrik | Beschreibung |
 |---|---|
+| [!UICONTROL AI credits] | Die Anzahl der KI-Credits, die von Ihrem Unternehmen bei der Verwendung von Adobe Experience Platform-Agenten verbraucht werden. KI-Credits werden während der nutzungsgebundenen Testversion für Adobe Experience Platform-Agenten verwendet und wenn sie für die Nutzung bezahlter Agenten lizenziert sind. Mit dieser Metrik können Sie die Nutzung der KI-Gutschriften anhand Ihrer verfügbaren Berechtigungen überwachen. |
 | [!UICONTROL Audience Activation Size] | Die Gesamtgröße der für ein dateibasiertes Ziel aktivierten Profile in einem Jahr. Hinweis: Dies beinhaltet keine Profile, die über Streaming-Ziele gesendet werden. |
 | [!UICONTROL Addressable Audience] | Die Gruppe von Personenprofilen im Echtzeit-Kundenprofil, mit denen Ihr Unternehmen interagieren darf, einschließlich direkt identifizierbarer und pseudonymer Profile. Diese Profile können Attribute, Verhaltensweisen und Segmentzugehörigkeitsdaten enthalten. Profilvolumina werden mithilfe des standardmäßigen deterministischen Identitätsdiagramms von Adobe Experience Platform berechnet und werden als freigegebene Funktion betrachtet. |
 | [!UICONTROL Adhoc Query Service Users Packs] | Ein Add-on, um die Berechtigung für autorisierte gleichzeitige Abfrage-Service-Benutzende um fünf zusätzliche gleichzeitige Abfrage-Service-Benutzende und eine zusätzliche gleichzeitig ausgeführte ungeplante Abfrage pro Paket zu erhöhen. Es können mehrere Pakete mit zusätzlichen ungeplanten Abfrage-Benutzenden lizenziert werden. |
@@ -310,7 +317,7 @@ Das Lizenznutzungs-Dashboard enthält Berichte zu verschiedenen eindeutigen Metr
 | [!UICONTROL Profile Richness No of Packs] | Eine Erhöhung des autorisierten Gesamtdatenvolumens um 25 KB pro Profil für jedes Paket mit zusätzlichem Profilumfang. |
 | [!UICONTROL Query Service Compute Hours] | Ein Maß für die Zeit, die die Abfrage-Service-Engines benötigen, um Daten bei Ausführung einer Batch-Abfrage im Data Lake zu lesen, dort zu verarbeiten und dorthin zurückzuschreiben. |
 | [!UICONTROL Streaming Segmentation No of Packs] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungs-Service gelangen. Die Segmentzugehörigkeit wird basierend auf den aktuellen Personenprofilattributen und dem Wert des aktuellen Ereignisses bewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsam genutzte Funktion. |
-| [!UICONTROL Total Data Volume] | Die Gesamtmenge der für das Echtzeit-Kundenprofil verfügbaren Daten, die in Interaktions-Workflows verwendet werden können. Das Gesamtdatenvolumen wird anhand der folgenden Formel berechnet: **Gesamtdatenvolumen = Adressierbare Zielgruppe × Durchschnittliche Profilreichhaltigkeit**. Diese Metrik spiegelt Daten wider, die nur im Profilspeicher gespeichert sind, und schließt den Data-Lake-Speicher aus. Sie bietet eine fokussiertere Ansicht von Daten, die für die profilbasierte Interaktion relevant sind. Weitere Informationen finden [&#x200B; unter „Häufig gestellte Fragen zum &#x200B;](../../landing/license-usage-and-guardrails/total-data-volume.md) Datenvolumen insgesamt“. |
+| [!UICONTROL Total Data Volume] | Die Gesamtmenge der für das Echtzeit-Kundenprofil verfügbaren Daten, die in Interaktions-Workflows verwendet werden können. Das Gesamtdatenvolumen wird anhand der folgenden Formel berechnet: **Gesamtdatenvolumen = Adressierbare Zielgruppe × Durchschnittliche Profilreichhaltigkeit**. Diese Metrik spiegelt Daten wider, die nur im Profilspeicher gespeichert sind, und schließt den Data-Lake-Speicher aus. Sie bietet eine fokussiertere Ansicht von Daten, die für die profilbasierte Interaktion relevant sind. Weitere Informationen finden [ unter „Häufig gestellte Fragen zum ](../../landing/license-usage-and-guardrails/total-data-volume.md) Datenvolumen insgesamt“. |
 | [!UICONTROL Total Volume of Data Egress] | Das kumulative Jahresvolumen der aus Adobe Experience Platform in Data Warehouses von Drittanbietern exportierten Daten. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
@@ -323,11 +330,11 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 | Lizenz | Produktbeschreibung |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD Lite</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/de/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD Lite</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL BIS 10M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform-Aktivierung](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME - STARTER:OD</li><li>UNP AJO ULTIMATE - STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILORCHESTRIERUNG</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
@@ -338,4 +345,4 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 Nach dem Lesen dieses Dokuments können Sie das Lizenznutzungs-Dashboard finden und Nutzungsmetriken für jedes gekaufte Produkt, für alle Produktions- oder Entwicklungs-Sandboxes und für eine bestimmte Sandbox anzeigen. Weitere Informationen zu verfügbaren Metriken für Ihr Unternehmen, die auf der von Ihrem Unternehmen erworbenen Lizenz basieren, finden Sie.
 
-Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).
