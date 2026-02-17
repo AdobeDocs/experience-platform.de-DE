@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform – Versionshinweise
 breadcrumb-title: Versionshinweise zu Experience Platform
 user-guide-description: Erhalten Sie monatliche Versionshinweise für Adobe Experience Platform.
-source-git-commit: a32410dbdfcd2b6da19377648a62b4c7a16734ae
+source-git-commit: fda9bb00dd77115c8085492cbf5883c0533588d8
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '183'
 ht-degree: 95%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 95%
 * [Aktuelle Versionshinweise zu Experience Platform](latest/latest.md)
 * [Hinweise zu Vorabversionen von Experience Platform](./pre-release-notes.md)
 * 2026 {#2026}
+   * [Februar 20206](2026/february-2026.md)
    * [Januar 2026](2026/january-2026.md)
 * 2025 {#2025}
    * [Oktober 2025](2025/october-2025.md)
@@ -40,7 +41,7 @@ ht-degree: 95%
    * [Februar 2024](2024/february-2024.md)
    * [Januar 2024](2024/january-2024.md)
 * 2023 {#2023}
-   * [Oktober 2023](2023/october-2023.md)
+   * [Oktober 2023](2023/october-2023.md)
    * [September 2023](2023/september-2023.md)
    * [August 2023](2023/august-2023.md)
    * [Juli 2023](2023/july-2023.md)
@@ -52,7 +53,7 @@ ht-degree: 95%
    * [Januar 2023](2023/january-2023.md)
 * 2022 {#2022}
    * [November 2022](2022/november-2022.md)
-   * [Oktober 2022](2022/october-2022.md)
+   * [Oktober 2022](2022/october-2022.md)
    * [September 2022](2022/september-2022.md)
    * [August 2022](2022/august-2022.md)
    * [Juli 2022](2022/july-2022.md)
@@ -64,7 +65,7 @@ ht-degree: 95%
    * [Januar 2022](2022/january-2022.md)
 * 2021 {#2021}
    * [November 2021](2021/november-2021.md)
-   * [Oktober 2021](2021/october-2021.md)
+   * [Oktober 2021](2021/october-2021.md)
    * [September 2021](2021/september-2021.md)
    * [August 2021](2021/august-2021.md)
    * [Juli 2021](2021/july-2021.md)
@@ -77,7 +78,7 @@ ht-degree: 95%
 * 2020 {#2020}
    * [Dezember 2020](2020/december-2020.md)
    * [November 2020](2020/november-2020.md)
-   * [Oktober 2020](2020/october-2020.md)
+   * [Oktober 2020](2020/october-2020.md)
    * [September 2020](2020/september-2020.md)
    * [August 2020](2020/august-2020.md)
    * [Juli 2020](2020/july-2020.md)
