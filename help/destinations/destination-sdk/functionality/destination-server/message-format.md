@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
 workflow-type: tm+mt
-source-wordcount: '2489'
+source-wordcount: '2488'
 ht-degree: 87%
 
 ---
@@ -33,7 +33,7 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 | Echtzeit-Integrationen (Streaming) | Ja |
 | Dateibasierte (Batch-)Integrationen | Ja (nur die Schritte 1 und 2 im unten stehenden Diagramm) |
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 
@@ -71,7 +71,7 @@ Um den Prozess der Profilumwandlung zu demonstrieren, verwendet das folgende Bei
 
 >[!NOTE]
 >
->Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche zu, und zwar im Schritt **Zuordnung** [&#x200B; des Zielaktivierungs-Workflows](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche zu, und zwar im Schritt **Zuordnung** [ des Zielaktivierungs-Workflows](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Nehmen wir an, Ihre Plattform kann ein Nachrichtenformat wie das Folgende erhalten:
 
@@ -1032,7 +1032,6 @@ Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configura
 Mögliche Werte sind:
 
 * realized
-* existing
 * exited
 
 Fügen Sie der Vorlage die folgende Zeile hinzu, um Profile aus Segmenten hinzuzufügen oder daraus zu entfernen, basierend auf den oben stehenden Werten:
