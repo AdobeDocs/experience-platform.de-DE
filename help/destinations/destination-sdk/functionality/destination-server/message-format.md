@@ -71,7 +71,7 @@ Um den Prozess der Profilumwandlung zu demonstrieren, verwendet das folgende Bei
 
 >[!NOTE]
 >
->Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche zu, und zwar im Schritt **Zuordnung** [ des Zielaktivierungs-Workflows](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche zu, und zwar im Schritt **Zuordnung** [&#x200B; des Zielaktivierungs-Workflows](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Nehmen wir an, Ihre Plattform kann ein Nachrichtenformat wie das Folgende erhalten:
 
