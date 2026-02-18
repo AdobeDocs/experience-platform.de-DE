@@ -45,4 +45,4 @@ Wählen Sie die Registerkarte **[!UICONTROL Roles]** aus, um die Rollen anzuzeig
 
 ## Nächste Schritte
 
-Sie wissen jetzt, wie Sie die Details und Rollen für eine Sandbox anzeigen. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter &quot;[ Zugriffssteuerung - Übersicht](../overview.md).
+Sie wissen jetzt, wie Sie die Details und Rollen für eine Sandbox anzeigen. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter &quot;[&#x200B; Zugriffssteuerung - Übersicht](../overview.md).
