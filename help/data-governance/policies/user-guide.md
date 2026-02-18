@@ -101,7 +101,7 @@ Die Registerkarte **[!UICONTROL Browse]** wird erneut angezeigt, wo die neu erst
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
->title="Anleitung"
+>title="Anweisungen"
 >abstract="<ul><li>Stellen Sie sicher, dass Sie Voreinstellungsdaten über den OneTrust-Quell-Connector oder das Standard-XDM-Schema zur Zustimmung in Ihre Vereinigungsschemata aufnehmen.</li><li>Wählen Sie im linken Navigationsbereich <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=de">Richtlinien</a> und dann die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=de#create-governance-policy">Richtlinie erstellen</a> aus.</li><li>Beschreiben Sie im Abschnitt <b>Wenn</b> die Bedingungen oder Aktionen, die die Richtlinienüberprüfung auslösen sollen.</li><li>Geben Sie im Abschnitt <b>Dann</b> die Einverständnisattribute an, die vorhanden sein müssen, damit ein Profil in die Aktion, die die Richtlinie ausgelöst hat, einbezogen wird.</li><li>Klicken Sie auf <b>Speichern</b>, um die Richtlinie zu erstellen. Um die Richtlinie zu aktivieren, klicken Sie in der rechten Leiste auf den Umschalter <b>Status</b>.</li><li>Experience Platform erzwingt automatisch Ihre aktivierten Einverständnisrichtlinien, wenn Sie Segmente für Ziele aktivieren, und liefert Details dazu, wie sich die einzelnen Richtlinien auf Ihre Zielgruppengröße auswirken.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Handbuch zum <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=de#consent-policy">Erstellen von Einverständnisrichtlinien</a> auf Experience League.</li></ul>"
 
 >[!IMPORTANT]
@@ -128,7 +128,7 @@ Einverständnisrichtlinien bestehen aus zwei logischen Komponenten:
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="If-Bedingung"
->abstract="Definieren Sie zunächst die Bedingungen, unter denen die Richtlinienüberprüfung ausgelöst wird. Bedingungen können die Durchführung bestimmter Marketing-Aktionen, das Vorhandensein bestimmter Data Governance-Kennzeichnungen oder eine Kombination aus beidem umfassen. Verwenden Sie EINE UND/ODER-Logik, um komplexe bedingte Beziehungen zwischen mehreren Bedingungen zu erstellen."
+>abstract="Definieren Sie zunächst die Bedingungen, unter denen die Richtlinienüberprüfung ausgelöst wird. Bedingungen können die Durchführung bestimmter Marketing-Aktionen, das Vorhandensein bestimmter Data Governance-Bezeichnungen oder eine Kombination aus beidem umfassen. Verwenden Sie EINE UND/ODER-Logik, um komplexe bedingte Beziehungen zwischen mehreren Bedingungen zu erstellen."
 
 Wählen Sie im Abschnitt **[!UICONTROL If]** die Marketing-Aktionen und/oder Datennutzungskennzeichnungen aus, die Trigger zu dieser Richtlinie haben sollen. Wählen Sie **[!UICONTROL View all]** und **[!UICONTROL Select labels]** aus, um die vollständigen Listen der verfügbaren Marketing-Aktionen bzw. Bezeichnungen anzuzeigen.
 
@@ -285,4 +285,4 @@ Dieses Dokument hat Ihnen einen Überblick darüber verschafft, wie Datennutzung
 
 Das folgende Video zeigt, wie Sie in der [!DNL Experience Platform]-Benutzeroberfläche mit Nutzungsrichtlinien arbeiten:
 
->[!VIDEO](https://video.tv.adobe.com/v/37126?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

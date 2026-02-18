@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Dieser Konfigurationsabschnitt regelt den Namen der Web-SDK-Instanz, die IMS-Organisation, für die sie gilt, und den Speicherort, an den Sie Daten senden möchten. Standardmäßig heißt eine Instanz `alloy`.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.
@@ -40,4 +40,4 @@ Die ID der Organisation, an die die Daten unter Adobe gesendet werden sollen. Me
 
 Die Domain, von der die Erweiterung Daten sendet und empfängt. Standardmäßig enthält das Feld `<COMPANYID>.data.adobedc.net`. Ältere Implementierungen enthalten möglicherweise den Standardwert `edge.adobedc.net`, der ebenfalls gültig ist.
 
-Adobe empfiehlt in den meisten Fällen die Verwendung einer Erstanbieter-Domain. Anweisungen zum Einrichten einer für die Datenerfassung geeigneten Erstanbieterdomäne finden [&#x200B; im Adobe-verwalteten Zertifikatprogramm &#x200B;](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/adobe-managed-cert). Anleitungen zum Festlegen dieses Werts finden Sie auch in der JavaScript-Bibliotheksdokumentation unter [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) .
+Adobe empfiehlt in den meisten Fällen die Verwendung einer Erstanbieter-Domain. Anweisungen zum Einrichten einer für die Datenerfassung geeigneten Erstanbieterdomäne finden [ im Adobe-verwalteten Zertifikatprogramm ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert). Anleitungen zum Festlegen dieses Werts finden Sie auch in der JavaScript-Bibliotheksdokumentation unter [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) .
