@@ -17,7 +17,7 @@ Adobe Experience Platform nimmt Daten aus einer Vielzahl von Quellen auf. Eine g
 
 Sie können Query Service verwenden, um die Kunden-Journey online und offline zu verbinden und die Omni-Channel-Attribution für Ihre Marke zu verstehen. Das folgende Video zeigt, wie ein Experience-Unternehmen den Abfrage-Service verwenden kann, um wichtige Anwendungsfälle zu beheben, und erläutert, wie der Abfrage-Service funktioniert.
 
->[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3464268?captions=ger&quality=12&learn=on)
 
 ## Verwenden des Abfrage-Service {#usage}
 
@@ -66,4 +66,4 @@ In diesem Dokument wurden Ihnen der Abfrage-Service und seine Funktionsweise im 
 
 Sehen Sie sich das folgende Video an, um zu verstehen, wie Abfragen ausgeführt werden. In diesem Video werden Tipps und Best Practices für die Ausführung von Abfragen in der Benutzeroberfläche des Abfrage-Editors, PSQL-Clients, Business Intelligence-Lösungen (BI) und der HTTP-API vorgestellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/29811?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32951?captions=ger&quality=12&learn=on)
