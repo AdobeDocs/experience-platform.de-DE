@@ -295,7 +295,7 @@ Die Funktion „Prognostizierte Nutzung“ unterstützt die folgenden Metriken:
 >
 >Kunden mit Berechtigungen für &quot;[!UICONTROL Average Profile Richness]&quot; und &quot;[!UICONTROL Total Storage]&quot; sahen ab dem 20. August stattdessen &quot;[!UICONTROL Total Data Volume]&quot; im Lizenznutzungs-Dashboard. Es gab keine Änderung bei den Kundenberechtigungen, sondern nur eine Vereinfachung der Tracking-Metriken. [!UICONTROL Total Data Volume] stellt die Daten dar, die im Echtzeit-Kundenprofil für Interaktions- und Personalisierungs-Workflows verfügbar sind. Diese vereinfachte Metrik verbesserte die Verwaltung und Messung der Verwendung von Echtzeit-Kundenprofilen. Kunden wurden gebeten, sich an ihren Adobe-Support-Mitarbeiter zu wenden, um weitere Informationen zu dieser Änderung zu erhalten.
 
-Die Metriken, die in Ihrem Dashboard angezeigt werden, hängen von den Produkten und Berechtigungen ab, die mit Ihrer Organisation verbunden sind. Wenn Ihr Unternehmen am nutzungsgebundenen Test für [Adobe Experience Platform-Agenten teilnimmt &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) Adobe Experience Platform-Agenten lizenziert, enthält das Dashboard die [!UICONTROL AI credits]. Wenn Ihr Unternehmen Adobe Experience Platform nicht lizenziert, wird die Verwendung von KI-Guthaben als primäre Metrik angezeigt.
+Die Metriken, die in Ihrem Dashboard angezeigt werden, hängen von den Produkten und Berechtigungen ab, die mit Ihrer Organisation verbunden sind. Wenn Ihr Unternehmen am nutzungsgebundenen Test für [Adobe Experience Platform-Agenten teilnimmt &#x200B;](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) Adobe Experience Platform-Agenten lizenziert, enthält das Dashboard die [!UICONTROL AI credits]. Wenn Ihr Unternehmen Adobe Experience Platform nicht lizenziert, wird die Verwendung von KI-Guthaben als primäre Metrik angezeigt.
 
 | Metrik | Beschreibung |
 |---|---|
@@ -330,11 +330,11 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 | Lizenz | Produktbeschreibung |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD Lite</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD Lite</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/de/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL BIS 10M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform-Aktivierung](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME - STARTER:OD</li><li>UNP AJO ULTIMATE - STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILORCHESTRIERUNG</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
