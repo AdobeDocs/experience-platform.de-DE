@@ -1,8 +1,8 @@
 ---
-title: Adobe Experience Platform – Versionshinweise Januar 2026
-description: Versionshinweise Januar 2026 für Adobe Experience Platform.
+title: Adobe Experience Platform – Versionshinweise Februar 2026
+description: Die Versionshinweise für Adobe Experience Platform vom Februar 2026.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fda9bb00dd77115c8085492cbf5883c0533588d8
+source-git-commit: 7cb35f5b35878b655dc668c0b26e22a41d675161
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 31%
@@ -18,8 +18,8 @@ ht-degree: 31%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 17. Februar 2026**
 
@@ -37,7 +37,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschied
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!DNL Slack] Integration für Warnhinweise für Kunden | Sie können jetzt kundenorientierte Warnhinweise an [!DNL Slack] senden. Folgen Sie [&#x200B; Schritt-für-Schritt-Tutorial](../../observability/alerts/slack-integration.md) um die [!DNL Slack]-Integration einzurichten und Warnhinweise direkt in Ihrem [!DNL Slack]-Arbeitsbereich zu erhalten. |
+| [!DNL Slack] Integration für Warnhinweise für Kunden | Sie können jetzt kundenorientierte Warnhinweise an [!DNL Slack] senden. Folgen Sie [ Schritt-für-Schritt-Tutorial](../../observability/alerts/slack-integration.md) um die [!DNL Slack]-Integration einzurichten und Warnhinweise direkt in Ihrem [!DNL Slack]-Arbeitsbereich zu erhalten. |
 
 {style="table-layout:auto"}
 
