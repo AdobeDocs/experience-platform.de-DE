@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
 role: Developer
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 73%
+source-wordcount: '711'
+ht-degree: 72%
 
 ---
 
@@ -19,12 +19,13 @@ ht-degree: 73%
 * Schemata {#schema}
    * [Grundlagen der Schema-Komposition](schema/composition.md)
    * [Best Practices für die Datenmodellierung](schema/best-practices.md)
+   * [Planen für die Profilaktivierung](./schema/profile-enablement-planning.md)
    * [Vertrauliche und personenbezogene Daten](./schema/sensitive-and-personal-data.md)
    * [Begrenzungen für XDM-Feldtypen](schema/field-constraints.md)
    * [Relationales Schema](./schema/relational.md)
    * [Namespacing in XDM](./schema/namespaces.md)
    * Datenmodelle für Unternehmen {#industries}
-      * [Übersicht](./schema/industries/overview.md)
+      * [Überblick](./schema/industries/overview.md)
       * [Einzelhandel](./schema/industries/retail.md)
       * [Finanz-Services](./schema/industries/financial.md)
       * [Gesundheitswesen](./schema/industries/healthcare.md)
@@ -61,7 +62,7 @@ ht-degree: 73%
          * [Dauer](./schema/healthcare/data-types/duration.md)
          * [Erweiterte Kontaktdetails](./schema/healthcare/data-types/extended-contact-detail.md)
          * [Menschenname](./schema/healthcare/data-types/human-name.md)
-         * [Kennung](./schema/healthcare/data-types/identifier.md)
+         * [ID](./schema/healthcare/data-types/identifier.md)
          * [Geld](./schema/healthcare/data-types/money.md)
          * [Zeitraum](./schema/healthcare/data-types/period.md)
          * [Person](./schema/healthcare/data-types/person.md)
@@ -235,7 +236,7 @@ ht-degree: 73%
    * [Web-Interaktion](./data-types/web-interaction.md)
    * [Webseitendetails](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] Benutzeroberfläche {#ui}
-   * [Übersicht](./ui/overview.md)
+   * [Überblick](./ui/overview.md)
    * [Erkunden von XDM-Ressourcen](./ui/explore.md)
    * Erstellen und Bearbeiten von Ressourcen {#resources}
       * [Schemata](./ui/resources/schemas.md)
@@ -256,7 +257,7 @@ ht-degree: 73%
    * [Generieren von Beispiel-XDM-Daten](./ui/sample.md)
    * [Exportieren von XDM-Schemata](./ui/export.md)
 * Schema Registry-API {#api}
-   * [Übersicht](api/overview.md)
+   * [Überblick](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [Schemata](api/schemas.md)
    * [Verhalten](api/behaviors.md)
