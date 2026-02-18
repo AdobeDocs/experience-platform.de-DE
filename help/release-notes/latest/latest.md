@@ -38,7 +38,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschied
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!DNL Slack] Integration für Warnhinweise für Kunden | Sie können jetzt kundenorientierte Warnhinweise an [!DNL Slack] senden. Folgen Sie [ Schritt-für-Schritt-Tutorial](../../observability/alerts/slack-integration.md) um die [!DNL Slack]-Integration einzurichten und Warnhinweise direkt in Ihrem [!DNL Slack]-Arbeitsbereich zu erhalten. |
+| [!DNL Slack] Integration für Warnhinweise für Kunden | Sie können jetzt kundenorientierte Warnhinweise an [!DNL Slack] senden. Folgen Sie [&#x200B; Schritt-für-Schritt-Tutorial](../../observability/alerts/slack-integration.md) um die [!DNL Slack]-Integration einzurichten und Warnhinweise direkt in Ihrem [!DNL Slack]-Arbeitsbereich zu erhalten. |
 
 {style="table-layout:auto"}
 
