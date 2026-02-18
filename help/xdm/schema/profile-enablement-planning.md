@@ -20,8 +20,8 @@ Durch die Aktivierung des Profils wird bestimmt, wie Ihre Daten in Experience Pl
 
 Bevor Sie dieses Planungshandbuch verwenden, stellen Sie sicher, dass Sie Folgendes haben:
 
-* Ein Schema mit der **[!UICONTROL Schema Editor]**- oder Schema Registry-API entworfen. Erste Schritte finden [ im Tutorial ](../tutorials/create-schema-ui.md)Schemaerstellung“.
-* Mindestens ein Identitätsfeld in Ihrem Schema konfiguriert. Anweisungen finden [ im Konfigurationshandbuch für Identitätsfelder ](../ui/fields/identity.md).
+* Ein Schema mit der **[!UICONTROL Schema Editor]**- oder Schema Registry-API entworfen. Erste Schritte finden [&#x200B; im Tutorial &#x200B;](../tutorials/create-schema-ui.md)Schemaerstellung“.
+* Mindestens ein Identitätsfeld in Ihrem Schema konfiguriert. Anweisungen finden [&#x200B; im Konfigurationshandbuch für Identitätsfelder &#x200B;](../ui/fields/identity.md).
 * Grundlegendes zu [Echtzeit-Kundenprofil](../../profile/home.md) und dessen Verwendung von Schemata zum Erstellen einheitlicher Kundenansichten.
 * Entsprechende Berechtigungen zum Aktivieren von Schemata und Datensätzen für das Profil. Wenden Sie sich an Ihren Systemadministrator, wenn Sie keinen Zugriff auf die Optionen zur Profilaktivierung haben.
 
@@ -74,7 +74,7 @@ Die Aktivierung von Profilen in diesen Szenarien kann zu unnötigen Profilen fü
 
 ### Bereitschaft des Schemas
 
-Überprüfen Sie die Schemastruktur, um sicherzustellen, dass sie Profilanforderungen unterstützt. Das Schema muss die Felder enthalten, die für die Segmentierung und Aktivierung erforderlich sind, während es experimentelle oder langfristig nicht benötigte Felder ausschließt. Beachten Sie, dass alle zusätzlichen Felder, die Sie nach der Aktivierung hinzufügen, additiv sein müssen (Einzelheiten finden Sie unter [Beschränkungen für die ](#why-planning-matters)). Diese Einschränkung bedeutet, dass Sie Ihre Feldauswahl sorgfältig überprüfen sollten, bevor Sie das Profil aktivieren. Einzelheiten zu zulässigen Aktualisierungen finden Sie unter [Schemaentwicklungsregeln](./composition.md#evolution).
+Überprüfen Sie die Schemastruktur, um sicherzustellen, dass sie Profilanforderungen unterstützt. Das Schema muss die Felder enthalten, die für die Segmentierung und Aktivierung erforderlich sind, während es experimentelle oder langfristig nicht benötigte Felder ausschließt. Beachten Sie, dass alle zusätzlichen Felder, die Sie nach der Aktivierung hinzufügen, additiv sein müssen (Einzelheiten finden Sie unter [Beschränkungen für die &#x200B;](#why-planning-matters)). Diese Einschränkung bedeutet, dass Sie Ihre Feldauswahl sorgfältig überprüfen sollten, bevor Sie das Profil aktivieren. Einzelheiten zu zulässigen Aktualisierungen finden Sie unter [Schemaentwicklungsregeln](./composition.md#evolution).
 
 ### Identitätskonfiguration
 
