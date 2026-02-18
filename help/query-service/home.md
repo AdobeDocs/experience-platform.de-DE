@@ -34,7 +34,7 @@ Um schnell mit den Funktionen von Query Service zu beginnen, sollten Sie die fol
 
 ## Abfrage-Service und Experience Platform-Dienste {#experience-platform-services}
 
-Query Service interagiert mit mehreren Experience Platform-Services und kann mit diesen verwendet werden. Um die Funktionen des Abfrage-Service optimal zu nutzen, sollten Sie sich mit diesen Services vertraut machen und auch damit, wie sie mit dem Abfrage-Service interagieren. Die Landingpage der [Experience Platform]Dokumentation (https://experienceleague.adobe.com/docs/experience-platform.html) enthält Zusammenfassungen und Links zu den Funktionen der Plattform.
+Query Service interagiert mit mehreren Experience Platform-Services und kann mit diesen verwendet werden. Um die Funktionen des Abfrage-Service optimal zu nutzen, sollten Sie sich mit diesen Services vertraut machen und auch damit, wie sie mit dem Abfrage-Service interagieren. Die Landingpage der [Experience Platform]Dokumentation (https://experienceleague.adobe.com/docs/experience-platform.html?lang=de) enthält Zusammenfassungen und Links zu den Funktionen der Plattform.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
