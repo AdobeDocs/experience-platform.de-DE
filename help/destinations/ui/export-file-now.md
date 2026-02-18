@@ -3,10 +3,10 @@ title: Exportieren von Dateien nach Bedarf an Batch-Ziele mithilfe der Experienc
 type: Tutorial
 description: Erfahren Sie, wie Sie Dateien über die Experience Platform-Benutzeroberfläche bei Bedarf in Batch-Ziele exportieren können.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 111f6d5093a0b66a683745b1da8d8909eb17f7eb
+source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 15%
+source-wordcount: '805'
+ht-degree: 12%
 
 ---
 
@@ -26,9 +26,26 @@ ht-degree: 15%
 
 In diesem Artikel wird erläutert, wie Sie mit der Experience Platform-Benutzeroberfläche Dateien bei Bedarf in Batch-Ziele wie [Cloud-Speicher](/help/destinations/catalog/cloud-storage/overview.md) und E-[-Marketing](/help/destinations/catalog/email-marketing/overview.md) exportieren können.
 
-Mit der **[!UICONTROL Export file now]** können Sie eine vollständige Datei exportieren, ohne den aktuellen Exportzeitplan einer zuvor geplanten Zielgruppe zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nichts an der Exportfrequenz der Zielgruppe. Der Dateiexport wird sofort ausgelöst und die neuesten Ergebnisse der Segmentierungsdurchgänge von Experience Platform werden abgerufen.
+Mit der **[!UICONTROL Export file now]** können Sie eine vollständige Datei exportieren, ohne den aktuellen Exportzeitplan einer zuvor geplanten Zielgruppe zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nichts an der Exportfrequenz der Zielgruppe.
 
-Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[&#x200B; wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren &#x200B;](/help/destinations/api/ad-hoc-activation-api.md).
+Der Dateiexport wird sofort ausgelöst und verwendet nur Daten aus dem letzten Schnappschuss der Zielgruppenbewertung. Sie enthält keine Profil- oder Identitätsänderungen, die nach der Erstellung eines Schnappschusses auftreten. Geplante Exporte dagegen umfassen sowohl Momentaufnahmendaten als auch inkrementelle Änderungen, die zwischen der Momentaufnahmerstellung und der Exportzeit auftreten.
+
+Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[ wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren ](/help/destinations/api/ad-hoc-activation-api.md).
+
+## Geplante Exporte vs. On-Demand-Exporte {#scheduled-vs-ondemand}
+
+Bei On-Demand-Exporten und geplanten Exporten werden unterschiedliche Datenquellen verwendet, was zu Unterschieden bei den exportierten Daten führen kann. Anhand der folgenden Tabelle können Sie sehen, was in jedem Fall exportiert wird.
+
+|  | Datei jetzt exportieren | Geplante Exporte |
+|--------|-----------------|-------------------|
+| **Datenquelle** | Nur Momentaufnahme | Snapshot + inkrementelle Änderungen |
+| **Profilattribute** | Werte zum Zeitpunkt der Momentaufnahme | Aktuelle Werte zur Exportzeit |
+
+>[!NOTE]
+>
+>Geplante Exporte können andere Profilzahlen oder Attributwerte aufweisen als On-Demand-Exporte, da sie Profilaktualisierungen enthalten, die nach der Zielgruppenbewertung erfolgen.
+
+Weitere Informationen finden Sie unter [Verstehen des Verhaltens beim geplanten Export](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior).
 
 ## Voraussetzungen {#prerequisites}
 
@@ -71,7 +88,7 @@ Beachten Sie bei der Verwendung des **[!UICONTROL Export file now]**-Steuereleme
 
 Bei Verwendung des **[!UICONTROL Export file now]**-Steuerelements kann eine der unten aufgeführten Fehlermeldungen auftreten. Überprüfen Sie die Tabelle, um zu verstehen, wie Sie darauf reagieren, wenn sie angezeigt werden.
 
-| Fehlermeldung | Auflösung |
+| Fehlermeldung | Lösung |
 |---------|----------|
 | Ausführung läuft bereits für Zielgruppen-`segment ID` für `dataflow ID` mit Ausführungs-ID `flow run ID` | Diese Fehlermeldung weist darauf hin, dass derzeit ein Ad-hoc-Aktivierungsfluss für eine Zielgruppe läuft. Warten Sie, bis der Vorgang abgeschlossen ist, bevor Sie den Aktivierungsvorgang erneut auslösen. |
 | Zielgruppen `<segment name>` sind nicht Teil dieses Datenflusses oder außerhalb des Zeitplanbereichs! | Diese Fehlermeldung zeigt an, dass die Zielgruppen, die Sie aktivieren möchten, nicht dem Datenfluss zugeordnet sind oder dass der für die Zielgruppen eingerichtete Aktivierungsplan entweder abgelaufen oder noch nicht gestartet wurde. Überprüfen Sie, ob die Zielgruppe tatsächlich dem Datenfluss zugeordnet ist, und stellen Sie sicher, dass sich der Zeitplan für die Zielgruppenaktivierung mit dem aktuellen Datum überschneidet. |
