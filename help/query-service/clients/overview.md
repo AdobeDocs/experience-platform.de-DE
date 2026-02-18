@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Verbinden von Clients mit dem Abfragedienst
 description: In diesem Dokument wird erläutert, wie Sie eine Verbindung zum Abfrage-Service von einer Vielzahl von Desktop-Client-Anwendungen aus herstellen und diese Verbindungen überprüfen können.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
+source-git-commit: 5e5a196074e844826579102fa6b36102c6481096
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 5%
+source-wordcount: '281'
+ht-degree: 6%
 
 ---
 
-# Clients mit [!DNL Query Service] verbinden
+# Clients mit dem Abfrage-Service verbinden
 
-In diesem Abschnitt wird beschrieben, wie Sie eine Verbindung zu [!DNL Query Service] von einer Vielzahl von Desktop-Client-Anwendungen aus herstellen und diese Verbindungen überprüfen. [!DNL Query Service] verwendet das [!DNL PostgreSQL]. In den Anweisungen in diesem Abschnitt wird daher erläutert, wie Sie [!DNL PostgreSQL] Tools und Treiber verwenden können, um Abfragen zu verbinden und zu schreiben.
+In diesem Abschnitt wird erläutert, wie Sie eine Verbindung zum Abfrage-Service von einer Vielzahl von Desktop-Client-Anwendungen aus herstellen und diese Verbindungen überprüfen. Der Abfrage-Service verwendet das PostgreSQL-Protokoll. Daher wird in den Anweisungen in diesem Abschnitt erläutert, wie Sie mit PostgreSQL-Tools und -Treibern Abfragen verbinden und schreiben können.
 
 >[!IMPORTANT]
 >
->Die TLS/SSL-Zertifikate in Produktionsumgebungen für die interaktive Postgres-API des Abfrage-Services wurden am Mittwoch, 24. Januar 2024 aktualisiert.<br>Obwohl dies eine jährliche Anforderung ist, hat sich in diesem Fall auch das Stammzertifikat in der Kette geändert, da die Zertifikatanbieter von Adobe TLS/SSL ihre Zertifikatshierarchie aktualisiert haben. Dies kann sich auf bestimmte Postgres-Clients auswirken, wenn in ihrer Liste der Zertifizierungsstellen das Stammzertifikat fehlt. Beispielsweise müssen einem PSQL-CLI-Client die Stammzertifikate möglicherweise zu einer expliziten `~/postgresql/root.crt` hinzugefügt werden, da dies sonst zu einem Fehler führen kann. Beispiel: `psql: error: SSL error: certificate verify failed`. Weitere Informationen zu [&#x200B; Problem finden Sie in &#x200B;](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) offiziellen PostgreSQL-Dokumentation .<br>Das hinzuzufügende Stammzertifikat kann von [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem heruntergeladen &#x200B;](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>Die TLS/SSL-Zertifikate in Produktionsumgebungen für die interaktive Postgres-API des Abfrage-Services wurden am Mittwoch, 24. Januar 2024 aktualisiert.<br>Dies ist zwar eine jährliche Anforderung, doch in diesem Fall hat sich auch das Stammzertifikat in der Kette geändert, da der TLS/SSL-Zertifikatanbieter von Adobe seine Zertifikatshierarchie aktualisiert hat. Dies kann sich auf bestimmte Postgres-Clients auswirken, wenn in ihrer Liste der Zertifizierungsstellen das Stammzertifikat fehlt. Beispielsweise müssen einem PSQL-CLI-Client die Stammzertifikate möglicherweise zu einer expliziten `~/postgresql/root.crt` hinzugefügt werden. Andernfalls kann dies zu einem Fehler führen, z. B. `psql: error: SSL error: certificate verify failed`. Weitere Informationen zu [ Problem finden Sie in ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) offiziellen PostgreSQL-Dokumentation .<br>Das hinzuzufügende Stammzertifikat kann von [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem heruntergeladen ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Anweisungen werden für folgende Clients bereitgestellt:
 
@@ -32,4 +32,4 @@ Anweisungen werden für folgende Clients bereitgestellt:
 
 >[!IMPORTANT]
 >
->Als Power BI- und Tableau-Anwender können Sie Customer Journey Analytics über die Registerkarte Anmeldeinformationen des Abfrage-Service mit Ihren BI-Tools verbinden. Anleitungen zum Verbinden (Verbinden [&#x200B; BI-Tools mit dem Customer Journey Analytics) finden Sie in der Dokumentation &#x200B;](../ui/credentials.md#connect-to-customer-journey-analytics) Anmeldedaten .
+>Als Power BI- und Tableau-Anwender können Sie Customer Journey Analytics mithilfe der auf der Registerkarte „Anmeldeinformationen für den Abfrage-Service“ bereitgestellten Anmeldeinformationen mit Ihren BI-Tools verbinden. Anleitungen zum Verbinden Ihrer BI-Tools mit Customer Journey Analytics finden [ in der Dokumentation zu Anmeldeinformationen ](../ui/credentials.md#connect-to-customer-journey-analytics).

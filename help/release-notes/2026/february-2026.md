@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Februar 2026
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2026.
-source-git-commit: afb1e0266b4c5485ba574f95aab3a56485d176b3
+exl-id: a677026f-e07e-4e69-bd6c-5ddcb13e8e38
+source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 31%
+source-wordcount: '606'
+ht-degree: 33%
 
 ---
 
@@ -17,8 +18,8 @@ ht-degree: 31%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 17. Februar 2026**
 
@@ -27,6 +28,7 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 - [Warnhinweise](#alerts)
 - [Ziele](#destinations)
 - [Quellen](#sources)
+- [Experience-Datenmodell (XDM)](#xdm)
 
 ## Warnhinweise {#alerts}
 
@@ -36,7 +38,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschied
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!DNL Slack] Integration für Warnhinweise für Kunden | Sie können jetzt kundenorientierte Warnhinweise an [!DNL Slack] senden. Folgen Sie [&#x200B; Schritt-für-Schritt-Tutorial](../../observability/alerts/slack-integration.md) um die [!DNL Slack]-Integration einzurichten und Warnhinweise direkt in Ihrem [!DNL Slack]-Arbeitsbereich zu erhalten. |
+| [!DNL Slack] Integration für Warnhinweise für Kunden | Sie können jetzt kundenorientierte Warnhinweise an [!DNL Slack] senden. Folgen Sie [ Schritt-für-Schritt-Tutorial](../../observability/alerts/slack-integration.md) um die [!DNL Slack]-Integration einzurichten und Warnhinweise direkt in Ihrem [!DNL Slack]-Arbeitsbereich zu erhalten. |
 
 {style="table-layout:auto"}
 
@@ -78,3 +80,14 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).
+
+
+## Experience-Datenmodell (XDM) {#xdm}
+
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemata) für Daten bereitstellt, die in Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Eingeschränkte Bearbeitung für Schemata mit Datensätzen | Bearbeitungsvorgänge, die zu grundlegenden Änderungen führen, sind jetzt eingeschränkt, sobald ein Datensatz für ein Schema vorhanden ist. Wenn ein Datensatz zugeordnet ist, können Sie Felder nicht mehr umbenennen oder löschen, Felddatentypen oder -formate ändern, Identitätsdeskriptoren ändern, verwandte Felder zum Entfernen vorhandener Felder verwalten oder die zugewiesene Klasse ändern. Additive Änderungen und das Verwerfen von Feldern werden weiterhin unterstützt. |
+
+Weitere Informationen finden Sie in der [XDM-Übersicht](../../xdm/home.md).
