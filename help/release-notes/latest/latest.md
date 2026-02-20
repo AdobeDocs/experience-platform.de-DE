@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2026
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2026.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
+source-git-commit: 05c9a99132d1385f9ec043bb667a72304b17a9b5
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 33%
+source-wordcount: '731'
+ht-degree: 32%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 33%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Versionsdatum: Mittwoch, 17. Februar 2026**
 
@@ -27,6 +27,7 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 
 - [Warnhinweise](#alerts)
 - [Ziele](#destinations)
+- [Segmentierungs-Service](#segmentation-service)
 - [Quellen](#sources)
 - [Experience-Datenmodell (XDM)](#xdm)
 
@@ -38,7 +39,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschied
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!DNL Slack] Integration für Warnhinweise für Kunden | Sie können jetzt kundenorientierte Warnhinweise an [!DNL Slack] senden. Folgen Sie [&#x200B; Schritt-für-Schritt-Tutorial](../../observability/alerts/slack-integration.md) um die [!DNL Slack]-Integration einzurichten und Warnhinweise direkt in Ihrem [!DNL Slack]-Arbeitsbereich zu erhalten. |
+| [!DNL Slack] Integration für Warnhinweise für Kunden | Sie können jetzt kundenorientierte Warnhinweise an [!DNL Slack] senden. Folgen Sie [ Schritt-für-Schritt-Tutorial](../../observability/alerts/slack-integration.md) um die [!DNL Slack]-Integration einzurichten und Warnhinweise direkt in Ihrem [!DNL Slack]-Arbeitsbereich zu erhalten. |
 
 {style="table-layout:auto"}
 
@@ -66,6 +67,19 @@ Weitere Informationen finden Sie in der [[!DNL Observability Insights] Übersich
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie unter [Ziele - Übersicht](../../destinations/home.md).
+
+## Segmentierungs-Service {#segmentation-service}
+
+[!DNL Segmentation Service] definiert eine bestimmte Teilmenge von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Zielgruppen können auf Datensatzdaten (z. B. demografische Informationen) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Bearbeitbare API-Zielgruppen | Sie können jetzt Zielgruppen bearbeiten, die entweder mit der Segmentierungs-Service-API oder mit der Audience Agent in Segment Builder erstellt wurden. **Hinweis:** Zielgruppen, die Zeitreihendaten enthalten, **derzeit nicht** Segment Builder bearbeitet werden können. |
+| Aktualisierung der Gültigkeit externer Zielgruppendaten | Sie können die Segmentierungs-Service-API verwenden, um den Datenablauf Ihrer externen Audiences zu verlängern. Weitere Informationen finden Sie im [API-Handbuch für externe Zielgruppen](/help/segmentation/api/external-audiences.md#extend-data-expiration). |
+
+Weitere Informationen finden Sie in der [[!DNL Segmentation Service] Übersicht](../../segmentation/home.md).
 
 ## Quellen {#sources}
 
