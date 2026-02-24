@@ -55,7 +55,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Segmentierungs-Service | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
+| Segmentierungs-Service | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -85,13 +85,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions)
+>* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions)
 
 Wenn Ihr Unternehmen Zugriff auf mehrere Organisationen hat, stellen Sie sicher, dass Sie dieselbe Organisation sowohl in Marketo Engage als auch in Real-Time CDP verwenden, wo Sie den Ziel-Connector für Marketo einrichten.  Wenn Sie bereits ein Ziel konfiguriert haben, können Sie ein vorhandenes Marketo-Konto auswählen, das mit Ihrer neuen Konfiguration verwendet werden soll.  Wenn nicht, klicken Sie auf die Eingabeaufforderung Connector to Destination , über die Sie den Namen, die Beschreibung und die Marketo Munchkin-ID des gewünschten Ziels festlegen können.  Die Munchkin-ID Ihrer Marketo-Instanz finden Sie im Menü Admin->Munchkin .
 
 >[!IMPORTANT]
 >
->Die Benutzerin oder der Benutzer, die oder der das Ziel einrichtet[ muss in der Marketo](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)Instanz und -Partition über die Berechtigung „Person bearbeiten“ verfügen.
+>Die Benutzerin oder der Benutzer, die oder der das Ziel einrichtet[&#x200B; muss in der Marketo](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)Instanz und -Partition über die Berechtigung „Person bearbeiten“ verfügen.
 
 ![Mit Ziel verbinden](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
