@@ -13,7 +13,7 @@ ht-degree: 32%
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
-Diese Aktivitäten können mit dem Arbeitsbereich der [[!UICONTROL Data Lifecycle]-Benutzeroberfläche ](#ui) der [Datenhygiene-API) ](#api). Wenn ein Datenlebenszyklusauftrag ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Auftragstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
+Diese Aktivitäten können mit dem Arbeitsbereich der [[!UICONTROL Data Lifecycle]-Benutzeroberfläche &#x200B;](#ui) der [Datenhygiene-API) &#x200B;](#api). Wenn ein Datenlebenszyklusauftrag ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Auftragstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensat
 
 >[!TIP]
 >
->Informationen zur Überwachung der aktuellen Nutzung in Bezug auf Kontingentbeschränkungen finden Sie [ „Kontingentreferenzhandbuch](./api/quota.md).\
+>Informationen zur Überwachung der aktuellen Nutzung in Bezug auf Kontingentbeschränkungen finden Sie [&#x200B; „Kontingentreferenzhandbuch](./api/quota.md).\
 >Berechtigungsregeln, monatliche Begrenzungen, SLA-Zeitleisten und Richtlinien zur Ausnahmebehandlung finden Sie in der Dokumentation [Löschen von Datensätzen (](./ui/record-delete.md#quotas)) und [Arbeitsauftrag (API)](./api/workorder.md#quotas).
 
 [Datensatzgültigkeitsanfrage](./ui/dataset-expiration.md) wird erstellt:
