@@ -3,10 +3,10 @@ title: (API) Oracle Eloqua-Verbindung
 description: Mit dem (API) Oracle Eloqua -Ziel können Sie Ihre Kontodaten exportieren und in Oracle Eloqua für Ihre Geschäftsanforderungen aktivieren.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1967'
-ht-degree: 25%
+source-wordcount: '2138'
+ht-degree: 24%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 25%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) ermöglicht es Marketing-Experten, Kampagnen zu planen und auszuführen und dabei ein personalisiertes Kundenerlebnis für ihre potenziellen Kunden zu liefern. Dank der integrierten Lead-Verwaltung und der einfachen Kampagnenerstellung können Marketing-Fachleute die richtige Zielgruppe zur richtigen Zeit auf der Journey ihres Käufers ansprechen. Außerdem kann die Lösung elegant skaliert werden, um Zielgruppen über verschiedene Kanäle wie E-Mail, Display-Suche, Video und Mobilgeräte zu erreichen. Vertriebsteams können mehr Angebote schneller abschließen und so den Marketing-ROI durch Echtzeit-insight steigern.
 
-Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt den Vorgang [Aktualisieren eines &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) aus der [!DNL Oracle Eloqua] REST-API, mit dem Sie **einer Zielgruppe** Identitäten in [!DNL Oracle Eloqua] aktualisieren können.
+Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt den Vorgang [Aktualisieren eines ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) aus der [!DNL Oracle Eloqua] REST-API, mit dem Sie **einer Zielgruppe** Identitäten in [!DNL Oracle Eloqua] aktualisieren können.
 
 [!DNL Oracle Eloqua] verwendet [Standardauthentifizierung](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) für die Kommunikation mit der [!DNL Oracle Eloqua] REST-API. Anweisungen zur Authentifizierung bei Ihrer [!DNL Oracle Eloqua]-Instanz sehen Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Die Marketing-Abteilung einer Online-Plattform möchte eine E-Mail-basierte Marketing-Kampagne an eine kuratierte Audience von Leads senden. Das Marketing-Team der Plattform kann bestehende Lead-Informationen über Adobe Experience Platform aktualisieren, Zielgruppen aus ihren eigenen Offline-Daten erstellen und diese Zielgruppen an [!DNL Oracle Eloqua] senden, die dann zum Senden der E-Mail mit der Marketing-Kampagne verwendet werden können.
 
@@ -27,7 +27,7 @@ Die Marketing-Abteilung einer Online-Plattform möchte eine E-Mail-basierte Mark
 
 ### Voraussetzungen für Experience Platform {#prerequisites-in-experience-platform}
 
-Vor der Aktivierung der Daten für das [!DNL Oracle Eloqua]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) verfügen, die in [!DNL Experience Platform] erstellt wurden.
+Vor der Aktivierung der Daten für das [!DNL Oracle Eloqua]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) verfügen, die in [!DNL Experience Platform] erstellt wurden.
 
 Weitere Informationen finden Sie in der Experience Platform[Dokumentation für die Schemafeldgruppe „Details zur Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) , wenn Sie Anleitungen zu Zielgruppenstatus benötigen.
 
@@ -35,7 +35,7 @@ Weitere Informationen finden Sie in der Experience Platform[Dokumentation für d
 
 Um Daten aus Experience Platform in Ihr [!DNL Oracle Eloqua]-Konto zu exportieren, benötigen Sie ein [!DNL Oracle Eloqua].
 
-Darüber hinaus benötigen Sie mindestens die *„Erweiterte Benutzer - Marketing-Berechtigungen“* für Ihre [!DNL Oracle Eloqua]. Eine Anleitung finden Sie im Abschnitt *Sicherheitsgruppen* auf der Seite [Gesicherter &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)&quot;. Der Zugriff ist für das Ziel erforderlich, um beim Aufrufen der [-API programmgesteuert &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)Ihre Basis-[!DNL Oracle Eloqua] zu bestimmen).
+Darüber hinaus benötigen Sie mindestens die *„Erweiterte Benutzer - Marketing-Berechtigungen“* für Ihre [!DNL Oracle Eloqua]. Eine Anleitung finden Sie im Abschnitt *Sicherheitsgruppen* auf der Seite [Gesicherter ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)&quot;. Der Zugriff ist für das Ziel erforderlich, um beim Aufrufen der [-API programmgesteuert ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)Ihre Basis-[!DNL Oracle Eloqua] zu bestimmen).
 
 #### Sammeln von [!DNL Oracle Eloqua]-Anmeldedaten {#gather-credentials}
 
@@ -43,12 +43,12 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Oracle Eloqua]-Ziel
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `Company Name` | Der mit Ihrem [!DNL Oracle Eloqua]-Konto verknüpfte Firmenname. <br>Sie verwenden später die `Company Name` [!DNL Oracle Eloqua] und `Username` als verkettete Zeichenfolge, die beim **[!UICONTROL Username]** Authentifizieren beim Ziel) als [&#x200B; verwendet &#x200B;](#authenticate). |
+| `Company Name` | Der mit Ihrem [!DNL Oracle Eloqua]-Konto verknüpfte Firmenname. <br>Sie verwenden später die `Company Name` [!DNL Oracle Eloqua] und `Username` als verkettete Zeichenfolge, die beim **[!UICONTROL Username]** Authentifizieren beim Ziel) als [ verwendet ](#authenticate). |
 | `Username` | Der Benutzername Ihres [!DNL Oracle Eloqua]. |
 | `Password` | Das Kennwort Ihres [!DNL Oracle Eloqua] Kontos. |
-| `Pod` | [!DNL Oracle Eloqua] unterstützt mehrere Rechenzentren mit jeweils einem eindeutigen Domain-Namen. [!DNL Oracle Eloqua] bezeichnet diese als „Pods“, es gibt derzeit insgesamt sieben - P01, P02, P03, P04, P06, P07 und P08. Um zu erfahren, in welchem POD Sie sich befinden, melden Sie sich bei [!DNL Oracle Eloqua] an und notieren Sie sich die URL in Ihrem Browser, nachdem Sie sich erfolgreich angemeldet haben. Wenn Ihre Browser-URL beispielsweise `secure.p01.eloqua.com` lautet, wird Ihr `pod` `p01`. Weitere Anleitungen finden Sie auf [&#x200B; Seite Bestimmen &#x200B;](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) POD . |
+| `Pod` | [!DNL Oracle Eloqua] unterstützt mehrere Rechenzentren mit jeweils einem eindeutigen Domain-Namen. [!DNL Oracle Eloqua] bezeichnet diese als „Pods“, es gibt derzeit insgesamt sieben - P01, P02, P03, P04, P06, P07 und P08. Um zu erfahren, in welchem POD Sie sich befinden, melden Sie sich bei [!DNL Oracle Eloqua] an und notieren Sie sich die URL in Ihrem Browser, nachdem Sie sich erfolgreich angemeldet haben. Wenn Ihre Browser-URL beispielsweise `secure.p01.eloqua.com` lautet, wird Ihr `pod` `p01`. Weitere Anleitungen finden Sie auf [ Seite Bestimmen ](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) POD . |
 
-Eine Anleitung finden Sie [&#x200B; Abschnitt „Anmelden  [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing)&quot;.
+Eine Anleitung finden Sie [ Abschnitt „Anmelden  [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing)&quot;.
 
 ## Leitlinien {#guardrails}
 
@@ -61,7 +61,7 @@ Eine Anleitung finden Sie [&#x200B; Abschnitt „Anmelden  [!DNL Oracle Eloqua]]
 * Wenn diese Grenze überschritten wird, tritt in Experience Platform ein Fehler auf. Der Grund dafür ist, dass die [!DNL Oracle Eloqua]-API die Anfrage nicht validieren kann und mit der Fehlermeldung - *400: Es gab einen Validierungsfehler* - , der das Problem beschreibt.
 * Wenn Sie das oben angegebene Limit erreicht haben, müssen Sie vorhandene Zuordnungen aus Ihrem Ziel entfernen und die entsprechenden benutzerdefinierten Kontaktfelder in Ihrem [!DNL Oracle Eloqua]-Konto löschen, bevor Sie weitere Segmente exportieren können.
 
-* Weitere Informationen zu zusätzlichen [[!DNL Oracle Eloqua]  finden Sie auf &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) Seite „Kontaktfelder erstellen“.
+* Weitere Informationen zu zusätzlichen [[!DNL Oracle Eloqua]  finden Sie auf ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) Seite „Kontaktfelder erstellen“.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -70,6 +70,28 @@ Eine Anleitung finden Sie [&#x200B; Abschnitt „Anmelden  [!DNL Oracle Eloqua]]
 | Ziel-Identität | Beschreibung | Obligatorisch |
 |---|---|---|
 | `EloquaId` | Eindeutige Kennung des Kontakts. | Ja |
+
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses Ziel exportieren können.
+
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+
+{style="table-layout:auto"}
+
+Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
+
+| Datentyp der Zielgruppe | Unterstützt | Beschreibung | Anwendungsfälle |
+|--------------------|-----------|-------------|-----------|
+| [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
+| [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
+| [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+
+{style="table-layout:auto"}
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -86,7 +108,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -99,7 +121,7 @@ Suchen Sie in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** nach [!DN
 >title="Firmenname\Benutzername"
 >abstract="Füllen Sie dieses Feld mit Ihrem Firmennamen und dem Benutzernamen von Oracle Eloqua aus `{COMPANY_NAME}\{USERNAME}`"
 
-Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [&#x200B; im Abschnitt  [!DNL Oracle Eloqua] Sammeln](#gather-credentials)Anmeldeinformationen“.
+Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [ im Abschnitt  [!DNL Oracle Eloqua] Sammeln](#gather-credentials)Anmeldeinformationen“.
 
 * **[!UICONTROL Password]**: Das Kennwort Ihres [!DNL Oracle Eloqua] Kontos.
 * **[!UICONTROL Username]**: Eine verkettete Zeichenfolge, die aus dem [!DNL Oracle Eloqua] Firmennamen und dem [!DNL Oracle Eloqua] Benutzernamen besteht.<br>Der verkettete Wert hat die Form von `{COMPANY_NAME}\{USERNAME}`.<br> Hinweis: Verwenden Sie keine Klammern oder Leerzeichen und behalten Sie die `\` bei. <br>Wenn Ihr [!DNL Oracle Eloqua] Firmenname beispielsweise `MyCompany` und [!DNL Oracle Eloqua] Benutzername `Username` ist, wird der verkettete Wert, den Sie im **[!UICONTROL Username]** verwenden, `MyCompany\Username`.
@@ -123,7 +145,7 @@ Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Pod]**: Um zu erfahren, auf welchem `pod` Sie sich befinden, melden Sie sich bei [!DNL Oracle Eloqua] an und notieren Sie sich die URL in Ihrem Browser, nachdem Sie sich erfolgreich angemeldet haben. Wenn Ihre Browser-URL beispielsweise `secure.p01.eloqua.com` ist, müssen Sie den `pod` Wert `p01` auswählen. Weitere Anleitungen finden [&#x200B; im Abschnitt  [!DNL Oracle Eloqua] Sammeln](#gather-credentials)Anmeldeinformationen“.
+* **[!UICONTROL Pod]**: Um zu erfahren, auf welchem `pod` Sie sich befinden, melden Sie sich bei [!DNL Oracle Eloqua] an und notieren Sie sich die URL in Ihrem Browser, nachdem Sie sich erfolgreich angemeldet haben. Wenn Ihre Browser-URL beispielsweise `secure.p01.eloqua.com` ist, müssen Sie den `pod` Wert `p01` auswählen. Weitere Anleitungen finden [ im Abschnitt  [!DNL Oracle Eloqua] Sammeln](#gather-credentials)Anmeldeinformationen“.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -136,7 +158,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 

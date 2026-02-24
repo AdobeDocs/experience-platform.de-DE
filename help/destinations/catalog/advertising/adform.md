@@ -2,13 +2,13 @@
 title: AdForm
 description: Adform ist ein führender Anbieter von Kauf- und Verkaufslösungen für programmgesteuerte Medien. Durch die Verbindung von Adform mit der Adobe Experience Platform können Sie Ihre Erstanbieter-Zielgruppen über Adform basierend auf der Experience Cloud ID (ECID) aktivieren.
 last-substantial-update: 2025-10-23T00:00:00Z
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 32%
+source-wordcount: '1106'
+ht-degree: 28%
 
 ---
-
 
 # Adform-Verbindung {#adform}
 
@@ -28,16 +28,16 @@ Damit Sie besser verstehen können, wie und wann Sie das Adform-Ziel verwenden s
 
 Verwenden Sie dieses Ziel, um Adobe Real-Time CDP-Zielgruppen zur Aktivierung basierend auf der Experience Cloud ID (ECID) und der ID Fusion von Adform an Adform zu senden. ID Fusion von Adform ist der ID-Auflösungs-Service von Adform, mit dem Sie Ihre First-Party-Zielgruppen basierend auf der Experience Cloud ID (ECID) aktivieren können.
 
-Ein gängiger Fall ist die erneute Zielgruppenbestimmung Ihrer Website-Besucher auf Ihrer Website oder in Ihrer App anhand der Experience Cloud ID (ECID). Sie müssen lediglich die Experience Cloud ID (ECID) über die jederzeit verfügbaren [Event Streaming“ oder &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)Client-seitigen[&#x200B; Adform-Erweiterungen an Adform senden](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/analytics/adform). Anschließend können Sie Zielgruppen über das Adform-Ziel für die Aktivierung mit Adform freigeben - allein auf Grundlage der Experience Cloud ID (ECID).
+Ein gängiger Fall ist die erneute Zielgruppenbestimmung Ihrer Website-Besucher auf Ihrer Website oder in Ihrer App anhand der Experience Cloud ID (ECID). Sie müssen lediglich die Experience Cloud ID (ECID) über die jederzeit verfügbaren [Event Streaming“ oder ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)Client-seitigen[ Adform-Erweiterungen an Adform senden](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform). Anschließend können Sie Zielgruppen über das Adform-Ziel für die Aktivierung mit Adform freigeben - allein auf Grundlage der Experience Cloud ID (ECID).
 
 ## Voraussetzungen {#prerequisites}
 
 * Sie müssen bereits ein Adform-Kunde sein, um dieses Ziel verwenden zu können.
 * Dazu benötigen Sie Ihre Zugangsdaten für die Adform Audience Base-Datenverbindung.
    * Wenn Sie keine Anmeldeinformationen für die Datenverbindung der Adform-Zielgruppe haben, wenden Sie sich bitte an Ihren Adform-Support-Mitarbeiter.
-* Für eine ordnungsgemäße Synchronisierung müssen Sie entweder über eine [Ereignis-Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)- oder [Client-seitige](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/analytics/adform) Verbindung von Ihren Entitäten zu Adform Site Tracking verfügen.
+* Für eine ordnungsgemäße Synchronisierung müssen Sie entweder über eine [Ereignis-Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)- oder [Client-seitige](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Verbindung von Ihren Entitäten zu Adform Site Tracking verfügen.
    * Wenn Sie keine Ereignis-Streaming- oder Client-seitige Verbindung von Ihren Entitäten zu Adform Site Tracking haben, wenden Sie sich bitte an Ihren Adform-Support-Mitarbeiter.
-   * Adform bietet Adobe Experience Cloud-Erweiterungen für [Ereignis-Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) und [Client-seitig](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/analytics/adform).
+   * Adform bietet Adobe Experience Cloud-Erweiterungen für [Ereignis-Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) und [Client-seitig](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Unterstützte Identitäten {#supported-identities}
@@ -56,10 +56,24 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
+
+| Datentyp der Zielgruppe | Unterstützt | Beschreibung | Anwendungsfälle |
+|--------------------|-----------|-------------|-----------|
+| [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
+| [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
+| [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+
+{style="table-layout:auto"}
+
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -76,7 +90,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[. &#x200B;](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[. ](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -111,7 +125,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -129,6 +143,6 @@ Der Ziel-Connector exportiert nur die ECID-Identität an das Ziel. Es wird keine
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).
 
-## Zusätzliche Ressourcen {#additional-resources}
+## Weitere Ressourcen {#additional-resources}
 
 Weitere Informationen zur Adform Audience Base finden Sie in der [Dokumentation zur Adform Audience Base](https://www.adformhelp.com/hc/en-us/categories/9738365991697-Data-Management-Platform).

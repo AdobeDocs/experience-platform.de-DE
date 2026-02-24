@@ -1,18 +1,18 @@
 ---
 title: Echtzeit-Zielverbindung Magnite
-description: Verwenden Sie dieses Ziel, um Adobe-CDP-Zielgruppen in Echtzeit für die Magnite-Streaming-Plattform bereitzustellen.
+description: Verwenden Sie dieses Ziel, um Adobe CDP-Zielgruppen in Echtzeit für die Magnite-Streaming-Plattform bereitzustellen.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: da05db9376893bdbe8f0aa291f19a507e4a73d4f
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 31%
+source-wordcount: '1410'
+ht-degree: 25%
 
 ---
 
 # Magnitude: Echtzeit-Zielverbindung
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Die [!DNL Magnite: Real-Time] und die Ziele [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) in Adobe Experience Platform helfen Ihnen, Zielgruppen für das Targeting und die Aktivierung auf der Magnite-Streaming-Plattform zuzuordnen und zu exportieren.
 
@@ -58,10 +58,24 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
+
+| Datentyp der Zielgruppe | Unterstützt | Beschreibung | Anwendungsfälle |
+|--------------------|-----------|-------------|-----------|
+| [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
+| [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
+| [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+
+{style="table-layout:auto"}
+
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -69,7 +83,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL Magnite: Real-Time]-Ziel verwendet werden. |
+| Exporttyp | **[!UICONTROL Segment export]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL Magnite: Real-Time]-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -78,26 +92,26 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View destinations]** und **[!UICONTROL Manage destinations]** Zugriffssteuerungsberechtigung[. ](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Connect to destination]** aus.
 
 ![Nicht ausgefüllte Authentifizierungsfelder der Zielkonfiguration](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
 
-* **[!UICONTROL Benutzername]**: Der von [!DNL Magnite] bereitgestellte Benutzername.
-* **[!UICONTROL Kennwort]**: Das Kennwort, das Sie von [!DNL Magnite] erhalten haben.
+* **[!UICONTROL Username]**: Der Benutzername, der Ihnen von [!DNL Magnite] bereitgestellt wurde.
+* **[!UICONTROL Password]**: Das Kennwort, das Sie von [!DNL Magnite] erhalten haben.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Ihr Firmenname]**: Ihr Kunden-/Firmenname. Es stehen nur unterstützte [!DNL Magnite Streaming]-Clients zur Auswahl.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Your company name]**: Ihr Kunde-/Firmenname. Es stehen nur unterstützte [!DNL Magnite Streaming]-Clients zur Auswahl.
 
 >[!NOTE]
 >
@@ -105,7 +119,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 ![Authentifizierungsfelder für die Zielkonfiguration ausgefüllt](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
-Klicken Sie abschließend auf die Schaltfläche **[!UICONTROL Erstellen]**.
+Klicken Sie abschließend auf die Schaltfläche **[!UICONTROL Create]** .
 
 ![Optionale Governance-Richtlinie und Durchsetzungsmaßnahmen](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
 
@@ -113,14 +127,14 @@ Klicken Sie abschließend auf die Schaltfläche **[!UICONTROL Erstellen]**.
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 >
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -130,9 +144,9 @@ Nachdem die Zielverbindung erstellt wurde, können Sie mit dem Aktivierungsfluss
 
 Der nächste Schritt besteht darin, Quellkennungen der ID „Magnite device_id“ zuzuordnen.
 
-* Sie können beliebig viele Zuordnungen hinzufügen, indem Sie **[!UICONTROL Neue Zuordnung hinzufügen]** auswählen.
+* Sie können beliebig viele Zuordnungen hinzufügen, indem Sie **[!UICONTROL Add new mapping]** auswählen.
 
-Dieses Beispiel zeigt unter Verwendung des Echtzeit-Ziels eine Zeile, die eine generische deviceId-Quellkennung enthält, die dem Zielfeld Magnite device_id zugeordnet ist. Wenn Sie mit den Zuordnungen fertig sind, klicken Sie auf [!UICONTROL Weiter].
+Dieses Beispiel zeigt unter Verwendung des Echtzeit-Ziels eine Zeile, die eine generische deviceId-Quellkennung enthält, die dem Zielfeld Magnite device_id zugeordnet ist. Wenn Sie mit den Zuordnungen fertig sind, wählen Sie [!UICONTROL Next] aus.
 
 ![Ordnen Sie dem Feld device_id die gewünschten Datenfelder zu](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
@@ -144,11 +158,11 @@ Jetzt müssen Sie für jede Zielgruppe ein Startdatum (obligatorisch), ein Endda
 
 **Zuordnungs-ID**
 
-* Verwenden Sie das **[!UICONTROL Zuordnungs-ID]**-Feld, wenn eine Zielgruppe eine bereits vorhandene Segment-ID hat, die Magnite zuvor bekannt war.
+* Verwenden Sie das Feld **[!UICONTROL Mapping ID]** , wenn eine Zielgruppe eine bereits vorhandene Segment-ID hat, die Magnite zuvor bekannt war.
 
-* Um einer Zielgruppe eine **[!UICONTROL Zuordnungs]** ID) hinzuzufügen, wählen Sie jede Zielgruppenzeile einzeln aus und geben Sie Daten in der rechten Spalte ein (siehe Abbildung oben). Wenn Sie keine Zuordnungs-ID hinzufügen möchten, geben Sie KEINE in das Feld Zuordnungs-ID ein.
+* Um eine **[!UICONTROL Mapping ID]** zu einer Audience hinzuzufügen, wählen Sie jede Audience-Zeile einzeln aus und geben Sie Daten in der rechten Spalte ein (siehe Abbildung oben). Wenn Sie keine Zuordnungs-ID hinzufügen möchten, geben Sie KEINE in das Feld Zuordnungs-ID ein.
 
-Wählen Sie **[!UICONTROL Weiter]** und schließen Sie den Aktivierungsfluss ab.
+Wählen Sie **[!UICONTROL Next]** aus und schließen Sie den Aktivierungsfluss ab.
 
 ![Wählen Sie Weiter aus und schließen Sie den Aktivierungsfluss ab.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
 
@@ -174,6 +188,6 @@ Wenn für Ihre Integration kein Batch-Ziel konfiguriert wurde, richten Sie es je
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).
 
-## Zusätzliche Ressourcen {#additional-resources}
+## Weitere Ressourcen {#additional-resources}
 
 Weitere Hilfedokumentation finden Sie im [Magnite Help Center](https://help.magnite.com/help).

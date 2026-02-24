@@ -3,16 +3,16 @@ keywords: Email;E-Mail;E-Mail;E-Mail-Ziele;SendGrid;SendGrid-Ziel
 title: SendGrid-Verbindung
 description: Mit dem SendGrid-Ziel können Sie Ihre First-Party-Daten exportieren und in SendGrid für Ihre Geschäftsanforderungen aktivieren.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 22%
+source-wordcount: '1646'
+ht-degree: 21%
 
 ---
 
 # [!DNL SendGrid]-Verbindung
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 [SendGrid](https://www.sendgrid.com) ist eine beliebte Kundenkommunikationsplattform für Transaktions- und Marketing-E-Mails.
 
@@ -25,16 +25,16 @@ SendGrid verwendet API-Bearer-Token als Authentifizierungsmechanismus für die K
 Die folgenden Elemente sind erforderlich, bevor Sie mit der Konfiguration des Ziels beginnen.
 
 1. Sie benötigen ein SendGrid-Konto.
-   * Navigieren Sie zur SendGrid[Anmeldeseite &#x200B;](https://signup.sendgrid.com/) registrieren Sie sich und erstellen Sie ein SendGrid-Konto, falls Sie noch keines haben.
+   * Navigieren Sie zur SendGrid[Anmeldeseite ](https://signup.sendgrid.com/) registrieren Sie sich und erstellen Sie ein SendGrid-Konto, falls Sie noch keines haben.
 1. Nach der Anmeldung beim SendGrid-Portal müssen Sie auch ein API-Token generieren.
 1. Navigieren Sie zur SendGrid-Website und rufen Sie die Seite **[!DNL Settings]** > **[!DNL API Keys]** auf. Alternativ finden Sie in der [SendGrid-Dokumentation](https://app.sendgrid.com/settings/api_keys) Informationen zum Zugriff auf den entsprechenden Abschnitt in der SendGrid-App.
 1. Klicken Sie abschließend auf die Schaltfläche **[!DNL Create API Key]** .
-   * Weitere Informationen zu den auszuführenden Aktionen [&#x200B; Sie in der &#x200B;](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key) zu SendGrid .
+   * Weitere Informationen zu den auszuführenden Aktionen [ Sie in der ](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key) zu SendGrid .
    * Wenn Sie Ihren API-Schlüssel programmgesteuert generieren möchten, lesen Sie die [SendGrid-Dokumentation](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie ein [Schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) in [!DNL Experience Platform] erstellt haben. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#limits)Beschränkungen“ weiter unten auf dieser Seite.
+Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie ein [Schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) in [!DNL Experience Platform] erstellt haben. Weitere Informationen finden Sie [ Abschnitt ](#limits)Beschränkungen“ weiter unten auf dieser Seite.
 
 >[!IMPORTANT]
 >
@@ -51,6 +51,31 @@ SendGrid unterstützt die Aktivierung von Identitäten, die in der folgenden Tab
 | email | E-Mail-Adresse | Beachten Sie, dass sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von [!DNL Adobe Experience Platform] unterstützt werden. Wenn das Quellfeld von Experience Platform ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform].<br/><br/> Beachten Sie, dass **SendGrid** keine Hash-E-Mail-Adressen unterstützt, sodass nur Textdaten ohne Umwandlung an das Ziel gesendet werden. |
 
 {style="table-layout:auto"}
+
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses Ziel exportieren können.
+
+| Zielgruppenherkunft | Unterstützt | Beschreibung |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
+
+| Datentyp der Zielgruppe | Unterstützt | Beschreibung | Anwendungsfälle |
+|--------------------|-----------|-------------|-----------|
+| [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
+| [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
+| [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+
+{style="table-layout:auto"}
+
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -75,7 +100,7 @@ Marketing-Teams, die SendGrid verwenden, können in SendGrid eine Mailing-Liste 
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -116,7 +141,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -141,20 +166,20 @@ Auf den folgenden Bildern finden Sie Details, die speziell für dieses Ziel gelt
 1. Wählen Sie **[!UICONTROL Finish]** aus, um die Einrichtung abzuschließen.
    ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
-Die umfassende Liste der unterstützten Attributzuordnungen, die für die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder aktualisieren) eingerichtet &#x200B;](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) können, finden Sie unten.
+Die umfassende Liste der unterstützten Attributzuordnungen, die für die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder aktualisieren) eingerichtet ](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) können, finden Sie unten.
 
 | Quellfeld | Zielfeld | Typ | Beschreibung | Beschränkungen |
 |---|---|---|---|---|
-| xdm:<br/> homeAddress.street1 | xdm:<br/> address_line_1 | String | Die erste Zeile der Adresse. | Maximale Länge: <br/> 100 Zeichen |
-| xdm:<br/> homeAddress.street2 | xdm:<br/> address_line_2 | String | Eine optionale zweite Zeile für die Adresse. | Maximale Länge: <br/> 100 Zeichen |
-| xdm:<br/> _extconndev.alternate_emails | xdm:<br/> alternative_emails | String-Array | Zusätzliche E-Mails, die mit dem Kontakt verknüpft sind. | <ul><li>Max.: 5 Elemente</li><li>Min.: 0 Elemente</li></ul> |
-| xdm:<br/> homeAddress.city | xdm:<br/> city | String | Die Stadt des Kontakts. | Maximale Länge: <br/> 60 Zeichen |
-| xdm:<br/> homeAddress.country | xdm:<br/> Land | String | Das Land des Kontakts. Kann ein vollständiger Name oder eine Abkürzung sein. | Maximale Länge: <br/> 50 Zeichen |
-| identityMap:<br/> E-Mail | Identität:<br/> external_id | String | Die primäre E-Mail des Kontakts. Dies ist eine gültige E-Mail. | Maximale Länge: <br/> 254 Zeichen |
-| xdm:<br/> person.name.firstName | xdm:<br/> first_name | String | Der Name des Kontakts | Maximale Länge: <br/> 50 Zeichen |
-| xdm:<br/> person.name.lastName | xdm:<br/> last_name | String | Nachname des Kontakts | Maximale Länge: <br/> 50 Zeichen |
-| xdm:<br/> homeAddress.postalCode | xdm:<br/> Postal_Code | String | Die Postleitzahl des Kontakts oder eine andere Postleitzahl. | |
-| xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_Province_region | String | Bundesland, Provinz oder Region des Kontakts. | Maximale Länge: <br/> 50 Zeichen |
+| xdm:<br/> homeAddress.street1 | xdm:<br/> address_line_1 | Zeichenfolge | Die erste Zeile der Adresse. | Maximale Länge: <br/> 100 Zeichen |
+| xdm:<br/> homeAddress.street2 | xdm:<br/> address_line_2 | Zeichenfolge | Eine optionale zweite Zeile für die Adresse. | Maximale Länge: <br/> 100 Zeichen |
+| xdm:<br/> _extconndev.alternate_emails | xdm:<br/> alternative_emails | Zeichenfolgen-Array | Zusätzliche E-Mails, die mit dem Kontakt verknüpft sind. | <ul><li>Max.: 5 Elemente</li><li>Min.: 0 Elemente</li></ul> |
+| xdm:<br/> homeAddress.city | xdm:<br/> city | Zeichenfolge | Die Stadt des Kontakts. | Maximale Länge: <br/> 60 Zeichen |
+| xdm:<br/> homeAddress.country | xdm:<br/> Land | Zeichenfolge | Das Land des Kontakts. Kann ein vollständiger Name oder eine Abkürzung sein. | Maximale Länge: <br/> 50 Zeichen |
+| identityMap:<br/> E-Mail | Identität:<br/> external_id | Zeichenfolge | Die primäre E-Mail des Kontakts. Dies ist eine gültige E-Mail. | Maximale Länge: <br/> 254 Zeichen |
+| xdm:<br/> person.name.firstName | xdm:<br/> first_name | Zeichenfolge | Der Name des Kontakts | Maximale Länge: <br/> 50 Zeichen |
+| xdm:<br/> person.name.lastName | xdm:<br/> last_name | Zeichenfolge | Nachname des Kontakts | Maximale Länge: <br/> 50 Zeichen |
+| xdm:<br/> homeAddress.postalCode | xdm:<br/> Postal_Code | Zeichenfolge | Die Postleitzahl des Kontakts oder eine andere Postleitzahl. | |
+| xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_Province_region | Zeichenfolge | Bundesland, Provinz oder Region des Kontakts. | Maximale Länge: <br/> 50 Zeichen |
 
 ## Überprüfen des Datenexports in SendGrid {#validate}
 
@@ -195,4 +220,4 @@ Dieses SendGrid-Ziel nutzt die folgenden APIs:
 
 ### Beschränkungen {#limits}
 
-* Die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder &#x200B;](https://api.sendgrid.com/v3/marketing/contacts)Kontakt aktualisieren) kann 30.000 Kontakte oder 6 MB Daten akzeptieren, je nachdem, welcher Wert niedriger ist.
+* Die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder ](https://api.sendgrid.com/v3/marketing/contacts)Kontakt aktualisieren) kann 30.000 Kontakte oder 6 MB Daten akzeptieren, je nachdem, welcher Wert niedriger ist.

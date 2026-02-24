@@ -1,18 +1,18 @@
 ---
 title: Magnite-Batch-Ziel
-description: Verwenden Sie dieses Ziel, um Adobe-CDP-Zielgruppen im Batch an die Magnite-Streaming-Plattform zu senden.
+description: Verwenden Sie dieses Ziel, um Adobe CDP-Zielgruppen im Batch an die Magnite-Streaming-Plattform zu senden.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 57e6dc4252c031d993592b963efc089f8427ce25
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1680'
-ht-degree: 14%
+source-wordcount: '1782'
+ht-degree: 12%
 
 ---
 
 # Magnitude: Batch-Verbindung {#magnite-streaming-batch}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 In diesem Dokument wird das Ziel „Magnite: Batch“ beschrieben und es werden Beispiele für Anwendungsfälle bereitgestellt, die Ihnen dabei helfen, die Aktivierung und den Export von Zielgruppen besser zu verstehen.
 
@@ -54,7 +54,7 @@ Um die [!DNL Magnite] Ziele in Adobe Experience Platform verwenden zu können, m
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Das Ziel Magnite: Batch kann (*)* Identitätsquellen von der Adobe-CDP empfangen. Derzeit hat dieses Ziel drei Zielidentitätsfelder, denen Sie zuordnen können.
+Das Ziel Magnite: Batch kann (*)* Identitätsquellen von der Adobe CDP empfangen. Derzeit hat dieses Ziel drei Zielidentitätsfelder, denen Sie zuordnen können.
 
 >[!NOTE]
 >
@@ -72,17 +72,31 @@ Das Ziel Magnite: Batch kann (*)* Identitätsquellen von der Adobe-CDP empfangen
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
+
+| Datentyp der Zielgruppe | Unterstützt | Beschreibung | Anwendungsfälle |
+|--------------------|-----------|-------------|-----------|
+| [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
+| [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
+| [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+
+{style="table-layout:auto"}
+
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
 | Element | Typ | Anmerkungen |
 |-----------------------------|----------|----------|
 | Exporttyp | Zielgruppenexport | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im Ziel Magnite: Batch verwendet werden. |
-| Exporthäufigkeit | Batch | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie [&#x200B; Batch (dateibasierte &#x200B;](/help/destinations/destination-types.md)). |
+| Exporthäufigkeit | Batch | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie [ Batch (dateibasierte ](/help/destinations/destination-types.md)). |
 
 {style="table-layout:auto"}
 
@@ -96,7 +110,7 @@ Suchen Sie im Adobe Experience-Katalog das Ziel Magnite: Batch . Klicken Sie auf
 
 Wenn Sie bereits über ein vorhandenes Konto verfügen, können Sie es suchen, indem Sie die Option Kontotyp in „Vorhandenes Konto“ ändern. Andernfalls wird unten ein Konto erstellt:
 
-Um ein neues Konto zu erstellen und es erstmals beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder „S3-Zugriffsschlüssel“ und „S3-Geheimschlüssel“ aus (bereitgestellt über Ihren Account Manager) und wählen Sie **[!UICONTROL Mit Ziel verbinden]**
+Um ein neues Konto zu erstellen und es erstmals beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder „S3-Zugriffsschlüssel“ und „S3-Geheimschlüssel“ aus (bereitgestellt über Ihren Account Manager) und wählen Sie **[!UICONTROL Connect to destination]** aus
 
 ![Nicht ausgefüllte Authentifizierungsfelder der Zielkonfiguration](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
@@ -110,9 +124,9 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie diese Zielverbindung/Instanz in der
 Zukunft.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dies zu identifizieren
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dies zu identifizieren
 Zielverbindung/Instanz in der Zukunft.
-* **[!UICONTROL Ihr Firmenname]**: Ihr Kunden-/Firmenname. Es stehen nur unterstützte [!DNL Magnite Streaming]-Clients zur Auswahl.
+* **[!UICONTROL Your company name]**: Ihr Kunde-/Firmenname. Es stehen nur unterstützte [!DNL Magnite Streaming]-Clients zur Auswahl.
 
 >[!NOTE]
 >
@@ -124,37 +138,37 @@ Zielverbindung/Instanz in der Zukunft.
 >
 >Wenn Sie mehrere ID-Typen (GAID, IDFA usw.) mithilfe des Batch-Ziels senden möchten, ist für jede Verbindung eine neue Zielinstanz erforderlich. Weitere Informationen erhalten Sie von Ihrem Magnite-Kundenbetreuer.
 
-Sie können dann fortfahren, indem Sie **[!UICONTROL Weiter]**
+Klicken Sie dann auf **[!UICONTROL Next]**
 
 Auf dem nächsten Bildschirm mit dem Titel „Governance-Richtlinie und Durchsetzungsaktionen (Optional)“ können Sie optional relevante Data-Governance-Richtlinien auswählen. „Datenexport“ wird im Allgemeinen für das Ziel „Magnitude: Batch“ ausgewählt.
 
 ![Optionale Governance-Richtlinie und Durchsetzungsmaßnahmen](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
-Wenn Sie diesen optionalen Bildschirm überspringen möchten, klicken Sie nach der Auswahl auf **[!UICONTROL Erstellen]**
+Nach der Auswahl oder wenn Sie diesen optionalen Bildschirm überspringen möchten, klicken Sie auf **[!UICONTROL Create]**
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ### Aktivieren von Segmenten für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Zum Aktivieren von Daten benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**&#x200B;[Zugriffssteuerung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Im Feld **[!UICONTROL Source]** können Sie ein beliebiges Attribut oder eine beliebige Identität für Ihre Geräte auswählen. In diesem Beispiel haben wir eine benutzerdefinierte IdentityMap namens „DeviceId“ ausgewählt
+In der **[!UICONTROL Source field]** können Sie ein beliebiges Attribut oder eine beliebige Identität für Ihre Geräte auswählen. In diesem Beispiel haben wir eine benutzerdefinierte IdentityMap namens „DeviceId“ ausgewählt
 ![Ordnen Sie dem Feld device_id die gewünschten Datenfelder zu](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-Im Feld **[!UICONTROL Target]**:
-![Wählen Sie den entsprechenden Gerätetyp für die Zielidentität aus](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Weitere Informationen finden Sie [Unterstützte &#x200B;](#supported-identities)&quot;.
-In diesem Beispiel haben wir das Feld **[!UICONTROL Target]**: WITNIGH_DEVICEId_CUSTOM ausgewählt, da unser **[!UICONTROL Source-Feld]** als benutzerdefinierte IdentityMap definiert wurde: DeviceID.
+Im **[!UICONTROL Target field]**:
+![Wählen Sie den entsprechenden Gerätetyp für die Zielidentität aus](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Weitere Informationen finden Sie [Unterstützte ](#supported-identities)&quot;.
+In diesem Beispiel haben wir die **[!UICONTROL Target field]**: 0magnetie_deviceId_CUSTOM ausgewählt, da unsere **[!UICONTROL Source field]** als benutzerdefinierte IdentityMap definiert wurde: DeviceID.
 
 >[!NOTE]
 >
@@ -185,6 +199,6 @@ Nach dem Hochladen Ihrer Zielgruppen können Sie überprüfen, ob Ihre Zielgrupp
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).
 
-## Zusätzliche Ressourcen {#additional-resources}
+## Weitere Ressourcen {#additional-resources}
 
 Weitere Hilfedokumentation finden Sie im [Magnite Help Center](https://help.magnite.com/help).

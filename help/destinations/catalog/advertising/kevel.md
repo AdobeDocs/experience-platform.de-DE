@@ -2,17 +2,17 @@
 title: Verbindung abgleichen
 description: Verwenden Sie das Level-Streaming-Ziel, um Zielgruppen direkt in die UserDB- und Segment-Management-APIs von Level zu aktivieren und das Targeting in Echtzeit zur Entscheidungszeit zu unterstützen.
 last-substantial-update: 2026-01-27T00:00:00Z
-source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
+exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 9%
+source-wordcount: '1172'
+ht-degree: 8%
 
 ---
 
-
 # [!DNL Kevel]-Verbindung {#kevel}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 [[!DNL Kevel]](https://www.kevel.com/) bietet die KI-fähige Technologie und fachkundige Anleitung, die innovativen Commerce-Führungskräften dabei helfen, in Einzelhandelsmedien zu starten, zu skalieren und erfolgreich zu sein. Die Retail Media Cloud von [!DNL Kevel] ermöglicht zielgerichtete, zuordenbare, anpassbare Anzeigenformate für Onsite- und Offsite-Werbung.
 
@@ -73,9 +73,23 @@ Das bedeutet:
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |-----------------------|-----------|---------------------------------------------------------- |
 | Segmentierungs-Service | Ja | Von der Segmentierungs-Engine ausgewertete Adobe-Profil-Zielgruppen. |
-| Benutzerdefinierte Uploads | Nein | Derzeit nicht unterstützt. |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
+
+| Datentyp der Zielgruppe | Unterstützt | Beschreibung | Anwendungsfälle |
+|--------------------|-----------|-------------|-----------|
+| [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
+| [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
+| [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+
+{style="table-layout:auto"}
+
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 

@@ -2,9 +2,9 @@
 title: Marketo Engage-Verbindung
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analysen und Commerce. Damit können Sie Aktivitäten automatisieren und verwalten, von der CRM-Lead-Verwaltung und Kundeninteraktion bis hin zu Account-basiertem Marketing und Umsatzzuordnung.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1875'
 ht-degree: 16%
 
 ---
@@ -45,7 +45,7 @@ Sie können ihre Zielgruppen in Marketo Engage aktivieren und den **[!UICONTROL 
 
 ## Voraussetzungen {#prerequisites}
 
-* Die Person, die das Ziel einrichtet, muss über die Berechtigung [Person bearbeiten](https://experienceleague.adobe.com/de/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) in ihrer Marketo-Instanz und -Partition verfügen.
+* Die Person, die das Ziel einrichtet, muss über die Berechtigung [Person bearbeiten](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) in ihrer Marketo-Instanz und -Partition verfügen.
 * Beim Einrichten dieses Ziels sind nur Marketo Engage-Instanzen in derselben Adobe Real-Time CDP-Organisation verfügbar.
 * Nur Marketo Engage-Instanzen, deren Benutzer in der Adobe Admin Console verwaltet werden, können dieses Ziel verwenden.
 
@@ -55,7 +55,7 @@ Sie können ihre Zielgruppen in Marketo Engage aktivieren und den **[!UICONTROL 
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| `DedupeField` | Das Feld, das zum Identifizieren und Abgleichen bestehender Leads in Marketo verwendet wird. | Ordnen Sie [&#x200B; Schritt &#x200B;](#mapping)Zuordnung“ jedes Quellfeld (z. B. `Email` oder andere benutzerdefinierte Kennungen) zu, das Sie als Deduplizierungsfeld für diese Zielidentität verwenden möchten. Um die besten Ergebnisse zu erzielen, wählen Sie ein Feld aus, das in allen Ihren Kundenprofilen konsistent verfügbar und eindeutig ist. `ECID` wird als Deduplizierungsfeld nicht unterstützt. |
+| `DedupeField` | Das Feld, das zum Identifizieren und Abgleichen bestehender Leads in Marketo verwendet wird. | Ordnen Sie [ Schritt ](#mapping)Zuordnung“ jedes Quellfeld (z. B. `Email` oder andere benutzerdefinierte Kennungen) zu, das Sie als Deduplizierungsfeld für diese Zielidentität verwenden möchten. Um die besten Ergebnisse zu erzielen, wählen Sie ein Feld aus, das in allen Ihren Kundenprofilen konsistent verfügbar und eindeutig ist. `ECID` wird als Deduplizierungsfeld nicht unterstützt. |
 
 {style="table-layout:auto"}
 
@@ -65,8 +65,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | ✓ | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> <br> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> <br> |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Marketo verwendet die von Ihnen ausgewählten **[!UICONTROL Marketo deduplicatio
 |-----------|---------------|-------------------|
 | **[!UICONTROL Profile only]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Aktualisiert vorhandene Leads mit neuen Profildaten</li><li>Erstellt neue Leads in der ausgewählten Partition für nicht übereinstimmende Profile</li></ul> |
 | **[!UICONTROL Profile only]** | **[!UICONTROL Update existing persons only]** | <ul><li>Aktualisiert vorhandene Leads mit neuen Profildaten</li><li>Keine neuen Leads für nicht übereinstimmende Profile erstellt</li></ul> |
-| **[!UICONTROL Audience only]** | k. A. | <ul><li>Fügt vorhandene Leads zu Zielgruppenlisten hinzu</li><li>Keine neuen Leads für nicht übereinstimmende Profile erstellt</li></ul> |
+| **[!UICONTROL Audience only]** | K. A. | <ul><li>Fügt vorhandene Leads zu Zielgruppenlisten hinzu</li><li>Keine neuen Leads für nicht übereinstimmende Profile erstellt</li></ul> |
 | **[!UICONTROL Audience and profile]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Aktualisiert vorhandene Leads mit neuen Profildaten</li><li>Fügt vorhandene Leads zu Zielgruppenlisten hinzu</li><li>Erstellt neue Leads in der ausgewählten Partition für nicht übereinstimmende Profile</li><li>Fügt neue Leads zu Zielgruppenlisten hinzu</li></ul> |
 | **[!UICONTROL Audience and profile]** | **[!UICONTROL Update existing persons only]** | <ul><li>Aktualisiert vorhandene Leads mit neuen Profildaten</li><li>Fügt vorhandene Leads zu Zielgruppenlisten hinzu</li><li>Keine neuen Leads für nicht übereinstimmende Profile erstellt</li></ul> |
 
@@ -119,7 +119,7 @@ Marketo verwendet die von Ihnen ausgewählten **[!UICONTROL Marketo deduplicatio
 
 >[!IMPORTANT]
 > 
->* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions)
+>* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions)
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
@@ -145,8 +145,8 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
    * **[!UICONTROL Audience and profile]**: Wählen Sie diese Option aus, wenn Sie sowohl Zielgruppenmitglieder zu Marketo-Listen hinzufügen als auch deren Profilinformationen auf dem neuesten Stand halten möchten.
    * **[!UICONTROL Profile only]**: Wählen Sie diese Option aus, um Marketo-Lead-Profile mit den neuesten Informationen aus Experience Platform auf dem neuesten Stand zu halten.
    * **[!UICONTROL Audience only]**: Wählen Sie diese Option aus, wenn Sie Zielgruppenmitglieder zu Marketo-Listen hinzufügen möchten, ohne ihre Profilinformationen zu aktualisieren.
-* **[!UICONTROL Partition]**: *Die Partitionsauswahl ist nur bei der Auswahl von **[!UICONTROL Profile only]**&#x200B;oder **[!UICONTROL Audience and profile]**&#x200B;Synchronisierungstypen verfügbar*. Wählen Sie eine Marketo-Partitions-ID aus, die mit Ihrem ausgewählten Arbeitsbereich verknüpft ist. Auf diese Weise können Sie angeben, welche Lead-Partition in Marketo die exportierten Daten erhält. Wenn Sie keine bestimmte Partition auswählen, werden Ihre Daten an die **[!UICONTROL Default]** Partition in Marketo gesendet.
-* **[!UICONTROL Marketo deduplication field]**: Wählen Sie das Marketo-Deduplizierungsfeld aus, das Sie beim Aktualisieren vorhandener Marketo-Leads verwenden möchten. Dieser Selektor zeigt die Felder an, die Sie in Marketo als Deduplizierungsfelder markiert haben. Wenn ein bestimmtes Feld aus Marketo als Deduplizierungsfeld angezeigt werden soll, müssen Sie das Feld in Marketo als [&#x200B; durchsuchbares &#x200B;](https://experienceleague.adobe.com/de/docs/marketo-developer/marketo/rest/lead-database/lead-database) markieren.
+* **[!UICONTROL Partition]**: *Die Partitionsauswahl ist nur bei der Auswahl von **[!UICONTROL Profile only]**oder **[!UICONTROL Audience and profile]**Synchronisierungstypen verfügbar*. Wählen Sie eine Marketo-Partitions-ID aus, die mit Ihrem ausgewählten Arbeitsbereich verknüpft ist. Auf diese Weise können Sie angeben, welche Lead-Partition in Marketo die exportierten Daten erhält. Wenn Sie keine bestimmte Partition auswählen, werden Ihre Daten an die **[!UICONTROL Default]** Partition in Marketo gesendet.
+* **[!UICONTROL Marketo deduplication field]**: Wählen Sie das Marketo-Deduplizierungsfeld aus, das Sie beim Aktualisieren vorhandener Marketo-Leads verwenden möchten. Dieser Selektor zeigt die Felder an, die Sie in Marketo als Deduplizierungsfelder markiert haben. Wenn ein bestimmtes Feld aus Marketo als Deduplizierungsfeld angezeigt werden soll, müssen Sie das Feld in Marketo als [ durchsuchbares ](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) markieren.
 
   >[!NOTE]
   >
@@ -167,7 +167,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 > 
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 

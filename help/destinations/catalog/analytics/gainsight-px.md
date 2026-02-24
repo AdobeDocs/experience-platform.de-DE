@@ -3,16 +3,16 @@ title: Gainsight PX-Verbindung
 description: Verwenden Sie das Gainsight PX-Ziel, um Segmentierungsinformationen an die Gainsight PX-Plattform zu senden.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 37%
+source-wordcount: '988'
+ht-degree: 24%
 
 ---
 
 # Gainsight PX-Verbindung {#gainsight-px}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 [[!DNL Gainsight PX]](https://www.gainsight.com/product-experience/) ist eine Produkterlebnisplattform, mit der Produkt-Teams verstehen können, wie Benutzer ihre Produkte verwenden, Feedback einholen und In-App-Interaktionen erstellen können, z. B. exemplarische Vorgehensweisen zu Produkten, um das Onboarding von Benutzern und die Produktakzeptanz zu fördern.
 
@@ -31,7 +31,7 @@ Ein SaaS-Unternehmen möchte seine Kunden über ein Anwendungshandbuch auf Gains
 ## Voraussetzungen {#prerequisites}
 
 * Wenden Sie sich an das [!DNL Gainsight]-Supportteam und fordern Sie die Aktivierung externer Segmentfunktionen für Ihr Abonnement an.
-* Generieren Sie einen OAuth-Geheimniswert für Ihr PX-Abonnement mithilfe der Schaltfläche **[!UICONTROL Neues Geheimnis generieren]** unten auf der Seite [Unternehmensdetails](https://app.aptrinsic.com/settings/subscription)
+* Generieren Sie einen geheimen OAuth-Wert für Ihr PX-Abonnement, indem Sie die Schaltfläche **[!UICONTROL Generate New Secret]** unten auf der Seite &quot;[&quot; ](https://app.aptrinsic.com/settings/subscription)
   ![Bildschirm mit Unternehmensdetails in Gainsight PX mit der Schaltfläche „Neues Geheimnis generieren“](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
 
 ## Unterstützte Identitäten {#supported-identities}
@@ -49,11 +49,25 @@ Gainsight PX unterstützt die Aktivierung von Identitäten, die in der folgenden
 In diesem Abschnitt wird beschrieben, welche Art von Zielgruppe Sie an dieses Ziel exportieren können.
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
-|---|---|---|
-| [!DNL Segmentation Service] | ✓ | Zielgruppen, die über den Experience Platform ([-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
+
+| Datentyp der Zielgruppe | Unterstützt | Beschreibung | Anwendungsfälle |
+|--------------------|-----------|-------------|-----------|
+| [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
+| [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
+| [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+
+{style="table-layout:auto"}
+
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -61,7 +75,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 |---|---|---|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL Gainsight PX]-Ziel verwendet werden. |
+| Exporttyp | **[!UICONTROL Segment export]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL Gainsight PX]-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert wird, sendet der Connector die Aktualisierung nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -70,44 +84,44 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Manage Destinations]** [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Connect to destination]** aus.
 
 ![Authentifizierungs-Screenshot](../../assets/catalog/analytics/gainsight-px/auth-screen.png)
 
-* **[!UICONTROL Kennwort]**: Das für die Anmeldung bei [[!DNL Gainsight PX]](https://app.aptrinsic.com) verwendete Kennwort
-* **[!UICONTROL Client-ID]**: Die Gainsight PX-Abonnement-ID auf der [Seite „Unternehmensdetails“](https://app.aptrinsic.com/settings/subscription)
-* **[!UICONTROL Client-Geheimnis]**: Das OAuth-Geheimnis, das unten auf der Seite &quot;[&quot; &#x200B;](https://app.aptrinsic.com/settings/subscription) der [!DNL Gainsight PX]-Benutzeroberfläche generiert wird.
-* **[!UICONTROL Benutzername]**: Die E-Mail, mit der die Anmeldung bei der [[!DNL Gainsight PX]](https://app.aptrinsic.com)-Benutzeroberfläche erfolgt
+* **[!UICONTROL Password]**: Das Kennwort für die Anmeldung bei [[!DNL Gainsight PX]](https://app.aptrinsic.com)
+* **[!UICONTROL Client ID]**: Die Gainsight PX-Abonnement-ID auf der Seite [Unternehmensdetails](https://app.aptrinsic.com/settings/subscription)
+* **[!UICONTROL Client secret]**: Das OAuth-Geheimnis, das unten auf der Seite [Unternehmensdetails“ ](https://app.aptrinsic.com/settings/subscription) der [!DNL Gainsight PX]-Benutzeroberfläche generiert wird.
+* **[!UICONTROL Username]**: Die E-Mail, mit der die Anmeldung bei der [[!DNL Gainsight PX]](https://app.aptrinsic.com)-Benutzeroberfläche erfolgt
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Bildschirm mit Zieldetails in der Experience Platform-Benutzeroberfläche, der zeigt, wie die Felder Name und Beschreibung ausgefüllt werden](../../assets/catalog/analytics/gainsight-px/destination_details.png)
+![Bildschirm mit Zieldetails in der Benutzeroberfläche von Experience Platform, der zeigt, wie die Felder Name und Beschreibung ausgefüllt werden](../../assets/catalog/analytics/gainsight-px/destination_details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 >
->* Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die Berechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffssteuerung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Zuordnen von Identitäten {#map}
 
-Dieses Ziel unterstützt die Zuordnung von Profilattributen und Identity-Namespaces. Das Zielgruppen-Mapping muss immer der Identity-Namespace **[!UICONTROL IDENTIFY_ID]** sein.
+Dieses Ziel unterstützt die Zuordnung von Profilattributen und Identity-Namespaces. Das Zielgruppen-Mapping muss immer der **[!UICONTROL IDENTIFY_ID]** Identity-Namespace sein.
 
 In den folgenden Beispielen erfahren Sie mehr über die Konfiguration der Zuordnung.
 
@@ -119,13 +133,13 @@ Im folgenden Beispiel ist das Quellfeld ein XDM-Profilattribut, das dem Ziel-Nam
 
 #### Zuordnen eines Identity-Namespace {#map-identity-namespace}
 
-Im folgenden Beispiel ist das Quellfeld ein Identity-Namespace (**[!UICONTROL ECID]**), der dem Zielnamespace **[!UICONTROL IDENTIFY_ID]** zugeordnet wird.
+Im folgenden Beispiel ist das Quellfeld ein Identity-Namespace (**[!UICONTROL ECID]**), der dem **[!UICONTROL IDENTIFY_ID]** Ziel-Namespace zugeordnet wird.
 
 ![Bildschirm für die Attributbeispielzuordnung , der zeigt, wie die Quell- und Zielwerte ausgewählt werden](../../assets/catalog/analytics/gainsight-px/mapping_identities.png)
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
-Segmentierungsdaten werden von der Experience Platform an Gainsight PX gestreamt.
+Segmentierungsdaten werden von Experience Platform an Gainsight PX gestreamt.
 
 Segmentmetadaten werden im Bildschirm Segmente in der [!DNL Gainsight PX]-Benutzeroberfläche angezeigt.
 
