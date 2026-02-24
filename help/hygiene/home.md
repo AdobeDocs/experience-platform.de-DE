@@ -2,10 +2,10 @@
 title: Erweiterte Übersicht über die Verwaltung des Datenlebenszyklus
 description: Mit dem erweiterten Daten-Lifecycle-Management können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder ungenaue Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: a1502e8f1515ff73840b2926f5be355032dd4bab
+source-git-commit: fc71e61fd33fe216f8cd326b9df048958c07077a
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 27%
+source-wordcount: '691'
+ht-degree: 32%
 
 ---
 
@@ -13,16 +13,7 @@ ht-degree: 27%
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
-<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
-
-* Scheduling automated dataset expirations
-* Deleting individual records from one or all datasets
-
->[!IMPORTANT]
->
->Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
-
-Diese Aktivitäten können mit dem Arbeitsbereich der [[!UICONTROL Data Lifecycle]-Benutzeroberfläche &#x200B;](#ui) der [Datenhygiene-API) &#x200B;](#api). Wenn ein Datenlebenszyklusauftrag ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Auftragstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
+Diese Aktivitäten können mit dem Arbeitsbereich der [[!UICONTROL Data Lifecycle]-Benutzeroberfläche ](#ui) der [Datenhygiene-API) ](#api). Wenn ein Datenlebenszyklusauftrag ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Auftragstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
 
 >[!NOTE]
 >
@@ -44,7 +35,7 @@ Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensat
 
 >[!TIP]
 >
->Informationen zur Überwachung der aktuellen Nutzung in Bezug auf Kontingentbeschränkungen finden Sie [&#x200B; „Kontingentreferenzhandbuch](./api/quota.md).\
+>Informationen zur Überwachung der aktuellen Nutzung in Bezug auf Kontingentbeschränkungen finden Sie [ „Kontingentreferenzhandbuch](./api/quota.md).\
 >Berechtigungsregeln, monatliche Begrenzungen, SLA-Zeitleisten und Richtlinien zur Ausnahmebehandlung finden Sie in der Dokumentation [Löschen von Datensätzen (](./ui/record-delete.md#quotas)) und [Arbeitsauftrag (API)](./api/workorder.md#quotas).
 
 [Datensatzgültigkeitsanfrage](./ui/dataset-expiration.md) wird erstellt:
@@ -59,28 +50,6 @@ Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensat
 | Dauerhafte Löschung wird abgeschlossen | 15 Tage | Alle mit dem Datensatz verknüpften Daten werden dauerhaft aus dem Data Lake und Profil-Service gelöscht. Der [Status des Datenlebenszyklusauftrags](./ui/browse.md#view-details) der den Datensatz gelöscht hat, wird aktualisiert, um dies widerzuspiegeln. |
 
 {style="table-layout:auto"}
-
->[!IMPORTANT]
->
->Löschungen von Datensätzen in Amazon Web Services (AWS) haben eine Latenz von etwa drei Stunden, bevor Änderungen vollständig angewendet werden. Dazu gehören bis zu zwei Stunden, bis der Datensatz zum Löschen gekennzeichnet ist, gefolgt von einer zusätzlichen Stunde, bevor er vollständig aus dem System gelöscht wird. Löschanfragen für Experience Platform-Instanzen, die den Data Lake von Azure verwenden, führen dagegen zu sofortigen Änderungen in allen Unternehmensfunktionen.
->
->Für AWS-Benutzende kann sich diese Verzögerung auf die Batch-Segmentierung, Streaming-Segmentierung, Vorschau, Schätzungen, Exporte und den Datenzugriff auswirken. Diese Latenz betrifft nur Kundinnen und Kunden, die AWS verwenden, da Azure Data Lake-Benutzende sofort aktualisiert werden. Bei AWS-Benutzern kann es bis zu drei Stunden dauern, bis Löschanfragen vollständig durch alle betroffenen Systeme übertragen werden. Passen Sie Ihre Erwartungen entsprechend an.
-
-
-<!-- ### Record deletes {#record-delete-transparency}
-
-The following takes place when a [record delete request](./ui/record-delete.md) is created:
-
-| Stage | Time after request submission | Description |
-| --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted. |
-| Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
-| Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
-| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
-| Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
-| Data vacuuming completed | 14 days | The [status of the lifecycle job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
-
-{style="table-layout:auto"} -->
 
 ## Nächste Schritte
 
