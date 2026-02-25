@@ -201,7 +201,7 @@ ht-degree: 4%
 
 **Zielkatalog**: Ein Zielkatalog ist eine Liste der in Experience Platform verfügbaren Ziele.
 
-**Zielinstanz**: Eine Zielinstanz ist eine individuelle, konfigurierte Verbindung zu einem bestimmten Ziel in Experience Platform, die über die Benutzeroberfläche oder API erstellt wird. Sie stellt eine einzelne Aktivierungs-Pipeline von Experience Platform zu einem Ziel-Endpunkt dar. Wird auch als &quot;[&quot; ](#dataflow). {#destination-instance}
+**Zielinstanz**: Eine Zielinstanz ist eine individuelle, konfigurierte Verbindung zu einem bestimmten Ziel in Experience Platform, die über die Benutzeroberfläche oder API erstellt wird. Sie stellt eine einzelne Aktivierungs-Pipeline von Experience Platform zu einem Ziel-Endpunkt dar. Wird auch als &quot;[&quot; &#x200B;](#dataflow). {#destination-instance}
 
 **Direktaufrufregeln**: Im Kontext von Tags ist eine Direktaufrufregel eine Regel, die ausgeführt wird, wenn sie direkt von der Seite aufgerufen wird, wobei die Ereigniserkennung und die Suchsysteme umgangen werden.
 
