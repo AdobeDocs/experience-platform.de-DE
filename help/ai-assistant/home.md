@@ -2,7 +2,7 @@
 title: KI-Assistent in Adobe Experience Platform - Übersicht
 description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
+source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 9%
@@ -25,7 +25,7 @@ Der KI-Assistent in Adobe Experience Platform ist ein Gesprächserlebnis, mit de
 >
 >Sie müssen einer [Benutzervereinbarung“ zustimmen](https://www.adobe.com/de/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) bevor Sie den KI-Assistenten verwenden können. Die Benutzervereinbarung enthält auch die öffentliche Beta-Vereinbarung. Dies dient dazu, dass Sie zusätzliche KI-Assistenten-Funktionen verwenden können, während sie in einer Beta-Funktion eingeführt werden.
 
-+++Auswählen, um die Benutzeroberfläche für Benutzervereinbarungen anzuzeigen
++++Auswählen, um die Benutzervereinbarungsschnittstelle anzuzeigen
 
 ![Die erste Seite der Benutzervereinbarung.](./images/user-agreement-1.png)
 
@@ -61,7 +61,7 @@ Produktkenntnisse beziehen sich auf Konzepte und Themen, die auf der Dokumentati
 
 Sehen Sie sich das folgende Video an, um weitere Informationen zu KI-Assistent-Produktkenntnissen zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3475939/?captions=ger&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Betriebliche Erkenntnisse {#operational-insights}
 
@@ -76,11 +76,11 @@ Sie können Fragen zum KI-Assistenten zu Ihren betrieblichen Erkenntnissen in de
 | Domain | Unterstützte Metadaten | Nicht unterstützte Metadaten |
 | --- | --- | --- |
 | Attribute | <ul><li>Suche nach Attributnamen</li><li>Attribut - Schemabeziehung</li><li>Attribut - Datensatzbeziehung</li><li>Attribut - Zielgruppenbeziehung</li><li>Attribut - Zielbeziehung</li></ul> | <ul><li>Attributklasse</li><li>Verfolgung</li><li>Veraltungsstatus</li><li>Beschriftungen</li><li>In Attributen gespeicherter Wert</li></ul> |
-| Zielgruppen | <ul><li>Zielgruppengröße</li><li>Zielgruppentyp (Streaming oder Batch)</li><li>Erstellungs-/Änderungsdatum</li><li>Aktivierungsstatus</li><li>Anzahl der Profile</li><li>Duplizieren von Zielgruppen</li><li>Zielgruppen-Definitionssuche</li><li>Zielgruppe - Zielgruppenbeziehung</li><li>Zielgruppe - Attributbeziehung</li><li>Zielgruppe - Datensatzbeziehung</li><li>Zielgruppen-Ziel-Beziehung</li><li>Namenssuche</li><li>Name- und ID-Suche | <ul><li>Zielgruppenüberschneidungen</li><li>Zielgruppen-Aktivierung</li><li>Zielgruppe - Kampagnenbeziehungen</li><li>Verfolgung</li><li>Erstellen/Ändern</li><li>Beschriftungen</li><li>Trends bei der Profilqualifizierung</li></ul> |
+| Zielgruppen | <ul><li>Zielgruppengröße</li><li>Zielgruppentyp (Streaming oder Batch)</li><li>Erstellungs-/Änderungsdatum</li><li>Aktivierungsstatus</li><li>Anzahl der Profile</li><li>Duplizieren von Zielgruppen</li><li>Zielgruppen-Definitionssuche</li><li>Zielgruppe - Zielgruppenbeziehung</li><li>Zielgruppe - Attributbeziehung</li><li>Zielgruppe - Datensatzbeziehung</li><li>Zielgruppen-Ziel-Beziehung</li><li>Namenssuche</li><li>Name- und ID-Suche | <ul><li>Zielgruppenüberschneidungen</li><li>Zielgruppenaktivierung</li><li>Zielgruppe - Kampagnenbeziehungen</li><li>Verfolgung</li><li>Erstellen/Ändern</li><li>Beschriftungen</li><li>Trends bei der Profilqualifizierung</li></ul> |
 | Datenflüsse | <ul><li>Anzahl der Datenflüsse</li><li>Datenflussstatus</li><li>Datenfluss - Datensatzbeziehung</li><li>Datenfluss-Quelle-Beziehung</li></ul> | <ul><li>Erstellung/Änderung</li><li>Datenfluss-Batch-Beziehungen</li><li>Anzahl der aufgenommenen Profile</li></ul> |
-| Datensätze | <ul><li>Anzahl der Datensätze</li><li>Profilaktivierungsstatus</li><li>Erstellungs-/Änderungsdatum</li><li>Datensatz - Schemabeziehung</li><li>Datensatz-Zielgruppen-Beziehung</li><li>Datensatz - Attributbeziehung</li><li>Datensatz - Datenflussbeziehung</li><li>Namenssuche </li><li>Name- und ID-Suche</li></ul> | <ul><li>Verfolgung</li><li>Erstellt von</li><li>Datensatz - Batch-Beziehung</li><li>Erstellen/Ändern von Datensätzen</li><li>Datensatzgröße</li><li>Anzahl der Profile</li><li>Anzahl Zeilen</li><li>Wertesuche</li></ul> |
+| Datensätze | <ul><li>Anzahl der Datensätze</li><li>Profilaktivierungsstatus</li><li>Erstellungs-/Änderungsdatum</li><li>Datensatz - Schemabeziehung</li><li>Datensatz-Zielgruppen-Beziehung</li><li>Datensatz - Attributbeziehung</li><li>Datensatz - Datenflussbeziehung</li><li>Datensatzgröße</li><li>Anzahl Zeilen</li><li>Namenssuche </li><li>Name- und ID-Suche</li></ul> | <ul><li>Verfolgung</li><li>Erstellt von</li><li>Datensatz - Batch-Beziehung</li><li>Erstellen/Ändern von Datensätzen</li><li>Anzahl der Profile</li><li>Wertesuche</li></ul> |
 | Ziele | <ul><li>Konfigurierte Zielzählungen</li><li>Ziel - Zielgruppenbeziehung</li><li>Zielattributbeziehung</li></ul> | <ul><li>Konto eingerichtet</li><li>Informationen zu Kontoanmeldeinformationen</li><li>Eindeutige Profile aktiviert</li></ul> |
-| Journeys | <ul><li>Zählungen</li><li>Namenssuche</li><li>Name- und ID-Suche</li><li>Journey-Status</li><li>Ausgelöster Status (Zielgruppe vs. Ereignisse)</li><li>Erstellungs-/Änderungsdatum</li><li>Wiederkehrende Häufigkeit</li></ul> | <ul><li>Attribute - Journey-Beziehungen</li><li>Verfolgung</li><li>Erstellung/Änderung</li><li>Erstellt von</li><li>Events</li><li>Journey - Datensatz</li><li>Journey - Schema</li><li>Angebote</li><li>Trends bei der Profilqualifizierung</li><li>Schrittereignisse</li></ul> |
+| Journeys | <ul><li>Zählungen</li><li>Namenssuche</li><li>Name- und ID-Suche</li><li>Journey-Status</li><li>Ausgelöster Status (Zielgruppe vs. Ereignisse)</li><li>Erstellungs-/Änderungsdatum</li><li>Wiederkehrende Häufigkeit</li></ul> | <ul><li>Attribute - Journey-Beziehungen</li><li>Verfolgung</li><li>Erstellung/Änderung</li><li>Erstellt von</li><li>Ereignisse</li><li>Journey - Datensatz</li><li>Journey - Schema</li><li>Angebote</li><li>Trends bei der Profilqualifizierung</li><li>Schrittereignisse</li></ul> |
 | Schemata | <ul><li>Anzahl der Schemata</li><li>Erstellungs-/Änderungsdatum</li><li>Schema - Attributbeziehung</li><li>Schema - Datensatzbeziehung</li><li>Schema - Zielgruppenbeziehung</li><li>Profilaktivierungsstatus</li><li>Namenssuche</li><li>Name- und ID-Suche</li></ul> | <ul><li>Verfolgung</li><li>Erstellung/Änderung</li><li>Erstellt von</li><li>Feldergruppen</li><li>Identitäten</li><li>Identity-Namespaces</li><li>Beschriftungen</li><li>Anzahl der Profile</li></ul> |
 | Quellen | <ul><li>Anzahl der Konten</li><li>Kontostatus</li><li>Aktive/inaktive Datenflüsse für jedes Konto</li><li>Source-Connector - Datenflussbeziehung</li><li>Source-Konto - Datenflussbeziehung</li></ul> | <ul><li>Informationen zu Kontoanmeldeinformationen</li><li>Konto eingerichtet</li><li>Metriken zur Datenaufnahme</li><li>Anzahl der Profile</li><li>Source - Batch-Beziehungen</li></ul> |
 
@@ -90,7 +90,7 @@ Bei Fragen zu operativen Einblicken spiegeln die Antworten möglicherweise nicht
 
 Sehen Sie sich das folgende Video an, um weitere Informationen zu den operativen Einblicken des KI-Assistenten zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444041?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Funktionsumfang {#feature-scope}
 

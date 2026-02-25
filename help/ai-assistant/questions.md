@@ -2,9 +2,9 @@
 title: Fragenleitfaden für KI-Assistenten
 description: In diesem Dokument erfahren Sie mehr über Beispielfragen, die Sie bei der Abfrage des KI-Assistenten verwenden können.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
+source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2063'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Lesen Sie dieses Dokument, um eine Reihe von Beispielfragen zu erhalten, die Sie bei der Abfrage des KI-Assistenten verwenden können.
 
-In diesem Dokument erfahren Sie auch, wie Sie [&#x200B; Ihre Fragen formulieren können](#phrasing-your-questions) um vom KI-Assistenten optimale Antworten zu erhalten.
+In diesem Dokument erfahren Sie auch, wie Sie [ Ihre Fragen formulieren können](#phrasing-your-questions) um vom KI-Assistenten optimale Antworten zu erhalten.
 
 ## Zielbezogene Fragen {#objectives-questions}
 
@@ -98,7 +98,7 @@ Lesen Sie die folgenden Tabellen, um weitere Anleitungen zu Best Practices zu er
 
 In den folgenden Tabellen sind Best Practices aufgeführt, die Sie bei der Verwendung des KI-Assistenten befolgen können:
 
-| tun | Beispiel |
+| Empfohlen | Beispiel |
 | --- | --- |
 | <ul><li>Geben Sie das Objekt oder die Informationen an, die Sie abrufen oder analysieren möchten.</li><li>Versuchen Sie, Ihre Datenobjektnamen in Anführungszeichen zu setzen. Wenn Sie nur einen Teil des Objektnamens kennen, können Sie diesen auch in der Frage angeben.</li><li>Verwenden Sie [Objekt automatisch vervollständigen](./ui-guide.md#use-auto-complete), damit der KI-Assistent den Kontext Ihrer Abfrage besser verstehen kann.</li></ul> | <ul><li>Welche Datensätze verwenden das Schema „Luma - Treue“?</li><li>Die aktivierten Segmente anzeigen, deren Namen „Luma“ enthalten. Ordnen Sie sie nach der Anzahl der Profile zu.</li></ul> |
 | <ul><li>Vermeiden Sie Mehrdeutigkeiten und verwenden Sie eine klare Sprache</li><li>Verwenden Sie eine präzise Terminologie, um eine klarere Abfrage zu ermöglichen.</li><li>Wenn Sie Fragen zu Adobe Experience Platform stellen, versuchen Sie, eine Experience Platform-spezifische Terminologie zu verwenden, um die Relevanz der Antworten zu verbessern.</li></ul> | <ul><li>Wie viele Profile habe ich in „ACME Audience“?</li><li>Zeigen Sie mir die fünf häufigsten XDM-Attribute, die in aktivierten Zielgruppen verwendet werden.</li></ul> |
@@ -106,7 +106,7 @@ In den folgenden Tabellen sind Best Practices aufgeführt, die Sie bei der Verwe
 
 {style="table-layout:auto"}
 
-| Tu das nicht | Beispiel |
+| Zu vermeiden | Beispiel |
 | --- | --- |
 | Verwende eine vage oder mehrdeutige Sprache. | <ul><li>Geben Sie mir Informationen zu Datensätzen.</li><li>Wie viele Benutzer habe ich in „ACME Audience“?</li><li>Segmente anzeigen.</li><li>Attribute auflisten.</li></ul> |
 | Unvollständige Anfragen stellen. | „Luma - Treueprogramm-Datensatz“ |
@@ -189,7 +189,7 @@ Sie können Ihre Fragen zur Datenbeobachtbarkeit auch mit einem Qualifizierer ve
 
 Im Folgenden finden Sie eine Liste mit Beispielen für Fragen, die derzeit nicht vom KI-Assistenten unterstützt werden.
 
-+++Auswählen, um Beispiele für nicht unterstützte Fragen anzuzeigen
++++Wählen Sie aus, um Beispiele für nicht unterstützte Fragen anzuzeigen
 
 ### Betriebliche Erkenntnisse
 
@@ -197,15 +197,13 @@ Im Folgenden finden Sie eine Liste mit Beispielen für Fragen, die derzeit nicht
 * In welchen Segmenten befindet sich dieses Profil {PROFILE_INFO/ATTRIBUTE_VALUE}?
 * Wie viele Profile im Datensatz verfügen über eine E-Mail?
 * Welcher Datensatz stellt die maximale Anzahl von Profilen in dieser Sandbox dar?
-* Welcher Datensatz hat die höchste Anzahl von Datensätzen?
 * Wie viele Segmente wurden in {RELATIVE_DATE} gelöscht?
-* Welcher meiner Datensätze hat die größte Größe?
 * Geben Sie mir ein Profil im {AUDIENCE_NAME}.
-* Wie viele Profile gibt es in meiner Sandbox?
+* Wie viele Profile gibt es in meiner Sandbox insgesamt?
 * Wie viele Identity-Namespaces sind mit dem Zielgruppen-{AUDIENCE_NAME} verknüpft?
 * Bericht mit allen Zielgruppensegmenten anzeigen, die heute ausgewertet wurden
 * Wie viele Segmente haben überlappende Profile?
-* Anzahl der Batches, die in {DATASET_NAME} geladen werden
+* Anzahl der Batches, in die geladen wird {DATASET_NAME}
 * Wie viele aktive Angebote habe ich?
 * Wie viele aktive Kampagnen habe ich?
 * Woher stammen meine Datenquellen?
