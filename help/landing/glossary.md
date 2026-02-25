@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform-Glossar
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
+source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
 workflow-type: tm+mt
-source-wordcount: '8169'
+source-wordcount: '8224'
 ht-degree: 4%
 
 ---
@@ -177,7 +177,7 @@ ht-degree: 4%
 
 **Datennutzungskennzeichnungen**: Mit Datennutzungskennzeichnungen können Sie Daten kategorisieren, die datenschutzbezogene Überlegungen und vertragliche Bedingungen zur Einhaltung von Verordnungen und Unternehmensrichtlinien widerspiegeln. Einem Datensatz hinzugefügte Datennutzungsbeschriftungen werden übernommen oder auf alle Felder in diesem Datensatz angewendet. Datennutzungsbeschriftungen können auch direkt auf Felder angewendet werden.
 
-**Datenfluss**: Ein Datenfluss ist eine virtuelle Pipeline von Daten, die von einer Quelle in Experience Platform und von dort zu Zielen fließen.
+**Datenfluss**: Ein Datenfluss ist eine virtuelle Pipeline von Daten, die von einer Quelle in Experience Platform und von dort zu Zielen fließen. Im Kontext von Zielen ist ein Datenfluss synonym mit einer [Zielinstanz](#destination-instance). {#dataflow}
 
 **Datenflussausführung**: Eine Datenflussausführung ist ein Datenfluss, der basierend auf einem vom Benutzer festgelegten Zeitplan in Experience Platform landet.
 
@@ -200,6 +200,8 @@ ht-degree: 4%
 **Zielkategorie**: Eine Zielkategorie ist eine Gruppierung von Zielen mit ähnlichen Eigenschaften.
 
 **Zielkatalog**: Ein Zielkatalog ist eine Liste der in Experience Platform verfügbaren Ziele.
+
+**Zielinstanz**: Eine Zielinstanz ist eine individuelle, konfigurierte Verbindung zu einem bestimmten Ziel in Experience Platform, die über die Benutzeroberfläche oder API erstellt wird. Sie stellt eine einzelne Aktivierungs-Pipeline von Experience Platform zu einem Ziel-Endpunkt dar. Wird auch als &quot;[&quot; ](#dataflow). {#destination-instance}
 
 **Direktaufrufregeln**: Im Kontext von Tags ist eine Direktaufrufregel eine Regel, die ausgeführt wird, wenn sie direkt von der Seite aufgerufen wird, wobei die Ereigniserkennung und die Suchsysteme umgangen werden.
 
