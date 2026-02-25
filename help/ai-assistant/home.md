@@ -61,7 +61,7 @@ Produktkenntnisse beziehen sich auf Konzepte und Themen, die auf der Dokumentati
 
 Sehen Sie sich das folgende Video an, um weitere Informationen zu KI-Assistent-Produktkenntnissen zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475939/?captions=ger&learn=on)
 
 ### Betriebliche Erkenntnisse {#operational-insights}
 
@@ -90,7 +90,7 @@ Bei Fragen zu operativen Einblicken spiegeln die Antworten möglicherweise nicht
 
 Sehen Sie sich das folgende Video an, um weitere Informationen zu den operativen Einblicken des KI-Assistenten zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444041?captions=ger&learn=on&enablevpops)
 
 ### Funktionsumfang {#feature-scope}
 
