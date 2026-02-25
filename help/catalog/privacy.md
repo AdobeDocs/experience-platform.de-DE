@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, auf ihre personenbezogenen Daten zuzugreifen, sich gegen deren Verkauf zu wenden oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1430'
-ht-degree: 72%
+source-wordcount: '1446'
+ht-degree: 69%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datensch
 
 >[!NOTE]
 >
->In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Data Lake in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Echtzeit-Kundenprofil-Datenspeicher vornehmen möchten, lesen Sie zusätzlich zu diesem Tutorial [&#x200B; Handbuch &#x200B;](../profile/privacy.md) Verarbeitung von Datenschutzanfragen für Profil .
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Data Lake in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Echtzeit-Kundenprofil-Datenspeicher vornehmen möchten, lesen Sie zusätzlich zu diesem Tutorial [ Handbuch ](../profile/privacy.md) Verarbeitung von Datenschutzanfragen für Profil .
 >
 >Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
@@ -32,13 +32,13 @@ Sie sollten über Grundkenntnisse zu folgenden [!DNL Experience Platform]-Servic
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 * [[!DNL Identity Service]](../identity-service/home.md): Löst das grundlegende Problem der Fragmentierung von Kundenerlebnisdaten, indem Identitäten geräte- und systemübergreifend zusammengeführt werden.
 
-## Identitäts-Namespaces verstehen {#namespaces}
+## Identity-Namespaces verstehen {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Kunden über Systeme und Geräte hinweg zusammen. [!DNL Identity Service] verwendet Identitäts-Namespaces, um einen Kontext zu Identitätswerten bereitzustellen, indem sie mit dem System ihrer Herkunft verknüpft werden. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) sein oder die Identität einer bestimmten Anwendung zuordnen, wie z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
+Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Kunden über Systeme und Geräte hinweg zusammen. [!DNL Identity Service] verwendet Identity-Namespaces, um einen Kontext zu Identitätswerten bereitzustellen, indem sie mit dem System ihrer Herkunft verknüpft werden. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) sein oder die Identität einer bestimmten Anwendung zuordnen, wie z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
 
-[!DNL Identity Service] verwaltet einen Speicher global definierter (standardmäßiger) und benutzerdefinierter Identitäts-Namespaces. Standardmäßige Namespaces (z. B. „E-Mail“ und „ECID“) stehen für alle Unternehmen zur Verfügung, während Ihr Unternehmen außerdem benutzerdefinierte Namespaces erstellen kann, die den jeweiligen Anforderungen entsprechen.
+[!DNL Identity Service] verwaltet einen Speicher global definierter (standardmäßiger) und benutzerdefinierter Identity-Namespaces. Standardmäßige Namespaces (z. B. „E-Mail“ und „ECID“) stehen für alle Unternehmen zur Verfügung, während Ihr Unternehmen außerdem benutzerdefinierte Namespaces erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
-Weitere Informationen zu Identitäts-Namespaces in [!DNL Experience Platform] finden Sie unter [Identitäts-Namespaces – Übersicht](../identity-service/features/namespaces.md).
+Weitere Informationen zu Identity-Namespaces in [!DNL Experience Platform] finden Sie unter [Identity-Namespaces – Übersicht](../identity-service/features/namespaces.md).
 
 ## Hinzufügen von Identitätsdaten zu Datensätzen
 
@@ -61,7 +61,7 @@ Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem Date
 
 ### Verwenden der Benutzeroberfläche {#identity-ui}
 
-In der [!DNL Experience Platform]-Benutzeroberfläche können Sie mit dem Arbeitsbereich **[!UICONTROL Schemata]** Ihre vorhandenen XDM-Schemata bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum [Einrichten eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im Tutorial [!DNL Schema Editor].
+In der [!DNL Experience Platform]Benutzeroberfläche von können Sie mit dem Arbeitsbereich **[!UICONTROL Schemas]** Ihre vorhandenen XDM-Schemata bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum [Einrichten eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im Tutorial [!DNL Schema Editor].
 
 Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt haben, können Sie mit dem nächsten Abschnitt zum [Senden von Datenschutzanfragen](#submit) fortfahren.
 
@@ -107,12 +107,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu erstellenden Deskriptors. Bei Identitätsdeskriptoren muss der Wert „xdm:descriptorIdentity“ lauten. |
+| `@type` | Der Typ des zu erstellenden Deskriptors. Für Identitätsdeskriptoren muss der Wert „xdm“ :descriptorIdentity. |
 | `xdm:sourceSchema` | Die eindeutige URI-ID des XDM-Schemas Ihres Datensatzes. |
 | `xdm:sourceVersion` | Die in `xdm:sourceSchema` angegebene Version des XDM-Schemas. |
 | `xdm:sourceProperty` | Der Pfad zum Schemafeld, auf das der Deskriptor angewendet wird. |
 | `xdm:namespace` | Einer der [standardmäßigen Identity-Namespaces](../privacy-service/api/appendix.md#standard-namespaces), die von [!DNL Privacy Service] erkannt werden, oder ein benutzerdefinierter Namespace, der von Ihrem Unternehmen definiert wurde. |
-| `xdm:property` | Entweder „xdm:id“ oder „xdm:code“, je nach Namespace, der unter `xdm:namespace` verwendet wird. |
+| `xdm:property` | Entweder „xdm:id&quot; oder „xdm:code&quot;, je nach Namespace, der unter `xdm:namespace` verwendet wird. |
 | `xdm:isPrimary` | Ein optionaler boolescher Wert. Wenn „true“, bedeutet dies, dass das Feld eine primäre Identität ist. Schemata dürfen nur eine primäre Identität enthalten. Die Standardeinstellung lautet „false“, wenn sie nicht enthalten ist. |
 
 **Antwort**
@@ -147,13 +147,15 @@ Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanfragen für den Da
 
 ### Verwenden der Benutzeroberfläche
 
-Wählen Sie beim Erstellen von Vorgangsanfragen in der Benutzeroberfläche **[!UICONTROL AEP Data Lake]** unter **[!UICONTROL Produkte]** aus, um Vorgänge für Daten zu verarbeiten, die im Data Lake gespeichert sind.
+Wählen Sie beim Erstellen von Vorgangsanfragen in der Benutzeroberfläche **[!UICONTROL AEP Data Lake]** unter **[!UICONTROL Products]** aus, um Vorgänge für Daten zu verarbeiten, die im Data Lake gespeichert sind.
 
 ![Bild mit dem im Dialogfeld zum Erstellen von Datenschutzanfragen ausgewählten Data Lake-Produkt](./images/privacy/product-value.png)
 
 ### Verwenden der API
 
-Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für den Data Lake müssen `unregistered` für ihren `type` Wert und einen `namespace` Wert verwenden, der mit einer der [Datenschutzkennzeichnungen](#privacy-labels) übereinstimmt, die den entsprechenden Datensätzen hinzugefügt wurden.
+Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. Für den Namespace-Wert muss ein gültiger, von Identity Service erkannter Identity-Namespace bereitgestellt werden. Verwenden Sie `standard` für standardmäßige Namespaces und `custom` für benutzerdefinierte Namespaces.
+
+IDs für den Data Lake müssen `unregistered` für ihren `type` Wert und einen `namespace` Wert verwenden, der mit einer der [Datenschutzkennzeichnungen](#privacy-labels) übereinstimmt, die den entsprechenden Datensätzen hinzugefügt wurden.
 
 Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Bei Anfragen an den Data Lake muss das Array den Wert `aepDataLake` enthalten.
 
@@ -181,12 +183,12 @@ curl -X POST \
           {
             "namespace": "email_label",
             "value": "ajones@acme.com",
-            "type": "unregistered"
+            "type": "custom"
           },
           {
             "namespace": "email_label",
             "value": "jdoe@example.com",
-            "type": "unregistered"
+            "type": "custom"
           }
         ]
       }
@@ -206,13 +208,13 @@ curl -X POST \
 
 Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Experience Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake entfernt. Während dieses 7-Tage-Fensters werden die Daten vorläufig gelöscht und stehen somit keinem [!DNL Experience Platform]-Service mehr zur Verfügung.
 
-Wenn Sie in die Datenschutzanfrage auch `ProfileService` oder `identity` aufgenommen haben, werden deren zugehörige Daten separat verarbeitet. Weitere Informationen finden Sie im Abschnitt [Verarbeitung von Löschanfragen für &#x200B;](../profile/privacy.md#delete)).
+Wenn Sie in die Datenschutzanfrage auch `ProfileService` oder `identity` aufgenommen haben, werden deren zugehörige Daten separat verarbeitet. Weitere Informationen finden Sie im Abschnitt [Verarbeitung von Löschanfragen für ](../profile/privacy.md#delete)).
 
 ## Nächste Schritte
 
 In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen für den Data Lake erhalten. Wir empfehlen Ihnen, die Dokumentation in diesem Handbuch weiterzulesen, um Ihr Verständnis hinsichtlich der Verwaltung von Identitätsdaten und Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Anweisungen zur Verarbeitung [&#x200B; Datenschutzanfragen für den [!DNL Profile] finden Sie &#x200B;](../profile/privacy.md) Dokument zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofile .
+Anweisungen zur Verarbeitung [ Datenschutzanfragen für den ](../profile/privacy.md) finden Sie [!DNL Profile] Dokument zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofile .
 
 ## Anhang
 
@@ -225,4 +227,4 @@ Beachten Sie, dass es zwei Arten von verschachtelten Feldern des Typs Zuordnung 
 * Feld vom Typ Zuordnung in einem Feld vom Typ Array
 * Feld vom Typ Zuordnung in einem anderen Feld vom Typ Zuordnung
 
-Die Verarbeitung von Datenschutzaufträgen für beide obigen Beispiele schlägt letztendlich fehl. Aus diesem Grund wird empfohlen, verschachtelte Felder vom Typ Zuordnung nicht zum Speichern vertraulicher Kundendaten zu verwenden. Relevante Kundenkennungen sollten bei datensatzbasierten Datensätzen als Nicht-Zuordnungs-Datentyp im `identityMap`-Feld (selbst ein Feld vom Typ Zuordnung) bzw. bei zeitreihenbasierten Datensätzen im `endUserID`-Feld gespeichert werden.
+Die Verarbeitung von Datenschutzaufträgen für beide obigen Beispiele schlägt letztendlich fehl. Aus diesem Grund wird empfohlen, verschachtelte Felder vom Typ Zuordnung nicht zum Speichern vertraulicher Kundendaten zu verwenden. Relevante Kundenkennungen sollten bei eintragsbasierten Datensätzen als Nicht-Zuordnungs-Datentyp im `identityMap`-Feld (selbst ein Feld vom Typ Zuordnung) bzw. bei zeitreihenbasierten Datensätzen im `endUserID`-Feld gespeichert werden.
