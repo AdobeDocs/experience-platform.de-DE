@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zum Abfrage-Service
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
+source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 69%
+source-wordcount: '411'
+ht-degree: 68%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 69%
 - Erste Schritte {#get-started}
    - [Voraussetzungen](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
-   - [Übersicht](data-distiller/overview.md)
+   - [Überblick](data-distiller/overview.md)
    - [Lizenznutzung](data-distiller/license-usage.md)
    - Abgeleitete Datensätze {#derived-datasets}
       - [Überblick](data-distiller/derived-datasets/overview.md)
@@ -73,7 +73,7 @@ ht-degree: 69%
    - [Prognostizieren der Kundenabwanderung mithilfe von SQL](use-cases/predict-customer-churn-stub.md)
    - [Tendenz-Bewertung](use-cases/propensity-score.md)
    - [Abrufen ähnlicher Datensätze mit Funktionen höherer Ordnung](use-cases/retrieve-similar-records.md)
-   - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten &#x200B;](use-cases/merchandising-variables.md)
+   - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten ](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Anzeigen des Roll-up-Berichts für Besuchende](use-cases/roll-up-report-of-a-visitor.md)
    - [Web- und Mobile-Analyse-Einblicke](use-cases/analytics-insights.md)
@@ -108,7 +108,8 @@ ht-degree: 69%
    - [Parametrierte Abfragen](ui/parameterized-queries.md)
    - [Abfragepläne](ui/query-schedules.md)
    - [Abfrageprotokolle](ui/query-logs.md)
-   - [Überwachen von geplanten Abfragen &#x200B;](ui/monitor-queries.md)
+   - [Überwachen von geplanten Abfragen ](ui/monitor-queries.md)
+   - [Sitzungen verwalten](ui/session-management.md)
    - [Handbuch zu Anmeldedaten](ui/credentials.md)
    - [Migrieren von JWT zu OAuth-Anmeldeinformationen](ui/migrate-jwt-to-oauth.md)
    - [Generieren von Ausgabedatensätzen aus Abfrageergebnissen](ui/create-datasets.md)
@@ -122,12 +123,12 @@ ht-degree: 69%
    - [Beschleunigte Abfragen](api/accelerated-queries.md)
    - [Abonnements von Warnhinweisen](api/alert-subscriptions.md)
 - Data Distiller Authorization-API {#auth-api}
-   - [Übersicht](auth-api/overview.md)
+   - [Überblick](auth-api/overview.md)
    - [Erste Schritte](auth-api/getting-started.md)
    - [IP-Zugriff](auth-api/ip-access.md)
    - [Überprüfen](auth-api/validate.md)
 - Data Governance {#data-governance}
-   - [Übersicht](data-governance/overview.md)
+   - [Überblick](data-governance/overview.md)
    - [Handbuch für Auditprotokolle](data-governance/audit-log-guide.md)
    - [Identitäten in ungeplanten Schema-Datensätzen](data-governance/ad-hoc-schema-identities.md)
    - [Unterstützung der attributbasierten Zugriffskontrolle für ungeplante Schemata](./data-governance/ad-hoc-schema-labels.md)
