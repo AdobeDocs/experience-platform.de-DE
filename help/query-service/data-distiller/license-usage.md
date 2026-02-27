@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Das Lizenznutzungs-Dashboard bietet detaillierte Berichte über die Lizenznutzung und Nutzungsmetriken des Abfrage-Service Ihres Unternehmens für jedes gekaufte Produkt. Weitere Informationen zu den im Dashboard verfügbaren Metriken finden Sie im [Handbuch zum Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md#available-metrics).
 
-Das Dashboard enthält Nutzungsmetriken für jedes gekaufte Produkt, die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetriken aus einer bestimmten Sandbox. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Experience Platform-Instanz erfasst. Admins können inaktive Sitzungen des Abfrage-Service überwachen und beenden, um Kapazitäten freizugeben, wenn keine zusätzlichen Sitzungen verfügbar sind und Benutzende aufgrund inaktiver Sitzungen blockiert werden. Weitere [ finden Sie unter ](../ui/session-management.md) von Query Service-Sitzungen .
+Das Dashboard enthält Nutzungsmetriken für jedes gekaufte Produkt, die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetriken aus einer bestimmten Sandbox. Die hier angezeigten Informationen werden während eines täglichen Schnappschusses Ihrer Experience Platform-Instanz erfasst. Admins können inaktive Sitzungen des Abfrage-Service überwachen und beenden, um Kapazitäten freizugeben, wenn keine zusätzlichen Sitzungen verfügbar sind und Benutzende aufgrund inaktiver Sitzungen blockiert werden. Weitere [&#x200B; finden Sie unter &#x200B;](../ui/session-management.md) von Query Service-Sitzungen .
 
 >[!NOTE]
 >

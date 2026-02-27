@@ -100,7 +100,7 @@ Verwenden Sie den Abfrage-Editor, um Abfragen ohne Verwendung eines externen Cli
 
 ![Das Abfrage-Dashboard mit hervorgehobener Option „Abfrage erstellen“.](../images/ui/overview/overview-create-query.png)
 
-Während der Eingabe in den Abfrage-Editor vervollständigt der Editor automatisch reservierte SQL-Wörter, Tabellen und Feldnamen in Tabellen. Wenn Sie die Abfrage fertig geschrieben haben, klicken Sie auf das Wiedergabesymbol (![Wiedergabesymbol).](../../images/icons/play.png)), um die Abfrage auszuführen. Die Registerkarte **[!UICONTROL Console]** unter dem Editor zeigt, was der Abfrage-Service derzeit ausführt, und zeigt an, wann eine Abfrage zurückgegeben wurde. Auf der Registerkarte **[!UICONTROL Result]** neben [!UICONTROL Console] werden die Abfrageergebnisse angezeigt. Weitere Informationen [ Verwendung des Abfrage](./user-guide.md)Editors finden Sie im Handbuch zum Abfrage-Editor .
+Während der Eingabe in den Abfrage-Editor vervollständigt der Editor automatisch reservierte SQL-Wörter, Tabellen und Feldnamen in Tabellen. Wenn Sie die Abfrage fertig geschrieben haben, klicken Sie auf das Wiedergabesymbol (![Wiedergabesymbol).](../../images/icons/play.png)), um die Abfrage auszuführen. Die Registerkarte **[!UICONTROL Console]** unter dem Editor zeigt, was der Abfrage-Service derzeit ausführt, und zeigt an, wann eine Abfrage zurückgegeben wurde. Auf der Registerkarte **[!UICONTROL Result]** neben [!UICONTROL Console] werden die Abfrageergebnisse angezeigt. Weitere Informationen [&#x200B; Verwendung des Abfrage](./user-guide.md)Editors finden Sie im Handbuch zum Abfrage-Editor .
 
 ![Der Arbeitsbereich des Abfrage-Editors.](../images/ui/overview/query-editor.png)
 
@@ -109,7 +109,7 @@ Während der Eingabe in den Abfrage-Editor vervollständigt der Editor automatis
 Auf der Registerkarte [!UICONTROL Result] wird die tabellarische Ausgabe Ihrer Abfrage nach der Ausführung angezeigt. Verwenden Sie diese Registerkarte, um Ergebnisse zu überprüfen, Ausgaben zu validieren und Folgeaktionen direkt in der Benutzeroberfläche durchzuführen. In dieser Ansicht haben Sie folgende Möglichkeiten:
 
 - Ergebnisse für Offline-Analysen im CSV-, XLSX- oder JSON-Format herunterladen. Siehe [Abfrageergebnisse herunterladen](./user-guide.md#download-query-results).
-- Zeigen Sie die Ergebnisse im Vollbildmodus an, um große Tabellen oder breite Datensätze in einem in der Größe veränderbaren Rasterlayout zu untersuchen. Siehe [Ergebnisse im Vollbildmodus ](./user-guide.md#view-results).
+- Zeigen Sie die Ergebnisse im Vollbildmodus an, um große Tabellen oder breite Datensätze in einem in der Größe veränderbaren Rasterlayout zu untersuchen. Siehe [Ergebnisse im Vollbildmodus &#x200B;](./user-guide.md#view-results).
 - Ergebnisse in die Zwischenablage im CSV-Format kopieren, um sie schnell in Tabellenkalkulationsprogramme einzufügen. Siehe [Ergebnisse kopieren](./user-guide.md#copy-results).
 
 Diese Funktionen unterstützen nahtlose Datenvalidierungs-, Berichterstellungs- und Freigabe-Workflows, ohne den Abfrage-Editor verlassen zu müssen.
@@ -143,7 +143,7 @@ Nachdem eine Abfrage geplant wurde, wird sie in der Liste der geplanten Abfragen
 | **[!UICONTROL Last run timestamp]** | Der Zeitstempel der letzten Ausführung der Abfrage. Diese Spalte zeigt, ob eine Abfrage gemäß ihrem aktuellen Zeitplan ausgeführt wurde. |
 | **[!UICONTROL Last run status]** | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind `successful`, `failed` oder `in progress`. |
 
-Weitere Informationen finden Sie in der Dokumentation zum [ (Überwachen von Abfragen über die Abfrage-Service-Benutzeroberfläche](./monitor-queries.md).
+Weitere Informationen finden Sie in der Dokumentation zum [&#x200B; (Überwachen von Abfragen über die Abfrage-Service-Benutzeroberfläche](./monitor-queries.md).
 
 ## Vorlagen {#browse}
 
@@ -158,7 +158,7 @@ Auf der Registerkarte **[!UICONTROL Templates]** werden Abfragen angezeigt, die 
 | **[!UICONTROL Modified by]** | Der letzte Benutzer, der die Abfrage geändert hat. Jeder Benutzer in Ihrer Organisation, der Zugriff auf den Abfrage-Service hat, kann Abfragen ändern. |
 | **[!UICONTROL Last modified]** | Datum und Uhrzeit der letzten Änderung der Abfrage in der Zeitzone des Browsers. |
 
-Weitere Informationen zu [ in der Benutzeroberfläche von Experience Platform finden ](./query-templates.md) in der Dokumentation zu Abfragevorlagen .
+Weitere Informationen zu [&#x200B; in der Benutzeroberfläche von Experience Platform finden &#x200B;](./query-templates.md) in der Dokumentation zu Abfragevorlagen .
 
 ## Protokoll {#log}
 
@@ -180,7 +180,7 @@ Die Registerkarte **[!UICONTROL Log]** enthält eine Liste der Abfragen, die ber
 >
 >Wählen Sie das Stiftsymbol (![Bleistiftsymbol) aus.](/help/images/icons/edit.png)) aus einer beliebigen Zeile des Abfrageprotokolls zum Abfrage-Editor navigieren. Die Abfrage ist vorausgefüllt, um die Bearbeitung zu erleichtern.
 
-Weitere [ zu den Protokolldateien, ](./query-logs.md) automatisch von einem Abfrageereignis generiert werden, finden Sie in der Dokumentation zu Abfrageprotokollen .
+Weitere [&#x200B; zu den Protokolldateien, &#x200B;](./query-logs.md) automatisch von einem Abfrageereignis generiert werden, finden Sie in der Dokumentation zu Abfrageprotokollen .
 
 ## Anmeldedaten
 
@@ -192,7 +192,7 @@ Auf der Registerkarte **[!UICONTROL Credentials]** werden sowohl Ihre ablaufende
 
 Verwenden Sie die Registerkarte **[!UICONTROL Admin]** , um gleichzeitige Sitzungen des Abfrage-Editors in Ihrer Organisation zu überwachen und zu verwalten. Diese Funktion richtet sich an Admins und ist nicht zum Schreiben oder Ausführen von Abfragen erforderlich.
 
-Auf der Registerkarte **[!UICONTROL Admin]** können Administratoren aktive Sitzungen in Sandboxes anzeigen und inaktive Sitzungen beenden, um freigegebene Kapazität freizugeben. Diese Aktion unterbricht keine aktiv laufenden Abfragen. Detaillierte Anweisungen [ Berechtigungsanforderungen finden Sie im Handbuch ](session-management.md)Verwalten von Query Service-Sitzungen“.
+Auf der Registerkarte **[!UICONTROL Admin]** können Administratoren aktive Sitzungen in Sandboxes anzeigen und inaktive Sitzungen beenden, um freigegebene Kapazität freizugeben. Diese Aktion unterbricht keine aktiv laufenden Abfragen. Detaillierte Anweisungen [&#x200B; Berechtigungsanforderungen finden Sie im Handbuch &#x200B;](session-management.md)Verwalten von Query Service-Sitzungen“.
 
 ## Nächste Schritte
 
