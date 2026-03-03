@@ -3,13 +3,13 @@ title: Verbesserungen bei der Zielgruppenkomposition
 description: Erfahren Sie mehr über die Verbesserungen bei der Audience-Komposition mit Zielgruppenanreicherung und schnellerer Aktivierung.
 hide: true
 hidefromtoc: true
-source-git-commit: 42e639b403edbaf666d8bc21eb35b2b75530d6b0
+exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
+source-git-commit: 2d16cc990ea15c1596aae92d8768cddc77a30efd
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
-
 
 # Verbesserungen der Zielgruppenkomposition
 
@@ -26,15 +26,15 @@ Um Zielgruppenanreicherungen zu Ihrer Komposition hinzuzufügen, wählen Sie den
 
 ![Der Block „Zielgruppe“ sowie die Schaltfläche „Regel erstellen“ sind hervorgehoben.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-Die Arbeitsfläche des Regel-Builders wird angezeigt. Jetzt können Filterkriterien für die Anreicherung Ihrer Audience erstellt werden. Dieses Filterkriterium **muss** ein Attribut enthalten, das sich in einem Array befindet. Das Attribut, das ein Array ist, hängt von der Schemastruktur Ihrer Organisation ab. Nachdem Sie Ihre Filterkriterien erstellt haben, wählen Sie im rechten Bedienfeld **[!UICONTROL Delivery]** aus.
+Die Arbeitsfläche des Regel-Builders wird angezeigt. Jetzt können Filterkriterien für die Anreicherung Ihrer Audience erstellt werden. Dieses Filterkriterium **muss** ein Attribut enthalten, das sich in einem Array befindet. Das Attribut, das ein Array ist, hängt von der Schemastruktur Ihrer Organisation ab. Nachdem Sie Ihre Filterkriterien erstellt haben, wählen Sie im rechten Bedienfeld **[!UICONTROL View enrichment]** aus.
 
-![Die Arbeitsfläche des Regel-Builders zeigt ein Beispiel für eine Zielgruppe, die über Anreicherungen verfügen kann. Die Schaltfläche „Versand“ ist ebenfalls hervorgehoben.](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![Die Arbeitsfläche des Regel-Builders zeigt ein Beispiel für eine Zielgruppe, die über Anreicherungen verfügen kann. Die Schaltfläche „Versand“ ist ebenfalls hervorgehoben.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-Wählen Sie in der Liste im linken Bereich das Objekt-Array aus, das Sie für die Anreicherung verwenden möchten. Wenn im Profil nur ein Array vorhanden ist, wird das Array automatisch für Sie ausgewählt. Wählen Sie **[!UICONTROL Save]** aus, um zur Audience-Komposition zurückzukehren.
+Wählen Sie in der Liste im linken Bereich das Objekt-Array sowie die Felder aus, die bei der Anreicherung verwendet werden sollen. Wenn im Profil nur ein Array vorhanden ist, wird das Array automatisch für Sie ausgewählt. Wählen Sie **[!UICONTROL Save]** aus, um zur Audience-Komposition zurückzukehren.
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![Die Schemastruktur für die Anreicherungsstruktur wird angezeigt.](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![Die Schemastruktur für die Anreicherungsstruktur wird angezeigt.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
 Innerhalb der Zielgruppenkomposition ist Ihr [!UICONTROL Audience] jetzt vom Typ &quot;[!UICONTROL Rule builder with enhancement]&quot;. Wählen Sie **[!UICONTROL Publish]** aus, um Ihre Audience für den nächsten täglichen Batch zu aktivieren.
 
