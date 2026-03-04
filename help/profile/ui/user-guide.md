@@ -3,9 +3,9 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht auf Ihre einzelnen Kunden und führt Daten aus verschiedenen Kanälen (Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Anleitung für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 5db5d0763b1d1456ba184bd24e7ef4c3047e25d1
+source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '2123'
 ht-degree: 5%
 
 ---
@@ -40,9 +40,9 @@ Weitere Informationen finden Sie im [Handbuch zum Profil-Dashboard](../../dashbo
 
 ## Registerkarte [!UICONTROL Browse]
 
-Auf der Registerkarte **[!UICONTROL Browse]** können Sie Ihre Profile entweder in einer **-,**- oder **-** anzeigen, indem Sie den Umschalter auswählen.
+Auf der Registerkarte **[!UICONTROL Browse]** können Sie Ihre Profile entweder in einer Ansicht **Karte** oder einer **anzeigen** indem Sie den Umschalter auswählen.
 
-![Der Umschalter für die Karten- und Diagrammansicht ist hervorgehoben.](../images/user-guide/change-browse-view.png)
+![Der Umschalter für die Karten- und Tabellenansicht ist hervorgehoben.](../images/user-guide/change-browse-view.png)
 
 Darüber hinaus können Sie Ihre Profile mithilfe einer Zusammenführungsrichtlinie durchsuchen oder mithilfe eines Identity-Namespace und -Werts nach bestimmten Profilen suchen.
 
@@ -111,11 +111,11 @@ Darüber hinaus können Sie weitere Details zu Profilen anzeigen, z. B. [Attribu
 
 ### Registerkarte „Details“ {#profile-detail}
 
-Die Registerkarte **[!UICONTROL Details]** enthält detailliertere Informationen zum ausgewählten Profil und ist in vier Abschnitte unterteilt: Kundenprofil-Insights, KI-insight-Widgets, anpassbare Widgets und automatisch klassifizierte Widgets.
+Die Registerkarte **[!UICONTROL Details]** enthält detailliertere Informationen zum ausgewählten Profil. Die Registerkarte Details ist in verschiedene Abschnitte unterteilt, je nachdem, ob Sie sich in der Karten- oder Diagrammansicht befinden. Für die Kartenansicht werden die Kundenprofil-Insights, KI-insight-Widgets, anpassbaren Widgets und automatisch klassifizierten Widgets angezeigt, während für die Diagrammansicht die Abschnitte Profilattribute und Erlebnisereignisse angezeigt werden.
 
 ![Die Seite mit den Profildetails wird angezeigt.](../images/user-guide/profile-details.png)
 
-Darüber hinaus können Sie ein- oder ausschalten, ob die KI-generierten Einblicke angezeigt werden, die Details für den Hub im Vergleich zu den Edge anzeigen und die Details in der Diagrammansicht anzeigen.
+Darüber hinaus können Sie ein- oder ausschalten, ob die KI-generierten Einblicke angezeigt werden, die Details für den Hub im Vergleich zu den Kanten anzeigen sowie zwischen Karten- oder Diagrammansichten wählen.
 
 ![Die oben aufgeführten Umschalter (KI-generierte Einblicke, Hub- oder Edge-Daten und Karten- oder Diagrammansicht) sind hervorgehoben.](../images/user-guide/profile-toggles.png)
 
@@ -151,13 +151,31 @@ Sie können auch zwischen der Anzeige der Attributnamen als Anzeigenamen und der
 
 Im Abschnitt **[!UICONTROL Auto-classified widgets]** werden Widgets angezeigt, die das Vereinigungsschema nutzen, um die Quellfeldgruppen zu bestimmen, zu denen ein Attribut gehört, und einen klareren Kontext bereitstellen, woher die Daten stammen. Sie können die Suchleiste verwenden, um in Ihren Widgets leichter nach Keywords zu suchen.
 
-Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ &#x200B;](#customizable-widgets) strukturieren.
+Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ ](#customizable-widgets) strukturieren.
 
 >[!NOTE]
 >
 >Wenn mehrere Quellfeldgruppen vorhanden sind, verwenden die Widgets nur **eine** verfügbaren Optionen.
 
 ![Der Abschnitt für automatisch klassifizierte Widgets wird angezeigt.](../images/user-guide/auto-classified-widgets.png)
+
+#### Profilattribute {#profile-attributes}
+
+Im Abschnitt **[!UICONTROL Profile attributes]** wird eine hierarchische Diagrammdarstellung der Profildaten angezeigt. In dieser Ansicht stellt der zentrale Knoten das Profil selbst dar, sekundäre Knoten stellen die Feldergruppen dar und die übrigen Knoten stellen Eigenschaften innerhalb jeder Feldergruppe dar.
+
+Innerhalb der Diagrammansicht können Sie die Knoten per Drag-and-Drop verschieben, um die Knotenreihenfolge neu anzuordnen, die Knoten reduzieren und erweitern, um mehr Details zu den Attributen zu sehen, nach Attribut suchen und filtern sowie ein- und auszoomen, um die Attributdetails besser anzuzeigen.
+
+![Die Diagrammansicht für das Profil wird angezeigt und zeigt die verschiedenen Knoten an, aus denen das Profil besteht.](/help/profile/images/user-guide/profile-attribute-graph.png)
+
+#### Erlebnisereignisse {#experience-events}
+
+Im Abschnitt **[!UICONTROL Experience events]** wird eine Zeitleiste mit Erlebnisereignissen angezeigt, die das Profil enthalten.
+
+![Der Abschnitt Erlebnisereignisse wird angezeigt und zeigt eine Zeitleiste von Erlebnisereignissen an, die das Profil enthalten.](/help/profile/images/user-guide/experience-event-graph.png)
+
+Wenn Sie **[!UICONTROL View event]** auswählen, können Sie die mit dem ausgewählten Ereignis verknüpften Ereignisattribute sehen. Zu diesen Details gehören der Pfad, das Attribut, der Anzeigename und der Wert.
+
+![Das Pop-up „Ereignisattribute“ wird mit weiteren Details zum Ereignis angezeigt.](/help/profile/images/user-guide/event-attributes-graph.png)
 
 ### Registerkarte „Attribute“ {#attributes}
 

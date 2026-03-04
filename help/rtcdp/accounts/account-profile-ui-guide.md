@@ -2,10 +2,10 @@
 keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsrichtlinie;Echtzeit-Kundenprofil
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
 description: Durch die Verwendung von Account-Profilen ermöglicht Adobe Real-Time Customer Data Platform B2B edition die Vereinheitlichung von Account-Informationen aus mehreren Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
 workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 39%
@@ -118,7 +118,7 @@ Auf der Registerkarte **[!UICONTROL Attributes]** werden alle Datensatzinformati
 
 Sie können die Daten nicht nur in einer Liste anzeigen, sondern auch in der Suchleiste nach bestimmten Attributen suchen oder die Eintragsdaten als JSON anzeigen.
 
-![Registerkarte „Attribute“](images/b2b-account-attributes.png)
+![Registerkarte „Attribute“](images/account-profile-attributes.png)
 
 ## Registerkarte „Personen“ {#people-tab}
 
