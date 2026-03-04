@@ -2,10 +2,10 @@
 title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 49%
+source-wordcount: '1308'
+ht-degree: 48%
 
 ---
 
@@ -40,7 +40,7 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-worksp
 * Datenflüsse zu den Zielen im Katalog erstellen, bearbeiten, aktivieren und deaktivieren;
 * Erstellen Sie ein Konto an einem Speicherort oder verknüpfen Sie Experience Platform mit dem Konto in der Zielplattform.
 * Auswählen, welche Zielgruppen oder Datensätze für Ziele aktiviert werden sollen;
-* Wählen Sie aus[&#x200B; welche (Experience-Datenmodell(XDM)-Felder](../xdm/home.md) beim Aktivieren von Zielgruppen für bestimmte Ziele wie E-Mail-Marketing-Ziele, CRM-Plattformen, Cloud-Speicherorte und mehr exportiert werden sollen.
+* Wählen Sie aus[ welche (Experience-Datenmodell(XDM)-Felder](../xdm/home.md) beim Aktivieren von Zielgruppen für bestimmte Ziele wie E-Mail-Marketing-Ziele, CRM-Plattformen, Cloud-Speicherorte und mehr exportiert werden sollen.
 * Aktivieren Sie verschiedene Arten von Profilen und Audiences für Ziele - Personen, Konten und potenzielle Kunden.
 
 ## Zieltypen und Kategorien {#types-and-categories}
@@ -62,11 +62,11 @@ In der folgenden Tabelle sind die Berechtigungen und Berechtigungskombinationen 
 | Berechtigungsebene | Beschreibung |
 | ---- | ---- |
 | **[!UICONTROL View Destinations]** | Um auf die Registerkarte Ziele in der Experience Platform-Benutzeroberfläche zuzugreifen, benötigen Sie die **[!UICONTROL View Destinations]** [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Um eine Verbindung zu -Zielen herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** | Zum Aktivieren von Zielgruppen für Ziele und Aktivieren des [Zuordnungsschritts](ui/activate-batch-profile-destinations.md#mapping) des Workflows sind die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) erforderlich. |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** | Um Zielgruppen zu vorhandenen Datenflüssen hinzuzufügen oder daraus zu entfernen, ohne Zugriff auf den [Zuordnungsschritt](ui/activate-batch-profile-destinations.md#mapping) des Workflows zu haben, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Zum Exportieren von Datensätzen an Ziele benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage and Activate Dataset Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) |
-| **[!UICONTROL View Identity Graph]** | Um *Identitäten* an Ziele zu exportieren, benötigen Sie die **[!UICONTROL View Identity Graph]**&#x200B;[&#x200B; Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Um eine Verbindung zu -Zielen herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, und **[!UICONTROL View Segments]** | Zum Aktivieren von Zielgruppen für Ziele und Aktivieren des [Zuordnungsschritts](ui/activate-batch-profile-destinations.md#mapping) des Workflows sind die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) erforderlich. |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, und **[!UICONTROL View Segments]** | Um Zielgruppen zu vorhandenen Datenflüssen hinzuzufügen oder daraus zu entfernen, ohne Zugriff auf den [Zuordnungsschritt](ui/activate-batch-profile-destinations.md#mapping) des Workflows zu haben, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Zum Exportieren von Datensätzen an Ziele benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage and Activate Dataset Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) |
+| **[!UICONTROL View Identity Graph]** | Um *Identitäten* an Ziele zu exportieren, benötigen Sie die **[!UICONTROL View Identity Graph]**[ Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -92,9 +92,9 @@ Das Entfernen von Profilen aus Zielen - auch als Nicht-Segmentierung bezeichnet 
 
 Die tatsächliche Geschwindigkeit, mit der die Profilentfernung in der Zielplattform wirksam wird, kann je nach Aufnahme- und Verarbeitungsverhalten des Ziels variieren.
 
-## Zielüberwachung {#destinations-monitoring}
+## Ziel-Monitoring {#destinations-monitoring}
 
-Nachdem Sie eine Verbindung zu einem Ziel hergestellt und den Aktivierungs-Workflow abgeschlossen haben, können Sie die Datenexporte an Ihr Empfangssystem überwachen. Weitere Informationen finden Sie im [Handbuch zur Überwachung von Datenflüssen zu Zielen in der Benutzeroberfläche](/help/dataflows/ui/monitor-destinations.md).
+Nachdem Sie eine Verbindung zu einem Ziel hergestellt und den Aktivierungs-Workflow abgeschlossen haben, können Sie die Datenexporte an Ihr Empfangssystem überwachen. Weitere Informationen finden Sie im [Handbuch zum Monitoring von Datenflüssen zu Zielen in der Benutzeroberfläche](/help/dataflows/ui/monitor-destinations.md).
 
 ![Beispiel für die Zielüberwachungsseite.](./assets/overview/monitoring-page-example.png)
 
@@ -107,15 +107,17 @@ Data Governance wird für Experience Platform-Ziele durchgesetzt durch:
 * *Marketing-Aktionen*, die Sie im Workflow zum Erstellen von Zielen auswählen können;
 * *Datenrichtlinien*, die verhindern, dass Daten mit bestimmten Nutzungs-Labels für Ziele mit bestimmten Marketing-Aktionen aktiviert werden.
 
-Experience Platform Weitere Informationen zu (Marketing-Aktionen) und zum Beheben von Verstößen gegen [&#x200B; finden Sie &#x200B;](../data-governance/policies/overview.md) der Dokumentation [&#x200B; Data Governance in &#x200B;](../data-governance/enforcement/auto-enforcement.md).
+Experience Platform Weitere Informationen zu (Marketing-Aktionen) und zum Beheben von Verstößen gegen [ finden Sie ](../data-governance/policies/overview.md) der Dokumentation [ Data Governance in ](../data-governance/enforcement/auto-enforcement.md).
 
 Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow zum Erstellen von Zielen finden Sie auf den folgenden Seiten für die verschiedenen Zieltypen in Experience Platform:
 
 * [Werbeziele – Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Werbeziele – Google Ads](./catalog/advertising/google-ads-destination.md)
 * [Werbeziele – Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
+* [Advertising-Kontoziele - Bombora ABM-Zielgruppenverbindung](./catalog/advertising/bombora.md)
+* [Advertising-Kontoziele - Demandbase-Verbindung](./catalog/advertising/demandbase.md)
 * [Cloud-Speicher-Ziele](./catalog/cloud-storage/overview.md)
-* [E-Mail-Marketing-Ziele &#x200B;](./catalog/email-marketing/overview.md)
+* [E-Mail-Marketing-Ziele ](./catalog/email-marketing/overview.md)
 * [Social-Media-Ziele](./catalog/social/overview.md)
 
 Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Zielgruppenaktivierung finden Sie im **[!UICONTROL Review]** Schritt in den folgenden Handbüchern:
