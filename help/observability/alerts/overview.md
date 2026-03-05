@@ -4,10 +4,10 @@ title: Warnhinweise – Übersicht
 description: Erfahren Sie mehr über Warnhinweise in Adobe Experience Platform, einschließlich der Struktur der Definition von Warnhinweisregeln.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
+source-git-commit: bdddcdb19fe248af8f83d42bf885f07b9749a399
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 59%
+source-wordcount: '865'
+ht-degree: 54%
 
 ---
 
@@ -58,7 +58,7 @@ Warnhinweise können über zwei Kanäle empfangen und verwaltet werden:
 
 ### I/O Events {#events}
 
-Warnhinweise können an einen konfigurierten Webhook gesendet werden, um eine effiziente Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über einen Webhook zu erhalten, müssen Sie Ihren Webhook für Experience Platform-Warnhinweise in Adobe Developer Console registrieren. Spezifische Schritte finden Sie im Handbuch [Abonnieren von Adobe I/O Event-Benachrichtigungen](./subscribe.md).
+Warnhinweise können an einen konfigurierten Webhook gesendet werden, um eine effiziente Automatisierung des Aktivitäts-Monitorings zu ermöglichen. Um Warnhinweise über einen Webhook zu erhalten, müssen Sie Ihren Webhook für Experience Platform-Warnhinweise in Adobe Developer Console registrieren. Spezifische Schritte finden Sie im Handbuch [Abonnieren von Adobe I/O Event-Benachrichtigungen](./subscribe.md).
 
 ### Experience Platform-Benutzeroberfläche {#ui}
 
@@ -92,6 +92,14 @@ Mit der Berechtigung „Warnhinweise anzeigen“ können Sie erhaltene Warnhinwe
 > Wählen Sie einen Warnhinweis aus, um zu einem zugehörigen Dashboard zu navigieren, um genauere Informationen zur Ursache des Warnhinweises zu erhalten.
 
 Darüber hinaus ermöglicht die Registerkarte [!UICONTROL Alerts] in der Benutzeroberfläche es einzelnen Benutzern, sich für bestimmte Warnhinweistypen zu abonnieren, und gibt Administratoren die Möglichkeit, Warnhinweisregeln vollständig zu aktivieren oder zu deaktivieren. Weitere Informationen zum Verwalten von Warnhinweisen finden Sie im [Handbuch zur Benutzeroberfläche](./ui.md).
+
+### Slack-Integration {#slack-integration}
+
+Sie können einen Webhook-Proxy für [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) verwenden, um [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) von Experience Platform zu Ihrem [!DNL Slack] zu erhalten. Der Proxy verarbeitet den Verifizierungs-Handshake von Adobe und wandelt Ereignis-Payloads in [!DNL Slack] um, sodass Sie kundenbezogene Warnhinweise direkt in Ihren Arbeitsbereich erhalten können.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+
+Weitere Informationen zum Empfang von Experience Platform-Benachrichtigungen in [!DNL Slack] durch Integration mit einem Adobe App Builder Webhook-Proxy finden Sie unter [Überwachen von Experience Platform-Ereignissen in [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 
 ## Nächste Schritte
 
