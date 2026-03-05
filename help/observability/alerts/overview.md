@@ -97,7 +97,7 @@ Darüber hinaus ermöglicht die Registerkarte [!UICONTROL Alerts] in der Benutze
 
 Sie können einen Webhook-Proxy für [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) verwenden, um [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) von Experience Platform zu Ihrem [!DNL Slack] zu erhalten. Der Proxy verarbeitet den Verifizierungs-Handshake von Adobe und wandelt Ereignis-Payloads in [!DNL Slack] um, sodass Sie kundenbezogene Warnhinweise direkt in Ihren Arbeitsbereich erhalten können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3480204?captions=ger&learn=on)
 
 Weitere Informationen zum Empfang von Experience Platform-Benachrichtigungen in [!DNL Slack] durch Integration mit einem Adobe App Builder Webhook-Proxy finden Sie unter [Überwachen von Experience Platform-Ereignissen in [!DNL Slack]](https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 
