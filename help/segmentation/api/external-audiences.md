@@ -2,9 +2,9 @@
 title: API-Endpunkt für externe Zielgruppen
 description: Erfahren Sie, wie Sie mit der API für externe Zielgruppen Ihre externen Zielgruppen aus Adobe Experience Platform erstellen, aktualisieren, aktivieren und löschen können.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: de18b8292f07c143d63d26a45ca541e50b2ed2f3
+source-git-commit: b024571a33c8c9313e0814c090e496a8ffa98009
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2622'
 ht-degree: 8%
 
 ---
@@ -92,7 +92,11 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": "40",
@@ -108,7 +112,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | Zeichenfolge | Eine optionale Beschreibung für die externe Zielgruppe. |
 | `customAudienceId` | Zeichenfolge | Eine optionale Kennung für Ihre externe Zielgruppe. |
 | `fields` | Array von Objekten | Liste der Felder und ihrer Datentypen Ihr Array muss mindestens 1 Feld und maximal 41 Felder enthalten. Eines der Felder **muss** ein Identitätsfeld sein und die `identityNs` enthalten. Beim Erstellen der Feldliste können Sie die folgenden Elemente hinzufügen: <ul><li>`name`: **Erforderlich** Der Name des Felds, das Teil der Spezifikation der externen Zielgruppe ist.</li><li>`type`: **Erforderlich** Der Datentyp, der in das Feld aufgenommen wird. Unterstützte Werte sind `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) und `boolean`.</li><li>`identityNs`: **Erforderlich für Identitätsfeld** Der Namespace, der vom Identitätsfeld verwendet wird. Unterstützte Werte umfassen alle gültigen Namespaces, z. B. `ECID` oder `email`.</li><li>`labels`: *Optional* Ein Array von Zugriffssteuerungsbeschriftungen für das Feld. Weitere Informationen zu den verfügbaren Zugriffssteuerungsbeschriftungen finden Sie im [Glossar zu Datennutzungsbeschriftungen](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objekt | Ein Objekt, das die Informationen enthält, wo sich die externe Zielgruppe befindet. Wenn Sie dieses Objekt verwenden **müssen** die folgenden Informationen einschließen: <ul><li>`path`: **Erforderlich**: Der Speicherort der externen Zielgruppe oder des Ordners, der die externe Zielgruppe in der Quelle enthält. Der Dateipfad **darf** Leerzeichen enthalten. Wenn Ihr Pfad beispielsweise `activation/sample-source/Example CSV File.csv` ist, legen Sie den Pfad auf `activation/sample-source/ExampleCSVFile.csv` fest. Den Pfad zu Ihrer Quelle finden Sie in der Spalte **Source** im Abschnitt Datenflüsse .</li><li>`type`: **Erforderlich** Der Typ des Objekts, das Sie aus der Quelle abrufen. Dieser Wert kann entweder `file` oder `folder` sein.</li><li>`sourceType`: *Optional* Der Typ der Quelle, von der Sie abrufen. Derzeit wird nur der Wert `Cloud Storage` unterstützt.</li><li>`cloudType`: **Erforderlich** Der Typ des Cloud-Speichers, basierend auf dem Quelltyp. Zu den unterstützten Werten gehören `S3`, `DLZ`, `GCS`, `Azure` und `SFTP`.</li><li>`baseConnectionId`: Die ID der Basisverbindung und wird von Ihrem Quellanbieter bereitgestellt. Dieser Wert ist **erforderlich** wenn ein `cloudType` Wert von `S3`, `GCS` oder `SFTP` verwendet wird. Andernfalls **Sie diesen Parameter**. Weitere Informationen finden Sie unter [Übersicht über Quell-Connectoren](../../sources/home.md).</li></ul> |
+| `sourceSpec` | Objekt | Ein Objekt, das die Informationen enthält, wo sich die externe Zielgruppe befindet. Wenn Sie dieses Objekt verwenden **müssen** die folgenden Informationen einschließen: <ul><li>`path`: **Erforderlich**: Der Speicherort der externen Zielgruppe oder des Ordners, der die externe Zielgruppe in der Quelle enthält. Der Dateipfad **darf** Leerzeichen enthalten. Wenn Ihr Pfad beispielsweise `activation/sample-source/Example CSV File.csv` ist, legen Sie den Pfad auf `activation/sample-source/ExampleCSVFile.csv` fest. Den Pfad zu Ihrer Quelle finden Sie in der Spalte **Source** im Abschnitt Datenflüsse .</li><li>`type`: **Erforderlich** Der Typ des Objekts, das Sie aus der Quelle abrufen. Dieser Wert kann entweder `file` oder `folder` sein.</li><li>`sourceType`: *Optional* Der Typ der Quelle, von der Sie abrufen. Derzeit wird nur der Wert `Cloud Storage` unterstützt.</li><li>`cloudType`: **Erforderlich** Der Typ des Cloud-Speichers, basierend auf dem Quelltyp. Zu den unterstützten Werten gehören `S3`, `DLZ`, `GCS`, `Azure` und `SFTP`.</li><li>`baseConnectionId`: Die ID der Basisverbindung und wird von Ihrem Quellanbieter bereitgestellt. Dieser Wert ist **erforderlich** wenn ein `cloudType` Wert von `S3`, `GCS` oder `SFTP` verwendet wird. Andernfalls **Sie diesen Parameter**. Weitere Informationen finden Sie unter [Übersicht über Quell-Connectoren](../../sources/home.md).</li><li>`encryption`: *Optional* Ein Objekt, das den Verschlüsselungsschlüssel enthält, der für die asynchrone verschlüsselte Datenaufnahme erforderlich ist.</li><ul><li>`publicKeyId`: **Erforderlich**: Die ID des öffentlichen Schlüssels, die zurückgegeben wurde, als Sie das Verschlüsselungsschlüsselpaar generiert haben. Weitere Informationen finden Sie im [Handbuch zum Verschlüsseln von Daten](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair). </li><li>`signVerificationKeyId`: *Optional*: Die ID des öffentlichen Schlüssels, die zurückgegeben wurde, als Sie den vom Kunden verwalteten Schlüssel für Experience Platform freigegeben haben. **Hinweis:** Dieses Feld ist in der Antwort für diese API-Anfrage als `publicKeyId` gekennzeichnet. Weitere Informationen finden Sie im [Handbuch zum Verschlüsseln von Daten](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform).</li></ul></ul> |
 | `ttlInDays` | Ganzzahl | Die Datengültigkeit für die externe Zielgruppe in Tagen. Dieser Wert kann zwischen 1 und 90 eingestellt werden. Standardmäßig ist der Ablauf der Daten auf 30 Tage festgelegt. |
 | `audienceType` | Zeichenfolge | Der Zielgruppentyp für die externe Zielgruppe. Derzeit wird nur `people` unterstützt. |
 | `originName` | Zeichenfolge | **Erforderlich** Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Für externe Zielgruppen sollten Sie `CUSTOM_UPLOAD` verwenden. |
@@ -155,7 +159,11 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 202 mit Details zur neu ers
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": 40,
@@ -390,6 +398,8 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur aktuali
 >[!NOTE]
 >
 >Um den folgenden Endpunkt verwenden zu können, benötigen Sie die `audienceId` Ihrer externen Zielgruppe. Sie können Ihre `audienceId` von einem erfolgreichen Aufruf an den `GET /external-audiences/operations/{OPERATION_ID}`-Endpunkt abrufen.
+>
+>Darüber hinaus kann dieser Endpunkt verwendet werden, um die Daten für die Zielgruppe zu aktualisieren, wenn sie zuvor aufgenommen wurden.
 
 Sie können eine Zielgruppenaufnahme starten, indem Sie eine POST-Anfrage an den folgenden Endpunkt senden und dabei die Zielgruppen-ID angeben.
 
@@ -623,7 +633,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Auf
 
 | Eigenschaft | Typ | Beschreibung |
 | -------- | ---- | ----------- |
-| `runs` | Objekt | Ein -Objekt, das die Liste der Aufnahmedurchgänge enthält, die zur Audience gehören. Weitere Informationen zu diesem Objekt finden Sie im Abschnitt [Abrufen des &#x200B;](#retrieve-ingestion-status)&quot;. |
+| `runs` | Objekt | Ein -Objekt, das die Liste der Aufnahmedurchgänge enthält, die zur Audience gehören. Weitere Informationen zu diesem Objekt finden Sie im Abschnitt [Abrufen des ](#retrieve-ingestion-status)&quot;. |
 
 +++
 
