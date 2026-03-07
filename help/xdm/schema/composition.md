@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Grundlagen der Schemakomposition
 description: Erfahren Sie mehr über Experience-Datenmodell-Schemas (XDM) und die Bausteine, Prinzipien und Best Practices zum Erstellen von Schemas in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
+source-git-commit: e4a30f7e483b90d5420ddcc1caffcee2089eda3f
 workflow-type: tm+mt
-source-wordcount: '4331'
+source-wordcount: '4371'
 ht-degree: 24%
 
 ---
@@ -23,7 +23,7 @@ Zusätzlich zur Beschreibung der Datenstruktur wenden Schemata Einschränkungen 
 
 Experience Platform erhält diese semantische Normalisierung mithilfe von Schemata aufrecht. Schemata sind die Standardmethode zur Beschreibung von Daten in Experience Platform. Dadurch können alle Daten, die mit Schemata konform sind, innerhalb einer Organisation ohne Konflikte wiederverwendet oder sogar von mehreren Organisationen gemeinsam genutzt werden.
 
-XDM-Schemata eignen sich ideal zum Speichern großer Mengen komplexer Daten in einem eigenständigen Format. Weitere Informationen dazu, wie XDM dies [, finden Sie in den Abschnitten &#x200B;](#embedded)Eingebettete Objekte[&#x200B; und Big Data](#big-data) im Anhang zu diesem Dokument.
+XDM-Schemata eignen sich ideal zum Speichern großer Mengen komplexer Daten in einem eigenständigen Format. Weitere Informationen dazu, wie XDM dies [, finden Sie in den Abschnitten ](#embedded)Eingebettete Objekte[ und Big Data](#big-data) im Anhang zu diesem Dokument.
 
 ### Schema-basierte Workflows in Experience Platform {#schema-based-workflows}
 
@@ -61,7 +61,7 @@ Um diesen Prozess zu unterstützen, können Schlüsselfelder in Ihren Schemata a
 
 Zu den Feldern, die häufig als &quot;[!UICONTROL Identity]&quot; gekennzeichnet sind, gehören: E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID oder andere eindeutige ID-Felder. Erwägen Sie alle eindeutigen Kennungen, die für Ihr Unternehmen spezifisch sind, da sie auch gute &quot;[!UICONTROL Identity]&quot; Felder sein können.
 
-Weitere Informationen dazu, wie Sie Ihren Kunden mit Identitätsinformationen digitale Erlebnisse bereitstellen können, finden Sie unter [Identity Service - Übersicht](../../identity-service/home.md). Tipps zur Verwendung von Identitäten beim Erstellen [&#x200B; Schemas finden Sie im Dokument Best Practices für die Datenmodellierung &#x200B;](./best-practices.md#data-validation-fields).
+Weitere Informationen dazu, wie Sie Ihren Kunden mit Identitätsinformationen digitale Erlebnisse bereitstellen können, finden Sie unter [Identity Service - Übersicht](../../identity-service/home.md). Tipps zur Verwendung von Identitäten beim Erstellen [ Schemas finden Sie im Dokument Best Practices für die Datenmodellierung ](./best-practices.md#data-validation-fields).
 
 Es gibt zwei Möglichkeiten, Identitätsdaten an Experience Platform zu senden:
 
@@ -76,7 +76,7 @@ Der Hauptnachteil der Verwendung von `identityMap` besteht darin, dass Identitä
 
 >[!NOTE]
 >
->Ein Schema, das `identityMap` verwendet, kann in einer Beziehung als Quellschema, aber nicht als Referenzschema verwendet werden. Dies liegt daran, dass alle Referenzschemata eine sichtbare Identität aufweisen müssen, die in einem Referenzfeld innerhalb des Quellschemas zugeordnet werden kann. Weitere Informationen zu den Anforderungen von Quell[&#x200B; und Referenzschemas finden &#x200B;](../tutorials/relationship-ui.md) im Handbuch zur Benutzeroberfläche unter Beziehungen .
+>Ein Schema, das `identityMap` verwendet, kann in einer Beziehung als Quellschema, aber nicht als Referenzschema verwendet werden. Dies liegt daran, dass alle Referenzschemata eine sichtbare Identität aufweisen müssen, die in einem Referenzfeld innerhalb des Quellschemas zugeordnet werden kann. Weitere Informationen zu den Anforderungen von Quell[ und Referenzschemas finden ](../tutorials/relationship-ui.md) im Handbuch zur Benutzeroberfläche unter Beziehungen .
 
 Identitätszuordnungen können jedoch nützlich sein, wenn es eine variable Anzahl von Identitäten für ein Schema gibt oder Sie Daten aus Quellen einbringen, die Identitäten speichern (z. B. [!DNL Airship] oder Adobe Audience Manager). Darüber hinaus sind Identitätszuordnungen erforderlich, wenn Sie die [Experience Platform Mobile SDK verwenden](https://developer.adobe.com/client-sdks/home/).
 
@@ -117,6 +117,11 @@ Wie im obigen Beispiel gezeigt, stellt jeder Schlüssel im `identityMap`-Objekt 
 
 ### Prinzipien der Schemaentwicklung {#evolution}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_schema_editing_breaking_change_warning"
+>title="Ein verwendetes Schema bearbeiten"
+>abstract="Dieses Schema wird bereits von Datensätzen oder Aufnahme-Workflows verwendet. Änderungen an vorhandenen Feldern oder Identitäten können zu Aufnahmefehlern führen, wenn Datenflüsse ausgeführt oder geplant werden. Nach Beginn der Aufnahme werden nur additive Schemaänderungen unterstützt."
+
 In dem Maße, wie sich die Art der digitalen Erfahrungen weiterentwickelt, müssen sich auch die Schemata, die zu ihrer Darstellung verwendet werden, weiterentwickeln. Ein gut entworfenes Schema ist daher in der Lage, sich bei Bedarf anzupassen und weiterzuentwickeln, ohne destruktive Änderungen an früheren Versionen des Schemas zu verursachen.
 
 Da die Beibehaltung der Abwärtskompatibilität für die Schemaentwicklung von entscheidender Bedeutung ist, erzwingt Experience Platform ein rein additives Versionierungsprinzip. Dieses Prinzip stellt sicher, dass alle Änderungen am Schema nur zu zerstörungsfreien Aktualisierungen und Änderungen führen. Mit anderen Worten: **brechende Änderungen werden nicht unterstützt.**
@@ -149,11 +154,11 @@ Beachten Sie beim Festlegen eines zuvor optionalen Felds nach Bedarf Folgendes:
 
 1. Wenn Sie historische Daten abfragen und die Ergebnisse in einen neuen Datensatz schreiben, schlagen einige Zeilen fehl, da sie Nullwerte für das erforderliche Feld enthalten.
 1. Wenn das Feld am Echtzeit-Kundenprofil teilnimmt und Sie Daten exportieren, bevor Sie sie nach Bedarf festlegen, kann es für einige Profile null sein.
-1. Sie können die Schema Registry-API verwenden, um ein Änderungsprotokoll mit Zeitstempel für alle XDM-Ressourcen in Experience Platform anzuzeigen, einschließlich neuer erforderlicher Felder. Weitere Informationen finden Sie im Handbuch zum [Endpunkt &#x200B;](../api/audit-log.md)Administratorprotokoll“.
+1. Sie können die Schema Registry-API verwenden, um ein Änderungsprotokoll mit Zeitstempel für alle XDM-Ressourcen in Experience Platform anzuzeigen, einschließlich neuer erforderlicher Felder. Weitere Informationen finden Sie im Handbuch zum [Endpunkt ](../api/audit-log.md)Administratorprotokoll“.
 
 ### Schemata und Datenerfassung
 
-Um Daten in die Experience Platform aufnehmen zu können, muss zunächst ein Datensatz erstellt werden. Datensätze sind die Bausteine für die Datenumwandlung und das Tracking für [[!DNL Catalog Service]](../../catalog/home.md) und stellen im Allgemeinen Tabellen oder Dateien dar, die aufgenommene Daten enthalten. Alle Datensätze basieren auf vorhandenen XDM-Schemata, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen finden Sie in der Übersicht zur Datenaufnahme [&#x200B; &#x200B;](../../ingestion/home.md)Experience Platform .
+Um Daten in die Experience Platform aufnehmen zu können, muss zunächst ein Datensatz erstellt werden. Datensätze sind die Bausteine für die Datenumwandlung und das Tracking für [[!DNL Catalog Service]](../../catalog/home.md) und stellen im Allgemeinen Tabellen oder Dateien dar, die aufgenommene Daten enthalten. Alle Datensätze basieren auf vorhandenen XDM-Schemata, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen finden Sie in der Übersicht zur Datenaufnahme [ ](../../ingestion/home.md)Experience Platform .
 
 ## Bausteine eines Schemas {#schema-building-blocks}
 
@@ -161,9 +166,9 @@ Die Experience Platform verwendet einen Kompositionsansatz, bei dem Standardbaus
 
 Schemata werden nach folgender Formel zusammengestellt:
 
-**Klasse + Schemafeldgruppe&ast; = XDM-Schema**
+**Klasse + Schemafeldgruppe&amp;ast; = XDM-Schema**
 
-&map;ast;Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Dies bedeutet, dass Sie ein Datensatzschema erstellen können, ohne Feldergruppen zu verwenden.
+&amp;map;ast;Ein Schema besteht aus einer Klasse und keiner oder mehreren Schemafeldgruppen. Dies bedeutet, dass Sie ein Datensatzschema erstellen können, ohne Feldergruppen zu verwenden.
 
 ### Klasse {#class}
 
@@ -274,7 +279,7 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 
 >[!NOTE]
 >
->Der Feldtyp „Zuordnung“ ermöglicht Schlüssel-Wert-Paardaten, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Zuordnungen finden Sie in standardmäßigen XDM-Klassen und -Feldergruppen. Sie können aber auch benutzerdefinierte Zuordnungen definieren. Weitere Informationen finden Sie im API[Tutorial zum Definieren benutzerdefinierter &#x200B;](../tutorials/custom-fields-api.md#custom-maps) oder im Handbuch [Definieren von Zuordnungsfeldern in &#x200B;](../ui/fields/map.md) Benutzeroberfläche“.
+>Der Feldtyp „Zuordnung“ ermöglicht Schlüssel-Wert-Paardaten, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Zuordnungen finden Sie in standardmäßigen XDM-Klassen und -Feldergruppen. Sie können aber auch benutzerdefinierte Zuordnungen definieren. Weitere Informationen finden Sie im API[Tutorial zum Definieren benutzerdefinierter ](../tutorials/custom-fields-api.md#custom-maps) oder im Handbuch [Definieren von Zuordnungsfeldern in ](../ui/fields/map.md) Benutzeroberfläche“.
 
 ## Kompositionsbeispiel {#composition-example}
 
