@@ -85,7 +85,7 @@ Die Voraussetzungen hängen davon ab, welche Identitätstypen Sie für die Zielg
 
 **Stellen Sie bei Cookie-basiertem Targeting auf[!DNL The Trade Desk]** sicher, dass eine Zuordnung zwischen ECID und [!DNL Trade Desk ID] hergestellt wurde. Führen Sie dazu die folgenden Schritte aus:
 
-1. **ID-Synchronisierungsfunktion aktivieren**: Wenn Sie [!DNL The Trade Desk ID] Aktivierung zum ersten Mal einrichten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) im Experience Cloud ID-Service noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren.
+1. **ID-Synchronisierungsfunktion aktivieren**: Wenn Sie [!DNL The Trade Desk ID] Aktivierung zum ersten Mal einrichten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/de/docs/id-service/using/id-service-api/methods/idsync) im Experience Cloud ID-Service noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren.
    * Wenn Sie zuvor bereits [!DNL The Trade Desk] Integrationen in Audience Manager eingerichtet haben, werden Ihre bestehenden ID-Synchronisierungen automatisch auf Experience Platform übertragen.
 
 2. **Web-Seiten instrumentieren**: Implementieren Sie Code auf Ihren Web-Seiten, um Zuordnungen zwischen [!DNL The Trade Desk ID] und Adobe ECID zu erstellen. Dadurch kann Experience Platform Trade Desk-IDs mit Ihren Kundenprofilen verknüpfen.
