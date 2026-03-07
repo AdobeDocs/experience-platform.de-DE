@@ -50,7 +50,7 @@ Informationen dazu, wie bestimmte Datenexportsteuerelemente den Datennutzungs-La
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
->title="Anleitung"
+>title="Anweisungen"
 >abstract="<ul><li>Kennzeichnen Sie XDM-Felder und Segmente, um die Felder und Segmente zu klassifizieren, auf die Sie den Zugriff beschränken möchten.</li><li>Kennzeichnen von Rollen: Durch Hinzufügen von Kennzeichnungen zu einer Rolle können Sie festlegen, für welche Kennzeichnungen Beschränkungen für Personen mit dieser Rolle gelten sollen.</li><li>Richtlinien erstellen: Eine Richtlinie schafft eine Beziehung zwischen den Kennzeichnungen für gekennzeichnete Objekte wie XDM-Feldern und Segmenten und den Kennzeichnungen für Rollen. Wenn die Labels übereinstimmen, kann entweder eine Zugriffserlaubnis oder ein eingeschränkter Zugriff definiert werden.</li></ul>"
 
 Sie können Datennutzungs-Labels mit [!DNL Experience Platform]-APIs oder der Benutzeroberfläche verwalten. Einzelheiten finden Sie in den nachfolgenden Abschnitten.

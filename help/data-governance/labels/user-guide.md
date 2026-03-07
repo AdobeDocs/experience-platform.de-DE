@@ -36,7 +36,7 @@ Sie können Labels direkt zu einem Schema oder zu Feldern innerhalb dieses Schem
 >
 >![Das Dialogfeld „Verletzung der Data Governance-Richtlinie erkannt“ mit Hervorhebung der Zusammenfassung der Verletzung und des Diagramms der Datenherkunft.](../images/labels/policy-violation-dialog.png)
 >
->Weitere [&#x200B; zu Richtlinienverletzungen finden Sie in der Dokumentation &#x200B;](../enforcement/auto-enforcement.md#data-usage-violation)Verletzung von Datennutzungsrichtlinien“.
+>Weitere [ zu Richtlinienverletzungen finden Sie in der Dokumentation ](../enforcement/auto-enforcement.md#data-usage-violation)Verletzung von Datennutzungsrichtlinien“.
 
 Zum Verwalten der Datennutzungs-Labels auf Schemaebene müssen Sie ein vorhandenes Schema auswählen oder ein neues erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Schemas]** aus, um den **[!UICONTROL Schemas]** Workspace zu öffnen. Auf dieser Seite werden alle erstellten Schemata, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Schema angezeigt.
 
@@ -156,4 +156,4 @@ Sie können jetzt auch Datennutzungsrichtlinien auf Basis der von Ihnen angewend
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422789?captions=ger&quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->

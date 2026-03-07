@@ -6,7 +6,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 855f0a1384f658d39aa9d4fbb6bcb032933e59db
 workflow-type: tm+mt
 source-wordcount: '588'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -45,7 +45,7 @@ Um eine einzelne Kennzeichnung anzuzeigen, wählen Sie den Namen der Kennzeichnu
 
 ![Die Detailseite einer einzelnen Kennzeichnung.](../../images/ui/labels/label-details.png){zoomable="yes"}
 
-## Erstellen einer benutzerdefinierten Beschriftung {#create-custom-label}
+## Erstellen eines benutzerdefinierten Labels {#create-custom-label}
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"

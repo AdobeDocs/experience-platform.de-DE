@@ -138,7 +138,7 @@ Lizenznutzungsberichte bieten ein hohes Maß an Granularität. Die meisten Metri
 
 In diesem Handbuch wird beschrieben, wie Sie das Lizenznutzungs-Dashboard in der Benutzeroberfläche aufrufen und verwenden können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Einen allgemeinen Überblick über die Experience Platform-Benutzeroberfläche erhalten Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).
 
 ## Dashboard-Daten [!UICONTROL License usage]
 
@@ -295,7 +295,7 @@ Die Funktion „Prognostizierte Nutzung“ unterstützt die folgenden Metriken:
 >
 >Kunden mit Berechtigungen für &quot;[!UICONTROL Average Profile Richness]&quot; und &quot;[!UICONTROL Total Storage]&quot; sahen ab dem 20. August stattdessen &quot;[!UICONTROL Total Data Volume]&quot; im Lizenznutzungs-Dashboard. Es gab keine Änderung bei den Kundenberechtigungen, sondern nur eine Vereinfachung der Tracking-Metriken. [!UICONTROL Total Data Volume] stellt die Daten dar, die im Echtzeit-Kundenprofil für Interaktions- und Personalisierungs-Workflows verfügbar sind. Diese vereinfachte Metrik verbesserte die Verwaltung und Messung der Verwendung von Echtzeit-Kundenprofilen. Kunden wurden gebeten, sich an ihren Adobe-Support-Mitarbeiter zu wenden, um weitere Informationen zu dieser Änderung zu erhalten.
 
-Die Metriken, die in Ihrem Dashboard angezeigt werden, hängen von den Produkten und Berechtigungen ab, die mit Ihrer Organisation verbunden sind. Wenn Ihr Unternehmen am nutzungsgebundenen Test für [Adobe Experience Platform-Agenten teilnimmt &#x200B;](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) Adobe Experience Platform-Agenten lizenziert, enthält das Dashboard die [!UICONTROL AI credits]. Wenn Ihr Unternehmen Adobe Experience Platform nicht lizenziert, wird die Verwendung von KI-Guthaben als primäre Metrik angezeigt.
+Die Metriken, die in Ihrem Dashboard angezeigt werden, hängen von den Produkten und Berechtigungen ab, die mit Ihrer Organisation verbunden sind. Wenn Ihr Unternehmen am nutzungsgebundenen Test für [Adobe Experience Platform-Agenten teilnimmt ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) Adobe Experience Platform-Agenten lizenziert, enthält das Dashboard die [!UICONTROL AI credits]. Wenn Ihr Unternehmen Adobe Experience Platform nicht lizenziert, wird die Verwendung von KI-Guthaben als primäre Metrik angezeigt.
 
 | Metrik | Beschreibung |
 |---|---|
@@ -317,7 +317,7 @@ Die Metriken, die in Ihrem Dashboard angezeigt werden, hängen von den Produkten
 | [!UICONTROL Profile Richness No of Packs] | Eine Erhöhung des autorisierten Gesamtdatenvolumens um 25 KB pro Profil für jedes Paket mit zusätzlichem Profilumfang. |
 | [!UICONTROL Query Service Compute Hours] | Ein Maß für die Zeit, die die Abfrage-Service-Engines benötigen, um Daten bei Ausführung einer Batch-Abfrage im Data Lake zu lesen, dort zu verarbeiten und dorthin zurückzuschreiben. |
 | [!UICONTROL Streaming Segmentation No of Packs] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungs-Service gelangen. Die Segmentzugehörigkeit wird basierend auf den aktuellen Personenprofilattributen und dem Wert des aktuellen Ereignisses bewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsam genutzte Funktion. |
-| [!UICONTROL Total Data Volume] | Die Gesamtmenge der für das Echtzeit-Kundenprofil verfügbaren Daten, die in Interaktions-Workflows verwendet werden können. Das Gesamtdatenvolumen wird anhand der folgenden Formel berechnet: **Gesamtdatenvolumen = Adressierbare Zielgruppe × Durchschnittliche Profilreichhaltigkeit**. Diese Metrik spiegelt Daten wider, die nur im Profilspeicher gespeichert sind, und schließt den Data-Lake-Speicher aus. Sie bietet eine fokussiertere Ansicht von Daten, die für die profilbasierte Interaktion relevant sind. Weitere Informationen finden [&#x200B; unter „Häufig gestellte Fragen zum &#x200B;](../../landing/license-usage-and-guardrails/total-data-volume.md) Datenvolumen insgesamt“. |
+| [!UICONTROL Total Data Volume] | Die Gesamtmenge der für das Echtzeit-Kundenprofil verfügbaren Daten, die in Interaktions-Workflows verwendet werden können. Das Gesamtdatenvolumen wird anhand der folgenden Formel berechnet: **Gesamtdatenvolumen = Adressierbare Zielgruppe × Durchschnittliche Profilreichhaltigkeit**. Diese Metrik spiegelt Daten wider, die nur im Profilspeicher gespeichert sind, und schließt den Data-Lake-Speicher aus. Sie bietet eine fokussiertere Ansicht von Daten, die für die profilbasierte Interaktion relevant sind. Weitere Informationen finden [ unter „Häufig gestellte Fragen zum ](../../landing/license-usage-and-guardrails/total-data-volume.md) Datenvolumen insgesamt“. |
 | [!UICONTROL Total Volume of Data Egress] | Das kumulative Jahresvolumen der aus Adobe Experience Platform in Data Warehouses von Drittanbietern exportierten Daten. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
@@ -330,11 +330,11 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 | Lizenz | Produktbeschreibung |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD Lite</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/de/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD Lite</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL BIS 10M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform-Aktivierung](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME - STARTER:OD</li><li>UNP AJO ULTIMATE - STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILORCHESTRIERUNG</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
@@ -345,4 +345,4 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 Nach dem Lesen dieses Dokuments können Sie das Lizenznutzungs-Dashboard finden und Nutzungsmetriken für jedes gekaufte Produkt, für alle Produktions- oder Entwicklungs-Sandboxes und für eine bestimmte Sandbox anzeigen. Weitere Informationen zu verfügbaren Metriken für Ihr Unternehmen, die auf der von Ihrem Unternehmen erworbenen Lizenz basieren, finden Sie.
 
-Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [&#128279;](../../landing/ui-guide.md).
+Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Handbuch zur Experience Platform-Benutzeroberfläche [](../../landing/ui-guide.md).

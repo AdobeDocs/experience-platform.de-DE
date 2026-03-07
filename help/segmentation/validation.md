@@ -1,13 +1,13 @@
 ---
 title: Zielgruppen-Validierung
 description: Erfahren Sie, wie Experience Platform Ihre Zielgruppen validiert, um sicherzustellen, dass sie nachgelagert eine gute Leistung erbringen.
-source-git-commit: 52439e55d3c48631488b17b6b04256bcbbe37bcb
+exl-id: 55877ad5-757f-4928-853c-3b211ece0a45
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '1630'
-ht-degree: 1%
+ht-degree: 14%
 
 ---
-
 
 # Zielgruppen-Validierung
 
@@ -44,7 +44,7 @@ Derzeit werden die folgenden Validierungen unterstützt:
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="logische Komplexität"
+>title="Logische Komplexität"
 >abstract="Ihre Zielgruppe enthält zu viele Abfragen, was zu unnötiger logischer Komplexität führt. Vereinfachen Sie Ihre Zielgruppendefinition, bevor Sie fortfahren."
 
 Die Validierung der logischen Komplexität analysiert die Struktur Ihrer logischen Aussagen (AND, OR, NOT) innerhalb Ihrer Zielgruppendefinition. Insbesondere sucht sie nach Zielgruppendefinitionen, die das System zwingen, eine übermäßige Anzahl von Vergleichen pro Profil durchzuführen.
@@ -105,12 +105,12 @@ plan.equals("trial") AND region.equals("canada")
 
 +++
 
-### [!BADGE Kritische Validierung]{type=Negative} Sequenzielle Ereigniskomplexität {#sequential-event-complexity}
+### [!BADGE Kritische Validierung]{type=Negative} Komplexität sequenzieller Ereignisse {#sequential-event-complexity}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="Ereignissequenzlimit"
->abstract="Ihre Zielgruppe enthält zu viele sequenzielle Ereignisse. Es können nur maximal 6 sequenzielle Ereignisse in Ihrer Zielgruppendefinition vorhanden sein. Bitte einige sequenzielle Ereignisse aus Ihrer Zielgruppendefinition entfernen, bevor Sie fortfahren."
+>title="Limit für Ereignissequenzen"
+>abstract="Ihre Zielgruppe enthält zu viele sequenzielle Ereignisse. Sie können maximal 6 sequenzielle Ereignisse innerhalb Ihrer Zielgruppendefinition verwenden. Entfernen Sie einige sequenzielle Ereignisse aus Ihrer Zielgruppendefinition, bevor Sie fortfahren."
 
 Die Validierung der Komplexität sequenzieller Ereignisse beschränkt die Anzahl sequenzieller Ereignisse in einer Sequenz auf 6 Ereignisse.
 
@@ -144,8 +144,8 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Warnung zum Zählungsfilter"
->abstract="Ihre Zielgruppe enthält zu viele Aggregationsereignisse. Sie sollten maximal drei Aggregationsereignisse in Ihrer Zielgruppe verwenden. Um Leistungsprobleme zu vermeiden, sollten Sie einige Aggregationsereignisse aus Ihrer Zielgruppendefinition entfernen."
+>title="Warnung zum Zählfilter"
+>abstract="Ihre Zielgruppe enthält zu viele Aggregationsereignisse. Sie sollten maximal 3 Aggregationsereignisse in Ihrer Zielgruppe verwenden. Um Leistungsprobleme zu vermeiden, sollten Sie einige Aggregationsereignisse aus Ihrer Zielgruppendefinition entfernen."
 
 Die Prüfung der aggregierten Anzahl begrenzt die Anzahl der in Ihrer Zielgruppe verwendeten Aggregationsereignisse auf drei Bedingungen.
 
@@ -158,7 +158,7 @@ Um zu vermeiden, dass diese Validierung ausgelöst wird, verwenden Sie nur dann 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_arraydepthcheck"
 >title="Warnung zu verschachtelten Daten"
->abstract="Ihre Zielgruppe verfügt über zu viele verschachtelte Datenschichten. Sie sollten maximal zwei Datenschichten in Ihrer Audience verwenden. Um Leistungsprobleme zu vermeiden, sollten Sie Ihre Zielgruppendefinition reduzieren."
+>abstract="Ihre Zielgruppe enthält zu viele verschachtelte Datenschichten. Sie sollten maximal 2 Datenschichten innerhalb Ihrer Zielgruppe verwenden. Um Leistungsprobleme zu vermeiden, sollten Sie Ihre Zielgruppendefinition reduzieren."
 
 Die Validierung der Komplexität verschachtelter Daten beschränkt die Anzahl verschachtelter Daten innerhalb einer Zielgruppendefinition auf 2 Ebenen.
 
@@ -171,7 +171,7 @@ Wenn Sie häufig eine Segmentierung für ein tief verschachteltes Attribut durch
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_profilestorecheck"
 >title="Warnung zur Zielgruppengröße"
->abstract="Ihre Zielgruppe ist zu breit geschrieben. Sie sollten es vermeiden, eine Zielgruppendefinition zu schreiben, die mehr als 30 % der gesamten Profile in Ihrer Sandbox qualifiziert. Um Leistungsprobleme zu vermeiden, sollten Sie Ihre Zielgruppendefinition enger definieren."
+>abstract="Ihre Zielgruppe ist zu weit gefasst. Sie sollten es vermeiden, eine Zielgruppendefinition zu verfassen, für die mehr als 30 % der gesamten Profile in Ihrer Sandbox qualifiziert sind. Um Leistungsprobleme zu vermeiden, sollten Sie Ihre Zielgruppendefinition eingrenzen."
 
 Bei der Validierung der Zielgruppengröße wird geprüft, ob Ihre Zielgruppendefinition so breit ist, dass mehr als 30 % der gesamten Profile in Ihrer Sandbox für die Zielgruppe qualifiziert sind.
 

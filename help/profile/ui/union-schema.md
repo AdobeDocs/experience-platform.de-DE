@@ -7,7 +7,7 @@ exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Dieses Handbuch für die Benutzeroberfläche setzt ein Verständnis der verschie
 * [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert die [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, während sie in [!DNL Experience Platform] aufgenommen werden.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 
-## Grundlagen zu Vereinigungsschemata {#understanding-union-schemas}
+## Informationen zu Vereinigungsschemata {#understanding-union-schemas}
 
 >[!CONTEXTUALHELP]
 >id="rtcdp_collaboration_union_schema"

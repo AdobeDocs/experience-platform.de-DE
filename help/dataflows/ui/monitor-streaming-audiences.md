@@ -3,13 +3,13 @@ title: Überwachen von Streaming-Zielgruppen
 description: Erfahren Sie, wie Sie mit dem Monitoring-Dashboard Zielgruppen überwachen, die mithilfe der Streaming-Segmentierung ausgewertet werden
 hide: true
 hidefromtoc: true
-source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
+exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '368'
-ht-degree: 9%
+ht-degree: 19%
 
 ---
-
 
 # Überwachen von Streaming-Zielgruppen
 
@@ -28,13 +28,13 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_evaluation_rate"
 >title="Auswertungsrate"
->abstract="Diese Metrik stellt die Anzahl der pro Sekunde ausgewerteten Datensätze dar."
+>abstract="Diese Metrik stellt die Anzahl der ausgewerteten Einträge pro Sekunde dar."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_p95_latency"
 >title="P95-Aufnahmelatenz"
->abstract="Diese Metrik misst die 95. Perzentil-Latenz eines Ereignisses, das in Adobe Experience Platform eintrifft, bis zur erfolgreichen Auswertung in der Zielgruppe."
+>abstract="Diese Metrik misst die Latenz im 95. Perzentil von dem Zeitpunkt an, an dem ein Ereignis in Adobe Experience Platform eintrifft, bis zur erfolgreichen Auswertung für die Zielgruppe."
 >text="Learn more in documentation"
 
 Die folgende Tabelle enthält detailliertere Informationen zu den Metriken, die für Streaming-Zielgruppen verwendet werden.

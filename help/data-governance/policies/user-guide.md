@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 364a92bde1a1629d2811e7ff16bd6a4fb5287249
 workflow-type: tm+mt
 source-wordcount: '2380'
-ht-degree: 46%
+ht-degree: 48%
 
 ---
 
@@ -128,7 +128,7 @@ Einverständnisrichtlinien bestehen aus zwei logischen Komponenten:
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="If-Bedingung"
->abstract="Definieren Sie zunächst die Bedingungen, unter denen die Richtlinienüberprüfung ausgelöst wird. Bedingungen können die Durchführung bestimmter Marketing-Aktionen, das Vorhandensein bestimmter Data Governance-Bezeichnungen oder eine Kombination aus beidem umfassen. Verwenden Sie EINE UND/ODER-Logik, um komplexe bedingte Beziehungen zwischen mehreren Bedingungen zu erstellen."
+>abstract="Definieren Sie zunächst die Bedingungen, unter denen die Richtlinienüberprüfung ausgelöst wird. Bedingungen können die Durchführung bestimmter Marketing-Aktionen, das Vorhandensein bestimmter Data Governance-Bezeichnungen oder eine Kombination aus beidem umfassen. Verwenden Sie UND/ODER-Logik, um komplexe bedingte Beziehungen zwischen mehreren Bedingungen zu erstellen."
 
 Wählen Sie im Abschnitt **[!UICONTROL If]** die Marketing-Aktionen und/oder Datennutzungskennzeichnungen aus, die Trigger zu dieser Richtlinie haben sollen. Wählen Sie **[!UICONTROL View all]** und **[!UICONTROL Select labels]** aus, um die vollständigen Listen der verfügbaren Marketing-Aktionen bzw. Bezeichnungen anzuzeigen.
 
@@ -145,7 +145,7 @@ Wenn Sie mehrere Bedingungen auswählen, können Sie mit dem zwischen ihnen ange
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Then-Bedingung"
->abstract="Nachdem Sie eine „If“-Bedingung definiert haben, wählen Sie im Abschnitt „Then“ mindestens ein Einverständnisattribut aus dem Vereinigungsschema aus. Sie müssen durch Container-Felder (Objekt, Zuordnung, Array) navigieren, um primitive Felder (Zeichenfolge, Zahl, Boolescher Wert usw.) für die Regelerstellung zu erreichen. Dieses primitive Feld ist das Attribut, das vorhanden sein muss, damit Profile in die Aktion einbezogen werden, die durch diese Richtlinie geregelt wird."
+>abstract="Nachdem Sie eine „If“-Bedingung definiert haben, wählen Sie im Abschnitt „Then“ mindestens ein Einverständnisattribut aus dem Vereinigungsschema aus. Sie müssen durch Container-Felder (Objekt, Zuordnung, Array) navigieren, um primitive Felder (Zeichenfolge, Zahl, Boolescher Wert usw.) für die Regelerstellung zu erreichen. Dieses primitive Feld ist das Attribut, das vorhanden sein muss, damit Profile in die Aktion einbezogen werden, die von dieser Richtlinie geregelt wird."
 
 Wählen Sie im Abschnitt **[!UICONTROL Then]** mindestens ein Einverständnisattribut aus dem Vereinigungsschema aus. Dies ist das Attribut, das vorhanden sein muss, damit Profile in die Aktion einbezogen werden, die durch diese Richtlinie geregelt wird. Sie können eine der vorgeschlagenen Optionen auswählen oder **[!UICONTROL View all]** auswählen, um das Attribut direkt aus dem Vereinigungsschema auszuwählen.
 
@@ -285,4 +285,4 @@ Dieses Dokument hat Ihnen einen Überblick darüber verschafft, wie Datennutzung
 
 Das folgende Video zeigt, wie Sie in der [!DNL Experience Platform]-Benutzeroberfläche mit Nutzungsrichtlinien arbeiten:
 
->[!VIDEO](https://video.tv.adobe.com/v/37126?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
