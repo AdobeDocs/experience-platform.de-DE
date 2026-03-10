@@ -1,29 +1,43 @@
 ---
-title: KI-Assistent in Adobe Experience Platform - Übersicht
-description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
+title: KI-Assistent (veraltet) in Adobe Experience Platform - Übersicht
+description: Erfahren Sie mehr über den KI-Assistenten (alt), seine Nuancen und Anwendungsfälle und wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-Time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
+source-git-commit: 68c55e370cab58ce5c93359520bf4ce671282a1b
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 9%
+source-wordcount: '1201'
+ht-degree: 5%
 
 ---
 
-# KI-Assistent in Adobe Experience Platform
+# KI-Assistent (veraltet) in Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>Dieses Dokument gilt für den KI-Assistenten (veraltet). Informationen zum KI-Assistenten (der nächsten Generation) finden Sie im Handbuch [Benutzeroberfläche des KI-Assistenten](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) in der Dokumentation [KI in Experience Cloud](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
+
+In der folgenden Tabelle finden Sie einen Vergleich von KI-Assistent (veraltet) und KI-Assistent (nächste Generation):
+
+| Merkmalsbereich | KI-Assistent (veraltet) | KI-Assistent (nächste Generation) |
+| --- | --- | --- |
+| Benutzererlebnis | Der KI-Assistent (veraltet) ist nur in einem Bereich der rechten Leiste verfügbar. | Der KI-Assistent (der nächsten Generation) ist sowohl im Bereich der rechten Leiste als auch im immersiven Vollbilderlebnis verfügbar. |
+| Funktionsumfang | Sie können den KI-Assistenten (frühere Version) sowohl für Produktkenntnisse als auch für betriebliche Einblicke verwenden. | Sie können den KI-Assistenten (der nächsten Generation) für Produktkenntnisse, operative Einblicke sowie erweiterte agentische Fähigkeiten und die Ausführung mehrstufiger Aufgaben verwenden. |
+| Architektur von Platform | Der KI-Assistent (veraltet) wurde nicht auf dem Agent Orchestrator-Stack erstellt. | Der KI-Assistent (der nächsten Generation) wird von [Adobe Experience Platform Agent Orchestrator ](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) unterstützt und ermöglicht Erweiterbarkeit und erweiterte Koordinierung über Funktionen hinweg. |
+| Anwendungsbereich | Der KI-Assistent (veraltet) ist eine anwendungsspezifische Implementierung. | Sie können den KI-Assistenten (der nächsten Generation) für ein einheitliches KI-Assistentenerlebnis in allen Adobe Experience Cloud-Programmen verwenden. |
+| Zugriffs- und Berechtigungsmodell | Auf einzelne Produktgrenzen abgestimmtes Zugriffsmodell für die Anwendung. | Alle Benutzer erhalten Zugriff auf den KI-Assistenten (der nächsten Generation) und die zugehörigen Experience Platform-Agenten. **Hinweis**: <ul><li>**Adobe Experience Manager**: Ihr Administrator muss Ihnen über die [Adobe Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html) die Berechtigung für den Zugriff auf den KI-Assistenten (der nächsten Generation) erteilen.</li><li>**Customer Journey Analytics**: Ihr Administrator muss Ihnen die Berechtigung für den Zugriff auf den KI-Assistenten über die [Customer Journey Analytics-Zugriffssteuerung](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en) erteilen. Auf diese Weise können Sie Fragen zu Produktwissen und Dateneinblicken stellen. |
 
 Das folgende Video soll Ihnen dabei helfen, KI-Assistent zu verstehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
-Lesen Sie dieses Dokument, um mehr über den KI-Assistenten in Adobe Experience Platform zu erfahren.
+Lesen Sie dieses Dokument, um mehr über den KI-Assistenten (veraltet) in Adobe Experience Platform zu erfahren.
 
-Der KI-Assistent in Adobe Experience Platform ist ein Gesprächserlebnis, mit dem Sie Ihre Workflows in Adobe-Anwendungen beschleunigen können. Sie können den KI-Assistenten verwenden, um Produktkenntnisse besser zu verstehen, Probleme zu beheben oder Informationen zu durchsuchen und betriebliche Erkenntnisse zu gewinnen. Der KI-Assistent unterstützt Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
+Der KI-Assistent (veraltet) in Adobe Experience Platform ist ein Gesprächserlebnis, mit dem Sie Ihre Workflows in Adobe-Anwendungen beschleunigen können. Sie können den KI-Assistenten (frühere Version) verwenden, um Produktkenntnisse besser zu verstehen, Probleme zu beheben oder Informationen zu durchsuchen und operative Erkenntnisse zu erhalten. Der KI-Assistent (veraltet) unterstützt Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
 ![Die Benutzeroberfläche des KI-Assistenten mit dem ausgelösten erstmaligen Benutzererlebnis.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->Sie müssen einer [Benutzervereinbarung“ zustimmen](https://www.adobe.com/de/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) bevor Sie den KI-Assistenten verwenden können. Die Benutzervereinbarung enthält auch die öffentliche Beta-Vereinbarung. Dies dient dazu, dass Sie zusätzliche KI-Assistenten-Funktionen verwenden können, während sie in einer Beta-Funktion eingeführt werden.
+>Sie müssen einer [Benutzervereinbarung“ zustimmen](https://www.adobe.com/de/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) bevor Sie den KI-Assistenten (veraltet) verwenden können. Die Benutzervereinbarung enthält auch die öffentliche Beta-Vereinbarung. Dies dient dazu, dass Sie zusätzliche KI-Assistenten-Funktionen (veraltete Funktionen) verwenden können, während sie in einer Beta-Funktion eingeführt werden.
 
 +++Auswählen, um die Benutzervereinbarungsschnittstelle anzuzeigen
 
@@ -35,7 +49,7 @@ Der KI-Assistent in Adobe Experience Platform ist ein Gesprächserlebnis, mit de
 
 ## Grundlagen zum KI-Assistenten {#understanding-ai-assistant}
 
-Der KI-Assistent antwortet auf Ihre gesendeten Fragen, indem er eine Datenbank abfragt und dann Daten aus der Datenbank in eine für Menschen lesbare Antwort übersetzt.
+Der KI-Assistent (veraltet) antwortet auf Ihre gesendeten Fragen, indem er eine Datenbank abfragt und dann Daten aus der Datenbank in eine für Menschen lesbare Antwort übersetzt.
 
 Diese interne Darstellung der zugrunde liegenden Daten wird auch als **[!DNL Knowledge Graph]** bezeichnet - ein umfassendes Web von Konzepten, Daten und Metadaten für eine bestimmte Antwort.
 
@@ -45,7 +59,7 @@ Die [!DNL Knowledge Graph] besteht aus Unterdiagrammen, die bei jeder Übermittl
 * Einblicke in den Betrieb von Kunden in verschiedenen Meta-Stores.
 * Dokumentation zu Experience League.
 
-Es gibt zwei Klassen von Fragen, die vor der Abfrage des KI-Assistenten zu berücksichtigen sind:
+Es gibt zwei Klassen von Fragen, die vor der Abfrage des KI-Assistenten (veraltet) zu berücksichtigen sind:
 
 ### Produktkenntnisse {#product-knowledge}
 
@@ -59,19 +73,19 @@ Produktkenntnisse beziehen sich auf Konzepte und Themen, die auf der Dokumentati
 
 {style="table-layout:auto"}
 
-Sehen Sie sich das folgende Video an, um weitere Informationen zu KI-Assistent-Produktkenntnissen zu erhalten:
+Sehen Sie sich das folgende Video an, um weitere Informationen zu KI-Assistent (veraltete Produktkenntnisse) zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3475939/?captions=ger&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Betriebliche Erkenntnisse {#operational-insights}
 
-Operative Einblicke beziehen sich auf Antworten, die der KI-Assistent zu Ihren Metadatenobjekten (Attributen, Zielgruppen, Datenflüssen, Datensätzen, Zielen, Journey, Schemata und Quellen) generiert, einschließlich Zählungen, Suchen und Auswirkungen auf die Herkunft. Es werden keine Daten innerhalb der Sandbox betrachtet.
+Operative Insights beziehen sich auf Antworten, die der KI-Assistent (veraltete Version) über Ihre Metadatenobjekte (Attribute, Zielgruppen, Datenflüsse, Datensätze, Ziele, Journey, Schemata und Quellen) generiert, einschließlich Zählungen, Suchen und Auswirkungen auf die Herkunft. Es werden keine Daten innerhalb der Sandbox betrachtet.
 
 * Wie viele Datensätze habe ich?
 * Wie viele Schemaattribute wurden noch nie verwendet?
 * Welche Zielgruppen wurden aktiviert?
 
-Sie können Fragen zum KI-Assistenten zu Ihren betrieblichen Erkenntnissen in den folgenden Bereichen stellen:
+Sie können Fragen zum KI-Assistenten (frühere Version) zu Ihren betrieblichen Insights in den folgenden Bereichen stellen:
 
 | Domain | Unterstützte Metadaten | Nicht unterstützte Metadaten |
 | --- | --- | --- |
@@ -88,23 +102,23 @@ Sie können Fragen zum KI-Assistenten zu Ihren betrieblichen Erkenntnissen in de
 
 Bei Fragen zu operativen Einblicken spiegeln die Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen stützen, werden alle 24 Stunden einmal aktualisiert. Änderungen, die Benutzende tagsüber in Real-Time CDP vornehmen, werden beispielsweise nachts mit den Datenspeichern synchronisiert und stehen dann morgens für Benutzerfragen zur Verfügung. Sie müssen sich bei einer Sandbox anmelden, um bestimmte Daten im Zusammenhang mit -Objekten abzufragen.
 
-Sehen Sie sich das folgende Video an, um weitere Informationen zu den operativen Einblicken des KI-Assistenten zu erhalten:
+Sehen Sie sich das folgende Video an, um weitere Informationen zu den operativen Einblicken des KI-Assistenten (veraltete Version) zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444041?captions=ger&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Funktionsumfang {#feature-scope}
 
-Derzeit umfasst der KI-Assistent Folgendes:
+Derzeit umfasst der Umfang des KI-Assistenten (veraltet) Folgendes:
 
-* [Produktkenntnisse](./home.md#product-knowledge): Der KI-Assistent beantwortet Fragen zu Produktkenntnissen für Experience Platform, Real-Time Customer Data Platform und Adobe Journey Optimizer. Sie können auch Produktwissensthemen für Customer Journey Analytics behandeln, jedoch nur über die Customer Journey Analytics-Benutzeroberfläche.
-* [Operative Einblicke](./home.md#operational-insights): Sie können dem KI-Assistenten Fragen zu operativen Einblicken in die folgenden Datenobjekte stellen: Attribute, Zielgruppen, Datenflüsse, Datensätze, Ziele, Journey, Schemata und Quellen.
+* [Produktwissen](./home.md#product-knowledge): KI-Assistent (veraltet) kann Fragen zu Produktkenntnissen für Experience Platform, Real-Time Customer Data Platform und Adobe Journey Optimizer beantworten. Sie können auch Produktwissensthemen für Customer Journey Analytics behandeln, jedoch nur über die Customer Journey Analytics-Benutzeroberfläche.
+* [Operative Einblicke](./home.md#operational-insights): Sie können dem KI-Assistenten (veraltet) Fragen zu operativen Einblicken in die folgenden Datenobjekte stellen: Attribute, Zielgruppen, Datenflüsse, Datensätze, Ziele, Journey, Schemata und Quellen.
 
 ## Nächste Schritte
 
-Nachdem Sie nun über ein allgemeines Verständnis des KI-Assistenten verfügen, können Sie jetzt fortfahren und den KI-Assistenten während Ihrer Workflows verwenden. Weiterführende Informationen finden Sie in der folgenden Dokumentation:
+Nachdem Sie nun über ein allgemeines Verständnis von KI-Assistent (veraltet) verfügen, können Sie jetzt fortfahren und den KI-Assistenten (veraltet) während Ihrer Workflows verwenden. Weiterführende Informationen finden Sie in der folgenden Dokumentation:
 
-* [Handbuch zur Benutzeroberfläche des KI-Assistenten](./ui-guide.md)
+* [Handbuch zur Benutzeroberfläche des KI-Assistenten (veraltet)](./ui-guide.md)
 * [Zugriff auf Funktionen](./access.md)
 * [Handbuch zu Fragen](./questions.md)
-* [Datenschutz, Sicherheit und Governance im KI-Assistenten](./privacy.md)
+* [Datenschutz, Sicherheit und Governance im KI-Assistenten (veraltet)](./privacy.md)
 * [Häufig gestellte Fragen](./faq.md)

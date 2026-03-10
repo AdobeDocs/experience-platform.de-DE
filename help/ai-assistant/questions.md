@@ -1,32 +1,32 @@
 ---
-title: Fragenleitfaden für KI-Assistenten
-description: In diesem Dokument erfahren Sie mehr über Beispielfragen, die Sie bei der Abfrage des KI-Assistenten verwenden können.
+title: Fragenleitfaden für KI-Assistenten (veraltet)
+description: In diesem Dokument erfahren Sie mehr über Beispielfragen, die Sie bei der Abfrage des KI-Assistenten (Legacy) verwenden können.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
+source-git-commit: 077c42f2190316a00168bbeca685c08677c2b13a
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2086'
 ht-degree: 0%
 
 ---
 
-# Fragenleitfaden für KI-Assistenten
+# Fragenleitfaden für KI-Assistenten (veraltet)
 
-Lesen Sie dieses Dokument, um eine Reihe von Beispielfragen zu erhalten, die Sie bei der Abfrage des KI-Assistenten verwenden können.
+Lesen Sie dieses Dokument, um eine Reihe von Beispielfragen zu erhalten, die Sie bei der Abfrage des KI-Assistenten (alt) verwenden können.
 
-In diesem Dokument erfahren Sie auch, wie Sie [&#x200B; Ihre Fragen formulieren können](#phrasing-your-questions) um vom KI-Assistenten optimale Antworten zu erhalten.
+In diesem Dokument erfahren Sie auch, wie Sie [ Ihre Fragen formulieren können](#phrasing-your-questions) um optimale Antworten vom KI-Assistenten (alt) zu erhalten.
 
 ## Zielbezogene Fragen {#objectives-questions}
 
-Die folgenden Beispielfragen sind nach Zielen gruppiert, die Sie mit dem KI-Assistenten erreichen können:
+Die folgenden Beispielfragen sind nach Zielen gruppiert, die Sie mit dem KI-Assistenten (veraltet) erreichen können:
 
 | Ziel | Beschreibung | Beispiel |
 | --- | --- | --- |
-| Lernkonzepte und fortlaufende Workflows | <ul><li>Als Anfänger können Sie den KI-Assistenten verwenden, um Real-Time CDP- und Adobe Journey Optimizer-Konzepte zu erlernen und sich mit Produkten und Funktionen vertraut zu machen, mit denen Sie nicht vertraut sind.</li><li>Als erfahrener Benutzer können Sie den KI-Assistenten verwenden, um einen Randfall zu lösen, der Ihren Workflow blockieren könnte. | <ul><li>Wie richte ich ein Dashboard in Journey Analytics ein?</li><li>Erzählen Sie mir einige Anwendungsfälle für Real-Time CDP.</li></ul> |
-| Fehlerbehebung | Verwenden Sie den KI-Assistenten, um zu erfahren, wie Sie grundlegende Fehler debuggen, auf die Sie in Ihrem Workflow stoßen können. | <ul><li>Was bedeutet dieser Fehler {ERROR_MESSAGE}?</li><li>Warum kann ich die Zielgruppe mit dem Namen „Luma: E-Mail-Zielgruppe“ nicht löschen?</li></ul> |
-| Sandbox-Hygiene | Verwenden Sie den KI-Assistenten, um Duplikate oder nicht verwendete Objekte zu identifizieren, damit Sie Ihre Sandbox effizient verwalten können. | <ul><li>Können Sie mir ähnliche Zielgruppen zeigen?</li><li>Gibt es Schemata, denen kein Datensatz zugeordnet ist?</li></ul> |
-| Wertanalyse | Verwenden Sie den KI-Assistenten, um Ihre am häufigsten verwendeten Datenobjekte zu identifizieren und Leistungsindikatoren zu bewerten oder die wertvollsten Datenobjekte zu finden. | <ul><li>Wie viele Profile sind in unserer Segmentdefinition „Luma: E-Mail-Zielgruppe“?</li><li>Wann wurden Zielgruppen für das Experience Cloud-Zielgruppen-Ziel aktiviert?</li></ul> |
-| Suche | Verwenden Sie den KI-Assistenten, um unterstützte Experience Platform-Objekte wie Zielgruppen, Datensätze, Ziele, Schemata und Quellen zu finden. | <ul><li>Listen Sie die Zielgruppen auf, die „Luma“ im Namen enthalten, die im letzten Quartal erstellt wurden.</li><li>Welche Attribute enthalten das XDM-Schema „Luma: Custom Actions“?</li></ul> |
-| Wirkungsanalyse | Verwenden Sie den KI-Assistenten, um Datenobjekte zu identifizieren, die in bestimmten Workflows verwendet wurden, damit Sie die Auswirkungen von Änderungen bewerten können. | <ul><li>Welche Zielgruppen verwenden `homeAddress.city` im Schema „Luma: PersonProfiles“?</li><li>In welchen Datensätzen wird das `consents.marketing.push.val` Profilattribut gespeichert?</li></ul> |
+| Lernkonzepte und fortlaufende Workflows | <ul><li>Als Anfänger können Sie den KI-Assistenten (veraltet) verwenden, um Real-Time CDP- und Adobe Journey Optimizer-Konzepte zu erlernen und sich mit Produkten und Funktionen vertraut zu machen, mit denen Sie nicht vertraut sind.</li><li>Als erfahrener Benutzer können Sie den KI-Assistenten (veraltet) verwenden, um einen Edge-Fall zu lösen, der Ihren Workflow blockieren könnte. | <ul><li>Wie richte ich ein Dashboard in Journey Analytics ein?</li><li>Erzählen Sie mir einige Anwendungsfälle für Real-Time CDP.</li></ul> |
+| Fehlerbehebung | Verwenden Sie den KI-Assistenten (veraltet), um zu erfahren, wie Sie grundlegende Fehler debuggen, auf die Sie in Ihrem Workflow stoßen können. | <ul><li>Was bedeutet dieser Fehler {ERROR_MESSAGE}?</li><li>Warum kann ich die Zielgruppe mit dem Namen „Luma: E-Mail-Zielgruppe“ nicht löschen?</li></ul> |
+| Sandbox-Hygiene | Verwenden Sie den KI-Assistenten (veraltet), um Duplikate oder nicht verwendete Objekte zu identifizieren, damit Sie Ihre Sandbox effizient verwalten können. | <ul><li>Können Sie mir ähnliche Zielgruppen zeigen?</li><li>Gibt es Schemata, denen kein Datensatz zugeordnet ist?</li></ul> |
+| Wertanalyse | Verwenden Sie den KI-Assistenten (veraltet), um Ihre am häufigsten verwendeten Datenobjekte zu identifizieren und Leistungsindikatoren zu bewerten oder die wertvollsten Datenobjekte zu finden. | <ul><li>Wie viele Profile sind in unserer Segmentdefinition „Luma: E-Mail-Zielgruppe“?</li><li>Wann wurden Zielgruppen für das Experience Cloud-Zielgruppen-Ziel aktiviert?</li></ul> |
+| Suche | Verwenden Sie den KI-Assistenten (veraltet), um unterstützte Experience Platform-Objekte wie Zielgruppen, Datensätze, Ziele, Schemata und Quellen zu finden. | <ul><li>Listen Sie die Zielgruppen auf, die „Luma“ im Namen enthalten, die im letzten Quartal erstellt wurden.</li><li>Welche Attribute enthalten das XDM-Schema „Luma: Custom Actions“?</li></ul> |
+| Wirkungsanalyse | Verwenden Sie den KI-Assistenten (veraltete Version), um Datenobjekte zu identifizieren, die in bestimmten Workflows verwendet wurden, damit Sie die Auswirkungen von Änderungen bewerten können. | <ul><li>Welche Zielgruppen verwenden `homeAddress.city` im Schema „Luma: PersonProfiles“?</li><li>In welchen Datensätzen wird das `consents.marketing.push.val` Profilattribut gespeichert?</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -81,26 +81,26 @@ Die folgenden Fragen sind nach Datenobjekten gruppiert und werden entweder als [
    * Wann sollte ich einen Datentyp im Vergleich zu einer Feldergruppe verwenden?
    * Was ist der Unterschied zwischen einer Identität und einem Primär- oder Fremdschlüssel?
 * **Fehlerbehebung - Produktkenntnisse (Real-Time CDP und Journey Optimizer)**
-   * Wobei kann der KI-Assistent helfen?
+   * Wobei kann KI-Assistent (veraltet) helfen?
    * Kann ich ein Profil-aktiviertes Schema nach der Datenaufnahme löschen?
    * Warum kann ich eine Zielgruppe nicht löschen?
    * Wie lange dauert es, bis Zielgruppen evaluiert und die Ergebnisse für die Zielgruppenbestimmung verfügbar sind?
 
 ## Formulieren von Fragen {#phrasing-your-questions}
 
-Sie müssen Ihre Fragen an den KI-Assistenten mit Klarheit und Kontext formulieren, um eine möglichst präzise Antwort zu erhalten. Eine Anleitung dazu, wie Sie im Kontext eine klare Frage stellen, finden Sie in der folgenden Liste von Tipps:
+Sie müssen Ihre Fragen an den KI-Assistenten (alt) mit Klarheit und Kontext formulieren, um eine möglichst präzise Antwort zu erhalten. Eine Anleitung dazu, wie Sie im Kontext eine klare Frage stellen, finden Sie in der folgenden Liste von Tipps:
 
 * Geben Sie Ihre Aufgabe und/oder Frage kurz an.
 * Vermeiden Sie mehrdeutige Sprache oder eine übermäßig komplexe Syntax, um das Verständnis zu erleichtern.
-* Geben Sie einen relevanten Kontext zu Ihrer Aufgabe und/oder Frage an, da der Kontext dazu beitragen kann, dass der KI-Assistent relevantere Antworten generiert.
+* Geben Sie einen relevanten Kontext zu Ihrer Aufgabe und/oder Frage an, da der Kontext dazu beitragen kann, dass der KI-Assistent (veraltete Version) relevantere Antworten generiert.
 
-Lesen Sie die folgenden Tabellen, um weitere Anleitungen zu Best Practices zu erhalten, die bei der Beantwortung von Fragen an den KI-Assistenten befolgt werden sollten.
+Lesen Sie die folgenden Tabellen, um weitere Anleitungen zu Best Practices zu erhalten, die bei der Beantwortung von Fragen an den KI-Assistenten (veraltet) befolgt werden sollten.
 
-In den folgenden Tabellen sind Best Practices aufgeführt, die Sie bei der Verwendung des KI-Assistenten befolgen können:
+In den folgenden Tabellen sind Best Practices aufgeführt, die Sie bei der Verwendung des KI-Assistenten (veraltet) befolgen können:
 
 | Empfohlen | Beispiel |
 | --- | --- |
-| <ul><li>Geben Sie das Objekt oder die Informationen an, die Sie abrufen oder analysieren möchten.</li><li>Versuchen Sie, Ihre Datenobjektnamen in Anführungszeichen zu setzen. Wenn Sie nur einen Teil des Objektnamens kennen, können Sie diesen auch in der Frage angeben.</li><li>Verwenden Sie [Objekt automatisch vervollständigen](./ui-guide.md#use-auto-complete), damit der KI-Assistent den Kontext Ihrer Abfrage besser verstehen kann.</li></ul> | <ul><li>Welche Datensätze verwenden das Schema „Luma - Treue“?</li><li>Die aktivierten Segmente anzeigen, deren Namen „Luma“ enthalten. Ordnen Sie sie nach der Anzahl der Profile zu.</li></ul> |
+| <ul><li>Geben Sie das Objekt oder die Informationen an, die Sie abrufen oder analysieren möchten.</li><li>Versuchen Sie, Ihre Datenobjektnamen in Anführungszeichen zu setzen. Wenn Sie nur einen Teil des Objektnamens kennen, können Sie diesen auch in der Frage angeben.</li><li>Verwenden Sie [Objekt automatisch vervollständigen](./ui-guide.md#use-auto-complete), damit der KI-Assistent (veraltet) den Kontext Ihrer Abfrage besser verstehen kann.</li></ul> | <ul><li>Welche Datensätze verwenden das Schema „Luma - Treue“?</li><li>Die aktivierten Segmente anzeigen, deren Namen „Luma“ enthalten. Ordnen Sie sie nach der Anzahl der Profile zu.</li></ul> |
 | <ul><li>Vermeiden Sie Mehrdeutigkeiten und verwenden Sie eine klare Sprache</li><li>Verwenden Sie eine präzise Terminologie, um eine klarere Abfrage zu ermöglichen.</li><li>Wenn Sie Fragen zu Adobe Experience Platform stellen, versuchen Sie, eine Experience Platform-spezifische Terminologie zu verwenden, um die Relevanz der Antworten zu verbessern.</li></ul> | <ul><li>Wie viele Profile habe ich in „ACME Audience“?</li><li>Zeigen Sie mir die fünf häufigsten XDM-Attribute, die in aktivierten Zielgruppen verwendet werden.</li></ul> |
 | <ul><li>Geben Sie den Kontext an oder geben Sie ein Kriterium zum Filtern Ihrer Ergebnisse an.</li><li>Verwenden Sie in den Fragen ein Filterkriterium, um die Datenmenge in der Antwort zu begrenzen.</li></ul> | <ul><li>Zielgruppen anzeigen, die nicht aktiviert wurden, vor mehr als 6 Monaten erstellt wurden und noch nie geändert wurden.</li><li>Für „ACME-Ziel“ aktivierte Zielgruppen anzeigen, die mehr als 10000 Profile aufweisen.</li></ul> |
 
@@ -118,7 +118,7 @@ In den folgenden Tabellen sind Best Practices aufgeführt, die Sie bei der Verwe
 
 ## Datensatz-Beobachtbarkeit {#dataset-observability}
 
-Der KI-Assistent kann jetzt Fragen zu bestimmten Datensatzmetriken wie Speichergröße und Zeilenanzahl beantworten.
+Der KI-Assistent (veraltet) kann jetzt Fragen zu bestimmten Datensatzmetriken wie Speichergröße und Zeilenanzahl beantworten.
 
 * Welche sind meine größten Datensätze nach Größe?
 * Welches sind meine größten Datensätze nach Zeilen?
@@ -187,7 +187,7 @@ Sie können Ihre Fragen zur Datenbeobachtbarkeit auch mit einem Qualifizierer ve
 
 ## Beispiele für nicht unterstützte Fragen {#unsupported-questions}
 
-Im Folgenden finden Sie eine Liste mit Beispielen für Fragen, die derzeit nicht vom KI-Assistenten unterstützt werden.
+Im Folgenden finden Sie eine Liste mit Beispielen für Fragen, die derzeit nicht vom KI-Assistenten (veraltete Version) unterstützt werden.
 
 +++Wählen Sie aus, um Beispiele für nicht unterstützte Fragen anzuzeigen
 
@@ -230,4 +230,4 @@ Im Folgenden finden Sie eine Liste mit Beispielen für Fragen, die derzeit nicht
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihre Fragen für den KI-Assistenten optimieren können. Informationen zur Verwendung der Funktion während Ihrer Workflows finden Sie im Handbuch [Benutzeroberfläche des KI-Assistenten](ui-guide.md).
+Durch das Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihre Fragen für den KI-Assistenten (frühere Version) optimieren können. Informationen zur Verwendung der Funktion während Ihrer Workflows finden Sie im Handbuch [KI-Assistent (veraltete Benutzeroberfläche)](ui-guide.md).
