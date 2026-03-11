@@ -3,16 +3,16 @@ keywords: Analytics-Ziele;Analytics-Ziel
 title: Analyseziele – Übersicht
 description: Analyseziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, und erfassen Daten, um das Verhalten Ihrer Zielgruppe zu untersuchen. Diese Plattformen liefern einzigartige Einblicke in Interaktion und Konversion Ihrer wertvollsten Besucher.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
+source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 84%
+source-wordcount: '173'
+ht-degree: 83%
 
 ---
 
 # Analyseziele – Übersicht {#analytics-destinations}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Analyseziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, und erfassen Daten, um das Verhalten Ihrer Zielgruppe zu untersuchen. Diese Plattformen liefern einzigartige Einblicke in Interaktion und Konversion Ihrer wertvollsten Besucher.
 
@@ -35,7 +35,6 @@ Derzeit unterstützt Adobe Experience Platform die unten aufgeführten Analysezi
 * [Nielsen BSDK-Erweiterung](nielsen-bsdk.md)
 * [Nielsen IMA Handler-Erweiterung](nielsen-ima.md)
 * [Nielsen VideoJS Player Handler-Erweiterung](nielsen-videojs.md)
-* [Parse.ly Analytics-Erweiterung](parsely.md)
 * [Quantum Metric-Erweiterung](quantum-metric.md)
 * [SessionCam-Erweiterung](sessioncam.md)
 * [TMMData-Erweiterung](tmmdata.md)

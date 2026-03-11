@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: ba61d129e7686dd7239b5225b9ae28281d90ce4e
+source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
 workflow-type: tm+mt
-source-wordcount: '1334'
-ht-degree: 73%
+source-wordcount: '1331'
+ht-degree: 72%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -134,7 +134,6 @@ ht-degree: 73%
       * [Nielsen BSDK-Erweiterung](./catalog/analytics/nielsen-bsdk.md)
       * [Nielsen IMA Handler-Erweiterung](./catalog/analytics/nielsen-ima.md)
       * [Nielsen VideoJS Player Handler-Erweiterung](./catalog/analytics/nielsen-videojs.md)
-      * [Parse.ly Analytics-Erweiterung](./catalog/analytics/parsely.md)
       * [Quantum Metric-Erweiterung](./catalog/analytics/quantum-metric.md)
       * [SessionCam-Erweiterung](./catalog/analytics/sessioncam.md)
       * [TMMData-Erweiterung](./catalog/analytics/tmmdata.md)
