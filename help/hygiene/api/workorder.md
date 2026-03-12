@@ -3,10 +3,10 @@ title: Löschen von Arbeitsaufträgen
 description: Erfahren Sie, wie Sie den Endpunkt /workorder in der Datenhygiene-API verwenden, um in Adobe Experience Platform Arbeitsaufträge zum Löschen von Datensätzen zu verwalten. In diesem Handbuch werden Kontingente, Verarbeitungszeitpläne und die API-Nutzung behandelt.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
+source-git-commit: 5ca3e4feae3096e41689610ac3afac7e93047149
 workflow-type: tm+mt
-source-wordcount: '2541'
-ht-degree: 2%
+source-wordcount: '3316'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ Verwenden Sie den `/workorder`-Endpunkt in der Datenhygiene-API, um Arbeitsauftr
 
 >[!IMPORTANT]
 >
->Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
+>Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
 
 ## Erste Schritte
 
@@ -32,27 +32,20 @@ Arbeitsaufträge zum Löschen von Datensätzen unterliegen täglichen und monatl
 
 ### Berechtigung zur monatlichen Übermittlung nach Produkt {#quota-limits}
 
-Die folgende Tabelle zeigt die Beschränkungen für die Übermittlung von Kennungen nach Produkt und Berechtigungsebene. Für jedes Produkt ist die monatliche Obergrenze der niedrigere von zwei Werten: eine feste Kennungsobergrenze oder ein prozentualer Schwellenwert, der an Ihr lizenziertes Datenvolumen gebunden ist.
+Die folgende Tabelle zeigt die Beschränkungen für die Übermittlung von Kennungen nach Produkt und Berechtigungsebene. Für jedes Produkt ist die monatliche Obergrenze der niedrigere von zwei Werten: eine feste Kennungsobergrenze oder ein prozentualer Schwellenwert, der an Ihr lizenziertes Datenvolumen gebunden ist. In der Praxis haben die meisten Unternehmen niedrigere monatliche Limits, die auf ihrer tatsächlichen adressierbaren Zielgruppe oder den Adobe Customer Journey Analytics-Zeilenberechtigungen basieren.
 
 | Produkt | Beschreibung der Berechtigung | Monatliche Obergrenze (je nachdem, welcher Wert niedriger ist) |
 |----------|-------------------------|---------------------------------|
 | Real-Time CDP oder Adobe Journey Optimizer | Ohne Privacy and Security Shield oder Healthcare Shield-Add-on | 2.000.000 Kennungen oder 5 % der adressierbaren Zielgruppe |
 | Real-Time CDP oder Adobe Journey Optimizer | Mit dem Add-on Privacy and Security Shield oder Healthcare Shield | 15.000.000 Kennungen oder 10 % der adressierbaren Zielgruppe |
-| Customer Journey Analytics | Ohne Privacy and Security Shield oder Healthcare Shield-Add-on | 2.000.000 Kennungen oder 100 Kennungen pro Million CJA-Berechtigungszeilen |
-| Customer Journey Analytics | Mit dem Add-on Privacy and Security Shield oder Healthcare Shield | 15.000.000 Kennungen oder 200 Kennungen pro Million CJA-Berechtigungszeilen |
+| Customer Journey Analytics | Ohne Privacy and Security Shield oder Healthcare Shield-Add-on | 2.000.000 Kennungen oder 100 Kennungen pro Million Customer Journey Analytics-Berechtigungszeilen |
+| Customer Journey Analytics | Mit dem Add-on Privacy and Security Shield oder Healthcare Shield | 15.000.000 Kennungen oder 200 Kennungen pro Million Customer Journey Analytics-Berechtigungszeilen |
 
 >[!NOTE]
 >
->Die meisten Unternehmen verfügen über niedrigere monatliche Limits, die auf ihren tatsächlichen adressierbaren Zielgruppen- oder CJA-Zeilenberechtigungen basieren.
-
->[!NOTE]
->
->Die Kontingente werden am ersten Tag jedes Kalendermonats zurückgesetzt. Nicht verwendetes Kontingent wird **nicht** übertragen.
-
->[!NOTE]
->
->Die Kontingentnutzung basiert auf der lizenzierten monatlichen Berechtigung Ihres Unternehmens für **übermittelte Kennungen**. Die Kontingente werden von den Systemleitplanken nicht durchgesetzt, können jedoch überwacht und überprüft werden.\
->Die Kapazität des Arbeitsauftrags zum Löschen von Datensätzen ist ein **freigegebener Dienst**. Die monatliche Obergrenze spiegelt die höchsten Berechtigungen für Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics und alle anwendbaren Shield-Add-ons wider.
+>- Die Kontingente werden am ersten Tag jedes Kalendermonats zurückgesetzt. Nicht verwendetes Kontingent wird **nicht** übertragen.
+>- Die Kontingentnutzung basiert auf der lizenzierten monatlichen Berechtigung Ihres Unternehmens für **übermittelte Kennungen**. Die Kontingente werden von den Systemleitplanken nicht durchgesetzt, können jedoch überwacht und überprüft werden.
+>- Die Kapazität des Arbeitsauftrags zum Löschen von Datensätzen ist ein **freigegebener Dienst**. Die monatliche Obergrenze spiegelt die höchsten Berechtigungen für Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics und alle anwendbaren Shield-Add-ons wider.
 
 ### Zeitleisten für die Übermittlung von Identifikatoren {#sla-processing-timelines}
 
@@ -131,7 +124,8 @@ Eine erfolgreiche Antwort gibt eine paginierte Liste von Löscharbeitsaufträgen
       "targetServices": [
         "profile",
         "datalake",
-        "identity"
+        "identity",
+        "ajo"
       ],
       "status": "received",
       "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
@@ -168,10 +162,10 @@ In der folgenden Tabelle werden die Eigenschaften in der Antwort beschrieben.
 | `createdAt` | Der Zeitstempel, wann der Arbeitsauftrag erstellt wurde. |
 | `updatedAt` | Der Zeitstempel, wann der Arbeitsauftrag zuletzt aktualisiert wurde. |
 | `operationCount` | Die Anzahl der Vorgänge, die im Arbeitsauftrag enthalten sind. |
-| `targetServices` | Liste der Ziel-Services für den Arbeitsauftrag. |
+| `targetServices` | Die Gruppe von Target-Services, die die Löschung verarbeitet haben. Der Standardwert hängt von den Berechtigungen Ihres Unternehmens ab. Für Unternehmen mit Real-Time CDP oder Adobe Journey Optimizer ist der Standardwert der vollständige Satz unterstützter Services (`["datalake", "identity", "profile", "ajo"]`). Für Organisationen, die nur Customer Journey Analytics nutzen (ohne Berechtigung für Echtzeit-Kundenprofile), ist der einzige gültige Wert [ „datalake“]. |
 | `status` | Aktueller Status des Arbeitsauftrags. Mögliche Werte sind: `received`, `validated`, `submitted`, `ingested`, `completed` und `failed`. |
 | `createdBy` | Die E-Mail-Adresse und die Kennung des Benutzers, der den Arbeitsauftrag erstellt hat. |
-| `datasetId` | Die eindeutige Kennung für den Datensatz, der mit dem Arbeitsauftrag verknüpft ist. Wenn die Anfrage für alle Datensätze gilt, wird dieses Feld auf ALLE gesetzt. |
+| `datasetId` | Die Datensätze, auf die der Arbeitsauftrag abzielt: eine einzelne Datensatz-ID, eine kommagetrennte Liste von Datensatz-IDs (mehrere Datensätze) oder das Literal `ALL`. Wenn die Anfrage den Nur-Profil-Modus verwendet hat, ist dieser Wert `ALL`. |
 | `datasetName` | Der Name des Datensatzes, der mit dem Arbeitsauftrag verknüpft ist. |
 | `displayName` | Eine für Menschen lesbare Beschriftung für den Arbeitsauftrag. |
 | `description` | Eine Beschreibung des Zwecks des Arbeitsauftrags. |
@@ -185,9 +179,9 @@ In der folgenden Tabelle werden die Eigenschaften in der Antwort beschrieben.
 
 ## Erstellen eines Arbeitsauftrags zum Löschen eines Datensatzes {#create}
 
-Um Datensätze, die mit einer oder mehreren Identitäten verknüpft sind, aus einem einzelnen Datensatz oder allen Datensätzen zu löschen, stellen Sie eine POST-Anfrage an den `/workorder`-Endpunkt.
+Um Datensätze, die mit einer oder mehreren Identitäten verknüpft sind, aus einem einzelnen Datensatz, mehreren Datensätzen oder allen Datensätzen zu löschen, stellen Sie eine POST-Anfrage an den `/workorder`-Endpunkt.
 
-Arbeitsaufträge werden asynchron verarbeitet und nach der Übermittlung in der Arbeitsauftragsliste angezeigt.
+Arbeitsaufträge werden asynchron verarbeitet und nach der Übermittlung in der Arbeitsauftragsliste angezeigt. Ab der Experience Platform-Version vom März 2026 sind Optionen für mehrere Datensätze und nur für Profile (zielgerichtete Services) allgemein für alle Kundinnen und Kunden verfügbar.
 
 >[!TIP]
 >
@@ -199,25 +193,36 @@ Arbeitsaufträge werden asynchron verarbeitet und nach der Übermittlung in der 
 POST /workorder
 ```
 
->[!NOTE]
->
->Sie können nur Datensätze aus Datensätzen löschen, deren verknüpftes XDM-Schema eine primäre Identität oder Identitätszuordnung definiert.
-
 >[!IMPORTANT]
 >
 >Arbeitsaufträge zum Löschen von Datensätzen beziehen sich ausschließlich auf das Feld **primäre Identität**. Die folgenden Einschränkungen gelten:
 >
+>- **Das Datensatzschema muss eine primäre Identität oder Identitätszuordnung definieren.** Sie können nur Datensätze aus Datensätzen löschen, deren verknüpftes XDM-Schema eine primäre Identität oder Identitätszuordnung definiert.
 >- **Sekundäre Identitäten werden nicht überprüft.** Wenn ein Datensatz mehrere Identitätsfelder enthält, wird nur die primäre Identität für die Zuordnung verwendet. Datensätze können nicht basierend auf nicht primären Identitäten ausgewählt oder gelöscht werden.
 >- **Datensätze ohne ausgefüllte primäre Identität werden übersprungen.** Wenn für einen Datensatz keine primären Identitätsmetadaten ausgefüllt sind, kann er nicht gelöscht werden.
 >- **Daten, die vor der Identitätskonfiguration aufgenommen wurden, sind nicht zulässig.** Wenn das primäre Identitätsfeld einem Schema nach der Datenaufnahme hinzugefügt wurde, können zuvor aufgenommene Datensätze nicht über Arbeitsaufträge zum Löschen von Datensätzen gelöscht werden.
 
 >[!NOTE]
 >
->Wenn Sie versuchen, einen Arbeitsauftrag zum Löschen eines Datensatzes für einen Datensatz zu erstellen, der bereits eine aktive Gültigkeit hat, gibt die Anfrage HTTP 400 (Fehlerhafte Anfrage) zurück. Eine aktive Gültigkeit ist jede geplante Löschung, die noch nicht abgeschlossen ist.
+>Wenn Sie versuchen, einen Datensatz-Löscharbeitsauftrag für einen Datensatz zu erstellen, der bereits eine aktive Gültigkeit hat, gibt die Anfrage HTTP 400 (Fehlerhafte Anfrage) zurück. Ein aktiver Ablauf ist jeder geplante Löschvorgang, der noch nicht abgeschlossen ist.
+
+### Payload-Formate für Identitäten (`namespacesIdentities` oder `identities`)
+
+Der Anfragetext muss **genau eine der folgenden** enthalten.
+
+| Format | Eigenschaft | Form | Verwendungszeitpunkt |
+|--------|----------|-------|-------------|
+| **Empfohlen** | `namespacesIdentities` | Array von Objekten mit `namespace` (z. B. `{ "code": "email" }`) und `ids` (Array von Identitätszeichenfolgen). | Wird für alle Payloads verwendet, unabhängig davon, ob sie manuell erstellt oder von Code generiert wurden. Dies ist besonders effizient, um die Payload-Größe zu reduzieren, wenn viele Identitäten denselben Namespace nutzen. |
+| **Auch akzeptiert** | `identities` | Array von Objekten mit `namespace` (z. B. `{ "code": "email" }`) und einem einzelnen `id` (Zeichenfolge). | Zur Abwärtskompatibilität akzeptiert. Dies ist das Format, das von den Konvertierungsskripten [CSV in die Datenhygiene“ erstellt ](#convert-id-lists-to-json-for-record-delete-requests). Der Service normalisiert dieses Format intern, sodass das resultierende Verhalten identisch ist. |
+
+Wenn Sie **beide Eigenschaften**, **weder Eigenschaft** senden oder **ein leeres Array** für die einzuschließende Eigenschaft angeben, gibt die API **HTTP 400 (Fehlerhafte Anfrage)** mit einer der folgenden Meldungen zurück:
+
+- **Beide Eigenschaften angegeben:** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **Weder angegebene noch leere Liste:** `"Identities are Empty for Delete Identity request."`
 
 **Anfrage**
 
-Die folgende Anfrage löscht alle Datensätze, die mit angegebenen E-Mail-Adressen aus einem bestimmten Datensatz verknüpft sind.
+Die folgende Anfrage löscht alle Datensätze, die mit angegebenen E-Mail-Adressen aus einem bestimmten Datensatz verknüpft sind. Es verwendet das empfohlene `namespacesIdentities`.
 
 ```shell
 curl -X POST \
@@ -237,7 +242,7 @@ curl -X POST \
             "namespace": {
               "code": "email"
             },
-            "IDs": [
+            "ids": [
               "alice.smith@acmecorp.com",
               "bob.jones@acmecorp.com",
               "charlie.brown@acmecorp.com"
@@ -254,8 +259,10 @@ In der folgenden Tabelle werden die Eigenschaften zum Erstellen eines Arbeitsauf
 | `displayName` | Eine menschenlesbare Beschriftung für diesen Datensatz, um einen Arbeitsauftrag zu löschen. |
 | `description` | Eine Beschreibung des Arbeitsauftrags zum Löschen des Datensatzes. |
 | `action` | Die Aktion, die für den Löscharbeitsauftrag für den Datensatz angefordert wurde. Um Datensätze zu löschen, die mit einer bestimmten Identität verknüpft sind, verwenden Sie `delete_identity`. |
-| `datasetId` | Die eindeutige Kennung für den Datensatz. Verwenden Sie die Datensatz-ID für einen bestimmten Datensatz oder `ALL` , um alle Datensätze auszuwählen. Datensätze müssen eine primäre Identität oder Identitätszuordnung aufweisen. Wenn eine Identitätszuordnung vorhanden ist, ist sie als Feld der obersten Ebene mit dem Namen `identityMap` vorhanden.<br>Beachten Sie, dass eine Datensatzzeile viele Identitäten in ihrer Identitätszuordnung haben kann, aber nur eine als primär markiert werden kann. `"primary": true` müssen eingeschlossen werden, damit der `id` mit einer primären Identität übereinstimmt. |
-| `namespacesIdentities` | Ein Array von Objekten, die jeweils Folgendes enthalten:<br><ul><li> `namespace`: Ein Objekt mit einer `code` Eigenschaft, die den Identity-Namespace angibt (z. B. „E-Mail„).</li><li> `IDs`: Ein Array von Identitätswerten, die für diesen Namespace gelöscht werden sollen.</li></ul>Identity-Namespaces bieten Kontext zu Identitätsdaten. Sie können die von Experience Platform bereitgestellten Standard-Namespaces verwenden oder eigene erstellen. Weitere Informationen finden Sie in der [Dokumentation zu Identity-Namespaces](../../identity-service/features/namespaces.md) und der [Identity Service API-Spezifikation](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `datasetId` | Die eindeutige Kennung für den/die Datensatz/Datensätze. Der Wert muss genau einer der folgenden sein: das `ALL`, eine einzelne Datensatz-ID oder eine kommagetrennte Liste von zwei oder mehr Datensatz-IDs (z. B. `"id1,id2,id3"`). Sie können `ALL` nicht mit bestimmten IDs kombinieren. Anfragen mit einem Datensatz verhalten sich wie zuvor, Anfragen mit mehreren Datensätzen löschen die Identitäten aus jedem aufgelisteten Datensatz und zielen `ALL` auf jeden Datensatz ab. Datensätze müssen eine primäre Identität oder Identitätszuordnung aufweisen. Wenn eine Identitätszuordnung vorhanden ist, ist sie als Feld der obersten Ebene mit dem Namen `identityMap` vorhanden.<br>**Hinweis**: Eine Datensatzzeile kann viele Identitäten in ihrer Identitätszuordnung haben, aber nur eine kann als primär markiert werden. `"primary": true` müssen eingeschlossen werden, damit der `id` mit einer primären Identität übereinstimmt.<br>Bei Verwendung von `targetServices` zum Löschen von Profilen nur `datasetId` müssen `ALL` werden. |
+| `targetServices` | Optional. Gibt an, welche Services den Löschvorgang verarbeiten sollen. Der Standardwert hängt von den Berechtigungen Ihres Unternehmens ab. Organisationen mit Real-Time CDP oder Adobe Journey Optimizer erhalten standardmäßig den vollständigen Satz unterstützter Services (`["datalake", "identity", "profile", "ajo"]`). Organisationen mit Customer Journey Analytics, aber ohne eine Berechtigung für das Echtzeit-Kundenprofil können nur [ „Datensee“ verwenden]. Um das Löschen auf profilbezogene Daten zu beschränken und den Data Lake unberührt zu lassen, setzen Sie dies auf `["identity", "profile", "ajo"]` (in beliebiger Reihenfolge). Dieser Nur-Profil-Modus erfordert eine Berechtigung für Real-Time CDP oder Adobe Journey Optimizer und `datasetId` muss `ALL` sein. |
+| `identities` | **Verwenden Sie genau eines von `identities` oder `namespacesIdentities`.** Array von Objekten, jedes mit `namespace` (Objekt mit `code`, z. B. `"email"`) und `id` (einzelne Identitätszeichenfolge). Wird aus Gründen der Abwärtskompatibilität akzeptiert und von den Konvertierungsskripten erstellt. Der Service normalisiert dieses Format intern. Das Verhalten ist identisch. Siehe [Format der Identitäts-Payload](#identity-payload-format-identities-or-namespacesidentities) oben. |
+| `namespacesIdentities` | **Verwenden Sie genau eines von `identities` oder `namespacesIdentities`.** Array von Objekten, jedes mit `namespace` (Objekt mit `code`, z. B. `"email"`) und `ids` (Array von Identitätszeichenfolgen). Empfohlen für alle Payloads. Die `namespacesIdentities` Eigenschaft ist kompakter, wenn viele Identitäten einen Namespace gemeinsam haben. Siehe [Format der Identitäts-Payload](#identity-payload-format-identities-or-namespacesidentities) oben. Identity-Namespaces: [Dokumentation zu Identity](../../identity-service/features/namespaces.md)Namespaces), [Identity Service-API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Antwort**
 
@@ -273,7 +280,8 @@ Eine erfolgreiche Antwort gibt die Details des neuen Datensatzlöscharbeitsauftr
   "targetServices": [
     "profile",
     "datalake",
-    "identity"
+    "identity",
+    "ajo"
   ],
   "status": "received",
   "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
@@ -298,20 +306,77 @@ In der folgenden Tabelle werden die Eigenschaften in der Antwort beschrieben.
 | `targetServices` | Eine Liste der Ziel-Services für den Datensatz-Löscharbeitsauftrag. |
 | `status` | Aktueller Status des Datensatzlöscharbeitsauftrags. |
 | `createdBy` | Die E-Mail-Adresse und die Kennung des Benutzers, der den Löscharbeitsauftrag für den Datensatz erstellt hat. |
-| `datasetId` | Die eindeutige Kennung für den Datensatz. Wenn die Anfrage alle Datensätze betrifft, wird der Wert auf `ALL` gesetzt |
+| `datasetId` | Die eindeutige Kennung für den/die Datensatz/Datensätze. Wenn die Anfrage für alle Datensätze gilt, wird der Wert auf `ALL` gesetzt. Bei Anfragen mit mehreren Datensätzen spiegelt der Wert die übermittelte kommagetrennte Liste oder einzelne ID wider. |
 | `datasetName` | Der Name des Datensatzes für diesen Datensatz: Arbeitsauftrag löschen. |
 | `displayName` | Eine menschenlesbare Beschriftung für den Arbeitsauftrag zum Löschen von Datensätzen. |
 | `description` | Eine Beschreibung des Arbeitsauftrags zum Löschen des Datensatzes. |
 
 {style="table-layout:auto"}
 
+Der Wert der Antwort-`targetServices` spiegelt Ihre Anfrage wider oder zeigt den vollständigen Standardsatz an, wenn er weggelassen wird (siehe Antworttabelle oben).
+
+### Mehrere Datensätze und nur ein Profil (API) {#multi-dataset-profile-only}
+
+Die folgenden Optionen sind nur über die API verfügbar und werden in der Datenhygiene-Benutzeroberfläche nicht unterstützt. Sie steuern, welche Datensätze und Services die Löschung verarbeiten, was Übermittlungen mit mehreren Datensätzen und Nur-Profil-Service-Anfragen ermöglicht.
+
+In der folgenden Tabelle ist zusammengefasst, wie sich der Anfragetext und das Verhalten für jede Option ändern.
+
+| Option | Änderung des Anfragetexts | Verhalten |
+|--------|---------------------|----------|
+| **Multi-Datensatz** | Verwenden einer kommagetrennten Liste in `datasetId` (z. B. `"id1,id2,id3"`). Einzelne ID oder `ALL` unverändert. | Identitäten werden aus den aufgelisteten Datensätzen (oder aus einem Datensatz oder bei `ALL` aus allen Datensätzen) gelöscht. |
+| **Nur Profil (Zielgruppendienste)** | Fügen Sie `targetServices` mit genau `["identity", "profile", "ajo"]` hinzu (beliebige Reihenfolge). Erfordert `datasetId`: `"ALL"`. | Nur Identity, Profile und Adobe Journey Optimizer verarbeiten die Löschung. Der Data Lake wird nicht geändert. |
+
+#### Anfragen für mehrere Datensätze
+
+Das `datasetId` Feld ist durch Kommas getrennt: Verwenden Sie eine einzelne ID (das gleiche Verhalten wie zuvor), eine kommagetrennte Liste von IDs oder den literalen `ALL`. Um Identitäten aus mehreren bestimmten Datensätzen in einem Arbeitsauftrag zu löschen, geben Sie eine kommagetrennte Liste an:
+
+```json
+"datasetId": "6707eb36eef4d42ab86d9fbe,6643f00c16ddf51767fcf780"
+```
+
+Identitäten werden dann aus jedem der aufgelisteten Datensätze gelöscht. Anfragen für einzelne Datensätze funktionieren wie immer. Verwenden Sie `ALL`, um jeden Datensatz anzusprechen. Der Wert muss genau einer der folgenden sein: `ALL`, eine einzelne Datensatz-ID oder zwei oder mehr Datensatz-IDs, durch Kommas getrennt (keine Kombination von `ALL` mit bestimmten IDs).
+
+#### Nur Profil (zielgerichtete Services)
+
+Um nur Identitäts- und profilbezogene Daten zu entfernen und den Data Lake unberührt zu lassen, schließen Sie `targetServices` mit genau diesen drei Werten in beliebiger Reihenfolge ein: `identity`, `profile` und `ajo`. Identität, Profil und AJO sind explizit enthalten. Der Data Lake ist ausgeschlossen. In diesem Modus müssen `datasetId` `ALL` werden (der Anwendungsfall ist das Löschen vollständiger Profile, nicht für Fragmente pro Datensatz).
+
+Im folgenden Beispiel wird ein Arbeitsauftrag zum Löschen eines Datensatzes auf Profilebene erstellt:
+
+```shell
+curl -X POST \
+  "https://platform.adobe.io/data/core/hygiene/workorder" \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+    "action": "delete_identity",
+    "datasetId": "ALL",
+    "displayName": "Profile-only delete for specified identity",
+    "description": "Delete identity, profile, and AJO data only; datalake unchanged.",
+    "targetServices": ["identity", "profile", "ajo"],
+    "namespacesIdentities": [
+      {
+        "namespace": { "code": "email" },
+        "ids": ["user@example.com"]
+      }
+    ]
+  }'
+```
+
+Erfolgreiche Antworten für Anfragen, die mehrere Datensätze oder nur Profile umfassen, haben dieselbe Form wie andere Arbeitsauftragsantworten. Die zurückgegebenen `datasetId` und `targetServices` spiegeln die Werte in der Anfrage wider (oder die vollständige Standardliste, wenn `targetServices` ausgelassen wird), sodass Sie bestätigen können, was gesendet wurde.
+
 >[!NOTE]
 >
 >Die Aktionseigenschaft für Löscharbeitsaufträge für Datensätze wird derzeit in API-Antworten `identity-delete`. Wenn die API einen anderen Wert verwendet (z. B. `delete_identity`), wird diese Dokumentation entsprechend aktualisiert.
 
-## ID-Listen für Anfragen zum Löschen von Datensätzen in JSON konvertieren
+## Konvertieren von ID-Listen in JSON für Anfragen zum Löschen von Datensätzen (#convert-id-lists-to-json-for-record-delete-requests)
 
-Um einen Datensatz für das Löschen von Arbeitsaufträgen aus CSV-, TSV- oder TXT-Dateien zu erstellen, die Kennungen enthalten, können Sie Konversionsskripte verwenden, um die erforderlichen JSON-Payloads für den `/workorder`-Endpunkt zu erstellen. Dieser Ansatz ist besonders bei der Arbeit mit vorhandenen Datendateien hilfreich. Gebrauchsfertige Skripte und umfassende Anweisungen finden Sie im GitHub-Repository [csv-to-data-hygiene](https://github.com/perlmonger42/csv-to-data-hygiene).
+Verwenden Sie Konvertierungsskripte, um die erforderlichen JSON-Payloads für den `/workorder`-Endpunkt zu erstellen, wenn Ihre Kennungen in CSV-, TSV- oder TXT-Dateien enthalten sind. Dieser Ansatz ist besonders bei der Arbeit mit vorhandenen Datendateien hilfreich. Gebrauchsfertige Skripte und Anweisungen finden Sie unter [csv-to-data-hygiene GitHub-Repository](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+Die Skripte geben das **`identities`**-Format aus - ein `id` pro Objekt mit einer -`namespace`. Die API akzeptiert dieses Format unverändert. Sie können die generierte JSON-Datei direkt im POST-Text ohne Konvertierung an `/workorder` senden. Das empfohlene Format ist **`namespacesIdentities`**. Siehe [Erstellen eines Arbeitsauftrags zum Löschen von Datensätzen](#create) und [Identity-Payload-Format](#identity-payload-format-identities-or-namespacesidentities).
 
 ### JSON-Payloads generieren
 
@@ -365,8 +430,8 @@ In der folgenden Tabelle werden die Parameter der Bash-Skripte beschrieben.
 | ---           | ---     |
 | `verbose` | Ausführliche Ausgabe aktivieren. |
 | `column` | Der Index (1-basiert) oder Kopfzeilenname der Spalte, die die zu löschenden Identitätswerte enthält. Standardmäßig wird die erste Spalte verwendet, wenn sie nicht angegeben wurde. |
-| `namespace` | Ein Objekt mit einer `code` Eigenschaft, die den Identity-Namespace angibt (z. B. „E-Mail„). |
-| `dataset-id` | Die eindeutige Kennung für den Datensatz, der mit dem Arbeitsauftrag verknüpft ist. Wenn die Anfrage für alle Datensätze gilt, wird dieses Feld auf `ALL` gesetzt. |
+| `namespace` | Der an das Skript übergebene Identity-Namespace-Code (z. B. `email`). Die generierte JSON verwendet dies in der `namespace.code`-Eigenschaft jedes Objekts. |
+| `dataset-id` | Die eindeutige Kennung für die Datensätze: eine einzelne ID, kommagetrennte IDs für mehrere Datensätze oder `ALL` für alle Datensätze. |
 | `description` | Eine Beschreibung des Arbeitsauftrags zum Löschen des Datensatzes. |
 | `output-dir` | Das Verzeichnis, in das die JSON-Payload der Ausgabe geschrieben wird. |
 
@@ -402,7 +467,7 @@ In der folgenden Tabelle werden die Eigenschaften in der JSON-Payload beschriebe
 | Eigenschaft | Beschreibung |
 | ---          | ---     |
 | `action` | Die Aktion, die für den Löscharbeitsauftrag für den Datensatz angefordert wurde. Wird vom Konvertierungsskript automatisch auf `delete_identity` festgelegt. |
-| `datasetId` | Die eindeutige Kennung für den Datensatz. |
+| `datasetId` | Die eindeutige Kennung für die Datensätze: eine einzelne ID, kommagetrennte IDs oder `ALL`. |
 | `displayName` | Eine menschenlesbare Beschriftung für diesen Datensatz, um einen Arbeitsauftrag zu löschen. |
 | `description` | Eine Beschreibung des Arbeitsauftrags zum Löschen des Datensatzes. |
 | `identities` | Ein Array von Objekten, die jeweils Folgendes enthalten:<br><ul><li> `namespace`: Ein Objekt mit einer `code` Eigenschaft, die den Identity-Namespace angibt (z. B. „E-Mail„).</li><li> `id`: Der für diesen Namespace zu löschende Identitätswert.</li></ul> |
@@ -411,7 +476,7 @@ In der folgenden Tabelle werden die Eigenschaften in der JSON-Payload beschriebe
 
 ### Senden der generierten JSON-Daten an den `/workorder`-Endpunkt
 
-Um eine Anfrage zu senden, befolgen Sie die Anweisungen im Abschnitt [Erstellen eines Datensatzlöscharbeitsauftrags](#create). Stellen Sie sicher, dass Sie die konvertierte JSON-Payload als Anfragetext (`-d`) verwenden, wenn Sie Ihre `curl` POST-Anfrage an den `/workorder`-API-Endpunkt senden.
+Die Skriptausgabe verwendet das `identities`-Format, das die API unverändert akzeptiert. Verwenden Sie die konvertierte JSON-Payload als Anfragetext (`-d`), wenn Sie Ihre `curl` POST-Anfrage an den `/workorder`-Endpunkt senden. Die vollständigen Anfrageoptionen und Validierungsregeln finden Sie unter [Erstellen eines Datensatzlöscharbeitsauftrags](#create).
 
 ## Abrufen von Details für einen bestimmten Datensatz zum Löschen von Arbeitsaufträgen {#lookup}
 
@@ -482,12 +547,12 @@ In der folgenden Tabelle werden die Eigenschaften in der Antwort beschrieben.
 | `targetServices` | Eine Liste der Ziel-Services, die von diesem Datensatz betroffen sind, löscht den Arbeitsauftrag. |
 | `status` | Der aktuelle Status des Datensatzlöscharbeitsauftrags. |
 | `createdBy` | Die E-Mail-Adresse und die Kennung des Benutzers, der den Löscharbeitsauftrag für den Datensatz erstellt hat. |
-| `datasetId` | Die eindeutige Kennung für den Datensatz, der mit dem Arbeitsauftrag verknüpft ist. |
+| `datasetId` | Die eindeutige Kennung für die Datensätze, die mit dem Arbeitsauftrag verknüpft sind (einzelne ID, kommagetrennte IDs oder `ALL`). |
 | `datasetName` | Der Name des Datensatzes, der mit dem Arbeitsauftrag verknüpft ist. |
 | `displayName` | Eine menschenlesbare Beschriftung für den Arbeitsauftrag zum Löschen von Datensätzen. |
 | `description` | Eine Beschreibung des Arbeitsauftrags zum Löschen des Datensatzes. |
 
-## Aktualisieren eines Datensatzlöscharbeitsauftrags
+## Aktualisieren eines Datensatzlöscharbeitsauftrags {#update}
 
 Aktualisieren Sie die `name` und `description` für einen Datensatz-Löscharbeitsauftrag, indem Sie eine PUT-Anfrage an den `/workorder/{WORKORDER_ID}`-Endpunkt stellen.
 
@@ -590,7 +655,7 @@ Eine erfolgreiche Antwort gibt die aktualisierte Arbeitsauftragsanfrage zurück.
 | `targetServices` | Eine Liste der Ziel-Services, die von diesem Datensatz betroffen sind, löscht den Arbeitsauftrag. |
 | `status` | Der aktuelle Status des Datensatzlöscharbeitsauftrags. Mögliche Werte sind: `received`, `validated`, `submitted`, `ingested`, `completed` und `failed`. |
 | `createdBy` | Die E-Mail-Adresse und die Kennung des Benutzers, der den Löscharbeitsauftrag für den Datensatz erstellt hat. |
-| `datasetId` | Die eindeutige Kennung für den Datensatz, der mit dem Arbeitsauftrag zum Löschen des Datensatzes verknüpft ist. |
+| `datasetId` | Die eindeutige Kennung für die Datensätze, die mit dem Arbeitsauftrag zum Löschen von Datensätzen verknüpft sind (einzelne ID, kommagetrennte IDs oder `ALL`). |
 | `datasetName` | Der Name des Datensatzes, der mit dem Arbeitsauftrag zum Löschen des Datensatzes verknüpft ist. |
 | `displayName` | Eine menschenlesbare Beschriftung für den Arbeitsauftrag zum Löschen von Datensätzen. |
 | `description` | Eine Beschreibung des Arbeitsauftrags zum Löschen des Datensatzes. |
