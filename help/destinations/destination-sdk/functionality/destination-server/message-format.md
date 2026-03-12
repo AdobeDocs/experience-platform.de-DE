@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
+source-git-commit: 270facfd580b2dde09906bee1728e1be198680cf
 workflow-type: tm+mt
-source-wordcount: '2488'
-ht-degree: 87%
+source-wordcount: '2512'
+ht-degree: 81%
 
 ---
 
@@ -71,7 +71,7 @@ Um den Prozess der Profilumwandlung zu demonstrieren, verwendet das folgende Bei
 
 >[!NOTE]
 >
->Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche zu, und zwar im Schritt **Zuordnung** [&#x200B; des Zielaktivierungs-Workflows](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche zu, und zwar im Schritt **Zuordnung** [ des Zielaktivierungs-Workflows](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Nehmen wir an, Ihre Plattform kann ein Nachrichtenformat wie das Folgende erhalten:
 
@@ -176,9 +176,9 @@ Adobe verwendet [Pebble-Vorlagen](https://pebbletemplates.io/), eine Vorlagenspr
 
 In diesem Abschnitt finden Sie mehrere Beispiele dafür, wie diese Transformationen vorgenommen werden – vom Eingabe-XDM-Schema über die Vorlage und die Ausgabe in Payload-Formaten, die von Ihrem Ziel akzeptiert werden. Die folgenden Beispiele werden mit zunehmender Komplexität wie folgt dargestellt:
 
-1. Einfache Transformationsbeispiele. Erfahren Sie, wie die Vorlage mit einfachen Transformationen für die Felder [Profilattribute](#attributes), [Zielgruppenzugehörigkeit](#segment-membership) und [Identität](#identities) arbeitet.
+1. Einfache Transformationsbeispiele. Erfahren Sie, wie die Vorlage mit einfachen Transformationen für die Felder [Profilattribute](#attributes), [Zielgruppenzugehörigkeit](#audience-membership) und [Identität](#identities) arbeitet.
 2. Beispiele für komplexere Vorlagen, die die oben genannten Felder kombinieren: [Erstellen einer Vorlage zum Senden von Zielgruppen und Identitäten](./message-format.md#segments-and-identities) und [Erstellen einer Vorlage zum Senden von Segmenten, Identitäten und Profilattributen](#segments-identities-attributes).
-3. Vorlagen, die den Aggregationsschlüssel enthalten. Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in der Zielkonfiguration verwenden, gruppiert Experience Platform die in Ihr Ziel exportierten Profile anhand von Kriterien wie Zielgruppen-ID, Zielgruppenstatus oder Identity-Namespaces.
+3. Vorlagen, die den Aggregationsschlüssel enthalten. Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in der Zielkonfiguration verwenden, gruppiert Experience Platform die in Ihr Ziel exportierten Profile anhand von Kriterien wie Zielgruppen-ID, Zielgruppen-Namespace, Zielgruppenstatus oder Identity-Namespaces.
 
 ### Profilattribute {#attributes}
 
@@ -794,7 +794,8 @@ Profil 2:
                 {% endfor %}
                 ]
             }
-        }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
     ]
 }
 ```
@@ -838,7 +839,7 @@ Die `json` unten zeigt die aus Adobe Experience Platform exportierten Daten.
         {
             "attributes": {
                 "firstName": "Harry",
-                "birthDate": "1980/07/21"
+                "birthDate": "1980/07/31"
             },
             "identities": [
                 {
@@ -859,21 +860,21 @@ Die `json` unten zeigt die aus Adobe Experience Platform exportierten Daten.
 
 ### Nehmen Sie Aggregationsschlüssel in Ihre Vorlage auf, um auf exportierte Profile zuzugreifen, die nach verschiedenen Kriterien gruppiert sind {#template-aggregation-key}
 
-Wenn Sie die [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in der Zielkonfiguration verwenden, können Sie die in Ihr Ziel exportierten Profile anhand von Kriterien wie Zielgruppen-ID, Zielgruppenalias, Zielgruppenzugehörigkeit oder Identity-Namespaces gruppieren.
+Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in der Zielkonfiguration verwenden, können Sie die in Ihr Ziel exportierten Profile anhand von Kriterien wie Zielgruppen-ID, Zielgruppen-Namespace, Zielgruppen-Alias, Zielgruppenmitgliedschaft oder Identity-Namespaces gruppieren.
 
 In der Nachrichtenumwandlungsvorlage können Sie auf die oben erwähnten Aggregationsschlüssel zugreifen, wie in den Beispielen in den folgenden Abschnitten dargestellt. Verwenden Sie Aggregationsschlüssel, um die aus Experience Platform exportierte HTTP-Nachricht so zu strukturieren, dass sie den von Ihrem Ziel erwarteten Format- und Ratenbeschränkungen entspricht.
 
 #### Verwenden des Zielgruppen-ID-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-id}
 
-Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) verwenden und `includeSegmentId` auf „true“ gesetzt ist, werden die Profile in den an Ihr Ziel exportierten HTTP-Nachrichten nach Zielgruppen-ID gruppiert. Unten sehen Sie, wie Sie auf die Zielgruppen-ID in der Vorlage zugreifen können.
+Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) verwenden und `includeSegmentId` auf „true“ gesetzt ist, werden die Profile in den an Ihr Ziel exportierten HTTP-Nachrichten nach Zielgruppen-ID gruppiert. Unten sehen Sie, wie Sie auf die Zielgruppen-ID und den Zielgruppen-Namespace in der Vorlage zugreifen können.
 
 **Eingabe**
 
 Betrachten Sie die folgenden vier Profile, bei denen:
 
-* die ersten beiden Teil der Zielgruppe mit der Zielgruppen-ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` sind
-* das dritte Profil Teil der Zielgruppe mit der Zielgruppen-ID `8f812592-3f06-416b-bd50-e7831848a31a` ist
-* das vierte Profil Teil beider oben genannten Zielgruppen ist.
+* Die ersten beiden sind Teil der Zielgruppe mit der Zielgruppen-ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` unter dem `ups` Namespace
+* Das dritte Profil ist Teil der Zielgruppe mit der Zielgruppen-ID `8f812592-3f06-416b-bd50-e7831848a31a` unter dem `CustomerAudienceUpload` Namespace
+* Das vierte Profil ist Teil beider oben genannten Zielgruppen, jeweils unter ihrem jeweiligen Namespace.
 
 Profil 1:
 
@@ -925,7 +926,7 @@ Profil 3:
       }
    },
    "segmentMembership":{
-      "ups":{
+      "CustomerAudienceUpload":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
@@ -946,12 +947,14 @@ Profil 4:
    },
    "segmentMembership":{
       "ups":{
-         "8f812592-3f06-416b-bd50-e7831848a31a":{
-            "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"realized"
-         },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"realized"
+         }
+      },
+      "CustomerAudienceUpload":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
          }
       }
@@ -965,11 +968,12 @@ Profil 4:
 >
 >Bei allen Vorlagen, die Sie verwenden, müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, mit Escape-Zeichen versehen, bevor Sie die [Vorlage](../../functionality/destination-server/templating-specs.md) in die [Ziel-Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md) einfügen. Weitere Informationen zum Maskieren von doppelten Anführungszeichen mit Escape-Zeichen finden Sie in Kapitel 9 im [JSON-Standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Beachten Sie, wie `audienceId` in der Vorlage verwendet wird, um auf Zielgruppen-IDs zuzugreifen. In diesem Beispiel wird davon ausgegangen, dass Sie `audienceId` für die Zielgruppenzugehörigkeit in Ihrer Zieltaxonomie verwenden. Je nach Ihrer eigenen Taxonomie können Sie stattdessen einen beliebigen anderen Feldnamen verwenden.
+Beachten Sie, wie `audienceId` und `audienceNamespace` in der Vorlage verwendet werden, um auf die Zielgruppen-ID und den Namespace zuzugreifen. In diesem Beispiel wird davon ausgegangen, dass Sie `audienceId` für die Zielgruppenzugehörigkeit in Ihrer Zieltaxonomie verwenden. Je nach Ihrer eigenen Taxonomie können Sie stattdessen einen beliebigen anderen Feldnamen verwenden.
 
 ```python
 {
     "audienceId": "{{ input.aggregationKey.segmentId }}",
+    "audienceNamespace": "{{ input.aggregationKey.segmentNamespace }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
@@ -982,11 +986,12 @@ Beachten Sie, wie `audienceId` in der Vorlage verwendet wird, um auf Zielgruppen
 
 **Ergebnis**
 
-Beim Export in Ihr Ziel werden die Profile basierend auf ihrer Zielgruppen-ID in zwei Gruppen aufgeteilt.
+Beim Export in Ihr Ziel werden die Profile basierend auf ihrer Zielgruppen-ID und ihrem Namespace in zwei Gruppen aufgeteilt.
 
 ```json
 {
    "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "audienceNamespace":"ups",
    "profiles":[
       {
          "firstName":"Hermione"
@@ -1004,6 +1009,7 @@ Beim Export in Ihr Ziel werden die Profile basierend auf ihrer Zielgruppen-ID in
 ```json
 {
    "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "audienceNamespace":"CustomerAudienceUpload",
    "profiles":[
       {
          "firstName":"Tom"
