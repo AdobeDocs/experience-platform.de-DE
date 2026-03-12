@@ -16,7 +16,7 @@ Verwenden Sie den `/workorder`-Endpunkt in der Datenhygiene-API, um Arbeitsauftr
 
 >[!IMPORTANT]
 >
->Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
+>Arbeitsaufträge zum Löschen von Datensätzen dienen der Datenbereinigung, dem Entfernen anonymer Daten oder der Datenminimierung. **Verwenden Sie keine Arbeitsaufträge zum Löschen von Datensätzen für Anfragen zu den Rechten betroffener Personen gemäß Datenschutzbestimmungen wie der DSGVO.** Verwenden Sie für Compliance-Anwendungsfälle [Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
 
 ## Erste Schritte
 
@@ -213,7 +213,7 @@ Der Anfragetext muss **genau eine der folgenden** enthalten.
 | Format | Eigenschaft | Form | Verwendungszeitpunkt |
 |--------|----------|-------|-------------|
 | **Empfohlen** | `namespacesIdentities` | Array von Objekten mit `namespace` (z. B. `{ "code": "email" }`) und `ids` (Array von Identitätszeichenfolgen). | Wird für alle Payloads verwendet, unabhängig davon, ob sie manuell erstellt oder von Code generiert wurden. Dies ist besonders effizient, um die Payload-Größe zu reduzieren, wenn viele Identitäten denselben Namespace nutzen. |
-| **Auch akzeptiert** | `identities` | Array von Objekten mit `namespace` (z. B. `{ "code": "email" }`) und einem einzelnen `id` (Zeichenfolge). | Zur Abwärtskompatibilität akzeptiert. Dies ist das Format, das von den Konvertierungsskripten [CSV in die Datenhygiene“ erstellt ](#convert-id-lists-to-json-for-record-delete-requests). Der Service normalisiert dieses Format intern, sodass das resultierende Verhalten identisch ist. |
+| **Auch akzeptiert** | `identities` | Array von Objekten mit `namespace` (z. B. `{ "code": "email" }`) und einem einzelnen `id` (Zeichenfolge). | Zur Abwärtskompatibilität akzeptiert. Dies ist das Format, das von den Konvertierungsskripten [CSV in die Datenhygiene“ erstellt &#x200B;](#convert-id-lists-to-json-for-record-delete-requests). Der Service normalisiert dieses Format intern, sodass das resultierende Verhalten identisch ist. |
 
 Wenn Sie **beide Eigenschaften**, **weder Eigenschaft** senden oder **ein leeres Array** für die einzuschließende Eigenschaft angeben, gibt die API **HTTP 400 (Fehlerhafte Anfrage)** mit einer der folgenden Meldungen zurück:
 
