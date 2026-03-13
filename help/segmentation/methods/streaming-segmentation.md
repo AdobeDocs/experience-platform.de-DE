@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Streaming-Segmentierung
 description: Erfahren Sie mehr über die Streaming-Segmentierung, einschließlich ihrer Funktionsweise, der Erstellung einer mithilfe der Streaming-Segmentierung bewerteten Zielgruppe und der Ansicht Ihrer mit der Streaming-Segmentierung erstellten Zielgruppen.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
+source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
 workflow-type: tm+mt
-source-wordcount: '2051'
-ht-degree: 19%
+source-wordcount: '2033'
+ht-degree: 20%
 
 ---
 
@@ -117,8 +117,8 @@ Ein Regelsatz ist für die Streaming-Segmentierung geeignet, wenn er eines der i
 | Abfragetyp | Details | Abfrage | Beispiel |
 | ---------- | ------- | ----- | ------- |
 | Einzelnes Ereignis innerhalb eines Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die innerhalb eines Zeitfensters von weniger als 24 Stunden auf ein einzelnes eingehendes Ereignis verweist. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Ein Beispiel für ein einzelnes Ereignis innerhalb eines relativen Zeitfensters wird angezeigt.](../images/methods/streaming/single-event.png) |
-| Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. | `homeAddress.country.equals("US", false)` | ![Ein Beispiel für ein Profilattribut wird angezeigt.](../images/methods/streaming/profile-attribute.png) |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden auftritt. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut in einem relativen Zeitfenster wird angezeigt.](../images/methods/streaming/single-event-with-profile-attribute.png) |
+| Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. | `homeAddress.country.equals("Canada", false)` | ![Ein Beispiel für ein Profilattribut wird angezeigt.](../images/methods/streaming/profile-attribute.png) |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden auftritt. | `workAddress.country.equals("Canada", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut in einem relativen Zeitfenster wird angezeigt.](../images/methods/streaming/single-event-with-profile-attribute.png) |
 | Mehrere Ereignisse innerhalb eines relativen Zeitfensters von 24 Stunden | Jede Segmentdefinition, die **innerhalb der letzten 24 Stunden** auf mehrere Ereignisse verweist und (optional) ein oder mehrere Profilattribute hat. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Ein Beispiel für mehrere Ereignisse mit einem Profilattribut wird angezeigt.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 Eine Segmentdefinition ist **nicht** für die Streaming-Segmentierung in den folgenden Szenarien geeignet:
@@ -140,7 +140,7 @@ Wenn eine Segmentdefinition geändert wird, sodass sie die Kriterien für die St
 
 Darüber hinaus erfolgt die Aufhebung der Segmentqualifikation, ähnlich wie die Segmentqualifikation selbst, in Echtzeit. Wenn sich eine Zielgruppe nicht mehr für ein Segment qualifiziert, wird deren Qualifikation daher sofort aufgehoben. Wenn in der Segmentdefinition beispielsweise nach „Alle Benutzenden, die in den letzten drei Stunden rote Schuhe gekauft haben“ gefragt wird, wird die Qualifikation nach drei Stunden für alle Profile, die sich ursprünglich für die Segmentdefinition qualifiziert haben, aufgehoben.
 
-### Kombinieren von Audiences {#combine-audiences}
+### Kombinieren von Zielgruppen {#combine-audiences}
 
 Um Daten aus Batch- und Streaming-Quellen zu kombinieren, müssen Sie die Batch- und Streaming-Komponenten in separate Zielgruppen aufteilen.
 
@@ -186,7 +186,7 @@ inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-43
 
 Sie können eine Zielgruppe erstellen, die mithilfe der Streaming-Segmentierung ausgewertet wird, entweder mithilfe der Segmentierungs-Service-API oder über das Zielgruppenportal in der Benutzeroberfläche.
 
-Eine Segmentdefinition kann für Streaming aktiviert werden, wenn sie mit einem der [geeigneten Regelsätze“ &#x200B;](#eligible-rulesets).
+Eine Segmentdefinition kann für Streaming aktiviert werden, wenn sie mit einem der [geeigneten Regelsätze“ ](#eligible-rulesets).
 
 >[!BEGINTABS]
 
@@ -289,15 +289,15 @@ Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Handbuch zu
 
 >[!TAB Zielgruppenportal]
 
-Wählen Sie in Audience Portal **[!UICONTROL Zielgruppe erstellen]** aus.
+Wählen Sie in Audience Portal **[!UICONTROL Create audience]** aus.
 
 ![Die Schaltfläche „Zielgruppe erstellen“ ist im Zielgruppenportal hervorgehoben.](../images/methods/streaming/select-create-audience.png)
 
-Ein Popup wird angezeigt. Wählen Sie **[!UICONTROL Regeln erstellen]**, um in Segment Builder zu gelangen.
+Ein Popup wird angezeigt. Wählen Sie **[!UICONTROL Build rules]** aus, um Segment Builder aufzurufen.
 
 ![Die Schaltfläche „Regeln erstellen“ ist im Pop-up „Zielgruppe erstellen“ hervorgehoben.](../images/methods/streaming/select-build-rules.png)
 
-Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([&#x200B; Regelsätze) &#x200B;](#eligible-rulesets). Wenn die Segmentdefinition für die Streaming-Segmentierung geeignet ist, können Sie &quot;**[!UICONTROL &quot;]** die **[!UICONTROL Auswertungsmethode]** auswählen.
+Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([ Regelsätze) ](#eligible-rulesets). Wenn die Segmentdefinition für die Streaming-Segmentierung geeignet ist, können Sie **[!UICONTROL Streaming]** als **[!UICONTROL Evaluation method]** auswählen.
 
 ![Die Segmentdefinition wird angezeigt. Der Auswertungstyp ist hervorgehoben und zeigt an, dass die Segmentdefinition mithilfe der Streaming-Segmentierung ausgewertet werden kann.](../images/methods/streaming/streaming-evaluation-method.png)
 
@@ -439,7 +439,7 @@ Sie können alle Zielgruppen abrufen, die für die Streaming-Segmentierung inner
 
 ![Das Filtersymbol ist in Audience Portal hervorgehoben.](../images/methods/filter-audiences.png)
 
-Gehen Sie in den verfügbaren Filtern zu **[!UICONTROL Aktualisierungshäufigkeit]** und wählen Sie &quot;[!UICONTROL Streaming] aus. Mit diesem Filter werden alle Zielgruppen in Ihrer Organisation angezeigt, die mithilfe der Streaming-Segmentierung ausgewertet werden.
+Gehen Sie in den verfügbaren Filtern zu **[!UICONTROL Update frequency]** und wählen Sie &quot;[!UICONTROL Streaming]&quot; aus. Mit diesem Filter werden alle Zielgruppen in Ihrer Organisation angezeigt, die mithilfe der Streaming-Segmentierung ausgewertet werden.
 
 ![Die Aktualisierungshäufigkeit für Streaming ist ausgewählt und zeigt alle Zielgruppen in der Organisation an, die mithilfe der Streaming-Segmentierung bewertet werden.](../images/methods/streaming/filter-streaming.png)
 
@@ -455,11 +455,11 @@ Nach Auswahl einer Zielgruppe in Audience Portal wird die Seite mit den Zielgrup
 
 ![Die Seite mit den Zielgruppendetails wird für eine Zielgruppe angezeigt, die mithilfe der Streaming-Segmentierung ausgewertet wird.](../images/methods/streaming/audience-details.png)
 
-Bei für Streaming aktivierten Zielgruppen wird die Karte **[!UICONTROL Profile im Zeitverlauf]** angezeigt, die die Gesamtzahl der qualifizierten und die neuen aktualisierten Metriken der Zielgruppe anzeigt.
+Bei für Streaming aktivierten Zielgruppen wird die Karte **[!UICONTROL Profiles over time]** angezeigt, auf der die insgesamt qualifizierten und die aktualisierten Metriken der neuen Zielgruppe angezeigt werden.
 
-Die **[!UICONTROL Gesamtzahl der Qualifizierten]** stellt die Gesamtzahl der qualifizierten Zielgruppen basierend auf Batch- und Streaming-Auswertungen für diese Zielgruppe dar.
+Die **[!UICONTROL Total qualified]** Metrik stellt die Gesamtzahl der qualifizierten Zielgruppen basierend auf Batch- und Streaming-Auswertungen für diese Zielgruppe dar.
 
-Die Metrik **[!UICONTROL Neue Zielgruppe aktualisiert]** wird durch ein Liniendiagramm dargestellt, das die Änderung der Zielgruppengröße durch die Streaming-Segmentierung anzeigt. Sie können das Dropdown-Menü so anpassen, dass die letzten 24 Stunden, die letzte Woche oder die letzten 30 Tage angezeigt werden.
+Die **[!UICONTROL New audience updated]** wird durch ein Liniendiagramm dargestellt, das die Änderung der Zielgruppengröße durch die Streaming-Segmentierung anzeigt. Sie können das Dropdown-Menü so anpassen, dass die letzten 24 Stunden, die letzte Woche oder die letzten 30 Tage angezeigt werden.
 
 ![Die Karte „Profile im Zeitverlauf“ ist hervorgehoben.](../images/methods/streaming/profiles-over-time.png)
 
@@ -471,4 +471,4 @@ In diesem Handbuch wird erläutert, wie für Streaming aktivierte Segmentdefinit
 
 Weitere Informationen zur Verwendung der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Benutzerhandbuch zur Segmentierung](./overview.md).
 
-Häufig gestellte Fragen zur Streaming-Segmentierung finden Sie im Abschnitt [Streaming-Segmentierung“ der häufig gestellten &#x200B;](../faq.md#streaming-segmentation).
+Häufig gestellte Fragen zur Streaming-Segmentierung finden Sie im Abschnitt [Streaming-Segmentierung“ der häufig gestellten ](../faq.md#streaming-segmentation).

@@ -3,10 +3,10 @@ title: Handbuch zur flexiblen Zielgruppenbewertung
 description: Erfahren Sie, wie Sie mit der flexiblen Zielgruppenauswertung Batch-Segmentierungsvorgänge bei Bedarf ausführen können.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
+source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 7%
+source-wordcount: '1206'
+ht-degree: 6%
 
 ---
 
@@ -29,9 +29,11 @@ Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Batch-Segme
 
 Beachten Sie bei der Ausführung der flexiblen Zielgruppenauswertung die folgenden Bedingungen:
 
-- Sie können nur eine flexible Zielgruppenauswertung (zweimal **&#x200B;**&#x200B;pro Tag und Sandbox verwenden. Diese Beschränkung wird um Mitternacht (UTC) zurückgesetzt.
+- Sie können nur eine flexible Zielgruppenauswertung (zweimal **** pro Tag und Sandbox verwenden. Diese Beschränkung wird um Mitternacht (UTC) zurückgesetzt.
 - Sie haben **maximal** 50 flexible Zielgruppenauswertungsdurchgänge pro Jahr **Produktions-/**.
+   - Ein Jahr ist definiert als ein Jahr ab dem Datum Ihres Experience Platform-Vertrags, um eine flexible Zielgruppenbewertung zu ermöglichen. Wenn Ihr Vertrag beispielsweise am 18. Mai gestartet wurde, wird Ihre Anzahl der flexiblen Zielgruppenauswertungsdurchgänge alle den 18. Mai zurückgesetzt.
 - Sie haben **maximal** 100 flexible Zielgruppenauswertungsdurchgänge pro Jahr **Entwicklungs**-Sandbox.
+   - Ein Jahr ist definiert als ein Jahr ab dem Datum Ihres Experience Platform-Vertrags, um eine flexible Zielgruppenbewertung zu ermöglichen. Wenn Ihr Vertrag beispielsweise am 18. Mai gestartet wurde, wird Ihre Anzahl der flexiblen Zielgruppenauswertungsdurchgänge alle den 18. Mai zurückgesetzt.
 - Alle Zielgruppen **müssen** haben den Ursprung „Segmentierungs-Service“.
 - Alle Zielgruppen **müssen** mithilfe der Batch-Segmentierung ausgewertet werden.
 - Alle Zielgruppen **müssen** personenbasierte Zielgruppen sein.
@@ -312,7 +314,7 @@ Das **[!UICONTROL Evaluate audiences on demand]** Pop-up wird mit der Liste der 
 
 ![Es werden die Zielgruppen angezeigt, die mithilfe einer flexiblen Zielgruppenauswertung ausgewertet werden können.](../images/methods/fae/evaluate-audiences-modal.png)
 
-Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, können Sie mit der Anfrage fortfahren, und die flexible Zielgruppenbewertung wird gestartet. Sie können den Status dieser Zielgruppenauswertung in der Ansicht [Überwachung von Auswertungsaufträgen“ &#x200B;](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
+Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, können Sie mit der Anfrage fortfahren, und die flexible Zielgruppenbewertung wird gestartet. Sie können den Status dieser Zielgruppenauswertung in der Ansicht [Überwachung von Auswertungsaufträgen“ ](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >
@@ -326,7 +328,7 @@ Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, k
 
 Das folgende Video zeigt, wie Sie in Experience Platform auf eine flexible Zielgruppenbewertung zugreifen und diese verwenden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453649?captions=ger&)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Häufig gestellte Fragen {#faq}
 
