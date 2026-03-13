@@ -3,22 +3,24 @@ title: Verwalten von Query Service-Sitzungen in Adobe Experience Platform
 description: Erfahren Sie, wie Admins aktive Sitzungen des Abfrage-Service anzeigen, überwachen und beenden können, um Leerlaufkapazitäten freizugeben und zuverlässige Data Distiller-Workflows zu erhalten.
 keywords: Experience Platform;Abfrage-Service;Sitzungen;Sitzungsverwaltung;Daten-Distiller;Admin
 solution: Experience Platform
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type="Informative"
+exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
+source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
 
 # Verwalten von Query Service-Sitzungen
 
+>[!AVAILABILITY]
+>
+>Die Sitzungsverwaltung für Query Service ist derzeit eingeschränkt verfügbar und steht nur Organisationen mit Berechtigungen für **Data Distiller** zur Verfügung. Um Zugriff zu erhalten, wenden Sie sich an Ihr Adobe Account Team.
+
 Verwenden Sie dieses Handbuch, um aktive Sitzungen des Abfrage-Service über die Benutzeroberfläche von Adobe Experience Platform zu verwalten. Die Sitzungsverwaltung hilft Admins, gleichzeitige Abfrage-Editor-Sitzungen in allen Sandboxes und die freie Kapazität zu überwachen, wenn Benutzende Sitzungen offen lassen.
 
 ## Für die Sitzungsverwaltung erforderliche Berechtigungen {#permissions}
-
->[!AVAILABILITY]
->
->Die Sitzungsverwaltung ist nur für Organisationen mit Berechtigungen für Data Distiller verfügbar.
 
 >[!IMPORTANT]
 >
@@ -93,4 +95,3 @@ Beachten Sie die folgenden Ressourcen, um Ihre Verwendung von Query Service und 
 
 * [Im Benutzerhandbuch zum Abfrage-Editor erfahren Sie, wie Benutzende Abfragen erstellen und ausführen.](user-guide.md)
 * [Überwachen geplanter Workloads mithilfe der Dokumentation zur Überwachung geplanter Abfragen](monitor-queries.md)
-
