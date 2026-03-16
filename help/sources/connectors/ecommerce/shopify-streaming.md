@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss ers
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4c7b23592a1784a5f2daa5518b512fa458a2c3ad
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '677'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Die [!DNL Shopify Streaming]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Shopify Streaming]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Adobe Experience Platform unterstützt die Aufnahme von Daten aus Streaming-Anwendungen. Unterstützung für Streaming-Anbieter umfasst [!DNL Shopify].
 
@@ -104,7 +104,7 @@ Bei einer erfolgreichen Antwort werden Ihr Zugriffstoken und Ihre Berechtigungsb
 
 ## Erstellen eines Webhooks für das Streaming von [!DNL Shopify] {#webhook}
 
-Webhooks ermöglichen es Anwendungen, mit Ihren [!DNL Shopify]-Daten synchronisiert zu bleiben oder eine Aktion auszuführen, nachdem ein bestimmtes Ereignis in einem Shop stattgefunden hat. Für das Streaming von [!DNL Shopify] auf Experience Platform können Webhooks verwendet werden, um den HTTP-Endpunkt und die Themen für das Abonnement zu definieren.
+Webhooks ermöglichen es Anwendungen, mit Ihren [!DNL Shopify]-Daten synchronisiert zu bleiben oder eine Aktion auszuführen, nachdem ein bestimmtes Ereignis in einem Shop stattgefunden hat. Für das Streaming von [!DNL Shopify] an Experience Platform können Webhooks verwendet werden, um den HTTP-Endpunkt und die Themen für das Abonnement zu definieren.
 
 **Anfrage**
 
@@ -117,7 +117,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
   "webhook": {
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "format": "json"
   }
@@ -126,7 +126,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- | 
-| `webhook.address` | Der HTTP-Endpunkt, an den Streaming-Nachrichten gesendet werden. |
+| `webhook.address` | Der HTTP-Endpunkt, an den Streaming-Nachrichten gesendet werden. Die Vorlage für den Webhook lautet: `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
 | `webhook.topic` | Das Thema Ihres Webhook-Abonnements. Weitere Informationen finden Sie im [[!DNL Shopify] Handbuch zu Webhook-](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | Das Format Ihrer Daten. |
 
@@ -138,7 +138,7 @@ Bei einer erfolgreichen Antwort werden Informationen zu Ihrem Webhook zurückgeg
 {
   "webhook": {
     "id": 1091138715786,
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "created_at": "2022-07-20T07:15:23-04:00",
     "updated_at": "2022-07-20T07:15:23-04:00",
@@ -161,7 +161,7 @@ Im Folgenden finden Sie eine Liste bekannter Einschränkungen, auf die Sie bei d
 
 ## Nächste Schritte
 
-In den folgenden Tutorials wird beschrieben, wie Sie Ihre [!DNL Shopify Streaming] mithilfe der -API und der Benutzeroberfläche mit dem Experience Platform verbinden:
+In den folgenden Tutorials wird beschrieben, wie Sie Ihre [!DNL Shopify Streaming] mithilfe der -API und der Benutzeroberfläche mit Experience Platform verbinden:
 
 * [Erstellen einer Shopify Streaming-Quellverbindung und eines Datenflusses mithilfe der Flow Service-API](../../tutorials/api/create/ecommerce/shopify-streaming.md)
 * [Erstellen einer Shopify Streaming-Quellverbindung und eines Datenflusses in der Benutzeroberfläche](../../tutorials/ui/create/ecommerce/shopify-streaming.md)
