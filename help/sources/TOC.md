@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
+source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 89%
+source-wordcount: '1089'
+ht-degree: 88%
 
 ---
 
@@ -97,6 +97,8 @@ ht-degree: 89%
       - [Bombora Intent](connectors/data-partners/bombora.md)
       - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Identitätsauflösung für Unternehmen von Merkury](connectors/data-partners/merkury.md)
+   - Datenfreigabe {#data-sharing}
+      - [Deltashare](connectors/data-sharing/deltashare.md)
    - E-Commerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -310,6 +312,8 @@ ht-degree: 89%
          - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Identitätsauflösung für Unternehmen von Merkury](tutorials/ui/create/data-partners/merkury.md)
+      - Datenfreigabe {#data-sharing}
+         - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
       - E-Commerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -370,7 +374,7 @@ ht-degree: 89%
    - [Anwenden von Zugriffskennzeichnungen auf einen Datenfluss](tutorials/ui/labels.md)
    - [Erstellen eines privaten Endpunkts](tutorials/ui/private-link.md)
 - Selbstbedienungsquellen (Batch-SDK) {#sdk}
-   - [Übersicht](sources-sdk/overview.md)
+   - [Überblick](sources-sdk/overview.md)
    - Konfigurieren der Verbindungsspezifikation {#config}
       - [Konfigurationsoptionen](sources-sdk/config/config.md)
       - [Konfigurieren der Authentifizierungsspezifikation](sources-sdk/config/authspec.md)
