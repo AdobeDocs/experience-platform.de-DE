@@ -5,10 +5,10 @@ title: Aktivieren von Zielgruppen für Batch-Ziele über die Ad-hoc-Aktivierungs
 description: Dieser Artikel veranschaulicht den End-to-End-Workflow für die Aktivierung von Zielgruppen über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung stattfinden.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: e5a757fcd73fc743b570c6456a66907e4720e8b6
 workflow-type: tm+mt
-source-wordcount: '1623'
-ht-degree: 8%
+source-wordcount: '1693'
+ht-degree: 7%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 8%
 >
 >Nach Abschluss der Beta-Phase ist die [!DNL ad-hoc activation API] jetzt allgemein für alle Experience Platform-Kunden verfügbar (GA). In der GA-Version wurde die API auf Version 2 aktualisiert. Schritt 4 ([Abrufen der neuesten Zielgruppenexportvorgangs-](#segment-export-id)) ist nicht mehr erforderlich, da die API die Export-ID nicht mehr benötigt.
 >
->Weitere Informationen finden [&#x200B; in diesem Tutorial unter „Ausführen &#x200B;](#activation-job) Ad-hoc-Aktivierungsauftrags“ weiter unten.
+>Weitere Informationen finden [ in diesem Tutorial unter „Ausführen ](#activation-job) Ad-hoc-Aktivierungsauftrags“ weiter unten.
 
 ## Überblick {#overview}
 
@@ -49,7 +49,7 @@ IT-Manager können die Ad-hoc-Aktivierungs-API von Experience Platform verwenden
 Beachten Sie die folgenden Leitplanken bei der Verwendung der Ad-hoc-Aktivierungs-API.
 
 * Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Zielgruppen aktivieren. Der Versuch, mehr als 80 Zielgruppen pro Auftrag zu aktivieren, führt zum Fehlschlagen des Auftrags. Dieses Verhalten kann sich in zukünftigen Versionen ändern.
-* Ad-hoc-Aktivierungsaufträge können nicht parallel zu geplanten [Zielgruppen-Exportvorgängen](../../segmentation/api/export-jobs.md) ausgeführt werden. Stellen Sie vor dem Ausführen eines Ad-hoc-Aktivierungsauftrags sicher, dass der geplante Zielgruppen-Exportauftrag abgeschlossen wurde. Informationen [&#x200B; Überwachen des Status &#x200B;](../../dataflows/ui/monitor-destinations.md) Aktivierungsflüsse finden Sie unter „Ziel-Datenflussüberwachung“. Wenn Ihr Aktivierungsdatenfluss beispielsweise den Status **[!UICONTROL Verarbeitung läuft]** aufweist, warten Sie, bis er abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen.
+* Ad-hoc-Aktivierungsaufträge können nicht parallel zu geplanten [Zielgruppen-Exportvorgängen](../../segmentation/api/export-jobs.md) ausgeführt werden. Stellen Sie vor dem Ausführen eines Ad-hoc-Aktivierungsauftrags sicher, dass der geplante Zielgruppen-Exportauftrag abgeschlossen wurde. Informationen [ Überwachen des Status ](../../dataflows/ui/monitor-destinations.md) Aktivierungsflüsse finden Sie unter „Ziel-Datenflussüberwachung“. Wenn Ihr Aktivierungsdatenfluss beispielsweise einen **[!UICONTROL Processing]** aufweist, warten Sie, bis er abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen.
 * Führen Sie nicht mehr als einen gleichzeitigen Ad-hoc-Aktivierungsauftrag pro Zielgruppe aus.
 
 ## Überlegungen zur Segmentierung {#segmentation-considerations}
@@ -124,9 +124,9 @@ Adobe Experience Platform führt geplante Segmentierungsaufträge alle 24 Stunde
 
 >[!IMPORTANT]
 >
->Beachten Sie die folgende einmalige Einschränkung: Stellen Sie vor der Ausführung eines Ad-hoc-Aktivierungsauftrags sicher, dass seit dem Zeitpunkt, zu dem die Zielgruppe zum ersten Mal gemäß dem Zeitplan aktiviert wurde, mindestens eine Stunde vergangen ist ([&#x200B; 3. Schritt - Aktivierungsfluss erstellen in der Experience Platform-Benutzeroberfläche](#activation-flow).
+>Beachten Sie die folgende einmalige Einschränkung: Stellen Sie vor der Ausführung eines Ad-hoc-Aktivierungsauftrags sicher, dass seit dem Zeitpunkt, zu dem die Zielgruppe zum ersten Mal gemäß dem Zeitplan aktiviert wurde, mindestens eine Stunde vergangen ist ([ 3. Schritt - Aktivierungsfluss erstellen in der Experience Platform-Benutzeroberfläche](#activation-flow).
 
-Stellen Sie vor der Ausführung eines Ad-hoc-Aktivierungsauftrags sicher, dass der geplante Zielgruppenexportauftrag für Ihre Zielgruppen abgeschlossen ist. Informationen [&#x200B; Überwachen des Status &#x200B;](../../dataflows/ui/monitor-destinations.md) Aktivierungsflüsse finden Sie unter „Ziel-Datenflussüberwachung“. Wenn Ihr Aktivierungsdatenfluss beispielsweise den Status **[!UICONTROL Verarbeitung läuft]** aufweist, warten Sie, bis er abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen, um eine vollständige Datei zu exportieren.
+Stellen Sie vor der Ausführung eines Ad-hoc-Aktivierungsauftrags sicher, dass der geplante Zielgruppenexportauftrag für Ihre Zielgruppen abgeschlossen ist. Informationen [ Überwachen des Status ](../../dataflows/ui/monitor-destinations.md) Aktivierungsflüsse finden Sie unter „Ziel-Datenflussüberwachung“. Wenn Ihr Aktivierungsdatenfluss beispielsweise einen **[!UICONTROL Processing]** aufweist, warten Sie, bis er abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen, um eine vollständige Datei zu exportieren.
 
 Nachdem der Zielgruppenexport abgeschlossen ist, können Sie einen Trigger für die Aktivierung erstellen.
 
@@ -139,6 +139,10 @@ Nachdem der Zielgruppenexport abgeschlossen ist, können Sie einen Trigger für 
 >[!IMPORTANT]
 >
 >Um v2 der Ad-hoc-Aktivierungs-API verwenden zu können, müssen Sie in Ihrer Anfrage den `Accept: application/vnd.adobe.adhoc.activation+json; version=2`-Header einfügen.
+
+Für Zielgruppen, die nicht vom Segmentierungs-Service stammen (z. B. [externe oder benutzerdefinierte Upload-Zielgruppen](../../segmentation/ui/audience-portal.md#import-audience)), müssen Sie in Ihrer Anfrage die von Experience Platform generierte Zielgruppen-ID und nicht die externe Zielgruppen-ID angeben. Die systemgenerierte ID finden Sie oben im Bereich [Zielgruppenzusammenfassung](../../segmentation/ui/audience-portal.md#audience-summary), die als **ID#** gefolgt von einer UUID angezeigt wird, wenn Sie die Seite mit den Zielgruppendetails in der Zielgruppen-Benutzeroberfläche öffnen.
+
+![Das Bedienfeld „Zielgruppenzusammenfassung“ mit dem hervorgehobenen systemgenerierten ID-Feld oben im Bedienfeld.](../assets/api/ad-hoc-activation/audience-summary-id.png)
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun' \
@@ -164,7 +168,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Experience Platform-Benutzeroberfläche abrufen, indem Sie zur Registerkarte **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** navigieren und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste aufzurufen. Weitere Informationen finden Sie in der [Dokumentation zum Arbeitsbereich „Ziele](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Experience Platform-Benutzeroberfläche abrufen, indem Sie zur Registerkarte **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** navigieren und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste aufzurufen. Weitere Informationen finden Sie in der [Dokumentation zum Arbeitsbereich „Ziele](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppen, die Sie für das ausgewählte Ziel aktivieren möchten. Mit der Ad-hoc-API können Sie Experience Platform-generierte Zielgruppen sowie externe (benutzerdefinierte Upload-)Zielgruppen exportieren. Verwenden Sie beim Aktivieren externer Zielgruppen die systemgenerierte ID anstelle der Zielgruppen-ID. Die systemgenerierte ID finden Sie in der Ansicht „Zielgruppenzusammenfassung“ in der Benutzeroberfläche „Zielgruppen“. <br> ![Ansicht der Zielgruppen-ID, die nicht ausgewählt werden soll.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Ansicht der Zielgruppen-ID, die nicht ausgewählt werden soll."){width="100" zoomable="yes"} <br> ![Ansicht der systemgenerierten Zielgruppen-ID, die verwendet werden soll.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Ansicht der systemgenerierten Zielgruppen-ID, die verwendet werden soll."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
@@ -205,7 +209,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Experience Platform-Benutzeroberfläche abrufen, indem Sie zur Registerkarte **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** navigieren und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste aufzurufen. Weitere Informationen finden Sie in der [Dokumentation zum Arbeitsbereich „Ziele](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Experience Platform-Benutzeroberfläche abrufen, indem Sie zur Registerkarte **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** navigieren und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste aufzurufen. Weitere Informationen finden Sie in der [Dokumentation zum Arbeitsbereich „Ziele](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppen, die Sie für das ausgewählte Ziel aktivieren möchten. |
 | <ul><li>`exportId1`</li></ul> | Die ID, die in der Antwort des [Zielgruppenexport“-](../../segmentation/api/export-jobs.md#retrieve-list) zurückgegeben wird. Unter [Schritt 4: Abrufen der neuesten Zielgruppen-Exportvorgangs-](#segment-export-id)) finden Sie Anweisungen, wie Sie diese ID finden. |
 
@@ -231,7 +235,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück.
 | -------- | ----------- |
 | `segment` | Die ID der aktivierten Zielgruppe. |
 | `order` | Die ID des Ziels, für das die Zielgruppe aktiviert wurde. |
-| `statusURL` | Die Status-URL des Aktivierungsflusses. Sie können den Flussfortschritt mithilfe der [Flow Service-API) &#x200B;](../../sources/tutorials/api/monitor.md). |
+| `statusURL` | Die Status-URL des Aktivierungsflusses. Sie können den Flussfortschritt mithilfe der [Flow Service-API) ](../../sources/tutorials/api/monitor.md). |
 
 {style="table-layout:auto"}
 
@@ -243,7 +247,7 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 Bei Verwendung der Ad-hoc-Aktivierungs-API können Sie auf Fehlermeldungen stoßen, die für diesen API-Endpunkt spezifisch sind. Überprüfen Sie die Tabelle, um zu verstehen, wie Sie darauf reagieren, wenn sie angezeigt werden.
 
-| Fehlermeldung | Auflösung |
+| Fehlermeldung | Lösung |
 |---------|----------|
 | Ausführung läuft bereits für Zielgruppen-`segment ID` für `dataflow ID` mit Ausführungs-ID `flow run ID` | Diese Fehlermeldung weist darauf hin, dass derzeit ein Ad-hoc-Aktivierungsfluss für eine Zielgruppe läuft. Warten Sie, bis der Vorgang abgeschlossen ist, bevor Sie den Aktivierungsvorgang erneut auslösen. |
 | Segmente `<segment name>` sind nicht Teil dieses Datenflusses oder außerhalb des Zeitplanbereichs! | Diese Fehlermeldung zeigt an, dass die Zielgruppen, die Sie aktivieren möchten, nicht dem Datenfluss zugeordnet sind oder dass der für die Zielgruppen eingerichtete Aktivierungsplan entweder abgelaufen oder noch nicht gestartet wurde. Überprüfen Sie, ob die Zielgruppe tatsächlich dem Datenfluss zugeordnet ist, und stellen Sie sicher, dass sich der Zeitplan für die Zielgruppenaktivierung mit dem aktuellen Datum überschneidet. |
@@ -251,4 +255,4 @@ Bei Verwendung der Ad-hoc-Aktivierungs-API können Sie auf Fehlermeldungen stoß
 ## Verwandte Informationen {#related-information}
 
 * [Verbinden mit Batch-Zielen und Aktivieren von Daten mit der Flow Service-API](/help/destinations/api/connect-activate-batch-destinations.md)
-* [(Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](/help/destinations/ui/export-file-now.md)
+* [Exportieren von Dateien nach Bedarf an Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](/help/destinations/ui/export-file-now.md)
