@@ -1,51 +1,90 @@
 ---
-title: Adobe Advertising Cloud DSP-Verbindung
-description: Adobe Advertising Cloud DSP ist ein integriertes Ziel für Adobe Real-Time Customer Data Platform, mit dem Sie authentifizierte First-Party-Zielgruppen mit genehmigten Werbetreibenden und Nutzerinnen und Nutzern für die Kampagnenaktivierung teilen können.
-exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+title: Adobe Advertising DSP-Verbindung
+description: Erfahren Sie, wie Sie authentifizierte und nicht authentifizierte First-Party-Zielgruppen mithilfe mehrerer Identitätstypen für Adobe Advertising Cloud Demand-Side Platform (DSP) freigeben.
+feature: Destinations
+source-git-commit: 5513e95637c1016caeb6abe699e1807cc234ed40
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 20%
+source-wordcount: '1342'
+ht-degree: 16%
 
 ---
 
-# Adobe Advertising Cloud DSP-Verbindung
+
+# Adobe Advertising DSP-Verbindung
 
 ## Überblick {#overview}
 
-Mit dem Ziel Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) können Sie authentifizierte First-Party-Zielgruppen für genehmigte Werbetreibende und Benutzende zur Kampagnenaktivierung mit DSP freigeben. Weitere Informationen zur Integration von Real-Time CDP mit DSP finden Sie unter [Informationen zum Aktivieren authentifizierter Zielgruppen aus Zielgruppenquellen](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=de).
+Mit dem Ziel Adobe Advertising Cloud Demand-Side Platform (DSP) können Benutzende sowohl authentifizierte als auch nicht authentifizierte First-Party-Zielgruppen mit einem DSP-Konto oder einem bestimmten Advertiser innerhalb eines Kontos teilen.
+
+Mit diesem Ziel können Kundinnen und Kunden Erstanbieter-Zielgruppen für eine oder alle der folgenden IDs freigeben:
+
+* Hash-E-Mail-ID, die zum Targeting in DSP in eine [!DNL LiveRamp RampID] oder [!DNL Unified ID 2.0] (UID2.0) konvertiert wird
+
+* Experience Cloud ID (ECID) und Adobe Advertising-Drittanbieter-Cookies
+
+* Mobile Advertising IDs (MAIDs):
+
+   * [!DNL Google] Advertising IDs (GAIDs) für [!DNL Android] Geräte
+
+   * Kennungen für Advertiser (IDFAs) für [!DNL Apple iOS] Geräte
+
+Diese Verbindung ersetzt die [veraltete Adobe Advertising Cloud DSP-Verbindung](adobe-advertising-cloud-connection-legacy.md) die nur Hash-E-Mail-Adressen unterstützt.
 
 >[!IMPORTANT]
 >
->Diese Seite wurde vom DSP-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich direkt unter `adcloud_support@adobe.com` an den Advertising Cloud-Support.
+>Diese Seite wurde vom Adobe Advertising [!DNL DSP]-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich direkt unter `adcloud_support@adobe.com` an den Advertising Cloud-Support.
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das Advertising Cloud DSP-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel bewältigen können.
+Mit diesem Ziel können Werbetreibende ihre Zielgruppe Browser-übergreifend mit Cookies und ohne Cookies erreichen.
 
-### Anwendungsfall für Markenwerbung
-
-Ein Online-retailer möchte seine hochwertigen Kunden über eine Anzeigekampagne erneut ansprechen, ohne Cookies für die Zielgruppenbestimmung zu verwenden. Der retailer gibt eine Audience frei, die aus den gehashten E-Mail-IDs seiner hochwertigen Kunden vom Adobe Real-Time Customer Data Platform (Real-Time CDP)-Konto bis zum DSP-Konto besteht. DSP konvertiert dann die gehashten E-Mail-IDs durch eine Partnerschaft zwischen DSP und LiveRamp in authentifizierte [!DNL RampIDs]. Die resultierende [!DNL RampIDs] kann in einer Anzeigekampagne verwendet werden, um die Zielgruppe anzusprechen.
-
-### Anwendungsfall für Agentur
-
-Eine Medienagentur mit DSP-Account führt im Namen ihres Kunden, einer Top-Marke im Gastgewerbe, eine Retargeting-Kampagne durch. Die Marke möchte alle ihre Gäste im letzten Jahr mit einem neuen Werbeangebot erneut ansprechen. Die Marke hostet alle Gastinformationen in [!DNL Real-Time CDP]. Die Marke kann eine Zielgruppe, die aus den gehashten E-Mail-IDs ihrer Gäste aus ihrem [!DNL Real-Time CDP]-Konto besteht, mit dem DSP-Konto der Medienagentur teilen, um die Gäste durch eine Medienkampagne erneut anzusprechen.
+Werbetreibende haben die Wahl, Segmente entweder mit authentifizierten First-Party-IDs (wie [!DNL RampID] und [!DNL UID2.0]) oder als nicht authentifizierte IDs (wie Cookies und MAIDs) freizugeben.
 
 ## Voraussetzungen {#prerequisites}
 
-* Einstellungen auf Konto- und Kampagnenebene in DSP, um die Freigabe von Zielgruppen für [!DNL LiveRamp RampID] zu aktivieren. Dadurch werden Kundendaten in [!DNL RampIDs] übersetzt, um Zielgruppensegmente zu erstellen. Diese Konfiguration wird von Ihrem DSP-Konto-Team durchgeführt. [!DNL RampID] ist über eine Partnerschaft zwischen DSP und [!DNL LiveRamp] verfügbar und Sie benötigen keine eigene [!DNL LiveRamp]-Mitgliedschaft, um sie zu verwenden.
-* Die Experience Cloud-Organisations-ID für das Experience Platform-Konto. Sie finden Ihre ID auf der Seite Ihres [!DNL Real-Time CDP] Benutzerprofils.
-* Eine [[!DNL Real-Time CDP] Quelle in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=de) um Zielgruppen für die Kampagnenaktivierung zu empfangen. Ihr DSP-Konto-Team erstellt die Quelle mit Ihrer Experience Cloud-Organisations-ID.
-* Der Quellschlüssel für das DSP-Konto oder den Advertiser, der generiert wird, wenn eine [[!DNL Real-Time CDP] source in DSP erstellt wird](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=de). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen. Sie verwenden sie in Experience Platform, um eine Zielverbindung zum Advertising Cloud DSP-Ziel herzustellen, wie [&#x200B; unten erläutert](#authenticate).
-* Kundendaten bestehend aus E-Mails oder Hash-E-Mails.
+* [!DNL RampID activation] Sie [!DNL DSP] Einstellungen auf Konto- und Kampagnenebene, um die Freigabe von Zielgruppen für [!DNL LiveRamp RampID] zu aktivieren. Dadurch werden Kundendaten in [!DNL RampIDs] übersetzt, um Zielgruppensegmente zu erstellen. Diese Konfiguration wird von Ihrem Adobe-Konto-Team durchgeführt. [!DNL RampID] ist über eine Partnerschaft zwischen [!DNL DSP] und [!DNL LiveRamp] verfügbar und Sie benötigen keine eigene [!DNL LiveRamp]-Mitgliedschaft, um sie zu verwenden.
+
+* Zielgruppen-IDs:
+
+   * Für [!DNL RampID] und [!DNL UID2.0] müssen Profile gehashte E-Mail-IDs enthalten.
+
+   * Richten Sie für Cookies einen Cookie-Synchronisierungsprozess mit entweder [!DNL Web SDK] Datenströmen oder dem [!DNL Experience Cloud ID Service] ein. Siehe [Einrichten der ID-Synchronisierung zum Freigeben von Cookies](#cookie-sync) unten.
+
+   * Für Profile mit MAIDs:
+
+      * Fügen Sie für jede GAID den in einer IdentityMap-Spalte `GAID` Wert ein.
+
+      * Fügen Sie für jeden IDFA den in einer IdentityMap-Spalte `IDFA` Wert ein.
+
+* Die Experience Cloud-Organisations-ID für das Experience Platform-Konto. Ihre ID finden Sie auf der Benutzerprofilseite für Adobe Real-Time Customer Data Platform (Real-Time CDP).
+
+* Eine [Real-Time CDP-Quelle in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) zum Empfang von Zielgruppen für die Kampagnenaktivierung. Ihr Adobe-Konto-Team erstellt die Quelle mit Ihrer Experience Cloud-Organisations-ID.
+
+* Der Quellschlüssel für das [!DNL DSP]-Konto oder den Advertiser, der generiert wird, wenn eine [Real-Time CDP-Quelle in erstellt wird [!DNL DSP]](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr [!DNL DSP] Account Team wird diesen Schlüssel mit Ihnen teilen. Sie verwenden sie in Experience Platform, um eine Zielverbindung zum Advertising Cloud DSP-Ziel herzustellen, wie unten beschrieben.
+
+### Einrichten der ID-Synchronisierung zum Freigeben von Cookies {#cookie-sync}
+
+Die ID-Synchronisierung ist eine Voraussetzung für die Freigabe von Drittanbieter-Cookies. Richten Sie einen Cookie-Synchronisierungsprozess mit entweder [!DNL Web SDK] Datenströmen oder der [!DNL Experience Cloud ID Service] ein. Weitere Informationen zur Identitätsverarbeitung für Drittanbieter-Cookies finden Sie unter [Advertising-Ziele, die auf Drittanbieter-Cookie-Integrationen angewiesen sind](/help/destinations/how-destinations-work/identity-handling.md#third-party-cookie-destinations).
+
+**Synchronisierung der Drittanbieter-ID mit[!DNL Web SDK]** aktivieren
+
+Wenn Sie [!DNL Experience Platform Web SDK] verwenden, aktivieren Sie die Synchronisierung von Drittanbieter-IDs in Ihrem Datenstrom, indem Sie die Option [!UICONTROL Third Party ID Sync] in den erweiterten Einstellungen konfigurieren. Anweisungen finden Sie unter [Konfigurieren erweiterter Optionen](/help/datastreams/configure.md#advanced-options) in der Dokumentation zu Datenströmen.
+
+**Aktivieren der Synchronisierung von Drittanbieter-IDs mit dem[!DNL Experience Cloud ID Service]**
+
+Wenn Sie [!DNL Experience Platform] Tags mit dem [!DNL Experience Cloud ID Service] verwenden, konfigurieren Sie die Synchronisierung der Drittanbieter-ID mithilfe der [Experience Cloud ID Service-Erweiterung](/help/tags/extensions/client/id-service/overview.md). Dadurch kann das passende Adobe Advertising-Cookie für die angegebene ECID verfügbar sein, wenn Sie die Zielgruppe in Real-Time CDP aktivieren.
 
 ## Unterstützte Identitäten {#supported-identities}
 
 Das Ziel Adobe Advertising Cloud DSP unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
-|---|---|---|
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Experience Platform unterstützt sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit Experience Platform die Daten bei Aktivierung automatisch hasht. |
+| --------------- | ----------- | -------------- |
+| `email_lc_sha256` | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Experience Platform unterstützt sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit Experience Platform die Daten bei Aktivierung automatisch hasht. |
+| `ECID` | Erstanbieter-Cookie für Experience Cloud | Erforderlich zum Erstellen von Cookie-basierten Segmenten. |
+| `Everesttech cookie` | Drittanbieter-Cookie für Adobe Advertising | Erforderlich zum Erstellen von Cookie-basierten Segmenten. |
+| `GAID` | [!DNL Android] Geräte-ID | Erforderlich für das Targeting von [!DNL Android]. |
+| `IDFA` | [!DNL iOS] Geräte-ID | Erforderlich für das Targeting von [!DNL iOS]. |
 
 {style="table-layout:auto"}
 
@@ -55,15 +94,15 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
 Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 
 | Datentyp der Zielgruppe | Unterstützt | Beschreibung | Anwendungsfälle |
-|--------------------|-----------|-------------|-----------|
+| -------------------- | --------- | ----------- | --------- |
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
@@ -76,8 +115,8 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 In der folgenden Tabelle finden Sie Informationen zum Zielexporttyp und zur Häufigkeit des Exports.
 
 | Element | Typ | Anmerkungen |
-|---------|----------|---------|
-| Exporttyp | **[!UICONTROL Audience export]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (E-Mail oder Hash-E-Mail), die im Advertising Cloud DSP-Ziel verwendet werden. |
+| ---- | ---- | ----- |
+| Exporttyp | **[!UICONTROL Audience export]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den ausgewählten Kennungen. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert wird, sendet der Connector die Aktualisierung nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -85,18 +124,18 @@ In der folgenden Tabelle finden Sie Informationen zum Zielexporttyp und zur Häu
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
-> 
->Experience Platform Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[&#x200B; für &#x200B;](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>
+>Experience Platform Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[ für ](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Um eine Verbindung zum Ziel herzustellen, befolgen Sie die Anweisungen zum [Erstellen einer Zielverbindung](/help/destinations/ui/connect-destination.md) mithilfe der Experience Platform-Benutzeroberfläche. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
+Um eine Verbindung zum Ziel herzustellen, befolgen Sie die Anweisungen zum [Erstellen einer Zielverbindung](/help/destinations/ui/connect-destination.md) mithilfe der Experience Platform-Benutzeroberfläche. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den folgenden Unterabschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um eine Verbindung zum Ziel herzustellen, geben Sie den folgenden Parameter im Abschnitt [!UICONTROL Connection type] ein und wählen Sie dann **[!UICONTROL Connect to destination]**.
+Um eine Verbindung zum Ziel herzustellen, geben Sie die folgenden Parameter im Abschnitt [!UICONTROL Connection type] ein und wählen Sie dann **[!UICONTROL Connect to destination]** aus:
 
-* **[!UICONTROL Account or Advertiser Key]**: Diese [!UICONTROL Source Key] wird generiert, wenn eine [[!DNL Real-Time CDP] Quelle in der Benutzeroberfläche von DSP erstellt &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=de). Ihr DSP-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
+* **[!UICONTROL Account or Advertiser Key]**: Dieser [!UICONTROL Source Key] wird generiert, wenn in der Benutzeroberfläche von DSP eine [Real-Time CDP-Quelle erstellt ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr Adobe-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
 
-![Feld Verbindungstyp](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
+![Screenshot des Abschnitts „Verbindungstyp“ mit dem Feld „Konto“ oder „Werbekunden-Schlüssel“.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -105,7 +144,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 
-![Zieldetailfelder](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+![Screenshot der Zieldetailfelder mit Eingabe von Name und Beschreibung.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -116,11 +155,19 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren von Identitäten benötigen Sie die **[!UICONTROL View Identity Graph]** [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
+
+### Zuordnen von Attributen und Identitäten {#map}
+
+Sie können die IDs auswählen, die an Adobe Advertising DSP gesendet werden sollen. Standardmäßig sind die Cookie-Kennungen für den Advertiser ausgewählt. Sie können auch [!UICONTROL Hashed Email], [!UICONTROL IDFA] und [!UICONTROL GAID] hinzufügen.
+
+Anweisungen finden Sie unter [Attribute und Identitäten zuordnen](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
+
+![Screenshot des Abschnitts zur Identitätszuordnung mit Cookie-Kennungen, Hash-E-Mail-, IDFA- und GAID-Optionen.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/identity-mapping.png)
 
 ## Überprüfen des Datenexports {#exported-data}
 
@@ -128,7 +175,7 @@ Um sicherzustellen, dass die Zielgruppendaten für Advertising Cloud freigegeben
 
 * Der Datenfluss in Ihrem [!DNL Real-Time CDP] Ziel ist erfolgreich.
 
-* In DSP ist die Zielgruppe verfügbar, wenn Sie eine Zielgruppe unter [!UICONTROL Audiences] > [!UICONTROL All Audiences] oder im Abschnitt [!UICONTROL Audience Targeting] der Platzierungseinstellungen erstellen oder bearbeiten. Die Zielgruppe sollte auf der Registerkarte [!UICONTROL Adobe Segments] unter dem Ordner [!UICONTROL Real-Time CDP] angezeigt werden.
+* In DSP ist die Zielgruppe verfügbar, wenn Sie eine Zielgruppe unter **[!UICONTROL Audiences]** > **[!UICONTROL All Audiences]** oder im Abschnitt **[!UICONTROL Audience Targeting]** der Platzierungseinstellungen erstellen oder bearbeiten. Die Zielgruppe sollte auf der Registerkarte [!UICONTROL Adobe Segments] unter dem Ordner [!UICONTROL Real-Time CDP] angezeigt werden.
 
 ![Real-Time CDP-Zielgruppen in den DSP-Zielgruppeneinstellungen](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
