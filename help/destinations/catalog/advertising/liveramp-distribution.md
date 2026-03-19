@@ -48,7 +48,7 @@ Damit Sie besser verstehen können, wie und wann Sie das [!DNL LiveRamp - Distri
 
 Das Marketing-Team einer Sportbekleidung in retailer verwendete die Verbindung [LiveRamp - Onboarding](liveramp-onboarding.md), um Zielgruppen aus Experience Platform an ihr LiveRamp-Konto zu senden.
 
-Trigger Über die [!DNL LiveRamp - Distribution]-Verbindung können sie jetzt die Aktivierung der integrierten Zielgruppen in die [unterstützten Ziele“ ](#supported-destinations). Dann können sie Benutzer auf mobilen, offenen Web-, Social- und [!DNL CTV]-Plattformen ansprechen.
+Trigger Über die [!DNL LiveRamp - Distribution]-Verbindung können sie jetzt die Aktivierung der integrierten Zielgruppen in die [unterstützten Ziele“ &#x200B;](#supported-destinations). Dann können sie Benutzer auf mobilen, offenen Web-, Social- und [!DNL CTV]-Plattformen ansprechen.
 
 ## Onboarden von Zielgruppen für LiveRamp {#onboarding}
 
@@ -62,7 +62,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -90,7 +90,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -120,7 +120,7 @@ Geben Sie nach erfolgreicher Verbindung mit Ihrem LiveRamp-Konto die erforderlic
 >Beispiel: `LiveRamp - Roku`.
 
 * **[!UICONTROL Description]**: Geben Sie eine Beschreibung für Ihr Ziel ein. Verwenden Sie eine Beschreibung, die Ihnen hilft, den Zweck dieses Ziels leicht zu identifizieren.
-* **[!UICONTROL Destination]**: Wählen Sie im Dropdown-Menü das Ziel aus, für das Sie Zielgruppen aktivieren möchten. Das hier ausgewählte Ziel wirkt sich direkt auf das aus, was Sie [ Bildschirm „Zielspezifische Einstellungen](#destination-settings) sehen.
+* **[!UICONTROL Destination]**: Wählen Sie im Dropdown-Menü das Ziel aus, für das Sie Zielgruppen aktivieren möchten. Das hier ausgewählte Ziel wirkt sich direkt auf das aus, was Sie [&#x200B; Bildschirm „Zielspezifische Einstellungen](#destination-settings) sehen.
 * **[!UICONTROL Integration]**: Wählen Sie das Integrationskonto aus, das Sie für Ihr Ziel verwenden möchten.
 * **[!UICONTROL Identifier]**: Wählen Sie die von Ihrem Ziel unterstützten Kennungen aus. Derzeit sind die unterstützten Kennungen aller Ziele im Dropdown-Menü vorbefüllt.
 
@@ -458,9 +458,9 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >
 >Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Die [!DNL LiveRamp - Distribution]-Verbindung aktiviert Zielgruppen, die bereits über die Verbindung „LiveRamp - Onboarding“ in [ LiveRamp-Konto ](liveramp-onboarding.md) wurden.
+Die [!DNL LiveRamp - Distribution]-Verbindung aktiviert Zielgruppen, die bereits über die Verbindung „LiveRamp - Onboarding“ in [&#x200B; LiveRamp-Konto &#x200B;](liveramp-onboarding.md) wurden.
 
-Um Ihre Zielgruppen erfolgreich zu aktivieren, müssen Sie dieselben **auswählen** die Sie [zuvor eingeführt) ](liveramp-onboarding.md) LiveRamp haben.
+Um Ihre Zielgruppen erfolgreich zu aktivieren, müssen Sie dieselben **auswählen** die Sie [zuvor eingeführt) &#x200B;](liveramp-onboarding.md) LiveRamp haben.
 
 >[!IMPORTANT]
 >

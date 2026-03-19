@@ -29,7 +29,7 @@ In diesem Tutorial werden die Schritte zum Löschen von Zielkonten beschrieben, 
 
 Gehen Sie wie folgt vor, um vorhandene Zielkonten zu löschen.
 
-1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform ](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Accounts]** in der oberen Kopfzeile aus, um Ihre vorhandenen Konten anzuzeigen.
+1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform &#x200B;](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Accounts]** in der oberen Kopfzeile aus, um Ihre vorhandenen Konten anzuzeigen.
 
    ![Registerkarte „Konten“](../assets/ui/delete-accounts/accounts-tab.png)
 

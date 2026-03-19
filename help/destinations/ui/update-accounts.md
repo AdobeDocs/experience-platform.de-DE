@@ -29,7 +29,7 @@ Bei Batch-Zielen können Sie den Zugriffs- oder Geheimschlüssel aktualisieren, 
 
 Gehen Sie wie folgt vor, um Verbindungsdetails für vorhandene Ziele zu aktualisieren.
 
-1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform ](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Accounts]** in der oberen Kopfzeile aus, um Ihre vorhandenen Konten anzuzeigen.
+1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform &#x200B;](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Accounts]** in der oberen Kopfzeile aus, um Ihre vorhandenen Konten anzuzeigen.
 
    ![Registerkarte „Konten“](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -37,7 +37,7 @@ Gehen Sie wie folgt vor, um Verbindungsdetails für vorhandene Ziele zu aktualis
 
    ![Filtern von Zielkonten](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Klicken Sie auf die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie aktualisieren möchten. Es wird ein Popup-Bedienfeld angezeigt, das Optionen zum **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** und **[!UICONTROL Delete]** des Kontos bietet. Klicken Sie auf ![ Schaltfläche „Details bearbeiten](/help/images/icons/edit.png) **[!UICONTROL Edit details]**, um die Kontoinformationen zu bearbeiten.
+3. Klicken Sie auf die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie aktualisieren möchten. Es wird ein Popup-Bedienfeld angezeigt, das Optionen zum **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** und **[!UICONTROL Delete]** des Kontos bietet. Klicken Sie auf ![&#x200B; Schaltfläche „Details bearbeiten](/help/images/icons/edit.png) **[!UICONTROL Edit details]**, um die Kontoinformationen zu bearbeiten.
 
    ![Konto bearbeiten](../assets/ui/update-accounts/accounts-edit.png)
 

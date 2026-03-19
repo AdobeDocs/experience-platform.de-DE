@@ -63,7 +63,7 @@ Sowohl hartcodierte als auch vorlagenbasierte Felder haben ihre eigene Verwendun
 
 **Herstellen einer Verbindung zu Ihrem Ziel ohne Benutzereingabe**
 
-Wenn Benutzerinnen [ Benutzer in der Experience Platform](../../../ui/connect-destination.md)Benutzeroberfläche eine Verbindung zu Ihrem Ziel herstellen, möchten Sie möglicherweise den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
+Wenn Benutzerinnen [&#x200B; Benutzer in der Experience Platform](../../../ui/connect-destination.md)Benutzeroberfläche eine Verbindung zu Ihrem Ziel herstellen, möchten Sie möglicherweise den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
 
 Dazu können Sie die Verbindungsparameter der Zielplattform in der Server-Spezifikation hartcodieren. Wenn Sie in Ihrer Ziel-Server-Konfiguration hartcodierte Parameterwerte verwenden, wird die Verbindung zwischen Adobe Experience Platform und Ihrer Zielplattform ohne Benutzereingabe veranlasst.
 
@@ -106,7 +106,7 @@ Im folgenden Beispiel erstellt ein Partner eine [Echtzeit (Streaming)](#streamin
 }
 ```
 
-Damit Benutzerinnen und Benutzer einen Wert in der Experience Platform-Benutzeroberfläche auswählen können, muss der `region` auch in der [Zielkonfiguration“ ](../../authoring-api/destination-configuration/create-destination-configuration.md) ein Kundendatenfeld definiert werden, wie unten dargestellt:
+Damit Benutzerinnen und Benutzer einen Wert in der Experience Platform-Benutzeroberfläche auswählen können, muss der `region` auch in der [Zielkonfiguration“ &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) ein Kundendatenfeld definiert werden, wie unten dargestellt:
 
 ```json
 "customerDataFields":[
