@@ -2,10 +2,10 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: efa50881315d986940f7cb3afcbfcc30ef67c3a7
+source-git-commit: 5cbf63cc0a149d54de63e3e1797cae4098498fe8
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 16%
+source-wordcount: '1322'
+ht-degree: 18%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 16%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: März 2026**
 
@@ -46,7 +46,7 @@ Experience Platform bietet eine Reihe von Datenhygiene-Funktionen, mit denen Sie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Löschen von Datensätzen mit mehreren Datensätzen und nur Profilen (nur API) | Sie können eine einzelne Datensatz-ID, eine durch Kommas getrennte Liste von Datensatz-IDs oder das Literal `ALL` senden, `datasetId` Identitäten in einem, mehreren oder allen Datensätzen zu löschen. Sie können das Löschen auch auf Profil-Services beschränken, indem Sie `targetServices` auf `["identity","profile","ajo"]` festlegen, wodurch der Datalake unverändert bleibt. Weitere Informationen finden [&#x200B; im Handbuch &#x200B;](../hygiene/api/workorder.md) Löschen von Arbeitsaufträgen . |
+| Löschen von Datensätzen mit mehreren Datensätzen und nur Profilen (nur API) | Sie können eine einzelne Datensatz-ID, eine durch Kommas getrennte Liste von Datensatz-IDs oder das Literal `ALL` senden, `datasetId` Identitäten in einem, mehreren oder allen Datensätzen zu löschen. Sie können das Löschen auch auf Profil-Services beschränken, indem Sie `targetServices` auf `["identity","profile","ajo"]` festlegen, wodurch der Datalake unverändert bleibt. Weitere Informationen finden [ im Handbuch ](../hygiene/api/workorder.md) Löschen von Arbeitsaufträgen . |
 
 {style="table-layout:auto"}
 
@@ -74,12 +74,10 @@ Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](ht
 
 | Ziel | Beschreibung |
 | --- | --- |
-| Unterstützung für [Snowflake](../destinations/catalog/warehouses/snowflake.md)Streaming, mehrere Regionen | Der Snowflake Streaming-Connector ist jetzt für Kunden außerhalb der US-amerikanischen VA7-Region verfügbar. Verwenden Sie den Dropdown-Selektor Region , um die Region Snowflake auszuwählen, in der sich Ihr Konto befindet. Die Dokumentation wurde mit der erwarteten Datenstruktur für Snowflake-Streaming-Tabellen aktualisiert. |
-| Regionsauswahl für &lbrace;0[Snowflake Streaming und &lbrace;2](../destinations/catalog/warehouses/snowflake.md)Snowflake Batch) [&#128279;](../destinations/catalog/warehouses/snowflake-batch.md) | Mit dem neuen durchsuchbaren Dropdown-Menü, in dem Suche und Dropdown zu einem Steuerelement kombiniert sind, können Sie Ihre Region jetzt einfacher finden. |
+| [Regionsauswahl für Snowflake ](../destinations/catalog/warehouses/snowflake-batch.md)Batch) | Mit dem neuen durchsuchbaren Dropdown-Menü, in dem Suche und Dropdown zu einem Steuerelement kombiniert sind, können Sie Ihre Region jetzt einfacher finden. |
 | Exportieren von Zielgruppen-Metadaten in [Snowflake Batch](../destinations/catalog/warehouses/snowflake-batch.md)-Ziele | Die an dieses Ziel exportierten Dateien enthalten jetzt Zielgruppen-Metadaten. Die neue Tabellenstruktur gilt für alle neuen Zielverbindungen, die in Zukunft eingerichtet werden. Die alte Tabellenstruktur wird noch weitere drei Monate beibehalten, bevor sie entfernt wird. |
 | [!DNL Adobe Advertising Cloud DSP]-Verbindung | Die neue Adobe Advertising DSP-Verbindung bietet dieselben Funktionen wie die alte Verbindung sowie Unterstützung für zusätzliche Identitäten. |
-| Unterstützung externer Zielgruppen für [The Trade Desk CRM](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) und [Pinterest](../destinations/catalog/advertising/pinterest.md) | Sie können jetzt Zielgruppen über die Segmentierungs-Service-Segmente hinaus für das Trade Desk-CRM, Criteo und Pinterest aktivieren, einschließlich benutzerdefinierter Upload-Zielgruppen (aus CSV importiert), Lookalike-Zielgruppen, Federated-Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie Adobe Journey Optimizer erstellt wurden. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“ auf der Katalogseite jedes Ziels. |
-| Zielgruppenfilter im Aktivierungs-Workflow | Sie können Zielgruppen im **[!UICONTROL Select audiences]** Schritt jetzt mit demselben Erlebnis wie die Seite Zielgruppen suchen und filtern. Sie können beispielsweise nach der Herkunft der Zielgruppe filtern, um die gesuchte Zielgruppe einfach zu finden. |
+| Unterstützung externer Zielgruppen für [The Trade Desk CRM](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) und [Pinterest](../destinations/catalog/advertising/pinterest.md) | Sie können jetzt Zielgruppen über die Segmentierungs-Service-Segmente hinaus für das Trade Desk-CRM, Criteo und Pinterest aktivieren, einschließlich benutzerdefinierter Upload-Zielgruppen (aus CSV importiert), Lookalike-Zielgruppen, Federated-Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie Adobe Journey Optimizer erstellt wurden. Weitere Informationen finden Sie [ Abschnitt ](../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“ auf der Katalogseite jedes Ziels. |
 | Erhöhtes Limit für benutzerdefinierte Upload-Zielgruppen | Sie können jetzt bis zu 20 benutzerdefinierte Upload-Zielgruppen pro Zielinstanz aktivieren. Zuvor war diese Grenze 10. |
 | [Datei jetzt exportieren](../destinations/ui/export-file-now.md) und [Ad-hoc-Aktivierungs-API](../destinations/api/ad-hoc-activation-api.md)Unterstützung für externe Zielgruppen | Sie können jetzt beim Aktivieren für Batch-dateibasierte Ziele die API „Datei jetzt exportieren“ (UI) und die Ad-hoc-Aktivierungs-API mit externen Zielgruppen (z. B. benutzerdefiniertes Hochladen, Lookalike, Federated und Zielgruppen aus anderen Experience Platform-Programmen) verwenden. |
 | HTTP-API-Ziele mit OAuth 2 und mTLS | Sie können jetzt HTTP-API-Ziele erstellen und authentifizieren, die OAuth 2 verwenden, wenn der Authentifizierungsendpunkt gegenseitiges TLS (mTLS) erfordert. Der Token-Abruf während der Zieleinrichtung unterstützt jetzt mTLS. |
@@ -139,7 +137,7 @@ Weitere Informationen finden Sie unter [Query Service - Übersicht](../query-ser
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der [Übersicht über Ausführung und Betrieb](../run-and-operate/overview.md), [Prüfen von &#x200B;](../run-and-operate/job-schedules.md) und im [Handbuch zur Platform-Benutzeroberfläche](../landing/ui-guide.md).
+Weitere Informationen finden Sie in der [Übersicht über Ausführung und Betrieb](../run-and-operate/overview.md), [Prüfen von ](../run-and-operate/job-schedules.md) und im [Handbuch zur Platform-Benutzeroberfläche](../landing/ui-guide.md).
 
 ## Segmentierungs-Service {#segmentation}
 
@@ -181,5 +179,8 @@ Weitere Informationen finden Sie unter [Quelle – Übersicht](../sources/home.m
 <!--
 
 | Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
+
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
+| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
 
 -->
