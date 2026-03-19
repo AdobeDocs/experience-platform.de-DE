@@ -6,10 +6,10 @@ breadcrumb-title: Datenerfassung
 user-guide-description: Erfahren Sie, wie Sie Daten an Adobe Experience Platform senden.
 feature: Data Collection
 role: Developer
-source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
+source-git-commit: c848f821ea911c82531c6784a17df0116572cd86
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 34%
+source-wordcount: '152'
+ht-degree: 40%
 
 ---
 
@@ -103,6 +103,8 @@ ht-degree: 34%
       + [Überblick](use-cases/identity/id-overview.md)
       + [IDs von Erstanbieter-Geräten](use-cases/identity/first-party-device-ids.md)
       + [ID-Freigabe](use-cases/identity/id-sharing.md)
+   + MCP {#mcp}
+      + [ChatGPT-Apps](use-cases/mcp/chatgpt.md)
    + [Mehrere SDK-Instanzen](use-cases/multiple-instances.md)
    + Personalisierung {#personalization}
       + [Überblick](use-cases/personalization/pers-overview.md)
