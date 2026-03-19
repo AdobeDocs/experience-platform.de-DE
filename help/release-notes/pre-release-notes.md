@@ -46,7 +46,7 @@ Experience Platform bietet eine Reihe von Datenhygiene-Funktionen, mit denen Sie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Löschen von Datensätzen mit mehreren Datensätzen und nur Profilen (nur API) | Sie können eine einzelne Datensatz-ID, eine durch Kommas getrennte Liste von Datensatz-IDs oder das Literal `ALL` senden, `datasetId` Identitäten in einem, mehreren oder allen Datensätzen zu löschen. Sie können das Löschen auch auf Profil-Services beschränken, indem Sie `targetServices` auf `["identity","profile","ajo"]` festlegen, wodurch der Datalake unverändert bleibt. Weitere Informationen finden [ im Handbuch ](../hygiene/api/workorder.md) Löschen von Arbeitsaufträgen . |
+| Löschen von Datensätzen mit mehreren Datensätzen und nur Profilen (nur API) | Sie können eine einzelne Datensatz-ID, eine durch Kommas getrennte Liste von Datensatz-IDs oder das Literal `ALL` senden, `datasetId` Identitäten in einem, mehreren oder allen Datensätzen zu löschen. Sie können das Löschen auch auf Profil-Services beschränken, indem Sie `targetServices` auf `["identity","profile","ajo"]` festlegen, wodurch der Datalake unverändert bleibt. Weitere Informationen finden [&#x200B; im Handbuch &#x200B;](../hygiene/api/workorder.md) Löschen von Arbeitsaufträgen . |
 
 {style="table-layout:auto"}
 
@@ -74,10 +74,10 @@ Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](ht
 
 | Ziel | Beschreibung |
 | --- | --- |
-| [Regionsauswahl für Snowflake ](../destinations/catalog/warehouses/snowflake-batch.md)Batch) | Mit dem neuen durchsuchbaren Dropdown-Menü, in dem Suche und Dropdown zu einem Steuerelement kombiniert sind, können Sie Ihre Region jetzt einfacher finden. |
+| [Regionsauswahl für Snowflake &#x200B;](../destinations/catalog/warehouses/snowflake-batch.md)Batch) | Mit dem neuen durchsuchbaren Dropdown-Menü, in dem Suche und Dropdown zu einem Steuerelement kombiniert sind, können Sie Ihre Region jetzt einfacher finden. |
 | Exportieren von Zielgruppen-Metadaten in [Snowflake Batch](../destinations/catalog/warehouses/snowflake-batch.md)-Ziele | Die an dieses Ziel exportierten Dateien enthalten jetzt Zielgruppen-Metadaten. Die neue Tabellenstruktur gilt für alle neuen Zielverbindungen, die in Zukunft eingerichtet werden. Die alte Tabellenstruktur wird noch weitere drei Monate beibehalten, bevor sie entfernt wird. |
 | [!DNL Adobe Advertising Cloud DSP]-Verbindung | Die neue Adobe Advertising DSP-Verbindung bietet dieselben Funktionen wie die alte Verbindung sowie Unterstützung für zusätzliche Identitäten. |
-| Unterstützung externer Zielgruppen für [The Trade Desk CRM](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) und [Pinterest](../destinations/catalog/advertising/pinterest.md) | Sie können jetzt Zielgruppen über die Segmentierungs-Service-Segmente hinaus für das Trade Desk-CRM, Criteo und Pinterest aktivieren, einschließlich benutzerdefinierter Upload-Zielgruppen (aus CSV importiert), Lookalike-Zielgruppen, Federated-Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie Adobe Journey Optimizer erstellt wurden. Weitere Informationen finden Sie [ Abschnitt ](../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“ auf der Katalogseite jedes Ziels. |
+| Unterstützung externer Zielgruppen für [The Trade Desk CRM](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) und [Pinterest](../destinations/catalog/advertising/pinterest.md) | Sie können jetzt Zielgruppen über die Segmentierungs-Service-Segmente hinaus für das Trade Desk-CRM, Criteo und Pinterest aktivieren, einschließlich benutzerdefinierter Upload-Zielgruppen (aus CSV importiert), Lookalike-Zielgruppen, Federated-Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie Adobe Journey Optimizer erstellt wurden. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“ auf der Katalogseite jedes Ziels. |
 | Erhöhtes Limit für benutzerdefinierte Upload-Zielgruppen | Sie können jetzt bis zu 20 benutzerdefinierte Upload-Zielgruppen pro Zielinstanz aktivieren. Zuvor war diese Grenze 10. |
 | [Datei jetzt exportieren](../destinations/ui/export-file-now.md) und [Ad-hoc-Aktivierungs-API](../destinations/api/ad-hoc-activation-api.md)Unterstützung für externe Zielgruppen | Sie können jetzt beim Aktivieren für Batch-dateibasierte Ziele die API „Datei jetzt exportieren“ (UI) und die Ad-hoc-Aktivierungs-API mit externen Zielgruppen (z. B. benutzerdefiniertes Hochladen, Lookalike, Federated und Zielgruppen aus anderen Experience Platform-Programmen) verwenden. |
 | HTTP-API-Ziele mit OAuth 2 und mTLS | Sie können jetzt HTTP-API-Ziele erstellen und authentifizieren, die OAuth 2 verwenden, wenn der Authentifizierungsendpunkt gegenseitiges TLS (mTLS) erfordert. Der Token-Abruf während der Zieleinrichtung unterstützt jetzt mTLS. |
@@ -137,7 +137,7 @@ Weitere Informationen finden Sie unter [Query Service - Übersicht](../query-ser
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der [Übersicht über Ausführung und Betrieb](../run-and-operate/overview.md), [Prüfen von ](../run-and-operate/job-schedules.md) und im [Handbuch zur Platform-Benutzeroberfläche](../landing/ui-guide.md).
+Weitere Informationen finden Sie in der [Übersicht über Ausführung und Betrieb](../run-and-operate/overview.md), [Prüfen von &#x200B;](../run-and-operate/job-schedules.md) und im [Handbuch zur Platform-Benutzeroberfläche](../landing/ui-guide.md).
 
 ## Segmentierungs-Service {#segmentation}
 
