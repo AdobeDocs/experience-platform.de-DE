@@ -30,7 +30,7 @@ Mit der **[!UICONTROL Export file now]** können Sie eine vollständige Datei ex
 
 Der Dateiexport wird sofort ausgelöst und verwendet nur Daten aus dem letzten Schnappschuss der Zielgruppenbewertung. Sie enthält keine Profil- oder Identitätsänderungen, die nach der Erstellung eines Schnappschusses auftreten. Geplante Exporte dagegen umfassen sowohl Momentaufnahmendaten als auch inkrementelle Änderungen, die zwischen der Momentaufnahmerstellung und der Exportzeit auftreten.
 
-Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[ wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren ](/help/destinations/api/ad-hoc-activation-api.md).
+Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[&#x200B; wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren &#x200B;](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Geplante Exporte vs. On-Demand-Exporte {#scheduled-vs-ondemand}
 
