@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie über den Endpunkt „/destination-servers“ Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren, die mit Adobe Experience Platform Destination SDK erstellt wurden.
 title: Konfiguration der Dateiformatierung
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1094'
-ht-degree: 88%
+source-wordcount: '1092'
+ht-degree: 85%
 
 ---
 
@@ -48,7 +48,7 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 
 ## Unterstützte Parameter {#supported-parameters}
 
-Sie können verschiedene Eigenschaften der exportierten Dateien ändern, um sie an die Anforderungen des Dateiempfangssystems Ihres Ziels anzupassen, damit die von Experience Platform empfangenen Dateien optimal gelesen und interpretiert werden können.
+Sie können mehrere Eigenschaften der exportierten Dateien ändern, um sie an die Anforderungen des Dateiempfangssystems Ihres Ziels anzupassen, damit die von Experience Platform empfangenen Dateien optimal gelesen und interpretiert werden können.
 
 >[!NOTE]
 >

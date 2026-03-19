@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Warnhinweise;Ziele
 description: Sie können beim Erstellen eines Datenflusses Warnhinweise abonnieren, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: Abonnieren von kontextbezogenen Zielwarnhinweisen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 17%
+source-wordcount: '931'
+ht-degree: 13%
 
 ---
 
@@ -18,7 +18,7 @@ Sie können beim Erstellen eines Datenflusses Warnhinweise abonnieren, um Benach
 
 In diesem Dokument wird beschrieben, wie Sie Warnhinweise für Ihre Ziel-Datenflüsse abonnieren und empfangen können.
 
-## Erste Schritte
+## Erste Schritte {#getting-started}
 
 Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -36,7 +36,7 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 >[!IMPORTANT]
 >
->Sie müssen sofortige E-Mail-Benachrichtigungen für Ihr Experience Platform-Konto aktivieren, um E-Mail-basierte Warnhinweise für Ihre Datenflüsse zu erhalten.
+>Sie müssen für Ihr Experience Platform-Konto die sofortige Benachrichtigung über E-Mails aktivieren, um E-Mail-basierte Benachrichtigungen für Ihre Datenflüsse zu erhalten.
 
 Sie können Warnhinweise für Ihre Datenflüsse während des [!UICONTROL Configure new destination] Schritts des Workflows [Zielverbindung](connect-destination.md) aktivieren.
 
@@ -56,6 +56,8 @@ Die für Ziel-Datenflüsse verfügbaren Warnhinweise werden in der folgenden Tab
 | Erfolgreiche Ausführung des Zielflusses | Dieser Warnhinweis benachrichtigt Sie, wenn eine Zielgruppe erfolgreich für ein Ziel aktiviert wurde. |
 | Start der Ausführung des Zielflusses | Dieser Warnhinweis informiert Sie, wenn ein Zielfluss mit der Aktivierung einer Zielgruppe beginnt. |
 | Aktivierung der Überspringungsrate überschritten | Dieser Warnhinweis informiert Sie, wenn die Aktivierungsüberspringungsrate 1 % der gesamten Aktivierungen überschritten hat. Identitäten werden während der Aktivierung übersprungen, wenn sie fehlende Attribute oder eine Einverständnisverletzung aufweisen. |
+
+{style="table-layout:auto"}
 
 ## Warnungen erhalten {#receiving-alerts}
 

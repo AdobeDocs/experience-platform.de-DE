@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie Ihr Ziel für die unterstützten Konfigurationen der Identitäts- und Attributzuordnung konfigurieren.
 title: Unterstützte Zuordnungskonfigurationen
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 77%
@@ -33,6 +33,8 @@ Mit Destination SDK erstellte Echtzeit-(Streaming-)Ziele unterstützen die in de
 | --- | --- |
 | XDM-Attribut | Benutzerdefiniertes Attribut |
 | Identity-Namespace | Identity-Namespace |
+
+{style="table-layout:auto"}
 
 Im folgenden Konfigurationsbeispiel können Kundinnen und Kunden beide Zuordnungen in der obigen Tabelle verwenden.
 
@@ -87,6 +89,8 @@ Dateibasierte Ziele, die mit Destination SDK erstellt wurden, unterstützen die 
 | XDM-Attribut | Attribut/benutzerspezifisches Attribut |
 | Identity-Namespace | Attribut/benutzerspezifisches Attribut |
 | Identity-Namespace | Identity-Namespace |
+
+{style="table-layout:auto"}
 
 Im folgenden Konfigurationsbeispiel können Kundinnen und Kunden alle Zuordnungen aus der obigen Tabelle verwenden.
 
@@ -163,4 +167,4 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](aggregation-policy.md)
 * [Batch-Konfiguration](batch-configuration.md)
-* [Historische Profilqualifikationen](historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](historical-profile-qualifications.md)

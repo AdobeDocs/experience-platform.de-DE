@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Attribute der Benutzeroberfläche, wie z. B. den Dokumentations-Link, die Kategorie der Zielkarte sowie den Verbindungstyp und die Häufigkeit der Zielverbindungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Benutzeroberflächenattribute
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 83%
+source-wordcount: '796'
+ht-degree: 79%
 
 ---
 
@@ -48,6 +48,8 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 | Echtzeit-Integrationen (Streaming) | Ja |
 | Dateibasierte (Batch-)Integrationen | Ja |
 
+{style="table-layout:auto"}
+
 ## Unterstützte Parameter {#supported-parameters}
 
 ```json
@@ -66,7 +68,7 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 
 Verwenden Sie das folgende Format: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, wobei `YOURDESTINATION` der Name Ihres Ziels ist. Für ein Ziel mit dem Namen „Moviestar“ würden Sie `http://www.adobe.com/go/destinations-moviestar-en` verwenden.
 
-Benutzerinnen und Benutzer können Ihren Dokumentations-Link über die Zielkatalogseite in der Benutzeroberfläche anzeigen und aufrufen. Dafür müssen sie zu Ihrer Zielkarte navigieren und **[!UICONTROL Mehr Aktionen]** gefolgt von **[!UICONTROL Dokumentation anzeigen]** wählen, wie in der Abbildung unten dargestellt.
+Benutzerinnen und Benutzer können Ihren Dokumentations-Link über die Zielkatalogseite in der Benutzeroberfläche anzeigen und aufrufen. Dafür müssen sie zu Ihrer Zielkarte navigieren und **[!UICONTROL More actions]** auswählen und dann **[!UICONTROL View documentation]**, wie in der Abbildung unten dargestellt.
 
 ![UI-Bild, das den Ort des Dokumentations-Links anzeigt.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -94,7 +96,7 @@ Benutzerinnen und Benutzer können den Zielverbindungstyp auf der Registerkarte 
 
 `frequency` ist ein Zeichenfolgenparameter, der sich auf den von Ihrem Ziel unterstützten Typ des Datenexports bezieht. Setzen Sie diesen auf `Streaming` für API-basierte Integrationen oder auf `Batch`, wenn Sie Dateien in Ihre Ziele exportieren.
 
-Die Benutzerinnen und Benutzer können den Häufigkeitstyp auf der Seite **[!UICONTROL Datenfluss-Ausführungen]** jeder Zielverbindung sehen.
+Benutzerinnen und Benutzer können den Häufigkeitstyp auf der Seite **[!UICONTROL Dataflow runs]** jeder Zielverbindung sehen.
 
 ![UI-Bild, das den Ort des Häufigkeitstyps in der Benutzeroberfläche zeigt.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 
@@ -129,4 +131,4 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](aggregation-policy.md)
 * [Batch-Konfiguration](batch-configuration.md)
-* [Historische Profilqualifikationen](historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](historical-profile-qualifications.md)

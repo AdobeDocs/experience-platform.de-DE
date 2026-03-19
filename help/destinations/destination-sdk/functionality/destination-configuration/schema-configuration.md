@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie das Partnerschema für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration des Partnerschemas
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1912'
 ht-degree: 77%
@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # Konfiguration des Partnerschemas
 
-Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Wenn Daten in Experience Platform aufgenommen werden, werden sie nach einem XDM-Schema strukturiert. Weitere Informationen zum Schemaaufbaumodell, einschließlich Planungsgrundsätzen und Best Practices, finden Sie in den [Grundlagen des Schemaaufbaus](../../../../xdm/schema/composition.md).
+Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Wenn Daten in Experience Platform aufgenommen werden, werden sie nach einem XDM-Schema strukturiert. Weitere Informationen zum Schemakompositionsmodell, einschließlich Planungsgrundsätzen und Best Practices, finden Sie in den [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md).
 
 Beim Erstellen eines Ziels mit Destination SDK können Sie Ihr eigenes Partnerschema definieren, das von Ihrer Zielplattform verwendet werden soll. Dadurch können Benutzerinnen und Benutzer Profilattribute von Experience Platform bestimmten Feldern zuordnen, die von Ihrer Zielplattform erkannt werden, und zwar alles in der Experience Platform-Benutzeroberfläche.
 
@@ -148,7 +148,7 @@ In einer dynamischen Schemakonfiguration wird das Array `profileFields` durch de
 
 | Parameter | Typ | Erforderlich/Optional | Beschreibung |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | Zeichenfolge | Erforderlich | Gibt an, wie [!DNL Experience Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Experience Platform-Kundinnen und -Kunden über eine der [hier) beschriebenen Authentifizierungsmethoden bei &#x200B;](customer-authentication.md) System anmelden. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Experience Platform]-Kunde keine Authentifizierungs-Anmeldedaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie [ein Anmeldeinformationsobjekt erstellen](../../credentials-api/create-credential-configuration.md) mithilfe der Anmeldeinformationen-API und die ID des Anmeldeinformationsobjekts im `authenticationId` Parameter in der Konfiguration [Zielversand](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) übergeben. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
+| `dynamicEnum.authenticationRule` | Zeichenfolge | Erforderlich | Gibt an, wie [!DNL Experience Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Experience Platform-Kundinnen und -Kunden über eine der [hier) beschriebenen Authentifizierungsmethoden bei ](customer-authentication.md) System anmelden. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Experience Platform]-Kunde keine Authentifizierungs-Anmeldedaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie [ein Anmeldeinformationsobjekt erstellen](../../credentials-api/create-credential-configuration.md) mithilfe der Anmeldeinformationen-API und die ID des Anmeldeinformationsobjekts im `authenticationId` Parameter in der Konfiguration [Zielversand](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) übergeben. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `dynamicEnum.destinationServerId` | Zeichenfolge | Erforderlich | Die `instanceId` des dynamischen Schema-Servers. Dieser Ziel-Server enthält den API-Endpunkt, den Experience Platform aufruft, um das dynamische Schema abzurufen. |
 | `dynamicEnum.value` | Zeichenfolge | Erforderlich | Der Name des dynamischen Schemas, wie in der Konfiguration des dynamischen Schema-Servers definiert. |
 | `dynamicEnum.responseFormat` | Zeichenfolge | Erforderlich | Die Einstellung ist immer `SCHEMA`, wenn ein dynamisches Schema definiert wird. |
@@ -251,7 +251,7 @@ Um Ihr Ziel so zu konfigurieren, dass es die Aktivierung [extern generierter Zie
 }
 ```
 
-Weitere Informationen zur [-Funktion finden Sie &#x200B;](#attributes-schema) den Eigenschaftsbeschreibungen in `segmentNamespaceDenyList`Tabelle) weiter oben auf dieser Seite.
+Weitere Informationen zur [-Funktion finden Sie ](#attributes-schema) den Eigenschaftsbeschreibungen in `segmentNamespaceDenyList`Tabelle) weiter oben auf dieser Seite.
 
 ## Nächste Schritte {#next-steps}
 

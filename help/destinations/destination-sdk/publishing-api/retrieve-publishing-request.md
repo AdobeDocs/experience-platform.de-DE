@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem Details zu einer Zielveröffentlichungsanfrage über Adobe Experience Platform Destination SDK abgerufen werden.
 title: Abrufen einer Zielveröffentlichungsanfrage
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 98%
+source-wordcount: '835'
+ht-degree: 94%
 
 ---
 
@@ -32,7 +32,7 @@ Verwenden Sie den API-Endpunkt für Veröffentlichungsziele, um eine Veröffentl
 
 ## Erste Schritte mit API-Vorgängen zur Zielveröffentlichung {#get-started}
 
-Bevor Sie fortfahren, lesen Sie bitte [Erste Schritte](../getting-started.md), um sich wichtige Informationen zu verschaffen, die Sie benötigen, um die API erfolgreich aufrufen zu können. Dies betrifft auch Informationen zur Vorgehensweise beim Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Header.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Auflisten der Zielveröffentlichungsanfragen {#retrieve-list}
 
@@ -181,6 +181,6 @@ Wenn Sie eine `DESTINATION_ID` im API-Aufruf übergeben haben, gibt die Antwort 
 
 >[!ENDTABS]
 
-## Umgang mit API-Fehlern
+## Umgang mit API-Fehlern {#error-handling}
 
 Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.

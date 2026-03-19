@@ -5,7 +5,7 @@ badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type="Informati
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 28%
@@ -14,13 +14,13 @@ ht-degree: 28%
 
 # Audience Analysis-Ziel
 
-Mit dem [!UICONTROL Audience Analysis] Ziel können Sie Adobe Experience Platform-Zielgruppendaten in [Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de). Sie können auswählen, welche Zielgruppen in die resultierenden angereicherten Daten aufgenommen werden sollen. Zielgruppenqualifikationen sind dann als Dimensionen in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=de)-Berichten verfügbar.
+Mit dem [!UICONTROL Audience Analysis] Ziel können Sie Adobe Experience Platform-Zielgruppendaten in [Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de). Sie können auswählen, welche Zielgruppen in die resultierenden angereicherten Daten aufgenommen werden sollen. Zielgruppenqualifikationen sind dann als Dimensionen in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html)-Berichten verfügbar.
 
 >[!AVAILABILITY]
 >
 >Dieses Ziel befindet sich in einer eingeschränkten Testphase. Wenn Sie an der Verwendung dieses Ziels interessiert sind, wenden Sie sich an Ihr Adobe Account Team.
 
-## Voraussetzungen
+## Voraussetzungen {#prerequisites}
 
 Vor der Verwendung dieses Ziels ist Folgendes erforderlich:
 
@@ -28,7 +28,7 @@ Vor der Verwendung dieses Ziels ist Folgendes erforderlich:
 * Sie müssen für die Verwendung von Customer Journey Analytics bereitgestellt werden.
 * Mindestens eine Zielgruppe muss in Adobe Experience Platform erstellt worden sein.
 
-## Unterstützte Identitäten
+## Unterstützte Identitäten {#supported-identities}
 
 Die Zielgruppenanalyse unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md). Normalerweise wird eine Experience Cloud ID (ECID) verwendet.
 
@@ -43,13 +43,13 @@ Die Zielgruppenanalyse unterstützt die Aktivierung von Identitäten, die in der
 
 {style="table-layout:auto"}
 
-## Unterstützte Zielgruppen
+## Unterstützte Zielgruppen {#supported-audiences}
 
 Bei der Verwendung dieses Ziels werden die folgenden Typen von Zielgruppen unterstützt:
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -68,7 +68,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 {style="table-layout:auto"}
 
 
-## Exporttyp und -häufigkeit
+## Exporttyp und -häufigkeit {#export-type-frequency}
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
@@ -79,15 +79,15 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 {style="table-layout:auto"}
 
-## Neues Ziel konfigurieren
+## Neues Ziel konfigurieren {#configure-destination}
 
 >[!IMPORTANT]
-> 
->Um ein Ziel zu erstellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[. &#x200B;](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>
+>Um ein Ziel zu erstellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[. ](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Um dieses Ziel zu erstellen, führen Sie die Schritte aus, die im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
-### Zieldetails
+### Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
@@ -96,7 +96,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Datastream ID]**: Die Datenstrom-ID, die Sie mit qualifizierten Zielgruppen anreichern möchten. Sie können diese ID im [Datenströme-Manager](/help/datastreams/overview.md) abrufen.
 * **[!UICONTROL Integration alias]**: Der Integrationsalias.
 
-### Warnhinweise
+### Warnhinweise {#alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
@@ -104,7 +104,7 @@ Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenf
 
 Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
-### Governance-Richtlinie und Durchsetzungsmaßnahmen
+### Governance-Richtlinie und Durchsetzungsmaßnahmen {#governance-policy}
 
 In diesem optionalen Abschnitt können Sie Ihre Data-Governance-Richtlinien definieren und sicherstellen, dass die verwendeten Daten konform sind, wenn Zielgruppen gesendet und aktiv sind.
 
@@ -113,7 +113,7 @@ Wenn Sie die gewünschten Marketing-Aktionen für das Ziel ausgewählt haben, kl
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Nachdem das Ziel erstellt wurde, können Sie die gewünschten Zielgruppen für das Ziel aktivieren.

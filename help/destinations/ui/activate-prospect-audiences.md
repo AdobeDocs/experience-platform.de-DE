@@ -3,9 +3,9 @@ title: Aktivieren von potenziellen Zielgruppen für Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie potenzielle Zielgruppen für Ziele aktivieren
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 24%
 
 ---
@@ -47,7 +47,7 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 >[!TIP]
 >
->Die Ziele, die Profil-Audiences exportieren können, werden mit einem Symbol oben rechts auf der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die potenzielle Audiences exportieren können ([&#x200B; weiter oben auf der Seite &#x200B;](#supported-destinations).
+>Die Ziele, die Profil-Audiences exportieren können, werden mit einem Symbol oben rechts auf der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die potenzielle Audiences exportieren können ([ weiter oben auf der Seite ](#supported-destinations).
 
 ![Amazon S3-Zielseite, auf der Profil-Zielgruppen exportiert werden können, hervorgehoben.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
@@ -59,15 +59,19 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 ![Zielaktivierungs-Workflow mit hervorgehobenem Steuerelement „Interessenten“.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
-1. Fahren Sie mit dem nächsten Abschnitt fort[&#x200B; um Ihre Profil-Audiences &#x200B;](#select-profile-audiences) exportieren.
+1. Fahren Sie mit dem nächsten Abschnitt fort[ um Ihre Profil-Audiences ](#select-profile-audiences) exportieren.
 
 ## Zielgruppen des potenziellen Kunden auswählen {#select-prospect-audiences}
 
-Aktivieren Sie die Kontrollkästchen links neben den Namen der potenziellen Zielgruppen, um die Zielgruppen auszuwählen, die Sie an das Ziel exportieren möchten, und klicken Sie dann auf **[!UICONTROL Next]**. Beachten Sie, dass in dieser Ansicht nur die Zielgruppen potenzieller Kundinnen und Kunden angezeigt werden. Andere Zielgruppen werden nicht angezeigt.
+Aktivieren Sie die Kontrollkästchen links neben den Namen der potenziellen Zielgruppen, um die Zielgruppen auszuwählen, die Sie an das Ziel exportieren möchten, und klicken Sie dann auf **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>In dieser Ansicht werden nur die Zielgruppen potenzieller Kundinnen und Kunden angezeigt, keine anderen Zielgruppen.
 
 ![Workflow für den Datensatzexport, der den Schritt „Zielgruppen auswählen“ zeigt, in dem Sie auswählen können, welche potenziellen Zielgruppen exportiert werden sollen.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
-## Planung und nächste Schritte
+## Planung und nächste Schritte {#scheduling-and-next-steps}
 
 Für den Rest des Aktivierungs-Workflows zum Exportieren von potenziellen Zielgruppen lesen Sie das Tutorial zum Aktivieren von Daten für dateibasierte Ziele. Fahren Sie mit dem [Schritt Zielgruppenexport planen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) fort.
 

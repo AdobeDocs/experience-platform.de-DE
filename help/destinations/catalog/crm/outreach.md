@@ -3,9 +3,9 @@ keywords: crm;CRM;CRM-Ziele;Kontaktaufnahme;CRM-Ziel für Kontaktaufnahme
 title: Outreach-Verbindung
 description: Mit dem Ziel „Kontaktaufnahme“ können Sie Ihre Kontodaten exportieren und in „Kontaktaufnahme“ für Ihre Geschäftsanforderungen aktivieren.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1808'
 ht-degree: 29%
 
 ---
@@ -28,7 +28,7 @@ Als Marketing-Experte können Sie Ihren Interessenten personalisierte Erlebnisse
 
 ### Voraussetzungen für Experience Platform {#prerequisites-in-experience-platform}
 
-Vor der Aktivierung der Daten für das [!DNL Outreach]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) verfügen, die in [!DNL Experience Platform] erstellt wurden.
+Vor der Aktivierung der Daten für das [!DNL Outreach]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) verfügen, die in [!DNL Experience Platform] erstellt wurden.
 
 Weitere Informationen finden Sie in der Adobe[Dokumentation zur Schemafeldgruppe „Details zur Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) , wenn Sie Anleitungen zu Zielgruppenstatus benötigen.
 
@@ -38,7 +38,7 @@ Beachten Sie die folgenden Voraussetzungen in [!DNL Outreach], um Daten aus Expe
 
 #### Sie benötigen ein Outreach-Konto {#prerequisites-account}
 
-Navigieren Sie zur [!DNL Outreach] [Anmelden](https://accounts.outreach.io/users/sign_in)-Seite, um sich zu registrieren und ein Konto zu erstellen, falls Sie noch keines haben. Weitere Informationen finden Sie auch auf [!DNL Outreach] Seite [&#x200B; &#x200B;](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account)-Support .
+Navigieren Sie zur [!DNL Outreach] [Anmelden](https://accounts.outreach.io/users/sign_in)-Seite, um sich zu registrieren und ein Konto zu erstellen, falls Sie noch keines haben. Weitere Informationen finden Sie auch auf [!DNL Outreach] Seite [ ](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account)-Support .
 
 Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Outreach]-CRM-Ziel authentifizieren:
 
@@ -49,7 +49,7 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Outreach]-CRM-Ziel 
 
 #### Einrichten von benutzerdefinierten Feldbezeichnungen {#prerequisites-custom-fields}
 
-[!DNL Outreach] unterstützt benutzerdefinierte Felder für [Interessenten](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Weitere Anleitungen finden [&#x200B; unter „Hinzufügen eines benutzerdefinierten Felds &#x200B;](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) Outreach“. Um die Identifizierung zu erleichtern, wird empfohlen, die Kennzeichnungen manuell auf die entsprechenden Zielgruppennamen zu aktualisieren, anstatt die Standardwerte beizubehalten. Beispiel:
+[!DNL Outreach] unterstützt benutzerdefinierte Felder für [Interessenten](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Weitere Anleitungen finden [ unter „Hinzufügen eines benutzerdefinierten Felds ](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) Outreach“. Um die Identifizierung zu erleichtern, wird empfohlen, die Kennzeichnungen manuell auf die entsprechenden Zielgruppennamen zu aktualisieren, anstatt die Standardwerte beizubehalten. Beispiel:
 
 Seite „Einstellungen“ für Interessenten mit benutzerdefinierten Feldern [!DNL Outreach].
 ![Screenshot der Outreach-Benutzeroberfläche mit den benutzerdefinierten Feldern auf der Einstellungsseite.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
@@ -61,13 +61,13 @@ Seite „Einstellungen“ für Interessenten mit benutzerdefinierten Feldern [!D
 >
 > Bezeichnungsnamen dienen nur der einfachen Identifizierung. Sie werden nicht zur Aktualisierung von potenziellen Kunden verwendet.
 
-## Leitlinien
+## Leitlinien {#guardrails}
 
 Die [!DNL Outreach]-API erlaubt eine Ratenbeschränkung von 10.000 Anfragen pro Stunde und Benutzer. Wenn Sie diese Grenze erreichen, erhalten Sie eine `429` Antwort mit der folgenden Nachricht: `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
 
 Wenn Sie diese Nachricht erhalten haben, müssen Sie Ihren Zeitplan für den Zielgruppenexport aktualisieren, um den Schwellenwert für die Rate einzuhalten.
 
-Weitere Informationen finden [[!DNL Outreach]  in der &#x200B;](https://api.outreach.io/api/v2/docs#rate-limiting).
+Weitere Informationen finden [[!DNL Outreach]  in der ](https://api.outreach.io/api/v2/docs#rate-limiting).
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -83,7 +83,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -116,7 +116,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
-> 
+>
 > Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Manage Destinations]** [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
@@ -159,9 +159,9 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
@@ -169,7 +169,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL Outreach]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Experience Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen. Um Ihre XDM-Felder den [!DNL Outreach]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie im [!UICONTROL Mapping] Schritt auf **[!UICONTROL Add new mapping]**. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
+1. Wählen Sie im [!UICONTROL Mapping] Schritt **[!UICONTROL Add new mapping]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
    Screenshot der ![Experience Platform-Benutzeroberfläche mit Informationen zum Hinzufügen einer neuen Zuordnung](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. Wählen Sie im Fenster [!UICONTROL Select source field] die Kategorie **[!UICONTROL Select identity namespace]** aus und fügen Sie die gewünschten Zuordnungen hinzu.
@@ -185,7 +185,7 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
      |---|---|---|
      | `Oid` | `OutreachId` | Ja |
 
-   * **[!UICONTROL Select custom attributes]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im [!UICONTROL Attribute name] definieren. Eine umfassende Liste [[!DNL Outreach]  unterstützten Attribute finden &#x200B;](https://api.outreach.io/api/v2/docs#prospect) in der Dokumentation zum Interessenten .
+   * **[!UICONTROL Select custom attributes]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im [!UICONTROL Attribute name] definieren. Eine umfassende Liste [[!DNL Outreach]  unterstützten Attribute finden ](https://api.outreach.io/api/v2/docs#prospect) in der Dokumentation zum Interessenten .
      Screenshot der Experience Platform-Benutzeroberfläche mit Ziel-Zuordnung unter Verwendung von LastName.![](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Outreach]-Instanz hinzu:
@@ -206,10 +206,10 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
 
   >[!IMPORTANT]
   >
-  > * Der in der *verwendete numerische Wert `N`(*) [!UICONTROL Mapping ID] sollte mit dem benutzerdefinierten Attributschlüssel übereinstimmen, der mit dem numerischen Wert in [!DNL Outreach] Suffix versehen ist. Beispiel: *Benutzerdefiniertes Feld `N` Bezeichnung*.
+  > * Der in der *verwendete numerische Wert `N`(*)[!UICONTROL Mapping ID] sollte mit dem benutzerdefinierten Attributschlüssel übereinstimmen, der mit dem numerischen Wert in [!DNL Outreach] Suffix versehen ist. Beispiel: *Benutzerdefiniertes Feld `N` Bezeichnung*.
   > * Sie müssen nur den numerischen Wert angeben, nicht die gesamte benutzerdefinierte Feldbezeichnung.
   > * [!DNL Outreach] unterstützt maximal 150 benutzerdefinierte Beschriftungsfelder.
-  > * Weitere Informationen finden [[!DNL Outreach]  in der Dokumentation &#x200B;](https://api.outreach.io/api/v2/docs#prospect) Interessenten .
+  > * Weitere Informationen finden [[!DNL Outreach]  in der Dokumentation ](https://api.outreach.io/api/v2/docs#prospect) Interessenten .
 
    * Beispiel:
 

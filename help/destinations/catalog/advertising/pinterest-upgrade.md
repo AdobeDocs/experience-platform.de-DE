@@ -1,12 +1,12 @@
 ---
 title: Pinterest-Zielmigration zur neuen API. Kundenaktion erforderlich.
-description: Pinterest stellt die v4-Advertiser-API ein, die derzeit vom Pinterest-Ziel in Real-Time CDP verwendet wird. Verstehen Sie Ihre Aktionselemente, um nahtlos auf die neue API umzusteigen, ohne Ihre Pinterest-Kampagnen zu unterbrechen.
+description: Pinterest stellt die v4-Advertiser-API ein, die derzeit vom Pinterest-Ziel in Real-Time CDP verwendet wird. Machen Sie sich mit Ihren Aktionselementen vertraut, um nahtlos auf die neue API zu wechseln, ohne Ihre Pinterest-Kampagnen zu unterbrechen.
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: e3341ec6f62844858ecda7dd4db70d085f0bf217
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -17,29 +17,29 @@ ht-degree: 0%
 >
 >Die Kundenaktionselemente auf dieser Seite gelten für Sie, wenn Ihr Unternehmen vor dem 16. November 2023, dem Datum, an dem das neue **[!UICONTROL Pinterest]**-Ziel mit der neuesten Pinterest-API zum Zielkatalog hinzugefügt wurde, Datenflüsse zum Exportieren von Daten in Pinterest eingerichtet hat.
 
-## Was geschieht?
+## Was geschieht? {#what-is-happening}
 
-Pinterest hat die v4-Advertiser-API veraltet, die vom [Pinterest-Ziel](/help/destinations/catalog/advertising/pinterest.md) in Real-Time CDP verwendet wurde. Adobe aktualisierte das Ziel für die Verwendung der [v5 Advertiser-API](https://developers.pinterest.com/docs/getting-started/migration/). Lesen Sie diese Seite, um Ihre Aktionselemente zu verstehen, damit Sie nahtlos zur neuen API wechseln können, ohne Ihre Pinterest-Kampagnen zu unterbrechen.
+Pinterest hat die v4-Advertiser-API veraltet, die vom [Pinterest-Ziel](/help/destinations/catalog/advertising/pinterest.md) in Real-Time CDP verwendet wurde. Adobe hat das Ziel aktualisiert, um die [v5 Advertiser-API ](https://developers.pinterest.com/docs/getting-started/migration/) verwenden. Lesen Sie diese Seite, um Ihre Aktionselemente zu verstehen, mit denen Sie nahtlos zur neuen API wechseln können, ohne Ihre Pinterest-Kampagnen zu unterbrechen.
 
-## Warum werde ich benachrichtigt?
+## Warum werde ich benachrichtigt? {#why-notified}
 
 Wir haben festgestellt, dass Ihr Unternehmen über aktive Datenflüsse zur Aktivierung von Zielgruppen in Pinterest verfügt.
 
-## Was ist der Plan?
+## Was ist der Plan? {#what-is-the-plan}
 
 Adobe hat eine neue Pinterest-Zielkarte veröffentlicht, die die Pinterest-API v5 nutzt und Ihre vorhandenen Datenflüsse in der neuen Verbindung beibehält.
 
-## Muss ich etwas tun, damit meine aktivierten Zielgruppen weiterhin funktionieren?
+## Muss ich etwas tun, damit meine aktivierten Zielgruppen weiterhin funktionieren? {#action-required}
 
 Ja, vor dem 18. Januar 2024 müssen Sie sich mit Ihrem Pinterest Advertiser-Konto in Real-Time CDP beim neuen Pinterest-Ziel authentifizieren. Detaillierte Anweisungen finden Sie unten.
 
 ### Erneutes Authentifizieren bei Pinterest {#reauthenticate}
 
-1. Navigieren Sie **[!UICONTROL Ziele > Konten]** und verwenden Sie den Filter auf dem Bildschirm, um nur das Pinterest-Ziel zu filtern.
+1. Navigieren Sie zu **[!UICONTROL Destinations > Accounts]** und verwenden Sie den Filter auf dem Bildschirm, um nur das Pinterest-Ziel zu filtern.
    ![Nur Pinterest-Konten filtern](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. Wählen Sie am Ziel **Pinterest** das Drei-Punkte-Symbol … und anschließend **[!UICONTROL Details bearbeiten]**.
+2. Wählen Sie am Ziel **** Pinterest&quot; das Symbol mit den drei Punkten … und wählen Sie **[!UICONTROL Edit details]**.
    ![Details bearbeiten auswählen](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
-3. Wählen Sie **[!UICONTROL OAuth erneut]** und melden Sie sich bei Ihrem Pinterest-Konto an.
+3. Wählen Sie **[!UICONTROL Reconnect OAuth]** aus und melden Sie sich bei Ihrem Pinterest-Konto an.
    ![Wählen Sie OAuth erneut verbinden aus](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. Wechseln Sie zum Aktionselement im folgenden Abschnitt
 
@@ -47,9 +47,9 @@ Ja, vor dem 18. Januar 2024 müssen Sie sich mit Ihrem Pinterest Advertiser-Kont
 
 Anschließend müssen Sie die Datenflüsse zur neuen **[!UICONTROL Pinterest]**-Karte aktivieren.
 
-1. Navigieren Sie zu **[!UICONTROL Ziele > Durchsuchen]** und verwenden Sie den Filter auf dem Bildschirm, um nur das **[!UICONTROL Pinterest]**-Ziel zu filtern.
+1. Navigieren Sie zu **[!UICONTROL Destinations > Browse]** und verwenden Sie den Filter auf dem Bildschirm, um nur das **[!UICONTROL Pinterest]** Ziel zu filtern.
    ![Filtern Sie Pinterest-Datenflüsse nur auf der Registerkarte Durchsuchen](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Wählen Sie den Hyperlink-Verbindungsnamen (im obigen Screenshot-Beispiel die Treuekampagne) zum Ziel **[!UICONTROL Pinterest]** aus und schalten Sie den Umschalter **[!UICONTROL Aktivieren]** auf **Ein** um.
+2. Wählen Sie den Hyperlink-Verbindungsnamen (im obigen Screenshot-Beispiel die Treuekampagne) zum **[!UICONTROL Pinterest]** Ziel aus und schalten Sie den **[!UICONTROL Enable]**-Umschalter auf **ein**.
    ![Ein-/Ausschalten für neue Verbindungen und Aus für alte Verbindungen](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
@@ -58,7 +58,7 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-## Können Sie einige allgemeine Timelines freigeben?
+## Können Sie einige allgemeine Timelines freigeben? {#high-level-timelines}
 
 Ja, siehe unten:
 
@@ -75,9 +75,9 @@ Ja, siehe unten:
 
 -->
 
-**Bis zum 15. Dezember 2023**: <span class="preview">Kundenaktion 1</span>. Sie müssen sich erneut bei Pinterest authentifizieren, damit die neue Karte mit Pinterest verbunden ist. Vollständige Anweisungen finden Sie [&#x200B; (diesem Abschnitt](#reauthenticate).
+**Bis zum 15. Dezember 2023**: <span class="preview">Kundenaktion 1</span>. Sie müssen sich erneut bei Pinterest authentifizieren, damit die neue Karte mit Pinterest verbunden ist. Vollständige Anweisungen finden Sie [ (diesem Abschnitt](#reauthenticate).
 
-<span class="preview">Kundenaktion 2</span>.Dann müssen Sie die Datenflüsse in der neuen Karte aktivieren. Vollständige Anweisungen finden Sie [&#x200B; (diesem Abschnitt](#disable-old-enable-new-flows).
+<span class="preview">Kundenaktion 2</span>.Dann müssen Sie die Datenflüsse in der neuen Karte aktivieren. Vollständige Anweisungen finden Sie [ (diesem Abschnitt](#disable-old-enable-new-flows).
 
 <!--
 

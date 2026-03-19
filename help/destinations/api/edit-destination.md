@@ -4,10 +4,10 @@ title: Bearbeiten von Zielverbindungen mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie verschiedene Komponenten einer Zielverbindung mithilfe der Flow Service-API bearbeiten können.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1610'
+ht-degree: 25%
 
 ---
 
@@ -17,7 +17,7 @@ In diesem Tutorial werden die Schritte zum Bearbeiten verschiedener Komponenten 
 
 >[!NOTE]
 >
-> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch in der Benutzeroberfläche von Experience Platform unterstützt. Weitere Informationen finden Sie im Tutorial [&#x200B; Bearbeiten von Zielen &#x200B;](/help/destinations/ui/edit-destination.md) der Benutzeroberfläche .
+> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch in der Benutzeroberfläche von Experience Platform unterstützt. Weitere Informationen finden Sie im Tutorial [ Bearbeiten von Zielen ](/help/destinations/ui/edit-destination.md) der Benutzeroberfläche .
 
 ## Erste Schritte {#get-started}
 
@@ -32,7 +32,7 @@ Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten 
 * [Ziele](../home.md): [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mithilfe der [!DNL Flow Service]-API erfolgreich aktualisieren zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mithilfe der [!DNL Flow Service]-API erfolgreich zu aktualisieren.
 
 ### Lesen von Beispiel-API-Aufrufen {#reading-sample-api-calls}
 
@@ -40,7 +40,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-for-required-headers}
 
-Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -64,7 +64,7 @@ Der erste Schritt bei der Bearbeitung Ihrer Zielverbindung besteht darin, Datenf
 
 >[!TIP]
 >
->Sie können die Experience Platform-Benutzeroberfläche verwenden, um die gewünschte Datenfluss-ID eines Ziels abzurufen. Gehen Sie **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]**, wählen Sie den gewünschten Zieldatenfluss aus und suchen Sie die Ziel-ID in der rechten Leiste. Die Ziel-ID ist der Wert, den Sie als Fluss-ID im nächsten Schritt verwenden werden.
+>Sie können die Experience Platform-Benutzeroberfläche verwenden, um die gewünschte Datenfluss-ID eines Ziels abzurufen. Gehen Sie zu **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, wählen Sie den gewünschten Ziel-Datenfluss aus und suchen Sie die Ziel-ID in der rechten Leiste. Die Ziel-ID ist der Wert, den Sie als Fluss-ID im nächsten Schritt verwenden werden.
 >
 > ![Abrufen der Ziel-ID über die Experience Platform-Benutzeroberfläche](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
@@ -79,6 +79,8 @@ GET /flows/{FLOW_ID}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{FLOW_ID}` | Der eindeutige `id` für den Ziel-Datenfluss, den Sie abrufen möchten. |
+
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -233,6 +235,8 @@ curl -X PATCH \
 | `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
+{style="table-layout:auto"}
+
 **Antwort**
 
 Bei einer erfolgreichen Antwort werden Ihre Zielverbindungs-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Zielverbindungs-ID angeben.
@@ -248,7 +252,7 @@ Bei einer erfolgreichen Antwort werden Ihre Zielverbindungs-ID und ein aktualisi
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die Parameter einer [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md)- oder [[!DNL Google Ad Manager 360] Ziel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details)-Verbindung, um das neue Feld [**[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**](/help/release-notes/2023/april-2023.md#destinations) hinzuzufügen.
+Die folgende Anfrage aktualisiert die Parameter einer [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md)- oder [[!DNL Google Ad Manager 360] Ziel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details)-Verbindung, um das neue [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations) hinzuzufügen.
 
 ```shell
 curl -X PATCH \
@@ -272,6 +276,8 @@ curl -X PATCH \
 | `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Die Operationen umfassen `add`, `replace` und `remove`. |
 | `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
+
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -314,6 +320,8 @@ curl -X PATCH \
 | `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Die Operationen umfassen `add`, `replace` und `remove`. |
 | `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
+
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -392,6 +400,8 @@ curl -X PATCH \
 | `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
+{style="table-layout:auto"}
+
 **Antwort**
 
 Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualisiertes E-Tag angegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Basisverbindungs-ID angeben.
@@ -434,6 +444,8 @@ curl -X PATCH \
 | `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
+{style="table-layout:auto"}
+
 **Antwort**
 
 Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualisiertes E-Tag angegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Basisverbindungs-ID angeben.
@@ -451,7 +463,7 @@ Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualis
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

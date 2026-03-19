@@ -2,10 +2,10 @@
 title: Umgang mit Identitäten im Aktivierungs-Workflow für Ziele
 description: Erfahren Sie, wie der Identitätsexport im Aktivierungs-Workflow je nach Zieltyp verarbeitet wird.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 99%
+source-wordcount: '1134'
+ht-degree: 83%
 
 ---
 
@@ -33,7 +33,7 @@ Als Problemumgehung können Sie dem Export weitere Identitäten hinzufügen, wen
 
 ## Unterschiede zwischen dem Export einer Identität aus einer Identitätszuordnung und dem Export einer Identität als XDM-Attribut {#identity-map-or-attribute}
 
-Die Anzahl der exportierten Datensätze kann unterschiedlich sein, je nachdem, ob Sie Identitäten aus der Identitätszuordnung für den Export auswählen oder Identitäten, die als Attribute in Experience Platform aufgenommen wurden. [Zusammenführungsrichtlinien](/help/profile/merge-policies/overview.md) spielen ebenfalls eine wichtige Rolle bei der Anzahl der Datensätze, die exportiert werden, wenn Sie Identitäten aus der Identitätszuordnung auswählen.
+Die Anzahl der exportierten Einträge kann unterschiedlich sein, je nachdem, ob Sie Identitäten aus der Identitätszuordnung für den Export auswählen oder Identitäten, die als Attribute in Experience Platform aufgenommen wurden. [Zusammenführungsrichtlinien](/help/profile/merge-policies/overview.md) spielen ebenfalls eine wichtige Rolle bei der Anzahl der Einträge, die exportiert werden, wenn Sie Identitäten aus der Identitätszuordnung auswählen.
 
 Angenommen, Ihnen liegen beispielsweise aus zwei verschiedenen Datensätzen die folgenden Profilfragmente vor, die zu einem Kundenprofil zusammengeführt werden:
 
@@ -43,6 +43,7 @@ Angenommen, Ihnen liegen beispielsweise aus zwei verschiedenen Datensätzen die 
 |---------|----------|---------|--------|
 | email1, Loyalty ID1 | John | Doe | email 1 |
 
+{style="table-layout:auto"}
 
 **Profilfragment 2**
 
@@ -50,19 +51,23 @@ Angenommen, Ihnen liegen beispielsweise aus zwei verschiedenen Datensätzen die 
 |---------|----------|---------|--------|
 | email2, Loyalty ID1 | John | Doe | email 2 |
 
+{style="table-layout:auto"}
+
 Das zusammengeführte Profil würde wie folgt aussehen:
 
 | Identitätszuordnung | Vorname | Nachname | E-Mail-Attribut |
 |---------|----------|---------|--------|
 | email1, email2, Loyalty ID1 | John | Doe | email 2 |
 
+{style="table-layout:auto"}
+
 Das Exportverhalten variiert je nachdem, ob Sie `IdentityMap: Email` oder `xdm: personalEmail.address` für den Export auswählen.
 
-Wenn kundenseitig `IdentityMap: Email` aktiviert wird, enthält die exportierte Datei zwei Datensätze, einen für email1 und einen weiteren für email2.
+Wenn kundenseitig `IdentityMap: Email` aktiviert wird, enthält die exportierte Datei zwei Einträge, einen für email1 und einen weiteren für email2.
 
-Wenn jedoch eine Kundin oder ein Kunde `xdm: personalEmail.address` aktiviert, ist nur email2 im Datensatz vorhanden, da das E-Mail-Attributfeld nur email2 umfasst. Hier sind verschiedene Anwendungsfälle möglich, je nachdem, ob Sie alle bei Ihnen hinterlegten Kunden-E-Mail-Adressen oder nur die neueste hinterlegte Kunden-E-Mail-Adresse aktivieren möchten.
+Wenn jedoch eine Kundin oder ein Kunde `xdm: personalEmail.address` aktiviert, ist nur email2 im Eintrag vorhanden, da das E-Mail-Attributfeld nur email2 umfasst. Hier sind verschiedene Anwendungsfälle möglich, je nachdem, ob Sie alle bei Ihnen hinterlegten Kunden-E-Mail-Adressen oder nur die neueste hinterlegte Kunden-E-Mail-Adresse aktivieren möchten.
 
-Es bleibt festzuhalten, dass die Anzahl der zu exportierenden Datensätze von den ausgewählten Zusammenführungsrichtlinien sowie davon abhängt, ob Sie im Export Identitäten oder Attribute auswählen.
+Es bleibt festzuhalten, dass die Anzahl der zu exportierenden Einträge von den ausgewählten Zusammenführungsrichtlinien sowie davon abhängt, ob Sie im Export Identitäten oder Attribute auswählen.
 
 ## API-basierte Streaming-Ziele {#streaming-destinations}
 
@@ -72,23 +77,23 @@ Beachten Sie jedoch, dass Sie flexibel sind, Daten entweder aus [privaten Diagra
 
 >[!TIP]
 >
->Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit Experience Platform die Daten bei Aktivierung automatisch hasht. Mehr über die Option **[!UICONTROL Umwandlung anwenden]** erfahren Sie im [Tutorial zur Aktivierung von Streaming-Zielen](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
+>Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit Experience Platform die Daten bei Aktivierung automatisch hasht. Mehr über die Option **[!UICONTROL Apply transformation]** erfahren Sie im Tutorial [Aktivierung von Streaming-Zielen](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
 
 ![Beispiel eines E-Mail-Adressenattributs, das dem Identitätsfeld für ein Pinterest-Ziel zugeordnet ist.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
 ### Werbeziele, die auf Drittanbieterfirmen-Cookie-Integrationen angewiesen sind {#third-party-cookie-destinations}
 
-Werbeziele, die auf Drittanbieterfirmen-Cookies angewiesen sind (z. B.: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) erfordern nicht, dass Kundinnen oder Kunden IDs im Aktivierungs-Workflow auswählen. Bei diesen Zielen überprüft Experience Platform bei der Einrichtung eines Aktivierungs-Workflows automatisch die vom [[!UICONTROL Experience Cloud-ID-Service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de) aufgebaute Tabelle für Identitätsübereinstimmung und exportiert alle Identitäten, die für ein Profil verfügbar sind und vom Ziel unterstützt werden.
+Werbeziele, die auf Drittanbieterfirmen-Cookies angewiesen sind (z. B.: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) erfordern nicht, dass Kundinnen oder Kunden IDs im Aktivierungs-Workflow auswählen. Bei diesen Zielen überprüft Experience Platform bei der Einrichtung eines Aktivierungs-Workflows automatisch die vom [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de) aufgebaute Tabelle für Identitätsübereinstimmung und exportiert alle Identitäten, die für ein Profil verfügbar sind und vom Ziel unterstützt werden.
 
-Für diese Ziele ist eine ID-Synchronisierung entweder über den [!UICONTROL Experience Cloud-ID-Service] oder das [!UICONTROL Experience Platform Web SDK] erforderlich.
+Für diese Ziele ist eine ID-Synchronisierung entweder über die [!UICONTROL Experience Cloud ID service] oder über [!UICONTROL Experience Platform Web SDK] erforderlich.
 
-Wenn Sie das [!UICONTROL Experience Platform Web SDK] verwenden und der ältere [!UICONTROL Experience Cloud-ID-Service] nicht auf der Seite implementiert ist, müssen Sie sicherstellen, dass der Datenstrom für die betroffene Website aktiviert ist, um die Synchronisierung von Drittanbieterfirmen-IDs zu ermöglichen, wie in der [Dokumentation zum Konfigurieren eines Datenstroms](/help/datastreams/configure.md#create) beschrieben.
+Wenn Sie [!UICONTROL Experience Platform Web SDK] verwenden und die veraltete [!UICONTROL Experience Cloud ID service] nicht auf der Seite implementiert ist, müssen Sie sicherstellen, dass der Datenstrom für die betroffene Website aktiviert ist, um die Synchronisierung von Drittanbieterfirmen-IDs zu ermöglichen, wie in der [Dokumentation zum Konfigurieren eines Datenstroms](/help/datastreams/configure.md#create) beschrieben.
 
-Beim Konfigurieren eines Datenstroms, wie in der oben verlinkten Dokumentation beschrieben, müssen Sie sicherstellen, dass der Regler **[!UICONTROL Synchronisierung der Drittanbieter-ID]** aktiviert ist. Die meisten Kundinnen und Kunden lassen das `container_id`-Feld leer (es enthält standardmäßig 0). Sie müssen diesen Wert nur ändern, wenn Ihre ältere Audience Manager-Implementierung eine bestimmte Container-ID verwendete (beachten Sie jedoch, dass dies nur die wenigsten Kundinnen und Kunden betrifft).
+Beim Konfigurieren eines Datenstroms, wie in der oben verlinkten Dokumentation beschrieben, müssen Sie sicherstellen, dass der Schieberegler **[!UICONTROL Third Party ID Sync]** aktiviert ist. Die meisten Kundinnen und Kunden lassen das `container_id`-Feld leer (es enthält standardmäßig 0). Sie müssen diesen Wert nur ändern, wenn Ihre ältere Audience Manager-Implementierung eine bestimmte Container-ID verwendete (beachten Sie jedoch, dass dies nur die wenigsten Kundinnen und Kunden betrifft).
 
 >[!NOTE]
 >
->Die meisten dieser Werbeziele werden in Audience Manager unterstützt (diese Zieltypen werden in Audience Manager als gerätebasierte Ziele bezeichnet. Hier finden Sie eine [Liste aller unterstützten gerätebasierten Ziele in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=de)). Nur wenige sind in Experience Platform aufgeführt. Informationen zur Datenfreigabe zwischen Experience Platform und Audience Manager finden Sie im Abschnitt zum [Aktivieren der Datenfreigabe von Experience Platform an Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de#enable-aep-to-aam-data). Derzeit ist keine Unterstützung für weitere Drittanbieter-Cookie-Ziele geplant.
+>Die meisten dieser Werbeziele werden in Audience Manager unterstützt (diese Zieltypen werden in Audience Manager als gerätebasierte Ziele bezeichnet. Hier finden Sie eine [Liste aller unterstützten gerätebasierten Ziele in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Nur wenige sind in Experience Platform aufgeführt. Informationen zur Datenfreigabe zwischen Experience Platform und Audience Manager finden Sie im Abschnitt zum [Aktivieren der Datenfreigabe von Experience Platform an Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Derzeit ist keine Unterstützung für weitere Drittanbieter-Cookie-Ziele geplant.
 
 ## Unternehmensziele {#enterprise-destinations}
 
@@ -96,7 +101,7 @@ Beim Konfigurieren eines Datenstroms, wie in der oben verlinkten Dokumentation b
 
 ## Personalisierungsziele {#personalization-destinations}
 
-[Personalisierungs- (oder Edge-)Ziele](/help/destinations/destination-types.md#edge-personalization-destinations) (z. B. Adobe Target, [!DNL Custom Personalization]) erfordern keine Identitätsauswahl im Aktivierungs-Workflow, da die Integration eine Profilsuche ist. Der Client ([!DNL Target], [!DNL Web SDK] oder andere) fragt [[!UICONTROL Edge]](/help/collection/home.md#edge) ab und ruft die Profilinformationen ab, die für die Personalisierung vor Ort erforderlich sind.
+[Personalisierungs- (oder Edge-)Ziele](/help/destinations/destination-types.md#edge-personalization-destinations) (z. B. Adobe Target, [!DNL Custom Personalization]) erfordern keine Identitätsauswahl im Aktivierungs-Workflow, da die Integration eine Profilsuche ist. Der Client ([!DNL Target], [!DNL Web SDK] oder andere) fragt die [[!UICONTROL Edge]](/help/collection/home.md#edge) ab und ruft die Profilinformationen ab, die für die Personalisierung vor Ort erforderlich sind.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

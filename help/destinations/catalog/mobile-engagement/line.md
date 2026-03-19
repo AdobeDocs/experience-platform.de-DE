@@ -4,9 +4,9 @@ title: LINE-Verbindung
 description: Mit dem LINE-Ziel können Sie Ihrer Experience Platform-Zielgruppe Profile hinzufügen und vernetzten Benutzern personalisierte Erlebnisse bereitstellen.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1316'
 ht-degree: 29%
 
 ---
@@ -50,7 +50,7 @@ Damit Experience Platform auf [!DNL LINE] Ressourcen zugreifen kann, benötigen 
 | --- | --- | --- |
 | `[!DNL Channel access token (long-lived)]` | Ihre [!DNL LINE Channel access token (long-lived)]. | `aaa2112XSMWqLXR7..........nyilFU=` |
 
-Anleitungen zum Erstellen [[!DNL LINE]  Kanals oder Hinzufügen eines Kanals zu Ihrem vorhandenen &#x200B;](https://developers.line.biz/en/docs/messaging-api/getting-started/)-Konto über die [!DNL LINE] Entwicklerkonsole finden Sie in der Dokumentation[!DNL LINE].
+Anleitungen zum Erstellen [[!DNL LINE]  Kanals oder Hinzufügen eines Kanals zu Ihrem vorhandenen ](https://developers.line.biz/en/docs/messaging-api/getting-started/)-Konto über die [!DNL LINE] Entwicklerkonsole finden Sie in der Dokumentation[!DNL LINE].
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -67,7 +67,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -101,7 +101,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -125,7 +125,7 @@ Screenshot der ![Experience Platform-Benutzeroberfläche mit den Zieldetails.](.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Audience Type]**: Wählen Sie **[!UICONTROL ID for Advertisers(IFAs)]** aus, wenn die Identitäten, die exportiert werden sollen, vom Typ *ID für Advertiser (IFAs)*. Wählen Sie **[!UICONTROL LINE user IDs]** aus, wenn die zu exportierenden Identitäten vom Typ (LINE *Benutzer-IDs)*. Weitere Informationen zu den Identitätstypen [&#x200B; Sie &#x200B;](#supported-identities) Abschnitt „Unterstützte Identitäten“.
+* **[!UICONTROL Audience Type]**: Wählen Sie **[!UICONTROL ID for Advertisers(IFAs)]** aus, wenn die Identitäten, die exportiert werden sollen, vom Typ *ID für Advertiser (IFAs)*. Wählen Sie **[!UICONTROL LINE user IDs]** aus, wenn die zu exportierenden Identitäten vom Typ (LINE *Benutzer-IDs)*. Weitere Informationen zu den Identitätstypen [ Sie ](#supported-identities) Abschnitt „Unterstützte Identitäten“.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -136,9 +136,9 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -152,6 +152,8 @@ Abhängig von Ihrer Quellidentität müssen die folgenden Ziel-Identity-Namespac
 | --- | --- | --- |
 | ID für Werbetreibende (IFAs) | `IDFA` oder `GAID` | `LineId` |
 | LINE-Benutzerkennung | `UserID` | `LineId` |
+
+{style="table-layout:auto"}
 
 Wenn es sich bei Ihren Zielidentitäten um *LINE-Benutzer-IDs* handelt, benötigen Sie Folgendes:
 ![Beispiel-Screenshot der Experience Platform-Benutzeroberfläche, der das Zielgruppen-Mapping bei Verwendung von LINE-Benutzer-IDs für Zielidentitäten zeigt.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)

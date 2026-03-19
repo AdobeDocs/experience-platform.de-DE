@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Löschen einer Anmeldedaten-Konfiguration mit dem Adobe Experience Platform Destination SDK veranschaulicht.
 title: Löschen einer Anmeldedaten-Konfiguration
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 86%
+source-wordcount: '416'
+ht-degree: 78%
 
 ---
 
@@ -35,7 +35,7 @@ Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authen
 
 ## Erste Schritte mit Anmeldedaten-API-Vorgängen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Löschen einer Anmeldedaten-Konfiguration {#delete}
 
@@ -52,6 +52,8 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | Die `ID` der Anmeldedaten-Konfiguration, die Sie löschen möchten. |
+
+{style="table-layout:auto"}
 
 Die folgende Anfrage löscht eine Anmeldedaten-Konfiguration, die durch den Parameter `{INSTANCE_ID}` bestimmt wird.
 

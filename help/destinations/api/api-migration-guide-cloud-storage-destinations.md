@@ -4,10 +4,10 @@ title: API-Migrationshandbuch für Cloud-Speicher-Ziele
 description: Erfahren Sie mehr über die Änderungen im Workflow zum Aktivieren von Cloud-Speicher-Zielen im Rahmen der Migration zu den neuen Cloud-Speicher-Zielkarten mit zusätzlichen Funktionen.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1334'
-ht-degree: 2%
+source-wordcount: '1333'
+ht-degree: 3%
 
 ---
 
@@ -15,14 +15,14 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->* Die auf dieser Seite beschriebene Funktion steht Kunden zur Verfügung, die die Pakete Real-Time CDP Prime und Ultimate erworben haben. Bitte wenden Sie sich an den Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
+>* Die auf dieser Seite beschriebene Funktion steht Kunden zur Verfügung, die die Pakete Real-Time CDP Prime und Ultimate erworben haben. Wenden Sie sich an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ## Migrationskontext {#migration-context}
 
-Ab [Oktober 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations) können Sie die neuen Dateiexportfunktionen verwenden, um beim Exportieren von Dateien von Experience Platform auf erweiterte Anpassungsfunktionen zuzugreifen:
+Ab [Oktober 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations) können Sie die neuen Dateiexportfunktionen verwenden, um beim Exportieren von Dateien aus Experience Platform auf erweiterte Anpassungsfunktionen zuzugreifen:
 
 * Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* Möglichkeit zum Festlegen benutzerdefinierter Dateikopfzeilen in exportierten Dateien über den [&#x200B; Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* Möglichkeit zum Festlegen benutzerdefinierter Dateikopfzeilen in exportierten Dateien über den [ Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Möglichkeit zur Auswahl des [Dateityps](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) der exportierten Datei.
 * Möglichkeit zum [Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
@@ -52,7 +52,7 @@ Diese Ziele mit erweiterten Funktionen wurden ursprünglich als Beta-Version ang
 
 Wenn Sie bereits die [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) zum Exportieren von Profilen an die Amazon S3-, Azure Blob- oder SFTP-Cloud-Speicherziele verwenden, gilt dieses API-Migrationshandbuch für Sie.
 
-Wenn Sie Skripte in Ihren [!DNL Amazon S3]-, [!DNL Azure Blob]- oder SFTP-Cloud-Speicherorten auf den von Experience Platform exportierten Dateien ausführen, beachten Sie, dass sich einige Parameter in Bezug auf die Verbindungs- und Flussspezifikationen der neuen Karten sowie in Bezug auf den Zuordnungsschritt ändern.
+Wenn Sie Skripte in Ihren [!DNL Amazon S3]-, [!DNL Azure Blob]- oder SFTP-Cloud-Speicherorten zusätzlich zu den aus Experience Platform exportierten -Dateien ausführen, beachten Sie, dass sich einige Parameter in Bezug auf die Verbindungs- und Flussspezifikationen der neuen -Karten sowie in Bezug auf den Zuordnungsschritt ändern.
 
 Wenn Sie beispielsweise ein Skript verwenden, um Ziel-Datenflüsse zum [!DNL Amazon S3]-Ziel basierend auf der Verbindungsspezifikation des [!DNL Amazon S3]-Ziels zu filtern, beachten Sie, dass sich die Verbindungsspezifikation ändert, sodass Sie Ihre Filter aktualisieren müssen.
 
@@ -72,7 +72,7 @@ TBD if we keep this link but will likely remove it
 
 ## Zusammenfassung der abwärtsinkompatiblen Änderungen {#summary-backwards-incompatible-changes}
 
-Mit der Migration zu den neuen Zielen werden allen Ihren vorhandenen Datenflüssen zu [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Zielen jetzt neue Zielverbindungen und Basisverbindungen zugewiesen. Der Schritt zur Profilzuordnung ändert sich ebenfalls. Abwärtsinkompatible Änderungen werden in den folgenden Abschnitten für jedes Ziel zusammengefasst. Weitere Informationen zu den Begriffen [&#x200B; unten stehenden Diagramm &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) Sie auch im Glossar „Ziele“.
+Mit der Migration zu den neuen Zielen werden allen Ihren vorhandenen Datenflüssen zu [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Zielen jetzt neue Zielverbindungen und Basisverbindungen zugewiesen. Der Schritt zur Profilzuordnung ändert sich ebenfalls. Abwärtsinkompatible Änderungen werden in den folgenden Abschnitten für jedes Ziel zusammengefasst. Weitere Informationen zu den Begriffen [ unten stehenden Diagramm ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) Sie auch im Glossar „Ziele“.
 
 ![Übersichtsbild zum Migrationshandbuch](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
@@ -80,7 +80,7 @@ Mit der Migration zu den neuen Zielen werden allen Ihren vorhandenen Datenflüss
 
 Die abwärtsinkompatiblen Änderungen für die API-Benutzer sind eine aktualisierte `connection spec ID` und `flow spec ID`, wie in der folgenden Tabelle dargestellt:
 
-| [!DNL Amazon S3] | Veraltet | Neu |
+| [!DNL Amazon S3] | Vorgängerversion | Neu |
 |---------|----------|---------|
 | Flussspezifikation | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1A0514A6-33D4-4C7F-AFF8-594799C47549 |
 | Verbindungsspezifikation | 4890FC95-5A1F-4983-94BB-E060C08E3F81 | 4FCE964D-3F37-408F-9778-E597338A21EE |
@@ -166,7 +166,7 @@ Ebenso gibt es keine abwärtsinkompatiblen Änderungen bei den Parametern, die z
 
 >[!TAB Neue Basisverbindung und Zielverbindung]
 
-+++Anzeigen neuer [!DNL base connection] für [!DNL Amazon S3]
++++Neue [!DNL base connection] für [!DNL Amazon S3] anzeigen
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -199,7 +199,7 @@ Ebenso gibt es keine abwärtsinkompatiblen Änderungen bei den Parametern, die z
 
 +++
 
-+++Anzeigen neuer [!DNL target connection] für [!DNL Amazon S3]
++++Neue [!DNL target connection] für [!DNL Amazon S3] anzeigen
 
 ```json {line-numbers="true" start-line="1" highlight="12, 16-27"}
 {
@@ -252,7 +252,7 @@ Ebenso gibt es keine abwärtsinkompatiblen Änderungen bei den Parametern, die z
 
 Die abwärtsinkompatiblen Änderungen für die API-Benutzer sind eine aktualisierte `connection spec ID` und `flow spec ID`, wie in der folgenden Tabelle dargestellt:
 
-| [!DNL Azure Blob] | Veraltet | Neu |
+| [!DNL Azure Blob] | Vorgängerversion | Neu |
 |---------|----------|---------|
 | Flussspezifikation | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | Verbindungsspezifikation | E258278B-A4CF-43AC-B158-4FA0CA0D948B | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
@@ -338,7 +338,7 @@ Ebenso gibt es keine abwärtsinkompatiblen Änderungen bei den Parametern, die z
 
 >[!TAB Neue Basisverbindung und Zielverbindung]
 
-+++Anzeigen neuer [!DNL base connection] für [!DNL Azure Blob]
++++Neue [!DNL base connection] für [!DNL Azure Blob] anzeigen
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -370,7 +370,7 @@ Ebenso gibt es keine abwärtsinkompatiblen Änderungen bei den Parametern, die z
 
 +++
 
-+++Anzeigen neuer [!DNL target connection] für [!DNL Azure Blob]
++++Neue [!DNL target connection] für [!DNL Azure Blob] anzeigen
 
 ```json {line-numbers="true" start-line="1" highlight="13, 17-25"}
 {
@@ -424,7 +424,7 @@ Ebenso gibt es keine abwärtsinkompatiblen Änderungen bei den Parametern, die z
 
 Die abwärtsinkompatiblen Änderungen für die API-Benutzer sind eine aktualisierte `connection spec ID` und `flow spec ID`, wie in der folgenden Tabelle dargestellt:
 
-| SFTP | Veraltet | Neu |
+| SFTP | Vorgängerversion | Neu |
 |---------|----------|---------|
 | Flussspezifikation | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaaa4-bf2b-43fb-9387-43785eeeb799 |
 | Verbindungsspezifikation | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965A81-B1C6-401B-99F8-22508F1E6A26 |
@@ -439,7 +439,7 @@ Sehen Sie sich die vollständigen Beispiele für veraltete und neue Basisverbind
 
 >[!TAB Veraltete Basisverbindung und Zielverbindung]
 
-+++Legacy-[!DNL base connection] für SFTP anzeigen - Kennwortauthentifizierung
++++Alte [!DNL base connection] für SFTP anzeigen - Passwortauthentifizierung
 
 ```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
@@ -548,7 +548,7 @@ Sehen Sie sich die vollständigen Beispiele für veraltete und neue Basisverbind
 
 >[!TAB Neue Basisverbindung und Zielverbindung]
 
-+++Anzeigen neuer [!DNL base connection] für [!DNL SFTP - password authentication]
++++Neue [!DNL base connection] für [!DNL SFTP - password authentication] anzeigen
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -680,7 +680,7 @@ Vollständige Informationen zum Einrichten des `profileMapping` finden Sie im [A
 
 >[!TAB Alte Umwandlungsparameter]
 
-+++Sehen Sie sich ein Beispiel für alte Umwandlungsparameter an.
++++Sehen Sie sich ein Beispiel für alte Umwandlungsparameter an
 
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 {
@@ -746,7 +746,7 @@ Vollständige Informationen zum Einrichten des `profileMapping` finden Sie im [A
 
 >[!TAB Neue Umwandlungsparameter]
 
-+++Sehen Sie sich ein Beispiel für Umwandlungsparameter nach der Migration an.
++++Ein Beispiel für Umwandlungsparameter nach der Migration anzeigen
 
 Beachten Sie im folgenden Konfigurationsbeispiel, wie `profileSelectors` Felder durch ein `profileMapping` ersetzt wurden.
 
@@ -791,7 +791,7 @@ Wenn das Migrationsdatum näher rückt, erhalten Sie eine Erinnerungs-E-Mail von
 Bereiten Sie sich zur Vorbereitung der Migration der [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Cloud-Speicher-Ziele auf die neuen Karten bitte darauf vor, Ihre Skripte und automatisierten API-Aufrufe wie unten vorgeschlagen zu aktualisieren.
 
 1. Aktualisieren Sie alle Skripte oder automatisierten API-Aufrufe für vorhandene [!DNL Amazon S3]-, [!DNL Azure Blob]- oder SFTP-Cloud-Speicher-Ziele bis zum 26. Juli 2023. Alle automatisierten API-Aufrufe oder -Skripte, die die veralteten Verbindungsspezifikationen oder Flussspezifikationen nutzen, müssen auf die neuen Verbindungsspezifikationen oder Flussspezifikationen aktualisiert werden.
-2. Wenden Sie sich an Ihren Adobe-Kundenbetreuer, wenn Ihre Scripts vor dem 26. Juli aktualisiert wurden.
+2. Wenden Sie sich an Ihren Adobe-Kundenbetreuer, wenn Ihre Skripte vor dem 26. Juli aktualisiert wurden.
 3. Beispielsweise kann die `targetConnectionSpecId` als Flag verwendet werden, um festzustellen, ob der Datenfluss zur neuen Zielkarte migriert wurde. Sie können Ihre Skripte mit einer `if` aktualisieren, um die veralteten und aktualisierten Zielverbindungsspezifikationen in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` zu überprüfen und festzustellen, ob Ihr Datenfluss migriert wurde. Die IDs der veralteten und neuen Verbindungsspezifikationen werden für jedes Ziel in den jeweiligen Abschnitten auf dieser Seite angezeigt.
 4. Ihr Adobe-Account-Team wird sich mit weiteren Informationen darüber in Verbindung setzen, wann Ihre Datenflüsse migriert werden.
 5. Nach dem 26. Juli werden alle Datenflüsse migriert. Alle vorhandenen Datenflüsse verfügen jetzt über neue Fluss-Entitäten (Verbindungsspezifikationen, Flussspezifikationen, Basisverbindungen und Zielverbindungen). Alle Skripte oder API-Aufrufe auf Ihrer Seite, die die veralteten Fluss-Entitäten verwenden, funktionieren nicht mehr.
@@ -802,4 +802,4 @@ Beachten Sie, dass es während oder nach der Migration keine Auswirkungen auf Ih
 
 ## Nächste Schritte {#next-steps}
 
-Durch das Lesen dieser Seite wissen Sie jetzt, ob Sie Maßnahmen zur Vorbereitung auf die Migration der Cloud-Speicher-Ziele ergreifen müssen. Sie wissen auch, auf welche Dokumentationsseiten verwiesen werden soll, wenn Sie API-basierte Workflows einrichten, um Dateien aus dem Experience Platform in Ihre bevorzugten Cloud-Speicher-Ziele zu exportieren. Als Nächstes können Sie sich das API-Tutorial ansehen, um [Daten in Cloud-Speicher-Ziele zu exportieren](/help/destinations/api/activate-segments-file-based-destinations.md).
+Durch das Lesen dieser Seite wissen Sie jetzt, ob Sie Maßnahmen zur Vorbereitung auf die Migration der Cloud-Speicher-Ziele ergreifen müssen. Außerdem wissen Sie, auf welche Dokumentationsseiten Sie verweisen müssen, wenn Sie API-basierte Workflows zum Exportieren von Dateien aus Experience Platform in Ihre bevorzugten Cloud-Speicher-Ziele einrichten. Als Nächstes können Sie sich das API-Tutorial ansehen, um [Daten in Cloud-Speicher-Ziele zu exportieren](/help/destinations/api/activate-segments-file-based-destinations.md).

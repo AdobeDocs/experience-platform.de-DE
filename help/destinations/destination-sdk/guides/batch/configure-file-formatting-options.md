@@ -2,29 +2,29 @@
 description: Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 title: Erfahren Sie, wie Sie mit Destination SDK Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '902'
 ht-degree: 22%
 
 ---
 
 # Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
-Destination SDK ermöglicht es Ihnen, die Formatierungs- und Komprimierungsoptionen Ihrer exportierten Dateien umfassend an alle nachgelagerten Anforderungen Ihres Speicherorts anzupassen.
+Mit Destination SDK können Sie die Formatierungs- und Komprimierungsoptionen Ihrer exportierten Dateien umfassend anpassen, um sie an die nachgelagerten Anforderungen Ihres Speicherorts anzupassen.
 
 Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren können.
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte &#x200B;](../../getting-started.md) Destination SDK , wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
+Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte mit Destination SDK](../../getting-started.md) , wie Sie die erforderlichen Anmeldedaten für die Adobe I/O-Authentifizierung und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
 
 Adobe empfiehlt außerdem, die folgende Dokumentation zu lesen und sich damit vertraut zu machen, bevor Sie fortfahren:
 
-* Jede verfügbare Dateiformatierungsoption wird ausführlich im Abschnitt [Dateiformatierungskonfiguration“ &#x200B;](../../functionality/destination-server/file-formatting.md).
-* Führen Sie die Schritte aus[&#x200B; um ein dateibasiertes Ziel mithilfe &#x200B;](../../guides/configure-file-based-destination-instructions.md) -Destination SDK zu konfigurieren.
+* Jede verfügbare Dateiformatierungsoption wird ausführlich im Abschnitt [Dateiformatierungskonfiguration“ ](../../functionality/destination-server/file-formatting.md).
+* Führen Sie die Schritte zum [Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md) mithilfe von Destination SDK aus.
 
 ## Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
@@ -108,7 +108,7 @@ Nachdem Sie im vorherigen Schritt die gewünschten Dateiformatierungsoptionen zu
 
 >[!IMPORTANT]
 >
->Dieser Schritt ist optional und bestimmt nur, welche der Dateiformatierungsoptionen Benutzenden in der Experience Platform-Benutzeroberfläche angezeigt werden sollen. Wenn Sie keine Dateiformatierungsoptionen als Kundendatenfelder einrichten, werden die Dateiexporte mit den Standardwerten fortgesetzt, die in der [Server- und Dateikonfiguration“ konfiguriert &#x200B;](#create-server-file-configuration).
+>Dieser Schritt ist optional und bestimmt nur, welche der Dateiformatierungsoptionen in der Experience Platform-Benutzeroberfläche angezeigt werden sollen. Wenn Sie keine Dateiformatierungsoptionen als Kundendatenfelder einrichten, werden die Dateiexporte mit den Standardwerten fortgesetzt, die in der [Server- und Dateikonfiguration“ konfiguriert ](#create-server-file-configuration).
 
 In diesem Schritt können Sie die angezeigten Optionen in beliebiger Reihenfolge gruppieren sowie benutzerdefinierte Gruppierungen, Dropdown-Felder und bedingte Gruppierungen basierend auf den ausgewählten Dateitypen erstellen. Alle diese Einstellungen werden bei der Aufzeichnung und in den weiter unten stehenden Abschnitten angezeigt.
 
@@ -116,7 +116,7 @@ In diesem Schritt können Sie die angezeigten Optionen in beliebiger Reihenfolge
 
 ### Sortieren der Dateiformatierungsoptionen {#ordering}
 
-Die Reihenfolge, in der Sie die Dateiformatierungsoptionen als Kundendatenfelder in der Zielkonfiguration hinzufügen, wird in der Benutzeroberfläche angezeigt. Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberfläche angezeigt, wobei die Optionen in der Reihenfolge **[!UICONTROL Trennzeichen]**, **[!UICONTROL Anführungszeichen]**, **[!UICONTROL Escape-Zeichen]**, **[!UICONTROL Leerer Wert]**, **[!UICONTROL Null-Wert]**.
+Die Reihenfolge, in der Sie die Dateiformatierungsoptionen als Kundendatenfelder in der Zielkonfiguration hinzufügen, wird in der Benutzeroberfläche angezeigt. Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberfläche angezeigt, wobei die Optionen in der Reihenfolge **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]** angezeigt werden.
 
 ![Bild, das die Reihenfolge der Dateiformatierungsoptionen in der Experience Platform-Benutzeroberfläche anzeigt.](../../assets/guides/batch/file-formatting-order.png)
 
@@ -241,7 +241,7 @@ Die Reihenfolge, in der Sie die Dateiformatierungsoptionen als Kundendatenfelder
 
 Sie können mehrere Dateiformatierungsoptionen in einem Abschnitt gruppieren. Beim Einrichten der Verbindung zum Ziel in der Benutzeroberfläche kann der Benutzer eine visuelle Gruppierung ähnlicher Felder sehen und davon profitieren.
 
-Verwenden Sie dazu `"type": "object"`, um die Gruppe zu erstellen, und fassen Sie die gewünschten Dateiformatierungsoptionen in einem `properties`-Parameter zusammen, wie im folgenden Beispiel gezeigt, wobei die Gruppierung **[!UICONTROL CSV-Optionen]** hervorgehoben ist.
+Verwenden Sie dazu `"type": "object"`, um die Gruppe zu erstellen, und fassen Sie die gewünschten Dateiformatierungsoptionen in einem `properties`-Parameter zusammen, wie im folgenden Beispiel gezeigt, wobei die **[!UICONTROL CSV Options]** hervorgehoben ist.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -487,7 +487,7 @@ Unten sehen Sie den resultierenden Bildschirm der Benutzeroberfläche, der auf d
 
 ![Bildschirmaufzeichnung mit der bedingten Option zur Dateiformatierung für CSV-Dateien.](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### Vollständige API-Anfrage, die alle oben angezeigten Optionen enthält
+### Vollständige API-Anfrage, die alle oben angezeigten Optionen enthält {#complete-api-request}
 
 Die folgende API-Anfrage kombiniert in einer Konfiguration alle Optionen, die in den obigen Abschnitten beschrieben werden.
 

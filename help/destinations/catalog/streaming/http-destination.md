@@ -4,10 +4,10 @@ title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3042'
-ht-degree: 49%
+source-wordcount: '3039'
+ht-degree: 48%
 
 ---
 
@@ -35,7 +35,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -99,7 +99,7 @@ Um [!DNL mTLS] mit [!DNL HTTP API] Zielen verwenden zu können, müssen für den
 
 Wenn Sie Zertifikatdetails wie die [!DNL Common Name] (CN) und [!DNL Subject Alternative Names] (SAN) auf zusätzliche Validierungen durch Dritte überprüfen möchten, verwenden Sie die API, um das Zertifikat abzurufen und diese Felder aus der Antwort zu extrahieren.
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
+Weitere Informationen finden [ in der ](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
@@ -135,8 +135,8 @@ curl --location --request POST 'https://some-api.com/token' \
 ## Herstellen einer Verbindung mit dem Ziel {#connect-destination}
 
 >[!IMPORTANT]
-> 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Beim Herstellen einer Verbindung zu diesem Ziel müssen Sie die folgenden Informationen angeben:
 
@@ -171,7 +171,7 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL OAuth 2 Password]** für die Ve
 
 >[!NOTE]
 >
->**mTLS-Einschränkung:** mTLS wird bei der OAuth 2-Kennwortauthentifizierung nicht unterstützt. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#mtls-considerations)mTLS-Überlegungen“.
+>**mTLS-Einschränkung:** mTLS wird bei der OAuth 2-Kennwortauthentifizierung nicht unterstützt. Weitere Informationen finden Sie [ Abschnitt ](#mtls-considerations)mTLS-Überlegungen“.
 
 * **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
 * **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
@@ -186,12 +186,12 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL OAuth 2 Client Credentials]** f
 ![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe von OAuth 2 mit Authentifizierung über Client-Anmeldeinformationen eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
-> 
+>
 >Bei Verwendung [!UICONTROL OAuth 2 Client Credentials] Authentifizierung kann der [!UICONTROL Access Token URL] maximal einen Abfrageparameter aufweisen. Das Hinzufügen eines [!UICONTROL Access Token URL] mit weiteren Abfrageparametern kann zu Problemen beim Herstellen einer Verbindung zu Ihrem Endpunkt führen.
 
 >[!NOTE]
 >
->**mTLS-Einschränkung:** mTLS wird bei der Authentifizierung mit Client-Anmeldeinformationen für OAuth 2 nicht unterstützt. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#mtls-considerations)mTLS-Überlegungen“.
+>**mTLS-Einschränkung:** mTLS wird bei der Authentifizierung mit Client-Anmeldeinformationen für OAuth 2 nicht unterstützt. Weitere Informationen finden Sie [ Abschnitt ](#mtls-considerations)mTLS-Überlegungen“.
 
 * **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
 * **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
@@ -248,11 +248,11 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* [Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht in Exporten an das HTTP-API-Ziel unterstützt. [Weitere Informationen](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden Sie &#x200B;](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
 
 ### Zielattribute {#attributes}
 
@@ -268,7 +268,9 @@ Experience Platform optimiert das Verhalten beim Profilexport für Ihr HTTP-API-
 
 In allen oben beschriebenen Fällen werden nur die Profile exportiert, in denen relevante Aktualisierungen vorgenommen wurden. Wenn beispielsweise eine Zielgruppe, die dem Zielfluss zugeordnet ist, aus hundert Mitgliedern besteht und fünf neue Profile sich für das Segment qualifizieren, ist der Export in Ihr Ziel inkrementell und umfasst nur die fünf neuen Profile.
 
-Beachten Sie, dass alle zugeordneten Attribute unabhängig von der Art der Änderungen für ein Profil exportiert werden. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
+>[!NOTE]
+>
+>Alle zugeordneten Attribute werden für ein Profil exportiert, unabhängig davon, wo die Änderungen liegen. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
 
 ### Was bestimmt einen Datenexport und was ist im Export enthalten? {#what-determines-export-what-is-included}
 
@@ -373,7 +375,9 @@ Im Folgenden finden Sie weitere Beispiele für exportierte Daten, abhängig von 
       }
 ```
 
-**Hinweis**: In diesem Beispiel wird das erste Segment (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) dem Ziel zugeordnet und enthält das `name`. Das zweite Segment (`354e086f-2e11-49a2-9e39-e5d9a76be683`) ist nicht dem Ziel zugeordnet und enthält nicht das Feld `name` , auch wenn die Option **[!UICONTROL Include Segment Names]** aktiviert ist.
+>[!NOTE]
+>
+>In diesem Beispiel wird das erste Segment (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) dem Ziel zugeordnet und enthält das `name`. Das zweite Segment (`354e086f-2e11-49a2-9e39-e5d9a76be683`) ist nicht dem Ziel zugeordnet und enthält nicht das Feld `name` , auch wenn die Option **[!UICONTROL Include Segment Names]** aktiviert ist.
 
 +++
 

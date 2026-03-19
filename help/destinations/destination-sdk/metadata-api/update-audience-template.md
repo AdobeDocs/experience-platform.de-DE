@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine Zielgruppenvorlage über Adobe Experience Platform Destination SDK aktualisiert wird.
 title: Aktualisieren einer Zielgruppenvorlage
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
-source-git-commit: fda542e62c448788099d63951277278a146fdfc8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 95%
+source-wordcount: '319'
+ht-degree: 84%
 
 ---
 
@@ -25,7 +25,7 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt ko
 
 ## Erste Schritte mit API-Vorgängen für Zielgruppenvorlagen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Aktualisieren einer Zielgruppenvorlage {#create}
 
@@ -42,6 +42,8 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 | Parameter | Beschreibung |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | Die ID der Zielgruppenvorlage, die Sie aktualisieren möchten. Wie Sie eine vorhandene Zielgruppenvorlage und die zugehörige `{INSTANCE_ID}` abrufen, erfahren Sie unter [Abrufen einer Zielgruppenvorlage](retrieve-audience-template.md). |
+
+{style="table-layout:auto"}
 
 Mit der folgenden Anfrage wird eine vorhandene Vorlage für Zielgruppen-Metadaten aktualisiert, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
 
@@ -268,10 +270,10 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu
 
 +++
 
-## Umgang mit API-Fehlern
+## Umgang mit API-Fehlern {#error-handling}
 
 Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wann Sie Zielgruppenvorlagen verwenden sollten und wie Sie eine Zielgruppenvorlage mithilfe des API-Endpunkts `/authoring/audience-templates` aktualisieren. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.

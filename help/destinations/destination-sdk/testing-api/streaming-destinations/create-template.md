@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API Ihre Umwandlungsvorlage für Streaming-Zielnachrichten testen können, bevor Sie das Ziel veröffentlichen.
 title: Erstellen und Testen einer Nachrichtenumwandlungsvorlage
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 100%
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # Erstellen und Testen einer Nachrichtenumwandlungsvorlage {#create-template}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Als Teil des Destination SDK bietet Adobe Entwickler-Tools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie eine Nachrichtenumwandlungsvorlage erstellen und testen. Informationen zum Testen Ihres Ziels finden Sie unter [Testen der Zielkonfiguration](streaming-destination-testing-overview.md).
 
@@ -38,8 +38,8 @@ Adobe bietet ein Vorlagenwerkzeug, mit dem Sie die Nachrichtenvorlage erstellen 
 Bevor Sie bereit sind, die Vorlage zu erstellen, führen Sie die folgenden Schritte aus:
 
 1. [Erstellen Sie eine Ziel-Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md). Die Vorlage, die Sie generieren, unterscheidet sich je nach dem Wert, den Sie für den Parameter `maxUsersPerRequest` angeben.
-   * Wenn ein API-Aufruf an das Ziel ein einzelnes Profil sowie die zugehörigen Segmentqualifikationen, Identitäten und Profilattribute enthalten soll, muss `maxUsersPerRequest=1` verwendet werden.
-   * Wenn ein API-Aufruf an das Ziel mehrere Profile sowie deren Segmentqualifikationen, Identitäten und Profilattribute enthalten soll, muss `maxUsersPerRequest` mit einem Wert größer als 1 verwendet werden.
+   * Wenn ein API-Aufruf an das Ziel ein einzelnes Profil sowie die zugehörigen Segmentqualifizierungen, Identitäten und Profilattribute enthalten soll, muss `maxUsersPerRequest=1` verwendet werden.
+   * Wenn ein API-Aufruf an das Ziel mehrere Profile sowie deren Segmentqualifizierungen, Identitäten und Profilattribute enthalten soll, muss `maxUsersPerRequest` mit einem Wert größer als 1 verwendet werden.
 2. [Erstellen Sie eine Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md) und fügen Sie die ID der Ziel-Server-Konfiguration in `destinationDelivery.destinationServerId` hinzu.
 3. [Rufen Sie die ID der Zielkonfiguration ab](../../authoring-api/destination-configuration/retrieve-destination-configuration.md), die Sie gerade erstellt haben, sodass Sie sie im Tool zur Vorlagenerstellung verwenden können.
 4. Sie müssen verstehen, [welche Funktionen und Filter Sie in der Nachrichtenumwandlungsvorlage verwenden können](../../functionality/destination-server/supported-functions.md).
@@ -167,6 +167,6 @@ Beispiele für Aufrufe, die Sie tätigen können, finden Sie in der API-Referenz
 
 Bearbeiten Sie die Vorlage und rufen Sie den Endpunkt der Render-Vorlagen-API auf, bis die exportierten Profile dem erwarteten Datenformat Ihres Ziels entsprechen.
 
-## Fügen Sie Ihre mit Escape-Zeichen versehene Vorlage zur Ziel-Server-Konfiguration hinzu
+## Fügen Sie Ihre mit Escape-Zeichen versehene Vorlage zur Ziel-Server-Konfiguration hinzu {#add-template-to-server-config}
 
 Wenn Sie mit der Nachrichtenumwandlungsvorlage zufrieden sind, fügen Sie sie zu Ihrer [Ziel-Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md)in `httpTemplate.requestBody.value` hinzu.

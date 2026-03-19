@@ -2,16 +2,16 @@
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /testing/destinationInstance die vollständigen Details Ihrer Testergebnisse anzeigen können. Dieser API-Endpunkt gibt dasselbe Ergebnis zurück, das Sie bei der Verwendung der Flow Service-API zur Überwachung von Datenflüssen erhalten würden.
 title: Anzeigen detaillierter Aktivierungsergebnisse
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 92%
+source-wordcount: '545'
+ht-degree: 85%
 
 ---
 
 # Anzeigen detaillierter Aktivierungsergebnisse {#view-test-results}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Auf dieser Seite wird erläutert, wie Sie den API-Endpunkt `/testing/destinationInstance` zum Anzeigen der vollständigen Details Ihrer dateibasierten Zieltestergebnisse verwenden.
 
@@ -25,7 +25,7 @@ Wenn Sie genauere Informationen über Ihren Aktivierungsfluss erhalten möchten,
 
 ## Erste Schritte {#getting-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -54,9 +54,13 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | Die ID der Zielinstanz, für die Sie Beispielprofile generieren. Im Abschnitt [Voraussetzungen](#prerequisites) finden Sie weitere Informationen zum Abrufen dieser ID. |
 
+{style="table-layout:auto"}
+
 | Abfragezeichenfolge-Parameter | Beschreibung |
 | -------- | ----------- |
 | `flowRunIds` | Die IDs der Flussausführungen, die den aktivierten Zielgruppen entsprechen. Die IDs der Flussausführungen finden Sie in der Eigenschaft `results`, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md) zurückgegeben wird. |
+
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -215,7 +219,7 @@ Die Antwort enthält die vollständigen Details des Aktivierungsflusses. Sie kö
 
 Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihre dateibasierte Zielkonfiguration testen und die vollständigen Details Ihrer Aktivierungsergebnisse anzeigen können.
 

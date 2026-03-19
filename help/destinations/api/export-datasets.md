@@ -4,9 +4,9 @@ title: Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze an ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '5208'
+source-wordcount: '5203'
 ht-degree: 12%
 
 ---
@@ -42,7 +42,7 @@ In diesem Artikel wird der Workflow erläutert, der erforderlich ist, um [!DNL F
 
 Die Datensätze, die Sie exportieren können, hängen von der Experience Platform-Anwendung (Real-Time CDP, Adobe Journey Optimizer), der Ebene (Prime oder Ultimate) und allen Add-ons ab, die Sie erworben haben (z. B. Data Distiller).
 
-Informationen dazu, welche Datensätze Sie exportieren können[&#x200B; finden Sie in der Tabelle auf &#x200B;](/help/destinations/ui/export-datasets.md#datasets-to-export) Tutorial-Seite zur Benutzeroberfläche .
+Informationen dazu, welche Datensätze Sie exportieren können[ finden Sie in der Tabelle auf ](/help/destinations/ui/export-datasets.md#datasets-to-export) Tutorial-Seite zur Benutzeroberfläche .
 
 ## Unterstützte Ziele {#supported-destinations}
 
@@ -59,7 +59,7 @@ Derzeit können Sie Datensätze in die Cloud-Speicher-Ziele exportieren, die im 
 
 ## Voraussetzungen {#prerequisites}
 
-Beachten Sie die folgenden Voraussetzungen, um Datensätze zu exportieren:
+Beachten Sie die folgenden Voraussetzungen zum Exportieren von Datensätzen:
 
 * Um Datensätze in Cloud-Speicher-Ziele zu exportieren, müssen Sie erfolgreich [eine Verbindung mit einem Ziel hergestellt haben](/help/destinations/ui/connect-destination.md). Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](/help/destinations/catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
 * Profildatensätze müssen für die Verwendung im Echtzeit-Kundenprofil aktiviert werden. [Weitere Informationen](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) wie Sie diese Option aktivieren.
@@ -77,7 +77,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen m�
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** und **[!UICONTROL Manage and Activate Dataset Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** und **[!UICONTROL Manage and Activate Dataset Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Exportieren von Datensätzen verfügen und dass das Ziel den Export von Datensätzen unterstützt, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über eine **[!UICONTROL Activate]** oder ein **[!UICONTROL Export datasets]** verfügt, verfügen Sie über die entsprechenden Berechtigungen.
 
@@ -201,7 +201,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **Anfrage**
 
@@ -362,7 +362,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-Beachten Sie, dass zum Abrufen geeigneter Datensätze die in der Anfrage-URL verwendete [!DNL connection spec]-ID die Data-Lake-Quell-Verbindungsspezifikations-ID `23598e46-f560-407b-88d5-ea6207e49db0` sein muss und die beiden Abfrageparameter `outputField=datasets` und `outputType=activationDatasets` angegeben werden müssen. Alle anderen Abfrageparameter sind die Standardparameter, die von der [Catalog Service API) unterstützt &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Beachten Sie, dass zum Abrufen geeigneter Datensätze die in der Anfrage-URL verwendete [!DNL connection spec]-ID die Data-Lake-Quell-Verbindungsspezifikations-ID `23598e46-f560-407b-88d5-ea6207e49db0` sein muss und die beiden Abfrageparameter `outputField=datasets` und `outputType=activationDatasets` angegeben werden müssen. Alle anderen Abfrageparameter sind die Standardparameter, die von der [Catalog Service API) unterstützt ](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 +++
 
@@ -514,7 +514,7 @@ Bei einer erfolgreichen Antwort werden die ID (`id`) der neu erstellten Quellver
 
 Beachten Sie bitte auch Folgendes:
 
-* Die in diesem Schritt erstellte Quellverbindung muss mit einem Datenfluss verknüpft sein, damit ihre Datensätze für ein Ziel aktiviert werden. Informationen [&#x200B; Verknüpfen einer Quellverbindung mit einem Datenfluss finden &#x200B;](#create-dataflow) im Abschnitt „Erstellen eines Datenflusses“.
+* Die in diesem Schritt erstellte Quellverbindung muss mit einem Datenfluss verknüpft sein, damit ihre Datensätze für ein Ziel aktiviert werden. Informationen [ Verknüpfen einer Quellverbindung mit einem Datenfluss finden ](#create-dataflow) im Abschnitt „Erstellen eines Datenflusses“.
 * Die Datensatz-IDs einer Quellverbindung können nach der Erstellung nicht mehr geändert werden. Wenn Sie Datensätze zu einer Quellverbindung hinzufügen oder daraus entfernen müssen, müssen Sie eine neue Quellverbindung erstellen und die ID der neuen Quellverbindung mit dem Datenfluss verknüpfen.
 
 ## Erstellen einer (Ziel-)Basisverbindung {#create-base-connection}
@@ -613,7 +613,7 @@ Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im folgenden [!DNL 
 +++
 
 
->[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] mit [!DNL auth spec]
 
@@ -891,7 +891,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsdaten finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) der Zieldokumentationsseite für Azure Blob Storage.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsdaten finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) der Zieldokumentationsseite für die Azure Blob-Datenspeicherung.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -933,7 +933,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **Anfrage**
 
@@ -1345,7 +1345,7 @@ Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im folgenden [!DN
 +++
 
 
->[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] mit Zielverbindungsparametern
 
@@ -1632,7 +1632,7 @@ Mithilfe der obigen Spezifikation können Sie eine Zielverbindungsanfrage für I
 >[!TIP]
 >
 >Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) der Dokumentationsseite für das [!DNL Amazon S3].
->&#x200B;>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
+>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -1685,7 +1685,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) der Dokumentationsseite für das [!DNL Azure Blob Storage].
->&#x200B;>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
+>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
 
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
@@ -1730,7 +1730,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **Anfrage**
 
@@ -1738,8 +1738,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) der Zieldokumentationsseite für Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->&#x200B;>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) der Zieldokumentationsseite für die Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -1791,7 +1791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) der Dokumentationsseite für das [!DNL Data Landing Zone].
->&#x200B;>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
+>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -1843,7 +1843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) der Dokumentationsseite für das [!DNL Google Cloud Storage].
->&#x200B;>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
+>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
 
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
@@ -1897,7 +1897,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) der Dokumentationsseite für SFTP-Ziele.
->&#x200B;>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
+>Weitere unterstützte Werte von `datasetFileType` finden Sie in der API-Referenzdokumentation.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -2091,7 +2091,7 @@ Die nachstehende Tabelle enthält Beschreibungen aller Parameter im Abschnitt &q
 
 +++
 
->[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **Anfrage**
 
@@ -2449,11 +2449,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Informationen zu den [verschiedenen von der Datenflussausführungs-API zurückgegebenen Parametern“ finden Sie &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) der API-Referenzdokumentation.
+Informationen zu den [verschiedenen von der Datenflussausführungs-API zurückgegebenen Parametern“ finden Sie ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) der API-Referenzdokumentation.
 
 ## Überprüfen eines erfolgreichen Datensatzexports {#verify}
 
-Beim Exportieren von Datensätzen erstellt Experience Platform eine `.json`- oder `.parquet`-Datei an dem von Ihnen angegebenen Speicherort. Erwarten Sie, dass eine neue Datei entsprechend dem Exportplan, den Sie beim Erstellen eines Datenflusses angegeben haben, an [&#x200B; Speicherort abgelegt &#x200B;](#create-dataflow).
+Beim Exportieren von Datensätzen erstellt Experience Platform eine `.json`- oder `.parquet`-Datei an dem von Ihnen angegebenen Speicherort. Erwarten Sie, dass eine neue Datei entsprechend dem Exportplan, den Sie beim Erstellen eines Datenflusses angegeben haben, an [ Speicherort abgelegt ](#create-dataflow).
 
 Experience Platform erstellt eine Ordnerstruktur am angegebenen Speicherort, in der die exportierten Datensatzdateien abgelegt werden. Für jeden Exportzeitpunkt wird ein neuer Ordner erstellt, wobei das folgende Muster befolgt wird:
 
@@ -2477,7 +2477,7 @@ Beachten Sie den Unterschied im Dateiformat zwischen den beiden Dateitypen, wenn
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Bekannte Einschränkungen {#known-limitations}
 

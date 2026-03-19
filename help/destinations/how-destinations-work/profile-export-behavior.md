@@ -2,10 +2,10 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2935'
-ht-degree: 86%
+source-wordcount: '2931'
+ht-degree: 84%
 
 ---
 
@@ -24,7 +24,7 @@ Es gibt mehrere Zieltypen in Experience Platform, wie in der Abbildung unten dar
 
 ![Abbildung mit den Zieltypen](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Nachrichtenaggregation in Streaming-Zielen
+## Nachrichtenaggregation in Streaming-Zielen {#message-aggregation}
 
 Bevor Sie sich mit bestimmten Informationen nach Zieltyp befassen, müssen Sie das Konzept der Nachrichtenaggregation für (Streaming *Ziele*.
 
@@ -51,7 +51,7 @@ Die Aggregationsrichtlinie ist konfigurierbar, und das Zielentwickler-Team kann 
 
 Die [Unternehmensziele](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform sind Amazon Kinesis, Azure Event Hubs und HTTP-API.
 
-Experience Platform optimiert das Verhalten beim Profilexport für Ihr Unternehmensziel, sodass Daten nur an Ihren API-Endpunkt exportiert werden, wenn relevante Profilaktualisierungen nach der Zielgruppenqualifikation oder anderen wichtigen Ereignissen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
+Experience Platform optimiert das Verhalten beim Profilexport für Ihr Unternehmensziel, sodass Daten nur an Ihren API-Endpunkt exportiert werden, wenn relevante Profilaktualisierungen nach der Zielgruppenqualifizierung oder anderen wichtigen Ereignissen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) für mindestens eine der dem Ziel zugeordneten Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) bestimmt. Beispielsweise wurde einem Profil, das sich bereits für eine der dem Ziel zugeordneten Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
@@ -59,7 +59,9 @@ Experience Platform optimiert das Verhalten beim Profilexport für Ihr Unternehm
 
 In allen oben beschriebenen Fällen werden nur die Profile exportiert, in denen relevante Aktualisierungen vorgenommen wurden. Wenn beispielsweise eine Zielgruppe, die dem Zielfluss zugeordnet ist, aus hundert Mitgliedern besteht und fünf neue Profile sich für das Segment qualifizieren, ist der Export in Ihr Ziel inkrementell und umfasst nur die fünf neuen Profile.
 
-Beachten Sie, dass alle zugeordneten Attribute unabhängig von der Art der Änderungen für ein Profil exportiert werden. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
+>[!NOTE]
+>
+>Alle zugeordneten Attribute werden für ein Profil exportiert, unabhängig davon, wo die Änderungen liegen. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
 
 ### Was bestimmt einen Datenexport und was ist im Export enthalten? {#enterprise-behavior}
 
@@ -67,7 +69,7 @@ Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es
 
 | Was einen Zielexport bestimmt | Im Zielexport enthaltene Informationen |
 |---------|----------|
-| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn sich der `segmentMembership` eines Profils in `realized` oder `exiting` ändert oder zugeordnete Attribute aktualisiert werden.</li><li>Da Identitäten derzeit nicht Unternehmenszielen zugeordnet werden können, bestimmen Änderungen an der Identität eines bestimmten Profils auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifikations- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. </li><li>Alle Identitäten im `identityMap`-Objekt sind ebenfalls enthalten (Experience Platform unterstützt derzeit keine Identitätszuordnung im Unternehmensziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
+| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn sich der `segmentMembership` eines Profils in `realized` oder `exiting` ändert oder zugeordnete Attribute aktualisiert werden.</li><li>Da Identitäten derzeit nicht Unternehmenszielen zugeordnet werden können, bestimmen Änderungen an der Identität eines bestimmten Profils auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifizierungs- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. </li><li>Alle Identitäten im `identityMap`-Objekt sind ebenfalls enthalten (Experience Platform unterstützt derzeit keine Identitätszuordnung im Unternehmensziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -97,7 +99,7 @@ Das Verhalten beim Profilexport für Streaming-Ziele wie Facebook, Trade Desk un
 
 Beispiele für Streaming-Ziele sind die Ziele, die zu den [Social-Media- und Werbekategorien](/help/destinations/destination-types.md#categories) im Katalog gehören.
 
-Experience Platform optimiert das Verhalten beim Profilexport für Ihr Streaming-Ziel, sodass Daten nur an Ihre API-basierten Streaming-Ziele exportiert werden, wenn relevante Profilaktualisierungen aufgrund einer Zielgruppenqualifikation oder anderer wichtiger Ereignisse durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
+Experience Platform optimiert das Verhalten beim Profilexport für Ihr Streaming-Ziel, sodass Daten nur an Ihre API-basierten Streaming-Ziele exportiert werden, wenn relevante Profilaktualisierungen aufgrund einer Zielgruppenqualifizierung oder anderer wichtiger Ereignisse durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) für mindestens eine der dem Ziel zugeordneten Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) für einen Identity-Namespace bestimmt, der für diese Zielinstanz für den Export markiert ist. Beispielsweise wurde einem Profil, das sich bereits für eine der dem Ziel zugeordneten Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
@@ -106,7 +108,9 @@ Experience Platform optimiert das Verhalten beim Profilexport für Ihr Streaming
 
 In allen oben beschriebenen Fällen werden nur die Profile exportiert, in denen relevante Aktualisierungen vorgenommen wurden. Wenn beispielsweise eine Zielgruppe, die dem Zielfluss zugeordnet ist, aus hundert Mitgliedern besteht und fünf neue Profile sich für das Segment qualifizieren, ist der Export in Ihr Ziel inkrementell und umfasst nur die fünf neuen Profile.
 
-Beachten Sie, dass alle zugeordneten Attribute unabhängig von der Art der Änderungen für ein Profil exportiert werden. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
+>[!NOTE]
+>
+>Alle zugeordneten Attribute werden für ein Profil exportiert, unabhängig davon, wo die Änderungen liegen. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
 
 ### Was bestimmt einen Datenexport und was ist im Export enthalten? {#streaming-behavior}
 
@@ -139,8 +143,8 @@ Was die Profilattribute angeht, bestimmt jede Änderung an den drei oben zugeord
 Beim Export von Profilen an [dateibasierte Ziele](/help/destinations/destination-types.md#file-based) in Experience Platform gibt es drei Arten von Zeitplänen (siehe unten) und zwei Dateiexportoptionen (vollständige oder inkrementelle Dateien), die Sie verwenden können. Alle diese Einstellungen werden auf Zielgruppenebene festgelegt, selbst wenn mehrere Zielgruppen einem einzelnen Zieldatenfluss zugeordnet sind.
 
 * Geplante Exporte: Konfigurieren Sie ein Ziel, fügen Sie ein oder mehrere Segmente hinzu, wählen Sie aus, ob Sie vollständige oder inkrementelle Dateien exportieren möchten, und bestimmen Sie eine feste Zeit pro Tag oder mehrere Zeitpunkte pro Tag für den Dateiexport. Beispielsweise bedeutet eine Exportzeit von 17 Uhr, dass jedes Profil, das für die Zielgruppe qualifiziert ist, um 17 Uhr exportiert wird.
-* Nach der Segmentauswertung: Der Export wird sofort nach Ausführung des täglichen Zielgruppenauswertungsvorgangs ausgelöst. Das bedeutet, dass die Anzahl der exportierten Profile in der Datei so nah wie möglich an der zuletzt ausgewerteten Population des Segments liegt.
-* Exporte auf Anfrage ([Datei jetzt exportieren](/help/destinations/ui/export-file-now.md)): Basierend auf dem neuesten Zielgruppenauswertungsvorgang wird eine vollständige Datei einmalig zusätzlich zu den regelmäßig geplanten Exporten exportiert.
+* Nach der Segmentauswertung: Der Export wird sofort nach Ausführung des täglichen Zielgruppenauswertungsauftrags ausgelöst. Das bedeutet, dass die Anzahl der exportierten Profile in der Datei so nah wie möglich an der zuletzt ausgewerteten Population des Segments liegt.
+* Exporte auf Anfrage ([Datei jetzt exportieren](/help/destinations/ui/export-file-now.md)): Basierend auf dem neuesten Zielgruppenauswertungsauftrag wird eine vollständige Datei einmalig zusätzlich zu den regelmäßig geplanten Exporten exportiert.
 
 In allen oben genannten Exportsituationen enthalten die exportierten Dateien die Profile, die für den Export qualifiziert sind, sowie die Spalten, die Sie als XDM-Attribute für den Export ausgewählt haben.
 
@@ -154,9 +158,9 @@ Ein Profil qualifiziert sich nicht bei jeder Aktualisierung für die Aufnahme in
 
 Wenn sich jedoch das `segmentMembership` für ein Profil ändert, wird das Profil in die exportierten Dateien aufgenommen. Mit anderen Worten: Wenn das Profil Teil der Zielgruppe wird oder aus der Zielgruppe entfernt wird, wird es in inkrementelle Dateiexporte eingeschlossen.
 
-Trigger Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm) hinzugefügt wird, &#x200B;](/help/identity-service/features/identity-graph-viewer.md) das Profil in einen neuen inkrementellen Dateiexport eingeschlossen.
+Trigger Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm) hinzugefügt wird, ](/help/identity-service/features/identity-graph-viewer.md) das Profil in einen neuen inkrementellen Dateiexport eingeschlossen.
 
-Wenn einer Zielzuordnung eine neue Zielgruppe hinzugefügt wird, hat dies keine Auswirkungen auf Qualifikationen und Exporte für ein anderes Segment. Exportpläne werden für jede Zielgruppe einzeln konfiguriert und Dateien werden für jedes Segment separat exportiert, selbst wenn die Zielgruppen demselben Zieldatenfluss hinzugefügt wurden.
+Wenn einer Zielzuordnung eine neue Zielgruppe hinzugefügt wird, hat dies keine Auswirkungen auf Qualifizierungen und Exporte für ein anderes Segment. Exportpläne werden für jede Zielgruppe einzeln konfiguriert und Dateien werden für jedes Segment separat exportiert, selbst wenn die Zielgruppen demselben Zieldatenfluss hinzugefügt wurden.
 
 >[!BEGINSHADEBOX]
 
@@ -171,7 +175,7 @@ Beachten Sie beispielsweise in der unten dargestellten Exporteinstellung, bei de
 
 >[!ENDSHADEBOX]
 
-### Was bestimmt einen Datenexport und was ist im Export enthalten?
+### Was bestimmt einen Datenexport und was ist im Export enthalten? {#file-based-export-details}
 
 Basierend auf den Informationen im obigen Abschnitt kann das Verhalten beim Profilexport an dateibasierte Ziele wie unten beschrieben zusammengefasst werden:
 

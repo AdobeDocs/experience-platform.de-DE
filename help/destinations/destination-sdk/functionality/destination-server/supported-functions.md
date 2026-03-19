@@ -2,10 +2,10 @@
 description: Das Destination SDK von Experience Platform verwendet Pebble-Vorlagen, mit denen Sie die aus Experience Platform exportierten Daten in das für Ihr Ziel erforderliche Format umwandeln können.
 title: Unterstützte Umwandlungsfunktionen in Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 100%
+source-wordcount: '551'
+ht-degree: 96%
 
 ---
 
@@ -27,7 +27,7 @@ Die Nachrichtenumwandlungsvorlage wird in der [Ziel-Server-Konfiguration](templa
 
 ## Voraussetzungen {#prerequisites}
 
-Um die Konzepte und Funktionen auf dieser Referenzseite zu verstehen, lesen Sie zunächst das Dokument zum [Nachrichtenformat](message-format.md). Sie müssen die [Profilstruktur](message-format.md#profile-structure) in Experience Platform verstehen, bevor Sie [!DNL Pebble]-Vorlagen zur Transformation der exportierten Daten verwenden können.
+Um die Konzepte und Funktionen auf dieser Referenzseite zu verstehen, lesen Sie zunächst das Dokument zum [Nachrichtenformat](message-format.md). Sie müssen die [Profilstruktur“ in Experience Platform verstehen](message-format.md#profile-structure) bevor Sie [!DNL Pebble] Vorlagen zur Transformation der exportierten Daten verwenden können.
 
 Bevor Sie zu den unten dokumentierten Funktionen übergehen, sehen Sie sich die Beispielvorlagen im Abschnitt [Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Zielgruppenzugehörigkeiten](message-format.md#using-templating) an. Die Beispiele dort beginnen sehr einfach und werden immer komplexer.
 
@@ -55,13 +55,13 @@ Aus dem [!DNL Pebble]-Funktionsabschnitt unterstützt Adobe *nicht* die Funktion
 
 Um zu veranschaulichen, wie die [!DNL Pebble]-Funktionen in Destination SDK verwendet werden, sehen Sie unten, wie die Datumsfunktion ([Link in der Pebble-Dokumentation](https://pebbletemplates.io/wiki/filter/date/)) verwendet wird, um das Format eines Zeitstempels zu transformieren.
 
-### Anwendungsfall
+### Anwendungsfall {#date-use-case}
 
 Sie möchten den `lastQualificationTime` Zeitstempel vom Standard-[ISO 8601](https://de.wikipedia.org/wiki/ISO_8601)-Wert, den Experience Platform exportiert, in einen anderen von Ihrem Ziel bevorzugten Wert ändern.
 
-### Beispiel
+### Beispiel {#date-example}
 
-#### Eingabe
+#### Eingabe {#date-input}
 
 ```json
 {
@@ -69,13 +69,13 @@ Sie möchten den `lastQualificationTime` Zeitstempel vom Standard-[ISO 8601](htt
 }
 ```
 
-#### Format
+#### Format {#date-format}
 
 ```java
 {{ lastQualificationTime | date(existingFormat="yyyy-MM-dd'T'HH:mm:sss.SSSX", format="yyyy-MM-dd'T'HH:mm:ssX") }}
 ```
 
-#### Ausgabe
+#### Ausgabe {#date-output}
 
 ```json
 {
@@ -89,13 +89,13 @@ Zusätzlich zu den vordefinierten Funktionen von [!DNL Pebble] sehen Sie unten d
 
 ### Funktionen `addedSegments` und `removedSegments` {#addedsegments-removedsegments-functions}
 
-#### Anwendungsfall
+#### Anwendungsfall {#segments-use-case}
 
 Diese Funktionen können verwendet werden, um eine Liste von Zielgruppen zu erhalten, die einem Profil hinzugefügt oder daraus entfernt wurden.
 
-#### Beispiel
+#### Beispiel {#segments-example}
 
-##### Eingabe
+##### Eingabe {#segments-input}
 
 ```json
 {
@@ -128,13 +128,13 @@ Diese Funktionen können verwendet werden, um eine Liste von Zielgruppen zu erha
 }
 ```
 
-##### Format
+##### Format {#segments-format}
 
 ```java
 added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}; removed: {% for s in removedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}
 ```
 
-##### Ausgabe
+##### Ausgabe {#segments-output}
 
 ```json
 added: <111111><333333>; removed: <222222>

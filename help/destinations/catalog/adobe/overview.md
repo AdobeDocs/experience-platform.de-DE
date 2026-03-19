@@ -3,7 +3,7 @@ keywords: Ziele;Experience Cloud-Lösungen;Target;Target-Ziel;Ad Cloud;Advertisi
 title: Adobe-Ziele – Übersicht
 description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in Experience Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 29%
@@ -22,7 +22,7 @@ Derzeit unterstützt Experience Platform die unten aufgeführten Adobe-Ziele.
 
 Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite Zieltypen und -kategorien.
 
-### Verbindungen
+### Verbindungen {#connections}
 
 * [Adobe Advertising Cloud DSP-Verbindung](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign-Verbindung](../email-marketing/adobe-campaign.md)
@@ -32,7 +32,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Marketo Measure Ultimate-Verbindung](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
 * [Verbindung mit Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
-### Erweiterungen
+### Erweiterungen {#extensions}
 
 * [Adobe Advertising Cloud-Erweiterung](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics-Erweiterung](../analytics/adobe-analytics.md)
@@ -45,7 +45,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Marketo Munchkin-Erweiterung](../email/marketo-munchkin.md)
 * [Marketo Web-Personalisierungserweiterung](../personalization/marketo-web-personalization.md)
 
-## Experience Platform-Zielgruppenfreigabe
+## Experience Platform-Zielgruppenfreigabe {#audience-sharing}
 
 Verwenden Sie die Funktion zur Freigabe von Experience Platform-Zielgruppen, um Ihre Experience Platform-Zielgruppen für weitere Adobe-Ziele freizugeben. Weitere Informationen finden Sie auf der folgenden Seite (wird im Dokumentationsportal zu Audience Manager geöffnet):
 

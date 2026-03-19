@@ -4,9 +4,9 @@ title: IP-Adressen-Zulassungsliste für Streaming-Ziele
 type: Documentation
 description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten aus Experience Platform sicher in Ihren HTTP-REST-API-Endpunkt oder Ihre Amazon Kinesis-Instanz zu exportieren.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '424'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ Die auf dieser Seite dokumentierten IP-Bereiche gelten für die folgenden Ziele:
 
 * [Erweiterte Unternehmensziele](../../destination-types.md#advanced-enterprise-destinations): [HTTP-API-](./http-destination.md)Ziel und [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [Exportziele für Streaming-Zielgruppen](../../destination-types.md#streaming-destinations) wie [Pega CDH RealTime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-basierte Integrationen mit [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) und [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
-* Öffentliche oder private Ziele, die über [Destination SDK erstellt &#x200B;](../../destination-sdk/getting-started.md)
+* Öffentliche oder private Ziele, die über [Destination SDK erstellt ](../../destination-sdk/getting-started.md)
 
 >[!IMPORTANT]
 >
@@ -82,7 +82,7 @@ Auf die Zulassungsliste setzen Zusätzlich zu diesen globalen IP-Adressen müsse
 
 ## VA6: Kunden aus den USA und Amerika, die mit AWS arbeiten {#aws}
 
-Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht [&#x200B; Experience Platform Multi-Cloud .](../../../landing/multi-cloud.md)
+Der folgende IP-Bereich gilt für Experience Platform-Kunden, die mit Amazon Web Services (AWS) arbeiten. Weitere Informationen dazu finden Sie in der Übersicht [ Experience Platform Multi-Cloud .](../../../landing/multi-cloud.md)
 
 * `3.209.222.108`
 * `3.211.230.204`

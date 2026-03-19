@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie einen Authentifizierungsmechanismus für Ihr Ziel einrichten und erhalten Sie einen Einblick darüber, was in der Benutzeroberfläche je nach gewählter Authentifizierungsmethode zu sehen sein wird.
 title: Konfiguration der Kundenauthentifizierung
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 91%
+source-wordcount: '1094'
+ht-degree: 88%
 
 ---
 
@@ -53,6 +53,8 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 |---|---|
 | Echtzeit-Integrationen (Streaming) | Ja |
 | Dateibasierte (Batch-)Integrationen | Ja |
+
+{style="table-layout:auto"}
 
 ## Konfiguration der Authentifizierungsregeln {#authentication-rule}
 
@@ -105,7 +107,7 @@ Um die Authentifizierung des Bearer-Typs für Ihr Ziel einzurichten, konfigurier
 
 ## OAuth 2-Authentifizierung {#oauth2}
 
-Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authentifizierungsfluss für Ihr Ziel auszulösen (siehe folgendes Beispiel für das Ziel „Benutzerdefinierte Twitter-Zielgruppen“). Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [Authentifizierungsseite für Destination SDK OAuth 2](oauth2-authorization.md).
+Benutzerinnen und Benutzer wählen **[!UICONTROL Connect to destination]** aus, um den OAuth 2-Authentifizierungsfluss für Ihr Ziel Trigger (siehe folgendes Beispiel für das Ziel „Twitter Custom Audiences„). Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [Authentifizierungsseite für Destination SDK OAuth 2](oauth2-authorization.md).
 
 ![Darstellung der Benutzeroberfläche mit OAuth 2-Authentifizierung](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -173,7 +175,7 @@ Um die [!DNL Azure Data Lake Storage] (ADLS)-Authentifizierung für Ihr Ziel ein
 ]
 ```
 
-## SFTP mit Passwortauthentifizierung
+## SFTP mit Passwortauthentifizierung {#sftp-password-auth}
 
 Die [!DNL SFTP]-Authentifizierung mit Passwort wird für dateibasierte Ziele in Experience Platform unterstützt.
 
@@ -191,7 +193,7 @@ Um die SFTP-Authentifizierung mit einem Kennwort für Ihr Ziel einzurichten, kon
 ]
 ```
 
-## SFTP mit SSH-Schlüsselauthentifizierung
+## SFTP mit SSH-Schlüsselauthentifizierung {#sftp-ssh-key-auth}
 
 Die [!DNL SFTP]-Authentifizierung mit dem [!DNL SSH]-Schlüssel wird für dateibasierte Ziele in Experience Platform unterstützt.
 
@@ -213,7 +215,7 @@ Um die SFTP-Authentifizierung mit dem SSH-Schlüssel für Ihr Ziel einzurichten,
 
 Die [!DNL Google Cloud Storage]-Authentifizierung wird für dateibasierte Ziele in Experience Platform unterstützt.
 
-Wenn Sie die [!DNL Google Cloud Storage] Authentifizierungstyp: Benutzer müssen ihre [!DNL Google Cloud Storage] [!UICONTROL Zugriffsschlüssel-ID] und [!UICONTROL geheimer Zugriffsschlüssel].
+Wenn Sie den Authentifizierungstyp [!DNL Google Cloud Storage] konfigurieren, müssen Benutzerinnen und Benutzer ihre [!DNL Google Cloud Storage] [!UICONTROL access key ID] und [!UICONTROL secret access key] eingeben.
 
 ![Benutzeroberflächen-Rendering mit Google Cloud Storage-Authentifizierung](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 
@@ -243,4 +245,4 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](aggregation-policy.md)
 * [Batch-Konfiguration](batch-configuration.md)
-* [Historische Profilqualifikationen](historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](historical-profile-qualifications.md)

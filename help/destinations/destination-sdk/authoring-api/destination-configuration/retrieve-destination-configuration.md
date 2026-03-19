@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Zielkonfiguration über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Abrufen einer Zielkonfiguration
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 95%
+source-wordcount: '366'
+ht-degree: 86%
 
 ---
 
@@ -19,7 +19,7 @@ Auf dieser Seite werden die API-Anfrage und -Payload erläutert, mit deren Hilfe
 
 ## Erste Schritte mit API-Vorgängen für die Zielkonfiguration {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Abrufen einer Zielkonfiguration {#retrieve}
 
@@ -190,6 +190,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- |
 | `{INSTANCE_ID}` | Die ID der Zielkonfiguration, die Sie abrufen möchten. |
 
+{style="table-layout:auto"}
+
 +++
 
 +++Antwort
@@ -308,7 +310,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der Zie
 
 Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Zielkonfiguration über den API-Endpunkt `/authoring/destinations` von Destination SDK abrufen können.
 

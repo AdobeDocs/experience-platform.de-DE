@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine vorhandene Ziel-Server-Konfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
 title: Aktualisieren einer Ziel-Server-Konfiguration
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 96%
+source-wordcount: '1101'
+ht-degree: 93%
 
 ---
 
@@ -30,7 +30,7 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt ko
 
 ## Erste Schritte mit API-Vorgängen für Ziel-Server {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Aktualisieren einer Ziel-Server-Konfiguration {#update}
 

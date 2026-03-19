@@ -1,13 +1,13 @@
 ---
 title: Zielgruppen-Lebenszyklus in Experience Platform und Streaming-Ziele
 description: Erfahren Sie, wie Zielgruppennamen und -zuordnungen aus Experience Platform in Streaming-Zielplattformen dargestellt werden.
-source-git-commit: 6b4dfa714e078fb5b97900811aade081ffef0d78
+exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 3%
 
 ---
-
 
 # Zielgruppen-Lebenszyklus in Streaming-Zielen
 
@@ -86,6 +86,6 @@ Die folgenden Streaming-Ziele unterstützen das automatische Entfernen von Zielg
 * [Benutzerdefinierte Twitter-Zielgruppen](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### Ziele, die das Entfernen von Zielgruppen nicht unterstützen
+### Ziele, die das Entfernen von Zielgruppen nicht unterstützen {#no-removal-support}
 
 Wenn Sie bei Zielen, die oben nicht aufgeführt sind, die Zuordnung einer Zielgruppe zum Ziel aufheben, entfernt Experience Platform nur die Zuordnung. Die Zielgruppe in der Zielplattform bleibt aktiv, bis Sie sie manuell in der Partnerplattform löschen.

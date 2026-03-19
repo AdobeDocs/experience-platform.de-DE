@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Zielgruppenvorlage über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Löschen einer Zielgruppenvorlage
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 94%
+source-wordcount: '287'
+ht-degree: 82%
 
 ---
 
@@ -25,7 +25,7 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt ko
 
 ## Erste Schritte mit API-Vorgängen für Zielgruppenvorlagen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Löschen einer Zielgruppenvorlage {#delete}
 
@@ -42,6 +42,8 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | Die `ID` der Zielgruppenvorlage, die Sie löschen möchten. |
+
+{style="table-layout:auto"}
 
 +++Anfrage
 

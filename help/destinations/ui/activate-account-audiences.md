@@ -3,9 +3,9 @@ title: Kontozielgruppen für Ziele aktivieren
 type: Tutorial
 description: Erfahren Sie, wie Sie Konto-Zielgruppen für Ziele aktivieren
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '772'
 ht-degree: 6%
 
 ---
@@ -24,7 +24,7 @@ Wechseln Sie zu **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** und
 
 ![Ziele, die Konto-Zielgruppen unterstützen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
-## Videoüberblick
+## Videoüberblick {#video-overview}
 
 Sehen Sie sich das folgende Video an, um einen Überblick über das Erstellen und Aktivieren von Account-Zielgruppen und die unterstützten Anwendungsfälle beim Aktivieren von Account-Zielgruppen zu erhalten.
 
@@ -37,7 +37,7 @@ Sehen Sie sich das folgende Video an, um einen Überblick über das Erstellen un
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Aktivieren von Konto-Zielgruppen benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Activate Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+Zum Aktivieren von Konto-Zielgruppen benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Activate Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Aktivieren von Konto-Zielgruppen verfügen, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über ein **[!UICONTROL Activate]** verfügt, verfügen Sie über die entsprechenden Berechtigungen.
 
@@ -53,7 +53,7 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 >[!TIP]
 >
->Die Ziele, die Account-Zielgruppen exportieren können, werden mit einem Symbol in der oberen rechten Ecke der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die Account-Zielgruppen exportieren können, [weiter oben auf der Seite &#x200B;](#supported-destinations).
+>Die Ziele, die Account-Zielgruppen exportieren können, werden mit einem Symbol in der oberen rechten Ecke der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die Account-Zielgruppen exportieren können, [weiter oben auf der Seite ](#supported-destinations).
 
 ![Demandbase-Zielseite, auf der Profil-Zielgruppen exportiert werden können, hervorgehoben.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
@@ -65,21 +65,25 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 ![Zielaktivierungs-Workflow mit hervorgehobenem Steuerelement „Konten“.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
 
-1. Fahren Sie mit dem nächsten Abschnitt fort[&#x200B; um Ihre Konto](#select-profile-audiences)Zielgruppen auszuwählen.
+1. Fahren Sie mit dem nächsten Abschnitt fort[ um Ihre Konto](#select-profile-audiences)Zielgruppen auszuwählen.
 
 ## Konto-Zielgruppen auswählen {#select-account-audiences}
 
-Aktivieren Sie die Kontrollkästchen links neben den Namen der Konto-Zielgruppen , um die Zielgruppen auszuwählen, die Sie an das Ziel exportieren möchten, und klicken Sie dann auf **[!UICONTROL Next]**. Beachten Sie, *in dieser Ansicht nur* Konto-Zielgruppen“ angezeigt werden und keine anderen Zielgruppentypen angezeigt werden.
+Aktivieren Sie die Kontrollkästchen links neben den Namen der Konto-Zielgruppen , um die Zielgruppen auszuwählen, die Sie an das Ziel exportieren möchten, und klicken Sie dann auf **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>In *Ansicht* nur „Konto-Zielgruppen“ angezeigt, und es werden keine anderen Zielgruppentypen angezeigt.
 
 ![Workflow für den Datensatzexport, der den Schritt „Zielgruppen auswählen“ zeigt, in dem Sie auswählen können, welche Konto-Zielgruppen exportiert werden sollen.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
-## Planung und nächste Schritte
+## Planung und nächste Schritte {#scheduling-and-next-steps}
 
 Lesen Sie für den Rest des Aktivierungs-Workflows zum Exportieren von Konto-Zielgruppen das Tutorial zum Aktivieren von Daten für dateibasierte Ziele. Fahren Sie mit dem [Schritt Zielgruppenexport planen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) fort. Wenn Sie Konto-Zielgruppen für das **[!UICONTROL (Companies) LinkedIn Matched Audiences]** Ziel aktivieren, lesen Sie das Tutorial zum Aktivieren von Streaming-Zielen. Fahren Sie mit dem [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) fort.
 
 >[!NOTE]
 >
->Beachten Sie, dass Sie im Planungsschritt beim Exportieren von Konto-Zielgruppen in Cloud-Speicher-Ziele mit dem Workflow zum Aktivieren von Konto-Zielgruppen nur [vollständige Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementelle Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _nach einem täglichen Zeitplan_. Stündliche Exporte werden nicht unterstützt. Beachten Sie außerdem, dass **[!UICONTROL After audience evaluation]** der einzige unterstützte Auswertungstyp ist.
+>Im Planungsschritt beim Exportieren von Konto-Zielgruppen in Cloud-Speicher-Ziele ermöglicht der Workflow zum Aktivieren von Konto-Zielgruppen nur den Export von [vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementellen ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _nach einem täglichen Zeitplan_. Stündliche Exporte werden nicht unterstützt. **[!UICONTROL After audience evaluation]** ist der einzige unterstützte Auswertungstyp.
 
 ## Wichtige Hinweise und bekannte Einschränkungen {#important-callouts-known-limitations}
 
@@ -96,10 +100,12 @@ Beachten Sie beim Aktivieren von Konto-Zielgruppen für das **[!UICONTROL (Compa
 | `accountName` | `companyName` |
 | `accountKey.sourceKey` | `primaryId` (Wählen Sie dieses Feld in der **[!UICONTROL Select Identity namespace]** aus, wenn Sie die **[!UICONTROL Target Field]** auswählen). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Konto-Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Konto-Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
 
+{style="table-layout:auto"}
+
 ### Durchsetzung von Data Governance {#data-governance-enforcement}
 
 Das Einverständnis wird auf Personen- oder Profilebene für (Kunden- *Interessenten-Zielgruppen)*. Daher wird [Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) derzeit nicht unterstützt, wenn Kontozielgruppen für Ziele aktiviert werden. Im Überprüfungsschritt des Aktivierungs-Workflows wird ein ausgegrautes Steuerelement für **[!UICONTROL View applicable consent policies]** angezeigt.
 
 ![Überprüfungsschritt des Workflows Konto-Zielgruppen aktivieren mit ausgegrautem Steuerelement zur Einverständnisdurchsetzung.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-Andere Data-Governance-Mechanismen in Real-Time CDP [&#x200B; z. B](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)Datenverwendungsrichtlinien-Prüfungen und [attributbasierte &#x200B;](/help/destinations/home.md#attribute-based-access)) werden unterstützt.
+Andere Data-Governance-Mechanismen in Real-Time CDP [ z. B](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)Datenverwendungsrichtlinien-Prüfungen und [attributbasierte ](/help/destinations/home.md#attribute-based-access)) werden unterstützt.

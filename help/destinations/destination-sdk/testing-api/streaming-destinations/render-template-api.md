@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API die Ausgabe basierend auf Ihrer Nachrichtenumwandlungsvorlage an Ihr Streaming-Ziel validieren.
 title: Validieren der exportierten Profilstruktur
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 98%
+source-wordcount: '792'
+ht-degree: 93%
 
 ---
 
@@ -20,7 +20,7 @@ Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie 
 
 ## Erste Schritte mit API-Vorgängen für Render-Vorlagen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](../../getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Berechtigung zur Zielerstellung und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Rendern exportierter Profile basierend auf der Nachrichtenumwandlungsvorlage {#render-exported-data}
 
@@ -186,7 +186,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
 **Anfrage**
 
 
-Die folgende Anfrage rendert mehrere exportierte Profile, die dem von Ihrem Ziel erwarteten Format entsprechen. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit konfigurierbarer Aggregation. Im Text der Anfrage sind zwei Profile enthalten, von denen jedes drei Zielgruppenqualifikationen und fünf Identitäten aufweist. Sie können Profile generieren, die bei dem Aufruf gesendet werden, indem Sie die [API zur Erzeugung von Musterprofilen](sample-profile-generation-api.md) verwenden.
+Die folgende Anfrage rendert mehrere exportierte Profile, die dem von Ihrem Ziel erwarteten Format entsprechen. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit konfigurierbarer Aggregation. Im Text der Anfrage sind zwei Profile enthalten, von denen jedes drei Zielgruppenqualifizierungen und fünf Identitäten aufweist. Sie können Profile generieren, die bei dem Aufruf gesendet werden, indem Sie die [API zur Erzeugung von Musterprofilen](sample-profile-generation-api.md) verwenden.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \

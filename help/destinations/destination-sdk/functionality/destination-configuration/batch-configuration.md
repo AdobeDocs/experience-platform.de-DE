@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Dateiexporteinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Batch-Konfiguration
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 8e7356bdc5692678e46a61b538d4b6748792a423
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 86%
+source-wordcount: '1031'
+ht-degree: 85%
 
 ---
 
@@ -92,10 +92,10 @@ Die Werte, die Sie hier festlegen, werden im Schritt [Zielgruppenexport planen](
 |---------|----------|------|
 | `allowMandatoryFieldSelection` | Boolesch | Wenn auf `true` eingestellt, können Kundinnen und Kunden festlegen, welche Profilattribute obligatorisch sind. Der Standardwert ist `false`. Weitere Informationen finden Sie unter [Obligatorische Attribute](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 | `allowDedupeKeyFieldSelection` | Boolesch | Wenn auf `true` eingestellt, können Kundinnen und Kunden Deduplizierungsschlüssel angeben. Der Standardwert ist `false`. Weitere Informationen finden Sie unter [Deduplizierungsschlüssel](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
-| `defaultExportMode` | Enum | Definiert den standardmäßigen Dateiexportmodus. Unterstützte Werte:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Der Standardwert ist `DAILY_FULL_EXPORT`. Weitere Informationen zur Planung von Dateiexporten finden Sie in der [Dokumentation zur Batch-Aktivierung](../../../ui/activate-batch-profile-destinations.md#scheduling). |
+| `defaultExportMode` | Aufzählung | Definiert den standardmäßigen Dateiexportmodus. Unterstützte Werte:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Der Standardwert ist `DAILY_FULL_EXPORT`. Weitere Informationen zur Planung von Dateiexporten finden Sie in der [Dokumentation zur Batch-Aktivierung](../../../ui/activate-batch-profile-destinations.md#scheduling). |
 | `allowedExportModes` | Liste | Definiert die für Kundinnen und Kunden verfügbaren Dateiexportmodi. Unterstützte Werte:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Liste | Definiert die für Kundinnen und Kunden verfügbare Dateiexportfrequenz. Unterstützte Werte:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> |
-| `defaultFrequency` | Enum | Definiert die standardmäßige Dateiexportfrequenz. Unterstützte Werte:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> Der Standardwert ist `DAILY`. |
+| `defaultFrequency` | Aufzählung | Definiert die standardmäßige Dateiexportfrequenz. Unterstützte Werte:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> Der Standardwert ist `DAILY`. |
 | `defaultStartTime` | Zeichenfolge | Definiert die standardmäßige Startzeit für den Dateiexport. Verwendet das 24-Stunden-Dateiformat. Der Standardwert ist „00:00&quot;. |
 | `filenameConfig.allowedFilenameAppendOptions` | Zeichenfolge | *Erforderlich*. Liste der verfügbaren Dateinamenmakros, aus denen Benutzerinnen und Benutzer auswählen können. Dadurch wird bestimmt, welche Elemente an exportierte Dateinamen angehängt werden (Zielgruppen-ID, Organisationsname, Datum und Uhrzeit des Exports usw.). Wenn Sie `defaultFilename`festlegen, sollten Sie darauf achten, dass Makros nicht dupliziert werden. <br><br>Unterstützte Werte: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Unabhängig von der Reihenfolge, in der Sie die Makros definieren, zeigt die Experience Platform-Benutzeroberfläche sie immer in der hier dargestellten Reihenfolge an. <br><br> Wenn `defaultFilename` leer ist, muss die Liste `allowedFilenameAppendOptions` mindestens ein Makro enthalten. |
 | `filenameConfig.defaultFilenameAppendOptions` | Zeichenfolge | *Erforderlich*. Vorausgewählte Standardmakros für Dateinamen, die von Benutzerinnen und Benutzern deaktiviert werden können.<br><br> Die Makros in dieser Liste sind eine Teilmenge der in `allowedFilenameAppendOptions` definierten. |
@@ -109,27 +109,27 @@ Die Werte, die Sie hier festlegen, werden im Schritt [Zielgruppenexport planen](
 Verwenden Sie Makros zur Dateinamenkonfiguration, um zu definieren, was die Namen der exportierten Dateien enthalten sollen. Die Makros in der folgenden Tabelle beschreiben Elemente, die in der Benutzeroberfläche des Bildschirms [Dateinamenkonfiguration](../../../ui/activate-batch-profile-destinations.md#file-names) angezeigt werden.
 
 >[!TIP]
-> 
+>
 >Als Best Practice sollten Sie immer das `SEGMENT_ID`-Makro in den Namen der exportierten Dateien aufnehmen. Segment-IDs sind eindeutig. Daher lässt sich am besten sicherstellen, dass Dateinamen auch eindeutig sind, indem Sie sie in den Dateinamen aufnehmen.
 
 | Makro | UI-Label | Beschreibung | Beispiel |
 |---|---|---|---|
-| `DESTINATION` | [!UICONTROL Ziel] | Zielname in der Benutzeroberfläche. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL Segment-ID] | Eindeutige, von Experience Platform generierte Zielgruppen-ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Segmentname] | Benutzerdefinierter Zielgruppenname | VIP |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL Ziel-ID] | Eindeutige, von Experience Platform generierte ID der Zielinstanz | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
-| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Zielname] | Benutzerdefinierter Name der Zielinstanz. | Mein Werbeziel 2022 |
-| `ORGANIZATION_NAME` | [!UICONTROL Organisationsname] | Name der Kundenorganisation in Adobe Experience Platform. | Mein Organisationsname |
-| `SANDBOX_NAME` | [!UICONTROL Sandbox-Name] | Name der von der Kundinnen oder dem Kunden verwendeten Sandbox. | prod |
-| `DATETIME` / `TIMESTAMP` | [!UICONTROL Datum und Uhrzeit] | `DATETIME` und `TIMESTAMP` definieren beide den Zeitpunkt der Erstellung der Datei, jedoch in verschiedenen Formaten. <br><br><ul><li>`DATETIME` verwendet das folgende Format: JJJJMMTT_HHMMSS.</li><li>`TIMESTAMP` verwendet das 10-stellige Unix-Format. </li></ul> `DATETIME` und `TIMESTAMP` schließen sich gegenseitig aus und können nicht gleichzeitig verwendet werden. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
-| `CUSTOM_TEXT` | [!UICONTROL Benutzerdefinierter Text] | Benutzerdefinierter Text, der in den Dateinamen eingefügt werden soll. Kann nicht in `defaultFilename` verwendet werden. | Mein_Benutzerdefinierter_Text |
-| `TIMESTAMP` | [!UICONTROL Datum und Uhrzeit] | 10-stelliger Zeitstempel der Zeit, zu der die Datei generiert wurde, im Unix-Format. | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL Zusammenführungsrichtlinien-ID] | Die ID der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md), die zum Generieren der exportierten Zielgruppe verwendet wird. Verwenden Sie dieses Makro, wenn Sie exportierte Zielgruppen anhand der Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL Name der Zusammenführungsrichtlinie] | Der Name der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md), die zum Generieren der exportierten Zielgruppe verwendet wird. Verwenden Sie dieses Makro, wenn Sie exportierte Zielgruppen anhand der Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | Meine benutzerdefinierte Zusammenführungsrichtlinie |
+| `DESTINATION` | [!UICONTROL Destination] | Zielname in der Benutzeroberfläche. | Amazon S3 |
+| `SEGMENT_ID` | [!UICONTROL Segment ID] | Eindeutige, von Experience Platform generierte Zielgruppen-ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Segment Name] | Benutzerdefinierter Zielgruppenname | VIP |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Eindeutige, von Experience Platform generierte ID der Zielinstanz | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Benutzerdefinierter Name der Zielinstanz. | Mein Werbeziel 2022 |
+| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Name der Kundenorganisation in Adobe Experience Platform. | Mein Organisationsname |
+| `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Name der von der Kundinnen oder dem Kunden verwendeten Sandbox. | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` und `TIMESTAMP` definieren beide den Zeitpunkt der Erstellung der Datei, jedoch in verschiedenen Formaten. <br><br><ul><li>`DATETIME` verwendet das folgende Format: JJJJMMTT_HHMMSS.</li><li>`TIMESTAMP` verwendet das 10-stellige Unix-Format. </li></ul> `DATETIME` und `TIMESTAMP` schließen sich gegenseitig aus und können nicht gleichzeitig verwendet werden. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL Custom text] | Benutzerdefinierter Text, der in den Dateinamen eingefügt werden soll. Kann nicht in `defaultFilename` verwendet werden. | Mein_Benutzerdefinierter_Text |
+| `TIMESTAMP` | [!UICONTROL Date and time] | 10-stelliger Zeitstempel der Zeit, zu der die Datei generiert wurde, im Unix-Format. | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | Die ID der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md), die zum Generieren der exportierten Zielgruppe verwendet wird. Verwenden Sie dieses Makro, wenn Sie exportierte Zielgruppen anhand der Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | Der Name der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md), die zum Generieren der exportierten Zielgruppe verwendet wird. Verwenden Sie dieses Makro, wenn Sie exportierte Zielgruppen anhand der Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | Meine benutzerdefinierte Zusammenführungsrichtlinie |
 
 {style="table-layout:auto"}
 
-### Beispiel für eine Dateinamenkonfiguration
+### Beispiel für eine Dateinamenkonfiguration {#file-name-configuration-example}
 
 Das folgende Konfigurationsbeispiel zeigt die Korrespondenz zwischen der im API-Aufruf verwendeten Konfiguration und den in der Benutzeroberfläche angezeigten Optionen.
 
@@ -166,4 +166,4 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Zielbereitstellung](destination-delivery.md)
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](aggregation-policy.md)
-* [Historische Profilqualifikationen](historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](historical-profile-qualifications.md)

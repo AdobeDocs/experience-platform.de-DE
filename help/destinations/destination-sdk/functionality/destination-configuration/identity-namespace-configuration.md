@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie die unterstützten Zielidentitäten für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Identity-Namespaces
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 56%
@@ -61,7 +61,7 @@ Bei der Definition der Zielidentitäten, die Ihr Ziel unterstützt, können Sie 
 |---------|----------|---|------|
 | `acceptsAttributes` | Boolesch | Optional | Gibt an, ob Kundinnen und Kunden der Identität, die Sie konfigurieren, standardmäßige Profilattribute zuordnen können. |
 | `acceptsCustomNamespaces` | Boolesch | Optional | Gibt an, ob Kundinnen und Kunden dem Identity-Namespace, den Sie konfigurieren, benutzerdefinierte Identity-Namespaces zuordnen können. |
-| `acceptedGlobalNamespaces` | – | Optional | Gibt an[&#x200B; welche (standardmäßigen Identity](../../../../identity-service/features/namespaces.md#standard)Namespaces) (z. B. [!UICONTROL IDFA]) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. |
+| `acceptedGlobalNamespaces` | – | Optional | Gibt an[ welche (standardmäßigen Identity](../../../../identity-service/features/namespaces.md#standard)Namespaces) (z. B. [!UICONTROL IDFA]) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. |
 | `transformation` | Zeichenfolge | Optional | Zeigt das Kontrollkästchen [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) in der Experience Platform-Benutzeroberfläche an, wenn das Quellfeld entweder ein XDM-Attribut oder ein benutzerdefinierter Identity-Namespace ist. Verwenden Sie diese Option, um Benutzerinnen und Benutzern die Möglichkeit zu geben, Quellattribute beim Export zu hashen. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
 | `requiredTransformation` | Zeichenfolge | Optional | Wenn Kundinnen und Kunden diesen Quell-Identity-Namespace auswählen, wird das Kontrollkästchen [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) automatisch auf die Zuordnung angewendet, und Kundinnen und Kunden können sie nicht deaktivieren. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
 
@@ -92,11 +92,11 @@ Kunden können beispielsweise einen [!DNL Experience Platform] [!DNL IDFA]-Names
 
 Mehr zu Identitäten erfahren Sie in der [Übersicht über Identity-Namespaces](../../../../identity-service/features/namespaces.md).
 
-## Zuordnungsüberlegungen
+## Zuordnungsüberlegungen {#mapping-considerations}
 
 Wenn Kundinnen und Kunden einen Quell-Identity-Namespace auswählen und keine Zielzuordnung auswählen, füllt Experience Platform die Zielzuordnung automatisch mit einem Attribut mit demselben Namen.
 
-## Konfigurieren des optionalen Hashing für Quellfelder
+## Konfigurieren des optionalen Hashing für Quellfelder {#configure-optional-hashing}
 
 Experience Platform-Kunden können Daten im Hash-Format oder im Klartext in Experience Platform aufnehmen. Wenn Ihre Zielplattform sowohl gehashte als auch ungehashte Daten akzeptiert, können Sie Kundinnen und Kunden die Möglichkeit geben, festzulegen, ob Experience Platform die Quellfeldwerte beim Export in Ihr Ziel hashen soll.
 
@@ -122,7 +122,7 @@ Aktivieren Sie diese Option, wenn Sie nicht gehashte Quellfelder verwenden, dami
 
 Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel erwartet, dass sie gehasht werden (z. B.: `email_lc_sha256` oder `phone_sha256`), aktivieren Sie die Option **Umwandlung anwenden**, damit Adobe Experience Platform die Quellattribute bei Aktivierung automatisch hasst.
 
-## Konfigurieren von obligatorischem Hashing für Quellfelder
+## Konfigurieren von obligatorischem Hashing für Quellfelder {#configure-mandatory-hashing}
 
 Wenn Ihr Ziel nur Hash-Daten akzeptiert, können Sie die exportierten Attribute so konfigurieren, dass sie automatisch von Experience Platform gehasht werden. Die folgende Konfiguration aktiviert automatisch die Option **Umwandlung anwenden**, wenn die `Email`- und `Phone`-Identitäten zugeordnet werden.
 

@@ -3,9 +3,9 @@ title: Verbindung abgleichen
 description: Verwenden Sie das Level-Streaming-Ziel, um Zielgruppen direkt in die UserDB- und Segment-Management-APIs von Level zu aktivieren und das Targeting in Echtzeit zur Entscheidungszeit zu unterstützen.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1168'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 8%
 Das [!DNL Kevel] Streaming-Ziel für Adobe Experience Platform ermöglicht es Kunden, Adobe-Zielgruppen direkt in die UserDB- und Segment Management-APIs von [!DNL Kevel] zu aktivieren, um das Targeting in Echtzeit zur Zeit der Anzeigenentscheidung zu unterstützen.
 
 >[!IMPORTANT]
-> 
+>
 >Wenn Sie Fragen haben oder ein Update zum [!DNL Kevel] oder seiner Dokumentation anfordern möchten, wenden Sie sich per E-Mail an das [!DNL Kevel]-Team unter [support@kevel.com](mailto:support@kevel.com).
 
 ## Anwendungsfälle {#use-cases}
@@ -50,7 +50,7 @@ Das [!DNL Kevel]-Ziel unterstützt die Aktivierung für jede Identität, die Ihr
 
 {style="table-layout:auto"}
 
-### Unterstützung für benutzerdefinierte Identity-Namespaces
+### Unterstützung für benutzerdefinierte Identity-Namespaces {#custom-identity-namespaces}
 
 Das [!DNL Kevel]-Ziel **akzeptiert auch benutzerdefinierte Namespaces** wie in Ihrer Experience Platform-Implementierung definiert.
 
@@ -60,7 +60,7 @@ Das bedeutet:
 - Diese Namespaces können `kevel_user_key1`, `kevel_user_key2` oder `kevel_user_key3` wie globale Namespaces zugewiesen werden.
 - [!DNL Kevel] generiert **einen UserDB-Eintrag pro Instanz jeder zugeordneten Identität** wodurch für jede Kennung, die Ihr System sendet, ein Abgleich in Echtzeit zur Zeit der Anzeigenentscheidung ermöglicht wird.
 
-### Verhalten bei der Identitätszuordnung
+### Verhalten bei der Identitätszuordnung {#identity-mapping-behavior}
 
 - Sie können **bis zu drei** Identity-Namespaces von Experience Platform den drei Identity-Slots von [!DNL Kevel] zuordnen.
 - Für jedes aktivierte Profil erhält [!DNL Kevel] **einen UserDB-Eintrag pro Instanz jeder zugeordneten Identität**.
@@ -105,7 +105,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 Befolgen Sie den standardmäßigen Experience Platform-[Ziel verbinden](../../ui/connect-destination.md)-Workflow.
 
 >[!IMPORTANT]
-> 
+>
 >Sie müssen über **Ziele anzeigen** und **Ziele verwalten** verfügen.
 
 ### Beim Ziel authentifizieren {#authenticate}
@@ -126,10 +126,9 @@ Konfigurieren Sie nach der Authentifizierung Folgendes:
 
 ![Zieldetails für Level Destination](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
-Um Zielgruppen an [!DNL Kevel] zu senden, folgen Sie dem Workflow in\
-[Profile und Segmente für Streaming-Segmentexportziele aktivieren](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Um Zielgruppen an [!DNL Kevel] zu senden, folgen Sie dem Workflow in [Aktivieren von Zielgruppen für Streaming-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Deaktivieren von Zielgruppen {#deactivate}
 
@@ -155,7 +154,7 @@ Wählen Sie während der Aktivierung die Identity-Namespaces aus, die Sie für [
 
 Wenn sich ein Profil für eine Zielgruppe qualifiziert und diese verlässt, sendet Experience Platform eine Streaming-Aktualisierung an [!DNL Kevel].
 
-### Beispiel-Payload von [!DNL Kevel] UserDB empfangen
+### Beispiel-Payload von [!DNL Kevel] UserDB empfangen {#sample-payload}
 
 ```json
 PUT /udb/{networkId}/segments?userKey=ECID-12345
@@ -213,7 +212,7 @@ Nachfolgend finden Sie ein Beispiel für ein exportiertes Profil:
 }
 ```
 
-#### Interpretation [!DNL Kevel] Profils
+#### Interpretation [!DNL Kevel] Profils {#kevel-profile-interpretation}
 
 Bei der [!DNL Kevel] Zielkonfiguration generiert jede zugeordnete Identität einen eigenen UserDB-Eintrag, d. h., [!DNL Kevel] empfängt:
 

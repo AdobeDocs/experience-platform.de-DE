@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Ziel-Server-Konfiguration über Adobe Experience Platform Destination SDK erläutert.
 title: Löschen einer Ziel-Server-Konfiguration
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 95%
+source-wordcount: '329'
+ht-degree: 84%
 
 ---
 
@@ -26,7 +26,7 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt l�
 
 ## Erste Schritte mit API-Vorgängen für Ziel-Server {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Löschen einer Ziel-Server-Konfiguration {#delete}
 
@@ -47,6 +47,8 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | Die `ID` der Ziel-Server-Konfiguration, die Sie löschen möchten. |
+
+{style="table-layout:auto"}
 
 +++Anfrage
 

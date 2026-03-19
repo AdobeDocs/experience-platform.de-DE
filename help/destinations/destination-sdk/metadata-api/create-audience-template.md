@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, der zum Erstellen einer Zielgruppenvorlage über Adobe Experience Platform Destination SDK verwendet wird.
 title: Erstellen einer Zielgruppenvorlage
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 88%
+source-wordcount: '621'
+ht-degree: 83%
 
 ---
 
@@ -25,7 +25,7 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt ko
 
 ## Erste Schritte mit API-Vorgängen für Zielgruppenvorlagen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Erstellen einer Zielgruppenvorlage {#create}
 
@@ -257,7 +257,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | Eigenschaft | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
 | `name` | Zeichenfolge | Der Name der Zielgruppen-Metadatenvorlage für Ihr Ziel. Dieser Name wird in jeder partnerspezifischen Fehlermeldung in der Benutzeroberfläche von Experience Platform angezeigt. |
-| `url` | String | Die URL und der Endpunkt Ihrer API, die zum Erstellen, Aktualisieren, Löschen oder Validieren von Audiences und/oder Datenflüssen in Ihrer Plattform verwendet wird. Zwei branchenübliche Beispiele sind `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` und `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `url` | Zeichenfolge | Die URL und der Endpunkt Ihrer API, die zum Erstellen, Aktualisieren, Löschen oder Validieren von Audiences und/oder Datenflüssen in Ihrer Plattform verwendet wird. Zwei branchenübliche Beispiele sind `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` und `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
 | `httpMethod` | Zeichenfolge | Die Methode, die für Ihren Endpunkt verwendet wird, um die Zielgruppe in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren, zu löschen oder zu validieren. Beispiel: `POST`, `PUT`, `DELETE` |
 | `headers.header` | Zeichenfolge | Gibt alle HTTP-Header an, die zum Aufruf Ihrer API hinzugefügt werden sollen. Beispiel: `"Content-Type"` |
 | `headers.value` | Zeichenfolge | Gibt den Wert von HTTP-Headern an, die zum Aufruf Ihrer API hinzugefügt werden sollen. Beispiel: `"application/x-www-form-urlencoded"` |
@@ -279,10 +279,10 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zur neu ers
 
 +++
 
-## Umgang mit API-Fehlern
+## Umgang mit API-Fehlern {#error-handling}
 
 Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wann Sie Zielgruppenvorlagen verwenden sollten und wie Sie eine Zielgruppenvorlage mithilfe des API-Endpunkts `/authoring/audience-templates` konfigurieren. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.

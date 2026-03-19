@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine vorhandene Anmeldedaten-Konfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
 title: Aktualisieren einer Anmeldedaten-Konfiguration
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 90%
+source-wordcount: '608'
+ht-degree: 85%
 
 ---
 
@@ -35,7 +35,7 @@ Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authen
 
 ## Erste Schritte mit Anmeldedaten-API-Vorgängen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Aktualisieren einer Anmeldedaten-Konfiguration {#update}
 

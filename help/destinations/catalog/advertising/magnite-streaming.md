@@ -3,10 +3,10 @@ title: Echtzeit-Zielverbindung Magnite
 description: Verwenden Sie dieses Ziel, um Adobe CDP-Zielgruppen in Echtzeit für die Magnite-Streaming-Plattform bereitzustellen.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1410'
-ht-degree: 25%
+source-wordcount: '1403'
+ht-degree: 24%
 
 ---
 
@@ -23,7 +23,9 @@ Um Ihre Zielgruppen für die [!DNL Magnite Streaming] zu aktivieren, müssen Sie
 * Aktivieren Sie die Zielgruppen im [!DNL Magnite: Real-Time] Ziel, wie auf dieser Seite gezeigt.
 * Aktivieren Sie dieselbe Zielgruppe auf dem Ziel Magnitude: Batch . Das [!DNL Magnite: Batch] ist eine obligatorische Komponente. Wenn Sie die Zielgruppe im [!DNL Magnite Streaming] Batch-Ziel nicht aktivieren, führt dies zu einer fehlgeschlagenen Integration, und Ihre Zielgruppen werden nicht aktiviert.
 
-Hinweis: Bei Verwendung des Echtzeit-Ziels empfangen [!DNL Magnite Streaming] Zielgruppen in Echtzeit, aber Magnite kann Echtzeit-Zielgruppen nur vorübergehend auf seiner Plattform speichern und sie werden innerhalb weniger Tage aus dem System entfernt. Wenn Sie daher das Echtzeit-Ziel Magnite: verwenden möchten, müssen Sie *auch* das Ziel Magnite: Batch verwenden. Dabei handelt es sich um jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, außerdem müssen Sie für das Batch-Ziel aktivieren.
+>[!NOTE]
+>
+>Bei Verwendung des Echtzeit-Ziels empfangen [!DNL Magnite Streaming] Zielgruppen in Echtzeit, aber Magnite kann Echtzeit-Zielgruppen nur vorübergehend in ihrer Plattform speichern und sie werden innerhalb weniger Tage aus dem System entfernt. Wenn Sie daher das Echtzeit-Ziel Magnite: verwenden möchten, müssen Sie *auch* das Ziel Magnite: Batch verwenden. Dabei handelt es sich um jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, außerdem müssen Sie für das Batch-Ziel aktivieren.
 
 >[!IMPORTANT]
 >
@@ -58,7 +60,7 @@ In diesem Abschnitt wird beschrieben, welche Art von Zielgruppen Sie an dieses Z
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -92,7 +94,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View destinations]** und **[!UICONTROL Manage destinations]** Zugriffssteuerungsberechtigung[. &#x200B;](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View destinations]** und **[!UICONTROL Manage destinations]** Zugriffssteuerungsberechtigung[. ](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -129,14 +131,14 @@ Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenf
 
 Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden ](/help/destinations/ui/activate-segment-streaming-destinations.md) unter Aktivieren von Zielgruppen für Streaming-Ziele .
 
 Nachdem die Zielverbindung erstellt wurde, können Sie mit dem Aktivierungsfluss für die Zielgruppe fortfahren. Im folgenden Abschnitt wird erläutert, wie Sie Zielgruppen mithilfe des Echtzeit-Ziels aktivieren.
 
@@ -178,7 +180,7 @@ Nach dem Hochladen Ihrer Zielgruppen können Sie mithilfe der folgenden Schritte
 
 * Nach der Aufnahme werden Zielgruppen voraussichtlich innerhalb weniger Minuten in [!DNL Magnite Streaming] angezeigt und können auf ein Angebot angewendet werden. Sie können dies bestätigen, indem Sie die Segment-ID nachschlagen, die während der Aktivierungsschritte in der Adobe Experience Platform freigegeben wurde.
 
-## Aktivieren derselben Zielgruppen über das [!DNL Magnite: Batch]Ziel
+## Aktivieren derselben Zielgruppen über das [!DNL Magnite: Batch]Ziel {#activate-magnite-batch}
 
 Audiences, die für [!DNL Magnite Streaming] über das Echtzeit-Ziel freigegeben wurden, müssen auch über das Ziel Magnite: Batch freigegeben werden. Wenn die Segmentnamen in der [!DNL Magnite Streaming]-Benutzeroberfläche korrekt konfiguriert sind, werden sie entsprechend den Segmentnamen aktualisiert, die in der posttäglichen Aktualisierung von Adobe Experience Platform verwendet werden.
 

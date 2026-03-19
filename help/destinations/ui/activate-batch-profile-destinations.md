@@ -3,7 +3,7 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Ihre Zielgruppen in Adobe Experience Platform aktivieren, indem Sie sie an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8019f7426f6e6dd3faef131ada8e307c1d075556
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '4783'
 ht-degree: 37%
@@ -14,11 +14,11 @@ ht-degree: 37%
 # Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 
 >[!IMPORTANT]
-> 
+>
 >* Zum Aktivieren von Zielgruppen und Aktivieren des [Zuordnungsschritts](#mapping) des Workflows sind die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) erforderlich.
 >* Um Zielgruppen zu aktivieren, ohne den [Zuordnungsschritt](#mapping) des Workflows zu durchlaufen, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
-> 
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>
 > Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 ## Überblick {#overview}
@@ -39,7 +39,7 @@ Beim Exportieren von Audiences werden die folgenden Dateiformate unterstützt:
 
 Beachten Sie, dass der Export von CSV-Dateien Ihnen mehr Flexibilität bei der Strukturierung Ihrer exportierten Dateien bietet. Lesen Sie mehr über [Dateiformatierungskonfiguration für CSV-Dateien](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
 
-Wählen Sie das gewünschte Dateiformat für den Export aus[&#x200B; wenn Sie eine Verbindung mit dem dateibasierten Ziel &#x200B;](/help/destinations/ui/connect-destination.md).
+Wählen Sie das gewünschte Dateiformat für den Export aus[ wenn Sie eine Verbindung mit dem dateibasierten Ziel ](/help/destinations/ui/connect-destination.md).
 
 ## Auswählen des Ziels {#select-destination}
 
@@ -75,7 +75,7 @@ Je nach Herkunft können Sie aus verschiedenen Arten von Zielgruppen auswählen:
 
 >[!TIP]
 >
->Um Zielgruppen aus vorhandenen Aktivierungsflüssen zu entfernen, verwenden Sie die Seite **[!UICONTROL Activation data]** . Weitere Informationen finden Sie im Abschnitt [Entfernen mehrerer Zielgruppen aus &#x200B;](../ui/destination-details-page.md#bulk-remove)-Flüssen“.
+>Um Zielgruppen aus vorhandenen Aktivierungsflüssen zu entfernen, verwenden Sie die Seite **[!UICONTROL Activation data]** . Weitere Informationen finden Sie im Abschnitt [Entfernen mehrerer Zielgruppen aus ](../ui/destination-details-page.md#bulk-remove)-Flüssen“.
 
 ## Planen eines Zielgruppenexports {#scheduling}
 
@@ -106,7 +106,7 @@ Um mehrere Zeitpläne gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen
 
 >[!TIP]
 >
->Sie können Zielgruppen-Aktivierungspläne für vorhandene Aktivierungsflüsse über die Seite **[!UICONTROL Activation data]** bearbeiten. Weitere Informationen finden Sie in [&#x200B; Dokumentation unter &#x200B;](../ui/destination-details-page.md#bulk-edit-schedule) für die Massenbearbeitung .
+>Sie können Zielgruppen-Aktivierungspläne für vorhandene Aktivierungsflüsse über die Seite **[!UICONTROL Activation data]** bearbeiten. Weitere Informationen finden Sie in [ Dokumentation unter ](../ui/destination-details-page.md#bulk-edit-schedule) für die Massenbearbeitung .
 
 >[!IMPORTANT]
 >
@@ -205,7 +205,7 @@ Wenn Profile nach der Zielgruppenbewertung aktualisiert werden, enthalten geplan
 
 Informationen zu On-Demand-Exporten finden Sie in der Dokumentation unter [Dateien nach Bedarf exportieren](/help/destinations/ui/export-file-now.md#scheduled-vs-ondemand).
 
-### Exportieren von inkrementellen Dateien
+### Exportieren von inkrementellen Dateien {#export-incremental-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
@@ -278,7 +278,7 @@ Um mehrere Dateinamen gleichzeitig zu bearbeiten, aktivieren Sie die Zielgruppen
 Wählen Sie **[!UICONTROL Apply changes]** aus, um Ihre Auswahl zu bestätigen.
 
 >[!IMPORTANT]
-> 
+>
 >Wenn Sie die **[!UICONTROL Date and Time]** nicht auswählen, sind die Dateinamen statisch und die neue exportierte Datei überschreibt die vorherige Datei an Ihrem Speicherort bei jedem Export. Diese Option wird bei der Ausführung eines wiederkehrenden Importauftrags von einem Speicherort zu einer E-Mail-Marketing-Plattform empfohlen.
 
 Nachdem Sie alle Zielgruppen konfiguriert haben, wählen Sie **[!UICONTROL Next]** aus, um fortzufahren.
@@ -298,7 +298,7 @@ In diesem Schritt müssen Sie die Profilattribute auswählen, die Sie zu den an 
 1. Wählen Sie auf der Seite **[!UICONTROL Select source field]** die Profilattribute und Identitäten aus, die Sie in die exportierten Dateien am Ziel einbeziehen möchten, und wählen Sie dann **[!UICONTROL Select]** aus.
 
    >[!TIP]
-   > 
+   >
    >Sie können das Suchfeld verwenden, um die Auswahl einzugrenzen, wie in der Abbildung unten dargestellt.
 
    Verwenden Sie den Umschalter **[!UICONTROL Show only fields with data]** , um nur Schemafelder anzuzeigen, die mit Werten ausgefüllt sind. Standardmäßig werden nur ausgefüllte Schemafelder angezeigt.
@@ -496,9 +496,9 @@ Adobe empfiehlt das Auswählen eines Identity-Namespace, z. B. einer [!DNL CRM I
 
 ### Deduplizierungsverhalten für Profile mit demselben Zeitstempel {#deduplication-same-timestamp}
 
-Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Dieser Zeitstempel stellt den Zeitpunkt dar, zu dem die Zielgruppenzugehörigkeit oder das Identitätsdiagramm eines Profils zuletzt aktualisiert wurde. Weitere Informationen dazu, wie Profile aktualisiert und exportiert werden, finden Sie im Dokument [Verhalten beim Profilexport](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Beim Exportieren von Profilen an dateibasierte Ziele stellt die Deduplizierung sicher, dass nur ein Profil exportiert wird, wenn mehrere Profile denselben Deduplizierungsschlüssel und denselben Referenzzeitstempel verwenden. Dieser Zeitstempel stellt den Zeitpunkt dar, zu dem die Zielgruppenzugehörigkeit oder das Identitätsdiagramm eines Profils zuletzt aktualisiert wurde. Weitere Informationen dazu, wie Profile aktualisiert und exportiert werden, finden Sie im Dokument [Verhalten beim Profilexport](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
-#### Wichtige Aspekte
+#### Wichtige Aspekte {#key-considerations}
 
 * **Deterministische Auswahl**: Wenn mehrere Profile identische Deduplizierungsschlüssel und denselben Referenzzeitstempel haben, bestimmt die Deduplizierungslogik, welches Profil exportiert werden soll, indem die Werte anderer ausgewählter Spalten (ohne komplexe Typen wie Arrays, Zuordnungen oder Objekte) sortiert werden. Die sortierten Werte werden in lexikografischer Reihenfolge ausgewertet und das erste Profil wird ausgewählt.
 
@@ -535,7 +535,7 @@ Sie können das Steuerelement [Berechnete Felder](/help/destinations/ui/data-tra
 
 Die neue **[!UICONTROL Mapping]** weist die folgenden bekannten Einschränkungen auf:
 
-#### Attribut für die Zielgruppenzugehörigkeit kann nicht über den Zuordnungs-Workflow ausgewählt werden
+#### Attribut für die Zielgruppenzugehörigkeit kann nicht über den Zuordnungs-Workflow ausgewählt werden {#audience-membership-attribute-mapping}
 
 Aufgrund einer bekannten Einschränkung können Sie das **[!UICONTROL Select field]**-Fenster derzeit nicht verwenden, um `segmentMembership.seg_namespace.seg_id.status` zu Ihren Dateiexporten hinzuzufügen. Stattdessen müssen Sie den Wert `xdm: segmentMembership.seg_namespace.seg_id.status` wie unten dargestellt manuell in das Schemafeld einfügen.
 
@@ -556,7 +556,7 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg
 
 Weitere Informationen [Verhalten beim Profilexport für dateibasierte Ziele](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
-#### Identity-Namespaces derzeit nicht für Exporte auswählbar
+#### Identity-Namespaces derzeit nicht für Exporte auswählbar {#identity-namespaces-export-limitation}
 
 Die Auswahl von Identity-Namespaces für den Export, wie in der Abbildung unten dargestellt, wird derzeit nicht unterstützt. Die Auswahl von Identitäts-Namespaces für den Export führt zu einem Fehler im **[!UICONTROL Review]**.
 
@@ -570,7 +570,7 @@ Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identity-Namespac
 ## Auswählen der Profilattribute {#select-attributes}
 
 >[!IMPORTANT]
-> 
+>
 >Für alle Cloud-Speicher-Ziele im Katalog kann ein verbesserter [[!UICONTROL Mapping] angezeigt werden](#mapping) der den in diesem Abschnitt beschriebenen **[!UICONTROL Select attributes]** ersetzt.
 >
 >Dieser **[!UICONTROL Select attributes]** Schritt wird weiterhin für die E-Mail-Marketing-Ziele Adobe Campaign, Oracle Responsys, Oracle Eloqua und Salesforce Marketing Cloud angezeigt.
@@ -617,7 +617,7 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.seg
 
 >[!IMPORTANT]
 >
->Dieser Schritt wird nur angezeigt, wenn Sie **[!UICONTROL Custom upload]** Zielgruppen während des Schritts [Zielgruppenauswahl“ &#x200B;](#select-audiences).
+>Dieser Schritt wird nur angezeigt, wenn Sie **[!UICONTROL Custom upload]** Zielgruppen während des Schritts [Zielgruppenauswahl“ ](#select-audiences).
 
 Anreicherungsattribute entsprechen benutzerdefinierten hochgeladenen Zielgruppen, die in Experience Platform als **[!UICONTROL Custom uploads]** aufgenommen werden. In diesem Schritt können Sie für jede ausgewählte externe Zielgruppe auswählen, welche Attribute Sie in Ihr Ziel exportieren möchten.
 
@@ -643,7 +643,7 @@ Wählen Sie **[!UICONTROL Next]** aus, um zum Schritt [Überprüfen](#review) zu
 ## Überprüfung {#review}
 
 >[!NOTE]
-> 
+>
 >Wenn Datennutzungs-Labels auf bestimmte Felder innerhalb eines Datensatzes angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Labels auf Feldebene bei der Aktivierung unter folgenden Bedingungen:
 >
 >* Die Felder werden in der Zielgruppendefinition verwendet.
@@ -662,7 +662,7 @@ Auf der Seite **[!UICONTROL Review]** können Sie eine Zusammenfassung Ihrer Aus
 >title="Aktuelle Einverständnisrichtlinien anzeigen"
 >abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [&#x200B; unter &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL View applicable consent policies]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Weitere Informationen finden [ unter ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) der Einverständnisrichtlinie .
 
 ### Prüfung der Datennutzungsrichtlinien {#data-usage-policy-checks}
 

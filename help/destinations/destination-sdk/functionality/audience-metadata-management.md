@@ -2,10 +2,10 @@
 description: Verwenden Sie Vorlagen für Zielgruppen-Metadaten, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Adobe bietet eine erweiterungsfähige Vorlage für Zielgruppen-Metadaten, die Sie anhand der Spezifikationen Ihrer Marketing-API konfigurieren können. Nachdem Sie die Vorlage definiert, getestet und gesendet haben, wird sie von Adobe zur Strukturierung der API-Aufrufe an Ihr Ziel verwendet.
 title: Verwaltung von Zielgruppen-Metadaten
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1309'
-ht-degree: 73%
+ht-degree: 74%
 
 ---
 
@@ -25,19 +25,19 @@ Abhängig von Ihrer API-Konfiguration müssen Sie möglicherweise den Endpunkt f
 
 Dank der Unterstützung von Zielgruppen-Metadaten in Destination SDK können Sie bei der Konfiguration Ihres Experience Platform-Ziels Experience Platform-Benutzern eine von mehreren Optionen bieten, wenn sie Zielgruppen Ihrem Ziel zuordnen und aktivieren. Sie können die Optionen, die den Benutzerinnen und Benutzern zur Verfügung stehen, über die Parameter im Abschnitt [Zielgruppen-Metadatenkonfiguration](../functionality/destination-configuration/audience-metadata-configuration.md) der Zielkonfiguration steuern.
 
-### Anwendungsfall 1: Sie verfügen über eine Drittanbieter-API, und Benutzerinnen und Benutzer müssen keine Zuordnungs-IDs angeben
+### Anwendungsfall 1: Sie verfügen über eine Drittanbieter-API, und Benutzerinnen und Benutzer müssen keine Zuordnungs-IDs angeben {#use-case-1}
 
 Wenn Sie über einen API-Endpunkt zum Erstellen, Aktualisieren und Löschen von Zielgruppen verfügen, können Sie Destination SDK mithilfe von Vorlagen für Zielgruppen-Metadaten so konfigurieren, dass es den Spezifikationen Ihres Zielgruppenendpunkts zum Erstellen/Aktualisieren/Löschen entspricht. Experience Platform kann Zielgruppen programmgesteuert erstellen, aktualisieren und löschen sowie Metadaten erneut synchronisieren.
 
 Beim Aktivieren von Zielgruppen für Ihr Ziel in der Benutzeroberfläche von Experience Platform brauchen Benutzerinnen und Benutzer im Aktivierungs-Workflow das Feld für die Zielgruppenzuordnungs-ID nicht manuell auszufüllen.
 
-### Anwendungsfall 2: Benutzerinnen und Benutzer müssen zuerst ein Zielgruppe in Ihrem Ziel erstellen und die Zuordnungs-ID manuell eingeben
+### Anwendungsfall 2: Benutzerinnen und Benutzer müssen zuerst ein Zielgruppe in Ihrem Ziel erstellen und die Zuordnungs-ID manuell eingeben {#use-case-2}
 
 Wenn Zielgruppen- und andere Metadaten von Partnern oder Benutzerinnen bzw. Benutzern manuell in Ihrem Ziel erstellt werden müssen, müssen die Benutzerinnen und Benutzer das Feld für die Segmentzuordnungs-ID im Aktivierungs-Workflow manuell ausfüllen, um die Zielgruppen-Metadaten zwischen Ihrem Ziel und Experience Platform zu synchronisieren.
 
 ![Eingabe-Zuordnungs-ID](../assets/functionality/input-mapping-id.png)
 
-### Anwendungsfall 3: Ihr Ziel akzeptiert die Zielgruppen-ID von Experience Platform, und Benutzerinnen und Benutzer brauchen die Zuordnungs-ID nicht manuell einzugeben
+### Anwendungsfall 3: Ihr Ziel akzeptiert die Zielgruppen-ID von Experience Platform, und Benutzerinnen und Benutzer brauchen die Zuordnungs-ID nicht manuell einzugeben {#use-case-3}
 
 Wenn Ihr Zielsystem die Zielgruppen-ID von Experience Platform akzeptiert, können Sie diese in der Vorlage Ihrer Zielgruppen-Metadaten konfigurieren. Benutzerinnen und Benutzer müssen beim Aktivieren eines Segments keine Zielgruppen-ID ausfüllen.
 

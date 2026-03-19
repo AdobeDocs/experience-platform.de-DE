@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie einen API-Aufruf strukturieren, um eine Zielkonfiguration über Adobe Experience Platform Destination SDK zu erstellen.
 title: Erstellen einer Zielkonfiguration
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1213'
-ht-degree: 92%
+source-wordcount: '1210'
+ht-degree: 89%
 
 ---
 
@@ -26,7 +26,7 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt ko
 * [Konfiguration von Zielgruppen-Metadaten](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](../../functionality/destination-configuration/aggregation-policy.md)
 * [Batch-Konfiguration](../../functionality/destination-configuration/batch-configuration.md)
-* [Historische Profilqualifikationen](../../functionality/destination-configuration/historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](../../functionality/destination-configuration/historical-profile-qualifications.md)
 
 >[!IMPORTANT]
 >
@@ -34,7 +34,7 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt ko
 
 ## Erste Schritte mit API-Vorgängen für die Zielkonfiguration {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Erstellen einer Zielkonfiguration {#create}
 
@@ -203,8 +203,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.enum` | Zeichenfolge | Rendert das benutzerdefinierte Feld als Dropdown-Menü und listet die für Benutzende verfügbaren Optionen auf. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
 | `customerDataFields.default` | Zeichenfolge | Definiert den Standardwert aus einer `enum`-Liste. |
 | `customerDataFields.pattern` | Zeichenfolge | Erzwingt bei Bedarf ein Muster für das benutzerdefinierte Feld. Verwenden Sie reguläre Ausdrücke, um ein Muster zu erzwingen. Wenn Ihre Kunden-IDs beispielsweise keine Zahlen oder Unterstriche enthalten, geben Sie in dieses Feld `^[A-Za-z]+$` ein. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
-| `uiAttributes.documentationLink` | Zeichenfolge | Weitere Informationen finden Sie auf der Dokumentationsseite im [Zielkatalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=de#catalog) für Ihr Ziel. Verwenden Sie `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, wobei `YOURDESTINATION` für den Namen Ihres Ziels steht. Für ein Ziel mit dem Namen „Moviestar“ würden Sie `https://www.adobe.com/go/destinations-moviestar-en` verwenden. Beachten Sie, dass dieser Link nur funktioniert, wenn Adobe Ihr Ziel live stellt und die Dokumentation veröffentlicht wird. <br/><br/> Siehe [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md) für detaillierte Informationen zu diesen Einstellungen. ![Bild der Experience Platform-Benutzeroberfläche mit dem Dokumentations-Link.](../../assets/authoring-api/destination-configuration/documentation-url.png "Dokumentations-URL"){width="100" zoomable="yes"} |
-| `uiAttributes.category` | Zeichenfolge | Bezieht sich auf die Ihrem Ziel in Adobe Experience Platform zugewiesene Kategorie. Weitere Informationen finden Sie unter [Zielkategorien](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=de#destination-categories). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Siehe [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md) für detaillierte Informationen zu diesen Einstellungen. |
+| `uiAttributes.documentationLink` | Zeichenfolge | Weitere Informationen finden Sie auf der Dokumentationsseite im [Zielkatalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog) für Ihr Ziel. Verwenden Sie `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, wobei `YOURDESTINATION` für den Namen Ihres Ziels steht. Für ein Ziel mit dem Namen „Moviestar“ würden Sie `https://www.adobe.com/go/destinations-moviestar-en` verwenden. Beachten Sie, dass dieser Link nur funktioniert, wenn Adobe Ihr Ziel live stellt und die Dokumentation veröffentlicht wird. <br/><br/> Siehe [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md) für detaillierte Informationen zu diesen Einstellungen. ![Bild der Experience Platform-Benutzeroberfläche mit dem Dokumentations-Link.](../../assets/authoring-api/destination-configuration/documentation-url.png "Dokumentations-URL"){width="100" zoomable="yes"} |
+| `uiAttributes.category` | Zeichenfolge | Bezieht sich auf die Ihrem Ziel in Adobe Experience Platform zugewiesene Kategorie. Weitere Informationen finden Sie unter [Zielkategorien](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Siehe [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md) für detaillierte Informationen zu diesen Einstellungen. |
 | `uiAttributes.connectionType` | Zeichenfolge | Der Verbindungstyp, je nach Ziel. Unterstützte Werte: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | Zeichenfolge | Bezieht sich auf die Art des Datenexports, die vom Ziel unterstützt wird. Setzen Sie diesen auf `Streaming` für API-basierte Integrationen oder auf `Batch`, wenn Sie Dateien in Ihre Ziele exportieren. |
 | `identityNamespaces.externalId.acceptsAttributes` | Boolesch | Gibt an, ob Kundinnen und Kunden der Identität, die Sie konfigurieren, standardmäßige Profilattribute zuordnen können. |
@@ -217,11 +217,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `segmentMappingConfig.mapUserInput` | Boolesch | Steuert, ob die Zielgruppenzuordnungs-ID im Zielaktivierungs-Workflow von der Benutzerin bzw. dem Benutzer eingegeben wird. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolesch | Steuert, ob die Zielgruppenzuordnungs-ID im Zielaktivierungs-Workflow die Experience Platform-Zielgruppen-ID ist. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolesch | Steuert, ob die Zielgruppenzuordnungs-ID im Zielaktivierungs-Workflow der Zielgruppenname von Experience Platform ist. |
-| `segmentMappingConfig.audienceTemplateId` | String | Die `instanceId` der [Zielgruppen-Metadatenvorlage](../../metadata-api/create-audience-template.md), die für dieses Ziel verwendet wird. |
+| `segmentMappingConfig.audienceTemplateId` | Zeichenfolge | Die `instanceId` der [Zielgruppen-Metadatenvorlage](../../metadata-api/create-audience-template.md), die für dieses Ziel verwendet wird. |
 | `schemaConfig.profileFields` | Array | Beim Hinzufügen vordefinierter `profileFields` wie in der obigen Konfiguration können Benutzerinnen und Benutzer die Attribute von Experience Platform den vordefinierten Attributen Ihres Ziels zuordnen. |
 | `schemaConfig.profileRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzerinnen und Benutzer die Zuordnung von Profilattributen aus Experience Platform zu benutzerdefinierten Attributen des Ziels vornehmen dürfen, wie in der obigen Beispielkonfiguration dargestellt. |
 | `schemaConfig.segmentRequired` | Boolesch | Verwenden Sie immer `segmentRequired:true`. |
-| `schemaConfig.identityRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzerinnen und Benutzer die Zuordnung von Identity-Namespaces von Experience Platform zu Ihrem gewünschten Schema vornehmen dürfen. |
+| `schemaConfig.identityRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzer in der Lage sein sollen, Identity-Namespaces von Experience Platform Ihrem gewünschten Schema zuzuordnen. |
 
 {style="table-layout:auto"}
 
@@ -233,11 +233,11 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu Ihrer ne
 
 +++
 
-## Umgang mit API-Fehlern
+## Umgang mit API-Fehlern {#error-handling}
 
 Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie über den API-Endpunkt `/authoring/destinations` von Destination SDK eine neue Zielkonfiguration erstellen.
 

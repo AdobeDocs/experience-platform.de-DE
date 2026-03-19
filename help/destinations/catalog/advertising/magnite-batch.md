@@ -3,9 +3,9 @@ title: Magnite-Batch-Ziel
 description: Verwenden Sie dieses Ziel, um Adobe CDP-Zielgruppen im Batch an die Magnite-Streaming-Plattform zu senden.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1779'
 ht-degree: 12%
 
 ---
@@ -72,7 +72,7 @@ Das Ziel Magnite: Batch kann (*)* Identitätsquellen von der Adobe CDP empfangen
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | Element | Typ | Anmerkungen |
 |-----------------------------|----------|----------|
 | Exporttyp | Zielgruppenexport | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im Ziel Magnite: Batch verwendet werden. |
-| Exporthäufigkeit | Batch | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie [&#x200B; Batch (dateibasierte &#x200B;](/help/destinations/destination-types.md)). |
+| Exporthäufigkeit | Batch | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie [ Batch (dateibasierte ](/help/destinations/destination-types.md)). |
 
 {style="table-layout:auto"}
 
@@ -136,7 +136,7 @@ Zielverbindung/Instanz in der Zukunft.
 
 >[!NOTE]
 >
->Wenn Sie mehrere ID-Typen (GAID, IDFA usw.) mithilfe des Batch-Ziels senden möchten, ist für jede Verbindung eine neue Zielinstanz erforderlich. Weitere Informationen erhalten Sie von Ihrem Magnite-Kundenbetreuer.
+>Wenn Sie mehrere ID-Typen (GAID, IDFA usw.) mithilfe des Batch-Ziels senden möchten, ist für jede Verbindung eine neue Zielinstanz erforderlich. Wenden Sie sich an Ihren Magnite-Kundenbetreuer, um weitere Informationen zu erhalten.
 
 Klicken Sie dann auf **[!UICONTROL Next]**
 
@@ -152,12 +152,12 @@ Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenf
 
 Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
-### Aktivieren von Segmenten für dieses Ziel {#activate}
+### Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -167,12 +167,12 @@ In der **[!UICONTROL Source field]** können Sie ein beliebiges Attribut oder ei
 ![Ordnen Sie dem Feld device_id die gewünschten Datenfelder zu](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
 Im **[!UICONTROL Target field]**:
-![Wählen Sie den entsprechenden Gerätetyp für die Zielidentität aus](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Weitere Informationen finden Sie [Unterstützte &#x200B;](#supported-identities)&quot;.
+![Wählen Sie den entsprechenden Gerätetyp für die Zielidentität aus](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Weitere Informationen finden Sie [Unterstützte ](#supported-identities)&quot;.
 In diesem Beispiel haben wir die **[!UICONTROL Target field]**: 0magnetie_deviceId_CUSTOM ausgewählt, da unsere **[!UICONTROL Source field]** als benutzerdefinierte IdentityMap definiert wurde: DeviceID.
 
 >[!NOTE]
 >
->Wenn Sie mehrere ID-Typen (GAID, IDFA usw.) mithilfe des Batch-Ziels senden/zuordnen möchten, ist für jede Verbindung eine neue Zielinstanz erforderlich. Weitere Informationen erhalten Sie von Ihrem Magnite-Kundenbetreuer.
+>Wenn Sie mehrere ID-Typen (GAID, IDFA usw.) mithilfe des Batch-Ziels senden/zuordnen möchten, ist für jede Verbindung eine neue Zielinstanz erforderlich. Wenden Sie sich an Ihren Magnite-Kundenbetreuer, um weitere Informationen zu erhalten.
 
 
 Auf dem Bildschirm „Konfigurieren Sie einen Dateinamen und einen Exportzeitplan für jede Zielgruppe“ müssen Sie jetzt für jede Zielgruppe ein Startdatum (obligatorisch), ein Enddatum (optional) und eine Zuordnungs-ID (obligatorisch) konfigurieren.

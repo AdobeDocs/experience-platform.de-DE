@@ -3,9 +3,9 @@ title: Verwenden des XDM-Attributs für die letzte Qualifikationszeit in den neu
 description: Erfahren Sie, wie Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen verwenden
 badgeBeta: label="Beta" type="Informative"
 exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '285'
 ht-degree: 10%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 10%
 # Verwenden des XDM-Attributs für die letzte Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen {#last-qualification-time}
 
 >[!IMPORTANT]
-> 
+>
 >Auf dieser Seite werden Funktionen beschrieben, die sich in der Beta-Phase befinden. Die Funktionalität und Dokumentation können sich ändern. Wenden Sie sich an den Adobe-Support-Mitarbeiter oder die Kundenunterstützung, wenn Sie Zugang zu diesem Beta-Programm erhalten möchten.
 
 ## Voraussetzungen {#prerequisites}
@@ -31,7 +31,9 @@ Um das XDM-Attribut Letzte Qualifikationszeit (`lastQualificationTime`) verwende
 
 Wenn Sie einen der sechs oben aufgeführten Cloud-Speicher-Connectoren verwenden, können Sie das XDM-Attribut für die letzte Qualifikationszeit im [Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) des Aktivierungs-Workflows verwenden, um eine Spalte in der exportierten Datei mit dem neuesten Zeitstempel zu erstellen, der angibt, wann sich ein Profil für ein Segment qualifiziert hat. Dies kann Ihnen bei bestimmten Anwendungsfällen für Messungen oder Analysen helfen und Ihnen eine bessere Vorstellung davon vermitteln, wann bestimmte Zielgruppen aktiviert werden sollten.
 
-Beachten Sie, dass Sie, um `lastQualificationTime` zu Ihren Dateiexporten hinzuzufügen, derzeit den `xdm: segmentMembership.ups.seg_id.lastQualificationTime` Wert manuell in das Quellfeld einfügen müssen, wie unten dargestellt. Sie können auch das Zielfeld so bearbeiten, dass oder ein beliebiger anderer Wert `lastQualificationTime` wird, den Sie dieser Spalte einen Namen geben möchten. Da es sich um eine Beta-Funktion handelt, kann sich die Syntax des `xdm: segmentMembership.ups.seg_id.lastQualificationTime` in Zukunft ändern.
+>[!NOTE]
+>
+>Um `lastQualificationTime` zu Ihren Dateiexporten hinzuzufügen, müssen Sie derzeit den Wert `xdm: segmentMembership.ups.seg_id.lastQualificationTime` wie unten dargestellt manuell in das Quellfeld einfügen. Sie können auch das Zielfeld so bearbeiten, dass oder ein beliebiger anderer Wert `lastQualificationTime` wird, den Sie dieser Spalte einen Namen geben möchten. Da es sich um eine Beta-Funktion handelt, kann sich die Syntax des `xdm: segmentMembership.ups.seg_id.lastQualificationTime` in Zukunft ändern.
 
 ![Bildschirmaufzeichnung, die die letzte Qualifikationszeit anzeigt, in die das XDM-Attribut im Zuordnungsschritt eingefügt wurde](/help/destinations/ui/last-qualification-time.gif)
 

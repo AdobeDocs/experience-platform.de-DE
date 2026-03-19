@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API Ihre Streaming-Zielkonfiguration testen können, bevor Sie sie veröffentlichen.
 title: Streaming-Zieltest-API – Überblick
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 100%
@@ -233,6 +233,6 @@ Beachten Sie, dass der Inhalt des Parameters `results.httpCalls` spezifisch für
 
 Beschreibungen der Anfrage- und Antwortparameter finden Sie unter [Vorgänge der Zieltest-API](../../testing-api/streaming-destinations/destination-testing-api.md).
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 Nachdem Sie Ihr Ziel getestet und bestätigt haben, dass es korrekt konfiguriert ist, verwenden Sie die [Zielveröffentlichungs-API](../../publishing-api/create-publishing-request.md), um Ihre Konfiguration zur Überprüfung an Adobe zu senden.

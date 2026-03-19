@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Zielgruppenvorlage über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Abrufen einer Zielgruppenvorlage
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 96%
+source-wordcount: '419'
+ht-degree: 88%
 
 ---
 
@@ -25,7 +25,7 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt ko
 
 ## Erste Schritte mit API-Vorgängen für Zielgruppenvorlagen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Abrufen einer Zielgruppenvorlage {#retrieve}
 
@@ -197,6 +197,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 | Parameter | Beschreibung |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | Die ID der Zielgruppenvorlage, die Sie abrufen möchten. |
+
+{style="table-layout:auto"}
 
 +++
 

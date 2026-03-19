@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Erstellen einer Anmeldedaten-Konfiguration im Adobe Experience Platform Destination SDK veranschaulicht.
 title: Erstellen einer Anmeldedaten-Konfiguration
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 90%
+source-wordcount: '584'
+ht-degree: 84%
 
 ---
 
@@ -35,7 +35,7 @@ Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authen
 
 ## Erste Schritte mit Anmeldedaten-API-Vorgängen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Erstellen einer Anmeldedaten-Konfiguration {#create}
 

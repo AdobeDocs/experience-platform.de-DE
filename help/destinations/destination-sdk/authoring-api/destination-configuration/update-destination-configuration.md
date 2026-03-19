@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine bestehende Zielkonfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
 title: Aktualisieren einer Zielkonfiguration
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 95%
+source-wordcount: '369'
+ht-degree: 85%
 
 ---
 
@@ -30,7 +30,7 @@ Eine ausführliche Beschreibung der Funktionen einer Zielkonfiguration finden Si
 * [Konfiguration von Zielgruppen-Metadaten](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](../../functionality/destination-configuration/aggregation-policy.md)
 * [Batch-Konfiguration](../../functionality/destination-configuration/batch-configuration.md)
-* [Historische Profilqualifikationen](../../functionality/destination-configuration/historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](../../functionality/destination-configuration/historical-profile-qualifications.md)
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ Eine ausführliche Beschreibung der Funktionen einer Zielkonfiguration finden Si
 
 ## Erste Schritte mit API-Vorgängen für die Zielkonfiguration {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Aktualisieren einer Zielkonfiguration {#update}
 
@@ -59,6 +59,8 @@ PUT /authoring/destinations/{INSTANCE_ID}
 | Parameter | Beschreibung |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | Die ID der Zielkonfiguration, die Sie aktualisieren möchten. Wie Sie eine vorhandene Zielkonfiguration und die dazugehörige `{INSTANCE_ID}` abrufen, erfahren Sie unter [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md). |
+
+{style="table-layout:auto"}
 
 +++Anfrage
 
@@ -209,7 +211,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu
 
 Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status](../../../../landing/troubleshooting.md#api-status-codes)Codes und [Fehler in der Anfragekopfzeile](../../../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Experience Platform.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Zielkonfiguration über den API-Endpunkt `/authoring/destinations` von Destination SDK aktualisieren können.
 

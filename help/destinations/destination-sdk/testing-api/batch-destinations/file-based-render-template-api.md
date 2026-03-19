@@ -2,17 +2,17 @@
 description: Auf dieser Seite wird erläutert, wie Sie mit dem Endpunkt /authoring/testing/template/render visualisieren können, wie die in Ihrer Zielkonfiguration definierten vorlagenbasierten Kundendatenfelder aussehen.
 title: Überprüfen von vorlagenbasierten Kundenfeldern
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 88%
+source-wordcount: '386'
+ht-degree: 79%
 
 ---
 
 
 # Überprüfen von vorlagenbasierten Kundenfeldern
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Der Endpunkt `/authoring/testing/template/render` hilft Ihnen dabei, sich ein Bild davon zu machen, wie die in Ihrer Zielkonfiguration definierten vorlagenbasierten [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) aussehen würden..
 
@@ -20,7 +20,7 @@ Der Endpunkt generiert zufällige Werte für Ihre Kundendatenfelder und gibt sie
 
 ## Erste Schritte {#getting-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -79,6 +79,8 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 | -------- | ----------- |
 | `destinationId` | Die ID der [Zielkonfiguration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md), die Sie testen. |
 | `templates` | Die vorlagenbasierten Feldnamen, die in Ihrer [Ziel-Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md) definiert sind. |
+
+{style="table-layout:auto"}
 
 **Antwort**
 

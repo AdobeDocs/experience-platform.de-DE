@@ -3,10 +3,10 @@ keywords: Email;E-Mail;E-Mail;E-Mail-Ziele;SendGrid;SendGrid-Ziel
 title: SendGrid-Verbindung
 description: Mit dem SendGrid-Ziel können Sie Ihre First-Party-Daten exportieren und in SendGrid für Ihre Geschäftsanforderungen aktivieren.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 21%
+source-wordcount: '1943'
+ht-degree: 18%
 
 ---
 
@@ -25,16 +25,16 @@ SendGrid verwendet API-Bearer-Token als Authentifizierungsmechanismus für die K
 Die folgenden Elemente sind erforderlich, bevor Sie mit der Konfiguration des Ziels beginnen.
 
 1. Sie benötigen ein SendGrid-Konto.
-   * Navigieren Sie zur SendGrid[Anmeldeseite &#x200B;](https://signup.sendgrid.com/) registrieren Sie sich und erstellen Sie ein SendGrid-Konto, falls Sie noch keines haben.
+   * Navigieren Sie zur SendGrid[Anmeldeseite ](https://signup.sendgrid.com/) registrieren Sie sich und erstellen Sie ein SendGrid-Konto, falls Sie noch keines haben.
 1. Nach der Anmeldung beim SendGrid-Portal müssen Sie auch ein API-Token generieren.
 1. Navigieren Sie zur SendGrid-Website und rufen Sie die Seite **[!DNL Settings]** > **[!DNL API Keys]** auf. Alternativ finden Sie in der [SendGrid-Dokumentation](https://app.sendgrid.com/settings/api_keys) Informationen zum Zugriff auf den entsprechenden Abschnitt in der SendGrid-App.
 1. Klicken Sie abschließend auf die Schaltfläche **[!DNL Create API Key]** .
-   * Weitere Informationen zu den auszuführenden Aktionen [&#x200B; Sie in der &#x200B;](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key) zu SendGrid .
+   * Weitere Informationen zu den auszuführenden Aktionen [ Sie in der ](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key) zu SendGrid .
    * Wenn Sie Ihren API-Schlüssel programmgesteuert generieren möchten, lesen Sie die [SendGrid-Dokumentation](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
-![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
+![Einstellungsseite für SendGrid-API-Schlüssel mit der Schaltfläche API-Schlüssel erstellen.](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie ein [Schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) in [!DNL Experience Platform] erstellt haben. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#limits)Beschränkungen“ weiter unten auf dieser Seite.
+Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie ein [Schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) in [!DNL Experience Platform] erstellt haben. Weitere Informationen finden Sie [ Abschnitt ](#limits)Beschränkungen“ weiter unten auf dieser Seite.
 
 >[!IMPORTANT]
 >
@@ -58,7 +58,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -92,15 +92,15 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Damit Sie besser verstehen können, wie und wann Sie das SendGrid-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die [!DNL Experience Platform] Kunden mit diesem Ziel bewältigen können.
 
-### Erstellen einer Marketing-Liste für mehrere Marketing-Aktivitäten
+### Erstellen einer Marketing-Liste für mehrere Marketing-Aktivitäten {#create-marketing-list}
 
 Marketing-Teams, die SendGrid verwenden, können in SendGrid eine Mailing-Liste erstellen und mit E-Mail-Adressen füllen. Die nun in SendGrid erstellte Mailing-Liste kann anschließend für mehrere Marketing-Aktivitäten verwendet werden.
 
 ## Mit Ziel verbinden {#connect}
 
 >[!IMPORTANT]
-> 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -109,17 +109,17 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 1. Navigieren Sie in der [!DNL Adobe Experience Platform]-Konsole zu **Ziele**.
 
 1. Wählen Sie die **Katalog** aus und suchen Sie nach *SendGrid*. Wählen Sie dann **Einrichten** aus. Nachdem Sie eine Verbindung zum Ziel hergestellt haben, ändert sich die Bezeichnung der Benutzeroberfläche in **Segmente aktivieren**.
-   ![](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
+   ![SendGrid-Zielkarte im Experience Platform-Zielkatalog mit hervorgehobener Schaltfläche „Einrichten“.](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
 
 1. Ihnen wird ein Assistent angezeigt, der Sie bei der Konfiguration des SendGrid-Ziels unterstützt. Erstellen Sie das neue Ziel, indem Sie **Neues Ziel konfigurieren** auswählen.
-   ![](../../assets/catalog/email-marketing/sendgrid/03.jpg)
+   ![Assistent zum Einrichten des SendGrid-Ziels mit der Option „Neues Ziel konfigurieren“.](../../assets/catalog/email-marketing/sendgrid/03.jpg)
 
 1. Wählen Sie die Option **Neues Konto** und geben Sie den Wert **Bearer-Token** ein. Dieser Wert ist der SendGrid-*API-Schlüssel* der zuvor im Abschnitt [Voraussetzungen](#prerequisites) erwähnt wurde.
-   ![](../../assets/catalog/email-marketing/sendgrid/04.jpg)
+   ![SendGrid-Authentifizierungsbildschirm mit der Option Neues Konto und dem Feld Bearer-Token.](../../assets/catalog/email-marketing/sendgrid/04.jpg)
 
 1. Wählen Sie **Mit Ziel verbinden** aus. Wenn der angegebene SendGrid *API* Schlüssel gültig ist, zeigt die Benutzeroberfläche den Status **Verbunden** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren, um zusätzliche Informationsfelder auszufüllen.
 
-![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
+![SendGrid-Ziel, das nach erfolgreicher Authentifizierung den Status „Verbunden“ mit einem grünen Häkchen anzeigt.](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -128,7 +128,7 @@ Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/de
 * **[!UICONTROL Name]**: Der Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine optionale Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 
-![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+![SendGrid-Zieldetailformular, das die Felder Name und Beschreibung anzeigt.](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -139,34 +139,34 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 Auf den folgenden Bildern finden Sie Details, die speziell für dieses Ziel gelten.
 
 1. Wählen Sie eine oder mehrere Zielgruppen für den Export in SendGrid aus.
-   ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
+   ![Bildschirm zur Zielgruppenauswahl mit einer oder mehreren Zielgruppen, die für den Export in das SendGrid ausgewählt wurden.](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
 1. Im **[!UICONTROL Mapping]** Schritt wird nach der Auswahl von **[!UICONTROL Add new mapping]** die Zuordnungsseite angezeigt, um die Quell-XDM-Felder den SendGrid-API-Zielfeldern zuzuordnen. Die folgenden Bilder zeigen, wie Identity-Namespaces zwischen Experience Platform und SendGrid zugeordnet werden. Stellen Sie sicher **[!UICONTROL Source field]** dass *E-Mail* wie unten dargestellt der **[!UICONTROL Target field]** *external_id* zugeordnet werden sollte.
-   ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
+   ![Zuordnungsschritt, der die im Workflow „SendGrid-Aktivierung“ ausgewählte Option „Neue Zuordnung hinzufügen“ zeigt.](../../assets/catalog/email-marketing/sendgrid/13.jpg)
+   ![Zuordnungsbildschirm, der das dem Zielfeld external_id in SendGrid zugeordnete E-Mail-Quellfeld anzeigt.](../../assets/catalog/email-marketing/sendgrid/14.jpg)
+   ![Zuordnungsbildschirm mit einem XDM-Quellattribut, das für die Zuordnung zu einem SendGrid-Zielfeld ausgewählt wurde.](../../assets/catalog/email-marketing/sendgrid/15.jpg)
+   ![Zuordnungsbildschirm mit zusätzlichen Identity-Namespace-Zuordnungen, die zwischen Experience Platform und SendGrid konfiguriert sind.](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
 1. Ordnen Sie auf ähnliche Weise die gewünschten [!DNL Adobe Experience Platform]-Attribute, die Sie exportieren möchten, dem SendGrid-Ziel zu.
-   ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
+   ![Zuordnungsbildschirm mit einem Experience Platform-Profilattribut, das als Quellfeld für den SendGrid-Export ausgewählt wurde.](../../assets/catalog/email-marketing/sendgrid/17.jpg)
+   ![Zuordnungsbildschirm mit abgeschlossenen Attributzuordnungen zwischen Experience Platform-XDM-Feldern und SendGrid-Zielfeldern.](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
 1. Wählen Sie nach Abschluss der Zuordnungen die Option **[!UICONTROL Next]** aus, um zum Bildschirm „Überprüfung“ zu gelangen.
-   ![](../../assets/catalog/email-marketing/sendgrid/22.png)
+   ![Überprüfungsbildschirm für die SendGrid-Aktivierung, der eine Zusammenfassung der konfigurierten Zuordnung vor Abschluss der Einrichtung anzeigt.](../../assets/catalog/email-marketing/sendgrid/22.png)
 
 1. Wählen Sie **[!UICONTROL Finish]** aus, um die Einrichtung abzuschließen.
-   ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
+   ![Fertigstellungsbildschirm des Aktivierungs-Workflows SendGrid mit der Schaltfläche Beenden.](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
-Die umfassende Liste der unterstützten Attributzuordnungen, die für die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder aktualisieren) eingerichtet &#x200B;](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) können, finden Sie unten.
+Die umfassende Liste der unterstützten Attributzuordnungen, die für die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder aktualisieren) eingerichtet ](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) können, finden Sie unten.
 
 | Quellfeld | Zielfeld | Typ | Beschreibung | Beschränkungen |
 |---|---|---|---|---|
@@ -186,26 +186,26 @@ Die umfassende Liste der unterstützten Attributzuordnungen, die für die [SendG
 Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichtet haben:
 
 1. Wählen Sie **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** aus, um zur Liste der Ziele zu navigieren.
-   ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
+   ![Registerkarte „Ziele durchsuchen“ in Experience Platform mit der Liste der konfigurierten Ziele.](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
 1. Wählen Sie das Ziel aus und überprüfen Sie, ob der Status **[!UICONTROL enabled]** ist.
-   ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
+   ![SendGrid-Ziel auf der Registerkarte Durchsuchen, auf der ein aktivierter Status angezeigt wird.](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
 1. Wechseln Sie zur Registerkarte **[!DNL Activation data]** und wählen Sie einen Zielgruppennamen aus.
-   ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
+   ![Registerkarte „Aktivierungsdaten“ für das SendGrid-Ziel, auf der der ausgewählte Zielgruppenname angezeigt wird.](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. Überwachen Sie die Zielgruppenzusammenfassung und überprüfen Sie, ob die Anzahl der Profile der im Datensatz erstellten Anzahl entspricht.
-   ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
+   ![Bedienfeld Zielgruppenzusammenfassung , das die Profilanzahl für die ausgewählte SendGrid-Zielgruppe anzeigt.](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. Die [SendGrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list) wird verwendet, um innerhalb von SendGrid eindeutige Kontaktlisten zu erstellen, indem der Wert des *list_name*-Attributs mit dem Zeitstempel des Datenexports verbunden wird. Navigieren Sie zur SendGrid-Site und überprüfen Sie, ob die neue Kontaktliste entsprechend dem Namensmuster erstellt wurde.
-   ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
+   ![SendGrid-Seite mit Marketing-Listen, auf der eine neu erstellte Kontaktliste angezeigt wird, die dem erwarteten Namensmuster entspricht.](../../assets/catalog/email-marketing/sendgrid/29.jpg)
+   ![SendGrid-Kontaktlistendetailansicht, die bestätigt, dass die neue Liste mit dem richtigen Namen erstellt wurde.](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. Wählen Sie die neu erstellte Kontaktliste aus und überprüfen Sie, ob der neue E-Mail-Datensatz aus dem von Ihnen erstellten Datensatz in der neuen Kontaktliste ausgefüllt wird.
 
 1. Überprüfen Sie außerdem einige E-Mails, um zu überprüfen, ob die Feldzuordnung korrekt ist.
-   ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
+   ![SendGrid-Kontaktdetailansicht mit E-Mail-Datensatzfeldern, die aus dem exportierten Datensatz ausgefüllt sind.](../../assets/catalog/email-marketing/sendgrid/31.jpg)
+   ![SendGrid-Kontaktdatensatz mit zugeordneten Feldwerten, die die korrekte Feldzuordnung aus Experience Platform bestätigen.](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -220,4 +220,4 @@ Dieses SendGrid-Ziel nutzt die folgenden APIs:
 
 ### Beschränkungen {#limits}
 
-* Die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder &#x200B;](https://api.sendgrid.com/v3/marketing/contacts)Kontakt aktualisieren) kann 30.000 Kontakte oder 6 MB Daten akzeptieren, je nachdem, welcher Wert niedriger ist.
+* Die [SendGrid-Marketing-Kontakte > Kontakt-API hinzufügen oder ](https://api.sendgrid.com/v3/marketing/contacts)Kontakt aktualisieren) kann 30.000 Kontakte oder 6 MB Daten akzeptieren, je nachdem, welcher Wert niedriger ist.

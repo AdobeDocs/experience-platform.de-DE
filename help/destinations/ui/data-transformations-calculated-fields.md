@@ -3,7 +3,7 @@ title: Durchführen von Umwandlungen an Daten, die mithilfe berechneter Felder i
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Funktion „Berechnete Felder“ Umwandlungen an Daten durchführen können, die an Cloud-Speicherziele exportiert wurden
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 8%
@@ -31,7 +31,7 @@ Um verschiedene Umwandlungen an Daten durchzuführen, die in Cloud-Speicher-Ziel
 
 So verwenden Sie berechnete Felder für Datenumwandlungen:
 
-1. [Verbinden](/help/destinations/ui/connect-destination.md) mit einem gewünschten Cloud-Speicher-Ziel. Wenn Sie eine Verbindung zum gewünschten Cloud-Ziel herstellen, schalten Sie die **[!UICONTROL Export arrays, maps, objects]** [Option aus](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Verbinden](/help/destinations/ui/connect-destination.md) mit einem gewünschten Cloud-Speicher-Ziel. Wenn Sie eine Verbindung zum gewünschten Cloud-Ziel herstellen, schalten Sie die **[!UICONTROL Export arrays, maps, objects]** [Option aus](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 2. Führen Sie die [Aktivierungsschritte für Cloud-Speicher](/help/destinations/ui/activate-batch-profile-destinations.md)Ziele aus und gelangen Sie zum Schritt [Zuordnung](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Arbeiten mit berechneten Feldern {#how-to-export-calculated-fields}

@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API eine Test-Nachrichtenumwandlungsvorlage für Ihr Ziel generieren.
 title: Erstellen einer Beispiel-Nachrichtenumwandlungsvorlage
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 96%
+source-wordcount: '375'
+ht-degree: 86%
 
 ---
 
@@ -20,7 +20,7 @@ Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie 
 
 ## Erste Schritte mit API-Vorgängen für Beispielvorlagen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](../../getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderliche Authoring-Berechtigung für Ziele und die Kopfzeilen abrufen können.
 
 ## Abrufen einer Beispielvorlage {#generate-sample-template}
 
@@ -39,6 +39,8 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 | Parameter | Beschreibung |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | Die ID der Zielkonfiguration, für die Sie eine Nachrichtenumwandlungsvorlage generieren. |
+
+{style="table-layout:auto"}
 
 **Anfrage**
 
