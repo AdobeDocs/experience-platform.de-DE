@@ -4,9 +4,10 @@ description: Erfahren Sie, wie Sie Batch-Daten von Talon.One über die Benutzero
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: d8b8143da3a67bba690229b1f8e88eb86f3fe804
+exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
+source-git-commit: 9c4c4a3bce2329e65abf5e8cfcc2f20ec2799045
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1518'
 ht-degree: 9%
 
 ---
@@ -15,9 +16,11 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
-Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche Batch-Daten aus Ihrem [!DNL Talon.One]-Konto in Adobe Experience Platform aufnehmen.
+Die [!DNL Talon.One] für Batch-Daten empfängt Ereignisse, die für eine [!DNL Talon.One] Anwendung aufgezeichnet wurden. Ein gängiger Anwendungsfall besteht darin, nach `talon_session_closed` zu filtern, um abgeschlossene Transaktionen zu erhalten, einschließlich gewonnener oder eingelöster Treuepunkte, eingelöster Coupons, gewährter Rabatte usw. Weitere Informationen zur API finden [[!DNL Talon.One]  in der ](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount) zur Verwaltungs-API.
+
+In diesem Tutorial erfahren Sie, wie Sie mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche Batch-Daten aus Ihrem [!DNL Talon.One]-Konto in Adobe Experience Platform aufnehmen.
 
 ## Erste Schritte
 
@@ -46,6 +49,10 @@ Um Daten aus [!DNL Talon.One] aufzunehmen, wählen Sie die Karte **[!UICONTROL T
 
 ### Neues Konto erstellen
 
+>[!TIP]
+>
+>Bevor Sie ein neues Konto erstellen, lesen Sie die [Voraussetzungen](../../../../connectors/loyalty/talon-one.md#prerequisites) in der [!DNL Talon.One] Übersicht , um zu erfahren, welche Authentifizierungsdaten erforderlich sind.
+
 Um ein neues Konto für Ihre [!DNL Talon.One] zu erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie einen Namen und eine optionale Beschreibung für Ihr Konto an. Geben Sie als Nächstes Ihre [!DNL Talon.One] Domain und Ihre [!UICONTROL Talon.One Management API Key] an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie einige Augenblicke, bis Ihre Verbindung hergestellt ist.
 
 ![Der Schritt „Neues Konto erstellen“ des Quell-Workflows.](../../../../images/tutorials/create/talon-one-batch/new.png)
@@ -57,6 +64,10 @@ Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Existing accoun
 ## Daten auswählen
 
 Geben Sie nach der Authentifizierung Werte für Ihre **applicationId** und **sessionType** an. In diesem Schritt können Sie die Vorschaufunktionen verwenden, um die Struktur Ihrer Daten zu überprüfen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Next]** aus, um fortzufahren.
+
+>[!TIP]
+>
+>Um abgeschlossene Transaktionen zu erfassen, einschließlich Treuepunkten, die verdient oder eingelöst wurden, eingelöster Coupons und gewährter Rabatte, wählen Sie den `talon_session_closed` Ereignistyp aus. Weitere Informationen zum Filtern von Ereignissen nach Typ finden Sie im [ Abfrageparameter „type“ in der  [!DNL Talon.One] -API](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
 ![Die Schritte „Daten auswählen“ und „Vorschau“ des Quell-Workflows.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 

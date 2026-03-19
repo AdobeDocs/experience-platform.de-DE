@@ -4,10 +4,11 @@ description: Erfahren Sie mehr über die Quellen von Talon.One auf Adobe Experie
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
+source-git-commit: 5ceef18d479854aa4b633e7e5e393a6698a05b2e
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 3%
+source-wordcount: '439'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +16,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Talon.One] befinden sich in der Betaphase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Talon.One] befinden sich in der Betaphase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Mit [!DNL Talon.One] können Sie ganz einfach personalisierte Marketing-Kampagnen für Ihre Kunden erstellen, verwalten und optimieren. Nutzen Sie diese leistungsstarke Plattform, um Rabatte auszuführen, Coupons zu verteilen, Empfehlungsprogramme zu starten, Treueprogramme einzurichten und Gamified Incentives anzubieten - alles von einem skalierbaren System aus, das Ihnen hilft, Ihre Zielgruppe anzusprechen und zu belohnen.
 
@@ -40,6 +41,28 @@ Geben Sie Werte für die folgenden Anmeldeinformationen an, um sich zu authentif
 ## Zuordnung {#mapping}
 
 Um Ihnen zu helfen, jedes Effektobjekt auf der Grundlage seines eindeutigen `effectType` zuzuordnen, können Sie die Datenvorbereitungs-`array_to_map` verwenden. Auf diese Weise können Sie einfach ein ungeordnetes Array von Effekten in Schlüssel-Wert-Paare konvertieren, die Ihren Anforderungen entsprechen. Eine Anleitung finden Sie im folgenden Beispiel .
+
+Sie können auch die standardisierten Treuefeldergruppen verwenden, die Adobe bereitstellt, um Ihre Treueprogrammkonzepte konsistent zu modellieren.
+
+>[!BEGINTABS]
+
+>[!TAB Treuedetails]
+
+Dies ist eine standardmäßige XDM-Feldergruppe für XDM Individual Profile, mit der der Treueprogramm-Mitgliedschaftsstatus einer Person beschrieben wird, indem deren Datensatzattribute und nicht Ereignisdaten erfasst werden. Verwenden Sie diese Feldergruppe in Ihren Profilschemata, um Folgendes zu erfassen:
+
+* **Wer** der Teilnehmer ist im Programm (`loyaltyID`, `program`, `status`, `tier`)
+* Ihre **aktuellen und Lebensdauersalden** (`points`, `lifetimePoints`, `expiredPoints` usw.)
+* Wichtige **Mitgliedschaftsdaten** (`joinDate`, `upgradeDate`, `tierExpiryDate`)
+
+>[!TAB Details zu Treueereignissen]
+
+Die Feldergruppe Treueprogramm-Ereignisdetails wurde entwickelt, um Treueprogramm-Aktivitäten auf Ereignisebene zu erfassen, z. B. Punkte, die in einer bestimmten Transaktion verdient oder eingelöst wurden. Diese Feldergruppe enthält Felder wie `xdm:points`, `xdm:pointsRedeemed`, `xdm:pointsAsOfDate` und `xdm:program`. Verwenden Sie diese Feldergruppe auf Ereignisebene in Ihren Erlebnisereignis-Schemata, um Folgendes zu erfassen:
+
+* **Pro-Ereignis-Bewegungen** in Punkten (gewonnen, eingelöst, abgelaufen)
+* **Rabatte** die durch Treuescheine oder Empfehlungen gewährt wurden
+* **Programm-IDs** und Transaktions-IDs zur Abstimmung mit dem Treueanbieter.
+
+>[!ENDTABS]
 
 | Quelle | Ziel |
 | ---- | --- |
