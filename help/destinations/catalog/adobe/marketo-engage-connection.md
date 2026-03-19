@@ -45,7 +45,7 @@ Sie können ihre Zielgruppen in Marketo Engage aktivieren und den **[!UICONTROL 
 
 ## Voraussetzungen {#prerequisites}
 
-* Die Person, die das Ziel einrichtet, muss über die Berechtigung [Person bearbeiten](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) in ihrer Marketo-Instanz und -Partition verfügen.
+* Die Person, die das Ziel einrichtet, muss über die Berechtigung [Person bearbeiten](https://experienceleague.adobe.com/de/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) in ihrer Marketo-Instanz und -Partition verfügen.
 * Beim Einrichten dieses Ziels sind nur Marketo Engage-Instanzen in derselben Adobe Real-Time CDP-Organisation verfügbar.
 * Nur Marketo Engage-Instanzen, deren Benutzer in der Adobe Admin Console verwaltet werden, können dieses Ziel verwenden.
 
@@ -146,7 +146,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
    * **[!UICONTROL Profile only]**: Wählen Sie diese Option aus, um Marketo-Lead-Profile mit den neuesten Informationen aus Experience Platform auf dem neuesten Stand zu halten.
    * **[!UICONTROL Audience only]**: Wählen Sie diese Option aus, wenn Sie Zielgruppenmitglieder zu Marketo-Listen hinzufügen möchten, ohne ihre Profilinformationen zu aktualisieren.
 * **[!UICONTROL Partition]**: *Die Partitionsauswahl ist nur bei der Auswahl von **[!UICONTROL Profile only]**&#x200B;oder **[!UICONTROL Audience and profile]**&#x200B;Synchronisierungstypen verfügbar*. Wählen Sie eine Marketo-Partitions-ID aus, die mit Ihrem ausgewählten Arbeitsbereich verknüpft ist. Auf diese Weise können Sie angeben, welche Lead-Partition in Marketo die exportierten Daten erhält. Wenn Sie keine bestimmte Partition auswählen, werden Ihre Daten an die **[!UICONTROL Default]** Partition in Marketo gesendet.
-* **[!UICONTROL Marketo deduplication field]**: Wählen Sie das Marketo-Deduplizierungsfeld aus, das Sie beim Aktualisieren vorhandener Marketo-Leads verwenden möchten. Dieser Selektor zeigt die Felder an, die Sie in Marketo als Deduplizierungsfelder markiert haben. Wenn ein bestimmtes Feld aus Marketo als Deduplizierungsfeld angezeigt werden soll, müssen Sie das Feld in Marketo als [&#x200B; durchsuchbares &#x200B;](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) markieren.
+* **[!UICONTROL Marketo deduplication field]**: Wählen Sie das Marketo-Deduplizierungsfeld aus, das Sie beim Aktualisieren vorhandener Marketo-Leads verwenden möchten. Dieser Selektor zeigt die Felder an, die Sie in Marketo als Deduplizierungsfelder markiert haben. Wenn ein bestimmtes Feld aus Marketo als Deduplizierungsfeld angezeigt werden soll, müssen Sie das Feld in Marketo als [&#x200B; durchsuchbares &#x200B;](https://experienceleague.adobe.com/de/docs/marketo-developer/marketo/rest/lead-database/lead-database) markieren.
 
   >[!NOTE]
   >
