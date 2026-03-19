@@ -2,13 +2,13 @@
 title: Übersicht über Ausführung und Bedienung
 description: Überprüfen, beheben und optimieren Sie Ihre Experience Platform-Implementierungen mit den Tools „Ausführen und Bedienen“. Gewinnen Sie Einblicke in geplante Batch-Aktivierungen, identifizieren Sie Konfigurationsprobleme und verbessern Sie die Systemzuverlässigkeit.
 hide: true
-source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
+exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
+source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
-
 
 # Übersicht über Ausführung und Bedienung
 
@@ -47,7 +47,7 @@ So greifen Sie über die Experience Platform-Benutzeroberfläche auf die Tools A
 
    >[!NOTE]
    >
-   >Derzeit ist nur die Funktion &quot;[&quot; &#x200B;](job-schedules.md).
+   >Derzeit sind die verfügbaren Funktionen [Auftragspläne](job-schedules.md) und [Konsistenzprüfungen](health-checks.md).
 
 ![Experience Platform-Benutzeroberfläche mit der Option „Ausführen“ und „Linke Bedienung“.](assets/overview/run-and-operate.png)
 
@@ -78,12 +78,28 @@ Job Schedules bietet drei Ermittlungsebenen:
 
 Sie können auch die Abhängigkeiten zwischen den einzelnen Datenverarbeitungsstufen verstehen und so einen zuverlässigen Datenfluss in Ihren Experience Platform-Workflows sicherstellen.
 
+### Konsistenzprüfungen {#health-checks}
+
+>[!IMPORTANT]
+>
+>[!UICONTROL Health checks] sind derzeit nur in begrenztem Umfang verfügbar.
+
+Mit [Konsistenzprüfungen](health-checks.md) können Sie proaktiv Schema- und Identitätskonfigurationsprobleme erkennen, bevor sie sich auf Ihre Geschäftsvorgänge auswirken. In diesem Moment führen Konsistenzprüfungen tägliche statische Scans für Ihre Schemata und Identitäts-Namespaces durch und decken fehlende Best Practices, Fehlkonfigurationen und Muster auf, die zu nachgelagerten Fehlern führen.
+
+Die Konsistenzprüfungen evaluieren derzeit fünf grundlegende Bereiche:
+
+* **[Validierung von Identitätsfeldern](health-checks.md#identity-field-validation)**: Überprüfen Sie, ob Identitätsfelder die richtige Länge und die richtigen Musterbeschränkungen aufweisen.
+* **[Verknüpfungsregeln für Identitätsdiagramme](health-checks.md#identity-graph-linking-rules)**: Vergewissern Sie sich, dass die Verknüpfungsregeln so konfiguriert sind, dass das Ausblenden eines Profils verhindert wird.
+* **[Konfiguration der Identität von Personen und Nicht-Personen](health-checks.md#people-non-people-identity)**: Validieren der korrekten Verwendung des Identitätstyps in allen Schemaklassen.
+* **[Beschreibung benutzerdefinierter Identity-Namespaces](health-checks.md#namespace-missing-description)**: Stellen Sie sicher, dass die Namespace-Metadaten vollständig sind.
+* **[Veraltete Identity-Namespaces](health-checks.md#deprecated-namespace)**: Erkennen veralteter Namespaces für die Bereinigung.
+
 ## Nächste Schritte {#next-steps}
 
 Nachdem Sie nun den Zweck und die Funktionen [!UICONTROL Run and Operate] Tools kennen, erkunden Sie die folgenden Ressourcen, um Ihr Wissen zu vertiefen:
 
+* Erfahren Sie, wie Sie mit [Konsistenzprüfungen](health-checks.md) Probleme mit Schemas und Identitätskonfigurationen erkennen können
+* Erfahren Sie, wie [ Auftragspläne für ](job-schedules.md) Batch-Aufnahme und -Aktivierungen prüfen
 * Erfahren Sie mehr über [Batch-Aufnahme](../ingestion/batch-ingestion/overview.md) um zu verstehen, wie Daten in Experience Platform aufgenommen werden
-* Erfahren Sie, wie [&#x200B; Auftragspläne für &#x200B;](job-schedules.md) Batch-Aufnahme und -Aktivierungen prüfen
 * Erfahren Sie, wie [geplante Aktivierungen](../destinations/ui/activate-batch-profile-destinations.md) für Batch-Ziele konfigurieren
 * Erkunden Sie [Datenflussüberwachung](../dataflows/ui/monitor-destinations.md) für Ziele
-
