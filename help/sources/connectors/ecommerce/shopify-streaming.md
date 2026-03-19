@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss ers
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: 4c7b23592a1784a5f2daa5518b512fa458a2c3ad
+source-git-commit: 6ab7c5c2e1f800c82d8906fba78fb897f8639877
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Die [!DNL Shopify Streaming]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
+>Die [!DNL Shopify Streaming]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) „Quellen - Übersicht“.
 
 Adobe Experience Platform unterstützt die Aufnahme von Daten aus Streaming-Anwendungen. Unterstützung für Streaming-Anbieter umfasst [!DNL Shopify].
 
@@ -126,7 +126,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- | 
-| `webhook.address` | Der HTTP-Endpunkt, an den Streaming-Nachrichten gesendet werden. Die Vorlage für den Webhook lautet: `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
+| `webhook.address` | Der HTTP-Endpunkt, an den Streaming-Nachrichten gesendet werden. Die Vorlage für den Webhook lautet: `https://dcs.adobedc.net/collection/{INLET_ID}?{X_ADOBE_FLOW_ID}={FLOW_ID}.` |
 | `webhook.topic` | Das Thema Ihres Webhook-Abonnements. Weitere Informationen finden Sie im [[!DNL Shopify] Handbuch zu Webhook-](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | Das Format Ihrer Daten. |
 
