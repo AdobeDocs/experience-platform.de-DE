@@ -16,9 +16,9 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
-Die [!DNL Talon.One] für Batch-Daten empfängt Ereignisse, die für eine [!DNL Talon.One] Anwendung aufgezeichnet wurden. Ein gängiger Anwendungsfall besteht darin, nach `talon_session_closed` zu filtern, um abgeschlossene Transaktionen zu erhalten, einschließlich gewonnener oder eingelöster Treuepunkte, eingelöster Coupons, gewährter Rabatte usw. Weitere Informationen zur API finden [[!DNL Talon.One]  in der ](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount) zur Verwaltungs-API.
+Die [!DNL Talon.One] für Batch-Daten empfängt Ereignisse, die für eine [!DNL Talon.One] Anwendung aufgezeichnet wurden. Ein gängiger Anwendungsfall besteht darin, nach `talon_session_closed` zu filtern, um abgeschlossene Transaktionen zu erhalten, einschließlich gewonnener oder eingelöster Treuepunkte, eingelöster Coupons, gewährter Rabatte usw. Weitere Informationen zur API finden [[!DNL Talon.One]  in der &#x200B;](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount) zur Verwaltungs-API.
 
 In diesem Tutorial erfahren Sie, wie Sie mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche Batch-Daten aus Ihrem [!DNL Talon.One]-Konto in Adobe Experience Platform aufnehmen.
 
@@ -67,7 +67,7 @@ Geben Sie nach der Authentifizierung Werte für Ihre **applicationId** und **ses
 
 >[!TIP]
 >
->Um abgeschlossene Transaktionen zu erfassen, einschließlich Treuepunkten, die verdient oder eingelöst wurden, eingelöster Coupons und gewährter Rabatte, wählen Sie den `talon_session_closed` Ereignistyp aus. Weitere Informationen zum Filtern von Ereignissen nach Typ finden Sie im [ Abfrageparameter „type“ in der  [!DNL Talon.One] -API](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
+>Um abgeschlossene Transaktionen zu erfassen, einschließlich Treuepunkten, die verdient oder eingelöst wurden, eingelöster Coupons und gewährter Rabatte, wählen Sie den `talon_session_closed` Ereignistyp aus. Weitere Informationen zum Filtern von Ereignissen nach Typ finden Sie im [&#x200B; Abfrageparameter „type“ in der  [!DNL Talon.One] -API](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
 ![Die Schritte „Daten auswählen“ und „Vorschau“ des Quell-Workflows.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
