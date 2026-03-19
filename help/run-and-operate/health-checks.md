@@ -181,4 +181,4 @@ Nachdem Sie die Ergebnisse Ihrer Konsistenzprüfung überprüft haben, können S
 * Erfahren Sie mehr über [Best Practices für Schemas](/help/xdm/schema/best-practices.md) zum Entwerfen zuverlässiger Datenmodelle.
 * Verstehen Sie [Regeln zur Identitätsdiagramm-Verknüpfung](/help/identity-service/identity-graph-linking-rules/overview.md), um das Ausblenden von Profilen zu verhindern.
 * Lesen Sie [Dokumentation zu Identitäts-Namespaces](/help/identity-service/features/namespaces.md) für Best Practices bei der Namespace-Verwaltung.
-* Informieren Sie sich [ anderen Tools zum Ausführen und ](/help/run-and-operate/overview.md), einschließlich [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) für die Sichtbarkeit von Batch-Vorgängen.
+* Informieren Sie sich [&#x200B; anderen Tools zum Ausführen und &#x200B;](/help/run-and-operate/overview.md), einschließlich [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) für die Sichtbarkeit von Batch-Vorgängen.
