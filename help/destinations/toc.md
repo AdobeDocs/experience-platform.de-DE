@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 6caa76e7e560bb3e1a375b89d2ab1457075cce54
+source-git-commit: cca83a46d83137af658ed2f9500386b5036ff4ba
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1339'
 ht-degree: 72%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 72%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -93,6 +93,7 @@ ht-degree: 72%
       * [DoubleClick Floodlight (Beta)-Erweiterung](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook-Pixel-Erweiterung](./catalog/advertising/facebook-pixel.md)
       * [Flashspeak OneTag-Erweiterung](./catalog/advertising/flashtalking.md)
+      * {hide-from-toc}[(Beta) FreeWheel-Verbindung](./catalog/advertising/freewheel.md)
       * [Google Ads-Verbindung](./catalog/advertising/google-ads-destination.md)
       * [Google Ad Manager-Verbindung](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360-Verbindung](./catalog/advertising/google-ad-manager-360-connection.md)
