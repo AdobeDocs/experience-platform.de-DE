@@ -39,7 +39,7 @@ Insgesamt gibt es fünf bewegliche Teile:
 
 1. **Benutzer** fordert **ChatGPT** mithilfe Ihres MCP-Servers auf.
 1. **ChatGPT** interpretiert die Eingabeaufforderungsabsicht und ruft das entsprechende **Backend-MCP-Tool)**.
-1. **Backend-MCP-Server** verwendet die Datenerfassungs-APIs (`interact`-Endpunkt), um ein Erlebnisereignis zur Analytics-Erfassung und optionalen Personalisierung an **** Edge Network zu senden.
+1. **Backend-MCP-Server** verwendet die Datenerfassungs-APIs (`interact`-Endpunkt), um ein Erlebnisereignis zur Analytics-Erfassung und optionalen Personalisierung an **&#x200B;**&#x200B;Edge Network zu senden.
 1. **Edge Network** gibt Antwort-Handles, einschließlich Statusaktualisierungen und Personalisierungsentscheidungen, an das **Backend-MCP-Tool“**.
 1. **Backend-MCP-Tool** gibt ein Tool-Ergebnis zurück, das Geschäftsdaten in `structuredContent` und Adobe-Metadaten in `_meta` zu **ChatGPT** enthält.
 1. **ChatGPT** stellt das Tool-Ergebnis für das **Frontend-Widget** bereit, das die Geschäftsdaten rendert und die Adobe-Metadaten mithilfe des `applyResponse`-Befehls der Web-SDK-JavaScript-Bibliothek anwendet. Dieser Befehl hydriert den Client-seitigen Status und rendert geeignete Personalisierungsentscheidungen in der Benutzeroberfläche.
@@ -54,7 +54,7 @@ Dieser Schritt ist der Einstiegspunkt für den Workflow. Der Benutzer bietet ein
 "Use the Adobe Office Information Tool to show me details about which office that is the most pet-friendly."
 ```
 
-Weitere Informationen finden [ in der OpenAI](https://developers.openai.com/apps-sdk/build/mcp-server/)Entwicklerdokumentation unter „MCP-Server erstellen“.
+Weitere Informationen finden [&#x200B; in der OpenAI](https://developers.openai.com/apps-sdk/build/mcp-server/)Entwicklerdokumentation unter „MCP-Server erstellen“.
 
 ## Schritt 2: ChatGPT interpretiert Absicht und ruft ein MCP-Tool auf
 
@@ -81,7 +81,7 @@ Basierend auf den Metadaten Ihres MCP-Servers interpretiert ChatGPT die Absicht 
 }
 ```
 
-Weitere Informationen [, wie Sie ChatGPT mitteilen, was jedes MCP-Tool tut, finden Sie ](https://developers.openai.com/apps-sdk/plan/tools/) der OpenAI Developers-Dokumentation unter „Tools definieren“.
+Weitere Informationen [, wie Sie ChatGPT mitteilen, was jedes MCP-Tool tut, finden Sie &#x200B;](https://developers.openai.com/apps-sdk/plan/tools/) der OpenAI Developers-Dokumentation unter „Tools definieren“.
 
 ## Schritt 3: Ihr MCP-Server sendet ein Erlebnisereignis an die Edge Network
 
@@ -205,7 +205,7 @@ Ihre MCP-Tool-Antwort umfasst sowohl die strukturierte Tool-Ausgabe als auch die
 }
 ```
 
-Weitere Informationen finden [ unter ](https://developers.openai.com/apps-sdk/reference/#tool-results) in der OpenAI-Entwicklerreferenz .
+Weitere Informationen finden [&#x200B; unter &#x200B;](https://developers.openai.com/apps-sdk/reference/#tool-results) in der OpenAI-Entwicklerreferenz .
 
 ## Schritt 6: Das Widget rendert das Ergebnis und wendet `_adobe.handles` mithilfe von `applyResponse` an
 
