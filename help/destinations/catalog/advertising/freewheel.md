@@ -4,10 +4,11 @@ description: Erfahren Sie, wie Sie Zielgruppen von Adobe Experience Platform fü
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 081832228c2aea6b436cce66a7e9623c5b79d62d
+exl-id: 1f1d3e57-a8ef-4971-b3d1-43521bd158bb
+source-git-commit: 705e94b13af6830916e7d4bf500c48ae1be88874
 workflow-type: tm+mt
 source-wordcount: '1534'
-ht-degree: 19%
+ht-degree: 24%
 
 ---
 
@@ -31,7 +32,7 @@ Bevor Sie Zielgruppen für die [!DNL FreeWheel] aktivieren können, überprüfen
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL FreeWheel] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Zusätzlich zu diesen Identitäten können Sie eine beliebige Identität verwenden, die in Ihrem [!DNL FreeWheel]-Konto verfügbar ist. Anweisungen [&#x200B; Zuordnen einer Identität, &#x200B;](#map) nicht in der folgenden Tabelle aufgeführt ist, finden Sie unter „Zuordnen von Attributen und Identitäten“. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+[!DNL FreeWheel] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Zusätzlich zu diesen Identitäten können Sie eine beliebige Identität verwenden, die in Ihrem [!DNL FreeWheel]-Konto verfügbar ist. Anweisungen [ Zuordnen einer Identität, ](#map) nicht in der folgenden Tabelle aufgeführt ist, finden Sie unter „Zuordnen von Attributen und Identitäten“. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Zielidentität | Beschreibung | Zu beachten |
 |---|---|---|
@@ -49,7 +50,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li>benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li>Lookalike-Zielgruppen,</li><li>Federated Audiences,</li><li>Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden,</li><li>und mehr.</li></ul> |
 
 {style="table-layout:auto"}
@@ -71,7 +72,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 |---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Identitätsfeldern, wie sie im Zuordnungsschritt des Workflows [Zielaktivierung“ ausgewählt &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Identitätsfeldern, wie sie im Zuordnungsschritt des Workflows [Zielaktivierung“ ausgewählt ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Der erste Export ist eine vollständige Momentaufnahme aller Profile, die für die aktivierten Zielgruppen qualifiziert sind. Nachfolgende Exporte sind tägliche inkrementelle Aktualisierungen, die neue Zielgruppenqualifikationen (Hinzufügen) und Zielgruppenaustritte (Entfernen) enthalten. Es ist auch ein konfigurierbares vollständiges Zielgruppen-Aktualisierungsintervall (4, 8 oder 12 Wochen) verfügbar, das zusätzlich zu den täglichen Inkrementen regelmäßige vollständige Exporte auslöst. Vollständige Exporte enthalten nur aktuell qualifizierte Profile. Zielgruppen-Ausstiege sind nicht enthalten und werden ausschließlich über die täglichen inkrementellen Aktualisierungen bereitgestellt. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -80,7 +81,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -123,7 +124,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
