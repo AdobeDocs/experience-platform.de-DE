@@ -2,10 +2,8 @@
 title: Übersicht zu talon.one Source
 description: Erfahren Sie mehr über die Quellen von Talon.One auf Adobe Experience Platform
 badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
-source-git-commit: 5ceef18d479854aa4b633e7e5e393a6698a05b2e
+source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 2%
@@ -16,7 +14,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Talon.One] befinden sich in der Betaphase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Talon.One] befinden sich in der Betaphase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Mit [!DNL Talon.One] können Sie ganz einfach personalisierte Marketing-Kampagnen für Ihre Kunden erstellen, verwalten und optimieren. Nutzen Sie diese leistungsstarke Plattform, um Rabatte auszuführen, Coupons zu verteilen, Empfehlungsprogramme zu starten, Treueprogramme einzurichten und Gamified Incentives anzubieten - alles von einem skalierbaren System aus, das Ihnen hilft, Ihre Zielgruppe anzusprechen und zu belohnen.
 
