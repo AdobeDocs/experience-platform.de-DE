@@ -18,8 +18,8 @@ ht-degree: 20%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 24. März 2026**
 
@@ -51,7 +51,7 @@ Mit Agent Orchestrator können Sie KI-gestützte Agenten erstellen und bereitste
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [Adobe Marketing Agent für [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] ist Ihr eingebetteter Agent, der Marketing-Intelligenz von Adobe direkt in alltägliche Tools wie [!DNL Teams], [!DNL Word], [!DNL PowerPoint] und andere [!DNL Microsoft 365]-Apps einbringt. Sie können diesen Agenten verwenden, um vertrauenswürdige Kampagneneinblicke aus Adobe-Programmen zu gewinnen, während Sie Kampagnen planen, Zielgruppen überprüfen, mit Kollegen zusammenarbeiten, um Kundenfragen zu beantworten, und um dateninformierte Entscheidungen zu treffen, ohne Ihren [!DNL Microsoft 365]-Workflow verlassen zu müssen. |
+| [Adobe Marketing Agent für [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] ist Ihr eingebetteter Agent, der Marketing-Intelligenz von Adobe direkt in alltägliche Tools wie [!DNL Teams], [!DNL Word], [!DNL PowerPoint] und andere [!DNL Microsoft 365]-Apps einbringt. Sie können diesen Agenten verwenden, um vertrauenswürdige Kampagneneinblicke aus Adobe-Programmen zu gewinnen, während Sie Kampagnen planen, Zielgruppen überprüfen, mit Kollegen zusammenarbeiten, um Kundenfragen zu beantworten, und um dateninformierte Entscheidungen zu treffen, ohne Ihren [!DNL Microsoft 365]-Workflow verlassen zu müssen. |
 
 {style="table-layout:auto"}
 
