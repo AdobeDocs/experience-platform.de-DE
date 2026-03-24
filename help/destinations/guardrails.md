@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: c550186c9cb3bc580a227633e0d7c0b574ecc2e8
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 41%
+source-wordcount: '1744'
+ht-degree: 42%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 41%
 
 >[!IMPORTANT]
 >
->Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [&#x200B; entsprechenden &#x200B;](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
 Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen in Bezug auf das Aktivierungsverhalten. Bei der Betrachtung der folgenden Leitplanken wird angenommen, dass Sie eine ordnungsgemäße [Verbindung zu Zielen hergestellt haben](/help/destinations/ui/connect-destination.md).
 
@@ -34,7 +34,7 @@ In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 | Art der Leitplanke | Beschreibung |
 |----------|---------|
 | **Leistungs-Schutzmaßnahme (weiches Limit)** | Die Leistung betreffende Leitplanken sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer Anwendungsfälle beziehen. Beim Überschreiten der Leistungsleitplanken kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist für eine solche Leistungsbeeinträchtigung nicht verantwortlich. Kunden, die ständig eine Leistungsschutzmaßnahme überschreiten, können sich dafür entscheiden, zusätzliche Kapazität zu lizenzieren, um eine Leistungsbeeinträchtigung zu vermeiden. |
-| **Vom System erzwungene Leitplanken (feste Grenze)** | Systemerzwungene Leitplanken werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und die API Sie daran hindern oder einen Fehler zurückgeben. |
+| **Vom System erzwungene Leitplanken (feste Grenze)** | Systemerzwungene Leitplanken werden von der [!DNL Real-Time CDP]-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und die API Sie daran hindern oder einen Fehler zurückgeben. |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ Die folgenden Leitplanken gelten generell für die Aktivierung durch [alle Zielt
 | Maximale Anzahl von Attributen, die einem Ziel zugeordnet sind | 50 | Leistungs-Schutzmaßnahme | Bei mehreren Zielen und Zieltypen können Sie Profilattribute und Identitäten auswählen, die dem Export zugeordnet werden sollen. Um eine optimale Leistung zu erzielen, sollten maximal 50 Attribute einer Zielinstanz zugeordnet werden. |
 | Maximale Anzahl von Zielen | 100 | Vom System erzwungene Leitplanken | Sie können maximal 100 Ziele erstellen, mit denen Sie (pro Sandbox) Daten verbinden *aktivieren*. [Edge-Personalisierungsziele (benutzerdefinierte Personalisierung)](#edge-destinations-activation) können maximal 10 der 100 empfohlenen Ziele ausmachen. |
 | Art der für Ziele aktivierten Daten | Profildaten, einschließlich Identitäten und Identitätszuordnung | Vom System erzwungene Leitplanken | Derzeit ist es nur möglich, *Profileintragsattribute* zu Zielen zu exportieren. XDM-Attribute, die Ereignisdaten beschreiben, werden derzeit nicht für den Export unterstützt. |
-| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Vom System erzwungene Leitplanken | Sie können Array-Attribute in [dateibasierte Ziele“ &#x200B;](/help/destinations/destination-types.md#file-based). [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md) über die Funktion. |
+| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Vom System erzwungene Leitplanken | Sie können Array-Attribute in [dateibasierte Ziele“ ](/help/destinations/destination-types.md#file-based). [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md) über die Funktion. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ Die folgenden Leitplanken gelten für die Aktivierung über [Batch-Ziele (dateib
 | Aktivierungshäufigkeit | Ein vollständiger Export pro Tag oder häufigere inkrementelle Exporte alle 3, 6, 8 oder 12 Stunden. | Vom System erzwungene Leitplanken | Lesen Sie die Dokumentationsabschnitte [Vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) für weitere Informationen über die Häufigkeitsabstufungen für Batch-Exporte. |
 | Maximale Anzahl von Zielgruppen, die zu einer bestimmten Stunde exportiert werden können | 100 | Leistungs-Schutzmaßnahme | Es wird empfohlen, maximal 100 Zielgruppen zu Batch-Zielinstanzen hinzuzufügen. |
 | Maximale Anzahl der zu aktivierenden Zeilen (Einträge) pro Datei | 5 Millionen | Vom System erzwungene Leitplanken | Adobe Experience Platform teilt die exportierten Dateien automatisch mit 5 Millionen Einträgen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar. Bei aufgeteilten Dateien wird eine Nummer an den Namen angehängt, die anzeigt, dass die Datei Teil eines größeren Exports ist, z. B. `filename.csv`, `filename_2.csv`, `filename_3.csv`. Weitere Informationen finden Sie im [Planungsabschnitt](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) des Tutorials zum Aktivieren von Batch-Zielen. |
-| Maximale Anzahl externer Zielgruppen (z. B. FAC, benutzerdefinierter Upload, Zielgruppenkomposition), die in einer Zielinstanz aktiviert werden können | 10 | Vom System erzwungene Leitplanken | Beim Aktivieren externer Zielgruppen (z[&#x200B; B. „Federated Audience &#x200B;](/help/segmentation/ui/audience-portal.md#fac)&quot;, [Custom Upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience Komposition](/help/segmentation/ui/audience-portal.md#audience-composition)) für Batch-dateibasierte Ziele gibt es eine Beschränkung von 10 solcher Zielgruppen, die Sie in einer Zielinstanz aktivieren können. Weitere [&#x200B; zu diesen Zielgruppentypen finden Sie unter &#x200B;](/help/segmentation/ui/audience-portal.md#customize) und Anpassung . Lesen Sie mehr über den Workflow zum [Aktivieren externer Zielgruppen für Batch-dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Maximale Anzahl externer Zielgruppen (z. B. FAC, benutzerdefinierter Upload, Zielgruppenkomposition), die in einer Zielinstanz aktiviert werden können | 20 | Vom System erzwungene Leitplanken | Beim Aktivieren externer Zielgruppen (z. B. [Federated Audience ](/help/segmentation/ui/audience-portal.md#fac)), [benutzerdefinierter Upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience-Komposition](/help/segmentation/ui/audience-portal.md#audience-composition)) für Batch-dateibasierte Ziele gibt es ein Limit von 20 solcher Zielgruppen, die Sie in einer Zielinstanz aktivieren können. Weitere [ zu diesen Zielgruppentypen finden Sie unter ](/help/segmentation/ui/audience-portal.md#customize) und Anpassung . Lesen Sie mehr über den Workflow zum [Aktivieren externer Zielgruppen für Batch-dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Die folgenden Leitplanken gelten für die Aktivierung durch [Edge-Personalisieru
 
 ### Datensatzexporte {#dataset-exports}
 
-Datensatzexporte werden derzeit in einem **[!UICONTROL First Full and then Incremental]** ([) &#x200B;](/help/destinations/ui/export-datasets.md#scheduling). Die in diesem Abschnitt beschriebenen Leitplanken *gelten für den ersten vollständigen Export* der nach der Einrichtung eines Datensatzexport-Workflows erfolgt.
+Datensatzexporte werden derzeit in einem **[!UICONTROL First Full and then Incremental]** ([) ](/help/destinations/ui/export-datasets.md#scheduling). Die in diesem Abschnitt beschriebenen Leitplanken *gelten für den ersten vollständigen Export* der nach der Einrichtung eines Datensatzexport-Workflows erfolgt.
 
 <!--
 
@@ -159,8 +159,8 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 |Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
 |---------|---------|-----------|-----------|------------|
-| Datasets based on the **XDM Experience Events schema** |  <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or  incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
-| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+| Datasets based on the **XDM Experience Events schema** | <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
+| Datasets based on the **XDM Individual Profile schema** | - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
@@ -193,10 +193,10 @@ Details zu Drosselungsschwellwerten oder -beschränkungen für bestimmte Ziele. 
 
 ## Nächste Schritte {#next-steps}
 
-In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP-Produktbeschreibungsdokumenten:
+In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus [!DNL Real-Time CDP] Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
-* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=de#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
 * [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
