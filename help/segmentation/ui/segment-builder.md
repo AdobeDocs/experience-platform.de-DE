@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '6311'
-ht-degree: 46%
+source-wordcount: '6574'
+ht-degree: 44%
 
 ---
 
@@ -55,6 +55,16 @@ Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereigniss
 Sie können diese Bausteine im Abschnitt **[!UICONTROL Fields]** auf der linken Seite des Arbeitsbereichs von [!DNL Segment Builder] sehen. **[!UICONTROL Fields]** enthält eine Registerkarte für jeden Hauptbaustein: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; und &quot;[!UICONTROL Audiences]&quot;.
 
 ![Der Segment Builder-Abschnitt „Felder“ ist hervorgehoben.](../images/ui/segment-builder/segment-fields.png)
+
+Sie können das Symbol ![Einstellungen](/help/images/icons/settings.png) auswählen, um die Einstellungen für die angezeigten Felder anzupassen.
+
+Für die **[!UICONTROL Available fields]** können Sie entweder nur die Felder anzeigen, die Daten enthalten, oder das vollständige XDM-Schema.
+
+Für die **[!UICONTROL Data sources]** können Sie filtern, um Attribute anzuzeigen, die aus den angegebenen Aufnahmetypen stammen. Zu den unterstützten Werten gehören **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]** und **[!UICONTROL Show fields with no ingested data]**.
+
+Für die **[!UICONTROL Merge policy]** können Sie auswählen, zu welcher Zusammenführungsrichtlinie die Felder gehören.
+
+![Der Einstellungsbereich wird in Segment Builder angezeigt.](../images/ui/segment-builder/settings.png)
 
 ### Attribute
 
@@ -146,6 +156,22 @@ Sie können die folgenden Operatoren für die jeweiligen Datentypen verwenden:
 Ausführlichere Informationen zu den Uhrzeit- und Datumsfunktionen finden Sie im [Abschnitt zu Zeitbeschränkungen](#time-constraints).
 
 +++
+
+Wenn Sie ein Attribut auswählen, können Sie die Zusammenfassungsdaten anzeigen, indem Sie auf das [Informationssymbol](../../images/icons/info.png) klicken. Die Zusammenfassungsdaten enthalten Informationen wie eine Erläuterung des Felds, die Anzahl der Einträge der Werte sowie den Prozentsatz der Konten, die Werte für dieses Attribut enthalten.
+
+Der Abschnitt **[!UICONTROL Top values]** zeigt die am häufigsten vorkommenden Werte für das Attribut an und enthält Details wie den Wert, die Anzahl der Datensätze, die diesen Wert aufweisen, sowie den Prozentsatz der gesamten Datensätze, die der Wert darstellt.
+
+![Ein Pop-up, das die Zusammenfassungsdaten für ein Attribut anzeigt](/help/segmentation/images/ui/segment-builder/summary-data.png)
+
+Wenn ein Attribut mit weniger als 25 % der Profile ausgefüllt ist, wird stattdessen ![Datenhinweissymbol](../../images/icons/data-notice.png) angezeigt. Unabhängig davon werden für das Attribut dieselben Zusammenfassungsdaten angezeigt.
+
+>[!NOTE]
+>
+>Die obersten Werte werden nur angezeigt, wenn das Feld **nicht** zu viele verschiedene Werte enthält und die Werte dieser Felder häufig wiederholt werden. Darüber hinaus werden diese Zusammenfassungsdaten **täglich**.
+
+Darüber hinaus verfügt das Attribut über eine **[!UICONTROL Ingestion Type]**. Der Aufnahmetyp teilt Ihnen den Ursprung der Daten mit und kann einer der folgenden Werte sein: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** oder **[!UICONTROL No Data Ingested]**.
+
+![Der Aufnahmetyp für das Attribut wird angezeigt.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
 
 #### Berechnete Attribute {#computed-attributes}
 
