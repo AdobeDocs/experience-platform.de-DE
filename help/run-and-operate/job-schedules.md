@@ -28,7 +28,7 @@ Verwenden Sie Vorgangszeitpläne, um Fehler zu untersuchen, den Vorgangszeitpunk
 
 ## Voraussetzungen {#prerequisites}
 
-Für den Zugriff auf [!UICONTROL Job Schedules] benötigen Sie die **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions)
+Für den Zugriff auf [!UICONTROL Job Schedules] benötigen Sie die **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions)
 
 Wenden Sie sich an Ihren Systemadministrator, um sicherzustellen, dass Sie über die entsprechenden Berechtigungen verfügen.
 

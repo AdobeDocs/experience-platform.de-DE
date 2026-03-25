@@ -87,7 +87,7 @@ Die Konsistenzprüfungen evaluieren derzeit fünf grundlegende Bereiche:
 Nachdem Sie nun den Zweck und die Funktionen [!UICONTROL Run and Operate] Tools kennen, erkunden Sie die folgenden Ressourcen, um Ihr Wissen zu vertiefen:
 
 * Erfahren Sie, wie Sie mit [Konsistenzprüfungen](health-checks.md) Probleme mit Schemas und Identitätskonfigurationen erkennen können
-* Erfahren Sie, wie [ Auftragspläne für ](job-schedules.md) Batch-Aufnahme und -Aktivierungen prüfen
+* Erfahren Sie, wie [&#x200B; Auftragspläne für &#x200B;](job-schedules.md) Batch-Aufnahme und -Aktivierungen prüfen
 * Erfahren Sie mehr über [Batch-Aufnahme](../ingestion/batch-ingestion/overview.md) um zu verstehen, wie Daten in Experience Platform aufgenommen werden
 * Erfahren Sie, wie [geplante Aktivierungen](../destinations/ui/activate-batch-profile-destinations.md) für Batch-Ziele konfigurieren
 * Erkunden Sie [Datenflussüberwachung](../dataflows/ui/monitor-destinations.md) für Ziele

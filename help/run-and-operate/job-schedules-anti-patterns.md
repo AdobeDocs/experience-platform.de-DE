@@ -28,9 +28,9 @@ Die [Vorgangszeitpläne](job-schedules.md) hilft Ihnen, häufige Konfigurationsp
 
 Bevor Sie Anti-Muster identifizieren, sollten Sie:
 
-* Zugriff auf [!UICONTROL Job Schedules] mit der **[!UICONTROL View Job Schedules]** Zugriffssteuerungsberechtigung[ haben](/help/access-control/home.md#permissions).
+* Zugriff auf [!UICONTROL Job Schedules] mit der **[!UICONTROL View Job Schedules]** Zugriffssteuerungsberechtigung[&#x200B; haben](/help/access-control/home.md#permissions).
 * Machen Sie sich mit der [Benutzeroberfläche für Auftragspläne](job-schedules.md#understanding-interface) und dem Lesen der Zeitleisten-Ansicht vertraut.
-* Grundlegende [ (Batch](../ingestion/batch-ingestion/overview.md)Aufnahme), [Segmentierung](../segmentation/home.md) und [Profilverarbeitung](../profile/home.md) Konzepte verstehen.
+* Grundlegende [&#x200B; (Batch](../ingestion/batch-ingestion/overview.md)Aufnahme), [Segmentierung](../segmentation/home.md) und [Profilverarbeitung](../profile/home.md) Konzepte verstehen.
 
 ## Kurzübersicht {#anti-pattern-quick-reference}
 
@@ -117,7 +117,7 @@ Dieses Muster beinhaltet einen einzelnen Datensatz mit vielen einzelnen Batch-Er
 Nachdem Sie Anti-Muster in Ihren Jobplänen identifiziert haben:
 
 * Zeigen Sie [Auftragsdetails](job-schedules-details.md) an, um bestimmte Datensätze und Auftragsausführungen zu untersuchen, die Probleme verursachen können.
-* Informieren Sie [ über die ](job-schedules.md) und Inspektionsfunktionen in der Übersicht zu Auftragsplänen.
+* Informieren Sie [&#x200B; über die &#x200B;](job-schedules.md) und Inspektionsfunktionen in der Übersicht zu Auftragsplänen.
 * Erfahren Sie mehr über [Batch-Aufnahme](../ingestion/batch-ingestion/overview.md) um Ihre Datenladepläne zu optimieren.
 * Grundlegendes [Segmentierungspläne](../segmentation/home.md), um einen korrekten Zeitplan für Zielgruppenbewertungen sicherzustellen.
 * Erkunden Sie [Überwachen von Zieldatenflüssen](../dataflows/ui/monitor-destinations.md) um die End-to-End-Pipeline-Sichtbarkeit zu ermitteln.
