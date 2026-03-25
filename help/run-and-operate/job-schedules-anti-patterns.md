@@ -3,25 +3,24 @@ description: Erfahren Sie, wie Sie allgemeine Antimuster bei der Konfiguration v
 solution: Experience Platform
 title: Ermitteln von Anti-Mustern für Auftragspläne
 type: Tutorial
-hide: true
-source-git-commit: 9d170fec9b80f0f2e17fc39e8f573cbad515f823
+exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
 
-
 # Identifizieren von Antimustern für Auftragspläne
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] sind derzeit als eingeschränkte Version verfügbar und nur für die folgenden Real-Time CDP-Aufträge:
+>[!UICONTROL Job schedules] sind derzeit nur für die folgenden Real-Time CDP-Aufträge verfügbar:
 >
 > * Batch-Data-Lake-Aufnahme
 > * Batch-Profilaufnahme
-> * Stapelsegmentierung
-> * Batch-Zielaktivierung.
+> * Batch-Segmentierung
+> * Batch-Zielaktivierung
 
 Die [Vorgangszeitpläne](job-schedules.md) hilft Ihnen, häufige Konfigurationsprobleme zu identifizieren, die sich negativ auf die Leistung und Zuverlässigkeit Ihrer Datenpipeline auswirken können. Diese Anti-Muster führen häufig zu Auftragsfehlern, Dateninkonsistenzen oder schlechterer Systemleistung. Durch das frühzeitige Erkennen dieser Muster können Sie Ihre Aufträge neu konfigurieren, um Probleme zu vermeiden, bevor sie sich auf Ihre Geschäftsvorgänge auswirken.
 
@@ -29,9 +28,9 @@ Die [Vorgangszeitpläne](job-schedules.md) hilft Ihnen, häufige Konfigurationsp
 
 Bevor Sie Anti-Muster identifizieren, sollten Sie:
 
-* Zugriff auf [!UICONTROL Job Schedules] mit der **[!UICONTROL View Job Schedules]** Zugriffssteuerungsberechtigung[&#x200B; haben](/help/access-control/home.md#permissions).
+* Zugriff auf [!UICONTROL Job Schedules] mit der **[!UICONTROL View Job Schedules]** Zugriffssteuerungsberechtigung[ haben](/help/access-control/home.md#permissions).
 * Machen Sie sich mit der [Benutzeroberfläche für Auftragspläne](job-schedules.md#understanding-interface) und dem Lesen der Zeitleisten-Ansicht vertraut.
-* Grundlegende [&#x200B; (Batch](../ingestion/batch-ingestion/overview.md)Aufnahme), [Segmentierung](../segmentation/home.md) und [Profilverarbeitung](../profile/home.md) Konzepte verstehen.
+* Grundlegende [ (Batch](../ingestion/batch-ingestion/overview.md)Aufnahme), [Segmentierung](../segmentation/home.md) und [Profilverarbeitung](../profile/home.md) Konzepte verstehen.
 
 ## Kurzübersicht {#anti-pattern-quick-reference}
 
@@ -47,7 +46,7 @@ Bevor Sie Anti-Muster identifizieren, sollten Sie:
 
 **Worauf Sie achten sollten**: Mehrere Aufträge, die gleichzeitig oder in enger Abfolge ausgeführt werden sollen, insbesondere wenn ressourcenintensive Aufträge sich überschneiden.
 
-In diesem Beispiel sehen Sie Batch-Erfassungsaufträge, die gleichzeitig mit einem geplanten Segmentierungsauftrag ausgeführt werden. Dies führt zu einem Ressourcenkonflikt, da beide Vorgänge eine erhebliche Verarbeitungsleistung und Arbeitsspeicher erfordern.
+Ein gängiges Beispiel sind Batch-Erfassungsaufträge, die gleichzeitig mit einem geplanten Segmentierungsauftrag ausgeführt werden. Dies führt zu einem Ressourcenkonflikt, da beide Vorgänge eine erhebliche Verarbeitungsleistung und Arbeitsspeicher erfordern.
 
 **Warum ist das problematisch**:
 
@@ -68,7 +67,7 @@ In diesem Beispiel sehen Sie Batch-Erfassungsaufträge, die gleichzeitig mit ein
 
 **Suchen nach**: Zu viele Datensätze mit mehreren Batches, die innerhalb derselben Stunde geplant sind, insbesondere wenn diese Batches nahe beieinander gestapelt und in der Nähe kritischer Verarbeitungsfenster wie der Segmentierungs-Startzeiten geplant werden.
 
-In diesem Muster sehen Sie Folgendes:
+Dieses Muster umfasst normalerweise:
 
 * Mehrere Datensätze mit jeweils mehreren Batches pro Tag
 * ETL-Aufträge (Data-Lake-Aufnahme und Profilaufnahme), die innerhalb derselben Stunde geclustert wurden
@@ -80,14 +79,14 @@ In diesem Muster sehen Sie Folgendes:
 * **Verzögerte Profilverfügbarkeit**: Aufträge zur Profilaufnahme, die zu nahe an den Segmentierungs-Startzeiten liegen, werden möglicherweise nicht rechtzeitig abgeschlossen, was zu unvollständigen oder veralteten Zielgruppenauswertungen führt.
 * **Unvorhersehbare Segmentierung**: Wenn Upstream-Aufnahmevorgänge zu Beginn der Segmentierung noch ausgeführt werden, besteht die Gefahr, dass Zielgruppen anhand unvollständiger Daten bewertet werden, was zu einer falschen Zielgruppenzugehörigkeit führt.
 * **Kaskadierende Fehler**: Ein einzelner verzögerter Batch in einem dicht gestapelten Zeitplan kann einen Dominoeffekt verursachen, der alle nachfolgenden Batches und nachgelagerten Prozesse verzögert.
-* **Ressourcenengpässe**: Das System kann Schwierigkeiten bei der Zuweisung ausreichender Ressourcen haben, wenn zu viele gleichzeitige Aufnahmevorgänge verarbeitet werden, was zu langsameren Verarbeitungszeiten oder Fehlern führt.
+* **Ressourcenbelastung**: Das System kann Schwierigkeiten bei der Zuweisung ausreichender Ressourcen haben, wenn zu viele gleichzeitige Aufnahmevorgänge verarbeitet werden, was zu langsameren Verarbeitungszeiten oder Fehlern führt.
 
 **Wie kann ich das Problem beheben**:
 
 * **Batches konsolidieren**: Reduzieren Sie die Batch-Häufigkeit, indem Sie mehrere kleine Batches in weniger, größeren Batches pro Datensatz kombinieren.
 * **Gleichmäßig verteilen**: Verteilen Sie Aufnahmeaufträge über den Tag, anstatt sie in bestimmten Stunden zu gruppieren.
 * **Pufferzeit hinzufügen**: Stellen Sie sicher, dass zwischen dem Abschluss der Profilaufnahme und dem Start der Segmentierung ein Puffer von mindestens 1-2 Stunden vorhanden ist.
-* **Anforderungen überprüfen**: Beurteilen, ob alle Datensätze wirklich mehrere tägliche Batches benötigen - viele Anwendungsfälle funktionieren mit weniger häufigen Aktualisierungen.
+* **Anforderungen überprüfen**: Beurteilen, ob alle Datensätze wirklich mehrere tägliche Batches benötigen. Viele Anwendungsfälle funktionieren mit weniger häufigen Aktualisierungen.
 
 ## Zu viele Batches pro Datensatz {#excessive-batches-per-dataset}
 
@@ -95,7 +94,7 @@ In diesem Muster sehen Sie Folgendes:
 
 **Wonach Sie suchen sollten**: Ein einzelner Datensatz mit einer übermäßigen Anzahl einzelner Batch-Vorgänge, die über den ganzen Tag geplant sind, wodurch ein langer vertikaler Stapel von Vorgängen auf der Timeline erstellt wird.
 
-In diesem Muster sehen Sie eine Datensatzzeile mit vielen einzelnen Batch-Erfassungsvorgängen, die in häufigen Intervallen geplant werden - manchmal Dutzende von Batches pro Tag für einen einzelnen Datensatz.
+Dieses Muster beinhaltet einen einzelnen Datensatz mit vielen einzelnen Batch-Erfassungsvorgängen, die in häufigen Intervallen geplant werden, manchmal in Dutzenden von Batches pro Tag.
 
 **Warum ist das problematisch**:
 
@@ -118,7 +117,7 @@ In diesem Muster sehen Sie eine Datensatzzeile mit vielen einzelnen Batch-Erfass
 Nachdem Sie Anti-Muster in Ihren Jobplänen identifiziert haben:
 
 * Zeigen Sie [Auftragsdetails](job-schedules-details.md) an, um bestimmte Datensätze und Auftragsausführungen zu untersuchen, die Probleme verursachen können.
-* Informieren Sie [&#x200B; über die &#x200B;](job-schedules.md) und Inspektionsfunktionen in der Übersicht zu Auftragsplänen.
+* Informieren Sie [ über die ](job-schedules.md) und Inspektionsfunktionen in der Übersicht zu Auftragsplänen.
 * Erfahren Sie mehr über [Batch-Aufnahme](../ingestion/batch-ingestion/overview.md) um Ihre Datenladepläne zu optimieren.
 * Grundlegendes [Segmentierungspläne](../segmentation/home.md), um einen korrekten Zeitplan für Zielgruppenbewertungen sicherzustellen.
 * Erkunden Sie [Überwachen von Zieldatenflüssen](../dataflows/ui/monitor-destinations.md) um die End-to-End-Pipeline-Sichtbarkeit zu ermitteln.

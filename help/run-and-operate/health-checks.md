@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie Konsistenzprüfungen in Adobe Experience Plat
 solution: Experience Platform
 type: Documentation
 role: Admin, User
-hide: true
-source-git-commit: ab2420b898dc38d19187cee627b5c44e7fb44a6c
+exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Konsistenzprüfungen
 
-Konsistenzprüfungen scannen Ihre Schemata und Identitäten, die in Ihrer Sandbox verwendet werden, und bieten eine Zusammenfassung von Problemen, die Sie verwenden können, um mit [!UICONTROL AI Assistant] zu untersuchen und Fehler zu beheben. In Zukunft können weitere Objekte auf einen umfassenderen Bericht überprüft werden.
+Konsistenzprüfungen scannen Ihre in Ihrer Sandbox verwendeten Schemata und Identitäten und bieten eine Zusammenfassung von Problemen, die Sie mit dem KI-Assistenten untersuchen und beheben können. In Zukunft können weitere Objekte auf einen umfassenderen Bericht überprüft werden.
 
 Schlechte Schema- und Identitätskonfigurationen führen zu erheblichen nachgelagerten Problemen, einschließlich falscher Profilerstellung, fehlgeschlagener Segmentqualifikation und ungenauer Aktivierung. Diese Probleme sind schwer zu erkennen und erfordern oft spezielles Fachwissen zur Diagnose. Konsistenzprüfungen verlagern Ihren Ansatz von der reaktiven Fehlerbehebung auf die proaktive, präventive Wartung.
 
@@ -22,7 +22,7 @@ Mit Konsistenzprüfungen können Sie:
 
 * **Konfigurationsprobleme frühzeitig erkennen**: Identifizieren Sie fehlende Best Practices, Fehlkonfigurationen und Muster, die zu Ineffizienzen bei Personalisierung, Aktivierung und mehr führen.
 * **Erhalten Sie angeleitete Problembehebung**: Erhalten Sie klare Anleitungen dazu, was jedes Problem ist und was Sie dagegen tun können.
-* **Fortlaufend überwachen**: In diesem Moment führen Konsistenzprüfungen tägliche automatische Scans durch, damit Sie Probleme erkennen können, bevor sie zu kritischen Fehlern werden. Der Zeitplan kann sich in zukünftigen Versionen ändern.
+* **Fortlaufend überwachen** Derzeit führen Konsistenzprüfungen tägliche automatische Scans durch, damit Sie Probleme erkennen können, bevor sie zu kritischen Fehlern werden. Der Zeitplan kann sich in zukünftigen Versionen ändern.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -72,14 +72,14 @@ Sucht, um sicherzustellen, dass Identitätsfelder für die Datenintegrität übe
 | Detail | Beschreibung |
 | --- | --- |
 | **Problem** | Als Identitäten markierte Felder haben keine Mindest-/Maximallänge oder Mustervalidierung. |
-| **Impact** | Ohne Validierung können Speicherbereinigungswerte [!UICONTROL Identity Service] eingeben. Werte wie „0“, „Guest“ oder nicht übereinstimmende Groß-/Kleinschreibung (z. B. „xyz123“ versus „XYZ123„) beeinträchtigen die Integrität des Profils, das während der Segmentierung und Aktivierung zusammengestellt wird. |
+| **Impact** | Ohne Validierung können Speicherbereinigungswerte [!DNL Identity Service] eingeben. Werte wie „0“, „Guest“ oder nicht übereinstimmende Groß-/Kleinschreibung (z. B. „xyz123“ versus „XYZ123„) beeinträchtigen die Integrität des Profils, das während der Segmentierung und Aktivierung zusammengestellt wird. |
 | **Behebung** | Legen Sie die minimale/maximale Länge und Musterbeschränkungen für benutzerdefinierte Felder fest, die als Identitäten markiert sind. Verwenden Sie reguläre Ausdrücke, um Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen durchzusetzen. |
 
 Wenn Sie die Karte **[!UICONTROL Identity Field Validation]** auswählen, wird auf der rechten Seite ein Detailbereich geöffnet. Das Bedienfeld zeigt:
 
 * **[!UICONTROL Description]**: Sucht, um sicherzustellen, dass Identitätsfelder Min./Max. Längen und Regex-Musterregeln für die Datenintegrität haben. Listet die betroffenen Schemata und Felder auf.
 * **[!UICONTROL Impact]**: Wenn in Identitätsfeldern in Schemata keine Min./Max. Länge festgelegt ist und Mustervalidierungen nicht festgelegt sind, kann dies zu inkonsistenten Daten führen, was die Integrität und Qualität der Daten beeinträchtigen kann.
-* **[!UICONTROL General areas of impact]**: Kennungen niedriger Qualität in [!UICONTROL Identity Service]; unzuverlässiges Zusammenfügen.
+* **[!UICONTROL General areas of impact]**: Kennungen niedriger Qualität in [!DNL Identity Service]; unzuverlässiges Zusammenfügen.
 * **[!UICONTROL Experience League Documentation]**: Ein Link zu Best Practices für die Datenmodellierung.
 * **[!UICONTROL Affected Schemas]**: Eine Liste der betroffenen Schemata, jedes mit einem Expander, um weitere Details anzuzeigen, und einem Link, um das Schema zu öffnen.
 
@@ -122,7 +122,7 @@ Validiert die richtige Verwendung von Identitätstypen von Personen und Nicht-Pe
 Wenn Sie die Karte **[!UICONTROL People & Non-People Identity Config]** auswählen, wird auf der rechten Seite ein Detailbereich geöffnet. Das Bedienfeld zeigt:
 
 * **[!UICONTROL Description]**: Validiert die ordnungsgemäße Verwendung von Identitätstypen in Schemaklassen. Listet falsch konfigurierte Schemata auf und markiert falsche Zuweisungen.
-* **[!UICONTROL Impact]**: Wenn einer Nicht-Personen-Entität eine Personen-Identität zugewiesen wird, erhöht dies die Profilanzahl und macht diese Daten als Suche ungeeignet. Wenn einer Personenentität eine Nicht-Personen-Identität zugewiesen wird, sind die Daten nicht für Streaming oder Edge-Segmentierung verfügbar.
+* **[!UICONTROL Impact]**: Wenn eine Nicht-Personen-Entität eine Personen-Identität erhält, erhöht dies die Profilanzahl und macht diese Daten als Suche nicht mehr geeignet. Wenn einer Personenentität eine Nicht-Personen-Identität zugewiesen wird, sind die Daten nicht für Streaming oder Edge-Segmentierung verfügbar.
 * **[!UICONTROL General areas of impact]**: Unvollständige Identitätsdiagramme; überhöhte Profilzahlen; Missbrauch bei der Suche.
 * **[!UICONTROL Affected Schemas]**: Eine Liste von Schemata mit Problemen. Erweitern Sie eine Schemazeile, um den Pfad, den Identitätsnamen und den Schematyp für jede Fehlkonfiguration anzuzeigen. Öffnen Sie das Schema mithilfe des Link-Symbols.
 
@@ -172,7 +172,7 @@ Wenn Sie die Karte **[!UICONTROL Deprecated Identity Namespace]** auswählen, wi
 
 ![Veraltetes Detailbedienfeld für Identity-Namespaces mit Beschreibung, Auswirkungen und der Liste der betroffenen Namespaces](assets/health-checks/deprecated-namespace-detail.png)
 
-Weitere Informationen finden Sie im [Experience Cloud Knowledge Base-Artikel zu veralteten Namespaces](https://experienceleague.adobe.com/de/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Weitere Informationen finden Sie im [Experience Cloud Knowledge Base-Artikel zu veralteten Namespaces](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Nächste Schritte {#next-steps}
 
@@ -181,4 +181,4 @@ Nachdem Sie die Ergebnisse Ihrer Konsistenzprüfung überprüft haben, können S
 * Erfahren Sie mehr über [Best Practices für Schemas](/help/xdm/schema/best-practices.md) zum Entwerfen zuverlässiger Datenmodelle.
 * Verstehen Sie [Regeln zur Identitätsdiagramm-Verknüpfung](/help/identity-service/identity-graph-linking-rules/overview.md), um das Ausblenden von Profilen zu verhindern.
 * Lesen Sie [Dokumentation zu Identitäts-Namespaces](/help/identity-service/features/namespaces.md) für Best Practices bei der Namespace-Verwaltung.
-* Informieren Sie sich [&#x200B; anderen Tools zum Ausführen und &#x200B;](/help/run-and-operate/overview.md), einschließlich [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) für die Sichtbarkeit von Batch-Vorgängen.
+* Informieren Sie sich [ anderen Tools zum Ausführen und ](/help/run-and-operate/overview.md), einschließlich [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) für die Sichtbarkeit von Batch-Vorgängen.

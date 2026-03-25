@@ -1,20 +1,18 @@
 ---
 title: Übersicht über Ausführung und Bedienung
 description: Überprüfen, beheben und optimieren Sie Ihre Experience Platform-Implementierungen mit den Tools „Ausführen und Bedienen“. Gewinnen Sie Einblicke in geplante Batch-Aktivierungen, identifizieren Sie Konfigurationsprobleme und verbessern Sie die Systemzuverlässigkeit.
-hide: true
+solution: Experience Platform
+type: Documentation
+role: Admin, User
 exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
-source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 1%
+source-wordcount: '636'
+ht-degree: 2%
 
 ---
 
 # Übersicht über Ausführung und Bedienung
-
->[!AVAILABILITY]
->
->Die Funktionen zum Ausführen und Betreiben sind derzeit nur in begrenztem Umfang verfügbar.
 
 Wenn Batch-Vorgänge fehlschlagen oder unvollständige Daten bereitstellen, müssen Sie schnell verstehen, was das Problem verursacht hat. Die Ursache können Probleme mit der Datenverfügbarkeit, falsche Zeitplanung, Konfigurationsprobleme oder Einschränkungen der Systemkapazität sein. Ohne klare Sicht können Sie Stunden damit verbringen, mehrere Systeme zu untersuchen, bevor Sie die Antwort finden.
 
@@ -30,13 +28,11 @@ Mit [!UICONTROL Run and Operate] Tools können Sie:
 
 * **Daten- und IT-**: Systemadministratoren und Dateningenieure, die zuverlässige Datenpipelines verwalten und technische Probleme beheben.
 * **Marketing-Vorgänge**: Marketing-Techniker, die die Datenbereitstellung an Marketing-Plattformen überprüfen und Aktivierungsprobleme beheben.
-* **Implementierer**: Anwender, die die Implementierungseffizienz, Zuverlässigkeit und Fehlerbehebung bei technischen Problemen validieren.
+* **Implementierer**: Anwender, die die Effizienz und Zuverlässigkeit der Implementierung überprüfen und technische Probleme beheben.
 
 ## Voraussetzungen {#prerequisites}
 
-Für den Zugriff auf die Ausführung und den Betrieb von Tools benötigen Sie die **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
-Die Seite [!UICONTROL Job Schedules] bietet einen Überblick über alle geplanten Batch-Verarbeitungsaufträge.
-Wenden Sie sich an Ihren Systemadministrator, um sicherzustellen, dass Sie über die entsprechenden Berechtigungen verfügen.
+Für den Zugriff auf die Ausführung und den Betrieb von Tools benötigen Sie die **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Wenden Sie sich an Ihren Systemadministrator, um sicherzustellen, dass Sie über die entsprechenden Berechtigungen verfügen.
 
 ## Erste Schritte {#getting-started}
 
@@ -44,10 +40,6 @@ So greifen Sie über die Experience Platform-Benutzeroberfläche auf die Tools A
 
 1. Melden Sie sich bei Ihrem Experience Platform-Konto an und wählen Sie im linken Navigationsbereich **[!UICONTROL Run and Operate]** aus.
 2. Wählen Sie das Tool aus, das Ihren Prüf- oder Fehlerbehebungsanforderungen entspricht.
-
-   >[!NOTE]
-   >
-   >Derzeit sind die verfügbaren Funktionen [Auftragspläne](job-schedules.md) und [Konsistenzprüfungen](health-checks.md).
 
 ![Experience Platform-Benutzeroberfläche mit der Option „Ausführen“ und „Linke Bedienung“.](assets/overview/run-and-operate.png)
 
@@ -63,8 +55,8 @@ Mit den folgenden Tools können Sie Ihre Datenvorgänge überprüfen und optimie
 >
 > * Batch-Data-Lake-Aufnahme
 > * Batch-Profilaufnahme
-> * Stapelsegmentierung
-> * Batch-Zielaktivierung.
+> * Batch-Segmentierung
+> * Batch-Zielaktivierung
 
 Mit [Vorgangszeitplänen](job-schedules.md) können Sie alle geplanten Batch-Vorgänge in Ihrem Unternehmen pro Sandbox überprüfen, einschließlich Data Lake-Aufnahme, Profilaufnahme, Segmentierung und Zielaktivierung. Zeigen Sie den Auftragsausführungsstatus, Leistungsmetriken und den Ausführungsverlauf an, um Muster zu identifizieren und Konfigurationsprobleme zu diagnostizieren, die die Zuverlässigkeit beeinträchtigen.
 
@@ -80,18 +72,14 @@ Sie können auch die Abhängigkeiten zwischen den einzelnen Datenverarbeitungsst
 
 ### Konsistenzprüfungen {#health-checks}
 
->[!IMPORTANT]
->
->[!UICONTROL Health checks] sind derzeit nur in begrenztem Umfang verfügbar.
-
-Mit [Konsistenzprüfungen](health-checks.md) können Sie proaktiv Schema- und Identitätskonfigurationsprobleme erkennen, bevor sie sich auf Ihre Geschäftsvorgänge auswirken. In diesem Moment führen Konsistenzprüfungen tägliche statische Scans für Ihre Schemata und Identitäts-Namespaces durch und decken fehlende Best Practices, Fehlkonfigurationen und Muster auf, die zu nachgelagerten Fehlern führen.
+Mit [Konsistenzprüfungen](health-checks.md) können Sie proaktiv Schema- und Identitätskonfigurationsprobleme erkennen, bevor sie sich auf Ihre Geschäftsvorgänge auswirken. Derzeit führen Konsistenzprüfungen tägliche statische Scans für Ihre Schemata und Identitäts-Namespaces durch und decken fehlende Best Practices, Fehlkonfigurationen und Muster auf, die zu nachgelagerten Fehlern führen.
 
 Die Konsistenzprüfungen evaluieren derzeit fünf grundlegende Bereiche:
 
 * **[Validierung von Identitätsfeldern](health-checks.md#identity-field-validation)**: Überprüfen Sie, ob Identitätsfelder die richtige Länge und die richtigen Musterbeschränkungen aufweisen.
 * **[Verknüpfungsregeln für Identitätsdiagramme](health-checks.md#identity-graph-linking-rules)**: Vergewissern Sie sich, dass die Verknüpfungsregeln so konfiguriert sind, dass das Ausblenden eines Profils verhindert wird.
 * **[Konfiguration der Identität von Personen und Nicht-Personen](health-checks.md#people-non-people-identity)**: Validieren der korrekten Verwendung des Identitätstyps in allen Schemaklassen.
-* **[Beschreibung benutzerdefinierter Identity-Namespaces](health-checks.md#namespace-missing-description)**: Stellen Sie sicher, dass die Namespace-Metadaten vollständig sind.
+* **[Beschreibung des benutzerdefinierten Identity-Namespace](health-checks.md#namespace-missing-description)**: Stellen Sie sicher, dass die Namespace-Metadaten vollständig sind.
 * **[Veraltete Identity-Namespaces](health-checks.md#deprecated-namespace)**: Erkennen veralteter Namespaces für die Bereinigung.
 
 ## Nächste Schritte {#next-steps}
@@ -99,7 +87,7 @@ Die Konsistenzprüfungen evaluieren derzeit fünf grundlegende Bereiche:
 Nachdem Sie nun den Zweck und die Funktionen [!UICONTROL Run and Operate] Tools kennen, erkunden Sie die folgenden Ressourcen, um Ihr Wissen zu vertiefen:
 
 * Erfahren Sie, wie Sie mit [Konsistenzprüfungen](health-checks.md) Probleme mit Schemas und Identitätskonfigurationen erkennen können
-* Erfahren Sie, wie [&#x200B; Auftragspläne für &#x200B;](job-schedules.md) Batch-Aufnahme und -Aktivierungen prüfen
+* Erfahren Sie, wie [ Auftragspläne für ](job-schedules.md) Batch-Aufnahme und -Aktivierungen prüfen
 * Erfahren Sie mehr über [Batch-Aufnahme](../ingestion/batch-ingestion/overview.md) um zu verstehen, wie Daten in Experience Platform aufgenommen werden
 * Erfahren Sie, wie [geplante Aktivierungen](../destinations/ui/activate-batch-profile-destinations.md) für Batch-Ziele konfigurieren
 * Erkunden Sie [Datenflussüberwachung](../dataflows/ui/monitor-destinations.md) für Ziele

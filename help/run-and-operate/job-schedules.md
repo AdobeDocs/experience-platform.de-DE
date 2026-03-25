@@ -3,33 +3,32 @@ description: Erfahren Sie, wie Sie geplante Batch-Verarbeitungsaufträge mit dem
 solution: Experience Platform
 title: Prüfen von Vorgangszeitplänen
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 0%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
-
 # Prüfen von Vorgangszeitplänen
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] sind derzeit als eingeschränkte Version verfügbar und nur für die folgenden Real-Time CDP-Aufträge:
+>[!UICONTROL Job schedules] sind derzeit nur für die folgenden Real-Time CDP-Aufträge verfügbar:
 >
 > * Batch-Data-Lake-Aufnahme
 > * Batch-Profilaufnahme
-> * Stapelsegmentierung
-> * Batch-Zielaktivierung.
+> * Batch-Segmentierung
+> * Batch-Zielaktivierung
 
-[!UICONTROL Job Schedules] bietet eine einheitliche Ansicht aller geplanten Batch-Verarbeitungsaufträge in Ihrer Daten-Pipeline - von der Aufnahme bis zur Zielaktivierung. Überprüfen Sie den Ausführungsstatus, ermitteln Sie Planungskonflikte und diagnostizieren Sie Konfigurationsprobleme, bevor sie sich auf Ihre Geschäftsvorgänge auswirken.
+[!UICONTROL Job Schedules] bietet eine einheitliche Ansicht aller geplanten Batch-Verarbeitungsaufträge in Ihrer Datenpipeline, von der Aufnahme bis zur Zielaktivierung. Überprüfen Sie den Ausführungsstatus, ermitteln Sie Planungskonflikte und diagnostizieren Sie Konfigurationsprobleme, bevor sie sich auf Ihre Geschäftsvorgänge auswirken.
 
 Verwenden Sie Vorgangszeitpläne, um Fehler zu untersuchen, den Vorgangszeitpunkt zu optimieren und die Abhängigkeiten zwischen der Data-Lake-Aufnahme, der Profilverarbeitung, der Segmentierung und der Zielaktivierung zu verstehen. Anleitungen zum Beheben häufiger Konfigurationsprobleme finden Sie in der Dokumentation unter [Ermitteln von Anti-Mustern für den Auftragsplan](job-schedules-anti-patterns.md).
 
 ## Voraussetzungen {#prerequisites}
 
-Für den Zugriff auf [!UICONTROL Job Schedules] benötigen Sie die **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions)
+Für den Zugriff auf [!UICONTROL Job Schedules] benötigen Sie die **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions)
 
 Wenden Sie sich an Ihren Systemadministrator, um sicherzustellen, dass Sie über die entsprechenden Berechtigungen verfügen.
 
@@ -107,7 +106,6 @@ Wenn Sie Ihre Auftragspläne überprüfen, werden Sie möglicherweise Muster bem
 Diese Muster können zu Auftragsfehlern, unvollständiger Datenverarbeitung und schlechter Systemleistung führen. Informationen zum Identifizieren und Beheben dieser Probleme finden Sie in der Dokumentation unter [Identifizieren von Antimustern bei der Auftragsplanung](job-schedules-anti-patterns.md).
 
 Wenn Sie bestimmte Datensätze oder Auftragsausführungen untersuchen müssen, können Sie einen Drilldown in detaillierte Ansichten durchführen, um den Ausführungsverlauf, Fehlermeldungen, Leistungsmetriken und Abhängigkeiten anzuzeigen. Informationen zum Anzeigen dieser detaillierten Daten finden Sie in der Dokumentation unter [Anzeigen von Auftragsdetails](job-schedules-details.md).
-
 
 ## Nächste Schritte {#next-steps}
 

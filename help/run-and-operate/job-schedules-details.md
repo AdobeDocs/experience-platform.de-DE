@@ -3,25 +3,24 @@ description: Erfahren Sie, wie Sie detaillierte Informationen zu Datensätzen un
 solution: Experience Platform
 title: Details zur Auftragsplanung anzeigen
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '1783'
-ht-degree: 1%
+source-wordcount: '1778'
+ht-degree: 2%
 
 ---
 
-
 # Details zur Auftragsplanung anzeigen
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] sind derzeit als eingeschränkte Version verfügbar und nur für die folgenden Real-Time CDP-Aufträge:
+>[!UICONTROL Job schedules] sind derzeit nur für die folgenden Real-Time CDP-Aufträge verfügbar:
 >
 > * Batch-Data-Lake-Aufnahme
 > * Batch-Profilaufnahme
-> * Stapelsegmentierung
-> * Batch-Zielaktivierung.
+> * Batch-Segmentierung
+> * Batch-Zielaktivierung
 
 Bei der Fehlerbehebung bei Auftragsfehlern oder der Untersuchung von Leistungsproblemen benötigen Sie detaillierte Informationen zu bestimmten Datensätzen und deren Vorgangsausführungen. Die [Vorgangszeitpläne](job-schedules.md) ermöglicht es Ihnen, einen Drilldown von der Zeitleisten -Ansicht nach einzelnen Datensätzen und Vorgängen durchzuführen, um Ausführungsverlauf, Timing und Status zu verstehen.
 
@@ -37,7 +36,7 @@ Verwenden Sie diese Detailansicht für Folgendes:
 
 Bevor Sie Auftragsdetails anzeigen, sollten Sie Folgendes tun:
 
-* Zugriff auf [!UICONTROL Job Schedules] mit den **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]**&#x200B;[&#x200B; Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+* Zugriff auf **[!UICONTROL Job Schedules]** mit den **[!UICONTROL View Job Schedules]** und **[!UICONTROL View Profile Management]**[ Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 * Machen Sie sich mit der [Benutzeroberfläche für Auftragspläne](job-schedules.md#understanding-interface) und der Zeitleistenansicht vertraut.
 * Machen Sie sich mit den verschiedenen [Vorgangstypen](job-schedules.md#job-schedules-details) (Seeaufnahme, Profilaufnahme, Segmentierung, Aktivierung) vertraut.
 
