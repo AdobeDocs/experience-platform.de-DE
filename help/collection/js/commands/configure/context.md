@@ -98,7 +98,7 @@ Weitere Informationen finden [&#x200B; unter &#x200B;](/help/collection/use-case
 
 ### Einmaliger Analytics-Referrer {#one-time-analytics-referrer}
 
-Das `"oneTimeAnalyticsReferrer"`-Schlüsselwort sendet einen Referrer-Wert nur beim ersten nicht entscheidungsrelevanten `sendEvent` für eine Seite an Adobe Analytics. Der Hauptanwendungsfall für dieses Kontextschlüsselwort besteht darin, zu verhindern, [&#x200B; die Dimension „Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) in Adobe Analytics durch Treffer aufgebläht wird, die hauptsächlich in Analytics- und Target-Integrationen verwendet werden.
+Das `"oneTimeAnalyticsReferrer"`-Schlüsselwort sendet einen Referrer-Wert nur beim ersten nicht entscheidungsrelevanten `sendEvent` für eine Seite an Adobe Analytics. Der Hauptanwendungsfall für dieses Kontextschlüsselwort besteht darin, zu verhindern, [&#x200B; die Dimension „Referrer](https://experienceleague.adobe.com/de/docs/analytics/components/dimensions/referrer) in Adobe Analytics durch Treffer aufgebläht wird, die hauptsächlich in Analytics- und Target-Integrationen verwendet werden.
 
 Wenn ein gegebener `sendEvent`-Befehl einen Decisioning-Ereignistyp verwendet (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), wird er bei der Berechnung des ersten `sendEvent` auf einer Seite ignoriert. Wenn sich der Referrer-Wert auf der Seite ändert und eine weitere `sendEvent` ausgelöst wird, wird der neue Referrer-Wert in die Payload aufgenommen. Aufgrund dieser Bedingung kann die Funktion mit Single Page Applications verwendet werden.
 
