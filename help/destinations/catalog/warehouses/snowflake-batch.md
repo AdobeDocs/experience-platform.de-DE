@@ -4,10 +4,10 @@ description: Erstellen Sie eine Live-Snowflake-Datenfreigabe, um tägliche Zielg
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: f6565f7820d6d6394d26b88fdde3d42a90dedd63
 workflow-type: tm+mt
-source-wordcount: '1732'
-ht-degree: 17%
+source-wordcount: '1804'
+ht-degree: 16%
 
 ---
 
@@ -81,7 +81,7 @@ Bevor Sie Ihre Snowflake-Verbindung konfigurieren, stellen Sie sicher, dass Sie 
 * Ihr Snowflake-Konto hat private Listeneinträge abonniert. Sie oder eine andere Person in Ihrem Unternehmen, die über Administratorrechte für das Konto auf Snowflake verfügt, können dies konfigurieren.
 * Sie kennen den Cloud-Anbieter und die Region Ihres Snowflake-Kontos. Sie müssen beide eingeben, wenn Sie eine Verbindung zum Ziel herstellen.
 
-Weitere Informationen zu den [[!DNL Snowflake]  Berechtigungen finden &#x200B;](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) in der Dokumentation .
+Weitere Informationen zu den [[!DNL Snowflake]  Berechtigungen finden ](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) in der Dokumentation .
 
 >[!IMPORTANT]
 >
@@ -93,7 +93,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -124,7 +124,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -155,7 +155,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 >[!NOTE]
 >
-> **[!UICONTROL Snowflake Account ID]** und **[!UICONTROL Snowflake Region]** können nach dem Erstellen des Ziels nicht [&#x200B; Workflow Ziel bearbeiten](../../ui/edit-destination.md) bearbeitet werden. Um andere Konto- oder Regionswerte zu verwenden, [&#x200B; Sie eine neue Zielverbindung &#x200B;](../../ui/connect-destination.md).
+> **[!UICONTROL Snowflake Account ID]** und **[!UICONTROL Snowflake Region]** können nach dem Erstellen des Ziels nicht [ Workflow Ziel bearbeiten](../../ui/edit-destination.md) bearbeitet werden. Um andere Konto- oder Regionswerte zu verwenden, [ Sie eine neue Zielverbindung ](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
@@ -172,7 +172,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -194,12 +194,19 @@ Die Daten werden über eine dynamische Tabelle in Ihrem Snowflake-Konto bereitge
 
 Die dynamische Tabelle enthält die folgenden Spalten:
 
-* **TS**: Eine Zeitstempelspalte, die angibt, wann jede Zeile aus der freigegebenen Tabelle zuletzt aktualisiert wurde
-* **Zusammenführungsrichtlinien-ID**: Die ID der [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md), zu der die aktivierte Zielgruppe gehört
-* **Zuordnungsattribute**: Jedes Zuordnungsattribut, das Sie während des Aktivierungs-Workflows auswählen, wird in Snowflake als Spaltenüberschrift dargestellt
-* **Zielgruppenzugehörigkeit**: Die Zugehörigkeit zu einer dem Datenfluss zugeordneten Zielgruppe wird über einen `active` Eintrag in der entsprechenden Zelle angezeigt
+* **TS**: Ein Zeitstempel, der angibt, wann jede Zeile zuletzt aktualisiert wurde
+* **MERGE_POLICY_ID**: Die ID der [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) zu der die aktivierte Zielgruppe gehört
+* **AUDIENCE_ID**: Die ID der Zielgruppe
+* **AUDIENCE_NAME**: Der Name der Zielgruppe, wie in Experience Platform konfiguriert
+* **AUDIENCE_ORIGIN**: Die [Herkunft](../../../segmentation/ui/audience-portal.md) der Zielgruppe (z. B. `Segmentation Service` oder `Custom upload`)
+* **AUDIENCE_STATUS**: Der Mitgliedschaftsstatus des Profils in der Zielgruppe (z. B. `active` oder `realized`)
+* **Zuordnungsattribute**: Jedes im Aktivierungs-Workflow ausgewählte Zuordnungsattribut wird als Spalte dargestellt
 
 ![Screenshot der Snowflake-Benutzeroberfläche mit dynamischen Tabellendaten](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
+
+>[!NOTE]
+>
+>Die oben beschriebene Tabellenstruktur gilt für Zielverbindungen, die nach der Experience Platform-Version vom März 2026 erstellt wurden. Während der Übergangszeit verwenden neue Connectoren beide Tabellenstrukturen, wobei der neuen Struktur `V2` vorangestellt ist (z. B. `V2_<table-name>`). Vorhandene Verbindungen verwenden weiterhin die vorherige Struktur, bei der jede Zielgruppe als separate Spalte dargestellt wird (z. B. `ups_<audience-id>` = `active`). Die vorherige Struktur wird Ende Juni 2026 eingestellt.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
