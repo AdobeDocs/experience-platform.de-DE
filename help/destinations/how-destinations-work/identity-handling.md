@@ -2,10 +2,10 @@
 title: Umgang mit Identitäten im Aktivierungs-Workflow für Ziele
 description: Erfahren Sie, wie der Identitätsexport im Aktivierungs-Workflow je nach Zieltyp verarbeitet wird.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 83%
+source-wordcount: '1132'
+ht-degree: 81%
 
 ---
 
@@ -71,7 +71,7 @@ Es bleibt festzuhalten, dass die Anzahl der zu exportierenden Einträge von den 
 
 ## API-basierte Streaming-Ziele {#streaming-destinations}
 
-[API-basierte Streaming-Ziele](/help/destinations/destination-types.md#streaming-destination) mit [Destination SDK](/help/destinations/destination-sdk/overview.md) (z. B. [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze] und andere) unterstützen nur bestimmte IDs für den Export. Detaillierte Informationen zu den spezifischen Identitäten, die an die einzelnen Ziele exportiert werden können, finden Sie im Abschnitt zu *unterstützten Identitäten* auf jeder Zieldokumentationsseite (siehe zum Beispiel den Abschnitt zu [unterstützten Identitäten](/help/destinations/catalog/advertising/pinterest.md) auf der [!DNL Pinterest]-Zielseite).
+[API-basierte Streaming-Ziele](/help/destinations/destination-types.md#streaming-audience-export-destinations) mit [Destination SDK](/help/destinations/destination-sdk/overview.md) (z. B. [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze] und andere) unterstützen nur bestimmte IDs für den Export. Detaillierte Informationen zu den spezifischen Identitäten, die an die einzelnen Ziele exportiert werden können, finden Sie im Abschnitt zu *unterstützten Identitäten* auf jeder Zieldokumentationsseite (siehe zum Beispiel den Abschnitt zu [unterstützten Identitäten](/help/destinations/catalog/advertising/pinterest.md) auf der [!DNL Pinterest]-Zielseite).
 
 Beachten Sie jedoch, dass Sie flexibel sind, Daten entweder aus [privaten Diagrammen](/help/profile/merge-policies/overview.md#id-stitching) oder aus Attributen als Identitäten zu nutzen. Dies bedeutet, dass Sie XDM-Attribute dem für das Ziel erforderlichen Identitätsfeld zuordnen können. Unten finden Sie ein Beispiel für das Ziel [!DNL Pinterest], wobei das XDM-Attribut `personalEmail.address` der erforderlichen [!DNL Pinterest]-Identität `pinterest_audience` zugeordnet ist.
 
@@ -93,7 +93,7 @@ Beim Konfigurieren eines Datenstroms, wie in der oben verlinkten Dokumentation b
 
 >[!NOTE]
 >
->Die meisten dieser Werbeziele werden in Audience Manager unterstützt (diese Zieltypen werden in Audience Manager als gerätebasierte Ziele bezeichnet. Hier finden Sie eine [Liste aller unterstützten gerätebasierten Ziele in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=de)). Nur wenige sind in Experience Platform aufgeführt. Informationen zur Datenfreigabe zwischen Experience Platform und Audience Manager finden Sie im Abschnitt zum [Aktivieren der Datenfreigabe von Experience Platform an Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de#enable-aep-to-aam-data). Derzeit ist keine Unterstützung für weitere Drittanbieter-Cookie-Ziele geplant.
+>Die meisten dieser Werbeziele werden in Audience Manager unterstützt (diese Zieltypen werden in Audience Manager als gerätebasierte Ziele bezeichnet. Hier finden Sie eine [Liste aller unterstützten gerätebasierten Ziele in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Nur wenige sind in Experience Platform aufgeführt. Informationen zur Datenfreigabe zwischen Experience Platform und Audience Manager finden Sie im Abschnitt zum [Aktivieren der Datenfreigabe von Experience Platform an Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Derzeit ist keine Unterstützung für weitere Drittanbieter-Cookie-Ziele geplant.
 
 ## Unternehmensziele {#enterprise-destinations}
 
@@ -101,7 +101,7 @@ Beim Konfigurieren eines Datenstroms, wie in der oben verlinkten Dokumentation b
 
 ## Personalisierungsziele {#personalization-destinations}
 
-[Personalisierungs- (oder Edge-)Ziele](/help/destinations/destination-types.md#edge-personalization-destinations) (z. B. Adobe Target, [!DNL Custom Personalization]) erfordern keine Identitätsauswahl im Aktivierungs-Workflow, da die Integration eine Profilsuche ist. Der Client ([!DNL Target], [!DNL Web SDK] oder andere) fragt die [[!UICONTROL Edge]](/help/collection/home.md#edge) ab und ruft die Profilinformationen ab, die für die Personalisierung vor Ort erforderlich sind.
+[Personalization- (oder Edge-)](/help/destinations/destination-types.md#edge-personalization-destinations) (z. B.: [!DNL Adobe Target], [!DNL Custom Personalization]) erfordern keine Identitätsauswahl im Aktivierungs-Workflow, da die Integration eine Profilsuche ist. Der Client ([!DNL Target], [!DNL Web SDK] oder andere) fragt die [[!UICONTROL Edge]](/help/collection/home.md) ab und ruft die Profilinformationen ab, die für die Personalisierung vor Ort erforderlich sind.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

@@ -3,7 +3,7 @@ title: Durchführen von Umwandlungen an Daten, die mithilfe berechneter Felder i
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Funktion „Berechnete Felder“ Umwandlungen an Daten durchführen können, die an Cloud-Speicherziele exportiert wurden
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 8%
@@ -118,7 +118,7 @@ Sie können beispielsweise die folgenden XDM-Felder wie im Screenshot zur Zuordn
 
 In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie die Elemente des Arrays mithilfe des `_`-Zeichens zu einer einzigen Zeichenfolge verkettet werden.
 
-```
+```csv
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
@@ -133,7 +133,7 @@ Wenn Sie mit dem `organizations` Array-Objekt von oben fortfahren, können Sie e
 
 In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie die beiden Elemente des Arrays, die das Kriterium erfüllen, mithilfe des `_`-Zeichens zu einer einzigen Zeichenfolge verkettet werden.
 
-```
+```csv
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
@@ -147,7 +147,7 @@ Wenn Sie mit dem `organizations` Array-Objekt von oben fortfahren, können Sie e
 
 In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie die drei Elemente des Arrays mithilfe des `_`-Zeichens transformiert und in eine einzelne Zeichenfolge verkettet werden.
 
-```
+```csv
 John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
@@ -159,7 +159,7 @@ Verwenden Sie die Funktion `iif` , um Elemente eines Arrays unter bestimmten Bed
 
 In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: In diesem Fall ist das erste Element des Arrays Marketing , sodass die Person Mitglied der Marketing-Abteilung ist.
 
-```
+```csv
 `First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
@@ -174,7 +174,7 @@ Wenn Sie mit dem `organizations` Array-Objekt von oben fortfahren, können Sie e
 
 In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie die drei Elemente des Arrays mithilfe des `_`-Zeichens zu einer einzigen Zeichenfolge verkettet werden und 2023 ebenfalls am Ende der Zeichenfolge angehängt wird.
 
-```
+```csv
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
@@ -202,7 +202,7 @@ Sie können beispielsweise die folgenden XDM-Felder kombinieren, wie im Screensh
 
 In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, wie der erste `true` ungleich null im -Array in die Datei exportiert wird.
 
-```
+```csv
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
@@ -220,7 +220,7 @@ Sie können beispielsweise die folgenden XDM-Felder unten kombinieren, wie im Sc
 
 In diesem Fall sieht Ihre Ausgabedatei wie folgt aus: Beachten Sie, dass in der zweiten Spalte die Anzahl der Elemente im Array angegeben ist, die der Anzahl der separaten Käufe entspricht, die vom Kunden getätigt wurden.
 
-```
+```csv
 `Personal_Email,Times_Purchased
 johndoe@acme.org,"5"
 ```
@@ -237,7 +237,7 @@ Sie können auf einen Index eines Arrays zugreifen, um ein einzelnes Element aus
 
 In diesem Fall sieht Ihre Ausgabedatei wie folgt aus und exportiert das erste Mal, dass der Kunde einen Kauf getätigt hat:
 
-```
+```csv
 `Personal_Email,First_Purchase
 johndoe@acme.org,"1538097126"
 ```
@@ -250,7 +250,7 @@ Verwenden Sie die Funktionen `first` und `last` zum Exportieren des ersten oder 
 
 In diesem Fall sieht Ihre Ausgabedatei wie folgt aus und exportiert das erste und letzte Mal, dass der Kunde einen Kauf getätigt hat:
 
-```
+```csv
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```

@@ -2,7 +2,7 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, der zum Erstellen einer Zielgruppenvorlage über Adobe Experience Platform Destination SDK verwendet wird.
 title: Erstellen einer Zielgruppenvorlage
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 83%
@@ -262,9 +262,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `headers.header` | Zeichenfolge | Gibt alle HTTP-Header an, die zum Aufruf Ihrer API hinzugefügt werden sollen. Beispiel: `"Content-Type"` |
 | `headers.value` | Zeichenfolge | Gibt den Wert von HTTP-Headern an, die zum Aufruf Ihrer API hinzugefügt werden sollen. Beispiel: `"application/x-www-form-urlencoded"` |
 | `requestBody` | Zeichenfolge | Gibt den Inhalt des Nachrichtentextes an, der an Ihre API gesendet werden soll. Welche Parameter zum Objekt `requestBody` hinzugefügt werden sollten, hängt davon ab, welche Felder Ihre API akzeptiert. In der [Dokumentation zu unterstützten Makros](../functionality/audience-metadata-management.md#macros) erfahren Sie, was Sie in den Nachrichtentext einfügen können. |
-| `responseFields.name` | Zeichenfolge | Geben Sie alle Antwortfelder an, die Ihre API beim Aufruf zurückgibt. Ein Beispiel finden Sie im Abschnitt [Vorlagenbeispiele](../functionality/audience-metadata-management.md#examples) im Dokument über die Funktionalität von Zielgruppen-Metadaten. |
+| `responseFields.name` | Zeichenfolge | Geben Sie alle Antwortfelder an, die Ihre API beim Aufruf zurückgibt. Ein Beispiel finden Sie im Abschnitt [Vorlagenbeispiele](../functionality/audience-metadata-management.md#configuration-examples) im Dokument über die Funktionalität von Zielgruppen-Metadaten. |
 | `responseFields.value` | Zeichenfolge | Geben Sie den Wert aller Antwortfelder an, die Ihre API beim Aufruf zurückgibt. |
-| `responseErrorFields.name` | Zeichenfolge | Geben Sie alle Antwortfelder an, die Ihre API beim Aufruf zurückgibt. Ein Beispiel finden Sie im Abschnitt [Vorlagenbeispiele](../functionality/audience-metadata-management.md#examples) im Dokument über die Funktionalität von Zielgruppen-Metadaten. |
+| `responseErrorFields.name` | Zeichenfolge | Geben Sie alle Antwortfelder an, die Ihre API beim Aufruf zurückgibt. Ein Beispiel finden Sie im Abschnitt [Vorlagenbeispiele](../functionality/audience-metadata-management.md#configuration-examples) im Dokument über die Funktionalität von Zielgruppen-Metadaten. |
 | `responseErrorFields.value` | Zeichenfolge | Analysiert alle Fehlermeldungen, die bei Antworten auf API-Aufrufe von Ihrem Ziel zurückgegeben werden. Diese Fehlermeldungen werden Benutzerinnen und Benutzern in der Benutzeroberfläche von Experience Platform angezeigt. |
 | `validations.field` | Zeichenfolge | Gibt an, ob Überprüfungen für Felder durchgeführt werden sollen, bevor API-Aufrufe an Ihr Ziel gesendet werden. Sie können beispielsweise `{{validations.accountId}}` verwenden, um die Konto-ID des Benutzers zu überprüfen. |
 | `validations.regex` | Zeichenfolge | Gibt an, wie das Feld strukturiert sein sollte, damit die Validierung erfolgreich ist. |

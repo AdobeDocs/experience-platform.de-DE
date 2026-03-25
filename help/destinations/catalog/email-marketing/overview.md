@@ -4,22 +4,22 @@ title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen es Ihnen, Ihre E-Mail-Marketing-Aktivitäten zu verwalten, z. B. zum Senden von Werbe-E-Mail-Kampagnen. Erfahren Sie, welche ESPs als Experience Platform-Ziele unterstützt werden.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 60%
+source-wordcount: '371'
+ht-degree: 59%
 
 ---
 
 # E-Mail-Marketing-Ziele – Übersicht {#email-marketing-destinations}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
-E-Mail-Service-Anbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-E-Mail-Kampagnen. Adobe Experience Platform lässt sich mit ESPs integrieren, indem Sie Zielgruppen für E-Mail-Marketing-Ziele aktivieren können.
+E-Mail-Service-Anbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-E-Mail-Kampagnen. [!DNL Adobe Experience Platform] lässt sich mit ESPs integrieren, indem Sie Zielgruppen für E-Mail-Marketing-Ziele aktivieren können.
 
 ## Unterstützte E-Mail-Marketing-Ziele {#supported-destinations}
 
-Adobe Experience Platform unterstützt die folgenden E-Mail-Marketing-Ziele:
+[!DNL Adobe Experience Platform] unterstützt die folgenden E-Mail-Marketing-Ziele:
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)

@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API Ihre Umwandlungsvorlage für Streaming-Zielnachrichten testen können, bevor Sie das Ziel veröffentlichen.
 title: Erstellen und Testen einer Nachrichtenumwandlungsvorlage
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 100%
+source-wordcount: '937'
+ht-degree: 88%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Als Teil des Destination SDK bietet Adobe Entwickler-Tools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie eine Nachrichtenumwandlungsvorlage erstellen und testen. Informationen zum Testen Ihres Ziels finden Sie unter [Testen der Zielkonfiguration](streaming-destination-testing-overview.md).
 
-Zum **Erstellen und Testen einer Nachrichtenumwandlungsvorlage** zwischen dem Zielschema in Adobe Experience Platform und dem von Ihrem Ziel unterstützten Nachrichtenformat können Sie das *Authoring-Tool für Vorlagen* verwenden, das weiter unten beschrieben wird.  Weitere Informationen zur Datenumwandlung zwischen Quell- und Zielschema finden Sie im [Dokument zu Nachrichtenformaten](../../functionality/destination-server/message-format.md#using-templating).
+Um **eine Nachrichtenumwandlungsvorlage zu erstellen und zu testen** zwischen dem Zielschema in [!DNL Adobe Experience Platform] und dem von Ihrem Ziel unterstützten Nachrichtenformat zu verwenden, verwenden Sie das Tool zum Erstellen von *Vorlagen*, das weiter unten beschrieben wird.  Weitere Informationen zur Datenumwandlung zwischen Quell- und Zielschema finden Sie im [Dokument zu Nachrichtenformaten](../../functionality/destination-server/message-format.md#using-templating).
 
 Die folgende Abbildung zeigt, wie das Erstellen und Testen einer Nachrichtenumwandlungsvorlage in den [Zielkonfigurations-Workflow](../../guides/configure-destination-instructions.md) in Destination SDK passt:
 
@@ -24,7 +24,7 @@ Die folgende Abbildung zeigt, wie das Erstellen und Testen einer Nachrichtenumwa
 
 ## Gründe für das Erstellen und Testen einer Nachrichtenumwandlungsvorlage {#why-create-message-transformation-template}
 
-Einer der ersten Schritte bei der Erstellung Ihres Ziels in Destination SDK besteht darin, darüber nachzudenken, wie das Datenformat für Zielgruppenzugehörigkeit, Identitäten und Profilattribute transformiert wird, wenn die Daten von Adobe Experience Plattform in Ihr Ziel exportiert werden. Informationen zur Transformation zwischen dem Adobe-XDM-Schema und Ihrem Zielschema finden Sie in [Dokument zu Nachrichtenformaten](../../functionality/destination-server/message-format.md#using-templating).
+Einer der ersten Schritte beim Erstellen Ihres Ziels in Destination SDK besteht darin, darüber nachzudenken, wie das Datenformat für Zielgruppenzugehörigkeit, Identitäten und Profilattribute transformiert wird, wenn Daten aus [!DNL Adobe Experience Platform] in Ihr Ziel exportiert werden. Informationen zur Transformation zwischen dem Adobe-XDM-Schema und Ihrem Zielschema finden Sie in [Dokument zu Nachrichtenformaten](../../functionality/destination-server/message-format.md#using-templating).
 
 Damit die Transformation erfolgreich ist, müssen Sie eine Umwandlungsvorlage wie im folgenden Beispiel angeben: [Erstellen einer Vorlage zum Senden von Segmenten, Identitäten und Profilattributen](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -158,12 +158,12 @@ Sie können ein Online-Tool zum Maskieren von Zeichen verwenden. In der obigen D
 
 ## Render-Vorlagen-API {#render-template-api}
 
-Nach Erstellung einer Nachrichtenumwandlungsvorlage mit der [Beispielvorlagen-API](create-template.md#sample-template-api)können Sie [die Vorlage rendern](render-template-api.md), um exportierte Daten auf dieser Basis zu generieren. Auf diese Weise können Sie überprüfen, ob die Profile, die Adobe Experience Platform in Ihr Ziel exportieren würde, dem erwarteten Format Ihres Ziels entsprechen.
+Nach Erstellung einer Nachrichtenumwandlungsvorlage mit der [Beispielvorlagen-API](create-template.md#sample-template-api)können Sie [die Vorlage rendern](render-template-api.md), um exportierte Daten auf dieser Basis zu generieren. Auf diese Weise können Sie überprüfen, ob die Profile, die [!DNL Adobe Experience Platform] an Ihr Ziel exportieren würden, dem erwarteten Format Ihres Ziels entsprechen.
 
 Beispiele für Aufrufe, die Sie tätigen können, finden Sie in der API-Referenz:
 
-* [Rendern einer Vorlage ohne im Hauptteil gesendete Profile](render-template-api.md#multiple-profiles-no-body)
-* [Rendern einer Vorlage mit im Hauptteil gesendeten Profilen](render-template-api.md#multiple-profiles-with-body)
+* [Rendern einer Vorlage ohne im Hauptteil gesendete Profile](render-template-api.md#best-effort)
+* [Rendern einer Vorlage mit im Hauptteil gesendeten Profilen](render-template-api.md#configurable-aggregation)
 
 Bearbeiten Sie die Vorlage und rufen Sie den Endpunkt der Render-Vorlagen-API auf, bis die exportierten Profile dem erwarteten Datenformat Ihres Ziels entsprechen.
 

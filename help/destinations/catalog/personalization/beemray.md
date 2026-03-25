@@ -3,10 +3,10 @@ keywords: beemray,beemray-Erweiterung
 title: Beemray-Erweiterung
 description: Die Beemray-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 5bb639f5-42b5-48ae-a3e9-7585595ab925
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 49%
+source-wordcount: '464'
+ht-degree: 42%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 49%
 
 ## Überblick {#overview}
 
-[!DNL Beemray] hilft Ihnen, Ihr Produkt mit situativem Kontext zu beschleunigen. So können Sie Einblicke gewinnen, neue Erlebnisse entwickeln, Interaktionen fördern und Momente kreieren, auf die es ankommt. Beemray automatisiert mithilfe von maschinellem Lernen kontextbezogene Kenntnisse. Beemray stellt eine Verbindung zu Adobe Experience Cloud und Ihren anderen technischen Partnern her. Alles findet in Echtzeit statt. Mit dieser Erweiterung wird [!DNL Beemray] SDK auf Ihrer Site installiert.
+[!DNL Beemray] hilft Ihnen, Ihr Produkt mit situativem Kontext zu beschleunigen. So können Sie Einblicke gewinnen, neue Erlebnisse entwickeln, Interaktionen fördern und Momente kreieren, auf die es ankommt. Beemray automatisiert mithilfe von maschinellem Lernen kontextbezogene Kenntnisse. Beemray verbindet sich mit dem [!DNL Adobe Experience Cloud] und dem Rest Ihrer Technologiepartner. Alles findet in Echtzeit statt. Mit dieser Erweiterung wird [!DNL Beemray] SDK auf Ihrer Site installiert.
 
-Beemray ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Beemray ist eine Personalisierungserweiterung in [!DNL Adobe Experience Platform]. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in [!DNL Adobe Experience Platform]. Tags werden [!DNL Adobe Experience Cloud] Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
@@ -44,7 +44,7 @@ Der Workflow führt Sie zur Datenerfassungs-Benutzeroberfläche, um die Installa
 
 Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der [Beemray-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
-Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen &#x200B;](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
+Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 
 ## Verwenden der Erweiterung {#how-to-use}
 

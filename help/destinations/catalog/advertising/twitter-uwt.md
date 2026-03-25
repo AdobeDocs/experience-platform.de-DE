@@ -3,10 +3,10 @@ keywords: Twitter;Twitter;universelles Website-Tag auf Twitter;universelles Webs
 title: Twitter Universal Website Tag-Erweiterung
 description: Die Twitter Universal Website Tag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 60%
+source-wordcount: '421'
+ht-degree: 56%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 60%
 
 [!DNL Twitter Universal Website Tag] bietet Aktionen zum Senden von Beacons an das Twitter-UWT-Tag.
 
-[!DNL Twitter Universal Website Tag] ist eine Advertising-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie unter [Konversionsverfolgung](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) in der Twitter-Dokumentation.
+[!DNL Twitter Universal Website Tag] ist eine Werbeerweiterung in [!DNL Adobe Experience Platform]. Weitere Informationen zur Funktionalität der Erweiterung finden Sie unter [Konversionsverfolgung](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) in der Twitter-Dokumentation.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in [!DNL Adobe Experience Platform]. Tags werden [!DNL Adobe Experience Cloud] Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 

@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Erstellen einer Anmeldedaten-Konfiguration im Adobe Experience Platform Destination SDK veranschaulicht.
 title: Erstellen einer Anmeldedaten-Konfiguration
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '584'
-ht-degree: 84%
+ht-degree: 76%
 
 ---
 
@@ -250,4 +250,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wann der Berechtigungs-Endpunkt verwendet wird und wie Sie eine Anmeldedaten-Konfiguration mithilfe des API-Endpunkts `/authoring/credentials` einrichten. Lesen Sie [Verwenden von Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wann der Zugangsdaten-Endpunkt verwendet wird und wie Sie eine Zugangsdaten-Konfiguration mithilfe des `/authoring/credentials`-API-Endpunkts einrichten. Lesen Sie [Verwenden von Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md) um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.

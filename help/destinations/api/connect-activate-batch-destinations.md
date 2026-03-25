@@ -5,10 +5,10 @@ title: Verbinden mit Batch-Zielen und Aktivieren von Daten mit der Flow Service-
 description: Schrittweise Anleitungen zur Verwendung der Flow Service-API zum Erstellen eines Batch-Cloud-Speichers oder E-Mail-Marketing-Ziels in Experience Platform und zum Aktivieren von Daten
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '3431'
-ht-degree: 71%
+source-wordcount: '3423'
+ht-degree: 70%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 71%
 
 >[!IMPORTANT]
 >
->* Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions)
+>* Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions)
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 >
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 >
 >Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
@@ -38,10 +38,10 @@ Wenn Sie die Experience Platform-Benutzeroberfläche bevorzugen, um eine Verbind
 
 ## Erste Schritte {#get-started}
 
-Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): Mit [!DNL Adobe Experience Platform Segmentation Service] können Sie aus Ihren [!DNL Adobe Experience Platform]-Daten Zielgruppen in [!DNL Real-Time Customer Profile] erstellen.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] können Sie aus Ihren [!DNL Adobe Experience Platform]-Daten Zielgruppen in [!DNL Real-Time Customer Profile] erstellen.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Daten für Batch-Ziele in Experience Platform zu aktivieren.
@@ -65,7 +65,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln der Werte für erforderliche und optionale Kopfzeilen {#gather-values-headers}
 
-Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -531,7 +531,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | Geben Sie einen Namen für die Basisverbindung zum Batch-Ziel an. |
 | `description` | Optional können Sie eine Beschreibung für die Basisverbindung angeben. |
 | `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für Ihr gewünschtes Batch-Ziel. Sie haben diese ID im Schritt [Abrufen der Liste der verfügbaren Ziele](#get-the-list-of-available-destinations) erhalten. |
-| `auth.specname` | Gibt das Authentifizierungsformat für das Ziel an. Um den specName für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Verbindungsspezifikationen-Endpunkt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) durch, wobei Sie die Verbindungsspezifikation Ihres gewünschten Ziels angeben. Suchen Sie in der Antwort nach dem Parameter `authSpec.name`. <br> Bei Adobe Campaign-Zielen können Sie beispielsweise eine der folgenden Optionen verwenden: `S3`, `SFTP with Password` oder `SFTP with SSH Key`. |
+| `auth.specname` | Gibt das Authentifizierungsformat für das Ziel an. Um den specName für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Verbindungsspezifikationen-Endpunkt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) durch, wobei Sie die Verbindungsspezifikation Ihres gewünschten Ziels angeben. Suchen Sie in der Antwort nach dem Parameter `authSpec.name`. <br> Für [!DNL Adobe Campaign] Ziele können Sie beispielsweise eine der folgenden Optionen verwenden: `S3`, `SFTP with Password` oder `SFTP with SSH Key`. |
 | `params` | Je nach Ziel, mit dem Sie eine Verbindung herstellen, müssen Sie unterschiedliche erforderliche Authentifizierungsparameter angeben. Bei Verbindungen des Typs Amazon S3 müssen Sie Ihre Zugriffs-ID und den geheimen Schlüssel für Ihren Speicherort im Amazon S3-Speicher angeben. <br> Um die erforderlichen Parameter für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Verbindungsspezifikationen-Endpunkt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) durch, wobei Sie die Verbindungsspezifikation Ihres gewünschten Ziels angeben. Suchen Sie in der Antwort nach dem Parameter `authSpec.spec.required`. |
 
 {style="table-layout:auto"}
@@ -934,7 +934,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | Geben Sie einen Namen für den Datenfluss an, den Sie erstellen. |
 | `description` | Optional können Sie eine Beschreibung für den Datenfluss angeben. |
-| `flowSpec.Id` | Verwenden Sie die Flussspezifikations-ID für das Batch-Ziel, mit dem Sie eine Verbindung herstellen möchten. Um die Flussspezifikations-ID abzurufen, führen Sie einen GET-Vorgang für den Endpunkt `flowspecs` durch, wie in der [API-Referenzdokumentation für Flussspezifikationen](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec) beschrieben. Suchen Sie in der Antwort nach `upsTo` und kopieren Sie die entsprechende ID des Batch-Ziels, mit dem Sie eine Verbindung herstellen möchten. Suchen Sie zum Beispiel für Adobe Campaign nach `upsToCampaign` und kopieren Sie den `id`-Parameter. |
+| `flowSpec.Id` | Verwenden Sie die Flussspezifikations-ID für das Batch-Ziel, mit dem Sie eine Verbindung herstellen möchten. Um die Flussspezifikations-ID abzurufen, führen Sie einen GET-Vorgang für den Endpunkt `flowspecs` durch, wie in der [API-Referenzdokumentation für Flussspezifikationen](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec) beschrieben. Suchen Sie in der Antwort nach `upsTo` und kopieren Sie die entsprechende ID des Batch-Ziels, mit dem Sie eine Verbindung herstellen möchten. Suchen Sie [!DNL Adobe Campaign] nach `upsToCampaign` und kopieren Sie den `id`. |
 | `sourceConnectionIds` | Verwenden Sie die Quellverbindungs-ID, die Sie im Schritt [Verbinden mit Ihren Experience Platform-Daten](#connect-to-your-experience-platform-data) erhalten haben. |
 | `targetConnectionIds` | Verwenden Sie die Zielverbindungs-ID, die Sie im Schritt [Verbinden mit dem Batch-Ziel](#connect-to-batch-destination) erhalten haben. |
 | `transformations` | Im nächsten Schritt werden Sie diesen Abschnitt mit den Zielgruppen und Profilattributen füllen, die aktiviert werden sollen. |
@@ -965,7 +965,7 @@ Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Dat
 
 Nachdem Sie alle Verbindungen sowie den Datenfluss erstellt haben, können Sie jetzt Ihre Profildaten für die Zielplattform aktivieren. In diesem Schritt wählen Sie aus, welche Zielgruppen und Profilattribute an das Ziel exportiert werden sollen.
 
-Sie können auch das Dateibenennungsformat der exportierten Dateien bestimmen und festlegen, welche Attribute als [Deduplizierungsschlüssel](../ui/activate-batch-profile-destinations.md#mandatory-keys) oder [obligatorische Attribute](../ui/activate-batch-profile-destinations.md#mandatory-attributes) verwendet werden sollen. In diesem Schritt können Sie auch den Zeitplan für das Senden von Daten an das Ziel festlegen.
+Sie können auch das Dateibenennungsformat der exportierten Dateien bestimmen und festlegen, welche Attribute als [Deduplizierungsschlüssel](../ui/activate-batch-profile-destinations.md#mandatory-attributes) oder [obligatorische Attribute](../ui/activate-batch-profile-destinations.md#mandatory-attributes) verwendet werden sollen. In diesem Schritt können Sie auch den Zeitplan für das Senden von Daten an das Ziel festlegen.
 
 Um Zielgruppen für Ihr neues Ziel zu aktivieren, müssen Sie einen JSON-PATCH-Vorgang ausführen, ähnlich dem folgenden Beispiel. Sie können mehrere Zielgruppen und Profilattribute in einem Aufruf aktivieren. Weiterführende Informationen zu JSON PATCH finden Sie in der [RFC-Spezifikation](https://tools.ietf.org/html/rfc6902).
 
@@ -1049,7 +1049,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 | `id` | Geben Sie die ID der Zielgruppe an, die Sie dem Ziel-Datenfluss hinzufügen. |
 | `name` | *Optional*. Geben Sie den Namen der Zielgruppe an, die Sie dem Ziel-Datenfluss hinzufügen. Beachten Sie, dass dieses Feld nicht obligatorisch ist und Sie dem Ziel-Datenfluss erfolgreich eine Zielgruppe hinzufügen können, ohne ihren Namen anzugeben. |
-| `filenameTemplate` | Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die ID der exportierten Zielgruppe.</li><li>`%SEGMENT_NAME%`: Optional. Die exportierten Dateien enthalten den Namen der exportierten Zielgruppe.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: Optional. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: Optional. Ersetzen Sie diesen Platzhalter durch einen beliebigen benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weitere Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Konfigurieren von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
+| `filenameTemplate` | Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die ID der exportierten Zielgruppe.</li><li>`%SEGMENT_NAME%`: Optional. Die exportierten Dateien enthalten den Namen der exportierten Zielgruppe.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: Optional. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: Optional. Ersetzen Sie diesen Platzhalter durch einen beliebigen benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weitere Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Konfigurieren von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
 | `exportMode` | Obligatorisch. Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [Exportieren von vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Exportieren von inkrementellen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung von Batch-Zielen. |
 | `startDate` | Wählen Sie das Datum aus, an dem die Zielgruppe Profile in Ihr Ziel exportieren soll. |
 | `frequency` | Obligatorisch. <br> <ul><li>Für den `"DAILY_FULL_EXPORT"` Exportmodus können Sie `ONCE`, `DAILY`, `WEEKLY` oder `MONTHLY` auswählen.</li><li>Für den Exportmodus `"FIRST_FULL_THEN_INCREMENTAL"` können Sie `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"` wählen.</li></ul> |
@@ -1253,7 +1253,7 @@ Die zurückgegebene Antwort sollte im `transformations` die Zielgruppen und Prof
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

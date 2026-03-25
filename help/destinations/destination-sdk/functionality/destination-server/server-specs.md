@@ -2,16 +2,16 @@
 description: Erfahren Sie, wie Sie die Ziel-Server-Spezifikationen im Adobe Experience Platform Destination SDK über den Endpunkt „/authoring/destination-servers“ konfigurieren.
 title: Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2775'
-ht-degree: 88%
+source-wordcount: '2748'
+ht-degree: 85%
 
 ---
 
 # Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden
 
-Ziel-Server-Spezifikationen definieren den Typ der Zielplattform, die die Daten von Adobe Experience Platform erhält, sowie die Kommunikationsparameter zwischen Experience Platform und Ihrem Ziel. Beispiel:
+Ziel-Server-Spezifikationen definieren den Typ der Zielplattform, die die Daten von [!DNL Adobe Experience Platform] erhält, sowie die Kommunikationsparameter zwischen Experience Platform und Ihrem Ziel. Beispiel:
 
 * Eine [Streaming](#streaming-example) Ziel-Server-Spezifikation definiert den HTTP-Server-Endpunkt, der die HTTP-Nachrichten von Experience Platform erhält. Informationen zum Konfigurieren der Formatierung der HTTP-Aufrufe an den Endpunkt finden Sie auf der Seite [Spezifikationen für Vorlagentypen](templating-specs.md).
 * Eine [Amazon S3](#s3-example)-Ziel-Server-Spezifikation definiert den [!DNL S3]-Behälternamen und -Pfad, in den Experience Platform die Dateien exportiert.
@@ -19,7 +19,7 @@ Ziel-Server-Spezifikationen definieren den Typ der Zielplattform, die die Daten 
 
 Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder auf den folgenden Übersichtsseiten zur Zielkonfiguration:
 
-* [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-server-template-configuratiom)
+* [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-server-template-configuration)
 * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
 
 Sie können die Ziel-Server-Spezifikationen über den Endpunkt `/authoring/destination-servers` konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
@@ -63,9 +63,9 @@ Sowohl hartcodierte als auch vorlagenbasierte Felder haben ihre eigene Verwendun
 
 **Herstellen einer Verbindung zu Ihrem Ziel ohne Benutzereingabe**
 
-Wenn Benutzerinnen [&#x200B; Benutzer in der Experience Platform](../../../ui/connect-destination.md)Benutzeroberfläche eine Verbindung zu Ihrem Ziel herstellen, möchten Sie möglicherweise den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
+Wenn Benutzerinnen [ Benutzer in der Experience Platform](../../../ui/connect-destination.md)Benutzeroberfläche eine Verbindung zu Ihrem Ziel herstellen, möchten Sie möglicherweise den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
 
-Dazu können Sie die Verbindungsparameter der Zielplattform in der Server-Spezifikation hartcodieren. Wenn Sie in Ihrer Ziel-Server-Konfiguration hartcodierte Parameterwerte verwenden, wird die Verbindung zwischen Adobe Experience Platform und Ihrer Zielplattform ohne Benutzereingabe veranlasst.
+Dazu können Sie die Verbindungsparameter der Zielplattform in der Server-Spezifikation hartcodieren. Wenn Sie hartcodierte Parameterwerte in Ihrer Ziel-Server-Konfiguration verwenden, wird die Verbindung zwischen [!DNL Adobe Experience Platform] und Ihrer Zielplattform ohne Benutzereingabe verarbeitet.
 
 Im folgenden Beispiel erstellt ein Partner einen Data Landing Zone(DLZ)-Ziel-Server, wobei das Feld `path.value` hartcodiert ist..
 
@@ -106,7 +106,7 @@ Im folgenden Beispiel erstellt ein Partner eine [Echtzeit (Streaming)](#streamin
 }
 ```
 
-Damit Benutzerinnen und Benutzer einen Wert in der Experience Platform-Benutzeroberfläche auswählen können, muss der `region` auch in der [Zielkonfiguration“ &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) ein Kundendatenfeld definiert werden, wie unten dargestellt:
+Damit Benutzerinnen und Benutzer einen Wert in der Experience Platform-Benutzeroberfläche auswählen können, muss der `region` auch in der [Zielkonfiguration“ ](../../authoring-api/destination-configuration/create-destination-configuration.md) ein Kundendatenfeld definiert werden, wie unten dargestellt:
 
 ```json
 "customerDataFields":[
@@ -130,7 +130,7 @@ Wenn Benutzerinnen und Benutzer das [Tutorial zur Zielverbindung](../../../ui/co
 
 ## Echtzeit-Ziel-Server (Streaming) {#streaming-example}
 
-Mit diesem Ziel-Server-Typ können Sie Daten von Adobe Experience Platform über HTTP-Anfragen an Ihr Ziel exportieren. Die Server-Konfiguration enthält Informationen zum Server, der die Nachrichten erhält (der Server auf Ihrer Seite).
+Mit diesem Ziel-Server-Typ können Sie Daten aus [!DNL Adobe Experience Platform] über HTTP-Anfragen an Ihr Ziel exportieren. Die Server-Konfiguration enthält Informationen zum Server, der die Nachrichten erhält (der Server auf Ihrer Seite).
 
 Dieser Prozess stellt Benutzerdaten als eine Reihe von HTTP-Nachrichten an Ihre Zielplattform bereit. Die folgenden Parameter bilden die Vorlage für HTTP-Server-Spezifikationen.
 
@@ -160,7 +160,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Amazon S3]-Ziel-Server {#s3-example}
 
-Mit diesem Ziel-Server können Sie Dateien, die Adobe Experience Platform-Daten enthalten, in Ihren Amazon S3-Speicher exportieren.
+Mit diesem Ziel-Server können Sie Dateien mit [!DNL Adobe Experience Platform] in Ihren Amazon S3-Speicher exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein Amazon S3-Ziel.
 
@@ -194,7 +194,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL SFTP]-Ziel-Server {#sftp-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit Adobe Experience Platform-Daten in Ihren [!DNL SFTP] Speicher-Server exportieren.
+Mit diesem Ziel-Server können Sie Dateien mit [!DNL Adobe Experience Platform] Daten in Ihren [!DNL SFTP]-Speicher-Server exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein SFTP-Ziel.
 
@@ -232,7 +232,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Azure Data Lake Storage] ([!DNL ADLS]) -Ziel-Server {#adls-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit Adobe Experience Platform-Daten in Ihr [!DNL Azure Data Lake Storage]-Konto exportieren.
+Mit diesem Ziel-Server können Sie Dateien mit [!DNL Adobe Experience Platform] Daten in Ihr [!DNL Azure Data Lake Storage] exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein [!DNL Azure Data Lake Storage]-Ziel.
 
@@ -260,7 +260,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Azure Blob Storage]-Ziel-Server {#blob-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit Adobe Experience Platform-Daten in Ihren [!DNL Azure Blob Storage]-Container exportieren.
+Mit diesem Ziel-Server können Sie Dateien mit [!DNL Adobe Experience Platform] Daten in Ihren [!DNL Azure Blob Storage]-Container exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein [!DNL Azure Blob Storage]-Ziel.
 

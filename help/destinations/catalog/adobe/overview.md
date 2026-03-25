@@ -3,9 +3,9 @@ keywords: Ziele;Experience Cloud-Lösungen;Target;Target-Ziel;Ad Cloud;Advertisi
 title: Adobe-Ziele – Übersicht
 description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in Experience Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '225'
 ht-degree: 29%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 29%
 
 ## Überblick {#overview}
 
-Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in Adobe Experience Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
+Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in [!DNL Adobe Experience Platform] mit anderen [!DNL Adobe Experience Cloud]-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
 
 ## Unterstützte Adobe-Ziele {#supported-destinations}
 

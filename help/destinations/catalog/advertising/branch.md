@@ -3,10 +3,10 @@ keywords: Verzweigung;Verzweigungserweiterung;Verzweigungsziel
 title: Branch-Erweiterung
 description: Die Branch-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 19cbd410-e1c9-4510-8b04-b4c0bf7ff6a7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 70%
+source-wordcount: '412'
+ht-degree: 65%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 70%
 
 Branch bietet leistungsstarke Links und Lösungen, die Ihnen beim Erwerb, der Interaktion und der Messung auf allen Geräten, Kanälen und Plattformen helfen.
 
-Branch ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der [Funktionsseite](https://branch.io/features/) der Branch-Website.
+Branch ist eine Werbeerweiterung in [!DNL Adobe Experience Platform]. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der [Funktionsseite](https://branch.io/features/) der Branch-Website.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in [!DNL Adobe Experience Platform]. Tags werden [!DNL Adobe Experience Cloud] Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 

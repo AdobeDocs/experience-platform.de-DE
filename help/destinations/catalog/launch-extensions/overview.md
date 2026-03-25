@@ -3,16 +3,16 @@ keywords: Tag-Erweiterungen; Tag-Erweiterung; Launch-Ziele; Platform-Tag-Erweite
 title: Tag-Erweiterungen in Adobe Experience Platform
 description: Adobe Experience Platform verfügt über die nächste Generation von Tag-Management-Funktionen von Adobe. Experience Platform bietet eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 56%
+source-wordcount: '480'
+ht-degree: 53%
 
 ---
 
-# Tag-Erweiterungen in Adobe Experience Platform
+# Tag-Erweiterungen in [!DNL Adobe Experience Platform]
 
-Adobe Experience Platform bietet die nächste Generation von Tag-Management-Funktionen von Adobe. Experience Platform bietet eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten.
+[!DNL Adobe Experience Platform] bietet die nächste Generation von Tag-Management-Funktionen von Adobe. Experience Platform bietet eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind. Tags werden [!DNL Adobe Experience Cloud] Kunden als integrierte Mehrwertfunktion angeboten.
 
 Eine Einführung in Tags finden Sie in den folgenden Ressourcen:
 
@@ -21,15 +21,15 @@ Eine Einführung in Tags finden Sie in den folgenden Ressourcen:
 
 ## So finden Sie Tag-Erweiterungen in der Benutzeroberfläche von Experience Platform {#how-to-find-extensions-in-interface}
 
-Um die Erweiterungen in der Experience Platform-Benutzeroberfläche zu finden, navigieren Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** und wählen Sie **[!UICONTROL Erweiterungen]** im Filter **[!UICONTROL Types]** aus.
+Um die Erweiterungen in der Experience Platform-Benutzeroberfläche zu finden, navigieren Sie zu **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** und klicken Sie im **[!UICONTROL Extensions]** auf **[!UICONTROL Types]** .
 
 ![Erweiterungsfilter in der Benutzeroberfläche](../../assets/catalog/launch-extensions/filter.png)
 
 ## Funktionsweise von Tag-Erweiterungen {#how-extensions-work}
 
-Eine [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder Mobile App erweitert. Dazu kann gehören, dass Rohdaten von Ereignissen an ein Ziel wie [Google Analytics gesendet &#x200B;](/help/destinations/catalog/analytics/google-universal-analytics.md), aber sie können auch andere Funktionen erfüllen.
+Eine [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder Mobile App erweitert. Dazu kann gehören, dass Rohdaten von Ereignissen an ein Ziel wie [Google Analytics gesendet ](/help/destinations/catalog/analytics/google-universal-analytics.md), aber sie können auch andere Funktionen erfüllen.
 
-Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die Erweiterungen, die in der Benutzeroberfläche Experience Platform-Ziele angezeigt werden, sind *Tag-Erweiterungen*. Weitere Informationen zu den Unterschieden zwischen Tags und [&#x200B; Ereignisweiterleitung finden Sie in der Übersicht &#x200B;](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) Ereignisweiterleitung .
+Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die Erweiterungen, die in der Benutzeroberfläche Experience Platform-Ziele angezeigt werden, sind *Tag-Erweiterungen*. Weitere Informationen zu den Unterschieden zwischen Tags und [ Ereignisweiterleitung finden Sie in der Übersicht ](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) Ereignisweiterleitung .
 
 
 
@@ -62,9 +62,9 @@ Erweiterungen können Sie für verschiedene Anwendungsfälle nutzen. Beispielhaf
 Erweiterungen können in Experience Platform unter die folgenden Kategorien fallen:
 
 - [Werbung](../advertising/overview.md)
-- [Analysen](../analytics/overview.md)
+- [Analytics](../analytics/overview.md)
 - [Daten-Management-Plattform](../data-management/overview.md)
-- [E-Mail-Marketing-Ziele &#x200B;](../email-marketing/overview.md)
+- [E-Mail-Marketing-Ziele ](../email-marketing/overview.md)
 - [Personalisierung](../personalization/overview.md)
 - [Umfragen](../survey/overview.md)
 - [Stimme des Kunden](../voice/overview.md)

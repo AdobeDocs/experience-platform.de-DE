@@ -3,10 +3,10 @@ keywords: Marketo Munchkin;Marketo Munchkin;Marketo Munchkin-Erweiterung;Marketo
 title: Marketo Munchkin-Erweiterung
 description: Die Marketo Munchkin-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 58%
+source-wordcount: '442'
+ht-degree: 53%
 
 ---
 
@@ -18,7 +18,7 @@ Vom Lead-Management bis hin zum Account-basierten Marketing vereinfacht [!DNL Ma
 
 [!DNL Marketo’s Munchkin] JavaScript ermöglicht das Tracking von Endbenutzer-Seitenbesuchen und Klicks auf [!DNL Marketo] Landingpages und externe Web-Seiten.
 
-[!DNL Marketo Munchkin] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Marketo Munchkin finden Sie unter [Lead-Tracking](https://developers.marketo.com/javascript-api/lead-tracking/) in der Dokumentation zu Marketo.
+[!DNL Marketo Munchkin] ist eine E-Mail-Erweiterung in [!DNL Adobe Experience Platform]. Weitere Informationen zu Marketo Munchkin finden Sie unter [Lead-Tracking](https://developers.marketo.com/javascript-api/lead-tracking/) in der Dokumentation zu Marketo.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -28,7 +28,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in [!DNL Adobe Experience Platform]. Tags werden [!DNL Adobe Experience Cloud] Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 

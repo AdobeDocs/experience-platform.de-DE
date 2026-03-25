@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie den Zielgruppentyp für Ihre mit Destination SDK erstellten Ziele konfigurieren.
 title: Zielgruppen-Datentyp konfigurieren
 exl-id: c56fb0f9-adb2-4fb2-ab06-c0398d828600
-source-git-commit: 5d84ea1baa96c288d9d37606122e0a41880478b9
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '732'
 ht-degree: 7%
 
 ---
@@ -20,7 +20,7 @@ Sehen Sie sich die folgenden Zielgruppen-Datentypen an, um mehr über die Unters
 | [Personen-Zielgruppen](../../../../segmentation/types/people-audiences.md) | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](../../../../segmentation/types/account-audiences.md) | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](../../../../segmentation/types/prospect-audiences.md) | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](../../../../catalog/datasets/overview.md) | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](../../../../catalog/datasets/overview.md) | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 Der unterstützte Zielgruppen-Datentyp hängt vom Typ des Ziels ab, das Sie erstellen.
 Anhand der folgenden Tabelle können Sie erkennen, welche Zieltypen welche Zielgruppen-Datentypen unterstützen.
@@ -153,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 Erwägen Sie, Ihrem Ziel Unterstützung für Konto-Zielgruppen hinzuzufügen, wenn Sie ein [!DNL B2B] Ziel für Account-basiertes Marketing konfigurieren möchten. Beispielsweise können Sie Account-basierte Zielgruppen verwenden, um Datensätze von allen Konten abzurufen, die keine Kontaktinformationen für Personen mit dem Titel [!DNL Chief Operating Officer (COO)] oder [!DNL Chief Marketing Officer (CMO)] haben.
 
-Um ein Ziel zu erstellen, das den Export von Konto-Zielgruppen unterstützt, fügen Sie das folgende Konfigurations-Snippet zu Ihrer [Zielkonfiguration“ &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md).
+Um ein Ziel zu erstellen, das den Export von Konto-Zielgruppen unterstützt, fügen Sie das folgende Konfigurations-Snippet zu Ihrer [Zielkonfiguration“ ](../../authoring-api/destination-configuration/create-destination-configuration.md).
 
 ```json
 "sources":[
@@ -259,9 +259,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## Zielgruppen potenzieller Kunden exportieren {#prospect}
 
-Erwägen Sie, Ihrem Ziel Unterstützung für potenzielle Zielgruppen hinzuzufügen, wenn Sie Personen ansprechen möchten, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. Mit Interessentenprofilen können Sie Ihre Kundenprofile mit Attributen von vertrauenswürdigen Drittanbieterpartnern ergänzen. Weitere Informationen finden [&#x200B; in diesem &#x200B;](../../../../rtcdp/partner-data/prospecting.md) für Interessenten.
+Erwägen Sie, Ihrem Ziel Unterstützung für potenzielle Zielgruppen hinzuzufügen, wenn Sie Personen ansprechen möchten, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. Mit Interessentenprofilen können Sie Ihre Kundenprofile mit Attributen von vertrauenswürdigen Drittanbieterpartnern ergänzen. Weitere Informationen finden [ in diesem ](../../../../rtcdp/partner-data/prospecting.md) für Interessenten.
 
-Um ein Ziel zu erstellen, das den Export von potenziellen Zielgruppen unterstützt, fügen Sie das folgende Konfigurations-Snippet zu Ihrer [Zielkonfiguration“ &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md).
+Um ein Ziel zu erstellen, das den Export von potenziellen Zielgruppen unterstützt, fügen Sie das folgende Konfigurations-Snippet zu Ihrer [Zielkonfiguration“ ](../../authoring-api/destination-configuration/create-destination-configuration.md).
 
 
 ```json
@@ -395,7 +395,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 Erwägen Sie das Hinzufügen von Unterstützung für den Datensatzexport zu Ihrem Ziel, wenn Sie Rohdatensätze exportieren möchten, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Sie können diese Daten für Berichte, Datenwissenschafts-Workflows und viele andere Anwendungsfälle verwenden. Als Administrator, Datentechniker oder Analyst können Sie beispielsweise Daten aus Experience Platform exportieren, um sie mit Ihrem Data Warehouse zu synchronisieren, in [!DNL BI] Analyse-Tools oder externen Cloud-[!DNL ML]-Tools verwenden oder in Ihrem System für langfristige Speicheranforderungen speichern.
 
-Um ein Ziel zu erstellen, das den Export von Datensätzen unterstützt, fügen Sie der [Zielkonfiguration“ das folgende Konfigurations-Snippet &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md).
+Um ein Ziel zu erstellen, das den Export von Datensätzen unterstützt, fügen Sie der [Zielkonfiguration“ das folgende Konfigurations-Snippet ](../../authoring-api/destination-configuration/create-destination-configuration.md).
 
 ```json
 "sources":[
@@ -584,4 +584,4 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](aggregation-policy.md)
 * [Batch-Konfiguration](batch-configuration.md)
-* [Historische Profilqualifikationen](historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](historical-profile-qualifications.md)

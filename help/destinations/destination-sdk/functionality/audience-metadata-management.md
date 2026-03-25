@@ -2,10 +2,10 @@
 description: Verwenden Sie Vorlagen für Zielgruppen-Metadaten, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Adobe bietet eine erweiterungsfähige Vorlage für Zielgruppen-Metadaten, die Sie anhand der Spezifikationen Ihrer Marketing-API konfigurieren können. Nachdem Sie die Vorlage definiert, getestet und gesendet haben, wird sie von Adobe zur Strukturierung der API-Aufrufe an Ihr Ziel verwendet.
 title: Verwaltung von Zielgruppen-Metadaten
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1309'
-ht-degree: 74%
+source-wordcount: '1297'
+ht-degree: 69%
 
 ---
 
@@ -60,13 +60,13 @@ In der folgenden Tabelle werden die Ereignisse beschrieben, die von Zielgruppen-
 
 | Vorlagenbereich | Beschreibung |
 |--- |--- |
-| `create` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, Segmente und Zielgruppen in Ihrer Plattform programmgesteuert zu erstellen und die erhaltenen Informationen mit Adobe Experience Platform zu synchronisieren. |
-| `update` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, Segmente und Zielgruppen in Ihrer Plattform programmgesteuert zu aktualisieren und die erhaltenen Informationen mit Adobe Experience Platform zu synchronisieren. |
+| `create` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, Segmente und Zielgruppen in Ihrer Plattform programmgesteuert zu erstellen und die Informationen wieder mit [!DNL Adobe Experience Platform] zu synchronisieren. |
+| `update` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, Segmente und Zielgruppen in Ihrer Plattform programmgesteuert zu aktualisieren und die Informationen wieder mit [!DNL Adobe Experience Platform] zu synchronisieren. |
 | `delete` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen sowie Segmente und Zielgruppen in Ihrer Plattform programmgesteuert zu löschen. |
 | `validate` | Führt Überprüfungen für alle Felder in der Vorlagenkonfiguration durch, bevor Sie die Partner-API aufrufen. Sie können beispielsweise überprüfen, ob die Account-ID des Benutzers korrekt eingegeben wurde. |
 | `notify` | Gilt nur für dateibasierte Ziele. Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Header, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen und Sie über erfolgreiche Dateiexporte zu informieren. |
-| `createDestination` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, einen Datenfluss in Ihrer Plattform programmgesteuert zu erstellen und die Informationen wieder mit Adobe Experience Platform zu synchronisieren. |
-| `updateDestination` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, einen Datenfluss in Ihrer Plattform programmgesteuert zu aktualisieren und die Informationen wieder mit Adobe Experience Platform zu synchronisieren. |
+| `createDestination` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, einen Datenfluss in Ihrer Plattform programmgesteuert zu erstellen und die Informationen wieder mit [!DNL Adobe Experience Platform] zu synchronisieren. |
+| `updateDestination` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, einen Datenfluss in Ihrer Plattform programmgesteuert zu aktualisieren und die Informationen wieder mit [!DNL Adobe Experience Platform] zu synchronisieren. |
 | `deleteDestination` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen und einen Datenfluss programmgesteuert aus Ihrer Plattform zu löschen. |
 
 {style="table-layout:auto"}

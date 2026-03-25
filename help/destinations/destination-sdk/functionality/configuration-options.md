@@ -2,16 +2,16 @@
 description: Der Ziel-Service in Adobe Experience Platform verwendet Konfigurationsendpunkte für verschiedene Komponenten, die die Zielfunktion aufbauen. Erfahren Sie, wie diese Komponenten zusammen es Experience Platform ermöglichen, eine Verbindung zu Zielpartnern herzustellen, benutzerdefinierte Nachrichten zu senden und Profildaten im gesamten digitalen Ökosystem zu aktivieren.
 title: Konfigurationsoptionen in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 92%
+source-wordcount: '821'
+ht-degree: 82%
 
 ---
 
 # Konfigurationsoptionen in Destination SDK
 
-Der Ziel-Service in Adobe Experience Platform verwendet Konfigurationsendpunkte für verschiedene Komponenten, die die Zielfunktion aufbauen.
+Der Ziel-Service in [!DNL Adobe Experience Platform] verwendet Konfigurationsendpunkte für mehrere Komponenten, die die Zielfunktion aufbauen.
 
 Gemeinsam ermöglichen diese Komponenten es Experience Platform, eine Verbindung zu Zielplattformen herzustellen, benutzerdefinierte Nachrichten zu senden, benutzerdefinierte Dateien zu exportieren und Profildaten im gesamten digitalen Ökosystem zu aktivieren.
 
@@ -38,7 +38,7 @@ Bei dateibasierten Zielen enthält diese Konfiguration auch die unterstützten D
 
 ## Zielkonfiguration {#destination-configuration}
 
-Dieser Konfigurationsendpunkt enthält grundlegende und erweiterte Informationen zu Ihrem Ziel. Hier geben Sie beispielsweise die Identitätstypen an, die Ihr Ziel unterstützen kann, das gewünschte Format der exportierten Dateien (für dateibasierte Ziele) und verschiedene Benutzeroberflächenattribute für Ihre Zielkarte in der Adobe Experience Platform-Benutzeroberfläche an.
+Dieser Konfigurationsendpunkt enthält grundlegende und erweiterte Informationen zu Ihrem Ziel. Hier geben Sie beispielsweise die Identitätstypen an, die Ihr Ziel unterstützen kann, das gewünschte Format der exportierten Dateien (für dateibasierte Ziele) und verschiedene Benutzeroberflächenattribute für Ihre Zielkarte in der [!DNL Adobe Experience Platform]-Benutzeroberfläche an.
 
 Weitere Informationen zu den einzelnen Zielkonfigurationskomponenten finden Sie in der folgenden Dokumentation. Sie können die im Folgenden beschriebenen Funktionen über den [Endpunkt „destinations“](../authoring-api/destination-configuration/create-destination-configuration.md)konfigurieren.
 
@@ -52,11 +52,11 @@ Weitere Informationen zu den einzelnen Zielkonfigurationskomponenten finden Sie 
 * [Konfiguration von Zielgruppen-Metadaten](destination-configuration/audience-metadata-configuration.md): Erfahren Sie, wie Zielgruppenmetadaten, etwa Zielgruppennamen oder -IDs, zwischen Experience Platform und Ihrem Ziel freigegeben werden sollten.
 * [Aggregationsrichtlinie](destination-configuration/aggregation-policy.md): Erfahren Sie, wie Sie eine Aggregationsrichtlinie einrichten, um zu bestimmen, wie HTTP-Anfragen an Ihr Ziel gruppiert und in Batches eingesetzt werden sollen.
 * [Batch-Konfiguration](destination-configuration/batch-configuration.md): Richten Sie verschiedene Einstellungen für die Dateibenennung und Exportplanung ein, die Benutzerinnen und Benutzern beim Herstellen einer Verbindung zu Ihrem Ziel in der Benutzeroberfläche von Experience Platform zur Verfügung stehen.
-* [Historische Profilqualifikationen](destination-configuration/historical-profile-qualifications.md): Erfahren Sie mehr über die historischen Profilqualifikationen, die von mit Destination SDK erstellten Zielen unterstützt werden.
+* [Historische Profilqualifizierungen](destination-configuration/historical-profile-qualifications.md): Erfahren Sie mehr über die historischen Profilqualifizierungen, die von mit Destination SDK erstellten Zielen unterstützt werden.
 
 ## Konfiguration von Zielgruppen-Metadaten {#audience-metadata-configuration}
 
-Mit dieser Komponente können Sie konfigurieren, wie Zielgruppen programmgesteuert in Ihrem Ziel erstellt, aktualisiert oder gelöscht werden. Bei dateibasierten Zielen können Sie eine Benachrichtigung einrichten, sobald Dateien erfolgreich an Ihr Ziel gesendet wurden. Sie können diese Funktion über den [Endpunkt „audience-templates“](../metadata-api/create-audience-template.md) konfigurieren.
+Mit dieser Komponente können Sie konfigurieren, wie Zielgruppen in Ihrem Ziel programmgesteuert erstellt, aktualisiert oder gelöscht werden. Bei dateibasierten Zielen können Sie eine Benachrichtigung einrichten, sobald Dateien erfolgreich an Ihr Ziel gesendet wurden. Sie können diese Funktion über den [Endpunkt „audience-templates“](../metadata-api/create-audience-template.md) konfigurieren.
 
 ## Nächste Schritte {#next-steps}
 

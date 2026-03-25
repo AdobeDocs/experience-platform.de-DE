@@ -2,9 +2,9 @@
 title: Verwenden der GitHub-Web-Oberfläche, um eine Zieldokumentationsseite zu erstellen
 description: Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie mit der GitHub-Web-Benutzeroberfläche eine Dokumentationsseite für Ihr Experience Platform-Ziel erstellen und zur Überprüfung senden.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: ff094c0c2c75e097140626d77478b8da9a7edf04
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '723'
 ht-degree: 3%
 
 ---
@@ -17,14 +17,14 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 >
 >Weitere Informationen finden Sie auch in der unterstützenden Dokumentation im Adobe-Handbuch für Mitwirkende:
 >
->* [Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=de)
->* [Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de)
->* [GitHub-Beitrags-Workflow für wichtige &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=de).
+>* [Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [GitHub-Beitrags-Workflow für wichtige ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Einrichten der GitHub-Authoring-Umgebung {#set-up-environment}
 
-1. Navigieren Sie im Browser zu `https://github.com/AdobeDocs/experience-platform.de-DE`.
-1. Um [Verzweigung](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=de#fork-the-repository) das Repository anzuzeigen, klicken Sie auf **Verzweigung** wie unten dargestellt. Dadurch wird eine Kopie des Experience Platform-Repositorys in Ihrem eigenen GitHub-Konto erstellt.
+1. Navigieren Sie im Browser zu `https://github.com/AdobeDocs/experience-platform.en`.
+1. Um [Verzweigung](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) das Repository anzuzeigen, klicken Sie auf **Verzweigung** wie unten dargestellt. Dadurch wird eine Kopie des Experience Platform-Repositorys in Ihrem eigenen GitHub-Konto erstellt.
 
    ![Fork Adobe-Dokumentations-Repository](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -36,7 +36,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 
    ![Neue Datei hinzufügen](../assets/docs-framework/github-navigate-and-create-file.gif)
 
-1. Benennen Sie Ihr `YOURDESTINATION.md`, wobei YOURDESTINATION der Name Ihres Ziels in Adobe Experience Platform ist. Wenn Ihre Firma beispielsweise Moviestar heißt, würden Sie Ihre Datei `moviestar.md` nennen.
+1. Benennen Sie Ihr `YOURDESTINATION.md`, wobei YOURDESTINATION der Name Ihres Ziels in [!DNL Adobe Experience Platform] ist. Wenn Ihre Firma beispielsweise Moviestar heißt, würden Sie Ihre Datei `moviestar.md` nennen.
 
 ## Erstellen der Dokumentationsseite für Ihr Ziel {#author-documentation}
 
@@ -47,7 +47,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
    >
    >Sie können Ihr Browser-Fenster jederzeit schließen und später erneut öffnen. Ihre Arbeit wird automatisch gespeichert und wartet auf Sie, wenn Sie den Browser erneut öffnen.
 1. Kopieren Sie den Inhalt aus dem Markdown-Editor in Ihre neue Datei in GitHub.
-1. Verwenden Sie für alle Screenshots oder Bilder, die Sie verwenden möchten, die GitHub-Oberfläche, um die Dateien in `experience-platform.en/help/destinations/assets/catalog/[...]` hochzuladen, wobei `[...]` die gewünschte Kategorie für Ihr Ziel ist. Wenn Sie beispielsweise ein Personalisierungsziel zu Experience Platform hinzufügen, wählen Sie die Kategorie `personalization` aus. Sie müssen eine Verknüpfung zu den Bildern auf der Seite herstellen, die Sie gerade bearbeiten. Siehe [Anweisungen zum Verknüpfen mit Bildern](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=de#link-to-images).
+1. Verwenden Sie für alle Screenshots oder Bilder, die Sie verwenden möchten, die GitHub-Oberfläche, um die Dateien in `experience-platform.en/help/destinations/assets/catalog/[...]` hochzuladen, wobei `[...]` die gewünschte Kategorie für Ihr Ziel ist. Wenn Sie beispielsweise ein Personalisierungsziel zu Experience Platform hinzufügen, wählen Sie die Kategorie `personalization` aus. Sie müssen eine Verknüpfung zu den Bildern auf der Seite herstellen, die Sie gerade bearbeiten. Siehe [Anweisungen zum Verknüpfen mit Bildern](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 
    ![Bild auf GitHub hochladen](../assets/docs-framework/upload-image.gif)
 
@@ -59,13 +59,13 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 
 >[!TIP]
 >
->Beachten Sie, dass es hier nichts gibt, was Sie brechen können. Wenn Sie die Anweisungen in diesem Abschnitt befolgen, schlagen Sie einfach eine Aktualisierung der Dokumentation vor. Die vorgeschlagene Aktualisierung wird vom Dokumentations-Team von Adobe Experience Platform genehmigt oder bearbeitet.
+>Beachten Sie, dass es hier nichts gibt, was Sie brechen können. Wenn Sie die Anweisungen in diesem Abschnitt befolgen, schlagen Sie einfach eine Aktualisierung der Dokumentation vor. Die vorgeschlagene Aktualisierung wird vom [!DNL Adobe Experience Platform] Dokumentations-Team genehmigt oder bearbeitet.
 
 1. Nachdem Sie die Datei gespeichert und die gewünschten Bilder hochgeladen haben, können Sie eine Pull-Anfrage (PR) öffnen, um Ihre Arbeitsverzweigung mit der Hauptverzweigung des Adobe-Dokumentations-Repositorys zusammenzuführen. Stellen Sie sicher, dass die Verzweigung, an der Sie gearbeitet haben, ausgewählt ist und wählen Sie **Beitragen > Pull Request öffnen**.
 
    ![Pull-Anfrage erstellen](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
-1. Stellen Sie sicher, dass die Basis- und Vergleichsverzweigungen korrekt sind. Fügen Sie der PR einen Hinweis hinzu, der Ihre Aktualisierung beschreibt, und wählen Sie **Pull-Anfrage erstellen**. Dadurch wird ein PR geöffnet, in dem der Arbeitszweig Ihres Abspaltungs mit dem Hauptzweig des Adobe-Repositorys zusammengeführt wird.
+1. Stellen Sie sicher, dass die Basis- und Vergleichsverzweigungen korrekt sind. Fügen Sie der PR einen Hinweis hinzu, der Ihre Aktualisierung beschreibt, und wählen Sie **Pull-Anfrage erstellen**. Dadurch wird ein PR geöffnet, in dem der Arbeitszweig Ihres Formulars mit dem Hauptzweig des Adobe-Repositorys zusammengeführt wird.
 
    >[!TIP]
    >
@@ -75,7 +75,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 
 1. An dieser Stelle wird eine Benachrichtigung angezeigt, die Sie auffordert, die Adobe Contributor License Agreement (CLA) zu unterzeichnen. Dies ist ein obligatorischer Schritt. Nachdem Sie die CLA signiert haben, aktualisieren Sie die PR-Seite und senden Sie die Pull-Anfrage.
 
-1. Sie können bestätigen, dass die Pull-Anfrage gesendet wurde, indem Sie die Registerkarte **Pull-Anfragen** in `https://github.com/AdobeDocs/experience-platform.de-DE` überprüfen.
+1. Sie können bestätigen, dass die Pull-Anfrage gesendet wurde, indem Sie die Registerkarte **Pull-Anfragen** in `https://github.com/AdobeDocs/experience-platform.en` überprüfen.
 
    ![PR erfolgreich](../assets/docs-framework/ssd-pr-successful.png)
 
@@ -83,4 +83,4 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 
 >[!TIP]
 >
->Informationen zum Hinzufügen von Bildern und Links zu Ihrer Dokumentation sowie zu allen anderen Fragen rund um Markdown finden Sie unter [Verwenden von &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=de)) im Handbuch für gemeinsames Schreiben in Adobe.
+>Informationen zum Hinzufügen von Bildern und Links zu Ihrer Dokumentation sowie zu allen anderen Fragen rund um Markdown finden Sie unter [Verwenden von ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)) im Handbuch für gemeinsames Schreiben in Adobe.

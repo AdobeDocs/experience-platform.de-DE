@@ -2,22 +2,22 @@
 title: Adobe Campaign Managed Cloud Services-Verbindung
 description: Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, die Echtzeit-Interaktionsverwaltung und die kanalübergreifende Ausführung.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1851'
-ht-degree: 23%
+source-wordcount: '1721'
+ht-degree: 18%
 
 ---
 
-# Adobe Campaign Managed Cloud Services-Verbindung {#adobe-campaign-managed-services}
+# [!DNL Adobe Campaign Managed Cloud Services]-Verbindung {#adobe-campaign-managed-services}
 
 >[!IMPORTANT]
 >
->Diese Integration funktioniert mit [Adobe Campaign Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=de#release-8-4-1).
+>Diese Integration funktioniert mit Version [[!DNL Adobe Campaign] .4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
 
 ## Überblick {#overview}
 
-Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Orchestrierung von Kampagnen, das Management von Interaktionen in Echtzeit und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=de)
+[!DNL Adobe Campaign Managed Cloud Services] bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, die Echtzeit-Interaktionsverwaltung und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=de)
 
 Mit Campaign haben Sie folgende Möglichkeiten:
 
@@ -27,52 +27,52 @@ Mit Campaign haben Sie folgende Möglichkeiten:
 
 ## Leitlinien {#guardrails}
 
-Beachten Sie die folgenden Leitplanken bei der Verwendung der Adobe Campaign Managed Cloud Services-Verbindung:
+Beachten Sie bei der Verwendung der [!DNL Adobe Campaign Managed Cloud Services]-Verbindung die folgenden Leitplanken:
 
-* Sie [&#x200B; maximal 25 &#x200B;](#activate) für dieses Ziel aktivieren.
+* Sie [ maximal 25 ](#activate) für dieses Ziel aktivieren.
 
   Sie können dieses Limit ändern, indem Sie den Wert der Option **NmsCdp_Aep_Audience_List_Limit** im Ordner **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** des Campaign-Explorers aktualisieren. Diese Schutzmaßnahme beschränkt die Gesamtzahl der Experience Platform-Zielgruppen, die für alle konfigurierten Ziele in eine Campaign-Instanz exportiert werden können.
 
-* Für jede Zielgruppe können Sie bis zu 20 Felder zu &quot;[&quot; &#x200B;](#map) Adobe Campaign hinzufügen.
+* Für jede Zielgruppe können Sie bis zu 20 Felder zu &quot;[&quot; ](#map) &quot;[!DNL Adobe Campaign]&quot; hinzufügen.
 
   Sie können diesen Grenzwert ändern, indem Sie den Wert der Option **NmsCdp_Aep_Destinations_Max_Columns** im Ordner **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** des Campaign-Explorers aktualisieren.
 
 * Datenaufbewahrung in der Azure Blob Storage Data Landing Zone (DLZ) : 7 Tage.
 * Die Aktivierungshäufigkeit beträgt mindestens 3 Stunden.
 * Die von dieser Verbindung unterstützte maximale Länge von Dateinamen beträgt 255 Zeichen. Wenn Sie [den Namen der exportierten Datei konfigurieren](../../ui/activate-batch-profile-destinations.md#configure-file-names) stellen Sie sicher, dass der Dateiname 255 Zeichen nicht überschreitet. Eine Überschreitung der maximalen Dateinamenlänge führt zu Aktivierungsfehlern.
-* Segmente/Zielgruppen, die Sonderzeichen enthalten (z. B.: `&`), werden beim Exportieren von Zielgruppen nach Adobe Campaign nicht unterstützt.
+* Segmente/Zielgruppen, die Sonderzeichen enthalten (z. B.: `&`) werden beim Exportieren von Zielgruppen in [!DNL Adobe Campaign] nicht unterstützt.
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das Ziel &quot;Adobe Campaign Manage Service“ verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel geeignet ist.
+Damit Sie besser verstehen können, wie und wann Sie das Ziel &quot;[!DNL Adobe Campaign] Manage Service“ verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das [!DNL Adobe Experience Platform] Kunden mithilfe dieses Ziels bewältigen können.
 
-* Adobe Experience Platform erstellt ein Kundenprofil, das Informationen wie das Identitätsdiagramm, Verhaltensdaten aus Analytics sowie Offline- und Online-Daten enthält. Mit dieser Integration können Sie die Segmentierungsfunktionen, die bereits in Adobe Campaign vorhanden sind, um diese von Adobe Experience Platform unterstützten Zielgruppen erweitern, sodass Sie diese Daten in Campaign aktivieren können.
+* [!DNL Adobe Experience Platform] erstellt ein Kundenprofil, das Informationen wie das Identitätsdiagramm, Verhaltensdaten aus Analytics sowie Offline- und Online-Daten zusammenführt. Mit dieser Integration können Sie die Segmentierungsfunktionen, die bereits in [!DNL Adobe Campaign] vorhanden sind, um diese [!DNL Adobe Experience Platform] Zielgruppen erweitern. Daher können Sie diese Daten in Campaign aktivieren.
 
-  Ein Sportbekleidungsunternehmen möchte beispielsweise die von Adobe Experience Platform unterstützten Zielgruppen nutzen und mithilfe von Adobe Campaign aktivieren, um sich über die verschiedenen von Adobe Campaign unterstützten Kanäle mit ihrem Kundenstamm zu verbinden. Nach dem Versand der Nachrichten möchten sie das Kundenprofil in Adobe Experience Platform mit Erlebnisdaten aus Adobe Campaign wie Sendungen, Öffnungen und Klicks verbessern.
+  Ein Sportbekleidungsunternehmen möchte beispielsweise die [!DNL Adobe Experience Platform] Zielgruppen nutzen und mithilfe von [!DNL Adobe Campaign] aktivieren, um sich über die verschiedenen von [!DNL Adobe Campaign] unterstützten Kanäle mit seinem Kundenstamm zu verbinden. Nach dem Versand der Nachrichten möchten sie das Kundenprofil [!DNL Adobe Experience Platform] mit Erlebnisdaten aus [!DNL Adobe Campaign] wie Sendungen, Öffnungen und Klicks verbessern.
 
   Das Ergebnis sind Cross-Channel-Kampagnen, die im gesamten Adobe Experience Cloud-Ökosystem konsistenter sind, und ein umfangreiches Kundenprofil, das sich schnell anpasst und lernt.
 
 
-* Zusätzlich zur Zielgruppenaktivierung in Campaign können Sie das Adobe Campaign Managed Services-Ziel nutzen, um zusätzliche Profilattribute einzufügen, die an ein Profil in Adobe Experience Platform gebunden sind und einen Synchronisierungsprozess aufweisen, damit sie in der Adobe Campaign-Datenbank aktualisiert werden.
+* Zusätzlich zur Audience-Aktivierung in Campaign können Sie das [!DNL Adobe Campaign Managed Services]-Ziel nutzen, um zusätzliche Profilattribute einzufügen, die an ein Profil in [!DNL Adobe Experience Platform] gebunden sind und einen Synchronisierungsprozess vorhanden haben, damit sie in der [!DNL Adobe Campaign]-Datenbank aktualisiert werden.
 
-  Nehmen wir beispielsweise an, Sie erfassen Opt-in- und Opt-out-Werte in Adobe Experience Platform. Mit dieser Verbindung können Sie diese Werte in Adobe Campaign übernehmen und einen Synchronisierungsprozess einrichten, damit sie regelmäßig aktualisiert werden.
+  Angenommen, Sie erfassen Opt-in- und Opt-out-Werte in [!DNL Adobe Experience Platform]. Mit dieser Verbindung können Sie diese Werte in [!DNL Adobe Campaign] importieren und einen Synchronisierungsprozess einrichten, damit sie regelmäßig aktualisiert werden.
 
   >[!NOTE]
   >
-  >Die Synchronisierung von Profilattributen ist für Profile verfügbar, die bereits in der Adobe Campaign-Datenbank vorhanden sind.
+  >Die Synchronisierung von Profilattributen ist für Profile verfügbar, die bereits in der [!DNL Adobe Campaign] Datenbank vorhanden sind.
 
-[Erfahren Sie mehr über die Integration von Adobe Campaign mit Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=de)
+[Weitere Informationen zur  [!DNL Adobe Campaign]  mit [!DNL Adobe Experience Platform]](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=de)
 
 ## Unterstützte Identitäten {#supported-identities}
 
-*Adobe Campaign Managed Cloud Services* unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+*[!DNL Adobe Campaign Managed Cloud Services]* unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | EXTERNAL_ID | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. Es wird empfohlen, diese Identität zu verwenden und sie der ID in Ihrer Campaign-Instanz zuzuordnen, die für den Kunden steht (Loyalty_ID, Account_ID, Customer_ID usw.) |
-| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](/help/identity-service/features/ecid.md) . |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
+| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: &quot;Adobe Marketing Cloud ID“, &quot;[!DNL Adobe Experience Cloud] ID“, &quot;[!DNL Adobe Experience Platform] ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](/help/identity-service/features/ecid.md) . |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | [!DNL Adobe Experience Platform] unterstützt sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | [!DNL Adobe Experience Platform] unterstützt sowohl einfache als auch SHA256-Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 
@@ -84,8 +84,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 
@@ -109,7 +109,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 |---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Profilattribute auswählen“ im Workflow &quot;[-Aktivierung“ &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exporttyp | **[!UICONTROL Profile-based]** | Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Profilattribute auswählen“ im Workflow &quot;[-Aktivierung“ ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -118,7 +118,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -126,16 +126,16 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Adobe Campaign Managed Cloud Services-Zieldetailformular mit Feldern für Name, Beschreibung, Instanzauswahl, Zielgruppen-Mapping und Synchronisationstyp.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
+![[!DNL Adobe Campaign Managed Cloud Services] Formular mit Zieldetails mit Feldern für Name, Beschreibung, Instanzauswahl, Zielgruppen-Mapping und Synchronisationstyp.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL Select instance]**: Ihre **[!DNL Campaign]** Marketing-Instanz.
-* **[!UICONTROL Target mapping]**: Wählen Sie das Zielgruppen-Mapping aus, das Sie **[!DNL Adobe Campaign]** Versand verwenden. [Weitere Informationen](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=de).
+* **[!UICONTROL Target mapping]**: Wählen Sie das Zielgruppen-Mapping aus, das Sie **[!DNL Adobe Campaign]** Versand verwenden. [Weitere Informationen](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Select sync type]**
 
-   * **[!UICONTROL Audience sync]**: Verwenden Sie diese Option, um Adobe Experience Platform-Zielgruppen an Adobe Campaign zu senden.
-   * **[!UICONTROL Profile sync (Update only)]**: Verwenden Sie diese Option, um Adobe Experience Platform-Profilattribute in Adobe Campaign zu importieren und einen Synchronisierungsprozess einzurichten, damit sie regelmäßig aktualisiert werden können.
+   * **[!UICONTROL Audience sync]**: Verwenden Sie diese Option, um [!DNL Adobe Experience Platform] Zielgruppen an [!DNL Adobe Campaign] zu senden.
+   * **[!UICONTROL Profile sync (Update only)]**: Verwenden Sie diese Option, um [!DNL Adobe Experience Platform] Profilattribute in [!DNL Adobe Campaign] zu bringen und einen Synchronisierungsprozess einzurichten, damit sie regelmäßig aktualisiert werden können.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -145,7 +145,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 
 ### Governance-Richtlinie und Durchsetzungsmaßnahmen {#governance}
 
-Wählen Sie die Marketing-Aktionen aus, die für die Daten gelten, die Sie an das Ziel exportieren möchten. Für Adobe Campaign wird empfohlen, die **[!UICONTROL Email Targeting]** Marketing-Aktion auszuwählen.
+Wählen Sie die Marketing-Aktionen aus, die für die Daten gelten, die Sie an das Ziel exportieren möchten. [!DNL Adobe Campaign] empfehlen wir, die **[!UICONTROL Email Targeting]** Marketing-Aktion auszuwählen.
 
 Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Datennutzungsrichtlinien – Übersicht](/help/data-governance/policies/overview.md).
 
@@ -154,25 +154,25 @@ Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Datennutzu
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppendaten für dieses Ziel finden Sie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
+Anweisungen [ Aktivieren von Zielgruppendaten für dieses Ziel finden Sie ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Wählen Sie die XDM-Felder aus, die mit den Profilen exportiert werden sollen, und ordnen Sie sie den entsprechenden Adobe Campaign-Feldern zu.[Erfahren Sie mehr über die Auswahl von Identitäten und Attributen für E-Mail-Marketing-Ziele](overview.md)
+Wählen Sie die XDM-Felder aus, die mit den Profilen exportiert werden sollen, und ordnen Sie sie den entsprechenden [!DNL Adobe Campaign] zu.[Erfahren Sie mehr über die Auswahl von Identitäten und Attributen für E-Mail-Marketing-Ziele](overview.md)
 
 1. Quellfelder auswählen:
 
-   * Wählen Sie eine **Kennung** (z. B. das E-Mail-Feld) als Quellidentität aus, die ein Profil in Adobe Experience Platform und Adobe Campaign eindeutig identifiziert.
+   * Wählen Sie eine **Kennung** (z. B. das E-Mail-Feld) als Quellidentität aus, die ein Profil in [!DNL Adobe Experience Platform] und [!DNL Adobe Campaign] eindeutig identifiziert.
 
-   * Wählen Sie alle anderen **XDM-Quellprofilattribute** aus, die nach Adobe Campaign exportiert werden müssen.
+   * Wählen Sie alle anderen **XDM-Quellprofilattribute** aus, die nach [!DNL Adobe Campaign] exportiert werden müssen.
 
    >[!NOTE]
    >
    >Das Feld „segmentMembershipStatus“ ist eine erforderliche Zuordnung, um den segmentMembership-Status widerzuspiegeln. Dieses Feld wird standardmäßig hinzugefügt und kann nicht geändert oder entfernt werden.
 
-1. Ordnen Sie jedes Feld seinem Zielfeld in Adobe Campaign zu. Verfügbare Zielfelder werden durch das beim Erstellen des Ziels [&#x200B; Zielgruppen-Mapping &#x200B;](#destination-details).
+1. Ordnen Sie jedes Feld seinem Zielfeld in [!DNL Adobe Campaign] zu. Verfügbare Zielfelder werden durch das beim Erstellen des Ziels [ Zielgruppen-Mapping ](#destination-details).
 
 1. Identifizieren Sie obligatorische Attribute und Deduplizierungsschlüssel. Beachten Sie, dass Werte in Attributen, die als „obligatorisch“ oder „Deduplizierungsschlüssel“ markiert sind, nicht null sein dürfen.
 
@@ -183,10 +183,10 @@ Wählen Sie die XDM-Felder aus, die mit den Profilen exportiert werden sollen, u
      >
      >Stellen Sie sicher, dass der Name des Deduplizierungsschlüsselattributs mit einem Spaltennamen der ausgewählten Zielzuordnung übereinstimmt.
 
-   ![Bildschirm für die Attributzuordnung mit XDM-Quellfeldern, die Adobe Campaign-Zielfeldern zugeordnet sind, mit obligatorischen und Deduplizierungs-Schlüsselindikatoren.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
+   ![Bildschirm für die Attributzuordnung mit den XDM-Quellfeldern, die [!DNL Adobe Campaign] Zielfeldern zugeordnet sind, sowie obligatorischen und Deduplizierungs-Schlüsselindikatoren.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
 1. Sobald die Zuordnung durchgeführt wurde, können Sie die Zielkonfiguration überprüfen und abschließen, um mit dem Senden von Daten an **[!DNL Campaign]** zu beginnen.
-   [Erfahren Sie, wie Sie die Zielkonfiguration überprüfen und abschließen](/help/destinations/destination-types.md#review).
+   [Erfahren Sie, wie Sie die Zielkonfiguration überprüfen und abschließen](/help/destinations/destination-types.md#destination-types-and-categories).
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
@@ -194,15 +194,15 @@ Nachdem ein Ziel aktiviert wurde, können Sie in Campaign auf den entsprechenden
 
 ### Überwachen von Datenexportvorgängen {#jobs}
 
-Navigieren Sie zum Menü **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load jobs]** , um alle in Adobe Experience Platform aktivierten Exportvorgänge zu überwachen.
+Navigieren Sie zum Menü **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load jobs]** , um alle in [!DNL Adobe Experience Platform] aktivierten Exportvorgänge zu überwachen.
 
-Bildschirm mit Ladevorgängen für Adobe Campaign-Zielgruppe mit in Adobe Experience Platform aktivierten Exportvorgängen.![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
+![[!DNL Adobe Campaign] Bildschirm mit den Zielgruppen-Ladevorgängen wird angezeigt, dass Exportvorgänge über [!DNL Adobe Experience Platform] aktiviert wurden.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### Zugreifen auf exportierte Daten {#data}
 
 Sie können **[!UICONTROL Audience sync]** die exportierte Zielgruppe überprüfen, indem Sie zum Menü **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** navigieren.
 
-![Listenansicht der Adobe Campaign AEP-Zielgruppen mit exportierten Zielgruppen aus Experience Platform, die unter „Profil“ und „Zielgruppe“ verfügbar sind.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+![[!DNL Adobe Campaign] Listenansicht AEP-Zielgruppen mit exportierten Zielgruppen aus Experience Platform, die unter „Profil“ und „Zielgruppe“ verfügbar sind.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
 **[!UICONTROL Profile sync (Update only)]** werden die Daten für jedes Profil, das von der im Ziel aktivierten Audience angesprochen wird, automatisch in der Campaign-Datenbank aktualisiert.
 

@@ -3,22 +3,22 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d57af88cc9507e0164b044a7203c66fe9fd9240e
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 51%
+source-wordcount: '812'
+ht-degree: 47%
 
 ---
 
 # Zieltypen und Kategorien
 
-Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien von Adobe Experience Platform-Zielen zu verstehen.
+Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien [!DNL Adobe Experience Platform] Ziele zu verstehen.
 
 ## Zieltypen {#destination-types}
 
-In Adobe Experience Platform unterscheiden wir zwischen verschiedenen Zieltypen - Verbindungen, Datensatzexporten und Erweiterungen. Es gibt mehrere Arten von Verbindungszielen, mit denen Sie Daten an API-basierte Ziele, Social-Media-Ziele, CRM-Plattformen und viele mehr exportieren können.
+In [!DNL Adobe Experience Platform] unterscheiden wir zwischen verschiedenen Zieltypen - Verbindungen, Datensatzexporten und Erweiterungen. Es gibt mehrere Arten von Verbindungszielen, mit denen Sie Daten an API-basierte Ziele, Social-Media-Ziele, CRM-Plattformen und viele mehr exportieren können.
 
-Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die über alle Organisationen im Zielkatalog verfügbar sind, und privaten Zielen unterschieden werden, die Kundinnen und Kunden von Real-Time CDP Ultimate erstellen können, um ihre spezifischen Exportanwendungsfälle zu erfüllen.
+Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die über alle Organisationen im Zielkatalog verfügbar sind, und privaten Zielen unterschieden werden, die [!DNL Real-Time CDP] Ultimate-Kundinnen und -Kunden erstellen können, um ihre spezifischen Exportanwendungsfälle zu erfüllen.
 
 >[!BEGINSHADEBOX]
 
@@ -28,7 +28,7 @@ Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die über 
 
 ## Verbindungen {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundenprofil](../profile/home.md) zu bilden, wenden die Segmentierung an und exportieren Zielgruppen und qualifizierte Profile zu Zielen.
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** und **[!DNL Edge Personalization]** Ziele in [!DNL Adobe Experience Platform] erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundenprofil](../profile/home.md) zu bilden, wenden die Segmentierung an und exportieren Zielgruppen und qualifizierte Profile zu Zielen.
 
 ## Profilexportziele {#profile-export}
 
@@ -43,7 +43,7 @@ Ziele von Profilexporten erhalten Rohdaten, wobei die E-Mail-Adresse oft als Pri
 >
 >Erweiterte Unternehmensziele oder Exportziele von Streaming-Profilen sind nur für [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html)-Kunden verfügbar.
 
-Verwenden Sie die erweiterten Data Connectors für Unternehmensziele, um Adobe Real-Time Customer Data Platform-Profile nahezu in Echtzeit für interne Systeme oder andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Anwendungsfällen der Profilanreicherung bereitzustellen.
+Verwenden Sie die erweiterten Data Connectors für Unternehmensziele, um Adobe-[!DNL Real-Time Customer Data Platform] nahezu in Echtzeit für interne Systeme oder andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Anwendungsfällen der Profilanreicherung bereitzustellen.
 
 Diese Ziele empfangen Zielgruppen- und Profildaten als Experience Platform-Datenströme.
 
@@ -77,7 +77,7 @@ Erfahren Sie mehr darüber, wie Sie [Personalisierungsziele für die Personalisi
 
 Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen geführt:
 
->[!VIDEO](https://video.tv.adobe.com/v/33170?captions=ger&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## Typen von exportierten Zielgruppen {#exported-audiences-types}
 
@@ -118,7 +118,7 @@ Als Marketing-Experte können Sie eine Kombination aus Verbindungen und Erweiter
 
 Verbindungen sind nützlich, wenn es erforderlich ist, ein vollständiges zentralisiertes Kundenprofil oder eine Kundenzielgruppe zur Aktivierung zu nutzen. Verwenden Sie beispielsweise Verbindungen, wenn Sie Verhaltensdaten aus einem Analysesystem mit hochgeladenen CRM-Daten verbinden, um einen Benutzer für eine bestimmte Zielgruppe zu qualifizieren, bevor Sie ihm eine personalisierte Nachricht senden.
 
-Erweiterungen sind hilfreich, wenn Ereignisdaten zum Auslösen einer Aktion oder zur Segmentierung in einer externen Umgebung verwendet werden. Wenn beispielsweise Verhaltensdaten an ein externes System weitergeleitet werden müssen, ohne dass sie für einen bestimmten Benutzer an andere Datenquellen in der Datei angebunden werden.
+Erweiterungen sind hilfreich, wenn Trigger von Ereignisdaten eine Aktion ausführen oder die Segmentierung in einer externen Umgebung durchführen. Wenn beispielsweise Verhaltensdaten an ein externes System weitergeleitet werden müssen, ohne dass sie für einen bestimmten Benutzer an andere Datenquellen in der Datei angebunden werden.
 
 ## Zielkategorien {#categories}
 

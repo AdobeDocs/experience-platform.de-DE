@@ -5,18 +5,18 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1878'
 ht-degree: 17%
 
 ---
 
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement]-Verbindung
 
-Das Ziel [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (früher als [!DNL Pardot] bezeichnet) ermöglicht den Export Ihrer Adobe Experience Platform-Profildaten in die B2B-Marketing-Automatisierungsplattform von Salesforce.
+Mit dem Ziel [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (früher als [!DNL Pardot] bezeichnet) können Sie Ihre [!DNL Adobe Experience Platform] Profildaten in die B2B-Marketing-Automatisierungsplattform von Salesforce exportieren.
 
-Diese Integration ermöglicht eine nahtlose Datensynchronisation zwischen Ihren Kundenprofilen in Adobe Experience Platform und Ihren Marketing-Kampagnen in [!DNL Salesforce Marketing Cloud Account Engagement].
+Diese Integration ermöglicht eine nahtlose Datensynchronisation zwischen Ihren Kundenprofilen in [!DNL Adobe Experience Platform] und Ihren Marketing-Kampagnen in [!DNL Salesforce Marketing Cloud Account Engagement].
 
 Dieses Ziel verwendet die -[[!DNL Salesforce Import API v5]](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html), um Batch-Datenexporte effizient zu verarbeiten.
 
@@ -30,19 +30,19 @@ Dieses Ziel verwendet die -[[!DNL Salesforce Import API v5]](https://developer.s
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL (V2) Marketing Cloud Account Engagement]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL (V2) Marketing Cloud Account Engagement]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die [!DNL Adobe Experience Platform] Kunden mit diesem Ziel bewältigen können.
 
 ### B2B-Lead-Management {#use-case-lead-management}
 
-Synchronisieren Sie Lead-Daten aus Adobe Experience Platform mit [!DNL Salesforce Marketing Cloud Account Engagement], um eine umfassende Lead-Pflege und -Bewertung zu ermöglichen. Ihr Marketing-Team kann in Experience Platform umfangreiche Zielgruppenprofile erstellen und für automatisierte B2B-Marketing-Kampagnen in [!DNL Salesforce Marketing Cloud Account Engagement] exportieren.
+Synchronisieren Sie Lead-Daten von [!DNL Adobe Experience Platform] zu [!DNL Salesforce Marketing Cloud Account Engagement], um eine umfassende Lead-Pflege und -Bewertung zu ermöglichen. Ihr Marketing-Team kann in Experience Platform umfangreiche Zielgruppenprofile erstellen und für automatisierte B2B-Marketing-Kampagnen in [!DNL Salesforce Marketing Cloud Account Engagement] exportieren.
 
 ### Automatisierung von Campaign {#use-case-campaign-automation}
 
-Sie können Trigger-Marketing-Kampagnen in [!DNL Salesforce Marketing Cloud Account Engagement] durchführen, indem Sie Zielgruppen verwenden, die Sie in Adobe Experience Platform definieren. Nachdem Sie Ihre Audiences in [!DNL Salesforce] exportiert haben, können Sie sie für E-Mail-Kampagnen und die Verwaltung Ihrer Leads durch Pflege, Bewertung und Kampagnensegmentierung verwenden.
+Sie können Trigger-Marketing-Kampagnen in [!DNL Salesforce Marketing Cloud Account Engagement] durchführen, indem Sie Zielgruppen verwenden, die Sie in [!DNL Adobe Experience Platform] definieren. Nachdem Sie Ihre Audiences in [!DNL Salesforce] exportiert haben, können Sie sie für E-Mail-Kampagnen und die Verwaltung Ihrer Leads durch Pflege, Bewertung und Kampagnensegmentierung verwenden.
 
 ### Profilanreicherung {#use-case-profile-enrichment}
 
-Erweitern Sie Ihre [!DNL Salesforce Marketing Cloud Account Engagement] Interessentenprofile mit umfangreichen Kundendaten aus Adobe Experience Platform. Exportieren Sie umfassende Profilattribute, um detailliertere Interessentendatensätze in zu erstellen, [!DNL Salesforce Marketing Cloud Account Engagement] Targeting und Personalisierung zu verbessern.
+Erweitern Sie Ihre [!DNL Salesforce Marketing Cloud Account Engagement] Interessentenprofile mit umfangreichen Kundendaten aus [!DNL Adobe Experience Platform]. Exportieren Sie umfassende Profilattribute, um detailliertere Interessentendatensätze in zu erstellen, [!DNL Salesforce Marketing Cloud Account Engagement] Targeting und Personalisierung zu verbessern.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -66,7 +66,7 @@ Schreiben Sie die folgenden Elemente auf, bevor Sie sich beim [!DNL (V2) Marketi
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Account Engagement Business Unit ID]** | Ihre Geschäftseinheits-ID für die [!DNL Salesforce]-Kontointeraktion. Weitere Informationen zum Ermitteln der ID finden [&#x200B; in &#x200B;](https://help.salesforce.com/s/articleView?id=000381973&type=1) Salesforce-Dokumentation . |
+| **[!UICONTROL Account Engagement Business Unit ID]** | Ihre Geschäftseinheits-ID für die [!DNL Salesforce]-Kontointeraktion. Weitere Informationen zum Ermitteln der ID finden [ in ](https://help.salesforce.com/s/articleView?id=000381973&type=1) Salesforce-Dokumentation . |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Schreiben Sie die folgenden Elemente auf, bevor Sie sich beim [!DNL (V2) Marketi
 
 [!DNL (V2) Marketing Cloud Account Engagement] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
-Wenn mithilfe einer dieser Kennungen eine Übereinstimmung gefunden wird, wird der vorhandene Datensatz für Interessenten für Kontointeraktionen mit den Daten aus Adobe Experience Platform aktualisiert. Wenn keine Übereinstimmung gefunden wird, wird in Account Engagement ein neuer Interessenten-Datensatz erstellt.
+Wenn mithilfe einer dieser Kennungen eine Übereinstimmung gefunden wird, wird der vorhandene Datensatz für Interessenten für Kontointeraktionen mit den Daten aus [!DNL Adobe Experience Platform] aktualisiert. Wenn keine Übereinstimmung gefunden wird, wird in Account Engagement ein neuer Interessenten-Datensatz erstellt.
 
 | Zielidentität | Beschreibung | Zu beachten |
 |---|---|---|
@@ -90,8 +90,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 
@@ -124,7 +124,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -138,7 +138,7 @@ Sie werden zur Anmeldeseite von [!DNL Salesforce] weitergeleitet. Geben Sie Ihre
 
 ![Salesforce-Anmeldeseite](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce-Anmeldeseite.")
 
-Wählen Sie als Nächstes **[!UICONTROL Allow]** aus, um der **Adobe Experience Platform**-App Berechtigungen für den Zugriff auf Ihr [!DNL Salesforce Marketing Cloud Account Engagement] zu erteilen. *Sie müssen dies nur einmal tun*.
+Wählen Sie als Nächstes **[!UICONTROL Allow]** aus, um der **[!DNL Adobe Experience Platform]** App Berechtigungen für den Zugriff auf Ihr [!DNL Salesforce Marketing Cloud Account Engagement]-Konto zu erteilen. *Sie müssen dies nur einmal tun*.
 
 ![Bestätigungs-Popup für den Screenshot der Salesforce-App, um der Experience Platform-App Berechtigungen für den Zugriff auf die Marketing Cloud-Kontointeraktion zu erteilen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
@@ -165,15 +165,15 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
-Um Zielgruppendaten von Adobe Experience Platform an das [!DNL (V2) Marketing Cloud Account Engagement] Ziel zu senden, müssen Sie Ihre Schemafelder des Experience-Datenmodells (XDM) den entsprechenden Feldern im Ziel zuordnen.
+Um Zielgruppendaten von [!DNL Adobe Experience Platform] an das [!DNL (V2) Marketing Cloud Account Engagement] Ziel zu senden, müssen Sie Ihre Schemafelder des Experience-Datenmodells (XDM) den entsprechenden Feldern im Ziel zuordnen.
 
-Eine vollständige Liste der unterstützten [&#x200B; finden Sie in der Dokumentation zur &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)Salesforce Prospect API v5. Beachten Sie[&#x200B; dass &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html)benutzerdefinierte Felder“ in der Alpha-Version nicht unterstützt werden.
+Eine vollständige Liste der unterstützten [ finden Sie in der Dokumentation zur ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)Salesforce Prospect API v5. Beachten Sie[ dass ](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html)benutzerdefinierte Felder“ in der Alpha-Version nicht unterstützt werden.
 
 #### Unterstützte Attribute {#supported-attributes}
 

@@ -4,10 +4,10 @@ title: Aktivierungsübersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie die Zielgruppen in Adobe Experience Platform für verschiedene Zieltypen aktivieren.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 26%
+source-wordcount: '337'
+ht-degree: 27%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 26%
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Adobe Experience Platform unterstützt eine Vielzahl von Zielen. Der Zielgruppen-Aktivierungs-Workflow variiert je nach Ziel und Art der unterstützten Zielgruppendaten sowie der Häufigkeit des Datenexports.
+[!DNL Adobe Experience Platform] unterstützt eine Vielzahl von Zielen. Der Zielgruppen-Aktivierungs-Workflow variiert je nach Ziel und Art der unterstützten Zielgruppendaten sowie der Häufigkeit des Datenexports.
 
 ## Aktivierungsmethoden {#activation-methods}
 
@@ -52,7 +52,7 @@ Gehen Sie wie folgt vor, um Daten für Ihre Ziele von der Seite **[!UICONTROL Br
 
 ### Aktivieren von Zielgruppen über die Seite mit den Zielgruppendetails {#activate-audience-details}
 
-Sie können Zielgruppen für Ziele über die Seite mit den Zielgruppendetails aktivieren. Weitere Informationen finden [&#x200B; unter &#x200B;](../../segmentation/ui/audience-portal.md#audience-details)Zielgruppendetails“.
+Sie können Zielgruppen für Ziele über die Seite mit den Zielgruppendetails aktivieren. Weitere Informationen finden [ unter ](../../segmentation/ui/audience-portal.md#audience-details)Zielgruppendetails“.
 
 Führen Sie je nach ausgewähltem Ziel die in den folgenden Artikeln beschriebenen Schritte aus, um den Aktivierungs-Workflow abzuschließen:
 

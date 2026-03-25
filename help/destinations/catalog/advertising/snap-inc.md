@@ -2,10 +2,10 @@
 title: Snap Inc-Verbindung
 description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Zielgruppen aus Experience Platform exportieren.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 20%
+source-wordcount: '1141'
+ht-degree: 21%
 
 ---
 
@@ -65,9 +65,9 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
-| [!DNL Federated Audience Composition] | Ja | Zielgruppen, die über die [Federated Audience Composition“ in Experience Platform importiert &#x200B;](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/start/audiences). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
+| [!DNL Federated Audience Composition] | Ja | Zielgruppen, die über die [Federated Audience Composition“ in Experience Platform importiert ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 
@@ -100,21 +100,21 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
 Gehen Sie wie folgt vor, um sich beim Ziel zu authentifizieren:
 
-1. Suchen Sie das *Snap Inc*-Ziel im Zielkatalog von Adobe Experience Platform und wählen Sie **Einrichten**.
+1. Suchen Sie das *Snap Inc*-Ziel im Zielkatalog von [!DNL Adobe Experience Platform] und wählen Sie **Einrichten**.
 2. Wählen Sie **[!UICONTROL Connect to destination]** aus. Sie werden zum folgenden Bildschirm weitergeleitet:
    ![Authentifizierungsbildschirm 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Geben Sie Ihre Snapchat-Anmeldeinformationen ein und wählen Sie **Anmelden** aus.
-4. Ihnen werden die Snapchat-Daten angezeigt, auf die Adobe Experience Platform zugreifen kann. Wählen **Weiter**, um mit dem Verbindungsprozess fortzufahren.
+4. Ihnen werden die Snapchat-Daten angezeigt, auf die [!DNL Adobe Experience Platform] zugreifen können. Wählen **Weiter**, um mit dem Verbindungsprozess fortzufahren.
 
 ![Authentifizierungsbildschirm 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
-Nachdem Sie auf Weiter geklickt haben, warten Sie, bis Sie wieder zu Adobe Experience Platform weitergeleitet werden.
+Nachdem Sie auf Weiter geklickt haben, warten Sie, bis Sie wieder zu [!DNL Adobe Experience Platform] weitergeleitet werden.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -124,7 +124,7 @@ Um Details für das Ziel zu konfigurieren, füllen Sie die erforderlichen Felder
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Account ID]**: Die ID des Werbekontos, das mit dem Werbekonto verknüpft ist, in das Sie Ihre Zielgruppen importieren möchten. Weitere Informationen dazu finden Sie in [&#x200B; Dokumentation im Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Account ID]**: Die ID des Werbekontos, das mit dem Werbekonto verknüpft ist, in das Sie Ihre Zielgruppen importieren möchten. Weitere Informationen dazu finden Sie in [ Dokumentation im Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 >
@@ -141,20 +141,20 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Nach der Aktivierung der Zielgruppen für *Ziel „Snap*&quot; werden die Zielgruppen im Abschnitt „Zielgruppen“ des [**-**-Managers &#x200B;](https://businesshelp.snapchat.com/s/article/audience-sharing). Gehen Sie wie folgt vor, um zu diesem Abschnitt zu navigieren:
+Nach der Aktivierung der Zielgruppen für *Ziel „Snap*&quot; werden die Zielgruppen im Abschnitt „Zielgruppen“ des [**-**-Managers ](https://businesshelp.snapchat.com/s/article/audience-sharing). Gehen Sie wie folgt vor, um zu diesem Abschnitt zu navigieren:
 
 1. Melden Sie sich beim [Snap Ads Manager](https://ads.snapchat.com/) an
-2. Wählen **Zielgruppen** aus dem Pulldown-Menü in der oberen linken Ecke des Bildschirms aus. Die Zielgruppen, die Sie in Adobe Experience Platform aktiviert haben, werden in der Zielgruppenbibliothek angezeigt:
+2. Wählen **Zielgruppen** aus dem Pulldown-Menü in der oberen linken Ecke des Bildschirms aus. Die Zielgruppen, die Sie in [!DNL Adobe Experience Platform] aktiviert haben, werden in der Zielgruppenbibliothek angezeigt:
 
 ![Zielgruppen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Beachten Sie, dass eine Adobe-Zielgruppe beim ersten Aktivieren für Snap Inc zunächst als leere Zielgruppe angezeigt wird. Dies liegt daran, dass Adobe Experience Platform Mitgliedsdaten erst dann in Snap Inc. exportiert, wenn es die Zielgruppe bewertet. Weitere Informationen zur Auswertung von Audiences in Experience Platform finden Sie im Abschnitt [Segmentierungs-Service - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=de#evaluate-segments).
+Beachten Sie, dass eine Adobe-Zielgruppe beim ersten Aktivieren für Snap Inc zunächst als leere Zielgruppe angezeigt wird. Dies liegt daran, dass [!DNL Adobe Experience Platform] Mitgliedsdaten erst dann in Snap Inc exportiert, wenn es die Zielgruppe bewertet. Weitere Informationen zur Auswertung von Audiences in Experience Platform finden Sie im Abschnitt [Segmentierungs-Service - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=de#evaluate-segments).
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

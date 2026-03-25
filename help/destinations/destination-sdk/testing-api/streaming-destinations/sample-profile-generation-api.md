@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API Beispielprofile für Ihr Streaming-Ziel generieren können, die Sie für Zieltests verwenden können.
 title: Generieren von Beispielprofilen basierend auf einem Quellschema
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 92%
@@ -47,8 +47,8 @@ Um die ID einer Zielinstanz abzurufen, müssen Sie zunächst in der Experience P
 
 >[!IMPORTANT]
 >
->* Um diese API verwenden zu können, müssen Sie über eine bestehende Verbindung zu Ihrem Ziel in der Experience Platform-Benutzeroberfläche verfügen. Lesen Sie [Herstellen einer Verbindung zum Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) und [Aktivieren von Profilen und Zielgruppen für ein Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=de) für weitere Informationen.
->* Nachdem Sie die Verbindung zu Ihrem Ziel hergestellt haben, rufen Sie die ID der Zielinstanz ab, die Sie in API-Aufrufen an diesen Endpunkt verwenden sollten, wenn Sie [eine Verbindung mit Ihrem Ziel durchsuchen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=de).
+>* Um diese API verwenden zu können, müssen Sie über eine bestehende Verbindung zu Ihrem Ziel in der Experience Platform-Benutzeroberfläche verfügen. Lesen Sie [Herstellen einer Verbindung zum Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) und [Aktivieren von Profilen und Zielgruppen für ein Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) für weitere Informationen.
+>* Nachdem Sie die Verbindung zu Ihrem Ziel hergestellt haben, rufen Sie die ID der Zielinstanz ab, die Sie in API-Aufrufen an diesen Endpunkt verwenden sollten, wenn Sie [eine Verbindung mit Ihrem Ziel durchsuchen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >
 >![UI-Bild, wie Sie die Ziel-Instanz-ID abrufen](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -185,7 +185,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit der angegebenen Anz
 | `segmentMembership` | Ein Zuordnungsobjekt, das die Zielgruppenzugehörigkeiten der Person beschreibt. Weitere Informationen zu `segmentMembership` finden Sie unter [Details zur Zielgruppenzugehörigkeit](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=de). |
 | `lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
 | `xdm:status` | Ein Zeichenfolgenfeld, das angibt, ob die Zielgruppenzugehörigkeit im Rahmen der aktuellen Anfrage realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`realized`: Das Profil ist Teil des Segments.</li><li>`exited`: Das Profil verlässt die Zielgruppe im Rahmen der aktuellen Anfrage.</li></ul> |
-| `identityMap` | Ein Feld vom Typ „Zuordnung“, das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen zu `identityMap` finden Sie unter [Grundlage der Schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de#identityMap). |
+| `identityMap` | Ein Feld vom Typ „Zuordnung“, das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen zu `identityMap` finden Sie unter [Grundlage der Schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit der angegebenen Anz
 
 >[!IMPORTANT]
 >
->Verwenden Sie die Beispielprofile, die hier beim Erstellen Ihrer Vorlage generiert werden, im [Schritt zum Rendern der Vorlage](render-template-api.md#multiple-profiles-with-body).
+>Verwenden Sie die Beispielprofile, die hier beim Erstellen Ihrer Vorlage generiert werden, im [Schritt zum Rendern der Vorlage](render-template-api.md#configurable-aggregation).
 
 Sie können Beispielprofile generieren, die auf dem Zielschema basieren, indem Sie eine GET-Anfrage an den `authoring/sample-profiles/`-Endpunkt stellen und die Ziel-ID der Zielkonfiguration angeben, auf deren Basis Sie Ihre Vorlage erstellen.
 

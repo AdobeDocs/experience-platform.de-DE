@@ -2,22 +2,22 @@
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: 270facfd580b2dde09906bee1728e1be198680cf
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2512'
-ht-degree: 81%
+source-wordcount: '2470'
+ht-degree: 76%
 
 ---
 
 # Nachrichtenformat
 
-## Voraussetzungen – Adobe Experience Platform-Konzepte {#prerequisites}
+## Voraussetzungen - [!DNL Adobe Experience Platform] {#prerequisites}
 
 Um das Nachrichtenformat sowie den Profilkonfigurations- und -konvertierungsprozess auf der Seite von Adobe zu verstehen, machen Sie sich mit den folgenden Konzepten von Experience Platform vertraut:
 
 * **Experience-Datenmodell (XDM)**. [XDM-Übersicht](../../../../xdm/home.md) und [Erstellen eines XDM-Schemas in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Klasse**. [Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche](../../../../xdm/ui/resources/classes.md).
-* **IdentityMap**. Die Identitätszuordnung stellt eine Zuordnung aller Endbenutzeridentitäten in Adobe Experience Platform dar. Siehe `xdm:identityMap` im [Wörterbuch der XDM-Felder](../../../../xdm/schema/field-dictionary.md).
+* **IdentityMap**. Die Identitätszuordnung stellt eine Zuordnung aller Endbenutzeridentitäten in [!DNL Adobe Experience Platform] dar. Siehe `xdm:identityMap` im [Wörterbuch der XDM-Felder](../../../../xdm/schema/field-dictionary.md).
 * **SegmentMembership**. Das XDM-Attribut [segmentMembership](../../../../xdm/schema/field-dictionary.md) informiert darüber, zu welchen Zielgruppen ein Profil gehört. Lesen Sie zu den drei verschiedenen Werten im Feld `status` die Dokumentation zur [Schemafeldgruppe der Zielgruppenzugehörigkeitsdetails](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
@@ -35,13 +35,13 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 
 ## Überblick {#overview}
 
-Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
+Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von Daten behandelt, die von [!DNL Adobe Experience Platform] an Ziele exportiert wurden.
 
-Adobe Experience Platform exportiert Daten in eine beträchtliche Anzahl von Zielen in verschiedenen Datenformaten. Beispiele für Zieltypen sind Werbeplattformen (Google), soziale Netzwerke (Facebook) und Cloud-Speicher-Standorte (Amazon S3, Azure Event Hub).
+[!DNL Adobe Experience Platform] exportiert Daten in eine erhebliche Anzahl von Zielen in verschiedenen Datenformaten. Beispiele für Zieltypen sind Werbeplattformen (Google), soziale Netzwerke (Facebook) und Cloud-Speicher-Standorte (Amazon S3, Azure Event Hub).
 
 Experience Platform kann das Nachrichtenformat der exportierten Profile so anpassen, dass es dem erwarteten Format auf Ihrer Seite entspricht. Um diese Anpassung zu verstehen, sind die folgenden Konzepte wichtig:
 
-* Das XDM-Quellschema (1) und -Zielschema (2) in Adobe Experience Platform
+* Das Quell- (1) und Ziel- (2) XDM-Schema in [!DNL Adobe Experience Platform]
 * Das erwartete Nachrichtenformat auf der Partnerseite (3) und
 * Die Transformationsebene zwischen dem XDM-Schema und dem erwarteten Nachrichtenformat, die Sie definieren können, indem Sie eine [Nachrichtenumwandlungsvorlage](#using-templating) erstellen.
 
@@ -67,11 +67,11 @@ Basierend auf den oben beschriebenen Schematransformationen wird hier gezeigt, w
 
 ## Erste Schritte: Transformieren von drei grundlegenden Attributen {#getting-started}
 
-Um den Prozess der Profilumwandlung zu demonstrieren, verwendet das folgende Beispiel drei gängige Profilattribute in Adobe Experience Platform: **Vorname**, **Nachname** und **E-Mail-Adresse**.
+Um den Prozess der Profilumwandlung zu demonstrieren, verwendet das folgende Beispiel drei gängige Profilattribute in [!DNL Adobe Experience Platform]: **Vorname**, **Nachname** und **E-Mail-Adresse**.
 
 >[!NOTE]
 >
->Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche zu, und zwar im Schritt **Zuordnung** [&#x200B; des Zielaktivierungs-Workflows](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>Die Kundin bzw. der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der [!DNL Adobe Experience Platform]-Benutzeroberfläche zu **im Schritt** Zuordnung“ des Workflows [Ziel aktivieren](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Nehmen wir an, Ihre Plattform kann ein Nachrichtenformat wie das Folgende erhalten:
 
@@ -186,7 +186,7 @@ Informationen zum Transformieren der in Ihr Ziel exportierten Profilattribute fi
 
 >[!IMPORTANT]
 >
->Eine Liste aller in Adobe Experience Platform verfügbaren Profilattribute finden Sie im [Wörterbuch der XDM-Felder](../../../../xdm/schema/field-dictionary.md).
+>Eine Liste aller in [!DNL Adobe Experience Platform] verfügbaren Profilattribute finden Sie im [Wörterbuch der XDM-Felder](../../../../xdm/schema/field-dictionary.md).
 
 
 **Eingabe**
@@ -609,7 +609,7 @@ Profil 2:
 
 **Ergebnis**
 
-Die `json` unten zeigt die aus Adobe Experience Platform exportierten Daten.
+Die folgende `json` stellt die aus [!DNL Adobe Experience Platform] exportierten Daten dar.
 
 ```json
 {
@@ -802,7 +802,7 @@ Profil 2:
 
 **Ergebnis**
 
-Die `json` unten zeigt die aus Adobe Experience Platform exportierten Daten.
+Die folgende `json` stellt die aus [!DNL Adobe Experience Platform] exportierten Daten dar.
 
 ```json
 {
@@ -1212,13 +1212,13 @@ Die nachstehende Tabelle enthält Beschreibungen der Funktionen in den obigen Be
 |---------|----------|----------|
 | `input.profile` | Das Profil, dargestellt als ein [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Folgt dem weiter oben erwähnten Partner-XDM-Schema auf dieser Seite. |  |
 | `hasSegments` | Diese Funktion akzeptiert eine Zuordnung von Namespace-Zielgruppen-IDs als Parameter. Die Funktion gibt `true` zurück, wenn sich mindestens eine Zielgruppe in der Zuordnung befindet (unabhängig vom Status), `false` andernfalls. Mit dieser Funktion können Sie entscheiden, ob Sie eine Zuordnung von Zielgruppen durchlaufen oder nicht. | `hasSegments(input.profile.segmentMembership)` |
-| `destination.namespaceSegmentAliases` | Zuordnung von Zielgruppen-IDs in einem bestimmten Adobe Experience Platform-Namespace zu Zielgruppen-Aliassen im System des Partners. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
-| `destination.namespaceSegmentNames` | Zuordnung von Zielgruppennamen in bestimmten Adobe Experience Platform-Namespaces zu Zielgruppennamen im System des Partners. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentAliases` | Zuordnung von Zielgruppen-IDs in einem bestimmten [!DNL Adobe Experience Platform]-Namespace zu Zielgruppen-Aliassen im System des Partners. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | Zuordnung von Zielgruppennamen in bestimmten [!DNL Adobe Experience Platform]-Namespaces zu Zielgruppennamen im System des Partners. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
 | `destination.namespaceSegmentTimestamps` | Gibt den Zeitpunkt zurück, zu dem eine Zielgruppe im UNIX-Zeitstempelformat erstellt, aktualisiert oder aktiviert wurde. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: Gibt im UNIX-Zeitstempelformat den Zeitpunkt zurück, zu dem das Segment mit der ID `seg-id-1` aus dem `ups`-Namespace erstellt wurde.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: Gibt im UNIX-Zeitstempelformat die Zeit zurück, zu der die Zielgruppe mit der ID `seg-id-1` aus dem `ups`-Namespace aktualisiert wurde.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: Gibt im UNIX-Zeitstempelformat die Zeit zurück, zu der die Zielgruppe mit der ID `seg-id-1` aus dem `ups`-Namespace für das Ziel aktiviert wurde.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: Gibt im UNIX-Zeitstempelformat die Zeit zurück, zu der die Zielgruppenaktivierung am Ziel aktualisiert wurde.</li></ul> |
 | `addedSegments(mapOfNamespacedSegmentIds)` | Gibt über alle Namespaces hinweg nur die Zielgruppen mit Status `realized` zurück. | `addedSegments(input.profile.segmentMembership)` |
 | `removedSegments(mapOfNamespacedSegmentIds)` | Gibt über alle Namespaces hinweg nur die Zielgruppen mit Status `exited` zurück. | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **Veraltet. Ersetzt durch`destination.namespaceSegmentAliases`** <br><br> Zuordnung von Zielgruppen-IDs im Adobe Experience Platform-Namespace zu Zielgruppen-Aliassen im System des Partners. | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **Veraltet. Ersetzt durch`destination.namespaceSegmentNames`** <br><br> Zuordnung von Zielgruppennamen im Adobe Experience Platform-Namespace zu Zielgruppennamen im System des Partners. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentAliases` | **Veraltet. Ersetzt durch`destination.namespaceSegmentAliases`** <br><br> Zuordnung von Zielgruppen-IDs im [!DNL Adobe Experience Platform]-Namespace zu Zielgruppen-Aliassen im System des Partners. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Veraltet. Ersetzt durch`destination.namespaceSegmentNames`** <br><br> Zuordnung von Zielgruppennamen im [!DNL Adobe Experience Platform]-Namespace zu Zielgruppennamen im System des Partners. | `destination.segmentNames["seg-name-1"]` |
 | `destination.segmentTimestamps` | **Veraltet. Ersetzt durch`destination.namespaceSegmentTimestamps`** <br><br> Gibt den Zeitpunkt zurück, zu dem eine Zielgruppe im UNIX-Zeitstempelformat erstellt, aktualisiert oder aktiviert wurde. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: Gibt die Zeit im UNIX-Zeitstempelformat zurück, zu der die Zielgruppe mit der ID `seg-id-1` erstellt wurde.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: Gibt im UNIX-Zeitstempelformat die Zeit zurück, zu der die Zielgruppe mit der ID `seg-id-1` aktualisiert wurde.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: Gibt im UNIX-Zeitstempelformat die Zeit zurück, zu der die Zielgruppe mit der ID `seg-id-1` für das Ziel aktiviert wurde.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: Gibt im UNIX-Zeitstempelformat die Zeit zurück, zu der die Zielgruppenaktivierung am Ziel aktualisiert wurde.</li></ul> |
 
 {style="table-layout:auto"}

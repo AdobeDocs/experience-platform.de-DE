@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie die Dateiexporteinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Batch-Konfiguration
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1028'
 ht-degree: 85%
 
 ---
@@ -106,7 +106,7 @@ Die Werte, die Sie hier festlegen, werden im Schritt [Zielgruppenexport planen](
 
 ## Dateinamenkonfiguration {#file-name-configuration}
 
-Verwenden Sie Makros zur Dateinamenkonfiguration, um zu definieren, was die Namen der exportierten Dateien enthalten sollen. Die Makros in der folgenden Tabelle beschreiben Elemente, die in der Benutzeroberfläche des Bildschirms [Dateinamenkonfiguration](../../../ui/activate-batch-profile-destinations.md#file-names) angezeigt werden.
+Verwenden Sie Makros zur Dateinamenkonfiguration, um zu definieren, was die Namen der exportierten Dateien enthalten sollen. Die Makros in der folgenden Tabelle beschreiben Elemente, die in der Benutzeroberfläche des Bildschirms [Dateinamenkonfiguration](../../../ui/activate-batch-profile-destinations.md#configure-file-names) angezeigt werden.
 
 >[!TIP]
 >
@@ -119,7 +119,7 @@ Verwenden Sie Makros zur Dateinamenkonfiguration, um zu definieren, was die Name
 | `SEGMENT_NAME` | [!UICONTROL Segment Name] | Benutzerdefinierter Zielgruppenname | VIP |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Eindeutige, von Experience Platform generierte ID der Zielinstanz | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Benutzerdefinierter Name der Zielinstanz. | Mein Werbeziel 2022 |
-| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Name der Kundenorganisation in Adobe Experience Platform. | Mein Organisationsname |
+| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Name der Kundenorganisation in [!DNL Adobe Experience Platform]. | Mein Organisationsname |
 | `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Name der von der Kundinnen oder dem Kunden verwendeten Sandbox. | prod |
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` und `TIMESTAMP` definieren beide den Zeitpunkt der Erstellung der Datei, jedoch in verschiedenen Formaten. <br><br><ul><li>`DATETIME` verwendet das folgende Format: JJJJMMTT_HHMMSS.</li><li>`TIMESTAMP` verwendet das 10-stellige Unix-Format. </li></ul> `DATETIME` und `TIMESTAMP` schließen sich gegenseitig aus und können nicht gleichzeitig verwendet werden. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Custom text] | Benutzerdefinierter Text, der in den Dateinamen eingefügt werden soll. Kann nicht in `defaultFilename` verwendet werden. | Mein_Benutzerdefinierter_Text |

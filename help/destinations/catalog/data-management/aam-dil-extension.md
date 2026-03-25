@@ -3,10 +3,10 @@ keywords: Audience Manager DIL-Erweiterung;Ziel-Audience-Manager;DIL-Erweiterung
 title: Audience Manager DIL-Erweiterung
 description: Die Audience Manager DIL-Erweiterung ist ein Ziel der Data Management Platform (DMP) in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 44%
+source-wordcount: '490'
+ht-degree: 35%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 44%
 
 ## Überblick {#overview}
 
-Dies ist die Adobe Audience Manager Data Integration Library-Erweiterung (Client-seitige Implementierung). Hinweis: Diese Erweiterung ist nicht für die Server-seitige Weiterleitung (Server-Side Forwarding, SSF) von Adobe Analytics-Daten vorgesehen. Nutzen Sie für SSF die Adobe Analytics-Erweiterung. Wichtig: Ab Version 8.0 ist DIL stark vom [!DNL Experience Cloud] ID-Service, Version 3.3 oder höher, abhängig. Bitte sowohl [!DNL Experience Cloud] ID-Service als auch DIL implementieren, um vollständige [!DNL Audience Manager]-Datenintegrationsfunktionen zu erhalten.
+Dies ist die Adobe Audience Manager Data Integration Library-Erweiterung (Client-seitige Implementierung). Hinweis: Diese Erweiterung ist nicht für die Server-seitige Weiterleitung (SSF) [!DNL Adobe Analytics] Daten vorgesehen. Verwenden Sie für SSF die [!DNL Adobe Analytics]. Wichtig: Ab Version 8.0 ist DIL stark vom [!DNL Experience Cloud] ID-Service, Version 3.3 oder höher, abhängig. Bitte sowohl [!DNL Experience Cloud] ID-Service als auch DIL implementieren, um vollständige [!DNL Audience Manager]-Datenintegrationsfunktionen zu erhalten.
 
-[!DNL Audience Manager] DIL ist eine Erweiterung der Data Management Platform (DMP) in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite [Audience Manager-Erweiterung](../../../tags/extensions/client/audience-manager/overview.md) in der Tags-Dokumentation.
+[!DNL Audience Manager] DIL ist eine Erweiterung von Data Management Platform (DMP) in [!DNL Adobe Experience Platform]. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite [Audience Manager-Erweiterung](../../../tags/extensions/client/audience-manager/overview.md) in der Tags-Dokumentation.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Erweiterungen in Experience Platform finden Sie unter [Übersicht über Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 Diese Erweiterung ist im [!DNL Destinations] für alle Kunden verfügbar, die Experience Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in [!DNL Adobe Experience Platform]. Tags werden [!DNL Adobe Experience Cloud] Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die **[!UICONTROL manage_properties]** Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
@@ -44,7 +44,7 @@ Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
 Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der Seite [Audience Manager-Erweiterung](../../../tags/extensions/client/audience-manager/overview.md) in der Tags-Dokumentation.
 
-Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen &#x200B;](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
+Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 
 ## Verwenden der Erweiterung {#how-to-use}
 

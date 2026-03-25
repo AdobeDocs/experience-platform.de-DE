@@ -2,17 +2,17 @@
 description: Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 title: OAuth 2-Autorisierung
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2273'
-ht-degree: 74%
+source-wordcount: '2243'
+ht-degree: 69%
 
 ---
 
 
 # OAuth 2-Autorisierung
 
-Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu &#x200B;](https://tools.ietf.org/html/rfc6749).
+Destination SDK unterstützt verschiedene Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Option, sich mithilfe des OAuth 2[Autorisierungs-Frameworks bei Ihrem Ziel zu ](https://tools.ietf.org/html/rfc6749).
 
 Auf dieser Seite werden die verschiedenen von Destination SDK unterstützten OAuth 2-Autorisierungsflüsse beschrieben und Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel bereitgestellt.
 
@@ -33,9 +33,9 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 
 ### Voraussetzungen in Ihrem System {#prerequisites}
 
-Als ersten Schritt müssen Sie in Ihrem System eine Anwendung für Adobe Experience Platform erstellen oder anderweitig Experience Platform in Ihrem System registrieren. Das Ziel besteht darin, eine Client-ID und ein Client-Geheimnis zu generieren, die zum Authentifizieren von Experience Platform bei Ihrem Ziel erforderlich sind.
+Als ersten Schritt müssen Sie eine App in Ihrem System zur [!DNL Adobe Experience Platform] erstellen oder anderweitig Experience Platform in Ihrem System registrieren. Das Ziel besteht darin, eine Client-ID und ein Client-Geheimnis zu generieren, die zum Authentifizieren von Experience Platform bei Ihrem Ziel erforderlich sind.
 
-Als Teil dieser Konfiguration in Ihrem System benötigen Sie die Adobe Experience Platform OAuth 2-Umleitungs-/Callback-URLs, die Sie in der folgenden Liste finden.
+Im Rahmen dieser Konfiguration in Ihrem System benötigen Sie die [!DNL Adobe Experience Platform] OAuth 2-Umleitungs-/Callback-URLs, die Sie in der folgenden Liste finden.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
@@ -46,7 +46,7 @@ Als Teil dieser Konfiguration in Ihrem System benötigen Sie die Adobe Experienc
 
 >[!IMPORTANT]
 >
->Der Schritt zum Registrieren einer Umleitungs-/Callback-URL für Adobe Experience Platform in Ihrem System ist nur für den Gewährungstyp [OAuth 2 mit Autorisierungs-Code](#authorization-code) erforderlich. Für die beiden anderen unterstützten Gewährungstypen (Kennwort und Client-Anmeldedaten) können Sie diesen Schritt überspringen.
+>Der Schritt zum Registrieren einer Umleitungs-/Callback-URL für [!DNL Adobe Experience Platform] in Ihrem System ist nur für den Gewährungstyp [OAuth 2 mit Autorisierungs](#authorization-code) erforderlich. Für die beiden anderen unterstützten Gewährungstypen (Kennwort und Client-Anmeldedaten) können Sie diesen Schritt überspringen.
 
 Am Ende dieses Schritts sollten Sie über Folgendes verfügen:
 
@@ -56,7 +56,7 @@ Am Ende dieses Schritts sollten Sie über Folgendes verfügen:
 
 ### Was Sie in Destination SDK tun müssen {#to-do-in-destination-sdk}
 
-Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details unter dem [-Parameter zur &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md)Zielkonfiguration`customerAuthenticationConfigurations` hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach Gewährungstyp der OAuth 2-Autorisierung zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
+Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details unter dem [-Parameter zur ](../../authoring-api/destination-configuration/create-destination-configuration.md)Zielkonfiguration`customerAuthenticationConfigurations` hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach Gewährungstyp der OAuth 2-Autorisierung zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
 
 ## Unterstützte OAuth 2-Gewährungstypen {#oauth2-grant-types}
 
@@ -126,8 +126,8 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
 | `accessTokenUrl` | Zeichenfolge | Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und optional Token aktualisiert. |
 | `authorizationUrl` | Zeichenfolge | Die URL Ihres Autorisierungs-Servers, über die Sie die Benutzerin bzw. den Benutzer zur Anmeldung bei Ihrer Anwendung umleiten. |
 | `refreshTokenUrl` | Zeichenfolge | *Optional.* Die URL auf Ihrer Seite, die Aktualisierungs-Token ausgibt. Häufig ist die `refreshTokenUrl` identisch mit der `accessTokenUrl`. |
-| `clientId` | Zeichenfolge | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
-| `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
+| `clientId` | Zeichenfolge | Die Client-ID, die Ihr System [!DNL Adobe Experience Platform] zuweist. |
+| `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System [!DNL Adobe Experience Platform] zuweist. |
 | `scope` | Liste von Zeichenfolgen | *Optional*. Legen Sie den Umfang der Aktionen fest, die das Zugriffstoken Experience Platform für Ihre Ressourcen ermöglicht. Beispiel: „lesen, schreiben“. |
 | `options.useBasicAuth` | Boolesch | *Optional*. Ein boolescher Wert, der steuert, wie die Client-Anmeldeinformationen (Client-ID und Client-Geheimnis) an den Token-Endpunkt des OAuth-Anbieters gesendet werden, wenn ein Autorisierungs-Code gegen ein Zugriffstoken ausgetauscht wird. <ul><li>Wenn als `false` oder nicht definiert festgelegt, werden die Anmeldeinformationen als `client_id`- und `client_secret` im POST-Anfrageinhalt gesendet (Standardverhalten).</li><li>Wenn dieser Parameter auf `true` gesetzt ist, werden die Anmeldeinformationen im HTTP-`Authorization`-Header im Standard-Authentifizierungsformat gesendet: `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Legen Sie `useBasicAuth` auf `true` fest, wenn Ihr OAuth-Anbieter erfordert, dass Client-Anmeldeinformationen im `Authorization`-Header und nicht im Anfragetext gesendet werden. |
 
@@ -170,8 +170,8 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
 | `authType` | Zeichenfolge | Verwenden Sie „OAUTH2“. |
 | `grant` | Zeichenfolge | Verwenden Sie „OAUTH2_PASSWORD“. |
 | `accessTokenUrl` | Zeichenfolge | Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und optional Token aktualisiert. |
-| `clientId` | Zeichenfolge | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
-| `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
+| `clientId` | Zeichenfolge | Die Client-ID, die Ihr System [!DNL Adobe Experience Platform] zuweist. |
+| `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System [!DNL Adobe Experience Platform] zuweist. |
 | `scope` | Liste von Zeichenfolgen | *Optional*. Legen Sie den Umfang der Aktionen fest, die das Zugriffstoken Experience Platform für Ihre Ressourcen ermöglicht. Beispiel: „lesen, schreiben“. |
 
 {style="table-layout:auto"}
@@ -212,8 +212,8 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
 | `grant` | Zeichenfolge | Verwenden Sie „OAUTH2_CLIENT_CREDENTIALS“. |
 | `accessTokenUrl` | Zeichenfolge | Die URL Ihres Autorisierungs-Servers, die ein Zugriffstoken und ein optionales Aktualisierungstoken ausgibt. |
 | `refreshTokenUrl` | Zeichenfolge | *Optional.* Die URL auf Ihrer Seite, die Aktualisierungs-Token ausgibt. Häufig ist die `refreshTokenUrl` identisch mit der `accessTokenUrl`. |
-| `clientId` | Zeichenfolge | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
-| `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
+| `clientId` | Zeichenfolge | Die Client-ID, die Ihr System [!DNL Adobe Experience Platform] zuweist. |
+| `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System [!DNL Adobe Experience Platform] zuweist. |
 | `scope` | Liste von Zeichenfolgen | *Optional*. Legen Sie den Umfang der Aktionen fest, die das Zugriffstoken Experience Platform für Ihre Ressourcen ermöglicht. Beispiel: „lesen, schreiben“. |
 
 {style="table-layout:auto"}
@@ -491,4 +491,4 @@ Abhängig von Ihrer Autorisierungsanpassung müssen Sie möglicherweise auf Date
 
 ## Nächste Schritte {#next-steps}
 
-Durch das Lesen dieses Artikels kennen Sie jetzt die von Adobe Experience Platform unterstützten OAuth 2-Autorisierungsmuster und wissen, wie Sie Ihr Ziel mit OAuth 2-Autorisierungsunterstützung konfigurieren können. Als Nächstes können Sie Ihr OAuth 2-unterstütztes Ziel mithilfe von Destination SDK einrichten. Lesen Sie [Verwenden von Destination SDK, um Ihr Ziel zu konfigurieren](../../guides/configure-destination-instructions.md) für die nächsten Schritte.
+Durch das Lesen dieses Artikels kennen Sie jetzt die von [!DNL Adobe Experience Platform] unterstützten OAuth 2-Autorisierungsmuster und wissen, wie Sie Ihr Ziel mit OAuth 2-Autorisierungsunterstützung konfigurieren können. Als Nächstes können Sie Ihr OAuth 2-unterstütztes Ziel mithilfe von Destination SDK einrichten. Lesen Sie [Verwenden von Destination SDK, um Ihr Ziel zu konfigurieren](../../guides/configure-destination-instructions.md) für die nächsten Schritte.

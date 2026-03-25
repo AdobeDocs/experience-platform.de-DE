@@ -4,9 +4,9 @@ title: Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Ser
 description: Erfahren Sie, wie Sie mit der Flow Service-API Dateien mit qualifizierten Profilen in Cloud-Speicher-Ziele exportieren können.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '4973'
+source-wordcount: '4966'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 Verwenden Sie die erweiterten Dateiexportfunktionen, um beim Exportieren von Dateien aus Experience Platform auf erweiterte Anpassungsfunktionen zuzugreifen:
 
-* Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
 * Möglichkeit zum Festlegen benutzerdefinierter Datei-Kopfzeilen in exportierten Dateien durch den [verbesserten Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Möglichkeit zur Auswahl des [Dateityps](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) der exportierten Datei.
 * [Möglichkeit zum Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -29,11 +29,11 @@ Diese Funktion wird von den sechs unten aufgeführten Cloud-Speicherkarten unter
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-In diesem Artikel wird der Arbeitsablauf erläutert, der für die Verwendung der [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) zum Exportieren qualifizierter Profile aus Adobe Experience Platform an einen der oben verknüpften Cloud-Speicherorte erforderlich ist.
+In diesem Artikel wird der Arbeitsablauf erläutert, der für die Verwendung der [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) zum Exportieren qualifizierter Profile von [!DNL Adobe Experience Platform] an einen der oben verknüpften Cloud-Speicherorte erforderlich ist.
 
 >[!TIP]
 >
->Sie können auch die Experience Platform-Benutzeroberfläche verwenden, um Profile in Cloud-Speicher-Ziele zu exportieren. Lesen Sie [&#x200B; Tutorial zum Aktivieren dateibasierter Ziele &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) weitere Informationen.
+>Sie können auch die Experience Platform-Benutzeroberfläche verwenden, um Profile in Cloud-Speicher-Ziele zu exportieren. Lesen Sie [ Tutorial zum Aktivieren dateibasierter Ziele ](/help/destinations/ui/activate-batch-profile-destinations.md) weitere Informationen.
 
 <!--
 
@@ -47,9 +47,9 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ![Schritte zum Aktivieren von Zielgruppen mit Hervorhebung des aktuellen Schritts, in dem sich der Benutzer befindet](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] können Sie aus Ihren [!DNL Adobe Experience Platform]-Daten Zielgruppen erstellen und Zielgruppen in [!DNL Real-Time Customer Profile] generieren.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
@@ -59,7 +59,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen m�
 
 Zum Exportieren von Profilen benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 ### Lesen von Beispiel-API-Aufrufen {#reading-sample-api-calls}
 
@@ -87,7 +87,7 @@ Für alle Anfragen mit einer Payload (`POST`, `PUT`, `PATCH`) ist eine zusätzli
 
 ### API-Referenzdokumentation {#api-reference-documentation}
 
-Eine zugehörige Referenzdokumentation für alle API-Vorgänge finden Sie in diesem Tutorial. Weitere Informationen finden Sie in [&#x200B; Dokumentation zur Flow Service - Ziele-API auf der Adobe Developer-Website](https://developer.adobe.com/experience-platform-apis/references/destinations/). Wir empfehlen, dass Sie dieses Tutorial und die API-Referenzdokumentation parallel verwenden.
+Eine zugehörige Referenzdokumentation für alle API-Vorgänge finden Sie in diesem Tutorial. Weitere Informationen finden Sie in [ Dokumentation zur Flow Service - Ziele-API auf der Adobe Developer-Website](https://developer.adobe.com/experience-platform-apis/references/destinations/). Wir empfehlen, dass Sie dieses Tutorial und die API-Referenzdokumentation parallel verwenden.
 
 ### Glossar {#glossary}
 
@@ -3275,7 +3275,7 @@ Notieren Sie die Datenfluss-ID aus der Antwort. Diese ID ist in späteren Schrit
 
 ### Audiences zum Export hinzufügen {#add-audiences}
 
-In diesem Schritt können Sie auch auswählen, welche Zielgruppen Sie an das Ziel exportieren möchten. Ausführliche Informationen zu diesem Schritt und zum Anfrageformat zum Hinzufügen einer Zielgruppe zum Datenfluss finden Sie in den Beispielen im Abschnitt [Aktualisieren &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) Zieldatenflusses“ der API-Referenzdokumentation.
+In diesem Schritt können Sie auch auswählen, welche Zielgruppen Sie an das Ziel exportieren möchten. Ausführliche Informationen zu diesem Schritt und zum Anfrageformat zum Hinzufügen einer Zielgruppe zum Datenfluss finden Sie in den Beispielen im Abschnitt [Aktualisieren ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) Zieldatenflusses“ der API-Referenzdokumentation.
 
 
 ## Einrichten der Attribut- und Identitätszuordnung {#attribute-and-identity-mapping}
@@ -3294,7 +3294,7 @@ Um beispielsweise die folgende Zuordnung zu erhalten, die in der Benutzeroberfl�
 
 ### Eingabeschema erstellen {#create-input-schema}
 
-Um ein Eingabeschema zu erstellen, müssen Sie zunächst Ihr [Vereinigungsschema“ &#x200B;](/help/profile/ui/union-schema.md) die Identitäten abrufen, die an das Ziel exportiert werden können. Dies ist das Schema der Attribute und Identitäten, die Sie als Quellzuordnung auswählen können.
+Um ein Eingabeschema zu erstellen, müssen Sie zunächst Ihr [Vereinigungsschema“ ](/help/profile/ui/union-schema.md) die Identitäten abrufen, die an das Ziel exportiert werden können. Dies ist das Schema der Attribute und Identitäten, die Sie als Quellzuordnung auswählen können.
 
 ![Aufzeichnung mit den Attribut- und Identitätsoptionen in der Ansicht Quellfeld auswählen](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
 
@@ -3489,7 +3489,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Anzeigen verfügbarer Identitäten zur Verwendung im Eingabeschema
 
-Die Antwort gibt die Identitäten zurück, die Sie beim Erstellen des Eingabeschemas verwenden können. Beachten Sie, dass diese Antwort sowohl [standardmäßige](/help/identity-service/features/namespaces.md#standard) als auch [benutzerdefinierte](/help/identity-service/features/namespaces.md#manage-namespaces) Identity-Namespaces zurückgibt, die Sie in Experience Platform eingerichtet haben.
+Die Antwort gibt die Identitäten zurück, die Sie beim Erstellen des Eingabeschemas verwenden können. Beachten Sie, dass diese Antwort sowohl [standardmäßige](/help/identity-service/features/namespaces.md#standard) als auch [benutzerdefinierte](/help/identity-service/features/namespaces.md#create-namespaces) Identity-Namespaces zurückgibt, die Sie in Experience Platform eingerichtet haben.
 
 ```json
 [
@@ -4462,7 +4462,7 @@ Rufen Sie als Nächstes die ID des Datenflusses ab, den Sie aktualisieren möcht
 
 >[!BEGINSHADEBOX]
 
-Weitere [&#x200B; zum Abrufen der ID eines Datenflusses finden &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/getFlowById) unter „Abrufen der Details Zieldatenflusses“.
+Weitere [ zum Abrufen der ID eines Datenflusses finden ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/getFlowById) unter „Abrufen der Details Zieldatenflusses“.
 
 >[!ENDSHADEBOX]
 
@@ -4871,11 +4871,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Informationen zu den [verschiedenen von der Datenflussausführungs-API zurückgegebenen Parametern“ finden Sie &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) der API-Referenzdokumentation.
+Informationen zu den [verschiedenen von der Datenflussausführungs-API zurückgegebenen Parametern“ finden Sie ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) der API-Referenzdokumentation.
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

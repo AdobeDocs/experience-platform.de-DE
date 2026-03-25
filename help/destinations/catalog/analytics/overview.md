@@ -3,10 +3,10 @@ keywords: Analytics-Ziele;Analytics-Ziel
 title: Analyseziele – Übersicht
 description: Analyseziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, und erfassen Daten, um das Verhalten Ihrer Zielgruppe zu untersuchen. Diese Plattformen liefern einzigartige Einblicke in Interaktion und Konversion Ihrer wertvollsten Besucher.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 83%
+source-wordcount: '170'
+ht-degree: 85%
 
 ---
 
@@ -18,7 +18,7 @@ Analyseziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, u
 
 ## Unterstützte Analytics-Ziele {#supported-destinations}
 
-Derzeit unterstützt Adobe Experience Platform die unten aufgeführten Analyseziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+Derzeit unterstützt [!DNL Adobe Experience Platform] die unten aufgeführten Analyseziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 * [Adform Website Tracking-Erweiterung](adform.md)
 * [Adobe Analytics-Erweiterung](adobe-analytics.md)

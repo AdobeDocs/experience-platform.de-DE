@@ -2,7 +2,7 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 84%
@@ -158,7 +158,7 @@ Ein Profil qualifiziert sich nicht bei jeder Aktualisierung für die Aufnahme in
 
 Wenn sich jedoch das `segmentMembership` für ein Profil ändert, wird das Profil in die exportierten Dateien aufgenommen. Mit anderen Worten: Wenn das Profil Teil der Zielgruppe wird oder aus der Zielgruppe entfernt wird, wird es in inkrementelle Dateiexporte eingeschlossen.
 
-Trigger Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm) hinzugefügt wird, &#x200B;](/help/identity-service/features/identity-graph-viewer.md) das Profil in einen neuen inkrementellen Dateiexport eingeschlossen.
+Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm) hinzugefügt wird, ](/help/identity-service/features/identity-graph-viewer.md) das Profil in einen neuen inkrementellen Dateiexport eingeschlossen.
 
 Wenn einer Zielzuordnung eine neue Zielgruppe hinzugefügt wird, hat dies keine Auswirkungen auf Qualifizierungen und Exporte für ein anderes Segment. Exportpläne werden für jede Zielgruppe einzeln konfiguriert und Dateien werden für jedes Segment separat exportiert, selbst wenn die Zielgruppen demselben Zieldatenfluss hinzugefügt wurden.
 

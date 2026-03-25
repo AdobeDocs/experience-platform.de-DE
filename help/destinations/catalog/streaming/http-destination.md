@@ -4,9 +4,9 @@ title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '3039'
+source-wordcount: '3020'
 ht-degree: 48%
 
 ---
@@ -35,8 +35,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -49,7 +49,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 
@@ -99,7 +99,7 @@ Um [!DNL mTLS] mit [!DNL HTTP API] Zielen verwenden zu können, müssen für den
 
 Wenn Sie Zertifikatdetails wie die [!DNL Common Name] (CN) und [!DNL Subject Alternative Names] (SAN) auf zusätzliche Validierungen durch Dritte überprüfen möchten, verwenden Sie die API, um das Zertifikat abzurufen und diese Felder aus der Antwort zu extrahieren.
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
+Weitere Informationen finden [ in der ](../../../data-governance/mtls-api/public-certificate-endpoint.md) zum öffentlichen Zertifikatendpunkt .
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
@@ -136,7 +136,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Beim Herstellen einer Verbindung zu diesem Ziel müssen Sie die folgenden Informationen angeben:
 
@@ -171,11 +171,11 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL OAuth 2 Password]** für die Ve
 
 >[!NOTE]
 >
->**mTLS-Einschränkung:** mTLS wird bei der OAuth 2-Kennwortauthentifizierung nicht unterstützt. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#mtls-considerations)mTLS-Überlegungen“.
+>**mTLS-Einschränkung:** mTLS wird bei der OAuth 2-Kennwortauthentifizierung nicht unterstützt. Weitere Informationen finden Sie [ Abschnitt ](#mtls-considerations)mTLS-Überlegungen“.
 
 * **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
-* **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
-* **[!UICONTROL Client Secret]**: Die [!DNL client secret], die Ihr System Adobe Experience Platform zuweist.
+* **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System [!DNL Adobe Experience Platform] zuweist.
+* **[!UICONTROL Client Secret]**: Die [!DNL client secret], die Ihr System [!DNL Adobe Experience Platform] zuweist.
 * **[!UICONTROL Username]**: Der Benutzername für den Zugriff auf Ihren HTTP-Endpunkt.
 * **[!UICONTROL Password]**: Das Kennwort für den Zugriff auf Ihren HTTP-Endpunkt.
 
@@ -191,11 +191,11 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL OAuth 2 Client Credentials]** f
 
 >[!NOTE]
 >
->**mTLS-Einschränkung:** mTLS wird bei der Authentifizierung mit Client-Anmeldeinformationen für OAuth 2 nicht unterstützt. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#mtls-considerations)mTLS-Überlegungen“.
+>**mTLS-Einschränkung:** mTLS wird bei der Authentifizierung mit Client-Anmeldeinformationen für OAuth 2 nicht unterstützt. Weitere Informationen finden Sie [ Abschnitt ](#mtls-considerations)mTLS-Überlegungen“.
 
 * **[!UICONTROL Access Token URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
-* **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
-* **[!UICONTROL Client Secret]**: Die [!DNL client secret], die Ihr System Adobe Experience Platform zuweist.
+* **[!UICONTROL Client ID]**: Die [!DNL client ID], die Ihr System [!DNL Adobe Experience Platform] zuweist.
+* **[!UICONTROL Client Secret]**: Die [!DNL client secret], die Ihr System [!DNL Adobe Experience Platform] zuweist.
 * **[!UICONTROL Client Credentials Type]**: Wählen Sie den Typ der von Ihrem Endpunkt unterstützten Client-Anmeldeinformationen für OAuth2 aus:
    * **[!UICONTROL Body Form Encoded]**: In diesem Fall sind die [!DNL client ID] und [!DNL client secret] enthalten *im Hauptteil der Anfrage* die an Ihr Ziel gesendet wird. Ein Beispiel finden Sie im Abschnitt [unterstützte Authentifizierungstypen](#supported-authentication-types).
    * **[!UICONTROL Basic Authorization]**: In diesem Fall werden die [!DNL client ID] und [!DNL client secret] (*einer `Authorization`-Kopfzeile)*, nachdem sie mit Base64 codiert und an Ihr Ziel gesendet wurden. Ein Beispiel finden Sie im Abschnitt [Unterstützte Authentifizierungstypen](#supported-authentication-types).
@@ -252,7 +252,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* [Bewertung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht in Exporten an das HTTP-API-Ziel unterstützt. [Weitere Informationen](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden Sie &#x200B;](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-streaming-profile-destinations.md) „Aktivieren von Zielgruppendaten für Streaming Profilexportziele“.
 
 ### Zielattribute {#attributes}
 

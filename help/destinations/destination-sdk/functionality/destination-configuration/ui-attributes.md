@@ -2,16 +2,16 @@
 description: Erfahren Sie, wie Sie die Attribute der Benutzeroberfläche, wie z. B. den Dokumentations-Link, die Kategorie der Zielkarte sowie den Verbindungstyp und die Häufigkeit der Zielverbindungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Benutzeroberflächenattribute
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 79%
+source-wordcount: '787'
+ht-degree: 76%
 
 ---
 
 # Benutzeroberflächenattribute
 
-Benutzeroberflächenattribute definieren die visuellen Elemente, die Adobe für Ihre Zielkarte in der Adobe Experience Platform-Benutzeroberfläche anzeigen soll, z. B. ein Logo, einen Link zur Dokumentationsseite, eine Zielbeschreibung und deren Kategorie und Typ.
+Benutzeroberflächenattribute definieren die visuellen Elemente, die Adobe für Ihre Zielkarte in der [!DNL Adobe Experience Platform]-Benutzeroberfläche anzeigen soll, z. B. ein Logo, einen Link zur Dokumentationsseite, eine Zielbeschreibung und deren Kategorie und Typ.
 
 Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder auf den folgenden Übersichtsseiten zur Zielkonfiguration:
 
@@ -64,7 +64,7 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` ist ein Zeichenfolgenparameter, der auf die Dokumentationsseite im [Zielkatalog](../../../catalog/overview.md) für Ihr Ziel verweist. Jedes produktbezogene Ziel in Adobe Experience Platform muss über eine entsprechende Dokumentationsseite verfügen. [Erfahren Sie, wie Sie eine Zieldokumentationsseite für Ihr Ziel erstellen](../../docs-framework/documentation-instructions.md). Beachten Sie, dass dies für private/benutzerdefinierte Ziele nicht erforderlich ist.
+`documentationLink` ist ein Zeichenfolgenparameter, der auf die Dokumentationsseite im [Zielkatalog](../../../catalog/overview.md) für Ihr Ziel verweist. Jedes produktbezogene Ziel in [!DNL Adobe Experience Platform] muss über eine entsprechende Dokumentationsseite verfügen. [Erfahren Sie, wie Sie eine Zieldokumentationsseite für Ihr Ziel erstellen](../../docs-framework/documentation-instructions.md). Beachten Sie, dass dies für private/benutzerdefinierte Ziele nicht erforderlich ist.
 
 Verwenden Sie das folgende Format: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, wobei `YOURDESTINATION` der Name Ihres Ziels ist. Für ein Ziel mit dem Namen „Moviestar“ würden Sie `http://www.adobe.com/go/destinations-moviestar-en` verwenden.
 
@@ -78,7 +78,7 @@ Benutzerinnen und Benutzer können Ihren Dokumentations-Link über die Zielkatal
 
 ### `category` {#category}
 
-`category` ist ein Zeichenfolgenparameter, der auf die Ihrem Ziel in Adobe Experience Platform zugewiesene Kategorie verweist. Weitere Informationen finden Sie unter [Zielkategorien](../../../destination-types.md). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
+`category` ist ein Zeichenfolgenparameter, der auf die Ihrem Ziel in [!DNL Adobe Experience Platform] zugewiesene Kategorie verweist. Weitere Informationen finden Sie unter [Zielkategorien](../../../destination-types.md). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
 
 Benutzerinnen und Benutzer können die Liste der Zielkategorien auf der linken Seite des Bildschirms im Zielkatalog sehen, wie in der Abbildung unten dargestellt.
 

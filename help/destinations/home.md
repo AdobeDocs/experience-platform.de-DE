@@ -2,10 +2,10 @@
 title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 48%
+source-wordcount: '1299'
+ht-degree: 46%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 48%
 
 ![Übersichtsbanner Ziele.](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+**[!DNL Destinations]** sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus [!DNL Adobe Experience Platform] ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -40,7 +40,7 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-worksp
 * Datenflüsse zu den Zielen im Katalog erstellen, bearbeiten, aktivieren und deaktivieren;
 * Erstellen Sie ein Konto an einem Speicherort oder verknüpfen Sie Experience Platform mit dem Konto in der Zielplattform.
 * Auswählen, welche Zielgruppen oder Datensätze für Ziele aktiviert werden sollen;
-* Wählen Sie aus[&#x200B; welche (Experience-Datenmodell(XDM)-Felder](../xdm/home.md) beim Aktivieren von Zielgruppen für bestimmte Ziele wie E-Mail-Marketing-Ziele, CRM-Plattformen, Cloud-Speicherorte und mehr exportiert werden sollen.
+* Wählen Sie aus[ welche (Experience-Datenmodell(XDM)-Felder](../xdm/home.md) beim Aktivieren von Zielgruppen für bestimmte Ziele wie E-Mail-Marketing-Ziele, CRM-Plattformen, Cloud-Speicherorte und mehr exportiert werden sollen.
 * Aktivieren Sie verschiedene Arten von Profilen und Audiences für Ziele - Personen, Konten und potenzielle Kunden.
 
 ## Zieltypen und Kategorien {#types-and-categories}
@@ -55,18 +55,18 @@ Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probl
 
 ## Ziele und Zugriffssteuerungen {#access-controls}
 
-Die Zielfunktion in Experience Platform arbeitet mit Zugriffssteuerungsberechtigungen für Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugriffssteuerung in Adobe Experience Platform](../access-control/home.md) und scrollen Sie nach unten zur Tabelle unten auf der Seite.
+Die Zielfunktion in Experience Platform funktioniert mit [!DNL Adobe Experience Platform] Zugriffssteuerungsberechtigungen. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugriffssteuerung in Adobe Experience Platform](../access-control/home.md) und scrollen Sie nach unten zur Tabelle unten auf der Seite.
 
 In der folgenden Tabelle sind die Berechtigungen und Berechtigungskombinationen aufgeführt, die zum Ausführen bestimmter Aktionen für Ziele erforderlich sind.
 
 | Berechtigungsebene | Beschreibung |
 | ---- | ---- |
 | **[!UICONTROL View Destinations]** | Um auf die Registerkarte Ziele in der Experience Platform-Benutzeroberfläche zuzugreifen, benötigen Sie die **[!UICONTROL View Destinations]** [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Um eine Verbindung zu -Zielen herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Um eine Verbindung zu -Zielen herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, und **[!UICONTROL View Segments]** | Zum Aktivieren von Zielgruppen für Ziele und Aktivieren des [Zuordnungsschritts](ui/activate-batch-profile-destinations.md#mapping) des Workflows sind die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) erforderlich. |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, und **[!UICONTROL View Segments]** | Um Zielgruppen zu vorhandenen Datenflüssen hinzuzufügen oder daraus zu entfernen, ohne Zugriff auf den [Zuordnungsschritt](ui/activate-batch-profile-destinations.md#mapping) des Workflows zu haben, benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Zum Exportieren von Datensätzen an Ziele benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage and Activate Dataset Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) |
-| **[!UICONTROL View Identity Graph]** | Um *Identitäten* an Ziele zu exportieren, benötigen Sie die **[!UICONTROL View Identity Graph]**&#x200B;[&#x200B; Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Zum Exportieren von Datensätzen an Ziele benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage and Activate Dataset Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) |
+| **[!UICONTROL View Identity Graph]** | Um *Identitäten* an Ziele zu exportieren, benötigen Sie die **[!UICONTROL View Identity Graph]**[ Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Weiterführende Informationen zu Zugriffssteuerungen finden Sie im [Benutzerhand
 
 ### Attributbasierte Zugriffssteuerung für Ziele {#attribute-based-access}
 
-Die attributbasierte Zugriffssteuerung in Adobe Experience Platform ermöglicht Admins, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
+Die attributbasierte Zugriffssteuerung in [!DNL Adobe Experience Platform] ermöglicht es Admins, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
 
 Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Im Übrigen können Sie keine Daten an ein Ziel exportieren, wenn Sie nicht auf alle Felder im Datensatz Zugriff haben.
 
@@ -107,7 +107,7 @@ Data Governance wird für Experience Platform-Ziele durchgesetzt durch:
 * *Marketing-Aktionen*, die Sie im Workflow zum Erstellen von Zielen auswählen können;
 * *Datenrichtlinien*, die verhindern, dass Daten mit bestimmten Nutzungs-Labels für Ziele mit bestimmten Marketing-Aktionen aktiviert werden.
 
-Experience Platform Weitere Informationen zu (Marketing-Aktionen) und zum Beheben von Verstößen gegen [&#x200B; finden Sie &#x200B;](../data-governance/policies/overview.md) der Dokumentation [&#x200B; Data Governance in &#x200B;](../data-governance/enforcement/auto-enforcement.md).
+Weitere Informationen zu (Marketing-Aktionen) und zum Beheben von Verstößen gegen [ finden Sie ](../data-governance/policies/overview.md) der Dokumentation [ Data Governance in ](../data-governance/enforcement/auto-enforcement.md).
 
 Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow zum Erstellen von Zielen finden Sie auf den folgenden Seiten für die verschiedenen Zieltypen in Experience Platform:
 
@@ -117,7 +117,7 @@ Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow zum Erstell
 * [Advertising-Kontoziele - Bombora ABM-Zielgruppenverbindung](./catalog/advertising/bombora.md)
 * [Advertising-Kontoziele - Demandbase-Verbindung](./catalog/advertising/demandbase.md)
 * [Cloud-Speicher-Ziele](./catalog/cloud-storage/overview.md)
-* [E-Mail-Marketing-Ziele &#x200B;](./catalog/email-marketing/overview.md)
+* [E-Mail-Marketing-Ziele ](./catalog/email-marketing/overview.md)
 * [Social-Media-Ziele](./catalog/social/overview.md)
 
 Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Zielgruppenaktivierung finden Sie im **[!UICONTROL Review]** Schritt in den folgenden Handbüchern:

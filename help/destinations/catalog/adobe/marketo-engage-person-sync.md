@@ -4,10 +4,10 @@ description: Verwenden Sie den Marketo Engage Person Sync -Connector, um Aktuali
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1223'
-ht-degree: 10%
+source-wordcount: '1200'
+ht-degree: 11%
 
 ---
 
@@ -41,7 +41,7 @@ Verwenden Sie den Marketo Engage Person Sync -Connector, um Aktualisierungen von
 
 | Ziel-Identität | Beschreibung |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| E-Mail | Ein Namespace, der eine E-Mail-Adresse darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. |
+| E-Mail | Ein Namespace, der eine E-Mail-Adresse darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und identifiziert diese Person daher über verschiedene Kanäle hinweg. |
 
 {style="table-layout:auto"}
 
@@ -55,8 +55,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Segmentierungs-Service | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+| Segmentierungs-Service | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 
@@ -85,13 +85,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions)
+>* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions)
 
-Wenn Ihr Unternehmen Zugriff auf mehrere Organisationen hat, stellen Sie sicher, dass Sie dieselbe Organisation sowohl in Marketo Engage als auch in Real-Time CDP verwenden, wo Sie den Ziel-Connector für Marketo einrichten.  Wenn Sie bereits ein Ziel konfiguriert haben, können Sie ein vorhandenes Marketo-Konto auswählen, das mit Ihrer neuen Konfiguration verwendet werden soll.  Wenn nicht, klicken Sie auf die Eingabeaufforderung Connector to Destination , über die Sie den Namen, die Beschreibung und die Marketo Munchkin-ID des gewünschten Ziels festlegen können.  Die Munchkin-ID Ihrer Marketo-Instanz finden Sie im Menü Admin->Munchkin .
+Wenn Ihr Unternehmen Zugriff auf mehrere Organisationen hat, stellen Sie sicher, dass Sie dieselbe Organisation sowohl in Marketo Engage als auch in [!DNL Real-Time CDP] verwenden, wo Sie den Ziel-Connector für Marketo einrichten.  Wenn Sie bereits ein Ziel konfiguriert haben, können Sie ein vorhandenes Marketo-Konto auswählen, das mit Ihrer neuen Konfiguration verwendet werden soll.  Wenn nicht, klicken Sie auf die Eingabeaufforderung Connector to Destination , über die Sie den Namen, die Beschreibung und die Marketo Munchkin-ID des gewünschten Ziels festlegen können.  Die Munchkin-ID Ihrer Marketo-Instanz finden Sie im Menü Admin->Munchkin .
 
 >[!IMPORTANT]
 >
->Die Benutzerin oder der Benutzer, die oder der das Ziel einrichtet[&#x200B; muss in der Marketo](https://experienceleague.adobe.com/de/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)Instanz und -Partition über die Berechtigung „Person bearbeiten“ verfügen.
+>Die Benutzerin oder der Benutzer, die oder der das Ziel einrichtet[ muss in der Marketo](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)Instanz und -Partition über die Berechtigung „Person bearbeiten“ verfügen.
 
 ![Mit Ziel verbinden](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,7 +102,7 @@ Wenn Ihr Unternehmen Zugriff auf mehrere Organisationen hat, stellen Sie sicher,
 * **[!UICONTROL First searchable field]**: Feld, in dem die Deduplizierung erfolgen soll. Das Feld muss in jedem Lead-Datensatz der Eingabe vorhanden sein. Standardwert ist E-Mail
 * **[!UICONTROL First searchable field]**: Ein sekundäres Feld für die Deduplizierung. Das Feld muss in jedem Lead-Datensatz der Eingabe vorhanden sein. Optional
 
-Nachdem Sie Ihre Instanz ausgewählt haben, müssen Sie auch die Lead-Partition auswählen, in die die Konfiguration integriert werden soll. Eine [Lead-Partition](https://experienceleague.adobe.com/de/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) ist ein Konzept in Marketo Engage, mit dem Lead-Datensätze nach Geschäftsbereichen wie Marken oder Vertriebsregionen getrennt werden. Wenn Ihr Marketo-Abonnement nicht über die Funktion „Arbeitsbereiche und Partitionen“ verfügt oder wenn in Ihrem Abonnement keine zusätzlichen Partitionen erstellt wurden, ist nur die Standardpartition verfügbar. Eine einzelne Konfiguration kann nur Lead-Einträge aktualisieren, die in ihrer konfigurierten Partition vorhanden sind.
+Nachdem Sie Ihre Instanz ausgewählt haben, müssen Sie auch die Lead-Partition auswählen, in die die Konfiguration integriert werden soll. Eine [Lead-Partition](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) ist ein Konzept in Marketo Engage, mit dem Lead-Datensätze nach Geschäftsbereichen wie Marken oder Vertriebsregionen getrennt werden. Wenn Ihr Marketo-Abonnement nicht über die Funktion „Arbeitsbereiche und Partitionen“ verfügt oder wenn in Ihrem Abonnement keine zusätzlichen Partitionen erstellt wurden, ist nur die Standardpartition verfügbar. Eine einzelne Konfiguration kann nur Lead-Einträge aktualisieren, die in ihrer konfigurierten Partition vorhanden sind.
 
 >[!IMPORTANT]
 >
@@ -126,7 +126,7 @@ Wenn kein übereinstimmender Lead-Datensatz gefunden wird, wird ein neuer Datens
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) unter Aktivieren von Zielgruppen für Streaming-Ziele .
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden ](/help/destinations/ui/activate-segment-streaming-destinations.md) unter Aktivieren von Zielgruppen für Streaming-Ziele .
 
 Im Schritt Zielgruppen aktivieren können Sie aus allen Personen-Zielgruppen auswählen, die für Sie sichtbar sind.
 
@@ -134,7 +134,7 @@ Im Schritt Zielgruppen aktivieren können Sie aus allen Personen-Zielgruppen aus
 
 ## Feldzuordnung {#field-mapping}
 
-Damit Änderungen an einem bestimmten Personenattribut an Marketo Engage gesendet werden können, muss das Feld von einem Real-Time CDP-Feld einem Marketo-Feld zugeordnet werden.
+Damit Änderungen an einem bestimmten Personenattribut an Marketo Engage gesendet werden können, muss das Feld von einem [!DNL Real-Time CDP] Feld dem Marketo-Feld zugeordnet werden.
 
 ![Feldzuordnung](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
@@ -158,7 +158,7 @@ Experience Platform-Datentypen und Marketo-Datentypen können wie folgt zugeordn
 
 {style="table-layout:auto"}
 
-In einigen Fällen ist es wünschenswert, Integrationen zu erlauben, den Wert eines Felds festzulegen, wenn es keinen gibt, während Integrationen daran gehindert werden, Aktualisierungen an Feldern vorzunehmen, die bereits einen Wert haben.  Wenn Sie verhindern müssen, dass der Ziel-Connector vorhandene Werte in Ihrer Marketo Engage-Instanz überschreibt, können Sie im Abschnitt Admin->Feldverwaltung Ihrer Marketo-Instanz Felder so konfigurieren, dass Aktualisierungen blockiert werden, und den Quelltyp Adobe Experience Platform umschalten.
+In einigen Fällen ist es wünschenswert, Integrationen zu erlauben, den Wert eines Felds festzulegen, wenn es keinen gibt, während Integrationen daran gehindert werden, Aktualisierungen an Feldern vorzunehmen, die bereits einen Wert haben.  Wenn Sie verhindern müssen, dass der Ziel-Connector vorhandene Werte in Ihrer Marketo Engage-Instanz überschreibt, können Sie im Abschnitt Admin->Feldverwaltung Ihrer Marketo-Instanz Felder so konfigurieren, dass Aktualisierungen blockiert werden, und den [!DNL Adobe Experience Platform] Quelltyp umschalten.
 
 ![Feldaktualisierungen blockieren](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png)
 
@@ -166,4 +166,4 @@ In einigen Fällen ist es wünschenswert, Integrationen zu erlauben, den Wert ei
 
 ## Datennutzung und Governance {#data-usage-and-governance}
 
-Alle Adobe Experience Platform-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie Adobe Experience Platform Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).

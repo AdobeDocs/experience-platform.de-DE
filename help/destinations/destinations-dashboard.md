@@ -3,17 +3,17 @@ keywords: Experience Platform; Benutzeroberfläche; UI; Anpassung; Dashboard zur
 title: Dashboard „Ziele“
 description: Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 23%
+source-wordcount: '62'
+ht-degree: 24%
 
 ---
 
 
 # [!UICONTROL Destinations] dashboard {#destinations-dashboard}
 
-Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen über die aktiven Ziele Ihres Unternehmens anzeigen können, die bei einer täglichen Momentaufnahme erfasst wurden.
+Die [!DNL Adobe Experience Platform]-Benutzeroberfläche (UI) bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können. Diese Informationen werden in einem täglichen Schnappschuss erfasst.
 
 <!--
 Broken links; this article is not in TOC

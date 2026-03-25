@@ -3,16 +3,16 @@ keywords: Experience Platform;Startseite;beliebte Themen;Warnhinweise;Ziele
 description: Sie können beim Erstellen eines Datenflusses Warnhinweise abonnieren, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: Abonnieren von kontextbezogenen Zielwarnhinweisen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '931'
-ht-degree: 13%
+source-wordcount: '917'
+ht-degree: 12%
 
 ---
 
 # Abonnieren von kontextbezogenen Zielwarnhinweisen
 
-Mit Adobe Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../../observability/api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Workflows erreicht wurde oder ob Fehler aufgetreten sind.
+[!DNL Adobe Experience Platform] können Sie ereignisbasierte Warnhinweise zu [!DNL Adobe Experience Platform] Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../../observability/api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Workflows erreicht wurde oder ob Fehler aufgetreten sind.
 
 Sie können beim Erstellen eines Datenflusses Warnhinweise abonnieren, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 
@@ -20,10 +20,10 @@ In diesem Dokument wird beschrieben, wie Sie Warnhinweise für Ihre Ziel-Datenfl
 
 ## Erste Schritte {#getting-started}
 
-Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Dokument setzt ein Verständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus:
 
-* [Ziele](../home.md): Vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
-* [Observability](../../observability/home.md): [!DNL Observability Insights] ermöglicht Ihnen die Überwachung von Experience Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen.
+* [Ziele](../home.md): Vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus [!DNL Adobe Experience Platform] ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+* [Observability](../../observability/home.md): [!DNL Observability Insights] ermöglicht die Überwachung von Experience Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen.
    * [Warnhinweise](../../observability/alerts/overview.md): Wenn bestimmte Bedingungen in Ihren Experience Platform-Vorgängen erfüllt sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Experience Platform allen Benutzenden in Ihrem Unternehmen, die sich dafür angemeldet haben, Warnhinweise zusenden.
 
 ## Abonnieren von Warnhinweisen in der Benutzeroberfläche {#subscribe-destination-alerts}

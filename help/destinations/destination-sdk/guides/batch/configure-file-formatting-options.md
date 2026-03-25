@@ -2,9 +2,9 @@
 description: Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 title: Erfahren Sie, wie Sie mit Destination SDK Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '901'
 ht-degree: 22%
 
 ---
@@ -23,7 +23,7 @@ Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich
 
 Adobe empfiehlt außerdem, die folgende Dokumentation zu lesen und sich damit vertraut zu machen, bevor Sie fortfahren:
 
-* Jede verfügbare Dateiformatierungsoption wird ausführlich im Abschnitt [Dateiformatierungskonfiguration“ &#x200B;](../../functionality/destination-server/file-formatting.md).
+* Jede verfügbare Dateiformatierungsoption wird ausführlich im Abschnitt [Dateiformatierungskonfiguration“ ](../../functionality/destination-server/file-formatting.md).
 * Führen Sie die Schritte zum [Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md) mithilfe von Destination SDK aus.
 
 ## Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
@@ -108,7 +108,7 @@ Nachdem Sie im vorherigen Schritt die gewünschten Dateiformatierungsoptionen zu
 
 >[!IMPORTANT]
 >
->Dieser Schritt ist optional und bestimmt nur, welche der Dateiformatierungsoptionen in der Experience Platform-Benutzeroberfläche angezeigt werden sollen. Wenn Sie keine Dateiformatierungsoptionen als Kundendatenfelder einrichten, werden die Dateiexporte mit den Standardwerten fortgesetzt, die in der [Server- und Dateikonfiguration“ konfiguriert &#x200B;](#create-server-file-configuration).
+>Dieser Schritt ist optional und bestimmt nur, welche der Dateiformatierungsoptionen in der Experience Platform-Benutzeroberfläche angezeigt werden sollen. Wenn Sie keine Dateiformatierungsoptionen als Kundendatenfelder einrichten, werden die Dateiexporte mit den Standardwerten fortgesetzt, die in der [Server- und Dateikonfiguration“ konfiguriert ](#create-server-file-configuration).
 
 In diesem Schritt können Sie die angezeigten Optionen in beliebiger Reihenfolge gruppieren sowie benutzerdefinierte Gruppierungen, Dropdown-Felder und bedingte Gruppierungen basierend auf den ausgewählten Dateitypen erstellen. Alle diese Einstellungen werden bei der Aufzeichnung und in den weiter unten stehenden Abschnitten angezeigt.
 
@@ -718,7 +718,7 @@ Bei einer erfolgreichen Antwort wird die Zielkonfiguration zurückgegeben, einsc
 Eine bestimmte Kombination von Dateiformatierungsoptionen kann zu unerwünschten Ergebnissen beim Dateiexport führen.
 Adobe empfiehlt, nicht die folgende Kombination von CSV-Optionen auszuwählen:
 
-```
+```properties
 nullValue -> ""
 quote -> "
 emptyValue -> ""

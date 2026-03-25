@@ -4,9 +4,9 @@ title: API-Migrationshandbuch für Cloud-Speicher-Ziele
 description: Erfahren Sie mehr über die Änderungen im Workflow zum Aktivieren von Cloud-Speicher-Zielen im Rahmen der Migration zu den neuen Cloud-Speicher-Zielkarten mit zusätzlichen Funktionen.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1328'
 ht-degree: 3%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->* Die auf dieser Seite beschriebene Funktion steht Kunden zur Verfügung, die die Pakete Real-Time CDP Prime und Ultimate erworben haben. Wenden Sie sich an den Adobe-Support, um weitere Informationen zu erhalten.
+>* Die auf dieser Seite beschriebene Funktion steht Kunden zur Verfügung, die die [!DNL Real-Time CDP] Pakete Prime und Ultimate erworben haben. Wenden Sie sich an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ## Migrationskontext {#migration-context}
 
 Ab [Oktober 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations) können Sie die neuen Dateiexportfunktionen verwenden, um beim Exportieren von Dateien aus Experience Platform auf erweiterte Anpassungsfunktionen zuzugreifen:
 
-* Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* Möglichkeit zum Festlegen benutzerdefinierter Dateikopfzeilen in exportierten Dateien über den [&#x200B; Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
+* Möglichkeit zum Festlegen benutzerdefinierter Dateikopfzeilen in exportierten Dateien über den [ Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Möglichkeit zur Auswahl des [Dateityps](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) der exportierten Datei.
 * Möglichkeit zum [Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
@@ -46,7 +46,7 @@ Beachten Sie, dass Sie derzeit in der Experience Platform-Benutzeroberfläche zw
 
 ![Abbildung der beiden Amazon S3-Zielkarten, die diese nebeneinander in einer Ansicht zeigt.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-Diese Ziele mit erweiterten Funktionen wurden ursprünglich als Beta-Version angeboten, *Adobe transferiert jetzt alle Real-Time CDP-Kunden zu den neuen Cloud-Speicher-Zielen*. Für Kunden, die bereits [!DNL Amazon S3], [!DNL Azure Blob] oder SFTP verwendet haben, bedeutet dies, dass vorhandene Datenflüsse zu den neuen Karten migriert werden. Weitere Informationen zu den spezifischen Änderungen im Rahmen der Migration finden Sie im Folgenden.
+Diese Ziele mit erweiterten Funktionen wurden ursprünglich als Beta-Version angeboten, *Adobe transferiert jetzt alle [!DNL Real-Time CDP]-Kunden zu den neuen Cloud-Speicherzielen*. Für Kunden, die bereits [!DNL Amazon S3], [!DNL Azure Blob] oder SFTP verwendet haben, bedeutet dies, dass vorhandene Datenflüsse zu den neuen Karten migriert werden. Weitere Informationen zu den spezifischen Änderungen im Rahmen der Migration finden Sie im Folgenden.
 
 ## Für wen diese Seite gilt {#who-this-applies-to}
 
@@ -60,19 +60,12 @@ Wenn Sie beispielsweise ein Skript verwenden, um Ziel-Datenflüsse zum [!DNL Ama
 
 Dieser Abschnitt enthält das entsprechende API-Tutorial und die Referenzdokumentation für die erweiterte Funktion zum Exportieren von Daten in Cloud-Speicher-Ziele.
 
-<!--
-
-TBD if we keep this link but will likely remove it
-
-[Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
-
--->
 * [API-Tutorial zum Exportieren von Zielgruppen in Cloud-Speicher-Ziele](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Referenzdokumentation zur Destinations Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## Zusammenfassung der abwärtsinkompatiblen Änderungen {#summary-backwards-incompatible-changes}
 
-Mit der Migration zu den neuen Zielen werden allen Ihren vorhandenen Datenflüssen zu [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Zielen jetzt neue Zielverbindungen und Basisverbindungen zugewiesen. Der Schritt zur Profilzuordnung ändert sich ebenfalls. Abwärtsinkompatible Änderungen werden in den folgenden Abschnitten für jedes Ziel zusammengefasst. Weitere Informationen zu den Begriffen [&#x200B; unten stehenden Diagramm &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) Sie auch im Glossar „Ziele“.
+Mit der Migration zu den neuen Zielen werden allen Ihren vorhandenen Datenflüssen zu [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Zielen jetzt neue Zielverbindungen und Basisverbindungen zugewiesen. Der Schritt zur Profilzuordnung ändert sich ebenfalls. Abwärtsinkompatible Änderungen werden in den folgenden Abschnitten für jedes Ziel zusammengefasst. Weitere Informationen zu den Begriffen [ unten stehenden Diagramm ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) Sie auch im Glossar „Ziele“.
 
 ![Übersichtsbild zum Migrationshandbuch](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
@@ -668,7 +661,7 @@ Sehen Sie sich die vollständigen Beispiele für veraltete und neue Basisverbind
 
 ### Abwärtskompatible Änderungen, die für [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Ziele üblich sind {#changes-all-destinations}
 
-Der Profilauswahlschritt in allen drei Zielen wird durch einen Zuordnungsschritt ersetzt, mit dem Sie die Spaltenüberschriften in Ihren exportierten Dateien bei Bedarf umbenennen können. Siehe die Abbildung unten nebeneinander mit dem alten Attributauswahlschritt auf der linken Seite und dem neuen Zuordnungsschritt auf der rechten Seite.
+Der Schritt zur Profilauswahl in allen drei Zielen wird durch einen Zuordnungsschritt ersetzt, mit dem Sie die Spaltenüberschriften in Ihren exportierten Dateien bei Bedarf umbenennen können. Siehe die Abbildung unten nebeneinander mit dem alten Attributauswahlschritt auf der linken Seite und dem neuen Zuordnungsschritt auf der rechten Seite.
 
 ![Übersichtsbild zum Migrationshandbuch](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 

@@ -2,10 +2,10 @@
 description: Das Destination SDK von Experience Platform verwendet Pebble-Vorlagen, mit denen Sie die aus Experience Platform exportierten Daten in das für Ihr Ziel erforderliche Format umwandeln können.
 title: Unterstützte Umwandlungsfunktionen in Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 96%
+source-wordcount: '548'
+ht-degree: 91%
 
 ---
 
@@ -21,7 +21,7 @@ Die [!DNL Pebble] -Implementierung in Experience Platform hat einige Änderungen
 
 ## Verwendungsbereiche {#where-to-use}
 
-Verwenden Sie die unten aufgeführten unterstützten Funktionen auf dieser Seite, wenn Sie für die Daten, die aus Experience Platform an Ihr Ziel exportiert wurden, [eine Nachrichtenumwandlungsvorlage erstellen &#x200B;](../../testing-api/streaming-destinations/create-template.md).
+Verwenden Sie die unten aufgeführten unterstützten Funktionen auf dieser Seite, wenn Sie für die Daten, die aus Experience Platform an Ihr Ziel exportiert wurden, [eine Nachrichtenumwandlungsvorlage erstellen ](../../testing-api/streaming-destinations/create-template.md).
 
 Die Nachrichtenumwandlungsvorlage wird in der [Ziel-Server-Konfiguration](templating-specs.md) für Streaming-Ziele verwendet.
 
@@ -45,15 +45,15 @@ Aus dem [!DNL Pebble]-Tags-Abschnitt unterstützt Destination SDK nur:
 >Die Verwendung von `for` unterscheidet sich bei der Iteration durch *Array*- oder *Zuordnungs*-Elemente in einer Vorlage. Wenn Sie durch ein Array navigieren, können Sie das Element direkt abrufen. Wenn Sie durch eine Zuordnung (Map) navigieren, erhalten Sie jeden Map-Eintrag, der über ein Schlüssel-Wert-Paar verfügt.
 >
 > * Betrachten Sie zum Beispiel für ein Array-Element die Identitäten in einem [identityMap](message-format.md#identities)-Namespace, in dem Sie durch Elemente wie `identityMap.gaid`, `identityMap.email` oder Ähnliches iterieren können.
-> * Nehmen Sie als Beispiel für ein Zuordnungselement [segmentMembership](message-format.md#segment-membership).
+> * Nehmen Sie als Beispiel für ein Zuordnungselement [segmentMembership](message-format.md#audience-membership).
 
 Aus dem Abschnitt der [!DNL Pebble]-Filter unterstützt Destination SDK alle Funktionen. Ein Beispiel weiter unten zeigt, wie die Funktion `date` in Destination SDK verwendet werden kann.
 
-Aus dem [!DNL Pebble]-Funktionsabschnitt unterstützt Adobe *nicht* die Funktion [&#x200B; range](https://pebbletemplates.io/wiki/function/range/).
+Aus dem [!DNL Pebble]-Funktionsabschnitt unterstützt Adobe *nicht* die Funktion [ range](https://pebbletemplates.io/wiki/function/range/).
 
 ## Beispiel für die Verwendung der Funktion `date` {#date-function}
 
-Um zu veranschaulichen, wie die [!DNL Pebble]-Funktionen in Destination SDK verwendet werden, sehen Sie unten, wie die Datumsfunktion ([Link in der Pebble-Dokumentation](https://pebbletemplates.io/wiki/filter/date/)) verwendet wird, um das Format eines Zeitstempels zu transformieren.
+Um zu veranschaulichen, wie [!DNL Pebble] in Destination SDK verwendet werden, sehen Sie unten, wie die Datumsfunktion ([Link in der Pebble-](https://pebbletemplates.io/wiki/filter/date/)) das Format eines Zeitstempels transformiert.
 
 ### Anwendungsfall {#date-use-case}
 

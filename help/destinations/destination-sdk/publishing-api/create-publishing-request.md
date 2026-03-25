@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie einen API-Aufruf formatieren, um eine Anfrage zur Veröffentlichung über Adobe Experience Platform Destination SDK zu senden.
 title: Erstellen einer Zielveröffentlichungsanfrage
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 88%
+source-wordcount: '444'
+ht-degree: 85%
 
 ---
 
@@ -83,4 +83,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Studium dieses Dokuments wissen Sie jetzt, wie Sie eine Veröffentlichungsanfrage für Ihr Ziel senden können. Das Adobe Experience Platform-Team prüft Ihre Veröffentlichungsanfrage und setzt sich innerhalb von fünf Werktagen mit Ihnen in Verbindung.
+Nach dem Studium dieses Dokuments wissen Sie jetzt, wie Sie eine Veröffentlichungsanfrage für Ihr Ziel senden können. Das [!DNL Adobe Experience Platform]-Team prüft Ihre Veröffentlichungsanfrage und setzt sich innerhalb von fünf Werktagen mit Ihnen in Verbindung.

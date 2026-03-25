@@ -3,24 +3,24 @@ keywords: Cloud-Speicherziel;Cloud-Speicher
 title: Übersicht über die Cloud-Speicher-Ziele
 description: Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 38%
+source-wordcount: '457'
+ht-degree: 39%
 
 ---
 
 # Übersicht über die Cloud-Speicher-Ziele {#cloud-storage-destinations}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
-Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an Ihre Cloud-Speicherorte senden. Auf diese Weise können Sie Zielgruppen und deren Profilattribute über CSV-Dateien für [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] und SFTP an Ihre internen Systeme senden. Für [!DNL Amazon Kinesis]- und [!DNL Azure Event Hubs]-Ziele werden Daten aus Experience Platform im [!DNL JSON]-Format gestreamt.
+[!DNL Adobe Experience Platform] können Ihre Zielgruppen als Datendateien an Ihre Cloud-Speicherorte senden. Auf diese Weise können Sie Zielgruppen und deren Profilattribute über CSV-Dateien für [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] und SFTP an Ihre internen Systeme senden. Für [!DNL Amazon Kinesis]- und [!DNL Azure Event Hubs]-Ziele werden Daten aus Experience Platform im [!DNL JSON]-Format gestreamt.
 
 ![Adobe-Cloud-Speicherzele](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Unterstützte Cloud-Speicherziele {#supported-destinations}
 
-Adobe Experience Platform unterstützt Datenexporte an die folgenden Cloud-Speicher-Ziele:
+[!DNL Adobe Experience Platform] unterstützt Datenexporte an die folgenden Cloud-Speicher-Ziele:
 
 * [Amazon Kinesis-Verbindung](amazon-kinesis.md)
 * [Amazon S3-Verbindung](amazon-s3.md)
@@ -79,4 +79,4 @@ Cloud-Speicher-Ziele unterstützen die folgenden Exporttypen:
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie ausgewählt haben, welches der [unterstützten Cloud-Ziele](#supported-destinations) Sie verwenden möchten, lesen Sie das [Tutorial zum Herstellen einer Verbindung mit Zielen](/help/destinations/ui/connect-destination.md) um zu erfahren, wie Sie eine Verbindung zum Ziel herstellen. Lesen Sie dann das Aktivierungs-Tutorial für dateibasierte Ziele, um zu erfahren, wie Sie mit dem [&#x200B; (Exportieren](/help/destinations/ui/activate-batch-profile-destinations.md) von Daten in Ihr Cloud-Speicherziel beginnen.
+Nachdem Sie ausgewählt haben, welches der [unterstützten Cloud-Ziele](#supported-destinations) Sie verwenden möchten, lesen Sie das [Tutorial zum Herstellen einer Verbindung mit Zielen](/help/destinations/ui/connect-destination.md) um zu erfahren, wie Sie eine Verbindung zum Ziel herstellen. Lesen Sie dann das Aktivierungs-Tutorial für dateibasierte Ziele, um zu erfahren, wie Sie mit dem [ (Exportieren](/help/destinations/ui/activate-batch-profile-destinations.md) von Daten in Ihr Cloud-Speicherziel beginnen.

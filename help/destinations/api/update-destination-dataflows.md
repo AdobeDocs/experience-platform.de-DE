@@ -5,9 +5,9 @@ title: Aktualisieren von Zieldatenflüssen mithilfe der Flow Service-API
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder mithilfe der Flow Service-API Zielgruppen und Attribute hinzufügen und entfernen.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2459'
 ht-degree: 29%
 
 ---
@@ -24,9 +24,9 @@ Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gült
 >
 > Die Begriffe *Fluss* und *Datenfluss* werden in diesem Tutorial synonym verwendet. Im Kontext dieses Tutorials haben sie dieselbe Bedeutung.
 
-Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus:
 
-* [Ziele](../home.md): [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+* [Ziele](../home.md): [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus [!DNL Adobe Experience Platform] ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mithilfe der [!DNL Flow Service]-API erfolgreich zu aktualisieren.
@@ -37,7 +37,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-for-required-headers}
 
-Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -503,7 +503,7 @@ curl -X PATCH \
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 | `id` | Geben Sie die ID der Zielgruppe an, die Sie dem Ziel-Datenfluss hinzufügen. |
 | `name` | **(optional)**. Geben Sie den Namen der Zielgruppe an, die Sie dem Ziel-Datenfluss hinzufügen. Beachten Sie, dass dieses Feld nicht obligatorisch ist und Sie dem Ziel-Datenfluss erfolgreich eine Zielgruppe hinzufügen können, ohne ihren Namen anzugeben. |
-| `filenameTemplate` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die ID der exportierten Zielgruppe.</li><li>`%SEGMENT_NAME%`: **(optional)**. Die exportierten Dateien enthalten den Namen der exportierten Zielgruppe.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: **(Optional)**. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: **(optional)**. Ersetzen Sie diesen Platzhalter durch einen beliebigen benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weitere Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Konfigurieren von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
+| `filenameTemplate` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die ID der exportierten Zielgruppe.</li><li>`%SEGMENT_NAME%`: **(optional)**. Die exportierten Dateien enthalten den Namen der exportierten Zielgruppe.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: **(Optional)**. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: **(optional)**. Ersetzen Sie diesen Platzhalter durch einen beliebigen benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weitere Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Konfigurieren von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
 | `exportMode` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br>. Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [Exportieren von vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Exportieren von inkrementellen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung von Batch-Zielen. |
 | `startDate` | Wählen Sie das Datum aus, an dem die Zielgruppe Profile in Ihr Ziel exportieren soll. |
 | `frequency` | Nur *Batch* Ziele. Dieses Feld ist nur erforderlich, wenn eine Zielgruppe zu einem Datenfluss in Batch-Dateiexportzielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br>. <br> <ul><li>Für den Exportmodus `"DAILY_FULL_EXPORT"` können Sie `ONCE` oder `DAILY` wählen.</li><li>Für den Exportmodus `"FIRST_FULL_THEN_INCREMENTAL"` können Sie `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"` wählen.</li></ul> |
@@ -761,9 +761,9 @@ Um ein Profilattribut zum Ziel-Datenfluss hinzuzufügen, führen Sie eine PATCH-
 >
 >**Zielspezifische Zuordnungsanforderungen**
 >
->Die in diesem Abschnitt beschriebene `profileSelectors`-Methode funktioniert für die meisten Streaming-Ziele. Einige Streaming-Ziele, einschließlich **Adobe Target**, erfordern jedoch stattdessen den Workflow Datenvorbereitungs-Zuordnungssatz .
+>Die in diesem Abschnitt beschriebene `profileSelectors`-Methode funktioniert für die meisten Streaming-Ziele. Für einige Streaming-Ziele, einschließlich **[!DNL Adobe Target]**, ist jedoch stattdessen der Workflow Datenvorbereitungs-Zuordnungssatz erforderlich.
 >
->**Wenn Ihre Profilattribute nach einer erfolgreichen API-Antwort (202) nicht in der Experience Platform-Benutzeroberfläche angezeigt werden** müssen Sie die Zuordnungssatzmethode verwenden, die in [Aktivieren von Zielgruppen für Batch-Ziele“ dokumentiert &#x200B;](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+>**Wenn Ihre Profilattribute nach einer erfolgreichen API-Antwort (202) nicht in der Experience Platform-Benutzeroberfläche angezeigt werden** müssen Sie die Zuordnungssatzmethode verwenden, die in [Aktivieren von Zielgruppen für Batch-Ziele“ dokumentiert ](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 **API-Format**
 
@@ -873,7 +873,7 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

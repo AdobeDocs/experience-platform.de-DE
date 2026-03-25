@@ -3,10 +3,10 @@ keywords: Katalog;Katalog
 title: Zielkatalog – Übersicht
 description: Der Zielkatalog bietet eine Liste der verfügbaren Ziele, die bereit sind, Daten zu empfangen. Zu diesen Zielen gehören Adobe-Lösungen, Werbeplattformen, Umfrageplattformen, E-Mail-Marketing-Plattformen und mehr.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 12%
+source-wordcount: '137'
+ht-degree: 13%
 
 ---
 
@@ -25,7 +25,7 @@ Durchsuchen Sie den Katalog, um festzustellen, welche Zielplattformen für Ihre 
 
 ## Zielkategorien {#destination-categories}
 
-Sie können Ihre Daten für verschiedene Zielkategorien in Adobe Experience Platform aktivieren. Folgende Links bieten weiterführende Informationen zu einzelnen Zielkategorien:
+Sie können Ihre Daten für verschiedene Zielkategorien in [!DNL Adobe Experience Platform] aktivieren. Folgende Links bieten weiterführende Informationen zu einzelnen Zielkategorien:
 
 - [Übersicht über Adobe [!UICONTROL destinations]](adobe/overview.md)
 - [Übersicht über [!UICONTROL Advertising] [!UICONTROL destinations]](advertising/overview.md)

@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die unterstützten Zielidentitäten für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Identity-Namespaces
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 56%
+source-wordcount: '912'
+ht-degree: 50%
 
 ---
 
@@ -29,7 +29,7 @@ Beim Konfigurieren von Identity-Namespaces für Ihr Ziel können Sie die von Ihr
 
 * Benutzerinnen und Benutzern ermöglichen, XDM-Attribute Identity-Namespaces zuzuordnen.
 * Benutzerinnen und Benutzern ermöglichen, [Standard-Identity-Namespaces](../../../../identity-service/features/namespaces.md#standard) Ihren eigenen Identity-Namespaces zuzuordnen.
-* Benutzerinnen und Benutzern ermöglichen, [benutzerdefinierte Identity-Namespaces](../../../../identity-service/features/namespaces.md#manage-namespaces) Ihren eigenen Identity-Namespaces zuzuordnen.
+* Benutzerinnen und Benutzern ermöglichen, [benutzerdefinierte Identity-Namespaces](../../../../identity-service/features/namespaces.md#create-namespaces) Ihren eigenen Identity-Namespaces zuzuordnen.
 
 Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch [Verwenden von Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -61,7 +61,7 @@ Bei der Definition der Zielidentitäten, die Ihr Ziel unterstützt, können Sie 
 |---------|----------|---|------|
 | `acceptsAttributes` | Boolesch | Optional | Gibt an, ob Kundinnen und Kunden der Identität, die Sie konfigurieren, standardmäßige Profilattribute zuordnen können. |
 | `acceptsCustomNamespaces` | Boolesch | Optional | Gibt an, ob Kundinnen und Kunden dem Identity-Namespace, den Sie konfigurieren, benutzerdefinierte Identity-Namespaces zuordnen können. |
-| `acceptedGlobalNamespaces` | – | Optional | Gibt an[&#x200B; welche (standardmäßigen Identity](../../../../identity-service/features/namespaces.md#standard)Namespaces) (z. B. [!UICONTROL IDFA]) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. |
+| `acceptedGlobalNamespaces` | – | Optional | Gibt an[ welche (standardmäßigen Identity](../../../../identity-service/features/namespaces.md#standard)Namespaces) (z. B. [!UICONTROL IDFA]) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. |
 | `transformation` | Zeichenfolge | Optional | Zeigt das Kontrollkästchen [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) in der Experience Platform-Benutzeroberfläche an, wenn das Quellfeld entweder ein XDM-Attribut oder ein benutzerdefinierter Identity-Namespace ist. Verwenden Sie diese Option, um Benutzerinnen und Benutzern die Möglichkeit zu geben, Quellattribute beim Export zu hashen. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
 | `requiredTransformation` | Zeichenfolge | Optional | Wenn Kundinnen und Kunden diesen Quell-Identity-Namespace auswählen, wird das Kontrollkästchen [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) automatisch auf die Zuordnung angewendet, und Kundinnen und Kunden können sie nicht deaktivieren. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
 
@@ -118,9 +118,9 @@ Die folgende Konfiguration aktiviert die optionale Option [Umwandlung anwenden](
    }
 ```
 
-Aktivieren Sie diese Option, wenn Sie nicht gehashte Quellfelder verwenden, damit diese automatisch von Adobe Experience Platform bei der Aktivierung gehasht werden.
+Aktivieren Sie diese Option, wenn Sie ungehashte Quellfelder verwenden, damit diese bei der Aktivierung automatisch gehasht [!DNL Adobe Experience Platform].
 
-Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel erwartet, dass sie gehasht werden (z. B.: `email_lc_sha256` oder `phone_sha256`), aktivieren Sie die Option **Umwandlung anwenden**, damit Adobe Experience Platform die Quellattribute bei Aktivierung automatisch hasst.
+Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel erwartet, dass sie gehasht werden (z. B.: `email_lc_sha256` oder `phone_sha256`), aktivieren Sie die Option **Umwandlung anwenden**, damit [!DNL Adobe Experience Platform] die Quellattribute bei Aktivierung automatisch hasht.
 
 ## Konfigurieren von obligatorischem Hashing für Quellfelder {#configure-mandatory-hashing}
 

@@ -4,10 +4,10 @@ title: Qualtrics Automations
 description: Synchronisieren Sie Erlebnis- und operative Kundendaten, um Personalisierung in jedem Maßstab zu ermöglichen. Verwenden Sie die Aggregation mehrerer betrieblicher Datenquellen in Adobe Experience Platform als Eingabe in der Qualtrics Experience ID, um Ihre Kunden besser zu verstehen und eine gezielte Kontaktaufnahme zu ermöglichen, um die Lücke beim Verständnis von Intent-, Emotions- und Erlebnistreibenden zu schließen.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 22%
+source-wordcount: '1259'
+ht-degree: 23%
 
 ---
 
@@ -17,31 +17,31 @@ ht-degree: 22%
 
 Synchronisieren Sie Erlebnis- und operative Kundendaten, um Personalisierung in jedem Maßstab zu ermöglichen.
 
-Verwenden Sie die Aggregation mehrerer betrieblicher Datenquellen in Adobe Experience Platform als Eingabe in der Qualtrics Experience ID, um Ihre Kunden besser zu verstehen und eine gezielte Kontaktaufnahme zu ermöglichen, um die Lücke beim Verständnis von Intent-, Emotions- und Erlebnistreibenden zu schließen.
+Verwenden Sie die Aggregation mehrerer betrieblicher Datenquellen in [!DNL Adobe Experience Platform] als Eingabe in der Qualtrics Experience ID, um Ihre Kunden besser zu verstehen und eine gezielte Kontaktaufnahme zu ermöglichen, um die Lücke beim Verständnis von Intent-, Emotions- und Erlebnistreibenden zu schließen.
 
 >[!IMPORTANT]
 >
->Der Ziel-Connector und die Dokumentationsseite werden vom Qualtrics-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich direkt an sie, indem Sie sich beim [Customer Success Hub“ &#x200B;](https://support-portal.qualtrics.com/).
+>Der Ziel-Connector und die Dokumentationsseite werden vom Qualtrics-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich direkt an sie, indem Sie sich beim [Customer Success Hub“ ](https://support-portal.qualtrics.com/).
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das Ziel *Qualtrics Automations* verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
+Damit Sie besser verstehen können, wie und wann Sie das -Ziel *Qualtrics Automations* verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die [!DNL Adobe Experience Platform] Kunden mit diesem Ziel bewältigen können.
 
 ### Anwendungsfall #1 {#use-case-1}
 
-**Szenario**: Ein Unternehmen möchte die Kundenzufriedenheit auf verschiedenen digitalen Touchpoints messen, z. B. auf seiner Website und in seiner mobilen App. Sie verwenden Adobe Experience Platform, um Umfragen von Trigger Qualtrics auf der Grundlage von Benutzerinteraktionen durchzuführen, z. B. um einen Kauf abzuschließen oder eine bestimmte Web-Seite zu besuchen.
+**Szenario**: Ein Unternehmen möchte die Kundenzufriedenheit auf verschiedenen digitalen Touchpoints messen, z. B. auf seiner Website und in seiner mobilen App. Sie verwenden [!DNL Adobe Experience Platform], um Umfragen von Trigger Qualtrics auf der Grundlage von Benutzerinteraktionen durchzuführen, z. B. um einen Kauf abzuschließen oder eine bestimmte Web-Seite zu besuchen.
 
 **Ergebnis**: Durch die Erfassung von Echtzeit-Feedback kann das Unternehmen datengesteuerte Verbesserungen am Kundenerlebnis vornehmen, was zu höherer Zufriedenheit und Loyalität führt.
 
 ### Anwendungsfall #2 {#use-case-2}
 
-**Szenario**: Ein Unternehmen möchte seinen Onboarding-Prozess für Mitarbeiter verbessern. Sie nutzen Adobe Experience Platform, um Feedback von Neueinstellungen durch Qualtrics-Umfragen zu sammeln. Umfragen werden nach einem vordefinierten Onboarding-Zeitraum automatisch ausgelöst.
+**Szenario**: Ein Unternehmen möchte seinen Onboarding-Prozess für Mitarbeiter verbessern. Sie nutzen [!DNL Adobe Experience Platform], um Feedback von Neueinstellungen durch Qualtrics-Umfragen zu sammeln. Umfragen werden nach einem vordefinierten Onboarding-Zeitraum automatisch ausgelöst.
 
 **Ergebnis**: Kontinuierliches Feedback ermöglicht es dem Unternehmen, den Onboarding-Prozess anzupassen und zu verbessern, was zu einer besseren Interaktion und Produktivität bei neuen Mitarbeitern führt.
 
 ## Voraussetzungen {#prerequisites}
 
-Stellen Sie vor dem Einrichten des Qualtrics-Ziels in Adobe Experience Platform sicher, dass die folgenden Voraussetzungen erfüllt sind:
+Stellen Sie vor dem Einrichten des Qualtrics-Ziels in [!DNL Adobe Experience Platform] sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 * Sie haben ein Qualtrics-Konto.
 * Sie haben das erforderliche API-Token von Qualtrics erhalten.
@@ -72,8 +72,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 
@@ -106,7 +106,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -122,7 +122,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL URL]**: Die im JSON-[&#x200B; gefundene URL](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) mit Triggern zu Ihrem [Workflow in Qualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). Ein Beispiel finden Sie im folgenden Screenshot.
+* **[!UICONTROL URL]**: Die im JSON-[ gefundene URL](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) mit Triggern zu Ihrem [Workflow in Qualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). Ein Beispiel finden Sie im folgenden Screenshot.
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 
@@ -138,7 +138,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >
 >Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) unter Aktivieren von Zielgruppen für Streaming-Ziele .
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden ](/help/destinations/ui/activate-segment-streaming-destinations.md) unter Aktivieren von Zielgruppen für Streaming-Ziele .
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
@@ -205,7 +205,7 @@ Wie bereits erwähnt, verwendet dieses Ziel ein offenes Schema, sodass alle Eige
 
 Um zu überprüfen, ob Daten in Qualtrics aufgenommen wurden, gehen Sie zu dem Workflow, der Ihr **JSON-Ereignis** enthält, und gehen Sie von dort zu **Run History**, wo Sie die Ausführungen Ihres Workflows sehen sollten. Jeder Workflow hat den Status **Erfolgreich** oder **Fehlgeschlagen**. Bei Auswahl einer bestimmten Ausführung werden weitere Informationen angezeigt, sodass Sie Probleme beheben können, falls Probleme auftreten.
 
-Wenn im **Ausführungsverlauf** keine Ausführungen sichtbar sind, bedeutet dies, dass der Workflow noch nicht ausgelöst wurde, was darauf hinweist, dass möglicherweise ein Problem vorliegt. Stellen Sie sicher, dass der Workflow aktiviert ist und dass **URL** im Ziel in Adobe Experience Platform korrekt ist. Workflow-Ausführungen erfolgen nicht sofort. Daher müssen Sie möglicherweise eine Weile warten, bevor der Vorgang abgeschlossen ist.
+Wenn im **Ausführungsverlauf** keine Ausführungen sichtbar sind, bedeutet dies, dass der Workflow noch nicht ausgelöst wurde, was darauf hinweist, dass möglicherweise ein Problem vorliegt. Stellen Sie sicher, dass der Workflow aktiviert ist und dass **URL** im Ziel in [!DNL Adobe Experience Platform] korrekt ist. Workflow-Ausführungen erfolgen nicht sofort. Daher müssen Sie möglicherweise eine Weile warten, bevor der Vorgang abgeschlossen ist.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

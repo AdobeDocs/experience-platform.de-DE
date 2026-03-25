@@ -3,10 +3,10 @@ title: Aktivieren von potenziellen Zielgruppen für Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie potenzielle Zielgruppen für Ziele aktivieren
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 24%
+source-wordcount: '583'
+ht-degree: 15%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 24%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Wenden Sie sich an den Adobe-Support, um weitere Informationen zu erhalten.
+>Diese Funktion steht Kunden zur Verfügung, die das [!DNL Real-Time CDP] Prime- und Ultimate-Paket erworben haben. Wenden Sie sich an den Adobe-Support, um weitere Informationen zu erhalten.
 
-In diesem Artikel wird der Workflow erläutert, der zum Exportieren [potenzieller Zielgruppen](/help/segmentation/types/prospect-audiences.md) aus Adobe Experience Platform an Ihr bevorzugtes Ziel erforderlich ist.
+In diesem Artikel wird der Workflow erläutert, der zum Exportieren [potenzieller Zielgruppen](/help/segmentation/types/prospect-audiences.md) aus [!DNL Adobe Experience Platform] an Ihr bevorzugtes Ziel erforderlich ist.
 
 ## Unterstützte Ziele {#supported-destinations}
 
@@ -47,7 +47,7 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 >[!TIP]
 >
->Die Ziele, die Profil-Audiences exportieren können, werden mit einem Symbol oben rechts auf der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die potenzielle Audiences exportieren können ([&#x200B; weiter oben auf der Seite &#x200B;](#supported-destinations).
+>Die Ziele, die Profil-Audiences exportieren können, werden mit einem Symbol oben rechts auf der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die potenzielle Audiences exportieren können ([ weiter oben auf der Seite ](#supported-destinations).
 
 ![Amazon S3-Zielseite, auf der Profil-Zielgruppen exportiert werden können, hervorgehoben.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
@@ -59,7 +59,7 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 ![Zielaktivierungs-Workflow mit hervorgehobenem Steuerelement „Interessenten“.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
-1. Fahren Sie mit dem nächsten Abschnitt fort[&#x200B; um Ihre Profil-Audiences &#x200B;](#select-profile-audiences) exportieren.
+1. Fahren Sie mit dem nächsten Abschnitt fort[ um Ihre Profil-Audiences ](#select-profile-audiences) exportieren.
 
 ## Zielgruppen des potenziellen Kunden auswählen {#select-prospect-audiences}
 
@@ -87,8 +87,8 @@ Note that we will need to add links to other destination types here as more dest
 
 ## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
 
-Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
+Erkunden Sie weitere Anwendungsfälle, die über die Partnerdatenunterstützung in [!DNL Real-Time CDP] aktiviert wurden:
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Verwenden Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, damit Sie [Ihre Profilbasis mit potenziellen Profilen von Datenpartnern erweitern und mit ihnen interagieren können, um neue Kundinnen und Kunden zu gewinnen oder zu erreichen](/help/rtcdp/partner-data/prospecting.md).
+* Nutzen Sie die Datenunterstützung von Drittanbietern in [!DNL Real-Time CDP], um [Ihre Profilbasis mit Interessentenprofilen von Datenpartnern zu erweitern und mit ihnen in Kontakt zu treten, um neue Kunden zu gewinnen oder zu erreichen](/help/rtcdp/partner-data/prospecting.md).
 * [Nutzen Sie die von Partnern unterstützte Erkennung zur Personalisierung von Erlebnissen vor Ort](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder eine Vorgeschichte mit Ihrer Marke hat.

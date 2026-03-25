@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie Eingabefelder in der Experience Platform-Benutzeroberfläche erstellen, mit denen Ihre Benutzerinnen und Benutzer verschiedene Informationen angeben können, die für die Verbindung und den Export von Daten zu Ihrem Ziel relevant sind.
 title: Benutzerdefinierte Datenfelder
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 71%
+source-wordcount: '1729'
+ht-degree: 64%
 
 ---
 
@@ -62,7 +62,7 @@ Bei der Erstellung Ihrer eigenen Kundendatenfelder können Sie die in der folgen
 | `enum` | Zeichenfolge | Optional | Rendert das benutzerdefinierte Feld als Dropdown-Menü und listet die für Benutzende verfügbaren Optionen auf. |
 | `default` | Zeichenfolge | Optional | Definiert den Standardwert aus einer `enum`-Liste. |
 | `hidden` | Boolesch | Optional | Gibt an, ob das Kundendatenfeld in der Benutzeroberfläche angezeigt wird oder nicht. |
-| `unique` | Boolesch | Optional | Verwenden Sie diesen Parameter, wenn Sie ein Kundendatenfeld erstellen müssen, dessen Wert über alle vom Unternehmen der Benutzenden eingerichteten Zieldatenflüsse hinweg eindeutig sein muss. Beispiel: Das Feld **[!UICONTROL Integrationsalias]** im Ziel [Benutzerdefinierte Personalisierung](../../../catalog/personalization/custom-personalization.md) muss eindeutig sein, d. h., zwei separate Datenflüsse zu diesem Ziel dürfen für dieses Feld nicht denselben Wert aufweisen. |
+| `unique` | Boolesch | Optional | Verwenden Sie diesen Parameter, wenn Sie ein Kundendatenfeld erstellen müssen, dessen Wert über alle vom Unternehmen der Benutzenden eingerichteten Zieldatenflüsse hinweg eindeutig sein muss. Beispielsweise muss das **[!UICONTROL Integration alias]** im Ziel [Benutzerdefinierte Personalization](../../../catalog/personalization/custom-personalization.md) eindeutig sein, d. h., zwei separate Datenflüsse zu diesem Ziel dürfen für dieses Feld nicht denselben Wert aufweisen. |
 | `readOnly` | Boolesch | Optional | Gibt an, ob die Kundin bzw. der Kunde den Wert des Felds ändern kann oder nicht. |
 
 {style="table-layout:auto"}
@@ -103,17 +103,17 @@ Das daraus resultierende Benutzeroberflächenerlebnis wird in der Abbildung unte
 
 ## Namen und Beschreibungen von Zielverbindungen {#names-description}
 
-Beim Erstellen eines neuen Ziels fügt Destination SDK automatisch Felder **[!UICONTROL Name]** und **[!UICONTROL Beschreibung]** zum Bildschirm für die Zielverbindung in der Experience Platform-Benutzeroberfläche hinzu. Wie Sie im obigen Beispiel sehen können, werden die Felder **[!UICONTROL Name]** und **[!UICONTROL Beschreibung]** in der Benutzeroberfläche gerendert, ohne in die Konfiguration der Kundendatenfelder einbezogen zu werden.
+Beim Erstellen eines neuen Ziels fügt Destination SDK in der Experience Platform-Benutzeroberfläche automatisch **[!UICONTROL Name]** und **[!UICONTROL Description]** Felder zum Bildschirm für die Zielverbindung hinzu. Wie Sie im obigen Beispiel sehen können, werden die Felder **[!UICONTROL Name]** und **[!UICONTROL Description]** in der Benutzeroberfläche gerendert, ohne in die Konfiguration der Kundendatenfelder einbezogen zu werden.
 
 >[!IMPORTANT]
 >
->Wenn Sie die Felder **[!UICONTROL Name]** und **[!UICONTROL Beschreibung]** in der Konfiguration der Kundendatenfelder hinzufügen, werden sie in der Benutzeroberfläche doppelt angezeigt.
+>Wenn Sie **[!UICONTROL Name]**- und **[!UICONTROL Description]**-Felder in der Konfiguration der Kundendatenfelder hinzufügen, werden sie in der Benutzeroberfläche doppelt angezeigt.
 
 ## Reihenfolge der Kundendatenfelder {#ordering}
 
 Die Reihenfolge, in der Sie die Kundendatenfelder in der Zielkonfiguration hinzufügen, wird in der Experience Platform-Benutzeroberfläche angezeigt.
 
-Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberfläche angezeigt, wobei die Optionen in der Reihenfolge **[!UICONTROL Name]**, **[!UICONTROL Beschreibung]**, **[!UICONTROL Behältername]**, **[!UICONTROL Ordnerpfad]**, **[!UICONTROL Dateityp]**, **[!UICONTROL Komprimierungsformat]** angezeigt werden.
+Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberfläche angezeigt, wobei die Optionen in der Reihenfolge **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]**, **[!UICONTROL Compression format]** angezeigt werden.
 
 ```json
 "customerDataFields":[
@@ -175,7 +175,7 @@ Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberf
 
 Sie können mehrere Kundendatenfelder in einem Abschnitt gruppieren. Beim Einrichten der Verbindung zum Ziel in der Benutzeroberfläche können Benutzerinnen und Benutzer eine visuelle Gruppierung ähnlicher Felder sehen und davon profitieren.
 
-Verwenden Sie dazu `"type": "object"`, um die Gruppe zu erstellen, und fassen Sie die gewünschten Kundendatenfelder in einem `properties`-Objekt zusammen, wie in der Abbildung unten gezeigt, wobei die Gruppierung **[!UICONTROL CSV-Optionen]** hervorgehoben ist.
+Verwenden Sie dazu `"type": "object"`, um die Gruppe zu erstellen, und fassen Sie die gewünschten Kundendatenfelder in einem `properties` -Objekt zusammen, wie in der Abbildung unten gezeigt, wobei die **[!UICONTROL CSV Options]** hervorgehoben ist.
 
 ```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[
@@ -261,7 +261,7 @@ Die dynamischen Dropdown-Selektoren sehen identisch mit den [regulären Dropdown
 
 Um eine dynamische Dropdown-Auswahl zu erstellen, müssen Sie zwei Komponenten konfigurieren:
 
-**Schritt 1.** [Erstellen Sie einen &#x200B;](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) mit einer `responseFields` Vorlage für den dynamischen API-Aufruf, wie unten dargestellt.
+**Schritt 1.** [Erstellen Sie einen ](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) mit einer `responseFields` Vorlage für den dynamischen API-Aufruf, wie unten dargestellt.
 
 ```json
 {
@@ -394,7 +394,7 @@ Um ein verschachteltes Feld hinzuzufügen, verwenden Sie den `properties` wie un
 
 Sie können bedingte Kundendatenfelder erstellen, die im Aktivierungs-Workflow nur angezeigt werden, wenn Benutzerinnen und Benutzer eine bestimmte Option auswählen.
 
-Beispielsweise können Sie bedingte Dateiformatierungsoptionen erstellen, die nur angezeigt werden, wenn Benutzerinnen und Benutzer einen bestimmten Dateityp auswählen.
+Beispielsweise können Sie bedingte Dateiformatierungsoptionen erstellen, die nur angezeigt werden, wenn Benutzerinnen und Benutzer einen bestimmten Dateitexport-Typ auswählen.
 
 Die folgende Konfiguration erstellt eine bedingte Gruppierung für CSV-Dateiformatierungsoptionen. Die CSV-Dateioptionen werden nur angezeigt, wenn Benutzerinnen oder Benutzer CSV als gewünschten Dateityp für den Export auswählen.
 
@@ -627,4 +627,4 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
 * [Aggregationsrichtlinie](aggregation-policy.md)
 * [Batch-Konfiguration](batch-configuration.md)
-* [Historische Profilqualifikationen](historical-profile-qualifications.md)
+* [Historische Profilqualifizierungen](historical-profile-qualifications.md)

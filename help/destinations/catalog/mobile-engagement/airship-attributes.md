@@ -3,9 +3,9 @@ keywords: Luftschiffattribute;Luftschiffziel
 title: Airship Attributes-Verbindung
 description: Nahtlose Übergabe von Adobe-Zielgruppendaten an Airship als Zielgruppenattribute für das Targeting in Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1121'
 ht-degree: 25%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 25%
 
 [!DNL Airship] ist die führende Experience Platform für Kundeninteraktion und hilft Ihnen, Ihren Anwendern in jeder Phase des Kundenlebenszyklus aussagekräftige, personalisierte Omni-Channel-Messaging bereitzustellen.
 
-Durch diese Integration werden Adobe-Profildaten zum Targeting oder [!DNL Airship] als [&#x200B; an &#x200B;](https://docs.airship.com/guides/audience/attributes/) übergeben.
+Durch diese Integration werden Adobe-Profildaten zum Targeting oder [!DNL Airship] als [ an ](https://docs.airship.com/guides/audience/attributes/) übergeben.
 
 Weitere Informationen zu [!DNL Airship] finden Sie unter [Airship Docs](https://docs.airship.com).
 
@@ -33,7 +33,7 @@ Bevor Sie Ihre Zielgruppen an [!DNL Airship] senden können, müssen Sie Folgend
 
 >[!TIP]
 >
->Erstellen Sie über [!DNL Airship]diesen Anmelde-Link[&#x200B; ein &#x200B;](https://go.airship.eu/accounts/register/plan/starter/)-Konto, falls noch nicht geschehen.
+>Erstellen Sie über [!DNL Airship]diesen Anmelde-Link[ ein ](https://go.airship.eu/accounts/register/plan/starter/)-Konto, falls noch nicht geschehen.
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -41,8 +41,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 
@@ -73,9 +73,9 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Attribute aktivieren {#enable-attributes}
 
-Adobe Experience Platform-Profilattribute ähneln [!DNL Airship] und können mithilfe des unten auf dieser Seite gezeigten Zuordnungs-Tools einfach in Experience Platform zugeordnet werden.
+[!DNL Adobe Experience Platform] Profilattribute ähneln [!DNL Airship] Attributen und können mithilfe des unten auf dieser Seite gezeigten Zuordnungs-Tools einfach miteinander in Experience Platform zugeordnet werden.
 
-[!DNL Airship] Projekte verfügen über mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es zuerst in [!DNL Airship] definieren. Weitere [&#x200B; finden Sie unter „Einrichten und Verwalten &#x200B;](https://docs.airship.com/tutorials/audience/attributes/) Attributen“.
+[!DNL Airship] Projekte verfügen über mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es zuerst in [!DNL Airship] definieren. Weitere [ finden Sie unter „Einrichten und Verwalten ](https://docs.airship.com/tutorials/audience/attributes/) Attributen“.
 
 ## Bearer-Token generieren {#bearer-token}
 
@@ -89,21 +89,21 @@ Klicken Sie auf **[!UICONTROL Create Token]** und speichern Sie die Details als 
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Airship Attributes]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Airship Attributes]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die [!DNL Adobe Experience Platform] Kunden mit diesem Ziel bewältigen können.
 
 ### Anwendungsfall #1 {#use-case-1}
 
-Nutzen Sie die in Adobe Experience Platform erfassten Profildaten für die Personalisierung der Nachricht und für umfangreiche Inhalte in allen Kanälen von [!DNL Airship]. Nutzen Sie beispielsweise [!DNL Experience Platform] Profildaten, um Standortattribute in [!DNL Airship] festzulegen. Dadurch kann eine Hotelmarke für jeden Benutzer ein Bild für den nächstgelegenen Hotelstandort anzeigen.
+Nutzen Sie Profildaten, die in [!DNL Adobe Experience Platform] erfasst wurden, um die Nachricht zu personalisieren und umfangreiche Inhalte in allen Kanälen von [!DNL Airship] bereitzustellen. Nutzen Sie beispielsweise [!DNL Experience Platform] Profildaten, um Standortattribute in [!DNL Airship] festzulegen. Dadurch kann eine Hotelmarke für jeden Benutzer ein Bild für den nächstgelegenen Hotelstandort anzeigen.
 
 ### Anwendungsfall #2 {#use-case-2}
 
-Nutzen Sie Attribute aus Adobe Experience Platform, um [!DNL Airship] Profile weiter anzureichern und mit SDK oder [!DNL Airship] Prognosedaten zu kombinieren. Beispielsweise kann eine retailer eine Zielgruppe mit Treuestatus- und Standortdaten (Attribute aus Experience Platform) erstellen und Daten abwandern, [!DNL Airship] hochgradig zielgerichtete Nachrichten an Benutzende mit dem Treuestatus Gold zu senden, die in Las Vegas (NV) leben und häufig abwandern.
+Nutzen Sie Attribute aus [!DNL Adobe Experience Platform], um [!DNL Airship] Profile weiter anzureichern und mit SDK oder [!DNL Airship] Prognosedaten zu kombinieren. Beispielsweise kann eine retailer eine Zielgruppe mit Treuestatus- und Standortdaten (Attribute aus Experience Platform) erstellen und Daten abwandern, [!DNL Airship] hochgradig zielgerichtete Nachrichten an Benutzende mit dem Treuestatus Gold zu senden, die in Las Vegas (NV) leben und häufig abwandern.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -132,7 +132,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 

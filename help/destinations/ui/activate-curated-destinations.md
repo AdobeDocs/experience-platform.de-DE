@@ -3,22 +3,22 @@ title: Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-K
 type: Tutorial
 description: Erfahren Sie, wie Sie Zielgruppen aus Adobe Experience Platform mithilfe der LiveRamp-ID für verbundene TV- und Audio-Ziele und andere Integrationen aktivieren.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '648'
 ht-degree: 1%
 
 ---
 
 # Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-Kennungen
 
-Verwenden Sie die Adobe Real-Time CDP-Integration mit [!DNL LiveRamp], um Zielgruppen für eine kuratierte Liste von Zielen zu aktivieren, die [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) zur Aktivierung verwenden, einschließlich verbundener TV- und Audio-Ziele, wie die unten aufgeführten.
+Verwenden Sie die Integration von Adobe [!DNL Real-Time CDP] mit [!DNL LiveRamp], um Zielgruppen für eine kuratierte Liste von Zielen zu aktivieren, die [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) zur Aktivierung verwenden, einschließlich verbundener TV- und Audio-Ziele, wie die unten aufgeführten.
 
 >[!IMPORTANT]
 >
 >Sie müssen LiveRampIDs in der Experience Platform-Benutzeroberfläche nicht aufnehmen und in keiner Weise mit ihnen arbeiten.
 >
-> Sie können Identitäten aus Real-Time CDP exportieren, z. B. PII-basierte Kennungen, bekannte Kennungen und benutzerdefinierte IDs, wie in der offiziellen [LiveRamp-Dokumentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) beschrieben. Diese Identitäten werden dann im Aktivierungsprozess weiter unten mit [!DNL LiveRamp RampIDs] abgeglichen.
+> Sie können Identitäten aus [!DNL Real-Time CDP] exportieren, z. B. PII-basierte Kennungen, bekannte Kennungen und benutzerdefinierte IDs, wie in der offiziellen [LiveRamp-Dokumentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) beschrieben. Diese Identitäten werden dann im Aktivierungsprozess weiter unten mit [!DNL LiveRamp RampIDs] abgeglichen.
 
 
 * [[!DNL 4C Insights]](#insights)
@@ -42,7 +42,7 @@ Verwenden Sie die Adobe Real-Time CDP-Integration mit [!DNL LiveRamp], um Zielgr
 * [[!DNL Teads]](#teads)
 * [[!DNL WB Discovery]](#wb-discovery)
 
-In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppen aus Real-Time CDP für die oben aufgeführten Ziele direkt über die Real-Time CDP-Benutzeroberfläche erforderlich ist.
+In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppen aus [!DNL Real-Time CDP] für die oben aufgeführten Ziele direkt über die [!DNL Real-Time CDP]-Benutzeroberfläche erforderlich ist.
 
 ## Aktivierungs-Workflow {#workflow}
 
@@ -50,19 +50,19 @@ Sie können Zielgruppen für verbundene TV- und Audio-Ziele aktivieren, indem Si
 
 ![Diagramm mit dem Workflow zum Aktivieren von Zielgruppen aus Real-Time CDP für kuratierte Ziele über LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
-Zunächst exportieren Sie Ihre Zielgruppen aus Real-Time CDP in das [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md)-Ziel als CSV-Dateien.
+Zunächst exportieren Sie Ihre Zielgruppen aus [!DNL Real-Time CDP] in das [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md)-Ziel als CSV-Dateien.
 
 Nachdem Sie Ihre Zielgruppen exportiert haben, aktivieren Sie sie mithilfe des [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md).
 
 >[!TIP]
 >
->Dieser Prozess ermöglicht es Ihnen, Ihre Zielgruppen für Ziele wie [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) und mehr direkt über die Real-Time CDP-Benutzeroberfläche zu aktivieren, ohne sich zur Aktivierung bei Ihrem [!DNL LiveRamp]-Konto anmelden zu müssen.
+>Durch diesen Prozess können Sie Ihre Zielgruppen für Ziele wie [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) und mehr direkt über die [!DNL Real-Time CDP]-Benutzeroberfläche aktivieren, ohne sich zur Aktivierung bei Ihrem [!DNL LiveRamp]-Konto anmelden zu müssen.
 
 ### Video-Tutorial {#video}
 
 Sehen Sie sich das folgende Video an, um eine umfassende Erläuterung des auf dieser Seite beschriebenen Workflows zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3452666?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### Schritt 1: Senden Sie Ihre Zielgruppen von Experience Platform über das [!DNL LiveRamp - Onboarding] Ziel an LiveRamp {#onboarding}
 
@@ -83,7 +83,7 @@ Fahren Sie nach dem erfolgreichen Export Ihrer Zielgruppen in LiveRamp mit [Schr
 
 >[!TIP]
 >
->Bevor Sie zu [Schritt 2](#distribution) übergehen[&#x200B; überprüfen Sie](../catalog/advertising/liveramp-onboarding.md#exported-data) ob Ihre Zielgruppen erfolgreich nach LiveRamp exportiert wurden. Weitere Informationen finden Sie in [&#x200B; Dokumentation zur Überwachung &#x200B;](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) Zieldatenflüssen und zu den spezifischen Überwachungsdetails für [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
+>Bevor Sie zu [Schritt 2](#distribution) übergehen[ überprüfen Sie](../catalog/advertising/liveramp-onboarding.md#exported-data) ob Ihre Zielgruppen erfolgreich nach LiveRamp exportiert wurden. Weitere Informationen finden Sie in [ Dokumentation zur Überwachung ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) Zieldatenflüssen und zu den spezifischen Überwachungsdetails für [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
 
 ### Schritt 2: Aktivieren Sie die integrierten Zielgruppen für angeschlossene TV- und Audio-Ziele über das [!DNL LiveRamp - Distribution] {#distribution}
 
@@ -93,7 +93,7 @@ Sie aktivieren die Zielgruppen (exportiert in [Schritt 1](#onboarding)) mithilfe
 
 ![Experience Platform-UI-Bild, das die LiveRamp - Verteilungs-Zielkarte anzeigt](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
-Informationen zum Konfigurieren des **[!DNL LiveRamp - Distribution]**-Ziels und Aktivieren der in Schritt 1 exportierten Zielgruppen [&#x200B; Sie &#x200B;](#onboarding) der Dokumentation zum [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md)-Ziel.
+Informationen zum Konfigurieren des **[!DNL LiveRamp - Distribution]**-Ziels und Aktivieren der in Schritt 1 exportierten Zielgruppen [ Sie ](#onboarding) der Dokumentation zum [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md)-Ziel.
 
 >[!IMPORTANT]
 >

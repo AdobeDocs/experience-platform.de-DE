@@ -3,9 +3,9 @@ title: Exportieren von Dateien nach Bedarf an Batch-Ziele mithilfe der Experienc
 type: Tutorial
 description: Erfahren Sie, wie Sie Dateien über die Experience Platform-Benutzeroberfläche bei Bedarf in Batch-Ziele exportieren können.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '804'
 ht-degree: 12%
 
 ---
@@ -30,7 +30,7 @@ Mit der **[!UICONTROL Export file now]** können Sie eine vollständige Datei ex
 
 Der Dateiexport wird sofort ausgelöst und verwendet nur Daten aus dem letzten Schnappschuss der Zielgruppenbewertung. Sie enthält keine Profil- oder Identitätsänderungen, die nach der Erstellung eines Schnappschusses auftreten. Geplante Exporte dagegen umfassen sowohl Momentaufnahmendaten als auch inkrementelle Änderungen, die zwischen der Momentaufnahmerstellung und der Exportzeit auftreten.
 
-Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[&#x200B; wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren &#x200B;](/help/destinations/api/ad-hoc-activation-api.md).
+Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[ wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren ](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Geplante Exporte vs. On-Demand-Exporte {#scheduled-vs-ondemand}
 

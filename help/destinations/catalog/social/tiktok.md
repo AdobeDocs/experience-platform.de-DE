@@ -3,10 +3,10 @@ title: TikTok-Verbindung
 description: Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Bei diesen Zielgruppen kann es sich um Personen handeln, die Ihre Website besucht oder mit Ihren Inhalten interagiert haben. Übertragen Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform nach TikTok mithilfe der Echtzeit-Integration von Adobe mit TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1244'
-ht-degree: 27%
+source-wordcount: '1211'
+ht-degree: 26%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 27%
 
 ## Überblick {#overview}
 
-Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Bei diesen Zielgruppen kann es sich um Personen handeln, die Ihre Website besucht oder mit Ihren Inhalten interagiert haben. Übertragen Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform nach TikTok mithilfe der Echtzeit-Integration von Adobe mit TikTok Ads Manager. Besuchen Sie das Business Help Center von [TikTok](https://ads.tiktok.com/help/article/audiences) um weitere Informationen zu erhalten.
+Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Bei diesen Zielgruppen kann es sich um Personen handeln, die Ihre Website besucht oder mit Ihren Inhalten interagiert haben. Übertragen Sie die gewünschte Zielgruppe schnell und sicher von [!DNL Adobe Experience Platform] nach TikTok mithilfe der Echtzeit-Integration von Adobe mit TikTok Ads Manager. Besuchen Sie das Business Help Center von [TikTok](https://ads.tiktok.com/help/article/audiences) um weitere Informationen zu erhalten.
 
 >[!IMPORTANT]
 >
@@ -22,17 +22,17 @@ Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das TikTok-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel für Kundinnen und Kunden von Adobe Experience Platform.
+Damit Sie besser verstehen können, wie und wann Sie das TikTok-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel für [!DNL Adobe Experience Platform].
 
 ### Anwendungsfall {#use-case-1}
 
-Eine Sportbekleidungsmarke möchte Bestandskunden über ihre Social-Media-Konten erreichen. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM in Adobe Experience Platform aufnehmen, Zielgruppen aus ihren eigenen Offline-Daten erstellen und diese Zielgruppen an TikTok senden, um Anzeigen in den Social-Media-Feeds ihrer Kunden anzuzeigen.
+Eine Sportbekleidungsmarke möchte Bestandskunden über ihre Social-Media-Konten erreichen. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM in [!DNL Adobe Experience Platform] aufnehmen, Zielgruppen aus ihren eigenen Offline-Daten erstellen und diese Zielgruppen an TikTok senden, um Anzeigen in den Social-Media-Feeds ihrer Kunden anzuzeigen.
 
 ## Voraussetzungen {#prerequisites}
 
 Sie benötigen [!DNL Admin] oder [!DNL Operator] Zugriff auf das TikTok Ads Manager-Konto, an das Sie Zielgruppen senden möchten. Weitere Informationen finden Sie im [TikTok-Hilfezentrum](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
-Bevor Sie Daten an Ihr TikTok Ads Manager-Konto senden, müssen Sie Adobe Experience Platform die Berechtigung erteilen, für `Audience Management` auf Ihr Ad-Konto zuzugreifen. Diese Berechtigung kann erteilt werden, indem [Ihre Ads Manager-ID eingeben](#authenticate) in der Experience Platform-Benutzeroberfläche und die Berechtigung erteilt wird, nachdem sie zu Ihrem TikTok Ads Manager-Konto weitergeleitet wurde.
+Bevor Sie Daten an Ihr TikTok Ads Manager-Konto senden, müssen Sie [!DNL Adobe Experience Platform] Berechtigung erteilen, um auf Ihr Ad-Konto für `Audience Management` zugreifen zu können. Diese Berechtigung kann erteilt werden, indem [Ihre Ads Manager-ID eingeben](#authenticate) in der Experience Platform-Benutzeroberfläche und die Berechtigung erteilt wird, nachdem sie zu Ihrem TikTok Ads Manager-Konto weitergeleitet wurde.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -40,10 +40,10 @@ TikTok unterstützt die Aktivierung von Identitäten, die in der folgenden Tabel
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. Sowohl Nur-Text- als auch SHA256-Hash-GAID-Werte werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
-| IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. Sowohl Nur-Text- als auch SHA256-Hash-IDFA-Werte werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
-| Telefonnummer | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt und müssen im E.164-Format vorliegen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
-| E-Mail | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
+| GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. Sowohl Nur-Text- als auch SHA256-Hash-GAID-Werte werden von [!DNL Adobe Experience Platform] unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
+| IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. Sowohl Nur-Text- als auch SHA256-Hash-IDFA-Werte werden von [!DNL Adobe Experience Platform] unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
+| Telefonnummer | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-Telefonnummern werden von [!DNL Adobe Experience Platform] unterstützt und müssen im E.164-Format vorliegen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
+| E-Mail | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | [!DNL Adobe Experience Platform] unterstützt sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
 
 {style="table-layout:auto"}
 
@@ -53,9 +53,9 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
-| [!DNL Federated Audience Composition] | Ja | Zielgruppen, die über die [Federated Audience Composition“ in Experience Platform importiert &#x200B;](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/start/audiences). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
+| [!DNL Federated Audience Composition] | Ja | Zielgruppen, die über die [Federated Audience Composition“ in Experience Platform importiert ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -121,7 +121,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -131,7 +131,7 @@ Nachfolgend finden Sie ein Beispiel für die korrekte Identitätszuordnung beim 
 
 Auswahl der Quellfelder:
 
-* Wählen Sie eine Kennung (z. B.: `Email_LC_SHA256`) als Quellidentität aus, die ein Profil in Adobe Experience Platform und [!DNL TikTok Ads Manager] eindeutig identifiziert.
+* Wählen Sie eine Kennung (z. B.: `Email_LC_SHA256`) als Quellidentität aus, die ein Profil in [!DNL Adobe Experience Platform] und [!DNL TikTok Ads Manager] eindeutig identifiziert.
 
 Auswählen der Zielfelder:
 

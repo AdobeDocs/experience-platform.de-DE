@@ -3,10 +3,10 @@ keywords: Ziele; Fragen; häufig gestellte Fragen; FAQ; Ziele FAQ
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 5%
+source-wordcount: '1633'
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ## Überblick {#overview}
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform-Zielen. Fragen und Antworten zur Fehlerbehebung bei anderen [!DNL Experience Platform], einschließlich solcher, die für alle [!DNL Experience Platform]-APIs gelten, finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platform](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu [!DNL Adobe Experience Platform]. Fragen und Antworten zur Fehlerbehebung bei anderen [!DNL Experience Platform], einschließlich solcher, die für alle [!DNL Experience Platform]-APIs gelten, finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platform](../landing/troubleshooting.md).
 
 ## Fragen zu allgemeinen Zielen {#general}
 
@@ -27,7 +27,7 @@ Bei der Streaming-Segmentierung wird die Profilanzahl für Streaming-Zielgruppen
 
 Wenn sich der Zeitplan für den Zielgruppenexport vom Segmentierungsplan unterscheidet, unterscheiden sich die Profilzahlen zwischen der Benutzeroberfläche und der exportierten [!DNL CSV], insbesondere bei Streaming-Zielgruppen.
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../segmentation/home.md) zum Segmentierungs-Service .
+Weitere Informationen finden [ in der ](../segmentation/home.md) zum Segmentierungs-Service .
 +++
 
 ### Warum werden niedrige Übereinstimmungsraten beim Deaktivieren und erneuten Aktivieren einer aktualisierten Zielgruppe für dasselbe Ziel angezeigt? {#low-match-rates-reactivation}
@@ -69,7 +69,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 
 ||Experience Cloud Audiences|Adobe Target|
 |---|---|---|
-| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, [!DNL Adobe Target], [!DNL Adobe Analytics], Advertising Cloud, Marketo, [!DNL Adobe Campaign] | Supports audience activation only to [!DNL Adobe Target] |
 | **Supports audience activation** | ✓ | ✓ |
 | **Supports attribute activation** | X | ✓ |
 | **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
@@ -93,11 +93,11 @@ See the table below for a feature comparison between the Experience Cloud Audien
 Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die folgenden Anforderungen erfüllen:
 
 * Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]** für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Adobe Experience Cloud Das Geschäftskonto **&#x200B;**&#x200B;muss Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [&#x200B; in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
+* Das **[!DNL Adobe Experience Cloud]** Business-Konto muss als Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden [ in der Facebook](https://www.facebook.com/business/help/1717412048538897)Dokumentation unter „Partner zu Ihrem Business Manager hinzufügen“.
 
   >[!IMPORTANT]
   >
-  > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Dies ist für die [!DNL Adobe Experience Platform]-Integration erforderlich.
+  > Beim Konfigurieren der Berechtigungen für [!DNL Adobe Experience Cloud] müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Dies ist für die [!DNL Adobe Experience Platform]-Integration erforderlich.
 * Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Rufen Sie dazu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` auf, wobei `accountID` Ihre [!DNL Facebook Ad Account ID] ist.
 +++
 
@@ -107,7 +107,7 @@ Bevor Sie Ihre Zielgruppen an [!DNL Facebook] senden können, müssen Sie die fo
 Nein. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen Sie keine Pixel zu Ihrem Advertiser-Konto hinzufügen.
 +++
 
-### Wie lange braucht Facebook, um Informationen aus Adobe Experience Platform zu verarbeiten? {#facebook-processing-time}
+### Wie lange braucht Facebook, um Informationen aus [!DNL Adobe Experience Platform] zu verarbeiten? {#facebook-processing-time}
 
 +++Antwort
 Ab März 2021 benötigt [!DNL Facebook Custom Audiences] bis zu einer Stunde, um die von [!DNL Experience Platform] erhaltenen Informationen zu verarbeiten.
@@ -127,7 +127,7 @@ Die [!DNL Facebook Custom Audiences]-Verbindung verwendet [!DNL Experience Platf
 Diese beiden Integrationen ergänzen sich gegenseitig. Sie können beide verwenden, um eine bessere Zielgruppenabdeckung zu gewährleisten. Beispielsweise können Sie die [!DNL Facebook Pixel]-Erweiterung für Interessenten verwenden, die kein Konto erstellt haben, während [!DNL Facebook Custom Audiences] Ihnen helfen können, bestehende Kundinnen und Kunden auf der Grundlage [!DNL Experience Platform] Identitäten anzusprechen.
 +++
 
-### Unterstützt die Adobe Experience Platform-Integration mit [!DNL Facebook Custom Audiences] die Disqualifizierung von Benutzenden aus einer Zielgruppe, wenn sie sich nicht mehr dafür qualifizieren? {#facebook-disqualify-users}
+### Unterstützt die [!DNL Adobe Experience Platform]-Integration mit [!DNL Facebook Custom Audiences] die Disqualifizierung von Benutzenden aus einer Zielgruppe, wenn diese nicht mehr für die Zielgruppe qualifiziert sind? {#facebook-disqualify-users}
 
 +++Antwort
 Ja, die Integration unterstützt das Entfernen von Benutzern aus [!DNL Facebook Custom Audiences], wenn sie sich nicht mehr qualifizieren.
@@ -192,22 +192,22 @@ Ausführliche Erläuterungen zu den Anforderungen für den ID-Abgleich finden Si
 
 +++
 
-## Personalisierung der gleichen und der nächsten Seite über die Adobe Target- und benutzerdefinierten Personalization-Ziele {#same-next-page-personalization}
+## Personalisierung der gleichen und der nächsten Seite über die [!DNL Adobe Target] und benutzerdefinierten Personalization-Ziele {#same-next-page-personalization}
 
-### Muss ich die Experience Platform Web SDK verwenden, um Zielgruppen und Attribute an Adobe Target zu senden? {#target-web-sdk}
+### Muss ich die Experience Platform Web SDK verwenden, um Zielgruppen und Attribute an [!DNL Adobe Target] zu senden? {#target-web-sdk}
 
 +++Antwort
-Nein, die Web-SDK ist nicht erforderlich, um Zielgruppen für [Adobe Target zu aktivieren](catalog/personalization/adobe-target-connection.md).
+Nein, die Web-SDK ist nicht erforderlich, um Zielgruppen für die [[!DNL Adobe Target]](catalog/personalization/adobe-target-connection.md) zu aktivieren.
 
 Wenn jedoch [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=de) anstelle von Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
 
-Bei [Personalisierung der gleichen Seite und der nächsten Seite](ui/activate-edge-personalization-destinations.md) müssen Sie entweder Web SDK oder die [Edge Network-API verwenden](https://developer.adobe.com/data-collection-apis/docs/api/). Weitere Informationen finden Sie in [&#x200B; Dokumentation unter Aktivieren von Zielgruppen für Edge](ui/activate-edge-personalization-destinations.md)Ziele .
+Bei [Personalisierung der gleichen Seite und der nächsten Seite](ui/activate-edge-personalization-destinations.md) müssen Sie entweder Web SDK oder die [Edge Network-API verwenden](https://developer.adobe.com/data-collection-apis/docs/api/). Weitere Informationen finden Sie in [ Dokumentation unter Aktivieren von Zielgruppen für Edge](ui/activate-edge-personalization-destinations.md)Ziele .
 +++
 
-### Gibt es eine Begrenzung für die Anzahl der Attribute, die ich von Real-time Customer Data Platform an Adobe Target oder ein benutzerdefiniertes Personalization-Ziel senden kann? {#target-attributes-limit}
+### Gibt es eine Begrenzung für die Anzahl der Attribute, die ich von Real-time Customer Data Platform an [!DNL Adobe Target] oder ein benutzerdefiniertes Personalization-Ziel senden kann? {#target-attributes-limit}
 
 +++Antwort
-Ja, Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite unterstützen beim Aktivieren von Zielgruppen für Adobe Target- oder benutzerdefinierte Personalization-Ziele maximal 30 Attribute pro Sandbox. Weitere Informationen zu Aktivierungsleitplanken finden Sie in der [Dokumentation zu Leitplanken](guardrails.md#edge-destinations-activation).
+Ja, Anwendungsfälle für die Personalisierung der gleichen Seite und der nächsten Seite unterstützen maximal 30 Attribute pro Sandbox, wenn Zielgruppen für [!DNL Adobe Target] oder benutzerdefinierte Personalization-Ziele aktiviert werden. Weitere Informationen zu Aktivierungsleitplanken finden Sie in der [Dokumentation zu Leitplanken](guardrails.md#edge-destinations-activation).
 +++
 
 ### Welche Attributtypen werden für die Aktivierung unterstützt (z. B. Arrays, Zuordnungen usw.)? {#target-supported-attribute-types}
@@ -226,10 +226,10 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 Zielgruppendefinitionen werden in bis zu einer Stunde an die Edge Network weitergegeben. Wenn jedoch innerhalb dieser ersten Stunde eine Zielgruppe aktiviert wird, könnten einige Besucher fehlen, die sich für die Zielgruppe qualifiziert hätten.
 +++
 
-### Wo kann ich die aktivierten Attribute in Adobe Target sehen? {#target-activated-attributes-location}
+### Wo kann ich die aktivierten Attribute in [!DNL Adobe Target] sehen? {#target-activated-attributes-location}
 
 +++Antwort
-Attribute stehen zur Verwendung in Target in {[} JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=de) und [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=de) Angeboten zur Verfügung.
+Attribute stehen zur Verwendung in Target in {[} JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) und [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) Angeboten zur Verfügung.
 +++
 
 ### Kann ich ein Ziel ohne Datenstrom erstellen und dann zu einem späteren Zeitpunkt einen Datenstrom zum selben Ziel hinzufügen? {#destination-without-datastream}
@@ -238,10 +238,10 @@ Attribute stehen zur Verwendung in Target in {[} JSON](https://experienceleague.
 Dies wird derzeit nicht über die Benutzeroberfläche „Ziele“ unterstützt. Wenn Sie in diesem Fall Hilfe benötigen, wenden Sie sich bitte an den Adobe-Support.
 +++
 
-### Was passiert, wenn ich ein Adobe Target-Ziel lösche? {#delete-target-destination}
+### Was passiert, wenn ich ein [!DNL Adobe Target]-Ziel lösche? {#delete-target-destination}
 
 +++Antwort
-Wenn Sie ein Ziel löschen, werden alle unter dem Ziel zugeordneten Zielgruppen und Attribute aus Adobe Target gelöscht und auch aus Edge Network entfernt.
+Wenn Sie ein Ziel löschen, werden alle unter dem Ziel zugeordneten Zielgruppen und Attribute aus [!DNL Adobe Target] gelöscht und auch aus der Edge Network entfernt.
 +++
 
 ### Funktioniert die Integration mit der Edge Network-API? {#edge-network-api-integration}
@@ -250,10 +250,10 @@ Wenn Sie ein Ziel löschen, werden alle unter dem Ziel zugeordneten Zielgruppen 
 Ja, die Edge Network-API funktioniert mit dem benutzerdefinierten Personalization-Ziel. Da Profilattribute vertrauliche Daten enthalten können, müssen Sie zum Schutz dieser Daten beim benutzerdefinierten Personalization-Ziel die Edge Network-API für die Datenerfassung verwenden. Darüber hinaus müssen alle API-Aufrufe in einem [authentifizierten Kontext](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) erfolgen.
 +++
 
-### Ich kann nur eine einzige Zusammenführungsrichtlinie haben, die im Randbereich aktiv ist. Kann ich Zielgruppen erstellen, die eine andere Zusammenführungsrichtlinie verwenden, und sie dennoch als Streaming-Zielgruppen an Adobe Target senden? {#edge-merge-policy}
+### Ich kann nur eine einzige Zusammenführungsrichtlinie haben, die im Randbereich aktiv ist. Kann ich Zielgruppen erstellen, die eine andere Zusammenführungsrichtlinie verwenden, und sie dennoch als Streaming-Zielgruppen an [!DNL Adobe Target] senden? {#edge-merge-policy}
 
 +++Antwort
-Nein. Alle Zielgruppen, die Sie für Adobe Target aktivieren möchten, müssen eine Active-On-Edge-[&#x200B; (Zusammenführungsrichtlinie) &#x200B;](../profile/merge-policies/ui-guide.md).
+Nein. Alle Zielgruppen, die Sie für [!DNL Adobe Target] aktivieren möchten, müssen eine Active-On-Edge-[ (Zusammenführungsrichtlinie) ](../profile/merge-policies/ui-guide.md).
 +++
 
 ### Werden Datennutzungskennzeichnungen und -durchsetzung (Data Usage Labeling and Enforcement, DULE) und Einverständnisrichtlinien durchgesetzt? {#dule-consent-enforcement}
@@ -265,7 +265,7 @@ Ja. Die [Data Governance- und Einverständnisrichtlinien](../data-governance/hom
 ### Sind die [!DNL Adobe Target]- und [!DNL Custom Personalization]-Ziele [!DNL HIPAA]? {#hipaa-compliance}
 
 +++Antwort
-[!DNL Adobe Target] ist nicht [!DNL HIPPA] konform mit [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/de/solutions/industries/healthcare.html). Kunden sollten sich bei ihren eigenen Rechtsabteilungen erkundigen, ob [!DNL HIPPA] für benutzerdefinierte Optimierungskanäle bereit sind, bevor sie die Edge-Personalisierung über [!DNL Adobe Target] oder die [!DNL Custom Personalization] Ziele verwenden.
+[!DNL Adobe Target] ist nicht [!DNL HIPPA] konform mit [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Kunden sollten sich bei ihren eigenen Rechtsabteilungen erkundigen, ob [!DNL HIPPA] für benutzerdefinierte Optimierungskanäle bereit sind, bevor sie die Edge-Personalisierung über [!DNL Adobe Target] oder die [!DNL Custom Personalization] Ziele verwenden.
 
 Für Anwendungsfälle, bei denen die Verwaltung von Einverständnisrichtlinien skaliert werden muss, müssen Kunden [!DNL Adobe Privacy & Security Shield] kaufen. [!DNL Adobe Privacy & Security Shield] Funktionen werden als erweiterte Funktionssuite angeboten und können nicht separat erworben werden.
 

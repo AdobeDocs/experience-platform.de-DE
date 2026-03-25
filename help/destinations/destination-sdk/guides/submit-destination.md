@@ -2,10 +2,10 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie benötigen, um ein produktbezogenes Ziel zur Überprüfung zu übermitteln, wenn Sie es mit Destination SDK erstellen.
 title: Ein produktbezogenes Ziel zur Überprüfung einreichen
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 35%
+source-wordcount: '1039'
+ht-degree: 32%
 
 ---
 
@@ -27,14 +27,14 @@ ht-degree: 35%
 
 Bevor Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) veröffentlicht werden kann, müssen Sie Adobe bestimmte Informationen über das Ziel und die von Ihnen durchgeführten Tests zukommen lassen, um sicherzustellen, dass die Anwender beim Aktivieren von Daten auf Ihrer Plattform die bestmöglichen Ergebnisse erzielen.
 
-Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, wenn Sie ein mit dem Adobe Experience Platform Destination SDK erstelltes Ziel übermitteln oder aktualisieren. Um ein Ziel in Adobe Experience Platform erfolgreich zu übermitteln, senden Sie eine E-Mail an <aepdestsdk@adobe.com>, die folgende Informationen enthält:
+Auf dieser Seite finden Sie alle Informationen, die Sie angeben müssen, wenn Sie ein mit [!DNL Adobe Experience Platform] Destination SDK erstelltes Ziel übermitteln oder aktualisieren. Um ein Ziel in [!DNL Adobe Experience Platform] erfolgreich zu übermitteln, senden Sie eine E-Mail an <aepdestsdk@adobe.com>, die folgende Informationen enthält:
 
 * Eine Beschreibung der Anwendungsfälle, die Ihr Ziel löst. Dies ist nur erforderlich, wenn Sie eine neue Zielkonfiguration senden.
 * Eine Beschreibung des Grundes für die Übermittlung Ihres Ziels. Dies ist nur erforderlich, wenn Sie eine vorhandene Zielkonfiguration aktualisieren.
 * Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Bitte teilen Sie Adobe einen API-Aufruf an Ihren Ziel-Endpunkt und die API-Antwort, die von Ihrem Ziel-Endpunkt empfangen wurde.
 * Eine Bildschirmaufzeichnung, die das Benutzererlebnis für jemanden zeigt, der eine Verbindung zu Ihrem Ziel herstellt und die Aktivierungsschritte durchläuft.
 * Zusätzliche Anforderungen für dateibasierte Ziele:
-   * Geben Sie eine Anfrage und ein Beispiel für eine Antwort frei, nachdem Sie die Test[API verwendet haben, um Ihr dateibasiertes Ziel mit Beispielprofilen zu &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+   * Geben Sie eine Anfrage und ein Beispiel für eine Antwort frei, nachdem Sie die Test[API verwendet haben, um Ihr dateibasiertes Ziel mit Beispielprofilen zu ](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Hängen Sie eine Beispieldatei an, die von Ihrem Ziel generiert und an Ihren Speicherort exportiert wurde.
    * Senden Sie eine Form des Nachweises, dass Sie die exportierte Datei vom Speicherort erfolgreich in Ihr System aufgenommen haben.
 * Nachweis, dass Sie eine Anfrage zur Veröffentlichung eines Ziels für Ihr Ziel mithilfe der [Zielveröffentlichungs-API](../publishing-api/create-publishing-request.md) übermittelt haben.
@@ -234,7 +234,7 @@ Bei dateibasierten Zielen müssen Sie einen zusätzlichen Nachweis dafür erbrin
 
 ### Testen der API-Antwort {#testing-api-response-file-based}
 
-Fügen Sie nach Verwendung der Test-API eine Anfrage und ein Antwortbeispiel [, um Ihr dateibasiertes Ziel mit Beispielprofilen zu &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+Fügen Sie nach Verwendung der Test-API eine Anfrage und ein Antwortbeispiel [, um Ihr dateibasiertes Ziel mit Beispielprofilen zu ](../testing-api/batch-destinations/file-based-destination-testing-api.md).
 
 ### Exportierte Datei anhängen {#attach-exported-file}
 

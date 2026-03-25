@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 description: Erfahren Sie, wie Sie das Enddatum für Datensatzexport-Datenflüsse mit dem aktuellen Enddatum 1. Mai 2025 aktualisieren.
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Was geschieht? {#what-is-happening}
 
-In [&#x200B; Experience Platform-Version vom September 2024 &#x200B;](/help/release-notes/latest/latest.md#destinations) die Option zum Festlegen eines `endTime` für den Export von Datensatzdatenflüssen eingeführt. Adobe hat außerdem das standardmäßige Enddatum 1. Mai 2025 für alle Datensatzexport-Datenflüsse eingeführt, die (*der Version vom September 2024) erstellt*. Diese Datenflüsse zeigen derzeit eine Meldung ähnlich der unten gezeigten an.
+In [ Experience Platform-Version vom September 2024 ](/help/release-notes/latest/latest.md#destinations) die Option zum Festlegen eines `endTime` für den Export von Datensatzdatenflüssen eingeführt. Adobe hat außerdem das standardmäßige Enddatum 1. Mai 2025 für alle Datensatzexport-Datenflüsse eingeführt, die (*der Version vom September 2024) erstellt*. Diese Datenflüsse zeigen derzeit eine Meldung ähnlich der unten gezeigten an.
 
 ![Benutzeroberflächenbenachrichtigung über die Notwendigkeit, das Enddatum des Datensatzexport-Datenflusses zu aktualisieren.](/help/destinations/assets/ui/export-datasets/update-end-date.png)
 
@@ -52,7 +52,7 @@ So aktualisieren Sie das Enddatum von Datenflüssen:
    ![Im Planungsschritt hervorgehobenes Steuerelement „Enddatum auswählen“](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. Fahren Sie mit dem Ende des Workflows fort und speichern Sie die Aktualisierungen.
 
-Ausführliche Informationen zum Planungsschritt finden Sie im Tutorial [Exportieren von Datensätzen in der Benutzeroberfläche](/help/destinations/api/export-datasets.md#scheduling).
+Ausführliche Informationen zum Planungsschritt finden Sie im Tutorial [Exportieren von Datensätzen in der Benutzeroberfläche](/help/destinations/api/export-datasets.md#export-datasets-by-using-the).
 
 ## Verwenden der API zum Aktualisieren des Enddatums {#use-api}
 

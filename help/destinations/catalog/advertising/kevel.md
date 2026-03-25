@@ -3,9 +3,9 @@ title: Verbindung abgleichen
 description: Verwenden Sie das Level-Streaming-Ziel, um Zielgruppen direkt in die UserDB- und Segment-Management-APIs von Level zu aktivieren und das Targeting in Echtzeit zur Entscheidungszeit zu unterstützen.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1159'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 [[!DNL Kevel]](https://www.kevel.com/) bietet die KI-fähige Technologie und fachkundige Anleitung, die innovativen Commerce-Führungskräften dabei helfen, in Einzelhandelsmedien zu starten, zu skalieren und erfolgreich zu sein. Die Retail Media Cloud von [!DNL Kevel] ermöglicht zielgerichtete, zuordenbare, anpassbare Anzeigenformate für Onsite- und Offsite-Werbung.
 
-Das [!DNL Kevel] Streaming-Ziel für Adobe Experience Platform ermöglicht es Kunden, Adobe-Zielgruppen direkt in die UserDB- und Segment Management-APIs von [!DNL Kevel] zu aktivieren, um das Targeting in Echtzeit zur Zeit der Anzeigenentscheidung zu unterstützen.
+Das [!DNL Kevel] Streaming-Ziel für [!DNL Adobe Experience Platform] ermöglicht es Kunden, Adobe-Zielgruppen direkt in die UserDB- und Segment Management-APIs von [!DNL Kevel] zu aktivieren, um das Targeting in Echtzeit zum Zeitpunkt der Anzeigenentscheidung zu unterstützen.
 
 >[!IMPORTANT]
 >
@@ -73,7 +73,7 @@ Das bedeutet:
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |-----------------------|-----------|---------------------------------------------------------- |
 | Segmentierungs-Service | Ja | Von der Segmentierungs-Engine ausgewertete Adobe-Profil-Zielgruppen. |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 

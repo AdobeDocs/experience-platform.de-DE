@@ -5,10 +5,10 @@ title: Verbinden mit Streaming-Zielen und Aktivieren von Daten mithilfe der Flow
 description: In diesem Dokument wird die Erstellung von Streaming-Zielen mithilfe der Adobe Experience Platform-API behandelt
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2203'
-ht-degree: 41%
+source-wordcount: '2197'
+ht-degree: 40%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 41%
 
 >[!IMPORTANT]
 >
->Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions)
+>Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions)
 >
 >Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
 >
 >Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-In diesem Tutorial erfahren Sie, wie Sie API-Aufrufe verwenden, um eine Verbindung zu Ihren Adobe Experience Platform-Daten herzustellen, eine Verbindung zu einem Streaming-Cloud-Speicher-Ziel ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) oder [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)) herzustellen, einen Datenfluss zu Ihrem neu erstellten Ziel zu erstellen und Daten für Ihr neu erstelltes Ziel zu aktivieren.
+In diesem Tutorial erfahren Sie, wie Sie API-Aufrufe verwenden, um eine Verbindung zu Ihren [!DNL Adobe Experience Platform]-Daten herzustellen, eine Verbindung zu einem Streaming-Cloud-Speicher-Ziel ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) oder [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)) herzustellen, einen Datenfluss zu Ihrem neu erstellten Ziel zu erstellen und Daten für Ihr neu erstelltes Ziel zu aktivieren.
 
 In diesem Tutorial wird für alle Beispiele das [!DNL Amazon Kinesis] verwendet, die Schritte sind jedoch für [!DNL Azure Event Hubs] identisch.
 
@@ -32,7 +32,7 @@ Wenn Sie die Benutzeroberfläche in Experience Platform bevorzugen, um eine Verb
 
 ## Erste Schritte {#get-started}
 
-Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] ist das „System of Record“ für den Speicherort und die Herkunft von Daten in Experience Platform.
@@ -53,7 +53,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Werte für erforderliche und optionale Kopfzeilen sammeln {#gather-values}
 
-Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -405,7 +405,7 @@ curl -X POST \
 
 * `{FLOW_SPEC_ID}`: Die Flussspezifikations-ID für profilbasierte Ziele ist `71471eba-b620-49e4-90fd-23f1fa0174d8`. Verwenden Sie diesen Wert im -Aufruf.
 * `{SOURCE_CONNECTION_ID}`: Verwenden Sie die Quellverbindungs-ID, die Sie im Schritt [Verbindung zu Ihren Experience Platform-Daten herstellen](#connect-to-your-experience-platform-data) erhalten haben.
-* `{TARGET_CONNECTION_ID}`: Verwenden Sie die Zielverbindungs-ID, die Sie im Schritt &quot;[&#x200B; mit Streaming-Ziel herstellen“ erhalten &#x200B;](#connect-to-streaming-destination).
+* `{TARGET_CONNECTION_ID}`: Verwenden Sie die Zielverbindungs-ID, die Sie im Schritt &quot;[ mit Streaming-Ziel herstellen“ erhalten ](#connect-to-streaming-destination).
 
 **Antwort**
 
@@ -565,7 +565,7 @@ Die zurückgegebene Antwort sollte im `transformations` die Zielgruppen und Prof
 
 >[!IMPORTANT]
 >
-> Zusätzlich zu den Profilattributen und den Zielgruppen im Schritt [Aktivieren von Daten für Ihr neues Ziel](#activate-data) enthalten die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] auch Informationen zur Identitätszuordnung. Dies stellt die Identitäten der exportierten Profile dar (z. B. [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=de), mobile ID, Google ID, E-Mail-Adresse usw.). Siehe Beispiel unten.
+> Zusätzlich zu den Profilattributen und den Zielgruppen im Schritt [Aktivieren von Daten für Ihr neues Ziel](#activate-data) enthalten die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] auch Informationen zur Identitätszuordnung. Dies stellt die Identitäten der exportierten Profile dar (z. B. [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobile ID, Google ID, E-Mail-Adresse usw.). Siehe Beispiel unten.
 
 ```json
 {
@@ -632,7 +632,7 @@ Gehen Sie wie folgt vor, um mithilfe der angehängten [!DNL Postman] eine Verbin
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

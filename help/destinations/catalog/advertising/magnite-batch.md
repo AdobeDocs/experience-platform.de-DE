@@ -3,9 +3,9 @@ title: Magnite-Batch-Ziel
 description: Verwenden Sie dieses Ziel, um Adobe CDP-Zielgruppen im Batch an die Magnite-Streaming-Plattform zu senden.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1756'
 ht-degree: 12%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 12%
 
 In diesem Dokument wird das Ziel „Magnite: Batch“ beschrieben und es werden Beispiele für Anwendungsfälle bereitgestellt, die Ihnen dabei helfen, die Aktivierung und den Export von Zielgruppen besser zu verstehen.
 
-Adobe Real-Time CDP-Zielgruppen können auf zwei Arten an die Magnite-Streaming-Plattform gesendet werden: entweder einmal täglich oder in Echtzeit:
+Adobe [!DNL Real-Time CDP]-Zielgruppen können auf zwei Arten an die Magnite Streaming-Plattform gesendet werden: entweder einmal täglich oder in Echtzeit:
 
 1. Wenn Sie Zielgruppen nur einmal täglich bereitstellen möchten und/oder müssen, können Sie das Magnite: Batch-Ziel verwenden, das Zielgruppen über einen täglichen S3-Batch-Dateiversand an Magnite Streaming bereitstellt. Diese Batch-Zielgruppen werden auf unbestimmte Zeit in der Magnite-Plattform gespeichert, im Gegensatz zu Echtzeit-Zielgruppen, die nur für einige Tage gespeichert werden.
 
 2. Wenn Sie jedoch Zielgruppen häufiger bereitstellen möchten oder müssen, müssen Sie das [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md)-Ziel verwenden. Bei Verwendung des Echtzeit-Ziels empfängt Magnite Streaming Zielgruppen in Echtzeit, aber Magnite kann Echtzeit-Zielgruppen nur vorübergehend auf seiner Plattform speichern und sie werden innerhalb weniger Tage aus dem System entfernt. Aus diesem Grund müssen Sie, wenn Sie das Echtzeit-Ziel Magnite verwenden möchten, *auch* das Ziel Magnite: Batch verwenden - jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, müssen Sie auch für das Batch-Ziel aktivieren.
 
-Zusammenfassend: Wenn Sie nur Adobe Real-Time CDP-Zielgruppen einmal pro Tag bereitstellen möchten, verwenden Sie nur das Batch-Ziel Magnite: und Zielgruppen werden einmal pro Tag bereitgestellt. Wenn Sie Adobe Real-Time CDP-Zielgruppen in Echtzeit bereitstellen möchten, verwenden Sie *beide* das Magnite: Batch-Ziel und das Magnite-Echtzeit-Ziel. Weitere Informationen finden Sie unter Magnite: Streaming .
+Zusammenfassend: Wenn Sie nur einmal täglich Adobe [!DNL Real-Time CDP]-Zielgruppen bereitstellen möchten, verwenden Sie nur das Batch-Ziel Magnite: , und die Zielgruppen werden einmal täglich bereitgestellt. Wenn Sie Adobe [!DNL Real-Time CDP]-Zielgruppen in Echtzeit bereitstellen möchten, verwenden Sie *sowohl* Magnite: Batch-Ziel als auch das Magnite-Echtzeit-Ziel. Weitere Informationen finden Sie unter Magnite: Streaming .
 
 
-Lesen Sie weiter unten, um weitere Informationen über Magnite zu erhalten: Batch-Ziel, wie Sie eine Verbindung damit herstellen und wie Sie Adobe Real-Time CDP-Zielgruppen aktivieren.
+Lesen Sie weiter unten, um weitere Informationen über Magnite zu erhalten: Batch-Ziel, wie Sie eine Verbindung damit herstellen und wie Sie Adobe [!DNL Real-Time CDP]-Zielgruppen aktivieren.
 Weitere Informationen zum Echtzeit-Ziel finden Sie stattdessen unter [diese Dokumentationsseite](magnite-streaming.md).
 
 >[!IMPORTANT]
@@ -34,7 +34,7 @@ Weitere Informationen zum Echtzeit-Ziel finden Sie stattdessen unter [diese Doku
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das Ziel Magnite: Batch verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel bewältigen können.
+Damit Sie besser verstehen können, wie und wann Sie das Magnite: Batch-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die [!DNL Adobe Experience Platform] Kunden mit diesem Ziel bewältigen können.
 
 ### Anwendungsfall #1 {#use-case-1}
 
@@ -50,7 +50,7 @@ Alle über das Ziel Magnite: Batch aktivierten Zielgruppen werden in einer Batch
 
 ## Voraussetzungen {#prerequisites}
 
-Um die [!DNL Magnite] Ziele in Adobe Experience Platform verwenden zu können, müssen Sie zunächst über ein Magnite-Streaming-Konto verfügen. Wenn Sie über ein [!DNL Magnite Streaming]-Konto verfügen, wenden Sie sich an Ihren [!DNL Magnite] Account Manager, um Anmeldeinformationen für den Zugriff auf [!DNL Magnite's] Ziele zu erhalten. Wenn Sie noch kein [!DNL Magnite Streaming]-Konto haben, wenden Sie sich bitte an adobe-tech@magnite.com
+Um die [!DNL Magnite] Ziele in [!DNL Adobe Experience Platform] verwenden zu können, müssen Sie zunächst über ein Magnite-Streaming-Konto verfügen. Wenn Sie über ein [!DNL Magnite Streaming]-Konto verfügen, wenden Sie sich an Ihren [!DNL Magnite] Account Manager, um Anmeldeinformationen für den Zugriff auf [!DNL Magnite's] Ziele zu erhalten. Wenn Sie noch kein [!DNL Magnite Streaming]-Konto haben, wenden Sie sich bitte an adobe-tech@magnite.com
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -72,8 +72,8 @@ Das Ziel Magnite: Batch kann (*)* Identitätsquellen von der Adobe CDP empfangen
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | [Personen-Zielgruppen](/help/segmentation/types/people-audiences.md) | Ja | Basierend auf Kundenprofilen können Sie bestimmte Personengruppen für Marketing-Kampagnen ansprechen. | Häufige Käufer, Warenkorbabbrüche |
 | [Konto-Zielgruppen](/help/segmentation/types/account-audiences.md) | Nein | Targeting von Personen in bestimmten Organisationen für Account-basierte Marketing-Strategien. | B2B-Marketing |
 | [Interessenten-Zielgruppen](/help/segmentation/types/prospect-audiences.md) | Nein | Targeting von Personen, die noch keine Kunden sind, aber Merkmale mit Ihrer Zielgruppe teilen. | Akquise mit Drittanbieterdaten |
-| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Im Data Lake von Adobe Experience Platform gespeicherte Sammlungen strukturierter Daten. | Reporting, Datenwissenschaft-Workflows |
+| [Datensatzexporte](/help/catalog/datasets/overview.md) | Nein | Sammlungen strukturierter Daten, die im Data Lake von [!DNL Adobe Experience Platform] gespeichert sind. | Reporting, Datenwissenschaft-Workflows |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 | Element | Typ | Anmerkungen |
 |-----------------------------|----------|----------|
 | Exporttyp | Zielgruppenexport | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im Ziel Magnite: Batch verwendet werden. |
-| Exporthäufigkeit | Batch | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie [&#x200B; Batch (dateibasierte &#x200B;](/help/destinations/destination-types.md)). |
+| Exporthäufigkeit | Batch | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie [ Batch (dateibasierte ](/help/destinations/destination-types.md)). |
 
 {style="table-layout:auto"}
 
@@ -157,7 +157,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -167,7 +167,7 @@ In der **[!UICONTROL Source field]** können Sie ein beliebiges Attribut oder ei
 ![Ordnen Sie dem Feld device_id die gewünschten Datenfelder zu](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
 Im **[!UICONTROL Target field]**:
-![Wählen Sie den entsprechenden Gerätetyp für die Zielidentität aus](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Weitere Informationen finden Sie [Unterstützte &#x200B;](#supported-identities)&quot;.
+![Wählen Sie den entsprechenden Gerätetyp für die Zielidentität aus](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Weitere Informationen finden Sie [Unterstützte ](#supported-identities)&quot;.
 In diesem Beispiel haben wir die **[!UICONTROL Target field]**: 0magnetie_deviceId_CUSTOM ausgewählt, da unsere **[!UICONTROL Source field]** als benutzerdefinierte IdentityMap definiert wurde: DeviceID.
 
 >[!NOTE]
@@ -189,7 +189,7 @@ Auf dem Bildschirm „Konfigurieren Sie einen Dateinamen und einen Exportzeitpla
 
 Nach dem Hochladen Ihrer Zielgruppen können Sie überprüfen, ob Ihre Zielgruppen korrekt erstellt und hochgeladen wurden.
 
-* Das Ziel Magnite: Batch stellt S3-Dateien täglich zum Magnite Streaming bereit. Nach dem Versand und der Aufnahme werden Zielgruppen/Segmente voraussichtlich im Magnite-Streaming angezeigt und können auf ein Angebot angewendet werden. Sie können dies bestätigen, indem Sie nach der Segment-ID oder dem Segmentnamen suchen, die bzw. der während der Aktivierungsschritte in der Adobe Experience Platform freigegeben wurde.
+* Das Ziel Magnite: Batch stellt S3-Dateien täglich zum Magnite Streaming bereit. Nach dem Versand und der Aufnahme werden Zielgruppen/Segmente voraussichtlich im Magnite-Streaming angezeigt und können auf ein Angebot angewendet werden. Sie können dies bestätigen, indem Sie nach der Segment-ID oder dem Segmentnamen suchen, die bzw. der während der Aktivierungsschritte in der [!DNL Adobe Experience Platform] freigegeben wurde.
 
 >[!NOTE]
 >
