@@ -45,7 +45,7 @@ Bevor Sie die Bot-Erkennung in Ihren Datenströmen aktivieren, sollten Sie einig
 
 ## Voraussetzungen {#prerequisites}
 
-Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die **[!UICONTROL Bot Detection Information]** Feldergruppe zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie [ der Dokumentation zum ](../xdm/ui/resources/schemas.md#add-field-groups)XDM-Schema .
+Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die **[!UICONTROL Bot Detection Information]** Feldergruppe zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie [&#x200B; der Dokumentation zum &#x200B;](../xdm/ui/resources/schemas.md#add-field-groups)XDM-Schema .
 
 ## Konfigurieren der Bot-Erkennung für Datenströme {#configure}
 
