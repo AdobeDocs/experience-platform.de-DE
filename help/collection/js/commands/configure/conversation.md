@@ -39,4 +39,4 @@ alloy("configure", {
 
 ## Konfigurieren von Gesprächseinstellungen mit der Tag-Erweiterung „Web SDK&quot;
 
-Diese Einstellungen können in der Tag-Erweiterung „Web SDK&quot; mithilfe von [Brand Concierge-Einstellungen konfiguriert ](/help/tags/extensions/client/web-sdk/configure/brand-concierge.md).
+Diese Einstellungen können in der Tag-Erweiterung „Web SDK&quot; mithilfe von [Brand Concierge-Einstellungen konfiguriert &#x200B;](/help/tags/extensions/client/web-sdk/configure/brand-concierge.md).

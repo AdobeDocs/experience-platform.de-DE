@@ -82,7 +82,7 @@ Das `implementationDetails`-Schlüsselwort erfasst Informationen über die SDK-V
 
 Das `"highEntropyUserAgentHints"`-Schlüsselwort erfasst detaillierte Informationen über das Gerät des Benutzers. Diese Daten sind im HTTP-Header der an Adobe gesendeten Anfrage enthalten. Nachdem die Daten an das Edge-Netzwerk gesendet wurden, füllt das XDM-Objekt den entsprechenden XDM-Pfad. Wenn Sie den entsprechenden XDM-Pfad in Ihrem `sendEvent`-Aufruf festlegen, hat dieser Vorrang vor dem HTTP-Header-Wert.
 
-Wenn Sie bei der [ Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/configure.md) können Daten zugunsten von Gerätesuchwerten gelöscht werden. Einige Client-Hinweisfelder und Gerätesuchfelder können nicht im selben Treffer vorhanden sein.
+Wenn Sie bei der [&#x200B; Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/configure.md) können Daten zugunsten von Gerätesuchwerten gelöscht werden. Einige Client-Hinweisfelder und Gerätesuchfelder können nicht im selben Treffer vorhanden sein.
 
 | Eigenschaft | Beschreibung | HTTP-Header | XDM-Pfad | Beispiel |
 | --- | --- | --- | --- | --- |
@@ -94,11 +94,11 @@ Wenn Sie bei der [ Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/
 | Browser-Name | Der verwendete Browser. Der Hinweis `Sec-CH-UA` niedrige Entropie erfasst auch dieses Element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Browser-Version | Die Hauptversion des Browsers. Der Hinweis `Sec-CH-UA` niedrige Entropie erfasst auch dieses Element. Die genaue Browser-Version wird nicht automatisch erfasst. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-Weitere Informationen finden [ unter ](/help/collection/use-cases/client-hints.md)-Client-Hinweise für Benutzeragenten .
+Weitere Informationen finden [&#x200B; unter &#x200B;](/help/collection/use-cases/client-hints.md)-Client-Hinweise für Benutzeragenten .
 
 ### Einmaliger Analytics-Referrer {#one-time-analytics-referrer}
 
-Das `"oneTimeAnalyticsReferrer"`-Schlüsselwort sendet einen Referrer-Wert nur beim ersten nicht entscheidungsrelevanten `sendEvent` für eine Seite an Adobe Analytics. Der Hauptanwendungsfall für dieses Kontextschlüsselwort besteht darin, zu verhindern, [ die Dimension „Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) in Adobe Analytics durch Treffer aufgebläht wird, die hauptsächlich in Analytics- und Target-Integrationen verwendet werden.
+Das `"oneTimeAnalyticsReferrer"`-Schlüsselwort sendet einen Referrer-Wert nur beim ersten nicht entscheidungsrelevanten `sendEvent` für eine Seite an Adobe Analytics. Der Hauptanwendungsfall für dieses Kontextschlüsselwort besteht darin, zu verhindern, [&#x200B; die Dimension „Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) in Adobe Analytics durch Treffer aufgebläht wird, die hauptsächlich in Analytics- und Target-Integrationen verwendet werden.
 
 Wenn ein gegebener `sendEvent`-Befehl einen Decisioning-Ereignistyp verwendet (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), wird er bei der Berechnung des ersten `sendEvent` auf einer Seite ignoriert. Wenn sich der Referrer-Wert auf der Seite ändert und eine weitere `sendEvent` ausgelöst wird, wird der neue Referrer-Wert in die Payload aufgenommen. Aufgrund dieser Bedingung kann die Funktion mit Single Page Applications verwendet werden.
 
