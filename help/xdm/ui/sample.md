@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Generieren von Beispieldaten für ein XDM-Schema in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie JSON-Beispieldaten basierend auf einem vorhandenen Schema in der Benutzeroberfläche von Adobe Experience Platform generieren.
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 15%
+source-wordcount: '449'
+ht-degree: 13%
 
 ---
 
@@ -21,6 +21,10 @@ Um Daten in Adobe Experience Platform aufzunehmen, müssen das Format und die St
 
 Für jedes Schema, das Sie in der Experience Platform-Benutzeroberfläche definieren, können Sie ein JSON-Beispielobjekt generieren, das der Schemastruktur entspricht. Dieses Objekt kann als Vorlage für alle Daten dienen, die in Datensätze aufgenommen werden, die das betreffende Schema verwenden.
 
+>[!NOTE]
+>
+>Wenn Sie Aktionen wie **Löschen** oder **JSON-Struktur kopieren** nicht finden können, stellen Sie sicher, dass Sie mit einer benutzerdefinierten (mandantendefinierten) Ressource arbeiten und über das Menü Tabellenzeile oder die Detailansicht (**[!UICONTROL More]**) darauf zugreifen. Die Verfügbarkeit von Aktionen hängt auch von Berechtigungen und Nutzungsbeschränkungen ab. Siehe [Verwalten von Schemata, Klassen, Feldergruppen und Datentypen: Aktionen und Löschen](./explore.md#xdm-resource-actions).
+
 Wählen Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich **[!UICONTROL Schemas]** aus. Suchen Sie auf der Registerkarte **[!UICONTROL Browse]** das Schema, für das Sie Beispieldaten generieren möchten. Wenn Sie sie aus der Liste auswählen, wird die rechte Leiste aktualisiert, um Details zum Schema anzuzeigen. Klicken Sie von hier aus auf **[!UICONTROL Download sample file]**.
 
 ![Die Registerkarte „Durchsuchen“ des Arbeitsbereichs „Schemata“ mit einem ausgewählten Schema und hervorgehobener Option „Beispieldatei herunterladen“.](../images/ui/sample/sample-data.png)
@@ -33,4 +37,4 @@ In diesem Handbuch wurde beschrieben, wie Sie eine JSON-Beispieldatei aus einem 
 
 Wenn Sie bereit sind, mit der Aufnahme von Daten zu beginnen, erfahren Sie in der Anleitung zum [Zuordnen einer CSV-Datei zu XDM](../../ingestion/tutorials/map-csv/overview.md) , wie Sie eine einfache Datendatei (z. B. eine CSV-Datei) einem XDM-Schema zuordnen und in Experience Platform aufnehmen. Alternativ können Sie eine [Quellverbindung“ einrichten](../../sources/home.md) um Ihre Daten aus einer externen Quelle einzubringen und sie XDM zuzuordnen.
 
-Weiterführende Informationen zu den Funktionen von [!UICONTROL Schemas] Workspace in der Benutzeroberfläche finden Sie im Abschnitt Übersicht über [[!UICONTROL Schemas] Workspace &#x200B;](./overview.md).
+Weiterführende Informationen zu den Funktionen von [!UICONTROL Schemas] Workspace in der Benutzeroberfläche finden Sie im Abschnitt Übersicht über [[!UICONTROL Schemas] Workspace ](./overview.md).

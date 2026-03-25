@@ -4,10 +4,10 @@ title: Exportieren von XDM-Schemata über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein vorhandenes Schema in eine andere Sandbox oder Organisation in der Benutzeroberfläche von Adobe Experience Platform exportieren.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 11%
+source-wordcount: '690'
+ht-degree: 10%
 
 ---
 
@@ -24,11 +24,15 @@ Um dieser Anforderung gerecht zu werden, können Sie mit dem Arbeitsbereich [!UI
 
 >[!NOTE]
 >
->Sie können die Schema Registry-API auch verwenden, um zusätzlich zu Schemata andere Ressourcen zu exportieren, einschließlich Klassen, Schemafeldgruppen und Datentypen. Weitere Informationen finden [&#x200B; im &#x200B;](../api/export.md) zum Exportieren von Endpunkten .
+>Sie können die Schema Registry-API auch verwenden, um zusätzlich zu Schemata andere Ressourcen zu exportieren, einschließlich Klassen, Schemafeldgruppen und Datentypen. Weitere Informationen finden [ im ](../api/export.md) zum Exportieren von Endpunkten .
 
 ## Voraussetzungen
 
 Auch wenn Sie über die Experience Platform-Benutzeroberfläche XDM-Ressourcen exportieren können, müssen Sie die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder Organisationen zu importieren, um den Workflow abzuschließen. Lesen Sie das Handbuch [Erste Schritte mit der Schema Registry-API](../api/getting-started.md) um wichtige Informationen zu erforderlichen Authentifizierungskopfzeilen zu erhalten, bevor Sie dieses Handbuch befolgen.
+
+>[!NOTE]
+>
+>Wenn Sie Aktionen wie **Löschen** oder **JSON-Struktur kopieren** nicht finden können, stellen Sie sicher, dass Sie mit einer benutzerdefinierten (mandantendefinierten) Ressource arbeiten und über das Menü Tabellenzeile oder die Detailansicht (**[!UICONTROL More]**) darauf zugreifen. Die Verfügbarkeit von Aktionen hängt auch von Berechtigungen und Nutzungsbeschränkungen ab. Siehe [Verwalten von Schemata, Klassen, Feldergruppen und Datentypen: Aktionen und Löschen](./explore.md#xdm-resource-actions).
 
 ## Export-Payload generieren {#generate-export-payload}
 
@@ -38,7 +42,7 @@ Um eine Export-Payload zu generieren, wählen Sie im linken Navigationsbereich *
 
 >[!TIP]
 >
->Weitere Informationen dazu, wie Sie die [&#x200B; XDM-Ressource finden, finden &#x200B;](./explore.md) im Handbuch zu XDM-Ressourcen .
+>Weitere Informationen dazu, wie Sie die [ XDM-Ressource finden, finden ](./explore.md) im Handbuch zu XDM-Ressourcen .
 
 Wählen Sie als Nächstes das **[!UICONTROL Copy JSON]** (![Kopiersymbol](/help/images/icons/copy.png)) aus den verfügbaren Optionen aus.
 
@@ -226,7 +230,7 @@ Beachten Sie, dass jede Instanz der Mandanten-ID Ihrer Organisation als `<XDM_TE
 
 ## Ressource mit der API importieren {#import-resource-with-api}
 
-Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Payload für eine POST-Anfrage an den `/rpc/import`-Endpunkt in der Schema Registry-API verwenden. Weitere Informationen [&#x200B; Konfigurieren des Aufrufs zum Senden des Schemas an &#x200B;](../api/import.md) gewünschte Organisation und Sandbox finden Sie im Handbuch zum des Importendpunkts .
+Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Payload für eine POST-Anfrage an den `/rpc/import`-Endpunkt in der Schema Registry-API verwenden. Weitere Informationen [ Konfigurieren des Aufrufs zum Senden des Schemas an ](../api/import.md) gewünschte Organisation und Sandbox finden Sie im Handbuch zum des Importendpunkts .
 
 ## Nächste Schritte
 

@@ -5,10 +5,10 @@ title: Erstellen eines Schemas mit dem Schema-Editor.
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4670'
-ht-degree: 60%
+source-wordcount: '4740'
+ht-degree: 59%
 
 ---
 
@@ -298,7 +298,7 @@ Wenn Sie nach einem bestimmten Feld in Ihrem Schema suchen, können Sie auch die
 
 >[!IMPORTANT]
 >
->Die Suchfunktion berücksichtigt alle ausgewählten Feldgruppenfilter bei der Anzeige passender Felder. Wenn in einer Suchanfrage nicht die erwarteten Ergebnisse angezeigt werden, müssen Sie möglicherweise überprüfen, ob Sie relevante Feldergruppen herausfiltern.
+>Die Suchfunktion berücksichtigt alle ausgewählten Feldgruppenfilter bei der Anzeige passender Felder. Wenn in einer Suchabfrage nicht die erwarteten Ergebnisse angezeigt werden, müssen Sie möglicherweise überprüfen, ob Sie relevante Feldergruppen herausfiltern.
 
 ## Festlegen eines Schemafelds als Identitätsfeld {#identity-field}
 
@@ -360,6 +360,10 @@ Wählen Sie **[!UICONTROL Enable]** aus, um Ihre Auswahl zu bestätigen. Sie kö
 
 ## Mehr Aktionen {#more}
 
+>[!NOTE]
+>
+>Beim Arbeiten mit XDM-Ressourcen sind Aktionen sowohl in der Inventartabelle (Zeilenmenü) als auch in der Ressourcendetailansicht (**[!UICONTROL More]**) verfügbar. Um auf den vollständigen Satz von Aktionen zuzugreifen, einschließlich **Löschen**, **JSON-** kopieren und **Zum Paket hinzufügen**, müssen Sie eine benutzerdefinierte (vom Mandanten definierte) Ressource auswählen. Standardressourcen (von Adobe bereitgestellt) haben begrenzte Aktionen. Eine vollständige Übersicht über Aktionen, Einschränkungen und Berechtigungen finden Sie unter [Verwalten von Schemata, Klassen, Feldergruppen und Datentypen: Aktionen und Löschen](../ui/explore.md#xdm-resource-actions).
+
 Im Schema-Editor können Sie auch Schnellaktionen durchführen, um die JSON-Struktur des Schemas zu kopieren oder das Schema zu löschen. Wählen Sie oben in der Ansicht [!UICONTROL More] aus, um eine Dropdown-Liste mit Schnellaktionen anzuzeigen.
 
 ![Der Schema-Editor mit der hervorgehobenen Schaltfläche „Mehr“ und den angezeigten Dropdown-Optionen.](../images/tutorials/create-schema/more-actions.png)
@@ -409,7 +413,7 @@ Das Schema „Mitglieder des Treueprogramms“ steht auch zur Ansicht und Verwal
 
 Das folgende Video zeigt, wie ein einfaches Schema in der [!DNL Experience Platform]-Benutzeroberfläche erstellt wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430216?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 Das folgende Video soll Ihr Verständnis für die Arbeit mit Feldergruppen und Klassen verbessern.
 
