@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API die Ausgabe basierend auf Ihrer Nachrichtenumwandlungsvorlage an Ihr Streaming-Ziel validieren.
 title: Validieren der exportierten Profilstruktur
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 93%
+source-wordcount: '790'
+ht-degree: 92%
 
 ---
 
@@ -30,7 +30,7 @@ Sie können eine einfache Vorlage verwenden, die Ihre Rohprofile exportiert, ohn
 
 >[!TIP]
 >
->* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Siehe [Abrufen einer Zielkonfiguration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) für weitere Details.
+>* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Weitere [ finden Sie unter ](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) einer Zielkonfiguration.
 
 **API-Format**
 

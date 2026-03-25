@@ -2,10 +2,10 @@
 description: Der Ziel-Service in Adobe Experience Platform verwendet Konfigurationsendpunkte für verschiedene Komponenten, die die Zielfunktion aufbauen. Erfahren Sie, wie diese Komponenten zusammen es Experience Platform ermöglichen, eine Verbindung zu Zielpartnern herzustellen, benutzerdefinierte Nachrichten zu senden und Profildaten im gesamten digitalen Ökosystem zu aktivieren.
 title: Konfigurationsoptionen in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 82%
+source-wordcount: '817'
+ht-degree: 79%
 
 ---
 
@@ -56,8 +56,8 @@ Weitere Informationen zu den einzelnen Zielkonfigurationskomponenten finden Sie 
 
 ## Konfiguration von Zielgruppen-Metadaten {#audience-metadata-configuration}
 
-Mit dieser Komponente können Sie konfigurieren, wie Zielgruppen in Ihrem Ziel programmgesteuert erstellt, aktualisiert oder gelöscht werden. Bei dateibasierten Zielen können Sie eine Benachrichtigung einrichten, sobald Dateien erfolgreich an Ihr Ziel gesendet wurden. Sie können diese Funktion über den [Endpunkt „audience-templates“](../metadata-api/create-audience-template.md) konfigurieren.
+Verwenden Sie diese Komponente, um zu konfigurieren, wie Zielgruppen in Ihrem Ziel programmgesteuert erstellt, aktualisiert oder gelöscht werden. Bei dateibasierten Zielen können Sie damit eine Benachrichtigung einrichten, sobald Dateien erfolgreich an Ihr Ziel gesendet wurden. Sie können diese Funktion über den [Endpunkt „audience-templates“](../metadata-api/create-audience-template.md) konfigurieren.
 
 ## Nächste Schritte {#next-steps}
 
-Durch das Lesen dieses Artikels haben Sie jetzt einen allgemeinen Überblick über die Funktionen, die von Destination SDK bereitgestellt werden, und darüber, welche Seiten Sie lesen können, um weitere Informationen zu bestimmten Konfigurationen zu erhalten. Als Nächstes können Sie die Handbücher lesen, die alle Schritte zum [Konfigurieren eines Streaming-Ziels](../guides/configure-destination-instructions.md) oder eines [dateibasierten Ziels](../guides/configure-file-based-destination-instructions.md) durch Verwendung von Destination SDK enthalten.
+Sie haben jetzt einen allgemeinen Überblick über die von Destination SDK bereitgestellten Funktionen und darüber, welche Seiten Sie lesen können, um weitere Informationen zu bestimmten Konfigurationen zu erhalten. Als Nächstes können Sie die Handbücher lesen, die alle Schritte zum [Konfigurieren eines Streaming-Ziels](../guides/configure-destination-instructions.md) oder eines [dateibasierten Ziels](../guides/configure-file-based-destination-instructions.md) durch Verwendung von Destination SDK enthalten.

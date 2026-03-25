@@ -3,9 +3,9 @@ title: SAP Commerce-Verbindung
 description: Verwenden Sie den SAP Commerce Destination Connector, um Kundendatensätze in Ihrem SAP-Konto zu aktualisieren.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2289'
 ht-degree: 19%
 
 ---
@@ -30,7 +30,7 @@ In den folgenden Abschnitten finden Sie alle Voraussetzungen, die Sie in Experie
 
 ### Voraussetzungen für Experience Platform {#prerequisites-in-experience-platform}
 
-Bevor Sie Daten für das [!DNL SAP Commerce]-Ziel aktivieren, müssen Sie ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=de) in [!DNL Experience Platform] erstellt haben.
+Bevor Sie Daten für das [!DNL SAP Commerce]-Ziel aktivieren, müssen Sie ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) in [!DNL Experience Platform] erstellt haben.
 
 Weitere Informationen finden Sie in der Experience Platform[Dokumentation für die Schemafeldgruppe „Details zur Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) , wenn Sie Anleitungen zu Zielgruppenstatus benötigen.
 
@@ -40,11 +40,11 @@ Beachten Sie die folgenden Voraussetzungen für den Export von Daten aus Experie
 
 #### Sie müssen über ein [!DNL SAP Subscription Billing] Konto verfügen {#prerequisites-account}
 
-Um Daten aus Experience Platform in Ihr [!DNL SAP Commerce]-Konto zu exportieren, benötigen Sie ein [!DNL SAP Subscription Billing]. Wenn Sie kein gültiges Abrechnungskonto haben, wenden Sie sich an Ihren [!DNL SAP] Account Manager. Weitere Informationen finden Sie [[!DNL SAP]  Dokument &#x200B;](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf)Platform-Konfiguration“.
+Um Daten aus Experience Platform in Ihr [!DNL SAP Commerce]-Konto zu exportieren, benötigen Sie ein [!DNL SAP Subscription Billing]. Wenn Sie kein gültiges Abrechnungskonto haben, wenden Sie sich an Ihren [!DNL SAP] Account Manager. Weitere Informationen finden Sie [[!DNL SAP]  Dokument ](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf)Platform-Konfiguration“.
 
 #### Generieren eines Service-Schlüssels {#prerequisites-service-key}
 
-* Mit dem [!DNL SAP Commerce]-Dienstschlüssel können Sie über Experience Platform auf die [!DNL SAP Subscription Billing]-API zugreifen. Informationen zum Erstellen eines Service[!DNL SAP Commerce]Schlüssels finden Sie unter [Erstellen eines Service](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret)Schlüssels mit Client-ID und Client-Geheimnis“. [!DNL SAP Commerce] erfordert Folgendes:
+* Der [!DNL SAP Commerce]-Dienstschlüssel bietet über Experience Platform Zugriff auf die [!DNL SAP Subscription Billing]-API. Informationen zum Erstellen eines Dienstschlüssels finden Sie [!DNL SAP Commerce] [ Erstellen eines Dienstschlüssels mit Client](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret)ID und Client-Geheimnis . [!DNL SAP Commerce] erfordert Folgendes:
    * Client-ID
    * Client-Geheimnis
    * URL. Das URL-Muster sieht wie folgt aus: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Dieser Wert wird später zum Abrufen von Werten für `Region` und `Endpoint` verwendet.
@@ -86,7 +86,7 @@ Um die benutzerdefinierten Verweise zu erstellen, melden Sie sich bei Ihrem [!DN
 Nachfolgend finden Sie ein Beispiel für das Erstellen eines benutzerdefinierten **[!UICONTROL Reference Type]** in [!DNL SAP Subscription Billing]:
 ![Bild, das zeigt, wo eine benutzerdefinierte Referenz in der SAP-Abonnementabrechnung erstellt werden kann.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-Weitere Anleitungen finden Sie in der Dokumentation [!DNL SAP Subscription Billing] [Benutzerdefinierte &#x200B;](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27)).
+Weitere Anleitungen finden Sie in der Dokumentation [!DNL SAP Subscription Billing] [Benutzerdefinierte ](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27)).
 
 ### Sammeln erforderlicher Anmeldedaten {#gather-credentials}
 
@@ -121,7 +121,7 @@ Dieses Ziel unterstützt auch die Aktivierung der in der folgenden Tabelle besch
 
 | Zielgruppentyp | Unterstützt | Beschreibung |
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -163,7 +163,7 @@ Suchen Sie in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** nach [!DN
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [&#x200B; im Abschnitt &#x200B;](#prerequisites-service-key) eines Dienstschlüssels .
+Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [ im Abschnitt ](#prerequisites-service-key) eines Dienstschlüssels .
 
 | Feld | Beschreibung |
 | --- | --- |
@@ -197,7 +197,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -301,7 +301,7 @@ Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, 
 
 ### Planen des Zielgruppenexports und Beispiel {#schedule-segment-export-example}
 
-Bei der Durchführung des Schritts [Planen des &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)-Exports) müssen Sie Experience Platform-Zielgruppen manuell den [Attributen](#prerequisites-attribute) in [!DNL SAP Subscription Billing] zuordnen.
+Bei der Durchführung des Schritts [Planen des ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)-Exports) müssen Sie Experience Platform-Zielgruppen manuell den [Attributen](#prerequisites-attribute) in [!DNL SAP Subscription Billing] zuordnen.
 
 Ein Beispiel für den Schritt Zielgruppenexport planen mit hervorgehobener Position des [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** wird unten angezeigt:
 ![Bild aus Experience Platform mit ausgefüllten Zeitplan-Zielgruppenexport-IDs.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
@@ -336,7 +336,7 @@ Basierend auf der Abbildung oben, in der Sie zwei Zielgruppen ausgewählt haben,
 
 Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichtet haben:
 
-Melden Sie sich beim [!DNL SAP Subscription Billing]-Konto an und navigieren Sie dann zur Seite **[!UICONTROL Contacts]** , um den Status der Zielgruppe zu überprüfen. Die Liste kann so konfiguriert werden, dass Spalten für die benutzerdefinierten Verweise und die entsprechenden Zielgruppenstatus angezeigt werden.
+Wechseln Sie zum [!DNL SAP Subscription Billing] Konto und navigieren Sie dann zur Seite **[!UICONTROL Contacts]** , um den Status der Zielgruppe zu überprüfen. Die Liste kann so konfiguriert werden, dass Spalten für die benutzerdefinierten Verweise und die entsprechenden Zielgruppenstatus angezeigt werden.
 ![Abbildung der SAP-Abonnementfakturierung mit der Kundenübersichtsseite mit Spaltenüberschriften, die den Zielgruppennamen und die Zielgruppenstatus-Zellen anzeigen](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}

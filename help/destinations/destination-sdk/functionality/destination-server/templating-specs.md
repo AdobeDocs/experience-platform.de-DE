@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die an Ihren Endpunkt gesendeten HTTP-Anfragen formatieren. Verwenden Sie den Endpunkt /authoring/destination-servers, um die Vorlagenspezifikationen des Ziel-Servers im Adobe Experience Platform Destination SDK zu konfigurieren.
 title: Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurden
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 88%
+source-wordcount: '510'
+ht-degree: 83%
 
 ---
 
@@ -71,7 +71,7 @@ Unten finden Sie ein Beispiel einer HTTP-Anfragenvorlage mit Beschreibungen der 
 |---|---|---|
 | `httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Unterstützte Methoden: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die mit Escape-Zeichen versehene Version der Vorlage, die die von Experience Platform gesendeten HTTP-Anfragen in das von Ihrem Ziel erwartete Format formatiert. <br> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](message-format.md#using-templating). <br> Weitere Informationen zur Bereinigung von Zeichen finden Sie im Abschnitt [RFC-JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Ein Beispiel für eine einfache Umwandlung finden Sie im unter [Umwandlung von Profilattributen](message-format.md#attributes). |
+| `value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die mit Escape-Zeichen versehene Version der Vorlage, die die von Experience Platform gesendeten HTTP-Anfragen in das von Ihrem Ziel erwartete Format formatiert. <br> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](message-format.md#using-templating). <br> Weitere Informationen zur Bereinigung von Zeichen finden Sie unter [RFC-JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Ein Beispiel für eine einfache Transformation finden Sie unter [Umwandlung von Profilattributen](message-format.md#attributes). |
 | `contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Je nachdem, welchen Typ von Ausgabe Ihre Umwandlungsvorlage erzeugt, kann dies einer der unterstützten [Content-Typen von HTTP-Anwendungen](https://www.iana.org/assignments/media-types/media-types.xhtml#application) sein. In den meisten Fällen sollte dieser Wert auf `application/json` gesetzt werden.  |
 
 {style="table-layout:auto"}

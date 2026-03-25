@@ -3,10 +3,10 @@ title: Erstellen einer neuen Zielverbindung
 type: Tutorial
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine Verbindung mit einem Ziel herstellen, Warnhinweise aktivieren und Marketing-Aktionen für Ihr verbundenes Ziel einrichten.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 64%
+source-wordcount: '1215'
+ht-degree: 56%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 64%
 
 >[!IMPORTANT]
 >
->* Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um eine Verbindung mit einem Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Um eine Verbindung mit einem Ziel herzustellen, das Datensatzexporte unterstützt, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage and Activate Dataset Destinations]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 ## Überblick {#overview}
@@ -33,7 +33,7 @@ Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindu
    * **[!UICONTROL Activate]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt die Zielgruppenaktivierung und den Export von Datensätzen.
    * **[!UICONTROL Activate audiences]**. Für dieses Ziel wurde bereits eine Verbindung eingerichtet. Dieses Ziel unterstützt nur die Zielgruppenaktivierung.
 
-   Weitere Informationen zum Unterschied zwischen diesen Steuerelementen finden Sie auch im Abschnitt [Katalog](../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
+   Weitere Informationen zum Unterschied zwischen diesen Steuerelementen finden Sie im Abschnitt [Katalog](../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
    Wählen Sie entweder **[!UICONTROL Set up]**, **[!UICONTROL Activate]** oder **[!UICONTROL Activate audiences]** aus, je nachdem, welches Steuerelement Ihnen zur Verfügung steht.
 
@@ -99,7 +99,7 @@ Für dateibasierte Ziele können Sie verschiedene Einstellungen für die Formati
 
 ### Einrichten der Zielverbindung für Zielgruppenaktivierung, Kontoaktivierung, Interessentenaktivierung oder Datensatzexporte {#segment-activation-or-dataset-exports}
 
-Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannte Kundinnen und Kunden, Account-Kundinnen und -Kunden oder Interessenten sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, mit der Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Konten](/help/destinations/ui/activate-account-audiences.md), [Interessenten](/help/destinations/ui/activate-prospect-audiences.md) oder [&#x200B; Datensätze exportieren](/help/destinations/ui/export-datasets.md).
+Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannte Kundinnen und Kunden, Account-Kundinnen und -Kunden oder Interessenten sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, mit der Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Konten](/help/destinations/ui/activate-account-audiences.md), [Interessenten](/help/destinations/ui/activate-prospect-audiences.md) oder [ Datensätze exportieren](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >
@@ -109,7 +109,7 @@ Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannt
 
 ### Aktivieren von Ziel-Warnhinweisen {#enable-alerts}
 
-1. (Optional) Wählen Sie die Ziel-Datenfluss-Warnhinweise aus, die Sie abonnieren möchten. Sie können jetzt beim Erstellen eines Ziel-Datenflusses Warnhinweise abonnieren, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Die verfügbaren Warnhinweise unterscheiden sich je nach Zieltyp (dateibasiert oder Streaming), mit dem Sie eine Verbindung herstellen. Lesen Sie [Kontextabhängige Ziel-Warnhinweise abonnieren](alerts.md), um detaillierte Informationen zu Ziel-Datenfluss-Warnhinweisen zu erhalten.
+1. (Optional) Wählen Sie die Ziel-Datenfluss-Warnhinweise aus, die Sie abonnieren möchten. Abonnieren Sie Warnhinweise, wenn Sie einen Datenfluss erstellen, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Die verfügbaren Warnhinweise unterscheiden sich je nach Zieltyp (dateibasiert oder Streaming), mit dem Sie eine Verbindung herstellen. Lesen Sie [Kontextabhängige Ziel-Warnhinweise abonnieren](alerts.md), um detaillierte Informationen zu Ziel-Datenfluss-Warnhinweisen zu erhalten.
 
    ![Das Dialogfeld „Neues Ziel konfigurieren“ mit hervorgehobenen Abonnementoptionen für kontextabhängige Ziel-Warnhinweise.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
@@ -123,10 +123,10 @@ Einige dateibasierte Ziele unterstützen die Zielgruppenaktivierung für bekannt
 
    ![Das Dialogfeld „Neues Ziel konfigurieren“ mit Hervorhebung der verfügbaren Marketing-Aktionen. Die verfügbaren Steuerelemente zum Abschließen des Workflows „Mit Ziel verbinden“ sind ebenfalls hervorgehoben.](../assets/ui/connect-destinations/governance.png)
 
-2. Wählen Sie **[!UICONTROL Save & Exit]** aus, um die Zielkonfiguration zu speichern, oder wählen Sie **[!UICONTROL Next]** aus, um mit den Zielgruppendaten [Aktivierungsfluss) &#x200B;](activation-overview.md).
+2. Wählen Sie **[!UICONTROL Save & Exit]** aus, um die Zielkonfiguration zu speichern, oder wählen Sie **[!UICONTROL Next]** aus, um mit den Zielgruppendaten [Aktivierungsfluss) ](activation-overview.md).
 
 ## Nächste Schritte {#next-steps}
 
-Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit der Experience Platform-Benutzeroberfläche eine Verbindung zu einem Ziel herstellen können. Zur Erinnerung: Die verfügbaren und erforderlichen Verbindungsparameter variieren von Ziel zu Ziel. Sie sollten auch die Seite zur Zieldokumentation im [Zielkatalog](/help/destinations/catalog/overview.md) konsultieren, um spezifische Informationen zu den erforderlichen Eingaben und verfügbaren Optionen pro Zieltyp zu erhalten.
+Sie wissen jetzt, wie Sie mit der Experience Platform-Benutzeroberfläche eine Verbindung zu einem Ziel herstellen können. Die verfügbaren und erforderlichen Verbindungsparameter variieren von Ziel zu Ziel. Auf der Zieldokumentationsseite im [Zielkatalog“ finden ](/help/destinations/catalog/overview.md) spezifische Informationen zu den erforderlichen Eingaben und verfügbaren Optionen pro Zieltyp.
 
-Als Nächstes können Sie mit dem [Aktivieren von Zielgruppen](/help/destinations/ui/activation-overview.md) oder [Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) zu Ihrem Ziel fortfahren.
+Fahren Sie als Nächstes mit dem [Aktivieren von ](/help/destinations/ui/activation-overview.md)&quot; oder [Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) zu Ihrem Ziel fort.

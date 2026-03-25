@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie Eingabefelder in der Experience Platform-Benutzeroberfläche erstellen, mit denen Ihre Benutzerinnen und Benutzer verschiedene Informationen angeben können, die für die Verbindung und den Export von Daten zu Ihrem Ziel relevant sind.
 title: Benutzerdefinierte Datenfelder
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '1729'
 ht-degree: 64%
@@ -261,7 +261,7 @@ Die dynamischen Dropdown-Selektoren sehen identisch mit den [regulären Dropdown
 
 Um eine dynamische Dropdown-Auswahl zu erstellen, müssen Sie zwei Komponenten konfigurieren:
 
-**Schritt 1.** [Erstellen Sie einen &#x200B;](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) mit einer `responseFields` Vorlage für den dynamischen API-Aufruf, wie unten dargestellt.
+**Schritt 1.** [Erstellen Sie einen ](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) mit einer `responseFields` Vorlage für den dynamischen API-Aufruf, wie unten dargestellt.
 
 ```json
 {
@@ -342,7 +342,7 @@ Legen Sie den `destinationServerId` auf die ID des Ziel-Servers fest, den Sie in
 
 ## Erstellen verschachtelter Kundendatenfelder {#nested-fields}
 
-Sie können verschachtelte Kundendatenfelder für komplexe Integrationsmuster erstellen. Auf diese Weise können Sie eine Reihe von Auswahlen für den Kunden verketten.
+Sie können verschachtelte Kundendatenfelder für komplexe Integrationsmuster erstellen. Verwenden Sie sie, um eine Reihe von Auswahlen für den Kunden zu verketten.
 
 Sie können beispielsweise verschachtelte Kundendatenfelder hinzufügen, um Kundinnen und Kunden aufzufordern, einen Integrationstyp mit Ihrem Ziel auszuwählen, gefolgt sofort von einer anderen Auswahl. Die zweite Auswahl ist ein verschachteltes Feld innerhalb des Integrationstyps.
 

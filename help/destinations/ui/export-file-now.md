@@ -3,7 +3,7 @@ title: Exportieren von Dateien nach Bedarf an Batch-Ziele mithilfe der Experienc
 type: Tutorial
 description: Erfahren Sie, wie Sie Dateien über die Experience Platform-Benutzeroberfläche bei Bedarf in Batch-Ziele exportieren können.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 12%
@@ -26,11 +26,11 @@ ht-degree: 12%
 
 In diesem Artikel wird erläutert, wie Sie mit der Experience Platform-Benutzeroberfläche Dateien bei Bedarf in Batch-Ziele wie [Cloud-Speicher](/help/destinations/catalog/cloud-storage/overview.md) und E-[-Marketing](/help/destinations/catalog/email-marketing/overview.md) exportieren können.
 
-Mit der **[!UICONTROL Export file now]** können Sie eine vollständige Datei exportieren, ohne den aktuellen Exportzeitplan einer zuvor geplanten Zielgruppe zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nichts an der Exportfrequenz der Zielgruppe.
+Verwenden Sie die **[!UICONTROL Export file now]**, um eine vollständige Datei zu exportieren, ohne den aktuellen Exportzeitplan einer zuvor geplanten Zielgruppe zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nichts an der Exportfrequenz der Zielgruppe.
 
 Der Dateiexport wird sofort ausgelöst und verwendet nur Daten aus dem letzten Schnappschuss der Zielgruppenbewertung. Sie enthält keine Profil- oder Identitätsänderungen, die nach der Erstellung eines Schnappschusses auftreten. Geplante Exporte dagegen umfassen sowohl Momentaufnahmendaten als auch inkrementelle Änderungen, die zwischen der Momentaufnahmerstellung und der Exportzeit auftreten.
 
-Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[&#x200B; wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren &#x200B;](/help/destinations/api/ad-hoc-activation-api.md).
+Hierfür können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie[ wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API für Batch-Ziele aktivieren ](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Geplante Exporte vs. On-Demand-Exporte {#scheduled-vs-ondemand}
 

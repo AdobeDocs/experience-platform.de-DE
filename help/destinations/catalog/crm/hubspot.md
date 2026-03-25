@@ -1,18 +1,18 @@
 ---
 title: HubSpot-Verbindung
-description: Mit dem HubSpot-Ziel können Sie Kontakteinträge in Ihrem HubSpot-Konto verwalten.
+description: Verwenden Sie das HubSpot-Ziel, um Kontaktaufzeichnungen in Ihrem HubSpot-Konto zu verwalten.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 26%
+source-wordcount: '1619'
+ht-degree: 25%
 
 ---
 
 # [!DNL HubSpot]-Verbindung
 
-[[!DNL HubSpot]](https://www.hubspot.com) ist eine CRM-Plattform mit all der Software, Integrationen und Ressourcen, die Sie für die Verbindung von Marketing, Vertrieb, Content-Management und Kundendienst benötigen. Damit können Sie Ihre Daten, Teams und Kunden auf einer CRM-Plattform verbinden.
+[[!DNL HubSpot]](https://www.hubspot.com) ist eine CRM-Plattform mit all der Software, Integrationen und Ressourcen, die Sie für die Verbindung von Marketing, Vertrieb, Content-Management und Kundendienst benötigen. Verwenden Sie sie, um Ihre Daten, Teams und Kunden auf einer CRM-Plattform zu verbinden.
 
 Dieses [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [[!DNL HubSpot] Kontakte-API](https://developers.hubspot.com/docs/api/crm/contacts), um Kontakte innerhalb von [!DNL HubSpot] aus einer bestehenden Experience Platform-Zielgruppe nach der Aktivierung zu aktualisieren.
 
@@ -30,7 +30,7 @@ In den folgenden Abschnitten finden Sie alle Voraussetzungen, die Sie in Experie
 
 ### Voraussetzungen für Experience Platform {#prerequisites-in-experience-platform}
 
-Bevor Sie Daten für das [!DNL HubSpot]-Ziel aktivieren, müssen Sie ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=de) in [!DNL Experience Platform] erstellt haben.
+Bevor Sie Daten für das [!DNL HubSpot]-Ziel aktivieren, müssen Sie ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) in [!DNL Experience Platform] erstellt haben.
 
 Weitere Informationen finden Sie in der Experience Platform[Dokumentation für die Schemafeldgruppe „Details zur Zielgruppenzugehörigkeit](/help/xdm/field-groups/profile/segmentation.md) , wenn Sie Anleitungen zu Zielgruppenstatus benötigen.
 
@@ -60,7 +60,7 @@ Wenn Sie keine private App haben, befolgen Sie die Dokumentation unter [Erstelle
 
 ## Leitlinien {#guardrails}
 
-[!DNL HubSpot] private Apps unterliegen [Ratenbeschränkungen](https://developers.hubspot.com/docs/api/usage-details). Die Anzahl der Aufrufe, die Ihre private App tätigen kann, hängt von Ihrem [!DNL HubSpot]-Kontoabonnement ab und davon, ob Sie das API-Add-on erworben haben. Siehe auch &quot;[&#x200B; Beschränkungen](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] private Apps unterliegen [Ratenbeschränkungen](https://developers.hubspot.com/docs/api/usage-details). Die Anzahl der Aufrufe, die Ihre private App tätigen kann, hängt von Ihrem [!DNL HubSpot]-Kontoabonnement ab und davon, ob Sie das API-Add-on erworben haben. Weitere Informationen finden Sie unter [Sonstige Beschränkungen](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -80,7 +80,7 @@ Dieses Ziel unterstützt auch die Aktivierung der in der folgenden Tabelle besch
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Nein | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -101,7 +101,7 @@ Unterstützte Zielgruppen nach Zielgruppen-Datentyp:
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
-Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der folgenden Tabelle.
 
 | Element | Typ | Anmerkungen |
 |---------|----------|---------|
@@ -114,7 +114,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -122,7 +122,7 @@ Suchen Sie in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** nach [!DN
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [&#x200B; im Abschnitt  [!DNL HubSpot] -Zugriffstoken für private &#x200B;](#gather-credentials) .
+Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden [ im Abschnitt  [!DNL HubSpot]  des Zugriffstokens für ](#gather-credentials) private App .
 
 * **[!UICONTROL Bearer token]**: Das Zugriffstoken für Ihre [!DNL HubSpot] private App.
 
@@ -207,7 +207,7 @@ Wenn Sie mit dem Eingeben der Zuordnungen für Ihre Zielverbindung fertig sind, 
 
 Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichtet haben:
 
-1. Melden Sie sich bei der [!DNL HubSpot]-Website an und navigieren Sie dann zur Seite **[!UICONTROL Contacts]** , um den Status der Zielgruppe zu überprüfen. Diese Liste kann so konfiguriert werden, dass Spalten für die benutzerdefinierten Eigenschaften angezeigt werden, die mit dem Zielgruppennamen erstellt wurden, wobei deren Wert die Zielgruppenstatus sind.
+1. Gehen Sie zur [!DNL HubSpot]-Website und navigieren Sie dann zur Seite **[!UICONTROL Contacts]** , um den Status der Zielgruppe zu überprüfen. Diese Liste kann so konfiguriert werden, dass Spalten für die benutzerdefinierten Eigenschaften angezeigt werden, die mit dem Zielgruppennamen erstellt wurden, wobei deren Wert die Zielgruppenstatus sind.
    ![Screenshot der HubSpot-Benutzeroberfläche mit der Seite „Kontakte“ mit Spaltenüberschriften, die den Namen der Zielgruppe und die Zellen des Zielgruppenstatus enthalten](../../assets/catalog/crm/hubspot/contacts.png)
 
 1. Alternativ können Sie einen Drilldown zu einer einzelnen **[!UICONTROL Person]** durchführen und zu den Eigenschaften navigieren, in denen der Zielgruppenname und der Zielgruppenstatus angezeigt werden.

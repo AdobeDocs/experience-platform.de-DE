@@ -3,9 +3,9 @@ title: Durchführen von Umwandlungen an Daten, die mithilfe berechneter Felder i
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Funktion „Berechnete Felder“ Umwandlungen an Daten durchführen können, die an Cloud-Speicherziele exportiert wurden
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1603'
 ht-degree: 8%
 
 ---

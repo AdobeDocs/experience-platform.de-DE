@@ -2,12 +2,12 @@
 keywords: Email;e-mail;E-Mail;E-Mail-Ziele
 title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
-description: E-Mail-Dienstanbieter (ESPs) ermöglichen es Ihnen, Ihre E-Mail-Marketing-Aktivitäten zu verwalten, z. B. zum Senden von Werbe-E-Mail-Kampagnen. Erfahren Sie, welche ESPs als Experience Platform-Ziele unterstützt werden.
+description: Email Service Provider (ESPs) ermöglichen es Ihnen, Ihre E-Mail-Marketing-Aktivitäten zu verwalten, z. B. zum Senden von Werbe-E-Mail-Kampagnen. Erfahren Sie, welche ESPs als Experience Platform-Ziele unterstützt werden.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 59%
+source-wordcount: '370'
+ht-degree: 54%
 
 ---
 
@@ -41,7 +41,7 @@ Um Zielgruppen an E-Mail-Marketing-Ziele für Ihre Kampagnen zu senden, muss Exp
 
 ### Identitätsauswahl {#identity}
 
-Adobe empfiehlt die Auswahl einer eindeutigen Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Dies ist das Feld, in dem Ihre Benutzeridentitäten verschlüsselt werden. In der Regel enthält das Feld die E-Mail-Adresse, es kann aber auch eine Treueprogramm-Kennung oder eine Telefonnummer sein. In der folgenden Tabelle sehen Sie die gängigsten eindeutigen Kennungen und deren XDM-Feld im Schema.
+Adobe empfiehlt die Auswahl einer eindeutigen Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Dies ist das Feld, in dem Ihre Benutzeridentitäten verschlüsselt werden. In der Regel enthält das Feld die E-Mail-Adresse, es kann aber auch eine Treueprogramm-Kennung oder eine Telefonnummer sein. In der folgenden Tabelle finden Sie die häufigsten eindeutigen Kennungen und deren XDM-Feld im Schema.
 
 | Eindeutige Kennung | XDM-Feld im einheitlichen Schema |
 |----------------- | ---------------------------|

@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf zum Erstellen eines Ziel-Servers über Adobe Experience Platform Destination SDK erläutert.
 title: Erstellen einer Ziel-Server-Konfiguration
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2038'
-ht-degree: 84%
+source-wordcount: '2029'
+ht-degree: 80%
 
 ---
 
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
 | `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Es gibt die Optionen `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Version mit Escape-Zeichen, die die Daten von Experience Platform-Kunden in das Format umwandelt, das Ihr Service erwartet. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Umwandlung finden Sie im unter [Umwandlung von Profilattributen](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Version mit Escape-Zeichen, die die Daten von Experience Platform-Kunden in das Format umwandelt, das Ihr Service erwartet. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zur Bereinigung von Zeichen finden Sie unter [RFC-JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Transformation finden Sie unter [Umwandlung von Profilattributen](../../functionality/destination-server/message-format.md#attributes) . </li></ul> |
 | `httpTemplate.contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Dieser Wert ist höchstwahrscheinlich `application/json`. |
 
 {style="table-layout:auto"}
@@ -782,7 +782,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erst
 
 ### Erstellen von dynamischen Schema-Ziel-Servern {#dynamic-schema-servers}
 
-Mit dynamischen Schemata können Sie die unterstützten Zielattribute dynamisch abrufen und Schemata basierend auf Ihrer eigenen API generieren. Sie müssen einen Ziel-Server für dynamische Schemata konfigurieren, bevor Sie das Schema konfigurieren können.
+Dynamische Schemata rufen die unterstützten Zielattribute dynamisch ab und generieren Schemata basierend auf Ihrer eigenen API. Sie müssen einen Ziel-Server für dynamische Schemata konfigurieren, bevor Sie das Schema konfigurieren können.
 
 Auf der Registerkarte unten finden Sie ein Beispiel für einen Ziel-Server für Ziele, die [dynamische Schemata](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration) verwenden.
 
@@ -836,7 +836,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Füllen Sie im Zuordnungs-Schritt des Aktivierungs-Workflows die Adresse des API-Endpunkts aus, mit dem sich Experience Platform verbinden soll, und rufen Sie die Schemafelder ab, die als Zielfelder ausgefüllt werden sollen. |
 | `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Verwenden Sie für dynamische Schema-Server `GET`. |
 | `responseFields.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `responseFields.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Umwandlungsvorlage mit Escape-Zeichen, die die von der Partner-API erhaltene Antwort in das Partnerschema umwandelt, das in der Experience Platform-Benutzeroberfläche angezeigt wird. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Umwandlung finden Sie im unter [Umwandlung von Profilattributen](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `responseFields.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Umwandlungsvorlage mit Escape-Zeichen, die die von der Partner-API erhaltene Antwort in das Partnerschema umwandelt, das in der Experience Platform-Benutzeroberfläche angezeigt wird. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zur Bereinigung von Zeichen finden Sie unter [RFC-JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Transformation finden Sie unter [Umwandlung von Profilattributen](../../functionality/destination-server/message-format.md#attributes) . </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -934,7 +934,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Verwenden Sie für dynamische Dropdown-Server `GET`. |
 | `httpTemplate.headers` | Objekt | *Optional.l* Schließen Sie alle Kopfzeilen ein, die für die Verbindung mit dem dynamischen Dropdown-Server erforderlich sind. |
 | `responseFields.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `responseFields.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Umwandlungsvorlage mit Escape-Zeichen, die die von Ihrer API erhaltene Antwort in die Werte umwandelt, die in der Experience Platform-Benutzeroberfläche angezeigt werden. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). |
+| `responseFields.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Umwandlungsvorlage mit Escape-Zeichen, die die von Ihrer API erhaltene Antwort in die Werte umwandelt, die in der Experience Platform-Benutzeroberfläche angezeigt werden. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zur Bereinigung von Zeichen finden Sie unter [RFC-JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). |
 
 {style="table-layout:auto"}
 

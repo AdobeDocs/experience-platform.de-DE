@@ -2,9 +2,9 @@
 description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Zielgruppenvorlage über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Löschen einer Zielgruppenvorlage
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '286'
 ht-degree: 82%
 
 ---

@@ -5,9 +5,9 @@ title: Löschen eines Zielkontos mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie ein Zielkonto mithilfe der Flow Service-API löschen können.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '743'
 ht-degree: 32%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 32%
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus [!DNL Adobe Experience Platform] ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-Vor der Aktivierung von Daten müssen Sie eine Verbindung zum Ziel herstellen, indem Sie zunächst ein Zielkonto einrichten. In diesem Tutorial werden die Schritte zum Löschen von Zielkonten beschrieben, die nicht mehr benötigt werden, indem die -[[!DNL Flow Service]  verwendet &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Vor der Aktivierung von Daten müssen Sie eine Verbindung zum Ziel herstellen, indem Sie zunächst ein Zielkonto einrichten. In diesem Tutorial werden die Schritte zum Löschen von Zielkonten beschrieben, die nicht mehr benötigt werden, indem die -[[!DNL Flow Service]  verwendet ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Vor der Aktivierung von Daten müssen Sie eine Verbindung zum Ziel herstellen, i
 
 ## Erste Schritte {#get-started}
 
-Für dieses Tutorial benötigen Sie eine gültige Verbindungs-ID. Die Verbindungs-ID stellt die Kontoverbindung zum Ziel dar. Wenn Sie keine gültige Verbindungs-ID haben, wählen Sie Ihr Ziel aus dem [Zielkatalog](../catalog/overview.md) und führen Sie die zum Herstellen einer [&#x200B; mit dem Ziel beschriebenen Schritte aus, &#x200B;](../ui/connect-destination.md) Sie dieses Tutorial ausführen.
+Für dieses Tutorial benötigen Sie eine gültige Verbindungs-ID. Die Verbindungs-ID stellt die Kontoverbindung zum Ziel dar. Wenn Sie keine gültige Verbindungs-ID haben, wählen Sie Ihr Ziel aus dem [Zielkatalog](../catalog/overview.md) und führen Sie die zum Herstellen einer [ mit dem Ziel beschriebenen Schritte aus, ](../ui/connect-destination.md) Sie dieses Tutorial ausführen.
 
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus:
 
@@ -39,7 +39,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-for-required-headers}
 
-Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -187,4 +187,4 @@ Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Exp
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie die [!DNL Flow Service]-API erfolgreich zum Löschen vorhandener Zielkonten verwendet. Weitere Informationen zur Verwendung von Zielen finden Sie unter [Ziele - Übersicht](/help/destinations/home.md).
+Sie haben die [!DNL Flow Service]-API erfolgreich zum Löschen vorhandener Zielkonten verwendet. Weitere Informationen zur Verwendung von Zielen finden Sie unter [Ziele - Übersicht](/help/destinations/home.md).

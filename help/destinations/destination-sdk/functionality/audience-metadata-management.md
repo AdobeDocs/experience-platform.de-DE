@@ -2,10 +2,10 @@
 description: Verwenden Sie Vorlagen für Zielgruppen-Metadaten, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Adobe bietet eine erweiterungsfähige Vorlage für Zielgruppen-Metadaten, die Sie anhand der Spezifikationen Ihrer Marketing-API konfigurieren können. Nachdem Sie die Vorlage definiert, getestet und gesendet haben, wird sie von Adobe zur Strukturierung der API-Aufrufe an Ihr Ziel verwendet.
 title: Verwaltung von Zielgruppen-Metadaten
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 69%
+source-wordcount: '1270'
+ht-degree: 64%
 
 ---
 
@@ -546,20 +546,20 @@ Um Informationen wie Zielgruppen-IDs, Zugriffs-Token, Fehlermeldungen und mehr z
 
 | Makro | Beschreibung |
 |--- |--- |
-| `{{segment.alias}}` | Ermöglicht den Zugriff auf den Alias der Zielgruppe in Experience Platform. |
-| `{{segment.name}}` | Ermöglicht den Zugriff auf den Namen der Zielgruppe in Experience Platform. |
-| `{{segment.id}}` | Ermöglicht den Zugriff auf die ID der Zielgruppe in Experience Platform. |
-| `{{customerData.accountId}}` | Ermöglicht den Zugriff auf das Feld „Konto-ID“, das Sie in der Zielkonfiguration eingerichtet haben. |
-| `{{oauth2ServiceAccessToken}}` | Ermöglicht Ihnen die dynamische Generierung eines Zugriffs-Tokens basierend auf Ihrer OAuth 2-Konfiguration. |
-| `{{authData.accessToken}}` | Ermöglicht die Weitergabe des Zugriffs-Tokens an den API-Endpunkt. Verwenden Sie `{{authData.accessToken}}`, wenn Experience Platform nicht ablaufende Token verwenden soll, um eine Verbindung zu Ihrem Ziel herzustellen. Andernfalls verwenden Sie `{{oauth2ServiceAccessToken}}`, um ein Zugriffs-Token zu generieren. |
+| `{{segment.alias}}` | Greift auf den Zielgruppen-Alias in Experience Platform zu. |
+| `{{segment.name}}` | Zugriff auf den Zielgruppennamen in Experience Platform. |
+| `{{segment.id}}` | Zugriff auf die Zielgruppen-ID in Experience Platform. |
+| `{{customerData.accountId}}` | Greift auf das Feld Konto-ID zu, das Sie in der Zielkonfiguration eingerichtet haben. |
+| `{{oauth2ServiceAccessToken}}` | Dynamisches Generieren eines Zugriffs-Tokens basierend auf Ihrer OAuth 2-Konfiguration. |
+| `{{authData.accessToken}}` | Übergibt das Zugriffstoken an Ihren API-Endpunkt. Verwenden Sie `{{authData.accessToken}}`, wenn Experience Platform nicht ablaufende Token verwenden soll, um eine Verbindung zu Ihrem Ziel herzustellen. Andernfalls verwenden Sie `{{oauth2ServiceAccessToken}}`, um ein Zugriffs-Token zu generieren. |
 | `{{body.segments[0].segment.id}}` | Gibt die eindeutige Kennung der erstellten Zielgruppe als Wert des Schlüssels `externalAudienceId` zurück. |
 | `{{error.message}}` | Gibt eine Fehlermeldung zurück, die Benutzerinnen und Benutzern in der Benutzeroberfläche von Experience Platform angezeigt wird. |
-| `{{{segmentEnrichmentAttributes}}}` | Ermöglicht den Zugriff auf alle Anreicherungsattribute für eine bestimmte Zielgruppe.  Dieses Makro wird von den Ereignissen `create`, `update` und `delete` unterstützt. Anreicherungsattribute sind nur für [benutzerdefinierte Upload-Zielgruppen](destination-configuration/schema-configuration.md#external-audiences) verfügbar. Im [Handbuch zur Aktivierung von Batch-Zielgruppen](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) finden Sie Informationen zur Funktionsweise der Anreicherungsattribut-Auswahl. |
+| `{{{segmentEnrichmentAttributes}}}` | Zugriff auf alle Anreicherungsattribute für eine bestimmte Zielgruppe.  Dieses Makro wird von den Ereignissen `create`, `update` und `delete` unterstützt. Anreicherungsattribute sind nur für [benutzerdefinierte Upload-Zielgruppen](destination-configuration/schema-configuration.md#external-audiences) verfügbar. Im [Handbuch zur Aktivierung von Batch-Zielgruppen](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) finden Sie Informationen zur Funktionsweise der Anreicherungsattribut-Auswahl. |
 | `{{destination.name}}` | Gibt den Namen Ihres Ziels zurück. |
 | `{{destination.sandboxName}}` | Gibt den Namen der Experience Platform-Sandbox zurück, in der Ihr Ziel konfiguriert ist. |
 | `{{destination.id}}` | Gibt die ID Ihrer Zielkonfiguration zurück. |
 | `{{destination.imsOrgId}}` | Gibt die IMS-Organisations-ID zurück, in der Ihr Ziel konfiguriert ist. |
-| `{{destination.enrichmentAttributes}}` | Ermöglicht den Zugriff auf alle Anreicherungsattribute für alle Zielgruppen, die einem Ziel zugeordnet sind. Dieses Makro wird von den Ereignissen `createDestination`, `updateDestination` und `deleteDestination` unterstützt. Anreicherungsattribute sind nur für [benutzerdefinierte Upload-Zielgruppen](destination-configuration/schema-configuration.md#external-audiences) verfügbar. Im [Handbuch zur Aktivierung von Batch-Zielgruppen](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) finden Sie Informationen zur Funktionsweise der Anreicherungsattribut-Auswahl. |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Ermöglicht den Zugriff auf Anreicherungsattribute für bestimmte externe, einem Ziel zugeordnete Zielgruppen. Anreicherungsattribute sind nur für [benutzerdefinierte Upload-Zielgruppen](destination-configuration/schema-configuration.md#external-audiences) verfügbar. Im [Handbuch zur Aktivierung von Batch-Zielgruppen](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) finden Sie Informationen zur Funktionsweise der Anreicherungsattribut-Auswahl. |
+| `{{destination.enrichmentAttributes}}` | Zugriff auf alle Anreicherungsattribute für alle Zielgruppen, die einem Ziel zugeordnet sind. Dieses Makro wird von den Ereignissen `createDestination`, `updateDestination` und `deleteDestination` unterstützt. Anreicherungsattribute sind nur für [benutzerdefinierte Upload-Zielgruppen](destination-configuration/schema-configuration.md#external-audiences) verfügbar. Im [Handbuch zur Aktivierung von Batch-Zielgruppen](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) finden Sie Informationen zur Funktionsweise der Anreicherungsattribut-Auswahl. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Zugreifen auf Anreicherungsattribute für bestimmte externe Zielgruppen, die einem Ziel zugeordnet sind. Anreicherungsattribute sind nur für [benutzerdefinierte Upload-Zielgruppen](destination-configuration/schema-configuration.md#external-audiences) verfügbar. Im [Handbuch zur Aktivierung von Batch-Zielgruppen](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) finden Sie Informationen zur Funktionsweise der Anreicherungsattribut-Auswahl. |
 
 {style="table-layout:auto"}

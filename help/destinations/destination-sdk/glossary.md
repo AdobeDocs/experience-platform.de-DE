@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Destination SDK-Glossar
 description: Wichtige Begriffe bei der Erstellung eines Ziels mit Experience Platform Destination SDK verstehen.
 exl-id: d65f390a-a980-49b8-9570-840f03534553
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '669'
 ht-degree: 3%
 
 ---
@@ -44,6 +44,6 @@ Definitionen der in Destination SDK verwendeten Begriffe finden Sie in diesem Gl
 
 **Vorlagenspezifikationen und Vorlagenstrategien**: Vorlagenspezifikationen sind Konfigurationen zum Formatieren von HTTP-Anfragen, die von [!DNL Adobe Experience Platform] an ein Ziel gesendet werden. Sie transformieren Profilattributfelder aus dem XDM-Schema in ein von der Zielplattform unterstütztes Format. Mithilfe einer Vorlagensprache, die [!DNL Jinja] ähnelt, ermöglichen diese Spezifikationen dynamische Datenumwandlungen auf der Grundlage spezifischer Regeln und Eingabedaten. [Weitere Informationen](/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md).
 
-**Test-API**: Mit der Test-API können Sie Ihre Zielkonfigurationen überprüfen, bevor Sie eine Veröffentlichungsanfrage senden. Es bietet Tools zum Generieren von Beispielprofilen und zum Testen des Datenflusses, um sicherzustellen, dass die Konfiguration den Anforderungen des Ziels entspricht. Die -API unterstützt sowohl Streaming- als auch dateibasierte (Batch-)Ziele und bietet eine Möglichkeit, Daten zu simulieren und potenzielle Probleme im Einrichtungsprozess zu beheben. Erfahren Sie mehr über die Test[API für &#x200B;](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)Streaming“ und [dateibasierte Ziele](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
+**Test-API**: Verwenden Sie die Test-API, um Ihre Zielkonfigurationen zu validieren, bevor Sie eine Veröffentlichungsanfrage senden. Es bietet Tools zum Generieren von Beispielprofilen und zum Testen des Datenflusses, um sicherzustellen, dass die Konfiguration den Anforderungen des Ziels entspricht. Die -API unterstützt sowohl Streaming- als auch dateibasierte (Batch-)Ziele und bietet eine Möglichkeit, Daten zu simulieren und potenzielle Probleme im Einrichtungsprozess zu beheben. Erfahren Sie mehr über die Test[API für ](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)Streaming“ und [dateibasierte Ziele](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
 
 **Umwandlungsvorlage**: Eine Umwandlungsvorlage passt das Datenformat aus dem Adobe-XDM-Schema an das erwartete Format des Ziels an. [Weitere Informationen](/help/destinations/destination-sdk/functionality/destination-server/message-format.md).

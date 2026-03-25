@@ -3,7 +3,7 @@ keywords: Yext-Konversionsverfolgung;Yext;Yext;Yext-Konversionsverfolgung
 title: Yext Conversion Tracking-Erweiterung
 description: Die Yext Conversion Tracking-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 57%
@@ -14,7 +14,7 @@ ht-degree: 57%
 
 ## Überblick {#overview}
 
-Mit der [!DNL Yext Conversion Tracking]-Erweiterung können Sie Konversionen messen, die Ihrer Verwendung von Yext-Produkten zugeschrieben werden können.
+Verwenden Sie die [!DNL Yext Conversion Tracking]-Erweiterung, um Konversionen zu messen, die Ihrer Verwendung von Yext-Produkten zugeschrieben werden können.
 
 [!DNL Yext Conversion Tracking] ist eine Analytics-Erweiterung in [!DNL Adobe Experience Platform]. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
 

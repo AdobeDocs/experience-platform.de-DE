@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie einen API-Aufruf formatieren, um eine Anfrage zur Veröffentlichung über Adobe Experience Platform Destination SDK zu senden.
 title: Erstellen einer Zielveröffentlichungsanfrage
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '443'
 ht-degree: 85%
 
 ---

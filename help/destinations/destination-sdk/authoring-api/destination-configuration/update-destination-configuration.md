@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine bestehende Zielkonfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
 title: Aktualisieren einer Zielkonfiguration
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 85%
+source-wordcount: '368'
+ht-degree: 86%
 
 ---
 

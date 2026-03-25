@@ -3,7 +3,7 @@ keywords: Google Universal Analytics;Google Universal Analytics;Google Universal
 title: Google Universal Analytics-Erweiterung
 description: Die Google Universal Analytics-Erweiterung ist ein Analytics-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 72576a0f-f2da-46d6-a722-33a0cf17f2c4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 62%
@@ -14,7 +14,7 @@ ht-degree: 62%
 
 ## Überblick {#overview}
 
-[!DNL Google Universal Analytics] können Sie Ihren Werbe-ROI messen sowie Ihre Flash-, Video- und Social-Networking-Sites und -Anwendungen verfolgen.
+Verwenden Sie [!DNL Google Universal Analytics], um Ihren Werbe-ROI zu messen und Ihre Flash-, Video- und Social-Networking-Sites und -Anwendungen zu verfolgen.
 
 [!DNL Google Universal Analytics] ist eine Analytics-Erweiterung in [!DNL Adobe Experience Platform]. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
 

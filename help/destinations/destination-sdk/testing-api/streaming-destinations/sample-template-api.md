@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API eine Test-Nachrichtenumwandlungsvorlage für Ihr Ziel generieren.
 title: Erstellen einer Beispiel-Nachrichtenumwandlungsvorlage
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 86%
+source-wordcount: '373'
+ht-degree: 84%
 
 ---
 
@@ -28,7 +28,7 @@ Sie können eine Beispielvorlage abrufen, indem Sie eine GET-Anfrage an den Endp
 
 >[!TIP]
 >
->* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Siehe Abschnitt [Abrufen einer Zielkonfiguration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) für weitere Details.
+>* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Weitere Informationen finden [ unter „Abrufen ](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) Zielkonfiguration“.
 
 **API-Format**
 

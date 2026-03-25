@@ -2,16 +2,16 @@
 description: Erfahren Sie, wie Sie die Zielbereitstellungseinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden, um anzugeben, wohin die exportierten Daten gehen und welche Authentifizierungsregel an dem Ort verwendet wird, an dem die Daten landen.
 title: Zielbereitstellung
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 79%
+source-wordcount: '639'
+ht-degree: 76%
 
 ---
 
 # Zielbereitstellung
 
-Um mehr Kontrolle darüber zu erhalten, wo die in Ihr Ziel exportierten Daten landen, können Sie mit Destination SDK Zielversandeinstellungen angeben.
+Um mehr Kontrolle darüber zu erhalten, wo die in Ihr Ziel exportierten Daten landen, verwenden Sie Destination SDK , um die Zielversandeinstellungen anzugeben.
 
 Im Abschnitt „Zielbereitstellung“ wird angegeben, wohin die exportierten Daten gehen und welche Authentifizierungsregel an dem Ort verwendet wird, an dem die Daten landen.
 
@@ -35,7 +35,7 @@ In diesem Artikel werden alle unterstützten Zielbereitstellungsoptionen beschri
 
 ## Unterstützte Integrationstypen {#supported-integration-types}
 
-Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die auf dieser Seite beschriebenen Funktionen unterstützen.
+In der folgenden Tabelle finden Sie Einzelheiten darüber, welche Integrationstypen die auf dieser Seite beschriebenen Funktionen unterstützen.
 
 | Integrationstyp | Unterstützt Funktionen |
 |---|---|
@@ -48,7 +48,7 @@ Bei der Konfiguration Ihrer Zielversandeinstellungen können Sie mithilfe der in
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Experience Platform] eine Verbindung zu Ihrem Ziel herstellen soll. Unterstützte Werte:<ul><li>`CUSTOMER_AUTHENTICATION`: Verwenden Sie diese Option, wenn sich Experience Platform-Kundinnen und -Kunden über eine der hier beschriebenen Authentifizierungsmethoden bei [&#x200B; System &#x200B;](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: Verwenden Sie diese Option, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und [!DNL Experience Platform]-Kundinnen bzw. -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Anmeldeinformationen-Objekt mithilfe der Konfiguration [Anmeldeinformationen-API](../../credentials-api/create-credential-configuration.md) erstellen und den `authenticationId`-Parameter auf den Wert der Anmeldeinformationsobjekt-ID festlegen.</li><li>`NONE`: Verwenden Sie diese Option, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
+| `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Experience Platform] eine Verbindung zu Ihrem Ziel herstellen soll. Unterstützte Werte:<ul><li>`CUSTOMER_AUTHENTICATION`: Verwenden Sie diese Option, wenn sich Experience Platform-Kundinnen und -Kunden über eine der hier beschriebenen Authentifizierungsmethoden bei [ System ](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: Verwenden Sie diese Option, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und [!DNL Experience Platform]-Kundinnen bzw. -Kunden keine Authentifizierungs-Anmeldedaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Anmeldeinformationen-Objekt mithilfe der Konfiguration [Anmeldeinformationen-API](../../credentials-api/create-credential-configuration.md) erstellen und den `authenticationId`-Parameter auf den Wert der Anmeldeinformationsobjekt-ID festlegen.</li><li>`NONE`: Verwenden Sie diese Option, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `authenticationId` | Zeichenfolge | Die `instanceId` der Konfigurations-ID des Berechtigungsobjekts, die für die Authentifizierung verwendet werden soll. Dieser Parameter ist nur erforderlich, wenn Sie eine bestimmte Zugangsdaten-Konfiguration angeben müssen. |
 | `destinationServerId` | Zeichenfolge | Die `instanceId` des [Ziel-Servers](../../authoring-api/destination-server/create-destination-server.md), an die Sie Daten exportieren möchten. |
 | `deliveryMatchers.type` | Zeichenfolge | <ul><li>Legen Sie diese bei der Konfiguration des Zielversands für dateibasierte Ziele immer auf `SOURCE` fest.</li><li>Beim Konfigurieren des Zielversands für ein Streaming-Ziel ist der Abschnitt `deliveryMatchers` nicht erforderlich.</li></ul> |

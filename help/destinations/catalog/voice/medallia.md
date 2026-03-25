@@ -3,10 +3,10 @@ keywords: Medallien;Medallien
 title: Medallia-Erweiterung
 description: Die Medallia-Erweiterung ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 54%
+source-wordcount: '448'
+ht-degree: 55%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 54%
 
 ## Überblick {#overview}
 
-Schnelle und nahtlose Bereitstellung von [!DNL Medallia] in Ihren Web-Eigenschaften. Mit der Erweiterung können Sie auch Umfrageereignisse erkennen, Kunden-Feedback in Echtzeit über Datenelemente erfassen, in Regeln verwenden, um das Kundenerlebnis zu personalisieren und Daten mit [!DNL Adobe Analytics] zu teilen.
+Schnelle und nahtlose Bereitstellung von [!DNL Medallia] in Ihren Web-Eigenschaften. Die Erweiterung erkennt außerdem Umfrageereignisse, erfasst das Kunden-Feedback in Echtzeit über Datenelemente, verwendet sie in Regeln, um das Kundenerlebnis zu personalisieren, und gibt Daten an [!DNL Adobe Analytics] weiter.
 
 [!DNL Medallia] ist eine Stimme der Kundenerweiterung in [!DNL Adobe Experience Platform]. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 

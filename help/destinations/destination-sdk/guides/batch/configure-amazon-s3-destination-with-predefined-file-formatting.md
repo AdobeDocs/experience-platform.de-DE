@@ -2,16 +2,16 @@
 description: Erfahren Sie, wie Sie mit Destination SDK ein Amazon S3-Ziel mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration konfigurieren.
 title: Konfigurieren eines Amazon S3-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '714'
 ht-degree: 8%
 
 ---
 
 # Konfigurieren eines [!DNL Amazon S3] Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein Amazon S3-Ziel mit vordefinierten, standardmäßigen [Dateiformatierungsoptionen](configure-file-formatting-options.md) und einer benutzerdefinierten [Dateinamenkonfiguration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) konfigurieren.
 
@@ -21,7 +21,7 @@ Detaillierte Beschreibungen der unten verwendeten Parameter finden Sie unter [Ko
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte &#x200B;](../../getting-started.md) Destination SDK , wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
+Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte mit Destination SDK](../../getting-started.md) , wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
@@ -285,7 +285,7 @@ Basierend auf den oben genannten Konfigurationen wird im Experience Platform-Kat
 
 ![Bildschirmaufzeichnung, die die Zielkatalogseite mit einer ausgewählten Zielkarte anzeigt.](../../assets/guides/batch/destination-card.gif)
 
-Beachten Sie in den folgenden Bildern und Aufzeichnungen, wie die [&#x200B; im Aktivierungs-Workflow für dateibasierte Ziele &#x200B;](../../../ui/activate-batch-profile-destinations.md) den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
+Beachten Sie in den folgenden Bildern und Aufzeichnungen, wie die [ im Aktivierungs-Workflow für dateibasierte Ziele ](../../../ui/activate-batch-profile-destinations.md) den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
 
 Beachten Sie beim Ausfüllen von Details zum Ziel, wie die Felder die benutzerdefinierten Datenfelder sind, die Sie in der Konfiguration eingerichtet haben.
 
@@ -303,7 +303,7 @@ Beachten Sie beim Anzeigen der Konfigurationsoptionen für Dateinamen, wie die a
 
 Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Schritte 1](#create-server-file-configuration) und [2](#create-destination-configuration), um die Konfigurationen entsprechend Ihren Anforderungen zu ändern.
 
-## Schritt 4: (Optional) Publish - Ihr Ziel {#publish-destination}
+## Schritt 4: (Optional) Veröffentlichen des Ziels {#publish-destination}
 
 >[!NOTE]
 >
@@ -321,4 +321,4 @@ Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) si
 
 ## Nächste Schritte {#next-steps}
 
-Durch das Lesen dieses Artikels wissen Sie jetzt, wie Sie mithilfe von Destination SDK ein benutzerdefiniertes [!DNL Amazon S3] erstellen können. Als Nächstes kann Ihr Team den [Aktivierungs-Workflow für dateibasierte Ziele“ verwenden](../../../ui/activate-batch-profile-destinations.md) um Daten an das Ziel zu exportieren.
+Sie wissen jetzt, wie Sie mithilfe von Destination SDK ein benutzerdefiniertes [!DNL Amazon S3] erstellen können. Als Nächstes kann Ihr Team den [Aktivierungs-Workflow für dateibasierte Ziele“ verwenden](../../../ui/activate-batch-profile-destinations.md) um Daten an das Ziel zu exportieren.

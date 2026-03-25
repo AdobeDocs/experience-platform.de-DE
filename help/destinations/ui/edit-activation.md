@@ -4,9 +4,9 @@ title: Bearbeiten von Aktivierungsdatenflüssen
 type: Tutorial
 description: Gehen Sie wie in diesem Artikel beschrieben vor, um einen vorhandenen Aktivierungsdatenfluss in Adobe Experience Platform zu bearbeiten.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '915'
 ht-degree: 8%
 
 ---
@@ -22,13 +22,13 @@ In [!DNL Adobe Experience Platform] können Sie verschiedene Komponenten vorhand
 * [Hinzufügen zusätzlicher Datensätze](#add-datasets) zum Aktivierungs-Workflow
 * [Marketing-Aktionen bearbeiten](#edit-marketing-actions) für Ihre Aktivierungsdatenflüsse
 * [Zugriffskennzeichnungen anwenden](#apply-access-labels) auf exportierte Daten
-* [Namen und Beschreibungen &#x200B;](#edit-names-descriptions) Aktivierungsdatenflüsse bearbeiten)
+* [Namen und Beschreibungen ](#edit-names-descriptions) Aktivierungsdatenflüsse bearbeiten)
 
 ## Durchsuchen von Aktivierungsdatenflüssen {#browse-activation-dataflows}
 
 Gehen Sie wie folgt vor, um Ihre vorhandenen Aktivierungsdatenflüsse zu durchsuchen und den Datenfluss zu identifizieren, den Sie bearbeiten möchten.
 
-1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform &#x200B;](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziel-Datenflüsse anzuzeigen.
+1. Wechseln Sie zur [Experience Platform](https://platform.adobe.com/)Benutzeroberfläche und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziel-Datenflüsse anzuzeigen.
 
    ![Ziele durchsuchen](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -68,7 +68,7 @@ Wählen Sie **[!UICONTROL Activate audiences]** in der rechten Leiste aus. Diese
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zum Aktivieren von Zielgruppen-Datenflüssen.](../assets/ui/edit-activation/activate-audiences.png)
 
-Wählen Sie den **[!UICONTROL Scheduling]** Schritt im Aktivierungs-Workflow aus, um den Aktivierungsplan zu bearbeiten und die Häufigkeit für den Datenfluss zu exportieren. In diesem Schritt können Sie konfigurieren, wie oft Daten an das Ziel exportiert werden.
+Wählen Sie den **[!UICONTROL Scheduling]** Schritt im Aktivierungs-Workflow aus, um den Aktivierungsplan zu bearbeiten und die Häufigkeit für den Datenfluss zu exportieren. Verwenden Sie diesen Schritt, um zu konfigurieren, wie oft Daten an das Ziel exportiert werden.
 
 Im **[!UICONTROL Scheduling]** Schritt des Aktivierungs-Workflows haben Sie folgende Möglichkeiten:
 
@@ -87,7 +87,7 @@ Wählen Sie **[!UICONTROL Activate audiences]** in der rechten Leiste aus. Diese
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zum Aktivieren von Zielgruppen-Datenflüssen.](../assets/ui/edit-activation/activate-audiences.png)
 
-Wählen Sie den **[!UICONTROL Mapping]** Schritt im Aktivierungs-Workflow aus, um die zugeordneten Attribute und Identitäten für Ihren Aktivierungsdatenfluss zu bearbeiten. Auf diese Weise können Sie anpassen, welche Profilattribute und Identitäten an das Ziel exportiert werden sollen.
+Wählen Sie den **[!UICONTROL Mapping]** Schritt im Aktivierungs-Workflow aus, um die zugeordneten Attribute und Identitäten für Ihren Aktivierungsdatenfluss zu bearbeiten. Verwenden Sie diesen Schritt, um anzupassen, welche Profilattribute und Identitäten an das Ziel exportiert werden.
 
 Im **[!UICONTROL Mapping]** Schritt des Aktivierungs-Workflows haben Sie folgende Möglichkeiten:
 
@@ -107,7 +107,7 @@ Wählen Sie **[!UICONTROL Export datasets]** in der rechten Leiste aus, um zusä
 
 >[!NOTE]
 >
->Diese Option ist nur für (Ziele[&#x200B; die den Datensatzexport unterstützen](export-datasets.md#supported-destinations) sichtbar.
+>Diese Option ist nur für (Ziele[ die den Datensatzexport unterstützen](export-datasets.md#supported-destinations) sichtbar.
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/export-datasets.png)
 
@@ -115,7 +115,7 @@ Wählen Sie **[!UICONTROL Export datasets]** in der rechten Leiste aus, um zusä
 
 >[!IMPORTANT]
 >
->Zum Bearbeiten von Marketing-Aktionen benötigen Sie die **[!UICONTROL Activate Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[&#x200B; &#x200B;](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Bearbeiten von Marketing-Aktionen benötigen Sie die **[!UICONTROL Activate Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[ ](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Sie können Marketing-Aktionen hinzufügen oder entfernen, die Sie beim erstmaligen Herstellen einer Verbindung mit dem Ziel eingerichtet haben.
 
@@ -130,7 +130,7 @@ Wählen Sie die entsprechenden Marketing-Aktionen aus und klicken Sie dann auf *
 
 ## Anwenden von Zugriffs-Labels {#apply-access-labels}
 
-Wählen Sie **[!UICONTROL Apply access labels]** aus, um die Datennutzungsbeschriftungen für die exportierten Daten zu bearbeiten. Weitere Informationen finden [&#x200B; in der Dokumentation &#x200B;](../../data-governance/labels/overview.md) Datennutzungskennzeichnungen .
+Wählen Sie **[!UICONTROL Apply access labels]** aus, um die Datennutzungsbeschriftungen für die exportierten Daten zu bearbeiten. Weitere Informationen finden [ in der Dokumentation ](../../data-governance/labels/overview.md) Datennutzungskennzeichnungen .
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/apply-access-labels.png)
 
@@ -142,6 +142,6 @@ Um den Namen und die Beschreibung des Aktivierungsdatenflusses zu bearbeiten, ve
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie den **[!UICONTROL destinations]**-Arbeitsbereich erfolgreich verwendet, um vorhandene Ziel-Datenflüsse zu aktualisieren.
+Sie haben Ihre Ziel-Datenflüsse mithilfe von **[!UICONTROL destinations]** Workspace erfolgreich aktualisiert.
 
 Weitere Informationen zu Zielen finden Sie unter [Ziele - Übersicht](../catalog/overview.md).

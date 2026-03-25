@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie eine Aggregationsrichtlinie einrichten, um zu bestimmen, wie HTTP-Anfragen an Ihr Ziel gruppiert und in Batches eingesetzt werden sollen.
 title: Aggregationsrichtlinie
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 80%
+source-wordcount: '1225'
+ht-degree: 75%
 
 ---
 
@@ -26,7 +26,7 @@ Sie können die Einstellungen der Aggregationsrichtlinie über den Endpunkt `/au
 
 In diesem Artikel werden alle unterstützten Einstellungen für Aggregationsrichtlinien beschrieben, die Sie für Ihr Ziel verwenden können.
 
-Lesen Sie nach diesem Dokument den Abschnitt über die [Verwendung von Vorlagen](../../functionality/destination-server/message-format.md#using-templating) und die [wichtigsten Aggregations-Beispiele](../../functionality/destination-server/message-format.md#template-aggregation-key), um zu verstehen, wie Sie die Aggregationsrichtlinie basierend auf Ihrer ausgewählten Aggregationsrichtlinie in Ihre Nachrichtenumwandlungsvorlage einschließen.
+Lesen Sie nach diesem Dokument den Abschnitt über [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating) und die [Aggregations-Schlüsselbeispiele](../../functionality/destination-server/message-format.md#template-aggregation-key), um zu verstehen, wie Sie die Aggregationsrichtlinie basierend auf Ihrer ausgewählten Aggregationsrichtlinie in Ihre Nachrichtenumwandlungsvorlage einschließen.
 
 >[!IMPORTANT]
 >
@@ -34,7 +34,7 @@ Lesen Sie nach diesem Dokument den Abschnitt über die [Verwendung von Vorlagen]
 
 ## Unterstützte Integrationstypen {#supported-integration-types}
 
-Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die auf dieser Seite beschriebenen Funktionen unterstützen.
+In der folgenden Tabelle finden Sie Einzelheiten darüber, welche Integrationstypen die auf dieser Seite beschriebenen Funktionen unterstützen.
 
 | Integrationstyp | Unterstützt Funktionen |
 |---|---|
@@ -81,7 +81,7 @@ Die folgende Beispielkonfiguration zeigt eine Konfiguration einer Aggregation na
 | `aggregationType` | Zeichenfolge | Gibt den Typ der Aggregationsrichtlinie an, die Ihr Ziel verwenden soll. Unterstützte Aggregationstypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | Ganzzahl | Experience Platform kann mehrere exportierte Profile in einem einzigen HTTP-Aufruf aggregieren. <br><br>Geben Sie hier die maximale Anzahl von Profilen an, die Ihr Endpunkt in einem einzelnen HTTP-Aufruf erhalten soll. Beachten Sie, dass dies eine bestmögliche Aggregation ist. Wenn Sie beispielsweise den Wert 100 angeben, kann Experience Platform bei einem Aufruf eine beliebige Anzahl von Profilen senden, die kleiner als 100 ist. <br><br> Wenn Ihr Server nicht mehrere Benutzerinnen oder Benutzer pro Anfrage akzeptiert, setzen Sie diesen Wert auf `1`. |
 | `bestEffortAggregation.splitUserById` | Boolesch | Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true`, wenn Ihr Server für einen gegebenen Identity-Namespace nur eine Identität pro Aufruf akzeptiert. |
-| `bestEffortAggregation.aggregationKey` | Objekt | *Optional*. Ermöglicht die Aggregation der dem Ziel zugeordneten exportierten Profile anhand der unten beschriebenen Parameter. Dieser Parameter kann weggelassen oder auf `null` gesetzt werden, wenn keine Aggregation erforderlich ist. Sofern angegeben, funktioniert er genauso wie der Aggregationsschlüssel in der konfigurierbaren Aggregation. |
+| `bestEffortAggregation.aggregationKey` | Objekt | *Optional*. Aggregiert die dem Ziel zugeordneten exportierten Profile anhand der unten beschriebenen Parameter. Dieser Parameter kann weggelassen oder auf `null` gesetzt werden, wenn keine Aggregation erforderlich ist. Sofern angegeben, funktioniert er genauso wie der Aggregationsschlüssel in der konfigurierbaren Aggregation. |
 | `bestEffortAggregation.aggregationKey.includeSegmentId` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID in Ihr Ziel exportiert wurden. |
 | `bestEffortAggregation.aggregationKey.includeSegmentStatus` | Boolesch | Sie müssen sowohl diesen Parameter als auch den Parameter `includeSegmentId` auf `true` festlegen, wenn Sie die an Ihr Ziel exportierten Profile nach Zielgruppen-ID und Zielgruppenstatus gruppieren möchten. |
 | `bestEffortAggregation.aggregationKey.includeIdentity` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Identity-Namespace zu Ihrem Ziel exportiert wurden. |
@@ -96,7 +96,7 @@ Die folgende Beispielkonfiguration zeigt eine Konfiguration einer Aggregation na
 
 ## Konfigurierbare Aggregation {#configurable-aggregation}
 
-Die konfigurierbare Aggregation eignet sich am besten, wenn Sie im selben Aufruf große Batches mit Tausenden Profilen verwenden möchten. Mit dieser Option können Sie die exportierten Profile auch anhand komplexer Aggregationsregeln aggregieren.
+Die konfigurierbare Aggregation eignet sich am besten, wenn Sie im selben Aufruf große Batches mit Tausenden Profilen verwenden möchten. Diese Option unterstützt auch die Aggregation der exportierten Profile anhand komplexer Aggregationsregeln.
 
 Die folgende Beispielkonfiguration zeigt eine konfigurierbare Aggregationskonfiguration. Ein Beispiel für die Aggregation nach bestem Bemühen finden Sie im Abschnitt [Aggregation nach bestem Bemühen](#best-effort-aggregation). Die Parameter für die konfigurierbare Aggregation sind in der folgenden Tabelle beschrieben.
 
@@ -136,7 +136,7 @@ Die folgende Beispielkonfiguration zeigt eine konfigurierbare Aggregationskonfig
 | `configurableAggregation.splitUserById` | Boolesch | Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true`, wenn Ihr Server für einen gegebenen Identity-Namespace nur eine Identität pro Aufruf akzeptiert. |
 | `configurableAggregation.maxBatchAgeInSecs` | Ganzzahl | Zusammen mit `maxNumEventsInBatch` bestimmt dieser Parameter, wie lange Experience Platform warten soll, bis ein API-Aufruf an Ihren Endpunkt gesendet wird. <ul><li>Mindestwert (Sekunden): 301</li><li>Höchstwert (Sekunden): 3.600</li></ul> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet Experience Platform entweder 3.600 Sekunden ODER, bis 10000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was früher eintritt). |
 | `configurableAggregation.maxNumEventsInBatch` | Ganzzahl | Zusammen mit `maxBatchAgeInSecs` bestimmt dieser Parameter, wie viele qualifizierte Profile in einem API-Aufruf aggregiert werden sollen. <ul><li>Mindestwert: 1.000</li><li>Höchstwert: 10.000</li></ul> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet Experience Platform entweder 3.600 Sekunden ODER, bis 10.000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was früher eintritt). |
-| `configurableAggregation.aggregationKey` | – | Ermöglicht die Aggregation der dem Ziel zugeordneten exportierten Profile anhand der folgenden Parameter. |
+| `configurableAggregation.aggregationKey` | – | Aggregiert die dem Ziel zugeordneten exportierten Profile anhand der unten beschriebenen Parameter. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID in Ihr Ziel exportiert wurden. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolesch | Sie müssen sowohl diesen Parameter als auch den Parameter `includeSegmentId` auf `true` festlegen, wenn Sie die an Ihr Ziel exportierten Profile nach Zielgruppen-ID und Zielgruppenstatus gruppieren möchten. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Identity-Namespace zu Ihrem Ziel exportiert wurden. |

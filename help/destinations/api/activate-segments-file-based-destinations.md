@@ -4,9 +4,9 @@ title: Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Ser
 description: Erfahren Sie, wie Sie mit der Flow Service-API Dateien mit qualifizierten Profilen in Cloud-Speicher-Ziele exportieren können.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '4966'
+source-wordcount: '4933'
 ht-degree: 9%
 
 ---
@@ -33,7 +33,7 @@ In diesem Artikel wird der Arbeitsablauf erläutert, der für die Verwendung der
 
 >[!TIP]
 >
->Sie können auch die Experience Platform-Benutzeroberfläche verwenden, um Profile in Cloud-Speicher-Ziele zu exportieren. Lesen Sie [&#x200B; Tutorial zum Aktivieren dateibasierter Ziele &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) weitere Informationen.
+>Sie können auch die Experience Platform-Benutzeroberfläche verwenden, um Profile in Cloud-Speicher-Ziele zu exportieren. Lesen Sie [ Tutorial zum Aktivieren dateibasierter Ziele ](/help/destinations/ui/activate-batch-profile-destinations.md) weitere Informationen.
 
 <!--
 
@@ -50,7 +50,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] können Sie aus Ihren [!DNL Adobe Experience Platform]-Daten Zielgruppen erstellen und Zielgruppen in [!DNL Real-Time Customer Profile] generieren.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] erstellt Zielgruppen in [!DNL Adobe Experience Platform] aus Ihren [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Daten für dateibasierte Ziele in Experience Platform zu aktivieren.
@@ -59,7 +59,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen m�
 
 Zum Exportieren von Profilen benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 ### Lesen von Beispiel-API-Aufrufen {#reading-sample-api-calls}
 
@@ -87,7 +87,7 @@ Für alle Anfragen mit einer Payload (`POST`, `PUT`, `PATCH`) ist eine zusätzli
 
 ### API-Referenzdokumentation {#api-reference-documentation}
 
-Eine zugehörige Referenzdokumentation für alle API-Vorgänge finden Sie in diesem Tutorial. Weitere Informationen finden Sie in [&#x200B; Dokumentation zur Flow Service - Ziele-API auf der Adobe Developer-Website](https://developer.adobe.com/experience-platform-apis/references/destinations/). Wir empfehlen, dass Sie dieses Tutorial und die API-Referenzdokumentation parallel verwenden.
+Eine zugehörige Referenzdokumentation für alle API-Vorgänge finden Sie in diesem Tutorial. Siehe die [Flow Service - Ziele-API-Dokumentation auf der Adobe Developer-Website](https://developer.adobe.com/experience-platform-apis/references/destinations/). Wir empfehlen, dass Sie dieses Tutorial und die API-Referenzdokumentation parallel verwenden.
 
 ### Glossar {#glossary}
 
@@ -110,7 +110,7 @@ Bevor Sie den Workflow zum Exportieren von Profilen starten, identifizieren Sie 
 
 {style="table-layout:auto"}
 
-Sie benötigen diese IDs, um in den nächsten Schritten dieses Tutorials die verschiedenen Flow Service-Entitäten zu erstellen. Sie müssen auch auf Teile der Verbindungsspezifikation selbst verweisen, um bestimmte Entitäten einzurichten, damit Sie die Verbindungsspezifikation aus Flow Service-APIs abrufen können. Nachfolgend finden Sie die Beispiele zum Abrufen von Verbindungsspezifikationen für alle Ziele in der Tabelle:
+Sie benötigen diese IDs, um in den nächsten Schritten dieses Tutorials die verschiedenen Flow Service-Entitäten zu erstellen. Sie müssen auch Teile der Verbindungsspezifikation selbst referenzieren, um bestimmte Entitäten einzurichten, damit Sie die Verbindungsspezifikation aus Flow Service-APIs abrufen können. Nachfolgend finden Sie die Beispiele zum Abrufen von Verbindungsspezifikationen für alle Ziele in der Tabelle:
 
 >[!BEGINTABS]
 
@@ -715,7 +715,7 @@ Mithilfe der in der Authentifizierungsspezifikation angegebenen Eigenschaften (d
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsdaten finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) der Zieldokumentationsseite für Amazon S3.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) der Zieldokumentationsseite für Amazon S3.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -749,7 +749,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsdaten finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) der Zieldokumentationsseite für Amazon S3.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) der Zieldokumentationsseite für Amazon S3.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -799,7 +799,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsdaten finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) der Zieldokumentationsseite für die Azure Blob-Datenspeicherung.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) der Zieldokumentationsseite für die Azure Blob-Datenspeicherung.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsdaten finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) der Zieldokumentationsseite zu Azure Data Lake Gen 2(ADLS Gen2).
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) der Zieldokumentationsseite für Azure Data Lake Gen 2(ADLS Gen2).
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -940,7 +940,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsdaten finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) der Zieldokumentationsseite für den Google Cloud-Speicher.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Authentifizieren bei Ziel](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) der Zieldokumentationsseite für den Google Cloud-Speicher.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -1202,7 +1202,7 @@ Notieren Sie die Verbindungs-ID aus der Antwort. Diese ID ist im nächsten Schri
 
 Als Nächstes müssen Sie eine Zielverbindung erstellen. [Zielgruppenverbindungen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) speichern die Exportparameter für die exportierten Zielgruppen. Zu den Exportparametern gehören Exportspeicherort, Dateiformat, Komprimierung und andere Details. Für CSV-Dateien können Sie beispielsweise mehrere Exportoptionen auswählen. Weitere Informationen zu allen unterstützten CSV-Exportoptionen finden Sie auf der Seite [Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-Die unterstützten Eigenschaften für jeden Zieltyp werden in den im -`targetSpec` des Ziels bereitgestellten `connection spec`-Eigenschaften beschrieben. Auf den folgenden Registerkarten finden Sie die `targetSpec` Eigenschaften aller unterstützten Ziele.
+Informationen zu den unterstützten Eigenschaften für die einzelnen Zieltypen finden Sie in den `targetSpec` Eigenschaften, die im -`connection spec` des Ziels bereitgestellt werden. Auf den folgenden Registerkarten finden Sie die `targetSpec` Eigenschaften aller unterstützten Ziele.
 
 >[!BEGINTABS]
 
@@ -2402,7 +2402,7 @@ Mithilfe der obigen Spezifikation können Sie eine Zielverbindungsanfrage für I
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) der Dokumentationsseite für das [!DNL Amazon S3].
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie [ Abschnitt „Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) der Dokumentationsseite für das [!DNL Amazon S3].
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -2496,7 +2496,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) der Dokumentationsseite für das [!DNL Azure Blob Storage].
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie [ Abschnitt „Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) der Dokumentationsseite für das [!DNL Azure Blob Storage].
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -2683,7 +2683,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) der Dokumentationsseite für das [!DNL Data Landing Zone].
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie [ Abschnitt „Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) der Dokumentationsseite für das [!DNL Data Landing Zone].
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -2776,7 +2776,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) der Dokumentationsseite für das [!DNL Google Cloud Storage].
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie [ Abschnitt „Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) der Dokumentationsseite für das [!DNL Google Cloud Storage].
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -2870,7 +2870,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) der Dokumentationsseite für SFTP-Ziele.
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie [ Abschnitt „Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) der Dokumentationsseite für SFTP-Ziele.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anfrage, wenn Sie die Anfrage in das Terminal Ihrer Wahl kopieren.
 
@@ -3275,7 +3275,7 @@ Notieren Sie die Datenfluss-ID aus der Antwort. Diese ID ist in späteren Schrit
 
 ### Audiences zum Export hinzufügen {#add-audiences}
 
-In diesem Schritt können Sie auch auswählen, welche Zielgruppen Sie an das Ziel exportieren möchten. Ausführliche Informationen zu diesem Schritt und zum Anfrageformat zum Hinzufügen einer Zielgruppe zum Datenfluss finden Sie in den Beispielen im Abschnitt [Aktualisieren &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) Zieldatenflusses“ der API-Referenzdokumentation.
+In diesem Schritt können Sie auch auswählen, welche Zielgruppen Sie an das Ziel exportieren möchten. Ausführliche Informationen zu diesem Schritt und zum Anfrageformat zum Hinzufügen einer Zielgruppe zum Datenfluss finden Sie in den Beispielen im Abschnitt [Aktualisieren ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) Zieldatenflusses“ der API-Referenzdokumentation.
 
 
 ## Einrichten der Attribut- und Identitätszuordnung {#attribute-and-identity-mapping}
@@ -3294,7 +3294,7 @@ Um beispielsweise die folgende Zuordnung zu erhalten, die in der Benutzeroberfl�
 
 ### Eingabeschema erstellen {#create-input-schema}
 
-Um ein Eingabeschema zu erstellen, müssen Sie zunächst Ihr [Vereinigungsschema“ &#x200B;](/help/profile/ui/union-schema.md) die Identitäten abrufen, die an das Ziel exportiert werden können. Dies ist das Schema der Attribute und Identitäten, die Sie als Quellzuordnung auswählen können.
+Um ein Eingabeschema zu erstellen, müssen Sie zunächst Ihr [Vereinigungsschema“ ](/help/profile/ui/union-schema.md) die Identitäten abrufen, die an das Ziel exportiert werden können. Dies ist das Schema der Attribute und Identitäten, die Sie als Quellzuordnung auswählen können.
 
 ![Aufzeichnung mit den Attribut- und Identitätsoptionen in der Ansicht Quellfeld auswählen](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
 
@@ -4462,7 +4462,7 @@ Rufen Sie als Nächstes die ID des Datenflusses ab, den Sie aktualisieren möcht
 
 >[!BEGINSHADEBOX]
 
-Weitere [&#x200B; zum Abrufen der ID eines Datenflusses finden &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/getFlowById) unter „Abrufen der Details Zieldatenflusses“.
+Weitere [ zum Abrufen der ID eines Datenflusses finden ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/getFlowById) unter „Abrufen der Details Zieldatenflusses“.
 
 >[!ENDSHADEBOX]
 
@@ -4871,15 +4871,15 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Informationen zu den [verschiedenen von der Datenflussausführungs-API zurückgegebenen Parametern“ finden Sie &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) der API-Referenzdokumentation.
+Informationen zu den [verschiedenen von der Datenflussausführungs-API zurückgegebenen Parametern“ finden Sie ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) der API-Referenzdokumentation.
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie Experience Platform erfolgreich mit einem Ihrer bevorzugten Cloud-Speicher-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet, um Zielgruppen zu exportieren. Auf den folgenden Seiten finden Sie weitere Details, z. B. wie Sie vorhandene Datenflüsse mit der Flow Service-API bearbeiten:
+Sie haben Experience Platform erfolgreich mit einem Ihrer bevorzugten Cloud-Speicher-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet, um Zielgruppen zu exportieren. Auf den folgenden Seiten finden Sie weitere Details, z. B. wie Sie vorhandene Datenflüsse mit der Flow Service-API bearbeiten:
 
 * [Ziele – Übersicht](../home.md)
 * [Zielkatalog – Übersicht](../catalog/overview.md)

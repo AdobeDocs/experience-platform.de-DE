@@ -4,9 +4,9 @@ title: Bearbeiten von Zielverbindungen mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie verschiedene Komponenten einer Zielverbindung mithilfe der Flow Service-API bearbeiten können.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1599'
 ht-degree: 24%
 
 ---
@@ -17,7 +17,7 @@ In diesem Tutorial werden die Schritte zum Bearbeiten verschiedener Komponenten 
 
 >[!NOTE]
 >
-> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch in der Benutzeroberfläche von Experience Platform unterstützt. Weitere Informationen finden Sie im Tutorial [&#x200B; Bearbeiten von Zielen &#x200B;](/help/destinations/ui/edit-destination.md) der Benutzeroberfläche .
+> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch in der Benutzeroberfläche von Experience Platform unterstützt. Weitere Informationen finden Sie im Tutorial [ Bearbeiten von Zielen ](/help/destinations/ui/edit-destination.md) der Benutzeroberfläche .
 
 ## Erste Schritte {#get-started}
 
@@ -40,7 +40,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-for-required-headers}
 
-Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -463,8 +463,8 @@ Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualis
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie gelernt, wie Sie verschiedene Komponenten einer Zielverbindung mithilfe der [!DNL Flow Service]-API aktualisieren können. Weitere Informationen zu Zielen finden Sie unter [Ziele - Übersicht](../home.md).
+Sie haben gelernt, wie Sie verschiedene Komponenten einer Zielverbindung mithilfe der [!DNL Flow Service]-API aktualisieren können. Weitere Informationen zu Zielen finden Sie unter [Ziele - Übersicht](../home.md).

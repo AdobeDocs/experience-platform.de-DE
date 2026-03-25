@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie die Ziel-Server-Spezifikationen im Adobe Experience Platform Destination SDK über den Endpunkt „/authoring/destination-servers“ konfigurieren.
 title: Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2745'
 ht-degree: 85%
 
 ---
@@ -46,7 +46,7 @@ Wenn Sie einen Ziel-Server [erstellen](../../authoring-api/destination-server/cr
 
 ## Hartcodierte bzw. vorlagenbasierte Felder {#templatized-fields}
 
-Bei der Erstellung eines Ziel-Servers durch Destination SDK können Sie die Parameterwerte für die Konfiguration entweder durch eine Hartcodierung in die Konfiguration oder durch Verwendung von Vorlagenfeldern definieren. Mit Vorlagenfeldern können Sie von Benutzenden bereitgestellte Werte aus der Experience Platform-Benutzeroberfläche lesen.
+Bei der Erstellung eines Ziel-Servers durch Destination SDK können Sie die Parameterwerte für die Konfiguration entweder durch eine Hartcodierung in die Konfiguration oder durch Verwendung von Vorlagenfeldern definieren. Vorlagenfelder lesen von Benutzenden bereitgestellte Werte aus der Experience Platform-Benutzeroberfläche.
 
 Die Ziel-Server-Parameter haben zwei konfigurierbare Felder. Diese Optionen bestimmen, ob Sie hartcodierte oder vorlagenbasierte Werte verwenden.
 
@@ -63,7 +63,7 @@ Sowohl hartcodierte als auch vorlagenbasierte Felder haben ihre eigene Verwendun
 
 **Herstellen einer Verbindung zu Ihrem Ziel ohne Benutzereingabe**
 
-Wenn Benutzerinnen [&#x200B; Benutzer in der Experience Platform](../../../ui/connect-destination.md)Benutzeroberfläche eine Verbindung zu Ihrem Ziel herstellen, möchten Sie möglicherweise den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
+Wenn Benutzerinnen [ Benutzer in der Experience Platform](../../../ui/connect-destination.md)Benutzeroberfläche eine Verbindung zu Ihrem Ziel herstellen, möchten Sie möglicherweise den Verbindungsprozess zum Ziel ohne Benutzereingabe abwickeln.
 
 Dazu können Sie die Verbindungsparameter der Zielplattform in der Server-Spezifikation hartcodieren. Wenn Sie hartcodierte Parameterwerte in Ihrer Ziel-Server-Konfiguration verwenden, wird die Verbindung zwischen [!DNL Adobe Experience Platform] und Ihrer Zielplattform ohne Benutzereingabe verarbeitet.
 
@@ -106,7 +106,7 @@ Im folgenden Beispiel erstellt ein Partner eine [Echtzeit (Streaming)](#streamin
 }
 ```
 
-Damit Benutzerinnen und Benutzer einen Wert in der Experience Platform-Benutzeroberfläche auswählen können, muss der `region` auch in der [Zielkonfiguration“ &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) ein Kundendatenfeld definiert werden, wie unten dargestellt:
+Damit Benutzerinnen und Benutzer einen Wert in der Experience Platform-Benutzeroberfläche auswählen können, muss der `region` auch in der [Zielkonfiguration“ ](../../authoring-api/destination-configuration/create-destination-configuration.md) ein Kundendatenfeld definiert werden, wie unten dargestellt:
 
 ```json
 "customerDataFields":[
@@ -160,7 +160,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Amazon S3]-Ziel-Server {#s3-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit [!DNL Adobe Experience Platform] in Ihren Amazon S3-Speicher exportieren.
+Verwenden Sie diesen Ziel-Server, um Dateien mit [!DNL Adobe Experience Platform] Daten in Ihren Amazon S3-Speicher zu exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein Amazon S3-Ziel.
 
@@ -194,7 +194,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL SFTP]-Ziel-Server {#sftp-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit [!DNL Adobe Experience Platform] Daten in Ihren [!DNL SFTP]-Speicher-Server exportieren.
+Verwenden Sie diesen Ziel-Server, um Dateien mit [!DNL Adobe Experience Platform] Daten in Ihren [!DNL SFTP]-Speicher-Server zu exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein SFTP-Ziel.
 
@@ -232,7 +232,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Azure Data Lake Storage] ([!DNL ADLS]) -Ziel-Server {#adls-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit [!DNL Adobe Experience Platform] Daten in Ihr [!DNL Azure Data Lake Storage] exportieren.
+Verwenden Sie diesen Ziel-Server, um Dateien mit [!DNL Adobe Experience Platform] Daten in Ihr [!DNL Azure Data Lake Storage] zu exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein [!DNL Azure Data Lake Storage]-Ziel.
 
@@ -260,7 +260,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Azure Blob Storage]-Ziel-Server {#blob-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit [!DNL Adobe Experience Platform] Daten in Ihren [!DNL Azure Blob Storage]-Container exportieren.
+Verwenden Sie diesen Ziel-Server, um Dateien mit [!DNL Adobe Experience Platform] Daten in Ihren [!DNL Azure Blob Storage]-Container zu exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein [!DNL Azure Blob Storage]-Ziel.
 
@@ -294,7 +294,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Data Landing Zone] ([!DNL DLZ]) -Ziel-Server {#dlz-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit Experience Platform-Daten in einen [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) exportieren.
+Verwenden Sie diesen Ziel-Server, um Dateien mit Experience Platform-Daten in einen [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) zu exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein [!DNL Data Landing Zone]-Ziel ([!DNL DLZ]).
 
@@ -324,7 +324,7 @@ Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ei
 
 ## [!DNL Google Cloud Storage]-Ziel-Server {#gcs-example}
 
-Mit diesem Ziel-Server können Sie Dateien mit Experience Platform-Daten in Ihr [!DNL Google Cloud Storage] exportieren.
+Verwenden Sie diesen Ziel-Server, um Dateien mit Experience Platform-Daten in Ihr [!DNL Google Cloud Storage] zu exportieren.
 
 Das folgende Beispiel zeigt ein Beispiel einer Ziel-Server-Konfiguration für ein [!DNL Google Cloud Storage]-Ziel.
 

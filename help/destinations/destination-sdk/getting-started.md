@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und Adobe Experience Platform Destination SDK verwenden. Sie enthält Anweisungen zum Abrufen der Anmeldedaten für die Adobe I/O-Authentifizierung, eines Sandbox-Namens und der Zugriffskontrolle für die Zielerstellung.
 title: Erste Schritte mit dem Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 77%
+source-wordcount: '588'
+ht-degree: 76%
 
 ---
 
@@ -17,7 +17,7 @@ Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und [!DNL Adobe
 
 ## Terminologie {#terminology}
 
-In diesem Handbuch werden Experience Platform-spezifische Konzepte wie Organisation und Sandboxes verwendet. Definitionen zu diesen Begriffen finden Sie [&#x200B; &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=de)Experience Platform-Glossar. Begriffe, die direkt mit dieser Funktion [&#x200B; sind, finden Sie im &#x200B;](/help/destinations/destination-sdk/glossary.md)Destination SDK-Glossar.
+In diesem Handbuch werden Experience Platform-spezifische Konzepte wie Organisation und Sandboxes verwendet. Definitionen zu diesen Begriffen finden Sie [ ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=de)Experience Platform-Glossar. Begriffe, die direkt mit dieser Funktion [ sind, finden Sie im ](/help/destinations/destination-sdk/glossary.md)Destination SDK-Glossar.
 
 ## Erforderliche Authentifizierungs-Anmeldedaten erhalten {#obtain-authentication-credentials}
 
@@ -80,5 +80,5 @@ Wenn Sie die Schritte in diesem Artikel befolgt haben, haben Sie Authentifizieru
    * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](guides/configure-destination-instructions.md)
    * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](guides/configure-file-based-destination-instructions.md)
 
-* Informationen zu allen Vorgängen finden Sie im Abschnitt [Dokumentation zur Zielerstellungs-API](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
-* Verwenden Sie die [Postman-Sammlung der Zielerstellungs-API](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json), um Ihr Ziel mithilfe der Destination SDK-API-Endpunkte zu konfigurieren. Informationen zu den ersten Schritten mit Postman finden Sie unter [Schritte zum Importieren von Umgebungen und Sammlungen](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) und im [Videoleitfaden zum Erstellen der Postman-Umgebung](https://video.tv.adobe.com/v/31575?captions=ger).
+* Informationen zu allen Vorgängen finden Sie unter [Dokumentation zur Zielerstellungs-API](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
+* Verwenden Sie die [Postman-Sammlung der Zielerstellungs-API](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json), um Ihr Ziel mithilfe der Destination SDK-API-Endpunkte zu konfigurieren. Informationen zu den ersten Schritten mit Postman finden Sie unter [Schritte zum Importieren von Umgebungen und Sammlungen](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) und im [Videoleitfaden zum Erstellen der Postman-Umgebung](https://video.tv.adobe.com/v/28832).

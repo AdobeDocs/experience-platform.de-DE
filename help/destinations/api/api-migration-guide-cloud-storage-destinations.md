@@ -4,9 +4,9 @@ title: API-Migrationshandbuch für Cloud-Speicher-Ziele
 description: Erfahren Sie mehr über die Änderungen im Workflow zum Aktivieren von Cloud-Speicher-Zielen im Rahmen der Migration zu den neuen Cloud-Speicher-Zielkarten mit zusätzlichen Funktionen.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1322'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 Ab [Oktober 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations) können Sie die neuen Dateiexportfunktionen verwenden, um beim Exportieren von Dateien aus Experience Platform auf erweiterte Anpassungsfunktionen zuzugreifen:
 
 * Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
-* Möglichkeit zum Festlegen benutzerdefinierter Dateikopfzeilen in exportierten Dateien über den [&#x200B; Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* Möglichkeit zum Festlegen benutzerdefinierter Dateikopfzeilen in exportierten Dateien über den [ Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Möglichkeit zur Auswahl des [Dateityps](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) der exportierten Datei.
 * Möglichkeit zum [Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
@@ -65,7 +65,7 @@ Dieser Abschnitt enthält das entsprechende API-Tutorial und die Referenzdokumen
 
 ## Zusammenfassung der abwärtsinkompatiblen Änderungen {#summary-backwards-incompatible-changes}
 
-Mit der Migration zu den neuen Zielen werden allen Ihren vorhandenen Datenflüssen zu [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Zielen jetzt neue Zielverbindungen und Basisverbindungen zugewiesen. Der Schritt zur Profilzuordnung ändert sich ebenfalls. Abwärtsinkompatible Änderungen werden in den folgenden Abschnitten für jedes Ziel zusammengefasst. Weitere Informationen zu den Begriffen [&#x200B; unten stehenden Diagramm &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) Sie auch im Glossar „Ziele“.
+Mit der Migration zu den neuen Zielen werden allen Ihren vorhandenen Datenflüssen zu [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Zielen jetzt neue Zielverbindungen und Basisverbindungen zugewiesen. Der Schritt zur Profilzuordnung ändert sich ebenfalls. Abwärtsinkompatible Änderungen werden in den folgenden Abschnitten für jedes Ziel zusammengefasst. Weitere Informationen zu den Begriffen [ unten stehenden Diagramm ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) Sie auch im Glossar „Ziele“.
 
 ![Übersichtsbild zum Migrationshandbuch](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
@@ -661,7 +661,7 @@ Sehen Sie sich die vollständigen Beispiele für veraltete und neue Basisverbind
 
 ### Abwärtskompatible Änderungen, die für [!DNL Amazon S3]-, [!DNL Azure Blob]- und SFTP-Ziele üblich sind {#changes-all-destinations}
 
-Der Schritt zur Profilauswahl in allen drei Zielen wird durch einen Zuordnungsschritt ersetzt, mit dem Sie die Spaltenüberschriften in Ihren exportierten Dateien bei Bedarf umbenennen können. Siehe die Abbildung unten nebeneinander mit dem alten Attributauswahlschritt auf der linken Seite und dem neuen Zuordnungsschritt auf der rechten Seite.
+Der Schritt zur Profilauswahl in allen drei Zielen wird durch einen Zuordnungsschritt zum Umbenennen der Spaltenüberschriften in den exportierten Dateien ersetzt. Siehe die Abbildung unten nebeneinander mit dem alten Attributauswahlschritt auf der linken Seite und dem neuen Zuordnungsschritt auf der rechten Seite.
 
 ![Übersichtsbild zum Migrationshandbuch](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
@@ -795,4 +795,4 @@ Beachten Sie, dass es während oder nach der Migration keine Auswirkungen auf Ih
 
 ## Nächste Schritte {#next-steps}
 
-Durch das Lesen dieser Seite wissen Sie jetzt, ob Sie Maßnahmen zur Vorbereitung auf die Migration der Cloud-Speicher-Ziele ergreifen müssen. Außerdem wissen Sie, auf welche Dokumentationsseiten Sie verweisen müssen, wenn Sie API-basierte Workflows zum Exportieren von Dateien aus Experience Platform in Ihre bevorzugten Cloud-Speicher-Ziele einrichten. Als Nächstes können Sie sich das API-Tutorial ansehen, um [Daten in Cloud-Speicher-Ziele zu exportieren](/help/destinations/api/activate-segments-file-based-destinations.md).
+Sie wissen jetzt, ob Sie Maßnahmen zur Vorbereitung der Migration der Cloud-Speicher-Ziele ergreifen müssen. Außerdem wissen Sie, auf welche Dokumentationsseiten Sie verweisen müssen, wenn Sie API-basierte Workflows zum Exportieren von Dateien aus Experience Platform in Ihre bevorzugten Cloud-Speicher-Ziele einrichten. Als Nächstes können Sie sich das API-Tutorial ansehen, um [Daten in Cloud-Speicher-Ziele zu exportieren](/help/destinations/api/activate-segments-file-based-destinations.md).

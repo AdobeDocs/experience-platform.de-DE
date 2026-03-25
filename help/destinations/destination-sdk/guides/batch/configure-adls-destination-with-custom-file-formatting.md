@@ -1,17 +1,17 @@
 ---
-description: Erfahren Sie, wie Sie Destination SDK verwenden, um ein Azure Data Lake Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration zu konfigurieren.
+description: Erfahren Sie, wie Sie mit Destination SDK ein Azure Data Lake Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration konfigurieren.
 title: Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration.
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '711'
 ht-degree: 8%
 
 ---
 
 # Konfigurieren eines [!DNL Azure Data Lake Storage] Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein [!DNL Azure Data Lake Storage]-Ziel mit benutzerdefinierten [Dateiformatierungsoptionen](configure-file-formatting-options.md) und einer benutzerdefinierten [Dateinamenkonfiguration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) konfigurieren.
 
@@ -21,7 +21,7 @@ Detaillierte Beschreibungen der unten verwendeten Parameter finden Sie unter [Ko
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte &#x200B;](../../getting-started.md) Destination SDK , wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
+Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte mit Destination SDK](../../getting-started.md) , wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
@@ -402,7 +402,7 @@ Basierend auf den oben genannten Konfigurationen wird im Experience Platform-Kat
 
 ![Bildschirmaufzeichnung, die die Zielkatalogseite mit einer ausgewählten Zielkarte anzeigt.](../../assets/guides/batch/adls-destination-card.gif)
 
-Beachten Sie in den folgenden Bildern und Aufzeichnungen, wie die [&#x200B; im Aktivierungs-Workflow für dateibasierte Ziele &#x200B;](../../../ui/activate-batch-profile-destinations.md) den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
+Beachten Sie in den folgenden Bildern und Aufzeichnungen, wie die [ im Aktivierungs-Workflow für dateibasierte Ziele ](../../../ui/activate-batch-profile-destinations.md) den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
 
 Beachten Sie beim Ausfüllen von Details zum Ziel, wie die Felder die benutzerdefinierten Datenfelder sind, die Sie in der Konfiguration eingerichtet haben.
 
@@ -420,7 +420,7 @@ Beachten Sie beim Anzeigen der Konfigurationsoptionen für Dateinamen, wie die a
 
 Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Schritte 1](#create-server-file-configuration) und [2](#create-destination-configuration), um die Konfigurationen entsprechend Ihren Anforderungen zu ändern.
 
-## Schritt 4: (Optional) Publish - Ihr Ziel {#publish-destination}
+## Schritt 4: (Optional) Veröffentlichen des Ziels {#publish-destination}
 
 >[!NOTE]
 >
@@ -438,4 +438,4 @@ Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) si
 
 ## Nächste Schritte {#next-steps}
 
-Durch das Lesen dieses Artikels wissen Sie jetzt, wie Sie mithilfe von Destination SDK ein benutzerdefiniertes [!DNL Azure Data Lake Storage] erstellen können. Als Nächstes kann Ihr Team den [Aktivierungs-Workflow für dateibasierte Ziele“ verwenden](../../../ui/activate-batch-profile-destinations.md) um Daten an das Ziel zu exportieren.
+Sie wissen jetzt, wie Sie mithilfe von Destination SDK ein benutzerdefiniertes [!DNL Azure Data Lake Storage] erstellen können. Als Nächstes kann Ihr Team den [Aktivierungs-Workflow für dateibasierte Ziele“ verwenden](../../../ui/activate-batch-profile-destinations.md) um Daten an das Ziel zu exportieren.

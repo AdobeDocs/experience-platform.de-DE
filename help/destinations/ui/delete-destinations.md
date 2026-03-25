@@ -4,9 +4,9 @@ title: Löschen von Zielen
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Löschen eines vorhandenen Ziels in der Adobe Experience Platform-Benutzeroberfläche aufgelistet
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '394'
 ht-degree: 26%
 
 ---
@@ -28,7 +28,7 @@ Es gibt zwei Möglichkeiten, Ziele aus dem [!DNL Experience Platform]-[!DNL UI] 
 
 Gehen Sie wie folgt vor, um ein Ziel aus der Registerkarte [!UICONTROL Browse] zu löschen.
 
-1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform &#x200B;](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus.
+1. Wechseln Sie zur [Experience Platform](https://platform.adobe.com/)Benutzeroberfläche und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziele anzuzeigen.
 
    ![Ziele durchsuchen](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -36,18 +36,18 @@ Gehen Sie wie folgt vor, um ein Ziel aus der Registerkarte [!UICONTROL Browse] z
 
    ![Ziele filtern](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Wählen Sie in der Spalte „Name![&#x200B; die Schaltfläche &#x200B;](/help/images/icons/more.png)Mehr“ und dann ![Schaltfläche „Löschen](/help/images/icons/delete.png) **[!UICONTROL Delete]**, um eine vorhandene Zielverbindung zu entfernen.
+3. Wählen Sie in der Spalte „Name![ die Schaltfläche ](/help/images/icons/more.png)Mehr“ und dann ![Schaltfläche „Löschen](/help/images/icons/delete.png) **[!UICONTROL Delete]**, um eine vorhandene Zielverbindung zu entfernen.
    ![Ziele löschen](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Wählen Sie **[!UICONTROL Delete]** aus, um das Entfernen der Zielverbindung zu bestätigen.
 
    ![Löschziel bestätigen](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
-## Löschen von Zielen auf der Seite mit den Zieldetails{#delete-destination-details-page}
+## Löschen von Zielen auf der Seite mit den Zieldetails {#delete-destination-details-page}
 
 Gehen Sie wie folgt vor, um ein Ziel von der Seite mit den Zieldetails zu löschen.
 
-1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform &#x200B;](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus.
+1. Wechseln Sie zur [Experience Platform](https://platform.adobe.com/)Benutzeroberfläche und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziele anzuzeigen.
 
    ![Ziele durchsuchen](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -75,6 +75,6 @@ Gehen Sie wie folgt vor, um ein Ziel von der Seite mit den Zieldetails zu lösch
 
    ![Ziel löschen bestätigen](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
-   >[!NOTE]
-   >
-   >Je nach Server-Last kann es einige Minuten dauern, bis [!DNL Experience Platform] das Ziel löscht.
+>[!NOTE]
+>
+>Je nach Server-Last kann es einige Minuten dauern, bis [!DNL Experience Platform] das Ziel löscht.
