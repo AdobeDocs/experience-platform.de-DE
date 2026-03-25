@@ -62,7 +62,7 @@ Nachdem Sie Ihre Zielgruppen exportiert haben, aktivieren Sie sie mithilfe des [
 
 Sehen Sie sich das folgende Video an, um eine umfassende Erläuterung des auf dieser Seite beschriebenen Workflows zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367)
+>[!VIDEO](https://video.tv.adobe.com/v/3452666?captions=ger)
 
 ### Schritt 1: Senden Sie Ihre Zielgruppen von Experience Platform über das [!DNL LiveRamp - Onboarding] Ziel an LiveRamp {#onboarding}
 
