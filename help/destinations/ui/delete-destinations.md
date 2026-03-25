@@ -28,7 +28,7 @@ Es gibt zwei Möglichkeiten, Ziele aus dem [!DNL Experience Platform]-[!DNL UI] 
 
 Gehen Sie wie folgt vor, um ein Ziel aus der Registerkarte [!UICONTROL Browse] zu löschen.
 
-1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform ](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus.
+1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform &#x200B;](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus.
 
    ![Ziele durchsuchen](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -36,7 +36,7 @@ Gehen Sie wie folgt vor, um ein Ziel aus der Registerkarte [!UICONTROL Browse] z
 
    ![Ziele filtern](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Wählen Sie in der Spalte „Name![ die Schaltfläche ](/help/images/icons/more.png)Mehr“ und dann ![Schaltfläche „Löschen](/help/images/icons/delete.png) **[!UICONTROL Delete]**, um eine vorhandene Zielverbindung zu entfernen.
+3. Wählen Sie in der Spalte „Name![&#x200B; die Schaltfläche &#x200B;](/help/images/icons/more.png)Mehr“ und dann ![Schaltfläche „Löschen](/help/images/icons/delete.png) **[!UICONTROL Delete]**, um eine vorhandene Zielverbindung zu entfernen.
    ![Ziele löschen](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Wählen Sie **[!UICONTROL Delete]** aus, um das Entfernen der Zielverbindung zu bestätigen.
@@ -47,7 +47,7 @@ Gehen Sie wie folgt vor, um ein Ziel aus der Registerkarte [!UICONTROL Browse] z
 
 Gehen Sie wie folgt vor, um ein Ziel von der Seite mit den Zieldetails zu löschen.
 
-1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform ](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus.
+1. Melden Sie sich bei der Benutzeroberfläche von [Experience Platform &#x200B;](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Destinations]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Browse]** in der oberen Kopfzeile aus.
 
    ![Ziele durchsuchen](../assets/ui/delete-destinations/browse-destinations.png)
 

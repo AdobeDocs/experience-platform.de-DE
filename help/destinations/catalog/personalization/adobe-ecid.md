@@ -42,9 +42,9 @@ Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren mö
 
 Der Workflow führt Sie zur Datenerfassungs-Benutzeroberfläche, um die Installation abzuschließen.
 
-Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der Seite zur Erweiterung des Experience Cloud ID-Service [](../../../tags/extensions/client/id-service/overview.md) in der Tags-Dokumentation.
+Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der Seite zur Erweiterung des Experience Cloud ID-Service [&#128279;](../../../tags/extensions/client/id-service/overview.md) in der Tags-Dokumentation.
 
-Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
+Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen &#x200B;](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 
 ## Verwenden der Erweiterung {#how-to-use}
 

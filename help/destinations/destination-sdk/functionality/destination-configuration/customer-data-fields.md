@@ -261,7 +261,7 @@ Die dynamischen Dropdown-Selektoren sehen identisch mit den [regulären Dropdown
 
 Um eine dynamische Dropdown-Auswahl zu erstellen, müssen Sie zwei Komponenten konfigurieren:
 
-**Schritt 1.** [Erstellen Sie einen ](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) mit einer `responseFields` Vorlage für den dynamischen API-Aufruf, wie unten dargestellt.
+**Schritt 1.** [Erstellen Sie einen &#x200B;](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) mit einer `responseFields` Vorlage für den dynamischen API-Aufruf, wie unten dargestellt.
 
 ```json
 {

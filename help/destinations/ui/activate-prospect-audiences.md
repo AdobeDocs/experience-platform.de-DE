@@ -47,7 +47,7 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 >[!TIP]
 >
->Die Ziele, die Profil-Audiences exportieren können, werden mit einem Symbol oben rechts auf der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die potenzielle Audiences exportieren können ([ weiter oben auf der Seite ](#supported-destinations).
+>Die Ziele, die Profil-Audiences exportieren können, werden mit einem Symbol oben rechts auf der Karte angezeigt, ähnlich dem unten hervorgehobenen Ziel. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die potenzielle Audiences exportieren können ([&#x200B; weiter oben auf der Seite &#x200B;](#supported-destinations).
 
 ![Amazon S3-Zielseite, auf der Profil-Zielgruppen exportiert werden können, hervorgehoben.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
@@ -59,7 +59,7 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
 ![Zielaktivierungs-Workflow mit hervorgehobenem Steuerelement „Interessenten“.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
-1. Fahren Sie mit dem nächsten Abschnitt fort[ um Ihre Profil-Audiences ](#select-profile-audiences) exportieren.
+1. Fahren Sie mit dem nächsten Abschnitt fort[&#x200B; um Ihre Profil-Audiences &#x200B;](#select-profile-audiences) exportieren.
 
 ## Zielgruppen des potenziellen Kunden auswählen {#select-prospect-audiences}
 

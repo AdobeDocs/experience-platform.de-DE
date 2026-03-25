@@ -37,7 +37,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-for-required-headers}
 
-Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Experience Platform-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -763,7 +763,7 @@ Um ein Profilattribut zum Ziel-Datenfluss hinzuzufügen, führen Sie eine PATCH-
 >
 >Die in diesem Abschnitt beschriebene `profileSelectors`-Methode funktioniert für die meisten Streaming-Ziele. Für einige Streaming-Ziele, einschließlich **[!DNL Adobe Target]**, ist jedoch stattdessen der Workflow Datenvorbereitungs-Zuordnungssatz erforderlich.
 >
->**Wenn Ihre Profilattribute nach einer erfolgreichen API-Antwort (202) nicht in der Experience Platform-Benutzeroberfläche angezeigt werden** müssen Sie die Zuordnungssatzmethode verwenden, die in [Aktivieren von Zielgruppen für Batch-Ziele“ dokumentiert ](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+>**Wenn Ihre Profilattribute nach einer erfolgreichen API-Antwort (202) nicht in der Experience Platform-Benutzeroberfläche angezeigt werden** müssen Sie die Zuordnungssatzmethode verwenden, die in [Aktivieren von Zielgruppen für Batch-Ziele“ dokumentiert &#x200B;](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 **API-Format**
 
@@ -873,7 +873,7 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Nächste Schritte {#next-steps}
 

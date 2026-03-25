@@ -88,7 +88,7 @@ Beim Herstellen einer Verbindung zu einem dateibasierten Cloud-Speicher-Ziel kö
 
 ![Exportieren Sie Arrays, Karten, Objekte ein- oder ausschalten und markieren Sie das Pop-up.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
-Schalten Sie diese Einstellung auf **ein**, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren. Sie können diese Objekttypen in der Ansicht der Quellfelder des [Zuordnungsschritts“ auswählen, ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) Sie Zielgruppen für Cloud-Speicher-Ziele aktivieren. Wenn diese Einstellung jedoch aktiviert ist, können Sie die Option „Berechnete Felder“ nicht verwenden, um Daten bei Aktivierung umzuwandeln.
+Schalten Sie diese Einstellung auf **ein**, um den Export von Arrays, Zuordnungen und Objekten in JSON- oder Parquet-Dateien zu aktivieren. Sie können diese Objekttypen in der Ansicht der Quellfelder des [Zuordnungsschritts“ auswählen, &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) Sie Zielgruppen für Cloud-Speicher-Ziele aktivieren. Wenn diese Einstellung jedoch aktiviert ist, können Sie die Option „Berechnete Felder“ nicht verwenden, um Daten bei Aktivierung umzuwandeln.
 
 Wenn dieser Umschalter auf **aus** steht, können Sie die Option „Berechnete Felder“ verwenden und beim Aktivieren von Zielgruppen verschiedene Datenumwandlungsfunktionen anzuwenden. Sie können jedoch keine Arrays, Zuordnungen und Objekte in JSON- oder Parquet-Dateien exportieren und müssen dafür ein separates Ziel konfigurieren.
 
@@ -106,7 +106,7 @@ Wenn diese Option aktiviert ist, verhindert die Benutzeroberfläche, dass Benutz
 
 Wenn diese Option auf *Aus* gesetzt ist, können Sie die Option Berechnete Felder verwenden und beim Aktivieren von Zielgruppen verschiedene Datenumwandlungsfunktionen anwenden. Sie können jedoch keine Arrays, Zuordnungen und Objekte in JSON- oder Parquet-Dateien exportieren und müssen dafür ein separates Ziel konfigurieren.
 
-Sie *können* Arrays, Zuordnungen und Objekte mithilfe der Funktion „Berechnete Felder“ in CSV-Dateien exportieren und mithilfe der Funktion &quot;`array_to_string`&quot; zu einer Zeichenfolge verketten. [Weitere Informationen ](#array-to-string-function-export-arrays) Verwendung dieser Funktion.
+Sie *können* Arrays, Zuordnungen und Objekte mithilfe der Funktion „Berechnete Felder“ in CSV-Dateien exportieren und mithilfe der Funktion &quot;`array_to_string`&quot; zu einer Zeichenfolge verketten. [Weitere Informationen &#x200B;](#array-to-string-function-export-arrays) Verwendung dieser Funktion.
 
 Erfahren Sie mehr über die Arbeit mit berechneten Feldern, um [Umwandlungen an Daten durchzuführen, die an Cloud-Speicherziele exportiert wurden](/help/destinations/ui/data-transformations-calculated-fields.md).
 

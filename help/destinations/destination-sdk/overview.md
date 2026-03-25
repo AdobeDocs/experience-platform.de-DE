@@ -134,7 +134,7 @@ Als Experience Platform-Kunde können Sie auch Ihr eigenes benutzerdefiniertes Z
 * Dateiexport in verschiedenen unterstützten Formaten (CSV, Parquet, JSON)
 * Konfigurierbare Dateiformatierungsoptionen, mit denen Sie das Format der exportierten Dateien strukturieren können, um Ihre nachgelagerten Anforderungen zu erfüllen.
 
-Informationen zu den technischen Anforderungen auf der Zielseite finden Sie im Artikel [Integrationsvoraussetzungen](integration-prerequisites.md) und Informationen zu allen unterstützten Konfigurationen finden Sie [ Artikel ](functionality/configuration-options.md) Konfigurationsoptionen
+Informationen zu den technischen Anforderungen auf der Zielseite finden Sie im Artikel [Integrationsvoraussetzungen](integration-prerequisites.md) und Informationen zu allen unterstützten Konfigurationen finden Sie [&#x200B; Artikel &#x200B;](functionality/configuration-options.md) Konfigurationsoptionen
 
 ## Zugriff auf das Destination SDK {#get-access}
 

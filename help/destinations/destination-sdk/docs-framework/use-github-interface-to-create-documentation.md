@@ -19,7 +19,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 >
 >* [Installieren von Git- und Markdown-Authoring-Tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
 >* [Richten Sie das Git-Repository zur Dokumentation lokal ein](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [GitHub-Beitrags-Workflow für wichtige ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
+>* [GitHub-Beitrags-Workflow für wichtige &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Einrichten der GitHub-Authoring-Umgebung {#set-up-environment}
 
@@ -83,4 +83,4 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie die GitHub-Web-Oberfläche verwe
 
 >[!TIP]
 >
->Informationen zum Hinzufügen von Bildern und Links zu Ihrer Dokumentation sowie zu allen anderen Fragen rund um Markdown finden Sie unter [Verwenden von ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)) im Handbuch für gemeinsames Schreiben in Adobe.
+>Informationen zum Hinzufügen von Bildern und Links zu Ihrer Dokumentation sowie zu allen anderen Fragen rund um Markdown finden Sie unter [Verwenden von &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)) im Handbuch für gemeinsames Schreiben in Adobe.

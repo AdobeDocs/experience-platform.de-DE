@@ -13,7 +13,7 @@ ht-degree: 81%
 
 ## Überblick {#overview}
 
-Auf dieser Seite werden die Regeln beschrieben, die Sie beim [ der Zieldokumentation befolgen sollten](./documentation-instructions.md) um sicherzustellen, dass die Seite den Qualitätsstandards der [!DNL Adobe Experience Platform] Dokumentation entspricht.
+Auf dieser Seite werden die Regeln beschrieben, die Sie beim [&#x200B; der Zieldokumentation befolgen sollten](./documentation-instructions.md) um sicherzustellen, dass die Seite den Qualitätsstandards der [!DNL Adobe Experience Platform] Dokumentation entspricht.
 
 ## Allgemeine Leitlinien {#general-guidance}
 

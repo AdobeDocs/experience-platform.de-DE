@@ -21,7 +21,7 @@ Die [!DNL Pebble] -Implementierung in Experience Platform hat einige Änderungen
 
 ## Verwendungsbereiche {#where-to-use}
 
-Verwenden Sie die unten aufgeführten unterstützten Funktionen auf dieser Seite, wenn Sie für die Daten, die aus Experience Platform an Ihr Ziel exportiert wurden, [eine Nachrichtenumwandlungsvorlage erstellen ](../../testing-api/streaming-destinations/create-template.md).
+Verwenden Sie die unten aufgeführten unterstützten Funktionen auf dieser Seite, wenn Sie für die Daten, die aus Experience Platform an Ihr Ziel exportiert wurden, [eine Nachrichtenumwandlungsvorlage erstellen &#x200B;](../../testing-api/streaming-destinations/create-template.md).
 
 Die Nachrichtenumwandlungsvorlage wird in der [Ziel-Server-Konfiguration](templating-specs.md) für Streaming-Ziele verwendet.
 
@@ -49,7 +49,7 @@ Aus dem [!DNL Pebble]-Tags-Abschnitt unterstützt Destination SDK nur:
 
 Aus dem Abschnitt der [!DNL Pebble]-Filter unterstützt Destination SDK alle Funktionen. Ein Beispiel weiter unten zeigt, wie die Funktion `date` in Destination SDK verwendet werden kann.
 
-Aus dem [!DNL Pebble]-Funktionsabschnitt unterstützt Adobe *nicht* die Funktion [ range](https://pebbletemplates.io/wiki/function/range/).
+Aus dem [!DNL Pebble]-Funktionsabschnitt unterstützt Adobe *nicht* die Funktion [&#x200B; range](https://pebbletemplates.io/wiki/function/range/).
 
 ## Beispiel für die Verwendung der Funktion `date` {#date-function}
 

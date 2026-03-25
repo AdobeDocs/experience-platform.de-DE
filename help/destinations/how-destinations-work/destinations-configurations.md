@@ -55,7 +55,7 @@ Entsprechend kann das Zielentwickler-Team für [dateibasierte Ziele](/help/desti
 Die folgenden verschiedenen Optionen und Schritte sind im Aktivierungs-Workflow verfügbar:
 
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md)
-* [Aktivieren von Zielgruppendaten für Unternehmensziele ](/help/destinations/ui/activate-streaming-profile-destinations.md)
+* [Aktivieren von Zielgruppendaten für Unternehmensziele &#x200B;](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Exportieren von Dateien nach Bedarf an Batch-Ziele](/help/destinations/ui/export-file-now.md)
 * [Exportieren von Datensätzen zu Cloud-Speicher-Zielen](/help/destinations/ui/export-datasets.md)

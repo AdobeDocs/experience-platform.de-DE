@@ -26,7 +26,7 @@ Dieser Dokumentationsabschnitt enthält:
 * Eine Vorlage, die Sie für Ihr Ziel ausfüllen können;
 * [Allgemeine Anweisungen zur Verwendung von Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
 * [Spezifische Anweisungen für die Adobe-Markdown-Variante](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (die Adobe-Markdown-Variante ähnelt der regulären Markdown-Variante).
-* Eine [Seite mit Best ](./authoring-best-practices.md)), die Sie bei der Erstellung einer Dokumentationsseite für Ihre Zielseite unterstützt, die den Qualitätsstandards der Experience Platform-Dokumentation entspricht.
+* Eine [Seite mit Best &#x200B;](./authoring-best-practices.md)), die Sie bei der Erstellung einer Dokumentationsseite für Ihre Zielseite unterstützt, die den Qualitätsstandards der Experience Platform-Dokumentation entspricht.
 
 ## Voraussetzungen {#prerequisites}
 

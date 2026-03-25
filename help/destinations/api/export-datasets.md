@@ -42,7 +42,7 @@ In diesem Artikel wird der Arbeitsablauf erläutert, der für die Verwendung des
 
 Die Datensätze, die Sie exportieren können, hängen von der Experience Platform-Anwendung ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), der Ebene (Prime oder Ultimate) und allen Add-ons ab, die Sie erworben haben (z. B. Data Distiller).
 
-Informationen dazu, welche Datensätze Sie exportieren können[ finden Sie in der Tabelle auf ](/help/destinations/ui/export-datasets.md#datasets-to-export) Tutorial-Seite zur Benutzeroberfläche .
+Informationen dazu, welche Datensätze Sie exportieren können[&#x200B; finden Sie in der Tabelle auf &#x200B;](/help/destinations/ui/export-datasets.md#datasets-to-export) Tutorial-Seite zur Benutzeroberfläche .
 
 ## Unterstützte Ziele {#supported-destinations}
 
@@ -77,7 +77,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen m�
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** und **[!UICONTROL Manage and Activate Dataset Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** und **[!UICONTROL Manage and Activate Dataset Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Exportieren von Datensätzen verfügen und dass das Ziel den Export von Datensätzen unterstützt, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über eine **[!UICONTROL Activate]** oder ein **[!UICONTROL Export datasets]** verfügt, verfügen Sie über die entsprechenden Berechtigungen.
 
@@ -362,7 +362,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-Beachten Sie, dass zum Abrufen geeigneter Datensätze die in der Anfrage-URL verwendete [!DNL connection spec]-ID die Data-Lake-Quell-Verbindungsspezifikations-ID `23598e46-f560-407b-88d5-ea6207e49db0` sein muss und die beiden Abfrageparameter `outputField=datasets` und `outputType=activationDatasets` angegeben werden müssen. Alle anderen Abfrageparameter sind die Standardparameter, die von der [Catalog Service API) unterstützt ](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Beachten Sie, dass zum Abrufen geeigneter Datensätze die in der Anfrage-URL verwendete [!DNL connection spec]-ID die Data-Lake-Quell-Verbindungsspezifikations-ID `23598e46-f560-407b-88d5-ea6207e49db0` sein muss und die beiden Abfrageparameter `outputField=datasets` und `outputType=activationDatasets` angegeben werden müssen. Alle anderen Abfrageparameter sind die Standardparameter, die von der [Catalog Service API) unterstützt &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 +++
 
@@ -514,7 +514,7 @@ Bei einer erfolgreichen Antwort werden die ID (`id`) der neu erstellten Quellver
 
 Beachten Sie bitte auch Folgendes:
 
-* Die in diesem Schritt erstellte Quellverbindung muss mit einem Datenfluss verknüpft sein, damit ihre Datensätze für ein Ziel aktiviert werden. Informationen [ Verknüpfen einer Quellverbindung mit einem Datenfluss finden ](#create-dataflow) im Abschnitt „Erstellen eines Datenflusses“.
+* Die in diesem Schritt erstellte Quellverbindung muss mit einem Datenfluss verknüpft sein, damit ihre Datensätze für ein Ziel aktiviert werden. Informationen [&#x200B; Verknüpfen einer Quellverbindung mit einem Datenfluss finden &#x200B;](#create-dataflow) im Abschnitt „Erstellen eines Datenflusses“.
 * Die Datensatz-IDs einer Quellverbindung können nach der Erstellung nicht mehr geändert werden. Wenn Sie Datensätze zu einer Quellverbindung hinzufügen oder daraus entfernen müssen, müssen Sie eine neue Quellverbindung erstellen und die ID der neuen Quellverbindung mit dem Datenfluss verknüpfen.
 
 ## Erstellen einer (Ziel-)Basisverbindung {#create-base-connection}
@@ -2449,11 +2449,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Informationen zu den [verschiedenen von der Datenflussausführungs-API zurückgegebenen Parametern“ finden Sie ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) der API-Referenzdokumentation.
+Informationen zu den [verschiedenen von der Datenflussausführungs-API zurückgegebenen Parametern“ finden Sie &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) der API-Referenzdokumentation.
 
 ## Überprüfen eines erfolgreichen Datensatzexports {#verify}
 
-Beim Exportieren von Datensätzen erstellt Experience Platform eine `.json`- oder `.parquet`-Datei an dem von Ihnen angegebenen Speicherort. Erwarten Sie, dass eine neue Datei entsprechend dem Exportplan, den Sie beim Erstellen eines Datenflusses angegeben haben, an [ Speicherort abgelegt ](#create-dataflow).
+Beim Exportieren von Datensätzen erstellt Experience Platform eine `.json`- oder `.parquet`-Datei an dem von Ihnen angegebenen Speicherort. Erwarten Sie, dass eine neue Datei entsprechend dem Exportplan, den Sie beim Erstellen eines Datenflusses angegeben haben, an [&#x200B; Speicherort abgelegt &#x200B;](#create-dataflow).
 
 Experience Platform erstellt eine Ordnerstruktur am angegebenen Speicherort, in der die exportierten Datensatzdateien abgelegt werden. Für jeden Exportzeitpunkt wird ein neuer Ordner erstellt, wobei das folgende Muster befolgt wird:
 
@@ -2477,7 +2477,7 @@ Beachten Sie den Unterschied im Dateiformat zwischen den beiden Dateitypen, wenn
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Weitere Informationen [&#x200B; Interpretieren von Fehlerantworten finden Sie unter &#x200B;](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[&#x200B; und &#x200B;](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Fehlerbehebung bei Experience Platform .
 
 ## Bekannte Einschränkungen {#known-limitations}
 
