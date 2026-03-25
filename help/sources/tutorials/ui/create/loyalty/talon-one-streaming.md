@@ -2,8 +2,10 @@
 title: Streamen Sie Daten von Talon.one mithilfe der Benutzeroberfläche an Experience Platform
 description: Erfahren Sie, wie Sie Daten von Talon.One mithilfe der Benutzeroberfläche in Adobe Experience Platform streamen. Dieses Handbuch behandelt die Einrichtung, Datenauswahl und Datenflusskonfiguration.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: a92e17dd-123c-4e83-a851-3cf2861751e5
-source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
+source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 14%
@@ -14,7 +16,7 @@ ht-degree: 14%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Talon.One]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre Daten mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von [!DNL Talon.One] mit Adobe Experience Platform verbinden und streamen.
 
