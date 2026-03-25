@@ -3,9 +3,9 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht auf Ihre einzelnen Kunden und führt Daten aus verschiedenen Kanälen (Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Anleitung für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
+source-git-commit: faeb53bfc4eba815eb1d9d00c464da4dc1a3b016
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2177'
 ht-degree: 5%
 
 ---
@@ -151,7 +151,7 @@ Sie können auch zwischen der Anzeige der Attributnamen als Anzeigenamen und der
 
 Im Abschnitt **[!UICONTROL Auto-classified widgets]** werden Widgets angezeigt, die das Vereinigungsschema nutzen, um die Quellfeldgruppen zu bestimmen, zu denen ein Attribut gehört, und einen klareren Kontext bereitstellen, woher die Daten stammen. Sie können die Suchleiste verwenden, um in Ihren Widgets leichter nach Keywords zu suchen.
 
-Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ &#x200B;](#customizable-widgets) strukturieren.
+Diese Widgets kombinieren sowohl Ereignisdaten (mit dem Widget Erlebnisereignisse) als auch Attributdaten, sodass Sie eine einheitliche Ansicht Ihres Profils haben. Sie können diese Widgets verwenden, um die Struktur der Daten Ihres Profils zu untersuchen und Ihre [anpassbaren Widgets“ ](#customizable-widgets) strukturieren.
 
 >[!NOTE]
 >
@@ -169,7 +169,7 @@ Innerhalb der Diagrammansicht können Sie die Knoten per Drag-and-Drop verschieb
 
 #### Erlebnisereignisse {#experience-events}
 
-Im Abschnitt **[!UICONTROL Experience events]** wird eine Zeitleiste mit Erlebnisereignissen angezeigt, die das Profil enthalten.
+Im Abschnitt **[!UICONTROL Experience events]** wird eine Zeitleiste mit Erlebnisereignissen angezeigt, die das Profil enthalten. Standardmäßig werden in diesem Abschnitt Erlebnisereignisse der letzten 48 Stunden angezeigt. Sie können den Datumsbereich jedoch auf bis zu 30 Tage festlegen.
 
 ![Der Abschnitt Erlebnisereignisse wird angezeigt und zeigt eine Zeitleiste von Erlebnisereignissen an, die das Profil enthalten.](/help/profile/images/user-guide/experience-event-graph.png)
 
@@ -193,7 +193,11 @@ Weitere Informationen zu Edge-Profilen finden Sie in der [Dokumentation zu Edge-
 
 ### Registerkarte „Ereignisse“ {#events}
 
-Die Registerkarte **[!UICONTROL Events]** enthält Daten aus den 100 neuesten ExperienceEvents, die mit dem Kunden verknüpft sind. Diese Daten können E-Mail-Öffnungen, Warenkorbaktivitäten und Seitenansichten umfassen. Die Auswahl von **[!UICONTROL View all]** für ein einzelnes Ereignis bietet zusätzliche Felder und Werte, die als Teil des Ereignisses erfasst werden.
+>[!NOTE]
+>
+>Die Anzeige der Ereignisse kann um bis zu 15 Minuten verzögert werden.
+
+Standardmäßig enthält **[!UICONTROL Events]** Registerkarte Daten der letzten 48 Stunden mit den 100 neuesten ExperienceEvents, die mit dem Kunden verknüpft sind. Diese Daten können E-Mail-Öffnungen, Warenkorbaktivitäten und Seitenansichten umfassen. Sie können den Datumsbereich auch auf bis zu 30 Tage festlegen. Die Auswahl von **[!UICONTROL View all]** für ein einzelnes Ereignis bietet zusätzliche Felder und Werte, die als Teil des Ereignisses erfasst werden.
 
 Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie auf **[!UICONTROL View JSON]** klicken. Dies ist hilfreich, um zu verstehen, wie Ereignisse in Experience Platform erfasst werden.
 
