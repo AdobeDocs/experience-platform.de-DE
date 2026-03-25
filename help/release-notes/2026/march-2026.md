@@ -40,7 +40,7 @@ Experience Platform bietet eine Reihe von Datenhygiene-Funktionen, mit denen Sie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Löschen von Datensätzen mit mehreren Datensätzen und nur Profilen (nur API) | Sie können eine einzelne Datensatz-ID, eine durch Kommas getrennte Liste von Datensatz-IDs oder das Literal `ALL` senden, `datasetId` Identitäten in einem, mehreren oder allen Datensätzen zu löschen. Sie können das Löschen auch auf profilbezogene Services beschränken, indem Sie `targetServices` auf `["identity","profile","ajo"]` festlegen. Dadurch bleibt der Datalake unverändert. Diese Funktion ist nur über die Data Hygiene API verfügbar. Weitere Informationen finden [ im Handbuch zum Löschen von Arbeitsaufträgen ](../../hygiene/api/workorder.md) Datensatz . |
+| Löschen von Datensätzen mit mehreren Datensätzen und nur Profilen (nur API) | Sie können eine einzelne Datensatz-ID, eine durch Kommas getrennte Liste von Datensatz-IDs oder das Literal `ALL` senden, `datasetId` Identitäten in einem, mehreren oder allen Datensätzen zu löschen. Sie können das Löschen auch auf profilbezogene Services beschränken, indem Sie `targetServices` auf `["identity","profile","ajo"]` festlegen. Dadurch bleibt der Datalake unverändert. Diese Funktion ist nur über die Data Hygiene API verfügbar. Weitere Informationen finden [&#x200B; im Handbuch zum Löschen von Arbeitsaufträgen &#x200B;](../../hygiene/api/workorder.md) Datensatz . |
 
 {style="table-layout:auto"}
 
@@ -66,7 +66,7 @@ Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung d
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Dynamische Datenstromkonfigurationen - allgemeine Verfügbarkeit | Dynamische Datenstromkonfigurationen sind jetzt allgemein verfügbar. Mit dynamischen Datenstromkonfigurationen können Sie benutzerkonfigurierbare Regelsätze für jeden Service definieren, der für Ihren Datenstrom aktiviert ist. Diese bestimmen, welche Experience Cloud-Lösung die einzelnen Datentypen erhalten soll. Weitere Informationen finden Sie [ Handbuch ](../../datastreams/configure-dynamic-datastream.md) dynamische Datenstromkonfigurationen . |
+| Dynamische Datenstromkonfigurationen - allgemeine Verfügbarkeit | Dynamische Datenstromkonfigurationen sind jetzt allgemein verfügbar. Mit dynamischen Datenstromkonfigurationen können Sie benutzerkonfigurierbare Regelsätze für jeden Service definieren, der für Ihren Datenstrom aktiviert ist. Diese bestimmen, welche Experience Cloud-Lösung die einzelnen Datentypen erhalten soll. Weitere Informationen finden Sie [&#x200B; Handbuch &#x200B;](../../datastreams/configure-dynamic-datastream.md) dynamische Datenstromkonfigurationen . |
 
 {style="table-layout:auto"}
 
@@ -80,12 +80,12 @@ Weitere Informationen finden Sie unter [Datenströme - Übersicht](../../datastr
 
 | Ziel | Beschreibung |
 | --- | --- |
-| [Regionsauswahl für Snowflake ](../../destinations/catalog/warehouses/snowflake-batch.md)Batch) | Mit dem neuen durchsuchbaren Dropdown-Menü, in dem Suche und Dropdown zu einem Steuerelement kombiniert sind, können Sie Ihre Region jetzt einfacher finden. Diese Aktualisierung wird bis Ende März eingeführt. |
-| Neue Tabellenstruktur für [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md)-Ziele | In Ihrem Snowflake-Konto freigegebene Tabellen haben jetzt eine neue Struktur, die separate Spalten für Zielgruppennamen und Zielgruppenursprung enthält. Die neue Tabellenstruktur gilt für alle neuen Zielverbindungen, die in Zukunft eingerichtet werden. Für alle neu eingerichteten Verbindungen werden beide Tabellenstrukturen erstellt: Der neuen Struktur wird das Präfix V2 vorangestellt, und die alte Struktur wird bis Ende Juni 2026 beibehalten. Danach wird sie eingestellt. Weitere Informationen finden Sie [ Abschnitt ](../../destinations/catalog/warehouses/snowflake-batch.md#exported-data) exportierten Daten in der Snowflake-Batch-Dokumentation. Diese Aktualisierung wird bis Ende März eingeführt. |
+| [Regionsauswahl für Snowflake &#x200B;](../../destinations/catalog/warehouses/snowflake-batch.md)Batch) | Mit dem neuen durchsuchbaren Dropdown-Menü, in dem Suche und Dropdown zu einem Steuerelement kombiniert sind, können Sie Ihre Region jetzt einfacher finden. Diese Aktualisierung wird bis Ende März eingeführt. |
+| Neue Tabellenstruktur für [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md)-Ziele | In Ihrem Snowflake-Konto freigegebene Tabellen haben jetzt eine neue Struktur, die separate Spalten für Zielgruppennamen und Zielgruppenursprung enthält. Die neue Tabellenstruktur gilt für alle neuen Zielverbindungen, die in Zukunft eingerichtet werden. Für alle neu eingerichteten Verbindungen werden beide Tabellenstrukturen erstellt: Der neuen Struktur wird das Präfix V2 vorangestellt, und die alte Struktur wird bis Ende Juni 2026 beibehalten. Danach wird sie eingestellt. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](../../destinations/catalog/warehouses/snowflake-batch.md#exported-data) exportierten Daten in der Snowflake-Batch-Dokumentation. Diese Aktualisierung wird bis Ende März eingeführt. |
 | [Adobe Advertising DSP](../../destinations/catalog/advertising/adobe-advertising-dsp-connection.md)-Verbindung | Die neue Adobe Advertising DSP-Verbindung bietet dieselben Funktionen wie die alte Verbindung sowie Unterstützung für zusätzliche Identitäten. Mit dem neuen Connector können Sie auch Cookie-basierte Identitäten nach Adobe Advertising DSP exportieren. |
 | [FreeWheel](../../destinations/catalog/advertising/freewheel.md)-Verbindung | Senden Sie [!DNL Real-Time CDP] Zielgruppen als tägliche Batch-Dateien an FreeWheel, damit Sie sie in FreeWheel-Angeboten und -Kampagnen für TV, Video und Display ansprechen können. Wenden Sie sich an Ihr Adobe-Accountteam, um Zugriff zu erhalten. |
-| Unterstützung externer Zielgruppen für [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) und [Pinterest](../../destinations/catalog/advertising/pinterest.md) | Sie können jetzt Zielgruppen aus anderen Quellen als dem Segmentierungs-Service für das Trade Desk-CRM, Criteo und Pinterest aktivieren, einschließlich benutzerdefinierter Upload-Zielgruppen (importiert aus CSV), Lookalike-Zielgruppen, Federated-Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie [!DNL Adobe Journey Optimizer] erstellt wurden. Diese Aktualisierung wird bis Ende März eingeführt. Weitere Informationen finden Sie [ Abschnitt ](../../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“ auf der Katalogseite jedes Ziels. |
-| Erhöhte Begrenzung für benutzerdefinierte Upload-Zielgruppen | Sie können jetzt bis zu 20 benutzerdefinierte Upload-Zielgruppen pro Zielinstanz aktivieren. Zuvor war diese Grenze 10. Weitere Informationen finden Sie [ Leitplanken ](../../destinations/guardrails.md#batch-file-based-activation) Ziele . |
+| Unterstützung externer Zielgruppen für [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) und [Pinterest](../../destinations/catalog/advertising/pinterest.md) | Sie können jetzt Zielgruppen aus anderen Quellen als dem Segmentierungs-Service für das Trade Desk-CRM, Criteo und Pinterest aktivieren, einschließlich benutzerdefinierter Upload-Zielgruppen (importiert aus CSV), Lookalike-Zielgruppen, Federated-Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie [!DNL Adobe Journey Optimizer] erstellt wurden. Diese Aktualisierung wird bis Ende März eingeführt. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](../../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“ auf der Katalogseite jedes Ziels. |
+| Erhöhte Begrenzung für benutzerdefinierte Upload-Zielgruppen | Sie können jetzt bis zu 20 benutzerdefinierte Upload-Zielgruppen pro Zielinstanz aktivieren. Zuvor war diese Grenze 10. Weitere Informationen finden Sie [&#x200B; Leitplanken &#x200B;](../../destinations/guardrails.md#batch-file-based-activation) Ziele . |
 | [Datei jetzt exportieren](../../destinations/ui/export-file-now.md) und [Ad-hoc-Aktivierungs-API](../../destinations/api/ad-hoc-activation-api.md)Unterstützung für externe Zielgruppen | Sie können jetzt beim Aktivieren für Batch-dateibasierte Ziele die API „Datei jetzt exportieren“ (UI) und die Ad-hoc-Aktivierungs-API mit externen Zielgruppen (z. B. benutzerdefiniertes Hochladen, Lookalike, Federated und Zielgruppen aus anderen Experience Platform-Programmen) verwenden. Diese Aktualisierung wird bis Ende März eingeführt. |
 | [HTTP-API](../../destinations/catalog/streaming/http-destination.md)-Ziele mit OAuth 2 und mTLS | Sie können jetzt HTTP-API-Ziele erstellen und authentifizieren, die OAuth 2 verwenden, wenn der Authentifizierungsendpunkt gegenseitiges TLS (mTLS) erfordert. Der Token-Abruf während der Zieleinrichtung unterstützt jetzt mTLS. Diese Aktualisierung wird bis Ende März eingeführt. |
 
@@ -108,7 +108,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| XDM-Entitätsaktionen und Löschunterstützung | Greifen Sie auf Aktionen für Schemata, Klassen, Feldergruppen und Datentypen direkt über Inline-Tabellenmenüs und Detailseiten-Kopfzeilenmenüs zu. Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie auch die Entitäten Ihrer Organisation löschen, wenn sie nicht von Datensätzen verwendet und nicht für Profil aktiviert sind. Weitere Informationen finden Sie [ Handbuch zur XDM](../../xdm/ui/explore.md)Benutzeroberfläche . |
+| XDM-Entitätsaktionen und Löschunterstützung | Greifen Sie auf Aktionen für Schemata, Klassen, Feldergruppen und Datentypen direkt über Inline-Tabellenmenüs und Detailseiten-Kopfzeilenmenüs zu. Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie auch die Entitäten Ihrer Organisation löschen, wenn sie nicht von Datensätzen verwendet und nicht für Profil aktiviert sind. Weitere Informationen finden Sie [&#x200B; Handbuch zur XDM](../../xdm/ui/explore.md)Benutzeroberfläche . |
 
 Weitere Informationen finden Sie in der [XDM-Übersicht](../../xdm/home.md).
 
@@ -139,7 +139,7 @@ Weitere Informationen finden Sie in der [[!DNL Real-Time Customer Profile] Über
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der [Übersicht über Ausführung und Betrieb](../../run-and-operate/overview.md), [Prüfen von ](../../run-and-operate/job-schedules.md) und im [Handbuch zur Platform-Benutzeroberfläche](../../landing/ui-guide.md).
+Weitere Informationen finden Sie in der [Übersicht über Ausführung und Betrieb](../../run-and-operate/overview.md), [Prüfen von &#x200B;](../../run-and-operate/job-schedules.md) und im [Handbuch zur Platform-Benutzeroberfläche](../../landing/ui-guide.md).
 
 ## Segmentierungs-Service {#segmentation-service}
 
@@ -150,7 +150,7 @@ Weitere Informationen finden Sie in der [Übersicht über Ausführung und Betrie
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Aufnahmetyp | Sie können jetzt den Aufnahmetyp Ihrer Attribute anzeigen. Auf diese Weise erfahren Sie, woher Ihre Daten stammen, und können so bessere Zielgruppen erstellen. Weitere Informationen zu dieser Funktion finden Sie im [Segment Builder-Handbuch](../../segmentation/ui/segment-builder.md). |
-| Zusammenfassungsdaten | Sie können jetzt die Zusammenfassungsdaten für Ihre Attribute für Konto- und personenbasierte Zielgruppen anzeigen. Weitere Informationen zu dieser Funktion in Konto-Zielgruppen finden Sie im Handbuch zu [ . ](../../rtcdp/segmentation/audience-builder.md) Weitere Informationen zu dieser Funktion in personenbasierten Zielgruppen finden Sie im [Segment Builder-Handbuch](../../segmentation/ui/segment-builder.md). |
+| Zusammenfassungsdaten | Sie können jetzt die Zusammenfassungsdaten für Ihre Attribute für Konto- und personenbasierte Zielgruppen anzeigen. Weitere Informationen zu dieser Funktion in Konto-Zielgruppen finden Sie im Handbuch zu [&#x200B; . &#x200B;](../../rtcdp/segmentation/audience-builder.md) Weitere Informationen zu dieser Funktion in personenbasierten Zielgruppen finden Sie im [Segment Builder-Handbuch](../../segmentation/ui/segment-builder.md). |
 
 Weitere Informationen finden Sie in der [[!DNL Segmentation Service] Übersicht](../../segmentation/home.md).
 
