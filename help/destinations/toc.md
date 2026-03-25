@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: cca83a46d83137af658ed2f9500386b5036ff4ba
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1340'
 ht-degree: 72%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 72%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -77,8 +77,8 @@ ht-degree: 72%
       * [(Beta) Verbindung mit Acxiom-Zielgruppe](./catalog/advertising/acxiom-audience-connection.md)
       * [(Beta) Acxiom RealID-Zielgruppenverbindung](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
-      * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
-      * [Alte Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection-legacy.md)
+      * [Adobe Advertising DSP-Verbindung](./catalog/advertising/adobe-advertising-dsp-connection.md)
+      * [Alte Adobe Advertising Cloud DSP-Verbindung](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
       * [Adform-Verbindung](./catalog/advertising/adform.md)
       * [Amazon Ads-Verbindung](./catalog/advertising/amazon-ads.md)
@@ -150,7 +150,7 @@ ht-degree: 72%
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
-      * [AUF DIE ZULASSUNGSLISTE SETZEN IP-Adresse für dateibasierte Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [IP-Adresse für dateibasierte Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM-Ziele (Customer Relationship Management) {#crm}
       * [Hubspot-Verbindung](./catalog/crm/hubspot.md)
       * [Salesforce-CRM-Verbindung](./catalog/crm/salesforce.md)
