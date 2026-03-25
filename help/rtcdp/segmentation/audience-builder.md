@@ -2,9 +2,9 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Erfahren Sie, wie Sie mit dem Audience Builder in Real-Time Customer Data Platform Zielgruppen erstellen.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 9%
@@ -50,7 +50,7 @@ Für die **[!UICONTROL Relationship of fields]** können Sie entweder die Standa
 
 ### Attribute {#attributes}
 
-Auf der Registerkarte [!UICONTROL Attributes] können Sie Account-Attribute durchsuchen, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [&#x200B; Arbeitsfläche &#x200B;](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
+Auf der Registerkarte [!UICONTROL Attributes] können Sie Account-Attribute durchsuchen, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [ Arbeitsfläche ](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
 
 ![Die Registerkarte Attribute wird im Audience Builder angezeigt](../assets/segmentation/audience-builder/attributes.png)
 
@@ -64,7 +64,7 @@ Der Abschnitt **[!UICONTROL Top values]** zeigt die am häufigsten vorkommenden 
 
 Alternativ können Sie die Verteilung Ihrer Daten mit den angezeigten Mindest-, Mittel- (Durchschnitt) und Höchstwerten anzeigen.
 
-![Ein Pop-up, das die Statistiken für ein Attribut anzeigt, einschließlich der Mindest-, Mittel- und Höchstwerte.](../assets/segmentation/audience-builder/statistics.png)
+![Ein Pop-up, das die Statistiken für ein Attribut anzeigt, einschließlich der Mindest-, Mittel- und Höchstwerte.](../assets/segmentation/audience-builder/statistics.png){width="300"}
 
 Wenn ein Attribut in weniger als 25 % der Konten eingetragen ist, wird stattdessen ![Datenhinweissymbol](../../images/icons/data-notice.png) angezeigt. Unabhängig davon werden für das Attribut dieselben Zusammenfassungsdaten angezeigt.
 
@@ -78,7 +78,7 @@ Wenn ein Attribut in weniger als 25 % der Konten eingetragen ist, wird stattdess
 
 Darüber hinaus verfügt das Attribut über eine **[!UICONTROL Ingestion Type]**. Der Aufnahmetyp teilt Ihnen den Ursprung der Daten mit und kann einer der folgenden Werte sein: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** oder **[!UICONTROL No Data Ingested]**.
 
-![Der Aufnahmetyp für das Attribut wird angezeigt.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+![Der Aufnahmetyp für das Attribut wird angezeigt.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
 Eine detailliertere Anleitung zu Attributen in Audience Builder finden Sie im [Audience Builder-Benutzerhandbuch](../../segmentation/ui/segment-builder.md){target="_blank"}.
 

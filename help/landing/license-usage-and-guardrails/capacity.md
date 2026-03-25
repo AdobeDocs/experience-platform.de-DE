@@ -2,10 +2,10 @@
 title: Lizenznutzung und -kapazität
 description: Erfahren Sie mehr über Ihre Lizenznutzung und Kapazitätsbeschränkungen in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
+source-git-commit: 1a7a074a455542bb1438b2cbf199d79229142389
 workflow-type: tm+mt
-source-wordcount: '1670'
-ht-degree: 6%
+source-wordcount: '2072'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 6%
 >- **Anzeigen des Dashboards zur Lizenznutzung**
 >   - Mit dieser Berechtigung können **die Startseite** Kapazität anzeigen.
 >- **Verwalten von Sandboxes**
->   - Mit dieser Berechtigung können **&#x200B;**&#x200B;Kapazitätszuweisungen „bearbeiten“.
+>   - Mit dieser Berechtigung können **** Kapazitätszuweisungen „bearbeiten“.
 >   - Darüber hinaus **muss** Zugriff auf alle Sandboxes zugewiesen werden, damit Sie (**)** Sandbox-Kapazität bearbeiten können.
 >
 >Weitere Informationen zu Berechtigungen in Experience Platform finden Sie unter [Zugriffssteuerung - Übersicht](/help/access-control/home.md#permissions)
@@ -35,7 +35,7 @@ Weitere Informationen zu Leitplanken in Experience Platform finden Sie in der Ü
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Streaming-Durchsatz"
->abstract="Der Wert für den Streaming-Durchsatz misst die kombinierten Spitzenwerte der eingehenden Ereignisse pro Sekunde für die Streaming-Aufnahme in den Profil-Service über Ihre Produktions- und Entwicklungs-Sandboxes hinweg."
+>abstract="Der Wert für den Streaming-Durchsatz misst die kombinierten Spitzenwerte der eingehenden Ereignisse pro Sekunde für die Streaming-Aufnahme in Profile in Produktions- und Entwicklungs-Sandboxes."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -51,14 +51,16 @@ Derzeit unterstützt Capacity die folgenden Services:
 
 - Streaming-Segmentierung 
 - Streaming-Aufnahme
+- Edge-Segmentierung
 
 Innerhalb dieser Services werden die folgenden Leitplanken verfolgt:
 
 - Die maximale Anzahl von Streaming-Zielgruppen ist 500
-   - Von diesen 500 Streaming-Zielgruppen sind maximal 150 Edge-Zielgruppen zulässig
+- Die maximale Anzahl von Edge-Zielgruppen ist 150
 - Der kombinierte anfängliche Durchsatz für die Streaming-Aufnahme beträgt 1500 Datensätze pro Sekunde (rps)
    - Dieser kombinierte Streaming-Durchsatz misst die kombinierten Spitzenwerte der eingehenden Ereignisse pro Sekunde für die Streaming-Aufnahme in das Echtzeit-Kundenprofil über Ihre Produktions- und Entwicklungs-Sandboxes hinweg.
    - Sie können zusätzliche Streaming-Segmentierungsunterstützung für bis zu 13.500 Datensätze pro Sekunde erwerben. Weitere Informationen zum Kauf zusätzlicher Berechtigungen finden Sie in der [Real-Time CDP-Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+- Der kombinierte Durchsatz für die Edge-Segmentierung beträgt 1.500 Datensätze pro Sekunde (rps)
 
 Die Zielgruppenkapazität befindet sich auf **Sandbox**-Ebene. Das bedeutet, dass Sie für jede Sandbox in Ihrem Unternehmen 500 Streaming-Zielgruppen haben können, davon 150 Edge-Zielgruppen.
 
@@ -88,7 +90,7 @@ Um auf die Kapazitätsübersicht zuzugreifen, wählen Sie **[!UICONTROL License 
 
 Die Seite „Kapazitätsübersicht“ wird angezeigt und enthält Informationen, einschließlich eines Verlaufs von Warnhinweisen sowie Details zu den Kapazitäten Ihres Unternehmens.
 
-![Die Seite „Kapazitätsübersicht“ ist in vollem Umfang dargestellt und zeigt den Warnhinweisverlauf und die Abschnitte mit den Kapazitätsdetails an.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+![Die Seite „Kapazitätsübersicht“ wird angezeigt, die den Warnhinweisverlauf und die Abschnitte mit den Kapazitätsdetails anzeigt.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
 
 ### Warnhinweisverlauf {#alert-history}
 
@@ -106,17 +108,15 @@ Um einen vollständigen Verlauf der Warnhinweise für Ihre Organisation anzuzeig
 
 ![Der vollständige Warnhinweisverlauf wird für eine Organisation angezeigt.](/help/landing/images/capacity/full-alert-history.png)
 
-### Kapazitätsdetails {#capacity-details}
+### Streaming-Kapazitäten {#streaming-capacities}
 
-Im Abschnitt Kapazitätsdetails finden Sie Informationen zu den Kapazitäten Ihres Unternehmens. In diesem Abschnitt können Sie nach Sandbox filtern und den Lookback-Zeitraum ändern.
+Im Abschnitt Streaming-Kapazitäten finden Sie Informationen zu den Streaming-Kapazitäten Ihres Unternehmens. Insbesondere werden in diesem Abschnitt Kapazitätsinformationen zum Streaming-Durchsatz und zu Streaming-Zielgruppen angezeigt. Sie können diese Informationen pro Sandbox filtern und den Lookback-Zeitraum ändern.
 
 ![Der Sandbox-Selektor und die Datumsauswahl für den Lookback-Zeitraum sind hervorgehoben.](/help/landing/images/capacity/filter-sandbox-and-date.png)
 
-Derzeit werden hier Kapazitätsinformationen zu Streaming-Durchsatz, Streaming-Zielgruppen und Edge-Zielgruppen angezeigt.
-
 #### Streaming-Durchsatz {#streaming-throughput}
 
-Im Abschnitt Streaming-Durchsatz werden Informationen zum Streaming-Durchsatz in den Sandboxes Ihrer Organisation angezeigt. Der Wert für den Streaming-Durchsatz misst die kombinierten Spitzenwerte der eingehenden Ereignisse pro Sekunde für die Streaming-Aufnahme in den Profil-Service.
+Im Abschnitt **[!UICONTROL Streaming throughput]** werden Informationen zum Streaming-Durchsatz in den Sandboxes Ihrer Organisation angezeigt. Der Wert für den Streaming-Durchsatz misst die kombinierten Spitzenwerte der eingehenden Ereignisse pro Sekunde für die Streaming-Aufnahme in Profile.
 
 ![Der Abschnitt Streaming-Durchsatz auf der Seite mit den Kapazitätsdetails wird angezeigt.](/help/landing/images/capacity/streaming-throughput-section.png)
 
@@ -153,11 +153,52 @@ Die Seite Zuordnung wird angezeigt. Auf dieser Seite können Sie die Kapazitäte
 
 Wählen Sie nach dem Aktualisieren der Kapazitätszuweisungen **[!UICONTROL Save]** aus, um die Aktualisierungen abzuschließen. Beachten Sie, dass es bis zu 10 Minuten dauern kann, bis die Änderungen in Ihrer Organisation übernommen werden.
 
-#### Zielgruppengröße {#audience-count}
+#### Anzahl der Streaming-Zielgruppen {#streaming-audience-count}
 
-In den Abschnitten **[!UICONTROL Streaming audience count]** und **[!UICONTROL Edge audience count]** wird die Anzahl der Streaming- und Edge-Zielgruppen innerhalb der Sandbox sowie die maximale Anzahl der Streaming- und Edge-Zielgruppen angezeigt, die in der Sandbox zulässig ist.
+Im Abschnitt **[!UICONTROL Streaming audience count]** werden die Anzahl der Streaming-Zielgruppen innerhalb der Sandbox sowie die maximale Anzahl der in der Sandbox zulässigen Streaming-Zielgruppen angezeigt.
 
-![Die Abschnitte zur Anzahl der Zielgruppen werden angezeigt.](/help/landing/images/capacity/audience-count.png)
+![Die Abschnitte Zielgruppengröße werden angezeigt.](/help/landing/images/capacity/audience-count.png)
+
+| Spaltenname | Beschreibung |
+| ----------- | ----------- |
+| Sandbox | Der Name der Sandbox. |
+| Dienste | Der Service, der für die Sandbox verwendet wird. |
+| Nutzung | Die Anzahl der Streaming-Zielgruppen in der Sandbox. |
+| Kapazität | Die maximale Anzahl von Streaming-Zielgruppen, die in der Sandbox zulässig ist. |
+
+### Edge-Kapazitäten {#edge-capacities}
+
+Im **[!UICONTROL Edge capacities]** Abschnitt finden Sie Informationen zu den Edge-Kapazitäten Ihres Unternehmens. Insbesondere zeigt dieser Abschnitt Kapazitätsinformationen zum Durchsatz der Edge-Segmentierung und zu den Edge-Zielgruppen an. Sie können den Lookback-Zeitraum für die Edge-Kapazitäten der Organisation ändern.
+
+![Der Abschnitt Edge-Kapazitäten wird angezeigt. Hier werden Informationen einschließlich des Durchsatzes der Edge-Segmentierung und der Edge-Zielgruppengröße beschrieben.](/help/landing/images/capacity/edge-capacities.png)
+
+#### Edge-Segmentierungsdurchsatz {#edge-streaming-throughput}
+
+Im Abschnitt **[!UICONTROL Edge segmentation throughput]** werden Informationen zum Durchsatz der Edge-Segmentierung innerhalb Ihrer Organisation und der Sandboxes Ihrer Organisation angezeigt. Der Durchsatzwert für die Edge-Segmentierung misst den kombinierten Spitzenwert der eingehenden Ereignisse pro Sekunde für die Edge-Aufnahme in das Profil.
+
+![Der Durchsatzabschnitt zur Edge-Segmentierung wird angezeigt. Dadurch werden Informationen zum Durchsatz der Edge-Segmentierung innerhalb Ihrer Organisation und ihrer Sandboxes angezeigt.](/help/landing/images/capacity/edge-segmentation-throughput.png)
+
+| Spaltenname | Beschreibung |
+| ----------- | ----------- |
+| Organisation | Der Name der Organisation. Die verfügbaren Sandboxes für die Organisation werden unter dem Namen der Organisation aufgeführt. |
+| Nutzung RPS (Spitzenwert) | Der maximale Datendurchsatz in der Sandbox innerhalb des ausgewählten Lookback-Zeitraums. |
+| Kapazität RPS | Der maximale Spitzendurchsatz für die Organisation. |
+| Verletzung | Wenn eine Verletzung aufgetreten ist, die Art der Verletzung für den Durchsatz der Edge-Segmentierung. |
+| Empfohlene Aktionen | Eine Spalte, die die empfohlene Aktion zum Beheben des Verstoßes beschreibt. |
+
+Sie können die Organisation auswählen, um eine detailliertere Ansicht des Edge-Segmentierungsdurchsatzes der Organisation anzuzeigen.
+
+![Die Organisation ist hervorgehoben.](/help/landing/images/capacity/select-organization.png)
+
+Die Seite **[!UICONTROL Edge Segmentation Throughput]** wird angezeigt. Es wird ein Diagramm angezeigt, das den Anforderungsdurchsatz im Vergleich zum Kapazitätslimit anzeigt. Auf dieser Seite können Sie den Lookback-Zeitraum für das angezeigte Diagramm anpassen.
+
+![Die Durchsatzseite &quot;Edge-Segmentierung“ wird angezeigt. In diesem Diagramm wird der Durchsatz im Vergleich zur Kapazitätsgrenze detailliert dargestellt.](/help/landing/images/capacity/edge-segmentation-throughput-details.png)
+
+#### Größe der Edge-Zielgruppe {#edge-audience-count}
+
+Im Abschnitt **[!UICONTROL Edge audience count]** werden die Anzahl der Edge-Zielgruppen in jeder Sandbox sowie die maximale Anzahl der Edge-Zielgruppen angezeigt, die in der Sandbox zulässig ist.
+
+![Der Abschnitt Edge Zielgruppengröße wird angezeigt. Hier werden Informationen zur Edge-Zielgruppengröße angezeigt.](/help/landing/images/capacity/edge-audience-count.png)
 
 | Spaltenname | Beschreibung |
 | ----------- | ----------- |
@@ -166,9 +207,9 @@ In den Abschnitten **[!UICONTROL Streaming audience count]** und **[!UICONTROL E
 | Nutzung | Die Anzahl der Zielgruppen des aufgelisteten Typs, die sich in der Sandbox befinden. |
 | Kapazität | Die maximale Anzahl von Zielgruppen des aufgelisteten Typs, die in der Sandbox zulässig sind. |
 
-## Best Practices für Streaming-Durchsatz {#suggestions}
+## Best Practices für Streaming-Durchsatz {#streaming-throughput-suggestions}
 
-Sie können Verstöße gegen den Streaming-Durchsatz beheben, indem Sie eine der folgenden Empfehlungen umsetzen:
+Sie können Ihre Durchsatzverletzungen beheben, indem Sie eine der folgenden Empfehlungen umsetzen:
 
 1. Erhöhen Sie die zugewiesene Kapazität für die Sandbox.
 2. Ermitteln Sie Datenflüsse mit hohem Durchsatz im [Überwachungs-Dashboard](/help/dataflows/ui/monitor-streaming-profile.md) und wenden Sie bei Bedarf Einschränkungen oder Filter auf diese Datenflüsse an.
@@ -179,13 +220,21 @@ Darüber hinaus können Sie Ihre Datenflüsse betrachten und feststellen, ob Sie
 | Faktor | Was es ist | Auswirkungen auf Anwendungsfälle | Best Practices |
 | --- | --- | --- | --- |
 | Konvertierung von Batch zu Streaming | Batch-Workloads, die in Streaming konvertiert werden, können den Durchsatz erheblich erhöhen und sich auf die Leistung und Ressourcenzuweisung auswirken. Beispielsweise die Durchführung einer Massenaktualisierung von Profilen nach einem Ereignis ohne Ratenbeschränkungen. | Streaming-Strategien sind für Batch-Anwendungsfälle unnötig, wenn eine Verarbeitung mit geringer Latenz nicht erforderlich ist. | Bewerten Sie die Anforderungen an Anwendungsfälle. Für das Batch-Outbound-Marketing sollten Sie [Batch-Aufnahme](/help/ingestion/batch-ingestion/overview.md) anstelle von Streaming verwenden, um die Datenaufnahme effizienter zu verwalten. |
-| Unnötige Datenaufnahme | Die Aufnahme von Daten, die nicht für die Personalisierung erforderlich sind, erhöht den Durchsatz, ohne einen Mehrwert zu erzielen, und verschwendet Ressourcen. Beispielsweise wird der gesamte Analytics-Traffic unabhängig von der Relevanz in Profile aufgenommen. | Übermäßige Mengen nicht relevanter Daten verursachen Rauschen, wodurch die Identifizierung wirkungsvoller Datenpunkte erschwert wird. Außerdem kann es beim Definieren und Verwalten von Audiences und Profilen zu Reibungen kommen. | Nehmen Sie nur Daten auf, die für Ihre Anwendungsfälle erforderlich sind. Stellen Sie sicher, dass Sie unnötige Daten herausfiltern.<ul><li>**Adobe Analytics**: Verwenden Sie [Filterung auf Zeilenebene](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) um die Datenaufnahme zu optimieren.</li><li>**Quellen**: Verwenden Sie die [[!DNL Flow Service] API zum Filtern von Daten auf Zeilenebene](/help/sources/tutorials/api/filter.md) für unterstützte Quellen wie [!DNL Snowflake] und [!DNL Google BigQuery].</li></li>**Edge-Datenstrom**: Konfigurieren Sie [dynamische &#x200B;](/help/datastreams/configure-dynamic-datastream.md)), um Traffic aus WebSDK auf Zeilenebene zu filtern.</li></ul> |
+| Unnötige Datenaufnahme | Die Aufnahme von Daten, die nicht für die Personalisierung erforderlich sind, erhöht den Durchsatz, ohne einen Mehrwert zu erzielen, und verschwendet Ressourcen. Beispielsweise wird der gesamte Analytics-Traffic unabhängig von der Relevanz in Profile aufgenommen. | Übermäßige Mengen nicht relevanter Daten verursachen Rauschen, wodurch die Identifizierung wirkungsvoller Datenpunkte erschwert wird. Außerdem kann es beim Definieren und Verwalten von Audiences und Profilen zu Reibungen kommen. | Nehmen Sie nur Daten auf, die für Ihre Anwendungsfälle erforderlich sind. Stellen Sie sicher, dass Sie unnötige Daten herausfiltern.<ul><li>**Adobe Analytics**: Verwenden Sie [Filterung auf Zeilenebene](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) um die Datenaufnahme zu optimieren.</li><li>**Quellen**: Verwenden Sie die [[!DNL Flow Service] API zum Filtern von Daten auf Zeilenebene](/help/sources/tutorials/api/filter.md) für unterstützte Quellen wie [!DNL Snowflake] und [!DNL Google BigQuery].</li></li>**Edge-Datenstrom**: Konfigurieren Sie [dynamische ](/help/datastreams/configure-dynamic-datastream.md)), um Traffic aus WebSDK auf Zeilenebene zu filtern.</li></ul> |
+
+## Best Practices für den Durchsatz der Edge-Segmentierung {#edge-best-practices}
+
+Sie können Verstöße gegen den Durchsatz der Edge-Segmentierung beheben, indem Sie eine der folgenden Empfehlungen umsetzen:
+
+1. Identifizieren Sie Datenströme mit hohem Durchsatz im [Monitoring-Dashboard](/help/dataflows/ui/monitor-edge.md) und wenden Sie bei Bedarf Einschränkungen oder Filter auf diese Datenströme an.
+2. Optimieren Sie Ihre Aufnahme mithilfe der Batch-Aufnahme für Anwendungsfälle mit geringerer Latenz.
+3. Wenden Sie sich an den Adobe-Kundendienst, wenn weiterhin Probleme auftreten.
 
 ## Videoüberblick {#video}
 
 Das folgende Video bietet einen Überblick über die Kapazität.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475282/?captions=ger&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Häufig gestellte Fragen {#faq}
 
