@@ -2,10 +2,10 @@
 title: Brand Concierge-Konfigurationseinstellungen
 description: Konfigurieren Sie Sitzungspersistenz und Stream-Timeouts für den Brand Concierge-Chat.
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 11%
+source-wordcount: '190'
+ht-degree: 18%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 11%
 
 Im Abschnitt **[!UICONTROL Brand Concierge]** können Sie steuern, wie sich Brand Concierge-Chat-Sitzungen in der Tag-Erweiterung „Web SDK&quot; verhalten.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.
@@ -37,3 +37,7 @@ Ein Kontrollkästchen, das Brand Concierge-Sitzungen über Seiten hinweg speiche
 ## [!UICONTROL Stream timeout (seconds)]
 
 Die maximale Zeit in Sekunden, die auf Konversations-Stream-Blöcke gewartet wird, bevor ein Zeitüberschreitungsfehler ausgelöst wird. Der Standardwert ist `10` Sekunden.
+
+## [!UICONTROL Collect sources]
+
+Ein Kontrollkästchen, das Quellen erfasst, wenn ein Benutzer über einen Link innerhalb einer Brand Concierge-Konversation zur Seite navigiert ist. Standardmäßig deaktiviert. Wenn diese Option aktiviert ist, sucht die Bibliothek nach dem Abfragezeichenfolgenparameter `adobe_brand_concierge_source` und füllt seinen Wert in `xdm.channel.referringSource`.

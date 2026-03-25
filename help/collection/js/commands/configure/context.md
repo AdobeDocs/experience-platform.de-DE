@@ -2,9 +2,9 @@
 title: Kontext
 description: Automatische Erfassung von Geräte-, Umgebungs- oder Standortdaten.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1017'
 ht-degree: 12%
 
 ---
@@ -58,6 +58,7 @@ Das `"placeContext"`-Schlüsselwort erfasst Informationen zum Standort des Benut
 | Bundesland | Der Bundesland-Provinzcode des Endbenutzers. | `xdm.placeContext.geo.stateProvince` | `CA` |
 | Breitengrad | Der Breitengrad des Endbenutzerstandorts. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
 | Längengrad | Der Längengrad des Endbenutzerstandorts. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
+| IANA-Zeitzone | Die IANA-Zeitzone des Endbenutzers. In Bibliotheksversionen 2.32.0 oder höher enthalten. | `xdm.placeContext.ianaTimezone` | `America/Denver` |
 
 ### Zeitstempel
 
@@ -81,7 +82,7 @@ Das `implementationDetails`-Schlüsselwort erfasst Informationen über die SDK-V
 
 Das `"highEntropyUserAgentHints"`-Schlüsselwort erfasst detaillierte Informationen über das Gerät des Benutzers. Diese Daten sind im HTTP-Header der an Adobe gesendeten Anfrage enthalten. Nachdem die Daten an das Edge-Netzwerk gesendet wurden, füllt das XDM-Objekt den entsprechenden XDM-Pfad. Wenn Sie den entsprechenden XDM-Pfad in Ihrem `sendEvent`-Aufruf festlegen, hat dieser Vorrang vor dem HTTP-Header-Wert.
 
-Wenn Sie bei der [&#x200B; Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/configure.md) können Daten zugunsten von Gerätesuchwerten gelöscht werden. Einige Client-Hinweisfelder und Gerätesuchfelder können nicht im selben Treffer vorhanden sein.
+Wenn Sie bei der [ Ihres Datenstroms Gerätesuchen verwenden](/help/datastreams/configure.md) können Daten zugunsten von Gerätesuchwerten gelöscht werden. Einige Client-Hinweisfelder und Gerätesuchfelder können nicht im selben Treffer vorhanden sein.
 
 | Eigenschaft | Beschreibung | HTTP-Header | XDM-Pfad | Beispiel |
 | --- | --- | --- | --- | --- |
@@ -93,11 +94,11 @@ Wenn Sie bei der [&#x200B; Ihres Datenstroms Gerätesuchen verwenden](/help/data
 | Browser-Name | Der verwendete Browser. Der Hinweis `Sec-CH-UA` niedrige Entropie erfasst auch dieses Element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Browser-Version | Die Hauptversion des Browsers. Der Hinweis `Sec-CH-UA` niedrige Entropie erfasst auch dieses Element. Die genaue Browser-Version wird nicht automatisch erfasst. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-Weitere Informationen finden [&#x200B; unter &#x200B;](/help/collection/use-cases/client-hints.md)-Client-Hinweise für Benutzeragenten .
+Weitere Informationen finden [ unter ](/help/collection/use-cases/client-hints.md)-Client-Hinweise für Benutzeragenten .
 
 ### Einmaliger Analytics-Referrer {#one-time-analytics-referrer}
 
-Das `"oneTimeAnalyticsReferrer"`-Schlüsselwort sendet einen Referrer-Wert nur beim ersten nicht entscheidungsrelevanten `sendEvent` für eine Seite an Adobe Analytics. Der Hauptanwendungsfall für dieses Kontextschlüsselwort besteht darin, zu verhindern, [&#x200B; die Dimension „Referrer](https://experienceleague.adobe.com/de/docs/analytics/components/dimensions/referrer) in Adobe Analytics durch Treffer aufgebläht wird, die hauptsächlich in Analytics- und Target-Integrationen verwendet werden.
+Das `"oneTimeAnalyticsReferrer"`-Schlüsselwort sendet einen Referrer-Wert nur beim ersten nicht entscheidungsrelevanten `sendEvent` für eine Seite an Adobe Analytics. Der Hauptanwendungsfall für dieses Kontextschlüsselwort besteht darin, zu verhindern, [ die Dimension „Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) in Adobe Analytics durch Treffer aufgebläht wird, die hauptsächlich in Analytics- und Target-Integrationen verwendet werden.
 
 Wenn ein gegebener `sendEvent`-Befehl einen Decisioning-Ereignistyp verwendet (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), wird er bei der Berechnung des ersten `sendEvent` auf einer Seite ignoriert. Wenn sich der Referrer-Wert auf der Seite ändert und eine weitere `sendEvent` ausgelöst wird, wird der neue Referrer-Wert in die Payload aufgenommen. Aufgrund dieser Bedingung kann die Funktion mit Single Page Applications verwendet werden.
 

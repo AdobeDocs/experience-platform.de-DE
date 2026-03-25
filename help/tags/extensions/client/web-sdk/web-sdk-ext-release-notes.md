@@ -2,17 +2,22 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '3165'
-ht-degree: 55%
+source-wordcount: '3230'
+ht-degree: 54%
 
 ---
 
 
-# Versionshinweise zur Web SDK-Erweiterung
+# Versionshinweise zur Tag-Erweiterung „Web SDK&quot;
 
-In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Experience Platform Web SDK](/help/collection/js/release-notes.md).
+In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Adobe Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Version 2.34.2 – Dienstag, 23. März 2026
+
+- Enthält [Version 2.32.0](/help/collection/js/release-notes.md) des Adobe Experience Platform Web SDK.
+- Fehlerkorrektur - Beim Kopieren einer Tags-Eigenschaft werden Verweise auf Datenelemente aus der ursprünglichen Eigenschaft jetzt in Aktionen vom Typ Variable aktualisieren nicht mehr beibehalten. Um vorhandene kopierte Eigenschaften zu reparieren, öffnen und speichern Sie jede betroffene Aktion Variable aktualisieren und ihre Regel erneut. Benennen Sie die kopierten Datenelemente erst nach dem erneuten Speichern um.
 
 ## Version 2.34.1 – Donnerstag, 11. Februar 2026
 
@@ -414,7 +419,7 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Der Aktion „Ereignis senden“ wurde [&#x200B; Kontrollkästchen „Dokument &#x200B;](actions/send-event.md)&quot; hinzugefügt.
+- Der Aktion „Ereignis senden“ wurde [ Kontrollkästchen „Dokument ](actions/send-event.md)&quot; hinzugefügt.
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](configure/consent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
 - Es wurde Unterstützung für den Adobe Consent 2.0-Standard bei Verwendung der [`Set consent`](actions/set-consent.md) hinzugefügt.
