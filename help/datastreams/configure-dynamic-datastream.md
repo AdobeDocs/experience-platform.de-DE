@@ -1,22 +1,15 @@
 ---
 title: Erstellen dynamischer Datenstromkonfigurationen
 description: Erfahren Sie, wie Sie dynamische Datenstromkonfigurationen erstellen, um Ihre Daten auf der Grundlage von Regeln an verschiedene Experience Cloud-Services weiterzuleiten.
-hide: true
-hidefromtoc: true
-badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 4%
+source-wordcount: '1098'
+ht-degree: 3%
 
 ---
 
 # Erstellen dynamischer Datenstromkonfigurationen
-
->[!AVAILABILITY]
->
->* Die Option zum Definieren dynamischer Datenstromkonfigurationen ist derzeit in Beta verfügbar und steht einer begrenzten Anzahl von Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion zu erhalten. Dokumentation und Funktionalitäten können sich ändern.
 
 Standardmäßig sendet Experience Platform Edge Network alle Ereignisse, die einen Datenstrom erreichen, an alle Experience Cloud [Services](configure.md#add-services) die Sie für Ihre Datenströme aktiviert haben. Je nach Anwendungsfall ist dies möglicherweise nicht immer der ideale Workflow für Sie.
 
@@ -26,8 +19,8 @@ Dynamische Datenstromkonfigurationen decken dieses Problem durch benutzerkonfigu
 
 Um eine dynamische Konfiguration für Ihren Datenstrom zu erstellen, müssen Sie zwei Bedingungen erfüllen:
 
-* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Erstellen &#x200B;](configure.md) Datenstroms .
-* Es muss *mindestens* ein Experience Cloud-Service zu Ihrem Datenstrom hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Hinzufügen eines &#x200B;](configure.md#add-services) zu einem Datenstrom .
+* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [ Erstellen ](configure.md) Datenstroms .
+* Es muss *mindestens* ein Experience Cloud-Service zu Ihrem Datenstrom hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [ Hinzufügen eines ](configure.md#add-services) zu einem Datenstrom .
 
 Nachdem Sie einen Datenstrom erstellt und ihm einen Experience Cloud-Service hinzugefügt haben, können Sie [eine dynamische Konfiguration erstellen](#create-dynamic-configuration).
 
@@ -57,33 +50,33 @@ Wenn Sie sowohl Überschreibungen der dynamischen Datenstromkonfigurationen als 
 
 Nachdem Sie [einen Datenstrom erstellt](configure.md) und [einen Service hinzugefügt](configure.md#add-services) haben, führen Sie die folgenden Schritte aus, um eine dynamische Konfiguration zum Service hinzuzufügen.
 
-1. Gehen Sie zur **[!UICONTROL Datenerfassung]** > **[!UICONTROL Datenströme]** und wählen Sie den von Ihnen erstellten Datenstrom aus.
+1. Gehen Sie zur Seite **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** und wählen Sie den von Ihnen erstellten Datenstrom aus.
 
    ![Bild der Benutzeroberfläche für Datenströme mit der Liste der Datenströme.](assets/configure-dynamic-datastream/select-datastream.png)
 
-1. Wählen Sie die **[!UICONTROL Bearbeiten]** für den Service aus, für den Sie eine dynamische Konfiguration definieren möchten.
+1. Wählen Sie die Option **[!UICONTROL Edit]** für den Service aus, für den Sie eine dynamische Konfiguration definieren möchten.
 
    ![Abbildung der Benutzeroberfläche für Datenströme mit den zu einem Datenstrom hinzugefügten Services.](assets/configure-dynamic-datastream/select-service.png)
 
-1. Wählen Sie auf der **[!UICONTROL Konfigurieren]** die Option **[!UICONTROL Dynamische Konfiguration speichern und bearbeiten]** aus.
+1. Wählen Sie auf der **[!UICONTROL Configure]** Seite **[!UICONTROL Save and Edit Dynamic Configuration]** aus.
 
    ![Abbildung der Benutzeroberfläche für Datenströme mit der Seite zur Datenstromkonfiguration.](assets/configure-dynamic-datastream/save-and-edit.png)
 
-1. Wählen **[!UICONTROL Dynamische Konfiguration hinzufügen]** aus.
+1. Wählen Sie **[!UICONTROL Add Dynamic Configuration]** aus.
 
    ![Abbildung der Benutzeroberfläche für Datenströme mit der dynamischen Konfiguration ohne Meldung „Regel hinzugefügt“.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
-1. Ziehen Sie die Elemente **[!UICONTROL mit denen Sie Ihre Regel erstellen möchten, aus dem Bedienfeld]** Ressourcen“ auf die rechte Seite des Fensters. Sie können mehrere Ressourcen kombinieren, um komplexe Regeln zu erstellen.
+1. Ziehen Sie die Elemente, mit denen Sie Ihre Regel erstellen möchten, aus dem **[!UICONTROL Resources]** auf die rechte Seite des Fensters. Sie können mehrere Ressourcen kombinieren, um komplexe Regeln zu erstellen.
 
-   Verwenden Sie die Optionen jeder Ressource, z **[!UICONTROL B. „gleich]**, **[!UICONTROL nicht gleich]**, **[!UICONTROL vorhanden]** und mehr, um Ihre Regeln zu optimieren.
+   Verwenden Sie die Optionen jeder Ressource, z. B. **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]** und mehr, um Ihre Regeln zu optimieren.
 
    ![Bild der Benutzeroberfläche für Datenströme mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Schalten **[!UICONTROL im Abschnitt]** die Services ein, die Sie für jede Regel aktivieren oder deaktivieren möchten, je nachdem, ob Sie möchten, dass die Daten an jeden Service gesendet werden. Wenn Sie den Umschalter deaktivieren, wird das Service-Routing deaktiviert und *keine Daten* werden an den Upstream-Service gesendet.
+1. Schalten Sie im Abschnitt **[!UICONTROL Configuration]** für jede Regel die Services ein, die Sie aktivieren oder deaktivieren möchten, je nachdem, ob Sie möchten, dass die Daten an jeden Service gesendet werden. Wenn Sie den Umschalter deaktivieren, wird das Service-Routing deaktiviert und *keine Daten* werden an den Upstream-Service gesendet.
 
    ![Bild der Benutzeroberfläche für Datenströme mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/enable-service.png)
 
-1. Wenn Sie die Konfiguration Ihrer Regeln abgeschlossen haben, klicken Sie auf **[!UICONTROL Speichern]**.
+1. Wenn Sie mit der Konfiguration Ihrer Regeln fertig sind, wählen Sie **[!UICONTROL Save]** aus.
 
 ## Überlegungen zur Regelpriorität {#considerations}
 
@@ -105,9 +98,9 @@ Regeln für die dynamische Datenstromkonfiguration arbeiten mit bestimmten Daten
 
 | Datentyp | Status | Anmerkungen |
 |-----------|--------|-------|
-| String | Zugelassen | – |
+| Zeichenfolge | Zugelassen | – |
 | Zahl (Integer, Long, Short, Byte) | Zugelassen | – |
-| Enum | Zugelassen | – |
+| Aufzählung | Zugelassen | – |
 | Boolesch | Zugelassen | – |
 | Datum | Zugelassen | – |
 | Array | Nicht zulässig | Auf Arrays basierende Regeln werden nicht unterstützt, da sie die Leistung beeinträchtigen können. |
@@ -128,7 +121,7 @@ Regeln können je nach Datentyp die folgenden Operatoren verwenden:
 
 >[!NOTE]
 >
->Der **[!UICONTROL EXCLUDE]**-Operator wird nicht direkt unterstützt, aber Sie können eine äquivalente Logik mit **[!UICONTROL INCLUDE]** mit negierten Vergleichsoperatoren erreichen (z. B. „ist nicht gleich„).
+>Der **[!UICONTROL EXCLUDE]** Operator wird nicht direkt unterstützt, aber Sie können eine äquivalente Logik erreichen, indem Sie **[!UICONTROL INCLUDE]** mit negierten Vergleichsoperatoren verwenden (z. B. „ist nicht gleich„).
 
 ### Regelstruktur {#rule-structure}
 

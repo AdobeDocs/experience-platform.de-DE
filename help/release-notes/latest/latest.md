@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise März 2026
 description: Versionshinweise März 2026 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8c8b3b223c67dd6e9a00f9cf297f51fd09f3227f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1266'
-ht-degree: 20%
+source-wordcount: '1369'
+ht-degree: 19%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 20%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: Mittwoch, 24. März 2026**
 
@@ -27,6 +27,7 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 
 - [Erweiterte Verwaltung des Datenlebenszyklus](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [Datenströme](#datastreams)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Echtzeit-Kundenprofil](#real-time-customer-profile)
@@ -39,7 +40,7 @@ Experience Platform bietet eine Reihe von Datenhygiene-Funktionen, mit denen Sie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Löschen von Datensätzen mit mehreren Datensätzen und nur Profilen (nur API) | Sie können eine einzelne Datensatz-ID, eine durch Kommas getrennte Liste von Datensatz-IDs oder das Literal `ALL` senden, `datasetId` Identitäten in einem, mehreren oder allen Datensätzen zu löschen. Sie können das Löschen auch auf profilbezogene Services beschränken, indem Sie `targetServices` auf `["identity","profile","ajo"]` festlegen. Dadurch bleibt der Datalake unverändert. Diese Funktion ist nur über die Data Hygiene API verfügbar. Weitere Informationen finden [&#x200B; im Handbuch zum Löschen von Arbeitsaufträgen &#x200B;](../../hygiene/api/workorder.md) Datensatz . |
+| Löschen von Datensätzen mit mehreren Datensätzen und nur Profilen (nur API) | Sie können eine einzelne Datensatz-ID, eine durch Kommas getrennte Liste von Datensatz-IDs oder das Literal `ALL` senden, `datasetId` Identitäten in einem, mehreren oder allen Datensätzen zu löschen. Sie können das Löschen auch auf profilbezogene Services beschränken, indem Sie `targetServices` auf `["identity","profile","ajo"]` festlegen. Dadurch bleibt der Datalake unverändert. Diese Funktion ist nur über die Data Hygiene API verfügbar. Weitere Informationen finden [ im Handbuch zum Löschen von Arbeitsaufträgen ](../../hygiene/api/workorder.md) Datensatz . |
 
 {style="table-layout:auto"}
 
@@ -53,11 +54,23 @@ Mit Agent Orchestrator können Sie KI-gestützte Agenten erstellen und bereitste
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [Adobe Marketing Agent für [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] ist Ihr eingebetteter Agent, der Marketing-Intelligenz von Adobe direkt in alltägliche Tools wie [!DNL Teams], [!DNL Word], [!DNL PowerPoint] und andere [!DNL Microsoft 365]-Apps einbringt. Sie können diesen Agenten verwenden, um vertrauenswürdige Kampagneneinblicke aus Adobe-Programmen zu gewinnen, während Sie Kampagnen planen, Zielgruppen überprüfen, mit Kollegen zusammenarbeiten, um Kundenfragen zu beantworten, und um dateninformierte Entscheidungen zu treffen, ohne Ihren [!DNL Microsoft 365]-Workflow verlassen zu müssen. |
+| [Adobe Marketing Agent für [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] ist Ihr eingebetteter Agent, der Marketing-Intelligenz von Adobe direkt in alltägliche Tools wie [!DNL Teams], [!DNL Word], [!DNL PowerPoint] und andere [!DNL Microsoft 365]-Apps einbringt. Sie können diesen Agenten verwenden, um vertrauenswürdige Kampagneneinblicke aus Adobe-Programmen zu gewinnen, während Sie Kampagnen planen, Zielgruppen überprüfen, mit Kollegen zusammenarbeiten, um Kundenfragen zu beantworten, und um dateninformierte Entscheidungen zu treffen, ohne Ihren [!DNL Microsoft 365]-Workflow verlassen zu müssen. |
 
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Datenströme {#datastreams}
+
+Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs und der Adobe Experience Platform Edge Network Server-API dar. Der Befehl zur Datenstromkonfiguration in den SDKs verarbeitet alle Services, mit denen ein Client interagiert.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Dynamische Datenstromkonfigurationen - allgemeine Verfügbarkeit | Dynamische Datenstromkonfigurationen sind jetzt allgemein verfügbar. Mit Konfigurationen für dynamische Datenströme können Sie benutzerkonfigurierbare Regelsätze für jeden Service definieren, der für Ihren Datenstrom aktiviert ist. Diese bestimmen, welche Experience Cloud-Lösung die einzelnen Datentypen erhalten soll. Weitere Informationen finden Sie [ Handbuch ](../../datastreams/configure-dynamic-datastream.md) dynamische Datenstromkonfigurationen . |
+
+{style="table-layout:auto"}
+
+Weitere Informationen finden Sie unter [Datenströme - Übersicht](../../datastreams/overview.md).
 
 ## Ziele {#destinations}
 
@@ -69,8 +82,8 @@ Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](ht
 | --- | --- |
 | [Adobe Advertising DSP](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md)-Verbindung | Die neue Adobe Advertising DSP-Verbindung bietet dieselben Funktionen wie die alte Verbindung sowie Unterstützung für zusätzliche Identitäten. Mit dem neuen Connector können Sie auch Cookie-basierte Identitäten nach Adobe Advertising DSP exportieren. |
 | [FreeWheel](../../destinations/catalog/advertising/freewheel.md)-Verbindung | Senden Sie [!DNL Real-Time CDP] Zielgruppen als tägliche Batch-Dateien an FreeWheel, damit Sie sie in FreeWheel-Angeboten und -Kampagnen für TV, Video und Display ansprechen können. Wenden Sie sich an Ihr Adobe-Accountteam, um Zugriff zu erhalten. |
-| Unterstützung externer Zielgruppen für [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) und [Pinterest](../../destinations/catalog/advertising/pinterest.md) | Sie können jetzt Zielgruppen aus anderen Quellen als dem Segmentierungs-Service für das Trade Desk-CRM, Criteo und Pinterest aktivieren, einschließlich benutzerdefinierter Upload-Zielgruppen (importiert aus CSV), Lookalike-Zielgruppen, Federated-Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie [!DNL Adobe Journey Optimizer] erstellt wurden. Diese Aktualisierung wird bis Ende März eingeführt. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](../../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“ auf der Katalogseite jedes Ziels. |
-| Erhöhte Begrenzung für benutzerdefinierte Upload-Zielgruppen | Sie können jetzt bis zu 20 benutzerdefinierte Upload-Zielgruppen pro Zielinstanz aktivieren. Zuvor war diese Grenze 10. Weitere Informationen finden Sie [&#x200B; Leitplanken &#x200B;](../../destinations/guardrails.md#batch-file-based-activation) Ziele . |
+| Unterstützung externer Zielgruppen für [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) und [Pinterest](../../destinations/catalog/advertising/pinterest.md) | Sie können jetzt Zielgruppen aus anderen Quellen als dem Segmentierungs-Service für das Trade Desk-CRM, Criteo und Pinterest aktivieren, einschließlich benutzerdefinierter Upload-Zielgruppen (importiert aus CSV), Lookalike-Zielgruppen, Federated-Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie [!DNL Adobe Journey Optimizer] erstellt wurden. Diese Aktualisierung wird bis Ende März eingeführt. Weitere Informationen finden Sie [ Abschnitt ](../../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“ auf der Katalogseite jedes Ziels. |
+| Erhöhte Begrenzung für benutzerdefinierte Upload-Zielgruppen | Sie können jetzt bis zu 20 benutzerdefinierte Upload-Zielgruppen pro Zielinstanz aktivieren. Zuvor war diese Grenze 10. Weitere Informationen finden Sie [ Leitplanken ](../../destinations/guardrails.md#batch-file-based-activation) Ziele . |
 | [Datei jetzt exportieren](../../destinations/ui/export-file-now.md) und [Ad-hoc-Aktivierungs-API](../../destinations/api/ad-hoc-activation-api.md)Unterstützung für externe Zielgruppen | Sie können jetzt beim Aktivieren für Batch-dateibasierte Ziele die API „Datei jetzt exportieren“ (UI) und die Ad-hoc-Aktivierungs-API mit externen Zielgruppen (z. B. benutzerdefiniertes Hochladen, Lookalike, Federated und Zielgruppen aus anderen Experience Platform-Programmen) verwenden. Diese Aktualisierung wird bis Ende März eingeführt. |
 
 {style="table-layout:auto"}
@@ -91,7 +104,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| XDM-Entitätsaktionen und Löschunterstützung | Greifen Sie auf Aktionen für Schemata, Klassen, Feldergruppen und Datentypen direkt über Inline-Tabellenmenüs und Detailseiten-Kopfzeilenmenüs zu. Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie auch die Entitäten Ihrer Organisation löschen, wenn sie nicht von Datensätzen verwendet und nicht für Profil aktiviert sind. Weitere Informationen finden Sie [&#x200B; Handbuch zur XDM](../../xdm/ui/explore.md)Benutzeroberfläche . |
+| XDM-Entitätsaktionen und Löschunterstützung | Greifen Sie auf Aktionen für Schemata, Klassen, Feldergruppen und Datentypen direkt über Inline-Tabellenmenüs und Detailseiten-Kopfzeilenmenüs zu. Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie auch die Entitäten Ihrer Organisation löschen, wenn sie nicht von Datensätzen verwendet und nicht für Profil aktiviert sind. Weitere Informationen finden Sie [ Handbuch zur XDM](../../xdm/ui/explore.md)Benutzeroberfläche . |
 
 Weitere Informationen finden Sie in der [XDM-Übersicht](../../xdm/home.md).
 
@@ -134,7 +147,7 @@ For more information, read the [Run and Operate overview](../run-and-operate/ove
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Aufnahmetyp | Sie können jetzt den Aufnahmetyp Ihrer Attribute anzeigen. Auf diese Weise erfahren Sie, woher Ihre Daten stammen, und können so bessere Zielgruppen erstellen. Weitere Informationen zu dieser Funktion finden Sie im [Segment Builder-Handbuch](/help/segmentation/ui/segment-builder.md). |
-| Zusammenfassungsdaten | Sie können jetzt die Zusammenfassungsdaten für Ihre Attribute für Konto- und personenbasierte Zielgruppen anzeigen. Weitere Informationen zu dieser Funktion in Konto-Zielgruppen finden Sie im Handbuch zu [&#x200B; . &#x200B;](/help/rtcdp/segmentation/audience-builder.md) Weitere Informationen zu dieser Funktion in personenbasierten Zielgruppen finden Sie im [Segment Builder-Handbuch](/help/segmentation/ui/segment-builder.md). |
+| Zusammenfassungsdaten | Sie können jetzt die Zusammenfassungsdaten für Ihre Attribute für Konto- und personenbasierte Zielgruppen anzeigen. Weitere Informationen zu dieser Funktion in Konto-Zielgruppen finden Sie im Handbuch zu [ . ](/help/rtcdp/segmentation/audience-builder.md) Weitere Informationen zu dieser Funktion in personenbasierten Zielgruppen finden Sie im [Segment Builder-Handbuch](/help/segmentation/ui/segment-builder.md). |
 
 Weitere Informationen finden Sie in der [[!DNL Segmentation Service] Übersicht](../../segmentation/home.md).
 
@@ -146,7 +159,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Quelle | Beschreibung |
 | --- | --- |
-| [!DNL Talon.One] | Sie können Experience Platform jetzt mit [!DNL Talon.One] verbinden, indem Sie die neuen [!DNL Talon.One] ([) &#x200B;](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) [Streaming](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md) verwenden. Verwenden Sie die neuen Quellen, um Treueprofildaten sowie Transaktions- und Treueprogramm-Aktivitätsereignisse in Experience Platform aufzunehmen. |
+| [!DNL Talon.One] | Sie können Experience Platform jetzt mit [!DNL Talon.One] verbinden, indem Sie die neuen [!DNL Talon.One] ([) ](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) [Streaming](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md) verwenden. Verwenden Sie die neuen Quellen, um Treueprofildaten sowie Transaktions- und Treueprogramm-Aktivitätsereignisse in Experience Platform aufzunehmen. |
 | Neue IP-Adressen zur Zulassungsliste | Neue IP-Adressen für GBR9: Großbritannien wurde in die Liste der Adressen aufgenommen, die erfolgreich mit Experience Platform auf Azure verbunden werden müssen. Weitere Informationen finden Sie in der Liste [Handbuch zur IP](../../sources/ip-address-allow-list.md#gbr9-united-kingdom)Zulassungsliste). |
 | Verbesserte Unterstützung für Change Data Capture | Sie können jetzt die Änderungsdatenerfassung mit den [!DNL Marketo Engage]-, [!DNL Microsoft Dynamics]- und [!DNL Salesforce CRM] verwenden. |
 | Verbessertes Authentifizierungshandbuch für [[!DNL Google BigQuery]](../../sources/connectors/databases/bigquery.md) | Das Authentifizierungshandbuch für die [!DNL Google BigQuery] wurde um die folgenden Informationen erweitert: <ul><li>Die erforderlichen Bereiche für das Aktualisierungs-Token.</li><li>Die für die [!DNL Google] Identität erforderlichen IAM-Rollen.</li><li>Zusätzliche Anleitungen zur Verwendung von `largeResultsDataSetId`.</li></ul> |
