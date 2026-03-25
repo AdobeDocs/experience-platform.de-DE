@@ -22,7 +22,7 @@ In [!DNL Adobe Experience Platform] können Sie verschiedene Komponenten vorhand
 * [Hinzufügen zusätzlicher Datensätze](#add-datasets) zum Aktivierungs-Workflow
 * [Marketing-Aktionen bearbeiten](#edit-marketing-actions) für Ihre Aktivierungsdatenflüsse
 * [Zugriffskennzeichnungen anwenden](#apply-access-labels) auf exportierte Daten
-* [Namen und Beschreibungen ](#edit-names-descriptions) Aktivierungsdatenflüsse bearbeiten)
+* [Namen und Beschreibungen &#x200B;](#edit-names-descriptions) Aktivierungsdatenflüsse bearbeiten)
 
 ## Durchsuchen von Aktivierungsdatenflüssen {#browse-activation-dataflows}
 
@@ -107,7 +107,7 @@ Wählen Sie **[!UICONTROL Export datasets]** in der rechten Leiste aus, um zusä
 
 >[!NOTE]
 >
->Diese Option ist nur für (Ziele[ die den Datensatzexport unterstützen](export-datasets.md#supported-destinations) sichtbar.
+>Diese Option ist nur für (Ziele[&#x200B; die den Datensatzexport unterstützen](export-datasets.md#supported-destinations) sichtbar.
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/export-datasets.png)
 
@@ -115,7 +115,7 @@ Wählen Sie **[!UICONTROL Export datasets]** in der rechten Leiste aus, um zusä
 
 >[!IMPORTANT]
 >
->Zum Bearbeiten von Marketing-Aktionen benötigen Sie die **[!UICONTROL Activate Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[ ](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Bearbeiten von Marketing-Aktionen benötigen Sie die **[!UICONTROL Activate Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[&#x200B; &#x200B;](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Sie können Marketing-Aktionen hinzufügen oder entfernen, die Sie beim erstmaligen Herstellen einer Verbindung mit dem Ziel eingerichtet haben.
 
@@ -130,7 +130,7 @@ Wählen Sie die entsprechenden Marketing-Aktionen aus und klicken Sie dann auf *
 
 ## Anwenden von Zugriffs-Labels {#apply-access-labels}
 
-Wählen Sie **[!UICONTROL Apply access labels]** aus, um die Datennutzungsbeschriftungen für die exportierten Daten zu bearbeiten. Weitere Informationen finden [ in der Dokumentation ](../../data-governance/labels/overview.md) Datennutzungskennzeichnungen .
+Wählen Sie **[!UICONTROL Apply access labels]** aus, um die Datennutzungsbeschriftungen für die exportierten Daten zu bearbeiten. Weitere Informationen finden [&#x200B; in der Dokumentation &#x200B;](../../data-governance/labels/overview.md) Datennutzungskennzeichnungen .
 
 ![Bild der Experience Platform-Benutzeroberfläche mit der Option zur Ausführung des Datenflusses für Datensätze exportieren.](../assets/ui/edit-activation/apply-access-labels.png)
 

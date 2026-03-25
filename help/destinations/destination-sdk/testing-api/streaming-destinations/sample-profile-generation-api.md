@@ -199,7 +199,7 @@ Sie können Beispielprofile generieren, die auf dem Zielschema basieren, indem S
 
 >[!TIP]
 >
->* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Weitere [ finden Sie unter ](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) einer Zielkonfiguration.
+>* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Weitere [&#x200B; finden Sie unter &#x200B;](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) einer Zielkonfiguration.
 
 **API-Format**
 

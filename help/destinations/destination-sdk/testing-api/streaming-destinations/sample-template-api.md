@@ -28,7 +28,7 @@ Sie können eine Beispielvorlage abrufen, indem Sie eine GET-Anfrage an den Endp
 
 >[!TIP]
 >
->* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Weitere Informationen finden [ unter „Abrufen ](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) Zielkonfiguration“.
+>* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Weitere Informationen finden [&#x200B; unter „Abrufen &#x200B;](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) Zielkonfiguration“.
 
 **API-Format**
 

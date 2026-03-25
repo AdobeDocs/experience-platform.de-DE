@@ -17,7 +17,7 @@ Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und [!DNL Adobe
 
 ## Terminologie {#terminology}
 
-In diesem Handbuch werden Experience Platform-spezifische Konzepte wie Organisation und Sandboxes verwendet. Definitionen zu diesen Begriffen finden Sie [ ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=de)Experience Platform-Glossar. Begriffe, die direkt mit dieser Funktion [ sind, finden Sie im ](/help/destinations/destination-sdk/glossary.md)Destination SDK-Glossar.
+In diesem Handbuch werden Experience Platform-spezifische Konzepte wie Organisation und Sandboxes verwendet. Definitionen zu diesen Begriffen finden Sie [&#x200B; &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=de)Experience Platform-Glossar. Begriffe, die direkt mit dieser Funktion [&#x200B; sind, finden Sie im &#x200B;](/help/destinations/destination-sdk/glossary.md)Destination SDK-Glossar.
 
 ## Erforderliche Authentifizierungs-Anmeldedaten erhalten {#obtain-authentication-credentials}
 

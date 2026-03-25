@@ -16,7 +16,7 @@ Erfahren Sie, wie Sie verschiedene Komponenten einer vorhandenen Zielverbindung 
 
 >[!NOTE]
 >
-> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch über API-Vorgänge unterstützt. Weitere Informationen finden Sie im Tutorial [ Bearbeiten von Zielen in ](/help/destinations/api/edit-destination.md) API .
+> Die in diesem Tutorial beschriebenen Bearbeitungsvorgänge werden auch über API-Vorgänge unterstützt. Weitere Informationen finden Sie im Tutorial [&#x200B; Bearbeiten von Zielen in &#x200B;](/help/destinations/api/edit-destination.md) API .
 
 ## Voraussetzungen {#prerequisites}
 
@@ -28,7 +28,7 @@ So bearbeiten Sie verschiedene Komponenten einer vorhandenen Zielverbindung:
 
 1. Navigieren Sie zu **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Wählen Sie das gewünschte Ziel aus, das Sie bearbeiten möchten.
-3. Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Ziel bearbeiten ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**zum Bearbeiten vorhandener Zielverbindungen.
+3. Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Ziel bearbeiten &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;zum Bearbeiten vorhandener Zielverbindungen.
 4. Bearbeiten Sie im modalen Fenster die gewünschten Einstellungen. Wählen Sie abschließend **[!UICONTROL Save]** aus.
 
 Im Fenster Ziel bearbeiten können Sie alle Einstellungen aktualisieren, die Sie beim erstmaligen Herstellen einer Verbindung mit dem Ziel konfiguriert haben. Diese Einstellungen unterscheiden sich je nach Zielplattform, die Sie aktualisieren.
