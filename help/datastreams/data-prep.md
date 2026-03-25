@@ -2,16 +2,16 @@
 title: Datenvorbereitung für die Datenerfassung
 description: Erfahren Sie, wie Sie beim Konfigurieren eines Datenstroms für die Adobe Experience Platform Web- und Mobile-SDKs Ihre Daten einem XDM-Ereignisschema (Experience-Datenmodell) zuordnen können.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 43%
+source-wordcount: '1167'
+ht-degree: 41%
 
 ---
 
 # Datenvorbereitung für die Datenerfassung
 
-Datenvorbereitung ist ein Adobe Experience Platform-Service, mit dem Sie Daten zuordnen, umwandeln und validieren können, die an das [Experience-Datenmodell (XDM)](../xdm/home.md) gesendet oder von ihm empfangen werden. Beim Konfigurieren eines Experience Platform-aktivierten [Datenstroms](./overview.md) können Sie Datenvorbereitungsfunktionen verwenden, um Ihre Quelldaten dem XDM zuzuordnen, wenn Sie sie an die Experience Platform Edge Network senden.
+Datenvorbereitung ist ein Adobe Experience Platform-Service, mit dem Sie Daten zuordnen, umwandeln und validieren können, die an das [Experience-Datenmodell (XDM) gesendet oder von ihm empfangen werden](../xdm/home.md). Beim Konfigurieren eines Experience Platform-aktivierten [Datenstroms](./overview.md) können Sie Datenvorbereitungsfunktionen verwenden, um Ihre Quelldaten dem XDM zuzuordnen, wenn Sie sie an die Experience Platform Edge Network senden.
 
 Alle von einer Web-Seite gesendeten Daten müssen als XDM in Experience Platform landen. Es gibt 3 Möglichkeiten, Daten von einer On-Page-Datenschicht in das von Experience Platform akzeptierte XDM zu übersetzen:
 
@@ -48,7 +48,7 @@ In diesem Handbuch wird beschrieben, wie Sie Ihre Daten innerhalb der Benutzerob
 
 Eine kurze Erklärung des Prozesses „Datenvorbereitung für die Datenerfassung“ finden Sie im folgenden Video:
 
->[!VIDEO](https://video.tv.adobe.com/v/3410301?captions=ger&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 ## [!UICONTROL Select data] {#select-data}
 
@@ -158,13 +158,13 @@ Sie können die Option zum Hochladen des Objekts als Datei auswählen oder statt
 
 >[!NOTE]
 >
-> Verwenden Sie ein JSON-Beispielobjekt, das jedes Datenschichtelement darstellt, das auf einer beliebigen Seite verwendet werden kann. Beispielsweise verwenden nicht alle Seiten Datenschichtelemente des Warenkorbs. Die Datenschichtelemente des Warenkorbs sollten jedoch in diesem JSON-Beispielobjekt enthalten sein.
+>Verwenden Sie ein JSON-Beispielobjekt, das jedes Datenschichtelement darstellt, das auf einer beliebigen Seite verwendet werden kann. Beispielsweise verwenden nicht alle Seiten Datenschichtelemente des Warenkorbs. Die Datenschichtelemente des Warenkorbs sollten jedoch in diesem JSON-Beispielobjekt enthalten sein.
 
 ## [!UICONTROL Mapping]
 
 Der **[!UICONTROL Mapping]** Schritt wird angezeigt, sodass Sie die Felder in Ihren Quelldaten dem Zielereignisschema in Experience Platform zuordnen können. Sie haben die Möglichkeit, die Zuordnung auf zwei Arten zu konfigurieren:
 
-* [Erstellen Sie &#x200B;](#create-mapping) für diesen Datenstrom durch einen manuellen Prozess.
+* [Erstellen Sie ](#create-mapping) für diesen Datenstrom durch einen manuellen Prozess.
 * [Importieren Sie Zuordnungsregeln](#import-mapping) aus einem vorhandenen Datenstrom.
 
 >[!IMPORTANT]

@@ -2,9 +2,9 @@
 title: Erstellen dynamischer Datenstromkonfigurationen
 description: Erfahren Sie, wie Sie dynamische Datenstromkonfigurationen erstellen, um Ihre Daten auf der Grundlage von Regeln an verschiedene Experience Cloud-Services weiterzuleiten.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1092'
 ht-degree: 3%
 
 ---
@@ -19,8 +19,8 @@ Dynamische Datenstromkonfigurationen decken dieses Problem durch benutzerkonfigu
 
 Um eine dynamische Konfiguration für Ihren Datenstrom zu erstellen, müssen Sie zwei Bedingungen erfüllen:
 
-* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Erstellen &#x200B;](configure.md) Datenstroms .
-* Es muss *mindestens* ein Experience Cloud-Service zu Ihrem Datenstrom hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Hinzufügen eines &#x200B;](configure.md#add-services) zu einem Datenstrom .
+* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [ Erstellen ](configure.md) Datenstroms .
+* Es muss *mindestens* ein Experience Cloud-Service zu Ihrem Datenstrom hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [ Hinzufügen eines ](configure.md#add-services) zu einem Datenstrom .
 
 Nachdem Sie einen Datenstrom erstellt und ihm einen Experience Cloud-Service hinzugefügt haben, können Sie [eine dynamische Konfiguration erstellen](#create-dynamic-configuration).
 
@@ -52,29 +52,29 @@ Nachdem Sie [einen Datenstrom erstellt](configure.md) und [einen Service hinzuge
 
 1. Gehen Sie zur Seite **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** und wählen Sie den von Ihnen erstellten Datenstrom aus.
 
-   ![Bild der Benutzeroberfläche für Datenströme mit der Liste der Datenströme.](assets/configure-dynamic-datastream/select-datastream.png)
+   ![Benutzeroberfläche „Datenströme“ mit der Liste der Datenströme.](assets/configure-dynamic-datastream/select-datastream.png)
 
 1. Wählen Sie die Option **[!UICONTROL Edit]** für den Service aus, für den Sie eine dynamische Konfiguration definieren möchten.
 
-   ![Abbildung der Benutzeroberfläche für Datenströme mit den zu einem Datenstrom hinzugefügten Services.](assets/configure-dynamic-datastream/select-service.png)
+   ![Benutzeroberfläche „Datenströme“ mit den zu einem Datenstrom hinzugefügten Services.](assets/configure-dynamic-datastream/select-service.png)
 
 1. Wählen Sie auf der **[!UICONTROL Configure]** Seite **[!UICONTROL Save and Edit Dynamic Configuration]** aus.
 
-   ![Abbildung der Benutzeroberfläche für Datenströme mit der Seite zur Datenstromkonfiguration.](assets/configure-dynamic-datastream/save-and-edit.png)
+   ![Benutzeroberfläche „Datenströme“ mit der Seite zur Datenstromkonfiguration.](assets/configure-dynamic-datastream/save-and-edit.png)
 
 1. Wählen Sie **[!UICONTROL Add Dynamic Configuration]** aus.
 
-   ![Abbildung der Benutzeroberfläche für Datenströme mit der dynamischen Konfiguration ohne Meldung „Regel hinzugefügt“.](assets/configure-dynamic-datastream/add-dynamic-config.png)
+   ![Datastreams-Benutzeroberfläche, auf der die Seite für die dynamische Konfiguration angezeigt wird, bevor Regeln hinzugefügt werden.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
 1. Ziehen Sie die Elemente, mit denen Sie Ihre Regel erstellen möchten, aus dem **[!UICONTROL Resources]** auf die rechte Seite des Fensters. Sie können mehrere Ressourcen kombinieren, um komplexe Regeln zu erstellen.
 
    Verwenden Sie die Optionen jeder Ressource, z. B. **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]** und mehr, um Ihre Regeln zu optimieren.
 
-   ![Bild der Benutzeroberfläche für Datenströme mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/drag-resources.png)
+   ![Benutzeroberfläche „Datenströme“ mit dem Builder für dynamische Konfigurationsregeln mit gezogenen Ressourcen.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Schalten Sie im Abschnitt **[!UICONTROL Configuration]** für jede Regel die Services ein, die Sie aktivieren oder deaktivieren möchten, je nachdem, ob Sie möchten, dass die Daten an jeden Service gesendet werden. Wenn Sie den Umschalter deaktivieren, wird das Service-Routing deaktiviert und *keine Daten* werden an den Upstream-Service gesendet.
+1. Schalten Sie im Abschnitt **[!UICONTROL Configuration]** für jede Regel die Services ein, die Sie aktivieren oder deaktivieren möchten, je nachdem, ob Sie möchten, dass die Daten an jeden Service gesendet werden. Wenn Sie den Umschalter deaktivieren, ist das Service-Routing deaktiviert und *keine Daten* werden an den nachgelagerten Service gesendet.
 
-   ![Bild der Benutzeroberfläche für Datenströme mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/enable-service.png)
+   ![Benutzeroberfläche „Datenströme“, die die dynamische Konfigurationsregel mit Service-Umschaltern anzeigt.](assets/configure-dynamic-datastream/enable-service.png)
 
 1. Wenn Sie mit der Konfiguration Ihrer Regeln fertig sind, wählen Sie **[!UICONTROL Save]** aus.
 
@@ -135,9 +135,9 @@ Betrachten Sie beispielsweise die komplexe Regel, die in der Abbildung unten dar
 
 Sie können diese Regel in die folgenden einfacheren Regeln unterteilen:
 
-![Platform-UI-Bild, das eine komplexe Regel anzeigt.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![Platform-UI-Bild, das die erste vereinfachte Regel zeigt.](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![Platform-UI-Bild, das eine komplexe Regel anzeigt.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![Platform-UI-Bild, das die zweite vereinfachte Regel anzeigt.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **Vermeiden Sie komplexe Regeln**. Einfachere Vorschriften gewährleisten eine schnellere Bewertung und bessere Wartungsfreundlichkeit.
 

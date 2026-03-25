@@ -2,9 +2,9 @@
 title: Konfigurieren der Bot-Erkennung für Datenströme
 description: Erfahren Sie, wie Sie die Bot-Erkennung für Datenströme konfigurieren, um zwischen menschlichem und nicht menschlichem Traffic zu unterscheiden.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 5f599b8572c4cebcdfb9ab85027211da4d8a020c
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Diese Bot-Bewertung hilft den Lösungen, die die Anfrage erhalten, Bot-Traffic k
 >
 >Die Bot-Erkennung löscht keine Bot-Anfragen. Es wird nur das XDM-Schema mit der Bot-Bewertung aktualisiert und das Ereignis an den [Datenstrom-Service](configure.md) weitergeleitet, den Sie konfiguriert haben.
 >
->Adobe-Lösungen können die Bewertung von Bots auf unterschiedliche Weise verarbeiten. Beispielsweise verwendet Adobe Analytics einen eigenen [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=de) und verwendet nicht den von der Edge Network festgelegten Wert. Die beiden Services verwenden dieselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) sodass die Bot-Bewertung identisch ist.
+>Adobe-Lösungen können die Bewertung von Bots auf unterschiedliche Weise verarbeiten. Beispielsweise verwendet Adobe Analytics einen eigenen [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) und verwendet nicht den von der Edge Network festgelegten Wert. Die beiden Services verwenden dieselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) sodass die Bot-Bewertung identisch ist.
 
 ## Technische Überlegungen {#technical-considerations}
 
@@ -45,7 +45,7 @@ Bevor Sie die Bot-Erkennung in Ihren Datenströmen aktivieren, sollten Sie einig
 
 ## Voraussetzungen {#prerequisites}
 
-Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die **[!UICONTROL Bot Detection Information]** Feldergruppe zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie [&#x200B; der Dokumentation zum &#x200B;](../xdm/ui/resources/schemas.md#add-field-groups)XDM-Schema .
+Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die **[!UICONTROL Bot Detection Information]** Feldergruppe zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie [ der Dokumentation zum ](../xdm/ui/resources/schemas.md#add-field-groups)XDM-Schema .
 
 ## Konfigurieren der Bot-Erkennung für Datenströme {#configure}
 
@@ -65,12 +65,12 @@ Die Seite **[!UICONTROL Bot Detection Rules]** wird angezeigt.
 
 Auf der Seite Regeln für die Bot-Erkennung können Sie die Bot-Erkennung mithilfe der folgenden Funktionen konfigurieren:
 
-* Verwenden der [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Verwenden der [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Erstellen eigener Regeln zur Bot-Erkennung.
 
 ### Verwenden der IAB/ABC International Spiders and Bots List {#iab-list}
 
-Die [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) ist eine Drittanbieter-Liste von Internet-Spiders und -Bots nach Industriestandard. In dieser Liste können Sie automatisierten Traffic wie Suchmaschinen-Crawler, Überwachungs-Tools und anderen nicht menschlichen Traffic identifizieren, den Sie möglicherweise nicht in Ihre Analytics-Zählungen einbeziehen möchten.
+Die [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) ist eine Drittanbieter-Liste von Internet-Spiders und -Bots nach Industriestandard. In dieser Liste können Sie automatisierten Traffic, z. B. Suchmaschinen-Crawlers, Überwachungs-Tools und anderen nicht menschlichen Traffic, identifizieren, den Sie möglicherweise nicht in Ihre Analytics-Zählungen einbeziehen möchten.
 
 So konfigurieren Sie Ihren Datenstrom für die Verwendung der IAB/ABC International Spiders and Bots List:
 
@@ -87,7 +87,7 @@ Sie können Regeln für die Bot-Erkennung basierend auf **IP-** und **IP-Adressb
 
 Wenn Sie detailliertere Regeln zur Bot-Erkennung benötigen, können Sie die IP-Bedingungen mit den Bedingungen im Anfrage-Header kombinieren. Regeln zur Bot-Erkennung können die folgenden Kopfzeilen verwenden:
 
-| HTTP-Kopfzeile | Beschreibung |
+| HTTP-Header | Beschreibung |
 | --- | --- |
 | `user-agent` | Eine Kopfzeile, mit der Server und Netzwerk-Peers die Anwendung, das Betriebssystem, den Anbieter und/oder die Version des anfragenden Benutzeragenten identifizieren können. |
 | `content-type` | Gibt den ursprünglichen Medientyp der Ressource an (vor jeder zum Senden angewendeten Inhaltscodierung). |

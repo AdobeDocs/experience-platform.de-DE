@@ -2,10 +2,10 @@
 title: Übersicht über Datenströme
 description: Erfahren Sie, wie Sie mithilfe von Datenströmen Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Zielen von Drittanbietern verbinden können.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 60%
+source-wordcount: '706'
+ht-degree: 56%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 60%
 
 Ein Datenstrom stellt die Server-seitige Konfiguration für die Adobe Experience Platform Web- und Mobile-SDKs dar. Während Client-seitige Einstellungen (z. B. die [`configure`](/help/collection/js/commands/configure/overview.md)) mit dem `edgeDomain`-Befehl in der SDK verarbeitet werden, verwalten Datenströme alle anderen Konfigurationen.
 
-Wenn Sie eine Anfrage an die Edge Network senden, verweist die `datastreamId` auf den Datenstrom, an den die Daten gesendet werden. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne den Code Ihrer Website zu ändern.
+Wenn Sie eine Anfrage an die Edge Network senden, verweist die `datastreamId` auf den Datenstrom, an den die Daten gesendet werden. Sie können die Server-seitige Konfiguration aktualisieren, ohne den Code Ihrer Website zu ändern.
 
 Sie können Datenströme erstellen und verwalten, indem Sie im linken Navigationsbereich der Adobe Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche **[!UICONTROL Datastreams]** auswählen.
 
@@ -27,7 +27,7 @@ Weitere Informationen zum Konfigurieren eines Datenstroms in der Benutzeroberfl�
 >
 >Der Inhalt dieses Dokuments ist keine Rechtsberatung und soll keine Rechtsberatung ersetzen. Wenden Sie sich an die Rechtsabteilung Ihres Unternehmens, um sich über den Umgang mit sensiblen Daten zu beraten.
 
-Unternehmensrichtlinien zur Datenverwaltung und gesetzliche Vorschriften schränken die Erfassung, Verarbeitung und Nutzung sensibler Kundendaten zunehmend ein. Dazu gehören die Erfassung, Verarbeitung und Verwendung geschützter Gesundheitsdaten (PHI), die Vorschriften wie dem Health Insurance Portability and Accountability Act (HIPAA) unterliegen.
+Unternehmensrichtlinien zur Datenverwaltung und gesetzliche Vorschriften schränken die Erfassung, Verarbeitung und Nutzung sensibler Kundendaten zunehmend ein. Dazu gehört die Erfassung, Verarbeitung und Nutzung geschützter Gesundheitsdaten (PHI), die Vorschriften wie dem Health Insurance Portability and Accountability Act (HIPAA) unterliegen.
 
 Datenströme bieten drei Methoden, mit denen Sie Ihre sensiblen Daten sicher verarbeiten können:
 

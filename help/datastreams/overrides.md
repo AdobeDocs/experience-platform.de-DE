@@ -2,22 +2,22 @@
 title: Konfigurieren von Datenstromüberschreibungen
 description: Erfahren Sie, wie Sie Datenstrom-Überschreibungen in der Datenstrom-Benutzeroberfläche konfigurieren und über die Web-SDK oder mobile SDK aktivieren.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1043'
 ht-degree: 53%
 
 ---
 
 # Konfigurieren von Datenstromüberschreibungen
 
-Mit Datenstrom-Überschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenströme definieren, die über die Web-SDK oder mobile SDK an die Edge Network übergeben werden.
+Verwenden Sie Datenstromüberschreibungen, um zusätzliche Konfigurationen für Ihre Datenströme zu definieren, die über die Web-SDK oder mobile SDK an die Edge Network übergeben werden.
 
 Auf diese Weise können Sie andere Datenstromverhaltensweisen als die standardmäßigen Trigger vornehmen, ohne einen Datenstrom zu erstellen oder Ihre vorhandenen Einstellungen zu ändern.
 
 Die Überschreibung der Datenstromkonfiguration ist ein zweistufiger Prozess:
 
-1. Zunächst müssen Sie Ihre Überschreibung der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration“ &#x200B;](configure.md).
+1. Zunächst müssen Sie Ihre Überschreibung der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration“ ](configure.md).
 2. Anschließend müssen Sie die Überschreibungen auf eine der folgenden Arten an Edge Network senden:
    * Durch die `sendEvent` oder `configure` [Web SDK](#send-overrides)-Befehle.
    * Über die Web-SDK [Tag-Erweiterung](../tags/extensions/client/web-sdk/configure/configuration-overrides.md).
@@ -51,7 +51,7 @@ Anstatt Daten an einen standardmäßigen Datenstrom zu senden, kann das Unterneh
 
 ## Konfigurieren von Datenstromüberschreibungen in der Datenstrom-Benutzeroberfläche {#configure-overrides}
 
-Überschreibungen der Datenstromkonfiguration ermöglichen es Ihnen, die folgenden Datenstromkonfigurationen zu ändern:
+Mit Überschreibungen der Datenstromkonfiguration können Sie die folgenden Datenstromkonfigurationen ändern:
 
 * Experience Platform-Ereignisdatensätze
 * Adobe Target-Eigenschafts-Token
@@ -74,7 +74,7 @@ Ihre Adobe Target-Datenstromüberschreibungen sollten jetzt konfiguriert sein. J
 
 Um Datenstromüberschreibungen für einen Adobe Analytics-Datenstrom zu konfigurieren, müssen Sie zunächst einen [Adobe Analytics](configure.md#analytics)-Datenstrom erstellen lassen. Befolgen Sie die Anweisungen, mit dem [Adobe Analytics](configure.md#analytics)-Dienst einen [Datenstrom zu konfigurieren](configure.md).
 
-Nachdem Sie den Datenstrom erstellt haben, bearbeiten Sie den [Adobe Analytics](configure.md#target)-Service, den Sie hinzugefügt haben, und verwenden Sie den Abschnitt **[!UICONTROL Report Suite Overrides]** , um die gewünschten Datenstromüberschreibungen hinzuzufügen, wie in der Abbildung unten dargestellt.
+Nachdem Sie den Datenstrom erstellt haben, bearbeiten Sie den [Adobe Analytics](configure.md#analytics)-Service, den Sie hinzugefügt haben, und verwenden Sie den Abschnitt **[!UICONTROL Report Suite Overrides]** , um die gewünschten Datenstromüberschreibungen hinzuzufügen, wie in der Abbildung unten dargestellt.
 
 Wählen Sie **[!UICONTROL Show Batch Mode]** aus, um die Batch-Bearbeitung der Report Suite-Überschreibungen zu aktivieren. Sie können eine Liste mit Report Suite-Überschreibungen kopieren und einfügen und dabei pro Zeile eine Report Suite eingeben.
 
