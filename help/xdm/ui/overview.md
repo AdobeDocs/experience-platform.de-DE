@@ -40,7 +40,7 @@ Der [!UICONTROL Schemas]-Arbeitsbereich bietet leistungsstarke Tools zum Erstell
 
 ## XDM-Felder definieren
 
-Klassen, Feldergruppen und Datentypen tragen alle Felder zu einem Schema bei. Sie können aus einer Liste von Standardfeldtypen auswählen, wenn Sie diesen Ressourcen Felder hinzufügen, und auch spezielle Felder für bestimmte Anwendungsfälle definieren. Weitere Informationen finden Sie im Handbuch unter [Definieren von XDM-Feldern in ](./fields/overview.md) Benutzeroberfläche“.
+Klassen, Feldergruppen und Datentypen tragen alle Felder zu einem Schema bei. Sie können aus einer Liste von Standardfeldtypen auswählen, wenn Sie diesen Ressourcen Felder hinzufügen, und auch spezielle Felder für bestimmte Anwendungsfälle definieren. Weitere Informationen finden Sie im Handbuch unter [Definieren von XDM-Feldern in &#x200B;](./fields/overview.md) Benutzeroberfläche“.
 
 ## Nächste Schritte
 

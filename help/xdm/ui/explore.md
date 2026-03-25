@@ -26,7 +26,7 @@ Wählen Sie in der Benutzeroberfläche von Experience Platform im linken Navigat
 
 Das Filtersymbol (![Filtersymbol Bild](/help/images/icons/filter.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzugrenzen. Ressourcenfilter sind für Schemata und Beziehungen auf den Registerkarten **[!UICONTROL Browse]** bzw. **[!UICONTROL Relationships]** verfügbar.
 
-Auf der Registerkarte [!UICONTROL Browse] des Arbeitsbereichs [!UICONTROL Schemas] können Sie Ihr Schema-Inventar filtern. Verwenden Sie den Umschalter **[!UICONTROL Included in Profile]** , um nur Schemas anzuzeigen, die für die Verwendung im [Echtzeit-Kundenprofil“ aktiviert ](../../profile/home.md). Verwenden Sie den Umschalter **[!UICONTROL Show adhoc schemas]** , um die Liste der Schemata zu filtern, die mit Feldern erstellt wurden, die in einem Namespace enthalten sind und nur von einem einzigen Datensatz verwendet werden können.
+Auf der Registerkarte [!UICONTROL Browse] des Arbeitsbereichs [!UICONTROL Schemas] können Sie Ihr Schema-Inventar filtern. Verwenden Sie den Umschalter **[!UICONTROL Included in Profile]** , um nur Schemas anzuzeigen, die für die Verwendung im [Echtzeit-Kundenprofil“ aktiviert &#x200B;](../../profile/home.md). Verwenden Sie den Umschalter **[!UICONTROL Show adhoc schemas]** , um die Liste der Schemata zu filtern, die mit Feldern erstellt wurden, die in einem Namespace enthalten sind und nur von einem einzigen Datensatz verwendet werden können.
 
 ![Die Registerkarte &quot;[!UICONTROL Schemas] Workspace-[!UICONTROL Browse]&quot; mit hervorgehobenem Bedienfeld „Filter“.](../images/ui/explore/filters.png)
 
@@ -78,7 +78,7 @@ Je nach Ressourcentyp und Ihren Berechtigungen sind möglicherweise die folgende
 - **[!UICONTROL Delete]** - Eine benutzerdefinierte Ressource dauerhaft aus Ihrer Organisation entfernen (wenn Einschränkungen dies zulassen). Wenn der Löschvorgang blockiert ist, siehe [Einschränkungen](#delete-constraints).
 - **[!UICONTROL Download sample file]** - Generieren Sie eine Beispieldatendatei basierend auf der Ressourcenstruktur. Schritt für Schritt: [Generieren von Beispiel-XDM-](./sample.md).
 - **[!UICONTROL Copy JSON structure]** - Kopieren Sie die Ressourcendefinition im JSON-Format zur Wiederverwendung, zum Export oder zur Überprüfung. Schritt für Schritt: [XDM-Schemata exportieren](./export.md).
-- **[!UICONTROL Add to package]** - Die Ressource wird in ein Sandbox-Paket für den Export oder Import in mehrere Sandboxes aufgenommen. Schritt für Schritt: [Objekte in ein Paket ](../../sandboxes/ui/sandbox-tooling.md#export-objects).
+- **[!UICONTROL Add to package]** - Die Ressource wird in ein Sandbox-Paket für den Export oder Import in mehrere Sandboxes aufgenommen. Schritt für Schritt: [Objekte in ein Paket &#x200B;](../../sandboxes/ui/sandbox-tooling.md#export-objects).
 
 Folgendes gilt für verschiedene Ressourcentypen:
 
@@ -142,7 +142,7 @@ Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Felder
 
 ![Der Schema-Editor mit hervorgehobenem Vorhängeschloss-Symbol](../images/ui/explore/schema-editor-padlock-icon.png)
 
-Eine Anleitung [ Sie in der Dokumentation zum Hinzufügen benutzerdefinierter Felder ](./resources/schemas.md) Standardfeldgruppen . Eine Standardklasse kann nicht bearbeitet werden.
+Eine Anleitung [&#x200B; Sie in der Dokumentation zum Hinzufügen benutzerdefinierter Felder &#x200B;](./resources/schemas.md) Standardfeldgruppen . Eine Standardklasse kann nicht bearbeitet werden.
 
 ### Systemgenerierte Felder {#system-fields}
 
@@ -176,13 +176,13 @@ Wenn es sich bei dem überprüften Feld um ein Aufzählungsfeld handelt, zeigt d
 
 Beim Überprüfen von Schemata, die Identitätsfelder enthalten, werden diese Felder in der linken Leiste unter der Klasse oder Feldergruppe aufgeführt, die sie für das Schema bereitstellt. Wählen Sie den Namen des Identitätsfelds in der linken Leiste aus, um das Feld auf der Arbeitsfläche anzuzeigen, unabhängig davon, wie tief es verschachtelt ist.
 
-Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol) ](/help/images/icons/identity-service.png). Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen anzeigen, z. B. den [Identity-Namespace](../../identity-service/features/namespaces.md) und ob das Feld die primäre Identität für das Schema ist oder nicht.
+Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol) &#x200B;](/help/images/icons/identity-service.png). Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen anzeigen, z. B. den [Identity-Namespace](../../identity-service/features/namespaces.md) und ob das Feld die primäre Identität für das Schema ist oder nicht.
 
 ![Der Schema-Editor mit der hervorgehobenen Identität des Schemas in der linken Leiste, dem hervorgehobenen Feld im Schemadiagramm und dem hervorgehobenen Identity-Namespace in den Feldeigenschaften.](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->Weitere Informationen zu Identitätsfeldern und [ Beziehung zu nachgelagerten Experience Platform](./fields/identity.md)Services finden Sie im Handbuch unter „Definieren von Identitätsfeldern“.
+>Weitere Informationen zu Identitätsfeldern und [&#x200B; Beziehung zu nachgelagerten Experience Platform](./fields/identity.md)Services finden Sie im Handbuch unter „Definieren von Identitätsfeldern“.
 
 ### Beziehungsfelder {#relationship}
 
@@ -194,7 +194,7 @@ Um den Identity-Namespace der primären Identität des Referenzschemas anzuzeige
 
 ![Das Dialogfeld „Beziehung bearbeiten“ mit den angezeigten Beziehungsparametern.](../images/ui/explore/edit-relationship-dialog.png)
 
-Weitere Informationen zur Verwendung von [ in XDM-Schemata finden Sie ](../tutorials/relationship-ui.md) Tutorial zum Erstellen einer Beziehung in der Benutzeroberfläche .
+Weitere Informationen zur Verwendung von [&#x200B; in XDM-Schemata finden Sie &#x200B;](../tutorials/relationship-ui.md) Tutorial zum Erstellen einer Beziehung in der Benutzeroberfläche .
 
 ## Nächste Schritte
 
