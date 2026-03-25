@@ -172,7 +172,7 @@ Wenn Sie die Karte **[!UICONTROL Deprecated Identity Namespace]** auswählen, wi
 
 ![Veraltetes Detailbedienfeld für Identity-Namespaces mit Beschreibung, Auswirkungen und der Liste der betroffenen Namespaces](assets/health-checks/deprecated-namespace-detail.png)
 
-Weitere Informationen finden Sie im [Experience Cloud Knowledge Base-Artikel zu veralteten Namespaces](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Weitere Informationen finden Sie im [Experience Cloud Knowledge Base-Artikel zu veralteten Namespaces](https://experienceleague.adobe.com/de/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Nächste Schritte {#next-steps}
 
