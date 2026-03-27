@@ -6,10 +6,10 @@ badge: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 40a9ea68fd855b2f0d92a4fa336f1b68142f0649
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 31%
+source-wordcount: '1511'
+ht-degree: 27%
 
 ---
 
@@ -25,15 +25,15 @@ Verwenden Sie das [!DNL Microsoft Ads Customer Match] Ziel, um Kundinnen und Kun
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann das [!DNL Microsoft Ads Customer Match]-Ziel verwendet wird, finden Sie hier einige Beispielanwendungsfälle, die [!DNL Adobe Experience Platform] Kundinnen und Kunden mit dieser Funktion bewältigen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Microsoft Ads Customer Match]-Ziel verwenden, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit dieser Funktion bewältigen können.
 
-### Anwendungsfall #1 {#use-case-1}
+### Erneutes Targeting bestehender Kunden mit personalisierten Angeboten {#use-case-1}
 
 Eine E-Commerce-Marke möchte Bestandskunden über [!DNL Microsoft Search] und [!DNL Microsoft Audience Network] ansprechen, um Angebote basierend auf ihren früheren Käufen und dem Navigationsverlauf zu personalisieren. Die Marke kann E-Mail-Adressen aus ihrem eigenen CRM in Experience Platform aufnehmen, Zielgruppen aus ihren eigenen Offline-Daten erstellen und diese Zielgruppen an [!DNL Microsoft Ads Customer Match] senden, die über Such- und Zielgruppenanzeigen hinweg verwendet werden können, und so ihre Werbeausgaben optimieren.
 
-### Anwendungsfall #2 {#use-case-2}
+### Werbung für neue Produkte bei Bestandskunden {#use-case-2}
 
-Ein Technologieunternehmen hat ein neues Produkt auf den Markt gebracht. Um dieses neue Produkt zu bewerben, möchten sie das Bewusstsein der Kunden schärfen, die zuvor verwandte Produkte gekauft haben. Sie laden E-Mail-Adressen aus ihrer CRM-Datenbank in Experience Platform hoch, wobei die E-Mail-Adressen als Kennungen verwendet werden. Zielgruppen werden basierend auf Kunden erstellt, denen zugehörige Produkte gehören. Diese Zielgruppen werden an [!DNL Microsoft Ads Customer Match] gesendet, damit das Unternehmen aktuelle Kunden und ähnliche Kunden in der gesamten [!DNL Microsoft Advertising Network] ansprechen kann.
+Ein Technologieunternehmen hat ein neues Produkt auf den Markt gebracht und möchte Kunden, die zuvor ähnliche Produkte gekauft haben, dafür sensibilisieren. Sie laden E-Mail-Adressen aus ihrer CRM-Datenbank in Experience Platform hoch, wobei die E-Mail-Adressen als Kennungen verwendet werden. Zielgruppen werden basierend auf Kunden erstellt, denen zugehörige Produkte gehören. Diese Zielgruppen werden an [!DNL Microsoft Ads Customer Match] gesendet, damit das Unternehmen aktuelle Kunden und ähnliche Kunden in der gesamten [!DNL Microsoft Advertising Network] ansprechen kann.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -41,7 +41,7 @@ Ein Technologieunternehmen hat ein neues Produkt auf den Markt gebracht. Um dies
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| `email` | Nur-Text-E-Mail-Adressen | Die [!DNL Microsoft Ads Customer Match]-Verbindung unterstützt nur E-Mail-Adressen im Klartext. Experience Platform hasht E-Mail-Adressen beim Export automatisch, um die Anforderungen von Microsoft zu erfüllen. |
+| `email` | Nur-Text-E-Mail-Adressen | Im Zuordnungsschritt werden nur (ungehashte) E-Mail **Adressen als**-Felder unterstützt. Vorab gehashte Quellfelder werden nicht unterstützt. Experience Platform hasht E-Mail-Adressen immer, bevor sie nach [!DNL Microsoft Ads] exportiert werden. |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -86,18 +86,32 @@ Um Zielgruppendaten an [!DNL Microsoft Ads] zu senden, benötigen Sie ein aktive
 
 Bevor Sie Zielgruppen über dieses Ziel aktivieren, müssen Sie zunächst manuell eine Kundenabgleichsliste in Ihrem [!DNL Microsoft Advertising]-Konto erstellen. Diese anfängliche manuelle Erstellung ist erforderlich, um die Geschäftsbedingungen für die Kundenübereinstimmung zu akzeptieren, sodass von Experience Platform gesendete Zielgruppen automatisch erstellt werden können. Wenn dieser Schritt nicht abgeschlossen wird, kann dies zu Fehlern bei der Aktivierung von Zielgruppen führen.
 
+### Admin-Genehmigung für Arbeitskonto (MS Entra) {#work-account-admin-approval}
+
+Wenn Sie sich mit einem Microsoft-Arbeitskonto (auch als Microsoft Entra-Konto bezeichnet) authentifizieren, muss der IT-Administrator Ihres Unternehmens möglicherweise eine Genehmigung erteilen, bevor Sie eine Verbindung zu [!DNL Microsoft Advertising] herstellen können.
+
+Wenn Sie versuchen, sich mit einem Arbeitskonto zu authentifizieren, werden Sie möglicherweise zu einer Seite **Genehmigung erforderlich** weitergeleitet. Auf dieser Seite wird eine Begründung für die Verknüpfung der App angefordert und die erforderlichen Berechtigungen, einschließlich `ads.manage`, aufgelistet. Senden Sie die Anfrage und Ihr IT-Administrator erhält eine Benachrichtigung, um sie zu überprüfen. Sie erhalten auch eine Bestätigungs-E-Mail, dass Ihre Anfrage gesendet wurde.
+
+Sobald der IT-Administrator die Anfrage im Azure Portal genehmigt hat, können Sie zu Experience Platform zurückkehren und sich mit Ihrem Arbeitskonto authentifizieren. Eine Anleitung finden Sie in der Dokumentation zu Microsoft:
+
+* [Überprüfen von Einverständnisanfragen durch Administratoren und Ergreifen entsprechender Maßnahmen](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [Konfigurieren des Workflows für das Admin-Einverständnis](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+* [Konfigurieren, wie Benutzer Anwendungen zustimmen](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
+
+Wenn der IT-Administrator die Anfrage noch nicht genehmigt hat, schlägt die Authentifizierung mit dem folgenden Fehler fehl: `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
+
 ### Kontokonfiguration {#account-configuration}
 
 Beim Konfigurieren des -Ziels müssen Sie die folgenden Informationen angeben:
 
-* [!UICONTROL Customer ID]: Ihre [!DNL Microsoft Ads] Kunden-ID (CID) im ganzzahligen Format. Anweisungen zum Ermitteln Ihrer Kunden-ID finden Sie [&#x200B; der Dokumentation zu Microsoft Advertising &#x200B;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
-* [!UICONTROL Customer Account ID]: Ihre [!DNL Microsoft Ads] Kundenkonto-ID. Anweisungen zum Ermitteln Ihrer Kundenkonto-ID [&#x200B; Sie in der Dokumentation zu Microsoft Advertising &#x200B;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
+* [!UICONTROL Customer ID]: Ihre [!DNL Microsoft Ads] Kunden-ID (CID) im ganzzahligen Format. Anweisungen zum Ermitteln Ihrer Kunden-ID finden Sie [ der Dokumentation zu Microsoft Advertising ](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
+* [!UICONTROL Customer Account ID]: Ihre [!DNL Microsoft Ads] Kundenkonto-ID. Anweisungen zum Ermitteln Ihrer Kundenkonto-ID [ Sie in der Dokumentation zu Microsoft Advertising ](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
@@ -130,12 +144,12 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Customer ID]**: Ihre [!DNL Microsoft Ads] Kunden-ID (CID). Anweisungen zum Ermitteln Ihrer Kunden-ID finden Sie [&#x200B; der Dokumentation zu Microsoft Advertising &#x200B;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
-* **[!UICONTROL Customer Account ID]**: Ihre [!DNL Microsoft Ads] Kundenkonto-ID. Anweisungen zum Ermitteln Ihrer Kundenkonto-ID [&#x200B; Sie in der Dokumentation zu Microsoft Advertising &#x200B;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
+* **[!UICONTROL Customer ID]**: Ihre [!DNL Microsoft Ads] Kunden-ID (CID). Anweisungen zum Ermitteln Ihrer Kunden-ID finden Sie [ der Dokumentation zu Microsoft Advertising ](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
+* **[!UICONTROL Customer Account ID]**: Ihre [!DNL Microsoft Ads] Kundenkonto-ID. Anweisungen zum Ermitteln Ihrer Kundenkonto-ID [ Sie in der Dokumentation zu Microsoft Advertising ](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
 * **[!UICONTROL Membership Duration]**: Die Anzahl der Tage, die eine Benutzerin oder ein Benutzer in der Kundenabgleichliste verbleibt. Akzeptierte Werte liegen zwischen 1 und 390 Tagen.
-* **[!UICONTROL Customer Match List Availability]**: Wählen Sie die Verfügbarkeit der Kundenabgleichliste aus. [!DNL Microsoft Advertising] kann eine Kunden-ID mehrere Kundenkonto-IDs (Advertiser-Konten) enthalten. Wählen Sie **[!UICONTROL Customer ID (all advertising accounts)]** aus, um die Liste für alle Advertiser-Konten unter Ihrer Kunden-ID verfügbar zu machen, oder **[!UICONTROL Customer Account ID (single advertising account)]** Sie die Liste auf die spezifische Kundenkonto-ID beschränken, die Sie oben angegeben haben. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Microsoft Advertising .](https://help.ads.microsoft.com/apex/index/3/en/56727)
+* **[!UICONTROL Customer Match List Availability]**: Wählen Sie die Verfügbarkeit der Kundenabgleichliste aus. [!DNL Microsoft Advertising] kann eine Kunden-ID mehrere Kundenkonto-IDs (Advertiser-Konten) enthalten. Wählen Sie **[!UICONTROL Customer ID (all advertising accounts)]** aus, um die Liste für alle Advertiser-Konten unter Ihrer Kunden-ID verfügbar zu machen, oder **[!UICONTROL Customer Account ID (single advertising account)]** Sie die Liste auf die spezifische Kundenkonto-ID beschränken, die Sie oben angegeben haben. Weitere Informationen finden Sie in der Dokumentation [ Microsoft Advertising .](https://help.ads.microsoft.com/apex/index/3/en/56727)
 
-![Platform-UI-Bild, das die Zieldetailfelder für das Microsoft Ads-Ziel „Customer Match“ anzeigt.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+  ![Platform-UI-Bild, das die Zieldetailfelder für das Microsoft Ads-Ziel „Customer Match“ anzeigt.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -148,7 +162,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Um *Identitäten* an Ziele zu exportieren, benötigen Sie die **[!UICONTROL View Identity Graph]**&#x200B;[&#x200B; Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um *Identitäten* an Ziele zu exportieren, benötigen Sie die **[!UICONTROL View Identity Graph]**[ Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
@@ -161,7 +175,7 @@ Im **[!UICONTROL Mapping]** Schritt müssen Sie die E-Mail-Identität aus Ihren 
 
 >[!IMPORTANT]
 >
->Sie müssen ungehashte (Nur-Text-)Quellfelder verwenden. Verwenden Sie keine vorab gehashten Quellidentitäten wie `Emails (SHA256, lowercased)`. Experience Platform hasht die E-Mail-Adressen beim Export automatisch, um die Anforderungen von Microsoft zu erfüllen.
+>Sie müssen E-Mail-Adressen im Nur-Text-Format (ungehasht) als **-** zuordnen. Vorab gehashte Quellidentitäten wie `Emails (SHA256, lowercased)` werden nicht unterstützt. Experience Platform hasht E-Mail-Adressen immer, bevor sie nach [!DNL Microsoft Ads] exportiert werden.
 
 ![UI-Bild, das den Zuordnungsschritt mit der IdentityMap-E-Mail zeigt, die der Identity-E-Mail zugeordnet ist.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
