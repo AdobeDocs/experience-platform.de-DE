@@ -158,7 +158,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="Vorkonfigurierte Zuordnungssätze"
 >abstract="Wir haben diese beiden Zuordnungssätze für Sie vorkonfiguriert: ECID und [!DNL adcloud] Cookie. Wenn Sie Daten für Adobe Advertising DSP aktivieren, müssen die für die aktivierten Zielgruppen qualifizierten Profile mindestens über eine ECID-Identität verfügen, die mit ihrem Profil verknüpft ist, damit sie erfolgreich in das Ziel exportiert werden können."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
 
 >[!IMPORTANT]
 >
