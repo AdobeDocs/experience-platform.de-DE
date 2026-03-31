@@ -2,9 +2,9 @@
 title: KI-Assistent (veraltet) in Adobe Experience Platform - Übersicht
 description: Erfahren Sie mehr über den KI-Assistenten (alt), seine Nuancen und Anwendungsfälle und wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-Time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 68c55e370cab58ce5c93359520bf4ce671282a1b
+source-git-commit: cc3ac0bb3e448f4a4fa69df5dcb7c45b098ca255
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1264'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Dieses Dokument gilt für den KI-Assistenten (veraltet). Informationen zum KI-Assistenten (der nächsten Generation) finden Sie im Handbuch [Benutzeroberfläche des KI-Assistenten](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) in der Dokumentation [KI in Experience Cloud](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/home).
+>Dieses Dokument gilt für den KI-Assistenten (veraltet). Informationen zum KI-Assistenten (der nächsten Generation) finden Sie im Handbuch [Benutzeroberfläche des KI-Assistenten](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) in der Dokumentation [KI in Experience Cloud](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 In der folgenden Tabelle finden Sie einen Vergleich von KI-Assistent (veraltet) und KI-Assistent (nächste Generation):
 
@@ -21,9 +21,9 @@ In der folgenden Tabelle finden Sie einen Vergleich von KI-Assistent (veraltet) 
 | --- | --- | --- |
 | Benutzererlebnis | Der KI-Assistent (veraltet) ist nur in einem Bereich der rechten Leiste verfügbar. | Der KI-Assistent (der nächsten Generation) ist sowohl im Bereich der rechten Leiste als auch im immersiven Vollbilderlebnis verfügbar. |
 | Funktionsumfang | Sie können den KI-Assistenten (frühere Version) sowohl für Produktkenntnisse als auch für betriebliche Einblicke verwenden. | Sie können den KI-Assistenten (der nächsten Generation) für Produktkenntnisse, operative Einblicke sowie erweiterte agentische Fähigkeiten und die Ausführung mehrstufiger Aufgaben verwenden. |
-| Architektur von Platform | Der KI-Assistent (veraltet) wurde nicht auf dem Agent Orchestrator-Stack erstellt. | Der KI-Assistent (der nächsten Generation) wird von [Adobe Experience Platform Agent Orchestrator &#x200B;](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) unterstützt und ermöglicht Erweiterbarkeit und erweiterte Koordinierung über Funktionen hinweg. |
+| Architektur von Platform | Der KI-Assistent (veraltet) wurde nicht auf dem Agent Orchestrator-Stack erstellt. | Der KI-Assistent (der nächsten Generation) wird von [Adobe Experience Platform Agent Orchestrator ](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) unterstützt und ermöglicht Erweiterbarkeit und erweiterte Koordinierung über Funktionen hinweg. |
 | Anwendungsbereich | Der KI-Assistent (veraltet) ist eine anwendungsspezifische Implementierung. | Sie können den KI-Assistenten (der nächsten Generation) für ein einheitliches KI-Assistentenerlebnis in allen Adobe Experience Cloud-Programmen verwenden. |
-| Zugriffs- und Berechtigungsmodell | Auf einzelne Produktgrenzen abgestimmtes Zugriffsmodell für die Anwendung. | Alle Benutzer erhalten Zugriff auf den KI-Assistenten (der nächsten Generation) und die zugehörigen Experience Platform-Agenten. **Hinweis**: <ul><li>**Adobe Experience Manager**: Ihr Administrator muss Ihnen über die [Adobe Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html) die Berechtigung für den Zugriff auf den KI-Assistenten (der nächsten Generation) erteilen.</li><li>**Customer Journey Analytics**: Ihr Administrator muss Ihnen die Berechtigung für den Zugriff auf den KI-Assistenten über die [Customer Journey Analytics-Zugriffssteuerung](https://experienceleague.adobe.com/de/docs/analytics-platform/using/technotes/access-control?lang=en) erteilen. Auf diese Weise können Sie Fragen zu Produktwissen und Dateneinblicken stellen. |
+| Zugriffs- und Berechtigungsmodell | Auf einzelne Produktgrenzen abgestimmtes Zugriffsmodell für die Anwendung. | Alle Benutzer erhalten Zugriff auf den KI-Assistenten (der nächsten Generation) und die zugehörigen Experience Platform-Agenten. **Hinweis**: <ul><li>**Adobe Experience Manager**: Ihr Administrator muss Ihnen über die [Adobe Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html) die Berechtigung für den Zugriff auf den KI-Assistenten (der nächsten Generation) erteilen.</li><li>**Customer Journey Analytics**: Ihr Administrator muss Ihnen die Berechtigung für den Zugriff auf den KI-Assistenten über die [Customer Journey Analytics-Zugriffssteuerung](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en) erteilen. Auf diese Weise können Sie Fragen zu Produktwissen und Dateneinblicken stellen. |
 
 Das folgende Video soll Ihnen dabei helfen, KI-Assistent zu verstehen.
 
@@ -75,7 +75,7 @@ Produktkenntnisse beziehen sich auf Konzepte und Themen, die auf der Dokumentati
 
 Sehen Sie sich das folgende Video an, um weitere Informationen zu KI-Assistent (veraltete Produktkenntnisse) zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3475939/?captions=ger&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Betriebliche Erkenntnisse {#operational-insights}
 
@@ -93,9 +93,12 @@ Sie können Fragen zum KI-Assistenten (frühere Version) zu Ihren betrieblichen 
 | Zielgruppen | <ul><li>Zielgruppengröße</li><li>Zielgruppentyp (Streaming oder Batch)</li><li>Erstellungs-/Änderungsdatum</li><li>Aktivierungsstatus</li><li>Anzahl der Profile</li><li>Duplizieren von Zielgruppen</li><li>Zielgruppen-Definitionssuche</li><li>Zielgruppe - Zielgruppenbeziehung</li><li>Zielgruppe - Attributbeziehung</li><li>Zielgruppe - Datensatzbeziehung</li><li>Zielgruppen-Ziel-Beziehung</li><li>Namenssuche</li><li>Name- und ID-Suche | <ul><li>Zielgruppenüberschneidungen</li><li>Zielgruppenaktivierung</li><li>Zielgruppe - Kampagnenbeziehungen</li><li>Verfolgung</li><li>Erstellen/Ändern</li><li>Beschriftungen</li><li>Trends bei der Profilqualifizierung</li></ul> |
 | Datenflüsse | <ul><li>Anzahl der Datenflüsse</li><li>Datenflussstatus</li><li>Datenfluss - Datensatzbeziehung</li><li>Datenfluss-Quelle-Beziehung</li></ul> | <ul><li>Erstellung/Änderung</li><li>Datenfluss-Batch-Beziehungen</li><li>Anzahl der aufgenommenen Profile</li></ul> |
 | Datensätze | <ul><li>Anzahl der Datensätze</li><li>Profilaktivierungsstatus</li><li>Erstellungs-/Änderungsdatum</li><li>Datensatz - Schemabeziehung</li><li>Datensatz-Zielgruppen-Beziehung</li><li>Datensatz - Attributbeziehung</li><li>Datensatz - Datenflussbeziehung</li><li>Datensatzgröße</li><li>Anzahl Zeilen</li><li>Namenssuche </li><li>Name- und ID-Suche</li></ul> | <ul><li>Verfolgung</li><li>Erstellt von</li><li>Datensatz - Batch-Beziehung</li><li>Erstellen/Ändern von Datensätzen</li><li>Anzahl der Profile</li><li>Wertesuche</li></ul> |
+| Datenmodelle (Federated Audience Composition) | <ul><li>Anzahl von Datenmodellen</li><li>Namenssuche</li><li>Datenmodell und Schemabeziehung</li><li>Verknüpfungseigenschaften</li><li>Status</li><li>Erstellungs- und Änderungsdaten</li><li>Beziehung zwischen Link und Datenmodell</li></ul> | |
 | Ziele | <ul><li>Konfigurierte Zielzählungen</li><li>Ziel - Zielgruppenbeziehung</li><li>Zielattributbeziehung</li></ul> | <ul><li>Konto eingerichtet</li><li>Informationen zu Kontoanmeldeinformationen</li><li>Eindeutige Profile aktiviert</li></ul> |
+| Federated Databases (Federated Audience Komposition) | <ul><li>Anzahl der Datenbanken</li><li>Datenbankname</li><li>Datenbanktyp</li><li>Erstellungs-/Änderungsdatum</li><li>Status</li></ul> | |
 | Journeys | <ul><li>Zählungen</li><li>Namenssuche</li><li>Name- und ID-Suche</li><li>Journey-Status</li><li>Ausgelöster Status (Zielgruppe vs. Ereignisse)</li><li>Erstellungs-/Änderungsdatum</li><li>Wiederkehrende Häufigkeit</li></ul> | <ul><li>Attribute - Journey-Beziehungen</li><li>Verfolgung</li><li>Erstellung/Änderung</li><li>Erstellt von</li><li>Ereignisse</li><li>Journey - Datensatz</li><li>Journey - Schema</li><li>Angebote</li><li>Trends bei der Profilqualifizierung</li><li>Schrittereignisse</li></ul> |
 | Schemata | <ul><li>Anzahl der Schemata</li><li>Erstellungs-/Änderungsdatum</li><li>Schema - Attributbeziehung</li><li>Schema - Datensatzbeziehung</li><li>Schema - Zielgruppenbeziehung</li><li>Profilaktivierungsstatus</li><li>Namenssuche</li><li>Name- und ID-Suche</li></ul> | <ul><li>Verfolgung</li><li>Erstellung/Änderung</li><li>Erstellt von</li><li>Feldergruppen</li><li>Identitäten</li><li>Identity-Namespaces</li><li>Beschriftungen</li><li>Anzahl der Profile</li></ul> |
+| Schemata (Federated Audience Komposition) | <ul><li>Anzahl der Schemata</li><li>Suche nach Schemanamen und -kennzeichnungen</li><li>Erstellungs- und Änderungsdaten</li><li>Schema-Datenbank-Beziehung</li><li>Zielgruppentyp-Schemata</li></ul> | <ul><li>Schema-Kompositions-Beziehung</li><li>Schemaeigenschaften</li></ul> |
 | Quellen | <ul><li>Anzahl der Konten</li><li>Kontostatus</li><li>Aktive/inaktive Datenflüsse für jedes Konto</li><li>Source-Connector - Datenflussbeziehung</li><li>Source-Konto - Datenflussbeziehung</li></ul> | <ul><li>Informationen zu Kontoanmeldeinformationen</li><li>Konto eingerichtet</li><li>Metriken zur Datenaufnahme</li><li>Anzahl der Profile</li><li>Source - Batch-Beziehungen</li></ul> |
 
 {style="table-layout:auto"}
@@ -104,7 +107,7 @@ Bei Fragen zu operativen Einblicken spiegeln die Antworten möglicherweise nicht
 
 Sehen Sie sich das folgende Video an, um weitere Informationen zu den operativen Einblicken des KI-Assistenten (veraltete Version) zu erhalten:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444041?captions=ger&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Funktionsumfang {#feature-scope}
 
