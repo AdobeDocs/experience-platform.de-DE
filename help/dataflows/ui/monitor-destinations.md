@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
+source-git-commit: b61d6d49e3fcd9a75d2920048ce76d3707592edb
 workflow-type: tm+mt
-source-wordcount: '3542'
-ht-degree: 11%
+source-wordcount: '3580'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 - [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Experience Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
    - [Datenflussausführungen](../../sources/notifications.md): Datenflussausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Häufigkeitskonfiguration ausgewählter Datenflüsse basieren.
 - [Ziele](../../destinations/home.md): Ziele sind vorgefertigte Integrationen mit häufig verwendeten Programmen, die die nahtlose Aktivierung von Daten aus Experience Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Experience Platform] in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 ## Überwachen von Datenflüssen im Arbeitsbereich Ziele {#monitor-dataflows-in-the-destinations-workspace}
 
@@ -70,7 +70,7 @@ In der folgenden Tabelle finden Sie weitere Informationen zu Status:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Fehlgeschlagene Identitäten"
->abstract="Die Anzahl individueller Profilidentitäten, deren Aktivierung für das ausgewählte Ziel fehlgeschlagen ist. Genauere Informationen dazu finden Sie in der Fehlerdiagnose."
+>abstract="Die Anzahl der einzelnen Profilidentitäten, die für das ausgewählte Ziel fehlgeschlagen sind. Weitere Informationen finden Sie in der Fehlerdiagnose."
 
 Für Streaming-Ziele bietet die Registerkarte [!UICONTROL Dataflow runs] eine stündliche Aktualisierung der Metrikdaten in Ihren Datenflussausführungen. Die bekanntesten Statistiken sind Identitäten.
 
@@ -98,7 +98,7 @@ Jede einzelne Datenflussausführung zeigt die folgenden Details:
 - **[!UICONTROL Profiles received]**: Die Gesamtzahl der im Datenfluss empfangenen Profile.
 - **[!UICONTROL Identities activated]**: Die Gesamtzahl der Profilidentitäten, die im Rahmen der Datenflussausführung erfolgreich für das ausgewählte Ziel aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
 - **[!UICONTROL Identities excluded]**: Die Gesamtzahl der Profilidentitäten, die aufgrund fehlender Attribute und Einverständnisverletzungen von der Aktivierung ausgeschlossen sind.
-- **[!UICONTROL Identities failed]** Die Gesamtzahl der Profilidentitäten, die aufgrund von Fehlern nicht für das Ziel aktiviert wurden.
+- **[!UICONTROL Identities failed]**: Die Gesamtzahl der Profilidentitäten, die für das Ziel aufgrund von Fehlern nicht aktiviert sind.
 
   >[!IMPORTANT]
   >
@@ -128,7 +128,7 @@ Auf der Detailseite wird auch eine Liste der fehlgeschlagenen Identitäten und d
 
 Sie können für jede Zielgruppe, die Teil des Datenflusses ist, Informationen zu den aktivierten, ausgeschlossenen oder fehlgeschlagenen Identitäten anzeigen, die auf Zielgruppenebene aufgeschlüsselt sind.
 
-Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist nur für bestimmte Ziele verfügbar. Eine Liste [&#x200B; unterstützten Ziele finden Sie &#x200B;](#audience-level-view) Abschnitt „Zielgruppenansicht .
+Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist nur für bestimmte Ziele verfügbar. Eine Liste [ unterstützten Ziele finden Sie ](#audience-level-view) Abschnitt „Zielgruppenansicht .
 
 ![Überwachung auf Zielgruppenebene für Streaming-Ziele.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -147,7 +147,7 @@ Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist nur für bestimmt
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="Empfangene Profile"
->abstract="Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert."
+>abstract="Die Gesamtzahl der im Datenfluss-Durchgang empfangenen Profile. Bei geplanten Exporten umfasst dies Profile aus dem neuesten Zielgruppen-Schnappschuss sowie alle Profile, deren Zielgruppenzugehörigkeit oder Identität zwischen der Schnappschuss-Erstellungszeit und der Exportzeit geändert wurde. Daher kann diese Anzahl höher sein als die Anzahl der Profile in der Zielgruppe."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
@@ -208,7 +208,7 @@ Sie können auch im Monitoring-Dashboard umfangreiche Informationen zu einem bes
 >
 >Sie können jetzt Informationen zum Datenfluss und den zugehörigen Datenflussausführungen im Monitoring-Dashboard anzeigen. Lesen Sie den folgenden Abschnitt für weitere Informationen.
 
-## Dashboard „Ziele überwachen“ {#monitoring-destinations-dashboard}
+## Dashboard zur Überwachung von Zielen {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ Verwenden Sie den Umschalter **[!UICONTROL Show failures only]** , um nur die fe
 
 ![Datenflussausführungsansicht mit hervorgehobenem Umschalter „Nur Fehler anzeigen“](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
-### Ansicht auf Zielgruppenebene {#segment-level-view}
+### Ansicht auf Zielgruppenebene {#audience-level-view}
 
 Bei Auswahl von **[!UICONTROL Audiences]** wird eine Liste der Zielgruppen angezeigt, die für den ausgewählten Datenfluss innerhalb des ausgewählten Zeitraums aktiviert wurden. Dieser Bildschirm enthält Informationen auf Zielgruppenebene zu den aktivierten, ausgeschlossenen Datensätzen sowie den Status und die Uhrzeit der letzten Datenflussausführung. Durch die Überprüfung der Metriken für ausgeschlossene und aktivierte Datensätze können Sie überprüfen, ob eine Zielgruppe erfolgreich aktiviert wurde oder nicht.
 
@@ -351,11 +351,11 @@ Verwenden Sie die Filterschaltfläche ![filter](/help/images/icons/filter-add.pn
 
 Auf der Seite mit den Datenflussausführungen werden Informationen zu den Datenflussausführungen angezeigt, einschließlich der Startzeit des Datenflusses, der Verarbeitungszeit, der empfangenen Datensätze, der aktivierten, der ausgeschlossenen Datensätze, der fehlgeschlagenen Datensätze, der Aktivierungsrate und des Status.
 
-Wenn Sie in der Ansicht auf Zielgruppenebene einen Drilldown zur Seite [&#x200B; Datenflussausführungen durchführen](#segment-level-view) haben Sie die Möglichkeit, die Datenflussausführungen anhand der folgenden Optionen zu filtern:
+Wenn Sie in der Ansicht auf Zielgruppenebene einen Drilldown zur Seite [ Datenflussausführungen durchführen](#audience-level-view) haben Sie die Möglichkeit, die Datenflussausführungen anhand der folgenden Optionen zu filtern:
 
 - **[!UICONTROL Dataflow runs with failed records]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenflussausführungen auf, die bei der Aktivierung fehlgeschlagen sind. Informationen dazu, warum Datensätze in einer bestimmten Datenflussausführung fehlgeschlagen sind, finden Sie auf der [Datenflussausführungs-Detailseite](#dataflow-run-details-page) für diese Datenflussausführung.
 - **[!UICONTROL Dataflow runs with excluded records]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenflussausführungen auf, bei denen einige Datensätze nicht vollständig aktiviert waren und einige Profile übersprungen wurden. Informationen dazu, warum Datensätze in einer bestimmten Datenflussausführung übersprungen wurden, finden Sie auf der [Datenflussausführungs-Detailseite](#dataflow-run-details-page) für diese Datenflussausführung.
-- **[!UICONTROL Dataflow runs with activated records]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenflussausführungen auf, bei denen Datensätze erfolgreich aktiviert wurden.
+- **[!UICONTROL Dataflow runs with activated records]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenflussausführungen auf, in denen Datensätze erfolgreich aktiviert wurden.
 
 ![Optionsfelder, die zeigen, wie Datenflussausführungen nach Zielgruppen gefiltert werden.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
@@ -371,7 +371,7 @@ Die Seite mit den Datenflussausführungs-Details zeigt zusätzlich zu den Detail
 - **[!UICONTROL IMS org ID]**: Die Organisation, zu der der Datenfluss gehört.
 - **[!UICONTROL Last updated]**: Die Zeit, zu der der Datenfluss zuletzt aktualisiert wurde.
 
-Auf der Detailseite gibt es auch einen Umschalter zum Wechseln zwischen Datenflussausführungsfehlern und Audiences. Diese Option ist für die Ziele verfügbar, die im Abschnitt [Ansicht auf Zielgruppenebene](#segment-level-view) aufgeführt sind.
+Auf der Detailseite gibt es auch einen Umschalter zum Wechseln zwischen Datenflussausführungsfehlern und Audiences. Diese Option ist für die Ziele verfügbar, die im Abschnitt [Ansicht auf Zielgruppenebene](#audience-level-view) aufgeführt sind.
 
 Die Ansicht Datenflussausführungsfehler zeigt eine Liste von fehlgeschlagenen Datensätzen und übersprungenen Datensätzen an. Es werden Informationen zu den fehlgeschlagenen und übersprungenen Datensätzen angezeigt, einschließlich Fehlercode, Identitätsanzahl und Beschreibung. Standardmäßig werden in der Liste die fehlgeschlagenen Datensätze angezeigt. Um übersprungene Datensätze anzuzeigen, wählen Sie den Umschalter **[!UICONTROL Records skipped]** aus.
 
