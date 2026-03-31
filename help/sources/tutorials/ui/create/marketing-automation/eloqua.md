@@ -1,9 +1,10 @@
 ---
 title: Verbinden von Oracle Eloqua (V2) mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche Ihr Oracle Eloqua-Konto mit Experience Platform verbinden.
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1185'
 ht-degree: 7%
 
 ---
@@ -29,7 +30,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Sammeln erforderlicher Anmeldedaten {#credentials}
 
-Informationen zur Authentifizierung [[!DNL Eloqua]  Sie in &#x200B;](../../../../connectors/marketing-automation/eloqua.md)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Eloqua]  Sie in ](../../../../connectors/marketing-automation/eloqua.md)Übersicht“.
 
 ## Navigieren im Quellkatalog {#catalog}
 
@@ -51,7 +52,7 @@ Um ein vorhandenes Konto zu verwenden, klicken Sie auf **[!UICONTROL Existing ac
 
 ## Neues Konto erstellen {#new}
 
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie einen Namen und eine Beschreibung unter Ihrem [!UICONTROL Source connection details] an. Geben Sie als Nächstes unter [!UICONTROL Account authentication] Werte für Ihre **Client-ID**, **Client-Geheimnis**, **Benutzername**, **Kennwort** und **Basisendpunkt** an. Weitere Informationen zu diesen Anmeldeinformationen finden [&#x200B; im &#x200B;](../../../../connectors/marketing-automation/eloqua.md) zur Authentifizierung . Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie einige Sekunden, bis Ihre Verbindung hergestellt ist.
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus und geben Sie einen Namen und eine Beschreibung unter Ihrem [!UICONTROL Source connection details] an. Geben Sie als Nächstes unter [!UICONTROL Account authentication] Werte für Ihre **Client-ID**, **Client-Geheimnis**, **Benutzername**, **Kennwort** und **Basisendpunkt** an. Weitere Informationen zu diesen Anmeldeinformationen finden [ im ](../../../../connectors/marketing-automation/eloqua.md) zur Authentifizierung . Wenn Sie fertig sind, wählen Sie **[!UICONTROL Connect to source]** aus und warten Sie einige Sekunden, bis Ihre Verbindung hergestellt ist.
 
 ![Die neue Kontoschnittstelle mit Feldern für Details zur Quellverbindung und Authentifizierungsberechtigungen.](../../../../images/tutorials/create/eloqua/new.png)
 
@@ -124,7 +125,6 @@ Nachdem Sie die berechneten Felder aktualisiert haben, wählen Sie **[!UICONTROL
 >* **Kontakte:** `C_DateModified`
 >* **Konten:** `M_DateModified`
 >* **Aktivität:** `CreatedAt`
->* **Benutzerdefinierte Objekte:** `UpdatedAt`
 >* **Kampagne:** `updatedAt`
 
 Nach Abschluss der Zuordnung können Sie jetzt einen Aufnahmezeitplan für Ihren Datenfluss konfigurieren. Legen Sie Ihre [!UICONTROL Frequency] auf `Once` fest, um einen einmaligen Aufnahmevorgang zu konfigurieren. Für die inkrementelle Aufnahme können Sie Ihre [!UICONTROL Frequency] auf `Hour`, `Day` oder `Week` festlegen. Bei Verwendung der inkrementellen Aufnahme müssen Sie auch den [!UICONTROL Interval] konfigurieren, um die Zeit zu definieren, die zwischen der Aufnahme vergeht. Wenn beispielsweise die Aufnahmefrequenz auf `Day` und das Intervall auf `15` festgelegt ist, bedeutet dies, dass der Datenfluss alle 15 Tage Daten aufnehmen soll.

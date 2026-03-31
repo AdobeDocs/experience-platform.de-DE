@@ -2,9 +2,10 @@
 title: Übersicht über Oracle Eloqua (v2) Source
 description: Erfahren Sie, wie Sie Oracle Eloqua mit Adobe Experience Platform verbinden.
 last-substantial-update: 2025-02-02T00:00:00Z
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+exl-id: f63beebd-920c-41dd-a924-61511135a234
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1822'
 ht-degree: 2%
 
 ---
@@ -19,11 +20,11 @@ ht-degree: 2%
 
 Sie können die [!DNL Eloqua] verwenden, um Ihr [!DNL Eloqua]-Konto mit Adobe Experience Platform zu verbinden. Lesen Sie die folgende Dokumentation, um zu erfahren, wie Sie beginnen.
 
-## Anwendungsbeispiele {#use-case-examples}
+## Beispiele für Anwendungsfälle {#use-case-examples}
 
 In der folgenden Tabelle sind die Marketing-Objekte aufgeführt, die von der [!DNL Eloqua] (V2)-Integration mit Adobe Experience Platform unterstützt werden. Für jedes Objekt finden Sie eine Beschreibung zusammen mit Beispielanwendungsfällen, um zu veranschaulichen, wie die Integration [!DNL Eloqua] Daten in Real-Time CDP die Marketing-Effektivität und die Kampagnenergebnisse steigern kann.
 
-| Objekt | Beschreibung | Anwendungsbeispiele |
+| Objekt | Beschreibung | Beispiele für Anwendungsfälle |
 | --- | --- | --- |
 | Kontakte | Nehmen Sie Kontaktdaten (wie Name, E-Mail, Telefonnummer, Stellenbezeichnung) in Real-Time CDP auf, um detaillierte, einheitliche Kundenprofile zu erstellen, die alle Interaktionen und Interaktionen mit jedem einzelnen Kontakt zusammenfassen. | **Kampagnenoptimierung:** Durch die Integration von Kontaktdaten aus [!DNL Eloqua] kann Ihr Marketing-Team Interessenten mit hoher Priorität anhand aktueller Aktivitäten wie E-Mail-Öffnungen, Formularübermittlungen und Ereignisregistrierungen identifizieren. Real-Time CDP bietet eine 360°-Ansicht des Verhaltens jedes Kontakts auf E-Mail-, Website- und anderen Marketing-Touchpoints, sodass Marketing-Teams Kampagnen anpassen und das Messaging für eine bessere Interaktion und Konversion optimieren können. |
 | Konten | Nehmen Sie Daten auf Kontoebene auf (z. B. Firmenname, Branche, Unternehmensgröße, Umsatz, Standort), um Strategien für Account-Based Marketing (ABM) in Real-Time CDP zu erstellen, und ermöglichen Sie Ihrem Team, die richtigen Unternehmen anzusprechen und mit relevantem Messaging zu interagieren. | **ABM-Kampagnen:** Die Integration von Account-Daten aus [!DNL Eloqua] hilft bei der Erstellung zielgerichteter ABM-Kampagnen. Ein Softwareunternehmen könnte beispielsweise die Kontodaten verwenden, um maßgeschneiderte E-Mail-Kampagnen zu segmentieren und an Entscheidungsträger in Unternehmen des Finanzsektors zu senden und so neue, auf ihre Branche zugeschnittene Lösungen zu fördern. |
@@ -79,7 +80,7 @@ Um Kampagnendaten aufzunehmen, navigieren Sie zur Benutzeroberfläche **Benutzer
 
 ![Die Sicherheitsgruppe mit hinzugefügten geführten Kampagnen.](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
 
-Optional können Sie einen zusätzlichen Benutzer erstellen und diesen Benutzer zu einer Sicherheitsgruppe hinzufügen. Ausführliche Anweisungen finden Sie in der [!DNL Eloqua] Dokumentation unter [Erstellen eines &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) und [Zuweisen eines Benutzers zu einer Sicherheitsgruppe](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
+Optional können Sie einen zusätzlichen Benutzer erstellen und diesen Benutzer zu einer Sicherheitsgruppe hinzufügen. Ausführliche Anweisungen finden Sie in der [!DNL Eloqua] Dokumentation unter [Erstellen eines ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) und [Zuweisen eines Benutzers zu einer Sicherheitsgruppe](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
 
 ### Sammeln erforderlicher Anmeldedaten
 
@@ -102,7 +103,6 @@ Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um [!DNL Eloq
 >- **Kontakte:** `C_DateModified`
 >- **Konten:** `M_DateModified`
 >- **Aktivität:** `CreatedAt`
->- **Benutzerdefinierte Objekte:** `UpdatedAt`
 >- **Kampagne:** `updatedAt`
 
 Die folgenden Tabellen enthalten detaillierte Zuordnungen zwischen [!DNL Eloqua] Quellfeldern und den entsprechenden Zielfeldern des Experience-Datenmodells (XDM) in Experience Platform. Jede Zeile beschreibt die Umwandlungslogik, ob das Feld unveränderlich ist, und bietet zusätzliche Hinweise, die Ihnen dabei helfen zu verstehen, wie Ihre [!DNL Eloqua] Daten in Experience Platform aufgenommen und strukturiert werden.
@@ -244,4 +244,3 @@ Die Zuordnungsvorlagen verwenden die folgenden Variablenplatzhalter, die ersetzt
 ## Verbinden von [!DNL Eloqua] mit Experience Platform
 
 Fahren Sie mit der Konfiguration Ihrer [!DNL Eloqua]-Quellverbindung in Experience Platform fort. Eine schrittweise Anleitung zum Einrichten der Verbindung über die Benutzeroberfläche finden Sie im [Tutorial hier](../../tutorials/ui/create/marketing-automation/eloqua.md). Lesen Sie dieses Tutorial, um mehr über das Verbinden Ihres [!DNL Eloqua]-Kontos, das Auswählen von Daten, das Zuordnen von Feldern, das Planen von Aufnahmen und das Überwachen Ihrer Datenflüsse zu erfahren.
-
