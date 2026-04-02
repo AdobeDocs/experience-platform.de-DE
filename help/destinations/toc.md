@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
+source-git-commit: 5408dd8a442e6ad47f6c1e12326d04b2390bffaa
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 72%
+source-wordcount: '1344'
+ht-degree: 71%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 72%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -114,6 +114,7 @@ ht-degree: 72%
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
       * [Pinterest-Verbindungs-Upgrade](./catalog/advertising/pinterest-upgrade.md)
       * [PubMatic Connect-Verbindung](./catalog/advertising/pubmatic.md)
+      * [Benutzerdefinierte Zielgruppenverbindung bearbeiten](./catalog/advertising/reddit-custom-audience.md)
       * [Snapchat Ads-Verbindung](./catalog/advertising/snap-inc.md)
       * [Verbindung mit The Trade Desk](./catalog/advertising/tradedesk.md)
       * [The Trade Desk CRM-Verbindung](./catalog/advertising/tradedesk-emails.md)
