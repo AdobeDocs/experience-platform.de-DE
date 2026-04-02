@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '6574'
 ht-degree: 44%
@@ -144,7 +144,7 @@ Sie können die folgenden Operatoren für die jeweiligen Datentypen verwenden:
 | Dieser Monat | Der Wert trat in diesem Kalendermonat auf. | Geburtsmonat **ist** Dieser Monat |
 | Dieses Jahr | Der Wert trat in diesem Kalenderjahr auf. | Anmeldedatum (**)** Jahr |
 | Benutzerdefiniertes Datum | Der Wert trat am angegebenen Datum auf. | Kaufdatum **ist am** Benutzerdefiniertes Datum |
-| Letzte | Der Wert trat innerhalb des zuletzt ausgewählten Zeitraums auf. Geburtstag **ist** Im letzten Monat |
+| Letzte | Der Wert trat innerhalb des zuletzt ausgewählten Zeitraums auf. Geburtstag **ist** Im letzten Monat | |
 | Von (bis) | Der Wert trat innerhalb der beiden ausgewählten Kalenderdaten auf. Dieser Zeitraum umfasst **einschließlich** der beiden Datumsangaben. | Datum der Kontoerstellung **ist** vom 20. April bis zum 13. Juli |
 | Während | Der Wert trat innerhalb des ausgewählten Monats oder Jahres auf. | Verkauf **ist** im März |
 | Innerhalb (+/-) | Der Wert trat innerhalb von Tagen, Wochen, Monaten oder Jahren nach dem ausgewählten Datum auf. Dieser Zeitraum umfasst **einschließlich** der beiden Datumsangaben. | Warenkorbabbruch ist **innerhalb** 3 Tage |

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definieren von Aufzählungsfeldern und empfohlenen Werten in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Aufzählungen und empfohlene Werte für Zeichenfolgenfelder in der Benutzeroberfläche von Experience Platform definieren.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 8%
@@ -24,7 +24,7 @@ Im Experience-Datenmodell (XDM) kann einem Zeichenfolgenfeld ein vordefinierter 
 
 Im Gegensatz zu Auflistungen ermöglicht die Option **[!UICONTROL Suggested values]** die Kennzeichnung eines Satzes empfohlener Werte für ein Zeichenfolgenfeld, durch die die Werte, die es aufnehmen kann, nicht beschränkt werden. Stattdessen beeinflussen vorgeschlagene Werte, welche vordefinierten Werte in der [Segmentierungsbenutzeroberfläche) verfügbar sind](../../../segmentation/ui/overview.md) wenn das Zeichenfolgenfeld als Attribut einbezogen wird.
 
-Beim [Definieren eines neuen &#x200B;](./overview.md#define) in der Benutzeroberfläche von Adobe Experience Platform und Festlegen des Typs auf [!UICONTROL String] haben Sie die Möglichkeit, für dieses Feld einen [Aufzählungs](#enum) oder [empfohlene Werte](#suggested-values) zu definieren.
+Beim [Definieren eines neuen ](./overview.md#define) in der Benutzeroberfläche von Adobe Experience Platform und Festlegen des Typs auf [!UICONTROL String] haben Sie die Möglichkeit, für dieses Feld einen [Aufzählungs](#enum) oder [empfohlene Werte](#suggested-values) zu definieren.
 
 ![Bild, das die Option Aufzählung und empfohlene Werte zeigt, die für ein Zeichenfolgenfeld in der Benutzeroberfläche aktiviert ist](../../images/ui/fields/enum/enum-options-selected.png)
 
@@ -72,7 +72,8 @@ Um neue vorgeschlagene Werte für ein Standardfeld hinzuzufügen, wählen Sie **
 
 ![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt sind](../../images/ui/fields/enum/suggested-standard-add.png)
 
-<!-- ### Removing suggested values for standard fields
+<!-- 
+### Removing suggested values for standard fields
 
 Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
@@ -82,7 +83,8 @@ For example, consider a profile schema where the a suggested value for the stand
 
 In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. 
+-->
 
 ## Evolutionsregeln für Aufzählungen und empfohlene Werte {#evolution}
 
@@ -93,7 +95,7 @@ Bei Auflistungen und empfohlenen Werten gelten nach der Aufnahme die folgenden R
 * Sie **vorgeschlagene** für standardmäßige und benutzerdefinierte Felder mit vorhandenen vorgeschlagenen Werten hinzufügen (KÖNNEN).
 * Sie **vorgeschlagene** aus benutzerdefinierten Feldern mit vorhandenen vorgeschlagenen Werten entfernen (KANN).
 * Sie **KÖNNEN** neue Aufzählungswerte für ein vorhandenes benutzerdefiniertes Aufzählungsfeld hinzufügen.
-* Sie **&#x200B;**&#x200B;die Aufzählungswerte eines benutzerdefinierten Felds nur auf vorgeschlagene Werte umschalten oder es in eine Zeichenfolge ohne Aufzählung oder vorgeschlagene Werte konvertieren. **Dieser Schalter kann nach der Anwendung nicht mehr rückgängig gemacht werden.**
+* Sie **** die Aufzählungswerte eines benutzerdefinierten Felds nur auf vorgeschlagene Werte umschalten oder es in eine Zeichenfolge ohne Aufzählung oder vorgeschlagene Werte konvertieren. **Dieser Schalter kann nach der Anwendung nicht mehr rückgängig gemacht werden.**
 * Aufzählungen **empfohlene Werte können** aus Standardfeldern entfernt werden.
 * Sie **AUFZÄHLUNGSWERTE NICHT** einem Feld ohne vorhandene AUFZÄHLUNG hinzufügen.
 * Sie **KÖNNEN** weniger als alle vorhandenen Aufzählungswerte für ein benutzerdefiniertes Feld entfernen.
@@ -117,7 +119,7 @@ Wenn in verschiedenen Feldergruppen auf denselben benutzerdefinierten Feldpfad v
 
 Aufgrund der aktuellen Systembeschränkungen gibt es zwei Fälle, in denen eine Aufzählung vom System während der Aufnahme nicht validiert wird:
 
-1. Die Aufzählung wird in einem „Array[Feld“ &#x200B;](./array.md).
+1. Die Aufzählung wird in einem „Array[Feld“ ](./array.md).
 1. Die Aufzählung ist mehr als eine Ebene tief in der Schemahierarchie definiert.
 
 ## Nächste Schritte
