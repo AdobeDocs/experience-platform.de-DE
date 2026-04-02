@@ -2,10 +2,10 @@
 title: Überblick über den Identitäts-Namespace
 description: Erfahren Sie mehr über Identity-Namespaces in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 384a67ac62eb56c4a0f8ac38593399afcc8b742e
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 26%
+source-wordcount: '1897'
+ht-degree: 28%
 
 ---
 
@@ -74,7 +74,7 @@ Ein Element eines Identity-Namespace ist der **Identitätstyp**. Der Identitäts
 * Ob ein Identitätsdiagramm generiert wird:
    * Identitätsdiagramme werden nicht für die folgenden Identitätstypen generiert: Nicht-Personen-IDs und Partner-ID.
    * Identitätsdiagramme werden für alle anderen Identitätstypen generiert.
-* Welche Identitäten werden aus dem Identitätsdiagramm entfernt, wenn die Systembeschränkungen erreicht sind. Weitere Informationen finden Sie unter [&#x200B; für Identitätsdaten &#x200B;](../guardrails.md).
+* Welche Identitäten werden aus dem Identitätsdiagramm entfernt, wenn die Systembeschränkungen erreicht sind. Weitere Informationen finden Sie unter [ für Identitätsdaten ](../guardrails.md).
 
 Die folgenden Identitätstypen sind in Experience Platform verfügbar:
 
@@ -96,23 +96,25 @@ Experience Platform bietet mehrere Identity-Namespaces , die für alle Organisat
 
 Die folgenden Standard-Namespaces stehen allen Organisationen in Experience Platform zur Verfügung:
 
-| Anzeigename | Beschreibung |
-| ------------ | ----------- |
-| AdCloud | Ein Namespace, der Adobe AdCloud darstellt. |
-| Adobe Analytics (veraltete ID) | Ein Namespace, der Adobe Analytics darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=de#namespaces)Namespaces. |
-| Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple ID für Advertiser darstellt. Weiteführende Informationen finden Sie im folgenden Dokument zu [Interessensbasierten Anzeigen](https://support.apple.com/de-de/HT202074). |
-| Apple Push Notification Service | Ein Namespace, der für Identitäten steht, die mit dem Push-Benachrichtigungs-Service von Apple erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument zum [Apple Push Notification &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)Service). |
-| ECID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](./ecid.md) . |
-| E-Mail | Ein Namespace, der eine E-Mail-Adresse darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. |
-| E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Weitere Informationen finden Sie im folgenden Dokument [SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=de#hashing-support)Hashing-Unterstützung). |
-| Firebase Cloud Messaging | Ein Namespace, der Identitäten darstellt, die mit Google Firebase Cloud Messaging für Push-Benachrichtigungen erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument zu [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) . |
-| Google Ad ID (GAID) | Ein Namespace, der eine Google Advertising ID darstellt. Weiterführende Informationen finden Sie im folgenden Dokument zu [Google Advertising IDs](https://support.google.com/googleplay/android-developer/answer/6048248?hl=de). |
-| Telefon | Ein Namespace, der eine Telefonnummer darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. |
-| Telefon (E.164) | Ein Namespace, der unformatierte Telefonnummern darstellt, die im E.164-Format gehasht werden müssen. Das Format E.164 enthält ein Pluszeichen (`+`), eine internationale Landesvorwahl, eine Ortsvorwahl und eine Telefonnummer. Beispiel: `(+)(country code)(area code)(phone number)`. |
-| Telefon (SHA256) | Ein Namespace, der Telefonnummern darstellt, die mit SHA256 gehasht werden müssen. Sie müssen Symbole, Buchstaben und vorangestellte Nullen entfernen. Sie müssen auch die Landesvorwahl als Präfix hinzufügen. |
-| Phone (SHA256_E.164) | Ein Namespace, der unformatierte Telefonnummern darstellt, die mit dem SHA256- und E.164-Format gehasht werden müssen. |
-| TNTID | Ein Namespace, der Adobe Target darstellt. Weitere Informationen finden Sie im folgenden Dokument [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=de) . |
-| Windows AID | Ein Namespace, der eine Windows Advertising ID darstellt. Weitere Informationen finden Sie im folgenden Dokument [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) . |
+| Anzeigename | Identitätssymbol (Code) | Identitätstyp | Beschreibung |
+| ------------ | ---------------------- | ------------- | ----------- |
+| AdCloud | AdCloud | Cookie-ID | Ein Namespace, der Adobe AdCloud darstellt. |
+| Adobe Analytics (veraltete ID) | AAID | Cookie-ID | Ein Namespace, der Adobe Analytics darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces)Namespaces. |
+| Apple IDFA (ID für Advertiser) | IDFA | Geräte-ID | Ein Namespace, der die Apple ID für Advertiser darstellt. Weiteführende Informationen finden Sie im folgenden Dokument zu [Interessensbasierten Anzeigen](https://support.apple.com/de-de/HT202074). |
+| Apple Push Notification Service | APNS | Geräte-ID | Ein Namespace, der für Identitäten steht, die mit dem Push-Benachrichtigungs-Service von Apple erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument zum [Apple Push Notification ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)Service). |
+| ECID | ECID | Cookie-ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](./ecid.md) . |
+| E-Mail | E-Mail | E-Mail | Ein Namespace, der eine E-Mail-Adresse darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. |
+| E-Mails (SHA256, in Kleinbuchstaben) | Email_LC_SHA256 | E-Mail | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Weitere Informationen finden Sie im folgenden Dokument [SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)Hashing-Unterstützung). |
+| Firebase Cloud Messaging | FCM | Geräte-ID | Ein Namespace, der Identitäten darstellt, die mit Google Firebase Cloud Messaging für Push-Benachrichtigungen erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument zu [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) . |
+| Google Ad ID (GAID) | GAID | Geräte-ID | Ein Namespace, der eine Google Advertising ID darstellt. Weiterführende Informationen finden Sie im folgenden Dokument zu [Google Advertising IDs](https://support.google.com/googleplay/android-developer/answer/6048248?hl=de). |
+| Telefon | Telefon | Telefonnummer | Ein Namespace, der eine Telefonnummer darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. |
+| Telefon (E.164) | phone_e.164 | Telefonnummer | Ein Namespace, der unformatierte Telefonnummern darstellt, die im E.164-Format gehasht werden müssen. Das Format E.164 enthält ein Pluszeichen (`+`), eine internationale Landesvorwahl, eine Ortsvorwahl und eine Telefonnummer. Beispiel: `(+)(country code)(area code)(phone number)`. |
+| Telefon (SHA256) | phone_SHA256 | Telefonnummer | Ein Namespace, der Telefonnummern darstellt, die mit SHA256 gehasht werden müssen. Sie müssen Symbole, Buchstaben und vorangestellte Nullen entfernen. Sie müssen auch die Landesvorwahl als Präfix hinzufügen. |
+| Phone (SHA256_E.164) | phone_SHA256_e.164 | Telefonnummer | Ein Namespace, der unformatierte Telefonnummern darstellt, die mit dem SHA256- und E.164-Format gehasht werden müssen. |
+| TNTID | TNTID | Cookie-ID | Ein Namespace, der Adobe Target darstellt. Weitere Informationen finden Sie im folgenden Dokument [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=de) . |
+| Windows AID | WAID | Geräte-ID | Ein Namespace, der eine Windows Advertising ID darstellt. Weitere Informationen finden Sie im folgenden Dokument [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) . |
+
+{style="table-layout:auto"}
 
 ### Anzeigen von Identity-Namespaces {#view-identity-namespaces}
 
@@ -127,7 +129,7 @@ Es wird ein Verzeichnis mit Namespaces in Ihrer Organisation angezeigt, in dem I
 
 ![Ein Verzeichnis mit benutzerdefinierten Identity-Namespaces in Ihrer Organisation.](../images/namespace/browse.png)
 
-## Erstellen benutzerdefinierter Namespaces {#create-namespaces}
+## Benutzerdefinierte Namespaces erstellen {#create-namespaces}
 
 Abhängig von Ihren Unternehmensdaten und Anwendungsfällen können Sie benutzerdefinierte Namespaces benötigen. Benutzerdefinierte Namespaces können mithilfe der [[!DNL Identity Service]](../api/create-custom-namespace.md)-API oder über die Benutzeroberfläche erstellt werden.
 
@@ -161,4 +163,4 @@ Die Angabe des Namespace für eine Identität hängt von der Methode ab, mit der
 
 ## Nächste Schritte
 
-Sie kennen nun die Schlüsselkonzepte von Identity-Namespaces und können als Nächstes erfahren, wie Sie Ihr Identitätsdiagramm mithilfe des [Identitätsdiagramm-Viewers“ &#x200B;](../features/identity-graph-viewer.md).
+Sie kennen nun die Schlüsselkonzepte von Identity-Namespaces und können als Nächstes erfahren, wie Sie Ihr Identitätsdiagramm mithilfe des [Identitätsdiagramm-Viewers“ ](../features/identity-graph-viewer.md).
