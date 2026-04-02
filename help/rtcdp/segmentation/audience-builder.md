@@ -2,11 +2,11 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Erfahren Sie, wie Sie mit dem Audience Builder in Real-Time Customer Data Platform Zielgruppen erstellen.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1115'
 ht-degree: 9%
 
 ---
@@ -50,15 +50,19 @@ Für die **[!UICONTROL Relationship of fields]** können Sie entweder die Standa
 
 ### Attribute {#attributes}
 
-Auf der Registerkarte [!UICONTROL Attributes] können Sie Account-Attribute durchsuchen, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [&#x200B; Arbeitsfläche &#x200B;](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
+Auf der Registerkarte [!UICONTROL Attributes] können Sie Account-Attribute durchsuchen, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [ Arbeitsfläche ](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
 
 ![Die Registerkarte Attribute wird im Audience Builder angezeigt](../assets/segmentation/audience-builder/attributes.png)
+
+>[!NOTE]
+>
+>Zusammenfassungsdaten befinden sich in **Eingeschränkte Verfügbarkeit**.
 
 Bei der Auswahl eines Attributs können Sie Zusammenfassungsdaten anzeigen, indem Sie auf das [Informationssymbol](../../images/icons/info.png) klicken. Die Zusammenfassungsdaten enthalten Informationen wie Top-Werte, eine Erklärung, was das Feld ist, die Anzahl der Datensätze der Werte sowie den Prozentsatz der Konten, die Werte für dieses Attribut enthalten.
 
 Im Abschnitt **[!UICONTROL Populated]** wird die Anzahl der Datensätze angezeigt, in denen das Attribut eingetragen ist, im Vergleich zur Gesamtzahl der verfügbaren Datensätze sowie der Prozentsatz der Konten, die einen Wert für dieses Feld haben.
 
-Der Abschnitt **[!UICONTROL Top values]** zeigt die am häufigsten vorkommenden Werte für das Attribut an und enthält Details wie den Wert, die Anzahl der Datensätze, die diesen Wert aufweisen, sowie den Prozentsatz der gesamten Datensätze, die der Wert darstellt.
+Der Abschnitt **[!UICONTROL Top values]** zeigt die am häufigsten vorkommenden Werte für das Attribut an und enthält Details wie den Wert, die Anzahl der Datensätze, die diesen Wert aufweisen, sowie den Prozentsatz der gesamten Datensätze, die der Wert darstellt. Die Anzahl der Datensätze für jedes Feld wird durch den Profil-Schnappschuss bestimmt, der eine konsolidierte Ansicht der Datensätze bietet, nachdem alle beitragenden Datensatzdaten zusammengeführt wurden.
 
 ![Ein Pop-up, das eine vollständig ausgefüllte Version der Zusammenfassungsdaten für ein Attribut anzeigt.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
