@@ -34,7 +34,7 @@ Die folgende Tabelle zeigt die kombinierten Auswirkungen von `defaultConsent` un
 
 >[!NOTE]
 >
->Identitäts- und Einverständnis-Cookies werden auch dann gesetzt, wenn ein Besucher eine Abwahl trifft. Diese Cookies sind erforderlich, um die Voreinstellungen des Besuchers für die Datenerfassung zu berücksichtigen. Siehe [Web SDK-Cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk), um eine vollständige Liste der Cookies zu erhalten, die von Web SDK gesetzt werden.
+>Identitäts- und Einverständnis-Cookies werden auch dann gesetzt, wenn ein Besucher eine Abwahl trifft. Diese Cookies sind erforderlich, um die Voreinstellungen des Besuchers für die Datenerfassung zu berücksichtigen. Siehe [Web SDK-Cookies](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/cookies/web-sdk), um eine vollständige Liste der Cookies zu erhalten, die von Web SDK gesetzt werden.
 
 Wenn ein Besucher sein Einverständnis erneut erteilt, nachdem er es zuvor widerrufen hat (indem er `setConsent` nach dem `"general": "in"` mit `"general": "out"` aufruft), sendet die Web-SDK erneut Ereignisse und verwendet die vorhandene ECID aus dem Cookie, wenn sie nicht abgelaufen ist. Die Identität des Besuchers wird beibehalten.
 
