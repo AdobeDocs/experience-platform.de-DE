@@ -6,10 +6,10 @@ seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
 uuid: 839686c9-6e4f-4661-acf6-150ea24dc47f
 exl-id: ed0579ef-ec26-43df-9453-a395c105038a
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 59%
+source-wordcount: '215'
+ht-degree: 60%
 
 ---
 
@@ -29,16 +29,18 @@ Um die entsprechenden Informationen einer Lösung anzuzeigen, wählen Sie die ge
 
 ![](images/network-analytics.jpg)
 
-Um zur Anzeige aller Lösungen zurückzukehren, wählen Sie **[!UICONTROL Netzwerk]**
+Um zur Anzeige aller Lösungen zurückzukehren, wählen Sie **[!UICONTROL Network]**
 
 Wählen Sie ein Element in der Netzwerkansicht aus, um eine erweiterte Ansicht anzuzeigen. In der erweiterten Ansicht können Sie die angezeigten Informationen in die Zwischenablage kopieren.
 
 ![](images/network-expand.jpg)
 
-<!--Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
+<!--
+Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
 
-![](images/copy.jpg)-->
+![](images/copy.jpg)
+-->
 
-Um die Liste zu löschen, wählen Sie **[!UICONTROL Ereignisse entfernen]** aus.
+Um die Liste zu löschen, klicken Sie auf **[!UICONTROL Remove Events]**.
 
-Um eine Excel-Datei mit den Informationen auf diesem Bildschirm herunterzuladen, wählen Sie **[!UICONTROL Herunterladen]**.
+Um eine Excel-Datei mit den Informationen auf diesem Bildschirm herunterzuladen, wählen Sie **[!UICONTROL Download]** aus.
