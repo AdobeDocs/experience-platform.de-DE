@@ -3,7 +3,8 @@ title: Privacy Service-Fehlercodes in Adobe Experience Platform
 description: Machen Sie sich mit den Privacy Service-Fehlercodes vertraut, damit Sie Fehler diagnostizieren, Auftragsergebnisse programmgesteuert verarbeiten und die nächsten Schritte beim Senden oder Überwachen von Datenschutzaufträgen bestimmen können.
 keywords: Privacy Service, Fehler-Codes, Datenschutzaufträge, API-Fehler
 solution: Experience Platform
-source-git-commit: a312dabf5b8c3b52af31e2e127cd4bbeb8dd0021
+exl-id: 49b79093-4d4c-4b92-bd38-86879452dbfb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 5%
@@ -38,13 +39,13 @@ Die Fehler-Codes werden nach Funktions-Domain gruppiert, damit Sie Probleme schn
 
 Zu den in diesem Dokument verwendeten Domains gehören:
 
-* **Anfragevalidierung**: Die Anfrage ist fehlerhaft oder enthält ungültige Werte. Informationen zur Anfragestruktur [&#x200B; den Validierungsanforderungen finden Sie &#x200B;](./privacy-jobs.md) Handbuch für Datenschutzaufträge .
+* **Anfragevalidierung**: Die Anfrage ist fehlerhaft oder enthält ungültige Werte. Informationen zur Anfragestruktur [ den Validierungsanforderungen finden Sie ](./privacy-jobs.md) Handbuch für Datenschutzaufträge .
 * **Autorisierung und Bereitstellung**: Ihr Unternehmen oder Ihre Benutzerin bzw. Ihr Benutzer hat nicht den erforderlichen Zugriff. Siehe [Verwalten von Berechtigungen](../permissions.md), um die rollenbasierten Berechtigungsanforderungen zu überprüfen.
 * **Identität und Anwendbarkeit**: Kennungen oder Namespaces können nicht auf die Anfrage angewendet werden. Unter [Identitätsdaten für Datenschutzanfragen](../identity-data.md) finden Sie Informationen zu unterstützten Identitätstypen und Namespace-Anforderungen.
 * **Ratenbegrenzung**: Das Übermittlungsvolumen überschreitet die Plattformbegrenzungen. Reduzieren Sie bei diesem Fehler die Übermittlungsrate und versuchen Sie es erneut.
-* **Datenzugriff und -verarbeitung**: Das System kann nicht auf die angeforderten Daten zugreifen oder sie verarbeiten. Häufige [&#x200B; und Schritte zur Behebung &#x200B;](../troubleshooting-guide.md) Probleme finden Sie im Handbuch zur Fehlerbehebung .
+* **Datenzugriff und -verarbeitung**: Das System kann nicht auf die angeforderten Daten zugreifen oder sie verarbeiten. Häufige [ und Schritte zur Behebung ](../troubleshooting-guide.md) Probleme finden Sie im Handbuch zur Fehlerbehebung .
 * **Verschlüsselung und Schlüsselverwaltung**: Erforderliche Verschlüsselungsschlüssel sind nicht verfügbar. Siehe [Vom Kunden verwaltete Schlüssel](../../landing/governance-privacy-security/customer-managed-keys/overview.md) für Anleitungen zu Schlüsselzugriff, Konfiguration und Wiederherstellung.
-* **Auftragsausführungsstatus**: Der Auftrag wurde vollständig, teilweise oder mit Fehlern abgeschlossen. Beschreibungen [&#x200B; Auftragsstatuskategorien und deren Bedeutungen finden Sie im &#x200B;](./privacy-jobs.md#status-categories)Handbuch für Datenschutzaufträge“.
+* **Auftragsausführungsstatus**: Der Auftrag wurde vollständig, teilweise oder mit Fehlern abgeschlossen. Beschreibungen [ Auftragsstatuskategorien und deren Bedeutungen finden Sie im ](./privacy-jobs.md#status-categories)Handbuch für Datenschutzaufträge“.
 
 >[!NOTE]
 >
@@ -55,7 +56,7 @@ Zu den in diesem Dokument verwendeten Domains gehören:
 In der folgenden Tabelle sind alle öffentlichen Privacy Service-Fehler-Codes aufgeführt.
 
 | Fehler-Code | HTTP-Status | Titel | Beschreibung |
-| ---------- | ----------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| ---------- | ----------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1000-400 | 400 | Formatierungsfehler | Mindestens ein Datenwert für das angegebene Programm weist Formatierungsprobleme auf. Weitere Informationen finden Sie in den Auftragsdetails. |
 | 1001-400 | 400 | Nicht autorisiert | Ihre Organisation wurde nicht bereitgestellt. Weitere Informationen erhalten Sie von Ihrem Administrator. |
 | 1010-400 | 400 | Fehlende Berechtigungen | Sie verfügen nicht über die erforderlichen Berechtigungen, um diese Aktion durchzuführen. Wenden Sie sich an Ihren Administrator, um Zugriff anzufordern. |
