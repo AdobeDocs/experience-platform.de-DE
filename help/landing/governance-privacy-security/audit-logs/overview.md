@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mithilfe von Auditprotokollen sehen können, 
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1579'
 ht-degree: 31%
@@ -111,7 +111,7 @@ Die folgenden Filter sind für Audit-Ereignisse in der Benutzeroberfläche verf�
 
 | Filter | Beschreibung |
 | --- | --- |
-| [!UICONTROL Category] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach ([) &#x200B;](#category) filtern. |
+| [!UICONTROL Category] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach ([) ](#category) filtern. |
 | [!UICONTROL Action] | Nach Aktion filtern. Die für jeden Service verfügbaren Aktionen finden Sie in der oben stehenden Ressourcentabelle. |
 | [!UICONTROL User] | Geben Sie die vollständige Benutzer-ID ein (z. B. `johndoe@acme.com`), um nach Benutzer zu filtern. |
 | [!UICONTROL Status] | Filtern von Audit-Ereignissen nach Ergebnis: erfolgreich, fehlgeschlagen, zulässig oder verweigert aufgrund fehlender [Zugriffskontrolle](../../../access-control/home.md)-Berechtigungen. Für eine ausgeführte Aktion zeigen die Hauptereignisse [!UICONTROL Allow] oder [!UICONTROL Deny] an. Wenn das Hauptereignis [!UICONTROL Allow] ist, wurde möglicherweise ein oder mehrere erweiterte Ereignisse mit **[!UICONTROL Success]** oder **[!UICONTROL Failure]** angehängt. Eine erfolgreiche Aktion zeigt beispielsweise [!UICONTROL Allow] zum Hauptereignis und [!UICONTROL Success] zum angehängten erweiterten Ereignis an. |
@@ -165,11 +165,11 @@ Wählen Sie den gewünschten Warnhinweis aus der Liste, der abonniert werden sol
 
 ## Verwalten von Auditprotokollen in der API
 
-Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können auch mithilfe von API-Aufrufen ausgeführt werden. Weitere Informationen finden [&#x200B; im &#x200B;](https://www.adobe.io/experience-platform-apis/references/audit-query/)-API-Referenzdokument .
+Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können auch mithilfe von API-Aufrufen ausgeführt werden. Weitere Informationen finden [ im ](https://www.adobe.io/experience-platform-apis/references/audit-query/)-API-Referenzdokument .
 
 ## Verwalten von Auditprotokollen für Adobe Admin Console
 
-Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/de/enterprise/using/audit-logs.html).
+Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
@@ -177,4 +177,4 @@ In diesem Handbuch wurde beschrieben, wie Sie Audit-Protokolle in Experience Pla
 
 Sehen Sie sich das folgende Video an, um Audit-Protokolle in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409524?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
