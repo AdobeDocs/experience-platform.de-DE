@@ -2,10 +2,10 @@
 title: Filtern von Daten auf Zeilenebene für eine Source mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fe7025b7e48634232d823f8380610c6409b2d4b1
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 15%
+source-wordcount: '1820'
+ht-degree: 13%
 
 ---
 
@@ -33,7 +33,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ## Filtern von Quelldaten {#filter-source-data}
 
@@ -407,7 +407,7 @@ Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) der neu erste
 
 ## Aktivitätsentitäten für [!DNL Marketo Engage] filtern {#filter-for-marketo}
 
-Bei Verwendung des Quell-Connectors können Sie die Filterung auf Zeilenebene verwenden, um nach Aktivitätsentitäten [[!DNL Marketo Engage]  filtern](../../connectors/adobe-applications/marketo/marketo.md). Derzeit können Sie nur nach Aktivitätsentitäten und standardmäßigen Aktivitätstypen filtern. Benutzerdefinierte Aktivitäten werden weiterhin unter [[!DNL Marketo] Feldzuordnungen“ &#x200B;](../../connectors/adobe-applications/mapping/marketo.md).
+Bei Verwendung des Quell-Connectors können Sie die Filterung auf Zeilenebene verwenden, um nach Aktivitätsentitäten [[!DNL Marketo Engage]  filtern](../../connectors/adobe-applications/marketo/marketo.md). Derzeit können Sie nur nach Aktivitätsentitäten und standardmäßigen Aktivitätstypen filtern. Benutzerdefinierte Aktivitäten werden weiterhin unter [[!DNL Marketo] Feldzuordnungen“ ](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### Standard-Aktivitätstypen [!DNL Marketo] {#marketo-standard-activity-types}
 
@@ -426,11 +426,11 @@ In der folgenden Tabelle sind die standardmäßigen Aktivitätstypen für [!DNL 
 | 11 | Click Email |
 | 12 | Neuer Lead |
 | 21 | Lead konvertieren |
-| 22 | Score ändern |
+| 22 | Punktzahl ändern |
 | 24 | Zur Liste hinzufügen |
 | 25 | Aus Liste entfernen |
-| 27 | E-Mail nicht zugestellt (Soft-Bounce) |
-| 32 | Leads zusammenführen |
+| 27 | Softbounce bei E-Mails |
+| 32 | Zusammenführen von Leads |
 | 34 | Zur Opportunity hinzufügen |
 | 35 | Aus Opportunity entfernen |
 | 36 | Opportunity aktualisieren |
@@ -457,7 +457,7 @@ Erstellen Sie zunächst einen [[!DNL Marketo] Datenfluss](../ui/create/adobe-app
 
 Nachdem Sie einen Datenfluss-Entwurf erstellt haben, müssen Sie die entsprechende ID abrufen.
 
-Navigieren Sie in der Benutzeroberfläche zum Quellkatalog und wählen Sie **[!UICONTROL Datenflüsse]** in der oberen Kopfzeile aus. Verwenden Sie die Spalte Status , um alle Datenflüsse zu identifizieren, die im Entwurfsmodus gespeichert wurden, und wählen Sie dann den Namen Ihres Datenflusses aus. Verwenden Sie anschließend das Bedienfeld **[!UICONTROL Eigenschaften]** auf der rechten Seite, um Ihre Datenfluss-ID zu finden.
+Navigieren Sie in der Benutzeroberfläche von zum Quellkatalog und wählen Sie **[!UICONTROL Dataflows]** in der oberen Kopfzeile aus. Verwenden Sie die Spalte Status , um alle Datenflüsse zu identifizieren, die im Entwurfsmodus gespeichert wurden, und wählen Sie dann den Namen Ihres Datenflusses aus. Verwenden Sie als Nächstes das **[!UICONTROL Properties]** Bedienfeld auf der rechten Seite, um Ihre Datenfluss-ID zu finden.
 
 ### Abrufen von Datenflussdetails
 
@@ -881,7 +881,7 @@ Bei einer erfolgreichen Antwort werden die ID und das entsprechende `etag` Ihres
 
 +++
 
-Sie können die Experience Platform-Benutzeroberfläche verwenden, um zu überprüfen, ob Ihr Datenflussentwurf veröffentlicht wurde. Navigieren Sie im Quellkatalog zur Seite „Datenflüsse“ und verweisen Sie auf **[!UICONTROL Status]** Ihres Datenflusses. Bei Erfolg sollte der Status jetzt auf „Aktiviert **gesetzt**.
+Sie können die Experience Platform-Benutzeroberfläche verwenden, um zu überprüfen, ob Ihr Datenflussentwurf veröffentlicht wurde. Navigieren Sie im Quellkatalog zur Seite Datenflüsse und verweisen Sie auf die **[!UICONTROL Status]** Ihres Datenflusses. Bei Erfolg sollte der Status jetzt auf „Aktiviert **gesetzt**.
 
 >[!TIP]
 >
@@ -898,7 +898,7 @@ In diesem Abschnitt finden Sie weitere Beispiele für verschiedene Payloads zum 
 
 Sie können die anfängliche `fnApply` für Szenarien auslassen, für die nur eine Bedingung erforderlich ist.
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
 {
@@ -927,7 +927,7 @@ Sie können die anfängliche `fnApply` für Szenarien auslassen, für die nur ei
 
 Ein Beispiel für den `in` finden Sie unten in der Beispiel-Payload .
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
 {
@@ -963,7 +963,7 @@ Ein Beispiel für den `in` finden Sie unten in der Beispiel-Payload .
 
 ### Verwenden des `isNull` Operators
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 Ein Beispiel für den `isNull` finden Sie unten in der Beispiel-Payload .
 
@@ -991,7 +991,7 @@ Ein Beispiel für den `isNull` finden Sie unten in der Beispiel-Payload .
 Ein Beispiel für den `NOT` finden Sie unten in der Beispiel-Payload .
 
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
 {
@@ -1022,7 +1022,7 @@ Ein Beispiel für den `NOT` finden Sie unten in der Beispiel-Payload .
 
 Ein Beispiel für komplexe verschachtelte Bedingungen finden Sie unten in der Beispiel-Payload .
 
-+++Beispiel auswählen, um es anzuzeigen
++++Beispiel anzeigen
 
 ```json
 {
