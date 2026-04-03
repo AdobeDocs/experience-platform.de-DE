@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinden von DbVisualizer mit dem Abfrage-Service
 description: In diesem Dokument werden die Schritte zum Verbinden von DbVisualizer mit dem Abfrage-Service von Adobe Experience Platform erläutert.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '876'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ In diesem Dokument werden die Schritte zum Verbinden des [!DNL DbVisualizer]-Dat
 
 Für dieses Handbuch müssen Sie bereits Zugriff auf die [!DNL DbVisualizer] Desktop-App haben und mit dem Navigieren in der zugehörigen Benutzeroberfläche vertraut sein. Informationen zum Herunterladen der [!DNL DbVisualizer] Desktop-App oder weitere Informationen finden Sie unter [Official [!DNL DbVisualizer] Documentation](https://www.dbvis.com/download/).
 
-Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL &#x200B; DbVisualizer] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Experience Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL  DbVisualizer] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Experience Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
 
 ## Erstellen einer Datenbankverbindung {#connect-database}
 
@@ -39,10 +39,10 @@ Geben Sie als Nächstes die in der folgenden Tabelle beschriebenen Treibereigens
 
 | Eigenschaft | Beschreibung |
 | ------ | ------ |
-| `PGHOST` | Der Hostname für den [!DNL PostgreSQL]. Dieser Wert ist Ihre Experience Platform **[!UICONTROL Host]-**. |
+| `PGHOST` | Der Hostname für den [!DNL PostgreSQL]. Dieser Wert ist Ihre Experience Platform **[!UICONTROL Host]-Berechtigung**. |
 | `ssl` | Definieren Sie den SSL-`1`, um die Verwendung von SSL zu aktivieren. |
 | `sslmode` | Dies steuert das SSL-Schutzniveau. Es wird empfohlen, beim Verbinden von Drittanbieter-Clients mit Adobe Experience Platform den `require`-SSL-Modus zu verwenden. Der `require`-Modus stellt sicher, dass alle Kommunikationen verschlüsselt werden müssen und dass das Netzwerk für die Verbindung mit dem richtigen Server vertrauenswürdig ist. Die Validierung des SSL-Zertifikats des Servers ist nicht erforderlich. |
-| `user` | Der mit der Datenbank verbundene Benutzername ist Ihre Organisations-ID. Es handelt sich um eine alphanumerische Zeichenfolge, die auf `@Adobe.Org` endet. Dieser Wert ist Ihre Experience Platform **[!UICONTROL Benutzername]-**. |
+| `user` | Der mit der Datenbank verbundene Benutzername ist Ihre Organisations-ID. Es handelt sich um eine alphanumerische Zeichenfolge, die auf `@Adobe.Org` endet. Dieser Wert ist Ihre Experience Platform **[!UICONTROL Username]-Berechtigung**. |
 
 Verwenden Sie die Suchleiste, um jede Eigenschaft zu finden, und wählen Sie dann die entsprechende Zelle für den Parameterwert aus. Die Zelle wird blau hervorgehoben. Geben Sie Ihre Experience Platform-Anmeldeinformationen in das Feld Wert ein und wählen Sie **[!DNL Apply]** aus, um die Treibereigenschaft hinzuzufügen.
 
@@ -54,7 +54,7 @@ Die Spalte [!DNL Edited] enthält ein Häkchen, das anzeigt, dass der Parameterw
 
 ### Anmeldedaten für den Abfrage-Service eingeben {#query-service-credentials}
 
-Um die Anmeldeinformationen zu finden, die zum Verbinden von BBVisualizer mit dem Abfrage-Service erforderlich sind, melden Sie sich bei der Experience Platform-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** aus dem linken Navigationsbereich aus, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Weitere Informationen zum Auffinden der Anmeldeinformationen **host**, **port**, **database**, **username** und **password** finden Sie im Handbuch [credentials](../ui/credentials.md).
+Um die zum Verbinden von BBVisualizer mit dem Abfrage-Service erforderlichen Anmeldeinformationen zu finden, melden Sie sich bei der Experience Platform-Benutzeroberfläche an und wählen Sie in der linken Navigationsleiste **[!UICONTROL Queries]** und dann **[!UICONTROL Credentials]** aus. Weitere Informationen zum Auffinden der Anmeldeinformationen **host**, **port**, **database**, **username** und **password** finden Sie im Handbuch [credentials](../ui/credentials.md).
 
 ![Die Seite mit den Anmeldeinformationen des Arbeitsbereichs &quot;Experience Platform-Abfragen“ mit hervorgehobenen Anmeldeinformationen und den ablaufenden Anmeldeinformationen.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
@@ -79,11 +79,11 @@ Sie können eine Verbindung mit ablaufenden oder nicht ablaufenden Anmeldeinform
 | Verbindungsparameter | Beschreibung |
 |---|---|
 | **[!UICONTROL Name]** | Erstellen Sie einen Namen für Ihre Verbindung. Es wird empfohlen, einen benutzerfreundlichen Namen anzugeben, um die Verbindung zu erkennen. |
-| **[!UICONTROL Datenbankserver]** | Dies ist Ihre Experience Platform **[!UICONTROL Host]**-Berechtigung. |
-| **[!UICONTROL Datenbank-Port]** | Der Port für [!DNL Query Service]. Sie müssen Port **80** oder **5432** verwenden, um eine Verbindung mit [!DNL Query Service] herzustellen. |
-| **[!UICONTROL Datenbank]** | Verwenden Sie Ihren Experience Platform **[!UICONTROL Datenbank]** Berechtigungswert: `prod:all`. |
-| **[!UICONTROL Datenbank-Benutzer-ID]** | Dies ist Ihre Experience Platform-Organisations-ID. Verwenden Sie Ihren Experience Platform **[!UICONTROL Benutzernamen]**-Berechtigungswert. Die ID hat das Format `ORG_ID@AdobeOrg`. |
-| **[!UICONTROL Datenbankkennwort]** | Diese alphanumerische Zeichenfolge ist Ihre Experience Platform **[!UICONTROL Kennwort]**-Berechtigung. Wenn Sie nicht ablaufende Anmeldeinformationen verwenden möchten, ist dieser Wert die verketteten Argumente aus der `technicalAccountID` und der in die JSON-Konfigurationsdatei heruntergeladenen `credential`. Das Kennwort hat folgende Form: {technicalAccountId}:{credential}. Die JSON-Konfigurationsdatei für nicht ablaufende Anmeldeinformationen ist ein einmaliger Download während ihrer Initialisierung, von dem Adobe keine Kopie speichert. |
+| **[!UICONTROL Database Server]** | Dies ist Ihre Experience Platform **[!UICONTROL Host]**-Berechtigung. |
+| **[!UICONTROL Database Port]** | Der Port für [!DNL Query Service]. Sie müssen Port **80** oder **5432** verwenden, um eine Verbindung mit [!DNL Query Service] herzustellen. |
+| **[!UICONTROL Database]** | Verwenden Sie Ihren Experience Platform **[!UICONTROL Database]**-Berechtigungswert: `prod:all`. |
+| **[!UICONTROL Database Userid]** | Dies ist Ihre Experience Platform-Organisations-ID. Verwenden Sie den Wert Ihrer Experience Platform **[!UICONTROL Username]**-Anmeldedaten. Die ID hat das Format `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL Database Password]** | Diese alphanumerische Zeichenfolge ist Ihre Experience Platform **[!UICONTROL Password]**-Berechtigung. Wenn Sie nicht ablaufende Anmeldeinformationen verwenden möchten, ist dieser Wert die verketteten Argumente aus der `technicalAccountID` und der in die JSON-Konfigurationsdatei heruntergeladenen `credential`. Das Kennwort hat folgende Form: {technicalAccountId}:{credential}. Die JSON-Konfigurationsdatei für nicht ablaufende Anmeldeinformationen ist ein einmaliger Download während ihrer Initialisierung, von dem Adobe keine Kopie speichert. |
 
 Nachdem Sie alle relevanten Anmeldeinformationen eingegeben haben, wählen Sie **[!DNL Connect]** aus.
 
