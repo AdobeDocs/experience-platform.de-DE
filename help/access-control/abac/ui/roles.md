@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung - Rolle erstellen
 description: Verwalten Sie Rollen über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud.
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: b665d0edce713f1b252e07125aabab79d52a9cba
+source-git-commit: ed966156c253a8c07380079013d98c578821ae03
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 14%
@@ -39,7 +39,7 @@ Das Dialogfeld **[!UICONTROL Create new role]** wird angezeigt. Geben Sie einen 
 
 ![Das Dialogfeld „Neue Rollen erstellen“ mit Hervorhebung des Namens und der Beschreibung und der Option „Bestätigen“.](../../images/ui/roles/roles-create-new-role.png)
 
-Der **[!UICONTROL Resources]** Arbeitsbereich wird angezeigt. Suchen Sie die benötigte Ressource, indem Sie scrollen oder indem Sie den Namen der Ressource in die Suchleiste im linken Bereich eingeben. Fügen Sie Ressourcen hinzu, indem Sie ![&#x200B; Pluszeichen &#x200B;](/help/images/icons/plus.png) dem Namen der Ressource auswählen.
+Der **[!UICONTROL Resources]** Arbeitsbereich wird angezeigt. Suchen Sie die benötigte Ressource, indem Sie scrollen oder indem Sie den Namen der Ressource in die Suchleiste im linken Bereich eingeben. Fügen Sie Ressourcen hinzu, indem Sie ![ Pluszeichen ](/help/images/icons/plus.png) dem Namen der Ressource auswählen.
 
 ![Der Arbeitsbereich „Ressourcen“ mit der hervorgehobenen Option „Hinzufügen“ einer einzelnen Ressource.](../../images/ui/roles/roles-resources.png)
 
@@ -59,9 +59,11 @@ Sie erhalten einen Warnhinweis, der anzeigt, dass die Rolle erfolgreich gespeich
 
 Die neue Rolle wurde erfolgreich erstellt und Sie werden zur Seite **[!UICONTROL Roles]** weitergeleitet, wo die neu erstellte Rolle in der Liste angezeigt wird.
 
-<!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
+<!-- 
+The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475982/?captions=ger&learn=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) 
+-->
 
 ## Duplizieren einer Rolle
 
