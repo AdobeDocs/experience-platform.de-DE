@@ -2,7 +2,7 @@
 title: Verbinden von GitHub-Copilot und Visual Studio Code mit dem Abfrage-Service
 description: Erfahren Sie, wie Sie GitHub Copilot und Visual Studio Code mit dem Abfrage-Service von Adobe Experience Platform verbinden.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 2%
@@ -23,7 +23,7 @@ In diesem Dokument werden die Schritte beschrieben, die zum Verbinden von [!DNL 
 
 Für dieses Handbuch müssen Sie bereits Zugriff auf ein GitHub-Konto haben und sich für [!DNL GitHub Copilot] angemeldet haben. Sie können [sich über die GitHub-Website anmelden](https://github.com/github-copilot/signup). Sie benötigen auch [!DNL VS Code]. Sie können [Download [!DNL VS Code]  von ihrer offiziellen Website](https://code.visualstudio.com/download).
 
-Nachdem Sie [!DNL VS Code] installiert und Ihr [!DNL Copilot]-Abonnement aktiviert haben, rufen Sie Ihre Verbindungsberechtigungen für Experience Platform ab. Diese Anmeldeinformationen befinden sich auf der Registerkarte [!UICONTROL Credentials] des Arbeitsbereichs [!UICONTROL Queries] in der Benutzeroberfläche von Experience Platform. Lesen Sie das Handbuch zu Anmeldeinformationen, um zu erfahren[&#x200B; wie Sie diese Werte in der Experience Platform-Benutzeroberfläche finden](../ui/credentials.md). Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den [!UICONTROL Queries]-Arbeitsbereich haben.
+Nachdem Sie [!DNL VS Code] installiert und Ihr [!DNL Copilot]-Abonnement aktiviert haben, rufen Sie Ihre Verbindungsberechtigungen für Experience Platform ab. Diese Anmeldeinformationen befinden sich auf der Registerkarte [!UICONTROL Credentials] des Arbeitsbereichs [!UICONTROL Queries] in der Benutzeroberfläche von Experience Platform. Lesen Sie das Handbuch zu Anmeldeinformationen, um zu erfahren[ wie Sie diese Werte in der Experience Platform-Benutzeroberfläche finden](../ui/credentials.md). Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den [!UICONTROL Queries]-Arbeitsbereich haben.
 
 ### Erforderliche [!DNL Visual Studio Code] {#required-extensions}
 
@@ -119,7 +119,7 @@ Wenn [!DNL GitHub Copilot] Code-Vervollständigungen vorschlägt, können Sie en
 
 >[!TIP]
 >  
->Wenn Sie keine Vorschläge erhalten, stellen Sie sicher[[!DNL Copilot]  dass in der Sprache Ihrer Datei aktiviert &#x200B;](#get-started-with-copilot).
+>Wenn Sie keine Vorschläge erhalten, stellen Sie sicher[[!DNL Copilot]  dass in der Sprache Ihrer Datei aktiviert ](#get-started-with-copilot).
 
 ![Der [!DNL VS Code]-Editor zeigt einen schwach grauen Textvorschlag von [!DNL GitHub Copilot] als Ghost-Text neben teilweise eingegebenem Code an.](../images/clients/github-copilot/accept-partial-suggestions.png)
 
@@ -136,10 +136,11 @@ Sie können auch direkt mit [!DNL Copilot] über Ihren Code chatten. Verwenden S
 
 ![Das Inline-Chat-Fenster mit Vergleichsansicht](../images/clients/github-copilot/inline-chat.png)
 
-<!-- THis section is poss unnecessary:
+<!-- 
+THis section is poss unnecessary:
 There are inline features for chat including doc, expalin, fix and test
 ![fix, document, explain](../images/clients/github-copilot/fix-document-explain.png)
- -->
+-->
 
 ## Dedizierte Chat-Ansicht {#dedicated-chat}
 
