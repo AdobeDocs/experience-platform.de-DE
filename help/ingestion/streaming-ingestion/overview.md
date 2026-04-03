@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Überblick über den Import von Streamingdaten
 description: Erfahren Sie mehr über die Streaming-Aufnahme in Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 15%
@@ -21,7 +21,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 Das folgende Video soll Ihnen dabei helfen, die Streaming-Aufnahme zu verstehen, und umreißt die oben genannten Konzepte.
 
->[!VIDEO](https://video.tv.adobe.com/v/31577?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Streamen von Profildatensätzen und [!DNL ExperienceEvents]
 
