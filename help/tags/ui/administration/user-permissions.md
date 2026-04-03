@@ -2,7 +2,7 @@
 title: Benutzerberechtigungen für Tags
 description: Hier erfahren Sie mehr über die verschiedenen Arten von Berechtigungen, die für Tags verfügbar sind, und über einige grundlegende Implementierungsstrategien für verschiedene geschäftliche Anwendungsfälle.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1260'
 ht-degree: 91%
@@ -109,9 +109,9 @@ In der folgenden Tabelle finden Sie einige Beispiele für die Rollentypen, die S
 | Manager | Möchte sehen, was im System passiert, sollte jedoch keine Änderungen vornehmen können. | Automatisch einfügen | (Keine) | (Keine) |
 | Vermarkter | Kann Erweiterungen installieren und neue Tags für vorhandene Eigenschaften einrichten, aber kann nicht in Staging- oder Produktionsumgebungen veröffentlichen. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Erweiterungen verwalten</li></ul> | <ul><li>Eigenschaften verwalten</li></ul> |
 | App-Entwickler | Ist für die Implementierung von Adobe- und Drittanbieterlösungen in nativen Mobile Apps verantwortlich. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Erweiterungen verwalten</li></ul> | <li>Eigenschaften verwalten</li><li>Mobile-App-Konfigurationen verwalten</li> |
-| IT-Team | Ändert zwar keine Tags, hat jedoch volle Kontrolle über die Staging- und die Produktionsumgebung und deren Inhalte. | Automatisch einfügen | (Keine) | <ul><li>Genehmigen</li><li>Veröffentlichen Sie</li><li>Umgebungen verwalten</li></ul> |
+| IT-Team | Ändert zwar keine Tags, hat jedoch volle Kontrolle über die Staging- und die Produktionsumgebung und deren Inhalte. | Automatisch einfügen | (Keine) | <ul><li>Genehmigen</li><li>Veröffentlichen</li><li>Umgebungen verwalten</li></ul> |
 | Erweiterungsentwickler | Entwickelt Erweiterungen und kann sie zur Genehmigung einreichen, kann sie jedoch nicht veröffentlichen oder zu vorhandenen Eigenschaften hinzufügen. | Automatisch einfügen | <ul><li>Entwickeln</li></ul> | <ul><li>Eigenschaften verwalten</li><li>Entwickeln von Erweiterungen</li></ul> |
-| Der Super-Anwender | Macht alles. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Genehmigen</li><li>Veröffentlichen Sie</li><li>Erweiterungen verwalten</li><li>Umgebungen verwalten</li></ul> | <ul><li>Eigenschaften verwalten</li></ul> |
+| Der Super-Anwender | Macht alles. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Genehmigen</li><li>Veröffentlichen</li><li>Erweiterungen verwalten</li><li>Umgebungen verwalten</li></ul> | <ul><li>Eigenschaften verwalten</li></ul> |
 
 {style="table-layout:auto"}
 
