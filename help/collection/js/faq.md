@@ -144,7 +144,7 @@ Wenn Sie unsere SDKs verwenden und XDM an die Edge Network senden, können Sie m
 
 ## Was ist eine CNAME- oder Erstanbieter-Domain und warum ist sie wichtig?
 
-Weitere Informationen finden Sie im Handbuch zu [ Services im ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)Adobe-Managed Certificate Program.
+Weitere Informationen finden Sie im Handbuch zu [&#x200B; Services im &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)Adobe-Managed Certificate Program.
 
 ## Verwendet Adobe Experience Platform Web SDK Cookies? Wenn ja, welche Cookies werden verwendet?
 

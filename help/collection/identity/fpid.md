@@ -12,7 +12,7 @@ ht-degree: 0%
 
 Experience Platform Edge Network verwendet Experience Cloud-IDs (ECIDs) zur Identifizierung von Website-Besuchern. Um die Dauerhaftigkeit der Identität in eigenen Eigenschaften zu verbessern, können Sie Ihre eigenen Geräte-IDs festlegen und verwalten, die als First-Party-Geräte-IDs (FPIDs) bezeichnet werden. Der Edge Network verwendet den FPID zum Seed der ECID, die Adobe-Lösungen verwenden.
 
-Auf dieser Seite wird davon ausgegangen, dass Sie mit ECIDs und `identityMap` vertraut sind. Weitere Informationen [ Sie unter „Identität ](./overview.md) Datenerfassung“.
+Auf dieser Seite wird davon ausgegangen, dass Sie mit ECIDs und `identityMap` vertraut sind. Weitere Informationen [&#x200B; Sie unter „Identität &#x200B;](./overview.md) Datenerfassung“.
 
 ## Verwendung von FPIDs {#when-to-use}
 
@@ -20,7 +20,7 @@ Browser-Einschränkungen können die Lebensdauer von Cookies verkürzen, die Ado
 
 FPIDs werden für Web-Implementierungen unterstützt, die die Web-SDK verwenden, einschließlich der Tag-Erweiterung „Web SDK&quot;. Sie eignen sich optimal, wenn Ihr Hauptziel eine stärkere Identitätspersistenz in Domains ist, die Ihrem Unternehmen gehören, oder wenn Sie eine bessere Kontinuität für das Reporting und die Personalisierung in eigenen Web-Eigenschaften wünschen. Sie ermöglichen es Ihnen auch, ein Erstanbieter-Cookie in der von Ihnen kontrollierten Infrastruktur festzulegen und zu verwalten.
 
-FPIDs sind nicht das richtige Tool, wenn Ihr Hauptziel die Übergabe von einer App an das Web oder die Identitätskontinuität über mehrere Domains hinweg ist. Für diese Szenarien siehe [Freigabe von Identitäten zwischen Mobilgeräten ](./mobile-to-web.md) Web und [Domain-übergreifende Freigabe](./cross-domain-sharing.md).
+FPIDs sind nicht das richtige Tool, wenn Ihr Hauptziel die Übergabe von einer App an das Web oder die Identitätskontinuität über mehrere Domains hinweg ist. Für diese Szenarien siehe [Freigabe von Identitäten zwischen Mobilgeräten &#x200B;](./mobile-to-web.md) Web und [Domain-übergreifende Freigabe](./cross-domain-sharing.md).
 
 Vorteile der Verwendung von FPIDs:
 
@@ -76,7 +76,7 @@ Erstanbieter-Cookies sind am effektivsten, wenn sie mit einem Server gesetzt wer
 >
 >Cookies, die mit der `document.cookie`-Methode von JavaScript festgelegt werden (einschließlich der Verwendung der Tag-Methode [`cookie.set()`](../tags/cookie.md)), sind fast nie vor Browser-Richtlinien geschützt, die die Cookie-Dauer beschränken.
 
-Beachten Sie, dass `A` oder `AAAA` Datensätze nur für das Setzen und Tracking von Cookies unterstützt werden. Die primäre Methode zur Datenerfassung erfolgt über eine DNS-`CNAME`. FPIDs werden mithilfe eines `A`- oder `AAAA`-Datensatzes festgelegt und mithilfe eines `CNAME` an Adobe gesendet. Mit dem Adobe-Managed Certificate Program [ Sie eine ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) für die Datenerfassung konfigurieren.`CNAME`
+Beachten Sie, dass `A` oder `AAAA` Datensätze nur für das Setzen und Tracking von Cookies unterstützt werden. Die primäre Methode zur Datenerfassung erfolgt über eine DNS-`CNAME`. FPIDs werden mithilfe eines `A`- oder `AAAA`-Datensatzes festgelegt und mithilfe eines `CNAME` an Adobe gesendet. Mit dem Adobe-Managed Certificate Program [&#x200B; Sie eine &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) für die Datenerfassung konfigurieren.`CNAME`
 
 ### Wann das Cookie gesetzt werden soll {#when-to-set-cookie}
 
@@ -105,8 +105,8 @@ Sie können FPIDs auf zwei Arten an Edge Network senden:
 
 Um ein FPID-Cookie in Ihrer eigenen Domain einzurichten, müssen Sie Ihre eigenen `CNAME` für Ihre Web-SDK-Aufrufe konfigurieren und dann die First-Party-ID-Cookie-Funktion in Ihrer Datenstromkonfiguration aktivieren. Mit einem `CNAME`-Eintrag in Ihrem DNS können Sie einen Alias von einem Domain-Namen zu einem anderen erstellen. Dieser Alias kann dazu beitragen, dass Drittanbieterdienste so aussehen, als wären sie Teil Ihrer eigenen Domain, sodass ihre Cookies wie Erstanbieter-Cookies aussehen. Wenn die Erstanbieter-Datenerfassung mithilfe eines `CNAME` aktiviert ist, werden alle Cookies für Ihre Domain bei Anfragen an den Datenerfassungsendpunkt gesendet.
 
-1. Arbeiten Sie mit Adobe zusammen, um einen `CNAME` Datensatz für die Datenerfassung in Ihrem Unternehmen zu erstellen. Den vollständigen Prozess finden Sie unter {0[ Adobe-verwaltetes Zertifikatprogramm .](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)
-1. Aktivieren Sie die Option **[!UICONTROL First Party ID Cookie]** in Ihrem Datenstrom. Diese Einstellung weist Edge Network an, beim Suchen nach einer First-Party-Geräte-ID das angegebene Cookie zu verwenden, anstatt nach dem Wert in der Identitätszuordnung zu suchen. Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die FPID gespeichert ist. Weitere [ finden Sie unter „Erstellen und Konfigurieren ](/help/datastreams/configure.md#advanced-options) Datenströmen“.
+1. Arbeiten Sie mit Adobe zusammen, um einen `CNAME` Datensatz für die Datenerfassung in Ihrem Unternehmen zu erstellen. Den vollständigen Prozess finden Sie unter &lbrace;0[&#x200B; Adobe-verwaltetes Zertifikatprogramm .](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)
+1. Aktivieren Sie die Option **[!UICONTROL First Party ID Cookie]** in Ihrem Datenstrom. Diese Einstellung weist Edge Network an, beim Suchen nach einer First-Party-Geräte-ID das angegebene Cookie zu verwenden, anstatt nach dem Wert in der Identitätszuordnung zu suchen. Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die FPID gespeichert ist. Weitere [&#x200B; finden Sie unter „Erstellen und Konfigurieren &#x200B;](/help/datastreams/configure.md#advanced-options) Datenströmen“.
 
    ![Platform-UI-Bild mit der Datenstromkonfiguration, in der die First-Party-ID-Cookie-Einstellung hervorgehoben ist](/help/collection/js/assets/first-party-id-datastreams.png)
 
@@ -198,7 +198,7 @@ Wenn Sie von einer früheren Implementierung zu Erstanbieter-Geräte-IDs migrier
 
 | Besuch | Beschreibung |
 | --- | --- |
-| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des FPID-Cookies begonnen. Die im -AMCV[Cookie enthaltene ECID ](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
+| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des FPID-Cookies begonnen. Die im -AMCV[Cookie enthaltene ECID &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
 | Zweiter Besuch | Der Rollout der FPID-Lösung hat begonnen. Die vorhandene ECID ist weiterhin vorhanden und bleibt die primäre Kennung zur Besucheridentifizierung. |
 | Dritter Besuch | Zwischen dem zweiten und dem dritten Besuch ist ausreichend Zeit verstrichen, um die ECID aufgrund der Browser-Richtlinie zu löschen. Da die FPID jedoch mithilfe eines DNS-`A`-Eintrags festgelegt wurde, bleibt die FPID bestehen. Die FPID wird jetzt als primäre ID betrachtet und zum Seed der ECID verwendet, die auf das Endbenutzergerät geschrieben wird. Der Benutzer wird jetzt als neuer Besucher in Adobe Experience Platform- und Experience Cloud-Lösungen betrachtet. |
 | Vierter Besuch | Zwischen dem dritten und vierten Besuch ist ausreichend Zeit verstrichen, um die ECID aufgrund der Browser-Richtlinie zu löschen. Wie beim vorherigen Besuch bleibt die FPID aufgrund der Art und Weise, wie sie festgelegt wurde, bestehen. Diesmal wird dieselbe ECID wie beim vorherigen Besuch generiert. Der Benutzer wird in allen Adobe Experience Platform- und Experience Cloud-Lösungen als derselbe Benutzer angezeigt wie der vorherige Besuch. |

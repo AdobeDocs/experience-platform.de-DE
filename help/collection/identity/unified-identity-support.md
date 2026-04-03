@@ -66,7 +66,7 @@ Die Unterstützung einer einheitlichen Identität erfordert Folgendes:
 
 1. **Aktivieren von Drittanbieter-Cookies in Web SDK**: Aktivieren Sie die **Verwenden von Drittanbieter-**) in Ihrer Web SDK-Implementierung. Wenn Sie die Tag-Erweiterung verwenden, aktivieren Sie **[!UICONTROL Use third-party cookies]** in [Identitätskonfigurationseinstellungen](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies). Wenn Sie die JavaScript-Bibliothek verwenden, setzen Sie [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md) auf `true`.
 
-1. **Synchronisierung der Drittanbieter-ID im Datenstrom aktivieren**: Aktivieren Sie die Option &quot;**[!UICONTROL Third-Party ID Sync]**&quot; in den erweiterten Einstellungen Ihres Datenstroms. Siehe [Erstellen und Konfigurieren von ](/help/datastreams/configure.md#advanced-options)).
+1. **Synchronisierung der Drittanbieter-ID im Datenstrom aktivieren**: Aktivieren Sie die Option &quot;**[!UICONTROL Third-Party ID Sync]**&quot; in den erweiterten Einstellungen Ihres Datenstroms. Siehe [Erstellen und Konfigurieren von &#x200B;](/help/datastreams/configure.md#advanced-options)).
 
 1. **Erstanbieter-Persistenz sicherstellen**: Vergewissern Sie sich, dass Ihre Erstanbieter-Persistenzstrategie (z. B. FPIDs) bereits in Ihrer eigenen Domain bereitgestellt ist. Siehe [Erstanbieter-Geräte-IDs in der Datenerfassung](fpid.md).
 

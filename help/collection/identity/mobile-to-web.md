@@ -12,9 +12,9 @@ ht-degree: 0%
 
 Wenn ein Besucher von einer mobilen App in eine WebView- oder mobile Web-Seite wechselt, behalten die App und die Web-Kontexte jeweils ihre eigene Identität bei. Ohne eine explizite Übergabe wird der Besucher im Web-Erlebnis als neue, unbekannte Person behandelt, wodurch das Reporting fragmentiert und die Personalisierung neu gestartet wird.
 
-Die Freigabe von Mobile-zu-Web-Identitäten löst dies, indem die [Experience Cloud ID (ECID) des Besuchers ](./overview.md) einem `adobe_mc` Abfragezeichenfolgenparameter von der Mobile App an das Web-Ziel übergeben wird. Der Parameter enthält die ECID, Ihre Experience Cloud-Organisations-ID und einen Zeitstempel. Wenn das Web-Ziel mit einem gültigen `adobe_mc` geladen wird, liest die Web-SDK dies automatisch und wendet die weitergegebene Identität auf ihre erste Edge Network-Anfrage an, sodass beide Kontexte denselben Besucher haben.
+Die Freigabe von Mobile-zu-Web-Identitäten löst dies, indem die [Experience Cloud ID (ECID) des Besuchers &#x200B;](./overview.md) einem `adobe_mc` Abfragezeichenfolgenparameter von der Mobile App an das Web-Ziel übergeben wird. Der Parameter enthält die ECID, Ihre Experience Cloud-Organisations-ID und einen Zeitstempel. Wenn das Web-Ziel mit einem gültigen `adobe_mc` geladen wird, liest die Web-SDK dies automatisch und wendet die weitergegebene Identität auf ihre erste Edge Network-Anfrage an, sodass beide Kontexte denselben Besucher haben.
 
-Verwenden Sie dieses Muster, wenn Ihre Mobile App eine WebView- oder mobile Web-Seite öffnet, die Ihr Unternehmen steuert, und Sie möchten, dass die App-Aktivität und die Web-Aktivität weiterhin mit demselben Besucher verknüpft sind. Wenn Ihr Ziel die Identitätskontinuität zwischen Websites auf verschiedenen Domains ist, verwenden [ stattdessen die ](cross-domain-sharing.md) „Domain-übergreifende Freigabe“.
+Verwenden Sie dieses Muster, wenn Ihre Mobile App eine WebView- oder mobile Web-Seite öffnet, die Ihr Unternehmen steuert, und Sie möchten, dass die App-Aktivität und die Web-Aktivität weiterhin mit demselben Besucher verknüpft sind. Wenn Ihr Ziel die Identitätskontinuität zwischen Websites auf verschiedenen Domains ist, verwenden [&#x200B; stattdessen die &#x200B;](cross-domain-sharing.md) „Domain-übergreifende Freigabe“.
 
 ## Voraussetzungen
 

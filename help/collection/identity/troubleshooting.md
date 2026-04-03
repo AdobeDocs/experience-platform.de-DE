@@ -67,7 +67,7 @@ Sie können auch Identitätswerte in den Entwickler-Tools Ihres Browsers überpr
 
 **Diagnoseschritte**:
 
-1. **Überprüfen des FPID-Cookie** Formats: Die FPID muss eine gültige [UUIDv4“ ](https://datatracker.ietf.org/doc/html/rfc4122). Öffnen Sie die Entwickler-Tools Ihres Browsers, suchen Sie das FPID-Cookie und überprüfen Sie, ob der Wert mit dem Muster `xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx` übereinstimmt.
+1. **Überprüfen des FPID-Cookie** Formats: Die FPID muss eine gültige [UUIDv4“ &#x200B;](https://datatracker.ietf.org/doc/html/rfc4122). Öffnen Sie die Entwickler-Tools Ihres Browsers, suchen Sie das FPID-Cookie und überprüfen Sie, ob der Wert mit dem Muster `xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx` übereinstimmt.
 2. **Überprüfen Sie den Cookie-Namen im Datenstrom**: Wenn Sie die [Datenstrom-Cookie-Methode](./fpid.md#setting-cookie-datastreams) verwenden, muss der im Datenstrom konfigurierte Cookie-Name genau mit dem Namen des Cookies übereinstimmen, das Ihr Server setzt.
 3. **Vergewissern Sie sich, dass das Cookie bei der Anfrage gesendet wird**: Überprüfen Sie auf der Registerkarte „Netzwerk“ die `Cookie` der Edge Network-Anfrage. Das FPID-Cookie muss enthalten sein.
 4. **Identitätspriorität überprüfen**: Wenn eine vorhandene ECID bereits in einem `kndctr_` Cookie gespeichert ist, hat sie Vorrang vor der FPID. Der FPID übergibt nur dann eine neue ECID, wenn keine vorhandene ECID vorhanden ist. Siehe [Funktionsweise von FPIDs](./fpid.md#how-fpids-work) für die vollständige Prioritätsreihenfolge.
@@ -95,7 +95,7 @@ Sie können auch Identitätswerte in den Entwickler-Tools Ihres Browsers überpr
 
 **Diagnoseschritte**:
 
-1. **URL überprüfen**: Die an die WebView übergebene URL protokollieren. Sie muss einen von `adobe_mc`[`getUrlVariables` generierten ](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/api-reference/#geturlvariables) enthalten.
+1. **URL überprüfen**: Die an die WebView übergebene URL protokollieren. Sie muss einen von `adobe_mc`[`getUrlVariables` generierten &#x200B;](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/api-reference/#geturlvariables) enthalten.
 2. **SDK-Versionen überprüfen**: Die Mobile Identity for Edge Network-Erweiterung muss Version 1.1.0 oder höher und die Web-SDK muss Version 2.11.0 oder höher sein.
 3. **Überprüfen Sie das Timing**: Wie bei der Domain-übergreifenden Freigabe läuft der `adobe_mc` nach fünf Minuten ab. Stellen Sie sicher, dass der WebView sofort nach dem Erstellen der URL geladen wird.
 4. **`orgId` Übereinstimmung bestätigen**: Die Experience Cloud-Organisations-ID muss sowohl in der mobilen SDK- als auch in der Web-SDK-Konfiguration identisch sein.

@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # Verwenden von identityMap in der Datenerfassung
 
-Mit dem `identityMap` Payload-Objekt können Sie dem Edge Network mitteilen, wer ein Besucher ist, der über die Geräteebene ([) ](./overview.md). Wenn sich ein Besucher anmeldet, einen Kauf abschließt oder anderweitig bekannt wird, können Sie neben der ECID Kennungen auf Personenebene (CRM-ID, gehashte E-Mail, Treueprogramm-ID usw.) senden. Diese Kennungen auf Personenebene bieten nachgelagerten -Services wertvolle Informationen, damit sie:
+Mit dem `identityMap` Payload-Objekt können Sie dem Edge Network mitteilen, wer ein Besucher ist, der über die Geräteebene ([) &#x200B;](./overview.md). Wenn sich ein Besucher anmeldet, einen Kauf abschließt oder anderweitig bekannt wird, können Sie neben der ECID Kennungen auf Personenebene (CRM-ID, gehashte E-Mail, Treueprogramm-ID usw.) senden. Diese Kennungen auf Personenebene bieten nachgelagerten -Services wertvolle Informationen, damit sie:
 
 * **Aktivität einer Person über Geräte und Kanäle hinweg zuordnen.** [Identity Service](/help/identity-service/home.md) verknüpft die von Ihnen gesendeten Identitäten mit einem [Identitätsdiagramm](/help/identity-service/features/identity-graph-viewer.md) und verbindet das anonyme Verhalten auf Geräteebene mit einer bekannten Person.
 * **Erstellen einheitlicher Kundenprofile.** [Echtzeit-Kundenprofil](/help/profile/home.md) verwendet die primäre Identität, die Sie festlegen, um Ereignisse und Attribute in einem einzelnen Profil zu verankern, was eine Segmentierung auf Personenebene und die Erstellung von Zielgruppen ermöglicht.
@@ -63,7 +63,7 @@ Bevor Sie einen Wert in `identityMap` aufnehmen, bereiten Sie ihn entsprechend d
 | **E-Mail (unbearbeitet)** | Kleinschreibung der vollständigen E-Mail-Adresse und Kürzung vorangestellter und nachgestellter Leerzeichen. | `user@example.com` |
 | **E-Mail (gehasht)** | Kleinbuchstaben verwenden und die E-Mail-Adresse zuerst kürzen und dann mit SHA-256 hashen. Senden Sie die resultierende 64-stellige Hex-Zeichenfolge. Fügen Sie kein Salz hinzu, es sei denn, Ihre Namespace-Definition erfordert eines. | `a1b2c3d4e5f6a7b8c9...` |
 | **Telefon (E.164)** | Formatieren Sie die Nummer in [E.164](https://en.wikipedia.org/wiki/E.164): eine vorangestellte `+`, den Ländercode und die Teilnehmernummer ohne Leerzeichen oder Satzzeichen. | `+15551234567` |
-| **FPID** | Generieren Sie eine [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122)-Zeichenfolge. Generierungsanforderungen finden [ unter ](./fpid.md)-IDs von Erstanbietern . | `123e4567-e89b-42d3-9456-426614174000` |
+| **FPID** | Generieren Sie eine [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122)-Zeichenfolge. Generierungsanforderungen finden [&#x200B; unter &#x200B;](./fpid.md)-IDs von Erstanbietern . | `123e4567-e89b-42d3-9456-426614174000` |
 
 Eine vollständige Liste der Standard-Namespaces und ihrer Definitionen finden Sie unter [Übersicht zu Identitäts-Namespaces](/help/identity-service/features/namespaces.md#standard).
 
@@ -77,7 +77,7 @@ Die benötigte Kennung ist selten direkt auf der Seite verfügbar. Zu den gängi
 
 * **Datenschicht**: Lesen Sie die Kennung aus der Datenschicht Ihrer Site, nachdem sich der Besucher angemeldet hat. Dieser Speicherort ist der zuverlässigste Ansatz, da die Datenschicht durch das Backend Ihrer Anwendung gefüllt wird und den authentifizierten Sitzungsstatus widerspiegelt.
 * **Authentifizierungs-Token oder Sitzungs** Cookie: Dekodieren Sie die Kennung aus einem JWT- oder Sitzungs-Cookie, das Ihr Authentifizierungssystem setzt, oder suchen Sie sie nach. Überprüfen Sie, ob das Token noch aktiv ist, bevor Sie den Wert verwenden.
-* **Server-seitige Anreicherung**: Verwenden Sie [Datenvorbereitung für die ](/help/datastreams/data-prep.md) oder eine [Ereignisweiterleitungsregel](/help/tags/ui/event-forwarding/overview.md), um die Kennung auf der Edge zuzuordnen oder zu transformieren, bevor sie nachgelagerte Services erreicht. Dieser Speicherort ist nützlich, wenn der Client nur über ein undurchsichtiges Sitzungstoken verfügt, das einer internen ID auf der Server-Seite zugeordnet ist.
+* **Server-seitige Anreicherung**: Verwenden Sie [Datenvorbereitung für die &#x200B;](/help/datastreams/data-prep.md) oder eine [Ereignisweiterleitungsregel](/help/tags/ui/event-forwarding/overview.md), um die Kennung auf der Edge zuzuordnen oder zu transformieren, bevor sie nachgelagerte Services erreicht. Dieser Speicherort ist nützlich, wenn der Client nur über ein undurchsichtiges Sitzungstoken verfügt, das einer internen ID auf der Server-Seite zugeordnet ist.
 
 >[!TIP]
 >

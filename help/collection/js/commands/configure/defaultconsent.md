@@ -40,7 +40,7 @@ alloy("configure", {
 
 ## Verwenden von `defaultConsent` zusammen mit `setConsent` {#using-consent}
 
-Bei der gemeinsamen Verwendung führen `defaultConsent` und `setConsent` je nach den konfigurierten Werten zu unterschiedlichen Datenerfassungs-, Cookie- und Identitätsergebnissen. Eine vollständige Interaktionstabelle finden [ unter „Einverständnis und Identität ](/help/collection/identity/consent.md#how-consent-affects-identity) Datenerfassung“.
+Bei der gemeinsamen Verwendung führen `defaultConsent` und `setConsent` je nach den konfigurierten Werten zu unterschiedlichen Datenerfassungs-, Cookie- und Identitätsergebnissen. Eine vollständige Interaktionstabelle finden [&#x200B; unter „Einverständnis und Identität &#x200B;](/help/collection/identity/consent.md#how-consent-affects-identity) Datenerfassung“.
 
 ## Festlegen des Standardeinverständnisses basierend auf `gdprApplies`
 
