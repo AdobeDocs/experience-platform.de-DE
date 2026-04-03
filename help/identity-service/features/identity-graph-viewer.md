@@ -2,9 +2,9 @@
 title: Identitätsdiagramm-Viewer
 description: Im Identitätsdiagramm werden die Beziehungen zwischen den verschiedenen Identitäten eines Kunden zusammengefasst. Dort wird visuell veranschaulicht, wie der Kunde auf unterschiedlichen Kanälen mit Ihrer Marke interagiert.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1379'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ Mit dem Identitätsdiagramm-Viewer in der Benutzeroberfläche von Experience Pla
 
 Das folgende Dokument beschreibt die Schritte für den Zugriff auf und die Verwendung des Identitätsdiagramm-Viewers in der Experience Platform-Benutzeroberfläche.
 
-## Anleitungsvideo
+## Tutorial-Video
 
 Das folgende Video soll Ihnen dabei helfen, den Identitätsdiagramm-Viewer zu verstehen.
 
@@ -38,11 +38,11 @@ Für die Arbeit mit dem Identitätsdiagramm-Viewer sind Kenntnisse der verschied
 
 ## Zugriff auf den Identitätsdiagramm-Viewer {#access-identity-graph-viewer}
 
-Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Identitäten]** im linken Navigationsbereich und anschließend **[!UICONTROL Identitätsdiagramm]** aus der Liste der Registerkarten in der Kopfzeile aus.
+Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigationsbereich die Option **[!UICONTROL Identities]** und dann **[!UICONTROL Identity Graph]** aus der Liste der Registerkarten in der Kopfzeile aus.
 
 ![Der Arbeitsbereich „Identitäten“ in der Experience Platform-Benutzeroberfläche mit ausgewählter Registerkarte „Identitätsdiagramm“.](../images/graph-viewer/identity-graph.png)
 
-Um ein Identitätsdiagramm anzuzeigen, geben Sie einen Identity-Namespace und den entsprechenden Wert an und wählen Sie dann **[!UICONTROL Anzeigen]** aus.
+Um ein Identitätsdiagramm anzuzeigen, geben Sie einen Identity-Namespace und den entsprechenden Wert an und wählen Sie dann **[!UICONTROL View]** aus.
 
 >[!TIP]
 >
@@ -56,11 +56,11 @@ Die Benutzeroberfläche des Identitätsdiagramm-Viewers besteht aus mehreren Ele
 
 ![Die Benutzeroberfläche des Identitätsdiagramm-Viewers.](../images/graph-viewer/identity-graph-viewer-main.png)
 
-Das Identitätsdiagramm zeigt alle Identitäten an, die mit der eingegebenen Kombination aus Identity-Namespace und Wert verknüpft sind. Jeder Knoten besteht aus einem Identity-Namespace und dem entsprechenden Wert. Sie können jeden Knoten auswählen, gedrückt halten und ziehen, um mit dem Graphen zu interagieren. Alternativ können Sie den Mauszeiger über einen Knoten bewegen, um Informationen über den entsprechenden Identitätswert anzuzeigen. Wählen Sie **[!UICONTROL Diagramm anzeigen]**, um das Diagramm auszublenden oder anzuzeigen.
+Das Identitätsdiagramm zeigt alle Identitäten an, die mit der eingegebenen Kombination aus Identity-Namespace und Wert verknüpft sind. Jeder Knoten besteht aus einem Identity-Namespace und dem entsprechenden Wert. Sie können jeden Knoten auswählen, gedrückt halten und ziehen, um mit dem Graphen zu interagieren. Alternativ können Sie den Mauszeiger über einen Knoten bewegen, um Informationen über den entsprechenden Identitätswert anzuzeigen. Wählen Sie **[!UICONTROL View graph]** aus, um das Diagramm auszublenden oder anzuzeigen.
 
 >[!IMPORTANT]
 >
->Ein Identitätsdiagramm erfordert die Generierung von mindestens zwei verknüpften Identitäten und eine gültige Kombination aus Identitäts-Namespace und Wert. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 50. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#appendix)Anhang“.
+>Ein Identitätsdiagramm erfordert die Generierung von mindestens zwei verknüpften Identitäten und eine gültige Kombination aus Identitäts-Namespace und Wert. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 50. Weitere Informationen finden Sie [ Abschnitt ](#appendix)Anhang“.
 
 ![Der Identitätsdiagramm-Viewer mit fünf verknüpften Identitäten.](../images/graph-viewer/graph.png)
 
@@ -68,11 +68,11 @@ Wählen Sie einen Link im Diagramm aus, um den Datensatz und die Batch-ID anzuze
 
 ![Der Identitätslink zwischen den ausgewählten E-Mail- und GAID-Knoten.](../images/graph-viewer/identity-link.png)
 
-Die [!UICONTROL Identitäten]-Tabelle bietet eine andere Ansicht Ihrer Identitätsdaten, in der der Identity-Namespace und die Kombination der Identitätswerte in einem tabellarischen Format aufgelistet sind. Wenn Sie einen Knoten im Diagramm auswählen, wird der hervorgehobene Zeileneintrag in der Tabelle [!UICONTROL Identitäten] aktualisiert.
+Die [!UICONTROL Identities] Tabelle bietet eine andere Ansicht Ihrer Identitätsdaten, in der der Identity-Namespace und die Kombination der Identitätswerte in einem tabellarischen Format aufgelistet sind. Wenn Sie einen Knoten im Diagramm auswählen, wird der hervorgehobene Zeileneintrag in der [!UICONTROL Identities] aktualisiert.
 
 ![Die Identitätstabelle mit der Liste der im Diagramm verknüpften Identitäten.](../images/graph-viewer/identities-table.png)
 
-Verwenden Sie das Dropdown-Menü, um die Diagrammdaten zu sortieren und Informationen zu einem bestimmten Identity-Namespace hervorzuheben. Wählen Sie beispielsweise **[!UICONTROL E-Mail]** aus dem Menü aus, um Daten anzuzeigen, die für den Identity-Namespace der E-Mail spezifisch sind.
+Verwenden Sie das Dropdown-Menü, um die Diagrammdaten zu sortieren und Informationen zu einem bestimmten Identity-Namespace hervorzuheben. Wählen Sie beispielsweise **[!UICONTROL Email]** aus dem Menü aus, um Daten anzuzeigen, die für den Identity-Namespace der E-Mail spezifisch sind.
 
 ![Die Identitätstabelle wird so sortiert, dass nur E-Mail-Daten angezeigt werden.](../images/graph-viewer/sort-email.png)
 
@@ -81,7 +81,7 @@ Die rechte Leiste zeigt Informationen zu einer ausgewählten Identität an, eins
 Die folgende Tabelle enthält zusätzliche Informationen zu den Datenquelleneigenschaften, die in der rechten Leiste angezeigt werden:
 
 | Datenquelle | Beschreibung |
-| --- | --- | 
+| --- | --- |
 | Batch-ID | Die automatisch generierte Kennung, die Ihren Batch-Daten entspricht. |
 | Datensatz-ID | Die automatisch generierte Kennung, die Ihrem Datensatz entspricht. |
 | Datensatzname | Der Name des Datensatzes, der Ihre Batch-Daten enthält. |
@@ -89,19 +89,19 @@ Die folgende Tabelle enthält zusätzliche Informationen zu den Datenquelleneige
 
 ![Die rechte Leiste, die Identitätsdaten sowie Informationen zur Datenquelle anzeigt.](../images/graph-viewer/right-rail.png)
 
-Sie können auch die *[!UICONTROL Datenquelle“ verwenden]* um eine Liste von Datenquellen anzuzeigen, die zu Ihren Identitäten beitragen. Wählen Sie [!UICONTROL Datenquelle] aus, um eine tabellarische Ansicht Ihrer Datensätze und Batch-IDs zu erhalten.
+Sie können die *[!UICONTROL Data source]* auch verwenden, um eine Liste der Datenquellen anzuzeigen, die zu Ihren Identitäten beitragen. Wählen Sie [!UICONTROL Data source] aus, um eine tabellarische Ansicht Ihrer Datensätze und Batch-IDs zu erhalten.
 
 ![Die ausgewählte Registerkarte „Datenquelle“.](../images/graph-viewer/data-source-table.png)
 
-Verwenden Sie den Schieberegler, um Diagrammdaten nach dem Zeitpunkt zu filtern, zu dem Identitäten erstmals erstellt wurden. Standardmäßig zeigt der Identitätsdiagramm-Viewer alle Identitäten an, die mit dem Diagramm verknüpft sind. Halten Sie den Schieberegler gedrückt, und ziehen Sie ihn, um den Zeitpunkt an den letzten Zeitstempel anzupassen, an dem eine neue Identität mit dem Diagramm verknüpft wurde. Im folgenden Beispiel zeigt das Diagramm an, dass der letzte Identitätslink (GAID) am **[!UICONTROL 08/19/2020, 16:29:29 Uhr eingerichtet]**.
+Verwenden Sie den Schieberegler, um Diagrammdaten nach dem Zeitpunkt zu filtern, zu dem Identitäten erstmals erstellt wurden. Standardmäßig zeigt der Identitätsdiagramm-Viewer alle Identitäten an, die mit dem Diagramm verknüpft sind. Halten Sie den Schieberegler gedrückt, und ziehen Sie ihn, um den Zeitpunkt an den letzten Zeitstempel anzupassen, an dem eine neue Identität mit dem Diagramm verknüpft wurde. Im folgenden Beispiel zeigt das Diagramm an, dass der letzte Identitätslink (GAID) auf **[!UICONTROL 08/19/2020, 4:29:29 PM]** eingerichtet wurde.
 
 ![Der Zeitstempel-Schieberegler des Diagrammanzeigers ist ausgewählt.](../images/graph-viewer/slider-one.png)
 
-Stellen Sie den Schieberegler ein, um zu sehen, dass am **[!UICONTROL 08/19/2020, 16:30 :25: ein weiterer Identitätslink (E-Mail) hergestellt]**.
+Stellen Sie den Schieberegler ein, um zu sehen, dass ein weiterer Identitätslink (E-Mail) in **[!UICONTROL 08/19/2020, 4:25:30 PM]** hergestellt wurde.
 
 ![Der Zeitstempelregler des Diagrammanzeigers wurde auf den zuletzt eingerichteten neuen Link eingestellt.](../images/graph-viewer/slider-two.png)
 
-Sie können den Schieberegler auch anpassen, um die früheste Iteration des Diagramms anzuzeigen. Im folgenden Beispiel zeigt der Identitätsdiagramm-Viewer an, dass das Diagramm zuerst am **[!UICONTROL 08/19/2020, 16:11:49 Uhr]** erstellt wurde, wobei die ersten Links ECID, E-Mail und Telefon sind.
+Sie können den Schieberegler auch anpassen, um die früheste Iteration des Diagramms anzuzeigen. Im folgenden Beispiel zeigt der Identitätsdiagramm-Viewer an, dass das Diagramm zuerst auf **[!UICONTROL 08/19/2020, 4:11:49 PM]** erstellt wurde, wobei die ersten Links ECID, E-Mail und Telefon sind.
 
 ![Der Zeitstempelregler des Diagrammanzeigers wurde auf den ersten eingerichteten neuen Link eingestellt.](../images/graph-viewer/slider-three.png)
 
@@ -121,7 +121,7 @@ Beim Zugriff auf den Identitätsdiagramm-Viewer können Fehler auftreten. Im Fol
 
 ### Zugreifen auf den Identitätsdiagramm-Viewer aus Datensätzen
 
-Sie können auch über die Oberfläche Datensätze auf den Identitätsdiagramm-Viewer zugreifen. Wählen Sie auf der Seite [!UICONTROL Durchsuchen] einen Datensatz aus, mit dem Sie interagieren möchten, und wählen Sie dann **[!UICONTROL Datensatz in der Vorschau anzeigen]**
+Sie können auch über die Oberfläche Datensätze auf den Identitätsdiagramm-Viewer zugreifen. Wählen Sie auf der [!UICONTROL Browse] Datensätze einen Datensatz aus, mit dem Sie interagieren möchten, und klicken Sie dann auf **[!UICONTROL Preview dataset]**
 
 ![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
 
