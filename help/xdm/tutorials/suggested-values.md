@@ -2,7 +2,7 @@
 title: Vorgeschlagene Werte in der API verwalten
 description: Erfahren Sie, wie Sie in der Schema Registry-API vorgeschlagene Werte zu einem Zeichenfolgenfeld hinzufügen.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
@@ -69,13 +69,15 @@ Alternativ können Sie ein Zeichenfolgenfeld definieren, das kein `enum`-Array e
 
 Da die Zeichenfolge über kein `enum`-Array zum Definieren von Einschränkungen verfügt, kann ihre `meta:enum`-Eigenschaft erweitert werden, um neue Werte einzuschließen.
 
-<!-- ## Manage suggested values for standard fields
+<!-- 
+## Manage suggested values for standard fields
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). 
+-->
 
 ## Hinzufügen empfohlener Werte zu einem Standardfeld {#add-suggested-standard}
 
-Um die `meta:enum` eines standardmäßigen Zeichenfolgenfelds zu erweitern, können Sie für das [&#x200B; Feld in einem bestimmten Schema einen &#x200B;](../api/descriptors.md#friendly-name)Deskriptor für benutzerfreundliche Namen“ erstellen.
+Um die `meta:enum` eines standardmäßigen Zeichenfolgenfelds zu erweitern, können Sie für das [ Feld in einem bestimmten Schema einen ](../api/descriptors.md#friendly-name)Deskriptor für benutzerfreundliche Namen“ erstellen.
 
 >[!NOTE]
 >
@@ -150,7 +152,8 @@ Nach Anwendung des Deskriptors antwortet die Schemaregistrierung beim Abrufen de
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+<!-- 
+### Remove suggested values {#remove-suggested-standard}
 
 If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
@@ -210,7 +213,8 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+``` 
+-->
 
 ## Vorgeschlagene Werte für ein benutzerdefiniertes Feld verwalten {#suggested-custom}
 
@@ -274,4 +278,4 @@ Nach Anwendung der Änderung antwortet die Schemaregistrierung beim Abrufen des 
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie vorgeschlagene Werte für Zeichenfolgenfelder in der Schema Registry-API verwalten. Weitere Informationen zum Erstellen [&#x200B; verschiedenen Feldtypen finden Sie &#x200B;](./custom-fields-api.md) Handbuch unter „Definieren benutzerdefinierter Felder in der API“.
+In diesem Handbuch wurde beschrieben, wie Sie vorgeschlagene Werte für Zeichenfolgenfelder in der Schema Registry-API verwalten. Weitere Informationen zum Erstellen [ verschiedenen Feldtypen finden Sie ](./custom-fields-api.md) Handbuch unter „Definieren benutzerdefinierter Felder in der API“.
