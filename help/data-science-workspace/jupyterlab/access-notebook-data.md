@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datenzugriff in JupyterLab-Notebooks
 description: In diesem Handbuch wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace erstellt wurden, auf Ihre Daten zugreifen können.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3274'
 ht-degree: 22%
@@ -29,7 +29,7 @@ Bevor Sie dieses Handbuch lesen, lesen Sie [[!DNL JupyterLab] Benutzerhandbuch](
 
 >[!IMPORTANT]
 >
->Für PySpark- und Scala-Notebooks, wenn Sie einen Fehler mit der Ursache „Remote-RPC-Client getrennt“ erhalten. Dies bedeutet in der Regel, dass dem Treiber oder einem Executor nicht mehr genügend Speicher zur Verfügung steht. Versuchen Sie, in [&#x200B; „Batch“-Modus &#x200B;](#mode) wechseln, um diesen Fehler zu beheben.
+>Für PySpark- und Scala-Notebooks, wenn Sie einen Fehler mit der Ursache „Remote-RPC-Client getrennt“ erhalten. Dies bedeutet in der Regel, dass dem Treiber oder einem Executor nicht mehr genügend Speicher zur Verfügung steht. Versuchen Sie, in [ „Batch“-Modus ](#mode) wechseln, um diesen Fehler zu beheben.
 
 Die folgenden Informationen definieren die maximale Datenmenge, die gelesen werden kann, den verwendeten Datentyp und den geschätzten Zeitrahmen für das Lesen der Daten.
 
@@ -398,7 +398,7 @@ Ein benutzerdefinierter [!DNL Data Science Workspace] Magic-Befehl zum Lesen ode
 > - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 > 
-> Weitere Informationen finden [&#x200B; im &#x200B;](../troubleshooting-guide.md) zur Fehlerbehebung .
+> Weitere Informationen finden [ im ](../troubleshooting-guide.md) zur Fehlerbehebung .
 
 Sie können die oben genannten Beispiele automatisch in JupyterLab generieren, indem Sie die folgende Methode verwenden:
 
@@ -498,7 +498,7 @@ In Scala können Sie `clientContext` importieren, um Experience Platform-Werte a
 > - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 > 
-> Weitere Informationen finden [&#x200B; im &#x200B;](../troubleshooting-guide.md) zur Fehlerbehebung .
+> Weitere Informationen finden [ im ](../troubleshooting-guide.md) zur Fehlerbehebung .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -555,7 +555,7 @@ In Scala können Sie `clientContext` importieren, um Experience Platform-Werte a
 > - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 > 
-> Weitere Informationen finden [&#x200B; im &#x200B;](../troubleshooting-guide.md) zur Fehlerbehebung .
+> Weitere Informationen finden [ im ](../troubleshooting-guide.md) zur Fehlerbehebung .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -574,7 +574,7 @@ df1.write.format("com.adobe.platform.query")
   .save()
 ```
 
-| Element | Beschreibung |
+| Element | description |
 | ------- | ----------- |
 | DF1 | Eine Variable, die den Pandas-Datenrahmen darstellt, der zum Lesen und Schreiben von Daten verwendet wird. |
 | user-token | Ihr Benutzer-Token, das automatisch mit `clientContext.getUserToken()` abgerufen wird. |
