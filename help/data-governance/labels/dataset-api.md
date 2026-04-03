@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datensatz-API;Datenverwendung verwalten;Datenverwendungs-API
 solution: Experience Platform
-title: Verwalten von Datennutzungskennzeichnungen für Datensätze mithilfe von APIs
-description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
+title: Verwalten von Datennutzungs-Labels für Datensätze mithilfe von APIs
+description: Mit der Datensatz-Service-API können Sie Nutzungs-Labels für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 91%
 
 ---
 
-# Verwalten von Datennutzungskennzeichnungen für Datensätze mithilfe von APIs
+# Verwalten von Datennutzungs-Labels für Datensätze mithilfe von APIs
 
-Mit [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) können Sie Nutzungskennzeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service]-API getrennt, die Datensatz-Metadaten verwaltet.
+Mit [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) können Sie Nutzungs-Labels für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service]-API getrennt, die Datensatz-Metadaten verwaltet.
 
 >[!IMPORTANT]
 >
->Das Anwenden von Kennzeichnungen auf Datensatzebene wird nur für Data-Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Kennzeichnungen auf das Schema anwenden](../../xdm/tutorials/labels.md), auf dem der Datensatz basiert. Weitere Informationen finden Sie in der Übersicht zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
+>Das Anwenden von Labels auf Datensatzebene wird nur für Data-Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Labels auf das Schema anwenden](../../xdm/tutorials/labels.md), auf dem der Datensatz basiert. Weitere Informationen finden Sie in der Übersicht zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
-In diesem Dokument wird beschrieben, wie Sie Kennzeichnungen für Datensätze und Felder mit der [!DNL Dataset Service API] verwalten. Anweisungen zum Verwalten von Datennutzungskennzeichnungen selbst mithilfe von API-Aufrufen finden Sie im [Handbuch zu Endpunktkennzeichnungen](../api/labels.md) für die [!DNL Policy Service API].
+In diesem Dokument wird beschrieben, wie Sie Labels für Datensätze und Felder mit der [!DNL Dataset Service API] verwalten. Anweisungen zum Verwalten von Datennutzungs-Labels selbst mithilfe von API-Aufrufen finden Sie im [Handbuch zu Endpunkt-Labels](../api/labels.md) für die [!DNL Policy Service API].
 
 ## Erste Schritte
 
@@ -27,9 +27,9 @@ Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt 
 
 Um die in diesem Dokument beschriebenen Endpunkte aufrufen zu können, müssen Sie über den eindeutigen `id`-Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch [Auflistung der Catalog-Objekte](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
 
-## Suchen nach Kennzeichnungen für einen Datensatz {#look-up}
+## Suchen nach Labels für einen Datensatz {#look-up}
 
-Sie können die Datennutzungskennzeichnungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET-Anfrage an die [!DNL Dataset Service]-API stellen.
+Sie können die Datennutzungs-Labels nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET-Anfrage an die [!DNL Dataset Service]-API stellen.
 
 **API-Format**
 
@@ -39,7 +39,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Der eindeutige `id`-Wert des Datensatzes, dessen Kennzeichnungen Sie nachschlagen möchten. |
+| `{DATASET_ID}` | Der eindeutige `id`-Wert des Datensatzes, dessen Labels Sie nachschlagen möchten. |
 
 **Anfrage**
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Datennutzungsbeschriftungen zurück, die auf den Datensatz angewendet wurden.
+Eine erfolgreiche Antwort gibt die Datennutzungs-Labels zurück, die auf den Datensatz angewendet wurden.
 
 ```json
 {
@@ -77,12 +77,12 @@ Eine erfolgreiche Antwort gibt die Datennutzungsbeschriftungen zurück, die auf 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `labels` | Eine Liste von Datennutzungsbeschriftungen, die auf den Datensatz angewendet wurden. |
-| `optionalLabels` | Eine Liste einzelner Felder im Datensatz, auf die Datennutzungsbeschriftungen angewendet werden bzw. wurden. |
+| `labels` | Eine Liste von Datennutzungs-Labels, die auf den Datensatz angewendet wurden. |
+| `optionalLabels` | Eine Liste einzelner Felder im Datensatz, auf die Datennutzungs-Labels angewendet werden bzw. wurden. |
 
-## Anwenden von Kennzeichnungen auf einen Datensatz {#apply}
+## Anwenden von Labels auf einen Datensatz {#apply}
 
-Sie können einen Satz von Kennzeichnungen für einen kompletten Datensatz erstellen, indem Sie diese in der Payload einer POST- oder PUT-Anfrage an die [!DNL Dataset Service]-API bereitstellen. Der Anfragetext ist für beide Aufrufe identisch. Sie können einzelnen Datensatzfeldern keine Kennzeichnungen hinzufügen.
+Sie können einen Satz von Labels für einen kompletten Datensatz erstellen, indem Sie diese in der Payload einer POST- oder PUT-Anfrage an die [!DNL Dataset Service]-API bereitstellen. Der Anfragetext ist für beide Aufrufe identisch. Sie können einzelnen Datensatzfeldern keine Labels hinzufügen.
 
 **API-Format**
 
@@ -93,19 +93,19 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Der eindeutige `id`-Wert des Datensatzes, für den Sie Kennzeichnungen erstellen. |
+| `{DATASET_ID}` | Der eindeutige `id`-Wert des Datensatzes, für den Sie Labels erstellen. |
 
 **Anfrage**
 
-Mit der nachstehenden POST-Beispielanfrage wird der komplette Datensatz mit einer `C1`-Kennzeichnung aktualisiert. Die in der Payload bereitgestellten Felder entsprechen den Feldern, die für eine PUT-Anfrage erforderlich sind.
+Mit der nachstehenden POST-Beispielanfrage wird der komplette Datensatz mit einem `C1`-Label aktualisiert. Die in der Payload bereitgestellten Felder entsprechen den Feldern, die für eine PUT-Anfrage erforderlich sind.
 
-Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Kennzeichnungen eines Datensatzes aktualisieren (PUT), muss eine `If-Match`-Kopfzeile eingefügt werden, die die aktuelle Version der Entität für die Datensatzkennzeichnung in Dataset Service angibt. Um Datenkollisionen zu vermeiden, aktualisiert der Service die Datensatzentität nur, wenn die enthaltene `If-Match`-Zeichenfolge mit dem neuesten vom System für diesen Datensatz generierten Versions-Tag übereinstimmt.
+Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Labels eines Datensatzes aktualisieren (PUT), muss eine `If-Match`-Kopfzeile eingefügt werden, die die aktuelle Version der Entität für das Datensatz-Label in Dataset Service angibt. Um Datenkollisionen zu vermeiden, aktualisiert der Service die Datensatzentität nur, wenn die enthaltene `If-Match`-Zeichenfolge mit dem neuesten vom System für diesen Datensatz generierten Versions-Tag übereinstimmt.
 
 >[!NOTE]
 >
->Wenn für den betreffenden Datensatz derzeit Kennzeichnungen vorhanden sind, können neue Kennzeichnungen nur über eine PUT-Anfrage hinzugefügt werden, wofür ein `If-Match`-Header erforderlich ist. Nachdem Kennzeichnungen zu einem Datensatz hinzugefügt wurden, ist der letzte `etag` erforderlich, um die Kennzeichnungen zu einem späteren Zeitpunkt zu aktualisieren oder zu entfernen<br>Bevor Sie die PUT-Methode ausführen, müssen Sie eine GET-Anfrage für die Datensatzkennzeichnungen ausführen. Stellen Sie sicher, dass Sie nur die spezifischen Felder aktualisieren, die in der Anfrage geändert werden sollen, sodass der Rest unverändert bleibt. Stellen Sie außerdem sicher, dass der PUT-Aufruf dieselben übergeordneten Entitäten beibehält wie der GET-Aufruf. Jede Diskrepanz würde zu einem Fehler für den Kunden führen.
+>Wenn für den betreffenden Datensatz derzeit Labels vorhanden sind, können neue Labels nur über eine PUT-Anfrage hinzugefügt werden, wofür ein `If-Match`-Header erforderlich ist. Nachdem Kennzeichnungen zu einem Datensatz hinzugefügt wurden, ist der letzte `etag` erforderlich, um die Kennzeichnungen zu einem späteren Zeitpunkt zu aktualisieren oder zu entfernen<br>Bevor Sie die PUT-Methode ausführen, müssen Sie eine GET-Anfrage für die Datensatzkennzeichnungen ausführen. Stellen Sie sicher, dass Sie nur die spezifischen Felder aktualisieren, die in der Anfrage geändert werden sollen, sodass der Rest unverändert bleibt. Stellen Sie außerdem sicher, dass der PUT-Aufruf dieselben übergeordneten Entitäten beibehält wie der GET-Aufruf. Jede Diskrepanz würde zu einem Fehler für den Kunden führen.
 
-Um die neueste Version der Datensatzkennzeichnungsentität abzurufen, stellen Sie eine [GET-Anfrage](#look-up) an den `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einer `etag`-Kopfzeile zurückgegeben. Beim Aktualisieren vorhandener Datensatzkennzeichnungen sollten Sie zunächst eine Suchanfrage für den Datensatz durchführen, um den neuesten `etag`-Wert abzurufen, bevor Sie diesen Wert in der `If-Match`-Kopfzeile Ihrer nachfolgenden PUT-Anfrage verwenden.
+Um die neueste Version der Datensatz-Label-Entität abzurufen, stellen Sie eine [GET-Anfrage](#look-up) an den `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einer `etag`-Kopfzeile zurückgegeben. Beim Aktualisieren vorhandener Datensatz-Labels sollten Sie zunächst eine Suchanfrage für den Datensatz durchführen, um den neuesten `etag`-Wert abzurufen, bevor Sie diesen Wert in der `If-Match`-Kopfzeile Ihrer nachfolgenden PUT-Anfrage verwenden.
 
 ```shell
 curl -X POST \
@@ -134,16 +134,16 @@ curl -X POST \
 | `entityId.namespace` | Dieser Wert wird verwendet, um ID-Konflikte zu vermeiden. Der `namespace`-Wert lautet `AEP`. |
 | `entityId.id` | Die ID der zu aktualisierenden Ressource. Dies bezieht sich auf `datasetId`. |
 | `entityId.type` | Der Typ der zu aktualisierenden Ressource. Als Wert wird immer `dataset` verwendet. |
-| `labels` | Eine Liste von Datennutzungskennzeichnungen, die dem kompletten Datensatz hinzugefügt werden sollen. |
-| `parents` | Das Array `parents` enthält eine Liste von `entityId`-Elementen, von denen dieser Datensatz Kennzeichnungen übernimmt. Datensätze können Kennzeichnungen von Schemata und/oder Datensätzen übernehmen. |
+| `labels` | Eine Liste von Datennutzungs-Labels, die dem kompletten Datensatz hinzugefügt werden sollen. |
+| `parents` | Das Array `parents` enthält eine Liste von `entityId`-Elementen, von denen dieser Datensatz Labels übernimmt. Datensätze können Labels von Schemata und/oder Datensätzen übernehmen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den aktualisierten Satz von Kennzeichnungen für den Datensatz zurück.
+Eine erfolgreiche Antwort gibt den aktualisierten Satz von Labels für den Datensatz zurück.
 
 >[!IMPORTANT]
 >
->Die Eigenschaft `optionalLabels` wird für die Verwendung bei POST-Anfragen nicht mehr unterstützt. Es ist nicht mehr möglich, Datenkennzeichnungen zu Datensatzfeldern hinzuzufügen. Bei einem POST-Vorgang wird ein Fehler ausgegeben, wenn ein `optionalLabel`-Wert vorhanden ist. Sie können Kennzeichnungen jedoch mithilfe einer PUT-Anfrage und der Eigenschaft `optionalLabels` aus einzelnen Feldern löschen. Weitere Informationen finden Sie im Abschnitt [Entfernen von Kennzeichnungen aus einem Datensatz](#remove).
+>Die Eigenschaft `optionalLabels` wird für die Verwendung bei POST-Anfragen nicht mehr unterstützt. Es ist nicht mehr möglich, Daten-Labels zu Datensatzfeldern hinzuzufügen. Bei einem POST-Vorgang wird ein Fehler ausgegeben, wenn ein `optionalLabel`-Wert vorhanden ist. Sie können Labels jedoch mithilfe einer PUT-Anfrage und der Eigenschaft `optionalLabels` aus einzelnen Feldern löschen. Weitere Informationen finden Sie im Abschnitt [Entfernen von Labels aus einem Datensatz](#remove).
 
 ```json
 {
@@ -163,9 +163,9 @@ Eine erfolgreiche Antwort gibt den aktualisierten Satz von Kennzeichnungen für 
 } 
 ```
 
-## Entfernen von Kennzeichnungen aus einem Datensatz {#remove}
+## Entfernen von Labels aus einem Datensatz {#remove}
 
-Sie können alle zuvor angewendeten Feldkennzeichnungen vollständig entfernen, indem Sie entweder vorhandene `optionalLabels`-Werte mit einer Teilmenge der vorhandenen Feldkennzeichnungen oder einer leeren Liste aktualisieren. Stellen Sie eine PUT-Anfrage an die [!DNL Dataset Service]-API, um zuvor angewendete Kennzeichnungen zu aktualisieren oder zu entfernen.
+Sie können alle zuvor angewendeten Feldkennzeichnungen vollständig entfernen, indem Sie entweder vorhandene `optionalLabels`-Werte mit einer Teilmenge der vorhandenen Feldkennzeichnungen oder einer leeren Liste aktualisieren. Stellen Sie eine PUT-Anfrage an die [!DNL Dataset Service]-API, um zuvor angewendete Labels zu aktualisieren oder zu entfernen.
 
 >[!NOTE]
 >
@@ -179,13 +179,13 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Der eindeutige `id`-Wert des Datensatzes, für den Sie Kennzeichnungen erstellen. |
+| `{DATASET_ID}` | Der eindeutige `id`-Wert des Datensatzes, für den Sie Labels erstellen. |
 
 **Anfrage**
 
-Der folgende Datensatz, auf den der PUT-Vorgang angewendet wird, enthielt „C1 optionalLabel“ für das Feld „properties/person/properties/address“ und „C1, C2 optionalLabels“ für das Feld „/properties/person/properties/name/properties/fullName“. Nach dem PUT-Vorgang weist das erste Feld keine Kennzeichnung auf (C1-Kennzeichnung wurde entfernt) und das zweite Feld nur die C1-Kennzeichnung (C2-Kennzeichnung wurde entfernt)
+Der folgende Datensatz, auf den der PUT-Vorgang angewendet wird, enthielt „C1 optionalLabel“ für das Feld „properties/person/properties/address“ und „C1, C2 optionalLabels“ für das Feld „/properties/person/properties/name/properties/fullName“. Nach dem PUT-Vorgang weist das erste Feld kein Label auf (C1-Kennzeichnung wurde entfernt) und das zweite Feld nur die C1-Kennzeichnung (C2-Kennzeichnung wurde entfernt)
 
-Im folgenden Beispielszenario wird eine PUT-Anfrage verwendet, um zu einzelnen Feldern hinzugefügte Kennzeichnungen zu entfernen. Vor Stellen der Anfrage wurden auf das Feld `fullName` die Kennzeichnungen `C1` und `C2` angewendet und auf das Feld `address` war bereits die Kennzeichnung `C1` angewandt worden. Die PUT-Anfrage überschreibt mithilfe des Parameters `optionalLabels.labels` vorhandene Kennzeichnungen `C1, C2` des Felds `fullName` mit der Kennzeichnung `C1`. Mit der Anfrage wird ebenfalls die Kennzeichnung `C1` des Felds `address` mit einem leeren Satz von Feldkennzeichnungen überschrieben.
+Im folgenden Beispielszenario wird eine PUT-Anfrage verwendet, um zu einzelnen Feldern hinzugefügte Labels zu entfernen. Vor Stellen der Anfrage wurden auf das Feld `fullName` die Labels `C1` und `C2` angewendet und auf das Feld `address` war bereits die Kennzeichnung `C1` angewandt worden. Die PUT-Anfrage überschreibt mithilfe des Parameters `optionalLabels.labels` vorhandene Labels `C1, C2` des Felds `fullName` mit der Kennzeichnung `C1`. Mit der Anfrage wird ebenfalls die Kennzeichnung `C1` des Felds `address` mit einem leeren Satz von Feldkennzeichnungen überschrieben.
 
 ```shell
 curl -X PUT \
@@ -238,13 +238,13 @@ curl -X PUT \
 | Parameter | Beschreibung |
 | --- | --- |
 | `entityId` | Hierdurch wird eine bestimmte zu aktualisierende Datensatzentität identifiziert. `entityId` muss die drei folgenden Werte enthalten:<br/><br/>`namespace`: Dieser Wert wird verwendet, um ID-Konflikte zu vermeiden. Der `namespace`-Wert lautet `AEP`.<br/>`id`: Die ID der zu aktualisierenden Ressource. Dies bezieht sich auf `datasetId`.<br/>`type`: Der Typ der zu aktualisierenden Ressource. Als Wert wird immer `dataset` verwendet. |
-| `labels` | Eine Liste von Datennutzungskennzeichnungen, die dem kompletten Datensatz hinzugefügt werden sollen. |
-| `parents` | Das Array `parents` enthält eine Liste von `entityId`-Elementen, von denen dieser Datensatz Kennzeichnungen übernimmt. Datensätze können Kennzeichnungen von Schemata und/oder Datensätzen übernehmen. |
-| `optionalLabels` | Dieser Parameter wird zum Entfernen von Kennzeichnungen verwendet, die zuvor auf ein Datensatzfeld angewendet wurden. Eine Liste der einzelnen Felder im Datensatz, von denen Kennzeichnungen entfernt werden sollen. Jedes Element in diesem Array muss die folgenden Eigenschaften aufweisen:<br/><br/>`option`Ein Objekt, das die [!DNL Experience Data Model] (XDM)-Attribute des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li><code>ID</code>: Der <code>$id-URI-Wert</code> des Schemas, das dem Feld zugeordnet ist.</li><li><code>contentType</code>: Der Content-Typ und die Versionsnummer des Schemas. Dies sollte in Form eines der gültigen <a href="../../xdm/api/getting-started.md#accept">Accept-Header</a> für eine XDM-Suchanfrage erfolgen.</li><li><code>schemaPath</code>: Der Pfad zum Feld im Schema des Datensatzes.</li></ul>`labels`: Dieser Wert muss entweder eine Teilmenge der vorhandenen angewendeten Feldkennzeichnungen enthalten oder leer sein, um alle vorhandenen Feldkennzeichnungen zu entfernen. Bei PUT- oder POST-Methoden wird jetzt ein Fehler zurückgegeben, wenn das Feld `optionalLabels` neue oder geänderte Kennzeichnungen umfasst. |
+| `labels` | Eine Liste von Datennutzungs-Labels, die dem kompletten Datensatz hinzugefügt werden sollen. |
+| `parents` | Das Array `parents` enthält eine Liste von `entityId`-Elementen, von denen dieser Datensatz Labels übernimmt. Datensätze können Labels von Schemata und/oder Datensätzen übernehmen. |
+| `optionalLabels` | Dieser Parameter wird zum Entfernen von Labels verwendet, die zuvor auf ein Datensatzfeld angewendet wurden. Eine Liste der einzelnen Felder im Datensatz, von denen Labels entfernt werden sollen. Jedes Element in diesem Array muss die folgenden Eigenschaften aufweisen:<br/><br/>`option`Ein Objekt, das die [!DNL Experience Data Model] (XDM)-Attribute des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li><code>ID</code>: Der <code>$id-URI-Wert</code> des Schemas, das dem Feld zugeordnet ist.</li><li><code>contentType</code>: Der Content-Typ und die Versionsnummer des Schemas. Dies sollte in Form eines der gültigen <a href="../../xdm/api/getting-started.md#accept">Accept-Header</a> für eine XDM-Suchanfrage erfolgen.</li><li><code>schemaPath</code>: Der Pfad zum Feld im Schema des Datensatzes.</li></ul>`labels`: Dieser Wert muss entweder eine Teilmenge der vorhandenen angewendeten Feldkennzeichnungen enthalten oder leer sein, um alle vorhandenen Feldkennzeichnungen zu entfernen. Bei PUT- oder POST-Methoden wird jetzt ein Fehler zurückgegeben, wenn das Feld `optionalLabels` neue oder geänderte Labels umfasst. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den aktualisierten Satz von Kennzeichnungen für den Datensatz zurück.
+Eine erfolgreiche Antwort gibt den aktualisierten Satz von Labels für den Datensatz zurück.
 
 ```json
 {
@@ -266,6 +266,6 @@ Eine erfolgreiche Antwort gibt den aktualisierten Satz von Kennzeichnungen für 
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit der [!DNL Dataset Service]-API Datennutzungskennzeichnungen für Datensätze und Felder verwalten können. Sie können jetzt [Datennutzungsrichtlinien](../policies/overview.md) und [Zugriffssteuerungsrichtlinien](../../access-control/abac/ui/policies.md) basierend auf den von Ihnen angewendeten Kennzeichnungen definieren.
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit der [!DNL Dataset Service]-API Datennutzungs-Labels für Datensätze und Felder verwalten können. Sie können jetzt [Datennutzungsrichtlinien](../policies/overview.md) und [Zugriffssteuerungsrichtlinien](../../access-control/abac/ui/policies.md) basierend auf den von Ihnen angewendeten Labels definieren.
 
 Weitere Informationen zum Verwalten von Datensätzen in [!DNL Experience Platform] finden Sie unter [Datensätze – Übersicht](../../catalog/datasets/overview.md).
