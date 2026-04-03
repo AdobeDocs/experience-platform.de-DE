@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool desAbfrage-Service von Adobe Experience Platform, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '3341'
 ht-degree: 16%
@@ -68,7 +68,7 @@ Die Konfigurationseinstellung für die automatische Vervollständigung erfolgt p
 
 ### Ausführen mehrerer sequenzieller Abfragen {#execute-multiple-sequential-queries}
 
-Verwenden Sie den erweiterten Abfrage-Editor, um mehr als eine Abfrage zu schreiben und alle Abfragen nacheinander auszuführen. Die Ausführung mehrerer Abfragen in einer Sequenz erzeugt jeweils einen Protokolleintrag. In der Abfrage-Editor-Konsole werden jedoch nur die Ergebnisse der ersten Abfrage angezeigt. Überprüfen Sie das Abfrageprotokoll, wenn Sie die ausgeführten Abfragen beheben oder bestätigen müssen. Weitere Informationen finden [&#x200B; in der &#x200B;](./query-logs.md) zu Abfrageprotokollen .
+Verwenden Sie den erweiterten Abfrage-Editor, um mehr als eine Abfrage zu schreiben und alle Abfragen nacheinander auszuführen. Die Ausführung mehrerer Abfragen in einer Sequenz erzeugt jeweils einen Protokolleintrag. In der Abfrage-Editor-Konsole werden jedoch nur die Ergebnisse der ersten Abfrage angezeigt. Überprüfen Sie das Abfrageprotokoll, wenn Sie die ausgeführten Abfragen beheben oder bestätigen müssen. Weitere Informationen finden [ in der ](./query-logs.md) zu Abfrageprotokollen .
 
 >[!NOTE]
 > 
@@ -123,11 +123,13 @@ Die [!UICONTROL Format text]-Funktion macht Ihre Abfrage lesbarer, indem sie sta
 
 ![Der Abfrage-Editor mit hervorgehobenen [!UICONTROL Format text] und SQL-Anweisungen.](../images/ui/query-editor/format-text.png)
 
-<!-- ### Undo text {#undo-text}
+<!-- 
+### Undo text {#undo-text}
 
 If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
 
-![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) 
+-->
 
 ### SQL kopieren {#copy-sql}
 
@@ -141,13 +143,13 @@ Um eine Abfrage im Abfrage-Editor anzuzeigen, wählen Sie eine gespeicherte Vorl
 
 >[!NOTE]
 >
->Die Optionen [!UICONTROL View schedule], [!UICONTROL Add schedule] und [!UICONTROL Delete query] sind erst verfügbar, nachdem die Abfrage als Vorlage gespeichert wurde. Die Option [!UICONTROL Add schedule] führt Sie direkt vom Abfrage-Editor zum Zeitplan-Builder. Die Option [!UICONTROL View schedule] führt Sie direkt zum Zeitplan-Inventar für diese Abfrage. Weitere Informationen zum Erstellen von Abfragezeitplänen in der Benutzeroberfläche finden [&#x200B; in der Dokumentation zu Abfragezeitplänen &#x200B;](./query-schedules.md#create-schedule).
+>Die Optionen [!UICONTROL View schedule], [!UICONTROL Add schedule] und [!UICONTROL Delete query] sind erst verfügbar, nachdem die Abfrage als Vorlage gespeichert wurde. Die Option [!UICONTROL Add schedule] führt Sie direkt vom Abfrage-Editor zum Zeitplan-Builder. Die Option [!UICONTROL View schedule] führt Sie direkt zum Zeitplan-Inventar für diese Abfrage. Weitere Informationen zum Erstellen von Abfragezeitplänen in der Benutzeroberfläche finden [ in der Dokumentation zu Abfragezeitplänen ](./query-schedules.md#create-schedule).
 
 ![Der Abfrage-Editor mit hervorgehobenem Bedienfeld mit Abfragedetails.](../images/ui/query-editor/query-details.png)
 
 Im Bedienfeld Details können Sie einen Ausgabedatensatz direkt über die Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen, den Zeitplan für die Ausführung der Abfrage anzeigen und die Abfrage einem Zeitplan hinzufügen.
 
-Um einen Ausgabedatensatz zu generieren, wählen Sie **[!UICONTROL Run as CTAS]** aus. Das Dialogfeld **[!UICONTROL Enter output dataset details]** wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und wählen Sie dann **[!UICONTROL Run as CTAS]** aus. Der neue Datensatz wird auf der Registerkarte Durchsuchen **[!UICONTROL Datasets]** angezeigt. Weitere [&#x200B; zu den für Ihre Organisation verfügbaren Datensätzen finden &#x200B;](../../catalog/datasets/user-guide.md#view-datasets) in der Dokumentation zum Anzeigen von Datensätzen .
+Um einen Ausgabedatensatz zu generieren, wählen Sie **[!UICONTROL Run as CTAS]** aus. Das Dialogfeld **[!UICONTROL Enter output dataset details]** wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und wählen Sie dann **[!UICONTROL Run as CTAS]** aus. Der neue Datensatz wird auf der Registerkarte Durchsuchen **[!UICONTROL Datasets]** angezeigt. Weitere [ zu den für Ihre Organisation verfügbaren Datensätzen finden ](../../catalog/datasets/user-guide.md#view-datasets) in der Dokumentation zum Anzeigen von Datensätzen .
 
 >[!NOTE]
 >
@@ -155,7 +157,7 @@ Um einen Ausgabedatensatz zu generieren, wählen Sie **[!UICONTROL Run as CTAS]*
 
 ![Der [!UICONTROL Enter output dataset details]-Dialog.](../images/ui/query-editor/output-dataset-details.png)
 
-Nachdem Sie die **[!UICONTROL Run as CTAS]** Aktion ausgeführt haben, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine praktische Möglichkeit bietet, zum Arbeitsbereich für Abfrageprotokolle zu navigieren. Weitere Informationen zu Abfrageprotokollen finden [&#x200B; in &#x200B;](./query-logs.md) Dokumentation zu Abfrageprotokollen .
+Nachdem Sie die **[!UICONTROL Run as CTAS]** Aktion ausgeführt haben, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine praktische Möglichkeit bietet, zum Arbeitsbereich für Abfrageprotokolle zu navigieren. Weitere Informationen zu Abfrageprotokollen finden [ in ](./query-logs.md) Dokumentation zu Abfrageprotokollen .
 
 ### Speichern von Abfragen {#saving-queries}
 
@@ -165,7 +167,7 @@ Der Abfrage-Editor bietet eine Speicherfunktion, mit der Sie eine Abfrage speich
 >
 >Mit dem Abfrage-Editor benannte und gespeicherte Abfragen sind als Vorlagen in der Registerkarte Abfrage-Dashboard [!UICONTROL Templates] verfügbar. Weitere Informationen finden Sie in der [Dokumentation zu Vorlagen](./query-templates.md).
 
-Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine einfache Möglichkeit bietet, zum Arbeitsbereich Planung von Abfragen zu navigieren. Weitere Informationen zum Ausführen von [&#x200B; mit benutzerdefinierter Kadenz finden &#x200B;](./query-schedules.md) in der Dokumentation zum Planen von Abfragen .
+Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine einfache Möglichkeit bietet, zum Arbeitsbereich Planung von Abfragen zu navigieren. Weitere Informationen zum Ausführen von [ mit benutzerdefinierter Kadenz finden ](./query-schedules.md) in der Dokumentation zum Planen von Abfragen .
 
 ### Geplante Abfragen {#scheduled-queries}
 
@@ -175,11 +177,11 @@ Zeitpläne werden im Abfrage-Editor festgelegt. Bei Verwendung des Abfrage-Edito
 
 >[!NOTE]
 >
->Geplante Abfragen, die zehn aufeinander folgende Durchgänge nicht bestehen, werden automatisch in den Status [!UICONTROL Quarantined] versetzt. Eine Abfrage mit diesem Status erfordert Ihr Eingreifen, bevor weitere Ausführungen stattfinden können. Weitere Informationen finden [&#x200B; in der &#x200B;](./monitor-queries.md#quarantined-queries) zu „Quarantäneabfragen“.
+>Geplante Abfragen, die zehn aufeinander folgende Durchgänge nicht bestehen, werden automatisch in den Status [!UICONTROL Quarantined] versetzt. Eine Abfrage mit diesem Status erfordert Ihr Eingreifen, bevor weitere Ausführungen stattfinden können. Weitere Informationen finden [ in der ](./monitor-queries.md#quarantined-queries) zu „Quarantäneabfragen“.
 
-Weitere Informationen zum Erstellen von Abfragezeitplänen in der Benutzeroberfläche finden [&#x200B; in der Dokumentation zu Abfragezeitplänen &#x200B;](./query-schedules.md). Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie alternativ im [Handbuch zu Endpunkten für geplante Abfragen](../api/scheduled-queries.md).
+Weitere Informationen zum Erstellen von Abfragezeitplänen in der Benutzeroberfläche finden [ in der Dokumentation zu Abfragezeitplänen ](./query-schedules.md). Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie alternativ im [Handbuch zu Endpunkten für geplante Abfragen](../api/scheduled-queries.md).
 
-Alle geplanten Abfragen werden der Liste auf der Registerkarte [!UICONTROL Scheduled queries] hinzugefügt. Von diesem Arbeitsbereich aus können Sie den Status aller geplanten Abfrageaufträge über die Benutzeroberfläche überwachen. Auf der Registerkarte [!UICONTROL Scheduled queries] finden Sie wichtige Informationen zur Ausführung Ihrer Abfragen und können Warnhinweise abonnieren. Zu den verfügbaren Informationen gehören der Status, Details zum Zeitplan und Fehlermeldungen/-codes, wenn ein Durchlauf fehlgeschlagen ist. Weitere Informationen finden [&#x200B; im Dokument &#x200B;](./monitor-queries.md) Abfragen überwachen .
+Alle geplanten Abfragen werden der Liste auf der Registerkarte [!UICONTROL Scheduled queries] hinzugefügt. Von diesem Arbeitsbereich aus können Sie den Status aller geplanten Abfrageaufträge über die Benutzeroberfläche überwachen. Auf der Registerkarte [!UICONTROL Scheduled queries] finden Sie wichtige Informationen zur Ausführung Ihrer Abfragen und können Warnhinweise abonnieren. Zu den verfügbaren Informationen gehören der Status, Details zum Zeitplan und Fehlermeldungen/-codes, wenn ein Durchlauf fehlgeschlagen ist. Weitere Informationen finden [ im Dokument ](./monitor-queries.md) Abfragen überwachen .
 
 
 ### Auffinden früherer Abfragen {#previous-queries}
@@ -236,7 +238,7 @@ Die Konsole bietet Informationen zum Status und zum Betrieb des Abfrage-Service.
 
 ## Abfrageergebnisse {#query-results}
 
-Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Results]** neben der Registerkarte **[!UICONTROL Console]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage an, wobei je nach ausgewählter ([) Ergebnisanzahl zwischen 50 und 1000 Ergebniszeilen angezeigt &#x200B;](#result-count). Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Anweisungen zum Generieren eines Datensatzes aus Abfragen im Abfrage-Editor finden Sie im [Tutorial zum Generieren von Datensätzen](./create-datasets.md).
+Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Results]** neben der Registerkarte **[!UICONTROL Console]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage an, wobei je nach ausgewählter ([) Ergebnisanzahl zwischen 50 und 1000 Ergebniszeilen angezeigt ](#result-count). Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Anweisungen zum Generieren eines Datensatzes aus Abfragen im Abfrage-Editor finden Sie im [Tutorial zum Generieren von Datensätzen](./create-datasets.md).
 
 ![Auf der Registerkarte „Ergebnisse“ der Abfrage-Editor-Konsole werden die Ergebnisse einer Abfrageausführung angezeigt.](../images/ui/query-editor/query-results.png)
 
@@ -312,7 +314,7 @@ Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platfo
 >
 >Die im Video dargestellte Benutzeroberfläche ist veraltet, aber die im Workflow verwendete Logik bleibt gleich.
 
->[!VIDEO](https://video.tv.adobe.com/v/33392?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Überwachen und Verwalten gleichzeitiger Sitzungen {#monitor-manage-sessions}
 
