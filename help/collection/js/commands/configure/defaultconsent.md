@@ -2,10 +2,10 @@
 title: defaultConsent
 description: Legen Sie die standardmäßige Methode zur Einverständniserfassung für Ihre Web-Eigenschaft fest.
 exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
-source-git-commit: 1e272eb18fac2f59f9737756d48947a25573d772
+source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 5%
+source-wordcount: '431'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ Legen Sie beim Ausführen des `defaultConsent`-Befehls die `configure`-Zeichenfo
 
 >[!IMPORTANT]
 >
->Der `defaultConsent` bleibt beim Laden der Seite nicht erhalten. Stellen Sie sicher, dass Sie jedes Mal, wenn Sie den `configure`-Befehl aufrufen, das gewünschte Standardeinverständnis festlegen.
+>Der `defaultConsent` bleibt beim Laden der Seite nicht erhalten. Stellen Sie sicher, dass Sie jedes Mal, wenn Sie den `configure`-Befehl aufrufen, das gewünschte Standardeinverständnis festlegen. Im Gegensatz dazu wird das aufgelöste Einverständnis eines Besuchers (festgelegt durch [`setConsent`](../setconsent.md)) in einem Cookie gespeichert und automatisch auf nachfolgende Seitenladevorgänge angewendet.
 
 ```js
 alloy("configure", {
@@ -40,32 +40,7 @@ alloy("configure", {
 
 ## Verwenden von `defaultConsent` zusammen mit `setConsent` {#using-consent}
 
-Web SDK bietet zwei komplementäre Einverständnisoptionen:
-
-* `defaultConsent` (diese Seite): Legt die standardmäßigen Einverständniseinstellungen fest.
-* [`setConsent`](../setconsent.md): Erfassen Sie die Einverständnisvoreinstellungen von Besuchern.
-
-Wenn diese Einstellungen zusammen verwendet werden, können sie je nach den konfigurierten Werten zu unterschiedlichen Ergebnissen bei der Datenerfassung und der Cookie-Einstellung führen.
-
-In der folgenden Tabelle erfahren Sie, wann eine Datenerfassung erfolgt und wann Cookies gesetzt werden, basierend auf den Einstellungen für das Einverständnis.
-
-| `defaultConsent` | `setConsent` | Datenerfassung findet statt | Web SDK setzt Browser-Cookies |
-|---------|----------|---------|---------|
-| `in` | `in` | Ja | Ja |
-| `in` | `out` | Nein | Ja |
-| `in` | Nicht festgelegt | Ja | Ja |
-| `pending` | `in` | Ja | Ja |
-| `pending` | `out` | Nein | Ja |
-| `pending` | Nicht festgelegt | Nein | Nein |
-| `out` | `in` | Ja | Ja |
-| `out` | `out` | Nein | Ja |
-| `out` | Nicht festgelegt | Nein | Nein |
-
-Unter [Adobe Experience Platform Web SDK-Cookies](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/cookies/web-sdk) finden Sie eine Liste der Cookies, die von der Bibliothek gesetzt werden.
-
->[!NOTE]
->
->Identitäts- und Einverständnis-Cookies werden auch dann gesetzt, wenn ein Besucher das Tracking ablehnt. Diese Cookies sind erforderlich, um die Voreinstellungen für die Datenerfassung zu berücksichtigen.
+Bei der gemeinsamen Verwendung führen `defaultConsent` und `setConsent` je nach den konfigurierten Werten zu unterschiedlichen Datenerfassungs-, Cookie- und Identitätsergebnissen. Eine vollständige Interaktionstabelle finden [ unter „Einverständnis und Identität ](/help/collection/identity/consent.md#how-consent-affects-identity) Datenerfassung“.
 
 ## Festlegen des Standardeinverständnisses basierend auf `gdprApplies`
 

@@ -3,9 +3,9 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2752'
 ht-degree: 54%
 
 ---
@@ -76,7 +76,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 **Fehlerbehebungen und Verbesserungen**
 
 - Fehlerkorrektur - Im [Media Analytics-Tracker](commands/getmediaanalyticstracker.md) akzeptiert die `length`-Eigenschaft des Medienobjekts jetzt korrekt ungültige Datentypen.
-- Verbesserte [Identitätsverwaltung](../use-cases/identity/id-overview.md) Fehlerbehandlung, um die Versprechensablehnung ordnungsgemäß zu verarbeiten, wenn die Identitätssuche fehlschlägt.
+- Verbesserte [Identitätsverwaltung](../identity/overview.md) Fehlerbehandlung, um die Versprechensablehnung ordnungsgemäß zu verarbeiten, wenn die Identitätssuche fehlschlägt.
 - Es wurde ein Problem behoben, bei dem Personalisierungsinhalte mit HTML-Inhaltselementen nicht gerendert werden konnten und ein Fehler im Zusammenhang mit einer fehlenden `renderStatusHandler` auftrat.
 - Activity Map (URL[Sammlung) wurde korrigiert](commands/configure/clickcollectionenabled.md) um Nicht-HTTP-URLs ordnungsgemäß zu verarbeiten.
 
@@ -97,7 +97,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket &#x200B;](install/create-custom-build.md).
+- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [ Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket ](install/create-custom-build.md).
 - Der [`getIdentity`](commands/getidentity.md)-Befehl liest jetzt automatisch die ECID direkt aus dem `kndctr`-Identitäts-Cookie. Wenn Sie `getIdentity` mit dem Namespace `ECID` aufrufen und bereits ein Identitäts-Cookie vorhanden ist, sendet Web SDK keine Anfrage mehr an die Edge Network, um die Identität abzurufen. Jetzt liest es die Identität aus dem Cookie.
 
 **Fehlerbehebungen und Verbesserungen**
@@ -147,7 +147,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-- Unterstützung für das Anfordern der [CORE ID](/help/collection/use-cases/identity/id-overview.md) im Befehl [getIdentity](commands/getidentity.md) hinzugefügt.
+- Unterstützung für das Anfordern der [CORE ID](/help/collection/identity/overview.md#core-id-and-third-party-identity) im Befehl [getIdentity](commands/getidentity.md) hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -296,7 +296,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-- Sie können jetzt personalisierte Erlebnisse präziser bereitstellen, indem Sie Besucher-IDs zwischen mobilen Apps und mobilen Webinhalten sowie domänenübergreifend freigeben. Weitere Informationen finden Sie in der [spezifischen Dokumentation](../use-cases/identity/id-sharing.md).
+- Sie können jetzt personalisierte Erlebnisse präziser bereitstellen, indem Sie Besucher-IDs zwischen mobilen Apps und mobilen Webinhalten sowie domänenübergreifend freigeben. Weitere Informationen [ Sie unter „Identität ](../identity/overview.md) Datenerfassung“.
 - Sie können jetzt ein Vorschläge-Array von [!DNL Adobe Target] in Einzelseitenanwendungen rendern oder ausführen, ohne die Analysemetriken zu inkrementieren. Dadurch werden Berichtsfehler reduziert und die Analysegenauigkeit erhöht.
 - Zusätzliche Informationen zum `getLibraryInfo`-Befehl, einschließlich verfügbarer Befehle und der endgültigen Konfiguration für die Instanz, wurden hinzugefügt.
 
@@ -364,7 +364,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.4.0 – März 2021 
 
-- SDK kann jetzt als NPM[Paket installiert &#x200B;](install/npm.md).
+- SDK kann jetzt als NPM[Paket installiert ](install/npm.md).
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Der [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md)-Callback kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
 - Jetzt wird eine XDM-Schemafeldgruppe anstelle von `meta.personalization` verwendet, wenn Ereignisse über gerenderte oder angeklickte personalisierte Inhalte gesendet werden.

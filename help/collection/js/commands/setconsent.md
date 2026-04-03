@@ -2,10 +2,10 @@
 title: setConsent
 description: Wird auf jeder Seite verwendet, um die Einverständnisvoreinstellungen Ihrer Benutzer zu verfolgen.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
-source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
+source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
 workflow-type: tm+mt
-source-wordcount: '1117'
-ht-degree: 2%
+source-wordcount: '1042'
+ht-degree: 0%
 
 ---
 
@@ -20,9 +20,9 @@ Web SDK unterstützt die folgenden Standards:
 * **[IAB Transparency &amp; Consent Framework](/help/landing/governance-privacy-security/consent/iab/overview.md)**: Wenn Sie diesen Standard verwenden, wird das Echtzeit-Kundenprofil des Besuchers mit den Einverständnisinformationen aktualisiert, sofern Ihre Implementierung korrekt konfiguriert ist:
    1. Das Schema Individuelles XDM-Profil enthält die Feldergruppe [IAB TCF 2.0-Einverständnis](/help/xdm/field-groups/profile/iab.md).
    1. Das Erlebnisereignis-Schema enthält die [IAB TCF 2.0-Einverständnis-Feldergruppe](/help/xdm/field-groups/event/iab.md).
-   1. Sie schließen die IAB-Einverständnisinformationen in das Ereignis (XDM[Objekt) &#x200B;](sendevent/xdm.md). Web SDK enthält die Einverständnisinformationen beim Senden von Ereignisdaten nicht automatisch.
+   1. Sie schließen die IAB-Einverständnisinformationen in das Ereignis (XDM[Objekt) ](sendevent/xdm.md). Web SDK enthält die Einverständnisinformationen beim Senden von Ereignisdaten nicht automatisch.
 
-Bei Verwendung dieses Befehls schreibt die Web-SDK die Benutzereinstellungen in das [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/cookies/web-sdk)-Cookie. Dieses Cookie wird unabhängig von den Einverständnisvoreinstellungen des Besuchers gesetzt, da es die Einverständnisvoreinstellungen dieses Besuchers speichert. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft die SDK diese persistierten Voreinstellungen ab, um zu ermitteln, ob Ereignisse an Adobe gesendet werden können.
+Bei Verwendung dieses Befehls schreibt die Web-SDK die Benutzereinstellungen in das [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)-Cookie. Dieses Cookie wird unabhängig von den Einverständnisvoreinstellungen des Besuchers gesetzt, da es die Einverständnisvoreinstellungen dieses Besuchers speichert. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft die SDK diese persistierten Voreinstellungen ab, um zu ermitteln, ob Ereignisse an Adobe gesendet werden können.
 
 Adobe empfiehlt, alle Voreinstellungen für das Einverständnisdialogfeld getrennt vom Einverständnis für Web SDK zu speichern. Web SDK bietet keine Möglichkeit, Einverständnis abzurufen. Um sicherzustellen, dass die Benutzereinstellungen mit der SDK synchron bleiben, können Sie bei jedem Laden der Seite den Befehl `setConsent` aufrufen. Web SDK führt nur dann einen Server-Aufruf durch, wenn sich das Einverständnis ändert.
 
@@ -32,26 +32,7 @@ Der Befehl `setConsent` verwendet nur die `ECID` aus der Identitätszuordnung, d
 
 ## Verwenden von `defaultConsent` zusammen mit `setConsent` {#using-consent}
 
-Web SDK bietet zwei komplementäre Einverständniskonfigurationsbefehle:
-
-* [`defaultConsent`](configure/defaultconsent.md): Dieser Befehl legt automatisch die Einverständnisvoreinstellung des Besuchers fest, bevor `setConsent` aufgerufen wird.
-* `setConsent` (aktuelle Seite): Dieser Befehl legt die Einverständnisvoreinstellung des Besuchers explizit fest.
-
-Wenn diese Einstellungen zusammen verwendet werden, können sie je nach den konfigurierten Werten zu unterschiedlichen Ergebnissen bei der Datenerfassung und der Cookie-Einstellung führen:
-
-| `defaultConsent` | `setConsent` | Datenerfassung findet statt | Web SDK setzt Browser-Cookies |
-| --- | --- | --- | --- |
-| `in` | `in` | Ja | Ja |
-| `in` | `out` | Nein | Ja |
-| `in` | Nicht festgelegt | Ja | Ja |
-| `pending` | `in` | Ja | Ja |
-| `pending` | `out` | Nein | Ja |
-| `pending` | Nicht festgelegt | Nein | Nein |
-| `out` | `in` | Ja | Ja |
-| `out` | `out` | Nein | Ja |
-| `out` | Nicht festgelegt | Nein | Nein |
-
-Eine vollständige Liste der Cookies, [&#x200B; gesetzt werden können, finden Sie im Handbuch zu Core Services unter &#x200B;](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/cookies/web-sdk)Cookies in Adobe Experience Platform Web SDK.
+Bei der gemeinsamen Verwendung führen `defaultConsent` und `setConsent` je nach den konfigurierten Werten zu unterschiedlichen Datenerfassungs-, Cookie- und Identitätsergebnissen. Eine vollständige Interaktionstabelle finden [ unter „Einverständnis und Identität ](/help/collection/identity/consent.md#how-consent-affects-identity) Datenerfassung“.
 
 ## Verwenden des `setConsent` Befehls
 
@@ -67,7 +48,7 @@ Führen Sie den `setConsent` Befehl aus, wenn Sie Ihre konfigurierte Instanz der
 
 ### Adobe 2.0-`consent`
 
-Wenn Sie Daten an Adobe Experience Platform senden, sollten Sie eine Datenschutzschemafeldgruppe in Ihr Profilschema aufnehmen. Weitere [&#x200B; zum Adobe 2.0-Standard finden Sie unter &#x200B;](/help/landing/governance-privacy-security/overview.md)Governance, Datenschutz und Sicherheit in Adobe Experience Platform&quot;. Sie können im unten stehenden Wertobjekt Daten hinzufügen, die dem Schema des `consents` Felds der [!UICONTROL Consents and Preferences] Profilfeldgruppe entsprechen.
+Wenn Sie Daten an Adobe Experience Platform senden, sollten Sie eine Datenschutzschemafeldgruppe in Ihr Profilschema aufnehmen. Weitere [ zum Adobe 2.0-Standard finden Sie unter ](/help/landing/governance-privacy-security/overview.md)Governance, Datenschutz und Sicherheit in Adobe Experience Platform&quot;. Sie können im unten stehenden Wertobjekt Daten hinzufügen, die dem Schema des `consents` Felds der [!UICONTROL Consents and Preferences] Profilfeldgruppe entsprechen.
 
 * **`standard`**: Der von Ihnen gewählte Einverständnisstandard. Legen Sie diese Eigenschaft für den Adobe 2.0-Standard auf `"Adobe"` fest.
 * **`version`**: Eine Zeichenfolge, die die Version des Einverständnisstandards darstellt. Legen Sie diese Eigenschaft für den Adobe 2.0-Standard auf `"2.0"` fest.
@@ -101,7 +82,7 @@ Um die Benutzereinverständnisvoreinstellungen aufzuzeichnen, die über den Stan
 
 Wenn das Einverständnis auf diese Weise festgelegt wird, wird das Echtzeit-Kundenprofil mit den Einverständnisinformationen aktualisiert. Dazu muss das Profil-XDM-Schema die Feldergruppe [Profil-Datenschutzschema“ enthalten](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Beim Senden von Ereignissen müssen die IAB-Einverständnisinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Web SDK enthält die Einverständnisinformationen nicht automatisch in die Ereignisse.
 
-Um die Einverständnisinformationen in -Ereignissen zu senden, müssen Sie die Feldergruppe Erlebnisereignis-Datenschutz zu Ihrem [!DNL Profile] aktivierten [!DNL XDM ExperienceEvent] hinzufügen. Anweisungen zur Konfiguration finden [&#x200B; im Abschnitt zum Aktualisieren &#x200B;](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema) ExperienceEvent-Schemas im Handbuch zur Datensatzvorbereitung.
+Um die Einverständnisinformationen in -Ereignissen zu senden, müssen Sie die Feldergruppe Erlebnisereignis-Datenschutz zu Ihrem [!DNL Profile] aktivierten [!DNL XDM ExperienceEvent] hinzufügen. Anweisungen zur Konfiguration finden [ im Abschnitt zum Aktualisieren ](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema) ExperienceEvent-Schemas im Handbuch zur Datensatzvorbereitung.
 
 * **`standard`**: Der von Ihnen gewählte Einverständnisstandard. Legen Sie diese Eigenschaft für den IAB TCF 2.0-Standard auf `"IAB TCF"` fest.
 * **`version`**: Eine Zeichenfolge, die die Version des Einverständnisstandards darstellt. Legen Sie diese Eigenschaft für den IAB TCF 2.0-Standard auf `"2.0"` fest.

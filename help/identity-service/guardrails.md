@@ -3,9 +3,9 @@ keywords: Experience Platform;Identität;Identity Service;Fehlerbehebung;Leitpla
 title: Leitplanken für Identity Service
 description: Dieses Dokument enthält Informationen zur Verwendung und zu den Ratenbeschränkungen für Identity Service-Daten, damit Sie die Verwendung des Identitätsdiagramms optimieren können.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1572'
 ht-degree: 39%
 
 ---
@@ -16,7 +16,7 @@ Dieses Dokument enthält Informationen über die Verwendung und die Ratenbeschr�
 
 >[!IMPORTANT]
 >
->Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [&#x200B; entsprechenden &#x200B;](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
 ## Erste Schritte
 
@@ -109,7 +109,7 @@ Daten werden nur im Identity Service gelöscht, nicht jedoch im Echtzeit-Kundenp
 Wenn Sie Ihre authentifizierten Ereignisse gegen die CRMID beibehalten möchten, wird empfohlen, Ihre primären IDs von ECID zu CRMID zu ändern. Anweisungen zum Implementieren dieser Änderung finden Sie in den folgenden Dokumenten:
 
 * [Konfigurieren der Identitätszuordnung für Experience Platform-Tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identitätsdaten in der Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
+* [Identität in der Datenerfassung](/help/collection/identity/overview.md)
 
 ### Beispielszenarien
 
@@ -199,7 +199,7 @@ Weitere Informationen über [!DNL Identity Service] finden Sie in der folgenden 
 In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP-Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
-* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=de#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
 * [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

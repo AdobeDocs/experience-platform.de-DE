@@ -2,16 +2,20 @@
 title: getIdentity
 description: Abrufen der Identität eines Besuchers ohne Senden von Ereignisdaten.
 exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
-source-git-commit: aea46e3804d315c1237fc853540771f1b5c2b767
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 2%
+source-wordcount: '331'
+ht-degree: 1%
 
 ---
 
 # `getIdentity`
 
 Wenn Sie den [`sendEvent`](sendevent/overview.md) Befehl ausführen, ruft die Web-SDK automatisch die Besucheridentität ab, sofern noch keine vorhanden ist. Mit dem Befehl `getIdentity` können Sie eine Besucher-ID abrufen, ohne Ereignisdaten zu senden. Wenn Sie separate Aufrufe benötigen, um eine Besucher-ID zu generieren und Daten zu senden, können Sie diesen Befehl verwenden.
+
+>[!IMPORTANT]
+>
+>Verwenden Sie `getIdentity`, wenn Sie Identitätsinformationen auf Client-Seite benötigen. Wenn Sie nur die ECID in XDM zuordnen müssen, verwenden Sie stattdessen [Datenvorbereitung für die Datenerfassung](/help/datastreams/data-prep.md) oder die [Tags-ECID-](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md).
 
 Der `getIdentity` Befehl durchläuft den folgenden Fluss, um die `ECID` abzurufen.
 

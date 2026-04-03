@@ -2,10 +2,10 @@
 title: Überblick über den Identitäts-Namespace
 description: Erfahren Sie mehr über Identity-Namespaces in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 384a67ac62eb56c4a0f8ac38593399afcc8b742e
+source-git-commit: 482991f0a7efdf4eae5a600ba0bd2a49baca7c37
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 28%
+source-wordcount: '1925'
+ht-degree: 27%
 
 ---
 
@@ -74,7 +74,7 @@ Ein Element eines Identity-Namespace ist der **Identitätstyp**. Der Identitäts
 * Ob ein Identitätsdiagramm generiert wird:
    * Identitätsdiagramme werden nicht für die folgenden Identitätstypen generiert: Nicht-Personen-IDs und Partner-ID.
    * Identitätsdiagramme werden für alle anderen Identitätstypen generiert.
-* Welche Identitäten werden aus dem Identitätsdiagramm entfernt, wenn die Systembeschränkungen erreicht sind. Weitere Informationen finden Sie unter [&#x200B; für Identitätsdaten &#x200B;](../guardrails.md).
+* Welche Identitäten werden aus dem Identitätsdiagramm entfernt, wenn die Systembeschränkungen erreicht sind. Weitere Informationen finden Sie unter [ für Identitätsdaten ](../guardrails.md).
 
 Die folgenden Identitätstypen sind in Experience Platform verfügbar:
 
@@ -99,12 +99,12 @@ Die folgenden Standard-Namespaces stehen allen Organisationen in Experience Plat
 | Anzeigename | Identitätssymbol (Code) | Identitätstyp | Beschreibung |
 | ------------ | ---------------------- | ------------- | ----------- |
 | AdCloud | AdCloud | Cookie-ID | Ein Namespace, der Adobe AdCloud darstellt. |
-| Adobe Analytics (veraltete ID) | AAID | Cookie-ID | Ein Namespace, der Adobe Analytics darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=de#namespaces)Namespaces. |
+| Adobe Analytics (veraltete ID) | AAID | Cookie-ID | Ein Namespace, der Adobe Analytics darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces)Namespaces. |
 | Apple IDFA (ID für Advertiser) | IDFA | Geräte-ID | Ein Namespace, der die Apple ID für Advertiser darstellt. Weiteführende Informationen finden Sie im folgenden Dokument zu [Interessensbasierten Anzeigen](https://support.apple.com/de-de/HT202074). |
-| Apple Push Notification Service | APNS | Geräte-ID | Ein Namespace, der für Identitäten steht, die mit dem Push-Benachrichtigungs-Service von Apple erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument zum [Apple Push Notification &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)Service). |
+| Apple Push Notification Service | APNS | Geräte-ID | Ein Namespace, der für Identitäten steht, die mit dem Push-Benachrichtigungs-Service von Apple erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument zum [Apple Push Notification ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)Service). |
 | ECID | ECID | Cookie-ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument [ECID](./ecid.md) . |
 | E-Mail | E-Mail | E-Mail | Ein Namespace, der eine E-Mail-Adresse darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. |
-| E-Mails (SHA256, in Kleinbuchstaben) | Email_LC_SHA256 | E-Mail | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Weitere Informationen finden Sie im folgenden Dokument [SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=de#hashing-support)Hashing-Unterstützung). |
+| E-Mails (SHA256, in Kleinbuchstaben) | Email_LC_SHA256 | E-Mail | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Weitere Informationen finden Sie im folgenden Dokument [SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)Hashing-Unterstützung). |
 | Firebase Cloud Messaging | FCM | Geräte-ID | Ein Namespace, der Identitäten darstellt, die mit Google Firebase Cloud Messaging für Push-Benachrichtigungen erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument zu [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) . |
 | Google Ad ID (GAID) | GAID | Geräte-ID | Ein Namespace, der eine Google Advertising ID darstellt. Weiterführende Informationen finden Sie im folgenden Dokument zu [Google Advertising IDs](https://support.google.com/googleplay/android-developer/answer/6048248?hl=de). |
 | Telefon | Telefon | Telefonnummer | Ein Namespace, der eine Telefonnummer darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher verwendet werden, um diese Person über verschiedene Kanäle hinweg zu identifizieren. |
@@ -159,8 +159,8 @@ Wählen Sie als Nächstes den Identitätstyp aus, den Sie dem benutzerdefinierte
 
 ## Namespaces in Identitätsdaten
 
-Die Angabe des Namespace für eine Identität hängt von der Methode ab, mit der Sie Identitätsdaten bereitstellen. Details zur Bereitstellung von Daten-Identitätsdaten finden Sie im [[!DNL Identity Service] Implementierungshandbuch](../implementation.md).
+Die Angabe des Namespace für eine Identität hängt von der Methode ab, mit der Sie Identitätsdaten bereitstellen. Details zur Bereitstellung von Daten-Identitätsdaten finden Sie im [[!DNL Identity Service] Implementierungshandbuch](../implementation.md). Wenn Sie Identitäten über die Web SDK-`identityMap` senden, finden Sie unter [Verwenden von identityMap in der Datenerfassung](/help/collection/identity/identity-map.md) Anleitungen zum Vorbereiten und Formatieren von Identitätswerten vor dem Senden.
 
 ## Nächste Schritte
 
-Sie kennen nun die Schlüsselkonzepte von Identity-Namespaces und können als Nächstes erfahren, wie Sie Ihr Identitätsdiagramm mithilfe des [Identitätsdiagramm-Viewers“ &#x200B;](../features/identity-graph-viewer.md).
+Sie kennen nun die Schlüsselkonzepte von Identity-Namespaces und können als Nächstes erfahren, wie Sie Ihr Identitätsdiagramm mithilfe des [Identitätsdiagramm-Viewers“ ](../features/identity-graph-viewer.md).

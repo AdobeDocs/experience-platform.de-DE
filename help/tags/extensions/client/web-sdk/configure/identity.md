@@ -2,10 +2,10 @@
 title: Einstellungen der Identitätskonfiguration
 description: Definieren, wie die Tag-Erweiterung Besucher identifiziert.
 exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 3%
+source-wordcount: '265'
+ht-degree: 10%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 In diesem Konfigurationsabschnitt können Sie das Verhalten der Web-SDK bei der Handhabung der Benutzeridentifizierung definieren.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.
@@ -35,7 +35,3 @@ Ein Kontrollkästchen, mit dem Web SDK die `AMCV` und `s_ecid` Cookies lesen und
 ## [!UICONTROL Use third-party cookies]
 
 Wenn diese Option aktiviert ist, versucht Web SDK, eine Benutzerkennung in einem Drittanbieter-Cookie zu speichern. Bei erfolgreicher Ausführung wird der Benutzer bei der Navigation durch mehrere Domains als ein einzelner Benutzer identifiziert, anstatt in jeder Domain als separater Benutzer identifiziert zu werden. Wenn diese Option aktiviert ist, kann die SDK die Benutzerkennung möglicherweise immer noch nicht in einem Drittanbieter-Cookie speichern, wenn der Browser keine Drittanbieter-Cookies unterstützt oder vom Benutzer so konfiguriert wurde, dass keine Drittanbieter-Cookies zugelassen werden. In diesem Fall speichert die SDK die Kennung nur in der Erstanbieter-Domain. Die JavaScript-Bibliothek, die diesem Kontrollkästchen entspricht, ist [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md).
-
->[!IMPORTANT]
->
->Drittanbieter-Cookies sind nicht mit der Funktion [Erstanbieter-Geräte-ID](/help/collection/use-cases/identity/first-party-device-ids.md) in Web SDK kompatibel. Sie können entweder Erstanbieter-Geräte-IDs oder Drittanbieter-Cookies verwenden. Sie können nicht beide Funktionen gleichzeitig verwenden.

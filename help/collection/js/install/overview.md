@@ -3,7 +3,7 @@ title: Web SDK-Installationsübersicht
 description: Erfahren Sie, wie Sie Experience Platform Web SDK installieren.
 keywords: Web SDK-Installation;Installieren von Web SDK;Internet Explorer;Promise;npm-Paket
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: a490c429047f5e5997d69f30a51e6b78debe2d5d
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
@@ -23,5 +23,5 @@ Es gibt drei unterstützte Möglichkeiten, Adobe Experience Platform Web SDK zu 
 Bevor Sie Web SDK verwenden oder installieren, müssen Sie die folgenden Anforderungen erfüllen:
 
 * Die -Architektur in Adobe Experience Platform muss zuerst konfiguriert werden. Zu diesen Einstellungen gehören alle erforderlichen Schemata, Identitäten und Datenströme.
-* Sie müssen über die entsprechenden Berechtigungen verfügen, um auf die entsprechenden Tools zugreifen zu können. Wenn Ihr Unternehmen beispielsweise beschließt, die Tag-Erweiterung zu verwenden, müssen Sie über die richtigen Berechtigungen für den Zugriff auf die Datenerfassungs-Benutzeroberfläche verfügen. Weitere Informationen [&#x200B; Sie unter &#x200B;](../../permissions.md)Datenerfassungsberechtigungen“.
-* Es wird empfohlen, eine Erstanbieterdomäne (CNAME) zu verwenden. Wenn Sie bereits über einen CNAME für Adobe Analytics verfügen, können Sie diesen verwenden. Testen in der Entwicklungsumgebung funktioniert ohne einen CNAME, aber Adobe empfiehlt, einen zu verwenden, bevor er in der Produktionsumgebung veröffentlicht wird. Weitere Informationen finden [&#x200B; unter &#x200B;](../../use-cases/identity/first-party-device-ids.md)-IDs von Erstanbietern .
+* Sie müssen über die entsprechenden Berechtigungen verfügen, um auf die entsprechenden Tools zugreifen zu können. Wenn Ihr Unternehmen beispielsweise beschließt, die Tag-Erweiterung zu verwenden, müssen Sie über die richtigen Berechtigungen für den Zugriff auf die Datenerfassungs-Benutzeroberfläche verfügen. Weitere Informationen [ Sie unter ](../../permissions.md)Datenerfassungsberechtigungen“.
+* Es wird empfohlen, eine Erstanbieterdomäne (CNAME) zu verwenden. Wenn Sie bereits über einen CNAME für Adobe Analytics verfügen, können Sie diesen verwenden. Testen in der Entwicklungsumgebung funktioniert ohne einen CNAME, aber Adobe empfiehlt, einen zu verwenden, bevor er in der Produktionsumgebung veröffentlicht wird. Weitere Informationen finden [ unter ](../../identity/fpid.md)-IDs von Erstanbietern .
