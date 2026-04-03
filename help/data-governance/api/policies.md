@@ -5,7 +5,7 @@ title: API-Endpunkt für Data Governance-Richtlinien
 description: Data Governance-Richtlinien sind Regeln, die Ihr Unternehmen verabschiedet hat und die die Arten von Marketing-Aktionen beschreiben, die Sie mit den Daten in Experience Platform durchführen dürfen bzw. die Ihnen untersagt sind. Der Endpunkt /policies wird für alle API-Aufrufe im Zusammenhang mit dem Anzeigen, Erstellen, Aktualisieren oder Löschen von Data Governance-Richtlinien verwendet.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 98%
@@ -148,7 +148,7 @@ Eine erfolgreiche Antwort enthält ein `children`-Array, das die Details der ein
 | `status` | Der aktuelle Status einer Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED` oder `DISABLED`. Standardmäßig werden nur Richtlinien vom Typ `ENABLED` in die Auswertung einbezogen. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienauswertung](../enforcement/overview.md). |
 | `marketingActionRefs` | Ein Array, das die URIs aller für eine Richtlinie möglichen Marketing-Aktionen auflistet. |
 | `description` | Eine optionale Beschreibung, die zusätzlichen Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | Ein Objekt, das die spezifischen Datennutzungskennzeichnungen beschreibt, bei denen die einer Richtlinie zugeordnete Marketing-Aktion nicht ausgeführt werden darf. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt [Erstellen einer Richtlinie](#create-policy). |
+| `deny` | Ein Objekt, das die spezifischen Datennutzungs-Labels beschreibt, bei denen die einer Richtlinie zugeordnete Marketing-Aktion nicht ausgeführt werden darf. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt [Erstellen einer Richtlinie](#create-policy). |
 
 ## Suchen einer Richtlinie {#look-up}
 
@@ -229,18 +229,18 @@ Eine erfolgreiche Antwort gibt die Details der Richtlinie zurück.
 | `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED` oder `DISABLED`. Standardmäßig werden nur Richtlinien vom Typ `ENABLED` in die Auswertung einbezogen. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienauswertung](../enforcement/overview.md). |
 | `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketing-Aktionen auflistet. |
 | `description` | Eine optionale Beschreibung, die zusätzlichen Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | Ein Objekt, das die spezifischen Datennutzungskennzeichnungen beschreibt, bei denen die der Richtlinie zugeordnete Marketing-Aktion nicht ausgeführt werden darf. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt [Erstellen einer Richtlinie](#create-policy). |
+| `deny` | Ein Objekt, das die spezifischen Datennutzungs-Labels beschreibt, bei denen die der Richtlinie zugeordnete Marketing-Aktion nicht ausgeführt werden darf. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt [Erstellen einer Richtlinie](#create-policy). |
 
 ## Erstellen einer benutzerdefinierten Richtlinie {#create-policy}
 
 In der [!DNL Policy Service]-API wird eine Richtlinie wie folgt definiert:
 
 * Ein Verweis auf eine bestimmte Marketing-Aktion
-* Ein Ausdruck, der die Datennutzungskennzeichnungen beschreibt, bei denen die Marketing-Aktion nicht ausgeführt werden darf.
+* Ein Ausdruck, der die Datennutzungs-Labels beschreibt, bei denen die Marketing-Aktion nicht ausgeführt werden darf.
 
-Um diese Anforderung zu erfüllen, müssen Richtliniendefinitionen einen booleschen Ausdruck zum Vorhandensein von Datennutzungskennzeichnungen enthalten. Dieser Ausdruck wird als Richtlinienausdruck bezeichnet.
+Um diese Anforderung zu erfüllen, müssen Richtliniendefinitionen einen booleschen Ausdruck zum Vorhandensein von Datennutzungs-Labels enthalten. Dieser Ausdruck wird als Richtlinienausdruck bezeichnet.
 
-Richtlinienausdrücke werden in jeder Richtliniendefinition in Form einer `deny`-Eigenschaft bereitgestellt. Ein Beispiel für ein einfaches `deny`-Objekt, das nur das Vorhandensein einer einzelnen Kennzeichnung prüft, würde wie folgt aussehen:
+Richtlinienausdrücke werden in jeder Richtliniendefinition in Form einer `deny`-Eigenschaft bereitgestellt. Ein Beispiel für ein einfaches `deny`-Objekt, das nur das Vorhandensein eines einzelnen Labels prüft, würde wie folgt aussehen:
 
 ```json
 "deny": {
@@ -248,9 +248,9 @@ Richtlinienausdrücke werden in jeder Richtliniendefinition in Form einer `deny`
 }
 ```
 
-In vielen Richtlinien werden jedoch komplexere Bedingungen für das Vorhandensein von Datennutzungskennzeichnungen spezifiziert. Um diese Anwendungsfälle zu unterstützen, können Sie auch boolesche Operationen zur Beschreibung Ihrer Richtlinienausdrücke einschließen. Das Objekt des Richtlinienausdrucks muss entweder eine Kennzeichnung oder einen Operator und Operanden enthalten, jedoch nicht beides. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt.
+In vielen Richtlinien werden jedoch komplexere Bedingungen für das Vorhandensein von Datennutzungs-Labels spezifiziert. Um diese Anwendungsfälle zu unterstützen, können Sie auch boolesche Operationen zur Beschreibung Ihrer Richtlinienausdrücke einschließen. Das Objekt des Richtlinienausdrucks muss entweder ein Label oder einen Operator und Operanden enthalten, jedoch nicht beides. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt.
 
-Um beispielsweise eine Richtlinie zu definieren, die die Ausführung einer Marketing-Aktion in Bezug auf Daten verbietet, bei denen `C1 OR (C3 AND C7)`-Kennzeichnungen vorhanden sind, wird die `deny`-Eigenschaft der Richtlinie wie folgt angegeben:
+Um beispielsweise eine Richtlinie zu definieren, die die Ausführung einer Marketing-Aktion in Bezug auf Daten verbietet, bei denen `C1 OR (C3 AND C7)`-Labels vorhanden sind, wird die `deny`-Eigenschaft der Richtlinie wie folgt angegeben:
 
 ```JSON
 "deny": {
@@ -270,9 +270,9 @@ Um beispielsweise eine Richtlinie zu definieren, die die Ausführung einer Marke
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `operator` | Gibt die bedingte Beziehung zwischen den Kennzeichnungen an, die im gleichrangigen `operands`-Array bereitgestellt werden. Akzeptierte Werte sind: <ul><li>`OR`: Der Ausdruck wird in „true“ aufgelöst, wenn eine der Kennzeichnungen im `operands`-Array vorhanden ist.</li><li>`AND`: Der Ausdruck wird nur dann in „true“ aufgelöst, wenn alle Kennzeichnungen im `operands`-Array vorhanden sind.</li></ul> |
-| `operands` | Ein Array von Objekten, wobei jedes Objekt entweder eine einzelne Kennzeichnung oder ein zusätzliches Paar der Eigenschaften `operator` und `operands` darstellt. Das Vorhandensein der Kennzeichnungen und/oder Operationen in einem `operands`-Array wird je nach dem Wert der zugehörigen `operator`-Eigenschaft in „true“ oder „false“ aufgelöst. |
-| `label` | Der Name einer einzelnen Datenverwendungskennzeichnung, die für die Richtlinie gilt. |
+| `operator` | Gibt die bedingte Beziehung zwischen den Labels an, die im gleichrangigen `operands`-Array bereitgestellt werden. Akzeptierte Werte sind: <ul><li>`OR`: Der Ausdruck wird in „true“ aufgelöst, wenn eine der Labels im `operands`-Array vorhanden ist.</li><li>`AND`: Der Ausdruck wird nur dann in „true“ aufgelöst, wenn alle Labels im `operands`-Array vorhanden sind.</li></ul> |
+| `operands` | Ein Array von Objekten, wobei jedes Objekt entweder ein einzelnes Label oder ein zusätzliches Paar der Eigenschaften `operator` und `operands` darstellt. Das Vorhandensein der Labels und/oder Operationen in einem `operands`-Array wird je nach dem Wert der zugehörigen `operator`-Eigenschaft in „true“ oder „false“ aufgelöst. |
+| `label` | Der Name eines einzelnen Datenverwendungs-Labels, das für die Richtlinie gilt. |
 
 Sie können eine neue benutzerdefinierte Richtlinie erstellen, indem Sie eine POST-Anfrage an den `/policies/custom`-Endpunkt senden.
 
@@ -284,7 +284,7 @@ POST /policies/custom
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Richtlinie, die die Ausführung der Marketing-Aktion `exportToThirdParty` auf Daten mit den Kennzeichnungen `C1 OR (C3 AND C7)` einschränkt.
+Die folgende Anfrage erstellt eine neue Richtlinie, die die Ausführung der Marketing-Aktion `exportToThirdParty` auf Daten mit den Labels `C1 OR (C3 AND C7)` einschränkt.
 
 ```shell
 curl -X POST \
@@ -323,7 +323,7 @@ curl -X POST \
 | `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED` oder `DISABLED`. Standardmäßig werden nur Richtlinien vom Typ `ENABLED` in die Auswertung einbezogen. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienauswertung](../enforcement/overview.md). |
 | `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketing-Aktionen auflistet. Der URI für eine Marketing-Aktion wird unter `_links.self.href` in der Antwort für [Suchen einer Marketing-Aktion](./marketing-actions.md#look-up) bereitgestellt. |
 | `description` | Eine optionale Beschreibung, die zusätzlichen Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | Der Richtlinienausdruck, der die spezifischen Datenverwendungskennzeichnungen beschreibt, bei denen die der Richtlinie zugeordnete Marketing-Aktion nicht ausgeführt werden darf. |
+| `deny` | Der Richtlinienausdruck, der die spezifischen Datenverwendungs-Labels beschreibt, bei denen die der Richtlinie zugeordnete Marketing-Aktion nicht ausgeführt werden darf. |
 
 **Antwort**
 
@@ -396,7 +396,7 @@ PUT /policies/custom/{POLICY_ID}
 
 **Anfrage**
 
-In diesem Beispiel haben sich die Bedingungen für den Export von Daten an einen Drittanbieter geändert. Daher muss die von Ihnen erstellte Richtlinie diese Marketing-Aktion jetzt ablehnen, wenn `C1 AND C5`-Datenbezeichnungen vorhanden sind.
+In diesem Beispiel haben sich die Bedingungen für den Export von Daten an einen Drittanbieter geändert. Daher muss die von Ihnen erstellte Richtlinie diese Marketing-Aktion jetzt ablehnen, wenn `C1 AND C5`-Daten-Labels vorhanden sind.
 
 Mit der folgenden Anfrage wird die vorhandene Richtlinie so aktualisiert, dass sie den neuen Richtlinienausdruck enthält. Beachten Sie, dass alle Felder in die Payload einbezogen werden müssen, da diese Anfrage die Richtlinie im Wesentlichen neu schreibt, auch wenn einige ihrer Werte nicht aktualisiert werden.
 
@@ -431,7 +431,7 @@ curl -X PUT \
 | `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED` oder `DISABLED`. Standardmäßig werden nur Richtlinien vom Typ `ENABLED` in die Auswertung einbezogen. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienauswertung](../enforcement/overview.md). |
 | `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketing-Aktionen auflistet. Der URI für eine Marketing-Aktion wird unter `_links.self.href` in der Antwort für [Suchen einer Marketing-Aktion](./marketing-actions.md#look-up) bereitgestellt. |
 | `description` | Eine optionale Beschreibung, die zusätzlichen Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | Der Richtlinienausdruck, der die spezifischen Datenverwendungskennzeichnungen beschreibt, bei denen die der Richtlinie zugeordnete Marketing-Aktion nicht ausgeführt werden darf. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt [Erstellen einer Richtlinie](#create-policy). |
+| `deny` | Der Richtlinienausdruck, der die spezifischen Datenverwendungs-Labels beschreibt, bei denen die der Richtlinie zugeordnete Marketing-Aktion nicht ausgeführt werden darf. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt [Erstellen einer Richtlinie](#create-policy). |
 
 **Antwort**
 
@@ -729,4 +729,4 @@ Eine erfolgreiche Antwort gibt die aktualisierte Liste der aktivierten Kernricht
 
 ## Nächste Schritte
 
-Nachdem Sie neue Richtlinien definiert oder vorhandene aktualisiert haben, können Sie die [!DNL Policy Service]-API verwenden, um Marketing-Aktionen mit bestimmten Kennzeichnungen oder Datensätzen zu testen und festzustellen, ob Ihre Richtlinien zu erwarteten Verstößen führen. Weitere Informationen finden Sie im Handbuch zu den [Endpunkten der Richtlinienauswertung](./evaluation.md).
+Nachdem Sie neue Richtlinien definiert oder vorhandene aktualisiert haben, können Sie die [!DNL Policy Service]-API verwenden, um Marketing-Aktionen mit bestimmten Labels oder Datensätzen zu testen und festzustellen, ob Ihre Richtlinien zu erwarteten Verstößen führen. Weitere Informationen finden Sie im Handbuch zu den [Endpunkten der Richtlinienauswertung](./evaluation.md).
