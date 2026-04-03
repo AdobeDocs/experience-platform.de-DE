@@ -2,7 +2,7 @@
 title: Adobe Analytics mit Experience Platform verbinden
 description: Erfahren Sie, wie Sie Ihre Report Suite-Daten von Adobe Analytics in Experience Platform übertragen
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '2754'
 ht-degree: 14%
@@ -26,7 +26,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dokument verwendet werden:
 
 * **Standardattribut**: Standardattribute sind alle Attribute, die von Adobe vordefiniert wurden. Sie haben dieselbe Bedeutung für alle Kunden und sind in den Analytics-Quelldaten und Analytics-Schemafeldergruppen verfügbar.
-* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in Analytics. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Ihre Verwendung kann sich von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. Weitere Informationen zu eVars finden [&#x200B; in der folgenden &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=de)Analytics-Dokumentation zu Konversionsvariablen).
+* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in Analytics. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Ihre Verwendung kann sich von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. Weitere Informationen zu eVars finden [ in der folgenden ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)Analytics-Dokumentation zu Konversionsvariablen).
 * **Attribute in benutzerdefinierten Feldgruppen**: Attribute, die aus von Kunden erstellten Feldgruppen stammen, sind alle benutzerdefiniert und gelten weder als Standard- noch als benutzerdefinierte Attribute.
 
 ## Navigieren im Quellkatalog
@@ -164,7 +164,8 @@ Similar to the source schema, you can use the interface to navigate through the 
 
 With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
-![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) 
+-->
 
 ## Filtern nach Echtzeit-Kundenprofil {#filtering-for-profile}
 
@@ -325,5 +326,5 @@ Das folgende Video soll Ihnen helfen, das Aufnehmen von Daten mithilfe des Adobe
 >
 > Die im folgenden Video angezeigte [!DNL Experience Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432289?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
