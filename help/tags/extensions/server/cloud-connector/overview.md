@@ -2,7 +2,7 @@
 title: Cloud Connector-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Cloud Connector-Ereignisweiterleitungserweiterung in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 75%
@@ -45,7 +45,7 @@ Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, 
 
 Um weitere Abfrageparameter hinzuzufügen, wählen Sie **[!UICONTROL Add Another]** aus.
 
-#### Header
+#### Kopfzeilen
 
 Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie als Header senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um den Wert eines Datenelements mit dem Namen „pageName“ als Schlüssel oder Wert zu referenzieren, geben Sie `{{pageName}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
 
@@ -67,7 +67,7 @@ In der folgenden Tabelle sind die vordefinierten Header aufgeführt. Sie sind ni
 | [Accept-Datetime](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) | Wird von einem Benutzeragenten zur Angabe übertragen, dass er auf einen früheren Zustand einer Originalressource zugreifen möchte. Zu diesem Zweck wird der `Accept-Datetime`-Header in einer HTTP-Anfrage an ein TimeGate für eine ursprüngliche Ressource übermittelt. Der Wert gibt den Zeitpunkt des gewünschten früheren Zustands der Originalressource an. |
 | Access-Control-Request-Headers | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Header](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers) der Client bei der eigentlichen Anfrage senden könnte. |
 | Access-Control-Request-Method | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Methode](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Methods) bei der eigentlichen Anfrage verwendet wird. Dieser Header ist erforderlich, da die Preflight-Anfrage immer eine [OPTION](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) ist und nicht dieselbe Methode wie die eigentliche Anfrage verwendet. |
-| Authorization | Enthält die Anmeldedaten zum Authentifizieren eines Benutzeragenten bei einem Server. |
+| Autorisierung | Enthält die Anmeldedaten zum Authentifizieren eines Benutzeragenten bei einem Server. |
 | [Cache-Control](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Cache-Control) | Anweisungen für Caching-Mechanismen sowohl in Anfragen als auch in Antworten. |
 | [Verbindung](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Connection) | Steuert, ob die Netzwerkverbindung nach Abschluss der aktuellen Transaktion geöffnet bleibt. |
 | [Content-Length](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length) | Die Größe der Ressource in Bytes als Dezimalzahl. |
@@ -128,7 +128,7 @@ Das [!DNL mTLS]-Zertifikat ist eine digitale Berechtigung, die die Identität ei
 
 ### Installieren der Adobe Cloud Connector-Erweiterung {#install}
 
-Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
 Wählen Sie **[!UICONTROL Extensions]** im linken Bedienfeld aus. Klicken Sie auf der Registerkarte **[!UICONTROL Catalog]** auf die Karte **[!UICONTROL Adobe Cloud Connector]** und klicken Sie dann auf **[!UICONTROL Install]**.
 
@@ -142,7 +142,7 @@ Wählen Sie **[!UICONTROL Extensions]** im linken Bedienfeld aus. Klicken Sie au
 
 Nach der Installation der Erweiterung können Sie eine Ereignisweiterleitungsregel erstellen, die [!DNL mTLS] verwendet, und sie zu Ihrer Bibliothek hinzufügen.
 
-Erstellen Sie eine neue [&#x200B; (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Geben Sie einen Namen für Ihre Regel an und fügen Sie dann unter **[!UICONTROL Actions]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Adobe Cloud Connector]** fest. Wählen Sie als Nächstes **[!UICONTROL Make Fetch Call]** für die **[!UICONTROL Action Type]** aus.
+Erstellen Sie eine neue [ (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Geben Sie einen Namen für Ihre Regel an und fügen Sie dann unter **[!UICONTROL Actions]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Adobe Cloud Connector]** fest. Wählen Sie als Nächstes **[!UICONTROL Make Fetch Call]** für die **[!UICONTROL Action Type]** aus.
 
 ![Die Ansicht mit den Eigenschaftsregeln für die Ereignisweiterleitung mit den Feldern, die zum Hinzufügen einer Regelkonfiguration für die Ereignisweiterleitung erforderlich sind, ist hervorgehoben.](../../../images/extensions/server/cloud-connector/event-action.png)
 
