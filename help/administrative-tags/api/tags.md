@@ -3,7 +3,7 @@ title: Unified Tags-Endpunkt
 description: Erfahren Sie, wie Sie Tag-Kategorien und Tags mithilfe der Adobe Experience Platform-APIs erstellen, aktualisieren, verwalten und löschen können.
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
@@ -34,7 +34,7 @@ Im folgenden Glossar wird der Unterschied zwischen einem **Tag** und einer **Tag
 
 ## Abrufen einer Liste von Tag-Kategorien {#get-tag-categories}
 
-Sie können eine Liste von Tag-Kategorien abrufen, die zu Ihrer Organisation gehören, indem Sie eine GET-Anfrage an den `/tagCategory`-Endpunkt senden.
+Sie können eine Liste von Tag-Kategorien abrufen, die zu Ihrer Organisation gehören, indem Sie eine GET-Anfrage an den `/tagCategory`-Endpunkt stellen.
 
 **API-Format**
 
@@ -55,7 +55,7 @@ Die folgenden optionalen Abfrageparameter können beim Abrufen von Tag-Kategorie
 
 **Anfrage**
 
-+++Beispielanfrage zum Auflisten aller Tag-Kategorien in Ihrer Organisation
++++Eine Beispielanfrage, um alle Tag-Kategorien in Ihrer Organisation aufzulisten
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
@@ -114,7 +114,7 @@ POST /tagCategory
 
 **Anfrage**
 
-+++Eine Beispielanfrage zum Erstellen einer neuen Tag-Kategorie.
++++Beispielanfrage zum Erstellen einer neuen Tag-Kategorie.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
@@ -139,7 +139,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 Eine Beispielantwort gibt den HTTP-Status-Code 200 mit Details zur neu erstellten Tag-Kategorie zurück.
 
-+++Eine Beispielantwort mit Details zur neu erstellten Tag-Kategorie.
++++Eine Beispielantwort, die Details zur neu erstellten Tag-Kategorie enthält.
 
 ```json
 {
@@ -518,7 +518,7 @@ POST /tags
 
 **Anfrage**
 
-+++Eine Beispielanfrage zum Erstellen eines neuen Tags.
++++Beispielanfrage zum Erstellen eines neuen Tags.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tags
@@ -542,7 +542,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 Bei einer erfolgreichen Antwort wird der HTTP-Status 201 mit Details zu Ihrem neu erstellten Tag zurückgegeben.
 
-+++Eine Beispielantwort mit Details zu Ihrem neu erstellten Tag.
++++Eine Beispielantwort, die Details zu Ihrem neu erstellten Tag enthält.
 
 ```json
 {
@@ -605,7 +605,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum angegebenen Tag zurück.
 
-+++Eine Beispielantwort, die Details zum angegebenen Tag enthält.
++++Eine Beispielantwort, die Details zum angegebenen Tag enthält. 
 
 ```json
 {
@@ -719,7 +719,7 @@ PATCH /tags/{TAG_ID}
 
 **Anfrage**
 
-+++Eine Beispielanfrage zum Aktualisieren eines bestimmten Tags
++++Beispielanfrage zum Aktualisieren eines bestimmten Tags
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
@@ -773,7 +773,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum neu aktu
 >
 >Nur der System- und Produktadministrator kann diesen API-Aufruf verwenden.
 >
->Darüber hinaus **das Tag (kann** keinem Geschäftsobjekt zugeordnet werden und **muss** archiviert werden, bevor Sie das Tag löschen können. Sie können das Tag mithilfe des Endpunkts [Tag aktualisieren“ &#x200B;](#update-tag).
+>Darüber hinaus **das Tag (kann** keinem Geschäftsobjekt zugeordnet werden und **muss** archiviert werden, bevor Sie das Tag löschen können. Sie können das Tag mithilfe des Endpunkts [Tag aktualisieren“ ](#update-tag).
 
 Sie können ein bestimmtes Tag löschen, indem Sie ein DELETE-Tag an den `/tags`-Endpunkt senden und die ID des Tags angeben, das Sie löschen möchten.
 
