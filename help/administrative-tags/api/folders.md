@@ -3,7 +3,7 @@ title: Folders-Endpunkt
 description: Erfahren Sie, wie Sie mit den Adobe Experience Platform-APIs Ordner erstellen, aktualisieren, verwalten und löschen können.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
@@ -26,7 +26,7 @@ Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](./getting-started
 
 ## Abrufen einer Ordnerliste {#list}
 
-Sie können eine Liste von Ordnern abrufen, die zu Ihrer Organisation gehören, indem Sie eine GET-Anfrage an den `/folder`-Endpunkt stellen und den Ordnertyp und die ID des übergeordneten Ordners angeben.
+Sie können eine Liste von Ordnern abrufen, die zu Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an den `/folder`-Endpunkt stellen und den Ordnertyp und die ID des übergeordneten Ordners angeben.
 
 **API-Format**
 
@@ -153,7 +153,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
 
 Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zum neu erstellten Ordner zurückgegeben.
 
-+++Eine Beispielantwort mit Details zum neu erstellten Ordner.
++++Eine Beispielantwort mit Details zum neu erstellten Ordner .
 
 ```json
 {
@@ -185,7 +185,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zum neu ers
 
 ## Abrufen eines bestimmten Ordners {#get}
 
-Sie können einen bestimmten Ordner abrufen, der zu Ihrer Organisation gehört, indem Sie eine GET-Anfrage an den `/folder`-Endpunkt stellen und den Ordnertyp und die ID des Ordners angeben.
+Sie können einen bestimmten Ordner abrufen, der zu Ihrem Unternehmen gehört, indem Sie eine GET-Anfrage an den `/folder`-Endpunkt stellen und den Ordnertyp und die ID des Ordners angeben.
 
 **API-Format**
 
@@ -256,7 +256,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zum angefor
 
 ## Validieren eines angegebenen Ordners {#validate}
 
-Sie können überprüfen, ob ein Ordner berechtigt ist, Objekte darin zu enthalten, indem Sie eine GET-Anfrage an den `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate`-Endpunkt senden und sowohl den Ordnertyp als auch die ID angeben.
+Sie können überprüfen, ob ein Ordner berechtigt ist, Objekte darin zu enthalten, indem Sie eine GET-Anfrage an den `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate`-Endpunkt stellen, und sowohl den Ordnertyp als auch die ID angeben.
 
 **API-Format**
 
@@ -316,7 +316,7 @@ Bei einem erfolgreichen Status wird der HTTP-Status 200 mit Details zum Ordner z
 
 ## Aktualisieren eines bestimmten Ordners {#update}
 
-Sie können die Details eines bestimmten Ordners, der zu Ihrem Unternehmen gehört, aktualisieren, indem Sie eine PATCH-Anfrage an den `/folder`-Endpunkt senden und den Ordnertyp und die ID des Ordners angeben.
+Sie können die Details eines bestimmten Ordners, der zu Ihrem Unternehmen gehört, aktualisieren, indem Sie eine PATCH-Anfrage an den `/folder`-Endpunkt stellen und den Ordnertyp und die ID des Ordners angeben.
 
 **API-Format**
 
@@ -331,7 +331,7 @@ PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 **Anfrage**
 
-+++Eine Beispielanfrage zum Aktualisieren eines bestimmten Ordners
++++Beispielanfrage zum Aktualisieren eines bestimmten Ordners
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
@@ -378,7 +378,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Informationen zu Ih
 
 ## Löschen eines bestimmten Ordners {#delete}
 
-Sie können einen bestimmten Ordner, der zu Ihrem Unternehmen gehört, löschen, indem Sie eine DELETE-Anfrage an den `/folder` stellen und den Ordnertyp und die Ordnerkennung angeben.
+Sie können einen bestimmten Ordner, der zu Ihrem Unternehmen gehört, löschen, indem Sie eine DELETE-Anfrage an den `/folder` stellen und den Ordnertyp und die ID des Ordners angeben.
 
 ***API-Format**
 
