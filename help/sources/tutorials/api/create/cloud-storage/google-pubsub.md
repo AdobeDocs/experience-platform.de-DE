@@ -3,7 +3,7 @@ title: Erstellen einer Google PubSub-Quellverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Google PubSub-Konto verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 45%
@@ -60,7 +60,7 @@ Weitere Informationen zu diesen Werten finden Sie in diesem Dokument [[!DNL PubS
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -90,7 +90,7 @@ POST /connections
 
 Um eine Basisverbindung mit projektbasierter Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie Ihre `projectId` und `credentials` im Anfragetext an.
 
-+++Anfrage
++++ Anfrage
 
 ```shell
 curl -X POST \
@@ -123,9 +123,9 @@ curl -X POST \
 | `auth.params.credentials` | Die zur Authentifizierung von [!DNL PubSub] erforderlichen Anmeldedaten bzw. der Schlüssel. |
 | `connectionSpec.id` | Die [!DNL PubSub]-Verbindungsspezifikations-ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-++++
++++
 
-+++Antwort
++++ Antwort
 
 Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, einschließlich ihrer eindeutigen Kennung (`id`). Diese Basisverbindungs-ID wird im nächsten Schritt benötigt, um eine Quellverbindung zu erstellen.
 
@@ -136,13 +136,13 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 }
 ```
 
-++++
++++
 
 >[!TAB Topic- und abonnementbasierte Authentifizierung]
 
 Um eine Basisverbindung mit themen- und abonnementbasierter Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie Ihre `credentials`, `topicName` und `subscriptionName` im Anfragetext an.
 
-+++Anfrage
++++ Anfrage
 
 ```shell
 curl -X POST \
@@ -179,7 +179,7 @@ curl -X POST \
 
 +++
 
-+++Antwort
++++ Antwort
 
 Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, einschließlich ihrer eindeutigen Kennung (`id`). Diese Basisverbindungs-ID wird im nächsten Schritt benötigt, um eine Quellverbindung zu erstellen.
 
@@ -190,7 +190,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 }
 ```
 
-++++
++++
 
 >[!ENDTABS]
 
