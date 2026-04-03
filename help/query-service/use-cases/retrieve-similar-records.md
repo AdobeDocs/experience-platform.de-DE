@@ -2,9 +2,9 @@
 title: Abrufen ähnlicher Datensätze mit Funktionen höherer Ordnung
 description: Erfahren Sie, wie Sie ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen basierend auf einer Ähnlichkeitsmetrik und einem Ähnlichkeitsschwellenwert identifizieren und abrufen können. Dieser Workflow kann aussagekräftige Beziehungen oder Überschneidungen zwischen unterschiedlichen Datensätzen hervorheben.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '4031'
+source-wordcount: '4030'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Bevor Sie mit diesem Dokument fortfahren, sollten Sie mit den folgenden Konzepte
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um die übergeordneten Funktionen für Ihre Adobe Experience Platform-Daten auszuführen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich an den Kundendienst von Adobe, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um die übergeordneten Funktionen für Ihre Adobe Experience Platform-Daten auszuführen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich an den Adobe-Kundendienst, um weitere Informationen zu erhalten.
 
 ## Ähnlichkeit herstellen {#establish-similarity}
 
@@ -108,8 +108,8 @@ Die folgenden Beschreibungen enthalten eine Aufschlüsselung des obigen SQL-Code
 - Zeile 1: `CREATE TEMP TABLE featurevector1 AS`: Diese Anweisung erstellt eine temporäre Tabelle mit dem Namen `featurevector1`. Temporäre Tabellen sind in der Regel nur innerhalb der aktuellen Sitzung zugänglich und werden automatisch am Ende der Sitzung entfernt.
 - Zeile 1 und 2: `SELECT * FROM (...)`: Dieser Teil des Codes ist eine Unterabfrage, die zum Generieren der Daten verwendet wird, die in die `featurevector1` eingefügt werden.
 Innerhalb der Unterabfrage werden mehrere `SELECT`-Anweisungen mithilfe des `UNION ALL`-Befehls kombiniert. Jede `SELECT`-Anweisung generiert eine Datenzeile mit den angegebenen Werten für die `ProductName`.
-- Zeile 3: `SELECT 'iPad' AS ProductName`: Dadurch wird eine Zeile mit dem in der `ProductName` Spalte `iPad` Wert generiert.
-- Zeile 5: `SELECT 'iPhone'`: Dadurch wird eine Zeile mit dem in der `ProductName` Spalte `iPhone` Wert generiert.
+- Zeile 3: `SELECT 'iPad' AS ProductName`: Dadurch wird eine Zeile mit dem in der `iPad` Spalte `ProductName` Wert generiert.
+- Zeile 5: `SELECT 'iPhone'`: Dadurch wird eine Zeile mit dem in der `iPhone` Spalte `ProductName` Wert generiert.
 
 Die SQL-Anweisung erstellt eine Tabelle, wie unten dargestellt:
 
@@ -194,7 +194,7 @@ Die Ergebnisse werden wie folgt angezeigt:
 
 +++
 
-### In Kleinbuchstaben umwandeln {#lowercase-conversion}
+### Konvertiert in Kleinbuchstaben {#lowercase-conversion}
 
 Anschließend wird die SQL verbessert, um die Produktnamen in Kleinbuchstaben zu konvertieren und alle Leerzeichen zu entfernen. Die untere Funktion (`lower(...)`) wird auf das Ergebnis der `replace()` angewendet. Die Funktion LOWER wandelt alle Zeichen der geänderten `ProductName` in Kleinbuchstaben um. Dadurch wird sichergestellt, dass die Werte unabhängig von ihrer ursprünglichen Groß-/Kleinschreibung in Kleinbuchstaben geschrieben werden.
 
@@ -262,7 +262,7 @@ Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
 Um die Genauigkeit weiter zu verbessern, muss die SQL verwendet werden, um sich überschneidende Token zu erstellen. Bei der obigen Zeichenfolge &quot;iPad&quot; fehlt beispielsweise das Token „pa“. Um dies zu beheben, verschieben Sie den Lookahead-Operator (mit `substring`) um einen Schritt und generieren Sie die Bi-Gramme.
 
-Ähnlich wie im vorherigen Schritt extrahiert `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` aus dem geänderten Produktnamen zweistellige Sequenzen, beginnt jedoch mit dem zweiten Zeichen unter Verwendung der `substring`-Methode, um überlappende Token zu erstellen. Als Nächstes kombiniert die Funktion `array_union()` in den Zeilen 3-7 (`array_union(...) AS tokens`) die Arrays von zweistelligen Sequenzen, die durch die beiden Extraktionen regulärer Ausdrücke erhalten werden. Dadurch wird sichergestellt, dass das Ergebnis eindeutige Token aus nicht überlappenden und überlappenden Sequenzen enthält.
+Ähnlich wie im vorherigen Schritt extrahiert `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` aus dem geänderten Produktnamen zweistellige Sequenzen, beginnt jedoch mit dem zweiten Zeichen unter Verwendung der `substring`-Methode, um überlappende Token zu erstellen. Als Nächstes kombiniert die Funktion `array_union(...) AS tokens` in den Zeilen 3-7 (`array_union()`) die Arrays von zweistelligen Sequenzen, die durch die beiden Extraktionen regulärer Ausdrücke erhalten werden. Dadurch wird sichergestellt, dass das Ergebnis eindeutige Token aus nicht überlappenden und überlappenden Sequenzen enthält.
 
 ```SQL {line-numbers="true"}
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, 
@@ -697,7 +697,7 @@ WHERE jaccard_similarity>=0.4
 
 Die Ergebnisse dieser Abfrage geben die Spalten für den Ähnlichkeits-Join an, wie unten dargestellt:
 
-+++Zum Erweitern auswählen
++++ Zum Erweitern auswählen
 
 |   | SetA_ProductNames | SetA_ProductNames |
 |---|--------------------------|------------------------|
@@ -707,7 +707,7 @@ Die Ergebnisse dieser Abfrage geben die Spalten für den Ähnlichkeits-Join an, 
 
 {style="table-layout:auto"}
 
-+++:
++++
 
 ### Nächste Schritte {#next-steps}
 
