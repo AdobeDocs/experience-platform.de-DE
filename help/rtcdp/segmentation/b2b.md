@@ -2,9 +2,9 @@
 title: Anwendungsfälle für die Segmentierung für Real-Time Customer Data Platform B2B edition
 description: Ein Überblick über die verschiedenen verfügbaren Anwendungsfälle für Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1603'
 ht-degree: 0%
@@ -39,10 +39,10 @@ Bei der Aktualisierung der Real-Time CDP B2B edition-Architektur unterstützen Z
 
 Bevor Sie die Segmentierungsattribute für B2B-Klassen verwenden können, müssen Sie die folgenden Schritte ausführen:
 
-1. Erstellen Sie Schemas, die die B2B-Klassen verwenden. Zu den B2B edition-Klassen gehören Konto, Kampagne, Opportunity, Marketing-Liste und mehr. Informationen zum [&#x200B; von Schemas zur Verwendung mit B2B-Klassen &#x200B;](../schemas/b2b.md) Sie in der Schemadokumentation .
+1. Erstellen Sie Schemas, die die B2B-Klassen verwenden. Zu den B2B edition-Klassen gehören Konto, Kampagne, Opportunity, Marketing-Liste und mehr. Informationen zum [ von Schemas zur Verwendung mit B2B-Klassen ](../schemas/b2b.md) Sie in der Schemadokumentation .
 2. Erstellen Sie Beziehungen zwischen Ihren B2B-Schemata des Experience-Datenmodells (XDM). Zielgruppen, die auf B2B edition-Attributen basieren, erfordern Beziehungen zwischen den -Klassen, um die erweiterte B2B-Segmentierungsfunktion in vollem Umfang nutzen zu können. Weitere Informationen finden Sie in der Dokumentation [Definieren einer Beziehung zwischen zwei B2B](../../xdm/tutorials/relationship-b2b.md)Schemata“.
-3. Nehmen Sie Daten mithilfe von Datensätzen auf der Grundlage Ihrer B2B-Schemata auf. Informationen zur Datenaufnahme finden [&#x200B; in der Quellendokumentation &#x200B;](../../sources/connectors/adobe-applications/marketo/marketo.md).
-4. Eine detailliertere Anleitung [&#x200B; Erstellen von Zielgruppen &#x200B;](../../segmentation/ui/segment-builder.md) Sie im Segment Builder-Benutzerhandbuch .
+3. Nehmen Sie Daten mithilfe von Datensätzen auf der Grundlage Ihrer B2B-Schemata auf. Informationen zur Datenaufnahme finden [ in der Quellendokumentation ](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. Eine detailliertere Anleitung [ Erstellen von Zielgruppen ](../../segmentation/ui/segment-builder.md) Sie im Segment Builder-Benutzerhandbuch .
 
 Sobald diese Anforderungen erfüllt sind, können Sie diese Attribute für gängige B2B-Anwendungsfälle kombinieren.
 
@@ -68,7 +68,7 @@ Diese Beziehung spiegelt sich in Segment Builder durch die Verwendung von `Key` 
 
 ![Beispiel für einen Quellschlüssel unter Verwendung von Segment Builder im Segmentierungsarbeitsbereich](../assets/segmentation/b2b/source-key-segmentation-example.png)
 
-Weitere Informationen zu den verfügbaren B2B[Klassen finden Sie &#x200B;](../schemas/b2b.md) der Dokumentation zu Schemas in Real-Time Customer Data Platform B2B edition .
+Weitere Informationen zu den verfügbaren B2B[Klassen finden Sie ](../schemas/b2b.md) der Dokumentation zu Schemas in Real-Time Customer Data Platform B2B edition .
 
 Die folgenden Anwendungsfälle enthalten Informationen darüber, welche Klassen verwendet werden, um Beziehungen zwischen den verschiedenen Schemas herzustellen und so diese Ergebnisse zu erzielen. Diese Beispiele können bei der Erstellung eigener Zielgruppen verwendet werden.
 
@@ -165,6 +165,7 @@ Ermitteln Sie alle Personen, die für Kampagnen vorgesehen sind, bei denen die I
 Suchen Sie alle Personen, die zur statischen Marketo-Liste „Anniversary users“ gehören, wobei isDeleted=false ist.
 
 ![Benutzeroberfläche mit übergeordneter Segmentierungsorganisation](../assets/segmentation/b2b/example-13.png)
+
 <!-- 
 ### Example 14: Find "decision makers" by opportunity status using streaming or edge segmentation {#find-decision-makers-personalization}
 
@@ -180,7 +181,8 @@ To create this audience, you must use "segment of segments" by creating a base a
 
 After creating the first audience, you can combine that with another audience of  people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 
-![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) -->
+![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) 
+-->
 
 ## Nächste Schritte {#next-steps}
 
