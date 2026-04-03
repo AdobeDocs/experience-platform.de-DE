@@ -3,7 +3,7 @@ title: API-Endpunkt für die Segmentsuche
 description: In der Segmentierungs-Service-API von Adobe Experience Platform wird die Segmentsuche verwendet, um Felder aus verschiedenen Datenquellen zu suchen und sie nahezu in Echtzeit zurückzugeben. Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche sowie Beispiele für API-Aufrufe zum Ausführen einfacher Aktionen mithilfe der -API.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 5%
@@ -36,9 +36,9 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 ```
 
 | Parameter | Beschreibung |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert darstellt, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `s={SEARCH_TERM}` | *(Optional)* Dabei stellt {SEARCH_TERM} eine Abfrage dar, die der Microsoft-Implementierung der [Suchsyntax von Lucene) &#x200B;](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben wird, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `s={SEARCH_TERM}` | *(Optional)* Dabei stellt {SEARCH_TERM} eine Abfrage dar, die der Microsoft-Implementierung der [Suchsyntax von Lucene) ](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben wird, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
 
 **Anfrage**
 
@@ -96,7 +96,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 ```
 
 | Parameter | Beschreibung |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Erforderlich)** Hierbei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schemaklasse-Wert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
 | `namespace={NAMESPACE}` | **(Erforderlich)** Wobei {NAMESPACE} den Namespace enthält, in dem gesucht werden soll. |
 | `s={SEARCH_TERM}` | *(Optional)* Hierbei enthält {SEARCH_TERM} eine Abfrage, die der Microsoft-Implementierung der [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) entspricht. Wenn kein Suchbegriff angegeben wird, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
@@ -167,7 +167,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 ```
 
 | Parameter | Beschreibung |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Erforderlich)** Hierbei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schemaklasse-Wert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
 | `namespace={NAMESPACE}` | **(Erforderlich)** Wobei {NAMESPACE} den Namespace enthält, in dem gesucht werden soll. |
 | `entityId={ENTITY_ID}` | **(Erforderlich)** Die ID des Suchobjekts, zu dem Sie die Strukturinformationen abrufen möchten, angegeben mit {ENTITY_ID}. |
