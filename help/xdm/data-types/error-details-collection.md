@@ -2,22 +2,22 @@
 title: Datentyp der Fehlerdetailsammlung
 description: Erfahren Sie mehr über den Datentyp „Error Details Collection Experience Data Model (XDM)“.
 exl-id: 54b03147-9bca-46af-86c8-90e42b4de26b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 12%
+source-wordcount: '101'
+ht-degree: 10%
 
 ---
 
-# [!UICONTROL Fehlerdetails] Sammlungsdatentyp
+# Datentyp der [!UICONTROL Error Details]
 
-[!UICONTROL Fehlerdetails] Die Sammlung ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Fehlerdetails beschreibt. Verwenden Sie den Datentyp [!UICONTROL Fehlerdetails] Sammlung, um Details zur Fehlerquelle und -identifizierung zu erfassen. Die Fehler-ID identifiziert den Fehler und die Fehlerquelle gibt an, ob er vom Player oder einer externen Quelle stammt.
+[!UICONTROL Error Details] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Fehlerdetails beschreibt. Verwenden Sie den Datentyp &quot;[!UICONTROL Error Details] Collection“, um Details zur Fehlerquelle und -identifizierung zu erfassen. Die Fehler-ID identifiziert den Fehler und die Fehlerquelle gibt an, ob er vom Player oder einer externen Quelle stammt.
 
 ![Abbildung des Datentyps für Fehlerdetails.](../images/data-types/error-details-collection.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Erforderlich | Beschreibung |
 |----------------------------|--------------|-----------|----------|-----------------------------------------------|
-| [!UICONTROL Fehler-ID] | `name` | Zeichenfolge | Nein | Die Fehler-ID. |
-| [!UICONTROL Fehler Source] | `source` | Zeichenfolge | Nein | Die Fehlerquelle. Aufgezählt: „player“, „external“ mit jeweiligen Bedeutungen. |
+| [!UICONTROL Error ID] | `name` | string | Nein | Die Fehler-ID. |
+| [!UICONTROL Error Source] | `source` | string | Nein | Die Fehlerquelle. Aufgezählt: „player“, „external“ mit jeweiligen Bedeutungen. |
 
 {style="table-layout:auto"}
