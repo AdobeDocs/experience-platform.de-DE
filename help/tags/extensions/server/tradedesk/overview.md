@@ -2,7 +2,7 @@
 title: Übersicht über die Erweiterung der Trade Desk Real-time Conversions-API
 description: Erfahren Sie mehr über die Real-Time Conversions-API-Erweiterung von Trade Desk für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 8cf838b6f6794b52f80cb899945c066014e211c2
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 3%
@@ -15,7 +15,7 @@ Sie können die [[!DNL The Trade Desk Real-Time Conversions API]](https://partne
 
 Mit [!DNL The Trade Desk Real-Time Conversions API] Erweiterung können Sie die Funktionen der API in Ihren Regeln [Ereignisweiterleitung“ nutzen](../../../ui/event-forwarding/overview.md) um Daten aus Adobe Experience Platform Edge Network an [!DNL The Trade Desk] zu senden.
 
-Lesen Sie dieses Dokument, um zu erfahren, wie Sie die Erweiterung installieren und ihre Funktionen in einer Ereignisweiterleitungsregel ([) &#x200B;](../../../ui/managing-resources/rules.md).
+Lesen Sie dieses Dokument, um zu erfahren, wie Sie die Erweiterung installieren und ihre Funktionen in einer Ereignisweiterleitungsregel ([) ](../../../ui/managing-resources/rules.md).
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Sie müssen über eine relevante Advertiser-ID, UPixel-ID und Tracker-ID verfüg
 
 ## Installieren und Konfigurieren der [!DNL The Trade Desk] Echtzeit-Konversions-API {#install}
 
-Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
 Wählen Sie **[!UICONTROL Extensions]** in der linken Navigationsleiste aus. Wählen Sie auf der Registerkarte **[!UICONTROL Catalog]** die Karte **[!UICONTROL The Trade Desk]** Echtzeit-Konversions-API und dann **[!UICONTROL Install]** aus.
 
@@ -39,7 +39,7 @@ Wählen Sie **[!UICONTROL Extensions]** in der linken Navigationsleiste aus. Wä
 
 Geben Sie auf dem nächsten Bildschirm die [!UICONTROL Advertiser ID] und optional eine [!UICONTROL Merchant ID] ein. Sie können die IDs direkt in diese Eingaben einfügen oder stattdessen ein Datenelement verwenden. Diese dienen als Standardwerte, die bei einem Ereignisaufruf an [!DNL The Trade Desk] Echtzeit-Konversions-API verwendet werden. Wählen Sie **[!UICONTROL Save]** aus, wenn Sie fertig sind.
 
-Um zu erfahren, wie Sie Datenelemente erstellen und sie Erweiterungen in Ihrer Tag-Eigenschaft zur Verfügung stellen können, folgen Sie dem Tutorial [Datenelemente erstellen](https://experienceleague.adobe.com/de/docs/platform-learn/data-collection/tags/create-data-elements) .
+Um zu erfahren, wie Sie Datenelemente erstellen und sie Erweiterungen in Ihrer Tag-Eigenschaft zur Verfügung stellen können, folgen Sie dem Tutorial [Datenelemente erstellen](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) .
 
 ![Die Seite Konfiguration der [!DNL The Trade Desk]-Erweiterung mit hervorgehobenen [!UICONTROL Advertiser ID]- und [!UICONTROL Merchant ID].](../../../images/extensions/server/tradedesk/configure-extension.png)
 
@@ -55,7 +55,7 @@ Sie sollten erwägen, mehrere Regeln zu konfigurieren, um alle akzeptierten [Anf
 >
 >Ereignisse sollten in Echtzeit oder so nah wie möglich an der Echtzeit gesendet werden.
 
-Erstellen Sie eine neue [&#x200B; (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Fügen Sie unter **[!UICONTROL Actions]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL The Trade Desk]** fest. Wählen Sie als Nächstes **[!UICONTROL Real Time Conversion]** für die **[!UICONTROL Action Type]** aus.
+Erstellen Sie eine neue [ (Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. Fügen Sie unter **[!UICONTROL Actions]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL The Trade Desk]** fest. Wählen Sie als Nächstes **[!UICONTROL Real Time Conversion]** für die **[!UICONTROL Action Type]** aus.
 
 ![Die Ansicht mit den Eigenschaftsregeln für die Ereignisweiterleitung mit den Feldern, die zum Hinzufügen einer Regelkonfiguration für die Ereignisweiterleitung erforderlich sind, ist hervorgehoben.](../../../images/extensions/server/tradedesk/tradedesk-event-action.png)
 
@@ -93,7 +93,7 @@ Ein JSON-Objekt, das weitere Informationen enthält. Sie haben die Möglichkeit,
 
 ![Der [!DNL Object Request Parameters] Abschnitt mit den verfügbaren Feldern.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
-Weitere Informationen zu [&#x200B; und ihren Eigenschaften finden Sie &#x200B;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) der Dokumentation zu Echtzeit-Konversionen [!UICONTROL Object Request Parameters] .
+Weitere Informationen zu [ und ihren Eigenschaften finden Sie ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) der Dokumentation zu Echtzeit-Konversionen [!UICONTROL Object Request Parameters] .
 
 **[!UICONTROL Configuration Overrides]**
 
@@ -114,6 +114,6 @@ Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL Save to Library
 
 In diesem Handbuch wurde beschrieben, wie Sie Server-seitige Ereignisdaten mithilfe der [!DNL The Trade Desk] Real-Time Conversions-API-Erweiterung an [!DNL The Trade Desk] senden. Von hier aus wird empfohlen, Ihre Integration zu erweitern, indem unterschiedliche Regeln erstellt werden, die spezifische Konversionsereignisse senden, wie für jede Kampagne zutreffend. Weitere Informationen zu den Ereignisweiterleitungsfunktionen in [!DNL Adobe Experience Platform] finden Sie unter [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
 
-Weitere Anleitungen zur effektiven Implementierung [!DNL The Trade Desk] Integration finden Sie in der [&#x200B; Dokumentation  [!DNL The Trade Desk] Best Practices für die Echtzeit](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi)Konversions-API).
+Weitere Anleitungen zur effektiven Implementierung [!DNL The Trade Desk] Integration finden Sie in der [ Dokumentation  [!DNL The Trade Desk] Best Practices für die Echtzeit](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi)Konversions-API).
 
 Weitere Informationen zum Debuggen Ihrer Implementierung mit dem Experience Platform-Debugger und dem Überwachungs-Tool für die Ereignisweiterleitung finden Sie unter [Adobe Experience Platform Debugger-Übersicht](../../../../debugger/home.md) und [Überwachen von Aktivitäten in der Ereignisweiterleitung](../../../ui/event-forwarding/monitoring.md).
