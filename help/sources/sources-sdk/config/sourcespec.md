@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Konfigurieren von Quellspezifikationen für Selbstbedienungsquellen (Batch-SDK)
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Selbstbedienungsquellen (Batch-SDK) vorbereiten müssen.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2107'
 ht-degree: 38%
