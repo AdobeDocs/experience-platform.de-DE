@@ -5,7 +5,7 @@ title: Streamen von Zeitreihendaten mithilfe von Streaming-Aufnahme-APIs
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnahme-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 55%
@@ -22,13 +22,13 @@ Für dieses Tutorial benötigen Sie Grundkenntnisse zu verschiedenen Adobe Exper
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Erlebnisdaten organisiert.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassendes Handbuch, das alle verfügbaren Endpunkte der [!DNL Schema Registry]-API abdeckt und beschreibt, wie Aufrufe an sie durchgeführt werden. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemata erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
+- [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassendes Handbuch, das alle verfügbaren Endpunkte der [!DNL Schema Registry]-API abdeckt und beschreibt, wie Aufrufe an sie durchgeführt werden. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemata erstellt, die zum Einrichten eines aufzunehmenden Datensatzes dienen.
 
 Darüber hinaus setzt dieses Tutorial voraus, dass Sie bereits eine Streaming-Verbindung hergestellt haben. Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Tutorial zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md).
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../landing/api-guide.md).
 
 ## Schema erstellen auf Grundlage der XDM ExperienceEvent-Klasse
 
@@ -195,13 +195,13 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 >
 >&#x200B;**Identity-Namespace-Codes**
 >
-> Stellen Sie sicher, dass die Codes gültig sind – im obigen Beispiel kommt „email“ zum Einsatz, was ein standardmäßiger Identitäts-Namespace ist. Weitere häufig verwendete standardmäßige Identitäts-Namespaces finden Sie in den [FAQ zum Identity Service](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
+> Stellen Sie sicher, dass die Codes gültig sind – im obigen Beispiel kommt „email“ zum Einsatz, was ein standardmäßiger Identity-Namespace ist. Weitere häufig verwendete standardmäßige Identity-Namespaces finden Sie in den [FAQ zum Identity Service](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
 > Wenn Sie einen benutzerdefinierten Namespace erstellen möchten, führen Sie die Schritte aus, die unter [Übersicht über Identitäts-Namespaces](../../identity-service/home.md) beschrieben sind.
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Informationen zum neu erstellten primären Identitäts-Namespace für das Schema zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Informationen zum neu erstellten primären Identity-Namespace für das Schema zurück.
 
 ```json
 {
@@ -509,6 +509,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den angeforder
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Experience Platform] aufnehmen. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie über [!DNL Experience Platform] Benutzeroberfläche mit der Überwachung Ihrer aufgenommenen Daten beginnen. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
+Durch das Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Experience Platform] aufnehmen. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie über [!DNL Experience Platform] Benutzeroberfläche mit der Überwachung Ihrer aufgenommenen Daten beginnen. Weiterführende Informationen finden Sie im Handbuch zum [Monitoring der Datenerfassung](../quality/monitor-data-ingestion.md).
 
 Weitere allgemeine Informationen zur Streaming-Aufnahme finden Sie in der [Streaming-Aufnahme – Übersicht](../streaming-ingestion/overview.md).
