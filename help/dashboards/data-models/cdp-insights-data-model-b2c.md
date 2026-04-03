@@ -3,7 +3,7 @@ title: Real-Time Customer Data Platform Insights-Datenmodell B2C Edition
 description: Erfahren Sie, wie Sie SQL-Abfragen mit den Real-Time Customer Data Platform Insights-Datenmodellen (B2C Edition) verwenden, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
 badgeB2C: null
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 3%
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Real-Time Customer Data Platform Insights-Datenmodell B2C Edition
 
-Das Real-Time Customer Data Platform Insights-Datenmodell für [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) stellt die Datenmodelle und SQL zur Verfügung, die die Insights für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglichen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Siehe die Dokumentation zu Reporting-Insights des abfragebeschleunigten Speichers , um zu erfahren[&#x200B; wie man ein Reporting-Insights-Datenmodell über den Abfrage-Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellt](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
+Das Real-Time Customer Data Platform Insights-Datenmodell für [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) stellt die Datenmodelle und SQL zur Verfügung, die die Insights für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglichen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Siehe die Dokumentation zu Reporting-Insights des abfragebeschleunigten Speichers , um zu erfahren[ wie man ein Reporting-Insights-Datenmodell über den Abfrage-Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellt](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ Das Real-Time Customer Data Platform Insights-Datenmodell für [B2C Edition](../
 
 ## Voraussetzungen
 
-Dieses Handbuch setzt ein Grundverständnis der [benutzerdefinierten Dashboards-Funktion“ &#x200B;](../standard-dashboards.md). Bitte lesen Sie die Dokumentation, bevor Sie mit diesem Handbuch fortfahren.
+Dieses Handbuch setzt ein Grundverständnis der [benutzerdefinierten Dashboards-Funktion“ ](../standard-dashboards.md). Bitte lesen Sie die Dokumentation, bevor Sie mit diesem Handbuch fortfahren.
 
 ## Real-Time CDP insight-Berichte und -Anwendungsfälle
 
@@ -44,7 +44,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Anwendungsfall für die Profilanzahl {#profile-count}
 
-Die für das [!UICONTROL Profile count]-Widget verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt des Schnappschusses zurück. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Profile count] Widgets &#x200B;](../guides/profiles.md#profile-count) .
+Die für das [!UICONTROL Profile count]-Widget verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt des Schnappschusses zurück. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Profile count] Widgets ](../guides/profiles.md#profile-count) .
 
 Der SQL-Code, der das [!UICONTROL Profile count]-Widget generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -64,7 +64,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### Anwendungsfall: Einzelne Identitätsprofile {#single-identity-profiles}
 
-Die für das [!UICONTROL Single identity profiles]-Widget verwendete Logik gibt die Anzahl der Profile Ihres Unternehmens an, die nur über einen einzigen ID-Typ verfügen, mit dem ihre Identität erstellt wird. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Single identity profiles] Widgets &#x200B;](../guides/profiles.md#single-identity-profiles) .
+Die für das [!UICONTROL Single identity profiles]-Widget verwendete Logik gibt die Anzahl der Profile Ihres Unternehmens an, die nur über einen einzigen ID-Typ verfügen, mit dem ihre Identität erstellt wird. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Single identity profiles] Widgets ](../guides/profiles.md#single-identity-profiles) .
 
 Der SQL-Code, der das [!UICONTROL Single identity profiles]-Widget generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -97,7 +97,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Profile nach Identitäts-Anwendungsfall {#profiles-by-identity}
 
-Das Widget [!UICONTROL Profiles by identity] zeigt die Aufschlüsselung der Identitäten für alle zusammengeführten Profile in Ihrem Profilspeicher an. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Profiles by identity] Widgets &#x200B;](../guides/profiles.md#profiles-by-identity) .
+Das Widget [!UICONTROL Profiles by identity] zeigt die Aufschlüsselung der Identitäten für alle zusammengeführten Profile in Ihrem Profilspeicher an. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Profiles by identity] Widgets ](../guides/profiles.md#profiles-by-identity) .
 
 Der SQL-Code, der das [!UICONTROL Profiles by identity]-Widget generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -121,7 +121,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### Einzelne Identitätsprofile nach Identitäts-Anwendungsfall {#single-identity-profiles-by-identity}
 
-Die für das [!UICONTROL Single identity profiles by identity]-Widget verwendete Logik veranschaulicht die Gesamtzahl der Profile, die mit nur einer eindeutigen Kennung identifiziert werden. Weitere Informationen dazu finden [&#x200B; in der Dokumentation &#x200B;](../guides/profiles.md#single-identity-profiles-by-identity) Identitäts-Widgets Einzelne Identitätsprofile .
+Die für das [!UICONTROL Single identity profiles by identity]-Widget verwendete Logik veranschaulicht die Gesamtzahl der Profile, die mit nur einer eindeutigen Kennung identifiziert werden. Weitere Informationen dazu finden [ in der Dokumentation ](../guides/profiles.md#single-identity-profiles-by-identity) Identitäts-Widgets Einzelne Identitätsprofile .
 
 Der SQL-Code, der das [!UICONTROL Single identity profiles by identity]-Widget generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -160,7 +160,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Anwendungsfall für die Zielgruppengröße {#audience-size}
 
-Die für das [!UICONTROL Audience size]-Widget verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe zum Zeitpunkt des letzten Schnappschusses zurück. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Audience size] Widgets &#x200B;](../guides/audiences.md#audience-size) .
+Die für das [!UICONTROL Audience size]-Widget verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe zum Zeitpunkt des letzten Schnappschusses zurück. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Audience size] Widgets ](../guides/audiences.md#audience-size) .
 
 Der SQL-Code, der das [!UICONTROL Audience size]-Widget generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -184,7 +184,7 @@ WHERE
 
 #### Anwendungsfall: Trend zur Änderung der Zielgruppengröße {#audience-size-change-trend}
 
-Die für das [!UICONTROL Audience size change trend]-Widget verwendete Logik bietet eine Kantengraph-Illustration der Differenz der Gesamtzahl der Profile, die sich zwischen den letzten täglichen Momentaufnahmen für eine bestimmte Zielgruppe qualifiziert haben. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Audience size change trend] Widgets &#x200B;](../guides/audiences.md#audience-size-change-trend) .
+Die für das [!UICONTROL Audience size change trend]-Widget verwendete Logik bietet eine Kantengraph-Illustration der Differenz der Gesamtzahl der Profile, die sich zwischen den letzten täglichen Momentaufnahmen für eine bestimmte Zielgruppe qualifiziert haben. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Audience size change trend] Widgets ](../guides/audiences.md#audience-size-change-trend) .
 
 Der SQL-Code, der das [!UICONTROL Audience size change trend]-Widget generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -246,7 +246,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### Anwendungsfall für kürzlich aktivierte Zielgruppen {#recently-activated-audiences}
 
-Die Logik für das [!UICONTROL Recently activated audiences]-Widget bietet eine Liste der Zielgruppen, die einem Ziel zuletzt zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen hilfreich sein. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Recently activated audiences] Widgets &#x200B;](../guides/destinations.md#recently-activated-audiences) .
+Die Logik für das [!UICONTROL Recently activated audiences]-Widget bietet eine Liste der Zielgruppen, die einem Ziel zuletzt zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen hilfreich sein. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Recently activated audiences] Widgets ](../guides/destinations.md#recently-activated-audiences) .
 
 Der SQL-Code, der das [!UICONTROL Recently activated audiences]-Widget generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -290,7 +290,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Profile nach Identität für einen Anwendungsfall mit einer Audience {#audience-profiles-by-identity}
 
-Die im [!UICONTROL Profiles by identity]-Widget verwendete Logik bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher für eine bestimmte Zielgruppe hinweg. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Profiles by identity] Widgets &#x200B;](../guides/audiences.md#profiles-by-identity) .
+Die im [!UICONTROL Profiles by identity]-Widget verwendete Logik bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher für eine bestimmte Zielgruppe hinweg. Weitere Informationen finden Sie in der Dokumentation [[!UICONTROL Profiles by identity] Widgets ](../guides/audiences.md#profiles-by-identity) .
 
 Der SQL-Code, der das [!UICONTROL Profiles by identity]-Widget generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -448,7 +448,8 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-<!-- Commented out as Anil wanted to add something but did not provide information yet:
+<!-- 
+Commented out as Anil wanted to add something but did not provide information yet:
 ### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
 
 The overlap namespace-audience model is comprised of the following datasets: 
@@ -463,11 +464,13 @@ The overlap namespace-audience model is comprised of the following datasets:
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-![An ERD of the overlap namespace-audience model.](../images/cdp-insights/overlap-namespace-audience-model.png) -->
+![An ERD of the overlap namespace-audience model.](../images/cdp-insights/overlap-namespace-audience-model.png) 
+-->
 
 <!-- What insights are gathered from this particular data model? -->
 
-<!-- Commented out as Anil wanted to add something but did not provide information yet:
+<!-- 
+Commented out as Anil wanted to add something but did not provide information yet:
 ### AI model {#ai-model}
 
 The AI model is comprised of the following datasets: 
@@ -477,7 +480,8 @@ The AI model is comprised of the following datasets:
 - `adwh_dim_merge_policies`
 - `adwh_dim_ai_models`
 
-![An ERD of the AI model.](./images/cdp-insights/ai-model.png) -->
+![An ERD of the AI model.](./images/cdp-insights/ai-model.png) 
+-->
 
 <!-- What insights are gathered from this particular data model? -->
 
