@@ -3,7 +3,7 @@ title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: ca6d7d257085da65b3f08376f0bd32e51e293533
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 19%
@@ -517,7 +517,7 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 | `orgId` | Gibt die Gültigkeiten von Datensätzen zurück, deren Organisations-ID mit der des Parameters übereinstimmt. Dieser Wert ist standardmäßig auf den Wert der `x-gw-ims-org-id`-Kopfzeilen festgelegt und wird ignoriert, es sei denn, die Anfrage liefert ein Service-Token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | Eine Ganzzahl, die angibt, welche Seite der Gültigkeitenliste zurückgegeben werden soll. | `page=3` |
 | `sandboxName` | Gibt die Datensatzgültigkeiten wieder, deren Sandbox-Name genau mit dem Argument übereinstimmt. Die Standardeinstellung ist der Sandbox-Name in der `x-sandbox-name`-Kopfzeile der Anfrage. Verwenden Sie `sandboxName=*`, um Datensatzgültigkeiten aus allen Sandboxes einzuschließen. | `sandboxName=dev1` |
-| `search` | Gibt die Gültigkeiten zurück, bei denen die angegebene Zeichenfolge der Gültigkeits-ID exakt entspricht oder **einem der folgenden Felder** enthalten) ist:<br><ul><li>Autor</li><li>Anzeigename</li><li>Beschreibung</li><li>Anzeigename</li><li>Datensatzname</li></ul> | `search=TESTING` |
+| `search` | Gibt die Gültigkeiten zurück, bei denen die angegebene Zeichenfolge der Gültigkeits-ID exakt entspricht oder **einem der folgenden Felder** enthalten) ist:<br><ul><li>Autor</li><li>Anzeigename</li><li>description</li><li>Anzeigename</li><li>Datensatzname</li></ul> | `search=TESTING` |
 | `status` | Eine durch Kommas getrennte Liste von Status. Wenn diese Liste enthalten ist, entspricht die Antwort den Datensatzgültigkeiten, deren aktueller Status in der Liste enthalten ist. | `status=pending,cancelled` |
 | `ttlId` | Passt die Gültigkeitsanfrage an die angegebene ID an. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
 | `updatedDate` | Gibt die Gültigkeiten wieder, die im 24-Stunden-Fenster des angegebenen Datums aktualisiert wurden. | `2024-01-01` |
