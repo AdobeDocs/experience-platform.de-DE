@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise März 2023
 description: Versionshinweise März 2023 für Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2081'
-ht-degree: 81%
+source-wordcount: '2020'
+ht-degree: 82%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Benutzerdefinierte Dashboards | Vor dem Hinzufügen eines Attributs zu einem Widget im benutzerdefinierten Widget-Composer für Dashboards können jetzt **Attributwerte ausprobiert** werden. Einige Beispielwerte aus dieser Attributspalte sind für einzelne Attribute beim Erstellen eines Widgets verfügbar.<br>In einem Widget können mit der Schaltfläche „Achse vertauschen“ die **X- und Y-Achse vertauscht** werden. Dadurch lässt sich Zeit sparen, und das Hinzufügen von Attributen zu Widgets wird ergonomischer. Dadurch müssen beide Attribute nicht erneut im Attributbereich gesucht werden.<br> Jetzt können in Widgets **Speicherort und Titel der Legende geändert werden**. Wenn eine Legende in einem Widget vorhanden ist, kann diese Legende an eine beliebige Stelle im Diagramm verschoben und der Legendentitel ebenso wie Achsenbeschriftungen und der Widget-Titel umbenannt werden. |
+| Benutzerdefinierte Dashboards | Vor dem Hinzufügen eines Attributs zu einem Widget im benutzerdefinierten Widget-Composer für Dashboards können jetzt **Attributwerte ausprobiert** werden. Einige Beispielwerte aus dieser Attributspalte sind für einzelne Attribute beim Erstellen eines Widgets verfügbar.<br>In einem Widget können mit der Schaltfläche „Achse vertauschen“ die **X- und Y-Achse vertauscht** werden. Dadurch lässt sich Zeit sparen, und das Hinzufügen von Attributen zu Widgets wird ergonomischer. Dadurch müssen beide Attribute nicht erneut im Attributbereich gesucht werden.<br> Jetzt können in Widgets **Speicherort und Titel der Legende geändert werden**. Wenn eine Legende in einem Widget vorhanden ist, kann diese Legende an eine beliebige Stelle im Diagramm verschoben und der Legendentitel ebenso wie Achsen-Labels und der Widget-Titel umbenannt werden. |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Neuer Schnellstart-Workflow für die Meta Conversions-API (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für die Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview?lang=de#quick-start) ermöglicht es, Ereignisdaten schnell zu erfassen und in wenigen einfachen Schritten Server-seitig an Meta für Anzeigenkonversionen weiterzuleiten. |
 | Neuer Schnellstart-Workflow für das Mobile SDK (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für das Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) ermöglicht die schnelle Implementierung des Mobile SDK und die Validierung einfacher Ereignisse auf Mobilgeräten in nur wenigen einfachen Schritten. |
 | [!DNL Braze]-Erweiterung zur Ereignisweiterleitung | Mit der Ereignisweiterleitungserweiterung [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Braze]-APIs für die Benutzernachverfolgung an [!DNL Braze] gesendet werden. |
-| [!DNL Epsilon]-Erweiterung zur Ereignisweiterleitung | Mit der [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=de)-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen in der Adobe Experience Platform Edge Network zu erfassen und über die [!DNL Epsilon]-Ereignis-API an [!DNL Epsilon] zu senden. |
+| [!DNL Epsilon]-Erweiterung zur Ereignisweiterleitung | Mit der [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html)-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen in der Adobe Experience Platform Edge Network zu erfassen und über die [!DNL Epsilon]-Ereignis-API an [!DNL Epsilon] zu senden. |
 | [!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung | Die [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de)-Erweiterung ermöglicht es, die Ereignisweiterleitung zu nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an Mixpanel zu senden. |
 
 {style="table-layout:auto"}
@@ -94,7 +94,7 @@ Weitere Informationen zur Datenvorbereitung finden Sie in der [Übersicht zur Da
 
 {style="table-layout:auto"}
 
-**Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
+**Fehlerbehebungen und Verbesserungen** {#destinations-fixes-and-enhancements}
 
 Wir veröffentlichen eine Fehlerbehebung für die PGP/GPG-Verschlüsselung in dateibasierten Zielen für Real-Time CDP. Mit dieser Änderung generieren vorhandene dateibasierte Ziele, die derzeit eine Verschlüsselung verwenden, einen Dateinamen mit einer anderen Erweiterung als zuvor.
 
@@ -111,7 +111,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| CSV-zu-Schema-Empfehlung | Sie können jetzt Ihre lokalen Dateien hochladen, um durch maschinelles Lernen generierte Schemata zu erstellen, die die manuelle Erstellung eines Schemas überflüssig machen. Laden Sie eine CSV-Beispieldatei aus dem Arbeitsbereich [!UICONTROL Quellen] hoch, und die Algorithmen für maschinelles Lernen von Adobe schlagen ein Schema auf der Grundlage der Zielfelder vor. Weitere Informationen finden Sie in der [Dokumentation](../../ingestion/tutorials/map-csv/recommendations.md).“ |
+| CSV-zu-Schema-Empfehlung | Sie können jetzt Ihre lokalen Dateien hochladen, um durch maschinelles Lernen generierte Schemata zu erstellen, die die manuelle Erstellung eines Schemas überflüssig machen. Laden Sie eine CSV-Beispieldatei aus dem [!UICONTROL Sources]-Arbeitsbereich hoch, und die Algorithmen für maschinelles Lernen von Adobe schlagen ein Schema auf der Grundlage der Zielfelder vor. Weitere Informationen finden Sie in der [Dokumentation](../../ingestion/tutorials/map-csv/recommendations.md).“ |
 
 {style="table-layout:auto"}
 
@@ -119,13 +119,13 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL Angebotselement]](https://github.com/adobe/xdm/pull/1678/files) | Klasse, die ein Angebot darstellt. |
-| Klasse | [[!UICONTROL Entscheidungselement]](https://github.com/adobe/xdm/pull/1678/files) | Ein Element, das einer Entscheidung unterzogen werden kann. Die Ausgabe eines Entscheidungsprozesses ist ein oder mehrere Entscheidungselemente. |
-| Klasse | [[!UICONTROL Zeitüberschreitung des Mediensitzungs-Servers]](https://github.com/adobe/xdm/pull/1676/files) | Dies gibt die Zeit in Sekunden an, die zwischen der letzten bekannten Interaktion des Benutzers und dem Zeitpunkt des Schließens der Sitzung vergangen ist. |
-| Feldergruppe | [[!UICONTROL Berechnete Attribute des XDM-Profils]](https://github.com/adobe/xdm/pull/1686/files) | Dadurch werden den eingehenden Kundendaten berechnete Attribute aus internen Adobe-Services hinzugefügt. Dies sollte von Kundinnen und Kunden nicht zur Aufnahme von Daten verwendet werden. |
-| Datentyp | [[!UICONTROL Erstattungselement]](https://github.com/adobe/xdm/pull/1685/files) | Gibt an, ob eine Rückerstattung mit einer Bestellung verknüpft ist, und definiert die Art der Rückerstattung, den Betrag und die zugehörige Währung. |
-| Datentyp | [[!UICONTROL Kategoriedaten]](https://github.com/adobe/xdm/pull/1677/files) | Dieser neue Datentyp stellt die Kategorie eines Produkts dar. |
-| Schema | [[!UICONTROL Adobe Target-Klassifizierungsfelder]](https://github.com/adobe/xdm/pull/1682/files) | Für Zielklassifizierungsdatensätze wurde ein neues XDM-Schema erstellt. Sie enthält einen Satz von Metadatenfeldern, mit denen Target-Aktivitäten und -Erlebnisse klassifiziert werden. |
+| Klasse | [[!UICONTROL Offer Item]](https://github.com/adobe/xdm/pull/1678/files) | Klasse, die ein Angebot darstellt. |
+| Klasse | [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1678/files) | Ein Element, das einer Entscheidung unterzogen werden kann. Die Ausgabe eines Entscheidungsprozesses ist ein oder mehrere Entscheidungselemente. |
+| Klasse | [[!UICONTROL Media Session Server Timeout]](https://github.com/adobe/xdm/pull/1676/files) | Dies gibt die Zeit in Sekunden an, die zwischen der letzten bekannten Interaktion des Benutzers und dem Zeitpunkt des Schließens der Sitzung vergangen ist. |
+| Feldergruppe | [[!UICONTROL XDM Profile Computed Attributes]](https://github.com/adobe/xdm/pull/1686/files) | Dadurch werden den eingehenden Kundendaten berechnete Attribute aus internen Adobe-Services hinzugefügt. Dies sollte von Kundinnen und Kunden nicht zur Aufnahme von Daten verwendet werden. |
+| Datentyp | [[!UICONTROL Refund Item]](https://github.com/adobe/xdm/pull/1685/files) | Gibt an, ob eine Rückerstattung mit einer Bestellung verknüpft ist, und definiert die Art der Rückerstattung, den Betrag und die zugehörige Währung. |
+| Datentyp | [[!UICONTROL Category data]](https://github.com/adobe/xdm/pull/1677/files) | Dieser neue Datentyp stellt die Kategorie eines Produkts dar. |
+| Schema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | Für Zielklassifizierungsdatensätze wurde ein neues XDM-Schema erstellt. Sie enthält einen Satz von Metadatenfeldern, mit denen Target-Aktivitäten und -Erlebnisse klassifiziert werden. |
 
 {style="table-layout:auto"}
 
@@ -133,25 +133,25 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldgruppe | [[!UICONTROL Details der Inhaltskomponente]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` wurde aus [!UICONTROL Inhaltskomponentendetails“ &#x200B;] |
-| Feldergruppe | [[!UICONTROL AJO-Entitäts-Tags]](https://github.com/adobe/xdm/pull/1672/files) | AJO-Entitäts-Tags zu [!UICONTROL AJO-Entitätsfeldern] hinzugefügt, die einer Journey oder Kampagne entsprechen |
-| Feldgruppe | (Mehrfach) | Es wurden mehrere Felder für die gemeinsamen Felder für [[!UICONTROL Journey Orchestration-Schrittereignisse hinzugefügt]](https://github.com/adobe/xdm/pull/1671/files) |
-| Feldgruppe | (Mehrfach) | [Es wurden mehrere XDM-Ereignistypen für [!UICONTROL Medienberichte“ &#x200B;]](https://github.com/adobe/xdm/pull/1670/files). |
-| Feldergruppe | [!UICONTROL Workfront-Änderungsereignis] | Die Feldergruppen `Full Record` und `Accessor Employee Ids` wurden hinzugefügt. |
-| Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/pull/1685/files) | Der [!UICONTROL Erstattungsbetrag] wurde hinzugefügt, um den für den Artikel erstatteten Betrag anzugeben, falls vorhanden. |
-| Datentyp | [&#128279;](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Erstattungsliste] wurde der Liste der Erstattungen für diese Bestellung hinzugefügt. |
-| Datentyp | [[!UICONTROL Produktlistenelement &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | Produktkategorien wurden der Liste der Kategoriedaten dieses Produkts hinzugefügt. |
-| Datentyp | [!UICONTROL Informationen zu Sitzungsdetails] | Das `pev3` Zeichenfolgenfeld wurde hinzugefügt, das [den Typ des für das Reporting verwendeten Medien-Streams angibt](https://github.com/adobe/xdm/pull/1676/files). Die `pccr` Eigenschaft gibt an, ob eine Umleitung stattgefunden hat. |
-| Datentyp | [!UICONTROL Anforderungsliste] | Stellt [&#x200B; Eigenschaften der Anforderungsliste &#x200B;](https://github.com/adobe/xdm/pull/1675/files). Dazu gehören Name, ID und Beschreibung. |
+| Feldgruppe | [[!UICONTROL Content Component Details]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` wurde aus [!UICONTROL Content Component Details] entfernt |
+| Feldergruppe | [[!UICONTROL AJO Entity tags]](https://github.com/adobe/xdm/pull/1672/files) | Entitäts-Tags von AJO zu [!UICONTROL AJO Entity Fields] hinzugefügt, die einer Journey oder Kampagne entsprechen |
+| Feldgruppe | (Mehrfach) | Es wurden mehrere Felder für [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/pull/1671/files) hinzugefügt |
+| Feldgruppe | (Mehrfach) | [Es wurden mehrere XDM-Ereignistypen für [!UICONTROL Media Reporting]](https://github.com/adobe/xdm/pull/1670/files) hinzugefügt. |
+| Feldergruppe | [!UICONTROL Workfront Change Event] | Die Feldergruppen `Full Record` und `Accessor Employee Ids` wurden hinzugefügt. |
+| Datentyp | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | Die [!UICONTROL Refund Amount] wurde hinzugefügt, um den für den Artikel erstatteten Betrag (falls vorhanden) anzugeben. |
+| Datentyp | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] wurde zur Liste der Erstattungen für diese Bestellung hinzugefügt. |
+| Datentyp | [[!UICONTROL Product List Item ]](https://github.com/adobe/xdm/pull/1677/files) | Produktkategorien wurden der Liste der Kategoriedaten dieses Produkts hinzugefügt. |
+| Datentyp | [!UICONTROL Session details information] | Das `pev3` Zeichenfolgenfeld wurde hinzugefügt, das [den Typ des für das Reporting verwendeten Medien-Streams angibt](https://github.com/adobe/xdm/pull/1676/files). Die `pccr` Eigenschaft gibt an, ob eine Umleitung stattgefunden hat. |
+| Datentyp | [!UICONTROL Requisition List] | Stellt [ Eigenschaften der Anforderungsliste ](https://github.com/adobe/xdm/pull/1675/files). Dazu gehören Name, ID und Beschreibung. |
 | Datentyp | [!UICONTROL Commerce] | Der Datentyp [Commerce wurde aktualisiert](https://github.com/adobe/xdm/pull/1675/files) um `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` und `requisitionList` einzuschließen. |
 
 {style="table-layout:auto"}
 
 Weitere Informationen zu XDM in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md).
 
-## Query Service {#query-service}
+## Abfrage-Service {#query-service}
 
-Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
+Der Abfrage-Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
 
 **Aktualisierte Funktionen**
 
@@ -179,13 +179,13 @@ Weitere Informationen zur Real-Time CDP B2B Edition finden Sie in der [Übersich
 
 ## Segmentierungs-Service {#segmentation}
 
-[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+[!DNL Segmentation Service] definiert eine bestimmte Teilmenge von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Eintragsdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Profilmetriken | Um eine genauere Darstellung der Profilmetriken zu erhalten, werden Mitgliedschaftsaufschlüsselungen und Abwanderungsmetriken kombiniert und jetzt über einen Zeitraum von 24 Stunden berechnet. Weitere Informationen finden Sie im [Handbuch zur Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md#browse) |
+| Profilmetriken | Um eine genauere Darstellung der Profilmetriken zu erhalten, werden Zugehörigkeitsaufschlüsselungen und Abwanderungsmetriken kombiniert und jetzt über einen Zeitraum von 24 Stunden berechnet. Weitere Informationen finden Sie im [Handbuch zur Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
