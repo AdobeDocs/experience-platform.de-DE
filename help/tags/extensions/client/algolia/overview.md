@@ -2,7 +2,7 @@
 title: Algolia Tags-Erweiterung - Übersicht
 description: Erfahren Sie mehr über die Algolia Tags-Erweiterung in Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 6eee26df3841a7829625361fc726bf59a278f867
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1954'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # [!DNL Algolia] Tags-Erweiterung - Übersicht
 
-Mit der [!DNL Algolia] Tags-Erweiterung können Marketing-Fachleute problemlos Regeln einrichten, mit denen Benutzerinteraktionsdaten an [!DNL Algolia] gesendet werden, damit Sie personalisiertere KI-Such- und -Erkennungserlebnisse bereitstellen können.
+Mit der [!DNL Algolia] Tags-Erweiterung können Marketing-Fachleute problemlos Regeln einrichten, mit denen Benutzerinteraktionsdaten an [!DNL Algolia] gesendet werden, sodass Sie mehr personalisierte KI-Suchen und Erkennungserlebnisse bereitstellen können.
 
 Diese Erweiterung basiert auf einer wichtigen Funktion:
 
@@ -27,8 +27,8 @@ Um [!DNL Algolia] mit Adobe Experience Platform zu verbinden, benötigen Sie die
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| Anwendungs-ID | Ihre Anwendungs-ID finden Sie [&#x200B; Abschnitt „API](https://www.algolia.com/account/api-keys/all)Schlüssel“ in Ihrem [!DNL Algolia]-Dashboard. | 0ABCDEFG12 |
-| API-Schlüssel suchen | Ihren API-Schlüssel für die Suche finden Sie [&#x200B; Abschnitt &#x200B;](https://www.algolia.com/account/api-keys/all)API-Schlüssel“ in Ihrem [!DNL Algolia]-Dashboard. | 1234a12345678901b1234567890c1ab1 |
+| Anwendungs-ID | Ihre Anwendungs-ID finden Sie [ Abschnitt „API](https://www.algolia.com/account/api-keys/all)Schlüssel“ in Ihrem [!DNL Algolia]-Dashboard. | 0ABCDEFG12 |
+| API-Schlüssel suchen | Ihren API-Schlüssel für die Suche finden Sie [ Abschnitt ](https://www.algolia.com/account/api-keys/all)API-Schlüssel“ in Ihrem [!DNL Algolia]-Dashboard. | 1234a12345678901b1234567890c1ab1 |
 
 ## Installieren und Konfigurieren der [!DNL Algolia] Insights-Erweiterung {#install-configure}
 
@@ -111,7 +111,7 @@ Fügen Sie Ihrer Tag-Regel die Aktion **[!UICONTROL Converted]** hinzu, um konve
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
-Weitere Informationen zu den Ereigniskategorien finden Sie in den Handbüchern [Konvertierte Objekt-IDs nach &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/) und [Konvertierte Objekt-IDs](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/) .
+Weitere Informationen zu den Ereigniskategorien finden Sie in den Handbüchern [Konvertierte Objekt-IDs nach ](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/) und [Konvertierte Objekt-IDs](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/) .
 
 ### Zum Warenkorb hinzufügen {#added-to-cart}
 
@@ -316,6 +316,6 @@ Die Ereignisse *Nach Suche geklickt* oder *Nach Suche konvertiert* erfordern ein
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der [!DNL Algolia]-Tag-Erweiterung an [!DNL Algolia Insights] senden. Wenn Sie planen, Server-seitige Ereignisse auch an [!DNL Algolia] zu senden, können Sie jetzt mit der Installation und Konfiguration der Erweiterung [[!DNL Conversions API] Ereignisweiterleitung“ &#x200B;](../../server/algolia/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Daten mithilfe der [!DNL Algolia]-Tag-Erweiterung an [!DNL Algolia Insights] senden. Wenn Sie planen, Server-seitige Ereignisse auch an [!DNL Algolia] zu senden, können Sie jetzt mit der Installation und Konfiguration der Erweiterung [[!DNL Conversions API] Ereignisweiterleitung“ ](../../server/algolia/overview.md).
 
 Weiterführende Informationen zu Tags in Experience Platform finden Sie in der [Übersicht zu Tags](../../../home.md).
