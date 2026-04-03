@@ -2,10 +2,10 @@
 title: Löschungen in Identity Service
 description: Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich dies auf Identitätsdiagramme auswirken kann.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 91%
+source-wordcount: '1197'
+ht-degree: 88%
 
 ---
 
@@ -25,7 +25,7 @@ Das nachstehende Dokument verweist auf die folgenden Funktionen von Experience P
    * [Identitätsdiagramm](./identity-graph-viewer.md): In einem Identitätsdiagramm werden die Beziehungen zwischen den verschiedenen Identitäten einer Kundin oder eines Kunden zusammengefasst. Dort wird visuell veranschaulicht, wie die Kundin oder der Kunde auf unterschiedlichen Kanälen mit Ihrer Marke interagiert.
    * [Identity-Namespaces](./namespaces.md): Identity-Namespaces sind eine Komponente von Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert von „name<span>@email.com“ als E-Mail-Adresse oder „443522“ als numerische CRMID.
 * [Katalog-Service](../../catalog/home.md): Informieren Sie sich über Datenherkunft, Metadaten, Dateibeschreibungen, Verzeichnisse und Datensätze im Data Lake.
-* [Datenhygiene](../../hygiene/home.md): Verwalten Sie Ihre gespeicherten Verbraucherdaten, indem Sie einen automatisierten Ablauf von Datensätzen planen oder einzelne Datensätze aus einem Datensatz oder allen Datensätzen löschen.
+* [Datenhygiene](../../hygiene/home.md): Verwalten Sie Ihre gespeicherten Verbraucherdaten, indem Sie einen automatisierten Ablauf von Datensätzen planen oder einzelne Einträge aus einem Datensatz oder allen Datensätzen löschen.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): Verwalten Sie Kundenanfragen für den Zugriff, den Opt-out vom Verkauf oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Das Echtzeit-Kundenprofli bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 
@@ -60,7 +60,7 @@ Sie können den Katalog-Service verwenden, um Anfragen zum Löschen von Datensä
 
 ### Datensatzablauf im Rahmen der Datenhygiene
 
-Der Arbeitsbereich [[!UICONTROL Datenhygiene]](../../hygiene/ui/overview.md) in der Adobe Experience Platform-Benutzeroberfläche bietet Ihnen die Möglichkeit, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Weiterführende Informationen finden Sie im Handbuch zum [Verwalten des Datensatzablaufs mithilfe des Arbeitsbereichs für die [!UICONTROL Datenhygiene]](../../hygiene/ui/dataset-expiration.md).
+Der Arbeitsbereich [[!UICONTROL Data Hygiene] in ](../../hygiene/ui/overview.md) Benutzeroberfläche von Adobe Experience Platform ermöglicht Ihnen, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Weitere Informationen finden Sie im Handbuch unter [Verwalten des Datensatzablaufs mithilfe des [!UICONTROL Data Hygiene] Workspace](../../hygiene/ui/dataset-expiration.md).
 
 Die folgende Tabelle enthält eine Aufschlüsselung der Unterschiede zwischen dem Löschen von Datensätzen im Katalog-Service und im Rahmen der Datenhygiene:
 
