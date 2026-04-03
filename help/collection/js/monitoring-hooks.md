@@ -2,7 +2,7 @@
 title: Überwachungs-Hooks für Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit den von Adobe Experience Platform Web SDK bereitgestellten Überwachungs-Hooks Ihre Implementierung debuggen und Web SDK-Protokolle erfassen können.
 exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Adobe Experience Platform Web SDK enthält Überwachungs-Hooks, mit denen Sie verschiedene Systemereignisse überwachen können. Diese Tools sind nützlich, um eigene Debugging-Tools zu entwickeln und Web SDK-Protokolle zu erfassen.
 
-Die Web SDK-Trigger übernehmen die Überwachungsfunktionen unabhängig davon, ob Sie „Debugging[&#x200B; aktiviert &#x200B;](commands/configure/debugenabled.md).
+Die Web SDK-Trigger übernehmen die Überwachungsfunktionen unabhängig davon, ob Sie „Debugging[ aktiviert ](commands/configure/debugenabled.md).
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
@@ -62,7 +62,7 @@ onBeforeCommand(data) {
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
 | `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
-| `data.commandName` | String | Der Name des Web-SDK-Befehls, vor dem diese Funktion ausgeführt wird. |
+| `data.commandName` | Zeichenfolge | Der Name des Web-SDK-Befehls, vor dem diese Funktion ausgeführt wird. |
 | `data.options` | Objekt | Ein -Objekt, das die Optionen enthält, die an den Web SDK-Befehl übergeben werden. |
 
 ## `onCommandResolved` {#onCommandResolved}
@@ -81,7 +81,7 @@ onCommandResolved(data) {
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
 | `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
-| `data.commandName` | String | Der Name des ausgeführten Web SDK-Befehls. |
+| `data.commandName` | Zeichenfolge | Der Name des ausgeführten Web SDK-Befehls. |
 | `data.options` | Objekt | Ein -Objekt, das die Optionen enthält, die an den Web SDK-Befehl übergeben werden. |
 | `data.result` | Objekt | Ein Objekt, das das Ergebnis des Web-SDK-Befehls enthält. |
 
@@ -101,7 +101,7 @@ onCommandRejected(data) {
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
 | `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
-| `data.commandName` | String | Der Name des ausgeführten Web SDK-Befehls. |
+| `data.commandName` | Zeichenfolge | Der Name des ausgeführten Web SDK-Befehls. |
 | `data.options` | Objekt | Ein -Objekt, das die Optionen enthält, die an den Web SDK-Befehl übergeben werden. |
 | `data.error` | Objekt | Ein Objekt, das die Fehlermeldung enthält, die vom Netzwerkaufruf des Browsers zurückgegeben wurde (in den meisten Fällen `fetch`), zusammen mit dem Grund, warum der Befehl abgelehnt wurde. |
 
@@ -121,8 +121,8 @@ onBeforeNetworkRequest(data) {
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
 | `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
-| `data.requestId` | String | Die von Web SDK generierte `requestId`, um das Debugging zu aktivieren. |
-| `data.url` | String | Die angeforderte URL. |
+| `data.requestId` | Zeichenfolge | Die von Web SDK generierte `requestId`, um das Debugging zu aktivieren. |
+| `data.url` | Zeichenfolge | Die angeforderte URL. |
 | `data.payload` | Objekt | Das Payload-Objekt der Netzwerkanfrage, das in das JSON-Format konvertiert und über eine `POST`-Methode im Hauptteil der Anfrage gesendet wird. |
 
 ## `onNetworkResponse` {#onNetworkResponse}
@@ -145,12 +145,12 @@ onNetworkResponse(data) {
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
 | `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
-| `data.requestId` | String | Die von Web SDK generierte `requestId`, um das Debugging zu aktivieren. |
-| `data.url` | String | Die angeforderte URL. |
+| `data.requestId` | Zeichenfolge | Die von Web SDK generierte `requestId`, um das Debugging zu aktivieren. |
+| `data.url` | Zeichenfolge | Die angeforderte URL. |
 | `data.payload` | Objekt | Das Payload-Objekt, das in das JSON-Format konvertiert und über eine `POST`-Methode im Hauptteil der Anfrage gesendet wird. |
-| `data.body` | String | Der Antworttext im Zeichenfolgenformat. |
+| `data.body` | Zeichenfolge | Der Antworttext im Zeichenfolgenformat. |
 | `data.parsedBody` | Objekt | Ein Objekt, das den analysierten Antworttext enthält. Wenn beim Analysieren des Antworttextes ein Fehler auftritt, ist dieser Parameter nicht definiert. |
-| `data.status` | String | Der Antwort-Code im ganzzahligen Format. |
+| `data.status` | Zeichenfolge | Der Antwort-Code im ganzzahligen Format. |
 | `data.retriesAttempted` | Ganzzahl | Die Anzahl weiterer Versuche, die beim Senden der Anfrage unternommen wurden. Null bedeutet, dass die Anfrage beim ersten Versuch erfolgreich war. |
 
 ## `onNetworkError` {#onNetworkError}
@@ -170,8 +170,8 @@ onNetworkError(data) {
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
 | `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
-| `data.requestId` | String | Die von Web SDK generierte `requestId`, um das Debugging zu aktivieren. |
-| `data.url` | String | Die angeforderte URL. |
+| `data.requestId` | Zeichenfolge | Die von Web SDK generierte `requestId`, um das Debugging zu aktivieren. |
+| `data.url` | Zeichenfolge | Die angeforderte URL. |
 | `data.payload` | Objekt | Das Payload-Objekt, das in das JSON-Format konvertiert und über eine `POST`-Methode im Hauptteil der Anfrage gesendet wird. |
 | `data.error` | Objekt | Ein Objekt, das die Fehlermeldung enthält, die vom Netzwerkaufruf des Browsers zurückgegeben wurde (in den meisten Fällen `fetch`), zusammen mit dem Grund, warum der Befehl abgelehnt wurde. |
 
@@ -191,8 +191,8 @@ onBeforeLog(data) {
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
 | `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
-| `data.componentName` | String | Der Name der Komponente, die die Protokollmeldung generiert hat. |
-| `data.level` | String | Die Protokollierungsebene. Unterstützte Ebenen: `log`, `info`, `warn`, `error`. |
+| `data.componentName` | Zeichenfolge | Der Name der Komponente, die die Protokollmeldung generiert hat. |
+| `data.level` | Zeichenfolge | Die Protokollierungsebene. Unterstützte Ebenen: `log`, `info`, `warn`, `error`. |
 | `data.arguments` | Zeichenfolgen-Array | Die Argumente der Protokollmeldung. |
 
 
@@ -212,9 +212,9 @@ Diese Rückruffunktion wird von der `personalization`-Komponente in verschiedene
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
 | `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
-| `data.componentName` | String | Der Name der Komponente, die die Protokollmeldung generiert hat. |
+| `data.componentName` | Zeichenfolge | Der Name der Komponente, die die Protokollmeldung generiert hat. |
 | `data.payload` | Objekt | Das Payload-Objekt, das in das JSON-Format konvertiert und über eine `POST`-Methode im Hauptteil der Anfrage gesendet wird. |
-| `data.status` | String | Die `personalization` benachrichtigt die Web-SDK über den Rendering-Status.  Unterstützte Werte: <ul><li>`rendering-started`: Gibt an, dass Web SDK Vorschläge rendern wird. Bevor Web SDK mit dem Rendern eines Entscheidungsumfangs oder einer Ansicht beginnt, können Sie im `data` die Vorschläge sehen, die von der `personalization` gerendert werden sollen, sowie den Namen des Bereichs.</li><li>`no-offers`: Gibt an, dass für die angeforderten Parameter keine Payload empfangen wurde.</li> <li>`rendering-failed`: Gibt an, dass Web SDK einen Vorschlag nicht rendern konnte.</li><li>`rendering-succeeded`: Gibt an, dass das Rendering für einen Entscheidungsumfang abgeschlossen ist.</li> <li>`rendering-redirect`: Gibt an, dass Web SDK einen Umleitungsvorschlag rendert.</li></ul> |
+| `data.status` | Zeichenfolge | Die `personalization` benachrichtigt die Web-SDK über den Rendering-Status.  Unterstützte Werte: <ul><li>`rendering-started`: Gibt an, dass Web SDK Vorschläge rendern wird. Bevor Web SDK mit dem Rendern eines Entscheidungsumfangs oder einer Ansicht beginnt, können Sie im `data` die Vorschläge sehen, die von der `personalization` gerendert werden sollen, sowie den Namen des Bereichs.</li><li>`no-offers`: Gibt an, dass für die angeforderten Parameter keine Payload empfangen wurde.</li> <li>`rendering-failed`: Gibt an, dass Web SDK einen Vorschlag nicht rendern konnte.</li><li>`rendering-succeeded`: Gibt an, dass das Rendering für einen Entscheidungsumfang abgeschlossen ist.</li> <li>`rendering-redirect`: Gibt an, dass Web SDK einen Umleitungsvorschlag rendert.</li></ul> |
 
 ## `onContentHiding` {#onContentHiding}
 
@@ -231,8 +231,8 @@ onContentHiding(data) {
 | Parameter | Typ | Beschreibung |
 |---------|----------|----------|
 | `data.instanceName` | Zeichenfolge | Der Name der globalen Variablen, in der die Web-SDK-Instanz gespeichert ist. |
-| `data.componentName` | String | Der Name der Komponente, die die Protokollmeldung generiert hat. |
-| `data.status` | String | Die `personalization` benachrichtigt die Web-SDK über den Rendering-Status. Unterstützte Werte: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
+| `data.componentName` | Zeichenfolge | Der Name der Komponente, die die Protokollmeldung generiert hat. |
+| `data.status` | Zeichenfolge | Die `personalization` benachrichtigt die Web-SDK über den Rendering-Status. Unterstützte Werte: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
 ## Angeben von Überwachungs-Hooks bei Verwendung des NPM-Pakets {#specify-monitoring-npm}
 
