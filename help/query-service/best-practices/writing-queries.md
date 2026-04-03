@@ -5,7 +5,7 @@ title: Allgemeine Leitlinien für die Ausführung von Abfragen im Abfrage-Servic
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen beschrieben, die Sie beim Schreiben von Abfragen in Adobe Experience Platform Query Service beachten sollten.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 4%
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Query Service] verfügt über zwei Modelle der A
 
 ### Interaktive Abfrageausführung
 
-Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service]-Benutzeroberfläche oder [über einen verbundenen Client) gesendet &#x200B;](../clients/overview.md). Wenn [!DNL Query Service] über einen verbundenen Client ausgeführt wird, wird eine aktive Sitzung zwischen dem Client und [!DNL Query Service] ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung auftritt.
+Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service]-Benutzeroberfläche oder [über einen verbundenen Client) gesendet ](../clients/overview.md). Wenn [!DNL Query Service] über einen verbundenen Client ausgeführt wird, wird eine aktive Sitzung zwischen dem Client und [!DNL Query Service] ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung auftritt.
 
 Die interaktive Ausführung von Abfragen hat die folgenden Einschränkungen:
 
@@ -238,21 +238,21 @@ Das folgende Beispiel zeigt die Schemainformationen für die `luma_midvalues`, d
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 |-------------------+-----------------------------+-----------+----------+---------
- timestamp         | timestamp                   |           |          | 
- _id               | text                        |           |          | 
- productlistitems  | anyarray                    |           |          | 
- commerce          | luma_midvalues_commerce     |           |          | 
- receivedtimestamp | timestamp                   |           |          | 
- enduserids        | luma_midvalues_enduserids   |           |          | 
- datasource        | datasource                  |           |          | 
- web               | luma_midvalues_web          |           |          | 
- placecontext      | luma_midvalues_placecontext |           |          | 
- identitymap       | anymap                      |           |          | 
- marketing         | marketing                   |           |          | 
- environment       | luma_midvalues_environment  |           |          | 
- _experience       | luma_midvalues__experience  |           |          | 
- device            | device                      |           |          | 
- search            | search                      |           |          | 
+ timestamp         | timestamp                   |           |          |
+ _id               | text                        |           |          |
+ productlistitems  | anyarray                    |           |          |
+ commerce          | luma_midvalues_commerce     |           |          |
+ receivedtimestamp | timestamp                   |           |          |
+ enduserids        | luma_midvalues_enduserids   |           |          |
+ datasource        | datasource                  |           |          |
+ web               | luma_midvalues_web          |           |          |
+ placecontext      | luma_midvalues_placecontext |           |          |
+ identitymap       | anymap                      |           |          |
+ marketing         | marketing                   |           |          |
+ environment       | luma_midvalues_environment  |           |          |
+ _experience       | luma_midvalues__experience  |           |          |
+ device            | device                      |           |          |
+ search            | search                      |           |          |
 ```
 
 Darüber hinaus können Sie weitere Informationen zu einer bestimmten Spalte erhalten, indem Sie den Namen der Spalte an den Tabellennamen anhängen. Dies würde im Format `\d {TABLE_NAME}_{COLUMN}` geschrieben.
@@ -263,8 +263,8 @@ Das folgende Beispiel zeigt zusätzliche Informationen für die `web` Spalte und
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 |----------------+-----------------------------------+-----------+----------+---------
- webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
- webreferrer    | web_webreferrer                   |           |          | 
+ webpagedetails | luma_midvalues_web_webpagedetails |           |          |
+ webreferrer    | web_webreferrer                   |           |          |
 ```
 
 ## Datensätze verknüpfen
