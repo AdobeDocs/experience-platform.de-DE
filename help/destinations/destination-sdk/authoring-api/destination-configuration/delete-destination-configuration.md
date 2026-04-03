@@ -2,7 +2,7 @@
 description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Zielkonfiguration über Adobe Experience Platform Destination SDK erläutert.
 title: Löschen einer Zielkonfiguration
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 73%
@@ -43,7 +43,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Anfrage
++++ Anfrage
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -53,7 +53,9 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Antwort
++++
+
++++ Antwort
 
 Bei einer erfolgreichen Antwort wird der HTTP-Status 200 zusammen mit einer leeren HTTP-Antwort zurückgegeben.
 
@@ -71,3 +73,5 @@ Weitere Informationen dazu, was Sie mit diesem Endpunkt tun können, finden Sie 
 * [Erstellen einer Zielkonfiguration](create-destination-configuration.md)
 * [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md)
 * [Aktualisieren einer Zielkonfiguration](update-destination-configuration.md)
+
++++
