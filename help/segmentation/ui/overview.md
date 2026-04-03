@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 70%
+source-wordcount: '1028'
+ht-degree: 62%
 
 ---
 
@@ -29,17 +29,17 @@ Sie sollten auch die folgenden Schlüsselbegriffe verstehen, die in diesem Dokum
 - **Segmentdefinition**: Die Regeln, die Adobe Experience Platform verwendet, um wichtige Merkmale oder Verhaltensweisen einer Zielgruppe zu beschreiben.
 - **Segmentieren**: Der Vorgang der Aufteilung von Profilen in Zielgruppen.
 
-## Übersicht
+## Überblick
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche in der linken Navigation **[!UICONTROL Zielgruppen]**, um die Registerkarte **[!UICONTROL Überblick]** zu öffnen, auf der das Dashboard [!UICONTROL Zielgruppen] angezeigt wird.
+Wählen Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Audiences]** aus, um die Registerkarte **[!UICONTROL Overview]** mit dem [!UICONTROL Audiences]-Dashboard zu öffnen.
 
 >[!NOTE]
 >
->Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Dashboard [!UICONTROL Zielgruppen] nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Überblick] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten im Zusammenhang mit Zielgruppen helfen können.
+>Wenn Experience Platform neu in Ihrem Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das [!UICONTROL Audiences]-Dashboard nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Overview] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten mit Audiences helfen können.
 
-### [!UICONTROL Zielgruppen]-Dashboard {#segments-dashboard}
+### [!UICONTROL Audiences] dashboard {#segments-dashboard}
 
-Das **[!UICONTROL Zielgruppen]**-Dashboard gibt einen Überblick über die wichtigsten Schlüsselmetriken in Bezug auf die Zielgruppendaten Ihrer Organisation.
+Im **[!UICONTROL Audiences]**-Dashboard werden Schlüsselmetriken im Zusammenhang mit den Zielgruppendaten Ihres Unternehmens beschrieben.
 
 Weitere Informationen finden Sie im [Handbuch zum Zielgruppen-Dashboard](../../dashboards/guides/audiences.md).
 
@@ -47,7 +47,7 @@ Weitere Informationen finden Sie im [Handbuch zum Zielgruppen-Dashboard](../../d
 
 ## Durchsuchen {#browse}
 
-Wählen Sie die **[!UICONTROL Durchsuchen]**, um das Zielgruppenportal anzuzeigen. Audience Portal bietet eine Liste aller Zielgruppen, die zu Ihrer Organisation und Sandbox gehören, und enthält Details wie die Profilanzahl, Herkunft, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
+Wählen Sie die Registerkarte **[!UICONTROL Browse]** aus, um das Zielgruppen-Portal anzuzeigen. Audience Portal bietet eine Liste aller Zielgruppen, die zu Ihrer Organisation und Sandbox gehören, und enthält Details wie die Profilanzahl, Herkunft, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
 
 Darüber hinaus können Sie mit dem Zielgruppenportal neue Zielgruppen mithilfe von Segment Builder oder der Zielgruppenkomposition erstellen sowie extern generierte Zielgruppen in Experience Platform importieren.
 
@@ -55,7 +55,7 @@ Weitere Informationen zu Audience Portal finden Sie unter [Audience Portal - Üb
 
 ## Kompositionen {#compositions}
 
-Wählen Sie die Registerkarte **[!UICONTROL Kompositionen]** aus, um eine Liste aller Zielgruppen anzuzeigen, die durch die Zielgruppenkomposition für Ihre Organisation generiert wurden.
+Wählen Sie die Registerkarte **[!UICONTROL Compositions]** aus, um eine Liste aller Zielgruppen anzuzeigen, die durch die Zielgruppenkomposition für Ihre Organisation generiert wurden.
 
 ![Eine Liste der Zielgruppen, die in der Zielgruppenkomposition für Ihre Organisation erstellt wurden.](../images/ui/overview/compositions.png)
 
@@ -66,7 +66,7 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 | Aktion | Beschreibung |
 | ------ | ----------- |
 | Duplizieren | Kopiert die ausgewählte Audience. |
-| Verwalten des Zugriffs | Verwaltet die Zugriffsbeschriftungen für die Zielgruppe. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
+| Verwalten des Zugriffs | Verwaltet die Zugriffsbeschriftungen für die Zielgruppe. Weitere Informationen zu Zugriffs-Labels finden Sie in der Dokumentation zum [Verwalten von Labels](../../access-control/abac/ui/labels.md). |
 | Löschen | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängen **können** nicht gelöscht werden. Weitere Informationen zum Löschen von Audiences finden Sie unter [Häufig gestellte Fragen zur Segmentierung](../faq.md#lifecycle-states). |
 
 Sie können das Symbol ![Tabelle anpassen](/help/images/icons/column-settings.png) auswählen, um zu ändern, welche Felder angezeigt werden.
@@ -78,15 +78,15 @@ Es wird ein Popup mit allen Feldern angezeigt, die in der Tabelle angezeigt werd
 ![Die Attribute, die für den Abschnitt „Komposition“ angezeigt werden können.](../images/ui/overview/compositions-customize-table.png)
 
 | Feld | Beschreibung |
-| ----- | ----------- | 
+| ----- | ----------- |
 | [!UICONTROL Name] | Der Name der Zielgruppe. |
 | [!UICONTROL Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Inactive` und `Published`. |
-| [!UICONTROL Erstellt] | Datum und Uhrzeit der Erstellung der Zielgruppe. |
-| [!UICONTROL Erstellt von] | Der Name der Person, die die Zielgruppe erstellt hat. |
-| [!UICONTROL Aktualisiert] | Datum und Uhrzeit der letzten Aktualisierung der Zielgruppe. |
-| [!UICONTROL Aktualisiert von] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
+| [!UICONTROL Created] | Datum und Uhrzeit der Erstellung der Zielgruppe. |
+| [!UICONTROL Created by] | Der Name der Person, die die Zielgruppe erstellt hat. |
+| [!UICONTROL Updated] | Datum und Uhrzeit der letzten Aktualisierung der Zielgruppe. |
+| [!UICONTROL Updated by] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
 
-Um zu sehen, wie sich die Zielgruppe zusammensetzt, wählen Sie den Namen einer Zielgruppe auf der Registerkarte [!UICONTROL Zielgruppen] aus.
+Um zu sehen, wie die Zielgruppe aufgebaut ist, wählen Sie den Namen der Zielgruppe auf der Registerkarte [!UICONTROL Audiences] aus.
 
 Die Seite „Zielgruppenkomposition“ wird mit den Bausteinen angezeigt, aus denen sich Ihre Zielgruppe zusammensetzt. Weitere Informationen zur Verwendung der Zielgruppenkomposition finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./audience-composition.md).
 
