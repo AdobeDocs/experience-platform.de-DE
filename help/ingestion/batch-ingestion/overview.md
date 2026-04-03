@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Batch-Aufnahme-API
 description: Mit der Batch-Aufnahme-API von Adobe Experience Platform können Sie Daten als Batch-Dateien in Experience Platform aufnehmen. Bei den aufgenommenen Daten kann es sich um Profildaten aus einer flachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder um Daten handeln, die einem bekannten Schema in der Registrierung des Experience-Datenmodells (XDM) entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: dace7bc2f7940748422628b62f0f57854036ad3f
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 65%
@@ -17,7 +17,7 @@ Mit der Batch-Aufnahme-API von Adobe Experience Platform können Sie Daten als B
 
 Die [Referenz zur Batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)Aufnahme-API enthält zusätzliche Informationen zu diesen API-Aufrufen.
 
-Das folgende Diagramm zeigt den Vorgang der Batch-Erfassung.
+Das folgende Diagramm zeigt den Vorgang der Batch-Aufnahme.
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
@@ -32,7 +32,7 @@ Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Batch-Aufnahme-A
 - Der Inhalt der Parquet-Datei muss mit einer Teilmenge des Schemas des Datensatzes übereinstimmen, in den hochgeladen wird.
 - Lassen Sie sich nach der Authentifizierung Ihr eindeutiges Zugriffstoken anzeigen.
 
-### Best Practices zur Batch-Erfassung
+### Best Practices zur Batch-Aufnahme
 
 - Die empfohlene Batch-Größe liegt zwischen 256 MB und 100 GB.
 - Jeder Batch sollte maximal 1500 Dateien enthalten.
@@ -150,7 +150,7 @@ Sie können Dateien mithilfe der Small File Upload-API hochladen. Wenn Ihre Date
 
 >[!INFO]
 >
->In den folgenden Beispielen wird das [Apache Parquet](https://parquet.apache.org/docs/)-Dateiformat verwendet. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](api-overview.md).
+>In den folgenden Beispielen wird das [Apache Parquet](https://parquet.apache.org/docs/)-Dateiformat verwendet. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch zur Batch-Aufnahme](api-overview.md).
 
 ### Hochladen von kleinen Dateien
 
@@ -403,7 +403,7 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 
 Das `"status"`-Feld zeigt den aktuellen Status des angeforderten Batches an. Die Batches können einen der folgenden Status haben:
 
-## Batch-Erfassungstatus
+## Batch-Aufnahmetatus
 
 | Status | Beschreibung |
 | ------ | ----------- |
