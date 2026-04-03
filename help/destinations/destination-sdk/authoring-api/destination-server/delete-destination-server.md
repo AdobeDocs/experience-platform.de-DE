@@ -2,7 +2,7 @@
 description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Ziel-Server-Konfiguration über Adobe Experience Platform Destination SDK erläutert.
 title: Löschen einer Ziel-Server-Konfiguration
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 85%
@@ -50,7 +50,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Anfrage
++++ Anfrage
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -60,9 +60,13 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Antwort
++++
+
++++ Antwort
 
 Bei einer erfolgreichen Antwort wird der HTTP-Status 200 zusammen mit einer leeren HTTP-Antwort zurückgegeben.
+
++++
 
 ## Umgang mit API-Fehlern {#error-handling}
 
