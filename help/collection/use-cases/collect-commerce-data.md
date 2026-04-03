@@ -2,9 +2,9 @@
 title: Erfassen von Handels-, Produkt- und Bestellinformationen mithilfe der Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit der Adobe Experience Platform Web SDK Daten zu Produkten oder einem Warenkorb hinzufügen.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 37%
 
 ---
@@ -30,7 +30,7 @@ In diesem Abschnitt werden die im `commerce`-Objekt verfügbaren Felder beschrie
 
 >[!TIP]
 >
->Eine Maßnahme umfasst zwei Bereiche: `id` und `value`. Meistens verwenden Sie nur das Feld `value` (z. B. `'value':1`). Mit dem Feld `id` können Sie eine eindeutige Kennung für das Tracking festlegen, wann die Kennzahl gesendet wurde. Weitere Informationen finden Sie in der XDM[Dokumentation &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md)Measure).
+>Eine Maßnahme umfasst zwei Bereiche: `id` und `value`. Meistens verwenden Sie nur das Feld `value` (z. B. `'value':1`). Mit dem Feld `id` können Sie eine eindeutige Kennung für das Tracking festlegen, wann die Kennzahl gesendet wurde. Weitere Informationen finden Sie in der XDM[Dokumentation ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md)Measure).
 
 | Maßnahme | Empfehlung | Beschreibung |
 |---|---|---|
@@ -51,7 +51,7 @@ In diesem Abschnitt werden die im `commerce`-Objekt verfügbaren Felder beschrie
 
 Erweitern Sie den folgenden Abschnitt, um ein Beispiel für einen Web SDK-Befehl mit einem Feld aus dem `commerce`-Objekt zu sehen.
 
-+++`productViews`
++++ productViews
 
 Ein einfacher Web SDK-`sendEvent`-Aufruf, der das `productViews` auf `1` setzt:
 
@@ -91,7 +91,7 @@ In diesem Abschnitt werden alle Felder beschrieben, die vom `order`-Objekt unter
 
 Erweitern Sie den folgenden Abschnitt, um ein Beispiel für einen Web SDK-Befehl mit dem `commerce`-Objekt zu sehen.
 
-+++Beispiel für ein `Order`
++++ Beispiel für ein `Order`
 
 Ein Web SDK-`sendEvent` ruft auf, indem das `order`-Objekt festgelegt wird, das für mehrere Produkte im `productListItems`-Array gilt:
 
@@ -151,7 +151,7 @@ Die Produktliste gibt an, welche Produkte mit der entsprechenden Aktion in Verbi
 
 Erweitern Sie die folgenden Abschnitte, um Beispiele für Web SDK-Befehle mit dem `productListItems`-Objekt anzuzeigen.
 
-+++`productListItems` Beispiel
++++ `productListItems` Beispiel
 
 Ein Web SDK-`sendEvent` ruft auf, indem der `productViews` für mehrere Produkte im `productListItems`-Array festgelegt wird:
 
@@ -179,7 +179,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds` Beispiel
++++ `productListAdds` Beispiel
 
 Ein Web SDK-`sendEvent` ruft auf, indem das `productListAdds`-Ereignis für mehrere Produkte im `productListItems`-Array festgelegt wird:
 
@@ -213,7 +213,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` Beispiel
++++ `checkouts` Beispiel
 
 Ein Web SDK-`sendEvent` ruft auf, indem das `checkouts`-Ereignis für mehrere Produkte im `productListItems`-Array festgelegt wird:
 
