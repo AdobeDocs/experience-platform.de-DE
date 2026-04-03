@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung - Benutzer verwalten
 description: Verwalten Sie Benutzende und Benutzergruppen über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud.
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: b665d0edce713f1b252e07125aabab79d52a9cba
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 7%
@@ -18,11 +18,12 @@ ht-degree: 7%
 >abstract="Benutzende sind Personen, die Zugriff auf Experience Platform haben. Der Zugriff von einzelnen Benutzenden auf die Ressourcen einer Organisation wird über Rollen verwaltet."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Verwalten von Rollen"
 
-Benutzer sind die Einzelpersonen, die Zugriff auf Adobe Experience Platform haben. Der Zugriff eines einzelnen Benutzers auf die Ressourcen einer Organisation wird über „Rollen[&#x200B; verwaltet](./roles.md){target="_blank"}. Ein Unternehmen kann auch [Benutzergruppen](#user-groups) erstellen, um mehreren Benutzern gleichzeitig nahtlosen Zugriff zu gewähren. Benutzende werden in der Admin Console verwaltet und Benutzende, die mit der Adobe Experience Platform-Produktkarte verknüpft sind, werden als Teil der Benutzerliste in Experience Platform angezeigt.
+Benutzer sind die Einzelpersonen, die Zugriff auf Adobe Experience Platform haben. Der Zugriff eines einzelnen Benutzers auf die Ressourcen einer Organisation wird über „Rollen[ verwaltet](./roles.md){target="_blank"}. Ein Unternehmen kann auch [Benutzergruppen](#user-groups) erstellen, um mehreren Benutzern gleichzeitig nahtlosen Zugriff zu gewähren. Benutzende werden in der Admin Console verwaltet und Benutzende, die mit der Adobe Experience Platform-Produktkarte verknüpft sind, werden als Teil der Benutzerliste in Experience Platform angezeigt.
 
 ## Verwalten von Benutzenden
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!IMPORTANT]
 >
 >[!UICONTROL Permissions] manages access control for existing Experience Platform users. To add users to Experience Platform, navigate to Adobe Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add users through the Admin Console, follow the [adding users to Experience Platform](...){#target="_blank"} guide.
@@ -56,7 +57,8 @@ Das Dialogfeld **[!UICONTROL Add Roles]** wird angezeigt. Wählen Sie die Rolle(
 
 Um eine Rolle aus dem Benutzer zu entfernen, klicken Sie auf **X** neben dem Namen der Rolle.
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 
 >[!NOTE]
 >
@@ -73,11 +75,12 @@ Ein Dialogfeld zum Bestätigen wird angezeigt. Wählen Sie **[!UICONTROL Confirm
 
 Benutzergruppen sind mehrere Benutzer, die gruppiert wurden und Zugriff haben, um dieselben Funktionen auszuführen.
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!IMPORTANT]
 >
 >[!UICONTROL Permissions] manages access control for existing Experience Platform user groups. To add user groups to Experience Platform, navigate to Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add user groups in the Admin Console, follow the [adding user groups to Experience Platform](...){#target="_blank"} guide.
- -->
+-->
 
 Um die Benutzer Ihres Unternehmens anzuzeigen, navigieren Sie zu **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}.Wählen Sie **[!UICONTROL Groups]** aus dem Abschnitt **[!UICONTROL Users]** im linken Bereich.
 
@@ -165,10 +168,10 @@ Ein Dialogfeld zum Bestätigen wird angezeigt. Wählen Sie **[!UICONTROL Confirm
 
 ## Nächste Schritte
 
-Sie wissen jetzt, wie Sie die Details und Rollen für einen Benutzer, eine Benutzergruppe und API-Anmeldeinformationen anzeigen können. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter &quot;[&#x200B; Zugriffssteuerung - Übersicht](../overview.md).
+Sie wissen jetzt, wie Sie die Details und Rollen für einen Benutzer, eine Benutzergruppe und API-Anmeldeinformationen anzeigen können. Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter &quot;[ Zugriffssteuerung - Übersicht](../overview.md).
 
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446407/?captions=ger&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 -->
