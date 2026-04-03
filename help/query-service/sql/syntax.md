@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: In diesem Dokument wird die vom Abfrage-Service von Adobe Experience Platform unterstützte SQL-Syntax beschrieben.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '4686'
 ht-degree: 4%
@@ -223,8 +223,8 @@ AS (select_query)
 | `schema` | Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie die neue Tabelle mit einem vorhandenen XDM-Schema verknüpfen möchten. |
 | `rowvalidation` | (Optional) Aktiviert die Validierung auf Zeilenebene für jeden Batch, der in den Datensatz aufgenommen wird. Der Standardwert ist „true“. |
 | `label` | (Optional) Verwenden Sie den Wert `PROFILE` , um den Datensatz als für die Profilaufnahme aktiviert zu kennzeichnen. |
-| `transform` | (Optional) Wendet vor der Materialisierung des Datensatzes technische Umwandlungen an (z. B. Zeichenfolgenindizierung, One-Hot-Kodierung oder TF-IDF). Diese Klausel wird für die Vorschau von umgewandelten Funktionen verwendet. Weitere Informationen finden Sie in der [`TRANSFORM` zur &#x200B;](#transform)-Klausel . |
-| `select_query` | Eine standardmäßige `SELECT`, die den Datensatz definiert. Weitere Informationen finden Sie [`SELECT` Abschnitt &#x200B;](#select-queries) . |
+| `transform` | (Optional) Wendet vor der Materialisierung des Datensatzes technische Umwandlungen an (z. B. Zeichenfolgenindizierung, One-Hot-Kodierung oder TF-IDF). Diese Klausel wird für die Vorschau von umgewandelten Funktionen verwendet. Weitere Informationen finden Sie in der [`TRANSFORM` zur ](#transform)-Klausel . |
+| `select_query` | Eine standardmäßige `SELECT`, die den Datensatz definiert. Weitere Informationen finden Sie [`SELECT` Abschnitt ](#select-queries) . |
 
 >[!NOTE]
 >
@@ -302,9 +302,9 @@ Die `TRANSFORM`-Klausel kann in den folgenden Anweisungen verwendet werden:
 - `CREATE TABLE`
 - `CREATE TEMP TABLE`
 
-Detaillierte Anweisungen zur Verwendung [&#x200B; ERSTELLEN &#x200B;](../advanced-statistics/models.md), einschließlich der Definition von Transformationen, der Festlegung von Modelloptionen und der Konfiguration von Trainingsdaten, finden Sie in der Dokumentation zu Modellen .
+Detaillierte Anweisungen zur Verwendung [ ERSTELLEN ](../advanced-statistics/models.md), einschließlich der Definition von Transformationen, der Festlegung von Modelloptionen und der Konfiguration von Trainingsdaten, finden Sie in der Dokumentation zu Modellen .
 
-Informationen zur Verwendung mit `CREATE TABLE` finden Sie [&#x200B; Abschnitt „CREATE TABLE AS SELECT](#create-table-as-select).
+Informationen zur Verwendung mit `CREATE TABLE` finden Sie [ Abschnitt „CREATE TABLE AS SELECT](#create-table-as-select).
 
 #### MODELLBEISPIEL ERSTELLEN
 
@@ -746,7 +746,7 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Ausführlichere Erläuterungen zu Best Practices für den Abfrage[Service finden Sie im Handbuch &#x200B;](../best-practices/organize-data-assets.md)Logische Organisation von Daten-Assets“.
+Ausführlichere Erläuterungen zu Best Practices für den Abfrage[Service finden Sie im Handbuch ](../best-practices/organize-data-assets.md)Logische Organisation von Daten-Assets“.
 
 ## Tabelle vorhanden
 
@@ -817,7 +817,7 @@ select inline(productListItems) from source_dataset limit 10;
 
 Die aus dem `source_dataset` übernommenen Werte werden in die Zieltabelle eingetragen.
 
-| SKU | _experience  | Menge | priceTotal |
+| SKU | _experience | Menge | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | („(„(A,pass,b,NULL)„)„) | 5 | 10,5 |
 | product-id-5 | („(„(A, pass, B, NULL)„)„) |          |              |
@@ -892,7 +892,7 @@ Der Befehl `FILTER CONTEXT` berechnet Statistiken für eine Teilmenge des Datens
 Die Konsolenausgabe wird wie unten dargestellt angezeigt.
 
 ```console
-|     Statistics ID      | 
+|     Statistics ID      |
 | ---------------------- |
 | adc_geometric_stats_1  |
 (1 row)
@@ -921,7 +921,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../key-concepts/dataset-statistics.md) zu Datensatzstatistiken .
+Weitere Informationen finden [ in der ](../key-concepts/dataset-statistics.md) zu Datensatzstatistiken .
 
 #### TABELLENBEISPIEL {#tablesample}
 
@@ -940,7 +940,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../key-concepts/dataset-samples.md) zu Datensatzbeispielen .
+Weitere Informationen finden [ in der ](../key-concepts/dataset-samples.md) zu Datensatzbeispielen .
 
 ### BEGIN
 
@@ -1242,7 +1242,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Weitere Informationen finden Sie im Dokument zum [&#x200B; von Identitäten in Ad-hoc-Datensätzen](../data-governance/ad-hoc-schema-identities.md).
+Weitere Informationen finden Sie im Dokument zum [ von Identitäten in Ad-hoc-Datensätzen](../data-governance/ad-hoc-schema-identities.md).
 
 #### SPALTE HINZUFÜGEN
 
