@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Teradata Vantage
 title: Erstellen einer Teradata Vantage-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Teradata Vantage verbinden.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 46%
@@ -25,9 +25,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
-Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit [!DNL Teradata Vantage] verbinden zu können.
+Der folgende Abschnitt enthält zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Teradata Vantage]-API erfolgreich mit [!DNL Flow Service] verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldedaten
 
