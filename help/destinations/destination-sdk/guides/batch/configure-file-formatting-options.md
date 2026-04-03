@@ -2,7 +2,7 @@
 description: Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 title: Erfahren Sie, wie Sie mit Destination SDK Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 22%
@@ -23,7 +23,7 @@ Bevor Sie mit den unten beschriebenen Schritten fortfahren, informieren Sie sich
 
 Adobe empfiehlt außerdem, die folgende Dokumentation zu lesen und sich damit vertraut zu machen, bevor Sie fortfahren:
 
-* Jede verfügbare Dateiformatierungsoption wird ausführlich im Abschnitt [Dateiformatierungskonfiguration“ &#x200B;](../../functionality/destination-server/file-formatting.md).
+* Jede verfügbare Dateiformatierungsoption wird ausführlich im Abschnitt [Dateiformatierungskonfiguration“ ](../../functionality/destination-server/file-formatting.md).
 * Führen Sie die Schritte zum [Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md) mithilfe von Destination SDK aus.
 
 ## Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
@@ -108,7 +108,7 @@ Nachdem Sie im vorherigen Schritt die gewünschten Dateiformatierungsoptionen zu
 
 >[!IMPORTANT]
 >
->Dieser Schritt ist optional und bestimmt nur, welche der Dateiformatierungsoptionen in der Experience Platform-Benutzeroberfläche angezeigt werden sollen. Wenn Sie keine Dateiformatierungsoptionen als Kundendatenfelder einrichten, werden die Dateiexporte mit den Standardwerten fortgesetzt, die in der [Server- und Dateikonfiguration“ konfiguriert &#x200B;](#create-server-file-configuration).
+>Dieser Schritt ist optional und bestimmt nur, welche der Dateiformatierungsoptionen in der Experience Platform-Benutzeroberfläche angezeigt werden sollen. Wenn Sie keine Dateiformatierungsoptionen als Kundendatenfelder einrichten, werden die Dateiexporte mit den Standardwerten fortgesetzt, die in der [Server- und Dateikonfiguration“ konfiguriert ](#create-server-file-configuration).
 
 In diesem Schritt können Sie die angezeigten Optionen in beliebiger Reihenfolge gruppieren sowie benutzerdefinierte Gruppierungen, Dropdown-Felder und bedingte Gruppierungen basierend auf den ausgewählten Dateitypen erstellen. Alle diese Einstellungen werden bei der Aufzeichnung und in den weiter unten stehenden Abschnitten angezeigt.
 
