@@ -2,7 +2,7 @@
 title: Engineering-Funktionen für maschinelles Lernen
 description: Erfahren Sie, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln, die von einem maschinellen Lernmodell genutzt werden können. Verwenden Sie Data Distiller, um ML-Funktionen im benötigten Umfang zu berechnen und diese Funktionen für Ihre maschinelle Lernumgebung freizugeben.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 13%
@@ -57,7 +57,7 @@ df_labels.head()
 Anzahl Klassen: 50000
 
 |   | eventType | userId | subscriptionOccurred | random_row_number_for_user |
-| ---  |   ---  |   ---  |   ---  |   --- | 
+| ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | directMarketing.emailClicked | 01027994177972439148069092698714414382 | 0 | 1 |
 | 1 | directMarketing.emailOpened | 01054714817856066632264746967668888198 | 0 | 1 |
 | 2 | web.formFilledOut | 01117296890525140996735553609305695042 | 1 | 15 |
@@ -147,7 +147,7 @@ df_features.head()
 **Beispielausgabe**
 
 |   | userId | EmailsReceived | emailsOpened | E-Mails angeklickt | productsViewed | propositionInteractions | Vorschlag abgelehnt | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
-| --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
+| --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
 | 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
@@ -230,7 +230,7 @@ df_training_set.head()
 **Beispielausgabe**
 
 |  | userId | eventType | Zeitstempel | subscriptionOccurred | EmailsReceived | emailsOpened | E-Mails angeklickt | productsViewed | propositionInteractions | Vorschlag abgelehnt | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
-| ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
+| ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
 | 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17.06.2023 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
 | 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 19.06.2023:01:06.55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Keine | NaN | 1 |
 | 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19.06.2023 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Keine | NaN | 7 |
@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## Nächste Schritte:
 
-Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Der nächste Schritt beim Erstellen von Funktions-Pipelines vom Experience Platform zum Einspeisen benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin, [Funktionsdatensätze zu exportieren](./export-data.md).
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Der nächste Schritt beim Erstellen von Funktions-Pipelines aus Experience Platform zum Einspeisen benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin, [Funktionsdatensätze zu exportieren](./export-data.md).
