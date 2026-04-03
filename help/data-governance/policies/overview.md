@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datennutzungsrichtlinien – Übersicht
 description: Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Adobe Experience Platform ausführen bzw. nicht ausführen dürfen.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 92%
@@ -23,7 +23,7 @@ Damit Datennutzungs-Labels die Datenkonformität effektiv unterstützen können,
 Es sind zwei Richtlinientypen verfügbar:
 
 * **[!UICONTROL Data governance policy]**: Beschränken Sie die Datenaktivierung auf der Grundlage der durchgeführten Marketing-Aktion und der von den betreffenden Daten getragenen Datennutzungskennzeichnungen.
-* **[!UICONTROL Consent policy]**: Filtern Sie die Profile, die für ([) &#x200B;](../../destinations/home.md) aktiviert werden können, basierend auf der Zustimmung oder den Voreinstellungen Ihrer Kunden
+* **[!UICONTROL Consent policy]**: Filtern Sie die Profile, die für ([) ](../../destinations/home.md) aktiviert werden können, basierend auf der Zustimmung oder den Voreinstellungen Ihrer Kunden
 
 >[!NOTE]
 >
@@ -52,12 +52,13 @@ Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten re
 
 Eine Liste der [von Adobe definierten verfügbaren Marketing-Aktionen](#core-actions) finden Sie im Anhang zu diesem Dokument. Sie können Ihre eigenen benutzerspezifischen Marketing-Aktionen auch mit der [!DNL Policy Service]-API oder über die [!DNL Experience Platform]-Benutzeroberfläche definieren. Weitere Informationen zum Arbeiten mit Marketing-Aktionen und Richtlinien finden Sie im nächsten Abschnitt.
 
-<!-- (Add after AAM DEC mapping doc is published)
+<!-- 
+(Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=de).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Datennutzungsrichtlinien verwalten {#manage}
