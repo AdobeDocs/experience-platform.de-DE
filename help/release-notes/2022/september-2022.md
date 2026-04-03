@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise, September 2022
 description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2723'
 ht-degree: 85%
@@ -11,7 +11,7 @@ ht-degree: 85%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 28. September 2022**
+**Release-Datum: Donnerstag, 28. September 2022**
 
 Neue Funktionen in Adobe Experience Platform:
 
@@ -26,7 +26,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
-- [Query Service](#query-service)
+- [Abfrage-Service](#query-service)
 - [Quellen](#sources)
 
 ## Attributbasierte Zugriffssteuerung {#abac}
@@ -134,7 +134,7 @@ Weitere Informationen zur Datenerfassung in Experience Platform finden Sie unter
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Orchestrierung von Kampagnen, das Management von Interaktionen in Echtzeit und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=de). Beachten Sie, dass diese Integration mit [Adobe Campaign-Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=de#release-8-4-1) kompatibel ist. |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Orchestrierung von Kampagnen, das Management von Interaktionen in Echtzeit und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=de). Beachten Sie, dass diese Integration mit [Adobe Campaign-Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1) kompatibel ist. |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | Das Ziel [!DNL Salesforce CRM] wurde aktualisiert und unterstützt jetzt sowohl Kontakt- als auch Lead-Aktualisierungen sowie Performance-Verbesserungen für schnellere Aktualisierungen. |
 
 {style="table-layout:auto"}
@@ -206,15 +206,15 @@ Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Übe
 
 Weitere Informationen zu Identity Service finden Sie im Abschnitt [Identity Service – Übersicht](../../identity-service/home.md).
 
-## Query Service {#query-service}
+## Abfrage-Service {#query-service}
 
-Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem [!DNL Data Lake] verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
+Der Abfrage-Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem [!DNL Data Lake] verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Warnhinweis-Abonnement-API | Mit dem Adobe Experience Platform-Abfrage-Service können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Experience Platform-Benutzeroberfläche oder über beide empfangen werden. Zurzeit können Abfrage-Warnhinweise nur mit der [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/) abonniert werden. |
+| Warnhinweis-Abonnement-API | Mit dem Abfrage-Service von Adobe Experience Platform können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Experience Platform-Benutzeroberfläche oder über beide empfangen werden. Zurzeit können Abfrage-Warnhinweise nur mit der [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/) abonniert werden. |
 | Datensatzbeispiele | Mit den Muster-Datensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, während die Abfragegenauigkeit verringert wird. Weitere Informationen erhalten Sie im [Handbuch zu Datensatzmustern](../../query-service/key-concepts/dataset-samples.md). |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).
