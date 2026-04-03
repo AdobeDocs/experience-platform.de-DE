@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verarbeiten von Datenformaten mit der Datenvorbereitung
 description: In diesem Dokument erhalten Sie einen Überblick darüber, wie verschiedene Datentypen von der Datenvorbereitung verarbeitet werden.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 95%
+source-wordcount: '624'
+ht-degree: 93%
 
 ---
 
@@ -47,7 +47,7 @@ Der Ausdruck `date(orderDate, "yyyy-MM-dd")` konvertiert den Wert `orderDate` be
 
 ### Konvertierungen von Datumsfunktionen
 
-Wenn Zeichenfolgenfelder aus eingehenden Daten mithilfe des Experience-Datenmodells (XDM) Datumsfeldern in Schemata zugeordnet werden, sollte das Datumsformat explizit angegeben werden. Wenn es nicht explizit angegeben ist, versucht Datenvorbereitung, die Eingabedaten zu konvertieren, indem sie mit folgenden Formaten abgeglichen werden. Sobald ein passendes Format gefunden wurde, wird die Auswertung aller nachfolgenden Formate beendet.
+Wenn Zeichenfolgenfelder aus eingehenden Daten mithilfe des Experience-Datenmodells (XDM) Datumsfeldern in Schemata zugeordnet werden, sollte das Datumsformat explizit angegeben werden. Wenn es nicht explizit angegeben ist, versucht Datenvorbereitung, die Eingabedaten zu konvertieren, indem sie mit folgenden Formaten abgeglichen werden. Sobald ein passendes Format gefunden wurde, wird die Auswertung aller nachfolgenden Formate gestoppt.
 
 ```console
 "yyyy-MM-dd HH:mm:ssZ",
@@ -105,7 +105,7 @@ Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen def
 | S | Millisekunde | Zahl | 245 |
 | z | Zeitzone | Allgemeine Zeitzone | Pacific Standard Time; PST; GMT-08:00 |
 | Z | Zeitzone | RFC 822-Zeitzone | -0800 |
-| X | Zeitzone | ISO 8601-Zeitzone | -08; -0800; -08:00 |
+| X | Zeitzone | ISO 8601-Zeitzone | -08;0800;08:00 |
 | V | Zeitzonen-ID | Text | America/Los_Angeles |
 | O | Zeitzonenversatz | Text | GMT+8 |
 | Q/q | Quartal des Jahres | Zahl/Text | 3; 03; Q3; 3. Quartal |
