@@ -3,7 +3,7 @@ title: Erstellen eines Datenflusses für Datenbankquellen mit der Flow Service-A
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API einen Datenfluss erstellen und Daten aus Ihrer Datenbank in Experience Platform aufnehmen.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 71%
@@ -12,7 +12,7 @@ ht-degree: 71%
 
 # Erstellen eines Datenflusses für Datenbankquellen mithilfe der [!DNL Flow Service]-API
 
-Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen und Daten aus Ihrer [[!DNL Flow Service]  in Adobe Experience Platform &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Tutorial, um zu erfahren, wie Sie mithilfe der -API einen Datenfluss erstellen und Daten aus Ihrer [[!DNL Flow Service]  in Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../landing/api-guide.md).
 
 ## Erstellen einer Quellverbindung {#source}
 
@@ -657,8 +657,6 @@ curl -X POST \
     }'
 ```
 
-+++
-
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `flowSpec.id` | Die [Flussspezifikations-ID](#specs), die im vorherigen Schritt abgerufen wurde. |
@@ -684,7 +682,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial [Überwachen von Datenflüssen in der API](../monitor.md)
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Weitere Informationen zum Monitoring von Datenflüssen finden Sie im Tutorial [Monitoring von Datenflüssen in der API](../monitor.md)
 
 ## Nächste Schritte
 
