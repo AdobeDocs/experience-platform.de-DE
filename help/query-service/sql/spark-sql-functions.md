@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;Startseite beliebte Themen;query service;Abfrage-Service;spark sql;Spark sql;spark;Spark SQL-Funktionen;Funktionen
 solution: Experience Platform
-title: Spark SQL-Funktionen in Query Service
+title: Spark SQL-Funktionen im Abfrage-Service
 description: Erfahren Sie mehr über die unterstützten Spark SQL-Funktionen, die die SQL-Funktionalität erweitern.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 93%
