@@ -2,7 +2,7 @@
 title: Ziele - Einblicke
 description: Entdecken Sie den SQL-Code, der Ihre Zieleinblicke ermöglicht, und verwenden Sie diese Abfragen, um benutzerdefinierte Einblicke zu generieren, um die Aktivierung von Daten aus Adobe Experience Platform weiter zu untersuchen.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 3%
@@ -17,16 +17,16 @@ Verstehen Sie Ihre Zieleinblicke, indem Sie auf die SQL zugreifen, die sie unter
 
 In der [SQL-Dokumentation anzeigen](../view-sql.md) finden Sie weitere Informationen darüber, wie Sie die SQL Ihrer Insights direkt über die Platform-Benutzeroberfläche anpassen können.
 
-Die folgenden Einblicke stehen Ihnen als Teil des [Ziele-Dashboards](../guides/destinations.md) oder eines benutzerdefinierten [benutzerdefinierten Dashboards](../standard-dashboards.md) zur Verfügung. Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [&#128279;](../customize/overview.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
+Die folgenden Einblicke stehen Ihnen als Teil des [Ziele-Dashboards](../guides/destinations.md) oder eines benutzerdefinierten [benutzerdefinierten Dashboards](../standard-dashboards.md) zur Verfügung. Anleitungen zum Anpassen Ihres Dashboards oder zum [Erstellen und Bearbeiten neuer Widgets](../customize/overview.md) in der Widget-Bibliothek und im benutzerdefinierten Dashboard finden [ ](../customize/custom-widgets.md) in der [Anpassungsübersicht](../standard-dashboards.md#create-widget).
 
 ## Aktivierte Zielgruppen {#activated-audiences}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele aktivierte Zielgruppen wurden insgesamt nach einem bestimmten Ziel gefiltert?
-- Wie hoch ist die Anzahl der aktivierten Zielgruppen nach Ziel?
+- Was ist die aktivierte Zielgruppengröße für jedes Ziel?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT
@@ -48,16 +48,16 @@ WHERE
 
 +++
 
-Informationen [&#x200B; Erscheinungsbild und die Funktionalität dieser Einblicke finden &#x200B;](../guides/destinations.md#activated-audiences) in der Dokumentation zum Widget „Aktivierte Zielgruppen .
+Weitere Informationen über [ Erscheinungsbild und die Funktionen ](../guides/destinations.md#activated-audiences) insight finden Sie in der Dokumentation zum Widget „Aktivierte Zielgruppen“ .
 
 ## Aktivierte Zielgruppen für alle Ziele {#activated-audiences-across-all-destinations}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Zielgruppen werden für alle Ziele aktiviert?
 - Wie viele aktivierte Zielgruppen gibt es insgesamt?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT count(segment_id) AS Activated_Audiences_Count
@@ -71,17 +71,17 @@ WHERE
 
 +++
 
-Weitere Informationen [&#x200B; Aussehen und Funktionalität dieser Einsicht finden Sie in der Widget](../guides/destinations.md#activated-audiences-across-all-destinations)Dokumentation Aktivierte Zielgruppen für alle Ziele .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in der ](../guides/destinations.md#activated-audiences-across-all-destinations) zum Widget „Aktivierte Zielgruppen für alle Ziele“ .
 
 ## Aktive Ziele nach Zielplattform {#active-destinations-by-destination-platform}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Ziele sind aktiv?
 - Wie ist die Aufschlüsselung der aktiven Ziele nach Zielplattform?
 - Wie viele aktive Ziele sind nach Zielplattform aufgeschlüsselt?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT destination_platform_name AS Destination_Platform_Name,
@@ -96,17 +96,17 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Weitere Informationen [&#x200B; Aussehen und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/destinations.md#active-destinations-by-destination-platform) Widget-Dokumentation „Aktive Ziele nach Zielplattform .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie ](../guides/destinations.md#active-destinations-by-destination-platform) der Widget-Dokumentation „Aktive Ziele Zielplattform“ .
 
 ## Trend der Zielgruppen-Größe {#audience-size-trend}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie hat sich die Zielgruppengröße im Laufe der Zeit geändert, einschließlich Anomalien für eine Zielgruppe, die einem Ziel zugeordnet ist?
 - Wie finde ich den allgemeinen Trend der Zielgruppengröße nach Ziel über die angegebenen Zeiträume von 30 Tagen, 90 Tagen und 12 Monaten?
 - Welche Hauptmerkmale trägt die Zielgruppe zur Größe bei, z. B. Spitzen bei E-Mail-Marketing-Kampagnen?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT d.destination_name,
@@ -142,17 +142,17 @@ SELECT d.destination_name,
 
 +++
 
-Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/destinations.md#audience-size-trend) Dokumentation zu Widgets für die Entwicklung der Zielgruppengröße .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in ](../guides/destinations.md#audience-size-trend) Dokumentation zu Widgets für die Entwicklung der Zielgruppengröße .
 
 ## Häufige Zielgruppen {#common-audiences}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welche Zielgruppen gibt es für zwei verschiedene Ziele?
 - Wie viele Profile hat jede der gemeinsamen Zielgruppen zwischen zwei verschiedenen Zielen?
 - Welcher Zielgruppe sind die größten Ziele zugeordnet?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT k.destination_name1,
@@ -214,17 +214,17 @@ SELECT k.destination_name1,
 
 +++
 
-Weitere Informationen über [&#x200B; Erscheinungsbild und die Funktionalität dieser &#x200B;](../guides/destinations.md#common-audiences) finden Sie in der Dokumentation zum Widget „Häufige Zielgruppen“ .
+Weitere Informationen über [ Erscheinungsbild und die Funktionen ](../guides/destinations.md#common-audiences) insight finden Sie in der Dokumentation zum Widget „Allgemeine Zielgruppen“ .
 
 ## Zielstatus {#destination-status}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Ziele sind insgesamt für die Verwendung aktiviert?
 - Wie viele Ziele sind insgesamt deaktiviert?
 - Wie sieht die prozentuale Aufteilung zwischen aktivierten und deaktivierten Zielen aus?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT COUNT(CASE
@@ -238,16 +238,16 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden &#x200B;](../guides/destinations.md#destination-status) in der Dokumentation zum Zielstatus-Widget .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden ](../guides/destinations.md#destination-status) in der Dokumentation zum Zielstatus-Widget .
 
 ## Anzahl der Ziele {#destinations-count}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Ziele sind derzeit konfiguriert?
 - Wie hat sich die Gesamtzahl der Ziele im Laufe der Zeit verändert?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT count(destination_id) AS total_number_of_destinations
@@ -256,17 +256,17 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/destinations.md#destinations-count) Dokumentation zum Widget „Anzahl der Ziele .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden ](../guides/destinations.md#destinations-count) in der Dokumentation zum Widget Anzahl der Ziele“.
 
 ## Zustand der zugeordneten Zielgruppe {#mapped-audience-health}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welche Zielgruppen, die einem Ziel zugeordnet sind, haben in den letzten 30 Tagen signifikante Variationen?
 - Wie groß ist eine zugeordnete Zielgruppe zuletzt und ob sich diese im Laufe des letzten Monats geändert hat?
 - Wie kann ich alle einem Ziel zugeordneten Zielgruppen basierend auf dem Schweregrad der Größenänderungen im letzten Monat auflisten?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT destination_name,
@@ -325,17 +325,17 @@ SELECT destination_name,
 
 +++
 
-Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/destinations.md#mapped-audience-health) Dokumentation zum Widget „Zustand der zugeordneten Zielgruppe .
+Weitere Informationen über [ Erscheinungsbild und die Funktionen dieser insight finden ](../guides/destinations.md#mapped-audience-health) in der Dokumentation zum Widget „Zustand der zugeordneten Zielgruppe .
 
 ## Zugeordnete Zielgruppen {#mapped-audiences}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Wie viele Zielgruppen werden einem bestimmten Ziel zugeordnet?
 - Wie hat sich die Anzahl der zugeordneten Zielgruppen im Laufe der Zeit verändert?
 - Wo kann ich zwei Ziele vergleichen, um die Zielgruppenüberschneidung zu sehen, die jedem Ziel zugeordnet ist?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT COUNT(segment_id) AS mapped_audiences_count
@@ -345,9 +345,10 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Weitere Informationen über [&#x200B; Erscheinungsbild und die Funktionalität dieser &#x200B;](../guides/destinations.md#mapped-audiences) finden Sie in der Dokumentation zum Widget „Zugeordnete Zielgruppen“ .
+Weitere Informationen über [ Erscheinungsbild und die Funktionen ](../guides/destinations.md#mapped-audiences) insight finden Sie in der Dokumentation zum Widget „Zugeordnete Zielgruppen“ .
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -368,13 +369,13 @@ See the [Mapped audiences by identity widget documentation](../guides/destinatio
 
 ## Am häufigsten verwendete Ziele {#most-used-destinations}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Was sind die am häufigsten verwendeten Ziele?
 - Wie viele Zielgruppen werden jedem Ziel zugeordnet, sortiert nach den meisten bis zu den wenigsten?
 - Wie ändert sich die Zuordnung von Zielgruppen zu Zielen von einer Momentaufnahme zur anderen?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -393,17 +394,17 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Informationen [&#x200B; Aussehen und Funktionalität dieser Einsicht finden Sie in &#x200B;](../guides/destinations.md#most-used-destinations) Dokumentation zum Widget „Am häufigsten verwendete Ziele .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie in ](../guides/destinations.md#most-used-destinations) Dokumentation zum Widget „Am häufigsten verwendete Ziele“ .
 
 ## Zuletzt aktivierte Zielgruppen {#recently-activated-audiences}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Für welches Ziel wurde eine Zielgruppe zuletzt aktiviert?
 - Wie finde ich eine Liste aller Ziele, sortiert nach dem Datum der letzten Aktualisierung?
 - Wie kann ich zwei Ziele basierend auf den letzten Aktivierungen vergleichen?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT
@@ -424,17 +425,17 @@ LIMIT
 
 +++
 
-Weitere Informationen [&#x200B; Aussehen und Funktionalität dieser Einblicke finden Sie &#x200B;](../guides/destinations.md#recently-activated-audiences) der Dokumentation zum Widget „Kürzlich aktivierte Zielgruppen .
+Weitere Informationen über [ Erscheinungsbild und die Funktionen dieser insight finden ](../guides/destinations.md#recently-activated-audiences) in der Dokumentation zum Widget „Kürzlich aktivierte Zielgruppen“ .
 
 ## Zuletzt aktivierte Zielgruppen nach Ziel {#recently-activated-audiences-by-destination}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welche Zielgruppen sind für ein bestimmtes Ziel aktiviert?
 - Wie finde ich eine Liste von Zielgruppen, die von einer bestimmten Zielgruppe aktiviert wurden, von der letzten bis zur letzten?
 - Wie finde ich eine Liste von Zielgruppen bis zu dem Datum, an dem sie für ein bestimmtes Ziel aktiviert wurde?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT c.destination_name,
@@ -455,17 +456,17 @@ SELECT c.destination_name,
 
 +++
 
-Weitere Informationen [&#x200B; Erscheinungsbild und Funktionalität dieser Einsicht finden Sie in der &#x200B;](../guides/destinations.md#recently-activated-audiences-by-destination) zu kürzlich aktivierten Zielgruppen nach Ziel .
+In der [Widget-Dokumentation Kürzlich aktivierte Zielgruppen nach Ziel](../guides/destinations.md#recently-activated-audiences-by-destination) finden Sie Informationen über das Erscheinungsbild und die Funktionen dieser insight.
 
 ## Kürzlich erstellte Ziele {#recently-created-destinations}
 
-Diese Einsicht beantwortet Fragen:
+Fragen, die von diesem insight beantwortet werden:
 
 - Welche sind die zuletzt erstellten Ziele?
 - Wie finde ich eine Liste von Zielen mit dem Datum, an dem sie erstellt wurden?
 - Welches neue Ziel wurde kürzlich erstellt?
 
-+++Auswählen, um die SQL anzuzeigen, die diese Einsicht generiert
++++Auswählen, um die SQL anzuzeigen, die diese insight generiert
 
 ```sql
 SELECT DISTINCT
@@ -484,9 +485,10 @@ LIMIT
 
 +++
 
-Weitere Informationen [&#x200B; Aussehen und Funktionalität dieser Einsicht finden Sie &#x200B;](../guides/destinations.md#recently-created-destinations) der Dokumentation zum Widget „Kürzlich erstellte Ziele .
+Weitere Informationen [ Erscheinungsbild und Funktionalität dieser insight finden Sie ](../guides/destinations.md#recently-created-destinations) der Dokumentation zum Widget „Kürzlich erstellte Ziele .
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 
