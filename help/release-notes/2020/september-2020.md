@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 38%
@@ -14,7 +14,7 @@ ht-degree: 38%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: Donnerstag, 9. September 2020**
+**Release-Datum: Donnerstag, 9. September 2020**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -46,7 +46,7 @@ In [Real-Time Customer Data Platform](../../rtcdp/overview.md) sind Ziele vorgef
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen zu erleichtern, z. B. das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten. Weitere Informationen finden [&#x200B; im Dokument &#x200B;](../../destinations/ui/destinations-workspace.md)Arbeitsbereich“. |
+| UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen zu erleichtern, z. B. das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten. Weitere Informationen finden [ im Dokument ](../../destinations/ui/destinations-workspace.md)Arbeitsbereich“. |
 
 Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/home.md)
 
@@ -60,7 +60,7 @@ Mit [!DNL Observability Insights] können Sie Aktivitäten in Adobe Experience P
 | --- | --- |
 | Adobe I/O-Ereignisbenachrichtigungen | [!DNL Observability Insights] nutzt Adobe I/O Events zum Erstellen von Ereignisbenachrichtigungen für mehrere Experience Platform-Services. Benachrichtigungs-Payloads werden an einen konfigurierten Webhook gesendet, mit dem Sie dann weitere nachgelagerte Prozesse automatisieren können. |
 
-Weitere Informationen [[!DNL Observability Insights]  Service finden &#x200B;](../../observability/home.md) in der Übersicht .
+Weitere Informationen [[!DNL Observability Insights]  Service finden ](../../observability/home.md) in der Übersicht .
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -72,7 +72,7 @@ Verschiedene gesetzliche und organisatorische Vorschriften geben Benutzern das R
 | ------- | ----------- |
 | Unterstützung für LGPD (Brasilien) | Datenschutzaufträge können jetzt im Rahmen der [!DNL Lei Geral de Proteção de Dados] (LGPD)-Verordnung erstellt werden. Diese Aufträge werden unter dem Regulierungs-Code `lgpd_bra` verfolgt. |
 
-Weitere Informationen zu dem Service finden Sie in [&#128279;](../../privacy-service/home.md) Übersicht über Privacy Service .
+Weitere Informationen zu dem Service finden Sie in [ ](../../privacy-service/home.md)Übersicht über Privacy Service .
 
 ## Echtzeit-Kundenprofil {#profile}
 
@@ -82,13 +82,13 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | ------- | ----------- |
 | Profilansicht | Der Profil-Viewer in der Experience Platform-Benutzeroberfläche wurde zu einem Dashboard mit vollständiger Anpassung aktualisiert. Der Benutzer hat jetzt die Möglichkeit, die folgenden Aufgaben auszuführen: <ul><li>Aktualisieren Sie die ausgewählten Standard- und benutzerdefinierten Attribute im Widget „Grundlegende Informationen“.</li><li>Erstellen, Bearbeiten und Entfernen benutzerdefinierter Widgets</li><li>Größe von Widgets ändern und neu anordnen</li></ul> |
 
-Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden [&#x200B; in der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden [ in der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
 Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in [!DNL Experience Platform] konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
 
-[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+[!DNL Segmentation Service] definiert eine bestimmte Teilmenge von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Eintragsdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
 **Neue Funktionen**
 
@@ -110,6 +110,6 @@ Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermögli
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Automatische Zuordnung | [!DNL Experience Platform] bietet intelligente Empfehlungen für die automatische Zuordnung während des Workflows der Datenaufnahme, basierend auf einem vom Benutzer ausgewählten Zielschema oder Datensatz. Sie können flexible automatische Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. |
-| UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen wie das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten zu erleichtern. Weitere Informationen finden [&#x200B; im Dokument &#x200B;](../../sources/tutorials/ui/monitor.md)Überwachen von Datenflüssen“. |
+| UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen wie das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten zu erleichtern. Weitere Informationen finden [ im Dokument ](../../sources/tutorials/ui/monitor.md)Überwachen von Datenflüssen“. |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
