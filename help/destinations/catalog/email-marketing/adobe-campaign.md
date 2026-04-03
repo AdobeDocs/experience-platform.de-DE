@@ -3,7 +3,7 @@ keywords: email;E-Mail;E-Mail;E-Mail-Ziele;Adobe Campaign;Campaign
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '926'
 ht-degree: 29%
@@ -14,9 +14,9 @@ ht-degree: 29%
 
 ## Überblick {#overview}
 
-[!DNL Adobe Campaign] umfasst eine Reihe von Lösungen, mit denen Sie Kampagnen personalisieren und auf allen Online- und Offline-Kanälen versenden können. Weitere Informationen [&#x200B; Sie unter „Erste Schritte &#x200B;](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) Campaign Classic&quot;.
+[!DNL Adobe Campaign] umfasst eine Reihe von Lösungen, mit denen Sie Kampagnen personalisieren und auf allen Online- und Offline-Kanälen versenden können. Weitere Informationen [ Sie unter „Erste Schritte ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) Campaign Classic&quot;.
 
-Um Zielgruppendaten an [!DNL Adobe Campaign] zu senden, müssen Sie zunächst in [&#x200B; &#x200B;](#connect-destination)das Ziel verbinden[!DNL Adobe Experience Platform] und dann [einen Datenimport einrichten](#import-data-into-campaign) von Ihrem Speicherort in [!DNL Adobe Campaign].
+Um Zielgruppendaten an [!DNL Adobe Campaign] zu senden, müssen Sie zunächst in [ ](#connect-destination)das Ziel verbinden[!DNL Adobe Experience Platform] und dann [einen Datenimport einrichten](#import-data-into-campaign) von Ihrem Speicherort in [!DNL Adobe Campaign].
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -24,7 +24,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 | ---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -104,10 +104,10 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für dieses Ziel finden Sie &#x200B;](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
+Anweisungen [ Aktivieren von Zielgruppen für dieses Ziel finden Sie ](../../ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-).
 
 ### Zielattribute {#destination-attributes}
 
@@ -122,10 +122,10 @@ Für [!DNL Adobe Campaign]-Ziele erstellt [!DNL Experience Platform] eine `.csv`
 >[!IMPORTANT]
 >
 >* Beachten Sie bei der Durchführung dieser Integration die [!DNL SFTP] Speicherbeschränkungen, Datenbankspeicherbeschränkungen und Beschränkungen für aktive Profile gemäß Ihrem [!DNL Adobe Campaign].
->* Sie müssen Ihre exportierten Segmente in [!DNL Adobe Campaign] mithilfe [!DNL Campaign] Workflows planen, importieren und zuordnen. Siehe [Einrichten eines wiederkehrenden Imports](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=de) in [!DNL Adobe Campaign Classic] Dokumentation und [Über Datenverwaltungsaktivitäten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=de) in [!DNL Adobe Campaign Standard] Dokumentation.
+>* Sie müssen Ihre exportierten Segmente in [!DNL Adobe Campaign] mithilfe [!DNL Campaign] Workflows planen, importieren und zuordnen. Siehe [Einrichten eines wiederkehrenden Imports](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=de) in [!DNL Adobe Campaign Classic] Dokumentation und [Über Datenverwaltungsaktivitäten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in [!DNL Adobe Campaign Standard] Dokumentation.
 >* Die bevorzugte Methode zum Senden von Daten an [!DNL Adobe Campaign] ist über [!DNL Amazon S3] oder [!DNL Azure Blob].
 
 Nachdem Sie [!DNL Experience Platform] mit Ihrem [!DNL Amazon S3]- oder [!DNL Azure Blob]-Speicher verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in [!DNL Adobe Campaign] einrichten. Informationen hierzu finden Sie auf den folgenden [!DNL Adobe Campaign] Dokumentationsseiten:
 
 * [Erste Schritte mit dem Datenimport und -export](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=de#getting-started) und [Laden (Datei)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=de) in der [!DNL Adobe Campaign Classic].
-* [Erste Schritte mit Prozessen und Daten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=de)Management und [Datei laden](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=de) in der [!DNL Adobe Campaign Standard].
+* [Erste Schritte mit Prozessen und Daten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html)Management und [Datei laden](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) in der [!DNL Adobe Campaign Standard].
