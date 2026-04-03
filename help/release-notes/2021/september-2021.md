@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise, September 2021
 description: Versionshinweise September 2021 zu Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 64%
@@ -11,7 +11,7 @@ ht-degree: 64%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Release-Datum: 29. September 2021**
+**Release-Datum: Donnerstag, 29. September 2021**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -27,7 +27,7 @@ Die Datenaufnahme in Adobe Experience Platform stellt die verschiedenen Methoden
 
 | Funktion | Beschreibung |
 |------- | -----------|
-| Aktualisieren oder Patchen von Profildatensätzen mithilfe der Batch-Aufnahme | Das Echtzeit-Kundenprofil ermöglicht jetzt über die Batch-Aufnahme Aktualisierungen an Profilattributen in individuellen Profildatensatzdaten. Weitere Informationen finden Sie im [Entwicklerhandbuch zur Batch-Aufnahme](../../ingestion/batch-ingestion/api-overview.md). |
+| Aktualisieren oder Patchen von Profileinträgen mithilfe der Batch-Aufnahme | Das Echtzeit-Kundenprofil ermöglicht jetzt über die Batch-Aufnahme Aktualisierungen an Profilattributen in individuellen Profildatensatzdaten. Weitere Informationen finden Sie im [Entwicklerhandbuch zur Batch-Aufnahme](../../ingestion/batch-ingestion/api-overview.md). |
 
 Weitere Informationen zur Aufnahme von Daten in Experience Platform finden Sie in der [Datenerfassungsdokumentation](../../ingestion/home.md).
 
@@ -52,7 +52,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Funktion | Beschreibung |
 | --- | --- |
 | [!DNL Data Landing Zone] | Sie können jetzt eine [!DNL Data Landing Zone]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) oder der [Benutzeroberfläche](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) erstellen. [!DNL Data Landing Zone] ist eine von Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, über die Sie auf eine sichere, Cloud-basierte Dateispeichereinrichtung zugreifen können, um Dateien in Experience Platform zu laden. Weitere Informationen finden Sie in der [[!DNL Data Landing Zone] Übersicht](../../sources/connectors/cloud-storage/data-landing-zone.md). |
-| [!DNL Snowflake] | Sie können jetzt eine [!DNL Snowflake]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) oder der [Benutzeroberfläche) &#x200B;](../../sources/tutorials/ui/create/databases/snowflake.md), um Daten aus Ihrer [!DNL Snowflake] in Experience Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Snowflake] Übersicht über](../../sources/connectors/databases/snowflake.md). |
+| [!DNL Snowflake] | Sie können jetzt eine [!DNL Snowflake]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) oder der [Benutzeroberfläche) ](../../sources/tutorials/ui/create/databases/snowflake.md), um Daten aus Ihrer [!DNL Snowflake] in Experience Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Snowflake] Übersicht über](../../sources/connectors/databases/snowflake.md). |
 | [!DNL SFTP]-Quellverbesserungen | Sie können beim Erstellen einer [!DNL SFTP]-Quellverbindung manuell eine benutzerdefinierte Port-Nummer festlegen. Weitere Informationen finden Sie in der [[!DNL SFTP] Übersicht über](../../sources/connectors/cloud-storage/sftp.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
