@@ -3,7 +3,7 @@ description: Erfahren Sie, wie Sie Datenflüsse während der Segmentierung mithi
 title: Überwachen von Datenflüssen für Zielgruppen in der Benutzeroberfläche
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 6%
@@ -41,11 +41,11 @@ Um auf das **[!UICONTROL Audiences]**-Dashboard zuzugreifen, wählen Sie **[!UIC
 
 Im **[!UICONTROL Audiences]** Dashboard zeigt die **[!UICONTROL Audiences]** den Status und das Datum des letzten Auswertungsauftrags und des letzten Exportauftrags an.
 
-Das Dashboard selbst enthält Metriken für Zielgruppen und Segmentierungsaufträge. Standardmäßig zeigt das Dashboard die Zielgruppenmetriken der letzten 24 Stunden an. Weitere Informationen zur Ansicht Segmentierungsaufträge finden Sie im Abschnitt [Überwachen von &#x200B;](#monitoring-segmentation-jobs-dashboard)&quot;.
+Das Dashboard selbst enthält Metriken für Zielgruppen und Segmentierungsaufträge. Standardmäßig zeigt das Dashboard die Zielgruppenmetriken der letzten 24 Stunden an. Weitere Informationen zur Ansicht Segmentierungsaufträge finden Sie im Abschnitt [Überwachen von ](#monitoring-segmentation-jobs-dashboard)&quot;.
 
 >[!IMPORTANT]
 >
->Derzeit werden nur Zielgruppen, die für [Batch-Ziele (dateibasiert) aktiviert &#x200B;](../../destinations/destination-types.md#file-based), für das Dashboard „Zielgruppen-Überwachung“ unterstützt.
+>Derzeit werden nur Zielgruppen, die für [Batch-Ziele (dateibasiert) aktiviert ](../../destinations/destination-types.md#file-based), für das Dashboard „Zielgruppen-Überwachung“ unterstützt.
 
 ![Das Zielgruppen-Dashboard. Es werden Informationen zu den verschiedenen Zielgruppen in Ihrer Organisation und Sandbox angezeigt.](../assets/ui/monitor-audiences/audience-dashboard.png)
 
@@ -64,7 +64,7 @@ Für diese Dashboard-Ansicht sind die folgenden Metriken verfügbar:
 | **[!UICONTROL Last activation identities]** | Die Anzahl der Identitäten, die im letzten Aktivierungsauftrag der Zielgruppe aktiviert wurden. |
 | **[!UICONTROL Last activation destination]** | Der Name des Ziels, für das der letzte Aktivierungsauftrag der Zielgruppe aktiviert wurde. |
 
-Sie können die Ergebnisse nach einer bestimmten Zielgruppe filtern und die zugehörigen Segmentierungsaufträge anzeigen, indem Sie das Filtersymbol (![&#x200B; Filtersymbol) auswählen.](/help/images/icons/filter-add.png)). Die Segmentierungsaufträge werden in chronologischer Reihenfolge sortiert, wobei die neuesten Segmentierungsaufträge zuerst angezeigt werden.
+Sie können die Ergebnisse nach einer bestimmten Zielgruppe filtern und die zugehörigen Segmentierungsaufträge anzeigen, indem Sie das Filtersymbol (![ Filtersymbol) auswählen.](/help/images/icons/filter-add.png)). Die Segmentierungsaufträge werden in chronologischer Reihenfolge sortiert, wobei die neuesten Segmentierungsaufträge zuerst angezeigt werden.
 
 ![Das Filtersymbol ist hervorgehoben. Wenn Sie diese Option auswählen, können Sie die Segmentierungsaufträge für die angegebene Zielgruppe anzeigen.](../assets/ui/monitor-audiences/filter-audience.png)
 
