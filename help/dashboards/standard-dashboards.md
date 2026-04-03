@@ -2,7 +2,7 @@
 title: Standard-Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um Schlüsselmetriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 1%
@@ -14,11 +14,13 @@ ht-degree: 1%
 Verwenden Sie Adobe Experience Platform-Dashboards, um mithilfe der Dashboards-Funktion Einblicke zu beschleunigen und die Visualisierung anzupassen. Mit dieser Funktion können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um für Ihr Unternehmen relevante Schlüsselmetriken zu visualisieren.
 
 
-<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
+<!-- 
+Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
 ## Getting started
 
-To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. 
+-->
 
 ## Erstellen eines benutzerdefinierten Dashboards
 
@@ -28,16 +30,18 @@ Um ein benutzerdefiniertes Dashboard zu erstellen, navigieren Sie zunächst zum 
 
 Bevor Sie ein benutzerdefiniertes Dashboard hinzufügen, ist das Dashboard-Inventar leer und zeigt „Keine Dashboards gefunden“ an. Nachricht. Nach der Erstellung werden alle Ihre Dashboards im Dashboard-Inventar aufgelistet.
 
-<!-- >[!NOTE]
+<!-- 
+>[!NOTE]
 >
 >To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
->![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
+>![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} 
+-->
 
 Das Dialogfeld [!UICONTROL Create dashboard] wird angezeigt. Geben Sie einen benutzerfreundlichen, beschreibenden Namen für die Sammlung von Widgets ein, die Sie erstellen möchten, und wählen Sie **[!UICONTROL Save]** aus.
 
 ![Das Dialogfeld „Dashboard erstellen“](./images/standard-dashboards/create-dashboard-dialog.png)
 
-Benutzende, die die Data Distiller SKU erworben haben, haben die Möglichkeit, benutzerdefinierte SQL-Abfragen zu verwenden, um ihre Einblicke zu erstellen. Anweisungen zu diesem Workflow finden [&#x200B; in der &#x200B;](./sql-insights-query-pro-mode/overview.md)Query Pro-Modus - Übersicht“.
+Benutzende, die die Data Distiller SKU erworben haben, haben die Möglichkeit, benutzerdefinierte SQL-Abfragen zu verwenden, um ihre Einblicke zu erstellen. Anweisungen zu diesem Workflow finden [ in der ](./sql-insights-query-pro-mode/overview.md)Query Pro-Modus - Übersicht“.
 
 Das neu erstellte leere Dashboard wird mit dem ausgewählten Namen oben links in der Ansicht angezeigt.
 
@@ -182,4 +186,4 @@ Die verfügbaren vorkonfigurierten Metriken und Visualisierungen für die Dashbo
 
 Sehen Sie sich das folgende Video an, um Dashboards in Experience Platform besser zu verstehen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3422737?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
