@@ -2,16 +2,16 @@
 title: Adobe Experience Platform – Versionshinweise August 2022
 description: Versionshinweise August 2022 für Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2014'
-ht-degree: 86%
+source-wordcount: '1967'
+ht-degree: 81%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 24. August 2022**
+**Releasedatum: Donnerstag, 24. August 2022**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -36,7 +36,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für den Datenschutz | <ul><li> Die Attributions-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Admins können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Attributions-KI nutzt Experience Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken Experience Platform Privacy Service verwenden, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.  </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
+| Unterstützung für den Datenschutz | <ul><li> Die Attributions-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Labels. Admins können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Attributions-KI nutzt Experience Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken Experience Platform Privacy Service verwenden, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.  </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -52,7 +52,7 @@ Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in gro
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für den Datenschutz | <ul><li> Kunden-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien, die der Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte innerhalb einer Produktanwendung dienen. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen auf der Grundlage bestimmter Attribute steuern. Bei diesen Attributen kann es sich um Metadaten handeln, die einem Objekt hinzugefügt werden, wie z. B. Beschriftungen. Admins können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Kunden-KI nutzt Experience Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken Experience Platform Privacy Service verwenden, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können. </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
+| Unterstützung für den Datenschutz | <ul><li> Kunden-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien, die der Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte innerhalb einer Produktanwendung dienen. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen auf der Grundlage bestimmter Attribute steuern. Bei diesen Attributen kann es sich um Metadaten handeln, die einem Objekt hinzugefügt werden, wie z. B. Labels. Admins können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Kunden-KI nutzt Experience Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken Experience Platform Privacy Service verwenden, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können. </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Experience Platform-Richtlinien. Die Experience Platform-Datenverschlüsselung gilt für Daten im Ruhezustand und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform bietet mehrere [!DNL dashboards], mit denen Sie wichti
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Geplante Aktivierungen-Widget | Das [!UICONTROL Geplante Aktivierungen]-Widget bietet eine tabellarische Übersicht über die zuletzt aktivierten Ziele. Für jedes Segment werden der Name, die Zielplattform sowie das Start- und Enddatum der Aktivierung angegeben. Mit diesem Widget können Sie auf einen Blick erkennen, wo und wann die Zielgruppe aktiviert wird, und es macht doppelte oder unnötige Aktivierungen transparenter. Diese gesammelten Informationen zeigen auch, wo jegliche Aktivierungen ausgeschlossen wurden. |
+| Geplante Aktivierungen-Widget | Das [!UICONTROL Scheduled activations]-Widget bietet eine tabellarische Übersicht über die zuletzt aktivierten Ziele. Für jedes Segment werden der Name, die Zielplattform sowie das Start- und Enddatum der Aktivierung angegeben. Mit diesem Widget können Sie auf einen Blick erkennen, wo und wann die Zielgruppe aktiviert wird, und es macht doppelte oder unnötige Aktivierungen transparenter. Diese gesammelten Informationen zeigen auch, wo jegliche Aktivierungen ausgeschlossen wurden. |
 
 Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] Übersicht](../../dashboards/home.md).
 
@@ -80,7 +80,7 @@ Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für das Aufnehmen von Datensätzen mit Warnungen | Bei der Datenvorbereitung werden nun Warnungen (unkritische Fehler) in den Feldern lokalisiert, und der Rest der Zeile kann aufgenommen werden. Alle Mapper-Umwandlungsfehler werden jetzt als Warnungen gemeldet, und Zeilen, die teilweise aufgenommen wurden, werden als erfolgreich betrachtet, jedoch mit einer Warnung.  Die Überwachung wird auch für Datensätze mit Warnungen und Diagnosedetails unterstützt. Die teilweise Aufnahme von Datensätzen mit Warnungen ist derzeit nur für Streaming-Daten verfügbar. Weitere Informationen finden Sie in der Dokumentation zum [Aufnehmen von Datensätzen mit Warnungen](../../sources/tutorials/ui/monitor-streaming.md). |
+| Unterstützung für das Aufnehmen von Einträgen mit Warnungen | Bei der Datenvorbereitung werden nun Warnungen (unkritische Fehler) in den Feldern lokalisiert, und der Rest der Zeile kann aufgenommen werden. Alle Mapper-Umwandlungsfehler werden jetzt als Warnungen gemeldet, und Zeilen, die teilweise aufgenommen wurden, werden als erfolgreich betrachtet, jedoch mit einer Warnung.  Das Monitoring wird auch für Einträge mit Warnungen und Diagnosedetails unterstützt. Die teilweise Aufnahme von Einträgen mit Warnungen ist derzeit nur für Streaming-Daten verfügbar. Weitere Informationen finden Sie in der Dokumentation zum [Aufnehmen von Einträgen mit Warnungen](../../sources/tutorials/ui/monitor-streaming.md). |
 
 {style="table-layout:auto"}
 
@@ -94,7 +94,7 @@ Weitere Informationen über [!DNL Data Prep] finden Sie in der [[!DNL Data Prep]
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| (Beta) Attribut-basierte Personalisierungsunterstützung für Personalisierungsziele | Mit der Beta-Version der Attribut-basierten Personalisierung werden Sie zwei neue Karten im [Zielkatalog](../../destinations/catalog/overview.md) sehen: <ul><li>**[!UICONTROL Adobe Target V2]**: Dieser Connector befindet sich derzeit in der Beta-Phase und steht nur einer ausgewählten Zahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen der Adobe Target V1-Karte fügt der Target V2-Connector dem Aktivierungs-Workflow einen [Zuordnungsschritt](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) hinzu, mit dem Sie Adobe Target Profilattribute zuordnen können, um eine Attribut-basierte Personalisierung auf derselben Seite und auf der nächsten Seite zu ermöglichen.</li><li>**[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]**: Dieser Connector befindet sich derzeit in der Beta-Phase und steht nur einer ausgewählten Zahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen der **[!UICONTROL benutzerdefinierten Personalisierung]** fügt der Connector **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** dem Aktivierungs-Workflow einen optionalen [Zuordnungsschritt](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) hinzu, mit dem Sie Profilattribute Ihrem benutzerdefinierten Personalisierungsziel zuordnen können, was eine Attribut-basierte Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht.</li></ul> <br> Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert **[!UICONTROL Ziel „Benutzerdefinierte Personalization mit]**&quot; die Verwendung der [Edge Network-API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) für die Datenerfassung. Darüber hinaus müssen alle Edge Network-API-Aufrufe in einem [authentifizierten Kontext“ &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
+| (Beta) Attribut-basierte Personalisierungsunterstützung für Personalisierungsziele | Mit der Beta-Version der Attribut-basierten Personalisierung werden Sie zwei neue Karten im [Zielkatalog](../../destinations/catalog/overview.md) sehen: <ul><li>**[!UICONTROL Adobe Target V2]**: Dieser Connector befindet sich derzeit in der Beta-Phase und steht nur einer ausgewählten Anzahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen der Adobe Target V1-Karte fügt der Target V2-Connector dem Aktivierungs-Workflow einen [Zuordnungsschritt](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) hinzu, mit dem Sie Adobe Target Profilattribute zuordnen können, um eine Attribut-basierte Personalisierung auf derselben Seite und auf der nächsten Seite zu ermöglichen.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: Dieser Connector befindet sich derzeit in der Beta-Phase und steht nur einer ausgewählten Anzahl von Kunden zur Verfügung. Zusätzlich zu den vom **[!UICONTROL Custom Personalization]** bereitgestellten Funktionen fügt der **[!UICONTROL Custom Personalization With Attributes]**-Connector dem Aktivierungs-Workflow einen optionalen [Zuordnungsschritt](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) hinzu, mit dem Sie Profilattribute Ihrem benutzerdefinierten Personalisierungsziel zuordnen können, was eine Attribut-basierte Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht.</li></ul> <br> Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert das **[!UICONTROL Custom Personalization With Attributes]**-Ziel, dass für die Datenerfassung die [Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/)API verwendet wird. Darüber hinaus müssen alle Edge Network-API-Aufrufe in einem [authentifizierten Kontext“ ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
 
 {style="table-layout:auto"}
 
@@ -116,8 +116,8 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL AJO-Entitätsklasse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Eine auf Datensätzen basierende Klasse zum Erstellen von Lookup-Schemata für Adobe Journey Optimizer. |
-| Feldgruppe | [[!UICONTROL Workfront-Arbeitsobjekte]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Eine Wrapper-Feldergruppe, die auf alle objektspezifischen Feldgruppen der unteren Ebene für Adobe Workfront verweist. |
+| Klasse | [[!UICONTROL AJO Entity Class]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Eine auf Einträgen basierende Klasse zum Erstellen von Lookup-Schemata für Adobe Journey Optimizer. |
+| Feldgruppe | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Eine Wrapper-Feldergruppe, die auf alle objektspezifischen Feldgruppen der unteren Ebene für Adobe Workfront verweist. |
 
 {style="table-layout:auto"}
 
@@ -125,13 +125,13 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldgruppe | [[!UICONTROL Gemeinsame Felder für Journey Orchestration-Step-Ereignisse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Es wurden zwei neue Eigenschaften hinzugefügt: `origTimeStamp` und `experienceID`. |
-| Feldgruppe | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Zusätzlich zum [!UICONTROL XDM-Individualprofil] kann diese Feldergruppe nun auch in Schemata verwendet werden, die auf der Klasse XDM Business Account basieren. |
+| Feldgruppe | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Es wurden zwei neue Eigenschaften hinzugefügt: `origTimeStamp` und `experienceID`. |
+| Feldgruppe | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Zusätzlich zu [!UICONTROL XDM Individual Profile] kann diese Feldergruppe jetzt auch in Schemata verwendet werden, die auf der Klasse XDM Business Account basieren. |
 | Feldgruppe | (Mehrfach) | Mehrere Feldergruppen, die sich auf Marketo B2B-Aktivitäten beziehen, wurden auf einen stabilen Status aktualisiert. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1593/files) für weitere Details. |
 | Feldgruppe | (Mehrfach) | Mehrere wetterbezogene Feldergruppen wurden aktualisiert, um Fehler zu beheben, die bei `uvIndex` und `sunsetTime` auftraten. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1602/files) für weitere Details. |
-| Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Eine neue Eigenschaft `productImageUrl` wurde hinzugefügt. |
-| Datentyp | [[!UICONTROL Informationen zu QoE-Daten]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Eine neue Eigenschaft `framesPerSecond` wurde hinzugefügt. |
-| Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` wurde in `appVersion` umbenannt. Die Felder `meta:enum` und `description` wurden ebenfalls aktualisiert. |
+| Datentyp | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Eine neue Eigenschaft `productImageUrl` wurde hinzugefügt. |
+| Datentyp | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Eine neue Eigenschaft `framesPerSecond` wurde hinzugefügt. |
+| Datentyp | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` wurde in `appVersion` umbenannt. Die Felder `meta:enum` und `description` wurden ebenfalls aktualisiert. |
 | Datentypen und Feldergruppen | (Mehrfach) | Mehrere Mediendatentypen und Feldergruppen verfügen über neue Felder und aktualisierte Beschreibungen. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1582/files) für weitere Details. |
 | (Alle) | (Mehrfach) | Alle Schemaobjekte, die ein `enum`-Feld enthalten, enthalten jetzt auch ein entsprechendes `meta:enum`-Feld, um die Anzeigewerte für jede Begrenzung anzugeben. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1601/files) für weitere Details. |
 
@@ -154,7 +154,7 @@ Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und B
 
 ## Segmentierungs-Service {#segmentation}
 
-[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+[!DNL Segmentation Service] definiert eine bestimmte Teilmenge von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Eintragsdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
 **Neue Funktionen**
 
