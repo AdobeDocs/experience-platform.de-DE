@@ -5,7 +5,7 @@ role: Developer
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 92%
@@ -14,9 +14,11 @@ ht-degree: 92%
 
 # Löschen von Datensätzen mithilfe der Data Hygiene API
 
-<!-- >[!IMPORTANT]
+<!-- 
+>[!IMPORTANT]
 >
->This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. 
+-->
 
 Mit der Datenhygiene-API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kundinnen und Kunden programmatisch korrigieren oder löschen.
 
@@ -42,9 +44,9 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 In diesem Dokument wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/api-guide.md#sample-api) in den Ersten Schritten für Experience Platform-APIs.
 
-## Erstellen eines Löschvorgangs
+## Erstellen eines Löschauftrags
 
-Sie können einen Löschvorgang erstellen, indem Sie eine POST-Anfrage ausführen.
+Sie können einen Löschauftrag erstellen, indem Sie eine POST-Anfrage ausführen.
 
 **API-Format**
 
@@ -115,7 +117,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Vorgänge zurück.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Aufträge zurück.
 
 ```json
 {
