@@ -3,10 +3,10 @@ title: Übersicht über den Snowflake Source Connector
 description: Erfahren Sie, wie Sie Snowflake mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 687363ab664e43cc854b535760dfbfc55acefd2c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1570'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -58,7 +58,7 @@ Um die Schlüsselpaar-Authentifizierung zu verwenden, generieren Sie zunächst e
 | --- | --- |
 | `account` | Ein Kontoname identifiziert ein Konto innerhalb Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto über verschiedene [!DNL Snowflake] hinweg eindeutig identifizieren. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `myorg-myaccount.snowflakecomputing.com`. Weitere Anleitungen finden Sie im Abschnitt [Abrufen  [!DNL Snowflake]  Kontokennung](#retrieve-your-account-identifier) . Weiterführende Informationen dazu finden Sie im [[!DNL Snowflake] entsprechenden Handbuch](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Der Benutzername Ihres [!DNL Snowflake]. |
-| `privateKey` | Der [!DNL Base64-]kodierte private Schlüssel Ihres [!DNL Snowflake]. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie auch eine Passphrase für den privaten Schlüssel angeben, wenn Sie sich bei Experience Platform authentifizieren. Weitere Informationen finden Sie im Abschnitt [Abrufen Ihres privaten &#x200B;](#retrieve-your-private-key)&quot;. |
+| `privateKey` | Der [!DNL Base64-]kodierte private Schlüssel Ihres [!DNL Snowflake]. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie auch eine Passphrase für den privaten Schlüssel angeben, wenn Sie sich bei Experience Platform authentifizieren. Weitere Informationen finden Sie im Abschnitt [Abrufen Ihres privaten ](#retrieve-your-private-key)&quot;. |
 | `privateKeyPassphrase` | Die Passphrase für den privaten Schlüssel ist eine zusätzliche Sicherheitsebene, die Sie bei der Authentifizierung mit einem verschlüsselten privaten Schlüssel verwenden müssen. Sie müssen die Passphrase nicht angeben, wenn Sie einen unverschlüsselten privaten Schlüssel verwenden. |
 | `port` | Die Port-Nummer, die von [!DNL Snowflake] verwendet wird, wenn eine Verbindung zu einem Server über das Internet hergestellt wird. |
 | `database` | Die [!DNL Snowflake], die die Daten enthält, die in Experience Platform aufgenommen werden sollen. |
@@ -92,7 +92,7 @@ Um die Schlüsselpaar-Authentifizierung zu verwenden, generieren Sie zunächst e
 | --- | --- |
 | `account` | Ein Kontoname identifiziert ein Konto innerhalb Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto über verschiedene [!DNL Snowflake] hinweg eindeutig identifizieren. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `http://myorg-myaccount.snowflakecomputing.com/`. Weitere Anleitungen finden Sie im Handbuch [Abrufen  [!DNL Snowflake]  Kontokennung](#etrieve-your-account-identifier) . Weiterführende Informationen dazu finden Sie im [[!DNL Snowflake] entsprechenden Handbuch](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Der Benutzername Ihres [!DNL Snowflake]. |
-| `privateKey` | Der private Schlüssel für Ihren [!DNL Snowflake]-Benutzer, base64-kodiert als einzelne Zeile ohne Kopfzeilen oder Zeilenumbrüche. Zur Vorbereitung kopieren Sie den Inhalt Ihrer PEM-Datei, entfernen Sie die `BEGIN`/`END` Zeilen und alle Zeilenumbrüche, und kodieren Sie dann das Ergebnis mit base64. Weitere Informationen finden Sie im Abschnitt [Abrufen Ihres privaten &#x200B;](#retrieve-your-private-key)&quot;. **Hinweis:** Verschlüsselte private Schlüssel werden derzeit für eine AWS-Verbindung nicht unterstützt. |
+| `privateKey` | Der private Schlüssel für Ihren [!DNL Snowflake]-Benutzer, base64-kodiert als einzelne Zeile ohne Kopfzeilen oder Zeilenumbrüche. Zur Vorbereitung kopieren Sie den Inhalt Ihrer PEM-Datei, entfernen Sie die `BEGIN`/`END` Zeilen und alle Zeilenumbrüche, und kodieren Sie dann das Ergebnis mit base64. Weitere Informationen finden Sie im Abschnitt [Abrufen Ihres privaten ](#retrieve-your-private-key)&quot;. **Hinweis:** Verschlüsselte private Schlüssel werden derzeit für eine AWS-Verbindung nicht unterstützt. |
 | `port` | Die Port-Nummer, die von [!DNL Snowflake] verwendet wird, wenn eine Verbindung zu einem Server über das Internet hergestellt wird. |
 | `database` | Die [!DNL Snowflake], die die Daten enthält, die in Experience Platform aufgenommen werden sollen. |
 | `warehouse` | Das [!DNL Snowflake] Warehouse verwaltet den Abfrageausführungsprozess für das Programm. Jedes [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss beim Übermitteln von Daten an Experience Platform einzeln aufgerufen werden. |
