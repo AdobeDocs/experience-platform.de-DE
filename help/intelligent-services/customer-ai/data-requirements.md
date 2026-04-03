@@ -6,9 +6,9 @@ title: Datenanforderungen in Kunden-KI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Kunden-KI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '2539'
 ht-degree: 91%
 
 ---
@@ -91,29 +91,29 @@ Erlebnisereignisse werden zur Bestimmung verschiedener Kundenverhaltensweisen ve
 
 Kunden-KI verwendet die Ereignisse standardmäßig in diesen vier Standardfeldgruppen: „Commerce“, „Web“, „Anwendung“ und „Suche“. Es ist nicht erforderlich, dass Daten für jedes Ereignis in den unten aufgeführten Standardfeldgruppen vorhanden sind. Bei bestimmten Szenarien werden jedoch bestimmte Ereignisse vorausgesetzt. Wenn Ereignisse in den Standardfeldgruppen verfügbar sind, wird empfohlen, diese in Ihr Schema einzuschließen. Wenn Sie beispielsweise ein Kunden-KI-Modell für die Prognose von Kaufereignissen erstellen möchten, sind dafür Daten aus den Feldergruppen mit Commerce- und Web-Seiten-Details hilfreich.
 
-Um eine Feldergruppe in der Experience Platform-Benutzeroberfläche anzuzeigen, wählen Sie in der linken Leiste die Registerkarte **[!UICONTROL Schemata]** und dann die Registerkarte **[!UICONTROL Feldergruppen]** aus.
+Um eine Feldergruppe in der Benutzeroberfläche von Experience Platform anzuzeigen, wählen Sie in der linken Leiste die Registerkarte **[!UICONTROL Schemas]** und dann die Registerkarte **[!UICONTROL Field groups]** aus.
 
 | Feldergruppe | Ereignistyp | XDM-Feldpfad |
 | --- | --- | --- |
-| [!UICONTROL Handelsdetails] | Bestellung | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
+| [!UICONTROL Commerce Details] | Bestellung | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
 |  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li> |
 |  | checkouts | <li> `commerce.checkouts.value` </li> <li> `productListItems.SKU` </li> |
 |  | purchases | <li> `commerce.purchases.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListRemovals | <li> `commerce.productListRemovals.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListOpens | <li> `commerce.productListOpens.value` </li> <li> `productListItems.SKU` </li> |
 |  | productViews | <li> `commerce.productViews.value` </li> <li> `productListItems.SKU` </li> |
-| [!UICONTROL Web-Details] | webVisit | `web.webPageDetails.name` |
+| [!UICONTROL Web Details] | webVisit | `web.webPageDetails.name` |
 |  | webInteraction | `web.webInteraction.linkClicks.value` |
-| [!UICONTROL Anwendungsdetails] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
+| [!UICONTROL Application Details] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
 |  | applicationCrashes | <li> `application.crashes.value` </li> <li> `application.name` </li> |
 |  | applicationFeatureUsages | <li> `application.featureUsages.value` </li> <li> `application.name` </li> |
 |  | applicationFirstLaunches | <li> `application.firstLaunches.value` </li> <li> `application.name` </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
-| [!UICONTROL Suchdetails] | Suchen | `search.keywords` |
+| [!UICONTROL Search Details] | Suchen | `search.keywords` |
 
-Darüber hinaus kann Kunden-KI mithilfe von Abonnementdaten bessere Abwanderungsmodelle erstellen. Abonnementdaten werden für jedes Profil mit dem Datentypformat [[!UICONTROL Abonnement]](../../xdm/data-types/subscription.md) benötigt. Die meisten Felder sind optional. Für ein optimales Abwanderungsmodell wird jedoch ausdrücklich empfohlen, Daten für so viele Felder wie möglich, z. B. `startDate`, `endDate`, und alle anderen relevanten Details bereitzustellen. Bitte wenden Sie sich an Ihr Konto-Team, um weitere Unterstützung zu dieser Funktion zu erhalten.
+Darüber hinaus kann Kunden-KI mithilfe von Abonnementdaten bessere Abwanderungsmodelle erstellen. Abonnementdaten werden für jedes Profil mit dem Datentypformat [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) benötigt. Die meisten Felder sind optional. Für ein optimales Abwanderungsmodell wird jedoch ausdrücklich empfohlen, Daten für so viele Felder wie möglich, z. B. `startDate`, `endDate`, und alle anderen relevanten Details bereitzustellen. Bitte wenden Sie sich an Ihr Konto-Team, um weitere Unterstützung zu dieser Funktion zu erhalten.
 
 ### Hinzufügen benutzerspezifischer Ereignisse und Profilattribute {#add-custom-events}
 
@@ -219,8 +219,8 @@ Die folgende Tabelle beschreibt die verschiedenen Attribute, die in der Ausgabe 
 
 | Attribut | Beschreibung |
 | ----- | ----------- |
-| [!UICONTROL Ergebnis] | Die relative Wahrscheinlichkeit, mit der ein Kunde das prognostizierte Ziel innerhalb des definierten Zeitraums erreicht. Dieser Wert ist nicht als Prozentsatz der Wahrscheinlichkeit zu behandeln, sondern vielmehr als die Wahrscheinlichkeit eines Individuums im Vergleich zur Gesamtbevölkerung. Dieser Wert liegt im Bereich von 0 bis 100. |
-| Wahrscheinlichkeit | Dieses Attribut ist die wahre Wahrscheinlichkeit eines Profils, dass es das das prognostizierte Ziel innerhalb des definierten Zeitraums erreicht. Beim Vergleichen der Ausgaben über verschiedene Ziele hinweg wird empfohlen, die Wahrscheinlichkeit über das Perzentil oder die Bewertung in Betracht zu ziehen. Die Wahrscheinlichkeit sollte immer bei der Bestimmung der durchschnittlichen Wahrscheinlichkeit für die gesamte geeignete Bevölkerung verwendet werden, da die Wahrscheinlichkeit für Ereignisse, die nicht häufig auftreten, tendenziell niedriger liegt. Die Werte für die Wahrscheinlichkeit liegen zwischen 0 und 1. |
+| [!UICONTROL Score] | Die relative Wahrscheinlichkeit, mit der ein Kunde das prognostizierte Ziel innerhalb des definierten Zeitraums erreicht. Dieser Wert ist nicht als Prozentsatz der Wahrscheinlichkeit zu behandeln, sondern vielmehr als die Wahrscheinlichkeit eines Individuums im Vergleich zur Gesamtpopulation. Dieser Wert liegt im Bereich von 0 bis 100. |
+| Wahrscheinlichkeit | Dieses Attribut ist die wahre Wahrscheinlichkeit eines Profils, dass es das das prognostizierte Ziel innerhalb des definierten Zeitraums erreicht. Beim Vergleichen der Ausgaben über verschiedene Ziele hinweg wird empfohlen, die Wahrscheinlichkeit über das Perzentil oder die Bewertung in Betracht zu ziehen. Die Wahrscheinlichkeit sollte immer bei der Bestimmung der durchschnittlichen Wahrscheinlichkeit für die gesamte geeignete Population verwendet werden, da die Wahrscheinlichkeit für Ereignisse, die nicht häufig auftreten, tendenziell niedriger liegt. Die Werte für die Wahrscheinlichkeit liegen zwischen 0 und 1. |
 | Perzentil | Dieser Wert enthält Informationen zur Performance eines Profils im Vergleich zu anderen Profilen mit ähnlichen Werten. Ein Profil mit einem Perzentil-Rang von 99 für Kundenabwanderung weist beispielsweise darauf hin, dass es ein höheres Risiko für Abwanderungen aufweist als 99 % aller anderen Profile, die bewertet wurden. Die Perzentile liegen zwischen 1 und 100. |
 | Tendenztyp | Der ausgewählte Tendenztyp. |
 | Datum der Auswertung | Das Datum, an dem die Auswertung erfolgte. |
