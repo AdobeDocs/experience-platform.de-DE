@@ -2,10 +2,10 @@
 title: Flow Service-Fehlermeldungen
 description: Erfahren Sie mehr über die Fehlermeldungen, die bei Verwendung des Flow Service für Quellen auftreten können.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 98%
+source-wordcount: '1666'
+ht-degree: 97%
 
 ---
 
@@ -48,8 +48,8 @@ In der folgenden Tabelle sind Fehler bei der internen Validierung in Flow Servic
 | `1419-400` | Ungültige Anfrage | Fehler beim Validieren der Zuordnung mit der ID 45d90285d2d249acb87a72a2f12f7401, Version 0. Dies kann auf unzureichende Berechtigungen für zugeordnete Felder zurückzuführen sein. Bitte überprüfen Sie Ihre Zuordnung oder wenden Sie sich an Ihren Admin. |
 | `1420-400` | Ungültige Anfrage | Der aktuelle Status der Deaktivierung kann nicht aktualisiert werden. |
 | `1421-400` | Ungültige Anfrage | Die aktuelle Statusaktualisierung kann nicht geändert werden. |
-| `1422-400` | Ungültige Anfrage | Die Aktion „Deaktivieren“ kann nicht auf den aktuellen Status {state} angewendet werden. Bitte aktualisieren Sie die Aktion und versuchen Sie es erneut. |
-| `1423-400` | Ungültige Anfrage | In ConnectionSpecFiltering wurde ein unbehandeltes Feld „baseSpec“ angegeben. Bitte aktualisieren Sie das Feld {field} und versuchen Sie es erneut. |
+| `1422-400` | Ungültige Anfrage | Die Aktion „Deaktivieren“ kann nicht auf die aktuelle {state} angewendet werden. Bitte aktualisieren Sie die Aktion und versuchen Sie es erneut. |
+| `1423-400` | Ungültige Anfrage | In ConnectionSpecFiltering wurde ein unbehandeltes Feld „baseSpec“ angegeben. Bitte aktualisieren Sie die {field} und versuchen Sie es erneut. |
 | `1424-400` | Ungültige Anfrage | OrderBy wird bei Cross-Sandbox-Abfragen nicht unterstützt. |
 | `1425-400` | Ungültige Anfrage | Fehler beim Abgleich des Schemas im Zieldatensatz 64ef1a3c0ef mit dem Schema in der Zuordnung 91ac5a2c0eb. Das Schema mit derselben ID und Version muss sowohl in der Zuordnung als auch im Zieldatensatz verwendet werden. |
 | `1426-400` | Ungültige Anfrage | Das Benutzer-Token ist nicht berechtigt, die Verbindungsspezifikation zu erstellen bzw. zu aktualisieren. Bitte stellen Sie sicher, dass das Benutzer-Token berechtigt ist, und versuchen Sie es erneut. |
