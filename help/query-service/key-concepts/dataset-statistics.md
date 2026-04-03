@@ -2,7 +2,7 @@
 title: Berechnung der Datensatzstatistiken
 description: In diesem Dokument wird beschrieben, wie Sie mit SQL-Befehlen Statistiken auf Spaltenebene für Azure Data Lake Storage(ADLS)-Datensätze berechnen.
 exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 100%
@@ -57,12 +57,12 @@ Die Ausgabe für das obige Beispiel lautet `SUCCESSFULLY COMPLETED, alias_name`.
 
 ## Anzeigen der Ausgabe berechneter Statistiken {#view-output-of-computed-statistics}
 
-Wenn Sie im Voraus keinen Aliasnamen angeben, generiert der Abfragedienst automatisch einen Namen für `Statistics ID`, der dem Format `<tableName_stats_{incremental_number}>` entspricht. Wenn ein Aliasname angegeben wird, erscheint er in der Spalte `Statistics ID`.
+Wenn Sie im Voraus keinen Aliasnamen angeben, generiert der Abfrage-Service automatisch einen Namen für `Statistics ID`, der dem Format `<tableName_stats_{incremental_number}>` entspricht. Wenn ein Aliasname angegeben wird, erscheint er in der Spalte `Statistics ID`.
 
 Ein Ausgabebeispiel für eine `COMPUTE STATISTICS`-Abfrage lautet wie folgt:
 
 ```console
-| Statistics ID         | 
+| Statistics ID         |
 | --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
@@ -152,4 +152,4 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments können Sie jetzt besser verstehen, wie Sie mit einer SQL-Abfrage Statistiken auf Spaltenebene für einen ADLS-Datensatz generieren. Es wird empfohlen, das [SQl-Syntaxhandbuch](../sql/syntax.md) zu lesen, um weitere Funktionen des Adobe Experience Platform-Abfrage-Service kennenzulernen.
+Durch Lesen dieses Dokuments können Sie jetzt besser verstehen, wie Sie mit einer SQL-Abfrage Statistiken auf Spaltenebene für einen ADLS-Datensatz generieren. Es wird empfohlen, das [SQl-Syntaxhandbuch](../sql/syntax.md) zu lesen, um weitere Funktionen des Abfrage-Service von Adobe Experience Platform kennenzulernen.
