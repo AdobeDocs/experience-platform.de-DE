@@ -4,7 +4,7 @@ title: API-Endpunkt für Segmentexportvorgänge
 description: Exportvorgänge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen persistiert werden. Sie können den Endpunkt /export/jobs in der Segmentierungs-Service-API von Adobe Experience Platform verwenden, mit der Sie Exportaufträge programmgesteuert abrufen, erstellen und abbrechen können.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 11%
