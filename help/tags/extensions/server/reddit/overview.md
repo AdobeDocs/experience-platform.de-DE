@@ -2,9 +2,10 @@
 title: Reddit Conversions API-Erweiterung
 description: Erfahren Sie, wie Sie mit der API-Erweiterung „Reddit Ads Conversions“ Benutzerinteraktionsereignisse für zielgruppengerechte Werbung an Reddit Ads senden können.
 last-substantial-update: 2025-05-1
-source-git-commit: 603cc86892f518852552eaa2fe1bdeaa296137cf
+exl-id: 550f7b62-84d7-49d4-8551-b8785cdedd0f
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -15,7 +16,7 @@ Reddit ist eine Social-Media-Plattform mit einer vielfältigen Nutzerbasis, die 
 
 Verwenden Sie die [[!DNL Reddit] Konversions-API](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API)Erweiterung, um in Adobe Experience Platform Edge Network erfasste Benutzerinteraktionsereignisse an [!DNL Reddit Ads] zu senden. Mit dieser Erweiterung können Sie Ihrer Marke helfen, eine Zielgruppe von mehr als 379 Millionen aktiven wöchentlichen Benutzern zu erreichen, das Benutzerverhalten besser zu verstehen und zielgerichtete Werbung zu schalten.
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie die [!DNL Reddit] Conversions-API-Erweiterung in Ihrer Ereignisweiterleitung (Regeln[&#x200B; installieren, konfigurieren und &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/tags/ui/rules).
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie die [!DNL Reddit] Conversions-API-Erweiterung in Ihrer Ereignisweiterleitung (Regeln[ installieren, konfigurieren und ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 
 ## Wichtigste Vorteile {#benefits}
 
@@ -36,26 +37,25 @@ Um den Experience Platform mit [!DNL Reddit] zu verbinden, sind die folgenden Ei
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
 | Pixel-ID | Die Pixel-ID ist eine eindeutige Kennung, die mit Ihrem [!DNL Reddit Ads]-Konto verknüpft ist. Er wird verwendet, um Benutzerinteraktionen und Konversionsereignisse auf Ihrer Website oder in Ihrer App zu verfolgen. Sie finden Ihre Pixel-ID in Ihrem [!DNL Reddit Ads] [Konto](https://ads.reddit.com/accounts). | 123456789012 |
-| Konversionszugriffstoken | Ihr [!DNL Reddit]-Konversions-Zugriffstoken. Eine Anleitung dazu finden [[!DNL Reddit]  im Dokument &#x200B;](https://business.reddithelp.com/s/article/conversion-access-token)Konversions-API“. <br> **Sie müssen diesen Prozess nur einmal durchlaufen, da dieses Token nicht abläuft.** | {YOUR_REDDIT_BEARER_TOKEN} |
+| Konversionszugriffstoken | Ihr [!DNL Reddit]-Konversions-Zugriffstoken. Eine Anleitung dazu finden [[!DNL Reddit]  im Dokument ](https://business.reddithelp.com/s/article/conversion-access-token)Konversions-API“. <br> **Sie müssen diesen Prozess nur einmal durchlaufen, da dieses Token nicht abläuft.** | {YOUR_REDDIT_BEARER_TOKEN} |
 
 ## Installieren und Konfigurieren der [!DNL Reddit] {#install-configure}
 
 Führen Sie die folgenden Schritte aus, um die [!DNL Reddit] Conversions-API-Erweiterung zu installieren und zu konfigurieren:
 
-1. Wählen Sie in der Datenerfassungs-UI von Experience Platform [!UICONTROL Erweiterungen] in der linken Navigationsleiste aus, um auf den [!UICONTROL Erweiterungen]-Katalog zuzugreifen. Erstellen [&#x200B; dann eine neue Ereignisweiterleitungs-Eigenschaft &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/tags/event-forwarding/overview#properties) wählen Sie eine vorhandene Eigenschaft aus.
-2. Navigieren Sie **[!UICONTROL linken Navigationsbereich zu]** Erweiterungen“. Wählen Sie **[!UICONTROL Katalog]** und wählen Sie dann die **[!DNL Reddit]** aus.
+1. Wählen Sie in der Datenerfassungs-Benutzeroberfläche von Experience Platform in der linken Navigationsleiste die Option [!UICONTROL Extensions] , um auf den [!UICONTROL Extensions] zuzugreifen. Erstellen [ dann eine neue Ereignisweiterleitungs-Eigenschaft ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties) wählen Sie eine vorhandene Eigenschaft aus.
+2. Navigieren Sie im linken Navigationsbereich zu **[!UICONTROL Extensions]** . Wählen Sie **[!UICONTROL Catalog]** und dann die **[!DNL Reddit]** aus.
    ![Der Adobe Experience Platform Extensions-Katalog mit hervorgehobener Reddit-Erweiterung.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. Geben Sie die folgenden Konfigurationsdetails an:
    - **Pixel-ID**: Geben Sie Ihre [!DNL Reddit Ads] Pixel-ID ein.
-   - **Konversionszugriffs-Token**: Geben Sie das in Ihrem [!DNL Reddit Ads]-Konto generierte Token ein und wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
-
+   - **Konversionszugriffs-Token**: Geben Sie das in Ihrem [!DNL Reddit Ads]-Konto generierte Token ein und wählen Sie **[!UICONTROL Save]** aus, wenn Sie fertig sind.
      ![Konfigurationsdetails für die API-Erweiterung „Reddit Conversions“, einschließlich Feldern für Pixel-ID und Konversionszugriffs-Token.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## Konfigurieren einer Ereignisweiterleitungsregel {#config-rule}
 
 Erstellen Sie nach dem Einrichten der Datenelemente Regeln für die Ereignisweiterleitung, um zu bestimmen, wann und wie Ereignisse an [!DNL Reddit Ads] gesendet werden.
 
-1. Navigieren Sie zu **Regeln** in Ihrer Ereignisweiterleitungs-Eigenschaft und erstellen Sie eine neue [Regel](https://experienceleague.adobe.com/de/docs/experience-platform/tags/ui/rules).
+1. Navigieren Sie zu **Regeln** in Ihrer Ereignisweiterleitungs-Eigenschaft und erstellen Sie eine neue [Regel](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 2. Fügen Sie **Aktionen** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!DNL Reddit CAPI]** fest.
 3. Legen Sie den **Aktionstyp** auf &quot;**&quot;**.
    ![Regelkonfigurationsschnittstelle für die Ereignisweiterleitungsregel für die API-Erweiterung „Reddit Conversions“, wobei die Felder „Erweiterung“ und „Aktionstyp“ hervorgehoben sind.](../../../images/extensions/server/reddit/reddit-rule.png)
@@ -83,7 +83,7 @@ Lesen Sie diesen Abschnitt für eine detaillierte Aufschlüsselung der Felder f�
 
 >[!NOTE]
 >
->Um die besten Ergebnisse aus Ihren Konversionsereignissen zu erhalten, füllen Sie bei der Einrichtung von (dynamischen [) alle Felder &#x200B;](https://business.reddithelp.com/s/article/dynamic-product-ads).
+>Um die besten Ergebnisse aus Ihren Konversionsereignissen zu erhalten, füllen Sie bei der Einrichtung von (dynamischen [) alle Felder ](https://business.reddithelp.com/s/article/dynamic-product-ads).
 
 ### Ereignis-Metadatenfelder
 
