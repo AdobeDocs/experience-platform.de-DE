@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;einheitliche Tags;Tags
 title: Übersicht über einheitliche Tags
 description: Dieses Dokument enthält Informationen zu einheitlichen Tags in Adobe Experience Platform
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
-source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 98%
