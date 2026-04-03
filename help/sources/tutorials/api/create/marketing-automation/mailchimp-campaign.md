@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Datenflusses für eine Mailchimp-Kampagne mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einer Mailchimp-Kampagne verbinden.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1934'
 ht-degree: 75%
@@ -13,7 +13,7 @@ ht-degree: 75%
 
 # Erstellen eines Datenflusses für [!DNL Mailchimp Campaign] mithilfe der Flow Service-API
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Mailchimp Campaign] Daten mithilfe der -API [[!DNL Flow Service]  Experience Platform &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Mailchimp Campaign] Daten mithilfe der -API [[!DNL Flow Service]  Experience Platform ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Voraussetzungen
 
@@ -467,7 +467,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
---->
+-->
 
 ## Erstellen eines Flusses {#flow}
 
