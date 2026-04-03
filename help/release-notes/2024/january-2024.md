@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise Januar 2024
 description: Versionshinweise Januar 2024 für Adobe Experience Platform.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1649'
 ht-degree: 37%
 
 ---
@@ -31,9 +31,9 @@ Aktualisierungen vorhandener Funktionen in Experience Platform:
 
 ## Anwendungsfall-Playbooks {#use-case-playbooks}
 
-Die [!UICONTROL Nutzungsszenario-Playbooks]-Funktion ist jetzt allgemein für alle Kunden von Real-Time CDP und Adobe Journey Optimizer verfügbar. [!UICONTROL Anwendungsfall-Playbooks] wurden entwickelt, um Benutzende bei der Überwindung von Herausforderungen zu unterstützen, wenn sie mit Real-Time Customer Data Platform oder Adobe Journey Optimizer beginnen. Wenn Sie sich nicht sicher sind, wo Sie anfangen sollen oder wie Sie die richtigen Assets für Ihre gewünschten Anwendungsfälle erstellen, bieten die Playbooks für Anwendungsfälle eine Inspiration und erstellen verschiedene Assets, die Sie testen und in Produktionsumgebungen importieren können, wenn Sie bereit sind.
+Die [!UICONTROL Use Case Playbooks] ist jetzt allgemein für alle Kunden von Real-Time CDP und Adobe Journey Optimizer verfügbar. [!UICONTROL Use Case Playbooks] sollen Benutzende dabei unterstützen, Herausforderungen zu meistern, wenn sie mit Real-Time Customer Data Platform oder Adobe Journey Optimizer beginnen. Wenn Sie sich nicht sicher sind, wo Sie anfangen sollen oder wie Sie die richtigen Assets für Ihre gewünschten Anwendungsfälle erstellen, bieten die Playbooks für Anwendungsfälle eine Inspiration und erstellen verschiedene Assets, die Sie testen und in Produktionsumgebungen importieren können, wenn Sie bereit sind.
 
-Lesen Sie die folgenden Dokumentationsseiten, um mit [!UICONTROL Playbooks für Anwendungsfälle] zu beginnen:
+Informationen zu den ersten Schritten mit [!UICONTROL Use Case Playbooks] finden Sie auf den folgenden Dokumentationsseiten:
 
 - Lesen Sie die [Übersichtsseite](/help/use-case-playbooks/playbooks/overview.md) um den Zweck und die Verfügbarkeitsinformationen zu verstehen und eine durchgängige Demonstration der Funktionsweise von Playbooks von der Erkennung über die Erstellung von Instanzen bis zum Import generierter Assets in andere Sandbox-Umgebungen zu erhalten.
 - Abrufen einer Liste aller [verfügbaren Playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md) gruppiert nach Produkt (Real-Time CDP oder Journey Optimizer)
@@ -101,7 +101,7 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Neuer Authentifizierungstyp **übernommene Rolle** für Amazon S3-Ziele | Verwenden Sie den neuen Authentifizierungstyp Angenommene Rolle beim Verbinden von Experience Platform mit Ihren Amazon S3-Buckets, wenn Sie keine Kontoschlüssel und Geheimschlüssel für Experience Platform freigeben möchten. Weitere Informationen über die neue Authentifizierungsmethode finden Sie [&#x200B; Abschnitt „Authentifizierung](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) in der Dokumentation zu Amazon S3. |
+| Neuer Authentifizierungstyp **übernommene Rolle** für Amazon S3-Ziele | Verwenden Sie den neuen Authentifizierungstyp Angenommene Rolle beim Verbinden von Experience Platform mit Ihren Amazon S3-Buckets, wenn Sie keine Kontoschlüssel und Geheimschlüssel für Experience Platform freigeben möchten. Weitere Informationen über die neue Authentifizierungsmethode finden Sie [ Abschnitt „Authentifizierung](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) in der Dokumentation zu Amazon S3. |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren 
 
 | Dokumentation aktualisieren | Beschreibung |
 | --- | --- |
-| Neustrukturierung der Dokumentation | Die Dokumentation zum Identity Service wurde umstrukturiert, um die Darstellung und Klarheit von Konzepten in Identity Service zu verbessern:<ul><li>Auf der [Identity Service-Übersichtsseite](../../identity-service/home.md) finden Sie ein erweitertes Terminologiehandbuch, ein Anwendungsbeispiel mit einer typischen Kunden-Journey, eine Aufschlüsselung der Verknüpfung von Identitäten mit Identity Service und eine Zusammenfassung der Rolle, die Identity Service innerhalb des Experience Platform-Ökosystems spielt.</li><li>Lesen Sie das Handbuch unter [Verstehen der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](../../identity-service/identity-and-profile.md) für eine detaillierte Zusammenfassung, wie die beiden Services zusammenarbeiten und die Unterschiede zwischen ihren Zwecken, Prozessen, Eingaben und Ausgaben.</li><li>Erläuterungen und Visualisierungen [&#x200B; Verhaltens des Identitätsdiagramms bei verschiedenen Szenarien und Zeitstempeln finden Sie &#x200B;](../../identity-service/features/identity-linking-logic.md) Handbuch zur Identitätsdienst-Verknüpfungslogik .</li></ul> |
+| Neustrukturierung der Dokumentation | Die Dokumentation zum Identity Service wurde umstrukturiert, um die Darstellung und Klarheit von Konzepten in Identity Service zu verbessern:<ul><li>Auf der [Identity Service-Übersichtsseite](../../identity-service/home.md) finden Sie ein erweitertes Terminologiehandbuch, ein Anwendungsbeispiel mit einer typischen Kunden-Journey, eine Aufschlüsselung der Verknüpfung von Identitäten mit Identity Service und eine Zusammenfassung der Rolle, die Identity Service innerhalb des Experience Platform-Ökosystems spielt.</li><li>Lesen Sie das Handbuch unter [Verstehen der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](../../identity-service/identity-and-profile.md) für eine detaillierte Zusammenfassung, wie die beiden Services zusammenarbeiten und die Unterschiede zwischen ihren Zwecken, Prozessen, Eingaben und Ausgaben.</li><li>Erläuterungen und Visualisierungen [ Verhaltens des Identitätsdiagramms bei verschiedenen Szenarien und Zeitstempeln finden Sie ](../../identity-service/features/identity-linking-logic.md) Handbuch zur Identitätsdienst-Verknüpfungslogik .</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -160,7 +160,7 @@ Weitere Informationen zum Echtzeit-Kundenprofil finden Sie in der [Profilübersi
 
 ## Segmentierungs-Service {#segmentation}
 
-[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+[!DNL Segmentation Service] definiert eine bestimmte Teilmenge von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Eintragsdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
 **Neue oder aktualisierte Funktionen**
 
@@ -181,9 +181,9 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] | Verwenden Sie die [!DNL Oracle NetSuite] Integrationen im Quellkatalog, um Daten aus Ihren [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)- und [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)-Konten in Experience Platform zu übertragen. |
-| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] | Verwenden Sie die [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) Integration im Quellkatalog, um Daten von Ihrem [!DNL Braze]-Konto an Experience Platform zu übertragen. |
-| Unterstützung der Schlüsselpaar-Authentifizierung für [!DNL Snowflake] Batch-Quelle | Sie können jetzt die Schlüsselpaar-Authentifizierung verwenden, wenn Sie ein neues [!DNL Snowflake] für Batch-Daten erstellen. Weitere Informationen finden sich im Handbuch unter [Erstellen eines  [!DNL Snowflake] -Kontos mithilfe der &#x200B;](../../sources/tutorials/api/create/databases/snowflake.md)) oder im Handbuch [Erstellen eines  [!DNL Snowflake] -Kontos mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/create/databases/snowflake.md). |
+| [!BADGE Beta]{type=Informative}-[!DNL Oracle NetSuite] | Verwenden Sie die [!DNL Oracle NetSuite] Integrationen im Quellkatalog, um Daten aus Ihren [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)- und [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)-Konten in Experience Platform zu übertragen. |
+| [!BADGE Beta]{type=Informative}-[!DNL Braze Currents] | Verwenden Sie die [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) Integration im Quellkatalog, um Daten von Ihrem [!DNL Braze]-Konto an Experience Platform zu übertragen. |
+| Unterstützung der Schlüsselpaar-Authentifizierung für [!DNL Snowflake] Batch-Quelle | Sie können jetzt die Schlüsselpaar-Authentifizierung verwenden, wenn Sie ein neues [!DNL Snowflake] für Batch-Daten erstellen. Weitere Informationen finden sich im Handbuch unter [Erstellen eines  [!DNL Snowflake] -Kontos mithilfe der ](../../sources/tutorials/api/create/databases/snowflake.md)) oder im Handbuch [Erstellen eines  [!DNL Snowflake] -Kontos mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}
 
