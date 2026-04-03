@@ -2,7 +2,7 @@
 title: Übersicht über Data Distiller
 description: Eine Zusammenfassung der Datennutzungsbeschränkungen von Distiller für Abfrage-Service-Daten in Bezug auf Ihre Lizenzberechtigung.
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -13,7 +13,8 @@ ht-degree: 0%
 
 Data Distiller ist ein Package, das eine Untergruppe der Funktionen von Adobe Experience Platform enthält. Mit Data Distiller können Sie Daten nach der Aufnahme für Echtzeit-Kundenprofile oder analytische Anwendungsfälle vorbereiten (z. B. bereinigen, gestalten und bearbeiten), indem Sie Batch-Abfragen im Abfrage-Service ausführen. Ihre Verwendung von Data Distiller hängt von Ihrer Berechtigung für Experience Platform-basierte Programme ab.
 
-<!-- Commented out references to licence usage dashboard. It is temporarily hidden:
+<!-- 
+Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
 
 
@@ -22,7 +23,8 @@ The [Data Distiller license usage dashboard](./license-usage.md) is available o
 The Data Distiller license usage dashboard is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours.
 -->
 
-<!-- Update these descriptions post 23.3 release
+<!-- 
+Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
 
 Scoping parameters are usage limits that relate to the scoping of your required set up, and are defined by your license capacity. Without add-ons, Data Distiller's scoping parameters are as follows: 
@@ -37,7 +39,8 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 Siehe das Dokument [Leitplanken für den Abfrage](../guardrails.md) bezüglich der standardmäßigen Nutzungsbeschränkungen für Abfrage-Service-Daten in Bezug auf Ihre Lizenzberechtigung.
 
-<!-- Update these descriptions post 23.3 release
+<!-- 
+Update these descriptions post 23.3 release
 ## Static limits
 
 A static limit is the usage limit that relates to the functional boundaries of Adobe Experience Platform Activation. [More information on Adobe Experience Platform Activation](https://helpx.adobe.com/ca/legal/product-descriptions/adobe-experience-platform0.html) can be found in the Adobe help documents. A summary of Data Distiller static limits are listed below, for more complete information please refer to the Query Service guardrail document.  
