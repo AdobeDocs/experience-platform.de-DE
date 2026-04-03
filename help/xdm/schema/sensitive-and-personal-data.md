@@ -2,7 +2,7 @@
 title: Vertrauliche und persönliche Informationen in XDM
 description: Erfahren Sie mehr über wichtige Aspekte zu sensiblen personenbezogenen Daten (SPI) und persönlich identifizierbaren Informationen (PII) im Experience-Datenmodell (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 2%
@@ -40,7 +40,8 @@ Experience Platform ermöglicht es Ihnen, eigene benutzerdefinierte Feldergruppe
 * [Erstellen einer benutzerdefinierten Feldgruppe](../ui/resources/field-groups.md#create)
 * [Erstellen eines benutzerdefinierten Datentyps](../ui/resources/data-types.md#create)
 
-<!-- (To include once features are available)
+<!-- 
+(To include once features are available)
 * Marking fields as sensitive
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion
