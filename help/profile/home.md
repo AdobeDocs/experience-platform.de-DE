@@ -2,7 +2,7 @@
 title: Übersicht zum Echtzeit-Kundenprofil
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 90%
@@ -27,10 +27,10 @@ Das nachfolgende Diagramm zeigt die Zusammenhänge zwischen dem Echtzeit-Kundenp
 
 Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der sogenannten **primären Entität**, und verschiedenen unterstützenden Entitäten. Im Kontext von Experience Platform ist die primäre Entität normalerweise eine **Profilentität**, die sich aus Merkmalen, Verhaltensweisen und Zielgruppenzugehörigkeiten einer einzelnen Person zusammensetzt. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
 
-- **Dimensionsentität**: Die Entität, die zur Vereinfachung des Datenmodellierungsprozesses für Informationen verwendet wird, die über Ereignisse oder Profildatensätze hinweg freigegeben werden. Dies wird auch als Lookup-Entität oder Klassifizierungsentität bezeichnet.
+- **Dimensionsentität**: Die Entität, die zur Vereinfachung des Datenmodellierungsprozesses für Informationen verwendet wird, die über Ereignisse oder Profileinträge hinweg freigegeben werden. Dies wird auch als Lookup-Entität oder Klassifizierungsentität bezeichnet.
 - **B2B-Entität**: Entitäten, die die Beziehung des Profils zu B2B-Konten und Opportunities beschreiben.
 
-![Ein Diagramm, das die Zusammensetzung der Profilentität erklärt.](./images/profile-overview/profile-entity-composition.png)
+![Ein Diagramm, das die Komposition der Profilentität erklärt.](./images/profile-overview/profile-entity-composition.png)
 
 >[!IMPORTANT]
 >
@@ -57,15 +57,15 @@ Die Benutzeroberfläche von Experience Platform bietet ein Dashboard, mit dem Si
 
 ### Profilfragmente im Vergleich zu zusammengeführten Profilen {#profile-fragments-vs-merged-profiles}
 
-Jedes einzelne Kundenprofil besteht aus mehreren Profilfragmenten, die zu einer einzigen Ansicht dieses Kunden zusammengefügt wurden. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Experience Platform aufgenommen werden, werden sie zusammengeführt, sodass ein einziges Profil für diesen Kunden entsteht.
+Jedes einzelne Kundenprofil besteht aus mehreren Profilfragmenten, die zu einer einzigen Ansicht dieses Kunden zusammengeführt wurden. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Experience Platform aufgenommen werden, werden sie zusammengeführt, sodass ein einziges Profil für diesen Kunden entsteht.
 
-Mit anderen Worten: Profilfragmente stellen eine eindeutige primäre Identität und die entsprechenden [Datensätze](#record-data) oder [Ereignisdaten](#time-series-events) für diese ID in einem bestimmten Datensatz dar.
+Mit anderen Worten: Profilfragmente stellen eine eindeutige primäre Identität und die entsprechenden [Einträge](#record-data) oder [Ereignisdaten](#time-series-events) für diese ID in einem bestimmten Datensatz dar.
 
 Wenn die Daten aus mehreren Datensätzen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die [Zusammenführungsrichtlinie](#merge-policies), welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen. Daher ist die Gesamtzahl der Profilfragmente innerhalb von Experience Platform wahrscheinlich höher als die Gesamtzahl der zusammengeführten Profile, da jedes Profil in der Regel aus mehreren Fragmenten aus mehreren Datensätzen besteht.
 
-### Daten aufzeichnen {#record-data}
+### Eintragsdaten {#record-data}
 
-Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson, die aus vielen Attributen besteht (auch als Datensatzdaten bezeichnet). So kann etwa ein Produktprofil eine SKU und eine Beschreibung enthalten, während in einem Personenprofil Informationen wie Vorname, Nachname und E-Mail-Adresse erfasst sind. Mit [!DNL Experience Platform] können Sie Profile so anpassen, dass die für Ihr Unternehmen relevanten Daten verwendet werden. Die Standardklasse [!DNL Experience Data Model] (XDM) [!DNL XDM Individual Profile] ist die bevorzugte Klasse für die Erstellung eines Schemas zur Beschreibung von Kundendatensatzdaten und liefert eine Vielzahl von für die Interaktionen zwischen Experience Platform-Services essenziellen Daten. Lesen Sie zum Einstieg in die Arbeit mit Schemata in [!DNL Experience Platform] zunächst die [Übersicht über das XDM-System](../xdm/home.md) durch.
+Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson, die aus vielen Attributen besteht (auch als Eintragsdaten bezeichnet). So kann etwa ein Produktprofil eine SKU und eine Beschreibung enthalten, während in einem Personenprofil Informationen wie Vorname, Nachname und E-Mail-Adresse erfasst sind. Mit [!DNL Experience Platform] können Sie Profile so anpassen, dass die für Ihr Unternehmen relevanten Daten verwendet werden. Die Standardklasse [!DNL Experience Data Model] (XDM) [!DNL XDM Individual Profile] ist die bevorzugte Klasse für die Erstellung eines Schemas zur Beschreibung von Kundendatensatzdaten und liefert eine Vielzahl von für die Interaktionen zwischen Experience Platform-Services essenziellen Daten. Lesen Sie zum Einstieg in die Arbeit mit Schemata in [!DNL Experience Platform] zunächst die [Übersicht über das XDM-System](../xdm/home.md) durch.
 
 ### Zeitreihen-Ereignisse {#time-series-events}
 
@@ -89,25 +89,27 @@ Eines der wichtigsten Merkmale des [!DNL Real-Time Customer Profile] ist seine F
 
 Weitere Informationen zu Vereinigungsschemata, einschließlich dem Zugriff auf Vereinigungsschemata in der Benutzeroberfläche, finden Sie im [Handbuch zur Benutzeroberfläche der Vereinigungsschemata](ui/union-schema.md).
 
-<!-- ### (Alpha) Computed attributes
+<!--
+### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). 
+-->
 
 ## Profile und Zielgruppen
 
 Der [!DNL Segmentation Service] von Adobe Experience Platform liefert die Zielgruppen, die für die Bereitstellung von Erlebnissen für Ihre individuellen Kundinnen und Kunden benötigt werden. Wird eine solches Zielgruppe erstellt, wird die ID dieser Zielgruppe zur Liste der Zielgruppenmitglieder für alle qualifizierten Profile hinzugefügt. Segmentregeln werden mithilfe von RESTful-APIs und der Benutzeroberfläche von Segment Builder erstellt und auf die Daten des [!DNL Real-Time Customer Profile] angewendet. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die [Segmentation Service – Übersicht](../segmentation/home.md).
 
-### Streaming-Erfassung und Streaming-Segmentierung
+### Streaming-Aufnahme und Streaming-Segmentierung
 
-Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Erfassung bezeichnet. Bei der Aufnahme von Profil- und Zeitreihendaten entscheidet das [!DNL Real-Time Customer Profile] automatisch, ob diese Daten durch einen fortlaufenden Prozess, die sogenannte Streaming-Segmentierung, in die Zielgruppen eingeschlossen oder von ihnen ausgeschlossen werden, bevor sie mit den vorhandenen Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen. Im Verlauf der Datenaufnahme wird außerdem validiert, ob die Daten ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Weitere Informationen dazu, welche Validierungen bei der Datenaufnahme vorgenommen werden, finden Sie in der Übersicht über die Datenaufnahme unter [Datenqualität](../ingestion/quality/overview.md).
+Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Aufnahme bezeichnet. Bei der Aufnahme von Profil- und Zeitreihendaten entscheidet das [!DNL Real-Time Customer Profile] automatisch, ob diese Daten durch einen fortlaufenden Prozess, die sogenannte Streaming-Segmentierung, in die Zielgruppen eingeschlossen oder von ihnen ausgeschlossen werden, bevor sie mit den vorhandenen Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen. Im Verlauf der Datenaufnahme wird außerdem validiert, ob die Daten ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Weitere Informationen dazu, welche Validierungen bei der Datenaufnahme vorgenommen werden, finden Sie in der Übersicht über die Datenaufnahme unter [Datenqualität](../ingestion/quality/overview.md).
 
 ## Aufnehmen von Daten in [!DNL Profile]
 
-[!DNL Experience Platform] kann so konfiguriert werden, dass Ihre Datensatz- und Zeitreihendaten an das [!DNL Profile] gesendet werden, und unterstützt die Aufnahme im Echtzeit-Streaming sowie per Batch. Weiterführende Informationen dazu, wie Sie [dem Echtzeit-Kundenprofil Daten hinzufügen](tutorials/add-profile-data.md), finden Sie im entsprechenden Tutorial.
+[!DNL Experience Platform] kann so konfiguriert werden, dass Ihre Eintrags- und Zeitreihendaten an das [!DNL Profile] gesendet werden, und unterstützt die Aufnahme im Echtzeit-Streaming sowie per Batch. Weiterführende Informationen dazu, wie Sie [dem Echtzeit-Kundenprofil Daten hinzufügen](tutorials/add-profile-data.md), finden Sie im entsprechenden Tutorial.
 
 >[!NOTE]
 >
@@ -115,11 +117,11 @@ Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Erfassung bezeich
 
 ### Metriken zur Aufnahme von Profilen
 
-Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adobe Experience Platform. Zusätzlich zu den in verfügbaren Nutzungsstatistiken und Performance-Indikatoren von [!DNL Experience Platform] für verschiedene [!DNL Experience Platform]-Funktionalitäten können Sie verschiedene auf das Profil bezogene Metriken ermitteln, die Ihnen Aufschluss über die Rate eingehender Anfragen, erfolgreicher Datenaufnahmen, Größen der aufgenommenen Datensätze und mehr geben. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über die Observability Insights-API](../observability/api/overview.md). Eine vollständige Liste der Echtzeit-Kundenprofil-Metriken finden Sie in der Dokumentation zu [verfügbaren Metriken](../observability/api/metrics.md#available-metrics).
+Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adobe Experience Platform. Zusätzlich zu den in verfügbaren Nutzungsstatistiken und Performance-Indikatoren von [!DNL Experience Platform] für verschiedene [!DNL Experience Platform]-Funktionalitäten können Sie verschiedene auf das Profil bezogene Metriken ermitteln, die Ihnen Aufschluss über die Rate eingehender Anfragen, erfolgreicher Datenaufnahmen, Größen der aufgenommenen Einträge und mehr geben. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über die Observability Insights-API](../observability/api/overview.md). Eine vollständige Liste der Echtzeit-Kundenprofil-Metriken finden Sie in der Dokumentation zu [verfügbaren Metriken](../observability/api/metrics.md#available-metrics).
 
 ## Aktualisieren der Profilspeicherdaten
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../catalog/datasets/enable-upsert.md).
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Einträge korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../catalog/datasets/enable-upsert.md).
 
 ## Data Governance und [!DNL Privacy]
 
