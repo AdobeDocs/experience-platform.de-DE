@@ -2,7 +2,7 @@
 title: Konfigurationshandbuch für Identitätsdiagramm-Verknüpfungsregeln
 description: Erfahren Sie mehr über die verschiedenen Implementierungstypen, die Sie mit Regeln für die Verknüpfung von Identitätsdiagrammen konfigurieren können.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 8%
@@ -240,7 +240,7 @@ Sie nehmen sowohl eine ungehashte (offline) CRMID als auch eine gehashte (online
 Konfigurieren Sie die folgenden Einstellungen in der Benutzeroberfläche zur Diagrammsimulation, bevor Sie Ihr Diagramm simulieren.
 
 | Anzeigename | Identitätssymbol | Identitätstyp | Nur einmal im Diagramm | Namespace-Priorität |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
 | ECID | ECID | COOKIE | | 3 |
@@ -281,6 +281,7 @@ CRMID: Jane, CRMIDhash: aaaa
 ![Ein freigegebenes Gerätediagramm mit einem Fehler im Hash-Prozess, der zu einer nicht eindeutigen gehashten CRMID führt.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
+
 <!-- 
 ### Use case: You are using Real-Time CDP and Adobe Commerce
 
@@ -339,7 +340,8 @@ Email: jane@g, ECID: 111
 
 ![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
->[!ENDTABS] -->
+>[!ENDTABS] 
+-->
 
 ### Anwendungsfall: Ihre Daten enthalten drei eindeutige Namespaces
 
