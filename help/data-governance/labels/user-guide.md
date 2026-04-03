@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verwalten von Datennutzungs-Labels in der Benutzeroberfläche
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungs-Labels in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 71%
@@ -36,7 +36,7 @@ Sie können Labels direkt zu einem Schema oder zu Feldern innerhalb dieses Schem
 >
 >![Das Dialogfeld „Verletzung der Data Governance-Richtlinie erkannt“ mit Hervorhebung der Zusammenfassung der Verletzung und des Diagramms der Datenherkunft.](../images/labels/policy-violation-dialog.png)
 >
->Weitere [&#x200B; zu Richtlinienverletzungen finden Sie in der Dokumentation &#x200B;](../enforcement/auto-enforcement.md#data-usage-violation)Verletzung von Datennutzungsrichtlinien“.
+>Weitere [ zu Richtlinienverletzungen finden Sie in der Dokumentation ](../enforcement/auto-enforcement.md#data-usage-violation)Verletzung von Datennutzungsrichtlinien“.
 
 Zum Verwalten der Datennutzungs-Labels auf Schemaebene müssen Sie ein vorhandenes Schema auswählen oder ein neues erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Schemas]** aus, um den **[!UICONTROL Schemas]** Workspace zu öffnen. Auf dieser Seite werden alle erstellten Schemata, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Schema angezeigt.
 
@@ -89,7 +89,8 @@ Auf Datensatzebene hinzugefügte Labels weisen neben ihrer Karte ein „x“ auf
 
 <!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
-<!-- To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
+<!-- 
+To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
 
 ![The Browse tab of the Datasets workspace with Datasets highlighted in the left sidebar.](../images/labels/dataset-navigation.png)
 
@@ -97,7 +98,8 @@ Next, select the **[!UICONTROL Data Governance]** tab to show the labels that ha
 
 ![Dataset Labels inherited by fields](../images/labels/dataset-labels-applied.png)
 
-The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. -->
+The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. 
+-->
 
 <!--Beleive can cut above here  -->
 
@@ -105,9 +107,11 @@ Der Umschalter **[!UICONTROL Show Inherited Labels]** ist standardmäßig aktivi
 
 ![Die Registerkarte „Data Governance“ des Arbeitsbereichs „Datensätze“ mit hervorgehobenem Umschalter „Übernommene Kennzeichnung anzeigen“.](../images/labels/inherited-labels.png)
 
-<!-- Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
+<!-- 
+Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
 
-![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) -->
+![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) 
+-->
 
 >[!NOTE]
 >
@@ -150,10 +154,12 @@ Nachdem Sie Datennutzungs-Labels auf Datensatz- und Feldebene hinzugefügt haben
 
 Sie können jetzt auch Datennutzungsrichtlinien auf Basis der von Ihnen angewendeten Labels definieren. Weitere Informationen finden Sie unter [Datennutzungsrichtlinien – Übersicht](../policies/overview.md).
 
-<!-- The workflow of this video is now outdated. This can be enabled once the video has been updated
+<!-- 
+The workflow of this video is now outdated. This can be enabled once the video has been updated
 
 ## Additional resources
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422789?captions=ger&quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) 
+-->
