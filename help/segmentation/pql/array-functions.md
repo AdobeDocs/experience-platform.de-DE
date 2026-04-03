@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Funktionen für Arrays, Listen und Sets in PQL
 description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen erleichtern.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 57%
@@ -108,7 +108,7 @@ Die folgende PQL-Abfrage definiert Personen, die alle ihrer Lieblingsstädte bes
 person.favoriteCities.subsetOf(person.visitedCities)
 ```
 
-## Obermenge
+## Übergeordnete Gruppe von
 
 Mit der `supersetOf`-Funktion wird bestimmt, ob ein bestimmtes Array (Array A) eine Obermenge eines anderen Arrays (Array B) ist. Mit anderen Worten: Array A enthält alle Elemente in Array B als Boolescher Wert.
 
@@ -126,7 +126,7 @@ Die folgende PQL-Abfrage definiert Personen, die mindestens einmal Sushi und min
 person.eatenFoods.supersetOf(["sushi", "pizza"])
 ```
 
-## Enthält
+## Umfasst
 
 Mit der Funktion `includes` wird bestimmt, ob ein Array oder eine Liste ein bestimmtes Element als boolesch enthält.
 
@@ -144,7 +144,7 @@ Die folgende PQL-Abfrage definiert Personen, zu deren Lieblingsfarben Rot gehör
 person.favoriteColors.includes("red")
 ```
 
-## Verschieden
+## Eindeutig
 
 Die Funktion `distinct` wird verwendet, um doppelte Werte aus einem Array oder einer Liste als Array zu entfernen.
 
@@ -261,7 +261,7 @@ Die Funktion `bottomN` wird verwendet, um die letzten `N` Elemente in einem Arra
 ```
 
 | Argument | Beschreibung |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{ARRAY}` | Das zu sortierende Array oder die zu sortierende Liste. |
 | `{VALUE}` | Die Eigenschaft, in der das Array oder die Liste sortiert werden soll. |
 | `{AMOUNT}` | Die Zahl der zurückzugebenden Elemente. |
