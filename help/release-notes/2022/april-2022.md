@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise April 2022
 description: Versionshinweise April 2022 für Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2679'
+source-wordcount: '2556'
 ht-degree: 92%
 
 ---
@@ -36,18 +36,18 @@ Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboa
 
 | Widget | Dashboard | Beschreibung |
 | ------ | --------- | ----------- |
-| [!UICONTROL Trend hinzugefügter Profile] | Profile | Dieses Widget verwendet ein Liniendiagramm, um die Gesamtzahl der zusammengeführten Profile zu veranschaulichen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. |
-| [!UICONTROL Zielgruppen, die einem Zielstatus zugeordnet sind] | Profile | Dieses Widget zeigt in einer einzigen Metrik die Gesamtzahl der zugeordneten und nicht zugeordneten Zielgruppen und veranschaulicht in einem Doughnut-Diagramm den proportionalen Unterschied zwischen ihren Summen. |
-| [!UICONTROL Zielgruppengröße] | Profile | Dieses Widget bietet eine zweispaltige Tabelle, die bis zu 20 Segmente und die Gesamtzahl der in den einzelnen Segmenten enthaltenen Zielgruppen auflistet. Die Liste hängt von der angewendeten Zusammenführungsrichtlinie ab und ist entsprechend der Gesamtzahl der Zielgruppen von der größten bis zur kleinsten sortiert. |
-| [!UICONTROL Trend der Profilanzahl] | Profile | Dieses Widget verwendet ein Liniendiagramm, um den Trend der Gesamtanzahl der im System enthaltenen Profile im Zeitverlauf zu veranschaulichen. Die Daten können über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
-| [!UICONTROL Einzelne Identitätsprofile nach Identität] | Profile | Dieses Widget verwendet ein Balkendiagramm, um die Gesamtanzahl der Profile zu veranschaulichen, die mit nur einer eindeutigen Kennung gekennzeichnet sind. Das Widget unterstützt bis zu fünf der am häufigsten vorkommenden Identitäten. |
-| [!UICONTROL Zielstatus] | Ziele | Dieses Widget zeigt die Gesamtzahl der aktivierten Ziele als einzelne Metrik an und veranschaulicht in einem Doughnut-Diagramm den proportionalen Unterschied zwischen aktivierten und deaktivierten Zielen. |
-| [!UICONTROL Aktive Ziele nach Zielplattform] | Ziele | Dieses Widget verwendet eine zweispaltige Tabelle, um eine Liste der aktiven Zielplattformen und die Gesamtzahl der aktiven Ziele für jede Zielplattform anzuzeigen. |
-| [!UICONTROL Aktivierte Zielgruppen für alle Ziele] | Ziele | Dieses Widget gibt in einer einzigen Metrik die Gesamtanzahl der Zielgruppen an, die für alle Ziele aktiviert sind. |
-| [!UICONTROL Zielgruppenaktivierungs-Reihenfolge] | Segmente | Dieses Widget bietet eine dreispaltige Tabelle, in der der Zielname, die Plattform und das Aktivierungsdatum der Zielgruppe aufgelistet sind. |
-| [!UICONTROL Trend der Zielgruppengröße] | Segmente | Dieses Widget bietet eine grafische Darstellung der Gesamtanzahl der Profile, die die Kriterien einer beliebigen Segmentdefinition über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten erfüllen. |
-| [!UICONTROL Trend bei der Änderung der Zielgruppengröße] | Segmente | Dieses Widget bietet ein Liniendiagramm, das die Differenz der Gesamtzahl der Profile anzeigt, die sich im Zeitraum zwischen den jüngsten täglichen Snapshots für ein bestimmtes Segment qualifiziert haben. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
-| [!UICONTROL Trend der Zielgruppengröße nach Identität] | Segmente | Dieses Widget veranschaulicht den Trend der Zielgruppengröße für ein bestimmtes Segment basierend auf einem ausgewählten Identitätstyp. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
+| [!UICONTROL Profiles added trend] | Profile | Dieses Widget verwendet ein Liniendiagramm, um die Gesamtzahl der zusammengeführten Profile zu veranschaulichen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. |
+| [!UICONTROL Audiences mapped to destination status] | Profile | Dieses Widget zeigt in einer einzigen Metrik die Gesamtzahl der zugeordneten und nicht zugeordneten Zielgruppen und veranschaulicht in einem Doughnut-Diagramm den proportionalen Unterschied zwischen ihren Summen. |
+| [!UICONTROL Audiences size] | Profile | Dieses Widget bietet eine zweispaltige Tabelle, die bis zu 20 Segmente und die Gesamtzahl der in den einzelnen Segmenten enthaltenen Zielgruppen auflistet. Die Liste hängt von der angewendeten Zusammenführungsrichtlinie ab und ist entsprechend der Gesamtzahl der Zielgruppen von der größten bis zur kleinsten sortiert. |
+| [!UICONTROL Profile count trend] | Profile | Dieses Widget verwendet ein Liniendiagramm, um den Trend der Gesamtanzahl der im System enthaltenen Profile im Zeitverlauf zu veranschaulichen. Die Daten können über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
+| [!UICONTROL Single identity profiles by identity] | Profile | Dieses Widget verwendet ein Balkendiagramm, um die Gesamtanzahl der Profile zu veranschaulichen, die mit nur einer eindeutigen Kennung gekennzeichnet sind. Das Widget unterstützt bis zu fünf der am häufigsten vorkommenden Identitäten. |
+| [!UICONTROL Destination status] | Ziele | Dieses Widget zeigt die Gesamtzahl der aktivierten Ziele als einzelne Metrik an und veranschaulicht in einem Doughnut-Diagramm den proportionalen Unterschied zwischen aktivierten und deaktivierten Zielen. |
+| [!UICONTROL Active destinations by destination platform] | Ziele | Dieses Widget verwendet eine zweispaltige Tabelle, um eine Liste der aktiven Zielplattformen und die Gesamtzahl der aktiven Ziele für jede Zielplattform anzuzeigen. |
+| [!UICONTROL Activated audiences across all destinations] | Ziele | Dieses Widget gibt in einer einzigen Metrik die Gesamtanzahl der Zielgruppen an, die für alle Ziele aktiviert sind. |
+| [!UICONTROL Audience activation order] | Segmente | Dieses Widget bietet eine dreispaltige Tabelle, in der der Zielname, die Plattform und das Aktivierungsdatum der Zielgruppe aufgelistet sind. |
+| [!UICONTROL Audience size trend] | Segmente | Dieses Widget bietet eine grafische Darstellung der Gesamtanzahl der Profile, die die Kriterien einer beliebigen Segmentdefinition über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten erfüllen. |
+| [!UICONTROL Audience size change trend] | Segmente | Dieses Widget bietet ein Liniendiagramm, das die Differenz der Gesamtzahl der Profile anzeigt, die sich im Zeitraum zwischen den jüngsten täglichen Snapshots für ein bestimmtes Segment qualifiziert haben. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
+| [!UICONTROL Audience size trend by identity] | Segmente | Dieses Widget veranschaulicht den Trend der Zielgruppengröße für ein bestimmtes Segment basierend auf einem ausgewählten Identitätstyp. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
 
 **Neue Funktionen** {#new-features}
 
@@ -69,7 +69,7 @@ Datenflüsse sind eine Darstellung von Aufträgen, die Daten durch Experience Pl
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Segment-Dashboard | Sie können jetzt das Monitoring-Dashboard verwenden, um Datenflüsse für Segmente zu überwachen. Weitere Informationen finden Sie in der Anleitung zur [Überwachung von Segmenten in der Benutzeroberfläche](../../dataflows/ui/monitor-audiences.md) |
+| Segment-Dashboard | Sie können jetzt das Monitoring-Dashboard verwenden, um Datenflüsse für Segmente zu überwachen. Weitere Informationen finden Sie in der Anleitung für das [Monitoring von Segmenten in der Benutzeroberfläche](../../dataflows/ui/monitor-audiences.md) |
 
 Weitere allgemeine Informationen zu Datenflüssen finden Sie in der [Übersicht zu Datenflüssen](../../dataflows/home.md). Weitere Informationen zur Segmentierung finden Sie unter [Segmentierung – Übersicht](../../segmentation/home.md).
 
@@ -132,24 +132,24 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Globales Schema | [[!UICONTROL Datenhygiene-Anfrage]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Erfasst die Details einer Datenbereinigungsanfrage zum Löschen oder Ändern von Datensätzen in einem bestimmten Datensatz oder einer bestimmten Sandbox. |
-| Deskriptor | [[!UICONTROL Zeitreihen-Granularitätsdeskriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Gibt die Granularität von Zeitreihen- und Zusammenfassungsdaten an. Bei Anwendung auf ein Schema ist das Schemafeld `timestamp` der erste Zeitstempel in einem Zeitraum dieser Granularität. |
-| Klasse | [[!UICONTROL Zusammengefasste XDM-Metriken]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Bietet vorab zusammengefasste Metriken mit Gruppierungsdimensionen, z. B. die Ergebnisse von SQL SELECT mit GROUP BY. |
-| Feldergruppe | [[!UICONTROL Zuordnung der Ergebnisse der Einverständnisrichtlinien-Auswertung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Erfasst das Ergebnis der Einverständnisrichtlinien-Auswertung für eine Person. |
-| Feldergruppe | [[!UICONTROL Site-Suche]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Erfasst alle Informationen zur Site-Suche wie Suchanfragen, Filterung und Sortierung. |
-| Feldergruppe | [[!UICONTROL Zusammenführen von Leads]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Erfasst die Details eines Ereignisses, bei dem zwei oder mehr Leads zusammengeführt werden. |
-| Feldergruppe | [[!UICONTROL E-Mail gesendet]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Erfasst die Details eines Ereignisses, bei dem eine E-Mail an einen Empfänger gesendet wird. |
-| Feldergruppe | [[!UICONTROL Zusammenführen von Feldern]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | Erfasst Werte, die vom Identitätszusammenfügungsprozess für ein Ereignis berechnet werden. |
-| Feldergruppe | [[!UICONTROL Sekundäres Empfängerdetail für Prüfung]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Eine Adobe Journey Optimizer-Feldergruppe, die sekundäre Empfängerdetails für eine Prüfung erfasst. |
-| Feldergruppe | [[!UICONTROL Details zu Firmenkonto-Person-Beziehungen in XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Erfasst Details zu einer Konto-Person-Beziehung. |
-| Feldergruppe | [[!UICONTROL Details zur Konto-Person-Beziehung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Erfasst Details zu einer Konto-Person-Beziehung. |
-| Datentyp | [[!UICONTROL Warenkorb]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | Erfasst Informationen zu einem E-Commerce-Warenkorb. |
-| Datentyp | [[!UICONTROL Lieferung]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Erfasst Lieferinformationen für ein oder mehrere Produkte. |
-| Datentyp | [[!UICONTROL Site-Suche]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | Erfasst Informationen zur Site-Suchaktivität. |
-| Erweiterung (Workfront) | [[!UICONTROL Attribute operativer Aufgaben]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | Erfasst Details zu einer operativen Aufgabe. |
-| Erweiterung (Workfront) | [[!UICONTROL Arbeitsportfolio-Attribute]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Erfasst Details zu einem Arbeitsportfolio. |
-| Erweiterung (Workfront) | [[!UICONTROL Arbeitsprogramm-Attribute]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Erfasst Details zu einem Arbeitsprogramm. |
-| Erweiterung (Workfront) | [[!UICONTROL Arbeitsprojekt-Attribute]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Erfasst Details zu einem Arbeitsprojekt. |
+| Globales Schema | [[!UICONTROL Data Hygiene Operation Request]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Erfasst die Details einer Datenbereinigungsanfrage zum Löschen oder Ändern von Einträgen in einem bestimmten Datensatz oder einer bestimmten Sandbox. |
+| Deskriptor | [[!UICONTROL Time-series Granularity Descriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Gibt die Granularität von Zeitreihen- und Zusammenfassungsdaten an. Bei Anwendung auf ein Schema ist das Schemafeld `timestamp` der erste Zeitstempel in einem Zeitraum dieser Granularität. |
+| Klasse | [[!UICONTROL XDM Summary Metrics]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Bietet vorab zusammengefasste Metriken mit Gruppierungsdimensionen, z. B. die Ergebnisse von SQL SELECT mit GROUP BY. |
+| Feldergruppe | [[!UICONTROL Consent policies evaluation results map]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Erfasst das Ergebnis der Einverständnisrichtlinien-Auswertung für eine Person. |
+| Feldergruppe | [[!UICONTROL Site Search]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Erfasst alle Informationen zur Site-Suche wie Suchanfragen, Filterung und Sortierung. |
+| Feldergruppe | [[!UICONTROL Merge Leads]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Erfasst die Details eines Ereignisses, bei dem zwei oder mehr Leads zusammengeführt werden. |
+| Feldergruppe | [[!UICONTROL Email Sent]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Erfasst die Details eines Ereignisses, bei dem eine E-Mail an einen Empfänger gesendet wird. |
+| Feldergruppe | [[!UICONTROL Stitching Fields]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | Erfasst Werte, die vom Identitätszusammenfügungsprozess für ein Ereignis berechnet werden. |
+| Feldergruppe | [[!UICONTROL Secondary Recipient Detail For Audit]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Eine Adobe Journey Optimizer-Feldergruppe, die sekundäre Empfängerdetails für eine Prüfung erfasst. |
+| Feldergruppe | [[!UICONTROL XDM Business Account Person Relation Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Erfasst Details zu einer Konto-Person-Beziehung. |
+| Feldergruppe | [[!UICONTROL Account Person Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Erfasst Details zu einer Konto-Person-Beziehung. |
+| Datentyp | [[!UICONTROL Cart]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | Erfasst Informationen zu einem E-Commerce-Warenkorb. |
+| Datentyp | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Erfasst Versandinformationen für ein oder mehrere Produkte. |
+| Datentyp | [[!UICONTROL Site Search]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | Erfasst Informationen zur Site-Suchaktivität. |
+| Erweiterung (Workfront) | [[!UICONTROL Operational Task Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | Erfasst Details zu einer operativen Aufgabe. |
+| Erweiterung (Workfront) | [[!UICONTROL Work Portfolio Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Erfasst Details zu einem Arbeitsportfolio. |
+| Erweiterung (Workfront) | [[!UICONTROL Work Program Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Erfasst Details zu einem Arbeitsprogramm. |
+| Erweiterung (Workfront) | [[!UICONTROL Work Project Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Erfasst Details zu einem Arbeitsprojekt. |
 
 {style="table-layout:auto"}
 
@@ -157,15 +157,15 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung der Aktualisierung |
 | --- | --- | --- |
-| Globales Schema | [[!UICONTROL Ziele]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Neue Enum-Werte für `destinationCategory`. |
-| Deskriptor | [[!UICONTROL Anzeigenamen-Deskriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | Die Entfernung empfohlener Werte (`meta:enum`), die nicht in Standardfeldern benötigt werden, wird nun unterstützt. |
-| Feldergruppe | [[!UICONTROL Benutzeranmeldeprozess]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | Das Feld `createProfile` wurde hinzugefügt. |
+| Globales Schema | [[!UICONTROL Destinations]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Neue Aufzählungswerte für `destinationCategory`. |
+| Deskriptor | [[!UICONTROL Friendly Name Descriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | Die Entfernung empfohlener Werte (`meta:enum`), die nicht in Standardfeldern benötigt werden, wird nun unterstützt. |
+| Feldergruppe | [[!UICONTROL User Login Process]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | Das Feld `createProfile` wurde hinzugefügt. |
 | Datentyp | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Mehrere Felder für den Warenkorb wurden hinzugefügt. |
-| Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Neue Felder für ausgewählte Optionen und Rabattbetrag wurden hinzugefügt. |
-| Erweiterung (Intelligent Services) | [[!UICONTROL Intelligent Services-JourneyAI-Versandzeitoptimierung]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Optimierung des Speicherformats für Versandzeit-Scores. |
-| Erweiterung (Workfront) | [[!UICONTROL Workfront-Änderungsereignis]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Mehrere Felder wurden durch ein `workfront:customData`-Feld ersetzt, das als benutzerdefiniertes Formularfeld verwendet werden kann. |
-| Erweiterung (Workfront) | [[!UICONTROL Arbeitsaufgaben-Attribute]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Mehrere Felder wurden hinzugefügt. |
-| Erweiterung (Workfront) | [[!UICONTROL Arbeitsobjekt]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Neue Felder für den übergeordneten Objekttyp und benutzerdefinierte Formularfelder. |
+| Datentyp | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Neue Felder für ausgewählte Optionen und Rabattbetrag wurden hinzugefügt. |
+| Erweiterung (Intelligent Services) | [[!UICONTROL Intelligent Services JourneyAI Send Time Optimization]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Optimierung des Speicherformats für Versandzeit-Scores. |
+| Erweiterung (Workfront) | [[!UICONTROL Workfront Change Event]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Mehrere Felder wurden durch ein `workfront:customData`-Feld ersetzt, das als benutzerdefiniertes Formularfeld verwendet werden kann. |
+| Erweiterung (Workfront) | [[!UICONTROL Work Task Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Mehrere Felder wurden hinzugefügt. |
+| Erweiterung (Workfront) | [[!UICONTROL Work Object]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Neue Felder für den übergeordneten Objekttyp und benutzerdefinierte Formularfelder. |
 
 {style="table-layout:auto"}
 
@@ -183,7 +183,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Attributions-KI unterstützt die folgenden Schemata: Adobe Analytics, Experience Event, Consumer Experience Event. Weitere Informationen zur Unterstützung für mehrere Datensätze in Attributions-KI finden Sie im [Benutzerhandbuch für Attributions-KI](../../intelligent-services/attribution-ai/user-guide.md). |
+| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Erlebnisereignis-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Attributions-KI unterstützt die folgenden Schemata: Adobe Analytics, Erlebnisereignis, Verbraucher-Erlebnisereignis. Weitere Informationen zur Unterstützung für mehrere Datensätze in Attributions-KI finden Sie im [Benutzerhandbuch für Attributions-KI](../../intelligent-services/attribution-ai/user-guide.md). |
 
 Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
 
@@ -195,7 +195,7 @@ Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in gro
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Kunden-KI unterstützt die folgenden Schemata: Adobe Analytics, Erlebnisereignis, Verbrauchererlebnisereignis und das Adobe Audience Manager-Schema. Weitere Informationen zur Unterstützung von mehreren Datensätzen in Kunden-KI finden Sie im [Benutzerhandbuch für Kunden-KI](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Erlebnisereignis-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Kunden-KI unterstützt die folgenden Schemata: Adobe Analytics, Erlebnisereignis, Verbrauchererlebnisereignis und das Adobe Audience Manager-Schema. Weitere Informationen zur Unterstützung von mehreren Datensätzen in Kunden-KI finden Sie im [Benutzerhandbuch für Kunden-KI](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Neue Modellauswertungsmetriken in Kunden-KI | Neue Gewinndiagramme in Kunden-KI ermöglichen es Marketing-Experten, die Gruppengröße für das Targeting anhand ihres Budgets und ihrer ROI-Ziele zu bestimmen. In neuen Steigerungsdiagrammen wird die Qualität des Modells gemessen, was eine bessere Sichtbarkeit der Steigerung ermöglicht, die verglichen mit zufälligem Targeting auftreten würde. Weitere Informationen finden Sie im Dokument [Einblicke gewinnen mit Kunden-KI](../../intelligent-services/customer-ai/user-guide/discover-insights.md). |
 
 Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
@@ -208,7 +208,7 @@ Real-Time CDP B2B Edition basiert auf Real-time Customer Data Platform (Real-Tim
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für die Funktion `isDeleted` | Alle [!DNL Marketo]-Datensätze außer `Activities` unterstützen jetzt die `isDeleted`-Zuordnung. Die neue Zuordnung wird automatisch zu Ihren vorhandenen B2B-Datenflüssen hinzugefügt. Sie können die `isDeleted`-Zuordnung verwenden, um gelöschte Datensätze herauszufiltern, sodass Ihre Daten im [!DNL Data Lake] mit Ihren Quelldaten übereinstimmen. Weitere Informationen zu `isDeleted` finden Sie in der [[!DNL Marketo] Anleitung zum Zuordnen von Feldern](../../sources/connectors/adobe-applications/mapping/marketo.md). |
+| Unterstützung für die Funktion `isDeleted` | Alle [!DNL Marketo]-Datensätze außer `Activities` unterstützen jetzt die `isDeleted`-Zuordnung. Die neue Zuordnung wird automatisch zu Ihren vorhandenen B2B-Datenflüssen hinzugefügt. Sie können die `isDeleted`-Zuordnung verwenden, um gelöschte Einträge herauszufiltern, sodass Ihre Daten im [!DNL Data Lake] mit Ihren Quelldaten übereinstimmen. Weitere Informationen zu `isDeleted` finden Sie in der [[!DNL Marketo] Anleitung zum Zuordnen von Feldern](../../sources/connectors/adobe-applications/mapping/marketo.md). |
 
 Weitere Informationen zu Real-time Customer Data Platform B2B Edition finden Sie in der [B2B-Übersicht](../../rtcdp/b2b-overview.md).
 
