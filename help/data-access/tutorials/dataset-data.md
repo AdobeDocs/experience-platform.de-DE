@@ -5,10 +5,10 @@ title: Anzeigen von Datensatzdaten mithilfe der Datenzugriffs-API
 type: Tutorial
 description: Erfahren Sie, wie Sie in einem Datensatz gespeicherte Daten mithilfe der Datenzugriffs-API in Adobe Experience Platform finden, darauf zugreifen und sie herunterladen können. In diesem Dokument werden einige der einzigartigen Funktionen der Datenzugriffs-API vorgestellt, wie Paging und partielle Downloads.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1365'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -18,7 +18,7 @@ In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mithilfe der [!DNL
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis darüber voraus, wie ein Datensatz erstellt und aufgefüllt wird. Weitere Informationen finden [&#x200B; im Tutorial &#x200B;](../../catalog/datasets/create.md) Datensatzerstellung .
+Dieses Tutorial setzt ein Grundverständnis darüber voraus, wie ein Datensatz erstellt und aufgefüllt wird. Weitere Informationen finden [ im Tutorial ](../../catalog/datasets/create.md) Datensatzerstellung .
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Experience Platform-APIs erfolgreich aufrufen zu können.
 
@@ -28,7 +28,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ &#x200B;](../../landing/api-authentication.md). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](../../landing/api-authentication.md). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -348,7 +348,7 @@ Je nachdem, ob die Datei-ID auf eine einzelne Datei oder ein Verzeichnis verweis
 ```
 
 | Eigenschaft | Beschreibung |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `data._links.self.href` | Die URL zum Herunterladen der zugehörigen Datei. |
 
 Diese Antwort gibt ein Verzeichnis mit zwei separaten Dateien mit den IDs `{FILE_ID_2}` und `{FILE_ID_3}` zurück. In diesem Szenario müssen Sie der URL jeder Datei folgen, um auf die Datei zuzugreifen.
@@ -443,7 +443,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | Eigenschaft | Beschreibung |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `Range: bytes=0-99` | Gibt den Bytebereich an, der heruntergeladen werden soll. Wenn dies nicht angegeben ist, lädt die API die gesamte Datei herunter. In diesem Beispiel werden die ersten 100 Byte heruntergeladen. |
 
 **Antwort**
