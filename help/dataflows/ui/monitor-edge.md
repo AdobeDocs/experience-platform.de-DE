@@ -1,13 +1,13 @@
 ---
 title: Überwachen der Edge-Segmentierung
 description: Erfahren Sie, wie Sie mit dem Monitoring-Dashboard den Durchsatz der Edge-Segmentierung beobachten können.
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+exl-id: 7abba7e8-1f2d-4a21-a93f-8bda7aa4d849
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 6%
 
 ---
-
 
 # Überwachen der Edge-Segmentierung
 
@@ -19,7 +19,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 * [Datenströme](../../datastreams/overview.md): Mit Datenströmen können Sie Experience Platform Edge Network mit Ihrem Datensatz verbinden.
 * [Kapazitäten](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform teilen Ihnen die Kapazitäten mit, ob Ihr Unternehmen eine Ihrer Leitplanken überschritten hat, und erhalten Informationen zur Behebung dieser Probleme.
-* [Edge-](../../segmentation/methods/edge-segmentation.md): Bei der Edge-Segmentierung werden Segmentdefinitionen in Adobe Experience Platform sofort ([&#x200B; Edge) ausgewertet](../../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+* [Edge-](../../segmentation/methods/edge-segmentation.md): Bei der Edge-Segmentierung werden Segmentdefinitionen in Adobe Experience Platform sofort ([ Edge) ausgewertet](../../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 ## Zugriff {#access}
 
