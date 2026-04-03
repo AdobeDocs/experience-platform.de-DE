@@ -3,7 +3,7 @@ title: API-Endpunkt für Zielgruppen
 description: Verwenden Sie den Zielgruppen-Endpunkt in der Segmentierungs-Service-API von Adobe Experience Platform, um Zielgruppen für Ihr Unternehmen programmgesteuert zu erstellen, zu verwalten und zu aktualisieren.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 6%
@@ -183,7 +183,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Zie
 ```
 
 | Eigenschaft | Zielgruppentyp | Beschreibung |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | Beide | Eine systemgenerierte schreibgeschützte Kennung für die Zielgruppe. |
 | `audienceId` | Beide | Wenn es sich bei der Zielgruppe um eine von Platform generierte Zielgruppe handelt, ist dies derselbe Wert wie die `id`. Wenn die Zielgruppe extern generiert wird, wird dieser Wert vom Client bereitgestellt. |
 | `schema` | Beide | Das Experience-Datenmodell (XDM)-Schema der Zielgruppe. |
@@ -246,7 +246,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | Eigenschaft | Beschreibung |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | Der Name der Zielgruppe. |
 | `description` | Eine Beschreibung der Zielgruppe. |
 | `type` | Ein Feld, das anzeigt, ob die Zielgruppe von Platform oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. Ein `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während ein `ExternalSegment` auf eine Zielgruppe verweist, die nicht in Platform generiert wurde. |
@@ -339,7 +339,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | Parameter | Beschreibung |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | Die ID der Zielgruppe, die Sie abrufen möchten. Beachten Sie, dass es sich hierbei um das `id` Feld handelt **nicht** das `audienceId`. |
 
 **Anfrage**
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | Eigenschaft | Beschreibung |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | Die ID der Zielgruppe. Für extern generierte Zielgruppen kann dieser Wert vom Benutzer bereitgestellt werden. |
 | `name` | Der Name der Zielgruppe. |
 | `namespace` | Der Namespace für die Zielgruppe. |
