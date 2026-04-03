@@ -2,16 +2,16 @@
 title: Adobe Experience Platform – Versionshinweise, Oktober 2023
 description: Versionshinweise von Oktober 2023 für Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1051'
 ht-degree: 36%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 25. Oktober 2023**
+**Veröffentlichungsdatum: Donnerstag, 25. Oktober 2023**
 
 Aktualisierungen vorhandener Funktionen in Experience Platform:
 
@@ -30,7 +30,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Nutzungsmetriken für Ziele | Dem Dashboard zur Lizenznutzung wurden neue Metriken hinzugefügt. Die Metriken **[!UICONTROL Audience Activation-]** und **[!UICONTROL Datenexportgröße]** bieten eine einfache Möglichkeit, zu verfolgen, wie viele Daten Sie aus Experience Platform in Bezug auf Ihre Lizenznutzungsberechtigungen exportiert haben. In der [Verfügbare Metriken](../../dashboards/guides/license-usage.md#available-metrics) finden Sie Beschreibungen zu diesen und anderen Lizenznutzungsmetriken. |
+| Nutzungsmetriken für Ziele | Dem Dashboard zur Lizenznutzung wurden neue Metriken hinzugefügt. Die **[!UICONTROL Audience Activation Size]**- und **[!UICONTROL Data Export Size]**-Metriken bieten eine praktische Möglichkeit, um zu verfolgen, wie viele Daten Sie aus Experience Platform in Bezug auf Ihre Lizenznutzungsberechtigungen exportiert haben. In der [Verfügbare Metriken](../../dashboards/guides/license-usage.md#available-metrics) finden Sie Beschreibungen zu diesen und anderen Lizenznutzungsmetriken. |
 
 {style="table-layout:auto"}
 
@@ -44,11 +44,11 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Erweiterungen | Verbesserung der [!DNL Meta] Conversions-API | Es gibt drei Verbesserungen bei der Erweiterung [Meta Conversions-API](/help/tags/extensions/server/meta/overview.md): <ul><li>Integration mit [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Ermöglicht die nahtlose Anmeldung, indem Sie Ihre Pixel-ID und Ihr Zugriffstoken für die Conversions-API-Integration mit Adobe freigeben.</li><li>Integration mit [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Ermöglicht das Bereitstellen von Werbung für Personen, die mit höherer Wahrscheinlichkeit eine gewünschte Aktion durchführen, und das Verknüpfen der Aktion mit den bereitgestellten Anzeigen.</li><li>Integration mit [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Ermöglicht die Übergabe der LiveRamp-Ramp-ID im CIP-Feld, sodass keine personenbezogenen Daten direkt mit Partnern oder Meta geteilt werden müssen. </li></ul> |
+| Erweiterungen | Verbesserung der [!DNL Meta] Conversions-API | Die Erweiterung der [Meta Conversions-API](/help/tags/extensions/server/meta/overview.md) wurde in drei Punkten verbessert: <ul><li>Integration mit [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Ermöglicht die nahtlose Anmeldung, indem Sie Ihre Pixel-ID und Ihr Zugriffstoken für die Conversions-API-Integration mit Adobe freigeben.</li><li>Integration mit [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Ermöglicht das Bereitstellen von Werbung für Personen, die mit höherer Wahrscheinlichkeit eine gewünschte Aktion durchführen, und das Verknüpfen der Aktion mit den bereitgestellten Anzeigen.</li><li>Integration mit [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Ermöglicht die Übergabe der LiveRamp-Ramp-ID im CIP-Feld, sodass keine personenbezogenen Daten direkt mit Partnern oder Meta geteilt werden müssen. </li></ul> |
 | Erweiterungen | [!DNL LinkedIn]-Konversions-API | Mit der [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md)-Erweiterung können Sie die Effektivität Ihrer LinkedIn-Marketing-Kampagnen bewerten, indem Sie Experience Platform-Ereignisdaten an LinkedIn weiterleiten. |
 | Geheimnis | OAuth 2-Geheimnis [!DNL LinkedIn] | Das [[!DNL LinkedIn] OAuth 2-Geheimnis](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) ermöglicht es Ihnen, Server-zu-Server-Interaktionen an [!DNL LinkedIn] in der Ereignisweiterleitung zu senden. |
-| Ereignisweiterleitung | Aktualisierung für Tags und Ereignisweiterleitung | Um die Leistung [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und [Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=de) in Experience Platform beizubehalten, werden nur die letzten erfolgreichen und nicht erfolgreichen Entwicklungs- und Staging-Builds beibehalten. Alle nicht mehr verwendeten Builds werden entfernt. Darüber hinaus wurden Drosselung und Ratenbegrenzung implementiert, um sicherzustellen, dass einige wenige starke API-Verwendungen die API-Leistung für andere nicht beeinträchtigen. |
-| Erweiterungen | Elemente, Regeln und Erweiterungen | [Elemente, Regeln und Erweiterungen](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=de) werden jetzt in der Bibliotheksausgabe sortiert, um mehr Konsistenz zwischen mehreren Builds und Bereitstellungen derselben Bibliothek sicherzustellen. |
+| Ereignisweiterleitung | Aktualisierung für Tags und Ereignisweiterleitung | Um die Leistung [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und [Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) in Experience Platform beizubehalten, werden nur die letzten erfolgreichen und nicht erfolgreichen Entwicklungs- und Staging-Builds beibehalten. Alle nicht mehr verwendeten Builds werden entfernt. Darüber hinaus wurden Drosselung und Ratenbegrenzung implementiert, um sicherzustellen, dass einige wenige starke API-Verwendungen die API-Leistung für andere nicht beeinträchtigen. |
+| Erweiterungen | Elemente, Regeln und Erweiterungen | [Elemente, Regeln und Erweiterungen](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) werden jetzt in der Bibliotheksausgabe sortiert, um mehr Konsistenz zwischen mehreren Builds und Bereitstellungen derselben Bibliothek sicherzustellen. |
 
 Weitere Informationen zur Datenerfassung finden Sie in der [Übersicht der Datenerfassungen](../../tags/home.md).
 
@@ -56,7 +56,7 @@ Weitere Informationen zur Datenerfassung finden Sie in der [Übersicht der Daten
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-**Neue oder aktualisierte Ziele** {#new-updated-destinations}
+**Neue oder aktualisierte Funktionen** {#new-updated-destinations}
 
 | Ziel | Neu oder aktualisiert | Beschreibung |
 | ----------- |----------------|----------- |
@@ -74,7 +74,7 @@ Weitere Informationen zur Datenerfassung finden Sie in der [Übersicht der Daten
 
 {style="table-layout:auto"}
 
-**Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
+**Fehlerbehebungen und Verbesserungen** {#destinations-fixes-and-enhancements}
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
