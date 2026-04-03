@@ -4,7 +4,7 @@ title: API-Endpunkte für Vorschauen und Schätzungen
 description: Bei der Entwicklung der Segmentdefinition können Sie die Tools Schätzung und Vorschau in Adobe Experience Platform verwenden, um Informationen auf Zusammenfassungsebene anzuzeigen und so sicherzustellen, dass Sie die erwartete Zielgruppe isolieren.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 11%
@@ -193,7 +193,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit detaillierten Inform
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `results` | Eine Liste der Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können mithilfe des Profilzugriffs-API[Endpunkts zum Nachschlagen der angegebenen Entitäten &#x200B;](../../profile/api/entities.md). |
+| `results` | Eine Liste der Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können mithilfe des Profilzugriffs-API[Endpunkts zum Nachschlagen der angegebenen Entitäten ](../../profile/api/entities.md). |
 
 +++
 
