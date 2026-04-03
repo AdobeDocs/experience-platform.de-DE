@@ -6,20 +6,20 @@ title: Fehlerbehebung bei der Kunden-KI
 description: Hier finden Sie Antworten auf häufige Fehler in der Kunden-KI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 31%
+source-wordcount: '1745'
+ht-degree: 26%
 
 ---
 
 # Fehlerbehebung bei der Kunden-KI
 
-Die Kunden-KI zeigt Fehler an, wenn Modell-Training, -bewertung und -konfiguration fehlschlagen. Im Abschnitt **[!UICONTROL Service-Instanzen]** wird in einer Spalte für **[!UICONTROL STATUS DES LETZTEN DURCHGANGS]** eine der folgenden Meldungen angezeigt: **[!UICONTROL Erfolg]**, **[!UICONTROL Problem mit Training]** und **[!UICONTROL Fehlgeschlagen]**.
+Die Kunden-KI zeigt Fehler an, wenn Modell-Training, -bewertung und -konfiguration fehlschlagen. Im **[!UICONTROL Service instances]** Abschnitt wird in einer Spalte für **[!UICONTROL LAST RUN STATUS]** eine der folgenden Meldungen angezeigt: **[!UICONTROL Success]**, **[!UICONTROL Training issue]** und **[!UICONTROL Failed]**.
 
 ![Status des letzten Durchgangs, der „Erfolg“, „Problem mit Training“ oder „Fehlgeschlagen“ anzeigt.](./images/errors/last-run-status.png)
 
-Falls **[!UICONTROL Fehlgeschlagen]** oder **[!UICONTROL Problem mit Training]** angezeigt wird, können Sie den Status des Durchgangs auswählen, um einen Seitenbereich zu öffnen. Im Seitenbereich sind der **[!UICONTROL Status des letzten Durchgangs]** und **[!UICONTROL Details des letzten Durchgangs]** einsehbar. Der Abschnitt **[!UICONTROL Details des letzten Durchgangs]** enthält Informationen darüber, warum der Durchgang fehlgeschlagen ist. Falls die Kunden-KI keine Details zu Ihrem Fehler bereitstellen kann, wenden Sie sich an den Support unter Angabe des angegebenen Fehler-Codes.
+Falls **[!UICONTROL Failed]** oder **[!UICONTROL Training issue]** angezeigt wird, können Sie den Ausführungsstatus auswählen, um einen Seitenbereich zu öffnen. Das seitliche Bedienfeld enthält Ihre **[!UICONTROL Last run status]** und **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** enthält Informationen darüber, warum der Durchgang fehlgeschlagen ist. Falls die Kunden-KI keine Details zu Ihrem Fehler bereitstellen kann, wenden Sie sich an den Support unter Angabe des angegebenen Fehler-Codes.
 
 ![](./images/errors/last-run-details.png){width=300}
 
@@ -37,7 +37,7 @@ Um dieses Problem zu umgehen, müssen Sie experience.adobe.com als Website hinzu
 
 ## Modellqualität ist schlecht
 
-Wenn der Fehler „[!UICONTROL Modellqualität ist schlecht. Es wird empfohlen, eine neue App mit der geänderten Konfiguration zu erstellen]“ angezeigt wird, befolgen Sie die unten empfohlenen Schritte zur Fehlerbehebung.
+Wenn Sie die Fehlermeldung &quot;[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration]&quot; erhalten. befolgen Sie die unten empfohlenen Schritte zur Fehlerbehebung.
 
 ![](./images/errors/model-quality.png){width=300}
 
@@ -73,4 +73,4 @@ Wenn die Einschränkung der Eignungspopulation nicht funktioniert hat oder nicht
 | 411 | KEINE EINGABEDATEN NACH ETL | Es sind keine Benutzerverhaltens- oder Profildaten für das Modell verfügbar, die zwischen `{{etl_start_date}}` und `{{etl_end_date}}` verwendet werden können. Stellen Sie sicher, dass der Datensatz über ausreichende Daten verfügt. (Fehlercode: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) | Für das Modell sind zwischen dem 01.04.2020 und dem 01.04.2021 keine Benutzerverhaltens- oder Profildaten verfügbar. Stellen Sie sicher, dass der Datensatz über ausreichende Daten verfügt. (Fehlercode: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) |
 | 412 | KEIN EREIGNIS NACH ETL | Für das Modell sind keine Benutzerverhaltensdaten verfügbar, die zwischen `{{etl_start_date}}` und `{{etl_end_date}}` verwendet werden können. Stellen Sie sicher, dass der Datensatz über ausreichende Daten verfügt. | Für das Modell sind keine Benutzerverhaltensdaten verfügbar, die zwischen dem 01.04.2020 und dem 01.04.2021 verwendet werden können. Stellen Sie sicher, dass der Datensatz über ausreichende Daten verfügt. (Fehlercode: VALIDATION-412 NO_EVENT_DATA_AFTER_ETL) |
 | 413 | EINZELWERT IM ZIEL | CustomerAI erfordert, dass der Datensatz sowohl qualifizierte als auch nicht qualifizierte Ereignisse für die Definition des Prognoseziels enthält. Der Eingabedatensatz enthält nur qualifizierte Ereignisse zwischen `{{etl_window_start}}` und `{{etl_window_end}}`. <br><br>Lösungsvorschläge: <br>1. Ändern Sie die Definition des Prognoseziels <br>2. Überprüfen Sie die Vollständigkeit der Daten oder verwenden Sie einen anderen Code, der Beispiele für nicht qualifizierte Ereignisse für das Prognoseziel enthält (Fehlercode: VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE). | CustomerAI erfordert, dass der Datensatz sowohl qualifizierte als auch nicht qualifizierte Ereignisse für die Definition des Prognoseziels enthält. Der Eingabedatensatz enthält nur qualifizierte Ereignisse zwischen dem 01.04.2020 und dem 01.04.2021.<br><br>Vorgeschlagene Lösungen:<br>1. Ändern der Definition des Prognoseziels.<br>2. Überprüfen Sie die Vollständigkeit der Daten oder verwenden Sie einen anderen , der Beispiele für nicht qualifizierte Ereignisse für das Prognoseziel enthält. (Fehlercode: VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE) |
-| 414 | KEINE EINFLUSSFAKTOREN | Das Einflussfaktormodell generiert eine unerwartete Ausgabe. Es wird empfohlen, eine neue App mit einer geänderten Konfiguration zu erstellen. (Fehlercode: VALIDATION-414 NO_INFLUENTIAL_FACTORS) | Das Einflussfaktormodell generiert eine unerwartete Ausgabe. Es wird empfohlen, eine neue App mit einer geänderten Konfiguration zu erstellen. (Fehlercode: VALIDATION-414 NO_INFLUENTIAL_FACTORS) |
+| 414  | KEINE EINFLUSSFAKTOREN | Das Einflussfaktormodell generiert eine unerwartete Ausgabe. Es wird empfohlen, eine neue App mit einer geänderten Konfiguration zu erstellen. (Fehlercode: VALIDATION-414 NO_INFLUENTIAL_FACTORS) | Das Einflussfaktormodell generiert eine unerwartete Ausgabe. Es wird empfohlen, eine neue App mit einer geänderten Konfiguration zu erstellen. (Fehlercode: VALIDATION-414 NO_INFLUENTIAL_FACTORS) |
