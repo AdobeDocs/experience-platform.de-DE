@@ -5,7 +5,7 @@ title: API-Endpunkt für Abfragevorlagen
 description: In diesem Handbuch werden die verschiedenen Aufrufe der Abfragevorlagen-API beschrieben, die Sie mit der Abfrage-Service-API durchführen können.
 role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 44%
@@ -18,7 +18,7 @@ ht-degree: 44%
 
 In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie mit der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-Informationen zum Erstellen von Vorlagen über die [-Benutzeroberfläche finden &#x200B;](../ui/query-templates.md) in der Dokumentation zu Abfragevorlagen der Benutzeroberfläche von Experience Platform .
+Informationen zum Erstellen von [ über die Experience Platform-Benutzeroberfläche finden ](../ui/query-templates.md) in der Dokumentation zu Abfragevorlagen der Benutzeroberfläche .
 
 ### Liste von Abfragevorlagen abrufen
 
@@ -109,7 +109,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Abf
 
 >[!NOTE]
 >
->Mit dem Wert `_links.delete` können Sie [&#x200B; Abfragevorlage löschen](#delete-a-specified-query-template).
+>Mit dem Wert `_links.delete` können Sie [ Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Abfragevorlage erstellen
 
@@ -176,7 +176,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zur 
 
 >[!NOTE]
 >
->Mit dem Wert `_links.delete` können Sie [&#x200B; Abfragevorlage löschen](#delete-a-specified-query-template).
+>Mit dem Wert `_links.delete` können Sie [ Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage abrufen
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 ```
 
 | Eigenschaft | Beschreibung |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{TEMPLATE_ID}` | Der `id`-Wert der Abfragevorlage, die Sie abrufen möchten. |
 
 **Anfrage**
@@ -234,7 +234,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen A
 
 >[!NOTE]
 >
->Mit dem Wert `_links.delete` können Sie [&#x200B; Abfragevorlage löschen](#delete-a-specified-query-template).
+>Mit dem Wert `_links.delete` können Sie [ Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage aktualisieren
 
@@ -310,7 +310,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit den aktualis
 
 >[!NOTE]
 >
->Mit dem Wert `_links.delete` können Sie [&#x200B; Abfragevorlage löschen](#delete-a-specified-query-template).
+>Mit dem Wert `_links.delete` können Sie [ Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage löschen
 
