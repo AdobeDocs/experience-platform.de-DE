@@ -5,7 +5,7 @@ title: Sandbox-Management-API - Endpunkt
 description: Mit dem Endpunkt /sandboxes in der Sandbox-API können Sie Sandboxes in Adobe Experience Platform programmgesteuert verwalten.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 44%
@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](./appendix.md#query) Abfrageparameter . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Weitere Informationen finden Sie [ Abschnitt ](./appendix.md#query) Abfrageparameter . |
 
 **Anfrage**
 
