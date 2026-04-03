@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Überblick über Adobe Experience Platform Multi-Cloud
 description: Erfahren Sie, was die Unterschiede zwischen der Ausführung von Experience Platform auf Microsoft Azure und Amazon Web Services sind.
-source-git-commit: d3654573cec338f173d151fd5e62ef5c8b893c11
+exl-id: da552311-6e50-4b09-bcc8-696a25325796
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '560'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
-
 
 # Überblick über Adobe Experience Platform Multi-Cloud
 
@@ -16,17 +16,17 @@ Adobe Experience Platform ist ein Multi-Cloud-Produkt, bei dem Sie zwischen der 
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform, das auf Amazon Web Services (AWS) ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zum Experience Platform auf AWS erhalten Sie von Ihrem Adobe-Account-Team.
+>Adobe Experience Platform, das auf Amazon Web Services (AWS) ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zu Experience Platform in AWS erhalten Sie von Ihrem Adobe Account Team.
 
 Diese Seite bietet einen allgemeinen Überblick über die beiden verfügbaren Cloud-Infrastrukturen und enthält Anleitungen zur Auswahl der richtigen für Ihr Unternehmen.
 
 ## Welche Cloud-Implementierung ist das Richtige für mich? {#which-cloud-is-right}
 
-Die Wahl zwischen Experience Platform auf Azure oder AWS hängt von mehreren Faktoren ab, die für Ihr Unternehmen spezifisch sind:
+Die Auswahl zwischen Experience Platform auf Azure oder AWS hängt von mehreren Faktoren ab, die für Ihr Unternehmen spezifisch sind:
 
 * **Geschäftliche und technische Anforderungen**: Bewerten Sie die Anforderungen Ihres Unternehmens und die langfristige Cloud-Strategie.
 * **Vorhandene Infrastruktur**: Berücksichtigen Sie Ihre aktuellen Cloud-Infrastruktur- und Integrationsanforderungen.
-* **Abhängigkeit von Cloud-Technologie**: Wenn Ihr Unternehmen stark von Microsoft-Technologien abhängig ist, ist Azure möglicherweise die bessere Wahl. Wenn Sie sich stärker auf Amazon-Services verlassen, könnte AWS die bessere Option sein.
+* **Cloud-Technologie**: Wenn Ihr Unternehmen stark von Microsoft-Technologien abhängig ist, eignet sich Azure möglicherweise besser. Wenn Sie sich stärker auf Amazon-Services verlassen, könnte AWS die bessere Option sein.
 * **Überlegungen zur Datenresidenz**: Bewerten Sie die Anforderungen an die Datenresidenz für Ihr Unternehmen und stellen Sie sicher, dass die ausgewählte Cloud-Plattform Regionen bietet, die diese Vorschriften erfüllen.
 
 Verwenden Sie unter Berücksichtigung der oben genannten Faktoren diesen vereinfachten Entscheidungsbaum, um bei der Entscheidung über die richtige Cloud-Implementierung für Ihre Geschäftsanforderungen zu helfen.
@@ -39,15 +39,15 @@ Die Auswahl der richtigen Cloud-Region ist entscheidend, um die Anforderungen an
 
 ![Bild, das die geografische Verteilung der Hosting-Standorte zeigt.](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
 
-Experience Platform ist an sechs Microsoft Azure-Hosting-Standorten und einem Amazon Web Services (AWS)-Hosting-Standort verfügbar und leitet Daten über sieben [Edge Network-Knoten, die weltweit &#x200B;](../collection/home.md#edge) sind, an Adobe-Services weiter.
+Experience Platform ist an sechs Microsoft Azure-Hosting-Standorten und an einem Amazon Web Services (AWS)-Hosting-Standort verfügbar und leitet Daten über sieben [Edge Network-Knoten](../collection/home.md#edge) die weltweit verteilt sind, an Adobe-Services weiter.
 
-### Microsoft Azure-Regionen {#azure-regions}
+### Regionen Microsoft Azure {#azure-regions}
 
-Die nachstehende Tabelle zeigt die Microsoft Azure-Regionen, in denen Experience Platform gehostet wird.
+Die nachstehende Tabelle zeigt die Regionen von Microsoft Azure, in denen Experience Platform gehostet wird.
 
 | Land | Regionscode | Standort |
 |---------|-------------|----------|
-| Vereinigte Staaten von Amerika | VA7 | Virginia |
+| Vereinigte Staaten von Amerika | VA7 | Virgina |
 | Vereinigtes Königreich | GBR9 | London |
 | Niederlande | NDL2 | Amsterdam |
 | Kanada | CAN2 | Toronto |
@@ -62,13 +62,13 @@ In der folgenden Tabelle sind die AWS-Regionen aufgeführt, in denen Experience 
 
 | Land | Regionscode | Standort |
 |---------|-------------|----------|
-| Vereinigte Staaten von Amerika | VA6 | Virginia |
+| Vereinigte Staaten von Amerika | VA6 | Virgina |
 
 {style="table-layout:auto"}
 
 ## Parität der Funktionen {#feature-parity}
 
-Adobe ist bestrebt, Funktionsparität zwischen Cloud-Plattformen für alle Anwendungen, die auf Experience Platform laufen, zu bieten, z. B.:
+Adobe ist bestrebt, für alle auf Experience Platform ausgeführten Anwendungen Funktionsgleichheit über Cloud-Plattformen hinweg zu bieten, z. B.:
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/ajo-home)
@@ -78,7 +78,7 @@ Einige Funktionen können jedoch zwischen Azure- und AWS-Implementierungen unter
 
 ### Unterschiede zwischen der Ausführung von Experience Platform auf Microsoft Azure und AWS {#azure-aws-differences}
 
-In der folgenden Tabelle werden die Hauptunterschiede zwischen der Ausführung von Experience Platform auf Microsoft Azure und AWS hervorgehoben.
+In der folgenden Tabelle werden die wichtigsten Unterschiede zwischen der Ausführung von Experience Platform auf Microsoft Azure und AWS hervorgehoben.
 
 | Funktion/Funktionalität | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
@@ -87,7 +87,8 @@ In der folgenden Tabelle werden die Hauptunterschiede zwischen der Ausführung v
 
 {style="table-layout:auto"}
 
-<!-- To be determined if we need to add this part about the AI Assistant 
+<!-- 
+To be determined if we need to add this part about the AI Assistant 
 
 | [Experience Platform AI Assistant](/help/ai-assistant/home.md) | Supported | Not supported |
 
