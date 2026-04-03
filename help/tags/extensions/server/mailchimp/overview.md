@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 3%
@@ -71,11 +71,11 @@ Je nach Mailchimp-Plan und ob Sie Transaktions-E-Mails, Kunden-Journey oder ande
 
 ## Installation und Konfiguration
 
-In diesem Abschnitt werden die Schritte zur Installation und Konfiguration der Erweiterung aufgeführt. Um den Mailchimp-API-Schlüssel sicher zu speichern, müssen Sie die Ereignisweiterleitung ([) &#x200B;](../../../ui/event-forwarding/secrets.md).
+In diesem Abschnitt werden die Schritte zur Installation und Konfiguration der Erweiterung aufgeführt. Um den Mailchimp-API-Schlüssel sicher zu speichern, müssen Sie die Ereignisweiterleitung ([) ](../../../ui/event-forwarding/secrets.md).
 
 ### Erstellen von geheimen Daten und Datenelementen
 
-Erstellen Sie in einer Ereignisweiterleitungs-Eigenschaft [einen geheimen [!UICONTROL Token], &#x200B;](../../../ui/event-forwarding/secrets.md#token). B. `Mailchimp API Key`.
+Erstellen Sie in einer Ereignisweiterleitungs-Eigenschaft [einen geheimen [!UICONTROL Token], ](../../../ui/event-forwarding/secrets.md#token). B. `Mailchimp API Key`.
 
 Erstellen Sie [ein Datenelement](../../../ui/managing-resources/data-elements.md#create-a-data-element) mithilfe der [!UICONTROL Core]-Erweiterung und eines [!UICONTROL Secret] Datenelementtyps, um auf die soeben erstellten `Mailchimp API Key` zu verweisen. Geben Sie `Mailchimp Token` als Namen des Datenelements ein.
 
@@ -115,12 +115,12 @@ Die nachstehende Tabelle enthält weitere Details zu jedem möglichen Wert.
 
 | Name | Beispielpfad | Typ | Beschreibung | Erforderlich | Beschränkungen |
 |:---|:---:|:---:|:---|:---:|:---|
-| `email` | `arc.event.xdm._tenant.emailId`<br /> oder<br /> `arc.event.data._tenant.emailId` | String | Die Adresse, die die E-Mail erhält | **Ja** | Muss in der Mailchimp-Zielgruppe vorhanden sein |
-| `listId` | `arc.event.xdm._tenant.listId`<br /> oder<br /> `arc.event.data._tenant.listid` | String | Zielgruppen-ID | **Ja** | Muss mit einer vorhandenen Zielgruppen-ID übereinstimmen |
-| `name` | `arc.event.xdm._tenant.name`<br /> oder<br /> `arc.event.data._tenant.name` | String | Der Ereignisname | **Ja** | 2-30 Zeichen lang |
+| `email` | `arc.event.xdm._tenant.emailId`<br /> oder<br /> `arc.event.data._tenant.emailId` | Zeichenfolge | Die Adresse, die die E-Mail erhält | **Ja** | Muss in der Mailchimp-Zielgruppe vorhanden sein |
+| `listId` | `arc.event.xdm._tenant.listId`<br /> oder<br /> `arc.event.data._tenant.listid` | Zeichenfolge | Zielgruppen-ID | **Ja** | Muss mit einer vorhandenen Zielgruppen-ID übereinstimmen |
+| `name` | `arc.event.xdm._tenant.name`<br /> oder<br /> `arc.event.data._tenant.name` | Zeichenfolge | Der Ereignisname | **Ja** | 2-30 Zeichen lang |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> oder<br /> `arc.event.data._tenant.properties` | Objekt | Eine optionale Liste von Eigenschaften im JSON-Format mit Details zum Ereignis | Nein |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> oder<br /> `arc.event.data._tenant.isSyncing` | Boolescher Wert | Bei Ereignissen, die mit `is_syncing` festgelegt wurden`true` **werden** Trigger-Automatisierungen nicht unterstützt | Nein |  |
-| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> oder `arc.event.data._tenant.occuredAt` | String | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist | Nein |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> oder<br /> `arc.event.data._tenant.isSyncing` | boolean | Bei Ereignissen, die mit `is_syncing` festgelegt wurden`true` **werden** Trigger-Automatisierungen nicht unterstützt | Nein |  |
+| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> oder `arc.event.data._tenant.occuredAt` | Zeichenfolge | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist | Nein |  |
 
 {style="table-layout:auto"}
 
