@@ -2,9 +2,9 @@
 title: Monitoring-Dashboard - Übersicht
 description: Erfahren Sie, wie Sie das Überwachungs-Dashboard in der Adobe Experience Platform-Benutzeroberfläche verwenden
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: cca405c58551a52a044ac513921298637974e88e
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '951'
 ht-degree: 4%
 
 ---
@@ -38,11 +38,11 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ## Handbuch zum Monitoring-Dashboard
 
-Wählen Sie in der Benutzeroberfläche von Experience Platform **[!UICONTROL Überwachung]** unter [!UICONTROL Datenverwaltung] im linken Navigationsbereich aus.
+Wählen Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich **[!UICONTROL Monitoring]** unter [!UICONTROL Data Management] aus.
 
 ![Das Überwachungs-Dashboard in der Experience Platform-Benutzeroberfläche.](../assets/ui/monitor-overview/monitoring.png)
 
-Wählen Sie **[!UICONTROL Datentyp]** aus und wählen Sie dann im Dropdown-Menü den Datentyp aus, den Sie anzeigen möchten. Datentypen werden von Experience-Datenmodell (XDM)-Schemaklassen definiert, um sicherzustellen, dass ihre Daten bei der Aufnahme in Experience Platform einem Standardformat entsprechen. Weitere Informationen finden Sie in der folgenden Dokumentation:
+Wählen Sie **[!UICONTROL Data Type]** aus und wählen Sie dann im Dropdown-Menü den Datentyp aus, den Sie anzeigen möchten. Datentypen werden von Experience-Datenmodell (XDM)-Schemaklassen definiert, um sicherzustellen, dass ihre Daten bei der Aufnahme in Experience Platform einem Standardformat entsprechen. Weitere Informationen finden Sie in der folgenden Dokumentation:
 
 * [Datentyp des B2B-Kontos](../../rtcdp/b2b-tutorial.md)
 * [Datentyp des Interessenten](../../rtcdp/partner-data/prospecting.md)
@@ -53,19 +53,19 @@ Sie können Ihre Ansicht anhand der folgenden Datentypen filtern:
 
 >[!TAB Alle]
 
-Wählen Sie **[!UICONTROL Alle]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu allen Daten anzuzeigen, die im Laufe eines bestimmten Zeitraums in Experience Platform aufgenommen wurden.
+Wählen Sie **[!UICONTROL All]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu allen Daten anzuzeigen, die im Laufe eines bestimmten Zeitraums in Experience Platform aufgenommen wurden.
 
 ![Der Überwachungs-Datentyp ist auf „Alle“ festgelegt.](../assets/ui/monitor-overview/all.png)
 
 >[!TAB Kunde &amp; Konto]
 
-Wählen Sie **[!UICONTROL Kunde und Konto]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Kunden- und Kontodaten anzuzeigen, die im Laufe eines bestimmten Zeitraums in Experience Platform aufgenommen wurden.
+Wählen Sie **[!UICONTROL Customer & Account]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Kunden- und Kontodaten anzuzeigen, die im Laufe eines bestimmten Zeitraums in Experience Platform aufgenommen wurden.
 
 ![Der Überwachungs-Datentyp ist auf „Kunde und Konto“ festgelegt.](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB Anreicherung von Kontoprofilen]
 
-Wählen Sie **[!UICONTROL Kontoprofilanreicherung]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Profilanreicherungsdaten anzuzeigen. **Hinweis**: Sie können die Metriken zur Anreicherung von Account-Profilen nur anzeigen, wenn Sie berechtigt sind, B2B[Daten &#x200B;](../../rtcdp/b2b-tutorial.md).
+Wählen Sie **[!UICONTROL Account profile enrichment]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Profilanreicherungsdaten anzuzeigen. **Hinweis**: Sie können die Metriken zur Anreicherung von Account-Profilen nur anzeigen, wenn Sie berechtigt sind, B2B[Daten ](../../rtcdp/b2b-tutorial.md).
 
 ![Der Überwachungs-Datentyp ist auf „Kontoprofilanreicherung“ festgelegt.](../assets/ui/monitor-overview/account-profile-enrichment.png)
 
@@ -77,31 +77,31 @@ Verwenden Sie die obere Kopfzeile des Dashboards für ein dienstübergreifendes 
 
 >[!TAB Data Lake]
 
-Wählen Sie **[!UICONTROL Data Lake]** aus, um Metriken zu Ihrer Data-Lake-Aufnahmerate anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen der Data-Lake](monitor-sources.md)Aufnahme“.
+Wählen Sie **[!UICONTROL Data lake]** aus, um Metriken zu Ihrer Data-Lake-Aufnahmerate anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen der Data-Lake](monitor-sources.md)Aufnahme“.
 
 ![Das Überwachungs-Dashboard in der Benutzeroberfläche mit der ausgewählten Data-Lake-Karte.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB Identitäten]
 
-Wählen Sie **[!UICONTROL Identitäten]** aus, um die Verarbeitungserfolgsrate Ihrer Identitätsdaten anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen von Identitätsdaten](monitor-identities.md) .
+Wählen Sie **[!UICONTROL Identities]** aus, um die Verarbeitungserfolgsrate Ihrer Identitätsdaten anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen von Identitätsdaten](monitor-identities.md) .
 
 ![Das Überwachungs-Dashboard in der Benutzeroberfläche mit ausgewählter Identitätskarte.](../assets/ui/monitor-overview/identities.png)
 
 >[!TAB Profile]
 
-Wählen Sie **[!UICONTROL Profile]** aus, um die Erfolgsrate der Verarbeitung Ihrer Profildaten anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen &#x200B;](monitor-profiles.md) Profildaten“.
+Wählen Sie **[!UICONTROL Profiles]** aus, um die Erfolgsrate der Verarbeitung Ihrer Profildaten anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen ](monitor-profiles.md) Profildaten“.
 
 ![Das Überwachungs-Dashboard in der Benutzeroberfläche mit ausgewählter Profilkarte.](../assets/ui/monitor-overview/profiles.png)
 
 >[!TAB Zielgruppen]
 
-Wählen Sie **[!UICONTROL Zielgruppen]** aus, um Metriken zu Ihren Zielgruppen und Segmentierungsaufträgen anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen &#x200B;](monitor-audiences.md) Zielgruppendaten“.
+Wählen Sie **[!UICONTROL Audiences]** aus, um Metriken zu Ihren Zielgruppen und Segmentierungsaufträgen anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen ](monitor-audiences.md) Zielgruppendaten“.
 
 ![Das Überwachungs-Dashboard in der Benutzeroberfläche mit ausgewählter Karte „Zielgruppen“.](../assets/ui/monitor-overview/audiences.png)
 
 >[!TAB Ziele]
 
-Wählen Sie **[!UICONTROL Ziele]** aus, um Metriken zu Ihrer [!UICONTROL Streaming-Aktivierungsrate] und [!UICONTROL fehlgeschlagenen Batch-Datenflussausführungen] anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen von &#x200B;](monitor-destinations.md)&quot;.
+Wählen Sie **[!UICONTROL Destinations]** aus, um Metriken zu Ihren [!UICONTROL Streaming activate rate] und [!UICONTROL Batch failed dataflow runs] anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen von ](monitor-destinations.md)&quot;.
 
 ![Das Überwachungs-Dashboard in der Benutzeroberfläche mit ausgewählter Zielkarte.](../assets/ui/monitor-overview/destinations.png)
 
@@ -109,17 +109,17 @@ Wählen Sie **[!UICONTROL Ziele]** aus, um Metriken zu Ihrer [!UICONTROL Streami
 
 ### Zeitrahmen für die Überwachung konfigurieren {#configure-monitoring-time-frame}
 
-Standardmäßig zeigt das Überwachungs-Dashboard Metriken zu den Daten an, die innerhalb der letzten 24 Stunden aufgenommen wurden. Um den Zeitrahmen zu aktualisieren, wählen Sie **[!UICONTROL Letzte 24 Stunden]**.
+Standardmäßig zeigt das Überwachungs-Dashboard Metriken zu den Daten an, die innerhalb der letzten 24 Stunden aufgenommen wurden. Um den Zeitrahmen zu aktualisieren, wählen Sie **[!UICONTROL Last 24 hours]** aus.
 
 ![Das Überwachungs-Dashboard in der Benutzeroberfläche mit der ausgewählten Zeitkonfiguration.](../assets/ui/monitor-overview/select-time.png)
 
 Im angezeigten Dialogfeld können Sie einen neuen Zeitrahmen für Ihre Datenüberwachungsansicht konfigurieren. Sie haben die Möglichkeit, einen benutzerdefinierten Zeitrahmen zu erstellen oder aus der Liste der vorkonfigurierten Optionen auszuwählen:
 
-* [!UICONTROL Letzte 24 Stunden]
-* [!UICONTROL Letzte 7 Tage]
-* [!UICONTROL Letzte 30 Tage]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Apply]** aus.
 
 ![Das Popup-Fenster für die Zeitrahmen-Konfiguration im Monitoring-Dashboard.](../assets/ui/monitor-overview/update-time.png)
 
@@ -129,10 +129,12 @@ Durch Lesen dieses Dokuments können Sie sich jetzt in der Benutzeroberfläche d
 
 * [Überwachen der Data Lake-Aufnahme](monitor-sources.md).
 * [Identitätsdaten überwachen](monitor-identities.md).
-* [Überwachen von &#x200B;](monitor-profiles.md).
+* [Überwachen von ](monitor-profiles.md).
 * [Zielgruppendaten überwachen](monitor-audiences.md).
 * [Zieldaten überwachen](monitor-destinations.md).
 
-<!-- >[!TAB Prospect]
+<!-- 
+>[!TAB Prospect]
 
-Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). 
+-->
