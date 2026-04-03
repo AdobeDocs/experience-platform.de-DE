@@ -2,7 +2,7 @@
 title: Explorative Datenanalyse
 description: Erfahren Sie, wie Sie mit Data Distiller Daten aus einem Python-Notebook untersuchen und analysieren können.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 14%
@@ -15,7 +15,7 @@ Dieses Dokument enthält einige grundlegende Beispiele und Best Practices für d
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie eine Verbindung zu Data Distiller in Ihrem [!DNL Python]-Notebook erstellt haben. In der Dokumentation finden Sie Anweisungen zum Verbinden [&#x200B; Notebooks mit  [!DNL Python]  Distiller](./establish-connection.md).
+Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie eine Verbindung zu Data Distiller in Ihrem [!DNL Python]-Notebook erstellt haben. In der Dokumentation finden Sie Anweisungen zum Verbinden [ Notebooks mit  [!DNL Python]  Distiller](./establish-connection.md).
 
 ## Erfassen grundlegender Statistiken {#basic-statistics}
 
@@ -103,9 +103,9 @@ print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
 Approximate count: 1284600.0 using 5.0% sample
 ```
 
-## E-Mail-Trichteranalyse {#email-funnel-analysis}
+## Email funnel Analysis {#email-funnel-analysis}
 
-Eine Trichteranalyse dient zum Verständnis der Schritte, die zum Erreichen eines Zielergebnisses erforderlich sind, und der Anzahl der Benutzer, die die einzelnen Schritte durchlaufen. Das folgende Beispiel zeigt eine einfache Trichteranalyse der Schritte, die dazu führen, dass ein Benutzer einen Newsletter abonniert. Das Abonnementergebnis wird durch einen Ereignistyp von `web.formFilledOut` dargestellt.
+Eine funnel-Analyse ist eine Methode, um die Schritte zu verstehen, die zum Erreichen eines Zielergebnisses erforderlich sind, und um zu ermitteln, wie viele Benutzende diese Schritte durchlaufen. Das folgende Beispiel zeigt eine einfache funnel-Analyse der Schritte, die einen Benutzer zum Abonnieren eines Newsletters führen. Das Abonnementergebnis wird durch einen Ereignistyp von `web.formFilledOut` dargestellt.
 
 Führen Sie zunächst eine Abfrage aus, um die Anzahl der Benutzer in jedem Schritt abzurufen.
 
@@ -152,7 +152,7 @@ fig.show()
 
 **Beispielausgabe**
 
-![Eine Infografik des eventType-E-Mail-Trichters.](../../images/data-distiller/email-funnel.png)
+![Eine Infografik der eventType-E-Mail-funnel.](../../images/data-distiller/email-funnel.png)
 
 ## Ereignis-Korrelationen {#event-correlations}
 
@@ -234,7 +234,7 @@ corrdf.fillna(0)
 
 **Beispielausgabe**:
 
-|    | Variable | Wert | Funktion | pearsonCorrelation |
+|    | Variable | value | Funktion | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
 | 0 | `webForms_EmailOpens` | 0,218874 | E-Mail-Öffnungen | 0,218874 |
 | 1 | `webForms_advertisingClicks` | 0,026805 | AdvertisingClicks | 0,026805 |
@@ -262,4 +262,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit Data Distiller Daten aus einem [!DNL Python]-Notebook untersuchen und analysieren können. Der nächste Schritt beim Erstellen von Funktions-Pipelines vom Experience Platform zur Bereitstellung benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin, [Funktionen für maschinelles Lernen zu entwickeln](./feature-engineering.md).
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit Data Distiller Daten aus einem [!DNL Python]-Notebook untersuchen und analysieren können. Der nächste Schritt beim Erstellen von Funktions-Pipelines von Experience Platform zur Bereitstellung benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin, [Funktionen für maschinelles Lernen zu entwickeln](./feature-engineering.md).
