@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Identity Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 96%
@@ -17,7 +17,7 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experie
 
 Daten, die eine Identifizierung einzelner Kundinnen und Kunden erlauben, sind häufig auf die verschiedenen Geräte und Systeme verteilt, die Kundinnen und Kunden zur Interaktion mit Ihrer Marke verwenden. [!DNL Identity Service] sammelt diese fragmentierten Identitäten und fasst sie zusammen, um eine vollständige Übersicht über Kundenverhalten zu liefern, sodass Sie in Echtzeit für effektive digitale Erlebnisse sorgen können. Weiterführende Informationen finden Sie in der [Identity Service – Übersicht](./home.md).
 
-## FAQs
+## Häufig gestellte Fragen
 
 Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu [!DNL Identity Service].
 
@@ -27,7 +27,7 @@ Identitätsdaten sind alle Daten, anhand derer sich einzelne Personen identifizi
 
 ## Welchen Nutzen bietet eine Kennzeichnung von Datenfeldern als Identitäten?
 
-Durch Kennzeichnung bestimmter Datenfelder in Ihren Datensatz- und Zeitreihendaten als Identitäten können Sie innerhalb der natürlichen Struktur Ihrer Daten Identitätsbeziehungen zuordnen und Duplikatdaten kanalübergreifend aufeinander abstimmen. Weiterführende Informationen dazu finden Sie unter [Identity Service – Übersicht](./home.md).
+Durch Kennzeichnung bestimmter Datenfelder in Ihren Eintrags- und Zeitreihendaten als Identitäten können Sie innerhalb der natürlichen Struktur Ihrer Daten Identitätsbeziehungen zuordnen und Duplikatdaten kanalübergreifend aufeinander abstimmen. Weiterführende Informationen dazu finden Sie unter [Identity Service – Übersicht](./home.md).
 
 ## Was sind bekannte und anonyme Identitäten?
 
@@ -57,31 +57,31 @@ Felder wie Postleitzahlen und IP-Adressen sollten nicht als Identitäten für ei
 
 Mit dem [`/cluster/members`Endpunkt](./api/list-cluster-identites.md) in der Identity Service-API können Sie zugehörige Identitäten für ein oder mehrere Identitätsfelder anzeigen. Wenn die Antwort nicht die erwarteten verknüpften Identitäten zurückgibt, stellen Sie sicher, dass Sie in Ihren XDM-Daten die entsprechenden Identitätsdaten angegeben haben. Weiterführende Informationen finden Sie im Abschnitt zum [Bereitstellen von XDM-Daten für Identity Service](./home.md) in der Übersicht zu Identity Service.
 
-## Was ist ein Identitäts-Namespace?
+## Was ist ein Identity-Namespace?
 
-Ein Identitäts-Namespace liefert Kontext dazu, wie Identitätsfelder mit der Identität eines Kunden zusammenhängen. Beispielsweise sollten Identitätsfelder unter dem Namespace „E-Mail“ einem standardmäßigen E-Mail-Format entsprechen (name<span>@emailprovider.com), während Felder, die den Namespace „Telefon“ verwenden, einer Standardtelefonnummer entsprechen sollten (in Nordamerika z. B. 987-555-1234).
+Ein Identity-Namespace liefert Kontext dazu, wie Identitätsfelder mit der Identität eines Kunden zusammenhängen. Beispielsweise sollten Identitätsfelder unter dem Namespace „E-Mail“ einem standardmäßigen E-Mail-Format entsprechen (name<span>@emailprovider.com), während Felder, die den Namespace „Telefon“ verwenden, einer Standardtelefonnummer entsprechen sollten (in Nordamerika z. B. 987-555-1234).
 
 Namespaces unterscheiden bei verschiedenen CRM-Systemen zwischen ähnlichen Identitätswerten. Nehmen wir an, dass ein Profil eine numerische Kennung für das Treueprogramm enthält, die mit dem Belohnungsprogramm Ihres Unternehmens verknüpft ist. Der Namespace „Treueprogramm“ würde diesen Wert von einer ähnlichen numerischen Kennung für Ihr E-Commerce-System trennen, die im selben Profil ebenfalls angezeigt wird.
 
-Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./home.md).
+Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identity-Namespaces](./home.md).
 
-## Wie verknüpfe ich eine Identität mit einem Identitäts-Namespace?
+## Wie verknüpfe ich eine Identität mit einem Identity-Namespace?
 
-Identitätsfelder müssen beim Erstellen mit einem vorhandenen Identitäts-Namespace verknüpft werden. Neue Namespaces müssen [mit der API erstellt](#how-do-i-create-a-custom-namespace-for-my-organization) werden, bevor sie mit Identitätsfeldern verknüpft werden.
+Identitätsfelder müssen beim Erstellen mit einem vorhandenen Identity-Namespace verknüpft werden. Neue Namespaces müssen [mit der API erstellt](#how-do-i-create-a-custom-namespace-for-my-organization) werden, bevor sie mit Identitätsfeldern verknüpft werden.
 
 Eine schrittweise Anleitung zum Definieren eines Namespace beim Erstellen eines Identitätsdeskriptors mit der API finden Sie im Abschnitt zum [Erstellen eines Deskriptors](../xdm/tutorials/create-schema-ui.md) im Entwicklerhandbuch zur Schemaregistrierung. Gehen Sie wie im Tutorial zum [Schema-Editor](../xdm/tutorials/create-schema-api.md) beschrieben vor, um in der Benutzeroberfläche ein Schema als Identität zu kennzeichnen.
 
-## Welche Identitäts-Namespaces stellt Experience Platform standardmäßig bereit? {#standard-namespaces}
+## Welche Identity-Namespaces stellt Experience Platform standardmäßig bereit? {#standard-namespaces}
 
 Standardmäßige Identity-Namespaces sind Namespaces, die für alle Organisationen verfügbar sind. Eine vollständige Liste der verfügbaren Standard-Namespaces finden Sie in der [Übersicht zu Identity-Namespaces](./features/namespaces.md).
 
-## Wo finde ich die Liste der verfügbaren Namespaces für meine Organisation?
+## Wo finde ich die Liste der verfügbaren Identity-Namespaces für meine Organisation?
 
-Mit der [Identity Service-API](https://www.adobe.io/experience-platform-apis/references/identity-service) können Sie alle für Ihre Organisation verfügbaren Identitäts-Namespaces auflisten, indem Sie eine GET-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Auflisten der verfügbaren Namespaces](./api/list-namespaces.md) in der Übersicht zur Identity Service-API.
+Mit der [Identity Service-API](https://www.adobe.io/experience-platform-apis/references/identity-service) können Sie alle für Ihre Organisation verfügbaren Identity-Namespaces auflisten, indem Sie eine GET-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Auflisten der verfügbaren Namespaces](./api/list-namespaces.md) in der Übersicht zur Identity Service-API.
 
 ## Wie erstelle ich für meine Organisation einen benutzerspezifischen Namespace?
 
-Mit der [Identity Service-API](https://www.adobe.io/experience-platform-apis/references/identity-service) können Sie einen benutzerdefinierten Identitäts-Namespace für Ihre Organisation einrichten, indem Sie eine POST-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Erstellen eines benutzerdefinierten Namespace](./api/create-custom-namespace.md) in der Übersicht zur Identity Service-API.
+Mit der [Identity Service-API](https://www.adobe.io/experience-platform-apis/references/identity-service) können Sie einen benutzerdefinierten Identity-Namespace für Ihre Organisation einrichten, indem Sie eine POST-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Erstellen eines benutzerdefinierten Namespace](./api/create-custom-namespace.md) in der Übersicht zur Identity Service-API.
 
 ## Was sind zusammengesetzte Identitäten und XIDs?
 
@@ -96,7 +96,8 @@ Identity Service verfügt über Standard-Namespaces, die die Aufnahme von Hash-I
 Wenn Sie gehashte PII-Werte an den Identity Service senden, müssen Sie für alle Datensätze dieselbe Verschlüsselungsmethode verwenden. Dadurch wird sichergestellt, dass der gleiche Identitätswert bei allen Datensätzen dieselben Hash-Werte generiert und im Identitätsdiagramm richtig zugeordnet und verknüpft werden kann.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
-<!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
+<!-- 
+## When should I use the Identity map rather than labeling individual XDM schema fields?
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
@@ -111,7 +112,8 @@ Developer|Recommended|Supported
 ETL|Recommended|Avoid - While this is supported, data should be formatted naturally when using an ETL, favoring identity fields over `identityMap`.
 Internal solutions|Preferred|Common
 
---- -->
+--- 
+-->
 
 ## Warum kann ich nicht auf die Identitätsdiagramm-Seite oder APIs zugreifen?
 
@@ -278,9 +280,9 @@ Diese Fehlermeldung wird angezeigt, wenn Ihre Organisation nicht über die erfor
 
 Dieser Fehler wird angezeigt, wenn bei Ausführung eines [!DNL Experience Platform]-Service-Aufrufs eine unerwartete Ausnahme auftritt. Es empfiehlt sich, automatisierte Aufrufe so zu programmieren, dass sie bei Erhalt dieses Fehlers Anfragen in einem bestimmten Zeitintervall mehrfach wiederholen. Wenn das Problem fortbesteht, wenden Sie sich an Ihren Systemadministrator.
 
-## Fehler-Codes zur Batch-Erfassung
+## Fehler-Codes zur Batch-Aufnahme
 
-[!DNL Identity Service] nimmt Identitätsdaten aus Datensatz- und Zeitreihendaten auf, die mithilfe einer Batch-Aufnahme in [!DNL Experience Platform] hochgeladen werden. Da die Batch-Erfassung ein asynchroner Vorgang ist, müssen Sie die Details für einen Batch anzeigen, um Fehler zu prüfen. Während der Batch-Verarbeitung werden Fehler gesammelt, bis der Batch abgeschlossen ist.
+[!DNL Identity Service] nimmt Identitätsdaten aus Eintrags- und Zeitreihendaten auf, die mithilfe einer Batch-Aufnahme in [!DNL Experience Platform] hochgeladen werden. Da die Batch-Aufnahme ein asynchroner Vorgang ist, müssen Sie die Details für einen Batch anzeigen, um Fehler zu prüfen. Während der Batch-Verarbeitung werden Fehler gesammelt, bis der Batch abgeschlossen ist.
 
 Im Folgenden finden Sie eine Liste von Fehlermeldungen im Zusammenhang mit [!DNL Identity Service], die bei Verwendung der [Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) auftreten können.
 
@@ -294,7 +296,7 @@ Im Folgenden finden Sie eine Liste von Fehlermeldungen im Zusammenhang mit [!DNL
 }
 ```
 
-[!DNL Identity Service] nutzt nur Identitäten für Datensatz- oder Zeitreihendaten, die den [!DNL Profile]- bzw. [!DNL ExperienceEvent]-Klassen entsprechen. Der Versuch, Daten für [!DNL Identity Service] aufzunehmen, die keiner der beiden Klassen angehören, löst diesen Fehler aus.
+[!DNL Identity Service] nutzt nur Identitäten für Eintrags- oder Zeitreihendaten, die den [!DNL Profile]- bzw. [!DNL ExperienceEvent]-Klassen entsprechen. Der Versuch, Daten für [!DNL Identity Service] aufzunehmen, die keiner der beiden Klassen angehören, löst diesen Fehler aus.
 
 ### Es gab 0 gültige Identitäten in den ersten 100 Zeilen des verarbeiteten Batch.
 
@@ -332,7 +334,7 @@ Dieser Fehler wird angezeigt, wenn die ersten 100 Zeilen eines Batch keine Ident
 
 Dieser Fehler wird angezeigt, wenn ein aufgenommener Eintrag eine Identität enthält, deren verknüpfter Namespace nicht vorhanden ist oder für Ihre Organisation nicht zugänglich ist.
 
-### Batch-Erfassung wird übersprungen, da für das private Identitätsdiagramm keine IMS-Organisation angegeben wurde
+### Batch-Aufnahme wird übersprungen, da für das private Identitätsdiagramm keine IMS-Organisation angegeben wurde
 
 ```json
 {
@@ -354,4 +356,4 @@ Beim Aufnehmen von Batch-Daten wird diese Fehlermeldung angezeigt, wenn Ihre Org
 }
 ```
 
-Dieser Fehler wird angezeigt, wenn bei der Batch-Erfassung eine unerwartete Ausnahme auftritt. Es empfiehlt sich, automatisierte Aufrufe so zu programmieren, dass sie bei Erhalt dieses Fehlers Anfragen in einem bestimmten Zeitintervall mehrfach wiederholen. Wenn das Problem fortbesteht, wenden Sie sich an Ihren Systemadministrator.
+Dieser Fehler wird angezeigt, wenn bei der Batch-Aufnahme eine unerwartete Ausnahme auftritt. Es empfiehlt sich, automatisierte Aufrufe so zu programmieren, dass sie bei Erhalt dieses Fehlers Anfragen in einem bestimmten Zeitintervall mehrfach wiederholen. Wenn das Problem fortbesteht, wenden Sie sich an Ihren Systemadministrator.
