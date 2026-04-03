@@ -2,7 +2,7 @@
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 163ff97da651ac3a68b5e37e8745b10440519e6f
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '3390'
 ht-degree: 37%
@@ -146,7 +146,7 @@ Es gibt eine Reihe von Tools, die Ihnen helfen, Ihre Lizenznutzungsberechtigunge
 
 Identitätsdiagramme werden nicht auf Ihre gesamte adressierbare Zielgruppenberechtigung angerechnet, da sich adressierbare Zielgruppe auf Ihre Gesamtzahl an Kundenprofilen bezieht.
 
-Aufgrund der Aufteilung von Identitäten können sich jedoch Beschränkungen des Identitätsdiagramms auf Ihre adressierbare Zielgruppe auswirken. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, bleibt die ECID im Echtzeit-Kundenprofil als pseudonymes Profil bestehen. Sie können [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) festlegen, um dieses Verhalten zu umgehen. Weitere Informationen finden Sie unter [&#x200B; für Identity Service-Daten](../../identity-service/guardrails.md).
+Aufgrund der Aufteilung von Identitäten können sich jedoch Beschränkungen des Identitätsdiagramms auf Ihre adressierbare Zielgruppe auswirken. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, bleibt die ECID im Echtzeit-Kundenprofil als pseudonymes Profil bestehen. Sie können [Ablauf von Daten pseudonymer Profile](../../profile/pseudonymous-profiles.md) festlegen, um dieses Verhalten zu umgehen. Weitere Informationen finden Sie unter [ für Identity Service-Daten](../../identity-service/guardrails.md).
 
 ### Aufnahmefilter {#ingestion-filters}
 
@@ -182,7 +182,9 @@ Es stehen eine Reihe von Berichten zur Verfügung, die Ihnen dabei helfen, die Z
 
 * **Dataset Overlap Report API**: Zeigt die Datensätze, die am meisten zu Ihrer adressierbaren Zielgruppe beitragen. Sie können diesen Bericht verwenden, um zu ermitteln, für welche [!DNL ExperienceEvent] Datensätze eine Gültigkeit festgelegt werden soll. Weitere Informationen dazu finden Sie im Tutorial zum [Erstellen des Dataset Overlap Reports](../../profile/tutorials/dataset-overlap-report.md).
 * **Identity Overlap Report API**: Zeigt die Identity-Namespaces, die am meisten zu Ihrer adressierbaren Zielgruppe beitragen. Weitere Informationen dazu finden Sie im Tutorial zum [Erstellen des Identity Overlap Reports](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+
+<!-- 
+* **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 ### Ablauf von Daten pseudonymer Profile {#pseudonymous-profile-expirations}
@@ -191,11 +193,11 @@ Verwenden Sie die Datenablauffunktion für pseudonyme Profile, um automatisch Da
 
 ### Datensatz-Benutzeroberfläche - Aufbewahrung von Erlebnisereignis-Datensätzen {#data-retention}
 
-Konfigurieren Sie die Einstellungen für die Gültigkeit und Aufbewahrung von Datensätzen, um eine feste Aufbewahrungsfrist für Ihre Daten im Data Lake und Profilspeicher zu erzwingen. Nach Ablauf der Aufbewahrungsfrist werden die Daten gelöscht. Ablauf von Erlebnisereignisdaten entfernt nur Ereignisse, keine Profilklassendaten, wodurch das [Gesamtdatenvolumen) &#x200B;](total-data-volume.md) Lizenznutzungsmetriken reduziert wird. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenspeicherungsrichtlinie](../../catalog/datasets/user-guide.md#data-retention-policy).
+Konfigurieren Sie die Einstellungen für die Gültigkeit und Aufbewahrung von Datensätzen, um eine feste Aufbewahrungsfrist für Ihre Daten im Data Lake und Profilspeicher zu erzwingen. Nach Ablauf der Aufbewahrungsfrist werden die Daten gelöscht. Ablauf von Erlebnisereignisdaten entfernt nur Ereignisse, keine Profilklassendaten, wodurch das [Gesamtdatenvolumen) ](total-data-volume.md) Lizenznutzungsmetriken reduziert wird. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenspeicherungsrichtlinie](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Gültigkeitsdauern von Profilerlebnisereignissen {#event-expirations}
 
-Konfigurieren Sie Ablaufzeiten, um Verhaltensdaten automatisch aus Ihrem profilaktivierten Datensatz zu entfernen, sobald sie für Ihre Anwendungsfälle nicht mehr nützlich sind. Weitere Informationen finden Sie in der Übersicht [&#x200B; Gültigkeitsdauern &#x200B;](../../profile/event-expirations.md) Erlebnisereignissen .
+Konfigurieren Sie Ablaufzeiten, um Verhaltensdaten automatisch aus Ihrem profilaktivierten Datensatz zu entfernen, sobald sie für Ihre Anwendungsfälle nicht mehr nützlich sind. Weitere Informationen finden Sie in der Übersicht [ Gültigkeitsdauern ](../../profile/event-expirations.md) Erlebnisereignissen .
 
 ## Zusammenfassung der Best Practices für die Lizenznutzung {#best-practices}
 
