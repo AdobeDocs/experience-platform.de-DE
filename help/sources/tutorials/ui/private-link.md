@@ -2,9 +2,9 @@
 title: Unterstützung privater Links für Quellen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche private Azure-Links für Quellen verwenden.
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ Die Lizenznutzungsberechtigungsmetriken für die Unterstützung privater Links i
 
 ## Erstellen eines privaten Endpunkts
 
-Um mit privaten Links zu beginnen, navigieren Sie zum Katalog *[!UICONTROL Quellen]* der Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL Private Endpunkte]** aus dem Menü der Registerkarten im Arbeitsbereich „Quellen“ aus.
+Um mit privaten Links zu beginnen, navigieren Sie zum *[!UICONTROL Sources]* Katalog der Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL Private endpoints]** aus dem Menü der Registerkarten im Arbeitsbereich Quellen .
 
 ![Der Quellkatalog mit „privaten Endpunkten“.](../../images/tutorials/private-links/catalog.png)
 
-Über die Benutzeroberfläche können Sie Informationen zu vorhandenen privaten Endpunkten anzeigen, z. B. ihre ID, die zugehörige Quelle und den aktuellen Status. Um einen neuen privaten Endpunkt zu erstellen, wählen Sie **[!UICONTROL Privaten Endpunkt erstellen]** aus.
+Über die Benutzeroberfläche können Sie Informationen zu vorhandenen privaten Endpunkten anzeigen, z. B. ihre ID, die zugehörige Quelle und den aktuellen Status. Um einen neuen privaten Endpunkt zu erstellen, wählen Sie **[!UICONTROL Create private endpoint]** aus.
 
 ![Die Benutzeroberfläche „Private Endpunkte“ mit ausgewähltem „Privaten Endpunkt erstellen“.](../../images/tutorials/private-links/private-endpoints.png)
 
@@ -58,7 +58,7 @@ Wählen Sie als Nächstes Ihre gewünschte Quelle aus und geben Sie dann Werte f
 
 {style="table-layout:auto"}
 
-Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Absenden]**..
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Submit]** aus.
 
 ![Das Authentifizierungsfenster zum Erstellen eines neuen privaten Endpunkts im Arbeitsbereich der Quell-Benutzeroberfläche.](../../images/tutorials/private-links/create-private-endpoint.png)
 
@@ -72,21 +72,21 @@ Um eine private Endpunktanfrage für die [!DNL Azure Blob] und [!DNL Azure Data 
 
 ## Erstellen eines Kontos mit einem privaten Endpunkt
 
-Navigieren Sie zum Quellkatalog und wählen Sie eine Quelle aus, die private Endpunkte unterstützt. Erstellen Sie als Nächstes ein neues Konto mit Ihrer Quelle und wählen Sie während der Kontoauthentifizierung den **[!UICONTROL Privater Endpunkt]** aus. Geben Sie die Authentifizierungsdaten Ihrer Quelle ein und wählen Sie **[!UICONTROL Mit Quelle verbinden]** Warten Sie einige Minuten, bis die Verbindung hergestellt ist.
+Navigieren Sie zum Quellkatalog und wählen Sie eine Quelle aus, die private Endpunkte unterstützt. Erstellen Sie als Nächstes ein neues Konto mit Ihrer Quelle und wählen Sie während der Kontoauthentifizierung den Umschalter **[!UICONTROL Private endpoint]** aus. Geben Sie die Authentifizierungsdaten Ihrer Quelle ein und wählen Sie dann **[!UICONTROL Connect to source]** Für einige Minuten zulassen aus, um die Verbindung herzustellen.
 
 >[!NOTE]
 >
->Wenn die Option [!UICONTROL Privater Endpunkt] aktiviert ist, prüft Experience Platform, ob für die ausgewählte Quelle ein genehmigter privater Endpunkt vorhanden ist. Wenn kein genehmigter Endpunkt gefunden wird, können Sie keine Verbindung herstellen.
+>Wenn die Option [!UICONTROL Private endpoint] aktiviert ist, prüft Experience Platform, ob für die ausgewählte Quelle ein genehmigter privater Endpunkt vorhanden ist. Wenn kein genehmigter Endpunkt gefunden wird, können Sie keine Verbindung herstellen.
 
 ![Der Schritt zur Authentifizierung eines neuen Kontos mit aktivierten privaten Endpunkten.](../../images/tutorials/private-links/new-account.png)
 
-Navigieren Sie dann zur [!UICONTROL Vorhandenes Konto] Ihrer Quelle. Über diese Benutzeroberfläche können Sie eine Liste Ihrer bestehenden Konten und der entsprechenden Status anzeigen. Sie können das Filtersymbol ![Filtersymbol](../../../images/icons/filter.png) auswählen, um nur die Konten anzuzeigen, die für die Verbindung mit einem privaten Endpunkt aktiviert wurden.
+Navigieren Sie dann zur [!UICONTROL Existing account] Ihrer Quelle. Über diese Benutzeroberfläche können Sie eine Liste Ihrer bestehenden Konten und der entsprechenden Status anzeigen. Sie können das Filtersymbol ![Filtersymbol](../../../images/icons/filter.png) auswählen, um nur die Konten anzuzeigen, die für die Verbindung mit einem privaten Endpunkt aktiviert wurden.
 
 ![Die vorhandene Kontoschnittstelle im Quell-Workflow zeigt nur die gefilterten Konten an, die für private Endpunktverbindungen aktiviert sind.](../../images/tutorials/private-links/existing-private-endpoints.png)
 
-Wählen Sie das gewünschte Konto aus und aktivieren Sie dann **[!UICONTROL Interaktives Authoring]**. Dieser Umschalter aktiviert [!UICONTROL Interaktives Authoring], eine [!DNL Azure] Funktion, mit der Sie Verbindungen testen, Ordnerlisten durchsuchen und Daten in der Vorschau anzeigen können. Die Aktivierung [!UICONTROL Interaktives Authoring] ist für private Endpunktverbindungen erforderlich. Beachten Sie, dass Sie diesen Umschalter nicht manuell deaktivieren können. Er wird nach 60 Minuten automatisch deaktiviert.
+Wählen Sie das gewünschte Konto aus und aktivieren Sie dann **[!UICONTROL Interactive Authoring]**. Dieser Umschalter aktiviert [!UICONTROL Interactive Authoring], eine [!DNL Azure], mit der Sie Verbindungen testen, Ordnerlisten durchsuchen und Daten in der Vorschau anzeigen können. Die Aktivierung von [!UICONTROL Interactive Authoring] ist für private Endpunktverbindungen erforderlich. Beachten Sie, dass Sie diesen Umschalter nicht manuell deaktivieren können. Er wird nach 60 Minuten automatisch deaktiviert.
 
-[!UICONTROL Interaktives Authoring] benötigt einige Minuten, um zu aktivieren. Nachdem die Einstellung aktiviert ist, klicken Sie **[!UICONTROL Weiter]**, um mit dem nächsten Schritt fortzufahren und die Daten auszuwählen, die Sie aufnehmen möchten.
+[!UICONTROL Interactive Authoring] Aktivieren dauert einige Minuten. Nachdem die Einstellung aktiviert ist, klicken Sie auf **[!UICONTROL Next]** , um mit dem nächsten Schritt fortzufahren, und wählen Sie die Daten aus, die Sie aufnehmen möchten.
 
 ![Ein vorhandenes Konto wird ausgewählt und die interaktive Bearbeitung ist aktiviert.](../../images/tutorials/private-links/interactive-authoring.png)
 
