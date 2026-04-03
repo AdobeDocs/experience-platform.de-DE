@@ -3,7 +3,7 @@ title: SQL-Erweiterung für Feature Engineering
 description: Erfahren Sie mehr über die SQL-Erweiterung Data Distiller Feature Engineering zur Vorverarbeitung von Daten für die erweiterte statistische Modellierung. Es behandelt die verfügbaren Techniken zur Extraktion, Transformation und Auswahl von Funktionen.
 role: Developer
 exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
-source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '735'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Add-on Data Distiller erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
+>Diese Funktion steht Kunden zur Verfügung, die das Add-on Data Distiller erworben haben. Weitere Informationen erhalten Sie beim Adobe-Support.
 
 Verwenden Sie die SQL Transformer-Erweiterung, um die Vorverarbeitung Ihrer Daten zu vereinfachen und zu automatisieren, um Ihre Funktionsanforderungen zu erfüllen. Verwenden Sie diese Erweiterung, um Funktionen zu erstellen und nahtlose Experimente mit verschiedenen Techniken der Funktionstechnik zu genießen, einschließlich der Verknüpfung mit Modellen. Das für verteilte Datenverarbeitung entwickelte Feature Engineering kann für große Datensätze parallel und skalierbar durchgeführt werden, wodurch die für die Datenvorverarbeitung erforderliche Zeit mit der SQL-Erweiterung Data Distiller Feature Engineering erheblich verkürzt wird.
 
@@ -70,7 +70,8 @@ Verwenden Sie diese Transformatoren, um kategoriale Daten in Formate zu konverti
 
 Als Nächstes konzentrieren Sie sich auf die Auswahl einer Teilmenge der wichtigsten Funktionen aus dem ursprünglichen Satz. Dieser Prozess trägt dazu bei, die Dimensionalität Ihrer Daten zu reduzieren, wodurch die Verarbeitung Ihrer Modelle erleichtert und die Gesamtleistung des Modells verbessert wird.
 
-<!-- Commented out as it 
+<!-- 
+Commented out as it 
 ## Supported machine learning algorithms {#supported-ml-algorithms}
 
 Once you have preprocessed your data, use the feature engineering SQL extension to prepare your data for the following machine learning algorithms:
@@ -86,9 +87,10 @@ Use logical regression to predict categorical outcomes and linear regression to 
 
 Use a clustering algorithm to group data points into distinct clusters based on their similarities.
 
-- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. -->
+- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. 
+-->
 
-## Implementierung der OPTIONS-Klausel {#options-clause}
+## Implementieren der OPTIONS-Klausel {#options-clause}
 
 Verwenden Sie beim Definieren des Modells die `OPTIONS`-Klausel, um den Algorithmus und seine Parameter anzugeben. Legen Sie zunächst den `type` fest, um den verwendeten Algorithmus anzugeben, z. B. `K-Means`. Definieren Sie dann die relevanten Parameter in der `OPTIONS`-Klausel als Schlüssel-Wert-Paare, um Ihr Modell fein abzustimmen. Wenn Sie bestimmte Parameter nicht anpassen möchten, wendet das System die Standardeinstellungen an. Informationen zur Funktion und zu den Standardwerten der einzelnen Parameter finden Sie in der entsprechenden Dokumentation .
 
