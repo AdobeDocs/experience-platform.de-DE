@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Begrenzungen für XDM-Feldtypen
 description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und für die Definition Ihrer eigenen Feldtypen in der API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 8ddedb5ff8c12b05cdf39fa8dc2b59258389e522
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 6%
@@ -27,7 +27,7 @@ XDM basiert auf dem JSON-Schema und daher übernehmen XDM-Felder beim Definieren
 
 >[!NOTE]
 >
->Weitere Informationen zu JSON[Schemas und anderen zugrunde liegenden Technologien in Experience Platform-APIs finden &#x200B;](../../landing/api-fundamentals.md#json-schema) im Handbuch zu den API-Grundlagen .
+>Weitere Informationen zu JSON[Schemas und anderen zugrunde liegenden Technologien in Experience Platform-APIs finden ](../../landing/api-fundamentals.md#json-schema) im Handbuch zu den API-Grundlagen .
 
 In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema dargestellt wird, zusammen mit einem Beispielwert, der dem Typ entspricht:
 
@@ -52,7 +52,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{type}: „number“&rbrace;</pre>
+{type}: „number“}</pre>
       </td>
       <td><code>12925.49</code></td>
     </tr>
@@ -60,11 +60,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   „type“: „integer“,
   „maximum“: 9007199254740991,
   „minimum“: -9007199254740991
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -72,11 +72,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   „type“: „integer“,
   „maximum“: 2147483648,
   „minimum“: -2147483648
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   „type“: „integer“,
   „maximum“: 32767,
   „minimum“: -32768
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,11 +96,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   „type“: „integer“,
   „Maximum“: 128,
   „minimum“: -128
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -108,10 +108,10 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   „type“: „string“,
   „format“: „date“
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,10 +119,10 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   „type“: „string“,
   „format“: „date-time“
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -151,7 +151,7 @@ In den folgenden Abschnitten wird beschrieben, wie jeder XDM-Typ anderen gängig
 >
 >Unter den in den folgenden Tabellen aufgelisteten Standard-XDM-Typen ist auch der [!UICONTROL Map] enthalten. Zuordnungen werden in Standardschemata verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel nicht sinnvoll in ein statisches Schema aufgenommen werden können und als Datenwerte behandelt werden müssen.
 >
->Viele standardmäßige XDM-Komponenten verwenden Zuordnungstypen und Sie können bei [&#x200B; auch benutzerdefinierte Zuordnungsfelder &#x200B;](../tutorials/custom-fields-api.md#custom-maps). Die Aufnahme des Zuordnungstyps in die folgenden Tabellen soll Ihnen dabei helfen, zu bestimmen, wie Sie Ihre vorhandenen Daten XDM zuordnen, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
+>Viele standardmäßige XDM-Komponenten verwenden Zuordnungstypen und Sie können bei [ auch benutzerdefinierte Zuordnungsfelder ](../tutorials/custom-fields-api.md#custom-maps). Die Aufnahme des Zuordnungstyps in die folgenden Tabellen soll Ihnen dabei helfen, zu bestimmen, wie Sie Ihre vorhandenen Daten XDM zuordnen, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
 
 ### Parquet, Spark SQL und Java {#parquet}
 
@@ -206,4 +206,4 @@ In den folgenden Abschnitten wird beschrieben, wie jeder XDM-Typ anderen gängig
 
 ## Definieren von XDM-Feldtypen in der API {#define-fields}
 
-Mit der Schema Registry-API können Sie benutzerdefinierte Felder mithilfe von Formaten und optionalen Einschränkungen definieren. Weitere Informationen finden Sie [&#x200B; Handbuch unter „Definieren benutzerdefinierter Felder in der Schema Registry](../tutorials/custom-fields-api.md)API“.
+Mit der Schema Registry-API können Sie benutzerdefinierte Felder mithilfe von Formaten und optionalen Einschränkungen definieren. Weitere Informationen finden Sie [ Handbuch unter „Definieren benutzerdefinierter Felder in der Schema Registry](../tutorials/custom-fields-api.md)API“.
