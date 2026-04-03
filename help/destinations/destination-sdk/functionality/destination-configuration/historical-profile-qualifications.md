@@ -1,23 +1,23 @@
 ---
-description: Erfahren Sie mehr über die historischen Profilqualifikationen, die von mit Destination SDK erstellten Zielen unterstützt werden.
-title: Historische Profilqualifikationen
+description: Erfahren Sie mehr über die historischen Profilqualifizierungen, die von mit Destination SDK erstellten Zielen unterstützt werden.
+title: Historische Profilqualifizierungen
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 99%
 
 ---
 
-# Historische Profilqualifikationen
+# Historische Profilqualifizierungen
 
-Alle Ziele, die über Destination SDK erstellt wurden, unterstützen standardmäßig historische Profilqualifikationen. Das bedeutet, dass, wenn Benutzerinnen oder Benutzer einen Aktivierungsdatenfluss zu Ihren Zielen einrichten, der erste Export alle Mitglieder der Zielgruppe enthält, die sich für dieses Segment qualifiziert haben.
+Alle Ziele, die über Destination SDK erstellt wurden, unterstützen standardmäßig historische Profilqualifizierungen. Das bedeutet, dass, wenn Benutzerinnen oder Benutzer einen Aktivierungsdatenfluss zu Ihren Zielen einrichten, der erste Export alle Mitglieder der Zielgruppe enthält, die sich für dieses Segment qualifiziert haben.
 
 Dieses Verhalten wird durch die Variable `"backfillHistoricalProfileData":true` in der Zielkonfiguration bestimmt.
 
 >[!IMPORTANT]
 >
->Historische Profilqualifikationen sind für alle Ziele aktiviert, die durch Destination SDK erstellt wurden, und der Parameter `backfillHistoricalProfileData` kann nicht von Benutzenden konfiguriert werden.
+>Historische Profilqualifizierungen sind für alle Ziele aktiviert, die durch Destination SDK erstellt wurden, und der Parameter `backfillHistoricalProfileData` kann nicht von Benutzenden konfiguriert werden.
 
 ## Unterstützte Integrationstypen {#supported-integration-types}
 
@@ -35,7 +35,8 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 |---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Experience Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Experience Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"} 
+-->
 
 
 ## Nächste Schritte {#next-steps}
