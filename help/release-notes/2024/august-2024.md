@@ -2,16 +2,16 @@
 title: Adobe Experience Platform – Versionshinweise August 2024
 description: Versionshinweise August 2024 für Adobe Experience Platform.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 95%
+source-wordcount: '1556'
+ht-degree: 89%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 20. August 2024**
+**Releasedatum: Mittwoch, 20. August 2024**
 
 >[!TIP]
 >
@@ -60,11 +60,11 @@ Lesen Sie mehr über die [Batch-Aufnahme](/help/ingestion/batch-ingestion/overvi
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-**Neue oder aktualisierte Ziele** {#new-updated-destinations}
+**Neue oder aktualisierte Funktionen** {#new-updated-destinations}
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] verwaltet eine Reihe verschiedener Instanzen für das Dashboard und die REST-Endpunkte. [!UICONTROL Braze]-Kundinnen und -Kunden sollten den richtigen REST-Endpunkt verwenden, je nachdem, für welche Instanz Sie eine Bereitstellung erhalten haben. Diese Version fügt einen neuen US-07-Endpunkt hinzu, den Sie beim Herstellen einer Verbindung zu [!UICONTROL Braze] auswählen können. |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] verwaltet eine Reihe verschiedener Instanzen für ihre Dashboard- und REST-Endpunkte. [!UICONTROL Braze] Kunden sollten den richtigen REST-Endpunkt verwenden, je nachdem, für welche Instanz Sie bereitgestellt wurden. Diese Version fügt einen neuen US-07-Endpunkt hinzu, den Sie beim Herstellen einer Verbindung zu [!UICONTROL Braze] auswählen können. |
 
 {style="table-layout:auto"}
 
@@ -75,9 +75,9 @@ Lesen Sie mehr über die [Batch-Aufnahme](/help/ingestion/batch-ingestion/overvi
 | Der Export von Dateien nach Bedarf an Batch-Ziele ist jetzt allgemein verfügbar. | Die Option zum Exportieren von Dateien nach Bedarf an Batch-Ziele ist jetzt für alle Kundinnen und Kunden verfügbar. Weitere Informationen dazu finden Sie in der [dedizierten Dokumentation](../../destinations/ui/export-file-now.md). |
 | Bearbeiten Sie Exportpläne für mehrere exportierte Zielgruppen im [Planungsschritt](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | Die Option zum Bearbeiten der Exportpläne für mehrere exportierte Zielgruppen direkt über den Planungsschritt des Workflows von Audience Activation ist jetzt für alle Kundinnen und Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, auf dem die Option „Zeitplan bearbeiten“ im Planungsschritt hervorgehoben ist.](assets/august/edit-schedule.png "Option „Zeitplan bearbeiten“ im Planungsschritt."){width="250" align="center" zoomable="yes"} |
 | Bearbeiten Sie die Dateinamen für mehrere exportierte Zielgruppen im [Planungsschritt](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | Die Option zum Bearbeiten der Namen für mehrere exportierte Dateien direkt über den Planungsschritt des Workflows von Audience Activation ist jetzt für alle Kundinnen und Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, auf dem die Option „Dateinamen bearbeiten“ im Planungsschritt hervorgehoben ist.](assets/august/edit-file-name.png "Option „Dateinamen bearbeiten“ im Planungsschritt."){width="250" align="center" zoomable="yes"} |
-| Entfernen Sie mehrere Zielgruppen aus einem Datenfluss auf der Seite [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-remove). | Die Option zum Entfernen mehrerer Zielgruppen aus vorhandenen Datenflüssen auf der Seite **[!UICONTROL Zieldetails]** ist jetzt für alle Kundinnen und Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, auf dem die Option „Zielgruppen entfernen“ auf der Seite „Zieldetails“ hervorgehoben ist.](assets/august/bulk-remove-audiences.png "Entfernen Sie die Option „Zielgruppen“ auf der Seite „Zieldetails“."){width="250" align="center" zoomable="yes"} |
-| Exportieren Sie mehrere Dateien bei Bedarf auf der Seite [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-export) an Batch-Ziele. | Die Option zum Exportieren mehrerer Dateien nach Bedarf an Batch-Ziele über die Seite **[!UICONTROL Zieldetails]** ist jetzt für alle Kundinnen und Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, auf dem die Option „Datei jetzt exportieren“ auf der Seite „Zieldetails“ hervorgehoben ist.](assets/august/bulk-export-file-now.png "Option „Datei jetzt exportieren“ auf der Seite „Zieldetails“."){width="250" align="center" zoomable="yes"} |
-| Bearbeiten Sie Dateinamen für mehrere exportierte Zielgruppen auf der Seite [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Sie können jetzt die Namen mehrerer exportierter Dateien direkt auf der Seite **[!UICONTROL Zieldetails]** bearbeiten. ![Bild der Experience Platform-Benutzeroberfläche, auf dem die Option „Dateinamen bearbeiten“ auf der Seite „Zieldetails“ hervorgehoben ist.](assets/august/edit-file-name-destination-details.png "Option „Dateinamen bearbeiten“ auf der Seite „Zieldetails“."){width="250" align="center" zoomable="yes"} |
+| Entfernen Sie mehrere Zielgruppen aus einem Datenfluss auf der Seite [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-remove). | Die Option zum Entfernen mehrerer Zielgruppen aus vorhandenen Datenflüssen von der **[!UICONTROL Destination Details]** ist jetzt für alle Kundinnen und Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, auf dem die Option „Zielgruppen entfernen“ auf der Seite „Zieldetails“ hervorgehoben ist.](assets/august/bulk-remove-audiences.png "Entfernen Sie die Option „Zielgruppen“ auf der Seite „Zieldetails“."){width="250" align="center" zoomable="yes"} |
+| Exportieren Sie mehrere Dateien bei Bedarf auf der Seite [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-export) an Batch-Ziele. | Die Option zum Exportieren mehrerer Dateien nach Bedarf an Batch-Ziele von der Seite **[!UICONTROL Destination Details]** ist jetzt für alle Kundinnen und Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, auf dem die Option „Datei jetzt exportieren“ auf der Seite „Zieldetails“ hervorgehoben ist.](assets/august/bulk-export-file-now.png "Option „Datei jetzt exportieren“ auf der Seite „Zieldetails“."){width="250" align="center" zoomable="yes"} |
+| Bearbeiten Sie Dateinamen für mehrere exportierte Zielgruppen auf der Seite [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Sie können jetzt die Namen mehrerer exportierter Dateien direkt auf der Seite **[!UICONTROL Destination Details]** bearbeiten. ![Bild der Experience Platform-Benutzeroberfläche, auf dem die Option „Dateinamen bearbeiten“ auf der Seite „Zieldetails“ hervorgehoben ist.](assets/august/edit-file-name-destination-details.png "Option „Dateinamen bearbeiten“ auf der Seite „Zieldetails“."){width="250" align="center" zoomable="yes"} |
 | Entfernen Sie mehrere Datensätze aus einem Datenfluss auf der Seite [Zieldetails](../../destinations/ui/export-datasets.md#remove-dataset). | Die Option zum Entfernen mehrerer Datensätze aus einem Datenfluss ist jetzt für alle Kundinnen und Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, auf dem die Option „Datensätze entfernen“ auf der Seite „Zieldetails“ hervorgehoben ist.](assets/august/bulk-remove-datasets.png "Option „Datensätze entfernen“ auf der Seite „Zieldetails“."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
@@ -120,7 +120,7 @@ Weiterführende Informationen zu Identity Service finden Sie in der [Übersicht 
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Aufnahmedetails | Bei Zielgruppen, deren Quelle der benutzerdefinierte Upload ist, können Sie Details zur Aufnahme der Zielgruppe auf der Seite mit den Zielgruppendetails umfassender anzeigen. Darüber hinaus können Sie Beschriftungen auf die Payload-Attribute anwenden, indem Sie das Schema und die gewünschten Attribute zur Beschriftung auswählen. Weitere Informationen zum Abschnitt „Aufnahmedetails“ finden Sie im [Handbuch zu Audience Portal](../../segmentation/ui/audience-portal.md#ingestion-details). |
+| Aufnahmedetails | Bei Zielgruppen, deren Quelle der benutzerdefinierte Upload ist, können Sie Details zur Aufnahme der Zielgruppe auf der Seite mit den Zielgruppendetails umfassender anzeigen. Darüber hinaus können Sie Labels auf die Payload-Attribute anwenden, indem Sie das Schema und die gewünschten Attribute zum Label auswählen. Weitere Informationen zum Abschnitt „Aufnahmedetails“ finden Sie im [Handbuch zu Audience Portal](../../segmentation/ui/audience-portal.md#ingestion-details). |
 
 {style="table-layout:auto"}
 
@@ -136,7 +136,7 @@ Verwenden Sie Quellen in Experience Platform, um Daten aus einer Adobe-Anwendung
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktualisierungen des Adobe Analytics-Quell-Connector | Auf der Seite „Datensatzaktivität“ werden keine Informationen zu Batches angezeigt, da der Analytics-Quell-Connector vollständig von Adobe verwaltet wird. Sie können überwachen, dass Daten fließen, indem Sie sich die Metriken um die erfassten Datensätze ansehen. Weitere Informationen finden Sie im Handbuch zum Erstellen einer [Quellverbindung für Analytics-Daten](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Aktualisierungen des Adobe Analytics-Quell-Connector | Auf der Seite „Datensatzaktivität“ werden keine Informationen zu Batches angezeigt, da der Analytics-Quell-Connector vollständig von Adobe verwaltet wird. Sie können überwachen, dass Daten fließen, indem Sie sich die Metriken um die erfassten Einträge ansehen. Weitere Informationen finden Sie im Handbuch zum Erstellen einer [Quellverbindung für Analytics-Daten](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 **Aktualisierte Dokumentation**
 
