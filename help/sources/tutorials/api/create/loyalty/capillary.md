@@ -3,7 +3,7 @@ title: Verbinden von Capillary mit Experience Platform mithilfe der Flow Service
 description: Erfahren Sie, wie Sie Capillary mithilfe von APIs mit Experience Platform verbinden.
 badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 9%
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Capillary Streaming Events]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie mit dem [!DNL Capillary Streaming Events] und der [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) Daten von Ihrem [!DNL Capillary] an Adobe Experience Platform streamen.
 
@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ### Sammeln erforderlicher Anmeldedaten
 
-Informationen zur Authentifizierung [[!DNL Capillary Streaming Events]  Sie in &#x200B;](../../../../connectors/loyalty/capillary.md)Übersicht“.
+Informationen zur Authentifizierung [[!DNL Capillary Streaming Events]  Sie in ](../../../../connectors/loyalty/capillary.md)Übersicht“.
 
 ### Verwenden von Experience Platform-APIs
 
@@ -234,7 +234,8 @@ Transaktionen erfassen Commerce-Aktivitäten. Sehen Sie sich die folgende Payloa
 
 >[!ENDTABS]
 
-<!--### Supported Events
+<!--
+### Supported Events
 
 The [!DNL Capillary] source supports the following events:
 
@@ -251,7 +252,8 @@ The [!DNL Capillary] source supports the following events:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`-->
+* `customerUpdated`
+-->
 
 ### Historische Datenmigration
 
@@ -330,7 +332,7 @@ Ordnen Sie die Kapillarfelder den entsprechenden XDM-Schemafeldern wie folgt zu:
 
 >[!TIP]
 >
->Sie können die [Ereignisse und Profilzuordnungen](../../../../images/tutorials/create/capillary/mappings.zip) für [!DNL Capillary] herunterladen und [die Dateien in die Datenvorbereitung &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping), wenn Sie für die Zuordnung Ihrer Daten bereit sind.
+>Sie können die [Ereignisse und Profilzuordnungen](../../../../images/tutorials/create/capillary/mappings.zip) für [!DNL Capillary] herunterladen und [die Dateien in die Datenvorbereitung ](../../../../../data-prep/ui/mapping.md#import-mapping), wenn Sie für die Zuordnung Ihrer Daten bereit sind.
 
 ### Erstellen eines Datenflusses {#flow}
 
