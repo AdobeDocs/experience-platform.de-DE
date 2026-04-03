@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Handbuch zur Batch-Aufnahme-API
 description: Dieses Dokument enthält eine umfassende Anleitung für Entwicklerinnen und Entwickler, die mit Batch-Aufnahme-APIs für Adobe Experience Platform arbeiten.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2435'
 ht-degree: 64%
 
 ---
 
-# Entwicklerhandbuch zur Batch-Erfassung
+# Entwicklerhandbuch zur Batch-Aufnahme
 
 Dieses Dokument enthält eine umfassende Anleitung zur Verwendung von [Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)Endpunkten in Adobe Experience Platform. Einen Überblick über Batch-Aufnahme-APIs, einschließlich Voraussetzungen und Best Practices, erhalten Sie in der [Übersicht über die Batch-Aufnahme-API](overview.md).
 
-Der Anhang zu diesem Dokument enthält Informationen zur [Formatierung von Daten, die zur Erfassung verwendet werden sollen](#data-transformation-for-batch-ingestion), einschließlich Beispiel-CSV- und JSON-Datendateien.
+Der Anhang zu diesem Dokument enthält Informationen zur [Formatierung von Daten, die zur Aufnahme verwendet werden sollen](#data-transformation-for-batch-ingestion), einschließlich Beispiel-CSV- und JSON-Datendateien.
 
 ## Erste Schritte
 
@@ -37,7 +37,7 @@ Zunächst müssen Sie einen Batch erstellen, wobei JSON als Eingabeformat dient.
 
 >[!NOTE]
 >
->Die folgenden Beispiele gelten für einzeilige JSON-Dateien. Um mehrzeilige JSON zu erfassen, muss die `isMultiLineJson`-Markierung gesetzt werden. Weiterführende Informationen finden Sie im [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](./troubleshooting.md).
+>Die folgenden Beispiele gelten für einzeilige JSON-Dateien. Um mehrzeilige JSON zu erfassen, muss die `isMultiLineJson`-Markierung gesetzt werden. Weiterführende Informationen finden Sie im [Handbuch zur Fehlerbehebung bei der Batch-Aufnahme](./troubleshooting.md).
 
 **API-Format**
 
@@ -99,7 +99,7 @@ Nachdem Sie nun einen Batch erstellt haben, können Sie die Batch-ID aus der Ant
 
 >[!NOTE]
 >
->Ein (Beispiel [&#x200B; ordnungsgemäß formatierten JSON-Datendatei) finden Sie im Anhang &#x200B;](#data-transformation-for-batch-ingestion).
+>Ein (Beispiel [ ordnungsgemäß formatierten JSON-Datendatei) finden Sie im Anhang ](#data-transformation-for-batch-ingestion).
 
 **API-Format**
 
@@ -623,7 +623,7 @@ Nach dem Erstellen eines Batches können Sie die `batchId` verwenden, um Dateien
 
 >[!NOTE]
 >
->Ein Beispiel für eine [&#x200B; CSV-Datendatei finden Sie im Anhang &#x200B;](#data-transformation-for-batch-ingestion).
+>Ein Beispiel für eine [ CSV-Datendatei finden Sie im Anhang ](#data-transformation-for-batch-ingestion).
 
 **API-Format**
 
@@ -752,7 +752,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Patchen eines Batches
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Adobe Experience Platform unterstützt die Aktualisierung oder das Patchen von Profilspeicherdaten durch eine Upsert-Aktion oder das „Patchen eines Batches“.
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Einträge korrigieren oder einen Attributwert ändern. Adobe Experience Platform unterstützt die Aktualisierung oder das Patchen von Profilspeicherdaten durch eine Upsert-Aktion oder das „Patchen eines Batches“.
 
 >[!NOTE]
 >
@@ -801,7 +801,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parameter | Beschreibung |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes. |
 
 **Antwort**
@@ -919,7 +919,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Der folgende Abschnitt enthält zusätzliche Informationen zur Aufnahme von Daten in Experience Platform mithilfe der Batch-Aufnahme.
 
-### Datenumwandlung für die Batch-Erfassung
+### Datenumwandlung für die Batch-Aufnahme
 
 Um eine Datendatei in [!DNL Experience Platform] aufzunehmen, muss die hierarchische Struktur der Datei dem Schema des [Experience-Datenmodells (XDM) entsprechen](../../xdm/home.md) das mit dem Datensatz verknüpft ist, in den hochgeladen wird.
 
