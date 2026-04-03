@@ -2,7 +2,7 @@
 title: Integration des Administratorprotokolls in Query Service
 description: In den Audit-Protokollen des Abfrage-Service werden Datensätze für verschiedene Benutzeraktionen gespeichert, um ein Audit-Protokoll zur Fehlerbehebung bei Problemen oder zur Einhaltung von Unternehmensrichtlinien für die Datenverwaltung und gesetzlichen Anforderungen zu bilden. Dieses Tutorial bietet einen Überblick über die Administratorprotokoll-Funktionen, die für den Abfrage-Service spezifisch sind.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 8%
@@ -79,11 +79,11 @@ Der Wert der [!UICONTROL Event status] ändert sich je nach der beim Audit verwe
 
 ## Verfügbare Filter für [!DNL Query Service] Administratorprotokoll-Kategorien {#available-filters}
 
-Die verfügbaren Filter variieren je nach der im Dropdown-Menü ausgewählten Kategorie. In der folgenden Tabelle sind die Filter aufgeführt, die für [[!DNL Query Service] Auditprotokollkategorien“ verfügbar &#x200B;](#audit-log-categories).
+Die verfügbaren Filter variieren je nach der im Dropdown-Menü ausgewählten Kategorie. In der folgenden Tabelle sind die Filter aufgeführt, die für [[!DNL Query Service] Auditprotokollkategorien“ verfügbar ](#audit-log-categories).
 
 | Filter | Beschreibung |
 |---|---|
-| Kategorie | Eine vollständige Liste [[!DNL Query Service]  verfügbaren Kategorien finden Sie &#x200B;](#audit-log-categories) Abschnitt „Auditprotokollkategorien“. |
+| Kategorie | Eine vollständige Liste [[!DNL Query Service]  verfügbaren Kategorien finden Sie ](#audit-log-categories) Abschnitt „Auditprotokollkategorien“. |
 | Aktion | Wenn Sie sich auf [!DNL Query Service] Auditkategorien beziehen, handelt es sich bei der Aktualisierung um **Änderung am vorhandenen Formular**, beim Löschen **Entfernen des Zeitplans oder der**), beim Erstellen **Erstellen eines neuen Zeitplans oder einer neuen Vorlage** und beim Ausführen **eine Abfrage**. |
 | Benutzerin bzw. Benutzer | Geben Sie die vollständige Benutzer-ID ein (z. B. johndoe@acme.com), um nach Benutzer zu filtern. |
 | Status | Die Optionen [!UICONTROL Allow], [!UICONTROL Success] und [!UICONTROL Failure] filtern die Protokolle auf der Grundlage des „Status“ oder „Ereignisstatus“, während die Option [!UICONTROL Deny] &quot;**&quot;**. |
