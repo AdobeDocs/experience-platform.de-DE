@@ -2,10 +2,10 @@
 title: Wichtigste Tipps zur Wertmaximierung mit Adobe Experience Platform Data Distiller - OS656
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Data Distiller den Wert maximieren können, indem Sie Echtzeit-Kundenprofildaten anreichern und Verhaltenseinblicke verwenden, um Zielgruppen zu erstellen. Diese Ressource enthält einen Beispieldatensatz und eine Fallstudie, die zeigt, wie das Modell „Neuigkeit, Häufigkeit, Geld (RFM)“ auf die Kundensegmentierung angewendet wird.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '3743'
-ht-degree: 0%
+source-wordcount: '3664'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ Mithilfe der Fallstudie zu Luma analysieren Sie die Verhaltensdaten der Benutzer
 
 ## Voraussetzung
 
-Um diesen Anwendungsfall ausführen zu können, muss Ihre Adobe Experience Platform-Instanz für [Data Distiller](./overview.md) lizenziert sein. Weitere Informationen erhalten Sie vom Adobe-Support.
+Um diesen Anwendungsfall ausführen zu können, muss Ihre Adobe Experience Platform-Instanz für [Data Distiller](./overview.md) lizenziert sein. Wenden Sie sich an den Adobe-Support, um weitere Informationen zu erhalten.
 
 Außerdem müssen Sie die Mandanten **ID Ihrer Organisation kennen,** für die Ausführung von Abfragen erforderlich ist. Ihre Mandanten-ID ist der erste Teil der URL, wenn Sie sich bei Experience Platform anmelden. Sie wird unmittelbar nach dem @-Symbol angezeigt.
 
@@ -55,7 +55,7 @@ Die folgende Infografik bietet einen allgemeinen Überblick über den Workflow z
 
 ![Eine Infografik mit dem Titel „RFM-Score-Based SQL Audience“, die vier Schritte veranschaulicht: CSV hochladen, Daten erkunden, mit RFM-Scores anreichern und die Zielgruppe aktivieren.](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
-Bevor Sie mit der Fallstudie zu Luma beginnen, müssen Sie einen Beispieldatensatz aufnehmen. Wählen [&#x200B; zunächst den Link aus, um den `luma_web_data.zip`-Datensatz lokal herunterzuladen](../resources/luma_web_data.zip). Der Beispieldatensatz ist eine CSV-Datei im komprimierten ZIP-Format, die an den Anwendungsfall angepasst wird. Entpacken Sie diese ZIP-Datei mit Adobe Acrobat oder einem vertrauenswürdigen Dateiextraktions-Tool, z. B. dem integrierten Dienstprogramm Ihres Betriebssystems. In der Praxis würden Sie Daten normalerweise aus Adobe Analytics, Adobe Commerce oder Adobe Web/Mobile SDK beziehen.
+Bevor Sie mit der Fallstudie zu Luma beginnen, müssen Sie einen Beispieldatensatz aufnehmen. Wählen [ zunächst den Link aus, um den `luma_web_data.zip`-Datensatz lokal herunterzuladen](../resources/luma_web_data.zip). Der Beispieldatensatz ist eine CSV-Datei im komprimierten ZIP-Format, die an den Anwendungsfall angepasst wird. Entpacken Sie diese ZIP-Datei mit Adobe Acrobat oder einem vertrauenswürdigen Dateiextraktions-Tool, z. B. dem integrierten Dienstprogramm Ihres Betriebssystems. In der Praxis würden Sie Daten normalerweise aus Adobe Analytics, Adobe Commerce oder Adobe Web/Mobile SDK beziehen.
 
 In diesem Tutorial verwenden Sie Data Distiller, um relevante Ereignisse und Felder in ein standardisiertes CSV-Format zu extrahieren. Ziel ist es, nur wesentliche Felder einzubeziehen und gleichzeitig eine flache Datenstruktur für Effizienz und Benutzerfreundlichkeit beizubehalten.
 
@@ -65,22 +65,22 @@ Führen Sie die folgenden Schritte aus, um eine CSV-Datei in Adobe Experience Pl
 
 #### Erstellen eines Datensatzes aus einer CSV-Datei {#create-a-dataset}
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Datensätze]** in der linken Navigationsleiste und anschließend **[!UICONTROL Datensatz erstellen]**. Wählen Sie dann **[!UICONTROL Datensatz aus CSV-Datei erstellen]** aus den verfügbaren Optionen aus.
+Wählen Sie in der Benutzeroberfläche von Experience Platform in der linken Navigationsleiste **[!UICONTROL Datasets]** und dann **[!UICONTROL Create dataset]** aus. Wählen Sie dann **[!UICONTROL Create dataset from CSV file]** aus den verfügbaren Optionen aus.
 
-Das [!UICONTROL Datensatz konfigurieren] wird angezeigt. Geben **[!UICONTROL im Feld]** den Datensatznamen als „luma_web_data“ ein und wählen Sie **[!UICONTROL Weiter]**.
+Das Bedienfeld [!UICONTROL Configure Dataset] wird angezeigt. Geben Sie im Feld **[!UICONTROL Name]** den Datensatznamen als „luma_web_data“ ein und wählen Sie **[!UICONTROL Next]** aus.
 
-Das [!UICONTROL Daten hinzufügen] wird angezeigt. Ziehen Sie die CSV-Datei in das Feld **[!UICONTROL Daten hinzufügen]** oder wählen Sie **[!UICONTROL Datei auswählen]** aus, um die Datei zu suchen und hochzuladen.
+Das Bedienfeld [!UICONTROL Add data] wird angezeigt. Ziehen Sie die CSV-Datei per Drag-and-Drop in das **[!UICONTROL Add data]** oder wählen Sie **[!UICONTROL Choose File]** aus, um die Datei zu durchsuchen und hochzuladen.
 
 Weitere Informationen zu diesem Prozess finden Sie im [Tutorial zur Batch](../../ingestion/tutorials/ingest-batch-data.md)Aufnahme und im [Workflow für die Datensatzerstellung](../../catalog/datasets/user-guide.md#create) im Handbuch zur Datensatz-Benutzeroberfläche.
 
 #### Überprüfen und Abschließen des Uploads {#review-and-complete-upload}
 
-Nach dem Hochladen der Datei wird unten in der Benutzeroberfläche eine Datenvorschau angezeigt. Wählen Sie **[!UICONTROL Beenden]** aus, um den Upload abzuschließen.
+Nach dem Hochladen der Datei wird unten in der Benutzeroberfläche eine Datenvorschau angezeigt. Wählen Sie **[!UICONTROL Finish]** aus, um den Upload abzuschließen.
 
 ![Der Abschnitt „Daten hinzufügen“ des Workflows „Datensatz aus CSV-Datei erstellen“ mit einer Datenvorschau und hervorgehobenem „Beenden“.](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 Die Ansicht Datensatzaktivitäten für den Datensatz „luma_web_data“ wird angezeigt. Manueller Upload der CSV-Datei
-wird als Batch aufgenommen und durch eine [!UICONTROL Batch-ID] gekennzeichnet. In einem Bedienfeld auf der rechten Seite wird der Tabellenname als `luma_web_data` angezeigt.
+wird als Batch aufgenommen und durch einen [!UICONTROL Batch ID] identifiziert. In einem Bedienfeld auf der rechten Seite wird der Tabellenname als `luma_web_data` angezeigt.
 
 >[!TIP]
 >
@@ -88,11 +88,12 @@ wird als Batch aufgenommen und durch eine [!UICONTROL Batch-ID] gekennzeichnet. 
 
 ![Die Registerkarte „Datensatzaktivität“ für den neu erstellten Datensatz „luma_web_data“ mit Tabellennamen, Batch-ID und hervorgehobener „Vorschau des Datensatzes“.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
-<!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
+<!-- 
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 
-Nachdem die Verarbeitung der Daten abgeschlossen ist, wählen Sie [!UICONTROL Vorschau des Datensatzes] in der oberen rechten Ecke aus, um eine Vorschau des Datensatzes anzuzeigen. So wird die Datensatzvorschau angezeigt:
+Nachdem die Verarbeitung der Daten abgeschlossen ist, wählen Sie oben rechts [!UICONTROL Preview dataset] aus, um eine Vorschau des Datensatzes anzuzeigen. So wird die Datensatzvorschau angezeigt:
 
 ![Die Datensatzvorschau des Datensatzes „luma_web_data“.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
@@ -118,7 +119,7 @@ Verwenden Sie Data Distiller, um die Qualität und Vollständigkeit von Datensä
 
 #### Durchführen einer einfachen Explorationsabfrage {#basic-exploration-queries}
 
-Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche **[!UICONTROL Abfragen]** in der linken Navigationsleiste und anschließend **[!UICONTROL Abfrage erstellen]**. Der Abfrage-Editor wird angezeigt.
+Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche in der linken Navigationsleiste **[!UICONTROL Queries]** und dann **[!UICONTROL Create Query]** aus. Der Abfrage-Editor wird angezeigt.
 
 Fügen Sie die folgende Abfrage in den Editor ein und führen Sie sie aus:
 
@@ -126,11 +127,11 @@ Fügen Sie die folgende Abfrage in den Editor ein und führen Sie sie aus:
 SELECT * FROM luma_web_data; 
 ```
 
-Die Abfrageergebnisse werden unter dem Abfrage-Editor auf der Registerkarte **[!UICONTROL Ergebnisse]** angezeigt. Um die Ergebnisse in einem neuen Dialogfeld zu erweitern, wählen Sie **[!UICONTROL Ergebnisse anzeigen]** aus. Die Ergebnisse sehen in etwa wie in der Abbildung unten aus.
+Die Abfrageergebnisse werden unter dem Abfrage-Editor auf der Registerkarte **[!UICONTROL Results]** angezeigt. Um die Ergebnisse in einem neuen Dialogfeld zu erweitern, wählen Sie **[!UICONTROL View results]** aus. Die Ergebnisse sehen in etwa wie in der Abbildung unten aus.
 
 ![Das Dialogfeld „Abfrageergebnisse“ für die grundlegenden Abfrageexplorationsergebnisse.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
-Weitere Informationen finden Sie [&#x200B; Dokument „Allgemeine Leitlinien &#x200B;](../best-practices/writing-queries.md) die Ausführung von Abfragen“.
+Weitere Informationen finden Sie [ Dokument „Allgemeine Leitlinien ](../best-practices/writing-queries.md) die Ausführung von Abfragen“.
 
 #### Fokus auf Bestellungen und Ausschließen stornierter Transaktionen {#focus-orders-exclude-cancelled}
 
@@ -352,7 +353,7 @@ Um den Zugriff und die Wiederverwendung zu optimieren, erstellen Sie ein `VIEW`,
 
 Die `CASE`-Anweisungen in der folgenden SQL kategorisieren Kundinnen und Kunden basierend auf ihren RFM-Bewertungen in Segmente und weisen die Ergebnisse der `RFM_Model`-Variablen zu.
 
-+++SQL anzeigen
++++SQL-Anzeige auswählen
 
 ```sql
 CREATE OR replace VIEW rfm_model_segment
@@ -438,7 +439,7 @@ In dieser SQL-Anweisung:
 
 >[!NOTE]
 >
->Der Namespace „E-Mail“ ist ein [Standard-Identity-Namespace](../../identity-service/features/namespaces.md#standard) in Adobe Experience Platform. Achten Sie beim Definieren von Identitätsfeldern darauf, dass der entsprechende Namespace angegeben wird, um eine genaue Identitätsauflösung zu ermöglichen. &#x200B;
+>Der Namespace „E-Mail“ ist ein [Standard-Identity-Namespace](../../identity-service/features/namespaces.md#standard) in Adobe Experience Platform. Stellen Sie beim Definieren von Identitätsfeldern sicher, dass der entsprechende Namespace angegeben wird, um eine genaue Identitätsauflösung zu ermöglichen. &#x200B;
 >
 >Weitere Informationen zum Definieren von Identitätsfeldern und zum Arbeiten mit Identity-Namespaces finden Sie in der [Identity Service-Dokumentation](../../identity-service/home.md) oder im Handbuch [Definieren eines Identitätsfelds in der Adobe Experience Platform-Benutzeroberfläche](../../xdm/ui/fields/identity.md).
 
@@ -470,11 +471,11 @@ FROM rfm_model_segment;
 
 Das Ergebnis dieser Abfrage ähnelt früheren Datensatzerstellungen in diesem Playbook, jedoch mit einer anderen ID.
 
-Navigieren Sie nach dem Erstellen des Datensatzes zu **[!UICONTROL Datensätze]** > **[!UICONTROL Durchsuchen]** > `adls_rfm_profile`, um sicherzustellen, dass der Datensatz leer ist.
+Navigieren Sie nach dem Erstellen des Datensatzes zu **[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile` , um sicherzustellen, dass der Datensatz leer ist.
 
 ![Der Arbeitsbereich „Datensätze“ mit den Details des Datensatzes „adls_rfm_profile“ wird angezeigt und der Umschalter „Profil aktiviert“ ist hervorgehoben.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-Sie können auch zu **[!UICONTROL Schemas]** > **[!UICONTROL Durchsuchen]** > `adls_rfm_profile` navigieren, um das Schema-Diagramm XDM-Kontaktprofil Ihres neu erstellten Datensatzes und seiner benutzerdefinierten Feldergruppen anzuzeigen.
+Sie können auch zu **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` navigieren, um das Schema-Diagramm XDM-Kontaktprofil Ihres neu erstellten Datensatzes und seiner benutzerdefinierten Feldergruppen anzuzeigen.
 
 ![Der XDM-Arbeitsbereich mit dem Diagramm „adls_rfm_profile“ wird auf der Arbeitsfläche des Schemas angezeigt.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -503,30 +504,30 @@ Nachdem Ihr SQL-Code jetzt einen abgeleiteten Datensatz generiert und ihn für d
 
 #### Planen der Abfrageausführung
 
-Navigieren Sie nach dem Speichern Ihrer SQL zur Registerkarte **[!UICONTROL Vorlagen]** , um die gespeicherte Abfrage anzuzeigen und den Planungsprozess zu starten. Es gibt zwei Möglichkeiten, eine Abfrage zu planen:
+Navigieren Sie nach dem Speichern Ihrer SQL zur Registerkarte **[!UICONTROL Templates]** , um die gespeicherte Abfrage anzuzeigen und den Planungsprozess zu starten. Es gibt zwei Möglichkeiten, eine Abfrage zu planen:
 
-Wählen **[!UICONTROL Zeitplan hinzufügen]** in der rechten Seitenleiste aus.
+Wählen Sie **[!UICONTROL Add Schedule]** in der rechten Seitenleiste aus.
 
 ![Die Registerkarte „Bearbeiten“ des Arbeitsbereichs „Abfragen“ mit hervorgehobener Option „Zeitplan hinzufügen“.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
 
-Alternativ können Sie die Registerkarte **[!UICONTROL Zeitpläne]** unter dem Vorlagennamen auswählen und dann **[!UICONTROL Zeitplan hinzufügen]**.
+Wählen Sie alternativ die Registerkarte **[!UICONTROL Schedules]** unter dem Vorlagennamen aus und klicken Sie dann auf **[!UICONTROL Add Schedule]**.
 
 ![Die Registerkarte „Zeitpläne“ des Arbeitsbereichs „Abfragen“ mit hervorgehobener Option „Zeitplan hinzufügen“.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
 
 Weitere Informationen zum Planen von Abfragen finden Sie in der [Dokumentation zu Abfragezeitplänen](../ui/query-schedules.md).
 
-Die [!UICONTROL Zeitplandetails] wird angezeigt. Geben Sie von hier aus die folgenden Details ein, um den Zeitplan zu konfigurieren:
+Die [!UICONTROL Schedule details] wird angezeigt. Geben Sie von hier aus die folgenden Details ein, um den Zeitplan zu konfigurieren:
 
-- **[!UICONTROL Ausführungsfrequenz]**: **wöchentlich**
-- **[!UICONTROL Tag der Ausführung]**: **Montag und Dienstag**
-- **[!UICONTROL Ausführungszeit planen]**: **10:10 UTC**
-- **[!UICONTROL Planzeitraum]**: **17. März - 30. April 2025**
+- **[!UICONTROL Execution Frequency]**: **Wöchentlich**
+- **[!UICONTROL Day of Execution]**: **Montag &amp; Dienstag**
+- **[!UICONTROL Schedule Execution Time]**: **10:10 UHR UTC**
+- **[!UICONTROL Schedule Period]**: **17. März - 30. April 2025**
 
-Klicken Sie **[!UICONTROL Speichern]**, um den Zeitplan zu bestätigen.
+Wählen Sie **[!UICONTROL Save]** aus, um den Zeitplan zu bestätigen.
 
 ![Die Zeitplandetails mit den konfigurierten Einstellungen und den hervorgehobenen Optionen „Speichern“.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
-Nachdem Sie den Zeitplan gespeichert haben, können Sie jederzeit zur Registerkarte **[!UICONTROL Geplante Abfragen]** navigieren, um geplante Distiller-Datenaufträge zu überwachen. Weitere Informationen zum [Anzeigen des Abfrageausführungsstatus, von Fehlermeldungen und Warnhinweisen](../ui/monitor-queries.md) finden Sie im Dokument Überwachen geplanter Abfragen .
+Nachdem Sie den Zeitplan gespeichert haben, können Sie jederzeit zur Registerkarte **[!UICONTROL Scheduled Queries]** navigieren, um geplante Distiller-Datenaufträge zu überwachen. Weitere Informationen zum [Anzeigen des Abfrageausführungsstatus, von Fehlermeldungen und Warnhinweisen](../ui/monitor-queries.md) finden Sie im Dokument Überwachen geplanter Abfragen .
 
 Nach der Konfiguration wird die SQL-Abfrage automatisch in den definierten Intervallen ausgeführt, um sicherzustellen, dass die Daten auf dem neuesten Stand bleiben, ohne dass ein manuelles Eingreifen erforderlich ist.
 
@@ -543,9 +544,9 @@ Wählen Sie den Ansatz aus, der am besten zu Ihrem Workflow passt.
 
 #### Lösung 1: SQL-Zielgruppe über Data Distiller {#data-distiller-sql-audience}
 
-Verwenden Sie den Befehl `CREATE AUDIENCE AS SELECT` , um eine neue Audience zu definieren. Die erstellte Zielgruppe wird in einem Datensatz gespeichert und im Arbeitsbereich **[!UICONTROL Zielgruppen]** unter &quot;**[!UICONTROL Distiller]** registriert.
+Verwenden Sie den Befehl `CREATE AUDIENCE AS SELECT` , um eine neue Audience zu definieren. Die erstellte Zielgruppe wird in einem Datensatz gespeichert und im Arbeitsbereich **[!UICONTROL Audiences]** unter **[!UICONTROL Data Distiller]** registriert.
 
-Audiences, die mit der SQL-Erweiterung erstellt wurden, werden automatisch unter der [!UICONTROL Data Distiller] im Arbeitsbereich [!UICONTROL Audiences] registriert. Im [Zielgruppenportal](../../segmentation/ui/audience-portal.md) können Sie Ihre Zielgruppen nach Bedarf anzeigen, verwalten und aktivieren.
+Audiences, die mit der SQL-Erweiterung erstellt wurden, werden automatisch unter der [!UICONTROL Data Distiller] Herkunft im Arbeitsbereich [!UICONTROL Audiences] registriert. Im [Zielgruppenportal](../../segmentation/ui/audience-portal.md) können Sie Ihre Zielgruppen nach Bedarf anzeigen, verwalten und aktivieren.
 
 ![Das Zielgruppen-Portal mit den verfügbaren Zielgruppen.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
@@ -646,19 +647,19 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 Verwenden Sie RFM-Attribute, um Benutzer basierend auf ihrem Verhalten und ihren Merkmalen zu segmentieren. Dieser Abschnitt führt Sie durch die Adobe Experience Platform-Benutzeroberfläche, um eine Zielgruppe mithilfe von RFM-Bewertungen zu definieren.
 
-Um sicherzustellen, dass die Daten in das Echtzeit-Kundenprofil geladen wurden, navigieren Sie zu **[!UICONTROL Kunden] > [!UICONTROL Profile] > [!UICONTROL Durchsuchen]**. Wählen Sie **[!UICONTROL Identity-Namespace]** als `Email` aus und geben Sie `user0076@example.com` ein. Überprüfen Sie die Profildetails, um sicherzustellen, dass es die erwarteten RFM-Attribute enthält.
+Um sicherzustellen, dass die Daten in das Echtzeit-Kundenprofil geladen wurden, navigieren Sie zu **[!UICONTROL Customers]> [!UICONTROL Profiles] >[!UICONTROL Browse]**. Wählen Sie **[!UICONTROL Identity Namespace]** als `Email` aus und geben Sie `user0076@example.com` ein. Überprüfen Sie die Profildetails, um sicherzustellen, dass es die erwarteten RFM-Attribute enthält.
 
 ![Der Arbeitsbereich Profile mit verfügbaren Profilen, auf die der Filter Primäre E-Mail-Identität und E-Mail-Wert angewendet wurde.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
 
 ![Die Ansicht Profilattribute , in der die Attribute eines bestimmten Profils angezeigt werden.](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
 
-Um vorhandene Zielgruppen zu durchsuchen, wählen Sie **[!UICONTROL Zielgruppen]** aus dem linken Navigationsbereich aus und stellen Sie sicher, dass die Registerkarte **[!UICONTROL Durchsuchen]** ausgewählt ist. Die Liste der verfügbaren Zielgruppen in der Sandbox wird angezeigt. Wenn Sie eine Zielgruppe auswählen, werden ihre Beschreibung, die Regeln für die Qualifizierung und die Anzahl der enthaltenen Profile angezeigt.
+Um vorhandene Zielgruppen zu durchsuchen, wählen Sie **[!UICONTROL Audiences]** im linken Navigationsbereich aus und stellen Sie sicher, dass die Registerkarte **[!UICONTROL Browse]** ausgewählt ist. Die Liste der verfügbaren Zielgruppen in der Sandbox wird angezeigt. Wenn Sie eine Zielgruppe auswählen, werden ihre Beschreibung, die Regeln für die Qualifizierung und die Anzahl der enthaltenen Profile angezeigt.
 
-Um eine neue Zielgruppe zu erstellen, wählen **[!UICONTROL oben]** „Zielgruppe erstellen“ aus. Es wird ein Dialogfeld mit zwei Optionen angezeigt. Wählen **[!UICONTROL Regel erstellen]** gefolgt von **[!UICONTROL Erstellen]** aus.
+Um eine neue Audience zu erstellen, wählen Sie oben rechts **[!UICONTROL Create Audience]** aus. Es wird ein Dialogfeld mit zwei Optionen angezeigt. Wählen Sie **[!UICONTROL Build Rule]** und dann **[!UICONTROL Create]** aus.
 
 ![Das Dialogfeld „Zielgruppe erstellen“ mit ausgewählter Regel erstellen und hervorgehobener Option „Erstellen“.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
 
-Die Benutzeroberfläche für die Zielgruppenkomposition bietet Zugriff auf Profilattribute. Navigieren Sie zu **[!UICONTROL Attribute] > [!UICONTROL Individuelles XDM-Profil]**, um verfügbare Attribute anzuzeigen.
+Die Benutzeroberfläche für die Zielgruppenkomposition bietet Zugriff auf Profilattribute. Navigieren Sie zu **[!UICONTROL Attributes]>[!UICONTROL XDM Individual Profile]** , um die verfügbaren Attribute anzuzeigen.
 
 Weitere Informationen zur Verwendung der Zielgruppenkomposition finden Sie im [Handbuch zur Benutzeroberfläche für die Zielgruppenkomposition](../../segmentation/ui/audience-composition.md). Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](../../segmentation/ui/segment-builder.md).
 
@@ -672,6 +673,6 @@ Um eine Zielgruppe mit RFM-Attributen zu erstellen, ziehen Sie das `Rfm_Model`-A
 
 ![Erstellen einer Zielgruppe in der Benutzeroberfläche für die Zielgruppenkomposition.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
 
-Um die Zielgruppe abzuschließen, wählen **[!UICONTROL oben rechts]** Speichern und veröffentlichen“ aus. Nach dem Speichern wird die neu erstellte Zielgruppe im Arbeitsbereich [!UICONTROL Zielgruppen] angezeigt, wo Sie die Zusammenfassung und Qualifizierungskriterien der Zielgruppe überprüfen können.
+Um die Zielgruppe abzuschließen, wählen Sie oben rechts **[!UICONTROL Save and Publish]** aus. Nach dem Speichern wird die neu erstellte Zielgruppe im Arbeitsbereich [!UICONTROL Audiences] angezeigt, wo Sie die Zusammenfassung und die Qualifikationskriterien überprüfen können.
 
 Verwenden Sie Segment Builder, um auf die abgeleiteten RFM-Attribute zuzugreifen und zusätzliche Zielgruppen zu entwerfen. Aktivieren Sie die neu erstellte SQL-Zielgruppe basierend auf RFM-Bewertungen und senden Sie sie an ein beliebiges Ziel, einschließlich Adobe Journey Optimizer.
