@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Didomi über die Benutzeroberfläche mit Adob
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Die [!DNL Didomi]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Didomi]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie ](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
 
 [!DNL Didomi] ist eine Plattform zur Einverständnis- und Präferenzverwaltung, die Unternehmen dabei hilft, Benutzerentscheidungen in Bezug auf personenbezogene Daten auf Websites, in Apps und internen Tools zu erfassen, zu verwalten und durchzusetzen.
 
@@ -80,7 +80,7 @@ Um einen Datensatz zu erstellen, klicken Sie im linken Navigationsbereich der Ex
 Um die Kompatibilität mit Experience Platform sicherzustellen, muss Ihr Webhook die folgenden Anforderungen erfüllen.
 
 | Feld | Beschreibung | Beispiel |
-| --- | --- | --- | 
+| --- | --- | --- |
 | Client-Geheimnis | Der mit Ihren Adobe-API-Anmeldeinformationen verknüpfte geheime Schlüssel. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
 | API-Schlüssel | Der öffentliche API-Schlüssel, der zum Authentifizieren von Anfragen an Adobe-Services verwendet wird. |  |
 | Gewährungstyp | Die Methode, mit der eine Anwendung ein Zugriffstoken vom Autorisierungs-Server erhält. Legen Sie diesen Wert auf `client_credentials` fest. | `client_credentials` |
@@ -94,7 +94,7 @@ Um die Kompatibilität mit Experience Platform sicherzustellen, muss Ihr Webhook
 Konfigurieren Sie als Nächstes die folgenden Optionen für Ihre [!DNL webhook].
 
 | Feld | Beschreibung | Wert |
-| ---| --- | --- | 
+| ---| --- | --- |
 | Anfrage-Header | Die benutzerdefinierten Kopfzeilen für die [!DNL webhook]. Stellen Sie sicher, dass Sie die `x-adobe-flow-id` einschließen. Sie können diesen Wert abrufen, nachdem Ihr [Datenfluss erstellt wurde](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url). | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
 | abflachen | Diese Eigenschaft muss überprüft werden, da sie sicherstellt, dass die [!DNL webhook] Daten als flaches Objekt gesendet werden. | Aktiviert |
 | Ereignistypen | Wählen Sie die spezifische Gruppe von [!DNL Didomi]-Ereignissen (`event.*` oder `user.*`) aus, die den Trigger der [!DNL webhook] bilden sollen. Verwenden Sie `event.*`, um Änderungen des Einverständnisses oder der Voreinstellungen zu verfolgen, und verwenden Sie `user.*`, um Aktualisierungen von Benutzerprofilen zu verfolgen. Diese Auswahl ist erforderlich, um sicherzustellen, dass nur kompatible Ereignisse an Adobe gesendet werden. Adobe unterstützt nur ein Schema pro Datenfluss. Daher kann die Auswahl beider Ereignistypen zu Aufnahmefehlern führen. | Die Liste der unterstützten Ereignistypen ist: <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |
