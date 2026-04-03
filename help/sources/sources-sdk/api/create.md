@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API
 description: Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der Flow Service-API und zum Integrieren einer neuen Quelle über Self-Service-Quellen.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 46%
@@ -39,7 +39,7 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 | Artefakte (Dateinamen) | Beschreibung | Beispiel |
 | --- | --- | --- |
 | {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte im Zusammenhang mit Ihrer Quelle in Ihrem privaten Git-Repository enthalten. | `mailchimp-members` |
-| {your_source}-category.txt | Die Kategorie, zu der Ihre Quelle gehört, formatiert als Textdatei. Zu den verfügbaren Quellkategorien, die von Selbstbedienungsquellen (Batch-SDK) unterstützt werden, gehören: <ul><li>Werbung</li><li>Analysen</li><li>Einverständnis und Voreinstellungen</li><li>CRM</li><li>Customer Success</li><li>Datenbank</li><li>e-Commerce</li><li>Marketing-Automatisierung</li><li>Zahlungen</li><li>Protokolle</li></ul> **Hinweis**: Wenn Sie der Meinung sind, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich an den Adobe-Support, um Folgendes zu besprechen. | `mailchimp-members-category.txt` Geben Sie in der Datei die Kategorie Ihrer Quelle an, z. B.: `marketingAutomation`. |
+| {your_source}-category.txt | Die Kategorie, zu der Ihre Quelle gehört, formatiert als Textdatei. Zu den verfügbaren Quellkategorien, die von Selbstbedienungsquellen (Batch-SDK) unterstützt werden, gehören: <ul><li>Werbung</li><li>Analytics</li><li>Einverständnis und Voreinstellungen</li><li>CRM</li><li>Customer Success</li><li>Datenbank</li><li>e-Commerce</li><li>Marketing-Automatisierung</li><li>Zahlungen</li><li>Protokolle</li></ul> **Hinweis**: Wenn Sie der Meinung sind, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich an den Adobe-Support, um Folgendes zu besprechen. | `mailchimp-members-category.txt` Geben Sie in der Datei die Kategorie Ihrer Quelle an, z. B.: `marketingAutomation`. |
 | {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Mailchimp Members] ist eine Marketing-Automatisierungsquelle, mit der Sie [!DNL Mailchimp Members] in Experience Platform übertragen können. |
 | {your_source}-icon.svg | Das Bild, das zur Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |  |
 | {your_source}-label.txt | Der Name Ihrer Quelle, wie er im Experience Platform-Quellkatalog angezeigt werden sollte. | Mailchimp-Mitglieder |
