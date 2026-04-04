@@ -21,9 +21,9 @@ ht-degree: 12%
 
 | Anzeigename | Eigenschaft | Datentyp | Erforderlich | Beschreibung |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | integer | Ja | Die Länge des Kapitels in Sekunden. |
-| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | string | Nein | Der Name des Kapitels und/oder Segments. |
-| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | integer | Ja | Der Versatz des Kapitels im Inhalt (in Sekunden) vom Start. |
-| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | integer | Ja | Die Position (Index, Ganzzahl) des Kapitels im Inhalt. |
+| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=de#chapter-length) | `length` | integer | Ja | Die Länge des Kapitels in Sekunden. |
+| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=de#chapter-name) | `friendlyName` | string | Nein | Der Name des Kapitels und/oder Segments. |
+| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=de#chapter-offset) | `offset` | integer | Ja | Der Versatz des Kapitels im Inhalt (in Sekunden) vom Start. |
+| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=de#chapter-position) | `index` | integer | Ja | Die Position (Index, Ganzzahl) des Kapitels im Inhalt. |
 
 {style="table-layout:auto"}
