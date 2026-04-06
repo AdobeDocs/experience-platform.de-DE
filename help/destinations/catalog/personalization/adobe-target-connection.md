@@ -33,7 +33,7 @@ ht-degree: 24%
 
 Einen kurzen Überblick über die Konfiguration der [!DNL Adobe Target] in Experience Platform erhalten Sie im folgenden Video.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449802/?captions=ger&quality=12&learn=on)
 
 ## Unterstützte Anwendungsfälle basierend auf dem Implementierungstyp {#supported-use-cases}
 
