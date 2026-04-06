@@ -3,100 +3,14 @@ solution: Experience Platform
 title: Handbuch zur Streaming-Segmentierung
 description: Erfahren Sie mehr über die Streaming-Segmentierung, einschließlich ihrer Funktionsweise, der Erstellung einer mithilfe der Streaming-Segmentierung bewerteten Zielgruppe und der Ansicht Ihrer mit der Streaming-Segmentierung erstellten Zielgruppen.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
 workflow-type: tm+mt
-source-wordcount: '2033'
-ht-degree: 20%
+source-wordcount: '2117'
+ht-degree: 19%
 
 ---
 
 # Handbuch zur Streaming-Segmentierung
-
->[!BEGINSHADEBOX]
-
->[!NOTE]
->
->Die Eignungskriterien für die Streaming-Segmentierung wurden am 20. Mai 2025 aktualisiert.
-
-+++Eignungsaktualisierungen
-
->[!IMPORTANT]
->
->Alle vorhandenen Segmentdefinitionen, die derzeit mithilfe von Streaming oder Edge-Segmentierung ausgewertet werden, funktionieren weiterhin wie bisher, es sei denn, sie werden bearbeitet oder aktualisiert.
-
-## Regelsatz {#ruleset}
-
-Alle **neuen oder bearbeiteten** Segmentdefinitionen, die den folgenden Regelsätzen entsprechen **werden nicht mehr** Streaming- oder Edge-Segmentierung ausgewertet. Stattdessen werden sie mithilfe der Batch-Segmentierung ausgewertet.
-
-- Ein einzelnes Ereignis mit einem Zeitfenster von mehr als 24 Stunden
-   - Aktivieren Sie eine Zielgruppe mit allen Profilen, die sich eine Web-Seite in den letzten 3 Tagen angesehen haben.
-- Ein einzelnes Ereignis ohne Zeitfenster
-   - Aktivieren Sie eine Zielgruppe mit allen Profilen, die eine Web-Seite angesehen haben.
-
-## Zeitfenster {#time-window}
-
-Um eine Zielgruppe mit Streaming-Segmentierung auszuwerten **muss sie** einem Zeitfenster von 24 Stunden eingeschränkt sein.
-
-## Einschließen von Batch-Daten in Streaming-Zielgruppen {#include-batch-data}
-
->[!NOTE]
->
->Um bei der Verwendung von Batch-Daten die Genauigkeit der Streaming-Segmentierung sicherzustellen, stellen Sie sicher, dass die Batch-Daten **nur** in der Batch-Zielgruppe gespeichert und in der Streaming-Zielgruppe referenziert werden.
-
-Vor diesem Update konnten Sie eine Definition für Streaming-Zielgruppen erstellen, die sowohl Batch- als auch Streaming-Datenquellen kombinierte. Mit der neuesten Aktualisierung wird jedoch die Erstellung einer Zielgruppe mit sowohl Batch- als auch Streaming-Datenquellen mithilfe der Batch-Segmentierung ausgewertet.
-
-Wenn Sie eine Segmentdefinition mit Streaming- oder Edge-Segmentierung auswerten müssen, die dem aktualisierten Regelsatz entspricht, müssen Sie explizit einen Batch und einen Streaming-Regelsatz erstellen und sie mithilfe von Segmenten kombinieren. Dieser Batch **Regelsatz** auf einem Profilschema basieren.
-
-Angenommen, Sie haben zwei Zielgruppen, von denen eine die Profilschemadaten und die andere die Ereignisschemadaten enthält:
-
-| Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
-| -------- | ------ | ----------- | ---------------- | ----------- |
-| Einwohner Kaliforniens | Profil | Batch | Wohnsitz ist in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Letzte Kassengänge | Erlebnisereignis | Streaming | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
-
-Wenn Sie die Batch-Komponente in Ihrer Streaming-Zielgruppe verwenden möchten, müssen Sie einen Verweis auf die Batch-Zielgruppe anhand des Segments von Segmenten erstellen.
-
-Ein Beispielregelsatz, der die beiden Zielgruppen kombiniert, würde also wie folgt aussehen:
-
-```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
-CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
-WHEN(<= 24 hours before now)])
-```
-
-Die resultierende Zielgruppe *wird* mithilfe der Streaming-Segmentierung ausgewertet, da sie die Zugehörigkeit der Batch-Zielgruppe durch Verweis auf die Komponente für die Batch-Zielgruppe nutzt.
-
-Wenn Sie jedoch zwei Zielgruppen mit Ereignisdaten kombinieren möchten, **Sie die beiden Ereignisse nicht** kombinieren. Sie müssen beide Zielgruppen erstellen und dann eine weitere Zielgruppe erstellen, die `inSegment` verwendet, um auf diese beiden Zielgruppen zu verweisen.
-
-Angenommen, Sie haben zwei Zielgruppen, wobei beide Zielgruppen Erlebnisereignis-Schemadaten enthalten:
-
-| Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
-| -------- | ------ | ----------- | ---------------- | ----------- |
-| Letzte Abbrüche | Erlebnisereignis | Batch | Hat mindestens ein Abbruchereignis in den letzten 24 Stunden | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Letzte Kassengänge | Erlebnisereignis | Streaming | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
-
-In diesem Fall müssten Sie wie folgt eine dritte Zielgruppe erstellen:
-
-```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
-```
-
->[!IMPORTANT]
->
->Alle vorhandenen Segmentdefinitionen, die mit den Regelsätzen übereinstimmen, bleiben mithilfe von Streaming oder Edge-Segmentierung ausgewertet, bis sie bearbeitet werden.
->
->Darüber hinaus bleiben alle vorhandenen Segmentdefinitionen, die derzeit die anderen Bewertungskriterien für Streaming oder Edge-Segmentierung erfüllen, mit Streaming- oder Edge-Segmentierung bewertet.
-
-## Zusammenführungsrichtlinie {#merge-policy}
-
-Alle **neuen oder bearbeiteten** Segmentdefinitionen, die für Streaming oder Edge-Segmentierung qualifiziert **müssen** in der Zusammenführungsrichtlinie „Active on Edge&quot; festgelegt sein.
-
-Wenn kein aktiver Zusammenführungsrichtliniensatz festgelegt ist, müssen Sie [Zusammenführungsrichtlinie konfigurieren](../../profile/merge-policies/ui-guide.md#configure) und sie so einstellen, dass sie im Randbereich aktiv ist.
-
-
-+++
-
->[!ENDSHADEBOX]
 
 Streaming-Segmentierung bedeutet, dass Zielgruppen in Adobe Experience Platform nahezu in Echtzeit ausgewertet werden können, während der Schwerpunkt auf die Relevanz der Daten gelegt wird.
 
@@ -128,6 +42,11 @@ Eine Segmentdefinition ist **nicht** für die Streaming-Segmentierung in den fol
 - Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
    - Beispielsweise das Verketten von Folgendem in einem einzigen Regelsatz: `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`.
 - Die Segmentdefinition verwendet „Jahr ignorieren“ als Teil ihrer Zeitbeschränkungen.
+- Die Segmentdefinition entspricht den folgenden Regelsätzen:
+   - Ein einzelnes Ereignis mit einem Zeitfenster von mehr als 24 Stunden
+      - Beispiel: „Aktivieren Sie eine Zielgruppe mit allen Profilen, die sich eine Web-Seite in den letzten 3 Tagen angesehen haben“.
+   - Ein einzelnes Ereignis ohne Zeitfenster
+      - Beispiel: „Aktivieren Sie eine Zielgruppe mit allen Profilen, die eine Web-Seite angesehen haben“.
 
 Beachten Sie die folgenden Richtlinien, die für Streaming-Segmentierungsabfragen gelten:
 
@@ -186,7 +105,7 @@ inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-43
 
 Sie können eine Zielgruppe erstellen, die mithilfe der Streaming-Segmentierung ausgewertet wird, entweder mithilfe der Segmentierungs-Service-API oder über das Zielgruppenportal in der Benutzeroberfläche.
 
-Eine Segmentdefinition kann für Streaming aktiviert werden, wenn sie mit einem der [geeigneten Regelsätze“ &#x200B;](#eligible-rulesets).
+Eine Segmentdefinition kann für Streaming aktiviert werden, wenn sie mit einem der [geeigneten Regelsätze“ ](#eligible-rulesets).
 
 >[!BEGINTABS]
 
@@ -297,7 +216,7 @@ Ein Popup wird angezeigt. Wählen Sie **[!UICONTROL Build rules]** aus, um Segme
 
 ![Die Schaltfläche „Regeln erstellen“ ist im Pop-up „Zielgruppe erstellen“ hervorgehoben.](../images/methods/streaming/select-build-rules.png)
 
-Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([&#x200B; Regelsätze) &#x200B;](#eligible-rulesets). Wenn die Segmentdefinition für die Streaming-Segmentierung geeignet ist, können Sie **[!UICONTROL Streaming]** als **[!UICONTROL Evaluation method]** auswählen.
+Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([ Regelsätze) ](#eligible-rulesets). Wenn die Segmentdefinition für die Streaming-Segmentierung geeignet ist, können Sie **[!UICONTROL Streaming]** als **[!UICONTROL Evaluation method]** auswählen.
 
 ![Die Segmentdefinition wird angezeigt. Der Auswertungstyp ist hervorgehoben und zeigt an, dass die Segmentdefinition mithilfe der Streaming-Segmentierung ausgewertet werden kann.](../images/methods/streaming/streaming-evaluation-method.png)
 
@@ -471,4 +390,91 @@ In diesem Handbuch wird erläutert, wie für Streaming aktivierte Segmentdefinit
 
 Weitere Informationen zur Verwendung der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Benutzerhandbuch zur Segmentierung](./overview.md).
 
-Häufig gestellte Fragen zur Streaming-Segmentierung finden Sie im Abschnitt [Streaming-Segmentierung“ der häufig gestellten &#x200B;](../faq.md#streaming-segmentation).
+Häufig gestellte Fragen zur Streaming-Segmentierung finden Sie im Abschnitt [Streaming-Segmentierung“ der häufig gestellten ](../faq.md#streaming-segmentation).
+
+## Anhang
+
+Dieser Abschnitt enthält zusätzliche Informationen zur Streaming-Segmentierung.
+
+### Eignungsaktualisierung vom 20. Mai 2025 {#may-20-eligibility-update}
+
+Im folgenden Abschnitt werden für die Nachwelt die vollständigen Details der Eignungsaktualisierung für die Streaming-Segmentierung beschrieben, die während der Experience Platform-Version vom Mai 2025 vorgenommen wurde.
+
++++Eignungsaktualisierungen
+
+>[!IMPORTANT]
+>
+>Alle vorhandenen Segmentdefinitionen, die derzeit mithilfe von Streaming oder Edge-Segmentierung ausgewertet werden, funktionieren weiterhin wie bisher, es sei denn, sie werden bearbeitet oder aktualisiert.
+
+## Regelsatz {#ruleset}
+
+Alle **neuen oder bearbeiteten** Segmentdefinitionen, die den folgenden Regelsätzen entsprechen **werden nicht mehr** Streaming- oder Edge-Segmentierung ausgewertet. Stattdessen werden sie mithilfe der Batch-Segmentierung ausgewertet.
+
+- Ein einzelnes Ereignis mit einem Zeitfenster von mehr als 24 Stunden
+   - Aktivieren Sie eine Zielgruppe mit allen Profilen, die sich eine Web-Seite in den letzten 3 Tagen angesehen haben.
+- Ein einzelnes Ereignis ohne Zeitfenster
+   - Aktivieren Sie eine Zielgruppe mit allen Profilen, die eine Web-Seite angesehen haben.
+
+## Zeitfenster {#time-window}
+
+Um eine Zielgruppe mit Streaming-Segmentierung auszuwerten **muss sie** einem Zeitfenster von 24 Stunden eingeschränkt sein.
+
+## Einschließen von Batch-Daten in Streaming-Zielgruppen {#include-batch-data}
+
+>[!NOTE]
+>
+>Um bei der Verwendung von Batch-Daten die Genauigkeit der Streaming-Segmentierung sicherzustellen, stellen Sie sicher, dass die Batch-Daten **nur** in der Batch-Zielgruppe gespeichert und in der Streaming-Zielgruppe referenziert werden.
+
+Vor diesem Update konnten Sie eine Definition für Streaming-Zielgruppen erstellen, die sowohl Batch- als auch Streaming-Datenquellen kombinierte. Mit der neuesten Aktualisierung wird jedoch die Erstellung einer Zielgruppe mit sowohl Batch- als auch Streaming-Datenquellen mithilfe der Batch-Segmentierung ausgewertet.
+
+Wenn Sie eine Segmentdefinition mit Streaming- oder Edge-Segmentierung auswerten müssen, die dem aktualisierten Regelsatz entspricht, müssen Sie explizit einen Batch und einen Streaming-Regelsatz erstellen und sie mithilfe von Segmenten kombinieren. Dieser Batch **Regelsatz** auf einem Profilschema basieren.
+
+Angenommen, Sie haben zwei Zielgruppen, von denen eine die Profilschemadaten und die andere die Ereignisschemadaten enthält:
+
+| Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Einwohner Kaliforniens | Profil | Batch | Wohnsitz ist in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Letzte Kassengänge | Erlebnisereignis | Streaming | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Wenn Sie die Batch-Komponente in Ihrer Streaming-Zielgruppe verwenden möchten, müssen Sie einen Verweis auf die Batch-Zielgruppe anhand des Segments von Segmenten erstellen.
+
+Ein Beispielregelsatz, der die beiden Zielgruppen kombiniert, würde also wie folgt aussehen:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+Die resultierende Zielgruppe *wird* mithilfe der Streaming-Segmentierung ausgewertet, da sie die Zugehörigkeit der Batch-Zielgruppe durch Verweis auf die Komponente für die Batch-Zielgruppe nutzt.
+
+Wenn Sie jedoch zwei Zielgruppen mit Ereignisdaten kombinieren möchten, **Sie die beiden Ereignisse nicht** kombinieren. Sie müssen beide Zielgruppen erstellen und dann eine weitere Zielgruppe erstellen, die `inSegment` verwendet, um auf diese beiden Zielgruppen zu verweisen.
+
+Angenommen, Sie haben zwei Zielgruppen, wobei beide Zielgruppen Erlebnisereignis-Schemadaten enthalten:
+
+| Zielgruppe | Schema | Typ der Quelle | Query definition | Zielgruppen-ID |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Letzte Abbrüche | Erlebnisereignis | Batch | Hat mindestens ein Abbruchereignis in den letzten 24 Stunden | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Letzte Kassengänge | Erlebnisereignis | Streaming | Hat mindestens einen Checkout in den letzten 24 Stunden | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+In diesem Fall müssten Sie wie folgt eine dritte Zielgruppe erstellen:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
+
+>[!IMPORTANT]
+>
+>Alle vorhandenen Segmentdefinitionen, die mit den Regelsätzen übereinstimmen, bleiben mithilfe von Streaming oder Edge-Segmentierung ausgewertet, bis sie bearbeitet werden.
+>
+>Darüber hinaus bleiben alle vorhandenen Segmentdefinitionen, die derzeit die anderen Bewertungskriterien für Streaming oder Edge-Segmentierung erfüllen, mit Streaming- oder Edge-Segmentierung bewertet.
+
+## Zusammenführungsrichtlinie {#merge-policy}
+
+Alle **neuen oder bearbeiteten** Segmentdefinitionen, die für Streaming oder Edge-Segmentierung qualifiziert **müssen** in der Zusammenführungsrichtlinie „Active on Edge&quot; festgelegt sein.
+
+Wenn kein aktiver Zusammenführungsrichtliniensatz festgelegt ist, müssen Sie [Zusammenführungsrichtlinie konfigurieren](../../profile/merge-policies/ui-guide.md#configure) und sie so einstellen, dass sie im Randbereich aktiv ist.
+
++++
+
+>[!ENDSHADEBOX]

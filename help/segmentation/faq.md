@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie Antworten auf häufig gestellte Fragen zu Zielgruppen und andere segmentierungsbezogene Konzepte.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 7a9c017c2dc7901c7995e5c6fcd178a4fe8709e0
 workflow-type: tm+mt
-source-wordcount: '4853'
-ht-degree: 25%
+source-wordcount: '4809'
+ht-degree: 24%
 
 ---
 
@@ -226,9 +226,9 @@ Wenn Sie eine Zielgruppe kopieren, befindet sich die neue Zielgruppe im Entwurfs
 
 Ja, die Verwendung einer Zielgruppe als untergeordnete Zielgruppe hat Auswirkungen darauf, welche Lebenszykluszustandsübergänge die untergeordnete und die übergeordnete Zielgruppe durchführen kann.
 
-Damit eine untergeordnete Zielgruppe in den Veröffentlichungsstatus verschoben werden kann, muss sich ihre gesamte übergeordnete Zielgruppe **&#x200B;**) im Veröffentlichungsstatus befinden. Die übergeordneten Zielgruppen können entweder vor der Veröffentlichung der untergeordneten Zielgruppe veröffentlicht werden oder, falls der Benutzer dies bestätigt, bei der Veröffentlichung der untergeordneten Zielgruppe automatisch veröffentlicht werden.
+Damit eine untergeordnete Zielgruppe in den Veröffentlichungsstatus verschoben werden kann, muss sich ihre gesamte übergeordnete Zielgruppe ****) im Veröffentlichungsstatus befinden. Die übergeordneten Zielgruppen können entweder vor der Veröffentlichung der untergeordneten Zielgruppe veröffentlicht werden oder, falls der Benutzer dies bestätigt, bei der Veröffentlichung der untergeordneten Zielgruppe automatisch veröffentlicht werden.
 
-Damit die übergeordnete Zielgruppe in den inaktiven oder gelöschten Status verschoben werden kann, müssen alle ihre untergeordneten Zielgruppen **&#x200B;**&#x200B;deaktiviert oder gelöscht werden.
+Damit die übergeordnete Zielgruppe in den inaktiven oder gelöschten Status verschoben werden kann, müssen alle ihre untergeordneten Zielgruppen **** deaktiviert oder gelöscht werden.
 
 ### Kann ich auf eine Zielgruppe verweisen, die sich in einem anderen Lebenszyklusstatus befindet?
 
@@ -244,7 +244,7 @@ Nein, das tun Sie nicht. Sofern Sie Bearbeitungsberechtigungen für Zielgruppen 
 
 ### Gibt es eine Begrenzung für die Anzahl der Ordner, die ich erstellen kann?
 
-Nein, es gibt keine Begrenzung für die Anzahl der Ordner, die Sie erstellen können. Weitere Informationen zu Ordnern finden Sie im Abschnitt [Zielgruppeninventar“ &#x200B;](./ui/audience-portal.md#folders) Übersicht über die Segmentierungs-Service-Benutzeroberfläche.
+Nein, es gibt keine Begrenzung für die Anzahl der Ordner, die Sie erstellen können. Weitere Informationen zu Ordnern finden Sie im Abschnitt [Zielgruppeninventar“ ](./ui/audience-portal.md#folders) Übersicht über die Segmentierungs-Service-Benutzeroberfläche.
 
 ### Gibt es eine Begrenzung für die Anzahl der Tags, die einer Zielgruppe hinzugefügt werden können?
 
@@ -417,8 +417,6 @@ Die Streaming-Segmentierung funktioniert bei allen Daten, die über eine Streami
 ### Wie werden Segmente als Batch- oder Streaming-Segmentierung definiert?
 
 Eine Segmentdefinition wird – basierend auf einer Kombination aus Abfragetyp und Ereignisverlaufsdauer – als Batch-, Streaming- oder Edge-Segmentierung definiert. Eine Liste der Segmente, die als Streaming-Segmentdefinitionen ausgewertet werden, finden Sie im [Abschnitt zu Abfragetypen von Streaming-Segmentierungen](#query-types).
-
-Bitte beachten Sie, dass eine Segmentdefinition, die **sowohl** einen `inSegment`-Ausdruck als auch eine direkte Einzelereigniskette enthält, nicht für die Streaming-Segmentierung infrage kommt. Wenn Sie möchten, dass diese Segmentdefinition für die Streaming-Segmentierung qualifiziert wird, sollten Sie die direkte Einzelereigniskette zu einem eigenen Segment machen.
 
 ### Warum steigt die Anzahl der „insgesamt qualifizierten“ Segmente weiter an, während die Anzahl unter „Letzte X Tage“ im Abschnitt Segmentdefinitionsdetails bei null bleibt?
 
