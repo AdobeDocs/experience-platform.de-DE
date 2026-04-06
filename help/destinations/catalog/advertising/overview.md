@@ -3,10 +3,10 @@ keywords: Werbeziele;Ziele;Plattformziele
 title: Werbeziele – Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Werbeplattform eines Drittanbieters (z. B. DSP, einem Werbenetzwerk, SSP) und geben Sie pseudonyme Zielgruppen für diese Plattformen frei.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
+source-git-commit: 2084f45ca89e78f980a8d2a53a08966e0588fcdd
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 42%
+source-wordcount: '291'
+ht-degree: 41%
 
 ---
 
@@ -31,6 +31,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Adobe Advertising DSP-Verbindung](adobe-advertising-dsp-connection.md)
 * [Alte Adobe Advertising Cloud DSP-Verbindung](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads-Verbindung](amazon-ads.md)
+* [Amazon Ads v2-Verbindung](amazon-ads-v2.md)
 * [Bombora-Verbindung](bombora.md)
 * [Criteo-Verbindung](criteo.md)
 * [Demandbase-Verbindung](demandbase.md)
@@ -47,7 +48,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [PubMatic Connect-Ziel](pubmatic.md)
 * [(Beta) Snapchat Ads-Verbindung](snap-inc.md)
 * [Verbindung mit The Trade Desk](tradedesk.md)
-* [(Beta) The Trade Desk CRM-Verbindung &#x200B;](tradedesk-emails.md)
+* [(Beta) The Trade Desk CRM-Verbindung ](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Erweiterungen {#extensions}

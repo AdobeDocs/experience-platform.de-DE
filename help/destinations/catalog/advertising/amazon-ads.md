@@ -1,26 +1,32 @@
 ---
-title: Amazon Ads
-description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
+title: (Legacy) Amazon Ads
+description: Amazon Ads bietet eine Reihe von Optionen, mit denen Sie Ihre Werbeziele für registrierte Verkäufer, Anbieter, Buchhändler, Kindle Direct Publishing (KDP)-Autoren, App-Entwickler oder Agenturen erreichen können. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 1e93c78b13159a2aed24d283e3768c670ad14097
 workflow-type: tm+mt
-source-wordcount: '2127'
-ht-degree: 33%
+source-wordcount: '2156'
+ht-degree: 26%
 
 ---
 
-# Amazon Ads-Verbindung {#amazon-ads}
+# (Veraltete) Amazon Ads-Verbindung {#amazon-ads}
 
 ## Überblick {#overview}
 
-[!DNL Amazon Ads] bietet eine Reihe von Optionen, mit denen Sie Ihre Werbeziele für registrierte Verkäufer, Anbieter, Buchhändler, Kindle Direct Publishing (KDP)-Autoren, App-Entwickler und/oder Agenturen erreichen können.
+[!DNL Amazon Ads] bietet eine Reihe von Optionen, mit denen Sie Ihre Werbeziele für registrierte Verkäufer, Anbieter, Buchhändler, Kindle Direct Publishing (KDP)-Autoren, App-Entwickler oder Agenturen erreichen können.
 
-Die [!DNL Amazon Ads] Integration mit [!DNL Adobe Experience Platform] bietet eine schlüsselfertige Integration für [!DNL Amazon Ads] Produkte, einschließlich Amazon DSP (ADSP) und Amazon Marketing Cloud (AMC).
+>[!IMPORTANT]
+>
+>[[!DNL Amazon Ads v2]](./amazon-ads-v2.md) ist das aktuelle Ziel für alle neuen [!DNL Amazon Ads]. Wenn Sie über eine bestehende (veraltete) [!DNL Amazon Ads] verfügen, funktioniert sie weiterhin ohne erforderliche Änderungen. [[!DNL Amazon Ads v2]](./amazon-ads-v2.md) stellt eine Verbindung zu [!DNL Ads Data Manager] her, das erweiterte Identitätstypen, adressbezogene Felder und die Datenfreigabe über [!DNL Amazon Ads] Produkte hinweg unterstützt und so die Targeting- und Zielgruppen-Übereinstimmungsraten im Vergleich zu diesem alten Ziel verbessert.
+>
+>Nach Ende April 2026 wird [!DNL Amazon Ads v2] in [!DNL Amazon Ads] umbenannt und die alte Karte wird ausgeblendet, sodass nur noch eine Zielkarte im Katalog übrig bleibt. Vorhandene ältere Datenflüsse funktionieren weiterhin, und Sie können sie über dieses Datum hinaus auf der Registerkarte **[!UICONTROL Browse]** verwalten.
 
-Mithilfe des [!DNL Amazon Ads] -Ziels in [!DNL Adobe Experience Platform] können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung in der Amazon DSP definieren.  Darüber hinaus können Benutzende ihre Daten in [!DNL Amazon Marketing Cloud] hochladen, um die Leistung nach Zielgruppe, von Advertisern bereitgestellten Dimensionen, Zugehörigkeit zu Amazon-Segmenten oder anderen in AMC verfügbaren Signalen zu verstehen. Nach dem Hochladen von Advertiser-Zielgruppen in AMC können Benutzende [!DNL Amazon Marketing Cloud] verwenden, um Zielgruppenmitglieder mithilfe von Amazon-Signalen aus [!DNL Amazon Marketing Cloud] zu ändern, zu verbessern oder an sie anzuhängen.
+Die [!DNL Amazon Ads] Integration mit [!DNL Adobe Experience Platform] bietet eine schlüsselfertige Integration für [!DNL Amazon Ads] Produkte, einschließlich [!DNL Amazon DSP] (ADSP) und [!DNL Amazon Marketing Cloud] (AMC).
 
-AMC vereint die einzigartigen Signale aus den von Amazon verwalteten und betriebenen Eigenschaften, die sich über Medien wie Display, Video, Streaming-TV, Audio und gesponserte Anzeigen erstrecken. Benutzer können kuratierte Segmente von [!DNL Adobe Experience Platform] an AMC senden, um das Lernen zu verbessern, z. B. die Markengruppen der Zielgruppen, Lifestyle-Kohorten und Interaktionsmuster der Marke. Erweiterte Segmente können dann verwendet werden, um Medienaktivierungen in Amazon DSP zu optimieren.
+Mithilfe des [!DNL Amazon Ads] in [!DNL Adobe Experience Platform] können Sie Advertiser-Zielgruppen für Targeting und Aktivierung im [!DNL Amazon DSP] definieren. Sie können Ihre Daten auch in [!DNL Amazon Marketing Cloud] hochladen, um die Leistung nach Zielgruppe, von Advertisern bereitgestellten Dimensionen, Zugehörigkeit zu Amazon-Segmenten oder anderen in AMC verfügbaren Signalen zu verstehen. Nach dem Hochladen von Advertiser-Zielgruppen in AMC können Benutzende [!DNL Amazon Marketing Cloud] verwenden, um Zielgruppenmitglieder mithilfe von Amazon-Signalen aus [!DNL Amazon Marketing Cloud] zu ändern, zu verbessern oder an sie anzuhängen.
+
+AMC vereint die einzigartigen Signale aus allen von Amazon verwalteten und betriebenen Objekten, einschließlich Anzeigemedien, Video, Streaming-TV, Audio und gesponserte Anzeigen. Sie können kuratierte Segmente von [!DNL Adobe Experience Platform] an AMC senden, um das Lernen zu verbessern, z. B. Markengruppen, Lifestyle-Kohorten und Interaktionsmuster der Zielgruppen. Verwenden Sie erweiterte Segmente, um Medienaktivierungen in [!DNL Amazon DSP] zu optimieren.
 
 >[!IMPORTANT]
 >
@@ -32,38 +38,38 @@ Damit Sie besser verstehen können, wie und wann Sie das *[!DNL Amazon Ads]*-Zie
 
 ### Aktivierung und Zielgruppenbestimmung {#activation-and-targeting}
 
-Durch diese Integration mit Amazon DSP können [!DNL Amazon Ads] Advertiser CDP-Zielgruppen von [!DNL Adobe Experience Platform] an DSP von Amazon weiterleiten, um Advertiser-Zielgruppen für das Anzeigen-Targeting zu erstellen. Zielgruppen können innerhalb der Amazon-DSP für positives Targeting sowie für negatives Targeting (Unterdrückung) ausgewählt werden. 
+Durch diese Integration mit [!DNL Amazon DSP] können [!DNL Amazon Ads] Advertiser CDP-Zielgruppen von [!DNL Adobe Experience Platform] an [!DNL Amazon DSP] weiterleiten, um Advertiser-Zielgruppen für das Anzeigen-Targeting zu erstellen. Sie können Zielgruppen in [!DNL Amazon DSP] für positives Targeting sowie für negatives Targeting (Unterdrückung) auswählen.
 
 ### Analyse und Messung {#analytics-and-measurement}
 
-Durch diese Integration mit [!DNL Amazon Marketing Cloud] (AMC) können [!DNL Amazon Ads] Advertiser CDP-Segmente von [!DNL Adobe Experience Platform] Formular an AMC weitergeben. Werbetreibende können dann die CDP-Eingaben mit [!DNL Amazon Ads] verbinden und benutzerdefinierte Analysen zu Themen wie Medienwirksamkeit, Zielgruppensegmenten und Kunden-Journey im datenschutzkonformen Format durchführen. Beispielsweise kann ein Werbetreibender eine Liste seiner Bestandskunden hochladen, um die aggregierte Leistung von Werbekampagnen zu verstehen, oder aggregierte Statistiken von Konversionsereignissen auf Amazon, wie das Anzeigen einer Produktdetailseite, das Hinzufügen eines Produkts zu einem Warenkorb oder den Kauf eines Produkts.
+Durch diese Integration mit [!DNL Amazon Marketing Cloud] (AMC) können [!DNL Amazon Ads] Advertiser CDP-Segmente von [!DNL Adobe Experience Platform] an AMC weitergeben. Anschließend können Sie die CDP-Eingaben mit [!DNL Amazon Ads] verbinden und benutzerdefinierte Analysen zu Themen wie Medienwirksamkeit, Zielgruppensegmenten und Kunden-Journey in einem datenschutzkonformen Format durchführen. Sie können beispielsweise eine Liste bestehender Kundinnen und Kunden hochladen, um die aggregierte Leistung von Werbekampagnen zu verstehen, oder aggregierte Statistiken von On-Amazon-Konversionsereignissen, wie das Anzeigen einer Produktdetailseite, das Hinzufügen eines Produkts zu einem Warenkorb oder den Kauf eines Produkts.
 
 ### Advertising-Optimierung {#advertising-optimization}
 
-Diese Integration mit [!DNL Amazon Marketing Cloud] (AMC) ermöglicht es Werbetreibenden, eigene Kundenlisten hochzuladen und mithilfe von [!DNL Amazon Marketing Cloud] SQL wiederkehrend Überschneidungsanalysen, Unterdrückungen, Ergänzungen oder Optimierungen für Zielgruppen durchzuführen, bevor in Amazon DSP eine für die Aktivierung geeignete Zielgruppe für das Targeting erstellt wird.
+Diese Integration mit [!DNL Amazon Marketing Cloud] (AMC) ermöglicht es Werbetreibenden, eigene Kundenlisten hochzuladen und [!DNL Amazon Marketing Cloud] SQL zu verwenden, um wiederkehrend Überschneidungsanalysen, Unterdrückungen, Ergänzungen oder Optimierungen für Zielgruppen durchzuführen, bevor in Amazon DSP eine für die Aktivierung geeignete Zielgruppe für das Targeting erstellt wird.
 
 ## Voraussetzungen {#prerequisites}
 
-Um die [!DNL Amazon Ads] Verbindung mit [!DNL Adobe Experience Platform] verwenden zu können, müssen Benutzende zunächst Zugriff auf ein Amazon DSP Advertiser-Konto oder eine [!DNL Amazon Marketing Cloud]-Instanz haben. Um diese Instanzen bereitzustellen, besuchen Sie die folgende Seite auf der [!DNL Amazon Ads]-Website:
+Um die [!DNL Amazon Ads] Verbindung mit [!DNL Adobe Experience Platform] verwenden zu können, müssen Benutzer zunächst Zugriff auf ein [!DNL Amazon DSP] Advertiser-Konto oder eine [!DNL Amazon Marketing Cloud] haben. Um diese Instanzen bereitzustellen, besuchen Sie die folgende Seite auf der [!DNL Amazon Ads]-Website:
 
 * [Erste Schritte mit Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
 * [Erste Schritte mit Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Die *[!DNL Amazon Ads]*-Verbindung unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service//features/namespaces.md). Weitere Informationen zu den von [!DNL Amazon Ads] unterstützten Identitäten finden Sie im [Amazon DSP Support Center](https://advertising.amazon.com/dsp/help/ss/de/audiences#GA6BC9BW52YFXBNE).
+Die *[!DNL Amazon Ads]*-Verbindung unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md). Weitere Informationen zu den von [!DNL Amazon Ads] unterstützten Identitäten finden Sie im [Amazon DSP Support Center](https://advertising.amazon.com/dsp/help/ss/de/audiences#GA6BC9BW52YFXBNE).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | [!DNL Adobe Experience Platform] unterstützt sowohl einfache als auch SHA256-Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | [!DNL Adobe Experience Platform] unterstützt sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Daten bei Aktivierung automatisch gehasht [!DNL Experience Platform]. |
-| `firstName` | Vorname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
-| `lastName` | Nachname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
+| `firstName` | Vorname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie **[!UICONTROL Apply transformation]** in der [!DNL Adobe Experience Platform]-Benutzeroberfläche. |
+| `lastName` | Nachname des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie **[!UICONTROL Apply transformation]** in der [!DNL Adobe Experience Platform]-Benutzeroberfläche. |
 | `street` | Adresse des Benutzers auf Straßenebene | Es wird nur eine SHA256-Hash-Eingabe unterstützt. Normalisieren vor dem Hashing. Aktivieren **nicht** die Adobe-seitige Umwandlung. |
-| `city` | Stadt des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
-| `state` | Bundesland oder Kanton des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
-| `zip` | Postleitzahl des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
-| `country` | Land des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie [!UICONTROL Apply transformation] in der Adobe-Benutzeroberfläche. |
+| `city` | Stadt des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie **[!UICONTROL Apply transformation]** in der [!DNL Adobe Experience Platform]-Benutzeroberfläche. |
+| `state` | Bundesland oder Kanton des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie **[!UICONTROL Apply transformation]** in der [!DNL Adobe Experience Platform]-Benutzeroberfläche. |
+| `zip` | Postleitzahl des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie **[!UICONTROL Apply transformation]** in der [!DNL Adobe Experience Platform]-Benutzeroberfläche. |
+| `country` | Land des Benutzers | Unterstützt Text oder SHA256. Wenn Nur-Text verwendet wird, aktivieren Sie **[!UICONTROL Apply transformation]** in der [!DNL Adobe Experience Platform]-Benutzeroberfläche. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +79,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -104,9 +110,9 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](/help/destinations/ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
@@ -118,23 +124,23 @@ Sie gelangen zur [!DNL Amazon Ads]-Verbindungsschnittstelle, über die Sie zunä
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-* **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
-* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel erkennen.
+* **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen bei der Identifizierung dieses Ziels hilft.
 * **[!UICONTROL Amazon Ads Connection]**: Wählen Sie die ID für das Ziel-[!DNL Amazon Ads] aus, das für das Ziel verwendet wird.
 
 >[!NOTE]
 >
->Nach dem Speichern der Zielkonfiguration können Sie die [!DNL Amazon Ads] Advertiser-ID nicht mehr ändern, selbst wenn Sie sich über Ihr Amazon-Konto erneut authentifizieren. Um eine andere [!DNL Amazon Ads] Advertiser-ID zu verwenden, müssen Sie eine neue Zielverbindung erstellen. Werbetreibende, die bereits eine Integration mit ADSP eingerichtet haben, um einen neuen Zielfluss erstellen zu können, wenn ihre Zielgruppen an AMC oder ein anderes ADSP-Konto gesendet werden sollen.
+>Nach dem Speichern der Zielkonfiguration können Sie die [!DNL Amazon Ads] Advertiser-ID nicht ändern, auch nicht, wenn Sie sich über Ihr Amazon-Konto erneut authentifizieren. Um eine andere [!DNL Amazon Ads] Advertiser-ID zu verwenden, müssen Sie eine neue Zielverbindung erstellen. Werbetreibende, die bereits eine Integration mit ADSP eingerichtet haben, müssen einen neuen Zielfluss erstellen, wenn ihre Zielgruppen an AMC oder ein anderes ADSP-Konto gesendet werden sollen.
 
 * **[!UICONTROL Advertiser Region]**: Wählen Sie die entsprechende Region aus, in der Ihr Advertiser gehostet wird. Weitere Informationen zu den von den einzelnen Regionen unterstützten Marktplätzen finden Sie in der [Amazon Ads-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-* **[!UICONTROL Amazon Ads Consent Signal]**: Bestätigen Sie, dass alle über diese Verbindung gesendeten Daten der Verwendung personenbezogener Daten für Werbezwecke zugestimmt haben. „ERTEILT“ bedeutet, dass Amazon damit einverstanden ist, die personenbezogenen Daten des Kunden für Werbezwecke zu verwenden. Zulässige Werte sind „GRANTED“ und „DENIED“. Alle Datensätze, die über Verbindungen mit „ABGELEHNT“ gesendet werden, werden für die weitere Verwendung in Amazon Ads abgelehnt.
+* **[!UICONTROL Amazon Ads Consent Signal]**: Bestätigen Sie, dass alle über diese Verbindung gesendeten Daten der Verwendung personenbezogener Daten für Werbezwecke zugestimmt haben. „ERTEILT“ bedeutet, dass Amazon damit einverstanden ist, die personenbezogenen Daten des Kunden für Werbezwecke zu verwenden. Zulässige Werte sind „GRANTED“ und „DENIED“. Alle Datensätze, die über Verbindungen mit „ABGELEHNT“ gesendet werden, werden für die weitere Verwendung innerhalb von [!DNL Amazon Ads] abgelehnt.
 
 ![Neues Ziel konfigurieren](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Zielen über die Benutzeroberfläche](/help/destinations/ui/alerts.md).
 
 Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Next]** aus.
 
@@ -143,7 +149,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -155,8 +161,8 @@ Die [!DNL Amazon Ads]-Verbindung unterstützt Hash-E-Mail-Adressen und Hash-Tele
 
 * Um Hash-E-Mail-Adressen zuzuordnen, wählen Sie den Identity-Namespace von `Email_LC_SHA256` als ein Quellfeld aus.
 * Um Hash-Telefonnummern zuzuordnen, wählen Sie den Identity-Namespace von `Phone_SHA256` als ein Quellfeld aus.
-* Um ungehashte E-Mail-Adressen oder Telefonnummern zuzuordnen, wählen Sie die entsprechenden Identity-Namespaces als Quellfelder aus und überprüfen Sie die `Apply Transformation`-Option, damit Experience Platform die Identitäten bei der Aktivierung hasht.
-* *NEU ab der Version vom September 2024*: In Amazon Ads müssen Sie ein Feld zuordnen, das einen `countryCode` im 2-stelligen ISO-Format enthält, um den Prozess der Identitätsauflösung zu erleichtern (z. B.: US, GB, MX, CA usw.). Verbindungen ohne `countryCode` führen zu negativen Auswirkungen auf die Übereinstimmungsraten der Identitäten.
+* Um ungehashte E-Mail-Adressen oder Telefonnummern zuzuordnen, wählen Sie die entsprechenden Identity-Namespaces als Quellfelder aus und überprüfen Sie die Option **[!UICONTROL Apply transformation]** , damit die Identitäten bei der Aktivierung [!DNL Experience Platform] gehasht werden.
+* *NEU ab der Version vom September 2024*: In Amazon Ads müssen Sie ein Feld zuordnen, das einen `countryCode` im 2-stelligen ISO-Format enthält, um den Prozess der Identitätsauflösung zu erleichtern (z. B.: US, GB, MX, CA usw.). Verbindungen ohne `countryCode`-Zuordnungen haben negative Auswirkungen auf die Übereinstimmungsraten von Identitäten.
 
 >[!NOTE]
 >
@@ -166,17 +172,17 @@ Die [!DNL Amazon Ads]-Verbindung unterstützt Hash-E-Mail-Adressen und Hash-Tele
 >* SHA256-Hashing ist erforderlich, entweder Client-seitig oder durch Aktivieren der Transformationseinstellung von Adobe.
 >* Die Adobe-Benutzeroberfläche bietet ein Kontrollkästchen zum Anwenden der Transformation pro Identitätsfeld während der Connector-Einrichtung.
 
-Sie wählen in einer Zielkonfiguration des [!DNL Amazon Ads]-Connectors nur einmal ein bestimmtes Zielfeld aus.  Wenn Sie beispielsweise eine Geschäfts-E-Mail senden, können Sie keine persönliche E-Mail in derselben Zielkonfiguration zuordnen.
+Sie wählen in einer Zielkonfiguration des [!DNL Amazon Ads]-Connectors nur einmal ein bestimmtes Zielfeld aus. Wenn Sie beispielsweise eine Geschäfts-E-Mail senden, können Sie keine persönliche E-Mail in derselben Zielkonfiguration zuordnen.
 
-Es wird dringend empfohlen, so viele Felder zuzuordnen, wie verfügbar sind. Wenn nur ein Quellattribut verfügbar ist, können Sie ein einzelnes Feld zuordnen. Das [!DNL Amazon Ads]-Ziel verwendet alle zugeordneten Felder für Zuordnungszwecke, was zu höheren Übereinstimmungsraten führt, wenn mehr Felder bereitgestellt werden. Weitere Informationen zu den zulässigen IDs finden Sie auf der [Hilfeseite zu gehashten Zielgruppen von Amazon Ads](https://advertising.amazon.com/dsp/help/ss/de/audiences#GA6BC9BW52YFXBNE).
+Ordnen Sie so viele Felder wie möglich zu. Wenn nur ein Quellattribut verfügbar ist, können Sie ein einzelnes Feld zuordnen. Das [!DNL Amazon Ads]-Ziel verwendet alle zugeordneten Felder für Zuordnungszwecke, was zu höheren Übereinstimmungsraten führt, wenn mehr Felder bereitgestellt werden. Weitere Informationen zu den zulässigen IDs finden Sie auf der [Hilfeseite zu gehashten Zielgruppen von Amazon Ads](https://advertising.amazon.com/dsp/help/ss/de/audiences#GA6BC9BW52YFXBNE).
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
-Nach dem Hochladen Ihrer Zielgruppe können Sie mithilfe der folgenden Schritte überprüfen, ob Ihre Zielgruppe korrekt erstellt und hochgeladen wurde:
+Überprüfen Sie nach dem Hochladen Ihrer Zielgruppe mithilfe der folgenden Schritte, ob sie korrekt erstellt und hochgeladen wurde:
 
-**Für Amazon DSP**
+**Für[!DNL Amazon DSP]**
 
-Navigieren Sie zu Ihrem **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]**. Wenn Ihre Zielgruppe erfolgreich erstellt wurde und die Mindestanzahl an Zielgruppenmitgliedern erreicht, wird der Status von `Active` angezeigt. Weitere Informationen zur Größe und Reichweite Ihrer Zielgruppe finden Sie im Bedienfeld „Prognostizierte Reichweite“ auf der rechten Seite der Benutzeroberfläche von Amazon DSP.
+Navigieren Sie zu **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]**. Wenn Ihre Zielgruppe erfolgreich erstellt wurde und die Mindestanzahl an Zielgruppenmitgliedern erreicht, wird der Status von `Active` angezeigt. Weitere Informationen zur Größe und Reichweite Ihrer Audience finden Sie im Bedienfeld „Prognostizierte Reichweite“ auf der rechten Seite der [!DNL Amazon DSP].
 
 ![Validierung der Erstellung von Amazon DSP-Zielgruppen](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
