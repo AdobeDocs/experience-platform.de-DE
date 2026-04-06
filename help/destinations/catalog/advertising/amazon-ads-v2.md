@@ -17,7 +17,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->[!DNL Amazon Ads v2] ist das aktuelle Ziel für alle neuen [!DNL Amazon Ads]. Wenn Sie über eine bestehende [ (veraltete)  [!DNL Amazon Ads]](./amazon-ads.md) verfügen, funktioniert sie weiterhin ohne erforderliche Änderungen. [!DNL Amazon Ads v2] stellt eine Verbindung zu [!DNL Ads Data Manager] her, das erweiterte Identitätstypen, adressbezogene Felder und die Datenfreigabe über [!DNL Amazon Ads] Produkte hinweg unterstützt und so die Targeting- und Zielgruppen-Übereinstimmungsraten im Vergleich zu [ (veraltet) [!DNL Amazon Ads]](./amazon-ads.md).
+>[!DNL Amazon Ads v2] ist das aktuelle Ziel für alle neuen [!DNL Amazon Ads]. Wenn Sie über eine bestehende [&#x200B; (veraltete)  [!DNL Amazon Ads]](./amazon-ads.md) verfügen, funktioniert sie weiterhin ohne erforderliche Änderungen. [!DNL Amazon Ads v2] stellt eine Verbindung zu [!DNL Ads Data Manager] her, das erweiterte Identitätstypen, adressbezogene Felder und die Datenfreigabe über [!DNL Amazon Ads] Produkte hinweg unterstützt und so die Targeting- und Zielgruppen-Übereinstimmungsraten im Vergleich zu [&#x200B; (veraltet) [!DNL Amazon Ads]](./amazon-ads.md).
 >
 >Nach Ende April 2026 wird [!DNL Amazon Ads v2] in [!DNL Amazon Ads] umbenannt und die alte Karte wird ausgeblendet, sodass nur noch eine Zielkarte im Katalog übrig bleibt. Vorhandene ältere Datenflüsse funktionieren weiterhin, und Sie können sie über dieses Datum hinaus auf der Registerkarte **[!UICONTROL Browse]** verwalten.
 
@@ -43,7 +43,7 @@ Eine Sportbekleidungsmarke möchte ihre Bestandskunden mit relevanten Anzeigen [
 
 ## Voraussetzungen {#prerequisites}
 
-Um die [!DNL Amazon Ads v2] Verbindung mit [!DNL Adobe Experience Platform] verwenden zu können, benötigen Sie Zugriff auf **[!DNL Amazon Ads Data Manager]** über ein [Manager-Konto](https://advertising.amazon.com/help/G69CDSR9MNSWJH95). Weitere [ finden Sie unter „Erste Schritte mit dem Amazon Ads](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)Datenmanager“.
+Um die [!DNL Amazon Ads v2] Verbindung mit [!DNL Adobe Experience Platform] verwenden zu können, benötigen Sie Zugriff auf **[!DNL Amazon Ads Data Manager]** über ein [Manager-Konto](https://advertising.amazon.com/help/G69CDSR9MNSWJH95). Weitere [&#x200B; finden Sie unter „Erste Schritte mit dem Amazon Ads](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)Datenmanager“.
 
 ### Akzeptieren der Nutzungsbedingungen von Amazon Ads Data Manager {#accept-terms}
 
@@ -81,8 +81,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den [!DNL Experience Platform]Segmentierungs[Service) generiert ](/help/segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-[ (importiert](/help/segmentation/ui/audience-portal.md#import-audience) in [!DNL Experience Platform] aus CSV-Dateien,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> in anderen [!DNL Experience Platform]-Apps generierte Zielgruppen wie [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den [!DNL Experience Platform]Segmentierungs[Service) generiert &#x200B;](/help/segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-[&#x200B; (importiert](/help/segmentation/ui/audience-portal.md#import-audience) in [!DNL Experience Platform] aus CSV-Dateien,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> in anderen [!DNL Experience Platform]-Apps generierte Zielgruppen wie [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -112,7 +112,7 @@ In der folgenden Tabelle werden der Zielexporttyp und die Häufigkeit beschriebe
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](/help/destinations/ui/connect-destination.md) beschrieben vor. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -141,7 +141,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Description]**: Eine Beschreibung, die Ihnen bei der Identifizierung dieses Ziels hilft.
 * **[!UICONTROL Manager Account]**: Die Konto-ID des Target-Managers aus der Dropdown-Liste.
 * **[!UICONTROL All audience members sent to Amazon are consented for use for Advertising]**: Geben Sie das Einverständnis zur Datennutzung an (`GRANTED` oder `DENIED`).
-* **[!UICONTROL Ads data manager Terms & Conditions]**: Akzeptieren Sie die Nutzungsbedingungen des [!DNL Amazon Ads] Data Manager. Weitere Einzelheiten finden [ im Abschnitt ](#accept-terms) akzeptieren.
+* **[!UICONTROL Ads data manager Terms & Conditions]**: Akzeptieren Sie die Nutzungsbedingungen des [!DNL Amazon Ads] Data Manager. Weitere Einzelheiten finden [&#x200B; im Abschnitt &#x200B;](#accept-terms) akzeptieren.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -153,7 +153,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 
 >[!IMPORTANT]
 >
->* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]**[ Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]**&#x200B;[&#x200B; Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 >* Zum Exportieren von Identitäten benötigen Sie die **[!UICONTROL View Identity Graph]** [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
