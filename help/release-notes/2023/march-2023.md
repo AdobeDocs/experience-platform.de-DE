@@ -139,10 +139,10 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Feldgruppe | (Mehrfach) | [Es wurden mehrere XDM-Ereignistypen für [!UICONTROL Media Reporting]](https://github.com/adobe/xdm/pull/1670/files) hinzugefügt. |
 | Feldergruppe | [!UICONTROL Workfront Change Event] | Die Feldergruppen `Full Record` und `Accessor Employee Ids` wurden hinzugefügt. |
 | Datentyp | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | Die [!UICONTROL Refund Amount] wurde hinzugefügt, um den für den Artikel erstatteten Betrag (falls vorhanden) anzugeben. |
-| Datentyp | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] wurde zur Liste der Erstattungen für diese Bestellung hinzugefügt. |
-| Datentyp | [[!UICONTROL Product List Item ]](https://github.com/adobe/xdm/pull/1677/files) | Produktkategorien wurden der Liste der Kategoriedaten dieses Produkts hinzugefügt. |
+| Datentyp | [[!UICONTROL Order &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] wurde zur Liste der Erstattungen für diese Bestellung hinzugefügt. |
+| Datentyp | [[!UICONTROL Product List Item &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | Produktkategorien wurden der Liste der Kategoriedaten dieses Produkts hinzugefügt. |
 | Datentyp | [!UICONTROL Session details information] | Das `pev3` Zeichenfolgenfeld wurde hinzugefügt, das [den Typ des für das Reporting verwendeten Medien-Streams angibt](https://github.com/adobe/xdm/pull/1676/files). Die `pccr` Eigenschaft gibt an, ob eine Umleitung stattgefunden hat. |
-| Datentyp | [!UICONTROL Requisition List] | Stellt [ Eigenschaften der Anforderungsliste ](https://github.com/adobe/xdm/pull/1675/files). Dazu gehören Name, ID und Beschreibung. |
+| Datentyp | [!UICONTROL Requisition List] | Stellt [&#x200B; Eigenschaften der Anforderungsliste &#x200B;](https://github.com/adobe/xdm/pull/1675/files). Dazu gehören Name, ID und Beschreibung. |
 | Datentyp | [!UICONTROL Commerce] | Der Datentyp [Commerce wurde aktualisiert](https://github.com/adobe/xdm/pull/1675/files) um `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` und `requisitionList` einzuschließen. |
 
 {style="table-layout:auto"}

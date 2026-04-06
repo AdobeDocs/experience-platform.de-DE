@@ -39,10 +39,10 @@ Bei der Aktualisierung der Real-Time CDP B2B edition-Architektur unterstützen Z
 
 Bevor Sie die Segmentierungsattribute für B2B-Klassen verwenden können, müssen Sie die folgenden Schritte ausführen:
 
-1. Erstellen Sie Schemas, die die B2B-Klassen verwenden. Zu den B2B edition-Klassen gehören Konto, Kampagne, Opportunity, Marketing-Liste und mehr. Informationen zum [ von Schemas zur Verwendung mit B2B-Klassen ](../schemas/b2b.md) Sie in der Schemadokumentation .
+1. Erstellen Sie Schemas, die die B2B-Klassen verwenden. Zu den B2B edition-Klassen gehören Konto, Kampagne, Opportunity, Marketing-Liste und mehr. Informationen zum [&#x200B; von Schemas zur Verwendung mit B2B-Klassen &#x200B;](../schemas/b2b.md) Sie in der Schemadokumentation .
 2. Erstellen Sie Beziehungen zwischen Ihren B2B-Schemata des Experience-Datenmodells (XDM). Zielgruppen, die auf B2B edition-Attributen basieren, erfordern Beziehungen zwischen den -Klassen, um die erweiterte B2B-Segmentierungsfunktion in vollem Umfang nutzen zu können. Weitere Informationen finden Sie in der Dokumentation [Definieren einer Beziehung zwischen zwei B2B](../../xdm/tutorials/relationship-b2b.md)Schemata“.
-3. Nehmen Sie Daten mithilfe von Datensätzen auf der Grundlage Ihrer B2B-Schemata auf. Informationen zur Datenaufnahme finden [ in der Quellendokumentation ](../../sources/connectors/adobe-applications/marketo/marketo.md).
-4. Eine detailliertere Anleitung [ Erstellen von Zielgruppen ](../../segmentation/ui/segment-builder.md) Sie im Segment Builder-Benutzerhandbuch .
+3. Nehmen Sie Daten mithilfe von Datensätzen auf der Grundlage Ihrer B2B-Schemata auf. Informationen zur Datenaufnahme finden [&#x200B; in der Quellendokumentation &#x200B;](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. Eine detailliertere Anleitung [&#x200B; Erstellen von Zielgruppen &#x200B;](../../segmentation/ui/segment-builder.md) Sie im Segment Builder-Benutzerhandbuch .
 
 Sobald diese Anforderungen erfüllt sind, können Sie diese Attribute für gängige B2B-Anwendungsfälle kombinieren.
 
@@ -68,7 +68,7 @@ Diese Beziehung spiegelt sich in Segment Builder durch die Verwendung von `Key` 
 
 ![Beispiel für einen Quellschlüssel unter Verwendung von Segment Builder im Segmentierungsarbeitsbereich](../assets/segmentation/b2b/source-key-segmentation-example.png)
 
-Weitere Informationen zu den verfügbaren B2B[Klassen finden Sie ](../schemas/b2b.md) der Dokumentation zu Schemas in Real-Time Customer Data Platform B2B edition .
+Weitere Informationen zu den verfügbaren B2B[Klassen finden Sie &#x200B;](../schemas/b2b.md) der Dokumentation zu Schemas in Real-Time Customer Data Platform B2B edition .
 
 Die folgenden Anwendungsfälle enthalten Informationen darüber, welche Klassen verwendet werden, um Beziehungen zwischen den verschiedenen Schemas herzustellen und so diese Ergebnisse zu erzielen. Diese Beispiele können bei der Erstellung eigener Zielgruppen verwendet werden.
 

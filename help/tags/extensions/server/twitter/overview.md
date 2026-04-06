@@ -13,9 +13,9 @@ ht-degree: 6%
 
 # [!DNL Twitter]-Erweiterung zur Ereignisweiterleitung
 
-[[!DNL Twitter]](https://twitter.com/i/flow/login) ist ein Online-Dienst für soziale Medien und soziale Netzwerke, auf dem Nutzer 280 Zeichen lange Nachrichten, auch Tweets genannt, posten und damit interagieren können. Benutzer können mit Twitter über einen Browser, eine mobile Frontend-Software oder programmgesteuert über die [APIs) ](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) ist ein Online-Dienst für soziale Medien und soziale Netzwerke, auf dem Nutzer 280 Zeichen lange Nachrichten, auch Tweets genannt, posten und damit interagieren können. Benutzer können mit Twitter über einen Browser, eine mobile Frontend-Software oder programmgesteuert über die [APIs) &#x200B;](https://developer.twitter.com/en/docs/twitter-api)
 
-Mit der [!DNL Twitter] Web Conversions-API [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) können Sie die in Adobe Experience Platform Edge Network erfassten Daten nutzen und an [!DNL Twitter] senden. In diesem Dokument werden die Anwendungsfälle der Erweiterung, deren Installation und die Integration der Funktionen in die Ereignisweiterleitung ([) ](../../../ui/managing-resources/rules.md).
+Mit der [!DNL Twitter] Web Conversions-API [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) können Sie die in Adobe Experience Platform Edge Network erfassten Daten nutzen und an [!DNL Twitter] senden. In diesem Dokument werden die Anwendungsfälle der Erweiterung, deren Installation und die Integration der Funktionen in die Ereignisweiterleitung ([) &#x200B;](../../../ui/managing-resources/rules.md).
 
 [!DNL Twitter] erfordert [OAuth 1.0](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) für die Authentifizierung mit der [!DNL Twitter] [!DNL Web Conversions]-API.
 
@@ -45,15 +45,15 @@ Um den Experience Platform mit [!DNL Twitter] zu verbinden, sind die folgenden E
 
 | Schlüsseltyp | Beschreibung |
 | --- | --- |
-| Consumer Key | &#x200B; Der API-Schlüssel der App für den Zugriff auf die [!DNL Twitter]-API. Eine Anleitung finden Sie in der [!DNL Twitter]-Dokumentation [API-Schlüssel und ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)). |
-| Verbrauchergeheimnis | Das API-Geheimnis ermöglicht Ihrer App den Zugriff auf die [!DNL Twitter]-API. Eine Anleitung finden Sie in der [!DNL Twitter]-Dokumentation [API-Schlüssel und ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)). |
-| Geheimer Token | Das nicht ablaufende Geheimnis-Token Ihrer App, das für die Authentifizierung bei der [!DNL Twitter]-API über OAuth verwendet wird. Eine Anleitung finden Sie in der [!DNL Twitter] Dokumentation [ Abrufen von Zugriffstoken ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) Benutzende . |
-| Zugriffs-Token | Das nicht ablaufende Zugriffstoken Ihrer App, das für die Authentifizierung bei der [!DNL Twitter]-API über OAuth verwendet wird. Eine Anleitung finden Sie in der [!DNL Twitter] Dokumentation [ Abrufen von Zugriffstoken ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) Benutzende . |
+| Consumer Key | &#x200B; Der API-Schlüssel der App für den Zugriff auf die [!DNL Twitter]-API. Eine Anleitung finden Sie in der [!DNL Twitter]-Dokumentation [API-Schlüssel und &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)). |
+| Verbrauchergeheimnis | Das API-Geheimnis ermöglicht Ihrer App den Zugriff auf die [!DNL Twitter]-API. Eine Anleitung finden Sie in der [!DNL Twitter]-Dokumentation [API-Schlüssel und &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)). |
+| Geheimer Token | Das nicht ablaufende Geheimnis-Token Ihrer App, das für die Authentifizierung bei der [!DNL Twitter]-API über OAuth verwendet wird. Eine Anleitung finden Sie in der [!DNL Twitter] Dokumentation [&#x200B; Abrufen von Zugriffstoken &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) Benutzende . |
+| Zugriffs-Token | Das nicht ablaufende Zugriffstoken Ihrer App, das für die Authentifizierung bei der [!DNL Twitter]-API über OAuth verwendet wird. Eine Anleitung finden Sie in der [!DNL Twitter] Dokumentation [&#x200B; Abrufen von Zugriffstoken &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) Benutzende . |
 | Pixel-ID | Das [!DNL Twitter] Pixel ist ein Website-Tag, das auf Ihrer Website implementiert wird, um Site-Aktionen oder Konversionen zu verfolgen. Eine Anleitung finden Sie in der [!DNL Twitter]-Dokumentation [Konversionsverfolgung für Websites](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) . |
 
 ## Installieren und Konfigurieren der [!DNL Twitter] {#install}
 
-Um die Erweiterung zu installieren[ erstellen Sie eine Ereignisweiterleitungseigenschaft oder ](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren[&#x200B; erstellen Sie eine Ereignisweiterleitungseigenschaft oder &#x200B;](../../../ui/event-forwarding/overview.md#properties) Sie stattdessen eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
 Wählen Sie **[!UICONTROL Extensions]** in der linken Navigationsleiste aus. Wählen Sie auf der Registerkarte **[!UICONTROL Catalog]** die Option **[!UICONTROL Install]** auf der Karte für die [!DNL Twitter] aus.
 

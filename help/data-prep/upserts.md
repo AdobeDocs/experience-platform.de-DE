@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >* Die Aufnahme von Meldungen zur Aktualisierung der Experience-Datenmodell (XDM)-Entität (mit JSON-PATCH-Vorgängen) für Profilaktualisierungen über den DCS-Eingang ist veraltet. Führen Sie alternativ dazu die in diesem Handbuch beschriebenen Schritte aus.
 >
->* Sie können auch die HTTP-API-Quelle verwenden[ um Rohdaten in den DCS-Eingang aufzunehmen ](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) die erforderlichen Datenzuordnungen anzugeben, um Ihre Daten in XDM-konforme Nachrichten für Profilaktualisierungen umzuwandeln.
+>* Sie können auch die HTTP-API-Quelle verwenden[&#x200B; um Rohdaten in den DCS-Eingang aufzunehmen &#x200B;](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) die erforderlichen Datenzuordnungen anzugeben, um Ihre Daten in XDM-konforme Nachrichten für Profilaktualisierungen umzuwandeln.
 >
 >* Bei der Verwendung von Arrays beim Streaming von Upserts müssen Sie explizit `upsert_array_append` oder `upsert_array_replace` verwenden, um einen klaren Zweck des Vorgangs zu definieren. Möglicherweise werden Fehler angezeigt, wenn diese Funktionen fehlen.
 
@@ -24,11 +24,11 @@ Verwenden Sie das Streaming von Upserts in [!DNL Data Prep], um partielle Zeilen
 
 Durch das Streamen von Upserts können Sie das Format Ihrer Daten beibehalten, während Sie diese Daten während der Aufnahme in [!DNL Real-Time Customer Profile] PATCH-Anfragen übersetzen. Basierend auf den von Ihnen bereitgestellten Eingaben können Sie mit [!DNL Data Prep] eine einzige API-Payload senden und die Daten sowohl an [!DNL Real-Time Customer Profile] PATCH- als auch [!DNL Identity Service] CREATE-Anfragen übersetzen.
 
-[!DNL Data Prep] verwendet Header-Parameter, um zwischen Einfügungen und Upserts zu unterscheiden. Alle Zeilen, die Upserts verwenden, müssen eine Kopfzeile haben. Sie können Upserts mit oder ohne Identitätsdeskriptoren verwenden. Wenn Sie Upserts mit Identitäten verwenden, müssen Sie die Konfigurationsschritte ausführen, die im Abschnitt „Konfigurieren [ Identitätsdatensatzes“ beschrieben ](#configure-the-identity-dataset). Wenn Sie Upserts ohne Identitäten verwenden, müssen Sie in Ihrer Anfrage keine Identitätskonfigurationen angeben. Weitere Informationen finden Sie im Abschnitt [Streamen von Upserts ohne ](#payload-without-identity-configuration)&quot;.
+[!DNL Data Prep] verwendet Header-Parameter, um zwischen Einfügungen und Upserts zu unterscheiden. Alle Zeilen, die Upserts verwenden, müssen eine Kopfzeile haben. Sie können Upserts mit oder ohne Identitätsdeskriptoren verwenden. Wenn Sie Upserts mit Identitäten verwenden, müssen Sie die Konfigurationsschritte ausführen, die im Abschnitt „Konfigurieren [&#x200B; Identitätsdatensatzes“ beschrieben &#x200B;](#configure-the-identity-dataset). Wenn Sie Upserts ohne Identitäten verwenden, müssen Sie in Ihrer Anfrage keine Identitätskonfigurationen angeben. Weitere Informationen finden Sie im Abschnitt [Streamen von Upserts ohne &#x200B;](#payload-without-identity-configuration)&quot;.
 
 >[!NOTE]
 >
->Um die Upsert-Funktion zu nutzen, wird empfohlen, XDM-kompatible Konfigurationen während der Datenaufnahme zu deaktivieren und die eingehende Payload mit [Data Prep Mapper) neu ](./ui/mapping.md).
+>Um die Upsert-Funktion zu nutzen, wird empfohlen, XDM-kompatible Konfigurationen während der Datenaufnahme zu deaktivieren und die eingehende Payload mit [Data Prep Mapper) neu &#x200B;](./ui/mapping.md).
 
 Dieses Dokument enthält Informationen zum Streamen von Upserts in [!DNL Data Prep].
 

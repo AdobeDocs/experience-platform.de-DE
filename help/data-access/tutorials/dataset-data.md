@@ -18,7 +18,7 @@ In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mithilfe der [!DNL
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis darüber voraus, wie ein Datensatz erstellt und aufgefüllt wird. Weitere Informationen finden [ im Tutorial ](../../catalog/datasets/create.md) Datensatzerstellung .
+Dieses Tutorial setzt ein Grundverständnis darüber voraus, wie ein Datensatz erstellt und aufgefüllt wird. Weitere Informationen finden [&#x200B; im Tutorial &#x200B;](../../catalog/datasets/create.md) Datensatzerstellung .
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Experience Platform-APIs erfolgreich aufrufen zu können.
 
@@ -28,7 +28,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ ](../../landing/api-authentication.md). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Experience Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial“ &#x200B;](../../landing/api-authentication.md). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

@@ -80,7 +80,7 @@ Die nachstehende Abfrage gibt den Wert der Erstkontakt-Attribution und Details d
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 
@@ -179,7 +179,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 
@@ -230,7 +230,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 
@@ -281,7 +281,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 
@@ -330,7 +330,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [ Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
+Eine vollständige Liste der potenziell erforderlichen Parameter und deren Beschreibungen finden Sie [&#x200B; Abschnitt „Attributionsabfrageparameter](#attribution-query-parameters).
 
 **Beispielabfrage**
 

@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Weitere Informationen finden Sie [ Abschnitt ](./appendix.md#query) Abfrageparameter . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse nach . Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](./appendix.md#query) Abfrageparameter . |
 
 **Anfrage**
 

@@ -33,9 +33,9 @@ Mit Data Distiller können Datenwissenschaftler und Ingenieure ihre Pipelines f�
 
 Dieser Workflow setzt ein grundlegendes Verständnis der verschiedenen Aspekte von Adobe Experience Platform voraus. Bevor Sie mit diesem Tutorial beginnen, lesen Sie die Dokumentation für die folgenden Konzepte:
 
-- Erfahren Sie[ wie Sie Experience Platform-APIs authentifizieren und ](../../../landing/api-authentication.md).
+- Erfahren Sie[&#x200B; wie Sie Experience Platform-APIs authentifizieren und &#x200B;](../../../landing/api-authentication.md).
 - Sandboxes: [Attributbasierte Zugriffssteuerungsberechtigungen](../../../access-control/abac/overview.md) und wie Rollen erstellt und verwaltet werden sowie die gewünschten Ressourcenberechtigungen für diese Rollen zugewiesen werden.
-- Data Governance: So [ Sie Datennutzungskennzeichnungen auf Datensätze und Felder anwenden und diese ](../../../data-governance/labels/overview.md) entsprechend den zugehörigen Data Governance-Richtlinien und Zugriffssteuerungsrichtlinien kategorisieren.
+- Data Governance: So [&#x200B; Sie Datennutzungskennzeichnungen auf Datensätze und Felder anwenden und diese &#x200B;](../../../data-governance/labels/overview.md) entsprechend den zugehörigen Data Governance-Richtlinien und Zugriffssteuerungsrichtlinien kategorisieren.
 
 ## Nächste Schritte
 

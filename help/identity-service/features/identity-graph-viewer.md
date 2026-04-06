@@ -60,7 +60,7 @@ Das Identitätsdiagramm zeigt alle Identitäten an, die mit der eingegebenen Kom
 
 >[!IMPORTANT]
 >
->Ein Identitätsdiagramm erfordert die Generierung von mindestens zwei verknüpften Identitäten und eine gültige Kombination aus Identitäts-Namespace und Wert. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 50. Weitere Informationen finden Sie [ Abschnitt ](#appendix)Anhang“.
+>Ein Identitätsdiagramm erfordert die Generierung von mindestens zwei verknüpften Identitäten und eine gültige Kombination aus Identitäts-Namespace und Wert. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 50. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](#appendix)Anhang“.
 
 ![Der Identitätsdiagramm-Viewer mit fünf verknüpften Identitäten.](../images/graph-viewer/graph.png)
 

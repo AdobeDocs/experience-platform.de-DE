@@ -19,7 +19,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 * [Datenströme](../../datastreams/overview.md): Mit Datenströmen können Sie Experience Platform Edge Network mit Ihrem Datensatz verbinden.
 * [Kapazitäten](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform teilen Ihnen die Kapazitäten mit, ob Ihr Unternehmen eine Ihrer Leitplanken überschritten hat, und erhalten Informationen zur Behebung dieser Probleme.
-* [Edge-](../../segmentation/methods/edge-segmentation.md): Bei der Edge-Segmentierung werden Segmentdefinitionen in Adobe Experience Platform sofort ([ Edge) ausgewertet](../../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+* [Edge-](../../segmentation/methods/edge-segmentation.md): Bei der Edge-Segmentierung werden Segmentdefinitionen in Adobe Experience Platform sofort ([&#x200B; Edge) ausgewertet](../../landing/edge-and-hub-comparison.md) was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 ## Zugriff {#access}
 

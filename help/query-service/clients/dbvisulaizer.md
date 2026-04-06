@@ -19,7 +19,7 @@ In diesem Dokument werden die Schritte zum Verbinden des [!DNL DbVisualizer]-Dat
 
 Für dieses Handbuch müssen Sie bereits Zugriff auf die [!DNL DbVisualizer] Desktop-App haben und mit dem Navigieren in der zugehörigen Benutzeroberfläche vertraut sein. Informationen zum Herunterladen der [!DNL DbVisualizer] Desktop-App oder weitere Informationen finden Sie unter [Official [!DNL DbVisualizer] Documentation](https://www.dbvis.com/download/).
 
-Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL  DbVisualizer] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Experience Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL &#x200B; DbVisualizer] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Experience Platform-Benutzeroberfläche. Wenden Sie sich an den Admin Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
 
 ## Erstellen einer Datenbankverbindung {#connect-database}
 

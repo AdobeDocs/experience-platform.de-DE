@@ -65,7 +65,7 @@ Wählen Sie **[!UICONTROL Customer & Account]** aus, um Ihr Dashboard zu aktuali
 
 >[!TAB Anreicherung von Kontoprofilen]
 
-Wählen Sie **[!UICONTROL Account profile enrichment]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Profilanreicherungsdaten anzuzeigen. **Hinweis**: Sie können die Metriken zur Anreicherung von Account-Profilen nur anzeigen, wenn Sie berechtigt sind, B2B[Daten ](../../rtcdp/b2b-tutorial.md).
+Wählen Sie **[!UICONTROL Account profile enrichment]** aus, um Ihr Dashboard zu aktualisieren und Metriken zu Profilanreicherungsdaten anzuzeigen. **Hinweis**: Sie können die Metriken zur Anreicherung von Account-Profilen nur anzeigen, wenn Sie berechtigt sind, B2B[Daten &#x200B;](../../rtcdp/b2b-tutorial.md).
 
 ![Der Überwachungs-Datentyp ist auf „Kontoprofilanreicherung“ festgelegt.](../assets/ui/monitor-overview/account-profile-enrichment.png)
 
@@ -89,19 +89,19 @@ Wählen Sie **[!UICONTROL Identities]** aus, um die Verarbeitungserfolgsrate Ihr
 
 >[!TAB Profile]
 
-Wählen Sie **[!UICONTROL Profiles]** aus, um die Erfolgsrate der Verarbeitung Ihrer Profildaten anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen ](monitor-profiles.md) Profildaten“.
+Wählen Sie **[!UICONTROL Profiles]** aus, um die Erfolgsrate der Verarbeitung Ihrer Profildaten anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen &#x200B;](monitor-profiles.md) Profildaten“.
 
 ![Das Überwachungs-Dashboard in der Benutzeroberfläche mit ausgewählter Profilkarte.](../assets/ui/monitor-overview/profiles.png)
 
 >[!TAB Zielgruppen]
 
-Wählen Sie **[!UICONTROL Audiences]** aus, um Metriken zu Ihren Zielgruppen und Segmentierungsaufträgen anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen ](monitor-audiences.md) Zielgruppendaten“.
+Wählen Sie **[!UICONTROL Audiences]** aus, um Metriken zu Ihren Zielgruppen und Segmentierungsaufträgen anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen &#x200B;](monitor-audiences.md) Zielgruppendaten“.
 
 ![Das Überwachungs-Dashboard in der Benutzeroberfläche mit ausgewählter Karte „Zielgruppen“.](../assets/ui/monitor-overview/audiences.png)
 
 >[!TAB Ziele]
 
-Wählen Sie **[!UICONTROL Destinations]** aus, um Metriken zu Ihren [!UICONTROL Streaming activate rate] und [!UICONTROL Batch failed dataflow runs] anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen von ](monitor-destinations.md)&quot;.
+Wählen Sie **[!UICONTROL Destinations]** aus, um Metriken zu Ihren [!UICONTROL Streaming activate rate] und [!UICONTROL Batch failed dataflow runs] anzuzeigen. Weitere Informationen finden Sie im Handbuch [Überwachen von &#x200B;](monitor-destinations.md)&quot;.
 
 ![Das Überwachungs-Dashboard in der Benutzeroberfläche mit ausgewählter Zielkarte.](../assets/ui/monitor-overview/destinations.png)
 
@@ -129,7 +129,7 @@ Durch Lesen dieses Dokuments können Sie sich jetzt in der Benutzeroberfläche d
 
 * [Überwachen der Data Lake-Aufnahme](monitor-sources.md).
 * [Identitätsdaten überwachen](monitor-identities.md).
-* [Überwachen von ](monitor-profiles.md).
+* [Überwachen von &#x200B;](monitor-profiles.md).
 * [Zielgruppendaten überwachen](monitor-audiences.md).
 * [Zieldaten überwachen](monitor-destinations.md).
 

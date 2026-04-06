@@ -28,7 +28,7 @@ Darüber hinaus setzt dieses Tutorial voraus, dass Sie bereits eine Streaming-Ve
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../landing/api-guide.md).
 
 ## Schema erstellen auf Grundlage der XDM ExperienceEvent-Klasse
 

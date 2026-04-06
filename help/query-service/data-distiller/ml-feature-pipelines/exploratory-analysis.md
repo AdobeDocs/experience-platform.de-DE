@@ -15,7 +15,7 @@ Dieses Dokument enthält einige grundlegende Beispiele und Best Practices für d
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie eine Verbindung zu Data Distiller in Ihrem [!DNL Python]-Notebook erstellt haben. In der Dokumentation finden Sie Anweisungen zum Verbinden [ Notebooks mit  [!DNL Python]  Distiller](./establish-connection.md).
+Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie eine Verbindung zu Data Distiller in Ihrem [!DNL Python]-Notebook erstellt haben. In der Dokumentation finden Sie Anweisungen zum Verbinden [&#x200B; Notebooks mit  [!DNL Python]  Distiller](./establish-connection.md).
 
 ## Erfassen grundlegender Statistiken {#basic-statistics}
 

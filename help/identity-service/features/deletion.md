@@ -60,7 +60,7 @@ Sie können den Katalog-Service verwenden, um Anfragen zum Löschen von Datensä
 
 ### Datensatzablauf im Rahmen der Datenhygiene
 
-Der Arbeitsbereich [[!UICONTROL Data Hygiene] in ](../../hygiene/ui/overview.md) Benutzeroberfläche von Adobe Experience Platform ermöglicht Ihnen, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Weitere Informationen finden Sie im Handbuch unter [Verwalten des Datensatzablaufs mithilfe des [!UICONTROL Data Hygiene] Workspace](../../hygiene/ui/dataset-expiration.md).
+Der Arbeitsbereich [[!UICONTROL Data Hygiene] in &#x200B;](../../hygiene/ui/overview.md) Benutzeroberfläche von Adobe Experience Platform ermöglicht Ihnen, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Weitere Informationen finden Sie im Handbuch unter [Verwalten des Datensatzablaufs mithilfe des [!UICONTROL Data Hygiene] Workspace](../../hygiene/ui/dataset-expiration.md).
 
 Die folgende Tabelle enthält eine Aufschlüsselung der Unterschiede zwischen dem Löschen von Datensätzen im Katalog-Service und im Rahmen der Datenhygiene:
 

@@ -39,7 +39,7 @@ Das Dialogfeld **[!UICONTROL Create new role]** wird angezeigt. Geben Sie einen 
 
 ![Das Dialogfeld „Neue Rollen erstellen“ mit Hervorhebung des Namens und der Beschreibung und der Option „Bestätigen“.](../../images/ui/roles/roles-create-new-role.png)
 
-Der **[!UICONTROL Resources]** Arbeitsbereich wird angezeigt. Suchen Sie die benötigte Ressource, indem Sie scrollen oder indem Sie den Namen der Ressource in die Suchleiste im linken Bereich eingeben. Fügen Sie Ressourcen hinzu, indem Sie ![ Pluszeichen ](/help/images/icons/plus.png) dem Namen der Ressource auswählen.
+Der **[!UICONTROL Resources]** Arbeitsbereich wird angezeigt. Suchen Sie die benötigte Ressource, indem Sie scrollen oder indem Sie den Namen der Ressource in die Suchleiste im linken Bereich eingeben. Fügen Sie Ressourcen hinzu, indem Sie ![&#x200B; Pluszeichen &#x200B;](/help/images/icons/plus.png) dem Namen der Ressource auswählen.
 
 ![Der Arbeitsbereich „Ressourcen“ mit der hervorgehobenen Option „Hinzufügen“ einer einzelnen Ressource.](../../images/ui/roles/roles-resources.png)
 
