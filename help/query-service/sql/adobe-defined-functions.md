@@ -13,7 +13,7 @@ ht-degree: 13%
 
 # Adobe-definierte SQL-Funktionen im Abfrage-Service
 
-Adobe-definierte Funktionen, hier als ADFs bezeichnet, sind vordefinierte Funktionen im Abfrage-Service von Adobe Experience Platform, die Sie bei der Durchführung gängiger geschäftsbezogener Aufgaben im Zusammenhang mit [!DNL Experience Event] unterstützen. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=de) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=de) wie die in Adobe Analytics.
+Adobe-definierte Funktionen, hier als ADFs bezeichnet, sind vordefinierte Funktionen im Abfrage-Service von Adobe Experience Platform, die Sie bei der Durchführung gängiger geschäftsbezogener Aufgaben im Zusammenhang mit [!DNL Experience Event] unterstützen. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) wie die in Adobe Analytics.
 
 Dieses Dokument enthält Informationen zu in Adobe definierten Funktionen, die in [!DNL Query Service] verfügbar sind.
 
@@ -47,7 +47,7 @@ Wenn Sie mit [!DNL Experience Event] Daten arbeiten, die von einer Website, eine
 
 Diese Gruppierung oder Sitzungserstellung von Daten hilft bei der Verknüpfung der Ereignisse, um mehr Kontext über das Kundenerlebnis zu erfahren.
 
-Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation unter [Kontextabhängige Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=de).
+Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation unter [Kontextabhängige Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Abfragesyntax**
 
@@ -487,4 +487,4 @@ Mithilfe der hier beschriebenen Funktionen können Sie Abfragen schreiben, um mi
 
 Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Darüber hinaus verwendet das Video Beispiele für einzelne Eigenschaften in einem XDM-Objekt, für die Verwendung von Adobe-definierten Funktionen und für die Verwendung von CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/33392?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)

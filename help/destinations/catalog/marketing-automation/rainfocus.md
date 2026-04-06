@@ -172,4 +172,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Weitere Ressourcen {#additional-resources}
 
-* [RainFocus Streaming Source-Connector](https://experienceleague.adobe.com/de/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [RainFocus Streaming Source-Connector](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

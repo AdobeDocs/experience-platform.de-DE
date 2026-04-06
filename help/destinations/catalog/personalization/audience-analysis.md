@@ -14,7 +14,7 @@ ht-degree: 23%
 
 # Audience Analysis-Ziel
 
-Verwenden Sie das [!UICONTROL Audience Analysis] Ziel, um [!DNL Adobe Experience Platform] Zielgruppendaten in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de) anzureichern. Sie können auswählen, welche Zielgruppen in die resultierenden angereicherten Daten aufgenommen werden sollen. Zielgruppenqualifikationen sind dann als Dimensionen in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=de)-Berichten verfügbar.
+Verwenden Sie das [!UICONTROL Audience Analysis] Ziel, um [!DNL Adobe Experience Platform] Zielgruppendaten in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de) anzureichern. Sie können auswählen, welche Zielgruppen in die resultierenden angereicherten Daten aufgenommen werden sollen. Zielgruppenqualifikationen sind dann als Dimensionen in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html)-Berichten verfügbar.
 
 >[!AVAILABILITY]
 >
