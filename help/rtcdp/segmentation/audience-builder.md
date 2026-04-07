@@ -2,11 +2,11 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Erfahren Sie, wie Sie mit dem Audience Builder in Real-Time Customer Data Platform Zielgruppen erstellen.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
+source-git-commit: fed1c2e2fea0b2de67c75b24cb636f68a1a3e035
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1146'
 ht-degree: 9%
 
 ---
@@ -50,17 +50,17 @@ Für die **[!UICONTROL Relationship of fields]** können Sie entweder die Standa
 
 ### Attribute {#attributes}
 
-Auf der Registerkarte [!UICONTROL Attributes] können Sie Account-Attribute durchsuchen, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [&#x200B; Arbeitsfläche &#x200B;](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
+Auf der Registerkarte [!UICONTROL Attributes] können Sie Account-Attribute durchsuchen, die zur Klasse XDM Business Account gehören, sowie Opportunities und personenbasierte Attribute. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs auf [ Arbeitsfläche ](#rule-builder-canvas)Regel-Builders“ gezogen werden kann.
 
 ![Die Registerkarte Attribute wird im Audience Builder angezeigt](../assets/segmentation/audience-builder/attributes.png)
 
->[!NOTE]
+>[!AVAILABILITY]
 >
->Zusammenfassungsdaten befinden sich in **Eingeschränkte Verfügbarkeit**.
+>Zusammenfassungsdaten sind in **Eingeschränkte Verfügbarkeit** und zur Verwendung in B2B edition und B2P Edition verfügbar.
 
 Bei der Auswahl eines Attributs können Sie Zusammenfassungsdaten anzeigen, indem Sie auf das [Informationssymbol](../../images/icons/info.png) klicken. Die Zusammenfassungsdaten enthalten Informationen wie Top-Werte, eine Erklärung, was das Feld ist, die Anzahl der Datensätze der Werte sowie den Prozentsatz der Konten, die Werte für dieses Attribut enthalten.
 
-Im Abschnitt **[!UICONTROL Populated]** wird die Anzahl der Datensätze angezeigt, in denen das Attribut eingetragen ist, im Vergleich zur Gesamtzahl der verfügbaren Datensätze sowie der Prozentsatz der Konten, die einen Wert für dieses Feld haben.
+Der Abschnitt **[!UICONTROL Populated]** zeigt den Prozentsatz der Konten an, die einen Wert für dieses Feld haben.
 
 Der Abschnitt **[!UICONTROL Top values]** zeigt die am häufigsten vorkommenden Werte für das Attribut an und enthält Details wie den Wert, die Anzahl der Datensätze, die diesen Wert aufweisen, sowie den Prozentsatz der gesamten Datensätze, die der Wert darstellt. Die Anzahl der Datensätze für jedes Feld wird durch den Profil-Schnappschuss bestimmt, der eine konsolidierte Ansicht der Datensätze bietet, nachdem alle beitragenden Datensatzdaten zusammengeführt wurden.
 
@@ -74,11 +74,17 @@ Wenn ein Attribut in weniger als 25 % der Konten eingetragen ist, wird stattdess
 
 ![Ein Pop-up, das eine Version der Zusammenfassungsdaten für ein Attribut anzeigt, wenn es mit weniger als 25 % der Konten gefüllt ist.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+Wenn Sie ein Attribut mit Zusammenfassungsdaten hinzufügen, können Sie die Zusammenfassungsdaten auch auf der Arbeitsfläche zum Erstellen von Regeln anzeigen.
+
+![Das Attribut mit den Zusammenfassungsdaten wird angezeigt.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+Sie können entweder das Dropdown verwenden, um aus den oberen Werten auszuwählen, oder Ihren Wert eingeben, der automatisch in einen der oberen Werte aufgelöst werden kann.
+
+![Das Dropdown-Menü, in dem Sie den Wert des Attributs hinzufügen können, ist hervorgehoben.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 >[!NOTE]
 >
->Zusammenfassungsdaten sind nur verfügbar, wenn das Attribut zum Schema Konto, Person oder Opportunity gehört. Darüber hinaus werden die oberen Werte nur angezeigt, wenn das Feld **nicht** zu viele verschiedene Werte enthält und wenn die Werte dieser Felder häufig wiederholt werden.
->
->Diese Zusammenfassungsdaten werden **täglich**.
+>Die Zusammenfassungsdaten werden **täglich**. Darüber hinaus werden Zusammenfassungsdaten **Attribute unterstützt** deren Werte entweder Arrays oder Schlüssel/Wert-Paare sind.
 
 Darüber hinaus verfügt das Attribut über eine **[!UICONTROL Ingestion Type]**. Der Aufnahmetyp teilt Ihnen den Ursprung der Daten mit und kann einer der folgenden Werte sein: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** oder **[!UICONTROL No Data Ingested]**.
 
