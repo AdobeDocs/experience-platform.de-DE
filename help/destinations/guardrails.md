@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 1f733dd25fafed153c8d1065555d2ca45bbb11f1
+source-git-commit: c6a8a516afe31c5c6eaef67712fc646c2944d31d
 workflow-type: tm+mt
-source-wordcount: '1745'
-ht-degree: 38%
+source-wordcount: '1810'
+ht-degree: 37%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 38%
 
 >[!IMPORTANT]
 >
->Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [&#x200B; entsprechenden &#x200B;](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
+>Überprüfen Sie zusätzlich zu dieser Seite mit Leitplanken Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und [ entsprechenden ](https://helpx.adobe.com/de/legal/product-descriptions.html)Produktbeschreibung) die tatsächlichen Nutzungsbeschränkungen.
 
 Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen in Bezug auf das Aktivierungsverhalten. Bei der Betrachtung der folgenden Leitplanken wird angenommen, dass Sie eine ordnungsgemäße [Verbindung zu Zielen hergestellt haben](/help/destinations/ui/connect-destination.md).
 
@@ -50,10 +50,11 @@ Die folgenden Leitplanken gelten generell für die Aktivierung durch [alle Zielt
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
 | Maximale Anzahl von Zielgruppen für ein einzelnes Ziel | 250 | Leistungs-Schutzmaßnahme | Es wird empfohlen, maximal 250 Zielgruppen einer einzelnen Zielinstanz zuzuordnen. <br><br> Wenn Sie mehr als 250 Zielgruppen für ein Ziel aktivieren müssen, haben Sie folgende Möglichkeiten: <ul><li> Heben Sie die Zuordnung von Zielgruppen auf, die Sie nicht mehr aktivieren möchten, oder</li><li>[Erstellen Sie eine neue Zielinstanz](ui/connect-destination.md) und ordnen Sie ihr Zielgruppen zu.</li></ul> <br> Beachten Sie, dass Sie bei einigen Zielen auf weniger als 250 dem Ziel zugeordnete Zielgruppen beschränkt sein können. Diese Ziele werden weiter unten auf der Seite in den jeweiligen Abschnitten aufgeführt. |
+| Maximale Anzahl von Zielgruppen, die gleichzeitig für ein Ziel aktiviert sind | 50 | Leistungs-Schutzmaßnahme | Die Massenaktivierung von mehr als 50 Zielgruppen gleichzeitig pro Ziel wird nicht unterstützt. Es empfiehlt sich, Zielgruppen in Stapeln von 20 zu aktivieren, einige Minuten zu warten und dann zu wiederholen. Die gleichzeitige Aktivierung von mehr als 50 Zielgruppen kann dazu führen, dass der Prozess blockiert wird oder das Ziel weniger Zielgruppen als erwartet erhält. |
 | Maximale Anzahl von Attributen, die einem Ziel zugeordnet sind | 50 | Leistungs-Schutzmaßnahme | Bei mehreren Zielen und Zieltypen können Sie Profilattribute und Identitäten auswählen, die dem Export zugeordnet werden sollen. Um eine optimale Leistung zu erzielen, sollten maximal 50 Attribute einer Zielinstanz zugeordnet werden. |
 | Maximale Anzahl von Zielen | 100 | Vom System erzwungene Leitplanken | Sie können maximal 100 Ziele erstellen, mit denen Sie (pro Sandbox) Daten verbinden *aktivieren*. [Edge-Personalisierungsziele (benutzerdefinierte Personalisierung)](#edge-destinations-activation) können maximal 10 der 100 empfohlenen Ziele ausmachen. |
 | Art der für Ziele aktivierten Daten | Profildaten, einschließlich Identitäten und Identitätszuordnung | Vom System erzwungene Leitplanken | Derzeit ist es nur möglich, *Profileintragsattribute* zu Zielen zu exportieren. XDM-Attribute, die Ereignisdaten beschreiben, werden derzeit nicht für den Export unterstützt. |
-| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Vom System erzwungene Leitplanken | Sie können Array-Attribute in [dateibasierte Ziele“ &#x200B;](/help/destinations/destination-types.md#file-based). [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md) über die Funktion. |
+| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Vom System erzwungene Leitplanken | Sie können Array-Attribute in [dateibasierte Ziele“ ](/help/destinations/destination-types.md#file-based). [Weitere Informationen](/help/destinations/ui/export-arrays-maps-objects.md) über die Funktion. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +77,7 @@ Die folgenden Leitplanken gelten für die Aktivierung über [Batch-Ziele (dateib
 | Aktivierungshäufigkeit | Ein vollständiger Export pro Tag oder häufigere inkrementelle Exporte alle 3, 6, 8 oder 12 Stunden. | Vom System erzwungene Leitplanken | Lesen Sie die Dokumentationsabschnitte [Vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) für weitere Informationen über die Häufigkeitsabstufungen für Batch-Exporte. |
 | Maximale Anzahl von Zielgruppen, die zu einer bestimmten Stunde exportiert werden können | 100 | Leistungs-Schutzmaßnahme | Es wird empfohlen, maximal 100 Zielgruppen zu Batch-Zielinstanzen hinzuzufügen. |
 | Maximale Anzahl der zu aktivierenden Zeilen (Einträge) pro Datei | 5 Millionen | Vom System erzwungene Leitplanken | Adobe Experience Platform teilt die exportierten Dateien automatisch mit 5 Millionen Einträgen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar. Bei aufgeteilten Dateien wird eine Nummer an den Namen angehängt, die anzeigt, dass die Datei Teil eines größeren Exports ist, z. B. `filename.csv`, `filename_2.csv`, `filename_3.csv`. Weitere Informationen finden Sie im [Planungsabschnitt](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) des Tutorials zum Aktivieren von Batch-Zielen. |
-| Maximale Anzahl externer Zielgruppen (z. B. FAC, benutzerdefinierter Upload, Zielgruppenkomposition), die in einer Zielinstanz aktiviert werden können | 20 | Vom System erzwungene Leitplanken | Beim Aktivieren externer Zielgruppen (z. B. [Federated Audience &#x200B;](/help/segmentation/ui/audience-portal.md#fac)), [benutzerdefinierter Upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience-Komposition](/help/segmentation/ui/audience-portal.md#audience-composition)) für Batch-dateibasierte Ziele gibt es ein Limit von 20 solcher Zielgruppen, die Sie in einer Zielinstanz aktivieren können. Weitere [&#x200B; zu diesen Zielgruppentypen finden Sie unter &#x200B;](/help/segmentation/ui/audience-portal.md#customize) und Anpassung . Lesen Sie mehr über den Workflow zum [Aktivieren externer Zielgruppen für Batch-dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Maximale Anzahl externer Zielgruppen (z. B. FAC, benutzerdefinierter Upload, Zielgruppenkomposition), die in einer Zielinstanz aktiviert werden können | 20 | Vom System erzwungene Leitplanken | Beim Aktivieren externer Zielgruppen (z. B. [Federated Audience ](/help/segmentation/ui/audience-portal.md#fac)), [benutzerdefinierter Upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience-Komposition](/help/segmentation/ui/audience-portal.md#audience-composition)) für Batch-dateibasierte Ziele gibt es ein Limit von 20 solcher Zielgruppen, die Sie in einer Zielinstanz aktivieren können. Weitere [ zu diesen Zielgruppentypen finden Sie unter ](/help/segmentation/ui/audience-portal.md#customize) und Anpassung . Lesen Sie mehr über den Workflow zum [Aktivieren externer Zielgruppen für Batch-dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -104,7 +105,7 @@ Die folgenden Leitplanken gelten für die Aktivierung durch [Edge-Personalisieru
 
 ### Datensatzexporte {#dataset-exports}
 
-Datensatzexporte werden derzeit in einem **[!UICONTROL First Full and then Incremental]** ([) &#x200B;](/help/destinations/ui/export-datasets.md#scheduling). Die in diesem Abschnitt beschriebenen Leitplanken *gelten für den ersten vollständigen Export* der nach der Einrichtung eines Datensatzexport-Workflows erfolgt.
+Datensatzexporte werden derzeit in einem **[!UICONTROL First Full and then Incremental]** ([) ](/help/destinations/ui/export-datasets.md#scheduling). Die in diesem Abschnitt beschriebenen Leitplanken *gelten für den ersten vollständigen Export* der nach der Einrichtung eines Datensatzexport-Workflows erfolgt.
 
 <!--
 
@@ -196,7 +197,7 @@ Details zu Drosselungsschwellwerten oder -beschränkungen für bestimmte Ziele. 
 In der folgenden Dokumentation finden Sie weitere Informationen zu anderen Experience Platform-Services-Leitplanken, zu End-to-End-Latenzinformationen und Lizenzinformationen aus [!DNL Real-Time CDP] Produktbeschreibungsdokumenten:
 
 * [Real-Time CDP-Leitplanken](/help/rtcdp/guardrails/overview.md)
-* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=de#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
+* [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Services.
 * [Real-Time Customer Data Platform (B2C Edition - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
