@@ -2,13 +2,14 @@
 title: Benutzerdefinierte Zielgruppe bearbeiten
 description: Reddit Ads verbindet Marken mit Menschen, die ihre Leidenschaften und Probleme aktiv in Echtzeit erkunden. Reddit Ads verbindet zielstrebige, von der Community angeregte Gespräche mit flexiblen Anzeigenformaten und einem robusten Targeting, um Werbetreibenden dabei zu helfen, engagierte Zielgruppen zu erreichen, Leistungsergebnisse zu erzielen und direkt von den Communities zu lernen, die die Kultur online prägen. Dieses Handbuch richtet sich an Werbetreibende und Medien-Teams, die Adobe Experience Platform verwenden, um Zielgruppen an Reddit Ads zu senden. Es behandelt, was Sie benötigen, um Ihre Konten zu verbinden, Identitäten zuzuordnen und Zielgruppen zu aktivieren.
 last-substantial-update: 2026-03-31T00:00:00Z
-source-git-commit: c7c74ba9b5c6a66f92dc6a5403d4f2c5614c0049
+exl-id: bcce02bd-d508-47a0-8f5c-bf162db1859d
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: 28bbad7ccbec0b669082658b912d0b52e0374667
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1231'
 ht-degree: 27%
 
 ---
-
 
 # [!DNL Reddit Custom Audience]-Verbindung {#reddit-custom-audience-connection}
 
@@ -55,7 +56,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 | --- | --- | --- |
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den [!DNL Experience Platform]Segmentierungs[Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den [!DNL Experience Platform]Segmentierungs[Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Zielgruppenursprünge außerhalb von Zielgruppen, die durch den Segmentierungs-Service generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). |
 
 {style="table-layout:auto"}
@@ -86,7 +87,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -121,7 +122,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -166,7 +167,7 @@ Im Folgenden finden Sie ein Beispiel für die an [!DNL Reddit] gesendete Payload
 }
 ```
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) zur Reddit-API .
+Weitere Informationen finden [ in der ](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) zur Reddit-API .
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -174,4 +175,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Weitere Ressourcen {#additional-resources}
 
-Weitere Informationen zur Funktionsweise des Endpunkts für benutzerdefinierte Zielgruppen finden [&#x200B; in der &#x200B;](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) zur Reddit-API .
+Weitere Informationen zur Funktionsweise des Endpunkts für benutzerdefinierte Zielgruppen finden [ in der ](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) zur Reddit-API .
