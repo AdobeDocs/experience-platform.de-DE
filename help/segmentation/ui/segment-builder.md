@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: eaa256ff7574b1b6221869c290cae8b8e3606f2a
 workflow-type: tm+mt
-source-wordcount: '6574'
-ht-degree: 44%
+source-wordcount: '6708'
+ht-degree: 43%
 
 ---
 
@@ -407,7 +407,7 @@ Die Liste der verfügbaren Zeitbeschränkungen sieht wie folgt aus:
 
 | Zeitliche Beschränkung | Beschreibung | Kann Jahr ignorieren aktivieren | Beispiel |
 | --------------- | ----------- | ------------------- | ------- |
-| Heute | Das Attribut oder Ereignis, das verglichen wird **muss** heute eintreten. | Ja | ![Ein Beispiel für die Zeitbeschränkung „Heute“, die verwendet wird.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Heute | Das Attribut oder Ereignis, das verglichen wird **muss** heute eintreten. Dies ist die standardmäßig ausgewählte Zeitbeschränkung. | Ja | ![Ein Beispiel für die Zeitbeschränkung „Heute“, die verwendet wird.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | Gestern | Das Attribut oder Ereignis, das verglichen wird **muss** gestern eintreten. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Gestern“](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | Dieser Monat | Das zu vergleichende Attribut oder Ereignis **muss** in diesem Kalendermonat auftreten. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Diesen Monat“](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | Dieses Jahr | Das zu vergleichende Attribut oder Ereignis **muss** in diesem Kalenderjahr auftreten. | Nein | ![Ein Beispiel für die Zeitbeschränkung „Dieses Jahr“, die verwendet wird.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -422,6 +422,16 @@ Die Liste der verfügbaren Zeitbeschränkungen sieht wie folgt aus:
 | Nächste | Das zu vergleichende Attribut oder Ereignis muss innerhalb des nächsten ausgewählten Zeitraums auftreten. Die ausgewählten Zeiträume umfassen Minuten, Stunden, Tage, Wochen, Monate und Jahre. | Nein | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „In nächster Zeit“](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | Existiert | Das Attribut ist vorhanden. | Nein | ![Ein Beispiel für die verwendete Zeitbeschränkung „Vorhanden“](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | existiert nicht | Das Attribut ist nicht vorhanden. | Nein | ![Ein Beispiel für die Zeitbeschränkung „Ist nicht vorhanden“ wird verwendet.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Jetzt | Das zu vergleichende Attribut oder Ereignis **muss** direkt bei der Auswertung der Zielgruppe auftreten. Diese Zeitbeschränkung kann nur als Option auf sekundärer Ebene innerhalb von Zeitbeschränkungen wie „Vor“ oder „Nach“ verwendet werden. | Ja | ![Ein Beispiel für die Verwendung der Zeitbeschränkung „Jetzt“.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>Der Unterschied zwischen der Zeitbeschränkung „Heute“ und der Zeitbeschränkung „Jetzt“ ist subtil, aber signifikant.
+>
+>- Verwenden Sie die Zeitbeschränkung „Heute“, um zu überprüfen, ob das zu vergleichende Attribut oder Ereignis um **Uhr** aktuellen Tages stattfindet.
+>- Verwenden Sie die Zeitbeschränkung „Jetzt“, um zu überprüfen, ob das Attribut oder Ereignis, das verglichen wird, gerade **ist**.
+>
+>Es gibt jedoch eine wichtige Ausnahme: Wenn Sie „Heute“ als Zeitbeschränkung auf oberster Ebene verwenden, bedeutet dies, dass Sie überprüfen, ob das Attribut oder Ereignis heute zu **irgendeinem** Zeitpunkt aufgetreten ist.
 
 +++
 

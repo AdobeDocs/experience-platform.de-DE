@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handbuch zur Streaming-Segmentierung
 description: Erfahren Sie mehr über die Streaming-Segmentierung, einschließlich ihrer Funktionsweise, der Erstellung einer mithilfe der Streaming-Segmentierung bewerteten Zielgruppe und der Ansicht Ihrer mit der Streaming-Segmentierung erstellten Zielgruppen.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
+source-git-commit: 0be405c34f7fa9d01691059658429652318c13bb
 workflow-type: tm+mt
 source-wordcount: '2117'
 ht-degree: 19%
@@ -105,7 +105,7 @@ inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-43
 
 Sie können eine Zielgruppe erstellen, die mithilfe der Streaming-Segmentierung ausgewertet wird, entweder mithilfe der Segmentierungs-Service-API oder über das Zielgruppenportal in der Benutzeroberfläche.
 
-Eine Segmentdefinition kann für Streaming aktiviert werden, wenn sie mit einem der [geeigneten Regelsätze“ &#x200B;](#eligible-rulesets).
+Eine Segmentdefinition kann für Streaming aktiviert werden, wenn sie mit einem der [geeigneten Regelsätze“ ](#eligible-rulesets).
 
 >[!BEGINTABS]
 
@@ -216,7 +216,7 @@ Ein Popup wird angezeigt. Wählen Sie **[!UICONTROL Build rules]** aus, um Segme
 
 ![Die Schaltfläche „Regeln erstellen“ ist im Pop-up „Zielgruppe erstellen“ hervorgehoben.](../images/methods/streaming/select-build-rules.png)
 
-Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([&#x200B; Regelsätze) &#x200B;](#eligible-rulesets). Wenn die Segmentdefinition für die Streaming-Segmentierung geeignet ist, können Sie **[!UICONTROL Streaming]** als **[!UICONTROL Evaluation method]** auswählen.
+Erstellen Sie in Segment Builder eine Segmentdefinition, die einem der ([ Regelsätze) ](#eligible-rulesets). Wenn die Segmentdefinition für die Streaming-Segmentierung geeignet ist, können Sie **[!UICONTROL Streaming]** als **[!UICONTROL Evaluation method]** auswählen.
 
 ![Die Segmentdefinition wird angezeigt. Der Auswertungstyp ist hervorgehoben und zeigt an, dass die Segmentdefinition mithilfe der Streaming-Segmentierung ausgewertet werden kann.](../images/methods/streaming/streaming-evaluation-method.png)
 
@@ -390,7 +390,7 @@ In diesem Handbuch wird erläutert, wie für Streaming aktivierte Segmentdefinit
 
 Weitere Informationen zur Verwendung der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Benutzerhandbuch zur Segmentierung](./overview.md).
 
-Häufig gestellte Fragen zur Streaming-Segmentierung finden Sie im Abschnitt [Streaming-Segmentierung“ der häufig gestellten &#x200B;](../faq.md#streaming-segmentation).
+Häufig gestellte Fragen zur Streaming-Segmentierung finden Sie im Abschnitt [Streaming-Segmentierung“ der häufig gestellten ](../faq.md#streaming-segmentation).
 
 ## Anhang
 
@@ -476,5 +476,3 @@ Alle **neuen oder bearbeiteten** Segmentdefinitionen, die für Streaming oder Ed
 Wenn kein aktiver Zusammenführungsrichtliniensatz festgelegt ist, müssen Sie [Zusammenführungsrichtlinie konfigurieren](../../profile/merge-policies/ui-guide.md#configure) und sie so einstellen, dass sie im Randbereich aktiv ist.
 
 +++
-
->[!ENDSHADEBOX]
