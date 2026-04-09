@@ -3,20 +3,18 @@ keywords: Experience Platform;Startseite;beliebte Themen;Adobe Campaign Managed 
 title: Adobe Campaign Managed Cloud Services
 description: Erfahren Sie, wie Sie Campaign Managed Cloud Services über die Benutzeroberfläche mit Experience Platform verbinden
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1d29cdd39075aad937d078aa116ec2f6e6ec6a56
 workflow-type: tm+mt
-source-wordcount: '747'
-ht-degree: 5%
+source-wordcount: '1030'
+ht-degree: 2%
 
 ---
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Experience Platform-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Campaign Managed Cloud Services bietet eine verwaltete Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse, die die visuelle Kampagnenorchestrierung, die Echtzeit-Interaktionsverwaltung und die kanalübergreifende Ausführung unterstützt. Weitere Informationen finden Sie in der Dokumentation zu [Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=de).
 
-Adobe Campaign Managed Cloud Services bietet eine Managed Services-Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und stellt dazu eine Umgebung für die visuelle Kampagnenorchestrierung, die Echtzeit-Interaktionsverwaltung und die kanalübergreifende Ausführung bereit. Weitere Informationen finden Sie in der Dokumentation [&#128279;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=de) Adobe Campaign v8 .
-
-Mit der Adobe Campaign Managed Cloud Services-Quelle können Sie Adobe Campaign v8-Versandlogs und -Trackinglog-Daten an Adobe Experience Platform übertragen.
+Mit dem Adobe Campaign Managed Cloud Services-Quell-Connector können Sie Versand- und Trackinglog-Daten aus Adobe Campaign v8 in Adobe Experience Platform aufnehmen. Dieser Connector fungiert als Batch-Quelle innerhalb von Platform.
 
 ## Voraussetzungen
 
@@ -30,7 +28,7 @@ Bevor Sie eine Quellverbindung erstellen können, um Ihre Campaign v8-Version na
 
 >[!IMPORTANT]
 >
->Sie müssen Zugriff auf die Client-Konsole von Adobe Campaign v8 haben, um Ihre Protokolldaten in Campaign anzeigen zu können. In der [Campaign v8-Dokumentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=de) finden Sie Informationen zum Herunterladen und Installieren der Client-Konsole.
+>Sie müssen Zugriff auf die Client-Konsole von Adobe Campaign v8 haben, um Ihre Protokolldaten in Campaign anzeigen zu können. In der [Campaign v8-Dokumentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) finden Sie Informationen zum Herunterladen und Installieren der Client-Konsole.
 
 Melden Sie sich über die Client-Konsole bei Ihrer Campaign v8-Instanz an. Wählen Sie auf der Registerkarte [!DNL Explorer] die Option [!DNL Administration] und dann [!DNL Configuration] aus. Wählen Sie als Nächstes [!DNL Data schemas] aus und wenden Sie dann den `broadLog` auf Namen oder Titel an. Wählen Sie in der angezeigten Liste das Quellschema der Empfänger-Versandlogs mit dem Namen `broadLogRcp` aus.
 
@@ -69,6 +67,20 @@ Detaillierte Anweisungen zum Erstellen eines Schemas finden Sie im Handbuch unte
 ### Erstellen eines Datensatzes {#create-a-dataset}
 
 Schließlich müssen Sie einen Datensatz für Ihre Schemata erstellen. Detaillierte Anweisungen zum Erstellen eines Datensatzes finden Sie im Handbuch unter [Erstellen eines Datensatzes in der Benutzeroberfläche](../../../catalog/datasets/user-guide.md).
+
+## Erwartete Latenz für Adobe Campaign Managed Cloud Services-Quelle {#latency}
+
+Die End-to-End-Latenz von einem Kampagnenereignis bis zur Datenverfügbarkeit in Experience Platform beträgt in der Regel in Standardkonfigurationen 15 bis 30 Minuten (einschließlich 15-minütiger Replikation, Export in Mikro-Batches und einem geplanten Experience Platform-Datenfluss), wobei von normalen Datenvolumen und keinem Rückstand ausgegangen wird. Dies ist ein nahezu in Echtzeit ablaufender Prozess, der durch geplante Synchronisierung von Mikro-Batches erreicht wird (in der Regel in der Größenordnung von zehn Minuten). Es handelt sich jedoch nicht um kontinuierliches Streaming.
+
+| Szenario | Details | Erwartete Latenz |
+| --- | --- | --- |
+| Das Campaign-Ereignis wird in einer Mid-Sourcing-/Message-Center-Instanz generiert. | Ein Versand- oder Tracking-Ereignis (Senden, Öffnen, Klicken usw.) tritt auf einem Campaign v8-Ausführungsknoten (Mid/Message Center) auf. | Echtzeit innerhalb der Campaign-Laufzeit (derzeit in Experience Platform nicht sichtbar). |
+| Replikation von der Laufzeit in die Marketing-Datenbank von Campaign | Ereignisdaten werden vom Mid/Message Center in die Marketing-Datenbank von Campaign repliziert ([!DNL Snowflake] oder [!DNL Postgres], je nach Kundengröße). Standardmäßige Integrationsmuster gehen von einem regulären Replikationsauftrag aus. | ~15 Minuten, basierend auf der standardmäßigen 15-minütigen Replikationskadenz. |
+| Export aus der Marketing-Datenbank von Campaign in die Landing Zone (z. B. [!DNL Data Landing Zone], [!DNL Amazon S3] oder [!DNL Azure Blob]) | Ein Export-Workflow (Export-Service) in Campaign wird nach einem Zeitplan ausgeführt, um neue/geänderte Versand- und Trackinglogs zu extrahieren und als Microbatches in eine dateibasierte Landingzone zu schreiben. | Minuten plus das Intervall für den Exportplan. |
+| Der Experience Platform-Quelldatenfluss nimmt exportierte Dateien auf | Die Adobe Campaign Managed Cloud Services-Quelle wird in Experience Platform [!DNL Flow Service] als Batch-Datenfluss konfiguriert. Sie scannt regelmäßig die Landing Zone, nimmt neue Dateien auf und schreibt sie in die konfigurierten ExperienceEvent-Datensätze. Bei der Überwachung werden „erfolgreiche Batches“ und „fehlgeschlagene Batches“ angezeigt. | Minuten plus das Zeitplanintervall für den Datenfluss. |
+| Verfügbare Daten im Data Lake und Echtzeit-Kundenprofil | Sobald der Batch aufgenommen wurde, werden die Datensätze im Data Lake landen und (wenn der Datensatz profilaktiviert ist) in das Echtzeit-Kundenprofil upsertiert. Es gelten die standardmäßigen Experience Platform-SLAs für die Batch- und Profilaufnahme. | Innerhalb desselben Ausführungsfensters wie der Datenfluss, d. h. kurz nach Abschluss der Batch-Ausführung. Datensätze werden für nachgelagerte Services normalerweise in Minuten verfügbar. |
+
+{style="table-layout:auto"}
 
 ## Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung mithilfe der Experience Platform-Benutzeroberfläche
 
