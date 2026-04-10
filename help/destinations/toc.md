@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 28bbad7ccbec0b669082658b912d0b52e0374667
+source-git-commit: 2be649980ecff5931ae61060ff43f6c98abe16d2
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1348'
 ht-degree: 71%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 71%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -74,8 +74,8 @@ ht-degree: 71%
       * [Zielgruppenfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
       * [Verbindung mit Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Werbeziele{#advertising}
-      * [(Beta) Verbindung mit Acxiom-Zielgruppe](./catalog/advertising/acxiom-audience-connection.md)
-      * [(Beta) Acxiom RealID-Zielgruppenverbindung](./catalog/advertising/acxiom-real-id-audience-connection.md)
+      * [Verbindung mit Acxiom-Zielgruppe](./catalog/advertising/acxiom-audience-connection.md)
+      * [Acxiom RealID-Zielgruppenverbindung](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising DSP-Verbindung](./catalog/advertising/adobe-advertising-dsp-connection.md)
       * [Alte Adobe Advertising Cloud DSP-Verbindung](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
