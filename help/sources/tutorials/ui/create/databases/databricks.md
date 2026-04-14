@@ -1,13 +1,11 @@
 ---
 title: Verbinden von DataBricks mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie Databricks über die Benutzeroberfläche mit Experience Platform verbinden.
-badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
-source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 9%
+source-wordcount: '438'
+ht-degree: 8%
 
 ---
 
@@ -15,9 +13,7 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->* Die [!DNL Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
->
->* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
 
 Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Databricks]-Konto mithilfe des Quellarbeitsbereichs in der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
@@ -67,7 +63,7 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL New account]** aus, g
 * Cluster-ID
 * Zugriffs-Token
 * Datenbank
-* Katalog
+* Catalog
 
 ![Die neue Kontoschnittstelle im Quell-Workflow mit einem Kontonamen und einer optionalen Beschreibung.](../../../../images/tutorials/create/databricks/new.png)
 

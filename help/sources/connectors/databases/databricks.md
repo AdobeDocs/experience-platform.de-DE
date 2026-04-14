@@ -2,12 +2,11 @@
 title: Databricks
 description: Erfahren Sie mehr über die erforderlichen Schritte zum Verbinden von Databricks mit Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-06-17T00:00:00Z
+last-substantial-update: 2026-03-14T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '606'
 ht-degree: 3%
 
 ---
@@ -16,9 +15,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Die [!DNL Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
->
->* Die [!DNL Databricks]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta[gekennzeichneten Quellen finden Sie &#x200B;](../../home.md#terms-and-conditions) den „Nutzungsbedingungen“ in der Quellenübersicht .
+>Die [!DNL Databricks] ist im Quellkatalog für Benutzende verfügbar, die Real-Time CDP Ultimate erworben haben.
 
 [!DNL Databricks] ist eine Cloud-basierte Plattform für Datenanalyse, maschinelles Lernen und KI. Sie können [!DNL Databricks] verwenden, um eine ganzheitliche Umgebung für das Erstellen, Bereitstellen und Verwalten von Datenlösungen im benötigten Umfang zu integrieren und bereitzustellen.
 
@@ -159,7 +156,7 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Speicherkonto | Der Name Ihres Speicherkontos. Sie können diesen Wert abrufen, indem Sie Ihre [!DNL Azure Blob Storage] Anmeldeinformationen abrufen. |
 | SAS-Token | Das Shared Access Signature Token für Ihre [!DNL Azure Blob Storage]. Sie können diesen Wert abrufen, indem Sie Ihre [!DNL Azure Blob Storage] Anmeldeinformationen abrufen. |
 
-![Die Databricks-Benutzeroberfläche auf Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+![Die Databricks-Benutzeroberfläche in Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
 Wenn keine Informationen bereitgestellt werden, schlägt die Kopieraktivität im Flusslauf fehl und gibt den folgenden Fehler zurück:
 

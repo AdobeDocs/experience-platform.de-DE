@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: d284a2a833bca1770d6680987888368fe22736e8
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1091'
 ht-degree: 88%
 
 ---
@@ -74,10 +74,10 @@ ht-degree: 88%
       - [Amazon Redshift-Connector](connectors/databases/redshift.md)
       - [Apache Hive on Azure HDInsights-Connector](connectors/databases/hive.md)
       - [Apache Spark on Azure HDInsights-Connector](connectors/databases/spark.md)
-      - [Azure Databricks-Connector](connectors/databases/databricks.md)
       - [Azure Data Explorer-Connector](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics-Connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-Connector](connectors/databases/ats.md)
+      - [Databricks-Connector](connectors/databases/databricks.md)
       - [Google BigQuery-Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Connector](connectors/databases/greenplum.md)
       - [HP Vertica-Connector](connectors/databases/hp-vertica.md)
@@ -167,10 +167,10 @@ ht-degree: 88%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark on Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
+         - [Databricks](tutorials/api/create/databases/databricks.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
@@ -290,10 +290,10 @@ ht-degree: 88%
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
+         - [Databricks](tutorials/ui/create/databases/databricks.md)
          - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
