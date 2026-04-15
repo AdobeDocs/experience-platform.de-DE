@@ -2,10 +2,10 @@
 title: Core-Erweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 0750a684c7383bd3f7cb18749078989ad5571816
 workflow-type: tm+mt
-source-wordcount: '5380'
-ht-degree: 95%
+source-wordcount: '5387'
+ht-degree: 94%
 
 ---
 
@@ -122,7 +122,7 @@ Das Ereignis wird ausgelöst, wenn ein benutzerspezifischer Ereignistyp eintritt
 
 #### Data Element Changed
 
-Das Ereignis wird ausgelöst, wenn sich ein angegebenes Datenelement ändert. Sie müssen einen Namen für das Datenelement angeben. Sie können das Datenelement auswählen, indem Sie entweder seinen Namen in das Textfeld eingeben oder auf der rechten Seite des Textfelds das Datenelementsymbol auswählen und im angezeigten Dialogfeld aus einer Liste wählen.
+Das Ereignis wird ausgelöst, wenn sich ein angegebenes Datenelement ändert. Umfragen für Änderungen finden einmal pro Sekunde statt. Sie müssen einen Namen für das Datenelement angeben. Sie können das Datenelement auswählen, indem Sie entweder seinen Namen in das Textfeld eingeben oder auf der rechten Seite des Textfelds das Datenelementsymbol auswählen und im angezeigten Dialogfeld aus einer Liste wählen.
 
 #### Direktaufruf {#direct-call-event}
 
@@ -319,7 +319,7 @@ Geben Sie den JavaScript-Variablennamen und -wert an, der für ein Ereignis vorh
 
 ### Interaktion
 
-#### Landing Page
+#### Landingpage
 
 Geben Sie die Seite an, auf der der Benutzer landen muss, um das Ereignis auszulösen.
 
@@ -524,7 +524,7 @@ Geben Sie an, wie oft die Bedingung „true“ zurückgibt. Sie können aus den 
 * Visitor
 * Seconds
 * Minutes
-* Days
+* Tage
 * Weeks
 * Months
 
@@ -839,7 +839,7 @@ Dieses Datenelement verwendet ähnlich wie die Seiteninformationen allgemeine Ve
 
 Wählen Sie eines der folgenden Attribute für das Besucherverhalten aus:
 
-* Landing page
+* Landingpage
 * Traffic-Quelle
 * Minutes on site
 * Session count
