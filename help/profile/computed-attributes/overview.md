@@ -2,9 +2,9 @@
 title: Berechnete Attribute - Übersicht
 description: Berechnete Attribute sind Funktionen zum Aggregieren von Daten auf Ereignisebene in Attribute auf Profilebene. Diese Funktionen werden automatisch berechnet, damit sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2eb87601d7090bf6bda8098458f9e01690a02b6c
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1179'
 ht-degree: 8%
 
 ---
@@ -20,7 +20,9 @@ Berechnete Attribute helfen dabei, Profilverhaltensdaten schnell in aggregierte 
 - Standardisierung aggregierter Profilverhaltensdaten für die Nutzung über Plattformen und Apps hinweg
 - Besseres Daten-Management durch Konsolidierung alter Profilereignisdaten in aussagekräftige Verhaltenserkenntnisse
 
-Diese Aggregate werden auf der Grundlage von profilaktivierten Erlebnisereignis-Datensätzen berechnet, die in Adobe Experience Platform aufgenommen werden. Jedes berechnete Attribut ist ein Profilattribut, das in Ihrem Profilvereinigungsschema erstellt wird und in Ihrem Vereinigungsschema unter der Feldergruppe „SystemComputedAttribute“ gruppiert ist.
+Diese Aggregate werden auf der Grundlage von benutzererstellten profilaktivierten Erlebnisereignis-Datensätzen berechnet, die in Adobe Experience Platform aufgenommen werden. Das bedeutet, dass systemgenerierte Datensätze, die über Service-Token über die SDK erstellt werden, wie z. B. Adobe Journey Optimizer **Systemdatensätze, nicht** werden können.
+
+Jedes berechnete Attribut ist ein Profilattribut, das in Ihrem Profilvereinigungsschema erstellt wird und in Ihrem Vereinigungsschema unter der Feldergruppe „SystemComputedAttribute“ gruppiert ist.
 
 Beispiele für Anwendungsfälle sind:
 
@@ -46,7 +48,7 @@ Zu den berechneten Attributen gehört die Erstellung eines Ausdrucks oder einer 
 
 Mit berechneten Attributen können Sie Ereignis-Aggregate eigenständig definieren, indem Sie vordefinierte Funktionen nutzen. Die Details zu diesen Funktionen finden Sie unten:
 
-| Funktion | Beschreibung | Unterstützte Datentypen | Anwendungsbeispiel |
+| Funktion | Beschreibung | Unterstützte Datentypen | Beispielverwendung |
 | -------- | ----------- | -------------------- | ------------- |
 | SUM | Eine Funktion, **den** Wert für qualifizierte Ereignisse summiert. | Ganzzahlen, Zahlen, Längen | Summe aller Käufe in den letzten 7 Tagen |
 | ANZAHL | Eine Funktion, die **zählt** die Anzahl der Ereignisse, die für die angegebene Regel aufgetreten sind. | K. A. | Anzahl der Käufe in den letzten 3 Monaten |
