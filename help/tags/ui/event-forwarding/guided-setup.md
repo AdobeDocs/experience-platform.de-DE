@@ -119,4 +119,4 @@ Wählen Sie **[!UICONTROL Send PageView Event]** aus, um ein Testereignis über 
 
 In diesem Handbuch wurde beschrieben, wie Sie mit dem geführten Setup-Tool Eigenschaften für die [!DNL Meta Conversions API] erstellen und konfigurieren können.
 
-Weitere Anleitungen zur effektiven Implementierung [!DNL Meta] Integration finden Sie in der [ Dokumentation  [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965)Best Practices für die ). Weitere allgemeine Informationen zu Tags und zur Ereignisweiterleitung in Adobe Experience Cloud finden Sie unter [Tags - Übersicht](../../home.md).
+Weitere Anleitungen zur effektiven Implementierung [!DNL Meta] Integration finden Sie in der [&#x200B; Dokumentation  [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965)Best Practices für die ). Weitere allgemeine Informationen zu Tags und zur Ereignisweiterleitung in Adobe Experience Cloud finden Sie unter [Tags - Übersicht](../../home.md).
