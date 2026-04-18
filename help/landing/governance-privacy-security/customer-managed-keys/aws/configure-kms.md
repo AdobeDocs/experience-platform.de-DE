@@ -2,9 +2,9 @@
 title: Konfigurieren von AWS KMS für kundenverwaltete Schlüssel
 description: Erfahren Sie, wie Sie Amazon Web Services Key Management Service (KMS) für die Verwendung mit kundenverwalteten Schlüsseln in Adobe Experience Platform konfigurieren.
 exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5d59dffa00e041c91b3e1a8943fa3df9e9d7b4ef
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Dieses Dokument gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](https://experienceleague.adobe.com/de/docs/experience-platform/landing/multi-cloud).
->
->[Vom Kunden verwaltete Schlüssel](../overview.md) (CMK) auf AWS werden für Privacy und Security Shield unterstützt, sind jedoch nicht für Healthcare Shield verfügbar. CMK wird auf Azure sowohl für Privacy und Security Shield als auch für Healthcare Shield unterstützt.
+>Dieses Dokument gilt für Implementierungen von Experience Platform, die auf Amazon Web Services (AWS) ausgeführt werden. Experience Platform, das auf AWS ausgeführt wird, steht derzeit einer begrenzten Anzahl von Kunden zur Verfügung. Weitere Informationen zur unterstützten Experience Platform-Infrastruktur finden Sie in der Übersicht zur [Experience Platform Multi-Cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Verwenden Sie dieses Handbuch, um Ihre Daten mit Amazon Web Services (AWS) Key Management Service (KMS) zu schützen, indem Sie Verschlüsselungsschlüssel für Adobe Experience Platform erstellen, verwalten und steuern. Diese Integration vereinfacht die Compliance, optimiert den Betrieb durch Automatisierung und macht die Pflege Ihrer eigenen Schlüsselverwaltungsinfrastruktur überflüssig.
 
-Spezifische Anweisungen für Customer Journey Analytics finden Sie in der Dokumentation zu [Customer Journey Analytics CMK](https://experienceleague.adobe.com/de/docs/analytics-platform/using/cja-privacy/cmk)
+Spezifische Anweisungen für Customer Journey Analytics finden Sie in der Dokumentation zu [Customer Journey Analytics CMK](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -36,9 +34,9 @@ Bevor Sie mit diesem Dokument fortfahren, sollten Sie über gute Kenntnisse der 
    - Definieren Sie, welche Benutzenden, Gruppen und Rollen Zugriff auf bestimmte Ressourcen haben.
    - Geben Sie an, welche Aktionen Benutzenden erlaubt oder verweigert werden sollen.
    - Implementieren Sie eine differenzierte Zugriffssteuerung, indem Sie Berechtigungen mithilfe von IAM-Richtlinien zuweisen.
-Weitere Informationen finden [&#x200B; in der offiziellen Dokumentation &#x200B;](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html) IAM-Richtlinien für AWS KMS .
-- **Datensicherheit in Experience Platform**: Erfahren Sie, wie Experience Platform die Datensicherheit gewährleistet und zur Verschlüsselung mit externen Services wie AWS KMS integriert. Experience Platform schützt Daten mit HTTPS TLS v1.2 für die Übertragung, Cloud-Anbieterverschlüsselung im Ruhezustand, isolierten Speicher und anpassbare Authentifizierungs- und Verschlüsselungsoptionen. Experience Platform Weitere Informationen zur [&#x200B; Ihrer Daten finden Sie unter &#x200B;](../overview.md)Governance, Datenschutz und Sicherheit“ oder im Dokument [Datenverschlüsselung in &#x200B;](../../encryption.md)).
-- **AWS-Verwaltungskonsole**: Ein zentraler Hub, über den Sie von einem webbasierten Programm aus auf alle AWS-Services zugreifen und diese verwalten können. Verwenden Sie die Suchleiste, um schnell Tools zu finden, Benachrichtigungen zu überprüfen, Ihr Konto und Ihre Abrechnung zu verwalten und Ihre Einstellungen anzupassen. Weitere Informationen finden [&#x200B; in der offiziellen Dokumentation &#x200B;](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) AWS-Verwaltungskonsole .
+Weitere Informationen finden [ in der offiziellen Dokumentation ](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html) IAM-Richtlinien für AWS KMS .
+- **Datensicherheit in Experience Platform**: Erfahren Sie, wie Experience Platform die Datensicherheit gewährleistet und zur Verschlüsselung mit externen Services wie AWS KMS integriert. Experience Platform schützt Daten mit HTTPS TLS v1.2 für die Übertragung, Cloud-Anbieterverschlüsselung im Ruhezustand, isolierten Speicher und anpassbare Authentifizierungs- und Verschlüsselungsoptionen. Weitere Informationen zur [ Ihrer Daten finden Sie unter ](../overview.md)Governance, Datenschutz und Sicherheit“ oder im Dokument [Datenverschlüsselung in ](../../encryption.md)).
+- **AWS-Verwaltungskonsole**: Ein zentraler Hub, über den Sie von einem webbasierten Programm aus auf alle AWS-Services zugreifen und diese verwalten können. Verwenden Sie die Suchleiste, um schnell Tools zu finden, Benachrichtigungen zu überprüfen, Ihr Konto und Ihre Abrechnung zu verwalten und Ihre Einstellungen anzupassen. Weitere Informationen finden [ in der offiziellen Dokumentation ](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) AWS-Verwaltungskonsole .
 
 ## Erste Schritte {#get-started}
 
@@ -152,4 +150,4 @@ Wählen Sie **[!DNL Confirm]** aus, um den Vorgang abzuschließen. Sie kehren zu
 
 ## Nächste Schritte
 
-Sobald AWS KMS konfiguriert ist, fahren Sie mit der Einrichtung der Integration über die [!UICONTROL Platform-Verschlüsselungskonfiguration]-Benutzeroberfläche oder die Adobe Experience Platform-API fort. Um den einmaligen Prozess zum Einrichten der Funktion für kundenseitig verwaltete Schlüssel fortzusetzen, fahren Sie mit dem [UI-Einrichtungshandbuch](./ui-set-up.md) fort.
+Sobald AWS KMS konfiguriert ist, fahren Sie mit der Einrichtung der Integration über die [!UICONTROL Platform Encryption Configuration]-Benutzeroberfläche oder die Adobe Experience Platform-API fort. Um den einmaligen Prozess zum Einrichten der Funktion für kundenseitig verwaltete Schlüssel fortzusetzen, fahren Sie mit dem [UI-Einrichtungshandbuch](./ui-set-up.md) fort.
