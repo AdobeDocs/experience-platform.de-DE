@@ -129,7 +129,7 @@ Sie können verschlüsselte Daten mithilfe der folgenden Cloud-Speicher-Batch-Qu
 
 Authentifizierung mit der von Ihnen ausgewählten Cloud-Speicherquelle. Wählen Sie während des Datenauswahlschritts des Workflows die aufzunehmende verschlüsselte Datei oder den aufzunehmenden Ordner aus und aktivieren Sie dann den **[!UICONTROL Is the file encrypted]**-Umschalter.
 
-![ Schritt „Daten auswählen“ des Quell-Workflows, in dem eine verschlüsselte Datendatei zur Aufnahme ausgewählt wird.](../../images/tutorials/edi/select_data.png)
+![&#x200B; Schritt „Daten auswählen“ des Quell-Workflows, in dem eine verschlüsselte Datendatei zur Aufnahme ausgewählt wird.](../../images/tutorials/edi/select_data.png)
 
 Wählen Sie anschließend eine Beispieldatei aus Ihren Quelldaten aus. Da Ihre Daten verschlüsselt sind, benötigt Experience Platform eine Beispieldatei, um ein XDM-Schema zu erstellen, das Ihren Quelldaten zugeordnet werden kann.
 
