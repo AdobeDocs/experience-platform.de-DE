@@ -1,9 +1,10 @@
 ---
 title: Geführte Einrichtung der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie die Ereignisweiterleitung mithilfe der geführten Einrichtung einrichten.
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+exl-id: c155dec0-9130-4452-834a-08d98a15b006
+source-git-commit: a2dd6b2a5ec8ccf4ca93e845c5b7b2b39d8d1599
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -30,6 +31,10 @@ Mit diesem Setup können Erweiterungen automatisch installiert werden. Diese Hyb
 Um mit der Funktion zu beginnen, wählen Sie **[!UICONTROL Get Started]** in der **[!UICONTROL Event Forwarding]**-Benutzeroberfläche für Datenerfassungen aus.
 
 ![Startseite der Ereignisweiterleitung mit der Karte „Erste Schritte“ in der Datenerfassungs-Benutzeroberfläche](../../images/ui/guided-setup/get-started.png)
+
+>[!INFO]
+>
+>Sie können die geführte Einrichtung auch direkt über die Startseite der Datenerfassungen aufrufen.
 
 ### Erstellen einer neuen Tag-Eigenschaft {#new-property}
 
@@ -119,4 +124,4 @@ Wählen Sie **[!UICONTROL Send PageView Event]** aus, um ein Testereignis über 
 
 In diesem Handbuch wurde beschrieben, wie Sie mit dem geführten Setup-Tool Eigenschaften für die [!DNL Meta Conversions API] erstellen und konfigurieren können.
 
-Weitere Anleitungen zur effektiven Implementierung [!DNL Meta] Integration finden Sie in der [&#x200B; Dokumentation  [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965)Best Practices für die ). Weitere allgemeine Informationen zu Tags und zur Ereignisweiterleitung in Adobe Experience Cloud finden Sie unter [Tags - Übersicht](../../home.md).
+Weitere Anleitungen zur effektiven Implementierung [!DNL Meta] Integration finden Sie in der [ Dokumentation  [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965)Best Practices für die ). Weitere allgemeine Informationen zu Tags und zur Ereignisweiterleitung in Adobe Experience Cloud finden Sie unter [Tags - Übersicht](../../home.md).
