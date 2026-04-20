@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen aus diesen Profilen zu erstellen und diese Zielgruppen für Drittanbieterziele bereitzustellen.
 role: Admin
-source-git-commit: 70dcebedd06c342e02ee2307042d4a5267b364d9
+source-git-commit: b4f6fac2bdd0365130aada34e7e0932303c6300a
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 58%
+source-wordcount: '323'
+ht-degree: 57%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 58%
       * [Tutorial mit der Beschreibung aller Schritte](./b2b-tutorial.md)
       * [Leitlinien für die Real-time CDP B2B Edition](b2b-guardrails.md)
       * [Architekturaktualisierungen für Real-Time CDP B2B edition](b2b-architecture-upgrade.md)
+   * [REAL-TIME CDP MCP](rtcdp-mcp.md)
 * Audience Manager und Real-Time CDP {#evolution}
    * [Wechsel von Audience Manager](aam-to-rtcdp.md)
 * Kontoprofile {#account}
@@ -47,12 +48,12 @@ ht-degree: 58%
    * [Ziele in der Real-time CDP B2B Edition](destinations/b2b.md)
 * Leitlinien {#guardrails}
    * [Übersicht über Real-Time CDP-Schutzmechanismen](guardrails/overview.md)
-   * [Schutzmaßnahmen bei der Datenaufnahme](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=de){target="_blank"}
+   * [Schutzmaßnahmen bei der Datenaufnahme](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Leitplanken für den [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Leitplanken für  [!DNL Real-Time Customer Profile]  und Segmentierung](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de){target="_blank"}
-   * [Leitplanken für [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=de){target="_blank"}
-   * [Schutzmaßnahmen für [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=de){target="_blank"}
-   * [Leitplanken für die Datenaktivierung durch Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=de){target="_blank"}
+   * [Leitplanken für [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Schutzmaßnahmen für [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Leitplanken für die Datenaktivierung durch Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identitäten {#identity}
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
 * Zusammenführungsrichtlinien {#merge-policies}
