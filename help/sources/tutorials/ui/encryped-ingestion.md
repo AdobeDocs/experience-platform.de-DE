@@ -2,7 +2,7 @@
 title: Aufnehmen verschlüsselter Daten in der Quellen-Benutzeroberfläche Workspace
 description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quell-Benutzeroberfläche aufnehmen.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: c52a0e3910697b420f88425388431a4ad3d53072
 workflow-type: tm+mt
 source-wordcount: '1414'
 ht-degree: 9%
@@ -37,7 +37,7 @@ Bevor Sie mit diesem Tutorial fortfahren, lesen Sie die folgenden Dokumente, um 
 ## Erstellen eines Schlüsselpaars für Verschlüsselung {#create-an-encryption-key-pair}
 
 >[!CONTEXTUALHELP]
->id="platform_sources_encrypted_encryptionKeyId"
+>id="platform_sources_encrypted_encryptionkeyid"
 >title="Verschlüsselungsschlüssel-ID"
 >abstract="Geben Sie die Verschlüsselungsschlüssel-ID an, die Ihrem Verschlüsselungsschlüssel entspricht, der zum Verschlüsseln Ihrer Quelldaten verwendet wurde."
 
@@ -129,7 +129,7 @@ Sie können verschlüsselte Daten mithilfe der folgenden Cloud-Speicher-Batch-Qu
 
 Authentifizierung mit der von Ihnen ausgewählten Cloud-Speicherquelle. Wählen Sie während des Datenauswahlschritts des Workflows die aufzunehmende verschlüsselte Datei oder den aufzunehmenden Ordner aus und aktivieren Sie dann den **[!UICONTROL Is the file encrypted]**-Umschalter.
 
-![&#x200B; Schritt „Daten auswählen“ des Quell-Workflows, in dem eine verschlüsselte Datendatei zur Aufnahme ausgewählt wird.](../../images/tutorials/edi/select_data.png)
+![ Schritt „Daten auswählen“ des Quell-Workflows, in dem eine verschlüsselte Datendatei zur Aufnahme ausgewählt wird.](../../images/tutorials/edi/select_data.png)
 
 Wählen Sie anschließend eine Beispieldatei aus Ihren Quelldaten aus. Da Ihre Daten verschlüsselt sind, benötigt Experience Platform eine Beispieldatei, um ein XDM-Schema zu erstellen, das Ihren Quelldaten zugeordnet werden kann.
 
