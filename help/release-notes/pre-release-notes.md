@@ -47,7 +47,7 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [Microsoft Ads-Kundenübereinstimmung](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Abgleichen von Kunden nach E-Mail-Adresse und erneutes Kontaktieren mit ihnen in der gesamten [!DNL Microsoft Advertising Network], einschließlich Suche und Zielgruppenanzeigen. Verknüpfen Sie Ihr [!DNL Microsoft Advertising]-Konto mit Real-Time CDP, um die Erstellung und Verwaltung von Kundenauswahllisten direkt aus Experience Platform zu automatisieren. |
 | [!BADGE Beta]{type=Informative} [Benutzerdefinierte Zielgruppe bearbeiten](../destinations/catalog/advertising/reddit-custom-audience.md) | Senden von Zielgruppen von Experience Platform an [!DNL Reddit Ads]. Verbinden Sie Ihr [!DNL Reddit]-Konto, ordnen Sie Identitäten zu und aktivieren Sie Zielgruppen, um Personen zu erreichen, die ihre Interessen auf [!DNL Reddit] aktiv erkunden. |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] ist das aktuelle Ziel für alle neuen [!DNL Amazon Ads]. Wenn Sie über eine bestehende [ (veraltete)  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) verfügen, funktioniert sie weiterhin ohne erforderliche Änderungen. [!DNL Amazon Ads v2] stellt eine Verbindung zu [!DNL Ads Data Manager] her, das erweiterte Identitätstypen, adressbezogene Felder und die Datenfreigabe über [!DNL Amazon Ads] Produkte hinweg unterstützt und so die Targeting- und Zielgruppen-Übereinstimmungsraten im Vergleich zu [ (veraltet) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] ist das aktuelle Ziel für alle neuen [!DNL Amazon Ads]. Wenn Sie über eine bestehende [&#x200B; (veraltete)  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) verfügen, funktioniert sie weiterhin ohne erforderliche Änderungen. [!DNL Amazon Ads v2] stellt eine Verbindung zu [!DNL Ads Data Manager] her, das erweiterte Identitätstypen, adressbezogene Felder und die Datenfreigabe über [!DNL Amazon Ads] Produkte hinweg unterstützt und so die Targeting- und Zielgruppen-Übereinstimmungsraten im Vergleich zu [&#x200B; (veraltet) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
 | [!DNL Rokt] | Verwenden Sie [!DNL Rokt], um Experience Platform-Zielgruppen mit KI-gestützter Echtzeit-Entscheidungsfindung zu verbinden und so die Kampagnenleistung durch präziseres Targeting, Unterdrückung und Personalisierung zu verbessern. |
 
 {style="table-layout:auto"}
@@ -112,7 +112,7 @@ Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf glo
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Eilexemplar | Verwenden Sie Express Copy , um Objekte in einer einzigen Aktion von der Sandbox-[-Benutzeroberfläche in eine Ziel-Sandbox zu ](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Abhängige Objekte werden automatisch erkannt und in der Ziel-Sandbox erstellt oder wiederverwendet, wenn sie bereits vorhanden sind. |
+| Eilexemplar | Verwenden Sie Express Copy , um Objekte in einer einzigen Aktion von der Sandbox-[-Benutzeroberfläche in eine Ziel-Sandbox zu &#x200B;](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Abhängige Objekte werden automatisch erkannt und in der Ziel-Sandbox erstellt oder wiederverwendet, wenn sie bereits vorhanden sind. |
 
 {style="table-layout:auto"}
 
