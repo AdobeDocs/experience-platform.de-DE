@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: eb69e67847305c4b02d377e032aad3490b0b84e0
+source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,4 +49,5 @@ Sie müssen nicht bei „run“ beginnen, um einen Wert zu liefern, sondern sich
 
 ## Erste Schritte
 
-Laden Sie die Framework-Vorlage und die unterstützenden Ressourcen herunter, um einen strukturierten Workshop durchzuführen und eine priorisierte, messbare Roadmap zu erstellen, die zur Aktivierung bereit ist.
+Laden Sie [die Framework-Vorlage und die unterstützenden Ressourcen](../assets/S651-use-case-framework-template.pdf) herunter, um einen strukturierten Workshop durchzuführen und eine priorisierte, messbare Roadmap zu erstellen, die bereit für die Aktivierung ist.
+
