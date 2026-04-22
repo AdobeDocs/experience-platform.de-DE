@@ -2,10 +2,10 @@
 title: Hinweise zu Vorabversionen von Experience Platform
 description: Eine Vorschau der neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d052230ec5ddc4a28495f4928ab32957bf9038ac
+source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 17%
+source-wordcount: '1344'
+ht-degree: 15%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 17%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Veröffentlichungsdatum: April 2026**
 
@@ -45,10 +45,13 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 
 | Ziel | Beschreibung |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Microsoft Ads-Kundenübereinstimmung](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Abgleichen von Kunden nach E-Mail-Adresse und erneutes Kontaktieren mit ihnen in der gesamten [!DNL Microsoft Advertising Network], einschließlich Suche und Zielgruppenanzeigen. Verknüpfen Sie Ihr [!DNL Microsoft Advertising]-Konto mit Real-Time CDP, um die Erstellung und Verwaltung von Kundenauswahllisten direkt aus Experience Platform zu automatisieren. |
+| [!BADGE Beta]{type=Informative} [Microsoft Ads-Kundenübereinstimmung](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Abgleichen von Kunden nach E-Mail-Adresse und erneutes Kontaktieren mit ihnen in der gesamten [!DNL Microsoft Advertising Network], einschließlich Suche und Zielgruppenanzeigen. Verknüpfen Sie Ihr [!DNL Microsoft Advertising]-Konto mit Real-Time CDP, um die Erstellung und Verwaltung von Kundenauswahllisten direkt aus Experience Platform zu automatisieren. Wenden Sie sich an Ihren Adobe-Kundenbetreuer, um Zugriff zu erhalten. |
 | [!BADGE Beta]{type=Informative} [Benutzerdefinierte Zielgruppe bearbeiten](../destinations/catalog/advertising/reddit-custom-audience.md) | Senden von Zielgruppen von Experience Platform an [!DNL Reddit Ads]. Verbinden Sie Ihr [!DNL Reddit]-Konto, ordnen Sie Identitäten zu und aktivieren Sie Zielgruppen, um Personen zu erreichen, die ihre Interessen auf [!DNL Reddit] aktiv erkunden. |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] ist das aktuelle Ziel für alle neuen [!DNL Amazon Ads]. Wenn Sie über eine bestehende [&#x200B; (veraltete)  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) verfügen, funktioniert sie weiterhin ohne erforderliche Änderungen. [!DNL Amazon Ads v2] stellt eine Verbindung zu [!DNL Ads Data Manager] her, das erweiterte Identitätstypen, adressbezogene Felder und die Datenfreigabe über [!DNL Amazon Ads] Produkte hinweg unterstützt und so die Targeting- und Zielgruppen-Übereinstimmungsraten im Vergleich zu [&#x200B; (veraltet) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] ist das aktuelle Ziel für alle neuen [!DNL Amazon Ads]. Wenn Sie über eine bestehende [ (veraltete)  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) verfügen, funktioniert sie weiterhin ohne erforderliche Änderungen. [!DNL Amazon Ads v2] stellt eine Verbindung zu [!DNL Ads Data Manager] her, das erweiterte Identitätstypen, adressbezogene Felder und die Datenfreigabe über [!DNL Amazon Ads] Produkte hinweg unterstützt und so die Targeting- und Zielgruppen-Übereinstimmungsraten im Vergleich zu [ (veraltet) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
 | [!DNL Rokt] | Verwenden Sie [!DNL Rokt], um Experience Platform-Zielgruppen mit KI-gestützter Echtzeit-Entscheidungsfindung zu verbinden und so die Kampagnenleistung durch präziseres Targeting, Unterdrückung und Personalisierung zu verbessern. |
+| Unterstützung externer Zielgruppen für [Criteo](../destinations/catalog/advertising/criteo.md) | Aktivieren Sie Zielgruppen aus anderen Ursprüngen als dem Segmentierungs-Service für [!DNL Criteo], einschließlich benutzerdefinierter Upload-Zielgruppen (importiert aus CSV), Lookalike-Zielgruppen, verbundener Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie [!DNL Adobe Journey Optimizer] erstellt wurden. Weitere Informationen finden Sie [ Abschnitt ](../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“. |
+| [Acxiom-Zielgruppenverbindung](../destinations/catalog/advertising/acxiom-audience-connection.md) | Das [!DNL Acxiom Audience Connection] ist jetzt allgemein verfügbar. Zielgruppen können mithilfe der [!DNL Acxiom's Real ID]-Technologie verbessert und für zusätzliche Plattformen aktiviert werden, z. B. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] und [!DNL Viant]. |
+| [Acxiom Real ID-Zielgruppenverbindung](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Das [!DNL Acxiom Real ID Audience Connection] ist jetzt allgemein verfügbar. Aktivieren Sie damit Zielgruppen, indem Sie [!DNL Acxiom's Real ID] als Übereinstimmungsschlüssel auf denselben unterstützten Plattformen verwenden, einschließlich [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] und [!DNL Viant]. |
 
 {style="table-layout:auto"}
 
@@ -57,6 +60,10 @@ Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience 
 | Fehlerbehebung | Beschreibung |
 | --- | --- |
 | Benutzerdefinierte Personalization-Überwachungsunterstützung | Das Überwachungs-Dashboard für Ziele unterstützt jetzt [!DNL Custom Personalization] Ziele. Der Hinweis zur Einschränkung, der [!DNL Custom Personalization] von der Überwachung ausschließt, wurde entfernt. |
+| Profilanzahl in der Aktivierungsprüfung | Der Schritt zur Überprüfung der Aktivierung zeigt jetzt die Profilanzahl für Zielgruppen an, die bereits aktiviert sind. Die Profilanzahl wird auch für Streaming-Ziele angezeigt, nicht nur für Batch-Ziele. |
+| Sichtbarkeit des [!DNL Pinterest]-Tokens | Das [!DNL Pinterest]-Ziel zeigt jetzt die Token-Ablaufzeit an, die direkt von [!DNL Pinterest] zurückgegeben wird, sodass Sie sehen können, wann eine erneute Authentifizierung erforderlich ist. |
+| Datei exportieren ist jetzt für ungültige Zeitpläne deaktiviert | Die **[!UICONTROL Export file now]** ist jetzt deaktiviert, wenn der Zielgruppen-Zeitplan ungültig oder veraltet ist. Eine QuickInfo erklärt, warum die Aktion nicht verfügbar ist. |
+| Fehlerbehebung bei der Spaltensichtbarkeit im Aktivierungs-Workflow | Es wurde ein Problem behoben, bei dem das Ändern sichtbarer Spalten in einer Tabelle fälschlicherweise andere Tabellen im Aktivierungs-Workflow beeinflusste. |
 
 {style="table-layout:auto"}
 
@@ -112,7 +119,7 @@ Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf glo
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Eilexemplar | Verwenden Sie Express Copy , um Objekte in einer einzigen Aktion von der Sandbox-[-Benutzeroberfläche in eine Ziel-Sandbox zu &#x200B;](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Abhängige Objekte werden automatisch erkannt und in der Ziel-Sandbox erstellt oder wiederverwendet, wenn sie bereits vorhanden sind. |
+| Eilexemplar | Verwenden Sie Express Copy , um Objekte in einer einzigen Aktion von der Sandbox-[-Benutzeroberfläche in eine Ziel-Sandbox zu ](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Abhängige Objekte werden automatisch erkannt und in der Ziel-Sandbox erstellt oder wiederverwendet, wenn sie bereits vorhanden sind. |
 
 {style="table-layout:auto"}
 
