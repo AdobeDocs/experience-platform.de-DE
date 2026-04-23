@@ -58,9 +58,9 @@ Werbetreibende haben die Wahl, Segmente entweder mit authentifizierten First-Par
 
 * Die Experience Cloud-Organisations-ID für das Experience Platform-Konto. Ihre ID finden Sie auf der Benutzerprofilseite für Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]).
 
-* Eine [[!DNL Real-Time CDP] Quelle in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) um Zielgruppen für die Kampagnenaktivierung zu empfangen. Ihr Adobe-Konto-Team erstellt die Quelle mit Ihrer Experience Cloud-Organisations-ID.
+* Eine [[!DNL Real-Time CDP] Quelle in DSP](https://experienceleague.adobe.com/de/docs/advertising/dsp/audiences/sources/source-manage) um Zielgruppen für die Kampagnenaktivierung zu empfangen. Ihr Adobe-Konto-Team erstellt die Quelle mit Ihrer Experience Cloud-Organisations-ID.
 
-* Der Quellschlüssel für das [!DNL DSP]-Konto oder den Advertiser, der generiert wird, wenn eine [[!DNL Real-Time CDP] Quelle in erstellt  [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Ihr [!DNL DSP] Account Team wird diesen Schlüssel mit Ihnen teilen. Sie werden sie in Experience Platform verwenden, um eine Zielverbindung zum Advertising DSP-Ziel herzustellen, wie unten beschrieben.
+* Der Quellschlüssel für das [!DNL DSP]-Konto oder den Advertiser, der generiert wird, wenn eine [[!DNL Real-Time CDP] Quelle in erstellt  [!DNL DSP]](https://experienceleague.adobe.com/de/docs/advertising/dsp/audiences/sources/source-manage). Ihr [!DNL DSP] Account Team wird diesen Schlüssel mit Ihnen teilen. Sie werden sie in Experience Platform verwenden, um eine Zielverbindung zum Advertising DSP-Ziel herzustellen, wie unten beschrieben.
 
 ### Einrichten der ID-Synchronisierung zum Freigeben von Cookies {#cookie-sync}
 
@@ -133,7 +133,7 @@ Um eine Verbindung zum Ziel herzustellen, befolgen Sie die Anweisungen zum [Erst
 
 Um eine Verbindung zum Ziel herzustellen, geben Sie die folgenden Parameter im Abschnitt [!UICONTROL Connection type] ein und wählen Sie dann **[!UICONTROL Connect to destination]** aus:
 
-* **[!UICONTROL Account or Advertiser Key]**: Diese [!UICONTROL Source Key] wird generiert, wenn eine [[!DNL Real-Time CDP] Quelle in der Benutzeroberfläche von DSP erstellt &#x200B;](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Ihr Adobe-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
+* **[!UICONTROL Account or Advertiser Key]**: Diese [!UICONTROL Source Key] wird generiert, wenn eine [[!DNL Real-Time CDP] Quelle in der Benutzeroberfläche von DSP erstellt &#x200B;](https://experienceleague.adobe.com/de/docs/advertising/dsp/audiences/sources/source-manage). Ihr Adobe-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
 
 ![Screenshot des Abschnitts „Verbindungstyp“ mit dem Feld „Konto“ oder „Werbekunden-Schlüssel“.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -158,7 +158,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="Vorkonfigurierte Zuordnungssätze"
 >abstract="Wir haben diese beiden Zuordnungssätze für Sie vorkonfiguriert: ECID und [!DNL adcloud] Cookie. Wenn Sie Daten für Adobe Advertising DSP aktivieren, müssen die für die aktivierten Zielgruppen qualifizierten Profile mindestens über eine ECID-Identität verfügen, die mit ihrem Profil verknüpft ist, damit sie erfolgreich in das Ziel exportiert werden können."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
 
 >[!IMPORTANT]
 >
