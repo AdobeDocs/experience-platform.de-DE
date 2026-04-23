@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Identitätsdaten für Datenschutzanfragen
 description: In diesem Dokument finden Sie allgemeine Anweisungen zur Konfiguration Ihrer Datenvorgänge und zur Nutzung der Adobe-Technologien, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 40%
+source-wordcount: '629'
+ht-degree: 35%
 
 ---
 
@@ -23,9 +23,9 @@ Wenn ein Kunde mit Ihrer Marke über mehrere verschiedene Kanäle interagieren k
 
 Bei der Verarbeitung von Kundendatenanfragen in [!DNL Privacy Service] kann eine Identität beispielsweise einen Cookie-Wert darstellen, der unter einer von Adobe kontrollierten Domain festgelegt wurde, einen Cookie-Wert unter einer Domain eines Drittanbieters, der für Adobe freigegeben wurde, oder eine benutzerdefinierte Kennung, die Sie in Ihrem Unternehmen explizit definieren.
 
-Daher muss jede an [!DNL Privacy Service] gesendete Identität von einem Namespace begleitet sein, der Kontext bietet, indem der Identitätswert mit dem System seiner Herkunft verknüpft wird. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
+Daher muss jede an [!DNL Privacy Service] gesendete Identität von einem Namespace begleitet sein, der Kontext bietet, indem der Identitätswert mit dem System seiner Herkunft verknüpft wird. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail„) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising-ID oder eine Adobe Target-ID.
 
-Adobe Experience Platform Identity Service verwaltet einen Speicher mit global definierten und benutzerdefinierten Identitäts-Namespaces. Weitere Informationen zu Namespaces finden Sie in [Identitäts-Namespace – Übersicht](../identity-service/features/namespaces.md). Eine Liste der Standard-Namespaces und Namespace-Qualifizierer, die häufig in [!DNL Privacy Service] verwendet werden, finden Sie im [Anhang](api/appendix.md) im API-Handbuch.
+Adobe Experience Platform Identity Service verwaltet einen Speicher mit global definierten und benutzerdefinierten Identity-Namespaces. Weitere Informationen zu Namespaces finden Sie in [Identity-Namespace – Übersicht](../identity-service/features/namespaces.md). Eine Liste der Standard-Namespaces und Namespace-Qualifizierer, die häufig in [!DNL Privacy Service] verwendet werden, finden Sie im [Anhang](api/appendix.md) im API-Handbuch.
 
 ## ECID- und Opt-in-Service
 

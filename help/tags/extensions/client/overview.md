@@ -2,9 +2,9 @@
 title: Tag-Erweiterungen - Referenz
 description: Hier finden Sie die Dokumentation zu Tag-Erweiterungen in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '423'
 ht-degree: 20%
 
 ---
@@ -21,7 +21,7 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Client-seitige Tag-Erw
 * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)*
 * [Aktualisieren der Aktionsseite](https://exchange.adobe.com/apps/ec/102848)*
 * [Adform-Website-Tracking](https://exchange.adobe.com/apps/ec/103195)*
-* [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
+* [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
 * [Adobe Analytics und Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics und Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
@@ -45,7 +45,6 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Client-seitige Tag-Erw
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
 * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
-* [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
 * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)*
 * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)*
 * [Amplitude](https://exchange.adobe.com/apps/ec/108010)*

@@ -3,9 +3,9 @@ title: Adobe Advertising DSP-Verbindung
 description: Erfahren Sie, wie Sie authentifizierte und nicht authentifizierte First-Party-Zielgruppen mithilfe mehrerer Identitätstypen für Adobe Advertising Demand-Side Platform (DSP) freigeben.
 feature: Destinations
 exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1468'
 ht-degree: 16%
 
 ---
@@ -28,7 +28,7 @@ Mit diesem Ziel können Kundinnen und Kunden Erstanbieter-Zielgruppen für eine 
 
    * Kennungen für Advertiser (IDFAs) für [!DNL Apple iOS] Geräte
 
-Diese Verbindung ersetzt die [veraltete Adobe Advertising Cloud DSP-Verbindung](adobe-advertising-cloud-dsp-connection-legacy.md) die nur Hash-E-Mail-Adressen unterstützt.
+Diese Verbindung ersetzt die [veraltete Adobe Advertising DSP-Verbindung](adobe-advertising-cloud-dsp-connection-legacy.md) die nur Hash-E-Mail-Adressen unterstützt.
 
 >[!IMPORTANT]
 >
@@ -58,9 +58,9 @@ Werbetreibende haben die Wahl, Segmente entweder mit authentifizierten First-Par
 
 * Die Experience Cloud-Organisations-ID für das Experience Platform-Konto. Ihre ID finden Sie auf der Benutzerprofilseite für Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]).
 
-* Eine [[!DNL Real-Time CDP] Quelle in DSP](https://experienceleague.adobe.com/de/docs/advertising/dsp/audiences/sources/source-manage) um Zielgruppen für die Kampagnenaktivierung zu empfangen. Ihr Adobe-Konto-Team erstellt die Quelle mit Ihrer Experience Cloud-Organisations-ID.
+* Eine [[!DNL Real-Time CDP] Quelle in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) um Zielgruppen für die Kampagnenaktivierung zu empfangen. Ihr Adobe-Konto-Team erstellt die Quelle mit Ihrer Experience Cloud-Organisations-ID.
 
-* Der Quellschlüssel für das [!DNL DSP]-Konto oder den Advertiser, der generiert wird, wenn eine [[!DNL Real-Time CDP] Quelle in erstellt  [!DNL DSP]](https://experienceleague.adobe.com/de/docs/advertising/dsp/audiences/sources/source-manage). Ihr [!DNL DSP] Account Team wird diesen Schlüssel mit Ihnen teilen. Sie werden sie in Experience Platform verwenden, um eine Zielverbindung zum Advertising DSP-Ziel herzustellen, wie unten beschrieben.
+* Der Quellschlüssel für das [!DNL DSP]-Konto oder den Advertiser, der generiert wird, wenn eine [[!DNL Real-Time CDP] Quelle in erstellt  [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Ihr [!DNL DSP] Account Team wird diesen Schlüssel mit Ihnen teilen. Sie werden sie in Experience Platform verwenden, um eine Zielverbindung zum Advertising DSP-Ziel herzustellen, wie unten beschrieben.
 
 ### Einrichten der ID-Synchronisierung zum Freigeben von Cookies {#cookie-sync}
 
@@ -94,7 +94,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps generiert werden, z. B. [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -125,7 +125,7 @@ In der folgenden Tabelle finden Sie Informationen zum Zielexporttyp und zur Häu
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[&#x200B; für &#x200B;](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigung[ für ](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung zum Ziel herzustellen, befolgen Sie die Anweisungen zum [Erstellen einer Zielverbindung](/help/destinations/ui/connect-destination.md) mithilfe der Experience Platform-Benutzeroberfläche. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den folgenden Unterabschnitten aufgeführt sind.
 
@@ -133,7 +133,7 @@ Um eine Verbindung zum Ziel herzustellen, befolgen Sie die Anweisungen zum [Erst
 
 Um eine Verbindung zum Ziel herzustellen, geben Sie die folgenden Parameter im Abschnitt [!UICONTROL Connection type] ein und wählen Sie dann **[!UICONTROL Connect to destination]** aus:
 
-* **[!UICONTROL Account or Advertiser Key]**: Diese [!UICONTROL Source Key] wird generiert, wenn eine [[!DNL Real-Time CDP] Quelle in der Benutzeroberfläche von DSP erstellt &#x200B;](https://experienceleague.adobe.com/de/docs/advertising/dsp/audiences/sources/source-manage). Ihr Adobe-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
+* **[!UICONTROL Account or Advertiser Key]**: Diese [!UICONTROL Source Key] wird generiert, wenn eine [[!DNL Real-Time CDP] Quelle in der Benutzeroberfläche von DSP erstellt ](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Ihr Adobe-Konto-Team teilt diesen Schlüssel mit Ihnen, nachdem es die Quelle erstellt hat.
 
 ![Screenshot des Abschnitts „Verbindungstyp“ mit dem Feld „Konto“ oder „Werbekunden-Schlüssel“.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -158,7 +158,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="Vorkonfigurierte Zuordnungssätze"
 >abstract="Wir haben diese beiden Zuordnungssätze für Sie vorkonfiguriert: ECID und [!DNL adcloud] Cookie. Wenn Sie Daten für Adobe Advertising DSP aktivieren, müssen die für die aktivierten Zielgruppen qualifizierten Profile mindestens über eine ECID-Identität verfügen, die mit ihrem Profil verknüpft ist, damit sie erfolgreich in das Ziel exportiert werden können."
->additional-url="https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Weitere Informationen zu den vorkonfigurierten Zuordnungen"
 
 >[!IMPORTANT]
 >

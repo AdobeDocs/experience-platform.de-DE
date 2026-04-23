@@ -3,10 +3,10 @@ keywords: Werbeziele;Ziele;Plattformziele
 title: Werbeziele – Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Werbeplattform eines Drittanbieters (z. B. DSP, einem Werbenetzwerk, SSP) und geben Sie pseudonyme Zielgruppen für diese Plattformen frei.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2084f45ca89e78f980a8d2a53a08966e0588fcdd
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 41%
+source-wordcount: '289'
+ht-degree: 40%
 
 ---
 
@@ -29,7 +29,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [(Beta) Acxiom-Zielgruppenverteilung](acxiom-audience-connection.md)
 * [(Beta) Zielgruppen-Verbindung mit Acxiom Real ID](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSP-Verbindung](adobe-advertising-dsp-connection.md)
-* [Alte Adobe Advertising Cloud DSP-Verbindung](adobe-advertising-cloud-dsp-connection-legacy.md)
+* [Veraltete Adobe Advertising DSP-Verbindung](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads-Verbindung](amazon-ads.md)
 * [Amazon Ads v2-Verbindung](amazon-ads-v2.md)
 * [Bombora-Verbindung](bombora.md)
@@ -48,12 +48,12 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [PubMatic Connect-Ziel](pubmatic.md)
 * [(Beta) Snapchat Ads-Verbindung](snap-inc.md)
 * [Verbindung mit The Trade Desk](tradedesk.md)
-* [(Beta) The Trade Desk CRM-Verbindung &#x200B;](tradedesk-emails.md)
+* [(Beta) The Trade Desk CRM-Verbindung ](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Erweiterungen {#extensions}
 
-* [Adobe Advertising Cloud-Erweiterung](adobe-advertising-cloud.md)
+* [Adobe Advertising-Erweiterung](adobe-advertising-cloud.md)
 * [Awin Advertising Conversion Tag-Erweiterung](awin-conversiontag.md)
 * [Awin Advertising Mastertag-Erweiterung](awin-mastertag.md)
 * [Bing Ads Universal Event Tracking-Erweiterung](bing-ads.md)

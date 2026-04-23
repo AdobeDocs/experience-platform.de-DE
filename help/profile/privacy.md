@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Echtzeit-Kundenprofil
 type: Documentation
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für das Echtzeit-Kundenprofil behandelt.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1746'
-ht-degree: 22%
+source-wordcount: '1743'
+ht-degree: 21%
 
 ---
 
@@ -20,7 +20,7 @@ In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutza
 
 >[!NOTE]
 >
->In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Profildatenspeicher in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Data Lake von Experience Platform vornehmen möchten, lesen Sie zusätzlich zu diesem Tutorial [&#x200B; Handbuch &#x200B;](../catalog/privacy.md) Verarbeitung von Datenschutzanfragen im Data Lake .
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Profildatenspeicher in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Data Lake von Experience Platform vornehmen möchten, lesen Sie zusätzlich zu diesem Tutorial [ Handbuch ](../catalog/privacy.md) Verarbeitung von Datenschutzanfragen im Data Lake .
 >
 >Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
@@ -38,7 +38,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden [!DNL Experience Platform] 
 
 ## Identity-Namespaces verstehen {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Kunden über Systeme und Geräte hinweg zusammen. [!DNL Identity Service] verwendet **Identity-Namespaces**, um durch die Verknüpfung der Identitätswerte mit ihrem Ursprungssystem einen Kontext zu den Werten bereitzustellen. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) sein oder die Identität einer bestimmten Anwendung zuordnen, wie z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
+Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Kunden über Systeme und Geräte hinweg zusammen. [!DNL Identity Service] verwendet **Identity-Namespaces**, um durch die Verknüpfung der Identitätswerte mit ihrem Ursprungssystem einen Kontext zu den Werten bereitzustellen. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail„) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising-ID oder eine Adobe Target-ID.
 
 Identity Service verwaltet einen Speicher global definierter (standardmäßiger) und benutzerdefinierter Identity-Namespaces. Standardmäßige Namespaces (z. B. „E-Mail“ und „ECID“) stehen für alle Unternehmen zur Verfügung, während Ihr Unternehmen außerdem benutzerdefinierte Namespaces erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
@@ -50,24 +50,24 @@ In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanfragen für 
 
 >[!IMPORTANT]
 >
->Privacy Service kann [!DNL Profile] Daten nur mithilfe einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszuordnung durchführt. Weitere Informationen finden Sie im Abschnitt [Einschränkungen &#x200B;](#merge-policy-limitations) Zusammenführungsrichtlinien“.
+>Privacy Service kann [!DNL Profile] Daten nur mithilfe einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszuordnung durchführt. Weitere Informationen finden Sie im Abschnitt [Einschränkungen ](#merge-policy-limitations) Zusammenführungsrichtlinien“.
 >
 >Beachten Sie, dass Datenschutzanfragen innerhalb der regulatorischen Anforderungen asynchron verarbeitet werden und die Dauer bis zum Abschluss variieren kann. Wenn Änderungen an Ihren [!DNL Profile] Daten auftreten, während eine Anfrage noch verarbeitet wird, ist nicht garantiert, dass diese eingehenden Datensätze auch in dieser Anfrage verarbeitet werden. Es werden nur Profile gelöscht, die zum Zeitpunkt der Anforderung des Datenschutzauftrags im Data Lake oder Profilspeicher gespeichert sind. Wenn Sie Profildaten im Zusammenhang mit dem Betreff einer Löschanfrage während des Löschvorgangs aufnehmen, ist nicht garantiert, dass alle Profilfragmente gelöscht werden.
 >Es liegt in Ihrer Verantwortung, zum Zeitpunkt einer Löschanfrage über eingehende Daten in Experience Platform oder im Profil-Service Bescheid zu wissen, da diese Daten in Ihre Datensatzspeicher eingefügt werden. Sie müssen bei der Aufnahme von Daten, die gelöscht wurden oder werden, vorsichtig sein.
 
 ### Verwenden der API
 
-Beim Erstellen von Auftragsanfragen in der API müssen alle IDs innerhalb von `userIDs` über einen spezifischen `namespace` und `type` verfügen. Für den Namespace[Wert muss ein gültiger &#x200B;](#namespaces)Identity-Namespace) angegeben werden, der vom Identity Service erkannt wird. Verwenden Sie `standard` für standardmäßige Namespaces und `custom` für benutzerdefinierte Namespaces.
+Beim Erstellen von Auftragsanfragen in der API müssen alle IDs innerhalb von `userIDs` über einen spezifischen `namespace` und `type` verfügen. Für den Namespace[Wert muss ein gültiger ](#namespaces)Identity-Namespace) angegeben werden, der vom Identity Service erkannt wird. Verwenden Sie `standard` für standardmäßige Namespaces und `custom` für benutzerdefinierte Namespaces.
 
 >[!NOTE]
 >
->Je nach Identitätsdiagramm und der Art und Weise, wie Ihre Profilfragmente in Experience Platform-Datensätzen verteilt werden, müssen Sie möglicherweise mehr als eine ID für jeden Kunden angeben. Weitere Informationen finden Sie [&#x200B; nächsten Abschnitt &#x200B;](#fragments)Profilfragmente“.
+>Je nach Identitätsdiagramm und der Art und Weise, wie Ihre Profilfragmente in Experience Platform-Datensätzen verteilt werden, müssen Sie möglicherweise mehr als eine ID für jeden Kunden angeben. Weitere Informationen finden Sie [ nächsten Abschnitt ](#fragments)Profilfragmente“.
 
 Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Um die mit einer Identität verknüpften Profildaten zu löschen, muss das Array den Wert `ProfileService` enthalten. Um die Identitätsdiagramm-Zuordnungen des Kunden zu löschen, muss das Array den Wert `identity` enthalten.
 
 >[!NOTE]
 >
->Weitere Informationen zu den Auswirkungen [&#x200B; Verwendung von &#x200B;](#profile-v-identity) und `ProfileService` innerhalb des `identity`-Arrays finden Sie `include` Abschnitt zu Profilanfragen und Identitätsanfragen weiter unten in diesem Dokument.
+>Weitere Informationen zu den Auswirkungen [ Verwendung von ](#profile-v-identity) und `ProfileService` innerhalb des `identity`-Arrays finden Sie `include` Abschnitt zu Profilanfragen und Identitätsanfragen weiter unten in diesem Dokument.
 
 Die folgende Anfrage erstellt einen neuen Datenschutzauftrag für die Daten eines einzelnen Kunden im [!DNL Profile]. Im `userIDs`-Array werden zwei Identitätswerte für den Kunden bereitgestellt; einer davon verwendet den standardmäßigen Identity-Namespace von `Email` und der andere einen benutzerdefinierten Namespace von `Customer_ID`. Sie enthält auch den Produktwert für [!DNL Profile] (`ProfileService`) im `include`-Array:
 
@@ -205,7 +205,7 @@ Je nachdem, ob Sie in Ihrer Datenschutzanfrage für Profil (`identity`) auch Ide
 | `ProfileService` und `aepDataLake` | Das Profil wird sofort gelöscht, sobald Privacy Service die Bestätigung sendet, dass die Löschanfrage abgeschlossen wurde. Das Identitätsdiagramm des Profils bleibt jedoch erhalten und das Profil kann möglicherweise rekonstruiert werden, wenn neue Daten mit denselben Identitäten aufgenommen werden.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Experience Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
 | `ProfileService`, `identity` und `aepDataLake` | Das Profil und das zugehörige Identitätsdiagramm werden sofort gelöscht, sobald Privacy Service die Bestätigung sendet, dass die Löschanfrage abgeschlossen wurde.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Experience Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
 
-Weitere Informationen zum Verfolgen [[!DNL Privacy Service]  Auftragsstatus finden &#x200B;](../privacy-service/home.md#monitor) in der Dokumentation .
+Weitere Informationen zum Verfolgen [[!DNL Privacy Service]  Auftragsstatus finden ](../privacy-service/home.md#monitor) in der Dokumentation .
 
 ### Profilanfragen versus Identitätsanfragen {#profile-v-identity}
 
@@ -225,4 +225,4 @@ Privacy Service kann [!DNL Profile] Daten nur mithilfe einer Zusammenführungsri
 
 In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen in [!DNL Experience Platform] erhalten. Lesen Sie die in diesem Handbuch bereitgestellte Dokumentation, um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Informationen zur Verarbeitung von Datenschutzanfragen für [!DNL Experience Platform] Ressourcen, die nicht von [!DNL Profile] verwendet werden, finden [&#x200B; im Dokument zur Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md).
+Informationen zur Verarbeitung von Datenschutzanfragen für [!DNL Experience Platform] Ressourcen, die nicht von [!DNL Profile] verwendet werden, finden [ im Dokument zur Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md).

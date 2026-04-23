@@ -2,9 +2,9 @@
 title: Adobe-Datenschutzerweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Privacy“ in Adobe Experience Platform vertraut.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '821'
 ht-degree: 78%
 
 ---
@@ -31,7 +31,7 @@ Im nächsten Bildschirm können Sie konfigurieren, aus welchen Quellen und Lösu
 * Adobe Audience Manager (AAM)
 * Adobe Target
 * Adobe Experience Cloud Identity Service (Besucher oder ECID)
-* Adobe Advertising Cloud (AdCloud)
+* Adobe Advertising
 
 Wählen Sie mindestens eine Lösung und anschließend **[!UICONTROL Update]** aus.
 

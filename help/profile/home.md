@@ -2,7 +2,7 @@
 title: Übersicht zum Echtzeit-Kundenprofil
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 90%
@@ -113,7 +113,7 @@ Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Aufnahme bezeichn
 
 >[!NOTE]
 >
->Daten, die über Adobe-Lösungen wie [!DNL Analytics Cloud], [!DNL Marketing Cloud] und [!DNL Advertising Cloud] erfasst werden, fließen in [!DNL Experience Platform] und werden in [!DNL Profile] aufgenommen.
+>Daten, die über Adobe-Lösungen wie [!DNL Analytics Cloud], [!DNL Marketing Cloud] und [!DNL Adobe Advertising] erfasst werden, fließen in [!DNL Experience Platform] und werden in [!DNL Profile] aufgenommen.
 
 ### Metriken zur Aufnahme von Profilen
 

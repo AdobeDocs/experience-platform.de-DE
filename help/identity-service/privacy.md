@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen
 title: Verarbeitung von Datenschutzanfragen in Identity Service
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Identity Service behandelt.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 53%
+source-wordcount: '1003'
+ht-degree: 50%
 
 ---
 
@@ -18,7 +18,7 @@ In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutza
 
 >[!NOTE]
 >
->In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen an den Identitätsdatenspeicher in Experience Platform stellen. Wenn Sie außerdem Datenschutzanfragen an Experience Platform Data Lake oder [!DNL Real-Time Customer Profile] beabsichtigen, finden Sie zusätzlich zu diesem Tutorial weitere Informationen im Handbuch [Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md) und im Handbuch [Verarbeitung von Datenschutzanfragen für &#x200B;](../profile/privacy.md)).
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen an den Identitätsdatenspeicher in Experience Platform stellen. Wenn Sie außerdem Datenschutzanfragen an Experience Platform Data Lake oder [!DNL Real-Time Customer Profile] beabsichtigen, finden Sie zusätzlich zu diesem Tutorial weitere Informationen im Handbuch [Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md) und im Handbuch [Verarbeitung von Datenschutzanfragen für ](../profile/privacy.md)).
 >
 >Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
@@ -32,7 +32,7 @@ Sie sollten über Grundkenntnisse zu folgenden [!DNL Experience Platform]-Servic
 
 ## Identity-Namespaces verstehen {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Kunden über Systeme und Geräte hinweg zusammen. [!DNL Identity Service] verwendet **Identity-Namespaces**, um durch die Verknüpfung der Identitätswerte mit ihrem Ursprungssystem einen Kontext zu den Werten bereitzustellen. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) sein oder die Identität einer bestimmten Anwendung zuordnen, wie z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
+Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Kunden über Systeme und Geräte hinweg zusammen. [!DNL Identity Service] verwendet **Identity-Namespaces**, um durch die Verknüpfung der Identitätswerte mit ihrem Ursprungssystem einen Kontext zu den Werten bereitzustellen. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail„) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising-ID oder eine Adobe Target-ID.
 
 Identity Service verwaltet einen Speicher global definierter (standardmäßiger) und benutzerdefinierter Identity-Namespaces. Standardmäßige Namespaces (z. B. „E-Mail“ und „ECID“) stehen für alle Unternehmen zur Verfügung, während Ihr Unternehmen außerdem benutzerdefinierte Namespaces erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
@@ -115,7 +115,7 @@ Je nachdem, ob Sie in Ihrer Datenschutzanfrage für Identity Service (`ProfileSe
 | `identity` und `aepDataLake` | Die angegebene Identität wird gelöscht, sobald Experience Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das aus diesem Identitätsdiagramm erstellte Profil bleibt weiterhin bestehen, wird jedoch nicht aktualisiert, da neue Daten aufgenommen werden, da die Identitätszuordnungen jetzt entfernt wurden.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Experience Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
 | `identity`, `ProfileService` und `aepDataLake` | Die angegebene Identität wird gelöscht, sobald Experience Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Experience Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
 
-Weitere Informationen zum Verfolgen [[!DNL Privacy Service]  Auftragsstatus finden &#x200B;](../privacy-service/home.md#monitor) in der Dokumentation .
+Weitere Informationen zum Verfolgen [[!DNL Privacy Service]  Auftragsstatus finden ](../privacy-service/home.md#monitor) in der Dokumentation .
 
 ## Nächste Schritte
 

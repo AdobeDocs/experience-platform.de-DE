@@ -2,10 +2,10 @@
 title: Einstellungen für Push-Benachrichtigungen
 description: Konfigurieren Sie Push-Benachrichtigungseinstellungen für die Tag-Erweiterung „Web SDK".
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 6%
+source-wordcount: '178'
+ht-degree: 11%
 
 ---
 
@@ -16,17 +16,13 @@ ht-degree: 6%
 >title="Push-Benachrichtigungen "
 >abstract="Legt einen gültigen öffentlichen Schlüssel für die Push-Benachrichtigungsauthentifizierung fest."
 
->[!AVAILABILITY]
->
->Push-Benachrichtigungen für die Web-SDK befinden sich derzeit in der **Beta**. Die Funktionalität und Dokumentation können sich ändern.
-
 In diesem Konfigurationsabschnitt können Sie einen gültigen öffentlichen Schlüssel für die Push-Benachrichtigungsauthentifizierung festlegen.
 
 >[!NOTE]
 >
 >Diese Funktion muss zuerst mithilfe von [Benutzerdefinierte Build-Komponenten](custom-build-components.md) aktiviert werden; sie ist standardmäßig deaktiviert.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und klicken Sie dann auf der **[!UICONTROL Configure]** auf [!UICONTROL Adobe Experience Platform Web SDK] .

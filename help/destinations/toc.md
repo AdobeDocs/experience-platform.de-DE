@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 52e41add31114a858e4f726101ab38a73dce6923
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1345'
 ht-degree: 71%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 71%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -78,8 +78,8 @@ ht-degree: 71%
       * [Acxiom RealID-Zielgruppenverbindung](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising DSP-Verbindung](./catalog/advertising/adobe-advertising-dsp-connection.md)
-      * [Alte Adobe Advertising Cloud DSP-Verbindung](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
-      * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
+      * [Veraltete Adobe Advertising DSP-Verbindung](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
+      * [Adobe Advertising-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
       * [Adform-Verbindung](./catalog/advertising/adform.md)
       * [(Veraltete) Amazon Ads-Verbindung](./catalog/advertising/amazon-ads.md)
       * [Amazon Ads v2-Verbindung](./catalog/advertising/amazon-ads-v2.md)

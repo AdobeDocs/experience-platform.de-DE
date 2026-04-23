@@ -1,23 +1,23 @@
 ---
 title: Registerkarte „Auditor“
-description: Erfahren Sie, wie Sie mit der Registerkarte „Auditor“ in Adobe Experience Platform Debugger Ihre Adobe Experience Cloud-Implementierungen testen können.
+description: Erfahren Sie, wie Sie die Registerkarte „Auditor“ in Adobe Experience Platform Debugger verwenden, um Ihre Adobe Experience Cloud-Implementierungen zu testen.
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Auditor;DTM;Target
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '361'
 ht-degree: 32%
 
 ---
 
 # Registerkarte „Auditor“
 
-Im Adobe Experience Platform Debugger können Sie die Registerkarte **[!UICONTROL Auditor]** verwenden, um eine Reihe von Audittests auf Ihrer Seite durchzuführen.
+In Adobe Experience Platform Debugger können Sie die Registerkarte **[!UICONTROL Auditor]** verwenden, um eine Reihe von Audittests auf Ihrer Seite durchzuführen.
 
 So verwenden Sie diese Funktion:
 
-1. Wählen **[!UICONTROL Auditor]** in der linken Navigationsleiste aus.
-1. Wählen **[!UICONTROL Auditor-Tests ausführen]**. Sobald die Tests abgeschlossen sind, werden ihre Ergebnisse unten angezeigt.
+1. Wählen Sie **[!UICONTROL Auditor]** in der linken Navigationsleiste aus.
+1. Wählen Sie **[!UICONTROL Run Auditor Tests]** aus. Sobald die Tests abgeschlossen sind, werden ihre Ergebnisse unten angezeigt.
 
 ![Screenshot der Testergebnisse auf der Registerkarte „Auditor“](../images/auditor-results.png)
 
@@ -46,8 +46,8 @@ Es wird **empfohlen**, Ergebnisse der Stufen 1 bis 3 zu korrigieren.
 
 Die Auditor-Funktion kann die folgenden Adobe-Technologien bewerten:
 
-* Adobe Advertising Cloud DSP
-* Adobe Advertising Cloud Search
+* Adobe Advertising DSP
+* Adobe Advertising Search
 * Adobe Analytics
 * Adobe Experience Cloud Identity Service
 * Adobe Target

@@ -2,7 +2,7 @@
 title: Bereitstellung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden
 description: Erfahren Sie, wie Sie die Opt-in- und Opt-out-Signale von Kunden für verschiedene Adobe-Lösungen in Adobe Experience Platform verwalten.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 94%
@@ -19,9 +19,9 @@ Entwickler von Adobe Experience Platform-Erweiterungen verwenden Erweiterungen u
 
 In diesem Dokument erfahren Sie, wie Sie verhindern können, dass Adobe-Tags ausgelöst werden, bevor die Einwilligung erfolgt.
 
-## Advertising Cloud
+## Adobe Advertising
 
-Adobe Experience Platform löst [!DNL Advertising Cloud] nicht automatisch aus. [!DNL Advertising Cloud] wird nur ausgelöst, wenn Sie dies in einer Regelaktion speziell festlegen. Bestimmen Sie mithilfe der Regelbedingungen, was wann ausgelöst werden soll. Wenn Sie beispielsweise Cookies zur Bestimmung des Anmeldestatus verwenden möchten, legen Sie ein Datenelement fest, das dieses Cookie ausliest, und verwenden Sie es in der Regel als Bedingung, um zu bestimmen, wann die erste „Konversionen verfolgen“-Aktion ausgelöst werden soll.
+Adobe Experience Platform löst [!DNL Adobe Advertising] nicht automatisch aus. [!DNL Advertising] wird nur ausgelöst, wenn Sie dies in einer Regelaktion speziell festlegen. Bestimmen Sie mithilfe der Regelbedingungen, was wann ausgelöst werden soll. Wenn Sie beispielsweise Cookies zur Bestimmung des Anmeldestatus verwenden möchten, legen Sie ein Datenelement fest, das dieses Cookie ausliest, und verwenden Sie es in der Regel als Bedingung, um zu bestimmen, wann die erste „Konversionen verfolgen“-Aktion ausgelöst werden soll.
 
 Integrationen mit Zustimmungsmanagern (wie OneTrust) können die Zustimmungscookies für Kunden festlegen und verfolgen. Diese können dann im Regel-Builder verwendet werden.
 
@@ -38,7 +38,7 @@ Sie können auch erwägen, das [Adobe-Anmeldeobjekt](https://experienceleague.ad
 
 Integrationen mit Zustimmungsmanagern (wie OneTrust) können die Zustimmungscookies für Kunden festlegen und verfolgen. Diese können dann im Regel-Builder verwendet werden.
 
-## Audience Manager
+## Audience Manager
 
 Die DIL wird derzeit automatisch ausgelöst, wenn sie auf einer Kundenseite platziert wird. Erwägen Sie, das Auslösen dieses Tags mithilfe des [Adobe-Anmeldeobjekts](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=de) in Übereinstimmung mit Ihrer Einwilligungsverwaltungs-Plattform zu steuern.
 

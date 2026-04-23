@@ -1,26 +1,26 @@
 ---
-keywords: Advertising Cloud;Advertising Cloud-Erweiterung;Advertising Cloud-Ziel
-title: Adobe Advertising Cloud-Erweiterung
-description: Die Adobe Advertising Cloud-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+keywords: Advertising-Erweiterung; Werbeziel
+title: Adobe Advertising-Erweiterung
+description: Die Adobe Advertising-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 34%
+source-wordcount: '409'
+ht-degree: 32%
 
 ---
 
-# [!DNL Adobe Advertising Cloud]-Erweiterung {#adobe-advertising-cloud-extension}
+# [!DNL Adobe Advertising]-Erweiterung {#adobe-advertising-cloud-extension}
 
 ## Überblick {#overview}
 
-Dies ist die [!DNL Advertising Cloud] Erweiterung zur Implementierung [!DNL Advertising Cloud] Konversions- und Zielgruppen-Tags für DSP und Search (DCO wird derzeit nicht unterstützt).
+Dies ist die [!DNL Adobe Advertising] Erweiterung zur Implementierung von Advertising Conversion- und Zielgruppen-Tags für DSP und Search (DCO wird derzeit nicht unterstützt).
 
-[!DNL Adobe Advertising Cloud] ist eine Werbeerweiterung in [!DNL Adobe Experience Platform].
+[!DNL Adobe Advertising] ist eine Werbeerweiterung in [!DNL Adobe Experience Platform].
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Experience Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
-![Adobe Advertising Cloud-Erweiterung](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
+![Adobe Advertising-Erweiterung](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## Voraussetzungen {#prerequisites}
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Ex
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Adobe Advertising Cloud]-Erweiterung:
+So installieren Sie die [!DNL Adobe Advertising]-Erweiterung:
 
 Wechseln Sie in der [Experience Platform](https://platform.adobe.com/)Benutzeroberfläche zu **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
@@ -42,7 +42,7 @@ Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren mö
 
 Der Workflow führt Sie zur Datenerfassungs-Benutzeroberfläche, um die Installation abzuschließen.
 
-Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen &#x200B;](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
+Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch [Hinzufügen einer neuen ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)&quot;.
 
 ## Verwenden der Erweiterung {#how-to-use}
 

@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '827'
 ht-degree: 80%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 80%
       * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
       * [Aktualisieren der Aktionsseite](https://exchange.adobe.com/apps/ec/102848)
       * [Adform-Website-Tracking](https://exchange.adobe.com/apps/ec/103195)
-      * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
+      * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
          * [Überblick](./extensions/client/analytics/overview.md)
          * [Gemeinsame Module](./extensions/client/analytics/shared-modules.md)
@@ -117,7 +117,7 @@ ht-degree: 80%
             * [Personalisierung](extensions/client/web-sdk/configure/personalization.md)
             * [Datenerfassung](extensions/client/web-sdk/configure/data-collection.md)
             * [Streaming-Medien](extensions/client/web-sdk/configure/streaming-media.md)
-            * [Push-Benachrichtigungen &#x200B;](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Push-Benachrichtigungen ](extensions/client/web-sdk/configure/push-notifications.md)
             * [Brand Concierge](extensions/client/web-sdk/configure/brand-concierge.md)
             * [Werbung](extensions/client/web-sdk/configure/advertising.md)
             * [Überschreibungen der Konfiguration](extensions/client/web-sdk/configure/configuration-overrides.md)
@@ -157,7 +157,7 @@ ht-degree: 80%
          * [Überblick](./extensions/client/target-v2/overview.md)
          * [Versionshinweise](./extensions/client/target-v2/release-notes.md)
       * [Adobe Target-Toolkit](https://exchange.adobe.com/apps/ec/100640)
-      * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+      * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100640)
       * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
       * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
       * [!DNL Algolia] Insights {#algolia-insights}
