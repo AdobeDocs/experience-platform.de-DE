@@ -17,7 +17,7 @@ Mit der Eigenschaft `edgeDomain` können Sie die Domain ändern, an die die Web-
 >
 >Diese Eigenschaft ändert nichts daran, wo Cookies gesetzt werden. Web SDK setzt immer [Erstanbieter-Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) unabhängig davon, wohin die Daten letztendlich gesendet werden.
 
-Der Wert, den Sie für die `edgeDomain` verwenden, hängt von Ihrer Teilnahme am [Adobe-verwalteten Zertifikatsprogramm ab](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert):
+Der Wert, den Sie für die `edgeDomain` verwenden, hängt von Ihrer Teilnahme am [Adobe-verwalteten Zertifikatsprogramm ab](https://experienceleague.adobe.com/de/docs/core-services/interface/data-collection/adobe-managed-cert):
 
 **Wenn Ihr Unternehmen am Adobe-Managed Certificate Program teilnimmt** setzen Sie den Wert auf die Erstanbieter-Domain, die beim Einrichten des Zertifikats ausgewählt wurde. Normalerweise ist dieser Wert eine Subdomain, die Ihrem Unternehmen gehört. Beispiel: `data.example.com`. CNAME-Datensätze in Ihrem Unternehmen leiten diese Daten an Adobe weiter.
 
