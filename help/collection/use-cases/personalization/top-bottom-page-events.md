@@ -43,7 +43,7 @@ alloy("sendEvent", {
 
 | Parameter | Erforderlich/Optional | Beschreibung |
 | --- | --- | --- |
-| `type` | Erforderlich | Legen Sie diesen Parameter auf `decisioning.propositionFetch` fest. Dieser spezielle Ereignistyp weist Adobe Analytics an, dieses Ereignis zu ignorieren. Bei Verwendung von Customer Journey Analytics können Sie auch einen Filter einrichten, um diese Ereignisse zu löschen. Weitere Informationen finden Sie unter [Ereignistypen für Edge Network ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types) Adobe Analytics. |
+| `type` | Erforderlich | Legen Sie diesen Parameter auf `decisioning.propositionFetch` fest. Dieser spezielle Ereignistyp weist Adobe Analytics an, dieses Ereignis zu ignorieren. Bei Verwendung von Customer Journey Analytics können Sie auch einen Filter einrichten, um diese Ereignisse zu löschen. Weitere Informationen finden Sie unter [Ereignistypen für Edge Network &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types) Adobe Analytics. |
 | `renderDecisions` | Erforderlich | Legen Sie diesen Parameter auf `true` fest. Dieser Parameter weist Web SDK an, von Edge Network zurückgegebene Entscheidungen zu rendern. |
 | `personalization.sendDisplayEvent` | Erforderlich | Legen Sie diesen Parameter auf `false` fest. Dieser Parameter verhindert das Senden von Anzeigeereignissen. |
 
@@ -59,7 +59,7 @@ Wenn Sie diese Felder stattdessen manuell festlegen möchten, lassen Sie **[!UIC
 
 ### Automatisch gerenderte Vorschläge {#bottom-auto-rendered}
 
-Im folgenden Beispiel wird ein Ereignis „Seitenende“ konfiguriert, das Anzeigeereignisse für Vorschläge sendet, die automatisch auf der Seite gerendert, aber im Ereignis &quot;[ der Seite“ ](#top-of-page) wurden.
+Im folgenden Beispiel wird ein Ereignis „Seitenende“ konfiguriert, das Anzeigeereignisse für Vorschläge sendet, die automatisch auf der Seite gerendert, aber im Ereignis &quot;[&#x200B; der Seite“ &#x200B;](#top-of-page) wurden.
 
 >[!BEGINTABS]
 
@@ -123,7 +123,7 @@ alloy("sendEvent", {
 
 | Parameter | Erforderlich/Optional | Beschreibung |
 | --- | --- | --- |
-| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen die `id`, `scope` und `scopeDetails` der Vorschläge einbeziehen. Weitere Informationen [ Sie unter ](display-events.md) von Anzeigeereignissen . Manuell gerenderte Personalisierungsinhalte müssen im Ereignis „Seitenende“ enthalten sein. |
+| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen die `id`, `scope` und `scopeDetails` der Vorschläge einbeziehen. Weitere Informationen [&#x200B; Sie unter &#x200B;](display-events.md) von Anzeigeereignissen . Manuell gerenderte Personalisierungsinhalte müssen im Ereignis „Seitenende“ enthalten sein. |
 | `xdm._experience.decisioning.propositionEventType` | Erforderlich | Legen Sie diesen Parameter auf `display: 1` fest. |
 | `xdm` | Optional | Verwenden Sie dieses Objekt, um alle Daten einzuschließen, die Sie für das Ereignis „Seitenende“ benötigen. |
 
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 Die Option &quot;[!UICONTROL Use guided events]&quot; deckt dieses Szenario nicht ab. Konfigurieren Sie die Aktion daher manuell:
 
-1. Erstellen Sie ein [XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object)-Datenelement (oder [Variable](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)), das `_experience.decisioning.propositions` mit den `id`, `scope` und `scopeDetails` jedes gerenderten Vorschlags füllt und `_experience.decisioning.propositionEventType.display` auf `1` setzt. Weitere Informationen [ Sie unter ](display-events.md) von Anzeigeereignissen .
+1. Erstellen Sie ein [XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object)-Datenelement (oder [Variable](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)), das `_experience.decisioning.propositions` mit den `id`, `scope` und `scopeDetails` jedes gerenderten Vorschlags füllt und `_experience.decisioning.propositionEventType.display` auf `1` setzt. Weitere Informationen [&#x200B; Sie unter &#x200B;](display-events.md) von Anzeigeereignissen .
 1. Lassen Sie in der [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) für die Regel „Seitenende“ **[!UICONTROL Use guided events]** deaktiviert und verweisen Sie auf das Datenelement im Feld &quot;**[!UICONTROL XDM]**&quot;.
 
 >[!ENDTABS]
