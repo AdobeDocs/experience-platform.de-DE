@@ -3,9 +3,9 @@ title: Algolia-Erweiterung für die Ereignisweiterleitung - Übersicht
 description: Erfahren Sie, wie Sie die Ereignisweiterleitungserweiterung Algolia in Adobe Experience Platform einrichten und verwenden. Weiterleiten von Benutzerverhaltensdaten über die Insights-API, Konfigurieren von Regeln, Zuordnen von XDM-Feldern und Überprüfen der Ereignisbereitstellung.
 last-substantial-update: 2025-05-09T00:00:00Z
 exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 61aeec69f782968a8c157b604ba1cd9e990b7f02
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Verwenden Sie die Erweiterung für die [!DNL Algolia] Ereignisweiterleitung , um
 
 ## Voraussetzungen {#prerequisites}
 
-Stellen Sie vor der Installation der Erweiterung sicher, dass Sie über ein [!DNL Algolia]-Konto mit Zugriff auf die [!DNL Insights API] verfügen. Wenn Sie kein Konto haben, [&#x200B; Sie sich an &#x200B;](https://dashboard.algolia.com/users/sign_up) aktivieren Sie den Zugriff auf die API.
+Stellen Sie vor der Installation der Erweiterung sicher, dass Sie über ein [!DNL Algolia]-Konto mit Zugriff auf die [!DNL Insights API] verfügen. Wenn Sie kein Konto haben, [ Sie sich an ](https://dashboard.algolia.com/users/sign_up) aktivieren Sie den Zugriff auf die API.
 
 Vergewissern Sie sich auch, dass Sie wissen, wie Sie die [!DNL Algolia] [!DNL Insights API] verwenden. Einen Überblick über das Senden von Ereignissen finden Sie unter [Senden von Ereignissen mit der Insights-API](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
@@ -69,15 +69,15 @@ Stellen Sie sicher, dass Sie die Feldergruppe &quot;[!DNL Algolia]&quot; zu Ihre
 
 ![Algolia-Ereignisfeldgruppen-Konfiguration](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
-### Hinzufügen der Feldergruppe &quot;[!DNL Algolia]-Ereignis“ zu Ihrem Schema {#add-algolia-field-group}
+### Hinzufügen der [!UICONTROL Algolia Event Details] Feldergruppe zu Ihrem Schema {#add-algolia-field-group}
 
-So fügen Sie die Feldergruppe [!DNL Algolia] ein:
+So fügen Sie die [!UICONTROL Algolia Event Details] Feldergruppe hinzu:
 
 Navigieren Sie zu **[!UICONTROL Schemas]** und wählen Sie **[!UICONTROL Browse]** aus.
 
 Fügen Sie ein neues Schema hinzu oder aktualisieren Sie ein vorhandenes Schema, das Sie zum Senden von Web-Ereignissen verwenden, und bewegen Sie den Mauszeiger über das **[!UICONTROL Add]**. Geben Sie *[!DNL Algolia]* in das Suchfeld ein, um die Ergebnisse einzugrenzen.
 
-Wählen Sie die **[!DNL Algolia]Ereignisdetails** Feldergruppe > **[!UICONTROL Add field group]** Schaltfläche > **[!UICONTROL Save]** aus.
+Wählen Sie die **[!UICONTROL Algolia Event Details]** Feldergruppe > Schaltfläche **[!UICONTROL Add field group]** > **[!UICONTROL Save]** aus.
 
 ![Algolia-Profilfeldgruppenkonfiguration in Experience Platform](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
@@ -167,5 +167,5 @@ Weitere Informationen zum Debuggen Ihrer Implementierung mit dem Experience Plat
 
 - [[!DNL Algolia] Insights-API-Dokumentation](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Ereignisdokumentation](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] Dokumentation zur Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=de)
+- [[!DNL Adobe Experience Platform] Dokumentation zur Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
 - [[!DNL Algolia] Übersicht über KI-Funktionen](https://www.algolia.com/products/ai-search/)
