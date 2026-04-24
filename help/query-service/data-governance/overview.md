@@ -1,47 +1,47 @@
 ---
 title: Data Governance in Query Service
-description: In dieser Übersicht werden die wichtigsten Elemente der Data Governance in Experience Platform Query Service behandelt.
+description: This overview covers the major elements of data governance in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: c98ae492b12fb5b9596f19a3d64785090439f7e1
 workflow-type: tm+mt
-source-wordcount: '3131'
-ht-degree: 1%
+source-wordcount: '3182'
+ht-degree: 3%
 
 ---
 
-# Data Governance in Query Service
+# Data governance in Query Service
 
-Adobe Experience Platform führt Daten aus verschiedenen Unternehmenssystemen zusammen und ermöglicht es Ihnen, die Daten über den Abfrage-Service Ihren Anforderungen entsprechend zu bereinigen, zu gestalten, zu bearbeiten und anzureichern. Dadurch können Marketing-Fachleute Kundinnen und Kunden besser identifizieren, verstehen und ansprechen. Die Sicherstellung einer angemessenen Data Governance ist ein wichtiger Aspekt beim Umgang mit personenbezogenen Daten, da bestimmte Daten Nutzungsbeschränkungen unterliegen können, die auf organisatorischen Richtlinien und gesetzlichen Vorschriften basieren. Es ist wichtig sicherzustellen, dass Ihre aufgenommenen Daten und die zugehörigen Vorgänge mit den definierten Datennutzungsrichtlinien konform sind.
+Adobe Experience Platform brings data from multiple enterprise systems together and allows you to clean, shape, manipulate and enrich the data through Query Service according to your needs. This allows marketers to identify, understand, and engage customers in a better way. Ensuring adequate data governance is a critical aspect of handling personal information as certain data may be subject to usage restrictions based on organizational policies and legal regulations. It is critical to ensure that your ingested data and its related operations are compliant with the defined data usage policies.
 
-Mit Data Governance in Query Service können Sie Kundendaten verwalten und bei der Datennutzung die Einhaltung von relevanten Vorschriften, Einschränkungen und Richtlinien sicherstellen. Dies spielt eine wichtige Rolle, wenn sichergestellt werden soll, dass die Nutzungsrichtlinien gemäß den von Ihrem Unternehmen festgelegten Vorschriften angewendet wurden.
+Data governance within Query Service allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. This plays a key role when ensuring the usage policies have been applied according to the regulations defined by your business.
 
-Unternehmen, die routinemäßig Datenverarbeitung durchführen, werden empfohlen, diese Richtlinien zu skizzieren, zu praktizieren und durchzusetzen, um eine datenschutzbewusste Umgebung für alle Benutzer zu schaffen.
+Organizations that routinely conduct data processing are recommended to outline, practice, and enforce these guidelines to create a privacy-conscious environment for all users.
 
-Die folgenden Kategorien sind bei der Einhaltung von Datenkonformitätsvorschriften bei der Verwendung von Query Service von entscheidender Bedeutung:
+The following categories are instrumental in adhering to data compliance regulations when using Query Service:
 
 1. Sicherheit
 1. Verfolgung
-1. Datennutzung
+1. Data usage
 1. Datenschutz
 1. Datenhygiene
 
-In diesem Dokument werden die verschiedenen Governance-Bereiche untersucht und gezeigt, wie die Einhaltung der Datenrichtlinien bei der Verwendung von Abfrage-Service erleichtert werden kann. In der [Governance, Datenschutz und Sicherheit - Übersicht](../../landing/governance-privacy-security/overview.md) finden Sie weitere Informationen darüber, wie Sie mit Experience Platform Kundendaten verwalten und die Einhaltung von Vorschriften sicherstellen können.
+This document examines each of the different areas of governance and demonstrates how to facilitate data compliance when using Query Service. See the [governance, privacy, and security overview](../../landing/governance-privacy-security/overview.md) for broader information on how Experience Platform allows you to manage customer data and ensure compliance.
 
 ## Sicherheit {#security}
 
-Datensicherheit ist der Prozess des Schutzes von Daten vor unbefugtem Zugriff und der Gewährleistung eines sicheren Zugriffs während ihres gesamten Lebenszyklus. Der sichere Zugriff in Experience Platform wird durch die Anwendung von Rollen und Berechtigungen durch Funktionen wie rollenbasierte Zugriffssteuerung und attributbasierte Zugriffssteuerung gewährleistet. Anmeldeinformationen, SSL und Datenverschlüsselung werden ebenfalls verwendet, um den Datenschutz in Experience Platform sicherzustellen.
+Data security is the process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Secure access is maintained in Experience Platform through the application of roles and permissions by capabilities such as role-based access control and attribute-based access control. Credentials, SSL, and data encryption are also used to ensure data protection across Experience Platform.
 
-Die Sicherheit in Bezug auf den Abfrage-Service ist in die folgenden Kategorien unterteilt:
+Security in regard to Query Service is divided into the following categories:
 
-* [Zugriffssteuerung](#access-control): Der Zugriff wird über Rollen und Berechtigungen gesteuert, einschließlich Berechtigungen auf Datensatz- und Spaltenebene.
-* Datensicherung über [Konnektivität](#connectivity): Daten werden über Experience Platform und externe Clients gesichert, indem eine eingeschränkte Verbindung mit ablaufenden oder nicht ablaufenden Anmeldeinformationen hergestellt wird.
-* Datensicherung durch [Verschlüsselung und kundenverwaltete Schlüssel (CMK)](#encryption-and-customer-managed-keys): Der Zugriff wird durch Verschlüsselung gesteuert, wenn sich die Daten im Ruhezustand befinden.
+* [Access control](#access-control): Access is controlled through roles and permissions including dataset and column-level permissions.
+* Securing data through [connectivity](#connectivity): Data is secured through Experience Platform and external clients by achieving a limited connection with expiring credentials, or non-expiring credentials.
+* Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest.
 
 ### Zugriffssteuerung {#access-control}
 
-Mit der Zugriffssteuerung in Adobe Experience Platform können Sie [Adobe Admin Console](https://adminconsole.adobe.com/) verwenden, um den Zugriff auf Abfrage-Service-Funktionen mithilfe von rollenbasierten Berechtigungen zu verwalten. Auf ähnliche Weise können Sie den Zugriff auf bestimmte Datenattribute durch die Kennzeichnungsverwaltung in Schemata und Datenfeldern steuern.
+Access control in Adobe Experience Platform is managed by role-based permissions that determine which users can use Query Service features. Similarly, you can control access to specific data attributes through label management on schemas and data fields.
 
-In diesem Abschnitt werden die erforderlichen Zugriffssteuerungsberechtigungen beschrieben, die ein Benutzer besitzen muss, um die Funktionen des Abfrage-Service vollständig nutzen zu können. Detaillierte Anweisungen zum Zuweisen [&#x200B; Zugriffs auf ein Produktprofil finden &#x200B;](../../access-control/ui/permissions.md) in den Dokumenten [Verwalten von Berechtigungen“ und &quot;](../../access-control/ui/users.md) von Benutzern“.
+This section outlines the required access control permissions that a user must have in order to fully utilize Query Service features. See the documents on [managing permissions](../../access-control/ui/permissions.md) and [managing users](../../access-control/ui/users.md) for detailed instructions on assigning access to a product profile.
 
 #### Relevante Berechtigungen
 
@@ -70,7 +70,7 @@ Dieser Abschnitt dient als Anleitung für den ressourcenbasierten Zugriff, der f
 
 Die attributbasierte Zugriffssteuerungsfunktion ermöglicht es Benutzern von Query Service, den Zugriff auf kritische Benutzerdaten zu beschränken. Der Zugriff kann basierend auf den einer Rolle zugewiesenen Berechtigungen gewährt oder eingeschränkt werden. Der Benutzerzugriff auf einzelne Spalten wird durch die entsprechenden Datennutzungskennzeichnungen und die Berechtigungssätze gesteuert, die auf die den Benutzern zugewiesenen Rollen angewendet werden.
 
-Durch das Tagging von Schemafeldgruppen und -klassen mit Datennutzungskennzeichnungen werden Datennutzungsbeschränkungen auf alle Schemata mit denselben Feldergruppen und -klassen angewendet. Umfassende Informationen zu [&#x200B; Funktion finden Sie in der Übersicht &#x200B;](../../access-control/abac/overview.md) (attributbasierte Zugriffssteuerung) .
+Durch das Tagging von Schemafeldgruppen und -klassen mit Datennutzungskennzeichnungen werden Datennutzungsbeschränkungen auf alle Schemata mit denselben Feldergruppen und -klassen angewendet. Umfassende Informationen zu [ Funktion finden Sie in der Übersicht ](../../access-control/abac/overview.md) (attributbasierte Zugriffssteuerung) .
 
 Mit dieser Funktion können Sie den Benutzergruppen Ihrer Wahl Zugriffsrechte auf vertrauliche Spalten gewähren. Die Zugriffssteuerung für eine Spalte kann die Lese- und Schreibfunktionen für einen bestimmten Benutzertyp einschränken.
 
@@ -97,7 +97,7 @@ Mit der [attributbasierten Zugriffssteuerungsfunktion](../../access-control/abac
 
 Um feldbasierte Zugriffsbeschränkungen für beschleunigte Datensätze zu erstellen, können Sie CTAS-Abfragen des Abfrage-Service verwenden, um beschleunigte Datensätze zu erstellen und diese Datensätze auf der Grundlage vorhandener XDM-Schemata oder Ad-hoc-Schemata zu strukturieren. Admins können dann [Datennutzungsbeschriftungen für das Schema hinzufügen und bearbeiten](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) oder [Ad-hoc-Schema](./ad-hoc-schema-labels.md#edit-governance-labels). Sie können Kennzeichnungen auf Ihre Schemata über den Arbeitsbereich [!UICONTROL Labels] in der [!UICONTROL Schemas]-Benutzeroberfläche anwenden, erstellen und bearbeiten.
 
-Datennutzungsbeschriftungen können auch über die Benutzeroberfläche Datensätze [angewendet oder direkt auf den Datensatz angewendet](../../data-governance/labels/user-guide.md#add-labels) oder über den Arbeitsbereich Zugriffssteuerung [!UICONTROL Labels] erstellt werden. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer neuen &#x200B;](../../access-control/abac/ui/labels.md)&quot;.
+Datennutzungsbeschriftungen können auch über die Benutzeroberfläche Datensätze [angewendet oder direkt auf den Datensatz angewendet](../../data-governance/labels/user-guide.md#add-labels) oder über den Arbeitsbereich Zugriffssteuerung [!UICONTROL Labels] erstellt werden. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer neuen ](../../access-control/abac/ui/labels.md)&quot;.
 
 Der Benutzerzugriff auf einzelne Spalten kann dann durch die angehängten Datennutzungskennzeichnungen und die Berechtigungssätze gesteuert werden, die auf die Rollen angewendet werden, die den Benutzern zugewiesen sind.
 
@@ -119,7 +119,7 @@ Für den Zugriff auf den Abfrage-Service mit einem Drittanbieter-Client sind Anm
 
 [Nicht ablaufende Anmeldeinformationen](../ui/credentials.md#non-expiring-credentials) ermöglichen es Ihnen, eine permanente Verbindung mit einem externen Client herzustellen, was die Verbindung zum Abfrage-Service erleichtert, ohne dass ein manuelles Kennwort erforderlich ist.
 
-Um die Option zum Generieren nicht ablaufender Zugangsdaten zu aktivieren, müssen Sie den beschriebenen [vorausgesetzte Workflow“ &#x200B;](../ui/credentials.md#prerequisites). Im Rahmen dieses Prozesses muss Ihr Organisationsadministrator Berechtigungen für das Produktprofil konfigurieren, sodass der Administrator steuern kann, welche Konten Zugriff auf die Verwendung nicht ablaufender Anmeldeinformationen haben.
+Um die Option zum Generieren nicht ablaufender Zugangsdaten zu aktivieren, müssen Sie den beschriebenen [vorausgesetzte Workflow“ ](../ui/credentials.md#prerequisites). Im Rahmen dieses Prozesses muss Ihr Organisationsadministrator Berechtigungen für das Produktprofil konfigurieren, sodass der Administrator steuern kann, welche Konten Zugriff auf die Verwendung nicht ablaufender Anmeldeinformationen haben.
 
 Technische Benutzerkonten mit unbefristeten Anmeldeinformationen können Rollen zugewiesen werden, um eine angemessene Data Governance sicherzustellen, indem der Umfang ihres Lese- und Schreibzugriffs auf der Grundlage ihrer Zuständigkeiten und Anforderungen definiert wird. Siehe vorherigen Abschnitt unter [Verwenden rollenbasierter Berechtigungen durch Zugriffssteuerung](#access-control) zum Verwalten des Zugriffs auf den Abfrage-Service.
 
@@ -129,20 +129,20 @@ Sobald der vorausgesetzte Workflow abgeschlossen ist, können autorisierte Benut
 
 Zur Erhöhung der Sicherheit bietet der Abfrage-Service native Unterstützung für SSL-Verbindungen zur Verschlüsselung der Client/Server-Kommunikation. Experience Platform unterstützt verschiedene SSL-Optionen, um Ihre Datensicherheitsanforderungen zu erfüllen und den Verarbeitungsaufwand für Verschlüsselung und Schlüsselaustausch auszugleichen.
 
-Weitere Informationen, einschließlich der Verwendung [&#x200B; SSL-Parameterwerts &#x200B;](../clients/ssl-modes.md), finden Sie im Handbuch zu verfügbaren SSL`verify-full`Optionen für Clientverbindungen von Drittanbietern zum Abfrage-Service .
+Weitere Informationen, einschließlich der Verwendung [ SSL-Parameterwerts `verify-full`, finden Sie im Handbuch zu verfügbaren SSL](../clients/ssl-modes.md)Optionen für Clientverbindungen von Drittanbietern zum Abfrage-Service .
 
 ### Verschlüsselung und kundenverwaltete Schlüssel (CMK) {#encryption-and-customer-managed-keys}
 
 Verschlüsselung ist die Verwendung eines algorithmischen Prozesses, um Daten in verschlüsselten und unlesbaren Text umzuwandeln, um sicherzustellen, dass die Informationen geschützt sind und ohne einen Entschlüsselungsschlüssel nicht zugänglich sind.
 
-Die Datenkonformität des Abfrage-Service stellt sicher, dass Daten immer verschlüsselt werden. Daten während der Übertragung sind immer HTTPS-kompatibel und Daten im Ruhezustand werden in einem Azure Data Lake-Speicher mithilfe von Schlüsseln auf Systemebene verschlüsselt. Weitere Informationen finden Sie in der Dokumentation [So werden Daten in Adobe Experience Platform &#x200B;](../../landing/governance-privacy-security/encryption.md). Einzelheiten dazu, wie Data-at-Rest im Data-Lake-Speicher von Azure verschlüsselt werden, finden Sie in der [offiziellen Azure-Dokumentation](https://docs.microsoft.com/de-de/azure/data-lake-store/data-lake-store-encryption).
+Die Datenkonformität des Abfrage-Service stellt sicher, dass Daten immer verschlüsselt werden. Daten während der Übertragung sind immer HTTPS-kompatibel und Daten im Ruhezustand werden in einem Azure Data Lake-Speicher mithilfe von Schlüsseln auf Systemebene verschlüsselt. Weitere Informationen finden Sie in der Dokumentation [So werden Daten in Adobe Experience Platform ](../../landing/governance-privacy-security/encryption.md). Einzelheiten dazu, wie Data-at-Rest im Data-Lake-Speicher von Azure verschlüsselt werden, finden Sie in der [offiziellen Azure-Dokumentation](https://docs.microsoft.com/de-de/azure/data-lake-store/data-lake-store-encryption).
 
-Daten in Übertragung sind immer HTTPS-kompatibel. Wenn sich die Daten im Data Lake im Ruhezustand befinden, erfolgt die Verschlüsselung mit dem Customer Management Key (CMK), der bereits von Data Lake Management unterstützt wird. Die derzeit unterstützte Version ist TLS1.2. In der [Dokumentation Kundenverwaltete Schlüssel (CMK) &#x200B;](../../landing/governance-privacy-security/customer-managed-keys/overview.md) Sie, wie Sie Ihre eigenen Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
+Daten in Übertragung sind immer HTTPS-kompatibel. Wenn sich die Daten im Data Lake im Ruhezustand befinden, erfolgt die Verschlüsselung mit dem Customer Management Key (CMK), der bereits von Data Lake Management unterstützt wird. Die derzeit unterstützte Version ist TLS1.2. In der [Dokumentation Kundenverwaltete Schlüssel (CMK) ](../../landing/governance-privacy-security/customer-managed-keys/overview.md) Sie, wie Sie Ihre eigenen Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 
 
 ## Verfolgung {#audit}
 
-Der Abfrage-Service zeichnet Benutzeraktivitäten auf und kategorisiert diese Aktivitäten in verschiedene Protokolltypen. Die Protokolle geben Informationen darüber **wer** welche **ausgeführt** wann **.**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute angeben, die für den Aktionstyp relevant sind.
+Der Abfrage-Service zeichnet Benutzeraktivitäten auf und kategorisiert diese Aktivitäten in verschiedene Protokolltypen. Die Protokolle geben Informationen darüber **wer** welche **ausgeführt** wann **.**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID der oder des Benutzenden, die oder der die Aktion durchgeführt hat, und weitere für den Aktionstyp relevante Attribute angeben.
 
 Jede der Protokollkategorien kann von einem Experience Platform-Benutzer nach Bedarf angefordert werden. Dieser Abschnitt enthält Details zum Typ der für den Abfrage-Service erfassten Informationen und dazu, wo auf diese Informationen zugegriffen werden kann.
 
@@ -174,7 +174,7 @@ Nachfolgend finden Sie eine Liste mit drei erweiterten Server-Protokollen, die m
 1. **Sitzungsprotokolle**: Das System erstellt ein Sitzungseintragsprotokoll für einen Benutzer, wenn er sich beim Abfrage-Service anmeldet, unabhängig davon, ob er eine Abfrage ausführt.
 1. **Verbindungsprotokolle von Drittanbietern**: Ein Verbindungsprüfprotokoll wird generiert, wenn ein Benutzer den Abfrage-Service erfolgreich mit einem Client eines Drittanbieters verbindet.
 
-Weitere Informationen darüber[&#x200B; wie Auditprotokolle Ihrem Unternehmen helfen können, die Einhaltung von Datenvorschriften zu gewährleisten, finden Sie &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) „Übersicht über Auditprotokolle“.
+Weitere Informationen darüber[ wie Auditprotokolle Ihrem Unternehmen helfen können, die Einhaltung von Datenvorschriften zu gewährleisten, finden Sie ](../../landing/governance-privacy-security/audit-logs/overview.md) „Übersicht über Auditprotokolle“.
 
 ## Datennutzung {#data-usage}
 
@@ -186,7 +186,7 @@ Es ist Best Practice, in jeder Phase des Journey der Daten auf die Einhaltung de
 >
 >Datensätze, die mit dem Abfrage-Service erstellt werden, werden als „abgeleitete Datensätze“ bezeichnet.
 
-Da Ad-hoc-Schemata von einem einzelnen Benutzer für einen bestimmten Zweck erstellt werden, werden die XDM-Schemafelder für diesen bestimmten Datensatz mit einem Namespace versehen und sind nicht für die Verwendung in verschiedenen Datensätzen vorgesehen. Daher sind Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche standardmäßig nicht sichtbar. Obwohl es bei der Anwendung von Datennutzungskennzeichnungen keinen Unterschied zwischen Standard- und Ad-hoc-Schemata gibt, müssen Ad-hoc-Schemata, die vom Abfrage-Service zum Zweck der Kennzeichnung erstellt wurden, zunächst in der Experience Platform-Benutzeroberfläche sichtbar gemacht werden. Weitere Informationen finden Sie im Handbuch [Erkennen von Ad-hoc-Schemata in &#x200B;](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) Experience Platform-Benutzeroberfläche“.
+Da Ad-hoc-Schemata von einem einzelnen Benutzer für einen bestimmten Zweck erstellt werden, werden die XDM-Schemafelder für diesen bestimmten Datensatz mit einem Namespace versehen und sind nicht für die Verwendung in verschiedenen Datensätzen vorgesehen. Daher sind Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche standardmäßig nicht sichtbar. Obwohl es bei der Anwendung von Datennutzungskennzeichnungen keinen Unterschied zwischen Standard- und Ad-hoc-Schemata gibt, müssen Ad-hoc-Schemata, die vom Abfrage-Service zum Zweck der Kennzeichnung erstellt wurden, zunächst in der Experience Platform-Benutzeroberfläche sichtbar gemacht werden. Weitere Informationen finden Sie im Handbuch [Erkennen von Ad-hoc-Schemata in ](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) Experience Platform-Benutzeroberfläche“.
 
 Nachdem Sie auf das Schema zugegriffen haben, können Sie [Kennzeichnungen auf einzelne Felder anwenden](../../xdm/tutorials/labels.md). Sobald ein Schema gekennzeichnet wurde, erben alle Datensätze, die von diesem Schema abgeleitet sind, diese Kennzeichnungen. Von hier aus können Sie Datennutzungsrichtlinien einrichten, die verhindern können, dass Daten mit bestimmten Beschriftungen für bestimmte Ziele aktiviert werden. Weitere Informationen finden Sie in der Übersicht zu [Datennutzungsrichtlinien](../../data-governance/policies/overview.md).
 
@@ -196,20 +196,20 @@ Nachdem Sie auf das Schema zugegriffen haben, können Sie [Kennzeichnungen auf e
 
 Datenschutzanfragen können an den Data Lake oder den Profildatenspeicher gesendet werden. Aus dem Data Lake gelöschte Datensätze führen nicht zum Löschen von Profilen, die aus diesen Datensätzen erstellt wurden. Ein Datenschutzauftrag zum Löschen personenbezogener Daten aus dem Data Lake löscht auch nicht sein Profil, sodass alle Informationen (die diese Profil-ID enthalten), die nach Abschluss des Datenschutzauftrags aufgenommen werden, dieses Profil wie gewohnt aktualisieren. Dies bekräftigt die Notwendigkeit, in Ad-hoc-Schemata verwendete Daten ordnungsgemäß zu identifizieren.
 
-Weitere Informationen finden Sie in der Privacy Service[Dokumentation zu Identitätsdaten für Datenschutzanfragen und &#x200B;](../../privacy-service/identity-data.md), wie Sie Ihre Datenvorgänge konfigurieren und Adobe-Technologien nutzen können, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
+See the Privacy Service documentation for more information on [identity data for privacy requests](../../privacy-service/identity-data.md) and how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 
-Die Funktionen des Abfrage-Service für die Data Governance vereinfachen und optimieren den Prozess der Datenkategorisierung und die Einhaltung von Datennutzungsbestimmungen. Nachdem die Daten identifiziert wurden, können Sie mit dem Abfrage-Service die primäre Identität für alle Ausgabedatensätze zuweisen. Sie **müssen** Identitäten zum Datensatz hinzufügen, um Datenschutzanfragen zu erleichtern und auf die Einhaltung von Datenschutzbestimmungen hinzuarbeiten.
+Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets. You **must** add identities into the dataset to facilitate data privacy requests and work towards data compliance.
 
-Schemadatenfelder können über die Experience Platform-Benutzeroberfläche als Identitätsfeld festgelegt werden. Darüber hinaus ermöglicht Ihnen der Abfrage-Service, die [&#x200B; mithilfe des SQL-Befehls „ALTER TABLE“ zu &#x200B;](../sql/syntax.md#alter-table). Das Festlegen einer Identität mit dem Befehl `ALTER TABLE` ist besonders dann hilfreich, wenn Datensätze mithilfe von SQL und nicht direkt aus einem Schema über die Experience Platform-Benutzeroberfläche erstellt werden. In der Dokumentation finden Sie Anweisungen zum [&#x200B; von Identitätsfeldern in der Benutzeroberfläche bei &#x200B;](../../xdm/ui/fields/identity.md) Verwendung von Standardschemata.
+Schema data fields can be set as an identity field through the Experience Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Setting an identity using the `ALTER TABLE` command is especially useful when datasets are created using SQL rather than directly from a schema through the Experience Platform UI. See the documentation for instructions on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md) when using standard schemas.
 
 ## Datenhygiene {#data-hygiene}
 
-„Datenhygiene“ bezieht sich auf den Prozess der Reparatur oder Entfernung von Daten, die veraltet, ungenau, falsch formatiert, dupliziert oder unvollständig sind. Diese Prozesse stellen sicher, dass Datensätze systemübergreifend korrekt und konsistent sind. Es ist wichtig, eine angemessene Datenhygiene bei jedem Schritt des Journey der Daten und sogar vom ersten Datenspeicherort sicherzustellen. Im Abfrage-Service von Experience Platform ist dies entweder der Data Lake oder der beschleunigte Speicher.
+&quot;Data hygiene&quot; refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. These processes make sure that datasets are accurate and consistent across all systems. It is important to ensure adequate data hygiene along every step of the data&#39;s journey and even from the initial data storage location. In Experience Platform Query Service, this is either the data lake or the accelerated store.
 
-Sie können einem abgeleiteten Datensatz eine Identität zuweisen, um die Datenverwaltung im Anschluss an die zentralisierten Datenhygiene-Services von Experience Platform zu ermöglichen.
+You can assign an identity to a derived dataset to allow their data management following Experience Platform&#39;s centralized data hygiene services.
 
-Wenn Sie dagegen einen aggregierten Datensatz im beschleunigten Speicher erstellen, können die aggregierten Daten nicht zur Ableitung der Originaldaten verwendet werden. Durch diese Datenaggregation entfällt die Notwendigkeit, Anfragen zur Datenhygiene zu stellen.
+Conversely, when you create an aggregated dataset on the accelerated store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated.
 
-Eine Ausnahme in diesem Szenario ist der Fall der Löschung. Wenn eine Datenhygiene-Löschung für einen Datensatz angefordert wird und bevor die Löschung abgeschlossen ist, eine andere abgeleitete Datensatzabfrage ausgeführt wird, erfasst der abgeleitete Datensatz Informationen aus dem ursprünglichen Datensatz. In diesem Fall müssen Sie beachten, dass Sie, wenn eine Anfrage zum Löschen eines Datensatzes gesendet wurde, keine neu abgeleiteten Datensatzabfragen mit derselben Datensatzquelle ausführen dürfen.
+An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any newly derived dataset queries using the same dataset source.
 
-Weitere [&#x200B; zur Datenhygiene in Adobe Experience Platform finden Sie &#x200B;](../../hygiene/home.md) der Übersicht zur Datenhygiene .
+See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform.

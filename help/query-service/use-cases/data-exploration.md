@@ -1,49 +1,49 @@
 ---
-title: Erkunden, Fehlerbehebung und Verifizierung der Batch-Aufnahme mit SQL
-description: Erfahren Sie, wie Sie den Datenaufnahmeprozess in Adobe Experience Platform verstehen und verwalten. Dieses Dokument beschreibt, wie Batches überprüft und aufgenommene Daten abgefragt werden.
+title: Explore, Troubleshoot, and Verify Batch Ingestion with SQL
+description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes how to verify batches and query ingested data.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fac5ebd3f81e6f4b9f601ab1d9252402cad52b6
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
 
-# Erkunden, Fehlerbehebung und Verifizierung der Batch-Aufnahme mit SQL
+# Explore, troubleshoot, and verify batch ingestion with SQL
 
-In diesem Dokument wird erläutert, wie Sie Datensätze in aufgenommenen Batches mit SQL überprüfen und validieren können. In diesem Dokument erfahren Sie, wie Sie:
+This document explains how to verify and validate records in ingested batches with SQL. This document teaches you how to:
 
-- Zugriff auf Datensatz-Batch-Metadaten
-- Fehlerbehebung und Gewährleistung der Datenintegrität durch die Abfrage von Batches
+- Access dataset batch metadata
+- Troubleshoot and ensure data integrity by querying batches
 
 >[!NOTE]
 >
->Einige Screenshots in diesem Handbuch stammen von [!DNL DBVisualizer]. Informationen zum Verbinden [Abfrage-Service mit DBVisualizer](../clients/dbvisulaizer.md) oder anderen [BI-Tools von Drittanbietern](../clients/overview.md) finden Sie in der verknüpften Dokumentation.
+>Some screenshots in this guide are taken from [!DNL DBVisualizer]. To learn how to [connect Query Service with DBVisualizer](../clients/dbvisulaizer.md) or other [third-party BI tools](../clients/overview.md), see the linked documentation.
 
 ## Voraussetzungen
 
-Um Ihnen das Verständnis der in diesem Dokument besprochenen Konzepte zu erleichtern, sollten Sie über Kenntnisse in den folgenden Themen verfügen:
+To help your understanding of the concepts discussed in this document, you should have knowledge of the following topics:
 
-- **Datenaufnahme**: In der [Übersicht zur Datenaufnahme](../../ingestion/home.md) erfahren Sie mehr über die Grundlagen, wie Daten in Experience Platform aufgenommen werden, einschließlich der verschiedenen Methoden und Prozesse.
-- **Batch-Aufnahme**: In der [Übersicht zur Batch-Aufnahme-](../../ingestion/batch-ingestion/overview.md) erfahren Sie mehr über die grundlegenden Konzepte der Batch-Aufnahme. Im Einzelnen geht es darum, was ein „Batch“ ist und wie er innerhalb des Datenerfassungsprozesses von Experience Platform funktioniert.
-- **Systemmetadaten in Datensätzen**: In der [Übersicht über den Katalog-Service](../../catalog/home.md) erfahren Sie, wie Systemmetadatenfelder verwendet werden, um aufgenommene Daten zu verfolgen und abzufragen.
-- **Experience-Datenmodell (XDM)**: In der [Übersicht über die Schemabenutzeroberfläche](../../xdm/ui/overview.md) und den [Grundlagen der Schemakomposition&#39; erfahren &#x200B;](../../xdm/schema/composition.md) mehr über XDM-Schemata und darüber, wie sie die Struktur und das Format von Daten darstellen und validieren, die in Experience Platform aufgenommen werden.
+- **Data ingestion**: See the [data ingestion overview](../../ingestion/home.md) to learn the basics of how data is ingested into the Experience Platform, including the different methods and processes involved.
+- **Batch ingestion**: See the [batch ingestion API overview](../../ingestion/batch-ingestion/overview.md) to learn the basic concepts of batch ingestion. Specifically, what a &quot;batch&quot; is and how it functions within Experience Platform&#39;s data ingestion process.
+- **System metadata in datasets**: See the [Catalog Service overview](../../catalog/home.md) to learn how system metadata fields are used to track and query ingested data.
+- **Experience Data Model (XDM)**: See the [schemas UI overview](../../xdm/ui/overview.md) and the [&#39;basics of schema composition&#39;](../../xdm/schema/composition.md) to learn about XDM schemas and how they represent and validate the structure and format of data ingested into Experience Platform.
 
-## Zugriff auf Datensatz-Batch-Metadaten {#access-dataset-batch-metadata}
+## Access dataset batch metadata {#access-dataset-batch-metadata}
 
-Um sicherzustellen, dass Systemspalten (Metadatenspalten) in den Abfrageergebnissen enthalten sind, verwenden Sie die SQL-`set drop_system_columns=false` im Abfrage-Editor. Dadurch wird das Verhalten Ihrer SQL-Abfragesitzung konfiguriert. Diese Eingabe muss wiederholt werden, wenn Sie eine neue Sitzung starten.
+To ensure that system columns (metadata columns) are included in the query results, use the SQL command `set drop_system_columns=false` in your Query Editor. This configures the behavior of your SQL query session. This input must be repeated if you start a new session.
 
-Führen Sie als Nächstes eine SELECT ALL-Anweisung aus, um die Systemfelder des Datensatzes anzuzeigen, z. B. `select * from movie_data`, um die Ergebnisse des Datensatzes anzuzeigen. Die Ergebnisse umfassen zwei neue Spalten auf der rechten Seite `_acp_system_metadata` und `_ACP_BATCHID`. Die Metadatenspalten `_acp_system_metadata` und `_ACP_BATCHID` helfen bei der Identifizierung der logischen und physischen Partitionen der aufgenommenen Daten.
+Next, to view the system fields of the dataset, execute a SELECT all statement to display the results from the dataset, for example `select * from movie_data`. The results include two new columns on the right-hand side `_acp_system_metadata` and `_ACP_BATCHID`. The metadata columns `_acp_system_metadata` and `_ACP_BATCHID` help identify the logical and physical partitions of ingested data.
 
-![Die DBVisualizer-Benutzeroberfläche mit der Movie_data-Tabelle und ihren Metadatenspalten, die angezeigt und hervorgehoben werden.](../images/use-cases/movie_data-table-with-metadata-columns.png)
+![The DBVisualizer UI with the movie_data table and its metadata columns displayed and highlighted.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-Wenn Daten in Experience Platform aufgenommen werden, wird ihnen auf der Grundlage der eingehenden Daten eine logische Partition zugewiesen. Diese logische Partition wird durch `_acp_system_metadata.sourceBatchId` dargestellt. Diese ID hilft, die Datenstapel logisch zu gruppieren und zu identifizieren, bevor sie verarbeitet und gespeichert werden.
+When data is ingested into Experience Platform, it is assigned a logical partition based on the incoming data. Diese logische Partition wird durch `_acp_system_metadata.acp_sourceBatchId` dargestellt. Diese ID hilft, die Datenstapel logisch zu gruppieren und zu identifizieren, bevor sie verarbeitet und gespeichert werden.
 
 Nachdem die Daten verarbeitet und in den Data Lake aufgenommen wurden, wird ihnen eine physische Partition zugewiesen, die durch `_ACP_BATCHID` dargestellt wird. Diese ID spiegelt die tatsächliche Speicherpartition im Data Lake wider, in dem sich die aufgenommenen Daten befinden.
 
 ### SQL verwenden, um logische und physische Partitionen zu verstehen {#understand-partitions}
 
-Um zu verstehen, wie die Daten nach der Aufnahme gruppiert und verteilt werden, verwenden Sie die folgende Abfrage, um die Anzahl der verschiedenen physischen Partitionen (`_ACP_BATCHID`) für jede logische Partition (`_acp_system_metadata.sourceBatchId`) zu zählen.
+Um zu verstehen, wie die Daten nach der Aufnahme gruppiert und verteilt werden, verwenden Sie die folgende Abfrage, um die Anzahl der verschiedenen physischen Partitionen (`_ACP_BATCHID`) für jede logische Partition (`_acp_system_metadata.acp_sourceBatchId`) zu zählen.
 
 ```SQL
 SELECT  _acp_system_metadata, COUNT(DISTINCT _ACP_BATCHID) FROM movie_data
@@ -92,17 +92,17 @@ Die Ergebnisse zeigen die Effizienz und das Verhalten des Datenerfassungsprozess
 
 >[!TIP]
 >
->Um die Batch-ID und die mit dieser Batch-ID verknüpften Abfragedatensätze abzurufen, müssen Sie zunächst einen Batch in Experience Platform erstellen. Wenn Sie den Prozess selbst testen möchten, können Sie CSV-Daten in Experience Platform aufnehmen. Lesen Sie das Handbuch zum [&#x200B; (Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema mithilfe von KI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md).
+>Um die Batch-ID und die mit dieser Batch-ID verknüpften Abfragedatensätze abzurufen, müssen Sie zunächst einen Batch in Experience Platform erstellen. Wenn Sie den Prozess selbst testen möchten, können Sie CSV-Daten in Experience Platform aufnehmen. Lesen Sie das Handbuch zum [ (Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema mithilfe von KI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md).
 
-Nachdem Sie einen Batch aufgenommen haben, müssen Sie zur Registerkarte [!UICONTROL Datensatzaktivität] für den Datensatz navigieren, in den Sie Daten aufgenommen haben.
+Nachdem Sie einen Batch aufgenommen haben, müssen Sie zum [!UICONTROL Datasets activity tab] für den Datensatz navigieren, in den Sie Daten aufgenommen haben.
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Datensätze]** im linken Navigationsbereich aus, um das Dashboard [!UICONTROL Datensätze] zu öffnen. Wählen Sie als Nächstes den Namen des Datensatzes auf der Registerkarte [!UICONTROL Durchsuchen] aus, um auf den Bildschirm [!UICONTROL Datensatzaktivität] zuzugreifen.
+Wählen Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Datasets]** aus, um das [!UICONTROL Datasets]-Dashboard zu öffnen. Wählen Sie als Nächstes auf der Registerkarte [!UICONTROL Browse] den Namen des Datensatzes aus, um auf den Bildschirm [!UICONTROL Dataset activity] zuzugreifen.
 
 ![Das Dashboard der Experience Platform-Benutzeroberfläche mit Datensätzen, die in der linken Navigationsleiste hervorgehoben sind.](../images/use-cases/datasets-workspace.png)
 
-Die [!UICONTROL Datensatzaktivität] wird angezeigt. Diese Ansicht enthält Details zum ausgewählten Datensatz. Er umfasst alle aufgenommenen Batches, die im Tabellenformat angezeigt werden.
+Die [!UICONTROL Dataset activity] wird angezeigt. Diese Ansicht enthält Details zum ausgewählten Datensatz. Er umfasst alle aufgenommenen Batches, die im Tabellenformat angezeigt werden.
 
-Wählen Sie einen Stapel aus der Liste der verfügbaren Stapel aus und kopieren [!UICONTROL Batch-ID] aus dem Detailbereich auf der rechten Seite.
+Wählen Sie einen Stapel aus der Liste der verfügbaren Stapel aus und kopieren Sie den [!UICONTROL Batch ID] aus dem Detailbereich auf der rechten Seite.
 
 ![Die Benutzeroberfläche &quot;Experience Platform-Datensätze“ mit den aufgenommenen Datensätzen und einer hervorgehobenen Batch-ID.](../images/use-cases/batch-id.png)
 
@@ -114,7 +114,7 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-Das Keyword `_ACP_BATCHID` wird zum Filtern der [!UICONTROL Batch-ID“ &#x200B;].
+Das Keyword `_ACP_BATCHID` wird zum Filtern der [!UICONTROL Batch ID] verwendet.
 
 >[!TIP]
 >
