@@ -2,9 +2,9 @@
 title: Inkrementelles Laden im Abfrage-Service
 description: Die inkrementelle Ladefunktion verwendet Funktionen sowohl für anonyme Blöcke als auch für Momentaufnahmen, um eine nahezu in Echtzeit entstehende Lösung zum Verschieben von Daten aus dem Data Lake in Ihr Data Warehouse zu bieten, ohne übereinstimmende Daten zu berücksichtigen.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '672'
 ht-degree: 99%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 99%
 
 Das Designmuster für inkrementelles Laden ist eine Lösung für die Datenverwaltung. Das Muster verarbeitet nur Informationen im Datensatz, die seit der letzten Ladeausführung erstellt oder geändert wurden.
 
-Inkrementelles Laden verwendet verschiedene Funktionen, die der Adobe Experience Platform-Abfrage-Service bereitstellt, wie anonyme Blöcke und Momentaufnahmen. Dieses Designmuster erhöht die Verarbeitungseffizienz, da alle bereits verarbeiteten Daten aus der Quelle übersprungen werden. Es kann sowohl bei der Streaming- als auch bei der Batch-Datenverarbeitung verwendet werden.
+Inkrementelles Laden verwendet verschiedene Funktionen, die der Abfrage-Service von Adobe Experience Platform bereitstellt, wie anonyme Blöcke und Momentaufnahmen. Dieses Designmuster erhöht die Verarbeitungseffizienz, da alle bereits verarbeiteten Daten aus der Quelle übersprungen werden. Es kann sowohl bei der Streaming- als auch bei der Batch-Datenverarbeitung verwendet werden.
 
 Dieses Dokument enthält eine Reihe von Anweisungen zum Erstellen eines Designmusters für die inkrementelle Verarbeitung. Diese Schritte können als Vorlage für die Erstellung Ihrer eigenen inkrementellen Datenladeabfragen verwendet werden.
 
@@ -40,7 +40,7 @@ Die folgenden Schritte zeigen, wie Sie Daten mithilfe von Momentaufnahmen und de
       WHERE false;
    ```
 
-1. Füllen Sie die `checkpoint_log`-Tabelle mit einer leeren Eingabe für den Datensatz, wodurch eine inkrementelle Verarbeitung erfordert wird. `DIM_TABLE_ABC` ist der Datensatz, der im folgenden Beispiel verarbeitet werden soll. Bei der erstmaligen Verarbeitung von `DIM_TABLE_ABC` ist `last_snapshot_id` als `null` initialisiert. Auf diese Weise können Sie den gesamten Datensatz beim ersten Mal und danach inkrementell verarbeiten.
+1. Füllen Sie die `checkpoint_log`-Tabelle mit einem leeren Eintrag für den Datensatz, der eine inkrementelle Verarbeitung erfordert. `DIM_TABLE_ABC` ist der Datensatz, der im folgenden Beispiel verarbeitet werden soll. Bei der erstmaligen Verarbeitung von `DIM_TABLE_ABC` ist `last_snapshot_id` als `null` initialisiert. Auf diese Weise können Sie den gesamten Datensatz beim ersten Mal und danach inkrementell verarbeiten.
 
    ```SQL
    INSERT INTO
@@ -84,7 +84,7 @@ Die folgenden Schritte zeigen, wie Sie Daten mithilfe von Momentaufnahmen und de
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END 
    $$;
@@ -116,7 +116,7 @@ Die folgenden Schritte zeigen, wie Sie Daten mithilfe von Momentaufnahmen und de
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END
    $$;
@@ -154,7 +154,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;

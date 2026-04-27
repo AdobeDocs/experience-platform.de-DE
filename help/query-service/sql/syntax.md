@@ -4,10 +4,10 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: In diesem Dokument wird die vom Abfrage-Service von Adobe Experience Platform unterstützte SQL-Syntax beschrieben.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '4686'
-ht-degree: 4%
+source-wordcount: '4737'
+ht-degree: 5%
 
 ---
 
@@ -134,30 +134,30 @@ In der folgenden Tabelle wird die Bedeutung der einzelnen Syntaxoptionen innerha
 | `AS OF end_snapshot_id` | liest Daten so, wie sie zur angegebenen Momentaufnahme-ID erfasst wurden (einschließlich). |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | Liest Daten zwischen den angegebenen Start- und End-Snapshot-IDs. Es ist exklusiv der `start_snapshot_id` und inklusive der `end_snapshot_id`. |
 | `BETWEEN HEAD AND start_snapshot_id` | liest Daten vom Anfang (vor dem ersten Schnappschuss) bis zur angegebenen Start-Schnappschuss-ID (einschließlich). Beachten Sie, dass nur Zeilen in `start_snapshot_id` zurückgegeben werden. |
-| `BETWEEN end_snapshot_id AND TAIL` | Liest Daten direkt nach dem angegebenen `end_snapshot_id` bis zum Ende des Datensatzes (ohne Snapshot-ID). Das bedeutet, dass die Abfrage null Zeilen zurückgibt, wenn `end_snapshot_id` der letzte Schnappschuss im Datensatz ist, da es keine Schnappschüsse gibt, die über diesen letzten Schnappschuss hinausgehen. |
-| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Liest Daten ab der angegebenen Momentaufnahme-ID aus `table_to_be_queried` und verknüpft sie mit den Daten aus `table_to_be_joined` so, wie sie sich bei `your_chosen_snapshot_id` befanden. Der Join basiert auf übereinstimmenden IDs aus den ID-Spalten der beiden verbundenen Tabellen. |
+| `BETWEEN end_snapshot_id AND TAIL` | Liest Daten direkt nach dem angegebenen `end_snapshot_id` bis zum Ende des Datensatzes (ohne Snapshot-ID). This means that if `end_snapshot_id` is the last snapshot in the dataset, the query will return zero rows because there are no snapshots beyond that last snapshot. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Reads data starting from the specified snapshot ID from `table_to_be_queried` and joins it with the data from `table_to_be_joined` as it was at `your_chosen_snapshot_id`. The join is based on matching IDs from the ID columns of the two tables being joined. |
 
-Eine `SNAPSHOT`-Klausel funktioniert mit einem Tabellen- oder Tabellenalias, aber nicht über einer Unterabfrage oder Ansicht. Eine `SNAPSHOT`-Klausel funktioniert überall dort, wo eine `SELECT` Abfrage auf eine Tabelle angewendet werden kann.
+A `SNAPSHOT` clause works with a table or table alias but not on top of a subquery or view. A `SNAPSHOT` clause works anywhere a `SELECT` query on a table can be applied.
 
-Außerdem können Sie `HEAD` und `TAIL` als spezielle Versatzwerte für Momentaufnahmenklauseln verwenden. Die Verwendung von `HEAD` bezieht sich auf einen Versatz vor dem ersten Schnappschuss, während `TAIL` sich auf einen Versatz nach dem letzten Schnappschuss bezieht.
+Also, you can use `HEAD` and `TAIL` as special offset values for snapshot clauses. Using `HEAD` refers to an offset before the first snapshot, while `TAIL` refers to an offset after the last snapshot.
 
 >[!NOTE]
 >
->Wenn Sie zwischen zwei Momentaufnahme-IDs abfragen, können die folgenden beiden Szenarien auftreten, wenn der Start-Momentaufnahme abgelaufen ist und das optionale Fallback-Verhaltens-Flag (`resolve_fallback_snapshot_on_failure`) festgelegt ist:
+>If you are querying between two snapshot IDs, the following two scenarios can occur if the start snapshot is expired and the optional fallback behavior flag (`resolve_fallback_snapshot_on_failure`) is set:
 >
->- Wenn das optionale Fallback-Verhaltens-Flag festgelegt ist, wählt der Abfrage-Service den frühesten verfügbaren Schnappschuss aus, legt ihn als Start-Schnappschuss fest und gibt die Daten zwischen dem frühesten verfügbaren Schnappschuss und dem angegebenen End-Schnappschuss zurück. Diese Daten **(einschließlich** der frühesten verfügbaren Momentaufnahme.
+>- If the optional fallback behavior flag is set, Query Service chooses the earliest available snapshot, sets it as the start snapshot, and returns the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
 
-### WHERE-Klausel
+### WHERE clause
 
-Standardmäßig wird bei Übereinstimmungen, die durch eine `WHERE`-Klausel in einer `SELECT`-Abfrage erzeugt werden, zwischen Groß- und Kleinschreibung unterschieden. Wenn Sie bei Übereinstimmungen die Groß-/Kleinschreibung nicht berücksichtigen möchten, können Sie das Keyword `ILIKE` anstelle von `LIKE` verwenden.
+By default, matches produced by a `WHERE` clause on a `SELECT` query are case-sensitive. If you want matches to be case-insensitive, you can use the keyword `ILIKE` instead of `LIKE`.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
 ```
 
-Die Logik der LIKE- und ILIKE-Klauseln wird in der folgenden Tabelle erläutert:
+The logic of the LIKE and ILIKE clauses are explained in the following table:
 
-| -Klausel | Operator |
+| Clause | Operator |
 | ------ | -------- |
 | `WHERE condition LIKE pattern` | `~~` |
 | `WHERE condition NOT LIKE pattern` | `!~~` |
@@ -171,11 +171,11 @@ SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
 
-Diese Abfrage gibt Kunden mit Namen zurück, die mit „A“ oder „a“ beginnen.
+This query returns customers with names beginning in &quot;A&quot; or &quot;a&quot;.
 
-### VERKNÜPFEN
+### JOIN
 
-Eine `SELECT` Abfrage, die Joins verwendet, weist die folgende Syntax auf:
+A `SELECT` query that uses joins has the following syntax:
 
 ```sql
 SELECT statement
@@ -186,7 +186,7 @@ ON join condition
 
 ### UNION, INTERSECT und EXCEPT
 
-Die `UNION`-, `INTERSECT`- und `EXCEPT`-Klauseln werden verwendet, um wie Zeilen aus zwei oder mehr Tabellen zu kombinieren oder auszuschließen:
+The `UNION`, `INTERSECT`, and `EXCEPT` clauses are used to combine or exclude like rows from two or more tables:
 
 ```sql
 SELECT statement 1
@@ -196,13 +196,13 @@ SELECT statement 2
 
 ### CREATE TABLE AS SELECT {#create-table-as-select}
 
-Verwenden Sie den Befehl `CREATE TABLE AS SELECT` (CTAS), um die Ergebnisse einer `SELECT` Abfrage in eine neue Tabelle zu materialisieren. Dies ist nützlich, um umgewandelte Datensätze zu erstellen, Aggregationen durchzuführen oder eine Vorschau von durch Funktionen erstellten Daten anzuzeigen, bevor sie in einem Modell verwendet werden.
+Use the `CREATE TABLE AS SELECT` (CTAS) command to materialize the results of a `SELECT` query into a new table. This is useful for creating transformed datasets, performing aggregations, or previewing feature-engineered data before using it in a model.
 
-Wenn Sie bereit sind, ein Modell mit umgewandelten KEs zu trainieren, finden Sie in der [Models-Dokumentation](../advanced-statistics/models.md) Anleitungen zur Verwendung von `CREATE MODEL` mit der `TRANSFORM`.
+If you&#39;re ready to train a model using transformed features, see the [Models documentation](../advanced-statistics/models.md) for guidance on using `CREATE MODEL` with the `TRANSFORM` clause.
 
-Sie können optional eine `TRANSFORM`-Klausel einfügen, um eine oder mehrere Funktionen des Feature Engineering direkt in der CTAS-Anweisung anzuwenden. Verwenden Sie `TRANSFORM`, um die Ergebnisse Ihrer Umwandlungslogik vor dem Modell-Training zu überprüfen.
+You can optionally include a `TRANSFORM` clause to apply one or more feature engineering functions directly within the CTAS statement. Use `TRANSFORM` to inspect the results of your transformation logic before model training.
 
-Diese Syntax gilt sowohl für permanente als auch für temporäre Tabellen.
+This syntax applies to both permanent and temporary tables.
 
 ```sql
 CREATE TABLE table_name 
@@ -220,19 +220,19 @@ AS (select_query)
 
 | Parameter | Beschreibung |
 | ----- | ----- |
-| `schema` | Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie die neue Tabelle mit einem vorhandenen XDM-Schema verknüpfen möchten. |
-| `rowvalidation` | (Optional) Aktiviert die Validierung auf Zeilenebene für jeden Batch, der in den Datensatz aufgenommen wird. Der Standardwert ist „true“. |
-| `label` | (Optional) Verwenden Sie den Wert `PROFILE` , um den Datensatz als für die Profilaufnahme aktiviert zu kennzeichnen. |
-| `transform` | (Optional) Wendet vor der Materialisierung des Datensatzes technische Umwandlungen an (z. B. Zeichenfolgenindizierung, One-Hot-Kodierung oder TF-IDF). Diese Klausel wird für die Vorschau von umgewandelten Funktionen verwendet. Weitere Informationen finden Sie in der [`TRANSFORM` zur &#x200B;](#transform)-Klausel . |
-| `select_query` | Eine standardmäßige `SELECT`, die den Datensatz definiert. Weitere Informationen finden Sie [`SELECT` Abschnitt &#x200B;](#select-queries) . |
+| `schema` | The title of the XDM schema. Use this clause only if you wish to associate the new table with an existing XDM schema. |
+| `rowvalidation` | (Optional) Enables row-level validation for each batch ingested into the dataset. Default is true. |
+| `label` | (Optional) Use the value `PROFILE` to label the dataset as enabled for Profile ingestion. |
+| `transform` | (Optional) Applies feature engineering transformations (such as string indexing, one-hot encoding, or TF-IDF) before materializing  the dataset. This clause is used for previewing transformed features. See [`TRANSFORM` clause documentation](#transform) for more details. |
+| `select_query` | A standard `SELECT` statement that defines the dataset. See the [`SELECT` queries section](#select-queries) for more details. |
 
 >[!NOTE]
 >
->Die `SELECT`-Anweisung muss einen Alias für Aggregatfunktionen wie `COUNT`, `SUM` oder `MIN` enthalten. Sie können die `SELECT` Abfrage mit oder ohne Klammern bereitstellen. Dies gilt unabhängig davon, ob die `TRANSFORM` verwendet wird oder nicht.
+>The `SELECT` statement must include an alias for aggregate functions such as `COUNT`, `SUM`, or `MIN`. You can provide the `SELECT` query with or without parentheses. This applies whether or not the `TRANSFORM` clause is used.
 
 **Beispiele**
 
-Ein einfaches Beispiel mit einer `TRANSFORM`Klausel, um eine Vorschau einiger angepasster Funktionen anzuzeigen:
+A basic example using a `TRANSFORM`clause to preview a few engineered features:
 
 ```sql
 CREATE TABLE ctas_transform_table_vp14 
@@ -244,7 +244,7 @@ TRANSFORM(
 AS SELECT * FROM movie_review_e2e_DND;
 ```
 
-Ein erweitertes Beispiel mit mehreren Umwandlungsschritten:
+A more advanced example with multiple transformation steps:
 
 ```sql
 CREATE TABLE ctas_transform_table 
@@ -261,7 +261,7 @@ TRANSFORM(
 AS SELECT * FROM movie_review;
 ```
 
-Beispiel für eine temporäre Tabelle:
+A temporary table example:
 
 ```sql
 CREATE TEMP TABLE ctas_transform_table 
@@ -278,14 +278,14 @@ TRANSFORM(
 AS SELECT * FROM movie_review;
 ```
 
-#### Einschränkungen und Verhalten {#limitations-and-behavior}
+#### Limitations and behavior {#limitations-and-behavior}
 
-Beachten Sie die folgenden Einschränkungen bei der Verwendung der `TRANSFORM`-Klausel mit `CREATE TABLE` oder `CREATE TEMP TABLE`:
+Keep the following limitations in mind when using the `TRANSFORM` clause with `CREATE TABLE` or `CREATE TEMP TABLE`:
 
-- Wenn eine Transformationsfunktion eine Vektorausgabe erzeugt, wird sie automatisch in ein Array konvertiert.
-- Daher können mit `TRANSFORM` erstellte Tabellen nicht direkt in `CREATE MODEL` Anweisungen verwendet werden. Sie müssen die Transformationslogik während der Modellerstellung neu definieren, um die entsprechenden Merkmalsvektoren zu erzeugen.
-- Umwandlungen werden nur während der Tabellenerstellung angewendet. Neue Daten, die mit `INSERT INTO` in die Tabelle eingefügt werden, werden **nicht automatisch transformiert**. Um Umwandlungen auf neue Daten anzuwenden, müssen Sie die Tabelle mithilfe von `CREATE TABLE AS SELECT` mit der `TRANSFORM`-Klausel neu erstellen.
-- Diese Methode dient zur Vorschau und Validierung von Transformationen zu einem bestimmten Zeitpunkt und nicht zum Erstellen wiederverwendbarer Transformations-Pipelines.
+- If any transformation function generates a vector output, it is automatically converted to an array.
+- As a result, tables created using `TRANSFORM` cannot be used directly in `CREATE MODEL` statements. You must redefine the transformation logic during model creation to generate the appropriate feature vectors.
+- Transformations are only applied during table creation. New data inserted into the table with `INSERT INTO` is **not automatically transformed**. To apply transformations to new data, you must recreate the table using `CREATE TABLE AS SELECT` with the `TRANSFORM` clause.
+- This method is intended for previewing and validating transformations at a point in time, not for building reusable transformation pipelines.
 
 >[!NOTE]
 >
@@ -302,9 +302,9 @@ Die `TRANSFORM`-Klausel kann in den folgenden Anweisungen verwendet werden:
 - `CREATE TABLE`
 - `CREATE TEMP TABLE`
 
-Detaillierte Anweisungen zur Verwendung [&#x200B; ERSTELLEN &#x200B;](../advanced-statistics/models.md), einschließlich der Definition von Transformationen, der Festlegung von Modelloptionen und der Konfiguration von Trainingsdaten, finden Sie in der Dokumentation zu Modellen .
+Detaillierte Anweisungen zur Verwendung [ ERSTELLEN ](../advanced-statistics/models.md), einschließlich der Definition von Transformationen, der Festlegung von Modelloptionen und der Konfiguration von Trainingsdaten, finden Sie in der Dokumentation zu Modellen .
 
-Informationen zur Verwendung mit `CREATE TABLE` finden Sie [&#x200B; Abschnitt „CREATE TABLE AS SELECT](#create-table-as-select).
+Informationen zur Verwendung mit `CREATE TABLE` finden Sie [ Abschnitt „CREATE TABLE AS SELECT](#create-table-as-select).
 
 #### MODELLBEISPIEL ERSTELLEN
 
@@ -367,7 +367,7 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 Die meisten Felder in einem echten XDM-Schema werden nicht auf der Stammebene gefunden und SQL erlaubt die Verwendung der Punktnotation nicht. Um mit verschachtelten Feldern ein realistisches Ergebnis zu erzielen, müssen Sie jedes Feld in Ihrem `INSERT INTO` zuordnen.
 
-Verwenden Sie die folgende Syntax, um verschachtelte Pfade zu `INSERT INTO`:
+To `INSERT INTO` nested paths, use the following syntax:
 
 ```sql
 INSERT INTO [dataset]
@@ -385,7 +385,7 @@ INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCi
 
 ## DROP TABLE
 
-Der Befehl `DROP TABLE` löscht eine vorhandene Tabelle und löscht das mit der Tabelle verknüpfte Verzeichnis aus dem Dateisystem, wenn es keine externe Tabelle ist. Wenn die Tabelle nicht vorhanden ist, tritt eine Ausnahme auf.
+The `DROP TABLE` command drops an existing table and deletes the directory associated with the table from the file system if it is not an external table. If the table does not exist, an exception occurs.
 
 ```sql
 DROP TABLE [IF EXISTS] [db_name.]table_name
@@ -393,19 +393,19 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `IF EXISTS` | Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn die Tabelle **nicht** vorhanden ist. |
+| `IF EXISTS` | If this is specified, no exception is thrown if the table does **not** exist. |
 
-## DATENBANK ERSTELLEN
+## CREATE DATABASE
 
-Der Befehl `CREATE DATABASE` erstellt eine Azure Data Lake Storage-Datenbank (ADLS).
+The `CREATE DATABASE` command creates an Azure Data Lake Storage (ADLS) database.
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
 ```
 
-## DATENBANK ABLEGEN
+## DROP DATABASE
 
-Der Befehl `DROP DATABASE` löscht die Datenbank aus einer -Instanz.
+The `DROP DATABASE` command deletes the database from an instance.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -413,11 +413,11 @@ DROP DATABASE [IF EXISTS] db_name
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `IF EXISTS` | Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn die Datenbank **nicht** vorhanden ist. |
+| `IF EXISTS` | If this is specified, no exception is thrown if the database does **not** exist. |
 
-## SCHEMA ABLEGEN
+## DROP SCHEMA
 
-Der Befehl `DROP SCHEMA` löscht ein vorhandenes Schema.
+The `DROP SCHEMA` command drops an existing schema.
 
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
@@ -425,15 +425,15 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `IF EXISTS` | Wenn dieser Parameter angegeben wird und das Schema **nicht** vorhanden ist, wird keine Ausnahme ausgelöst. |
-| `RESTRICT` | Der Standardwert für den -Modus. Wenn angegeben, wird das Schema nur abgelegt, wenn es **keine** Tabellen enthält. |
-| `CASCADE` | Wenn angegeben, wird das Schema zusammen mit allen im Schema vorhandenen Tabellen gelöscht. |
+| `IF EXISTS` | If this parameter is specified and the schema does **not** exist, no exception is thrown. |
+| `RESTRICT` | The default value for the mode. If specified, the schema only drops if it does **not** contain any tables. |
+| `CASCADE` | If specified, the schema is dropped along with all the tables present in the schema. |
 
 ## CREATE VIEW {#create-view}
 
-Eine SQL-Ansicht ist eine virtuelle Tabelle, die auf dem Ergebnissatz einer SQL-Anweisung basiert. Erstellen Sie eine Ansicht mit der Anweisung `CREATE VIEW` und geben Sie ihr einen Namen. Sie können diesen Namen dann verwenden, um auf die Ergebnisse der Abfrage zurückzuverweisen. Dies erleichtert die Wiederverwendung komplexer Abfragen.
+An SQL view is a virtual table based on the result-set of an SQL statement. Create a view with the `CREATE VIEW` statement and give it a name. You can then use that name to refer back to the results of the query. This makes it easier to reuse complex queries.
 
-Die folgende Syntax definiert eine `CREATE VIEW` Abfrage für einen Datensatz. Dieser Datensatz kann ein ADLS- oder beschleunigter Speicherdatensatz sein.
+The following syntax defines a `CREATE VIEW` query for a dataset. This dataset can be an ADLS or accelerated store dataset.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -441,7 +441,7 @@ CREATE VIEW view_name AS select_query
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `view_name` | Der Name der zu erstellenden Ansicht. |
+| `view_name` | The name of view to be created. |
 | `select_query` | Eine `SELECT`. Die Syntax der `SELECT` Abfrage finden Sie im Abschnitt [SELECT-Abfragen](#select-queries). |
 
 **Beispiel**
@@ -452,7 +452,7 @@ CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
-Die folgende Syntax definiert eine `CREATE VIEW` Abfrage, die eine Ansicht im Kontext einer Datenbank und eines Schemas erstellt.
+The following syntax defines a `CREATE VIEW` query which creates a view in the context of a database and schema.
 
 **Beispiel**
 
@@ -525,7 +525,7 @@ $$BEGIN
 $$END
 
 exceptionHandler:
-      WHEN OTHER
+      WHEN OTHERS
       THEN statementList
 
 statementList:
@@ -543,7 +543,7 @@ $$BEGIN
      AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
@@ -630,7 +630,7 @@ $$BEGIN
 
 #### Ausnahmenblöcke
 
-Ausnahmeblöcke werden in anonymen Blöcken unterstützt.
+Exception blocks are supported within anonymous blocks.
 
 **Beispiel**
 
@@ -647,30 +647,30 @@ $$BEGIN
     ELSE    
        SELECT 'DEFAULT';
     END IF;  
-EXCEPTION WHEN OTHER THEN 
+EXCEPTION WHEN OTHERS THEN 
   SELECT 'THERE WAS AN ERROR';    
  END$$;
 ```
 
-### Automatisch zu JSON {#auto-to-json}
+### Auto to JSON {#auto-to-json}
 
-Query Service unterstützt eine optionale Einstellung auf Sitzungsebene, mit der komplexe Felder der obersten Ebene aus interaktiven SELECT-Abfragen als JSON-Zeichenfolgen zurückgegeben werden können. Die `auto_to_json` ermöglicht es, Daten aus komplexen Feldern als JSON zurückzugeben und dann mithilfe von Standardbibliotheken in JSON-Objekte zu parsen.
+Query Service supports an optional session-level setting to return top-level complex fields from interactive SELECT queries as JSON strings. The `auto_to_json` setting allows for data from complex fields to be returned as JSON then parsed into JSON objects using standard libraries.
 
-Legen Sie die Feature Flag-`auto_to_json` auf „true“ fest, bevor Sie Ihre SELECT-Abfrage ausführen, die komplexe Felder enthält.
+SET the feature flag `auto_to_json` to true before executing your SELECT query that contains complex fields.
 
 ```sql
 set auto_to_json=true; 
 ```
 
-#### Vor dem Setzen des `auto_to_json`
+#### Before setting the `auto_to_json` flag
 
-Die folgende Tabelle zeigt ein Beispielabfrageergebnis, bevor die `auto_to_json` angewendet wird. In beiden Szenarien wurde dieselbe SELECT-Abfrage (wie unten dargestellt) verwendet, die auf eine Tabelle mit komplexen Feldern abzielt.
+The following table provides an example query result before the `auto_to_json` setting is applied. The same SELECT query (as seen below) that targets a table with complex fields was used in both scenarios.
 
 ```sql
 SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 ```
 
-Die Ergebnisse lauten wie folgt:
+The results are as follows:
 
 ```console
                 _id                |                                _experience                                 | application  |                   commerce                   | dataSource |                               device                               |                       endUserIDs                       |                                                                                                environment                                                                                                |                     identityMap                     |                              placeContext                               |   receivedTimestamp   |       timestamp       | userActivityRegion |                                         web                                          | _adcstageforpqs
@@ -680,9 +680,9 @@ Die Ergebnisse lauten wie folgt:
 (2 rows)  
 ```
 
-#### Nach dem Setzen des `auto_to_json`
+#### After setting the `auto_to_json` flag
 
-Die folgende Tabelle zeigt die unterschiedlichen Ergebnisse, die die `auto_to_json` für den resultierenden Datensatz hat. In beiden Szenarien wurde dieselbe SELECT-Abfrage verwendet.
+The following table demonstrates the difference in results that the `auto_to_json` setting has on the resulting dataset. The same SELECT query was used in both scenarios.
 
 ```console
                 _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
@@ -692,11 +692,11 @@ Die folgende Tabelle zeigt die unterschiedlichen Ergebnisse, die die `auto_to_js
 (2 rows)
 ```
 
-### Fallback-Snapshot bei Fehler auflösen {#resolve-fallback-snapshot-on-failure}
+### Resolve fallback snapshot on failure {#resolve-fallback-snapshot-on-failure}
 
-Die Option `resolve_fallback_snapshot_on_failure` wird verwendet, um das Problem einer abgelaufenen Momentaufnahme-ID zu beheben.
+The `resolve_fallback_snapshot_on_failure` option is used to resolve the issue of an expired snapshot ID.
 
-Legen Sie die Option &quot;`resolve_fallback_snapshot_on_failure`&quot; auf „true“ fest, um einen Schnappschuss mit einer vorherigen Schnappschuss-ID zu überschreiben.
+Set the `resolve_fallback_snapshot_on_failure` option to true to override a snapshot with a previous snapshot ID.
 
 ```sql
 SET resolve_fallback_snapshot_on_failure=true;
@@ -724,7 +724,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
@@ -733,9 +733,9 @@ $$;
 
 ## Organisation von Daten-Medienelementen
 
-Es ist wichtig, Ihre Datenelemente beim Wachstum im Data Lake von Adobe Experience Platform logisch zu organisieren. Query Service erweitert SQL-Konstrukte, mit denen Sie Datenelemente innerhalb einer Sandbox logisch gruppieren können. Diese Organisationsmethode ermöglicht die Freigabe von Daten-Assets zwischen Schemas, ohne dass sie physisch verschoben werden müssen.
+It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
 
-Die folgenden SQL-Konstrukte mit standardmäßiger SQL-Syntax werden für die logische Organisation Ihrer Daten unterstützt.
+The following SQL constructs using standard SQL syntax are supported for you to logically organize your data.
 
 ```SQL
 CREATE DATABASE dg1;
@@ -746,15 +746,15 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Ausführlichere Erläuterungen zu Best Practices für den Abfrage[Service finden Sie im Handbuch &#x200B;](../best-practices/organize-data-assets.md)Logische Organisation von Daten-Assets“.
+See the [logical organization of data assets](../best-practices/organize-data-assets.md) guide for a more detailed explanation on Query Service best practices.
 
 ## Tabelle vorhanden
 
-Mit dem `table_exists` SQL-Befehl wird bestätigt, ob im System derzeit eine Tabelle vorhanden ist. Der Befehl gibt einen booleschen Wert zurück: `true`, wenn die Tabelle **vorhanden** und `false`, wenn die Tabelle **nicht** vorhanden ist.
+The `table_exists` SQL command is used to confirm whether a table currently exists in the system. Der Befehl gibt einen booleschen Wert zurück: `true`, wenn eine Tabelle **vorhanden** ist, und `false`, wenn **keine** Tabelle vorhanden ist.
 
-Durch die Überprüfung, ob eine Tabelle vorhanden ist, bevor die Anweisungen ausgeführt werden, vereinfacht die `table_exists` den Prozess des Schreibens eines anonymen Blocks, um sowohl die `CREATE` als auch `INSERT INTO` Anwendungsfälle abzudecken.
+By validating whether a table exists before running the statements, the `table_exists` feature simplifies the process of writing an anonymous block to cover both the `CREATE` and `INSERT INTO` use cases.
 
-Die folgende Syntax definiert den `table_exists`-Befehl:
+The following syntax defines the `table_exists` command:
 
 ```SQL
 $$
@@ -775,14 +775,14 @@ CREATE TABLE IF NOT EXISTS target_table_name AS
                      WHERE  @mytableexist = 'true' limit 20
               ) ;
 EXCEPTION
-WHEN other THEN SELECT 'ERROR';
+WHEN OTHERS THEN SELECT 'ERROR';
 
 END $$; 
 ```
 
 ## Inline {#inline}
 
-Die Funktion `inline` trennt die Elemente eines Arrays von Strukturen und generiert die Werte in einer Tabelle. Es kann nur in der `SELECT` oder einer `LATERAL VIEW` platziert werden.
+The `inline` function separates the elements of an array of structs and generates the values into a table. Es kann nur in der `SELECT` oder einer `LATERAL VIEW` platziert werden.
 
 Die `inline` Funktion **kann** nicht in eine Auswahlliste eingefügt werden, in der andere Generatorfunktionen vorhanden sind.
 
@@ -873,9 +873,9 @@ Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendu
 
 #### BERECHNEN VON STATISTIKEN zum Data Lake {#compute-statistics-data-lake}
 
-Sie können jetzt mit dem [!DNL Azure Data Lake Storage] SQL-Befehl Statistiken auf Spaltenebene für `COMPUTE STATISTICS` (ADLS)-Datensätze berechnen. Spaltenstatistiken entweder für den gesamten Datensatz, eine Teilmenge eines Datensatzes, alle Spalten oder eine Teilmenge von Spalten berechnen.
+Sie können jetzt mit dem `COMPUTE STATISTICS` SQL-Befehl Statistiken auf Spaltenebene für [!DNL Azure Data Lake Storage] (ADLS)-Datensätze berechnen. Spaltenstatistiken entweder für den gesamten Datensatz, eine Teilmenge eines Datensatzes, alle Spalten oder eine Teilmenge von Spalten berechnen.
 
-`COMPUTE STATISTICS` erweitert den `ANALYZE TABLE`. Die Befehle `COMPUTE STATISTICS`, `FILTERCONTEXT` und `FOR COLUMNS` werden jedoch in beschleunigten Speichertabellen nicht unterstützt. Diese Erweiterungen für den `ANALYZE TABLE`-Befehl werden derzeit nur für ADLS-Tabellen unterstützt.
+`COMPUTE STATISTICS` erweitert den `ANALYZE TABLE`. Die Befehle `COMPUTE STATISTICS`, `FILTERCONTEXT` und `FOR COLUMNS` werden jedoch in beschleunigten Speichertabellen nicht unterstützt. Diese Erweiterungen für den Befehl `ANALYZE TABLE` werden derzeit nur für ADLS-Tabellen unterstützt.
 
 **Beispiel**
 
@@ -921,7 +921,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../key-concepts/dataset-statistics.md) zu Datensatzstatistiken .
+Weitere Informationen finden [ in der ](../key-concepts/dataset-statistics.md) zu Datensatzstatistiken .
 
 #### TABELLENBEISPIEL {#tablesample}
 
@@ -940,7 +940,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Weitere Informationen finden [&#x200B; in der &#x200B;](../key-concepts/dataset-samples.md) zu Datensatzbeispielen .
+Weitere Informationen finden [ in der ](../key-concepts/dataset-samples.md) zu Datensatzbeispielen .
 
 ### BEGIN
 
@@ -1105,13 +1105,13 @@ Weitere Informationen zu den standardmäßigen SELECT-Abfrageparametern finden S
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `TEMPORARY` oder `TEMP` | Ein optionaler Parameter. Wenn der Parameter angegeben wird, ist die erstellte Tabelle eine temporäre Tabelle. |
-| `UNLOGGED` | Ein optionaler Parameter. Wenn der Parameter angegeben wird, ist die erstellte Tabelle eine nicht protokollierte Tabelle. Weitere Informationen zu nicht protokollierten Tabellen finden Sie in der [[!DNL PostgreSQL] Dokumentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
-| `new_table` | Der Name der zu erstellenden Tabelle. |
+| `TEMPORARY` oder `TEMP` | Ein optionaler Parameter. If the parameter is specified, the created table is a temporary table. |
+| `UNLOGGED` | Ein optionaler Parameter. If the parameter is specified, the created table is an unlogged table. More information about unlogged tables can be found in the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `new_table` | The name of the table to be created. |
 
 **Beispiel**
 
-Die folgende Abfrage erstellt eine neue `films_recent`, die nur aus den letzten Einträgen der `films` besteht:
+The following query creates a new table `films_recent` consisting of only recent entries from the table `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -1119,7 +1119,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### SHOW
 
-Der Befehl `SHOW` zeigt die aktuelle Einstellung der Laufzeitparameter an. Diese Variablen können mithilfe der `SET`-Anweisung, durch Bearbeiten der `postgresql.conf`-Konfigurationsdatei, durch die `PGOPTIONS` Umgebungsvariable (bei Verwendung von libpq oder einer libpq-basierten Anwendung) oder durch Befehlszeilen-Flags beim Starten des Postgres-Servers festgelegt werden.
+The `SHOW` command displays the current setting of runtime parameters. These variables can be set using the `SET` statement, by editing the `postgresql.conf` configuration file, through the `PGOPTIONS` environmental variable (when using libpq or a libpq-based application), or through command-line flags when starting the Postgres server.
 
 ```sql
 SHOW name
@@ -1128,12 +1128,12 @@ SHOW ALL
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `name` | Der Name des Laufzeitparameters, zu dem Sie Informationen wünschen. Zu den möglichen Werten für den Laufzeitparameter gehören die folgenden Werte:<br>`SERVER_VERSION`: Dieser Parameter zeigt die Versionsnummer des Servers an.<br>`SERVER_ENCODING`: Dieser Parameter zeigt die Server-seitige Zeichensatzkodierung an.<br>`LC_COLLATE`: Dieser Parameter zeigt die Gebietsschema-Einstellung der Datenbank für die Sortierung (Textreihenfolge) an.<br>`LC_CTYPE`: Dieser Parameter zeigt die Gebietsschemaeinstellung der Datenbank für die Zeichenklassifizierung an.<br>`IS_SUPERUSER`: Dieser Parameter zeigt an, ob die aktuelle Rolle über Superuser-Berechtigungen verfügt. |
-| `ALL` | Zeigt die Werte aller Konfigurationsparameter mit Beschreibungen an. |
+| `name` | The name of the runtime parameter you want information about. Possible values for the runtime parameter include the following values:<br>`SERVER_VERSION`: This parameter shows the server&#39;s version number.<br>`SERVER_ENCODING`: This parameter shows the server-side character set encoding.<br>`LC_COLLATE`: This parameter shows the database&#39;s locale setting for collation (text ordering).<br>`LC_CTYPE`: This parameter shows the database&#39;s locale setting for character classification.<br>`IS_SUPERUSER`: This parameter shows if the current role has superuser privileges. |
+| `ALL` | Show the values of all configuration parameters with descriptions. |
 
 **Beispiel**
 
-Die folgende Abfrage zeigt die aktuelle Einstellung des `DateStyle`.
+The following query shows the current setting of the parameter `DateStyle`.
 
 ```sql
 SHOW DateStyle;
@@ -1146,9 +1146,9 @@ SHOW DateStyle;
 (1 row)
 ```
 
-### KOPIEREN
+### COPY
 
-Der Befehl `COPY` dupliziert die Ausgabe jeder `SELECT` Abfrage an einem angegebenen Speicherort. Der Benutzer muss Zugriff auf diesen Speicherort haben, damit dieser Befehl erfolgreich ist.
+The `COPY` command duplicates the output of any `SELECT` query to a specified location. The user must have access to this location for this command to succeed.
 
 ```sql
 COPY query
@@ -1158,20 +1158,20 @@ COPY query
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `query` | Die Abfrage, die Sie kopieren möchten. |
-| `format_name` | Das Format, in das Sie die Abfrage kopieren möchten. Die `format_name` kann `parquet`, `csv` oder `json` sein. Standardmäßig ist der Wert `parquet`. |
+| `query` | The query that you want to copy. |
+| `format_name` | The format that you want to copy the query in. The `format_name` can be one of `parquet`, `csv`, or `json`. By default, the value is `parquet`. |
 
 >[!NOTE]
 >
->Der vollständige Ausgabepfad ist `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>The complete output path is `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### TABELLE ÄNDERN {#alter-table}
+### ALTER TABLE {#alter-table}
 
-Mit dem Befehl `ALTER TABLE` können Sie Primär- oder Fremdschlüsseleinschränkungen hinzufügen oder ablegen und Spalten zur Tabelle hinzufügen.
+The `ALTER TABLE` command lets you add or drop primary or foreign key constraints and add columns to the table.
 
-#### EINSCHRÄNKUNG HINZUFÜGEN ODER ABLEGEN
+#### ADD or DROP CONSTRAINT
 
-Die folgenden SQL-Abfragen zeigen Beispiele für das Hinzufügen oder Ablegen von Einschränkungen zu einer Tabelle. Einschränkungen für Primäre Schlüssel und Fremdschlüssel können zu mehreren Spalten mit kommagetrennten Werten hinzugefügt werden. Sie können zusammengesetzte Schlüssel erstellen, indem Sie zwei oder mehr Werte für Spaltennamen übergeben, wie in den Beispielen unten dargestellt.
+The following SQL queries show examples of adding or dropping constraints to a table. Primary key and foreign key constraints can be added to multiple columns with comma-separated values. Sie können zusammengesetzte Schlüssel erstellen, indem Sie zwei oder mehr Werte für Spaltennamen übergeben, wie in den Beispielen unten dargestellt.
 
 **Definieren von Primärschlüsseln oder zusammengesetzten Schlüsseln**
 
@@ -1242,7 +1242,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Weitere Informationen finden Sie im Dokument zum [&#x200B; von Identitäten in Ad-hoc-Datensätzen](../data-governance/ad-hoc-schema-identities.md).
+Weitere Informationen finden Sie im Dokument zum [ von Identitäten in Ad-hoc-Datensätzen](../data-governance/ad-hoc-schema-identities.md).
 
 #### SPALTE HINZUFÜGEN
 

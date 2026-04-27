@@ -2,10 +2,10 @@
 title: Engineering-Funktionen für maschinelles Lernen
 description: Erfahren Sie, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln, die von einem maschinellen Lernmodell genutzt werden können. Verwenden Sie Data Distiller, um ML-Funktionen im benötigten Umfang zu berechnen und diese Funktionen für Ihre maschinelle Lernumgebung freizugeben.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 13%
+source-wordcount: '1146'
+ht-degree: 18%
 
 ---
 
@@ -146,7 +146,7 @@ df_features.head()
 
 **Beispielausgabe**
 
-|   | userId | EmailsReceived | emailsOpened | E-Mails angeklickt | productsViewed | propositionInteractions | Vorschlag abgelehnt | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
+|   | userId | EmailsReceived | emailsOpened | E-Mails angeklickt | productsViewed | propositionInteracts | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
@@ -156,9 +156,9 @@ df_features.head()
 
 {style="table-layout:auto"}
 
-#### Kombinieren von Kennzeichnungen und Funktionen in Abfragen {#combine-queries}
+#### Combine labels and features queries {#combine-queries}
 
-Schließlich können die Abfragebeschriftungen und die Abfragefeatures zu einer einzigen Abfrage kombiniert werden, die einen Trainings-Datensatz mit Beschriftungen und Funktionen zurückgibt:
+Finally, the labels query and the features query can be combined into a single query that returns a training dataset of labels and features:
 
 +++Auswählen, um Beispielabfrage anzuzeigen
 
@@ -229,28 +229,28 @@ df_training_set.head()
 
 **Beispielausgabe**
 
-|  | userId | eventType | Zeitstempel | subscriptionOccurred | EmailsReceived | emailsOpened | E-Mails angeklickt | productsViewed | propositionInteractions | Vorschlag abgelehnt | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
+|  | userId | eventType | Zeitstempel | subscriptionOccurred | EmailsReceived | emailsOpened | E-Mails angeklickt | productsViewed | propositionInteracts | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17.06.2023 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 19.06.2023:01:06.55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Keine | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19.06.2023 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Keine | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 21.06.2023 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21.06.2023 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Keine | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Keine | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
 
 {style="table-layout:auto"}
 
-## Erstellen einer Abfragevorlage zur inkrementellen Berechnung von Schulungsdaten
+## Create a query template to incrementally compute training data
 
-Es ist üblich, ein Modell regelmäßig mit aktualisierten Trainingsdaten neu zu trainieren, um die Genauigkeit des Modells über die Zeit hinweg aufrechtzuerhalten. Als Best Practice zur effizienten Aktualisierung Ihres Trainings-Datensatzes können Sie eine Vorlage aus Ihrer Trainings-Set-Abfrage erstellen, um neue Trainings-Daten inkrementell zu berechnen. Auf diese Weise können Sie Beschriftungen und Funktionen nur aus Daten berechnen, die seit der letzten Aktualisierung der Schulungsdaten zum ursprünglichen Erlebnisereignis-Datensatz hinzugefügt wurden, und die neuen Beschriftungen und Funktionen in den vorhandenen Schulungsdatensatz einfügen.
+It is typical to periodically retrain a model with updated training data to maintain accuracy of the model over time. As a best practice for efficiently updating your training dataset, you can create a template from your training set query to compute new training data incrementally. This allows you compute labels and features only from data that was added to the original Experience Events dataset since the training data was last updated, and insert the new labels and features into the existing training dataset.
 
-Dies erfordert einige Änderungen an der Trainings-Set-Abfrage:
+Doing so requires a few modifications to the training set query:
 
-- Fügen Sie Logik hinzu, um einen neuen Trainings-Datensatz zu erstellen, falls er nicht vorhanden ist, und fügen Sie andernfalls die neuen Beschriftungen und Funktionen in den vorhandenen Trainings-Datensatz ein. Dies erfordert eine Reihe von zwei Versionen der Trainings-Set-Abfrage:
-   - Verwenden Sie zunächst die Anweisung `CREATE TABLE IF NOT EXISTS {table_name} AS` .
-   - Verwenden Sie anschließend die `INSERT INTO {table_name}` für den Fall, dass der Trainings-Datensatz bereits vorhanden ist
-- Fügen Sie eine `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` Anweisung hinzu, um die Abfrage auf Ereignisdaten zu beschränken, die innerhalb eines bestimmten Intervalls hinzugefügt wurden. Das `$` Präfix für die Momentaufnahme-IDs gibt an, dass es sich um Variablen handelt, die bei der Ausführung der Abfragevorlage übergeben werden.
+- Add logic to create a new training dataset if it doesn&#39;t exist, and insert the new labels and features into the existing training dataset otherwise. This requires a series of two versions of the training set query:
+   - First, using the `CREATE TABLE IF NOT EXISTS {table_name} AS` statement
+   - Next, using the `INSERT INTO {table_name}` statement for the case where the training dataset already exists
+- Add a `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` statement to limit the query to event data that was added within a specified interval. The `$` prefix on the snapshot IDs indicates that thy are variables that will be passed in when the query template is executed.
 
-Das Anwenden dieser Änderungen führt zur folgenden Abfrage:
+Applying those changes results in the following query:
 
 +++Auswählen, um Beispielabfrage anzuzeigen
 
@@ -381,7 +381,7 @@ WHERE
 ORDER BY timestamp;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 
 END $$;
@@ -390,7 +390,7 @@ END $$;
 
 +++
 
-Schließlich speichert der folgende Code die Abfragevorlage in Data Distiller:
+Finally, the following code saves the query template in Data Distiller:
 
 ```python
 template_res = dd.createQueryTemplate({
@@ -407,7 +407,7 @@ print(f"Template for propensity training data created as ID {template_id}")
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
-Nachdem die Vorlage gespeichert wurde, können Sie die Abfrage jederzeit ausführen, indem Sie auf die Vorlagen-ID verweisen und den Bereich der Momentaufnahme-IDs angeben, die in die Abfrage aufgenommen werden sollen. Die folgende Abfrage ruft die Momentaufnahmen des ursprünglichen Erlebnisereignis-Datensatzes ab:
+With the template saved, you can execute the query at any time by referencing the template ID and specify the range of snapshot IDs that should be included in the query. The following query retrieves the snapshots of the original Experience Events dataset:
 
 ```python
 query_snapshots = f"""
@@ -422,7 +422,7 @@ ORDER BY snapshot_generation ASC
 df_snapshots = dd_cursor.query(query_snapshots, output="dataframe")
 ```
 
-Der folgende Code veranschaulicht die Ausführung der Abfragevorlage unter Verwendung der ersten und letzten Momentaufnahmen zur Abfrage des gesamten Datensatzes:
+The following code demonstrates execution of the query template, using the first and last snapshots to query the entire dataset:
 
 ```python
 snapshot_start_id = str(df_snapshots["snapshot_id"].iloc[0])
@@ -445,7 +445,7 @@ print(f"Query started successfully and got assigned ID {query_final_id} - it wil
 
 `Query started successfully and got assigned ID c6ea5009-1315-4839-b072-089ae01e74fd - it will take some time to execute`
 
-Sie können die folgende Funktion definieren, um den Status der Abfrage regelmäßig zu überprüfen:
+You can define the following function to periodically check the status of the query:
 
 ```python
 def wait_for_query_completion(query_id):
@@ -482,6 +482,6 @@ Query is still in progress, sleeping…
 Query completed successfully in 473.8 seconds
 ```
 
-## Nächste Schritte:
+## Next steps:
 
-Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Der nächste Schritt beim Erstellen von Funktions-Pipelines aus Experience Platform zum Einspeisen benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin, [Funktionsdatensätze zu exportieren](./export-data.md).
+By reading this document you have learned how to transform data in Adobe Experience Platform into features, or variables, that can be consumed by a machine learning model. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [export feature datasets](./export-data.md).
