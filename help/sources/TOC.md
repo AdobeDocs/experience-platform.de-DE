@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 79527635a61a43e2995f08d8c5981cd2030c5840
+source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1115'
 ht-degree: 88%
 
 ---
@@ -107,7 +107,6 @@ ht-degree: 88%
       - [Connector für den Upload lokaler Dateien](connectors/local-system/local-file-upload.md)
    - Treue {#loyalty}
       - [Kapillar-Streaming-Ereignisse](connectors/loyalty/capillary.md)
-      - [Kobie](tutorials/ui/create/loyalty/kobie.md)
       - [Talon.one](connectors/loyalty/talon-one.md)
    - Marketing-Automatisierung {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -323,6 +322,7 @@ ht-degree: 88%
          - [Lokaler Datei-Upload](tutorials/ui/create/local-system/local-file-upload.md)
       - Treue {#loyalty}
          - [Kapillar-Streaming-Ereignisse](tutorials/ui/create/loyalty/capillary.md)
+         - [Kobie-Streaming-Ereignisse](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Talon.one Streaming-Ereignisse](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Marketing-Automatisierung {#marketing-automation}
