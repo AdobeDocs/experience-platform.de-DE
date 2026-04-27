@@ -1,19 +1,25 @@
 ---
 title: Streamen von Daten von Kobie an Experience Platform mithilfe der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Daten von Kobie mithilfe der Benutzeroberfläche in Adobe Experience Platform streamen.
-badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 3cba7ab5ddadc0f3b940f25280eb66a85725d1a6
+exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 15%
+source-wordcount: '881'
+ht-degree: 14%
 
 ---
 
-# Streamen von Daten von [!DNL Kobie] an Experience Platform mithilfe der Benutzeroberfläche
+# Streamen von Daten von [!DNL Kobie Streaming Events] an Experience Platform mithilfe der Benutzeroberfläche
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre Daten mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von [!DNL Kobie] mit Adobe Experience Platform verbinden und streamen.
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)] ist eine hochgradig konfigurierbare, sichere und skalierbare MACH-Plattform, die sich an Ihre Treuestrategie anpasst - verkürzte Wertschöpfungszeit, verbesserte Effizienz und Schutz Ihrer Marke durch Governance auf Unternehmensniveau. Dank der nahtlosen Integrationen von CDPs, CRMs, CMS und mehr ermöglicht [!DNL KALC] Marketing-Experten die Bereitstellung von Echtzeit-Personalisierung über jeden Kanal hinweg und bietet gleichzeitig die Flexibilität und Rückverfolgbarkeit, sich mit wachsender Markentreue weiterzuentwickeln.
+
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihre Daten mithilfe des Arbeitsbereichs „Quellen“ in der Benutzeroberfläche von [!DNL Kobie Streaming Events] mit Adobe Experience Platform verbinden und streamen.
+
+>[!IMPORTANT]
+>
+>Informationen zum Einrichten und Zuordnen von Voraussetzungen erhalten Sie direkt von Ihrem [!DNL Kobie Client Services].
 
 ## Erste Schritte
 
@@ -23,10 +29,6 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-
->[!IMPORTANT]
->
->Lesen Sie die [[!DNL Kobie] Übersicht](../../../../connectors/loyalty/kobie.md), um mehr über die erforderlichen Schritte zu erfahren, die Sie durchführen müssen, bevor Sie Ihr -Konto mit Experience Platform verbinden.
 
 ## Navigieren im Quellkatalog
 

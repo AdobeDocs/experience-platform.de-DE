@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
+source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1113'
 ht-degree: 88%
 
 ---
@@ -107,8 +107,8 @@ ht-degree: 88%
       - [Connector für den Upload lokaler Dateien](connectors/local-system/local-file-upload.md)
    - Treue {#loyalty}
       - [Kapillar-Streaming-Ereignisse](connectors/loyalty/capillary.md)
-      - [Kobie](connectors/loyalty/kobie.md)
-      - [Talon.One](connectors/loyalty/talon-one.md)
+      - [Kobie](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - [Talon.one](connectors/loyalty/talon-one.md)
    - Marketing-Automatisierung {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -323,8 +323,6 @@ ht-degree: 88%
          - [Lokaler Datei-Upload](tutorials/ui/create/local-system/local-file-upload.md)
       - Treue {#loyalty}
          - [Kapillar-Streaming-Ereignisse](tutorials/ui/create/loyalty/capillary.md)
-         - [Kobie (Batch)](tutorials/ui/create/loyalty/kobie-batch.md)
-         - [Kobie (Streaming)](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Talon.one Streaming-Ereignisse](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Marketing-Automatisierung {#marketing-automation}
