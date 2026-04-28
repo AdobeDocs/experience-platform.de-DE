@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform – Versionshinweise März 2026
-description: Versionshinweise März 2026 für Adobe Experience Platform.
+title: Adobe Experience Platform - Versionshinweise April 2026
+description: Versionshinweise April 2026 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cd09f9e510052f6bae89ff730ba83aa16e95f193
+source-git-commit: 2baaee1b6279bfbef626c978f35b8e94a7f5370b
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 13%
+source-wordcount: '1622'
+ht-degree: 18%
 
 ---
 
@@ -18,71 +18,34 @@ ht-degree: 13%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/de/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/analytics-platform/using/releases/latest)
->- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/latest)
+>- [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Veröffentlichungsdatum: Mittwoch, 24. März 2026**
+**Veröffentlichungsdatum: 28. April 2026**
 
 Neue Funktionen und Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-- [Erweiterte Verwaltung des Datenlebenszyklus](#advanced-data-lifecycle-management)
-- [Agent Orchestrator](#agent-orchestrator)
-- [Kapazität](#capacity)
-- [Datenströme](#datastreams)
+- [Datenerfassung](#data-collection)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
-- [Echtzeit-Kundenprofil](#real-time-customer-profile)
-- [Segmentierungs-Service](#segmentation-service)
+- [Abfrage-Service](#query-service)
+- [Real-Time CDP](#rtcdp)
+- [Sandboxes](#sandboxes)
 - [Quellen](#sources)
 
-## Erweiterte Verwaltung des Datenlebenszyklus {#advanced-data-lifecycle-management}
+## Datenerfassung {#data-collection}
 
-Experience Platform bietet eine Reihe von Datenhygiene-Funktionen, mit denen Sie Ihre gespeicherten Daten durch programmgesteuerte Löschungen von Verbraucherdatensätzen verwalten können. Mithilfe des Datenlebenszyklus-Arbeitsbereichs in der Benutzeroberfläche oder Aufrufen der Datenhygiene-API können Sie Ihre Datenspeicher effektiv verwalten. Verwenden Sie diese Funktionen, um sicherzustellen, dass Informationen erwartungsgemäß verwendet werden, aktualisiert werden, wenn falsche Daten korrigiert werden müssen, und gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Löschen mehrerer Datensätze (nur API) | Löschen von Identitäten in einem, mehreren oder allen Datensätzen in einer einzigen API-Anfrage, wodurch die Datenhygiene-Workflows vereinfacht werden. Sie können das Löschen auch auf Profil-Services beschränken, sodass die Data-Lake-Datensätze unverändert bleiben. Weitere Informationen finden [&#x200B; im Handbuch zum Löschen von Arbeitsaufträgen &#x200B;](../../hygiene/api/workorder.md) Datensatz . |
-
-{style="table-layout:auto"}
-
-Weitere Informationen finden Sie im Abschnitt [Übersicht über das erweiterte Daten-Lifecycle-Management](../../hygiene/home.md).
-
-## Agent Orchestrator {#agent-orchestrator}
-
-Verwenden Sie Agent Orchestrator, um KI-gestützte Agenten zu erstellen und bereitzustellen, die Workflows automatisieren und kanalübergreifend mit Kunden interagieren.
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [Adobe Marketing Agent für [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] ist Ihr eingebetteter Agent, der Marketing-Intelligenz von Adobe direkt in alltägliche Tools wie [!DNL Teams], [!DNL Word], [!DNL PowerPoint] und andere [!DNL Microsoft 365]-Apps einbringt. Sie können diesen Agenten verwenden, um vertrauenswürdige Kampagneneinblicke aus Adobe-Programmen zu gewinnen, während Sie Kampagnen planen, Zielgruppen überprüfen, mit Kollegen zusammenarbeiten, um Kundenfragen zu beantworten, und um dateninformierte Entscheidungen zu treffen, ohne Ihren [!DNL Microsoft 365]-Workflow verlassen zu müssen. |
+| Build-Details anzeigen | Sie können jetzt entweder über eine Bibliothek oder eine Umgebung auf Builds und Build-Details zugreifen, um den derzeit aktiven Build anzuzeigen und die Inhalte (Erweiterungen, Datenelemente und Regeln) zu überprüfen. Weitere Informationen finden Sie unter [Builds - Übersicht](../../tags/ui/publishing/builds.md#build-details). |
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der Dokumentation zu [Agent Orchestrator](https://experienceleague.adobe.com/de/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
-
-## Kapazität {#capacity}
-
-Die Kapazität bietet einen umfassenden Überblick über die [Leitplanken](../../rtcdp/guardrails/overview.md) und gibt Empfehlungen dazu, wie potenzielle Kapazitätsverletzungen durch die Zuordnung Ihrer Kapazitäten auf Sandbox-Ebene behoben werden können.
-
-**Neue Funktion**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Edge-Segmentierungsdurchsatz | Sie können jetzt Leitplanken im Zusammenhang mit dem Durchsatz der Edge-Segmentierung sehen und verwalten. Weitere Informationen finden Sie im Abschnitt [Kapazitätsübersicht](/help/landing/license-usage-and-guardrails/capacity.md#edge-segmentation-throughput). |
-| Unterstützung für die Überwachung von Edge-Datenströmen | Die Echtzeit-Überwachung für Ihre Edge-Datenströme ist jetzt verfügbar und bietet Transparenz in Bezug auf Durchsatz und andere Metriken. Weitere Informationen finden Sie im [Handbuch zur Edge-Überwachung](/help/dataflows/ui/monitor-edge.md). |
-
-## Datenströme {#datastreams}
-
-Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs und der Adobe Experience Platform Edge Network Server-API dar. Der Befehl zur Datenstromkonfiguration in den SDKs verarbeitet alle Services, mit denen ein Client interagiert.
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Dynamische Datenstromkonfigurationen - allgemeine Verfügbarkeit | Dynamische Datenstromkonfigurationen sind jetzt allgemein verfügbar. Mit dynamischen Datenstromkonfigurationen können Sie benutzerkonfigurierbare Regelsätze für jeden Service definieren, der für Ihren Datenstrom aktiviert ist. Diese bestimmen, welche Experience Cloud-Lösung die einzelnen Datentypen erhalten soll. Weitere Informationen finden Sie [&#x200B; Handbuch &#x200B;](../../datastreams/configure-dynamic-datastream.md) dynamische Datenstromkonfigurationen . |
-
-{style="table-layout:auto"}
-
-Weitere Informationen finden Sie unter [Datenströme - Übersicht](../../datastreams/overview.md).
+Weitere Informationen finden Sie im Abschnitt [Übersicht über die Datenerfassung](../../tags/home.md).
 
 ## Ziele {#destinations}
 
@@ -92,23 +55,26 @@ Weitere Informationen finden Sie unter [Datenströme - Übersicht](../../datastr
 
 | Ziel | Beschreibung |
 | --- | --- |
-| [Regionsauswahl für Snowflake &#x200B;](../../destinations/catalog/warehouses/snowflake-batch.md)Batch) | Mit dem neuen durchsuchbaren Dropdown-Menü, in dem Suche und Dropdown zu einem Steuerelement kombiniert sind, können Sie Ihre Region jetzt einfacher finden. Diese Aktualisierung wird bis Ende März eingeführt. |
-| Neue Tabellenstruktur für [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md)-Ziele | In Ihrem Snowflake-Konto freigegebene Tabellen haben jetzt eine neue Struktur, die separate Spalten für Zielgruppennamen und Zielgruppenursprung enthält. Die neue Tabellenstruktur gilt für alle neuen Zielverbindungen, die in Zukunft eingerichtet werden. Für alle neu eingerichteten Verbindungen werden beide Tabellenstrukturen erstellt: Der neuen Struktur wird das Präfix V2 vorangestellt, und die alte Struktur wird bis Ende Juni 2026 beibehalten. Danach wird sie eingestellt. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](../../destinations/catalog/warehouses/snowflake-batch.md#exported-data) exportierten Daten in der Snowflake-Batch-Dokumentation. Diese Aktualisierung wird bis Ende März eingeführt. |
-| [Adobe Advertising DSP](../../destinations/catalog/advertising/adobe-advertising-dsp-connection.md)-Verbindung | Die neue Adobe Advertising DSP-Verbindung bietet dieselben Funktionen wie die alte Verbindung sowie Unterstützung für zusätzliche Identitäten. Mit dem neuen Connector können Sie auch Cookie-basierte Identitäten nach Adobe Advertising DSP exportieren. |
-| [FreeWheel](../../destinations/catalog/advertising/freewheel.md)-Verbindung | Senden Sie [!DNL Real-Time CDP] Zielgruppen als tägliche Batch-Dateien an FreeWheel, damit Sie sie in FreeWheel-Angeboten und -Kampagnen für TV, Video und Display ansprechen können. Wenden Sie sich an Ihr Adobe-Accountteam, um Zugriff zu erhalten. |
-| Unterstützung externer Zielgruppen für [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) und [Pinterest](../../destinations/catalog/advertising/pinterest.md) | Sie können jetzt Zielgruppen aus anderen Quellen als dem Segmentierungs-Service für das Trade Desk-CRM, Criteo und Pinterest aktivieren, einschließlich benutzerdefinierter Upload-Zielgruppen (importiert aus CSV), Lookalike-Zielgruppen, Federated-Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie [!DNL Adobe Journey Optimizer] erstellt wurden. Diese Aktualisierung wird bis Ende März eingeführt. Weitere Informationen finden Sie [&#x200B; Abschnitt &#x200B;](../../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“ auf der Katalogseite jedes Ziels. |
-| Erhöhte Begrenzung für benutzerdefinierte Upload-Zielgruppen | Sie können jetzt bis zu 20 benutzerdefinierte Upload-Zielgruppen pro Zielinstanz aktivieren. Zuvor war diese Grenze 10. Weitere Informationen finden Sie [&#x200B; Leitplanken &#x200B;](../../destinations/guardrails.md#batch-file-based-activation) Ziele . |
-| [Datei jetzt exportieren](../../destinations/ui/export-file-now.md) und [Ad-hoc-Aktivierungs-API](../../destinations/api/ad-hoc-activation-api.md)Unterstützung für externe Zielgruppen | Sie können jetzt beim Aktivieren für Batch-dateibasierte Ziele die API „Datei jetzt exportieren“ (UI) und die Ad-hoc-Aktivierungs-API mit externen Zielgruppen (z. B. benutzerdefiniertes Hochladen, Lookalike, Federated und Zielgruppen aus anderen Experience Platform-Programmen) verwenden. Diese Aktualisierung wird bis Ende März eingeführt. |
-| [HTTP-API](../../destinations/catalog/streaming/http-destination.md)-Ziele mit OAuth 2 und mTLS | Sie können jetzt HTTP-API-Ziele erstellen und authentifizieren, die OAuth 2 verwenden, wenn der Authentifizierungsendpunkt gegenseitiges TLS (mTLS) erfordert. Der Token-Abruf während der Zieleinrichtung unterstützt jetzt mTLS. Diese Aktualisierung wird bis Ende März eingeführt. |
+| [!BADGE Beta]{type=Informative} [Microsoft Ads-Kundenübereinstimmung](../../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Abgleichen von Kunden nach E-Mail-Adresse und erneutes Kontaktieren mit ihnen in der gesamten [!DNL Microsoft Advertising Network], einschließlich Suche und Zielgruppenanzeigen. Verknüpfen Sie Ihr [!DNL Microsoft Advertising]-Konto mit Real-Time CDP, um die Erstellung und Verwaltung von Kundenauswahllisten direkt aus Experience Platform zu automatisieren. Wenden Sie sich an Ihren Adobe-Kundenbetreuer, um Zugriff zu erhalten. |
+| [!BADGE Beta]{type=Informative} [Benutzerdefinierte Zielgruppe bearbeiten](../../destinations/catalog/advertising/reddit-custom-audience.md) | Senden von Zielgruppen von Experience Platform an [!DNL Reddit Ads]. Verbinden Sie Ihr [!DNL Reddit]-Konto, ordnen Sie Identitäten zu und aktivieren Sie Zielgruppen, um Personen zu erreichen, die ihre Interessen auf [!DNL Reddit] aktiv erkunden. |
+| [Amazon Ads v2](../../destinations/catalog/advertising/amazon-ads-v2.md) | Verwenden Sie die [!DNL Amazon Ads v2] für alle neuen [!DNL Amazon Ads]. [!DNL Amazon Ads v2] stellt eine Verbindung zu [!DNL Ads Data Manager] her, das erweiterte Identitätstypen, adressbezogene Felder und die Datenfreigabe über [!DNL Amazon Ads] Produkte hinweg unterstützt und so die Targeting- und Zielgruppen-Übereinstimmungsraten verbessert. Der vorhandene [!DNL Amazon Ads]-Connector im Katalog wurde in [(alt) umbenannt [!DNL Amazon Ads]](../../destinations/catalog/advertising/amazon-ads.md). Wenn Sie über eine bestehende Legacy-Verbindung verfügen, funktioniert sie weiterhin ohne erforderliche Änderungen. |
+| [[!DNL Rokt]](../../destinations/catalog/advertising/rokt.md) | Verwenden Sie [!DNL Rokt], um Experience Platform-Zielgruppen mit KI-gestützter Echtzeit-Entscheidungsfindung zu verbinden und so die Kampagnenleistung durch präziseres Targeting, Unterdrückung und Personalisierung zu verbessern. |
+| Unterstützung externer Zielgruppen für [Criteo](../../destinations/catalog/advertising/criteo.md) | Aktivieren Sie Zielgruppen aus anderen Ursprüngen als dem Segmentierungs-Service für [!DNL Criteo], einschließlich benutzerdefinierter Upload-Zielgruppen (importiert aus CSV), Lookalike-Zielgruppen, verbundener Zielgruppen und Zielgruppen, die in anderen Experience Platform-Programmen wie [!DNL Adobe Journey Optimizer] erstellt wurden. Weitere Informationen finden Sie [ Abschnitt ](../../destinations/catalog/advertising/criteo.md#supported-audiences)Unterstützte Zielgruppen“. Dieses Update wird bis Ende April eingeführt. |
+| [Acxiom-Zielgruppenverbindung](../../destinations/catalog/advertising/acxiom-audience-connection.md) | Das [!DNL Acxiom Audience Connection] ist jetzt allgemein verfügbar. Zielgruppen können mithilfe der [!DNL Acxiom's Real ID]-Technologie angereichert und für [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL Facebook], [!DNL Amazon], [!DNL Pinterest], [!DNL Vizio], [!DNL LG Ads], [!DNL Spectrum] und [!DNL Viant] aktiviert werden. |
+| [Acxiom Real ID-Zielgruppenverbindung](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Das [!DNL Acxiom Real ID Audience Connection] ist jetzt allgemein verfügbar. Aktivieren Sie damit Zielgruppen mithilfe von [!DNL Acxiom's Real ID] als Übereinstimmungsschlüssel für [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL Facebook], [!DNL Amazon], [!DNL Pinterest], [!DNL Vizio], [!DNL LG Ads], [!DNL Spectrum] und [!DNL Viant]. |
 
 {style="table-layout:auto"}
 
 **Fehlerbehebungen und Verbesserungen**
 
-| Fehlerbehebung | Beschreibung |
+| Korrigieren | Beschreibung |
 | --- | --- |
-| Hashing der [TikTok](../../destinations/catalog/social/tiktok.md)-Connector-Telefonnummern | Es wurde ein Problem behoben, bei dem aufgrund einer fehlerhaften Konfiguration in der Zielkarte Identitäten, die von Telefonnummern abgeleitet wurden, nicht für TikTok aktiviert wurden. Um von dieser Fehlerbehebung zu profitieren, richten Sie einen neuen Aktivierungsfluss ein oder entfernen Sie die Telefonnummern-Zuordnung aus Ihrem vorhandenen Fluss, speichern Sie sie und fügen Sie sie erneut hinzu. |
-| [Snowflake Streaming](../../destinations/catalog/warehouses/snowflake.md) und [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) Konto-ID-Validierung | Zum Schritt Konto-ID wurde ein Validator für reguläre Ausdrücke hinzugefügt. Wenn Sie Ihre ID eingeben, wird sie jetzt validiert, um sicherzustellen, dass die Organisations-ID und die Konto-ID im richtigen Format (durch einen Punkt getrennt) vorliegen. Diese Aktualisierung wird bis Ende März eingeführt. |
+| Neue `TS` für [Snowflake-Streaming](../../destinations/catalog/warehouses/snowflake.md)-Ziele | Das Ziel [Snowflake Streaming](../../destinations/catalog/warehouses/snowflake.md) enthält jetzt eine `TS` Zeitstempelspalte in der freigegebenen Tabelle, die anzeigt, wann jede Zeile zuletzt aktualisiert wurde. |
+| Monitoring-Unterstützung für [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md)-Ziele | Auf [ Seite „Datenflussausführungen](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) werden jetzt Metriken für [benutzerdefinierte Personalization](../../destinations/catalog/personalization/custom-personalization.md)-Ziele angezeigt. Zuvor waren diese Metriken für diesen Zieltyp nicht verfügbar. Verwenden Sie sie, um zu überprüfen, ob die Zielgruppen erwartungsgemäß aktiviert werden, und um Probleme zu diagnostizieren. <br> ![Für ein benutzerdefiniertes Personalization-Ziel werden Metriken zu Datenflussausführungen angezeigt, die aktivierte, ausgeschlossene und fehlgeschlagene Identitäten anzeigen.](../2026/assets/april/dataflow-run-custom-personalization.png "Metriken für Datenflussausführungen für benutzerdefinierte Personalization-Ziele."){zoomable="yes"} |
+| Anzahl der Profile im Überprüfungsschritt des Aktivierungs-Workflows | Der Überprüfungsschritt des Aktivierungs-Workflows zeigt jetzt die Profilanzahl für Zielgruppen an, die bereits aktiviert sind. Die Profilanzahl wird auch für [Streaming-Ziele](../../destinations/ui/activate-segment-streaming-destinations.md) angezeigt, nicht nur [Batch-Ziele](../../destinations/ui/activate-batch-profile-destinations.md). <br> ![Profilanzahl, die im Überprüfungsschritt des Aktivierungs-Workflows für bereits aktivierte und Streaming-Zielgruppen angezeigt wird.](../2026/assets/april/profile-count-review.png "Profilanzahl im Überprüfungsschritt des Aktivierungs-Workflows."){zoomable="yes"} |
+| Sichtbarkeit des [!DNL Pinterest]-Tokens | Das [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md)-Ziel zeigt jetzt das Token-Ablaufdatum an, sodass Sie sehen können, wann eine erneute Authentifizierung erforderlich ist. [!DNL Pinterest]-Token laufen alle 30 Tage ab. Wenn ein Token abläuft, funktionieren Datenexporte nicht mehr. Um Unterbrechungen zu vermeiden, [Aktualisieren Sie Ihre Authentifizierungsdaten](../../destinations/catalog/advertising/pinterest.md#refresh-authentication-credentials) bevor das Token abläuft. |
+| Exportdatei ist jetzt für abgelaufene Zeitpläne deaktiviert | Wenn Ihr Zielgruppen-Zeitplan abgelaufen ist, ist **[!UICONTROL Export file now]** jetzt deaktiviert, bevor Sie versuchen, ihn zu verwenden, und in einer QuickInfo wird erläutert, warum. Zuvor führte die Auswahl der Aktion zu einem Fehler. <br> ![Die Aktion „Datei exportieren“ wurde jetzt mit einer QuickInfo deaktiviert, die erklärt, warum die Aktion nicht verfügbar ist.](../2026/assets/april/export-file-now-disabled.png "Die Aktion „Datei exportieren“ ist jetzt deaktiviert."){zoomable="yes"} |
+| Fehlerbehebung bei der Spaltensichtbarkeit im Aktivierungs-Workflow | Es wurde ein Problem behoben, bei dem das Ändern sichtbarer Spalten in einer Tabelle fälschlicherweise andere Tabellen im Aktivierungs-Workflow beeinflusste. |
 
 {style="table-layout:auto"}
 
@@ -120,64 +86,71 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| XDM-Entitätsaktionen und Löschunterstützung | Greifen Sie auf Aktionen für Schemata, Klassen, Feldergruppen und Datentypen direkt über Inline-Tabellenmenüs und Detailseiten-Kopfzeilenmenüs zu. Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie auch die Entitäten Ihrer Organisation löschen, wenn sie nicht von Datensätzen verwendet und nicht für Profil aktiviert sind. Weitere Informationen finden Sie [&#x200B; Handbuch zur XDM](../../xdm/ui/explore.md)Benutzeroberfläche . |
+| Verbesserungen bei der Nutzung und Erkennung von Feldergruppen | Zeigen Sie direkt in der Benutzeroberfläche an, welche Schemata eine Feldergruppe verwenden und auf Metadaten wie kompatible Klassen, erforderliche Attribute und Governance-Kennzeichnungen zugreifen. Sie können Feldergruppen auch nach Klassenkompatibilität und Branchen-Tags filtern, um relevante Ressourcen effizienter zu ermitteln und die Auswirkungen zu bewerten, bevor Sie Änderungen vornehmen. Weitere Informationen finden [ im Handbuch zu ](../../xdm/ui/explore.md#explore-field-groups.md) . |
 
 Weitere Informationen finden Sie in der [XDM-Übersicht](../../xdm/home.md).
 
-## Echtzeit-Kundenprofil {#real-time-customer-profile}
+## Abfrage-Service {#query-service}
 
-Das Echtzeit-Kundenprofil liefert Ihnen einen vollständigen Überblick über jeden einzelnen Kunden, indem es Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieterdaten, kombiniert. Mit dem Profil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
-
-**Neue oder aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Ereignisse | Sie können jetzt die Lookback-Periode von Ereignissen beim Durchsuchen Ihrer Profile festlegen. Auf diese Weise können Sie die Ereignisse anzeigen, mit denen das Profil für den angegebenen Zeitraum verknüpft ist. Weitere Informationen finden Sie im [Handbuch zur Profil-Benutzeroberfläche](../../profile/ui/user-guide.md#events). |
-
-{style="table-layout:auto"}
-
-Weitere Informationen finden Sie in der [[!DNL Real-Time Customer Profile] Übersicht](../../profile/home.md).
-
-## Ausführung und Bedienung {#run-and-operate}
-
-Überprüfen, beheben und optimieren Sie Ihre Experience Platform-Implementierungen mit den Tools „Ausführen und Bedienen“. Gewinnen Sie Einblicke in geplante Batch-Aktivierungen, identifizieren Sie Konfigurationsprobleme und verbessern Sie die Systemzuverlässigkeit.
+Verwenden Sie den Abfrage-Service, um Daten in Adobe Experience Platform [!DNL Data Lake] mit Standard-SQL abzufragen. Schließen Sie beliebige Datensätze aus dem [!DNL Data Lake] zusammen und erfassen Sie Abfrageergebnisse als neuen Datensatz für Berichte, Data Science Workspace oder die Aufnahme in das Echtzeit-Kundenprofil.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [Vorgangszeitpläne](../../run-and-operate/job-schedules.md) allgemeine Verfügbarkeit | [!DNL Job Schedules] bietet eine einheitliche Ansicht aller geplanten Batch-Verarbeitungsaufträge in Ihrer Datenpipeline, von der Aufnahme bis zur Zielaktivierung. Überprüfen Sie den Ausführungsstatus, ermitteln Sie Planungskonflikte und diagnostizieren Sie Konfigurationsprobleme, bevor sie sich auf Ihre Geschäftsvorgänge auswirken. |
-| [Konsistenzprüfungen](../../run-and-operate/health-checks.md) allgemeine Verfügbarkeit | Schlechte Schema- und Identitätskonfigurationen führen zu erheblichen nachgelagerten Problemen, einschließlich falscher Profilerstellung, fehlgeschlagener Segmentqualifikation und ungenauer Aktivierung. <br>Konsistenzprüfungen ändern Ihren Ansatz von der reaktiven Fehlerbehebung zu proaktiver, präventiver Wartung. Konsistenzprüfungen sind stets aktive Scans Ihrer Schemata und Identitäten, die in Ihrer Sandbox verwendet werden, und bieten eine Zusammenfassung von Problemen, die Sie zur Untersuchung und Fehlerbehebung verwenden können. |
+| Sitzungsverwaltung des Abfrage-Service | Zeigen Sie auf der Registerkarte [!UICONTROL Admin] aktive Sitzungen des Abfrage-Service an und beenden Sie diese, um die Nutzung zu überwachen und die Sitzungskapazität im Leerlauf zu nutzen. Auf diese Weise können Administratoren zuverlässige Data Distiller-Workflows aufrechterhalten, indem sie Kapazitäten aus inaktiven Sitzungen zurückgewinnen. Weitere Informationen finden Sie [ Handbuch ](../../query-service/ui/session-management.md) Verwalten von Query Service-Sitzungen . |
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der [Übersicht über Ausführung und Betrieb](../../run-and-operate/overview.md), [Prüfen von &#x200B;](../../run-and-operate/job-schedules.md) und im [Handbuch zur Platform-Benutzeroberfläche](../../landing/ui-guide.md).
+Weitere Informationen finden Sie unter [Query Service - Übersicht](../../query-service/home.md).
 
-## Segmentierungs-Service {#segmentation-service}
+## Real-Time CDP {#rtcdp}
 
-[!DNL Segmentation Service] definiert eine bestimmte Teilmenge von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Zielgruppen können auf Datensatzdaten (z. B. demografische Informationen) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+Real-Time CDP bietet einheitliche, umsetzbare Kundenprofile, indem Daten über mehrere Kanäle hinweg in Echtzeit aufgenommen, verarbeitet und aktiviert werden. Mit Real-Time CDP können Unternehmen von Experience Platform aus bestehende Datenquellen verbinden, umfangreiche Zielgruppen erstellen und aktivieren und eine datenschutzkonforme Aktivierung über Ziele hinweg sicherstellen. Dadurch können Marketing-Experten, Analysten und IT-Teams ihren Kunden durch nahtlose, kanalübergreifende Marketing-Kampagnen hochgradig personalisierte, zeitnahe Erlebnisse bereitstellen.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
-| ------- | ----------- |
-| Aufnahmetyp | Sie können jetzt den Aufnahmetyp Ihrer Attribute anzeigen. Auf diese Weise erfahren Sie, woher Ihre Daten stammen, und können so bessere Zielgruppen erstellen. Weitere Informationen zu dieser Funktion finden Sie im [Segment Builder-Handbuch](../../segmentation/ui/segment-builder.md). |
-| Zusammenfassungsdaten | Sie können jetzt die Zusammenfassungsdaten für Ihre Attribute für Konto- und personenbasierte Zielgruppen anzeigen. Weitere Informationen zu dieser Funktion in Konto-Zielgruppen finden Sie im Handbuch zu [&#x200B; . &#x200B;](../../rtcdp/segmentation/audience-builder.md) Weitere Informationen zu dieser Funktion in personenbasierten Zielgruppen finden Sie im [Segment Builder-Handbuch](../../segmentation/ui/segment-builder.md). |
+| --- | --- |
+| Real-Time CDP MCP (Beta) | Verwenden Sie den [Real-Time CDP MCP](../../rtcdp/rtcdp-mcp.md), um Real-Time CDP in KI-Agenten und MCP-kompatible Clients zu integrieren, sodass Sie direkt über Ihr natives LLM-Erlebnis mit Real-Time CDP-Tools interagieren können. Durch Verbinden eines MCP-kompatiblen Clients (z. B. Claude, ChatGPT, Claude Code, Codex, Cursor oder VS Code) mit dem von Ihrem Adobe-Support-Mitarbeiter bereitgestellten Endpunkt können Sie eine natürliche Sprache verwenden, um Zielgruppen, Zielkonfigurationen und den Ausführungsverlauf der Aktivierung zu überprüfen, ohne Experience Platform-REST-API-Aufrufe zu schreiben oder durch mehrere UI-Workflows zu navigieren. Nach Abschluss einer Browser-basierten Adobe-Anmeldung haben Sie schreibgeschützten Zugriff auf Tools, darunter: <ul><li>Durchsuchen vorhandener Zielgruppen</li><li>Vorschau der Zielgruppenzugehörigkeit</li><li>Auflisten der Zieltypen</li><li>Auflisten der konfigurierten Konten</li><li>Auflisten der konfigurierten Ziele</li><li>Auflisten von Source-Verbindungen</li><li>Auflisten der Zielverbindungen</li><li>Überprüfen von Aktivierungsdurchgängen</li></ul>. Für jede Anfrage sind `imsOrgId`- und `sandboxName` erforderlich, um sicherzustellen, dass Aktionen für Ihre Organisation und Sandbox gelten. **Hinweis**: Schreibvorgänge werden in dieser Beta-Version nicht unterstützt. |
 
-Weitere Informationen finden Sie in der [[!DNL Segmentation Service] Übersicht](../../segmentation/home.md).
+{style="table-layout:auto"}
+
+Weiterführende Informationen finden Sie in der Übersicht zu [Real-Time CDP](../../rtcdp/home.md).
+
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Eilexemplar | Verwenden Sie Express Copy , um Objekte in einer einzigen Aktion von der Sandbox-[-Benutzeroberfläche in eine Ziel-Sandbox zu ](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Abhängige Objekte werden automatisch erkannt und in der Ziel-Sandbox erstellt oder wiederverwendet, wenn sie bereits vorhanden sind. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen finden Sie unter [Sandbox-Übersicht](../../sandboxes/home.md).
 
 ## Quellen {#sources}
 
-Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Verwenden Sie diese Quellverbindungen, um sich zu authentifizieren und eine Verbindung zu externen Speichersystemen und CRM-Services herzustellen, Zeiten für Aufnahmedurchgänge festzulegen und den Datenaufnahmedurchsatz zu verwalten.
+Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
 **Neue oder aktualisierte Quellen**
 
 | Quelle | Beschreibung |
 | --- | --- |
-| Neue IP-Adressen zur Zulassungsliste | Neue IP-Adressen für GBR9: Großbritannien wurde in die Liste der Adressen aufgenommen, die erfolgreich mit Experience Platform auf Azure verbunden werden müssen. Weitere Informationen finden Sie in der Liste [Handbuch zur IP](../../sources/ip-address-allow-list.md#gbr9-united-kingdom)Zulassungsliste). |
-| Verbesserte Unterstützung für Change Data Capture | Sie können jetzt die Änderungsdatenerfassung mit den [!DNL Marketo Engage]-, [!DNL Microsoft Dynamics]- und [!DNL Salesforce CRM] verwenden. |
-| Verbessertes Authentifizierungshandbuch für [[!DNL Google BigQuery]](../../sources/connectors/databases/bigquery.md) | Das Authentifizierungshandbuch für die [!DNL Google BigQuery] wurde um die folgenden Informationen erweitert: <ul><li>Die erforderlichen Bereiche für das Aktualisierungs-Token.</li><li>Die für die [!DNL Google] Identität erforderlichen IAM-Rollen.</li><li>Zusätzliche Anleitungen zur Verwendung von `largeResultsDataSetId`.</li></ul> |
+| [!BADGE Beta]{type=Informative} [!DNL Talon.One] | Die [[!DNL Talon.One] Quelle](../../sources/connectors/loyalty/talon-one.md) für Experience Platform ist jetzt sowohl im Batch- als auch im Streaming-Modus verfügbar. Verwenden Sie die [[!DNL Talon.One Batch Source Connector]](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md), um regelmäßig geschlossene Sitzungen und frühere Treuetransaktionen aufzunehmen, und die [[!DNL Talon.One Streaming Events]](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md), um [!DNL Talon.One] Ereignisse nahezu in Echtzeit in Experience Platform zu importieren. Gemeinsam erleichtern sie das Laden und Aktivieren [!DNL Talon.One] Treueprogramm-Daten in Real-Time CDP, Adobe Journey Optimizer und Offer Decisioning. |
+| Filterunterstützung auf Zeilenebene für [!DNL Salesforce], die SOQL verwenden | Sie können jetzt [!DNL Salesforce] SOQL-Filter (Object Query Language) direkt in [!DNL Salesforce] Quellverbindungen anwenden, sodass Sie Daten auf Zeilenebene einschränken können, bevor sie in Experience Platform aufgenommen werden. Verwenden Sie die -Funktion, um: <ul><li>Definieren von SOQL-WHERE-Klausel-Stilbedingungen für Salesforce-Objekte (z. B. führt nur mit E-Mail != null oder Opportunities in bestimmten Phasen)</li><li>Die Aufnahme auf die Zeilen beschränken, die Ihren Kriterien entsprechen, wodurch unnötige Datenverschiebung, Speicherung und nachgelagerte Verarbeitung reduziert werden</li><li>Die Experience Platform-Aufnahme enger an den Regeln für den Datenzugriff und die Compliance in Ihrem CRM auszurichten, indem kontrolliert wird, welche Datensätze an der Quelle in Experience Platform importiert werden</li></ul>. Weitere Informationen finden Sie im Handbuch unter [Filterung auf Zeilenebene nach Quellen](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie unter [Quelle – Übersicht](../../sources/home.md).
+
+<!--
+
+| Data Distiller Accelerators | Run and schedule Adobe-managed, parameterized SQL templates in the Query Service UI to perform common analyses without writing SQL. This helps you standardize analytics workflows and reuse trusted query logic across your organization. See the [Data Distiller accelerators guide](../../query-service/ui/accelerators.md) for more details. |
+
+| Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
+
+--->
