@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+source-git-commit: 343f9e9fa01b06196106126235508059836e391c
 workflow-type: tm+mt
-source-wordcount: '1345'
-ht-degree: 71%
+source-wordcount: '1413'
+ht-degree: 69%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 71%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -71,7 +71,7 @@ ht-degree: 71%
       * [(Legacy) (V2) Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
       * [Marketo Engage Person Sync connection](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate-Verbindung](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Zielgruppenfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
+      * [Experience Platform-Zielgruppenfreigabe](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
       * [Verbindung mit Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Werbeziele{#advertising}
       * [Verbindung mit Acxiom-Zielgruppe](./catalog/advertising/acxiom-audience-connection.md)
@@ -116,6 +116,7 @@ ht-degree: 71%
       * [Pinterest-Verbindungs-Upgrade](./catalog/advertising/pinterest-upgrade.md)
       * [PubMatic Connect-Verbindung](./catalog/advertising/pubmatic.md)
       * [(Beta) Reddit Custom Audience Connection](./catalog/advertising/reddit-custom-audience.md)
+      * [Stammverbindung](./catalog/advertising/rokt.md)
       * [Snapchat Ads-Verbindung](./catalog/advertising/snap-inc.md)
       * [Verbindung mit The Trade Desk](./catalog/advertising/tradedesk.md)
       * [The Trade Desk CRM-Verbindung](./catalog/advertising/tradedesk-emails.md)
@@ -175,7 +176,7 @@ ht-degree: 71%
       * [Marketo-Erweiterung](./catalog/email/marketo.md)
       * [Marketo Munchkin-Erweiterung](./catalog/email/marketo-munchkin.md)
       * [PebblePost-Erweiterung](./catalog/email/pebblepost.md)
-   * E-Mail-Marketing-Ziele  {#email-marketing}
+   * E-Mail-Marketing-Ziele {#email-marketing}
       * [E-Mail-Marketing-Ziele – Übersicht](./catalog/email-marketing/overview.md)
       * [Adobe Campaign-Verbindung](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services-Verbindung](./catalog/email-marketing/adobe-campaign-managed-services.md)
@@ -287,7 +288,7 @@ ht-degree: 71%
          * [Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Konfigurieren eines dateibasierten Ziels zum Exportieren von potenziellen Zielgruppen](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * API-Referenz zur Zielerstellung {#authoring-api}
-      * [API-Referenz zum Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [API-Referenz für Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Vorgänge des Ziel-Servers {#server-operations}
          * [Erstellen einer Ziel-Server-Konfiguration](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [Abrufen einer Ziel-Server-Konfiguration](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
