@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 343f9e9fa01b06196106126235508059836e391c
+source-git-commit: a90c6cde6d1052f068265a92fc27e32ad87cd0f1
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1414'
 ht-degree: 69%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 69%
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=de#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Handbücher zur Benutzeroberfläche {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
@@ -75,7 +75,7 @@ ht-degree: 69%
       * [Verbindung mit Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Werbeziele{#advertising}
       * [Verbindung mit Acxiom-Zielgruppe](./catalog/advertising/acxiom-audience-connection.md)
-      * [Acxiom RealID-Zielgruppenverbindung](./catalog/advertising/acxiom-real-id-audience-connection.md)
+      * [Acxiom Real ID™-Zielgruppenverbindung](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising DSP-Verbindung](./catalog/advertising/adobe-advertising-dsp-connection.md)
       * [Veraltete Adobe Advertising DSP-Verbindung](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
