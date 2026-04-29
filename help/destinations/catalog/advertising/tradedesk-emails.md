@@ -1,12 +1,12 @@
 ---
 title: The Trade Desk - CRM-Verbindung
 description: Profile für Ihr Trade Desk-Konto aktivieren, um Zielgruppen-Targeting und -Unterdrückung auf der Grundlage von CRM-Daten durchzuführen.
-last-substantial-update: 2025-01-16T00:00:00Z
+last-substantial-update: 2026-04-29T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: a052203dce4949bc795fe181821a8d890c341673
 workflow-type: tm+mt
-source-wordcount: '1799'
-ht-degree: 8%
+source-wordcount: '1861'
+ht-degree: 9%
 
 ---
 
@@ -39,11 +39,11 @@ Dieser Connector sendet Daten zur Aktivierung von Erstanbieter-Daten an [!DNL Th
 
 ## Anforderungen für den ID-Abgleich {#id-matching-requirements}
 
-Je nach Typ der IDs, die Sie in [!DNL Adobe Experience Platform] aufnehmen, müssen Sie die entsprechenden Anforderungen erfüllen. Weitere Informationen finden [&#x200B; in der Übersicht &#x200B;](/help/identity-service/features/namespaces.md) Identitäts-Namespaces .
+Je nach Typ der IDs, die Sie in [!DNL Adobe Experience Platform] aufnehmen, müssen Sie die entsprechenden Anforderungen erfüllen. Weitere Informationen finden [ in der Übersicht ](/help/identity-service/features/namespaces.md) Identitäts-Namespaces .
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL The Trade Desk] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+[!DNL The Trade Desk] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 [!DNL Adobe Experience Platform] unterstützt sowohl ungehashte als auch gehashte E-Mail-Adressen und Telefonnummern. Befolgen Sie die Anweisungen im Abschnitt Anforderungen an den ID-Abgleich und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen.
 
@@ -72,7 +72,7 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[&#x200B; (Segmentierungs-Service) generiert &#x200B;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den Experience Platform-[ (Segmentierungs-Service) generiert ](../../../segmentation/home.md). |
 | Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-Zielgruppen [importiert](../../../segmentation/ui/audience-portal.md#import-audience) aus CSV-Dateien in Experience Platform,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> Zielgruppen, die in anderen Experience Platform-Apps wie Adobe Journey Optimizer generiert wurden, </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
@@ -101,10 +101,9 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hashen, stellen 
 * Wandeln Sie alle ASCII-Zeichen in Kleinbuchstaben um.
 * Entfernen Sie in `gmail.com` E-Mail-Adressen die folgenden Zeichen aus dem Teil Benutzername der E-Mail-Adresse:
 
-      * Der Zeitraum (“.„) Zeichen (ASCII-Code 46). Normalisieren Sie beispielsweise &quot;jane.doe@gmail.com&quot; auf &quot;janedoe@gmail.com&quot;.
+      * Zeichen des Zeitraums (“.„) (ASCII-Code 46). Normalisieren Sie beispielsweise &quot;jane.doe@gmail.com&quot; auf &quot;janedoe@gmail.com&quot;.
      * Das Pluszeichen (`+`) (ASCII-Code 43) und alle nachfolgenden Zeichen. Normalisieren Sie beispielsweise &quot;janedoe+home@gmail.com&quot; auf &quot;janedoe@gmail.com&quot;.
   
-
 ## Normalisierungs- und Hash-Anforderungen für Telefonnummern {#phone-hashing}
 
 Hier finden Sie, was Sie über das Hochladen von Telefonnummern wissen müssen:
@@ -124,10 +123,10 @@ Im Folgenden finden Sie Informationen zu den Normalisierungsanforderungen für T
 * E.164-Telefonnummern können maximal 15 Stellen haben.
 * Normalisierte E.164-Telefonnummern verwenden die folgende Syntax: `[+][country code][subscriber number including area code]` ohne Leerzeichen, Bindestriche, Klammern oder andere Sonderzeichen. Im Folgenden finden Sie einige Beispiele:
 
-      * US: 1 (234) 567-8901 wird auf +12345678901 normalisiert.
-     * Singapur: 65 1243 5678 wird auf +6512345678 normalisiert.
-     * Australien: Handy-Nummer 0491 570 006 ist normalisiert, um den Länder-Code hinzuzufügen und die führende Null: +61491570006.
-     * GB: Mobiltelefonnummer 07812 345678 wird normalisiert, um den Ländercode hinzuzufügen und die führende Null zu löschen: +447812345678.
+      * US: 1 (234) 567-8901 wird normalisiert auf +12345678901.
+     * Singapur: 65 1243 5678 wird normalisiert auf +6512345678.
+     * Australien: Mobiltelefonnummer 0491 570 006 wird normalisiert, um den Ländercode hinzuzufügen und die führende Null zu löschen: +61491570006.
+     * UK: Mobiltelefonnummer 07812 345678 wird normalisiert, um den Ländercode hinzuzufügen und die führende Null zu löschen: +447812345678.
   
 Stellen Sie sicher, dass die normalisierte Telefonnummer UTF-8 lautet, nicht ein anderes Kodierungssystem wie UTF-16.
 
@@ -156,6 +155,10 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>Die **[Datei jetzt exportieren](/help/destinations/ui/export-file-now.md)**-Funktion ist für [!DNL The Trade Desk] CRM-Ziel nicht verfügbar. Verwenden Sie zum Exportieren von Zielgruppen den [geplanten täglichen Batch-Export](#activate).
+
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 ### Beim Ziel authentifizieren {#authenticate}
@@ -173,16 +176,16 @@ Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen S
 
 Screenshot der ![Experience Platform-Benutzeroberfläche mit Informationen zum Ausfüllen der Zieldetails.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Weitere Einzelheiten finden Sie in der [&#x200B; zu Experience Platform &#x200B;](/help/data-governance/policies/overview.md)Übersicht zu Data Governance).
+Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Weitere Einzelheiten finden Sie in der [ zu Experience Platform ](/help/data-governance/policies/overview.md)Übersicht zu Data Governance).
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Anweisungen [&#x200B; Aktivieren von Zielgruppen für ein Ziel finden Sie &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
+Anweisungen [ Aktivieren von Zielgruppen für ein Ziel finden Sie ](/help/destinations/ui/activate-batch-profile-destinations.md)Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele“.
 
 Auf der Seite **[!UICONTROL Scheduling]** können Sie den Zeitplan und die Dateinamen für jede Audience konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
 
