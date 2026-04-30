@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie einen vorhandenen Quell-Datenfluss in der Experience Platform-Benutzeroberfläche aktualisieren.
 title: Aktualisieren eines Source-Verbindungsdatenflusses in der Benutzeroberfläche
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
+source-git-commit: 2139566a7c44de8736f7433ba826796dad44715f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '893'
 ht-degree: 9%
 
 ---
@@ -33,7 +33,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigations
 
 >[!TIP]
 >
->Mit Filterfunktionen können Sie Ihre Datenflüsse sortieren und filtern. Weitere Informationen finden Sie [&#x200B; Handbuch unter „Filtern von Quellobjekten in &#x200B;](./filter.md) Benutzeroberfläche“.
+>Mit Filterfunktionen können Sie Ihre Datenflüsse sortieren und filtern. Weitere Informationen finden Sie [ Handbuch unter „Filtern von Quellobjekten in ](./filter.md) Benutzeroberfläche“.
 
 Auf der Seite [!UICONTROL Dataflows] wird eine Liste aller vorhandenen Datenflüsse in Ihrer Organisation angezeigt. Suchen Sie den Datenfluss, den Sie aktualisieren möchten, und wählen Sie die Auslassungspunkte (`...`) daneben aus. Es wird ein Dropdown-Menü mit einer Liste von Optionen angezeigt, aus denen Sie auswählen können, um zusätzliche Konfigurationen an Ihrem vorhandenen Datenfluss vorzunehmen.
 
@@ -47,7 +47,7 @@ Sie werden zum Quellen-Workflow weitergeleitet, in dem Sie Aspekte Ihres Datenfl
 
 >[!NOTE]
 >
->Die Funktion „Zuordnung bearbeiten“ wird derzeit für die folgenden Quellen nicht unterstützt: Adobe Analytics, Adobe Audience Manager, HTTP-API und [!DNL Marketo Engage].
+>Die Funktion „Zuordnung bearbeiten“ wird derzeit für die folgenden Quellen nicht unterstützt: Adobe Analytics, Adobe Audience Manager und HTTP-API.
 
 Während dieses Vorgangs können Sie auch die mit Ihrem Datenfluss verknüpften Zuordnungssätze aktualisieren.  In der Zuordnungsschnittstelle wird die vorhandene Zuordnung Ihres Datenflusses angezeigt und nicht ein neuer empfohlener Zuordnungssatz. Zuordnungsaktualisierungen werden nur auf Datenflussausführungen angewendet, die in der Zukunft geplant sind. Bei einem Datenfluss, der für eine einmalige Aufnahme geplant war, können die Zuordnungssätze nicht aktualisiert werden.
 
