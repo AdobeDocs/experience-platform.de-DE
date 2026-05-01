@@ -3,9 +3,9 @@ title: Bombora Intent
 description: Erfahren Sie mehr über die Bombora Intent-Quelle auf Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1775'
 ht-degree: 11%
 
 ---
@@ -42,7 +42,7 @@ Lesen Sie die folgenden Abschnitte für erforderliche Schritte, bevor Sie [!DNL 
 
 ### Zulassungsliste von IP-Adressen
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie [&#x200B; Seite &#x200B;](../../ip-address-allow-list.md)IP-Adresse“.
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie [ Seite ](../../ip-address-allow-list.md)IP-Adresse“.
 
 ### Konfigurieren von Berechtigungen für Experience Platform
 
@@ -195,7 +195,7 @@ Wenn eine Unternehmens-Domain aktualisiert wird, wird der neue Domain-Wert bei d
 
 +++Antwort
 
-Der Domain-Abgleich in Experience Platform basiert auf einer exakten Übereinstimmung des bereinigten Domain-Feldwerts. Experience Platform entfernt automatisch Präfixe (z. B. https:/<span>/www.) und behält die Domain auf oberster Ebene (z. B. adobe.com) bei. Für den Abgleich ist ein exakter Domain-Wert erforderlich, ohne Unterstützung für Fuzzy-Abgleich oder Subdomains.
+Der Domain-Abgleich in Experience Platform basiert auf einer exakten Übereinstimmung des bereinigten Domain-Feldwerts. Experience Platform entfernt automatisch Präfixe (z. B. https:/<span>/www.) und behält die Domain auf oberster Ebene bei (z. B. adobe.com). Für den Abgleich ist ein exakter Domain-Wert erforderlich, ohne Unterstützung für Fuzzy-Abgleich oder Subdomains.
 
 +++
 
@@ -203,6 +203,29 @@ Der Domain-Abgleich in Experience Platform basiert auf einer exakten Übereinsti
 
 +++Antwort
 
-Absichtsdaten können in &quot;[-Zielgruppen“ verwendet werden, &#x200B;](../../../segmentation/types/account-audiences.md) Targeting, Segmentierung und Personalisierung zu verbessern. Durch die Nutzung von Intent-Signalen können Unternehmen Accounts identifizieren und mit ihnen interagieren, die ein hohes Interesse an bestimmten Themen zeigen, und so Marketing- und Verkaufsaktivitäten optimieren.
+Absichtsdaten können in &quot;[-Zielgruppen“ verwendet werden, ](../../../segmentation/types/account-audiences.md) Targeting, Segmentierung und Personalisierung zu verbessern. Durch die Nutzung von Intent-Signalen können Unternehmen Accounts identifizieren und mit ihnen interagieren, die ein hohes Interesse an bestimmten Themen zeigen, und so Marketing- und Verkaufsaktivitäten optimieren.
+
++++
+
+### Ist die [!DNL Account Key] Standardfeldgruppe mit dem [!DNL Bombora Account Intent] kompatibel?
+
++++Antwort
+
+Nein. Verwenden Sie das Feld `accountID` , um Beziehungen zum Schema B2B-Konto herzustellen. Dadurch wird vermieden, dass die gesamte Feldergruppe entweder im Referenzierungs- oder Quellschema eingeführt werden muss.
++++
+
+### Wie stellt das [!DNL Bombora Account Intent]-Schema eine Beziehung zum B2B-Konto-Schema her?
+
++++Antwort
+
+Das [!DNL Bombora Account Intent] Schema verwendet das Feld `accountID` , um eine Verknüpfung mit dem entsprechenden Datensatz im B2B-Konto herzustellen. Dieses Feld wird bei der Aufnahme automatisch ausgefüllt, wenn in beiden Datensätzen eine übereinstimmende Domain gefunden wird. Insbesondere verweist die `accountID` im [!DNL Bombora]-Schema auf die `accountKey.sourceKey` im standardmäßigen B2B-Konto-Schema.
+
++++
+
+### Warum verwendet das [!DNL Bombora Account Intent]-Schema `accountID` anstelle der typischen [!DNL Account Key] Feldergruppenstruktur?
+
++++Antwort
+
+[!DNL Bombora Intent] Schemata konzentrieren sich auf die Speicher- und Verarbeitungseffizienz. Anstatt eine ganze Feldergruppe zu verwenden, verwendet das Schema ein optimiertes einzelnes Feld (`accountID`) zum Erstellen von Beziehungen. Dies reduziert die Komplexität und passt sich optimalen Verarbeitungsmustern für Intent-Daten an.
 
 +++
