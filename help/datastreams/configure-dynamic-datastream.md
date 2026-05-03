@@ -2,25 +2,25 @@
 title: Erstellen dynamischer Datenstromkonfigurationen
 description: Erfahren Sie, wie Sie dynamische Datenstromkonfigurationen erstellen, um Ihre Daten auf der Grundlage von Regeln an verschiedene Experience Cloud-Services weiterzuleiten.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1040'
 ht-degree: 3%
 
 ---
 
 # Erstellen dynamischer Datenstromkonfigurationen
 
-Standardmäßig sendet Experience Platform Edge Network alle Ereignisse, die einen Datenstrom erreichen, an alle Experience Cloud [Services](configure.md#add-services) die Sie für Ihre Datenströme aktiviert haben. Je nach Anwendungsfall ist dies möglicherweise nicht immer der ideale Workflow für Sie.
+Standardmäßig sendet der [!DNL Adobe Experience Platform Edge Network] alle Ereignisse, die einen Datenstrom erreichen, an alle [!DNL Experience Cloud] ([), ](/help/datastreams/configure.md#add-services) Sie für Ihre Datenströme aktiviert haben. Je nach Anwendungsfall ist dies möglicherweise nicht immer der ideale Workflow.
 
-Dynamische Datenstromkonfigurationen decken dieses Problem durch benutzerkonfigurierbare Regelsätze ab, die Sie für jeden für Ihren Datenstrom aktivierten Service definieren. Diese bestimmen, welche Experience Cloud-Lösung die einzelnen Datentypen erhalten soll.
+Dynamische Datenstromkonfigurationen adressieren dies durch einen Satz von Regeln, die Sie für jeden für Ihren Datenstrom aktivierten Service definieren. Diese steuern, welche [!DNL Experience Cloud] Lösung die einzelnen Datentypen erhält.
 
 ## Voraussetzungen {#prerequisites}
 
 Um eine dynamische Konfiguration für Ihren Datenstrom zu erstellen, müssen Sie zwei Bedingungen erfüllen:
 
-* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Erstellen &#x200B;](configure.md) Datenstroms .
-* Es muss *mindestens* ein Experience Cloud-Service zu Ihrem Datenstrom hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Hinzufügen eines &#x200B;](configure.md#add-services) zu einem Datenstrom .
+* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [ Erstellen ](/help/datastreams/configure.md) Datenstroms .
+* Ihrem Datenstrom muss *mindestens* ein [!DNL Experience Cloud]-Service hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [ Hinzufügen eines ](/help/datastreams/configure.md#add-services) zu einem Datenstrom .
 
 Nachdem Sie einen Datenstrom erstellt und ihm einen Experience Cloud-Service hinzugefügt haben, können Sie [eine dynamische Konfiguration erstellen](#create-dynamic-configuration).
 
@@ -32,19 +32,19 @@ Dynamische Datenstromkonfigurationen weisen bestimmte Beschränkungen und Leistu
 |---------|------------|------|
 | Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für Experience Platform-Services | 5 | Leistungs-Schutzmaßnahme |
 | Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für die Ereignisweiterleitung | 5 | Leistungs-Schutzmaßnahme |
-| Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für Adobe Analytics | 5 | Leistungs-Schutzmaßnahme |
-| Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für Adobe Target | 5 | Leistungs-Schutzmaßnahme |
-| Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für Adobe Audience Manager | 5 | Leistungs-Schutzmaßnahme |
+| Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für [!DNL Adobe Analytics] | 5 | Leistungs-Schutzmaßnahme |
+| Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für [!DNL Adobe Target] | 5 | Leistungs-Schutzmaßnahme |
+| Maximale Anzahl dynamischer Datenstromkonfigurationen pro Datenstrom für [!DNL Adobe Audience Manager] | 5 | Leistungs-Schutzmaßnahme |
 | Maximale Anzahl von Bedingungen (Prädikate), die in einer einzigen Regel kombiniert werden können | 100 | Leistungs-Schutzmaßnahme |
 | Maximal zulässige Zeit für die Auswertung aller dynamischen Datenstromkonfigurationen pro Datenstrom vor Ablauf der Zeit | 25 ms | Vom System erzwungene Leitplanken |
 
 ## Überschreibungen der dynamischen Datenstromkonfigurationen im Vergleich zur Datenstromkonfiguration {#dynamic-versus-overrides}
 
-Dynamische Datenstromkonfigurationen und [Überschreibungen der Datenstromkonfiguration](overrides.md) schließen sich gegenseitig aus.
+Dynamische Datenstromkonfigurationen und [Überschreibungen der Datenstromkonfiguration](/help/datastreams/overrides.md) schließen sich gegenseitig aus.
 
-Das bedeutet, dass Sie keine dynamischen Datenstromkonfigurationen zusammen mit Überschreibungen der Datenstromkonfiguration verwenden können. Sie müssen entweder das eine oder das andere wählen.
+Sie können keine dynamischen Datenstromkonfigurationen zusammen mit Überschreibungen der Datenstromkonfiguration verwenden. Sie müssen entweder das eine oder das andere wählen.
 
-Wenn Sie sowohl Überschreibungen der dynamischen Datenstromkonfigurationen als auch der Datenstromkonfiguration aktivieren, haben die Überschreibungen der Konfiguration Vorrang und die Regeln für die dynamische Datenstromkonfiguration werden ignoriert.
+Wenn Sie beide aktivieren, haben Konfigurationsüberschreibungen Vorrang und das System ignoriert die Konfigurationsregeln für dynamische Datenstroms.
 
 ## Erstellen einer dynamischen Datenstromkonfiguration {#create-dynamic-configuration}
 
@@ -72,13 +72,13 @@ Nachdem Sie [einen Datenstrom erstellt](configure.md) und [einen Service hinzuge
 
    ![Benutzeroberfläche „Datenströme“ mit dem Builder für dynamische Konfigurationsregeln mit gezogenen Ressourcen.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Schalten Sie im Abschnitt **[!UICONTROL Configuration]** für jede Regel die Services ein, die Sie aktivieren oder deaktivieren möchten, je nachdem, ob Sie möchten, dass die Daten an jeden Service gesendet werden. Wenn Sie den Umschalter deaktivieren, ist das Service-Routing deaktiviert und *keine Daten* werden an den nachgelagerten Service gesendet.
+1. Aktivieren oder deaktivieren Sie im Abschnitt **[!UICONTROL Configuration]** die Services für jede Regel, je nachdem, ob Sie die Daten an die einzelnen Services senden möchten. Wenn Sie einen Service deaktivieren, wird das Routing deaktiviert und *keine Daten* werden an den nachgelagerten Service gesendet.
 
    ![Benutzeroberfläche „Datenströme“, die die dynamische Konfigurationsregel mit Service-Umschaltern anzeigt.](assets/configure-dynamic-datastream/enable-service.png)
 
 1. Wenn Sie mit der Konfiguration Ihrer Regeln fertig sind, wählen Sie **[!UICONTROL Save]** aus.
 
-## Überlegungen zur Regelpriorität {#considerations}
+## Überlegungen zur Regelpriorität {#rule-priority}
 
 Für jede Konfiguration eines dynamischen Datenstroms können Sie mehrere Regeln definieren. Wenn Ihre Daten jedoch den Bedingungen mehrerer Regeln entsprechen, wird nur die erste übereinstimmende Regel in der Liste berücksichtigt und alle anderen übereinstimmenden Regeln werden ignoriert.
 
@@ -86,7 +86,7 @@ Achten Sie zum Erzielen des gewünschten Daten-Routing-Verhaltens auf die Reihen
 
 Um die Regelreihenfolge zu konfigurieren, können Sie die Regelfenster in die gewünschte Reihenfolge ziehen.
 
-![GIF, das zeigt, wie die Reihenfolge der Regeln durch Ziehen und Ablegen geändert werden kann.](assets/configure-dynamic-datastream/move-rules.gif)
+![Dynamische Datenstromregeln per Drag-and-Drop neu anordnen.](assets/configure-dynamic-datastream/move-rules.gif)
 
 ## Eignungskriterien für Regeln {#eligibility-criteria}
 
@@ -117,7 +117,7 @@ Regeln können je nach Datentyp die folgenden Operatoren verwenden:
 | **Boolesch** | `equals true/false`, `does not equal true/false` |
 | **enum** | `equals`, `does not equal`, `exists`, `does not exist` |
 | **Datum** | `today`, `yesterday`, `this month`, `this year`, `custom date`, `in last`, `from`, `during`, `within`, `before`, `after`, `rolling range`, `in next`, `exists`, `does not exist` |
-| **Logisch** | `INCLUDE`, `ANY/ALL` (entspricht UND/ODER) |
+| **Logisch** | `INCLUDE`, `ANY/ALL` (entspricht [!DNL AND]/[!DNL OR]) |
 
 >[!NOTE]
 >
@@ -127,17 +127,17 @@ Regeln können je nach Datentyp die folgenden Operatoren verwenden:
 
 Beim Erstellen von Regeln für dynamische Datenstromkonfigurationen ist es wichtig, die strukturellen Anforderungen zu verstehen, die eine optimale Leistung und Systemkompatibilität sicherstellen. Die Regelstruktur wirkt sich direkt darauf aus, wie effizient Ihre Daten verarbeitet und durch das System weitergeleitet werden.
 
-**Nur flache Ausdrücke verwenden**. Sie müssen Regeln als flache logische Ausdrücke definieren. Verschachtelte logische Ausdrücke (bei Verwendung von Containern oder mehreren Ebenen von UND/ODER) werden nicht unterstützt. Wenn Sie komplexe Logik benötigen, unterteilen Sie sie in mehrere einfache Regeln.
+**Nur flache Ausdrücke verwenden**. Sie müssen Regeln als flache logische Ausdrücke definieren. Verschachtelte logische Ausdrücke (bei Verwendung von Containern oder mehreren Ebenen von [!DNL AND]/[!DNL OR]) werden nicht unterstützt. Wenn Sie komplexe Logik benötigen, unterteilen Sie sie in mehrere einfache Regeln.
 
-Betrachten Sie beispielsweise die komplexe Regel, die in der Abbildung unten dargestellt wird.
+Betrachten Sie beispielsweise die folgende komplexe Regel.
 
-![Platform-UI-Bild, das eine komplexe Regel anzeigt.](assets/configure-dynamic-datastream/complex-rule.png)
+![Beispiel einer verschachtelten komplexen Regel mit mehreren AND/OR-Bedingungen.](assets/configure-dynamic-datastream/complex-rule.png)
 
 Sie können diese Regel in die folgenden einfacheren Regeln unterteilen:
 
-![Platform-UI-Bild, das die erste vereinfachte Regel zeigt.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![Die erste vereinfachte Regel, die die verschachtelte komplexe Regel ersetzt.](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![Platform-UI-Bild, das die zweite vereinfachte Regel anzeigt.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![Die zweite vereinfachte Regel, die die verschachtelte komplexe Regel ersetzt.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **Vermeiden Sie komplexe Regeln**. Einfachere Vorschriften gewährleisten eine schnellere Bewertung und bessere Wartungsfreundlichkeit.
 
@@ -145,11 +145,7 @@ Sie können diese Regel in die folgenden einfacheren Regeln unterteilen:
 
 Die Befolgung der Best Practices beim Erstellen dynamischer Datenstromkonfigurationsregeln stellt eine optimale Leistung, Systemzuverlässigkeit und verwaltbare Konfigurationen sicher. Diese Richtlinien helfen Ihnen, häufige Fehler zu vermeiden und effiziente Regeln zu erstellen, die nahtlos mit der Architektur der Plattform zusammenarbeiten.
 
-* **Halten Sie Regeln einfach und einfach.** Wenn Sie eine komplexe Logik ausdrücken müssen, verwenden Sie mehrere Regeln anstelle von Verschachtelungen.
+* **Halten Sie Regeln einfach und flach.** Wenn Sie eine komplexe Logik ausdrücken müssen, verwenden Sie mehrere Regeln anstelle von Verschachtelungen.
 * **Verwenden Sie nur [unterstützte Datentypen](#supported-data-types) und [Operatoren](#supported-operators).**
-* **Testen Sie Ihre Regeln auf Leistung.** zu komplexen oder nicht unterstützten Regeln kann das System diese Regeln ablehnen oder die Systemleistung beeinträchtigen.
-
-
-
-
+* **Testen Sie Ihre Regeln auf Leistung.** Zu komplexe oder nicht unterstützte Regeln können dazu führen, dass das System sie ablehnt, oder die Systemleistung beeinträchtigen.
 
