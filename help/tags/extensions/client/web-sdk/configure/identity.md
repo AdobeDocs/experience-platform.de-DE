@@ -1,24 +1,24 @@
 ---
-title: Einstellungen der Identitätskonfiguration
-description: Definieren, wie die Tag-Erweiterung Besucher identifiziert.
+title: Konfigurationseinstellungen für die Identität
+description: Definieren Sie, wie die Tag-Erweiterung Besuchende kennzeichnet.
 exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
 source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 10%
+source-wordcount: '271'
+ht-degree: 11%
 
 ---
 
-# Einstellungen der Identitätskonfiguration {#identity}
+# Konfigurationseinstellungen für die Identität {#identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_identity"
 >title="Identität"
->abstract="Definieren, wie die Tag-Erweiterung Besucher identifiziert."
+>abstract="Definieren Sie, wie die Tag-Erweiterung Besuchende kennzeichnet."
 
 In diesem Konfigurationsabschnitt können Sie das Verhalten der Web-SDK bei der Handhabung der Benutzeridentifizierung definieren.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.
@@ -30,7 +30,7 @@ Die folgenden Optionen sind verfügbar:
 
 ## [!UICONTROL Migrate ECID from VisitorAPI]
 
-Ein Kontrollkästchen, mit dem Web SDK die `AMCV` und `s_ecid` Cookies lesen und das von `AMCV` verwendete `Visitor.js`-Cookie festlegen kann. Diese Funktion ist bei der Migration von Bibliotheken, die `VisitorAPI.js` verwenden, auf die Web-SDK wichtig, da einige Seiten möglicherweise noch `Visitor.js` verwenden. Mit dieser Option kann SDK dieselbe ECID weiterhin verwenden, sodass Benutzende nicht als zwei separate Benutzende identifiziert werden. Die JavaScript-Bibliothek, die diesem Kontrollkästchen entspricht, ist [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md).
+Ein Kontrollkästchen, mit dem Web SDK die `AMCV` und `s_ecid` Cookies lesen und das von `Visitor.js` verwendete `AMCV`-Cookie festlegen kann. Diese Funktion ist bei der Migration von Bibliotheken, die `VisitorAPI.js` verwenden, auf die Web-SDK wichtig, da einige Seiten möglicherweise noch `Visitor.js` verwenden. Mit dieser Option kann SDK dieselbe ECID weiterhin verwenden, sodass Benutzende nicht als zwei separate Benutzende identifiziert werden. Die JavaScript-Bibliothek, die diesem Kontrollkästchen entspricht, ist [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md).
 
 ## [!UICONTROL Use third-party cookies]
 

@@ -1,24 +1,24 @@
 ---
-title: Einstellungen für die Datenstromkonfiguration
+title: Konfigurationseinstellungen für Datenströme
 description: Konfigurieren Sie den Datenstrom, um Daten mithilfe der Tag-Erweiterung „Web SDK" an zu senden.
 exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 1%
+source-wordcount: '255'
+ht-degree: 10%
 
 ---
 
-# Einstellungen für die Datenstromkonfiguration {#datastreams}
+# Konfigurationseinstellungen für Datenströme {#datastreams}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_datastreams"
 >title="Datenströme"
->abstract="Erforderlich. Legt den Datenstrom innerhalb der Edge Network fest, an den Sie Daten senden möchten."
+>abstract="Erforderlich. Legt den Datenstrom innerhalb des Edge Network fest, an das Sie Daten senden möchten."
 
 In diesem Konfigurationsabschnitt können Sie festlegen, an welchen [Datenstrom](/help/datastreams/overview.md) Sie Daten senden möchten. **Für alle Daten, die an Edge Network gesendet werden, ist eine Datenstrom-ID erforderlich.**
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.

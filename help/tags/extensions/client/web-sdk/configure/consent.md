@@ -1,15 +1,15 @@
 ---
-title: Konfigurationseinstellungen des Einverständnisses
+title: Konfigurationseinstellungen für Einverständnis
 description: Konfigurieren Sie die standardmäßigen Einverständnis- und Datenschutzeinstellungen für die Tag-Erweiterung.
 exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 13%
 
 ---
 
-# Konfigurationseinstellungen des Einverständnisses {#consent}
+# Konfigurationseinstellungen für Einverständnis {#consent}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_consent"
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Im **[!UICONTROL Consent]** Abschnitt können Sie die Standardebene für das Einverständnis auswählen, von der ausgegangen wird, wenn keine andere explizite Einverständnisvoreinstellung angegeben wird. Die standardmäßige Einverständnisebene wird nicht in Benutzerprofilen gespeichert.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.

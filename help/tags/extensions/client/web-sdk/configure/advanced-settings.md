@@ -1,24 +1,24 @@
 ---
-title: Erweiterte Konfigurationeinstellungen
+title: Erweiterte Konfigurationseinstellungen
 description: Konfigurieren Sie die erweiterten Einstellungen für die Tag-Erweiterung „Web SDK".
 exl-id: d830a210-77ab-4823-b5fa-c1194a01bea3
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 3%
+source-wordcount: '153'
+ht-degree: 22%
 
 ---
 
-# Erweiterte Konfigurationeinstellungen {#advanced}
+# Erweiterte Konfigurationseinstellungen {#advanced}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advanced"
 >title="Erweiterte Einstellungen"
->abstract="Erweiterte Konfigurationseinstellungen. Adobe empfiehlt, diese Optionen für die meisten Implementierungen unverändert zu lassen."
+>abstract="Erweiterte Einstellungen. Adobe empfiehlt, diese Optionen für die meisten Implementierungen unverändert zu lassen."
 
 In diesem Konfigurationsabschnitt können Sie erweiterte Einstellungen ändern. Adobe empfiehlt, diese Optionen für die meisten Implementierungen unverändert zu lassen.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.

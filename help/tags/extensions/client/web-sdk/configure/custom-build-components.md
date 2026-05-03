@@ -4,7 +4,7 @@ description: Erstellen Sie einen benutzerdefinierten Web-SDK-Build, der Funktion
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
 source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '278'
 ht-degree: 9%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_buildoptions"
 >title="Build-Optionen"
->abstract="Sie können Module selektiv aus der JavaScript-Bibliothek einbeziehen oder ausschließen, wodurch die Bibliotheksgröße verringert und die Leistung verbessert wird."
+>abstract="Sie können Module selektiv in die JavaScript-Bibliothek aufnehmen oder daraus ausschließen, um die Bibliotheksgröße zu verringern und die Leistung zu verbessern."
 
 Die Web SDK-Bibliothek enthält mehrere Module für verschiedene Funktionen wie Personalisierung, Identitätsnachverfolgung, Linktracking und mehr. Je nach Anwendungsfällen benötigen Sie möglicherweise nur bestimmte Funktionen anstelle der gesamten Bibliothek. Durch das Deaktivieren von Build-Komponenten können Sie nur die benötigten Module verwenden, die Bibliotheksgröße reduzieren und die Leistung verbessern.
 
 Wenn Sie eine Komponente deaktivieren, können Sie die Einstellungen dieser Komponente nicht mehr bearbeiten. Wenn Sie mehrere Web SDK-Instanzen verwenden, werden die ausgewählten Build-Komponenten auf alle Instanzen angewendet.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Extensions]** und wählen Sie **[!UICONTROL Configure]** auf der [!UICONTROL Adobe Experience Platform Web SDK] aus.

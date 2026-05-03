@@ -4,7 +4,7 @@ description: Konfigurieren Sie Push-Benachrichtigungseinstellungen für die Tag-
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
 source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '180'
 ht-degree: 11%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 11%
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_pushnotifications"
->title="Push-Benachrichtigungen "
->abstract="Legt einen gültigen öffentlichen Schlüssel für die Push-Benachrichtigungsauthentifizierung fest."
+>title="Push-Benachrichtigungen"
+>abstract="Legt einen gültigen öffentlichen VAPID-Schlüssel für die Authentifizierung von Push-Benachrichtigungen fest."
 
 In diesem Konfigurationsabschnitt können Sie einen gültigen öffentlichen Schlüssel für die Push-Benachrichtigungsauthentifizierung festlegen.
 
@@ -22,10 +22,10 @@ In diesem Konfigurationsabschnitt können Sie einen gültigen öffentlichen Schl
 >
 >Diese Funktion muss zuerst mithilfe von [Benutzerdefinierte Build-Komponenten](custom-build-components.md) aktiviert werden; sie ist standardmäßig deaktiviert.
 
-1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei &#x200B;](https://experience.adobe.com)experience.adobe.com) an.
+1. Melden Sie sich mit Ihren Adobe ID[Anmeldeinformationen bei ](https://experience.adobe.com)experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Extensions]** und klicken Sie dann auf der **[!UICONTROL Configure]** auf [!UICONTROL Adobe Experience Platform Web SDK] .
+1. Navigieren Sie zu **[!UICONTROL Extensions]** und klicken Sie dann auf der [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Configure]** .
 1. Erweitern Sie **[!UICONTROL Custom build components]** und aktivieren Sie dann **[!UICONTROL Push notifications]**.
 1. Scrollen Sie unter [!UICONTROL SDK instances] nach unten, um den Abschnitt [!UICONTROL Push Notifications] zu finden.
 1. Geben Sie im Feld **[!UICONTROL VAPID Public Key]** Ihren gültigen öffentlichen Schlüssel ein.
