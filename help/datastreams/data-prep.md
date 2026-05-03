@@ -11,7 +11,7 @@ ht-degree: 29%
 
 # Datenvorbereitung für die Datenerfassung
 
-Verwenden Sie [!DNL Data Prep], einen [!DNL Adobe Experience Platform]-Service, um Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen [ validieren](/help/xdm/home.md). Beim Konfigurieren eines Experience Platform-aktivierten [Datenstroms](/help/datastreams/overview.md) können Sie [!DNL Data Prep] Funktionen verwenden, um Ihre Quelldaten dem XDM zuzuordnen, wenn Sie sie an die [!DNL Adobe Experience Platform Edge Network] senden.
+Verwenden Sie [!DNL Data Prep], einen [!DNL Adobe Experience Platform]-Service, um Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen [&#x200B; validieren](/help/xdm/home.md). Beim Konfigurieren eines Experience Platform-aktivierten [Datenstroms](/help/datastreams/overview.md) können Sie [!DNL Data Prep] Funktionen verwenden, um Ihre Quelldaten dem XDM zuzuordnen, wenn Sie sie an die [!DNL Adobe Experience Platform Edge Network] senden.
 
 Alle von einer Web-Seite gesendeten Daten müssen als XDM in Experience Platform landen. Sie haben drei Möglichkeiten, Daten aus einer On-Page-Datenschicht in das von Experience Platform akzeptierte XDM zu übersetzen:
 
@@ -164,7 +164,7 @@ Sie können die Option zum Hochladen des Objekts als Datei auswählen oder statt
 
 Der **[!UICONTROL Mapping]** Schritt wird angezeigt, sodass Sie die Felder in Ihren Quelldaten dem Zielereignisschema in Experience Platform zuordnen können. Sie haben die Möglichkeit, die Zuordnung auf zwei Arten zu konfigurieren:
 
-* [Erstellen Sie ](#create-mapping) für diesen Datenstrom durch einen manuellen Prozess.
+* [Erstellen Sie &#x200B;](#create-mapping) für diesen Datenstrom durch einen manuellen Prozess.
 * [Importieren Sie Zuordnungsregeln](#import-mapping) aus einem vorhandenen Datenstrom.
 
 >[!IMPORTANT]
@@ -233,4 +233,4 @@ Wenn die Anzahl der erforderlichen Felder null erreicht und Sie Ihre Zuordnung �
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde beschrieben, wie Sie Ihre Daten XDM zuordnen, wenn Sie einen Datenstrom in der Benutzeroberfläche einrichten. Wenn Sie dem Tutorial zu allgemeinen Datenströmen gefolgt sind, können Sie jetzt zur Anleitung zum Anzeigen [ Datenspeicherdetails ](/help/datastreams/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Ihre Daten XDM zuordnen, wenn Sie einen Datenstrom in der Benutzeroberfläche einrichten. Wenn Sie dem Tutorial zu allgemeinen Datenströmen gefolgt sind, können Sie jetzt zur Anleitung zum Anzeigen [&#x200B; Datenspeicherdetails &#x200B;](/help/datastreams/overview.md).

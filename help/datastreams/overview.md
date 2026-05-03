@@ -37,7 +37,7 @@ Datenströme bieten drei Methoden, mit denen Sie Ihre sensiblen Daten sicher ver
 
 ### Verbesserte Verschlüsselung {#encryption}
 
-Alle Daten, die über die [!DNL Edge Network] übertragen werden, werden über sichere, verschlüsselte Verbindungen mit ([ TLS 1.2) ](https://datatracker.ietf.org/doc/html/rfc5246). Wenn der Datenstrom Daten in Experience Platform einbringt, werden die Daten im Ruhezustand im Experience Platform Data Lake verschlüsselt. Weitere Informationen finden Sie im Dokument über [Datenverschlüsselung in Experience Platform](/help/landing/governance-privacy-security/encryption.md).
+Alle Daten, die über die [!DNL Edge Network] übertragen werden, werden über sichere, verschlüsselte Verbindungen mit ([&#x200B; TLS 1.2) &#x200B;](https://datatracker.ietf.org/doc/html/rfc5246). Wenn der Datenstrom Daten in Experience Platform einbringt, werden die Daten im Ruhezustand im Experience Platform Data Lake verschlüsselt. Weitere Informationen finden Sie im Dokument über [Datenverschlüsselung in Experience Platform](/help/landing/governance-privacy-security/encryption.md).
 
 ### Data Governance {#governance}
 

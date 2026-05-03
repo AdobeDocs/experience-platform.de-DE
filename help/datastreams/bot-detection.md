@@ -49,7 +49,7 @@ Bevor Sie die Bot-Erkennung in Ihren Datenströmen aktivieren, sollten Sie einig
 
 ## Voraussetzungen {#prerequisites}
 
-Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die Feldergruppe **[Bot-Erkennungsinformationen](/help/xdm/field-groups/event/bot-detection-information.md)** zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie ](/help/xdm/ui/resources/schemas.md#add-field-groups) der Dokumentation zum [XDM-Schema .
+Damit die Bot-Erkennung in Ihrem Datenstrom funktioniert, müssen Sie die Feldergruppe **[Bot-Erkennungsinformationen](/help/xdm/field-groups/event/bot-detection-information.md)** zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie [&#128279;](/help/xdm/ui/resources/schemas.md#add-field-groups) der Dokumentation zum XDM-Schema .
 
 ## Konfigurieren der Bot-Erkennung für Datenströme {#configure}
 
@@ -127,7 +127,7 @@ Gehen Sie wie folgt vor, um eine Regel zur Bot-Erkennung zu erstellen:
 
 4. Wenn Sie Ihrer Regel Kopfzeilenbedingungen hinzufügen möchten, wählen Sie **[!UICONTROL Add header conditions group]** und dann die Kopfzeilen aus, die die Regel verwenden soll.
 
-   ![Bildschirm für Bot-Erkennungsregeln mit der Gruppenoption Header-Bedingungen hinzufügen ](assets/bot-detection/header-conditions.png)
+   ![Bildschirm für Bot-Erkennungsregeln mit der Gruppenoption Header-Bedingungen hinzufügen &#x200B;](assets/bot-detection/header-conditions.png)
 
    Fügen Sie dann die Bedingungen hinzu, die für die ausgewählte Kopfzeile verwendet werden sollen.
 

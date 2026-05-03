@@ -17,7 +17,7 @@ Trigger verschiedener Datenstromverhaltensweisen, ohne einen neuen Datenstrom zu
 
 Die Überschreibung der Datenstromkonfiguration ist ein zweistufiger Prozess:
 
-1. Zunächst müssen Sie Ihre Überschreibung der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration“ ](/help/datastreams/configure.md).
+1. Zunächst müssen Sie Ihre Überschreibung der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration“ &#x200B;](/help/datastreams/configure.md).
 2. Anschließend müssen Sie die Überschreibungen auf eine der folgenden Arten an die [!DNL Edge Network] senden:
    * Durch die `sendEvent` oder `configure` [Web SDK](#send-overrides)-Befehle.
    * Über die Web-SDK [Tag-Erweiterung](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md).

@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # Erstellen dynamischer Datenstromkonfigurationen
 
-Standardmäßig sendet der [!DNL Adobe Experience Platform Edge Network] alle Ereignisse, die einen Datenstrom erreichen, an alle [!DNL Experience Cloud] ([), ](/help/datastreams/configure.md#add-services) Sie für Ihre Datenströme aktiviert haben. Je nach Anwendungsfall ist dies möglicherweise nicht immer der ideale Workflow.
+Standardmäßig sendet der [!DNL Adobe Experience Platform Edge Network] alle Ereignisse, die einen Datenstrom erreichen, an alle [!DNL Experience Cloud] ([), &#x200B;](/help/datastreams/configure.md#add-services) Sie für Ihre Datenströme aktiviert haben. Je nach Anwendungsfall ist dies möglicherweise nicht immer der ideale Workflow.
 
 Dynamische Datenstromkonfigurationen adressieren dies durch einen Satz von Regeln, die Sie für jeden für Ihren Datenstrom aktivierten Service definieren. Diese steuern, welche [!DNL Experience Cloud] Lösung die einzelnen Datentypen erhält.
 
@@ -19,8 +19,8 @@ Dynamische Datenstromkonfigurationen adressieren dies durch einen Satz von Regel
 
 Um eine dynamische Konfiguration für Ihren Datenstrom zu erstellen, müssen Sie zwei Bedingungen erfüllen:
 
-* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [ Erstellen ](/help/datastreams/configure.md) Datenstroms .
-* Ihrem Datenstrom muss *mindestens* ein [!DNL Experience Cloud]-Service hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [ Hinzufügen eines ](/help/datastreams/configure.md#add-services) zu einem Datenstrom .
+* Es muss *mindestens* Datenstrom erstellt worden sein, mit dem Sie arbeiten können. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Erstellen &#x200B;](/help/datastreams/configure.md) Datenstroms .
+* Ihrem Datenstrom muss *mindestens* ein [!DNL Experience Cloud]-Service hinzugefügt werden. Detaillierte Informationen finden Sie in der Dokumentation [&#x200B; Hinzufügen eines &#x200B;](/help/datastreams/configure.md#add-services) zu einem Datenstrom .
 
 Nachdem Sie einen Datenstrom erstellt und ihm einen Experience Cloud-Service hinzugefügt haben, können Sie [eine dynamische Konfiguration erstellen](#create-dynamic-configuration).
 
