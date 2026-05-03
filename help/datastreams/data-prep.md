@@ -48,7 +48,7 @@ In diesem Handbuch wird beschrieben, wie Sie Ihre Daten innerhalb der Benutzerob
 
 Eine kurze Demonstration des Prozesses Datenvorbereitung für die Datenerfassung finden Sie im folgenden Video:
 
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410301?captions=ger&quality=12&enable10seconds=on&speedcontrol=on)
 
 ## Angeben von Beispieldaten {#select-data}
 
