@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datenvorbereitung – Übersicht
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4df6f85701f2a509b3f9c7ceddb8d002dd81c6f0
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 98%
+source-wordcount: '800'
+ht-degree: 95%
 
 ---
 
@@ -42,7 +42,20 @@ Um mehr über berechnete Felder zu erfahren, lesen Sie bitte den [Leitfaden für
 
 ### Sonderzeichen mit Escape-Zeichen versehen {#escape-special-characters}
 
-Sie können Sonderzeichen in einem Feld durch die Verwendung von `${...}` mit Escape-Zeichen versehen. Allerdings werden JSON-Dateien, die Felder mit einem Punkt (`.`) enthalten, von diesem Mechanismus nicht unterstützt. Wenn Sie mit Hierarchien arbeiten und ein untergeordnetes Attribut einen Punkt (`.`) enthält, müssen Sie einen Backslash (`\`) verwenden, um Sonderzeichen zu umgehen. Ein Beispiel: `address` ist ein Objekt, das das Attribut `street.name` enthält. Auf dieses kann sich dann durch `address.street\.name` anstelle von `address.street.name` bezogen werden.
+Sie können Sonderzeichen in einem Feld durch die Verwendung von `${...}` mit Escape-Zeichen versehen. Allerdings werden JSON-Dateien, die Felder mit einem Punkt (`.`) enthalten, von diesem Mechanismus nicht unterstützt.
+
+Wenn Sie mit Hierarchien arbeiten und ein untergeordnetes Attribut einen Punkt (`.`) enthält, müssen Sie einen Backslash (`\`) verwenden, um Sonderzeichen zu umgehen. Das folgende `address` ist beispielsweise ein -Objekt, das das -Attribut `street.name`:
+
+```json
+{ 
+  "address": 
+      { 
+        "street.name": "myId" 
+      }
+}
+```
+
+Um in einer Zuordnung auf dieses Feld zu verweisen, müssen Sie `${address.street\.name}` verwenden.
 
 ## Zuordnungssatz
 
