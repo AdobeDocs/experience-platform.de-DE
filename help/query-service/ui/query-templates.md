@@ -33,11 +33,11 @@ Data Distiller-Beschleuniger sind schreibgeschützt. Um einen Accelerator zu än
 
 Öffnen Sie einen Beschleuniger und wählen Sie dann **[!UICONTROL Create custom template]** aus, um die SQL zu klonen. Speichern Sie die Vorlage, um sie zur Registerkarte **[!UICONTROL Templates]** hinzuzufügen. Die geklonte Vorlage kann vollständig bearbeitet werden und kann bei Bedarf ausgeführt, geplant oder geändert werden.
 
-Detaillierte Anweisungen finden [ im Handbuch ](./accelerators.md#create-custom-template)Data Distiller Accelerators“.
+Detaillierte Anweisungen finden [&#x200B; im Handbuch &#x200B;](./accelerators.md#create-custom-template)Data Distiller Accelerators“.
 
 >[!TIP]
 >
->Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine einfache Möglichkeit bietet, zum Arbeitsbereich Planung von Abfragen zu navigieren. Weitere Informationen zum Ausführen von [ mit benutzerdefinierter Kadenz finden ](./query-schedules.md) in der Dokumentation zum Planen von Abfragen .
+>Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine einfache Möglichkeit bietet, zum Arbeitsbereich Planung von Abfragen zu navigieren. Weitere Informationen zum Ausführen von [&#x200B; mit benutzerdefinierter Kadenz finden &#x200B;](./query-schedules.md) in der Dokumentation zum Planen von Abfragen .
 
 ## Abfragevorlagen durchsuchen {#browse}
 

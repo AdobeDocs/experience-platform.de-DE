@@ -18,21 +18,21 @@ Lesen Sie dieses Handbuch, um zu erfahren, wie Sie im [!UICONTROL Queries]-Arbei
 
 >[!AVAILABILITY]
 >
->Data Distiller Accelerators sind nur für Unternehmen mit einer Data Distiller SKU verfügbar. Für die Registerkarte &quot;[!UICONTROL Accelerators]&quot; und zugehörige Workflows ist das Add-on Data Distiller erforderlich. Weitere Informationen finden Sie [Übersicht zu Data ](../data-distiller/overview.md) oder wenden Sie sich an Ihren Adobe-Support-Mitarbeiter.
+>Data Distiller Accelerators sind nur für Unternehmen mit einer Data Distiller SKU verfügbar. Für die Registerkarte &quot;[!UICONTROL Accelerators]&quot; und zugehörige Workflows ist das Add-on Data Distiller erforderlich. Weitere Informationen finden Sie [Übersicht zu Data &#x200B;](../data-distiller/overview.md) oder wenden Sie sich an Ihren Adobe-Support-Mitarbeiter.
 
 ## Voraussetzungen {#prerequisites}
 
 Bevor Sie beginnen, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
 
 * Sie haben Zugriff auf den [!UICONTROL Queries] Arbeitsbereich in Experience Platform.
-* Sie wissen[ wie Sie den Abfrage-Editor verwenden und Abfragen ausführen](./user-guide.md).
+* Sie wissen[&#x200B; wie Sie den Abfrage-Editor verwenden und Abfragen ausführen](./user-guide.md).
 * Sie kennen [parametrisierte Abfragen](./parameterized-queries.md) (Platzhalter in SQL zur Laufzeit ersetzt).
 
 ## Verwendung von -Beschleunigern {#when-to-use}
 
-Verwenden Sie Accelerators, wenn Sie vorgefertigte SQL-Abfragen für gängige Analysemuster wie funnel-Analysen, angepasste Durchschnittswerte oder Zielgruppenüberschneidungen benötigen. Wenn für Ihren Anwendungsfall kein Beschleuniger geeignet ist, [ Sie eine benutzerdefinierte Abfrage im Abfrage-Editor ](./user-guide.md#query-authoring) oder fordern Sie einen neuen Beschleuniger an (siehe [Neuen Beschleuniger anfordern](#request-accelerator)).
+Verwenden Sie Accelerators, wenn Sie vorgefertigte SQL-Abfragen für gängige Analysemuster wie funnel-Analysen, angepasste Durchschnittswerte oder Zielgruppenüberschneidungen benötigen. Wenn für Ihren Anwendungsfall kein Beschleuniger geeignet ist, [&#x200B; Sie eine benutzerdefinierte Abfrage im Abfrage-Editor &#x200B;](./user-guide.md#query-authoring) oder fordern Sie einen neuen Beschleuniger an (siehe [Neuen Beschleuniger anfordern](#request-accelerator)).
 
-Eine kleine Gruppe von Beschleunigern wird als Dashboard für die sofortige Analyse geöffnet, während andere im Abfrage-Editor geöffnet werden, in dem Sie die Logik ausführen, planen oder anpassen können. Im Abschnitt [Dashboard-verknüpfte ](#dashboard-accelerators)&quot; erfahren Sie, wie diese vorkonfigurierten Visualisierungen Einblicke in Ihre Zielgruppendaten bieten.
+Eine kleine Gruppe von Beschleunigern wird als Dashboard für die sofortige Analyse geöffnet, während andere im Abfrage-Editor geöffnet werden, in dem Sie die Logik ausführen, planen oder anpassen können. Im Abschnitt [Dashboard-verknüpfte &#x200B;](#dashboard-accelerators)&quot; erfahren Sie, wie diese vorkonfigurierten Visualisierungen Einblicke in Ihre Zielgruppendaten bieten.
 
 Um mit der Verwendung von Beschleunigern zu beginnen, navigieren Sie zum Arbeitsbereich **[!UICONTROL Queries]** und öffnen Sie die Registerkarte **[!UICONTROL Accelerators]** oder die Registerkarte **[!UICONTROL Overview]** .
 
@@ -109,7 +109,7 @@ Das Dialogfeld für die Zeitplankonfiguration wird angezeigt.
 
 Im Dialogfeld für die Zeitplankonfiguration müssen Sie erneut eine Häufigkeit, einen Zeitrahmen, einen Ausgabedatensatz und Parameterwerte angeben. Im Abfrage-Editor eingegebene Parameterwerte werden nicht in die Zeitplankonfiguration übernommen. Im Abschnitt **[!UICONTROL Dataset details]** können Sie zwischen **[!UICONTROL Append into existing dataset]** und **[!UICONTROL Create and append into new dataset]** wählen. Nach der Konfiguration des Zeitplans wird der Beschleuniger automatisch auf der Grundlage Ihrer Einstellungen ausgeführt und schreibt die Ergebnisse in den ausgewählten Datensatz.
 
-Vollständige schrittweise Anweisungen finden Sie im Handbuch [Erstellen eines ](./query-schedules.md#create-schedule)&quot;.
+Vollständige schrittweise Anweisungen finden Sie im Handbuch [Erstellen eines &#x200B;](./query-schedules.md#create-schedule)&quot;.
 
 ## Erstellen einer benutzerdefinierten Vorlage aus einem Accelerator {#create-custom-template}
 
