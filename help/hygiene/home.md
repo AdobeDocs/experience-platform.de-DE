@@ -13,7 +13,7 @@ ht-degree: 21%
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
-Diese Aktivitäten können mit dem Arbeitsbereich der [[!UICONTROL Data Lifecycle]-Benutzeroberfläche ](#ui) der [Datenhygiene-API) ](#api). Wenn ein Datenlebenszyklusauftrag ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Auftragstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
+Diese Aktivitäten können mit dem Arbeitsbereich der [[!UICONTROL Data Lifecycle]-Benutzeroberfläche &#x200B;](#ui) der [Datenhygiene-API) &#x200B;](#api). Wenn ein Datenlebenszyklusauftrag ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Auftragstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensat
 >[!TIP]
 >
 >Weitere Referenzinformationen:
->- Informationen zur Überwachung der aktuellen Nutzung in Bezug auf Kontingentbeschränkungen finden Sie [ „Kontingentreferenzhandbuch](./api/quota.md).
+>- Informationen zur Überwachung der aktuellen Nutzung in Bezug auf Kontingentbeschränkungen finden Sie [&#x200B; „Kontingentreferenzhandbuch](./api/quota.md).
 >- Berechtigungsregeln, monatliche Obergrenzen, SLA-Timelines und Richtlinien zur Ausnahmebehandlung finden Sie unter [Handbuch zur Datensatzlöschung (Benutzeroberfläche)](./ui/record-delete.md#quotas) und [Handbuch zu Arbeitsauftragskontingenten (API)](./api/workorder.md#quotas).
 
 [Datensatzgültigkeitsanfrage](./ui/dataset-expiration.md) wird erstellt:
@@ -44,7 +44,7 @@ Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensat
 | Staging | Zeit nach planmäßiger Gültigkeit | Beschreibung |
 | --- | --- | --- |
 | Anfrage wird übermittelt | 0 Stunden | Ein Data Steward oder Datenschutzanalyst übermittelt eine Anfrage, dass ein Datensatz zu einem bestimmten Zeitpunkt ablaufen soll. Nachdem sie übermittelt wurde, ist die Anfrage in der [!UICONTROL Data Lifecycle UI] sichtbar und verbleibt bis zum Ablauf der planmäßigen Gültigkeitsdauer im Status „Ausstehend“, wonach die Anfrage ausgeführt wird. |
-| Datensatz wird aus dem Data Lake gelöscht | 1 Stunde | Der Datensatz wird aus der Datensatzinventarseite [ der ](../catalog/datasets/user-guide.md)-Benutzeroberfläche gelöscht. Die Daten im Data Lake werden nur vorläufig gelöscht und bleiben so bis zum Ende des Prozesses erhalten, wonach sie dauerhaft gelöscht werden. |
+| Datensatz wird aus dem Data Lake gelöscht | 1 Stunde | Der Datensatz wird aus der Datensatzinventarseite [&#x200B; der &#x200B;](../catalog/datasets/user-guide.md)-Benutzeroberfläche gelöscht. Die Daten im Data Lake werden nur vorläufig gelöscht und bleiben so bis zum Ende des Prozesses erhalten, wonach sie dauerhaft gelöscht werden. |
 | Datensatz wird aus dem Profil-Service gelöscht | 3 Stunden | Ab diesem Zeitpunkt werden bei Vorgängen wie Batch- und Streaming-Segmentierung, Vorschau oder Schätzung, Export und Entitätszugriff keine Daten mehr aus diesem Datensatz gelesen. Die Daten im Profil-Service werden nur vorläufig gelöscht und bleiben so bis zum Ende des Prozesses erhalten, wonach sie dauerhaft gelöscht werden. |
 | Profilanzahl und Zielgruppen aktualisiert | 48 Stunden | Sobald alle betroffenen Profile aktualisiert worden sind, werden alle zugehörigen [Zielgruppen](../segmentation/home.md) aktualisiert, damit ihre neue Größe widergespiegelt wird. Je nach entferntem Datensatz und den Attributen, nach denen Sie segmentieren, kann sich die Größe der einzelnen Zielgruppen aufgrund des Löschens erhöhen oder verringern. An dieser Stelle werden alle resultierenden Änderungen der Gesamtprofilanzahl in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten widergespiegelt. |
 | Journeys und Ziele werden aktualisiert | 50 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in den zugehörigen Segmenten aktualisiert. |
@@ -54,7 +54,7 @@ Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensat
 
 ### Zeitleisten für das Löschen von Datensätzen {#record-delete-transparency}
 
-Nachdem ein Antrag auf Löschung eines Datensatzes [ wurde](./ui/record-delete.md) erfolgt Folgendes.
+Nachdem ein Antrag auf Löschung eines Datensatzes [&#x200B; wurde](./ui/record-delete.md) erfolgt Folgendes.
 
 >[!NOTE]
 >
