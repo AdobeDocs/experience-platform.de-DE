@@ -1,12 +1,12 @@
 ---
 title: Snowflake Streaming-Verbindung
 description: Erstellen Sie eine Live-Snowflake-Datenfreigabe, um Aktualisierungen der Streaming-Zielgruppe direkt als freigegebene Tabellen in Ihrem Konto zu erhalten.
-last-substantial-update: 2026-03-24T00:00:00Z
+last-substantial-update: 2026-04-28T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 0d5bb74473551c9eddd823439e8bbe18126242e9
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1681'
 ht-degree: 17%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 17%
 
 >[!AVAILABILITY]
 >
->Dieser Ziel-Connector ist nur eingeschränkt verfügbar und nur für [!DNL Real-Time CDP] Ultimate-Kunden verfügbar, die in der [VA7-Region bereitgestellt &#x200B;](/help/landing/multi-cloud.md#azure-regions).
+>Dieser Ziel-Connector ist nur eingeschränkt verfügbar und nur für [!DNL Real-Time CDP] Ultimate-Kunden verfügbar, die in der [VA7-Region bereitgestellt ](/help/landing/multi-cloud.md#azure-regions).
 
 ## Überblick {#overview}
 
-Verwenden Sie den Snowflake-Ziel-Connector, um Daten in die Snowflake-Instanz von Adobe zu exportieren, die Adobe dann über &quot;[&quot; mit Ihrer Instanz &#x200B;](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+Verwenden Sie den Snowflake-Ziel-Connector, um Daten in die Snowflake-Instanz von Adobe zu exportieren, die Adobe dann über &quot;[&quot; mit Ihrer Instanz ](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
 
 In den folgenden Abschnitten erfahren Sie, wie das Snowflake-Ziel funktioniert und wie Daten zwischen Adobe und Snowflake übertragen werden.
 
@@ -79,7 +79,7 @@ Bevor Sie Ihre Snowflake-Verbindung konfigurieren, stellen Sie sicher, dass Sie 
 * Ihr [!DNL Snowflake]-Konto hat private Listeneinträge abonniert. Sie oder eine andere Person in Ihrem Unternehmen, die über Administratorrechte für [!DNL Snowflake] verfügt, können dies konfigurieren.
 * Sie kennen die Region Ihres [!DNL Snowflake]-Kontos, die Sie beim Herstellen einer Verbindung zum Ziel aus einem Dropdown-Menü auswählen werden.
 
-Weitere Informationen zu den [[!DNL Snowflake]  Berechtigungen finden &#x200B;](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) in der Dokumentation .
+Weitere Informationen zu den [[!DNL Snowflake]  Berechtigungen finden ](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) in der Dokumentation .
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -87,8 +87,8 @@ In diesem Abschnitt wird beschrieben, welche Arten von Zielgruppen Sie an dieses
 
 | Zielgruppenherkunft | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den [!DNL Adobe Experience Platform]Segmentierungs[Service) generiert &#x200B;](../../../segmentation/home.md). |
-| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-[&#x200B; (importiert](../../../segmentation/ui/audience-portal.md#import-audience) in [!DNL Adobe Experience Platform] aus CSV-Dateien,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> in anderen [!DNL Adobe Experience Platform]-Apps generierte Zielgruppen wie [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Zielgruppen, die über den [!DNL Adobe Experience Platform]Segmentierungs[Service) generiert ](../../../segmentation/home.md). |
+| Alle anderen Ursprünge der Zielgruppe | Ja | Diese Kategorie enthält alle Ursprünge der Zielgruppe außerhalb der Zielgruppen, die durch die [!DNL Segmentation Service] generiert wurden. Lesen Sie mehr über [verschiedene Ursprünge von Audiences](/help/segmentation/ui/audience-portal.md#customize). Einige Beispiele: <ul><li> benutzerdefinierte Upload-[ (importiert](../../../segmentation/ui/audience-portal.md#import-audience) in [!DNL Adobe Experience Platform] aus CSV-Dateien,</li><li> Lookalike-Zielgruppen, </li><li> Federated Audiences, </li><li> in anderen [!DNL Adobe Experience Platform]-Apps generierte Zielgruppen wie [!DNL Adobe Journey Optimizer], </li><li> und mehr. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -118,7 +118,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. &#x200B;](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL View Destinations]** und **[!UICONTROL Manage Destinations]** Zugriffssteuerungsberechtigungen[. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -148,11 +148,11 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 >[!NOTE]
 >
-> Das **[!UICONTROL Snowflake Account ID]** kann nach dem Erstellen des Ziels nicht [&#x200B; Workflow &#x200B;](../../ui/edit-destination.md)Ziel bearbeiten) bearbeitet werden. Um ein anderes Konto zu verwenden, erstellen [eine neue Zielverbindung](../../ui/connect-destination.md).
+> Das **[!UICONTROL Snowflake Account ID]** kann nach dem Erstellen des Ziels nicht [ Workflow ](../../ui/edit-destination.md)Ziel bearbeiten) bearbeitet werden. Um ein anderes Konto zu verwenden, erstellen [eine neue Zielverbindung](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
-> Sonderzeichen, die im Zielnamen und [!DNL Adobe Experience Platform] Sandbox-Namen verwendet werden, werden in `_` automatisch in Unterstriche ([!DNL Snowflake]) konvertiert. Um Verwirrung zu vermeiden, verwenden Sie keine Sonderzeichen in Ihrem Ziel und Sandbox-Namen.
+> Sonderzeichen, die im Zielnamen und [!DNL Adobe Experience Platform] Sandbox-Namen verwendet werden, werden in [!DNL Snowflake] automatisch in Unterstriche (`_`) konvertiert. Um Verwirrung zu vermeiden, verwenden Sie keine Sonderzeichen in Ihrem Ziel und Sandbox-Namen.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -165,7 +165,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, wäh
 >[!IMPORTANT]
 >
 >* Zum Aktivieren von Daten benötigen Sie die **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** und **[!UICONTROL View Segments]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[&#x200B; &#x200B;](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Zum Exportieren *Identitäten* benötigen Sie die **[!UICONTROL View Identity Graph]** Zugriffssteuerungsberechtigung[ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie einen im Workflow hervorgehobenen Identity-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -183,12 +183,13 @@ Die Daten werden über eine freigegebene Tabelle in Ihrem Snowflake-Konto freige
 
 Das folgende Beispiel zeigt Beispielzeilen aus einer freigegebenen Tabelle: Einige Spalten speichern Identitäten und Segmentzugehörigkeiten als JSON; zugeordnete Profilattribute werden als separate Zeichenfolgenspalten angezeigt.
 
-![Beispiel für Snowflake-Arbeitsblattzeilen mit den Spalten IDENTITYMAP, SEGMENT_MEMBERSHIP und Zugeordnete Attribute](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
+![Beispiel für Snowflake-Arbeitsblattzeilen mit den Spalten „TS“, „IDENTITYMAP“, „SEGMENT_MEMBERSHIP“ und „Zugeordnetes Attribut“.](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
 ### Datenstruktur {#data-structure}
 
 Der obige Screenshot zeigt die folgenden Spalten:
 
+* **TS**: Ein Zeitstempel, der angibt, wann jede Zeile zuletzt aktualisiert wurde.
 * **IDENTITYMAP**: JSON-Objekt für jede Profilidentitätszuordnung.
 * **SEGMENT_MEMBERSHIP**: JSON-Objekt für jede Zielgruppe, die im Datenfluss aktiviert ist. Der Wert umfasst `lastQualificationTime` und `status` (z. B. `realized`, wenn das Profil für das Segment qualifiziert ist).
 * **Zuordnungsattribute**: Jedes Zuordnungsattribut, das Sie während des Aktivierungs-Workflows auswählen, wird in [!DNL Snowflake] als Spaltenüberschrift dargestellt.
