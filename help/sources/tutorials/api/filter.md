@@ -2,9 +2,9 @@
 title: Filtern von Daten auf Zeilenebene für eine Source mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: cf5c460f1db4970217b881688c994787696d1ce1
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '2086'
 ht-degree: 13%
 
 ---
@@ -33,7 +33,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../landing/api-guide.md).
 
 ## Filtern von Quelldaten {#filter-source-data}
 
@@ -112,7 +112,7 @@ Bei einer erfolgreichen Antwort werden der Status-Code 200 und die Verbindungssp
 
 +++
 
-#### Vergleichsoperatoren  {#comparison-operators}
+#### Vergleichsoperatoren {#comparison-operators}
 
 | Operator | Beschreibung |
 | --- | --- |
@@ -394,7 +394,7 @@ curl -X POST \
 
 +++Antwort
 
-Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurückgegeben.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück.
 
 ```json
 {
@@ -405,9 +405,180 @@ Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) der neu erste
 
 +++
 
+## Filtern [!DNL Salesforce] Datenflüssen
+
+Das folgende Beispiel zeigt End-to-End, wie mithilfe der [!DNL Flow Service]-API Filter auf Zeilenebene auf einen vorhandenen [!DNL Salesforce]-Datenfluss angewendet werden.
+
+### Abfragesprache und Escape-Zeichen
+
+Bei Verwendung von OAuth 2.0-Client-Anmeldeinformationen mit [!DNL Salesforce]-Quellen wird die Filterung auf Zeilenebene mit SOQL ([!DNL Salesforce] Object Query Language) durchgeführt.
+
+* Spaltennamen in SOQL-Filtern verwenden die exakten [!DNL Salesforce] Feld-API-Namen ohne Backticks oder andere Sonderzeichen.
+* Zeichenfolgenwerte sollten gemäß der SOQL-Syntax in einfache Anführungszeichen gesetzt werden.
+* Verwenden Sie für boolesche Werte die Schlüsselwörter `true` oder `false` anstelle numerischer Werte (`0` oder `1`).
+* Datums- und Datums-Uhrzeit-Werte in `WHERE`-Klauseln sollten als Datums- oder Datums-Uhrzeit-Literale in nicht in Anführungszeichen gesetzte Zeichenfolge und nicht als Zeichenfolgen geschrieben werden, wenn der Filter anzeigt, dass sie Datums-/Uhrzeittypen darstellen.
+
+Für die PQL-basierte Filterung auf Zeilenebene muss jeder Literalknoten, dessen Wert ein `boolean` oder ein `dateTime` ist, einen `literalType` enthalten, damit Werte korrekt interpretiert und übersetzt werden.
+
+PQL-Beispiele:
+
+>[!BEGINTABS]
+
+>[!TAB PQL-Beispiel 1]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "like",
+    "params": [
+      {
+        "nodeType": "fieldLookup",
+        "fieldName": "Name"
+      },
+      {
+        "nodeType": "literal",
+        "value": "ro%"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQL-Beispiel 2]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": ">",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "CreatedDate" },
+      {
+        "nodeType": "literal",
+        "literalType": "DateTime",
+        "value": "2024-05-15T00:00:00Z"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQL-Beispiel 3]
+
+```json
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "=",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "IsDeleted" },
+      {
+        "nodeType": "literal",
+        "literalType": "boolean",
+        "value": false
+      }
+    ]
+  }
+}
+```
+
+>[!ENDTABS]
+
+#### Abrufen von Verbindungsspezifikationen für [!DNL Salesforce]
+
+Um die Verbindungsspezifikationsinformationen für eine [!DNL Salesforce] abzurufen, stellen Sie eine GET-Anfrage an den `/connectionSpecs`-Endpunkt der [!DNL Flow Service]-API und geben Sie den Eigenschaftsnamen Ihrer Quelle als Teil Ihrer Abfrageparameter an.
+
+**API-Format**
+
+```http
+GET /connectionSpecs/{QUERY_PARAMS}
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{QUERY_PARAMS}` | Die optionalen Abfrageparameter zum Filtern der Ergebnisse nach . Sie können die [!DNL Salesforce] Verbindungsspezifikation abrufen, indem Sie die `name`-Eigenschaft anwenden und bei der Suche `"salesforce"` angeben. |
+
++++Anfrage
+
+Die folgende Anfrage ruft die Verbindungsspezifikationen für [!DNL Salesforce] ab.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="salesforce"' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}'
+```
+
++++Antwort
+
+Bei einer erfolgreichen Antwort werden der Status-Code 200 und die Verbindungsspezifikationen für [!DNL Salesforce] zurückgegeben, einschließlich Informationen zu der unterstützten Abfragesprache und den logischen Operatoren.
+
+
+```json
+ "attributes": {
+    "filterAtSource": {
+      "enabled": true,
+      "queryLanguage": "SQL",
+      "logicalOperators": [
+        "and",
+        "or",
+        "not"
+      ],
+      "comparisonOperators": [
+        "=",
+        "!=",
+        "<",
+        "<=",
+        ">",
+        ">=",
+        "like",
+        "in",
+        "isNull",
+        "isNotNull"
+      ],
+      "columnNameEscapeChar": "`",
+      "valueEscapeChar": "'",
+      "v2": {
+        "oAuth2ClientCredential": {
+          "queryLanguage": "SOQL",
+          "logicalOperators": [
+            "and",
+            "or",
+            "not"
+          ],
+          "comparisonOperators": [
+            "=",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "like",
+            "in",
+            "isNull",
+            "isNotNull"
+          ],
+          "columnNameEscapeChar": "",
+          "valueEscapeChar": "'"
+        }
+      }
+    }
+  }
+```
+
++++
+
 ## Aktivitätsentitäten für [!DNL Marketo Engage] filtern {#filter-for-marketo}
 
-Bei Verwendung des Quell-Connectors können Sie die Filterung auf Zeilenebene verwenden, um nach Aktivitätsentitäten [[!DNL Marketo Engage]  filtern](../../connectors/adobe-applications/marketo/marketo.md). Derzeit können Sie nur nach Aktivitätsentitäten und standardmäßigen Aktivitätstypen filtern. Benutzerdefinierte Aktivitäten werden weiterhin unter [[!DNL Marketo] Feldzuordnungen“ &#x200B;](../../connectors/adobe-applications/mapping/marketo.md).
+Bei Verwendung des Quell-Connectors können Sie die Filterung auf Zeilenebene verwenden, um nach Aktivitätsentitäten [[!DNL Marketo Engage]  filtern](../../connectors/adobe-applications/marketo/marketo.md). Derzeit können Sie nur nach Aktivitätsentitäten und standardmäßigen Aktivitätstypen filtern. Benutzerdefinierte Aktivitäten werden weiterhin unter [[!DNL Marketo] Feldzuordnungen“ ](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### Standard-Aktivitätstypen [!DNL Marketo] {#marketo-standard-activity-types}
 
