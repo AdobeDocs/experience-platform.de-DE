@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrem Unternehmen gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '2409'
-ht-degree: 20%
+source-wordcount: '2471'
+ht-degree: 19%
 
 ---
 
@@ -42,17 +42,29 @@ Der [!UICONTROL Data Distiller capabilities] Abschnitt enthält Dokumentations-L
 
 ![Der Arbeitsbereich „Abfrage-Service“ mit hervorgehobenem Abschnitt zu den Funktionen von Data Distiller.](../images/ui/overview/data-distiller-capabilities.png)
 
+### Beschleuniger {#accelerators}
+
+Die Registerkarte &quot;**[!UICONTROL Accelerators]**&quot; im Arbeitsbereich „Abfragen“ enthält einen Katalog mit von Adobe erstellten, parametrisierten SQL-Vorlagen für gängige analytische Anwendungsfälle. Jeder Accelerator wird als Zeile in einer Tabelle mit einem Namen, einer SQL-Vorschau und Metadaten angezeigt.
+
+Wählen Sie einen Accelerator aus, um ihn im Abfrage-Editor zu öffnen. Parameterwerte angeben und die Abfrage ausführen, um Ergebnisse zu generieren. Die Beschleuniger sind schreibgeschützt und werden von Adobe gepflegt, um Konsistenz zu gewährleisten. Um die Logik zu ändern, erstellen Sie eine bearbeitbare Kopie mit **[!UICONTROL Create custom template]**. Informationen [ Ermitteln, Ausführen, Planen und Anpassen von Accelerators finden Sie ](./accelerators.md) Handbuch zu Data Distiller Accelerators .
+
 ### Empfohlene Data Distiller-Beschleuniger {#recommended-accelerators}
 
-Klicken Sie auf einen Schnelllink, um zur entsprechenden Data Distiller-Dashboards-[!UICONTROL Templates] zu navigieren. Jeder Accelerator bietet leistungsstarke Tools und Visualisierungen, mit denen Sie Zielgruppendaten analysieren, die Segmentierung optimieren und Zielgruppenbestimmungsstrategien verbessern können.
+Der Abschnitt **[!UICONTROL Recommended Data Distiller accelerators]** auf der Registerkarte Übersicht bietet schnellen Zugriff auf häufig verwendete Beschleuniger. Diese werden als Karten angezeigt und unterstützen zwei Workflows:
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: Von diesem Dashboard aus können Sie Zielgruppenüberschneidungen zwischen mehreren Zielgruppensegmenten analysieren, um wertvolle Einblicke zu gewinnen und Segmentierungsstrategien zu optimieren. Sie können Ihre Insights auch für weitere Offline-Analyse- oder Berichtszwecke exportieren.
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: In diesem Dashboard können Sie wichtige Zielgruppenmetriken nebeneinander vergleichen und gegenüberstellen, um zwei Zielgruppengruppen im Detail zu analysieren. Diese Einblicke helfen Ihnen, die Zielgruppengröße, das Wachstum und andere wichtige Leistungsindikatoren zu verstehen, und ermöglichen es Ihnen, die Segmentierung zu verfeinern und Targeting-Strategien mit datengesteuerten Entscheidungen zu optimieren.
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Verwenden Sie das [!UICONTROL Audience trends]-Dashboard, um anhand von Schlüsselmetriken wie Zielgruppenwachstum, Identitätsanzahl und einzelnen Identitätsprofilen zu visualisieren, wie sich Ihre Zielgruppen im Laufe der Zeit entwickeln. Verfolgen Sie Trends, um wertvolle Einblicke in das Verhalten der Zielgruppe zu erhalten, und verfeinern Sie die Segmentierung, verbessern Sie die Interaktion und optimieren Sie Zielgruppenstrategien für effektivere Kampagnen.
-Verfolgen Sie Zielgruppenmetriken im Zeitverlauf, um Änderungen bei der Zielgruppengröße, dem Identitätswachstum und der Gesamtinteraktion zu überwachen.
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Verwenden Sie das Dashboard für Identitätsüberschneidungen von Zielgruppen , um Identitätsüberschneidungen innerhalb ausgewählter Zielgruppen zu analysieren. Visualisierungen und tabellarische Daten liefern Einblicke, um die Identitätszuordnung zu optimieren, Redundanz zu reduzieren und die Segmentierung zu verbessern. Diese Erkenntnisse ermöglichen eine effektivere Zielgruppenbestimmung, eine verbesserte Personalisierung und optimierte Kundeninteraktionen.
+- **Dashboard-verknüpfte Beschleuniger** werden im Arbeitsbereich „Dashboards“ mit vordefinierten Visualisierungen geöffnet. Diese erfordern keine Parametereingabe oder manuelle Abfrageausführung.
+- **Abfragebasierte Beschleuniger** werden im Abfrage-Editor geöffnet, wo Sie Parameterwerte angeben, die Abfrage ausführen oder planen können.
 
-![Der Arbeitsbereich „Abfrage-Service“ mit hervorgehobenem Abschnitt „Data Distiller Accelerators“.](../images/ui/overview/data-distiller-accelerators.png)
+Wählen Sie eine Karte aus, um das Gaspedal zu öffnen. Verwenden Sie diesen Abschnitt für den schnellen Zugriff auf gängige Workflows oder navigieren Sie zur Registerkarte **[!UICONTROL Accelerators]** , um den vollständigen Katalog zu durchsuchen. Eine vollständige Liste der Beschleuniger und detaillierte Anweisungen finden Sie auf der Registerkarte [Beschleuniger](./accelerators.md#discovery-paths) oder im [Handbuch für Distiller-Beschleuniger](./accelerators.md).
+
+Die folgenden Dashboard-verknüpften Beschleuniger sind verfügbar:
+
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: Analysieren Sie Schnittmengen zwischen Zielgruppensegmenten, um Überschneidungsmuster zu identifizieren und die Segmentierung zu verfeinern.
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: Vergleichen Sie Schlüsselmetriken zwischen zwei Zielgruppen, einschließlich Größe, Komposition und Änderungen im Zeitverlauf.
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Verfolgen Sie, wie sich Zielgruppenmetriken im Laufe der Zeit ändern, einschließlich der Größe der Zielgruppe und der Anzahl der Identitäten.
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Untersuchen Sie, wie sich Identitätstypen innerhalb von Zielgruppen überschneiden, um Identitätsabgleich und Segmentierungsgenauigkeit zu unterstützen.
+
+![Query Service - Übersicht mit dem Abschnitt „Data Distiller Accelerators“ und den empfohlenen Accelerator-Karten.](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Beispiele für Data Distiller {#data-distiller-examples}
 
@@ -72,7 +84,7 @@ Im Abschnitt Schlüsselmetriken werden Visualisierungen wichtiger Daten angezeig
 
 #### Festlegen eines Datumsfilters {#set-date-filter}
 
-Um einen globalen Datumsfilter auf diese Visualisierungen anzuwenden, klicken Sie auf das Filtersymbol (![A Filtersymbol).](../../images/icons/filter-icon-white.png)) und passen den Datumsbereich im **[!UICONTROL Filters]** an. Wenden Sie diesen Filter an, um die angezeigten Metriken für einen bestimmten Zeitrahmen anzupassen und die Relevanz Ihrer Analyse zu erhöhen.
+Um einen globalen Datumsfilter auf diese Visualisierungen anzuwenden, klicken Sie auf das Filtersymbol (![Filtersymbol.](../../images/icons/filter-icon-white.png)) und passen Sie den Datumsbereich im Dialogfeld &quot;**[!UICONTROL Filters]**&quot; an. Wenden Sie diesen Filter an, um die angezeigten Metriken für einen bestimmten Zeitrahmen anzupassen und die Relevanz Ihrer Analyse zu erhöhen.
 
 ![Das Dialogfeld „Filter“ für die Diagramme mit den Schlüsselmetriken im Abfrage-Service Workspace.](../images/ui/overview/filters-dialog.png)
 
@@ -100,7 +112,7 @@ Verwenden Sie den Abfrage-Editor, um Abfragen ohne Verwendung eines externen Cli
 
 ![Das Abfrage-Dashboard mit hervorgehobener Option „Abfrage erstellen“.](../images/ui/overview/overview-create-query.png)
 
-Während der Eingabe in den Abfrage-Editor vervollständigt der Editor automatisch reservierte SQL-Wörter, Tabellen und Feldnamen in Tabellen. Wenn Sie die Abfrage fertig geschrieben haben, klicken Sie auf das Wiedergabesymbol (![Wiedergabesymbol).](../../images/icons/play.png)), um die Abfrage auszuführen. Die Registerkarte **[!UICONTROL Console]** unter dem Editor zeigt, was der Abfrage-Service derzeit ausführt, und zeigt an, wann eine Abfrage zurückgegeben wurde. Auf der Registerkarte **[!UICONTROL Result]** neben [!UICONTROL Console] werden die Abfrageergebnisse angezeigt. Weitere Informationen [&#x200B; Verwendung des Abfrage](./user-guide.md)Editors finden Sie im Handbuch zum Abfrage-Editor .
+Während der Eingabe in den Abfrage-Editor vervollständigt der Editor automatisch reservierte SQL-Wörter, Tabellen und Feldnamen in Tabellen. Wenn Sie die Abfrage fertig geschrieben haben, klicken Sie auf das Wiedergabesymbol (![Wiedergabesymbol.](../../images/icons/play.png)) , um die Abfrage auszuführen. Die Registerkarte **[!UICONTROL Console]** unter dem Editor zeigt, was der Abfrage-Service derzeit ausführt, und zeigt an, wann eine Abfrage zurückgegeben wurde. Auf der Registerkarte **[!UICONTROL Result]** neben [!UICONTROL Console] werden die Abfrageergebnisse angezeigt. Weitere Informationen [ Verwendung des Abfrage](./user-guide.md)Editors finden Sie im Handbuch zum Abfrage-Editor .
 
 ![Der Arbeitsbereich des Abfrage-Editors.](../images/ui/overview/query-editor.png)
 
@@ -109,7 +121,7 @@ Während der Eingabe in den Abfrage-Editor vervollständigt der Editor automatis
 Auf der Registerkarte [!UICONTROL Result] wird die tabellarische Ausgabe Ihrer Abfrage nach der Ausführung angezeigt. Verwenden Sie diese Registerkarte, um Ergebnisse zu überprüfen, Ausgaben zu validieren und Folgeaktionen direkt in der Benutzeroberfläche durchzuführen. In dieser Ansicht haben Sie folgende Möglichkeiten:
 
 - Ergebnisse für Offline-Analysen im CSV-, XLSX- oder JSON-Format herunterladen. Siehe [Abfrageergebnisse herunterladen](./user-guide.md#download-query-results).
-- Zeigen Sie die Ergebnisse im Vollbildmodus an, um große Tabellen oder breite Datensätze in einem in der Größe veränderbaren Rasterlayout zu untersuchen. Siehe [Ergebnisse im Vollbildmodus &#x200B;](./user-guide.md#view-results).
+- Zeigen Sie die Ergebnisse im Vollbildmodus an, um große Tabellen oder breite Datensätze in einem in der Größe veränderbaren Rasterlayout zu untersuchen. Siehe [Ergebnisse im Vollbildmodus ](./user-guide.md#view-results).
 - Ergebnisse in die Zwischenablage im CSV-Format kopieren, um sie schnell in Tabellenkalkulationsprogramme einzufügen. Siehe [Ergebnisse kopieren](./user-guide.md#copy-results).
 
 Diese Funktionen unterstützen nahtlose Datenvalidierungs-, Berichterstellungs- und Freigabe-Workflows, ohne den Abfrage-Editor verlassen zu müssen.
@@ -143,7 +155,7 @@ Nachdem eine Abfrage geplant wurde, wird sie in der Liste der geplanten Abfragen
 | **[!UICONTROL Last run timestamp]** | Der Zeitstempel der letzten Ausführung der Abfrage. Diese Spalte zeigt, ob eine Abfrage gemäß ihrem aktuellen Zeitplan ausgeführt wurde. |
 | **[!UICONTROL Last run status]** | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind `successful`, `failed` oder `in progress`. |
 
-Weitere Informationen finden Sie in der Dokumentation zum [&#x200B; (Überwachen von Abfragen über die Abfrage-Service-Benutzeroberfläche](./monitor-queries.md).
+Weitere Informationen finden Sie in der Dokumentation zum [ (Überwachen von Abfragen über die Abfrage-Service-Benutzeroberfläche](./monitor-queries.md).
 
 ## Vorlagen {#browse}
 
@@ -158,7 +170,7 @@ Auf der Registerkarte **[!UICONTROL Templates]** werden Abfragen angezeigt, die 
 | **[!UICONTROL Modified by]** | Der letzte Benutzer, der die Abfrage geändert hat. Jeder Benutzer in Ihrer Organisation, der Zugriff auf den Abfrage-Service hat, kann Abfragen ändern. |
 | **[!UICONTROL Last modified]** | Datum und Uhrzeit der letzten Änderung der Abfrage in der Zeitzone des Browsers. |
 
-Weitere Informationen zu [&#x200B; in der Benutzeroberfläche von Experience Platform finden &#x200B;](./query-templates.md) in der Dokumentation zu Abfragevorlagen .
+Weitere Informationen zu [ in der Benutzeroberfläche von Experience Platform finden ](./query-templates.md) in der Dokumentation zu Abfragevorlagen .
 
 ## Protokoll {#log}
 
@@ -178,9 +190,9 @@ Die Registerkarte **[!UICONTROL Log]** enthält eine Liste der Abfragen, die ber
 
 >[!NOTE]
 >
->Wählen Sie das Stiftsymbol (![Bleistiftsymbol) aus.](/help/images/icons/edit.png)) aus einer beliebigen Zeile des Abfrageprotokolls zum Abfrage-Editor navigieren. Die Abfrage ist vorausgefüllt, um die Bearbeitung zu erleichtern.
+>Wählen Sie das Stiftsymbol aus (![Bleistiftsymbol.](/help/images/icons/edit.png)) aus einer beliebigen Zeile des Abfrageprotokolls zum Navigieren zum Abfrage-Editor. Die Abfrage ist vorausgefüllt, um die Bearbeitung zu erleichtern.
 
-Weitere [&#x200B; zu den Protokolldateien, &#x200B;](./query-logs.md) automatisch von einem Abfrageereignis generiert werden, finden Sie in der Dokumentation zu Abfrageprotokollen .
+Weitere [ zu den Protokolldateien, ](./query-logs.md) automatisch von einem Abfrageereignis generiert werden, finden Sie in der Dokumentation zu Abfrageprotokollen .
 
 ## Anmeldedaten
 
@@ -192,7 +204,7 @@ Auf der Registerkarte **[!UICONTROL Credentials]** werden sowohl Ihre ablaufende
 
 Verwenden Sie die Registerkarte **[!UICONTROL Admin]** , um gleichzeitige Sitzungen des Abfrage-Editors in Ihrer Organisation zu überwachen und zu verwalten. Diese Funktion richtet sich an Admins und ist nicht zum Schreiben oder Ausführen von Abfragen erforderlich.
 
-Auf der Registerkarte **[!UICONTROL Admin]** können Administratoren aktive Sitzungen in Sandboxes anzeigen und inaktive Sitzungen beenden, um freigegebene Kapazität freizugeben. Diese Aktion unterbricht keine aktiv laufenden Abfragen. Detaillierte Anweisungen [&#x200B; Berechtigungsanforderungen finden Sie im Handbuch &#x200B;](session-management.md)Verwalten von Query Service-Sitzungen“.
+Auf der Registerkarte **[!UICONTROL Admin]** können Administratoren aktive Sitzungen in Sandboxes anzeigen und inaktive Sitzungen beenden, um freigegebene Kapazität freizugeben. Diese Aktion unterbricht keine aktiv laufenden Abfragen. Detaillierte Anweisungen [ Berechtigungsanforderungen finden Sie im Handbuch ](session-management.md)Verwalten von Query Service-Sitzungen“.
 
 ## Nächste Schritte
 

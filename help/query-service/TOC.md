@@ -5,15 +5,15 @@ breadcrumb-title: Anleitung zum Abfrage-Service
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 71d8268a209036291c41da3fef84a331aec2172b
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 68%
+source-wordcount: '439'
+ht-degree: 67%
 
 ---
 
 
-# Abfrage-Service von Adobe Experience Platform  {#query}
+# Abfrage-Service von Adobe Experience Platform {#query}
 
 - [Abfrage-Service – Überblick](home.md)
 - [Packaging des Abfrage-Services](packaging.md)
@@ -73,7 +73,7 @@ ht-degree: 68%
    - [Prognostizieren der Kundenabwanderung mithilfe von SQL](use-cases/predict-customer-churn-stub.md)
    - [Tendenz-Bewertung](use-cases/propensity-score.md)
    - [Abrufen ähnlicher Datensätze mit Funktionen höherer Ordnung](use-cases/retrieve-similar-records.md)
-   - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten &#x200B;](use-cases/merchandising-variables.md)
+   - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Anzeigen des Roll-up-Berichts für Besuchende](use-cases/roll-up-report-of-a-visitor.md)
    - [Web- und Mobile-Analyse-Einblicke](use-cases/analytics-insights.md)
@@ -105,10 +105,11 @@ ht-degree: 68%
    - [Benutzeroberfläche – Übersicht](ui/overview.md)
    - [Benutzerhandbuch zum Abfrage-Editor](ui/user-guide.md)
    - [Abfragevorlagen](ui/query-templates.md)
+   - [Daten-Distiller-Beschleuniger](ui/accelerators.md)
    - [Parametrierte Abfragen](ui/parameterized-queries.md)
    - [Abfragepläne](ui/query-schedules.md)
    - [Abfrageprotokolle](ui/query-logs.md)
-   - [Überwachen von geplanten Abfragen &#x200B;](ui/monitor-queries.md)
+   - [Überwachen von geplanten Abfragen](ui/monitor-queries.md)
    - [Sitzungen verwalten](ui/session-management.md)
    - [Handbuch zu Anmeldedaten](ui/credentials.md)
    - [Migrieren von JWT zu OAuth-Anmeldeinformationen](ui/migrate-jwt-to-oauth.md)

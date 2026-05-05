@@ -2,10 +2,10 @@
 title: Abfragevorlagen
 description: Abfragevorlagen sind wiederverwendbare gespeicherte SQL-Abfragen, die von anderen Benutzenden wiederverwendet werden können, um Zeit und Mühe zu sparen. Sie können mit dem Abfrage-Editor oder der Abfrage-Service-API erstellt werden und sind für alle Experience Platform-Datensätze verfügbar.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 63%
+source-wordcount: '651'
+ht-degree: 54%
 
 ---
 
@@ -17,7 +17,7 @@ Dieses Dokument enthält die Informationen, die zum Erstellen von Abfragevorlage
 
 ## Voraussetzungen
 
-Die Berechtigung [!UICONTROL Abfragen verwalten] muss aktiviert sein, damit Sie auf den Abfrage-Editor zugreifen und das Abfrage-Dashboard in der Experience Platform-Benutzeroberfläche anzeigen können. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
+Die Berechtigung [!UICONTROL Manage queries] muss aktiviert sein, damit Sie auf den Abfrage-Editor zugreifen und das Abfrage-Dashboard in der Experience Platform-Benutzeroberfläche anzeigen können. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
 
 ## Abfragevorlage erstellen
 
@@ -25,15 +25,23 @@ Sie können Abfragevorlagen auf zwei Arten erstellen: entweder indem Sie eine PO
 
 ### Erstellen und Speichern einer Abfrage als Vorlage mithilfe des Abfrage-Editors
 
-In der Dokumentation finden Sie Anweisungen dazu, wie Sie mit dem Abfrage-Editor [Abfragen schreiben](./user-guide.md#query-authoring) und [speichern](./user-guide.md#saving-queries) können. Nachdem Sie Ihre Abfrage benannt und gespeichert haben, kann sie als Abfragevorlage über die Registerkarte [!UICONTROL Vorlagen] wiederverwendet werden.
+In der Dokumentation finden Sie Anweisungen dazu, wie Sie mit dem Abfrage-Editor [Abfragen schreiben](./user-guide.md#query-authoring) und [speichern](./user-guide.md#saving-queries) können. Nachdem Sie Ihre Abfrage benannt und gespeichert haben, kann sie als Abfragevorlage über die Registerkarte [!UICONTROL Templates] wiederverwendet werden.
+
+### Erstellen einer Vorlage mit einem Data Distiller-Beschleuniger {#create-from-accelerator}
+
+Data Distiller-Beschleuniger sind schreibgeschützt. Um einen Accelerator zu ändern, erstellen Sie daraus im Abfrage-Editor eine bearbeitbare Vorlage.
+
+Öffnen Sie einen Beschleuniger und wählen Sie dann **[!UICONTROL Create custom template]** aus, um die SQL zu klonen. Speichern Sie die Vorlage, um sie zur Registerkarte **[!UICONTROL Templates]** hinzuzufügen. Die geklonte Vorlage kann vollständig bearbeitet werden und kann bei Bedarf ausgeführt, geplant oder geändert werden.
+
+Detaillierte Anweisungen finden [ im Handbuch ](./accelerators.md#create-custom-template)Data Distiller Accelerators“.
 
 >[!TIP]
 >
->Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine einfache Möglichkeit bietet, zum Arbeitsbereich Planung von Abfragen zu navigieren. Weitere Informationen zum Ausführen von [&#x200B; mit benutzerdefinierter Kadenz finden &#x200B;](./query-schedules.md) in der Dokumentation zum Planen von Abfragen .
+>Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine einfache Möglichkeit bietet, zum Arbeitsbereich Planung von Abfragen zu navigieren. Weitere Informationen zum Ausführen von [ mit benutzerdefinierter Kadenz finden ](./query-schedules.md) in der Dokumentation zum Planen von Abfragen .
 
 ## Abfragevorlagen durchsuchen {#browse}
 
-Wählen Sie im Arbeitsbereich „Abfragen“ der Experience Platform-Benutzeroberfläche die Option **[!UICONTROL Vorlagen]**, um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
+Wählen Sie im Arbeitsbereich „Abfragen“ der Experience Platform-Benutzeroberfläche die Option **[!UICONTROL Templates]** , um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
 
 ![Der Arbeitsbereich „Abfragen“ mit hervorgehobener Registerkarte „Vorlagen“.](../images/ui/query-templates/query-templates.png)
 
@@ -43,10 +51,10 @@ Um relevante Vorlageninformationen zu finden, klicken Sie auf eine beliebige Abf
 
 Im Bedienfeld Details können Sie die folgenden Aktionen ausführen:
 
-* Wählen Sie **[!UICONTROL Als CTAS ausführen]** aus, um eine neue Tabelle zu erstellen, indem Sie Daten aus einer oder mehreren vorhandenen Tabellen auswählen. Diese Option ist nur verfügbar, wenn Sie eine SELECT-Abfrage haben.
-* Wählen Sie **[!UICONTROL Zeitplan hinzufügen]**, um mit der Bearbeitung des Zeitplans für Ihre Abfragevorlage zu beginnen.
-* Wählen Sie **[!UICONTROL Zeitplan anzeigen]** aus, um zur Registerkarte [!UICONTROL Zeitpläne] des Abfrage-Editors zu navigieren. Diese Ansicht enthält alle Zeitplaninformationen, die mit der Abfrage verknüpft sind.
-* Wählen Sie **[!UICONTROL Abfrage löschen]** aus, um die Vorlage zu löschen.
+* Wählen Sie **[!UICONTROL Run as CTAS]** aus, um eine neue Tabelle zu erstellen, indem Sie Daten aus einer oder mehreren vorhandenen Tabellen auswählen. Diese Option ist nur verfügbar, wenn Sie eine SELECT-Abfrage haben.
+* Wählen Sie **[!UICONTROL Add schedule]** aus, um mit der Bearbeitung Ihres Zeitplans für Ihre Abfragevorlage zu beginnen.
+* Wählen Sie **[!UICONTROL View schedule]** aus, um zur Registerkarte [!UICONTROL Schedules] des Abfrage-Editors zu navigieren. Diese Ansicht enthält alle Zeitplaninformationen, die mit der Abfrage verknüpft sind.
+* Wählen Sie **[!UICONTROL Delete query]** aus, um die Vorlage zu löschen.
 * Wählen Sie den Vorlagennamen aus, um zum Abfrage-Editor zu navigieren, in dem die SQL zur Bearbeitung vorausgefüllt ist.
 
 ### Erstellen einer Vorlage mithilfe der Abfrage-Service-API
