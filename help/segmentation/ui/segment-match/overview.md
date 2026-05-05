@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht zu Segment Match
 description: Segment Match ist ein Service zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Experience Platform-Benutzende Segmentdaten auf sichere, verwaltete und datenschutzfreundliche Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: d4b6b83e37762f73f628b8922bf77f1739492eef
+source-git-commit: bf5a474d7ba6ef27d196bc88c10ff9f19151e111
 workflow-type: tm+mt
-source-wordcount: '2000'
-ht-degree: 67%
+source-wordcount: '2123'
+ht-degree: 62%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 67%
 
 >[!IMPORTANT]
 >
->Adobe führte 2021 [!DNL Segment Match] für Kunden ein, um mit ihnen zusammenzuarbeiten und Audiences auszutauschen. Anfang 2025 führte Adobe [Real-Time CDP Collaboration](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/home) ein, den längerfristigen Ansatz zur Lösung dieses Anwendungsfalls.
+>Adobe führte 2021 [!DNL Segment Match] für Kunden ein, um mit ihnen zusammenzuarbeiten und Audiences auszutauschen. Anfang 2025 führte Adobe [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) ein, den längerfristigen Ansatz zur Lösung dieses Anwendungsfalls.
 >
->* Für Kunden in den USA, Kanada, Australien, Neuseeland und EMEA: Adobe empfiehlt Kunden von Real-Time CDP Prime und Ultimate, Anwendungsfälle für die Datenzusammenarbeit von [!DNL Segment Match] auf Real-Time CDP Collaboration zu übertragen. Lesen Sie die [Dokumentation](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/home) und [Schnellstartanleitung](https://experienceleague.adobe.com/de/docs/real-time-cdp-collaboration/using/quick-start-guide) für Real-Time CDP Collaboration und wenden Sie sich an Ihr Adobe-Accountteam, um mehr zu erfahren.
+>* Für Kunden in den USA, Kanada, Australien, Neuseeland und EMEA: Adobe empfiehlt Kunden von Real-Time CDP Prime und Ultimate, Anwendungsfälle für die Datenzusammenarbeit von [!DNL Segment Match] auf Real-Time CDP Collaboration zu übertragen. Lesen Sie die [Dokumentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) und [Schnellstartanleitung](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) für Real-Time CDP Collaboration und wenden Sie sich an Ihr Adobe-Accountteam, um mehr zu erfahren.
 >* Für Kunden in allen anderen Regionen: [!DNL Segment Match] ist die empfohlene Option, bis Real-Time CDP Collaboration in diesen Regionen 2026 veröffentlicht wird.
 
 Adobe Experience Platform Segment Match ist ein Service zur Segmentfreigabe, mit dem zwei oder mehr Experience Platform-Benutzende Segmentdaten auf sichere, verwaltete und datenschutzfreundliche Weise austauschen können. [!DNL Segment Match] verwendet Experience Platform-Datenschutzstandards und persönliche IDs wie Hash-E-Mails, Hash-Telefonnummern und Geräte-IDs wie IDFAs und GAIDs.
@@ -51,7 +51,7 @@ Folgende Namespaces werden unterstützt:
 
 | Namespace | Beschreibung |
 | --------- | ----------- |
-| E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Experience Platform bietet zwei Methoden zur Unterstützung von Hashing bei der Datenerfassung: durch [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=de#hashing-support) und [Datenvorbereitung](../../../data-prep/functions.md#hashing). |
+| E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Experience Platform bietet zwei Methoden zur Unterstützung von Hashing bei der Datenerfassung: durch [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) und [Datenvorbereitung](../../../data-prep/functions.md#hashing). |
 | Phone (SHA256_E.164) | Ein Namespace, der unformatierte Telefonnummern darstellt, die mit dem SHA256- und E.164-Format gehasht werden müssen. |
 | ECID | Ein Namespace, der einen Experience Cloud ID (ECID)-Wert darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weiterführende Informationen dazu finden Sie in der [ECID-Übersicht](../../../identity-service/features/ecid.md). |
 | Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple ID für Advertiser darstellt. Weiteführende Informationen finden Sie im folgenden Dokument zu [Interessensbasierten Anzeigen](https://support.apple.com/de-de/HT202074). |
@@ -59,11 +59,11 @@ Folgende Namespaces werden unterstützt:
 
 ### Einrichten der Einverständniskonfiguration
 
-Sie müssen eine Einverständniskonfiguration bereitstellen und deren Standardwert auf `opt-in` oder `opt-out` festlegen, um eine Einverständnisprüfung durchzuführen.
+Sie müssen eine Einverständniskonfiguration bereitstellen und deren Standardwert auf Opt-in oder Opt-out für eine Einverständnisprüfung festlegen.
 
-Die Opt-in- und Opt-out-Einverständnisprüfung bestimmt, ob Sie basierend auf dem Einverständnis, Benutzerdaten standardmäßig freigeben dürfen. Wenn die Einverständniskonfiguration standardmäßig auf `opt-out` festgelegt ist, können Benutzerdaten freigegeben werden, es sei denn, Benutzende schließen die Freigabe ausdrücklich aus. Wenn der Standardwert auf `opt-in` festgelegt ist, können Benutzerdaten nicht freigegeben werden, es sei denn, Benutzende lassen dies ausdrücklich zu.
+Die Opt-in- und Opt-out-Einverständnisprüfung bestimmt, ob Sie basierend auf dem Einverständnis, Benutzerdaten standardmäßig freigeben dürfen. Wenn die Einverständniskonfiguration standardmäßig auf Opt-in festgelegt ist, können Benutzerdaten freigegeben werden, es sei denn, Benutzende schließen die Freigabe ausdrücklich aus. Wenn als Standard Opt-out festgelegt ist, können Benutzerdaten nicht freigegeben werden, es sei denn, Benutzende lassen dies ausdrücklich zu.
 
-Die standardmäßige Einverständniskonfiguration für [!DNL Segment Match] ist auf `opt-out` festgelegt. Um ein Opt-in-Modell für Ihre Daten zu erzwingen, senden Sie eine E-Mail-Anfrage an das Adobe-Accountteam.
+Die standardmäßige Einverständniskonfiguration für Segment Match ist auf Opt-out festgelegt. Um ein Opt-in-Modell für Ihre Daten zu erzwingen, senden Sie eine E-Mail-Anfrage an das Adobe-Accountteam.
 
 Weitere Informationen zum `share`, das zum Festlegen des Einverständniswerts für eine Datenfreigabe verwendet wird, finden Sie in der folgenden Dokumentation [Datenschutz- und Einverständnis-Feldergruppe](../../../xdm/field-groups/profile/consents.md). Informationen zu der spezifischen Feldergruppe, mit der das Verbrauchereinverständnis zur Sammlung und Verwendung von Daten im Zusammenhang mit Datenschutz-, Personalisierungs- und Marketing-Voreinstellungen erfasst wird, finden Sie im folgenden [GitHub-Beispiel zu den Voreinstellungen für das Einverständnis für Datenschutz, Personalisierung und Marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
@@ -130,7 +130,7 @@ Um einen Partner über seinen [!UICONTROL connect ID] zu verbinden, geben Sie de
 
 Bei einem **Feed** handelt es sich um eine Gruppierung von Daten (Segmenten), die Regeln, wie diese Daten bereitgestellt oder verwendet werden können, und die Konfigurationen, die bestimmen, wie Ihre Daten mit den Daten Ihrer Partner abgeglichen werden. Ein Feed kann unabhängig verwaltet und mit anderen Experience Platform-Benutzenden über [!DNL Segment Match] ausgetauscht werden.
 
-Um einen neuen Feed zu erstellen, wählen Sie im **[!UICONTROL Create feed]**-Dashboard die Option [!UICONTROL Feeds] aus.
+Um einen neuen Feed zu erstellen, wählen Sie im [!UICONTROL Feeds]-Dashboard die Option **[!UICONTROL Create feed]** aus.
 
 ![create-feed.png](./images/create-feed.png)
 
@@ -198,7 +198,7 @@ Die Liste der Segmente wird angezeigt. Von hier aus können Sie neue Segmente zu
 
 ### Akzeptieren eines eingehenden Feeds
 
-Um einen eingehenden Feed anzuzeigen, wählen Sie in der Kopfzeile der Seite **[!UICONTROL Received]** die Option [!UICONTROL Feeds] und dann den Feed aus der Liste aus, der angezeigt werden soll. Um den Feed zu akzeptieren, wählen Sie **[!UICONTROL Enable for profile]** aus und warten Sie einen Augenblick, bis sich der Status von [!UICONTROL Pending] auf [!UICONTROL Enabled] ändert.
+Um einen eingehenden Feed anzuzeigen, wählen Sie in der Kopfzeile der Seite [!UICONTROL Feeds] die Option **[!UICONTROL Received]** und dann den Feed aus der Liste aus, der angezeigt werden soll. Um den Feed zu akzeptieren, wählen Sie **[!UICONTROL Enable for profile]** aus und warten Sie einen Augenblick, bis sich der Status von [!UICONTROL Pending] auf [!UICONTROL Enabled] ändert.
 
 ![received.png](./images/received.png)
 
