@@ -5,10 +5,10 @@ title: Senden mehrerer Nachrichten in einer einzigen HTTP-Anfrage
 type: Tutorial
 description: Dieses Dokument enthält ein Tutorial zum Senden mehrerer Nachrichten an Adobe Experience Platform innerhalb einer einzigen HTTP-Anfrage mithilfe der Streaming-Aufnahme.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '1483'
-ht-degree: 58%
+source-wordcount: '1724'
+ht-degree: 51%
 
 ---
 
@@ -23,9 +23,9 @@ Dieses Dokument enthält ein Tutorial zum Senden mehrerer Nachrichten an [!DNL E
 Dieses Tutorial setzt ein Grundverständnis der Adobe Experience Platform-[!DNL Data Ingestion] voraus. Bevor Sie mit dem Tutorial beginnen, lesen Sie die folgenden Dokumente:
 
 - [Übersicht über die Datenaufnahme](../home.md): Behandelt die grundlegenden Konzepte der [!DNL Experience Platform Data Ingestion], einschließlich Aufnahmemethoden und Daten-Connectoren.
-- [Streaming-Aufnahme - &#x200B;](../streaming-ingestion/overview.md): Der Workflow und die Bausteine der Streaming-Aufnahme, wie Streaming-Verbindungen, Datensätze, [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent].
+- [Streaming-Aufnahme - ](../streaming-ingestion/overview.md): Der Workflow und die Bausteine der Streaming-Aufnahme, wie Streaming-Verbindungen, Datensätze, [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent].
 
-Für dieses Tutorial müssen Sie auch das Tutorial [Authentifizierung bei Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um [!DNL Experience Platform] APIs erfolgreich aufrufen zu können. Durch Abschließen des Authentifizierungs-Tutorials erhalten Sie den Wert für die Autorisierungs-Kopfzeile, der für alle API-Aufrufe in diesem Tutorial erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
+Für dieses Tutorial müssen Sie auch das Tutorial [Authentifizierung bei Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abgeschlossen haben, um [!DNL Experience Platform] APIs erfolgreich aufrufen zu können. Durch Abschließen des Authentifizierungs-Tutorials erhalten Sie den Wert für die Autorisierungs-Kopfzeile, der für alle API-Aufrufe in diesem Tutorial erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 
@@ -39,7 +39,7 @@ Sie müssen zunächst eine Streaming-Verbindung erstellen, bevor Sie mit dem Str
 
 Nach der Registrierung einer Streaming-Verbindung verfügen Sie als Datenproduzent über eine eindeutige URL, mit der Daten an Experience Platform gestreamt werden können.
 
-## Streamen in einen Datensatz
+## Streamen in einen Datensatz {#stream-to-dataset}
 
 Das folgende Beispiel zeigt, wie mehrere Nachrichten an einen bestimmten Datensatz innerhalb einer einzelnen HTTP-Anfrage gesendet werden. Fügen Sie die Datensatz-ID in die Kopfzeile der Nachricht ein, damit die Nachricht direkt darin aufgenommen wird.
 
@@ -511,7 +511,7 @@ Die zweite Nachricht schlug fehl, weil der Nachrichtentext fehlte. Die Erfassung
 
 Die dritte Nachricht schlug aufgrund der Verwendung einer ungültigen Organisations-ID in der Kopfzeile fehl. Die Organisation muss mit der {CONNECTION_ID} übereinstimmen, an die Sie posten möchten. Um festzustellen, welche Organisations-ID mit der von Ihnen verwendeten Streaming-Verbindung übereinstimmt, können Sie eine `GET inlet` mithilfe der [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) ausführen. Ein Beispiel zum Abrufen zuvor erstellter Streaming-Verbindungen finden Sie unter [Abrufen einer Streaming-Verbindung](./create-streaming-connection.md#get-data-collection-url).
 
-Die vierte Meldung ist fehlgeschlagen, da sie nicht dem erwarteten XDM-Schema entsprach. Das `xdmSchema`, das in der Kopfzeile und im Text der Anfrage enthalten ist, stimmt nicht mit dem XDM-Schema der `{DATASET_ID}` überein. Wenn Sie das Schema in der Kopfzeile und im Hauptteil der Nachricht korrigieren, kann es die DCCS-Validierung bestehen und erfolgreich an [!DNL Experience Platform] gesendet werden. Außerdem muss der Nachrichtentext so aktualisiert werden, dass er dem XDM-Schema des `{DATASET_ID}` entspricht, damit die Streaming-Validierung bei [!DNL Experience Platform] erfolgreich ist. Weiterführende Informationen dazu, was mit Nachrichten passiert, die erfolgreich an Experience Platform gestreamt werden, finden [&#x200B; im Abschnitt &quot;](#confirm-messages-ingested) aufgenommener Nachrichten bestätigen“ dieses Tutorials.
+Die vierte Meldung ist fehlgeschlagen, da sie nicht dem erwarteten XDM-Schema entsprach. Das `xdmSchema`, das in der Kopfzeile und im Text der Anfrage enthalten ist, stimmt nicht mit dem XDM-Schema der `{DATASET_ID}` überein. Wenn Sie das Schema in der Kopfzeile und im Hauptteil der Nachricht korrigieren, kann es die DCCS-Validierung bestehen und erfolgreich an [!DNL Experience Platform] gesendet werden. Außerdem muss der Nachrichtentext so aktualisiert werden, dass er dem XDM-Schema des `{DATASET_ID}` entspricht, damit die Streaming-Validierung bei [!DNL Experience Platform] erfolgreich ist. Weiterführende Informationen dazu, was mit Nachrichten passiert, die erfolgreich an Experience Platform gestreamt werden, finden [ im Abschnitt &quot;](#confirm-messages-ingested) aufgenommener Nachrichten bestätigen“ dieses Tutorials.
 
 ### Abrufen fehlgeschlagener Nachrichten von [!DNL Experience Platform]
 
@@ -519,6 +519,42 @@ Fehlgeschlagene Nachrichten werden durch einen Fehlerstatus-Code im Antwort-Arra
 Die ungültigen Nachrichten werden in einem „Fehler“-Batch innerhalb des von der `{DATASET_ID}` angegebenen Datensatzes erfasst und gespeichert.
 
 Weitere Informationen zum Wiederherstellen von fehlgeschlagenen Batch-Nachrichten finden Sie der Anleitung zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
+
+### Senden mehrerer XDM-Entitäten an einen Datenfluss {#send-multiple-xdm-entities-to-a-dataflow}
+
+Um mehrere XDM-Entitäten an einen Datenfluss zu senden, haben Sie folgende Möglichkeiten:
+
+- Senden Sie eine oder mehrere Entitäten in einem `messages`-Array innerhalb einer HTTP-Anfrage an den Streaming-Endpunkt.
+- Hochladen einer Datei mit mehreren Entitäten mithilfe der Batch-Aufnahme.
+
+Wählen Sie die Methode aus, die Ihrem Datenvolumen und Anwendungsfall entspricht.
+
+>[!BEGINTABS]
+
+>[!TAB Gruppieren von Entitäten in einer HTTP-Anfrage]
+
+Sie können mehrere XDM-Entitäten in ein `messages`-Array innerhalb einer einzelnen HTTP-Anfrage an den Streaming-Aufnahme-Endpunkt einschließen. Alle Nachrichten können auf dieselben oder verschiedene Datensätze und Schemata abzielen, sofern sie alle zu derselben Organisation **Sandbox**.
+
+Verwenden Sie diese Option, wenn Sie Folgendes tun möchten:
+
+- Reduzieren Sie Anfragen, indem Sie mehrere XDM-Entitäten in einem HTTP-Aufruf senden.
+- Streamen von Daten in Echtzeit über den Aufnahme-Endpunkt.
+
+Weitere Informationen und detaillierte Anweisungen zum Senden der Anfrage finden Sie im Abschnitt [Streaming an einen ](#stream-to-dataset)).
+
+>[!TAB Hochladen einer Batch-Datei]
+
+Sie können eine Batch-Datei mit einer oder mehreren XDM-Entitäten in einen Datenfluss hochladen. Alle Dateien, die unter demselben Batch hochgeladen werden, werden zusammen als eine Aufnahmeeinheit verarbeitet.
+
+Verwenden Sie diese Methode, wenn Sie:
+
+- Nehmen Sie größere Datenvolumen auf (z. B. CSV-, JSON- oder Parquet-Dateien).
+- Arbeiten mit dateibasierten Exporten von vorgelagerten Systemen.
+- Geplante oder Massenaufnahme bevorzugen.
+
+Eine [ Anleitung ](../batch-ingestion/api-overview.md) Schritt für Schritt finden Sie im Abschnitt „Handbuch zur Batch-Aufnahme“.
+
+>[!ENDTABS]
 
 ## Bestätigen von aufgenommenen Nachrichten
 

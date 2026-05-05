@@ -3,18 +3,18 @@ keywords: Experience Platform;Startseite;beliebte Themen;Überwachen von Datenfl
 solution: Experience Platform
 title: Überwachen von Datenflüssen mithilfe der Flow Service-API
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Überwachen von Daten in Datenflüssen auf Vollständigkeit, Fehler und Metriken mithilfe der Flow Service-API beschrieben.
+description: In diesem Tutorial werden die Schritte zum Monitoring von Daten in Datenflüssen auf Vollständigkeit, Fehler und Metriken mithilfe der Flow Service-API beschrieben.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '770'
 ht-degree: 57%
 
 ---
 
 # Überwachen von Datenflüssen mithilfe der Flow Service-API
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Sie können Daten aus einer Vielzahl von Quellen aufnehmen, z. B. aus Adobe-Programmen, Cloud-basierten Datenspeichern, Datenbanken und vielen anderen. Darüber hinaus ermöglicht Experience Platform die Aktivierung von Daten an externe Partner.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Experience Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken. Darüber hinaus ermöglicht Experience Platform die Aktivierung von Daten an externe Partner.
 
 [!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Service bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen und Ziele verbunden werden können.
 
@@ -201,3 +201,5 @@ Bei einer erfolgreichen Antwort werden Details zu Ihrem Flussvorgang angegeben, 
 ## Nächste Schritte
 
 Mit diesem Tutorial haben Sie mithilfe der [!DNL Flow Service]-API Metriken und Fehlerinformationen zu Ihrem Datenfluss abgerufen. Sie können jetzt Ihren Datenfluss entsprechend Ihrem Datenaufnahme-Zeitplan überwachen, um dessen Status und Aufnahmeraten zu verfolgen. Informationen zum Überwachen von Datenflüssen für Quellen finden Sie im Tutorial [Überwachen von Datenflüssen für Quellen mithilfe der Benutzeroberfläche](../ui/monitor-sources.md) . Weitere Informationen zum Überwachen von Datenflüssen für Ziele finden Sie im Tutorial [Überwachen von Datenflüssen für Ziele mithilfe der Benutzeroberfläche](../ui/monitor-destinations.md) .
+
+Um mehrere XDM-Entitäten an einen Datenfluss zu senden, verwenden Sie ein `messages`-Array in Ihrer HTTP-Anfrage oder laden Sie eine Datei (CSV, JSON oder Parquet) mit mehreren Datensätzen hoch. Ausführliche Anleitungen und Best Practices finden Sie [So senden Sie mehrere XDM-Entitäten an einen Datenfluss](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).
