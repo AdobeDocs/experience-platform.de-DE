@@ -2,9 +2,9 @@
 title: Best Practices für die erweiterte Verwaltung des Datenlebenszyklus
 description: Erfahren Sie, wie Sie Datenhygiene-Anfragen in Adobe Experience Platform mithilfe der erweiterten Benutzeroberfläche für die Verwaltung von Datenlebenszyklen und der Datenhygiene-API effizient verwalten können. In diesem Handbuch werden Best Practices behandelt, wie die Maximierung von Identitäten pro Anfrage, die Angabe einzelner Datensätze und die Berücksichtigung von API-Drosselungen zur Vermeidung von Verzögerungen. Das Dokument enthält Richtlinien für die Einrichtung der automatischen Datensatzbereinigung, für die Überwachung des Arbeitsauftragsstatus und für detaillierte Methoden zum Abrufen von Antworten. Befolgen Sie diese Best Practices, um die Verarbeitung Ihrer Anfragen zu optimieren und die Antwortzeiten zu optimieren.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Dieses Handbuch setzt ein Verständnis des Datenlebenszyklus-Arbeitsbereichs und
 
 ## Richtlinien zur Erstellung von Arbeitsaufträgen {#work-order-creation-guidelines}
 
-Sie können den `/workorder`-Endpunkt in der Data Hygiene API verwenden, um Anfragen zum Löschen von Datensätzen in Experience Platform programmgesteuert zu verwalten. Mit diesem Endpunkt können Sie eine Löschanfrage erstellen, ihren Status überprüfen oder eine vorhandene Anfrage aktualisieren. Informationen zum Ausführen dieser Aktionen mithilfe [&#x200B; API finden &#x200B;](./api/workorder.md) im Dokument zum Arbeitsauftrags-Endpunkt .
+Sie können den `/workorder`-Endpunkt in der Data Hygiene API verwenden, um Anfragen zum Löschen von Datensätzen in Experience Platform programmgesteuert zu verwalten. Mit diesem Endpunkt können Sie eine Löschanfrage erstellen, ihren Status überprüfen oder eine vorhandene Anfrage aktualisieren. Informationen zum Ausführen dieser Aktionen mithilfe [ API finden ](./api/workorder.md) im Dokument zum Arbeitsauftrags-Endpunkt . Löschanfragen für Datensätze werden vor Beginn der Verarbeitung in Batches zusammengefasst und können bis zu 30 Tage (Standard-SLA) oder 15 Tage (Privacy and Security Shield oder Healthcare Shield) dauern. Eine vollständige Aufschlüsselung der Vorgänge in den einzelnen Phasen finden Sie unter [Zeitpläne für das Löschen von Datensätzen](./home.md#record-delete-transparency).
 
 >[!TIP]
 >
@@ -41,17 +41,17 @@ Wenn Sie einen 429-Fehler erhalten, bedeutet dies, dass Sie die zulässige Anzah
 
 ## Ablaufdatum des Datensatzes {#dataset-expiration}
 
-Richten Sie die automatische Datensatzbereinigung für kurzlebige Daten ein. Verwenden Sie den `/ttl`-Endpunkt in der Datenhygiene-API, um Ablaufdaten für Datensätze zur Bereinigung basierend auf einer bestimmten Zeit oder einem bestimmten Datum zu planen. Informationen zum Erstellen einer Datensatzgültigkeit und [akzeptierten Abfrageparametern](./api/dataset-expiration.md) finden Sie [&#x200B; Handbuch zum Datensatzgültigkeits-Endpunkt &#x200B;](./api/dataset-expiration.md#query-params).
+Richten Sie die automatische Datensatzbereinigung für kurzlebige Daten ein. Verwenden Sie den `/ttl`-Endpunkt in der Datenhygiene-API, um Ablaufdaten für Datensätze zur Bereinigung basierend auf einer bestimmten Zeit oder einem bestimmten Datum zu planen. Informationen zum Erstellen einer Datensatzgültigkeit und [akzeptierten Abfrageparametern](./api/dataset-expiration.md) finden Sie [ Handbuch zum Datensatzgültigkeits-Endpunkt ](./api/dataset-expiration.md#query-params).
 
 ## Überwachen des Arbeitsauftrags und des Datensatzgültigkeitsstatus {#monitor}
 
 Sie können den Fortschritt des Daten-Lifecycle-Managements effizient mithilfe von **I/O Events** überwachen. Ein I/O-Ereignis ist ein Mechanismus zum Empfang von Echtzeitbenachrichtigungen über Änderungen oder Aktualisierungen in verschiedenen Services in Experience Platform.
 
-E/A-Ereignis-Warnhinweise können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über einen Webhook zu erhalten, müssen Sie Ihren Webhook für Experience Platform-Warnhinweise in Adobe Developer Console registrieren. Detaillierte Anweisungen finden Sie [&#x200B; Handbuch unter „Abonnieren von Adobe I/O](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.
+E/A-Ereignis-Warnhinweise können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über einen Webhook zu erhalten, müssen Sie Ihren Webhook für Experience Platform-Warnhinweise in Adobe Developer Console registrieren. Detaillierte Anweisungen finden Sie [ Handbuch unter „Abonnieren von Adobe I/O](../observability/alerts/subscribe.md)Ereignisbenachrichtigungen“.
 
 Verwenden Sie die folgenden Methoden und Richtlinien für den Datenlebenszyklus, um Auftragsstatus effektiv abzurufen und zu überwachen:
 
-### I/O-Ereignisse {#io-events}
+### I/O Events {#io-events}
 
 Um den Fortschritt Ihrer Datenlebenszyklusaufgaben effizient zu überwachen, richten Sie I/O-Ereignisse ein und verwenden Sie sie, indem Sie die folgenden Schritte ausführen:
 

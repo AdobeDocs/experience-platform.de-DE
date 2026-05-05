@@ -2,10 +2,10 @@
 title: Durchsuchen von Datenlebenszyklus-Arbeitsaufträgen
 description: Erfahren Sie, wie Sie vorhandene Datenlebenszyklus-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 65%
+source-wordcount: '846'
+ht-degree: 62%
 
 ---
 
@@ -86,6 +86,10 @@ Je nach ausgewähltem Typ des Arbeitsauftrags sind unterschiedliche Informatione
 ### Details zum Löschen von Datensätzen {#record-delete}
 
 Zu den Details einer Löschanfrage für einen Datensatz gehören der aktuelle Status und die seit der Anfrage verstrichene Zeit. Jede Anfrage enthält auch einen Abschnitt **[!UICONTROL Status by service]** , der individuelle Statusdetails zu jedem nachgelagerten Service bereitstellt, der an der Löschung beteiligt ist. In der rechten Leiste können Sie mithilfe von Steuerelementen den Namen und die Beschreibung der Arbeitsaufträge aktualisieren.
+
+>[!TIP]
+>
+>Löschanfragen für Datensätze werden vor Beginn der Verarbeitung in Batches zusammengefasst und können unter der standardmäßigen SLA bis zu 30 Tage dauern. Eine Aufschlüsselung der Vorgänge in den einzelnen Phasen finden Sie unter [Zeitpläne für das Löschen von Datensätzen](../home.md#record-delete-transparency).
 
 ![Bild mit der Detailseite für einen Datensatz-Löscharbeitsauftrag](../images/ui/browse/record-delete-details.png)
 

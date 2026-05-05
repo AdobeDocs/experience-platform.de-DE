@@ -2,10 +2,10 @@
 title: Erweiterte Übersicht über die Verwaltung des Datenlebenszyklus
 description: Mit dem erweiterten Daten-Lifecycle-Management können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder ungenaue Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc71e61fd33fe216f8cd326b9df048958c07077a
+source-git-commit: adba9d3cd979f655f477d2d80ed3e55e96fbe486
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 32%
+source-wordcount: '877'
+ht-degree: 21%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 32%
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
-Diese Aktivitäten können mit dem Arbeitsbereich der [[!UICONTROL Data Lifecycle]-Benutzeroberfläche &#x200B;](#ui) der [Datenhygiene-API) &#x200B;](#api). Wenn ein Datenlebenszyklusauftrag ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Auftragstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
+Diese Aktivitäten können mit dem Arbeitsbereich der [[!UICONTROL Data Lifecycle]-Benutzeroberfläche ](#ui) der [Datenhygiene-API) ](#api). Wenn ein Datenlebenszyklusauftrag ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Auftragstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
 
 >[!NOTE]
 >
@@ -35,15 +35,16 @@ Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensat
 
 >[!TIP]
 >
->Informationen zur Überwachung der aktuellen Nutzung in Bezug auf Kontingentbeschränkungen finden Sie [&#x200B; „Kontingentreferenzhandbuch](./api/quota.md).\
->Berechtigungsregeln, monatliche Begrenzungen, SLA-Zeitleisten und Richtlinien zur Ausnahmebehandlung finden Sie in der Dokumentation [Löschen von Datensätzen (](./ui/record-delete.md#quotas)) und [Arbeitsauftrag (API)](./api/workorder.md#quotas).
+>Weitere Referenzinformationen:
+>- Informationen zur Überwachung der aktuellen Nutzung in Bezug auf Kontingentbeschränkungen finden Sie [ „Kontingentreferenzhandbuch](./api/quota.md).
+>- Berechtigungsregeln, monatliche Obergrenzen, SLA-Timelines und Richtlinien zur Ausnahmebehandlung finden Sie unter [Handbuch zur Datensatzlöschung (Benutzeroberfläche)](./ui/record-delete.md#quotas) und [Handbuch zu Arbeitsauftragskontingenten (API)](./api/workorder.md#quotas).
 
 [Datensatzgültigkeitsanfrage](./ui/dataset-expiration.md) wird erstellt:
 
 | Staging | Zeit nach planmäßiger Gültigkeit | Beschreibung |
 | --- | --- | --- |
 | Anfrage wird übermittelt | 0 Stunden | Ein Data Steward oder Datenschutzanalyst übermittelt eine Anfrage, dass ein Datensatz zu einem bestimmten Zeitpunkt ablaufen soll. Nachdem sie übermittelt wurde, ist die Anfrage in der [!UICONTROL Data Lifecycle UI] sichtbar und verbleibt bis zum Ablauf der planmäßigen Gültigkeitsdauer im Status „Ausstehend“, wonach die Anfrage ausgeführt wird. |
-| Datensatz wird aus dem Data Lake gelöscht | 1 Stunde | Der Datensatz wird aus der [Datensatzinventarseite](../catalog/datasets/user-guide.md) in der Benutzeroberfläche gelöscht. Die Daten im Data Lake werden nur vorläufig gelöscht und bleiben so bis zum Ende des Prozesses erhalten, wonach sie dauerhaft gelöscht werden. |
+| Datensatz wird aus dem Data Lake gelöscht | 1 Stunde | Der Datensatz wird aus der Datensatzinventarseite [ der ](../catalog/datasets/user-guide.md)-Benutzeroberfläche gelöscht. Die Daten im Data Lake werden nur vorläufig gelöscht und bleiben so bis zum Ende des Prozesses erhalten, wonach sie dauerhaft gelöscht werden. |
 | Datensatz wird aus dem Profil-Service gelöscht | 3 Stunden | Ab diesem Zeitpunkt werden bei Vorgängen wie Batch- und Streaming-Segmentierung, Vorschau oder Schätzung, Export und Entitätszugriff keine Daten mehr aus diesem Datensatz gelesen. Die Daten im Profil-Service werden nur vorläufig gelöscht und bleiben so bis zum Ende des Prozesses erhalten, wonach sie dauerhaft gelöscht werden. |
 | Profilanzahl und Zielgruppen aktualisiert | 48 Stunden | Sobald alle betroffenen Profile aktualisiert worden sind, werden alle zugehörigen [Zielgruppen](../segmentation/home.md) aktualisiert, damit ihre neue Größe widergespiegelt wird. Je nach entferntem Datensatz und den Attributen, nach denen Sie segmentieren, kann sich die Größe der einzelnen Zielgruppen aufgrund des Löschens erhöhen oder verringern. An dieser Stelle werden alle resultierenden Änderungen der Gesamtprofilanzahl in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten widergespiegelt. |
 | Journeys und Ziele werden aktualisiert | 50 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in den zugehörigen Segmenten aktualisiert. |
@@ -51,6 +52,24 @@ Anfragen zum [Löschen von Datensätzen](./ui/record-delete.md) und zur Datensat
 
 {style="table-layout:auto"}
 
-## Nächste Schritte
+### Zeitleisten für das Löschen von Datensätzen {#record-delete-transparency}
 
-Dieses Dokument bietet einen Überblick über die Datenlebenszyklusfunktionen von Experience Platform. Informationen zu den ersten Schritten bei Datenhygiene-Anfragen in der Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche](./ui/overview.md) Informationen zum programmgesteuerten Erstellen von Datenlebenszyklus-Aufträgen finden Sie im [Data Hygiene API-Handbuch](./api/overview.md)
+Nachdem ein Antrag auf Löschung eines Datensatzes [ wurde](./ui/record-delete.md) erfolgt Folgendes.
+
+>[!NOTE]
+>
+>Die Zeiten sind ungefähre Zahlen und variieren je nach Systemlast, Batch-Planung und Berechtigungsstufe. Der End-to-End-SLA (30 Tage Standard, 15 Tage für Privacy and Security Shield oder Healthcare Shield) ist die operative Verpflichtung.
+
+| Staging | Ca. Timing | Beschreibung |
+| --- | --- | --- |
+| Anforderung gesendet und in Batches eingesetzt | Tag 1-15 | Ein Arbeitsauftrag wird erstellt und in die Warteschlange gestellt. Anfragen können bis zu 14 Tage vor Beginn der Verarbeitung in die Warteschlange gestellt und in Batches aufgenommen werden. Batching ist der Hauptgrund dafür, dass das Löschen nicht sofort erfolgt. |
+| Löschanfrage für nachgelagerte Systeme | Tag 16-25 | Nachgelagerte Services empfangen die Löschanfrage für den Datensatz und führen sie aus. |
+| Puffer - Integritätsprüfungen und erneute Übermittlungen | Tag 25-30 | Ein Pufferfenster ermöglicht Integritätsprüfungen und die erneute Übermittlung fehlgeschlagener Aufträge, bevor das SLA-Fenster geschlossen wird. Der Arbeitsauftragsstatus wird auf `completed` aktualisiert, sobald alle Systeme den Löschvorgang bestätigen. |
+
+{style="table-layout:auto"}
+
+Informationen zu berechtigungsbasierten Warteschlangendauern und maximalen SLA-Werten finden Sie unter [Verarbeitungszeitpläne für Kennungsübermittlungen](./ui/record-delete.md#sla-processing-timelines).
+
+## Nächste Schritte {#next-steps}
+
+Dieses Dokument bietet einen Überblick über die Datenlebenszyklusfunktionen von Experience Platform. Informationen zu den ersten Schritten bei Datenhygiene-Anfragen in der Benutzeroberfläche finden Sie im [Handbuch zur Datenlebenszyklus-Benutzeroberfläche](./ui/overview.md). Informationen zum programmgesteuerten Erstellen von Datenlebenszyklusaufträgen finden Sie im [Data Hygiene API Guide](./api/overview.md).
