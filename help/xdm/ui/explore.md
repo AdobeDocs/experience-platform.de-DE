@@ -5,9 +5,9 @@ title: Erkunden von Schema-Ressourcen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie vorhandene Schemata, Klassen, Schemafeldgruppen und Datentypen in der Benutzeroberfläche von Experience Platform untersuchen.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ca90fd3f8615e21fb4c44104c2de7679db1e1025
+source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '2820'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Wählen Sie in der Benutzeroberfläche von Experience Platform im linken Navigat
 
 ![Der Arbeitsbereich „Schemata“ mit mehreren hervorgehobenen Registerkarten.](../images/ui/explore/tabs.png)
 
-Das Filtersymbol (![Filtersymbol Bild](/help/images/icons/filter.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzugrenzen. Ressourcenfilter sind für Schemata und Beziehungen auf den Registerkarten **[!UICONTROL Browse]** bzw. **[!UICONTROL Relationships]** verfügbar.
+Das Filtersymbol (![Filtersymbol Bild](/help/images/icons/filter.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzugrenzen. Ressourcenfilter sind für Schemata und Beziehungen auf den Registerkarten **[!UICONTROL Browse]** bzw. **[!UICONTROL Relationships]** verfügbar. Verwenden Sie auf der Registerkarte **[!UICONTROL Field groups]** die unter [ und Filterung von Feldergruppen beschriebenen Filter, ](#field-group-metadata-and-filtering) die Liste nach kompatiblen Klassen- und Branchen-Tags einzugrenzen.
 
-Auf der Registerkarte [!UICONTROL Browse] des Arbeitsbereichs [!UICONTROL Schemas] können Sie Ihr Schema-Inventar filtern. Verwenden Sie den Umschalter **[!UICONTROL Included in Profile]** , um nur Schemas anzuzeigen, die für die Verwendung im [Echtzeit-Kundenprofil“ aktiviert &#x200B;](../../profile/home.md). Verwenden Sie den Umschalter **[!UICONTROL Show adhoc schemas]** , um die Liste der Schemata zu filtern, die mit Feldern erstellt wurden, die in einem Namespace enthalten sind und nur von einem einzigen Datensatz verwendet werden können.
+Auf der Registerkarte [!UICONTROL Browse] des Arbeitsbereichs [!UICONTROL Schemas] können Sie Ihr Schema-Inventar filtern. Verwenden Sie den Umschalter **[!UICONTROL Included in Profile]** , um nur Schemas anzuzeigen, die für die Verwendung im [Echtzeit-Kundenprofil“ aktiviert ](../../profile/home.md). Verwenden Sie den Umschalter **[!UICONTROL Show adhoc schemas]** , um die Liste der Schemata zu filtern, die mit Feldern erstellt wurden, die in einem Namespace enthalten sind und nur von einem einzigen Datensatz verwendet werden können.
 
 ![Die Registerkarte &quot;[!UICONTROL Schemas] Workspace-[!UICONTROL Browse]&quot; mit hervorgehobenem Bedienfeld „Filter“.](../images/ui/explore/filters.png)
 
@@ -78,7 +78,7 @@ Je nach Ressourcentyp und Ihren Berechtigungen sind möglicherweise die folgende
 - **[!UICONTROL Delete]** - Eine benutzerdefinierte Ressource dauerhaft aus Ihrer Organisation entfernen (wenn Einschränkungen dies zulassen). Wenn der Löschvorgang blockiert ist, siehe [Einschränkungen](#delete-constraints).
 - **[!UICONTROL Download sample file]** - Generieren Sie eine Beispieldatendatei basierend auf der Ressourcenstruktur. Schritt für Schritt: [Generieren von Beispiel-XDM-](./sample.md).
 - **[!UICONTROL Copy JSON structure]** - Kopieren Sie die Ressourcendefinition im JSON-Format zur Wiederverwendung, zum Export oder zur Überprüfung. Schritt für Schritt: [XDM-Schemata exportieren](./export.md).
-- **[!UICONTROL Add to package]** - Die Ressource wird in ein Sandbox-Paket für den Export oder Import in mehrere Sandboxes aufgenommen. Schritt für Schritt: [Objekte in ein Paket &#x200B;](../../sandboxes/ui/sandbox-tooling.md#export-objects).
+- **[!UICONTROL Add to package]** - Die Ressource wird in ein Sandbox-Paket für den Export oder Import in mehrere Sandboxes aufgenommen. Schritt für Schritt: [Objekte in ein Paket ](../../sandboxes/ui/sandbox-tooling.md#export-objects).
 
 Folgendes gilt für verschiedene Ressourcentypen:
 
@@ -138,11 +138,11 @@ Alle Felder vom Typ „Objekt“, die Untereigenschaften enthalten, werden stand
 
 ### Indikator für Standardklasse und Feldergruppe {#standard-class-and-field-group-indicator}
 
-Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Schlosssymbol (![Vorhängeschloss-Symbol) gekennzeichnet.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+Innerhalb des Schema-Editors werden Standardklassen (Adobe-generiert) und Feldergruppen mit dem Schlosssymbol (![Vorhängeschloss-Symbol) ](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben einem beliebigen Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 
 ![Der Schema-Editor mit hervorgehobenem Vorhängeschloss-Symbol](../images/ui/explore/schema-editor-padlock-icon.png)
 
-Eine Anleitung [&#x200B; Sie in der Dokumentation zum Hinzufügen benutzerdefinierter Felder &#x200B;](./resources/schemas.md) Standardfeldgruppen . Eine Standardklasse kann nicht bearbeitet werden.
+Eine Anleitung [ Sie in der Dokumentation zum Hinzufügen benutzerdefinierter Felder ](./resources/schemas.md) Standardfeldgruppen . Eine Standardklasse kann nicht bearbeitet werden.
 
 ### Systemgenerierte Felder {#system-fields}
 
@@ -164,7 +164,7 @@ Wenn ein Array-Feld auf einem Objekttyp basiert, können Sie auf der Arbeitsflä
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-Wenn Sie den Namen eines Felds auf der Arbeitsfläche auswählen, wird die rechte Leiste aktualisiert, um Details zu diesem Feld unter **[!UICONTROL Field properties]** anzuzeigen. Dies kann eine Beschreibung des vorgesehenen Anwendungsfalls des Felds, Standardwerte, Muster, Formate, unabhängig davon, ob das Feld erforderlich ist oder nicht, und mehr umfassen.
+Wenn Sie den Namen eines Felds auf der Arbeitsfläche auswählen, wird die rechte Leiste aktualisiert, um Details zu diesem Feld unter **[!UICONTROL Field properties]** anzuzeigen. Dies kann eine Beschreibung des vorgesehenen Anwendungsfalls des Felds, Standardwerte, Muster, Formate, die Angabe, ob das Feld erforderlich ist, und mehr umfassen. Wenn Sie eine Feldergruppe untersuchen, können auch hier beschriftungsbezogene Details für das ausgewählte Feld angezeigt werden. Siehe [Beschriftungen in der Strukturansicht](#field-group-labels-in-structure).
 
 ![Ein aus dem Commerce-Datentyp ausgewähltes Feld mit hervorgehobenen Feldeigenschaften.](../images/ui/explore/field-properties.png)
 
@@ -176,13 +176,13 @@ Wenn es sich bei dem überprüften Feld um ein Aufzählungsfeld handelt, zeigt d
 
 Beim Überprüfen von Schemata, die Identitätsfelder enthalten, werden diese Felder in der linken Leiste unter der Klasse oder Feldergruppe aufgeführt, die sie für das Schema bereitstellt. Wählen Sie den Namen des Identitätsfelds in der linken Leiste aus, um das Feld auf der Arbeitsfläche anzuzeigen, unabhängig davon, wie tief es verschachtelt ist.
 
-Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol) &#x200B;](/help/images/icons/identity-service.png). Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen anzeigen, z. B. den [Identity-Namespace](../../identity-service/features/namespaces.md) und ob das Feld die primäre Identität für das Schema ist oder nicht.
+Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol) ](/help/images/icons/identity-service.png). Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen anzeigen, z. B. den [Identity-Namespace](../../identity-service/features/namespaces.md) und ob das Feld die primäre Identität für das Schema ist oder nicht.
 
 ![Der Schema-Editor mit der hervorgehobenen Identität des Schemas in der linken Leiste, dem hervorgehobenen Feld im Schemadiagramm und dem hervorgehobenen Identity-Namespace in den Feldeigenschaften.](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->Weitere Informationen zu Identitätsfeldern und [&#x200B; Beziehung zu nachgelagerten Experience Platform](./fields/identity.md)Services finden Sie im Handbuch unter „Definieren von Identitätsfeldern“.
+>Weitere Informationen zu Identitätsfeldern und [ Beziehung zu nachgelagerten Experience Platform](./fields/identity.md)Services finden Sie im Handbuch unter „Definieren von Identitätsfeldern“.
 
 ### Beziehungsfelder {#relationship}
 
@@ -194,7 +194,93 @@ Um den Identity-Namespace der primären Identität des Referenzschemas anzuzeige
 
 ![Das Dialogfeld „Beziehung bearbeiten“ mit den angezeigten Beziehungsparametern.](../images/ui/explore/edit-relationship-dialog.png)
 
-Weitere Informationen zur Verwendung von [&#x200B; in XDM-Schemata finden Sie &#x200B;](../tutorials/relationship-ui.md) Tutorial zum Erstellen einer Beziehung in der Benutzeroberfläche .
+Weitere Informationen zur Verwendung von [ in XDM-Schemata finden Sie ](../tutorials/relationship-ui.md) Tutorial zum Erstellen einer Beziehung in der Benutzeroberfläche .
+
+## Erkunden von Feldergruppen: Verwendung und Metadaten {#explore-field-groups}
+
+Navigieren Sie zu **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** , um Feldergruppen zu untersuchen. Auf der Registerkarte &quot;**[!UICONTROL Field groups]**&quot; helfen Ihnen zusätzliche Funktionen dabei zu verstehen, wo eine Feldergruppe schemaübergreifend verwendet wird und was sie enthält, z. B. Kompatibilität, erforderliche Felder (die Aufnahmeanforderungen erzwingen) und Governance-Signale.
+
+Mithilfe dieser Funktionen können Sie die Auswirkungen bewerten, bevor Sie Änderungen vornehmen, und relevante Feldergruppen beim Schema-Design effizienter identifizieren.
+
+### Anzeigen der Schemanutzung für Feldergruppen {#view-schema-usage-for-field-groups}
+
+Wählen Sie in der **[!UICONTROL Field groups]** eine Feldergruppe aus, um ihre Detailansicht zu öffnen. Die Arbeitsfläche wird aktualisiert und zeigt die Feldergruppenstruktur an. Die Eigenschaftenleiste zeigt zusätzliche Informationen zur ausgewählten Ressource an.
+
+#### Schemata, die diese Feldergruppe verwenden
+
+In der rechten Leiste Eigenschaften werden im Abschnitt **[!UICONTROL Schemas using this field group]** Schemata aufgelistet, die derzeit die -Feldgruppe enthalten.
+
+![Die Eigenschaftenleiste der Feldergruppen, auf der die Schemata angezeigt werden, die diesen Abschnitt zur Feldergruppe verwenden.](../images/ui/explore/field-group-properties.png)
+
+- Wenn die Feldergruppe von drei oder weniger Schemata verwendet wird, werden alle Schemanamen angezeigt.
+- Wenn es von mehr als drei Schemata verwendet wird, werden nur einige Namen angezeigt, zusammen mit einer Option zum Anzeigen der vollständigen Liste.
+
+Wählen Sie einen Schemanamen aus, um seine Detailansicht in einer neuen Registerkarte zu öffnen, und überprüfen Sie, wie die Feldergruppe in diesem Schema implementiert ist.
+
+#### Weitere und vollständige Schemalliste anzeigen
+
+Wenn mehr Schemata vorhanden sind, als inline angezeigt werden können, wählen Sie **[!UICONTROL View more]** aus, um das vollständige Dialogfeld zu öffnen.
+
+![Die Option „Mehr anzeigen“ im Abschnitt Schemata, die diese Feldergruppe verwenden.](../images/ui/explore/view-more-schemas.png)
+
+Das Dialogfeld **[!UICONTROL Schemas using this field group]** wird mit der vollständigen Liste der Schemata angezeigt, die die -Feldgruppe verwenden.
+
+![Das Dialogfeld Schemata, die diese Feldergruppe verwenden und in dem die Schemaliste und Spalten angezeigt werden.](../images/ui/explore/schemas-using-this-field-group-dialog.png)
+
+Im Dialogfeld **[!UICONTROL Schemas using this field group]** haben Sie folgende Möglichkeiten:
+
+- Durchsuchen aller Schemata, die die Feldergruppe verwenden
+- Seiten durch große Ergebnismengen
+- Schema auswählen, um seine Detailansicht in einer neuen Registerkarte zu öffnen
+
+Sie können Schemadetails wie Schemaname, Klasse und andere Attribute anzeigen.
+
+Dieser Workflow ist nur für **Auswirkungsanalyse und -erkundung** vorgesehen. Schemata oder Feldergruppen werden nicht geändert. Informationen zum Ändern der Schemastruktur finden Sie unter [Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche](./resources/schemas.md).
+
+### Feldergruppen-Metadaten und -Filter {#field-group-metadata-and-filtering}
+
+Die Registerkarte **[!UICONTROL Field groups]** enthält Metadaten und Filterwerkzeuge, mit denen Sie Feldergruppen vor der Auswahl finden und auswerten können.
+
+#### Tabelle und Filter durchsuchen
+
+Die Inventartabelle der Feldergruppen enthält zusätzliche Spalten, die Metadaten direkt in der Listenansicht bereitstellen, z. B. **[!UICONTROL Compatible classes]**, die angibt, auf welche Klassen eine Feldergruppe angewendet werden kann. Feldergruppen können nur zu Schemata hinzugefügt werden, die eine der aufgelisteten kompatiblen Klassen verwenden, basierend auf dem Verhalten der Daten, die sie darstellen (z. B. datensatzbasierte oder Zeitreihendaten). Die Tabelle kann **[!UICONTROL All]** anzeigen, wenn die Feldergruppe mit allen Klassen kompatibel ist. **[!UICONTROL Industry tags]** helfen bei der Kategorisierung von Feldergruppen für die Erkennung.
+
+Um die Liste zu verfeinern, wählen Sie das Filtersymbol (![Filtersymbol Bild](/help/images/icons/filter.png)) aus, um den Filterbereich in der linken Leiste zu öffnen. Die folgende Abbildung zeigt das in der linken Leiste geöffnete Filterbedienfeld.
+
+![Die Registerkarte „Feldergruppen“ mit kompatiblen Klassen, Branchen-Tags und dem Filterbedienfeld.](../images/ui/explore/field-group-filters.png)
+
+Im Filterbedienfeld haben Sie folgende Möglichkeiten:
+
+- **[!UICONTROL Compatible classes]** - Verwenden Sie das Dropdown, um Feldergruppen nach Klassenkompatibilität zu filtern.
+- **[!UICONTROL Industry tags]** - Verwenden Sie Kontrollkästchen, um nach einer oder mehreren Branchenkategorien zu filtern
+
+Wählen Sie beim Durchsuchen eine Zeile in der Tabelle aus, um die Informationsleiste zu aktualisieren. Die Informationsleiste zeigt Metadaten wie kompatible Klassen und Branchen-Tags an, damit Sie wichtige Details überprüfen können, ohne die Feldergruppe zu öffnen.
+
+#### Metadaten der Feldergruppen-Details
+
+Wenn Sie eine Feldergruppe öffnen, zeigt die Eigenschaftenleiste zusätzliche Metadaten an, die mit der Ressource verknüpft sind.
+
+Die Eigenschaftenleiste kann die folgenden Metadaten anzeigen:
+
+- **[!UICONTROL Compatible classes]** - Klassen, die die Feldergruppe erweitern kann
+- **[!UICONTROL Required attributes]** - Attribute, die gültige Werte aufweisen müssen, wenn sie von der Feldergruppe während der Datenaufnahme benötigt werden. Die Anforderungen hängen von der Datenstruktur ab, und Datensätze mit fehlenden oder ungültigen erforderlichen Werten schlagen bei der Validierung fehl
+- **[!UICONTROL Labels]** - Kennzeichnungen werden nicht auf der Feldergruppenebene angezeigt. Ein Feld auswählen, um Beschriftungsdetails in der **[!UICONTROL Field properties]** Leiste anzuzeigen
+
+Diese Informationen helfen Ihnen, Einschränkungen und Anforderungen zu verstehen, bevor Sie die Feldergruppe verwenden oder ändern.
+
+#### Beschriftungen in der Strukturansicht
+
+Wenn eine Feldergruppe auf der Arbeitsfläche geöffnet ist, können Sie Beschriftungsinformationen direkt in der Struktur anzeigen. Wählen Sie das Einstellungssymbol (![Einstellungssymbol.](../../images/icons/settings.png)) in der Symbolleiste der Arbeitsfläche und aktivieren Sie **[!UICONTROL Show labels on tree]**, um Kennzeichnungsindikatoren für Felder auf der Arbeitsfläche anzuzeigen.
+
+![Die Arbeitsfläche der Feldergruppen mit dem Dialogfeld mit den Anzeigeoptionen für die Baumstruktur mit hervorgehobener Option „Kennzeichnungen in der Baumstruktur anzeigen“.](../images/ui/explore/show-labels-on-tree.png)
+
+Wählen Sie ein Feld auf der Arbeitsfläche aus, um Beschriftungsdetails in der **[!UICONTROL Field properties]** Leiste anzuzeigen, einschließlich der auf dieses Feld angewendeten Beschriftungen.
+
+![Die Arbeitsfläche für Feldergruppen mit Beschriftungen von Feldern und Beschriftungsdetails in der Leiste „Feldeigenschaften“.](../images/ui/explore/field-group-labels.png)
+
+Kennzeichnungen werden nach Kategorie gruppiert (z. B. Identitäts- und Vertraulichkeitskennzeichnungen) und bieten Einblick in die Governance oder die Zugriffsbeschränkungen, die auf die Daten angewendet werden.
+
+Diese Indikatoren dienen nur der Sichtbarkeit und ändern die Schemastruktur nicht. Weitere Informationen finden Sie unter [Verwalten von Datennutzungsbeschriftungen für ein Schema](../tutorials/labels.md).
 
 ## Nächste Schritte
 
