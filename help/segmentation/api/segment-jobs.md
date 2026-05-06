@@ -4,10 +4,10 @@ title: API-Endpunkt für Segmentaufträge
 description: Mit dem Segmentauftrags-Endpunkt in der Segmentierungs-Service-API von Adobe Experience Platform können Sie Segmentaufträge für Ihr Unternehmen programmgesteuert verwalten.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 66ee03814585364826d8d9416530f0a976481b6e
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 18%
+source-wordcount: '1240'
+ht-degree: 19%
 
 ---
 
@@ -377,7 +377,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit detaillierten Informationen zum angegebenen Segmentauftrag zurück. Eine vollständige Liste aller Segmentdefinitionen wird innerhalb des `children.segments` angezeigt.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum angegebenen Segmentauftrag zurück. Eine vollständige Liste aller Segmentdefinitionen wird innerhalb des `children.segments` angezeigt.
 
 +++ Eine Beispielantwort zum Abrufen eines Segmentauftrags.
 
@@ -451,8 +451,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit detaillierten Inform
 | `metrics` | Ein Objekt, das Diagnoseinformationen zum Segmentauftrag enthält. |
 
 +++
-
->[!ENDTABS]
 
 ## Massenabruf von Segmentaufträgen {#bulk-get}
 
