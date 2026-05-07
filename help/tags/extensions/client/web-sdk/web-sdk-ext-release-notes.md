@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
+source-git-commit: a8a466778b74e6f64d258f759a36e1a4361f0a6b
 workflow-type: tm+mt
-source-wordcount: '3320'
-ht-degree: 54%
+source-wordcount: '3355'
+ht-degree: 53%
 
 ---
 
@@ -13,6 +13,11 @@ ht-degree: 54%
 # Versionshinweise zur Tag-Erweiterung „Web SDK&quot;
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zu SDK finden Sie in den [Versionshinweisen zu Adobe Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Version 2.35.1 - 7. Mai 2026
+
+- Enthält [Version 2.35.1](/help/collection/js/release-notes.md) des Adobe Experience Platform Web SDK.
+- Es wurde ein Problem behoben, bei dem erforderliche Komponenten wie Kontext aus dem SDK-Bundle ausgeschlossen wurden und verhindert wurde, dass Ereignisse gesendet wurden.
 
 ## Version 2.35.0 - 7. Mai 2026
 
@@ -426,7 +431,7 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-- Der Aktion „Ereignis senden“ wurde [&#x200B; Kontrollkästchen „Dokument &#x200B;](actions/send-event.md)&quot; hinzugefügt.
+- Der Aktion „Ereignis senden“ wurde [ Kontrollkästchen „Dokument ](actions/send-event.md)&quot; hinzugefügt.
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](configure/consent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
 - Es wurde Unterstützung für den Adobe Consent 2.0-Standard bei Verwendung der [`Set consent`](actions/set-consent.md) hinzugefügt.
