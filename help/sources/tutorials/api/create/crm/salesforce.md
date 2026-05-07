@@ -2,16 +2,16 @@
 title: Verbinden von Salesforce mit Experience Platform mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Salesforce-Konto verbinden.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
+source-git-commit: 11e9e1a25a45f4011f15b1e28753a98d4158012c
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 17%
+source-wordcount: '952'
+ht-degree: 18%
 
 ---
 
 # Verbinden von [!DNL Salesforce] mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
-Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Salesforce]-Quellkonto mithilfe der [[!DNL Flow Service] API) mit Adobe Experience Platform &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lesen Sie dieses Handbuch, um zu erfahren, wie Sie Ihr [!DNL Salesforce]-Quellkonto mithilfe der [[!DNL Flow Service] API) mit Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -22,7 +22,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 ### Verwenden von Experience Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [&#x200B; mit Experience Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Experience Platform-APIs finden Sie im Handbuch unter [ mit Experience Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Verbinden von [!DNL Salesforce] mit Experience Platform auf [!DNL Azure] {#azure}
 
@@ -30,30 +30,7 @@ Lesen Sie die folgenden Schritte, um Informationen zum Verbinden Ihrer [!DNL Sal
 
 ### Sammeln erforderlicher Anmeldedaten
 
->[!WARNING]
->
->Die Standardauthentifizierung für die [!DNL Salesforce] wird im Januar 2026 eingestellt. Sie müssen zur Authentifizierung mit Client-Anmeldeinformationen für OAuth 2 wechseln, um weiterhin die -Quelle verwenden und Daten von Ihrem [!DNL Salesforce]-Konto in Experience Platform aufnehmen zu können.
-
-Die [!DNL Salesforce]-Quelle unterstützt die Standardauthentifizierung sowie OAuth2-Client-Anmeldeinformationen.
-
->[!BEGINTABS]
-
->[!TAB Einfache Authentifizierung]
-
-Um Ihr [!DNL Salesforce]-Konto mit [!DNL Flow Service] über die Standardauthentifizierung zu verbinden, geben Sie Werte für die folgenden Anmeldeinformationen an:
-
-| Anmeldedaten | Beschreibung |
-| --- | --- |
-| `environmentUrl` | Die URL der [!DNL Salesforce] Quellinstanz. Das Format für `environmentUrl` ist `https://[domain].my.salesforce.com`. |
-| `username` | Der Benutzername für das [!DNL Salesforce] Benutzerkonto. |
-| `password` | Das Kennwort für das [!DNL Salesforce] Benutzerkonto. |
-| `securityToken` | Das Sicherheits-Token für das [!DNL Salesforce] Benutzerkonto. |
-| `apiVersion` | (Optional) Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce]. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version `52` verwenden, müssen Sie den Wert als `52.0` eingeben. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Salesforce] ist: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
-
-Weitere Informationen zu den ersten Schritten finden Sie [diesem Salesforce-Dokument](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
-
->[!TAB OAuth 2 Client-Anmeldedaten]
+Die [!DNL Salesforce]-Quelle unterstützt die Authentifizierung über OAuth2-Client-Anmeldeinformationen.
 
 Um Ihr [!DNL Salesforce]-Konto mit [!DNL Flow Service] über Anmeldeinformationen für den OAuth 2-Client zu verbinden, geben Sie Werte für die folgenden Anmeldeinformationen an:
 
@@ -68,8 +45,6 @@ Um Ihr [!DNL Salesforce]-Konto mit [!DNL Flow Service] über Anmeldeinformatione
 
 Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce] finden Sie im [[!DNL Salesforce] Handbuch zu OAuth-Autorisierungsflüssen](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
->[!ENDTABS]
-
 ### Erstellen einer Basisverbindung für [!DNL Salesforce] in Experience Platform auf [!DNL Azure]
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Experience Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen ID der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
@@ -82,67 +57,7 @@ Um eine Basisverbindung zu erstellen und Ihr [!DNL Salesforce]-Konto mit Experie
 POST /connections
 ```
 
->[!BEGINTABS]
-
->[!TAB Einfache Authentifizierung]
-
-+++Anfrage
-
-Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce] mit einfacher Authentifizierung:
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "ACME Salesforce account",
-      "description": "Salesforce account using basic authentication",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params":
-            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
-            "username": "acme-salesforce",
-            "password": "xxxx",
-            "securityToken": "xxxx"
-        }
-      },
-      "connectionSpec": {
-          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-          "version": "1.0"
-      }
-  }'
-```
-
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `auth.params.environmentUrl` | Die URL Ihrer [!DNL Salesforce]. |
-| `auth.params.username` | Der Benutzername, der Ihrem [!DNL Salesforce]-Konto zugeordnet ist. |
-| `auth.params.password` | Das mit Ihrem [!DNL Salesforce]-Konto verknüpfte Kennwort. |
-| `auth.params.securityToken` | Das Ihrem [!DNL Salesforce]-Konto zugeordnete Sicherheits-Token. |
-| `connectionSpec.id` | Die Spezifikations-ID der [!DNL Salesforce]-Verbindung: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
-
-+++
-
-+++Antwort
-
-Bei einer erfolgreichen Antwort wird Ihre neu erstellte Basisverbindung zusammen mit der eindeutigen ID zurückgegeben.
-
-```json
-{
-    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
-    "etag": "\"1700df7b-0000-0200-0000-5e3b424f0000\""
-}
-```
-
-+++
-
->[!TAB OAuth 2 Client-Anmeldedaten]
-
-+++Anfrage
++++Zum Anzeigen der Anfrage auswählen
 
 Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce] mit OAuth 2-Client-Anmeldedaten:
 
@@ -186,7 +101,7 @@ curl -X POST \
 +++
 
 
-+++Antwort
++++Auswählen, um die Antwort anzuzeigen
 
 Bei einer erfolgreichen Antwort wird Ihre neu erstellte Basisverbindung zusammen mit der eindeutigen ID zurückgegeben.
 
@@ -198,8 +113,6 @@ Bei einer erfolgreichen Antwort wird Ihre neu erstellte Basisverbindung zusammen
 ```
 
 +++
-
->[!ENDTABS]
 
 ## Verbinden von [!DNL Salesforce] mit Experience Platform auf Amazon Web Services (AWS) {#aws}
 
@@ -225,7 +138,7 @@ POST /connections
 
 **Anfrage**
 
-+++Auswählen, um die Anfrage anzuzeigen
++++Zum Anzeigen der Anfrage auswählen
 
 Die folgende Anfrage erstellt eine Basisverbindung für die [!DNL Salesforce] in Experience Platform auf AWS.
 
@@ -286,7 +199,7 @@ GET /connections
 
 **Anfrage**
 
-+++Auswählen, um die Anfrage anzuzeigen
++++Zum Anzeigen der Anfrage auswählen
 
 Die folgende Anfrage ruft Informationen zur Basisverbindungs-ID ab: `3e908d3f-c390-482b-9f44-43d3d4f2eb82`.
 
