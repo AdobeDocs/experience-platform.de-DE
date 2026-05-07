@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
 workflow-type: tm+mt
-source-wordcount: '2752'
-ht-degree: 54%
+source-wordcount: '2963'
+ht-degree: 52%
 
 ---
 
@@ -16,19 +16,29 @@ ht-degree: 54%
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Version 2.32.0 – Dienstag, 23. März 2026
+## Version 2.33.0 - 7. Mai 2026
+
+- Es wurde ein Problem behoben, bei dem verbrückte Media Analytics-AdBreak-, Kapitel- und QoE-Ereignisse API-Fehler zurückgaben.
+- Es wurde Adobe Advertising-`stitchId` zu ausgehenden Erlebnisereignissen hinzugefügt, wenn Advertising konfiguriert ist.
+- Die Leistung von `sendEvent`-Befehlen wurde durch Entfernen eines Blocks bei der Verarbeitung der ID-Zielgruppe verbessert.
+- Es wurde ein Problem behoben, bei dem die Advertising Identity Resolution Skripte und iFrames von Drittanbietern lud, selbst wenn Advertising nicht konfiguriert war.
+- Es wurde die Möglichkeit hinzugefügt, `adobe_mc` Identitätsübertragungsparameter aus dem Hash zu lesen (zuvor war nur in den Abfrageparametern).
+- Es wurde ein Problem behoben, bei dem `adobe_mc` nicht gelesen werden konnten, wenn die URL mehrmals kodiert war.
+- XDM in alle ausgehenden Brand Concierge-Ereignisse einschließen.
+
+## Version 2.32.0 - 23. März 2026
 
 - Gemeinsam genutzte Hauptdienstprogramme werden jetzt als eigenständiges npm-Paket ([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core)) veröffentlicht, das von Erweiterungen und Integrationen verwendet werden kann.
 - Schließt jetzt die IANA-Zeitzone in das XDM-Feld ein, `xdm.placeContext.ianaTimezone` wenn `placeContext` in der [`context`](/help/collection/js/commands/configure/context.md) Konfigurationsvariablen enthalten ist.
 - Brand Concierge: Es wurde ein Sitzungs-ID-Problem behoben, bei dem [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) deaktiviert war.
 
-## Version 2.31.1 – Donnerstag, 11. Februar 2026
+## Version 2.31.1 - 11. Februar 2026
 
 - Es wurde ein Problem behoben, bei dem die Web-SDK abstürzte, wenn die URL mehrere `s_kwcid` oder `ef_id` enthielt, die sich auf Werbung bezogen.
 - Es wurde ein Problem behoben, bei dem Advertising-Daten gesendet und Cookies erstellt wurden, bevor das Einverständnis erteilt wurde.
 - Es wurde ein Problem in Safari behoben, bei dem Brand Concierge-Streams nicht korrekt geparst wurden.
 
-## Version 2.31.0 – Dienstag, 9. Februar 2026
+## Version 2.31.0 - 9. Februar 2026
 
 **Neue Funktionen**
 
@@ -97,7 +107,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [&#x200B; Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket &#x200B;](install/create-custom-build.md).
+- Sie können jetzt das NPM-Paket von Web SDK verwenden, um benutzerdefinierte Web-SDK-Builds zu erstellen und nur die benötigten Bibliothekskomponenten auszuwählen. Dies führt zu einer geringeren Bibliotheksgröße und optimierten Ladezeiten. Weitere Informationen finden Sie in der Dokumentation [ Erstellen eines benutzerdefinierten Web-SDK-Builds mit dem NPM-Paket ](install/create-custom-build.md).
 - Der [`getIdentity`](commands/getidentity.md)-Befehl liest jetzt automatisch die ECID direkt aus dem `kndctr`-Identitäts-Cookie. Wenn Sie `getIdentity` mit dem Namespace `ECID` aufrufen und bereits ein Identitäts-Cookie vorhanden ist, sendet Web SDK keine Anfrage mehr an die Edge Network, um die Identität abzurufen. Jetzt liest es die Identität aus dem Cookie.
 
 **Fehlerbehebungen und Verbesserungen**
@@ -211,7 +221,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 - Unterstützung für das Rendern von In-App-Nachrichten von Adobe Journey Optimizer wurde hinzugefügt.
 - Es wurde Unterstützung für [Ereignisse oben und unten auf der Seite](../use-cases/personalization/top-bottom-page-events.md) hinzugefügt.
-- Dem [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md)-Befehl wurde `sendEvent` Option hinzugefügt, um das Anfordern des seitenweiten Bereichs und der Standardoberfläche zu steuern.
+- Dem `sendEvent`-Befehl wurde [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) Option hinzugefügt, um das Anfordern des seitenweiten Bereichs und der Standardoberfläche zu steuern.
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -267,7 +277,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.13.1 – 13. Oktober 2022
 
-- Es wurde ein Problem behoben, bei dem die Besuchermigration nicht funktionierte, wenn window.Visitor nach der Konfiguration definiert wurde. Dies ist insbesondere bei der Ausführung mit Adobe-Tags ein Problem.
+- Es wurde ein Problem behoben, bei dem die Besuchermigration in einem -Fenster nicht funktionierte.Besucher wird nach der Konfiguration definiert. Dies ist insbesondere bei der Ausführung mit Adobe-Tags ein Problem.
 - Es wurde ein Problem behoben, bei dem `device.screenWidth` und `device.screenHeight` in einigen Umgebungen als Zeichenfolgen gefüllt wurden.
 
 ## Version 2.13.0 – 28. September 2022
@@ -296,7 +306,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-- Sie können jetzt personalisierte Erlebnisse präziser bereitstellen, indem Sie Besucher-IDs zwischen mobilen Apps und mobilen Webinhalten sowie domänenübergreifend freigeben. Weitere Informationen [&#x200B; Sie unter „Identität &#x200B;](../identity/overview.md) Datenerfassung“.
+- Sie können jetzt personalisierte Erlebnisse präziser bereitstellen, indem Sie Besucher-IDs zwischen mobilen Apps und mobilen Webinhalten sowie domänenübergreifend freigeben. Weitere Informationen [ Sie unter „Identität ](../identity/overview.md) Datenerfassung“.
 - Sie können jetzt ein Vorschläge-Array von [!DNL Adobe Target] in Einzelseitenanwendungen rendern oder ausführen, ohne die Analysemetriken zu inkrementieren. Dadurch werden Berichtsfehler reduziert und die Analysegenauigkeit erhöht.
 - Zusätzliche Informationen zum `getLibraryInfo`-Befehl, einschließlich verfügbarer Befehle und der endgültigen Konfiguration für die Instanz, wurden hinzugefügt.
 
@@ -355,16 +365,16 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 - Bietet mehr Personalisierungsinhalte in der aufgelösten `sendEvent`-Zusage, einschließlich Adobe Target-Antwort-Token. Wenn der `sendEvent`-Befehl ausgeführt wird, wird eine Zusage zurückgegeben, die schließlich mit einem `result`-Objekt aufgelöst wird, das Informationen enthält, die vom Server empfangen wurden. Zuvor enthielt dieses Ergebnisobjekt eine Eigenschaft mit dem Namen `decisions`. Diese `decisions`-Eigenschaft wird nicht mehr unterstützt. Die neue Eigenschaft `propositions` wurde hinzugefügt. Diese neue Eigenschaft bietet Kundinnen und Kunden Zugriff auf mehr Personalisierungsinhalte, einschließlich Antwort-Token.
 
-## Version 2.5.0 – Juni 2021 
+## Version 2.5.0 – Juni 2021
 
 - Unterstützung für Umleitungspersonalisierungsangebote wurde hinzugefügt.
 - Automatisch erfasste Darstellungsfeldbreiten und -höhen, die negative Werte sind, werden nicht mehr an den Server gesendet.
 - Wenn ein Ereignis durch Rückgabe von `false` von einem `onBeforeEventSend`-Rückruf abgebrochen wird, wird jetzt eine Meldung protokolliert.
 - Es wurde ein Problem behoben, bei dem bestimmte XDM-Daten, die für ein einzelnes Ereignis vorgesehen waren, über mehrere Ereignisse hinweg einbezogen wurden.
 
-## Version 2.4.0 – März 2021 
+## Version 2.4.0 – März 2021
 
-- SDK kann jetzt als NPM[Paket installiert &#x200B;](install/npm.md).
+- SDK kann jetzt als NPM[Paket installiert ](install/npm.md).
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Der [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md)-Callback kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
 - Jetzt wird eine XDM-Schemafeldgruppe anstelle von `meta.personalization` verwendet, wenn Ereignisse über gerenderte oder angeklickte personalisierte Inhalte gesendet werden.
